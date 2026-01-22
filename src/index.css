@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
+
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  html, body, #root {
+    @apply h-full w-full;
+  }
+  body {
+    @apply font-sans antialiased text-ucsd-navy bg-gray-50;
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+
+
+/* Custom Scrollbar */
+
+.custom-scrollbar::-webkit-scrollbar {
+
+  width: 8px;
+
+}
+
+
+
+.custom-scrollbar::-webkit-scrollbar-track {
+
+  background: rgba(0, 0, 0, 0.05);
+
+  border-radius: 4px;
+
+}
+
+
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+
+  background: rgba(24, 43, 73, 0.2);
+
+  border-radius: 4px;
+
+}
+
+
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+
+  background: rgba(24, 43, 73, 0.4);
+
+}
