@@ -11,7 +11,10 @@ export const slides = [
     "presenterTitle": "Executive Director, Workplace Technology & Infrastructure Services",
     "audiences": [
       "all",
-      "internal"
+      "internal",
+      "public",
+      "executive",
+      "technical"
     ]
   },
   {
