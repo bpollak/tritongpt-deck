@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion'; // eslint-disable-line no-unused-vars
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Settings } from 'lucide-react';
 import Slide from './components/Slide';
+import SlideManager from './components/SlideManager';
 import { slides } from './data/slides';
 
 // Utility function to filter slides based on audience
@@ -17,6 +18,7 @@ const filterSlidesByAudience = (slides, audienceType) => {
 const Presentation = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
+  const [showManager, setShowManager] = useState(false);
 
   // Get audience type from URL parameter
   const audienceType = useMemo(() => {
@@ -171,6 +173,20 @@ const Presentation = () => {
           transition={{ duration: 0.3 }}
         />
       </div>
+
+      {/* Settings Button */}
+      <button
+        onClick={() => setShowManager(true)}
+        className="absolute top-4 right-4 p-3 rounded-full bg-white/80 hover:bg-white shadow-lg text-ucsd-navy transition-all z-50"
+        aria-label="Manage slide audiences"
+      >
+        <Settings size={24} />
+      </button>
+
+      {/* Slide Manager Modal */}
+      {showManager && (
+        <SlideManager onClose={() => setShowManager(false)} />
+      )}
     </div>
   );
 };

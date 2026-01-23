@@ -702,7 +702,7 @@ export const slides = [
     "saasOnboarding": {
       "text": "Onboard new institutions adopting TritonGPT as a Software-as-a-Service AI platform"
     },
-    "audiences": ["all", "internal"]
+    "audiences": ["internal"]
   },
   {
     "id": 24,
