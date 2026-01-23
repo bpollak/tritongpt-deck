@@ -1257,25 +1257,47 @@ const Slide = ({ slide }) => {
                   {category.name}
                 </h3>
                 <div className="flex flex-col gap-3">
-                  {category.assistants.map((assistant, idx) => (
-                    <motion.div
-                      key={idx}
-                      initial={{ opacity: 0, x: -10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.4 + catIndex * 0.1 + idx * 0.05 }}
-                      className="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-100"
-                    >
-                      <div className="w-2.5 h-2.5 rounded-full mt-2 flex-shrink-0" style={{ backgroundColor: category.color }} />
-                      <div>
-                        <div className="font-bold text-ucsd-navy text-lg md:text-xl leading-tight">{assistant.heading}</div>
-                        <div className="text-sm md:text-base text-slate-600 font-medium leading-relaxed mt-1">{assistant.text}</div>
-                      </div>
-                    </motion.div>
-                  ))}
+                  {category.assistants.map((assistant, idx) => {
+                    const IconComponent = assistant.icon ? iconMap[assistant.icon] : null;
+                    return (
+                      <motion.div
+                        key={idx}
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.4 + catIndex * 0.1 + idx * 0.05 }}
+                        className="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-100"
+                      >
+                        {IconComponent ? (
+                          <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: category.color }}>
+                            <IconComponent size={20} className="text-white" />
+                          </div>
+                        ) : (
+                          <div className="w-2.5 h-2.5 rounded-full mt-2 flex-shrink-0" style={{ backgroundColor: category.color }} />
+                        )}
+                        <div>
+                          <div className="font-bold text-ucsd-navy text-lg md:text-xl leading-tight">{assistant.heading}</div>
+                          <div className="text-sm md:text-base text-slate-600 font-medium leading-relaxed mt-1">{assistant.text}</div>
+                        </div>
+                      </motion.div>
+                    );
+                  })}
                 </div>
               </motion.div>
             ))}
           </div>
+
+          {slide.saasOnboarding && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              className="mt-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl shadow-lg p-6 border-2 border-green-600"
+            >
+              <div className="text-center text-lg md:text-xl font-bold text-green-900">
+                {slide.saasOnboarding.text}
+              </div>
+            </motion.div>
+          )}
         </div>
       )}
 

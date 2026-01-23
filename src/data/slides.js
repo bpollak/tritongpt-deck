@@ -604,19 +604,23 @@ export const slides = [
         "assistants": [
           {
             "heading": "Transcript Verification (P1)",
-            "text": "Automate review and verification for incoming students."
+            "text": "Automate review and verification for incoming students.",
+            "icon": "FileCheck"
           },
           {
             "heading": "Fund Manager Coach (P2)",
-            "text": "Direct AI access to data warehouse for grant reporting."
+            "text": "Direct AI access to data warehouse for grant reporting.",
+            "icon": "DollarSign"
           },
           {
             "heading": "Instructional AI Expansion",
-            "text": "Scale AI Assistants for faculty and personalized student support."
+            "text": "Scale AI Assistants for faculty and personalized student support.",
+            "icon": "GraduationCap"
           },
           {
             "heading": "AI Contract Review Rollout",
-            "text": "Deployment to all 20 Procurement Buyers across campus."
+            "text": "Deployment to all 20 Procurement Buyers across campus.",
+            "icon": "FileText"
           }
         ]
       },
@@ -626,19 +630,23 @@ export const slides = [
         "assistants": [
           {
             "heading": "Academic Advising Agent",
-            "text": "Support Tier 1 questions via the Virtual Advising Center."
+            "text": "Support Tier 1 questions via the Virtual Advising Center.",
+            "icon": "GraduationCap"
           },
           {
             "heading": "Research Proposal Risk",
-            "text": "Assess and prioritize proposal risk for compliance workflows."
+            "text": "Assess and prioritize proposal risk for compliance workflows.",
+            "icon": "Shield"
           },
           {
             "heading": "UCSD Mobile Integration",
-            "text": "Enable TritonGPT access within the campus flagship mobile app."
+            "text": "Enable TritonGPT access within the campus flagship mobile app.",
+            "icon": "Cpu"
           },
           {
             "heading": "GASB 87 Lease Analysis",
-            "text": "Extract financial data from real estate lease agreements."
+            "text": "Extract financial data from real estate lease agreements.",
+            "icon": "Building2"
           }
         ]
       },
@@ -648,27 +656,30 @@ export const slides = [
         "assistants": [
           {
             "heading": "Transcript Matching (P2)",
-            "text": "Automated matching of transcripts to student records."
+            "text": "Automated matching of transcripts to student records.",
+            "icon": "FileCheck"
           },
           {
             "heading": "GASB 96 IT Review",
-            "text": "Compliance for subscription-based IT arrangement data."
+            "text": "Compliance for subscription-based IT arrangement data.",
+            "icon": "Database"
           },
           {
             "heading": "AI IT Observability",
-            "text": "Automated response to system anomalies via log analysis."
+            "text": "Automated response to system anomalies via log analysis.",
+            "icon": "Target"
           },
           {
             "heading": "OneStop Virtual Advisor",
-            "text": "Personalized support using student demographic and academic data."
-          },
-          {
-            "heading": "TritonGPT SaaS Onboarding",
-            "text": "Onboard new partner institutions adopting TritonGPT platform."
+            "text": "Personalized support using student demographic and academic data.",
+            "icon": "Heart"
           }
         ]
       }
-    ]
+    ],
+    "saasOnboarding": {
+      "text": "Onboard new institutions adopting TritonGPT as a Software-as-a-Service AI platform"
+    }
   },
   {
     "id": 24,
