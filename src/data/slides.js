@@ -9,7 +9,10 @@ export const slides = [
     "conference": "Rolling Updates | February 2026",
     "presenterName": "Brett Pollak",
     "presenterTitle": "Executive Director, Workplace Technology & Infrastructure Services",
-    "audiences": ["all"]
+    "audiences": [
+      "all",
+      "executive"
+    ]
   },
   {
     "id": 2,
@@ -45,7 +48,9 @@ export const slides = [
     "layout": "hero-list",
     "dark": false,
     "backgroundColor": "#F5F0E6",
-    "audiences": ["all"]
+    "audiences": [
+      "all"
+    ]
   },
   {
     "id": 3,
@@ -79,7 +84,9 @@ export const slides = [
     ],
     "title": "TritonAI: Secure, Scalable AI Platform",
     "layout": "feature-grid",
-    "audiences": ["all"]
+    "audiences": [
+      "all"
+    ]
   },
   {
     "id": 4,
@@ -180,7 +187,9 @@ export const slides = [
         "icon": "Calendar"
       }
     ],
-    "audiences": ["all"]
+    "audiences": [
+      "all"
+    ]
   },
   {
     "id": 5,
@@ -188,7 +197,9 @@ export const slides = [
     "content": [],
     "videoSrc": "/media/media1.mov",
     "poster": "/media/image36.png",
-    "audiences": ["all"]
+    "audiences": [
+      "all"
+    ]
   },
   {
     "id": 6,
@@ -196,7 +207,9 @@ export const slides = [
     "content": [],
     "videoSrc": "/media/media2.mov",
     "poster": "/media/image37.png",
-    "audiences": ["all"]
+    "audiences": [
+      "all"
+    ]
   },
   {
     "id": 7,
@@ -204,7 +217,9 @@ export const slides = [
     "content": [],
     "videoSrc": "/media/media3.mov",
     "poster": "/media/image38.png",
-    "audiences": ["all"]
+    "audiences": [
+      "all"
+    ]
   },
   {
     "id": 8,
@@ -212,7 +227,9 @@ export const slides = [
     "content": [],
     "videoSrc": "/media/media4.mov",
     "poster": "/media/image39.png",
-    "audiences": ["all"]
+    "audiences": [
+      "all"
+    ]
   },
   {
     "id": 9,
@@ -220,7 +237,9 @@ export const slides = [
     "content": [],
     "videoSrc": "/media/media5.mov",
     "poster": "/media/image40.png",
-    "audiences": ["all"]
+    "audiences": [
+      "all"
+    ]
   },
   {
     "id": 10,
@@ -228,7 +247,9 @@ export const slides = [
     "content": [],
     "videoSrc": "/media/media6.mov",
     "poster": "/media/image41.png",
-    "audiences": ["all"]
+    "audiences": [
+      "all"
+    ]
   },
   {
     "id": 11,
@@ -269,7 +290,9 @@ export const slides = [
         "sub": "No Login Required"
       }
     ],
-    "audiences": ["all"]
+    "audiences": [
+      "all"
+    ]
   },
   {
     "id": 12,
@@ -277,7 +300,9 @@ export const slides = [
     "content": [],
     "videoSrc": "/media/media8.mov",
     "poster": "/media/image49.png",
-    "audiences": ["all"]
+    "audiences": [
+      "all"
+    ]
   },
   {
     "id": 13,
@@ -285,7 +310,9 @@ export const slides = [
     "content": [],
     "videoSrc": "/media/media9.mov",
     "poster": "/media/image50.png",
-    "audiences": ["all"]
+    "audiences": [
+      "all"
+    ]
   },
   {
     "id": 14,
@@ -326,7 +353,9 @@ export const slides = [
         "sub": "Instant contextual answers"
       }
     ],
-    "audiences": ["all"]
+    "audiences": [
+      "all"
+    ]
   },
   {
     "id": 15,
@@ -367,7 +396,9 @@ export const slides = [
         "sub": "Students want in more courses"
       }
     ],
-    "audiences": ["all"]
+    "audiences": [
+      "all"
+    ]
   },
   {
     "id": 16,
@@ -375,7 +406,9 @@ export const slides = [
     "content": [],
     "videoSrc": "/media/media11.mov",
     "poster": "/media/image53.png",
-    "audiences": ["all"]
+    "audiences": [
+      "all"
+    ]
   },
   {
     "id": 17,
@@ -411,7 +444,10 @@ export const slides = [
         "agenticAI": "Supervisor / Orchestrator."
       }
     ],
-    "audiences": ["all", "technical"]
+    "audiences": [
+      "all",
+      "technical"
+    ]
   },
   {
     "id": 18,
@@ -446,7 +482,11 @@ export const slides = [
         "statLabel": "Expert Reviewers"
       }
     ],
-    "audiences": ["all", "executive", "internal"]
+    "audiences": [
+      "all",
+      "executive",
+      "internal"
+    ]
   },
   {
     "id": 19,
@@ -491,7 +531,9 @@ export const slides = [
         "author": "Procurement Lead"
       }
     ],
-    "audiences": ["all"]
+    "audiences": [
+      "all"
+    ]
   },
   {
     "id": 20,
@@ -499,7 +541,9 @@ export const slides = [
     "content": [],
     "videoSrc": "/media/media7.mp4",
     "poster": "/media/image47.png",
-    "audiences": ["all"]
+    "audiences": [
+      "all"
+    ]
   },
   {
     "id": 21,
@@ -540,7 +584,12 @@ export const slides = [
         "description": "Modular Executive Functions",
         "details": "Existing apps (HR, Finance, CRM) repurposed as modular tools. Uses programmatic or agentic approach based on complexity.",
         "color": "#A8C5DD",
-        "tools": ["CRM", "Finance", "Teams", "HR"],
+        "tools": [
+          "CRM",
+          "Finance",
+          "Teams",
+          "HR"
+        ],
         "icon": "Grid3x3"
       },
       {
@@ -570,7 +619,10 @@ export const slides = [
         "icon": "Network"
       }
     ],
-    "audiences": ["all", "technical"]
+    "audiences": [
+      "all",
+      "technical"
+    ]
   },
   {
     "id": 22,
@@ -611,7 +663,9 @@ export const slides = [
         "icon": "TrendingUp"
       }
     ],
-    "audiences": ["all"]
+    "audiences": [
+      "all"
+    ]
   },
   {
     "id": 23,
@@ -702,7 +756,9 @@ export const slides = [
     "saasOnboarding": {
       "text": "Onboard new institutions adopting TritonGPT as a Software-as-a-Service AI platform"
     },
-    "audiences": ["internal"]
+    "audiences": [
+      "internal"
+    ]
   },
   {
     "id": 24,
@@ -713,6 +769,8 @@ export const slides = [
     "layout": "title-hero",
     "presenterName": "Brett Pollak",
     "presenterTitle": "Executive Director, Workplace Technology & Infrastructure Services",
-    "audiences": ["all"]
+    "audiences": [
+      "all"
+    ]
   }
 ];
