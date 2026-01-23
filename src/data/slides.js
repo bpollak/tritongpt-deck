@@ -11,7 +11,7 @@ export const slides = [
     "presenterTitle": "Executive Director, Workplace Technology & Infrastructure Services",
     "audiences": [
       "all",
-      "executive"
+      "internal"
     ]
   },
   {
@@ -49,7 +49,8 @@ export const slides = [
     "dark": false,
     "backgroundColor": "#F5F0E6",
     "audiences": [
-      "all"
+      "all",
+      "internal"
     ]
   },
   {
@@ -85,7 +86,8 @@ export const slides = [
     "title": "TritonAI: Secure, Scalable AI Platform",
     "layout": "feature-grid",
     "audiences": [
-      "all"
+      "all",
+      "internal"
     ]
   },
   {
@@ -188,7 +190,8 @@ export const slides = [
       }
     ],
     "audiences": [
-      "all"
+      "all",
+      "internal"
     ]
   },
   {
@@ -198,7 +201,8 @@ export const slides = [
     "videoSrc": "/media/media1.mov",
     "poster": "/media/image36.png",
     "audiences": [
-      "all"
+      "all",
+      "internal"
     ]
   },
   {
@@ -208,7 +212,8 @@ export const slides = [
     "videoSrc": "/media/media2.mov",
     "poster": "/media/image37.png",
     "audiences": [
-      "all"
+      "all",
+      "internal"
     ]
   },
   {
@@ -218,7 +223,8 @@ export const slides = [
     "videoSrc": "/media/media3.mov",
     "poster": "/media/image38.png",
     "audiences": [
-      "all"
+      "all",
+      "internal"
     ]
   },
   {
@@ -228,7 +234,8 @@ export const slides = [
     "videoSrc": "/media/media4.mov",
     "poster": "/media/image39.png",
     "audiences": [
-      "all"
+      "all",
+      "internal"
     ]
   },
   {
@@ -238,7 +245,8 @@ export const slides = [
     "videoSrc": "/media/media5.mov",
     "poster": "/media/image40.png",
     "audiences": [
-      "all"
+      "all",
+      "internal"
     ]
   },
   {
@@ -248,7 +256,8 @@ export const slides = [
     "videoSrc": "/media/media6.mov",
     "poster": "/media/image41.png",
     "audiences": [
-      "all"
+      "all",
+      "internal"
     ]
   },
   {
@@ -291,7 +300,8 @@ export const slides = [
       }
     ],
     "audiences": [
-      "all"
+      "all",
+      "internal"
     ]
   },
   {
@@ -301,7 +311,8 @@ export const slides = [
     "videoSrc": "/media/media8.mov",
     "poster": "/media/image49.png",
     "audiences": [
-      "all"
+      "all",
+      "internal"
     ]
   },
   {
@@ -311,7 +322,8 @@ export const slides = [
     "videoSrc": "/media/media9.mov",
     "poster": "/media/image50.png",
     "audiences": [
-      "all"
+      "all",
+      "internal"
     ]
   },
   {
@@ -354,7 +366,8 @@ export const slides = [
       }
     ],
     "audiences": [
-      "all"
+      "all",
+      "internal"
     ]
   },
   {
@@ -397,7 +410,8 @@ export const slides = [
       }
     ],
     "audiences": [
-      "all"
+      "all",
+      "internal"
     ]
   },
   {
@@ -407,7 +421,8 @@ export const slides = [
     "videoSrc": "/media/media11.mov",
     "poster": "/media/image53.png",
     "audiences": [
-      "all"
+      "all",
+      "internal"
     ]
   },
   {
@@ -446,7 +461,8 @@ export const slides = [
     ],
     "audiences": [
       "all",
-      "technical"
+      "technical",
+      "internal"
     ]
   },
   {
@@ -532,7 +548,8 @@ export const slides = [
       }
     ],
     "audiences": [
-      "all"
+      "all",
+      "internal"
     ]
   },
   {
@@ -542,7 +559,8 @@ export const slides = [
     "videoSrc": "/media/media7.mp4",
     "poster": "/media/image47.png",
     "audiences": [
-      "all"
+      "all",
+      "internal"
     ]
   },
   {
@@ -621,7 +639,8 @@ export const slides = [
     ],
     "audiences": [
       "all",
-      "technical"
+      "technical",
+      "internal"
     ]
   },
   {
@@ -664,7 +683,8 @@ export const slides = [
       }
     ],
     "audiences": [
-      "all"
+      "all",
+      "internal"
     ]
   },
   {
@@ -770,7 +790,8 @@ export const slides = [
     "presenterName": "Brett Pollak",
     "presenterTitle": "Executive Director, Workplace Technology & Infrastructure Services",
     "audiences": [
-      "all"
+      "all",
+      "internal"
     ]
   }
 ];
