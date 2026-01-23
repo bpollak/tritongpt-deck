@@ -319,22 +319,22 @@ export const slides = [
     "type": "content",
     "content": [
       {
-        "heading": "Virtual TA",
-        "text": "Student-facing assistant that helps navigate, synthesize, and summarize course materials using Socratic guidance."
+        "heading": "Socratic AI Tutor",
+        "text": "Student-facing assistant that guides learning through Socratic questioning, helping navigate and synthesize course materials."
       },
       {
-        "heading": "Faculty Power Tool",
-        "text": "Instructor-only assistant for lesson planning, quiz development, and creating study guides from lecture content."
+        "heading": "Faculty AI Assistant",
+        "text": "Instructor-only tool for lesson planning, quiz generation, and creating study guides from lecture content."
       },
       {
         "heading": "Instructor Controlled",
         "text": "Connects securely to private Google Drive folders, allowing faculty to strictly define the knowledge base."
       }
     ],
-    "title": "Instructional AI: The Socratic Assistant",
+    "title": "Instructional AI: Socratic Tutor & Faculty Assistant",
     "videoSrc": "/media/media10.mov",
     "layout": "solution-showcase-video",
-    "subtitle": "Scaling Student Support & Faculty Efficiency",
+    "subtitle": "Dual AI Tools for Learning & Teaching",
     "backgroundColor": "#F5F0E6",
     "stats": [
       {
