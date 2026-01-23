@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { slides } from '../data/slides';
-import { Eye, EyeOff, ChevronDown, ChevronUp, Save, Upload } from 'lucide-react';
+import { Eye, EyeOff, ChevronDown, ChevronUp, Save, Upload, ExternalLink } from 'lucide-react';
 
 const AUDIENCE_TYPES = ['all', 'technical', 'executive', 'internal', 'public'];
 
@@ -176,8 +176,34 @@ const SlideManager = ({ onClose, onExport, standalone = false }) => {
             ))}
           </div>
 
-          <div className="mt-4 text-sm text-gray-600">
-            Showing {filteredSlides.length} of {slides.length} slides
+          <div className="mt-4 flex items-center justify-between">
+            <div className="text-sm text-gray-600">
+              Showing {filteredSlides.length} of {slides.length} slides
+            </div>
+
+            {/* Preview Links */}
+            <div className="flex items-center gap-2">
+              <span className="text-xs font-medium text-gray-500">Preview:</span>
+              {AUDIENCE_TYPES.map(audience => {
+                const baseUrl = window.location.origin;
+                const url = audience === 'all'
+                  ? baseUrl
+                  : `${baseUrl}/?audience=${audience}`;
+
+                return (
+                  <a
+                    key={audience}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`px-2 py-1 rounded text-xs font-medium transition-all flex items-center gap-1 ${AUDIENCE_COLORS[audience]} text-white hover:opacity-80`}
+                  >
+                    {audience}
+                    <ExternalLink size={12} />
+                  </a>
+                );
+              })}
+            </div>
           </div>
         </div>
 
