@@ -1,30 +1,51 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion'; // eslint-disable-line no-unused-vars
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Slide from './components/Slide';
 import { slides } from './data/slides';
 
+// Utility function to filter slides based on audience
+const filterSlidesByAudience = (slides, audienceType) => {
+  if (!audienceType || audienceType === 'all') {
+    return slides;
+  }
+  return slides.filter(slide =>
+    slide.audiences && slide.audiences.includes(audienceType)
+  );
+};
+
 const Presentation = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
 
+  // Get audience type from URL parameter
+  const audienceType = useMemo(() => {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('audience') || 'all';
+  }, []);
+
+  // Filter slides based on audience type
+  const filteredSlides = useMemo(() => {
+    return filterSlidesByAudience(slides, audienceType);
+  }, [audienceType]);
+
   const nextSlide = useCallback(() => {
     setDirection(1);
-    if (currentIndex < slides.length - 1) {
+    if (currentIndex < filteredSlides.length - 1) {
       setCurrentIndex(prev => prev + 1);
     } else {
       setCurrentIndex(0);
     }
-  }, [currentIndex]);
+  }, [currentIndex, filteredSlides.length]);
 
   const prevSlide = useCallback(() => {
     setDirection(-1);
     if (currentIndex > 0) {
       setCurrentIndex(prev => prev - 1);
     } else {
-      setCurrentIndex(slides.length - 1);
+      setCurrentIndex(filteredSlides.length - 1);
     }
-  }, [currentIndex]);
+  }, [currentIndex, filteredSlides.length]);
 
   const goToFirstSlide = useCallback(() => {
     if (currentIndex > 0) {
@@ -34,11 +55,11 @@ const Presentation = () => {
   }, [currentIndex]);
 
   const goToLastSlide = useCallback(() => {
-    if (currentIndex < slides.length - 1) {
+    if (currentIndex < filteredSlides.length - 1) {
       setDirection(1);
-      setCurrentIndex(slides.length - 1);
+      setCurrentIndex(filteredSlides.length - 1);
     }
-  }, [currentIndex]);
+  }, [currentIndex, filteredSlides.length]);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -114,7 +135,7 @@ const Presentation = () => {
           }}
           className="absolute w-full h-full"
         >
-          <Slide slide={slides[currentIndex]} />
+          <Slide slide={filteredSlides[currentIndex]} />
         </motion.div>
       </AnimatePresence>
 
@@ -129,7 +150,7 @@ const Presentation = () => {
         </button>
 
         <span className="text-sm font-semibold text-ucsd-navy/60 bg-white/50 px-3 py-1 rounded-full backdrop-blur-sm" aria-live="polite" aria-atomic="true">
-          Slide {currentIndex + 1} of {slides.length}
+          Slide {currentIndex + 1} of {filteredSlides.length}
         </span>
 
         <button
@@ -142,11 +163,11 @@ const Presentation = () => {
       </nav>
 
       {/* Progress Bar */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gray-200 z-50" role="progressbar" aria-valuenow={currentIndex + 1} aria-valuemin={1} aria-valuemax={slides.length} aria-label="Presentation progress">
+      <div className="absolute top-0 left-0 w-full h-1 bg-gray-200 z-50" role="progressbar" aria-valuenow={currentIndex + 1} aria-valuemin={1} aria-valuemax={filteredSlides.length} aria-label="Presentation progress">
         <motion.div
           className="h-full bg-ucsd-gold"
           initial={{ width: "0%" }}
-          animate={{ width: `${((currentIndex + 1) / slides.length) * 100}%` }}
+          animate={{ width: `${((currentIndex + 1) / filteredSlides.length) * 100}%` }}
           transition={{ duration: 0.3 }}
         />
       </div>
