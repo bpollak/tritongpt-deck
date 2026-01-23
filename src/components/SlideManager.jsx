@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { slides } from '../data/slides';
-import { Eye, EyeOff, ChevronDown, ChevronUp } from 'lucide-react';
+import { Eye, EyeOff, ChevronDown, ChevronUp, Save, Upload } from 'lucide-react';
 
 const AUDIENCE_TYPES = ['all', 'technical', 'executive', 'internal', 'public'];
 
@@ -12,7 +12,7 @@ const AUDIENCE_COLORS = {
   public: 'bg-orange-500'
 };
 
-const SlideManager = ({ onClose, onExport }) => {
+const SlideManager = ({ onClose, onExport, standalone = false }) => {
   const [slideAudiences, setSlideAudiences] = useState(
     slides.reduce((acc, slide) => {
       acc[slide.id] = slide.audiences || ['all'];
@@ -21,6 +21,8 @@ const SlideManager = ({ onClose, onExport }) => {
   );
   const [expandedSlide, setExpandedSlide] = useState(null);
   const [filterAudience, setFilterAudience] = useState('all');
+  const [isSaving, setIsSaving] = useState(false);
+  const [saveStatus, setSaveStatus] = useState(null);
 
   const toggleAudience = (slideId, audience) => {
     setSlideAudiences(prev => {
@@ -78,19 +80,82 @@ const SlideManager = ({ onClose, onExport }) => {
     URL.revokeObjectURL(url);
   };
 
+  const saveAndDeploy = async () => {
+    setIsSaving(true);
+    setSaveStatus(null);
+
+    try {
+      const updatedSlides = slides.map(slide => ({
+        ...slide,
+        audiences: slideAudiences[slide.id]
+      }));
+
+      // Get admin password from prompt or environment
+      const password = prompt('Enter admin password:');
+      if (!password) {
+        setSaveStatus({ type: 'error', message: 'Password required' });
+        setIsSaving(false);
+        return;
+      }
+
+      const response = await fetch('/api/save-slides', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${password}`
+        },
+        body: JSON.stringify({ slides: updatedSlides })
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to save');
+      }
+
+      setSaveStatus({
+        type: 'success',
+        message: 'Saved! Deploying to Vercel... (1-2 min)'
+      });
+
+      // Reload page after 3 seconds to get updated slides
+      setTimeout(() => {
+        window.location.reload();
+      }, 3000);
+
+    } catch (error) {
+      setSaveStatus({
+        type: 'error',
+        message: error.message || 'Failed to save changes'
+      });
+    } finally {
+      setIsSaving(false);
+    }
+  };
+
+  const containerClasses = standalone
+    ? "bg-white rounded-lg shadow-2xl w-full flex flex-col"
+    : "fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4";
+
+  const contentClasses = standalone
+    ? "w-full flex flex-col"
+    : "bg-white rounded-lg shadow-2xl max-w-4xl w-full max-h-[90vh] flex flex-col";
+
   return (
-    <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-lg shadow-2xl max-w-4xl w-full max-h-[90vh] flex flex-col">
+    <div className={containerClasses}>
+      <div className={contentClasses}>
         {/* Header */}
         <div className="p-6 border-b border-gray-200">
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-2xl font-bold text-ucsd-navy">Manage Slide Audiences</h2>
-            <button
-              onClick={onClose}
-              className="text-gray-500 hover:text-gray-700 text-2xl font-bold"
-            >
-              ×
-            </button>
+            {!standalone && (
+              <button
+                onClick={onClose}
+                className="text-gray-500 hover:text-gray-700 text-2xl font-bold"
+              >
+                ×
+              </button>
+            )}
           </div>
 
           {/* Filter */}
@@ -194,23 +259,56 @@ const SlideManager = ({ onClose, onExport }) => {
 
         {/* Footer */}
         <div className="p-6 border-t border-gray-200 bg-gray-50">
+          {saveStatus && (
+            <div className={`mb-4 p-3 rounded-lg ${
+              saveStatus.type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
+            }`}>
+              {saveStatus.message}
+            </div>
+          )}
           <div className="flex items-center justify-between gap-4">
             <div className="text-sm text-gray-600">
               Click a slide to edit its audience tags
             </div>
             <div className="flex gap-3">
-              <button
-                onClick={exportConfig}
-                className="px-6 py-2 bg-ucsd-gold text-ucsd-navy font-semibold rounded-lg hover:bg-yellow-500 transition-colors"
-              >
-                Copy to Clipboard
-              </button>
-              <button
-                onClick={downloadConfig}
-                className="px-6 py-2 bg-ucsd-navy text-white font-semibold rounded-lg hover:bg-blue-900 transition-colors"
-              >
-                Download slides.js
-              </button>
+              {standalone ? (
+                <button
+                  onClick={saveAndDeploy}
+                  disabled={isSaving}
+                  className={`px-6 py-2 font-semibold rounded-lg transition-colors flex items-center gap-2 ${
+                    isSaving
+                      ? 'bg-gray-400 text-white cursor-not-allowed'
+                      : 'bg-green-600 text-white hover:bg-green-700'
+                  }`}
+                >
+                  {isSaving ? (
+                    <>
+                      <Upload size={20} className="animate-spin" />
+                      Saving...
+                    </>
+                  ) : (
+                    <>
+                      <Save size={20} />
+                      Save & Deploy
+                    </>
+                  )}
+                </button>
+              ) : (
+                <>
+                  <button
+                    onClick={exportConfig}
+                    className="px-6 py-2 bg-ucsd-gold text-ucsd-navy font-semibold rounded-lg hover:bg-yellow-500 transition-colors"
+                  >
+                    Copy to Clipboard
+                  </button>
+                  <button
+                    onClick={downloadConfig}
+                    className="px-6 py-2 bg-ucsd-navy text-white font-semibold rounded-lg hover:bg-blue-900 transition-colors"
+                  >
+                    Download slides.js
+                  </button>
+                </>
+              )}
             </div>
           </div>
         </div>
