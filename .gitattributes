@@ -1,2 +1,6 @@
+# Track most videos with LFS, but exclude the compressed ones
 public/media/*.mov filter=lfs diff=lfs merge=lfs -text
 public/media/*.mp4 filter=lfs diff=lfs merge=lfs -text
+# Exclude compressed videos from LFS (stored as regular files)
+public/media/media7.mp4 -filter -diff -merge -text
+public/media/media8.mov -filter -diff -merge -text
