@@ -575,7 +575,6 @@ export const slides = [
     "backgroundColor": "#F5F0E6",
     "architectureLayers": [
       {
-        "number": "1",
         "name": "Agent Orchestrator",
         "description": "The Brain: Task Planning & Delegation",
         "details": "Receives goals → Breaks into subtasks → Assigns specialized agents → Monitors completion.",
@@ -583,7 +582,6 @@ export const slides = [
         "icon": "Cpu"
       },
       {
-        "number": "2",
         "name": "Model Context Protocol",
         "description": "Universal Connector: Apps ↔ AI",
         "details": [
@@ -600,7 +598,6 @@ export const slides = [
         "icon": "GitBranch"
       },
       {
-        "number": "3",
         "name": "Enterprise Tools",
         "description": "Existing Systems Become Agent Tools",
         "details": "Finance, HR, Research, and Student systems transformed into callable functions agents use to complete work.",
@@ -614,7 +611,6 @@ export const slides = [
         "icon": "Grid3x3"
       },
       {
-        "number": "4",
         "name": "Institutional Knowledge",
         "description": "Memory + Context for Decisions",
         "details": "University policies, historical decisions, reasoning logs that inform agent actions.",
@@ -622,7 +618,6 @@ export const slides = [
         "icon": "Database"
       },
       {
-        "number": "5",
         "name": "Agent Teams",
         "description": "How Agents Work Together",
         "details": "Complex workflows require coordination between multiple specialized agents.",

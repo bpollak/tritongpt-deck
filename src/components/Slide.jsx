@@ -1607,7 +1607,6 @@ const Slide = ({ slide }) => {
                   <Cpu size={18} style={{ color: slide.architectureLayers[0].color }} />
                 </div>
                 <div className="flex items-start gap-2">
-                  <div className="text-4xl font-black text-ucsd-navy/20 leading-none">{slide.architectureLayers[0].number}</div>
                   <div className="flex-1">
                     <div className="text-2xl font-black text-ucsd-navy uppercase tracking-wide leading-none mb-1">{slide.architectureLayers[0].name}</div>
                     <div className="text-base font-bold text-ucsd-blue mb-1">{slide.architectureLayers[0].description}</div>
@@ -1681,7 +1680,6 @@ const Slide = ({ slide }) => {
                   <Network size={16} style={{ color: slide.architectureLayers[4].color }} />
                 </div>
                 <div className="flex items-start gap-2 mb-1">
-                  <div className="text-4xl font-black text-ucsd-navy/20 leading-none">{slide.architectureLayers[4].number}</div>
                   <div className="flex-1">
                     <div className="text-xl font-black text-ucsd-navy uppercase leading-none mb-1">{slide.architectureLayers[4].name}</div>
                     <div className="text-base font-bold text-ucsd-blue">{slide.architectureLayers[4].description}</div>
@@ -1765,7 +1763,6 @@ const Slide = ({ slide }) => {
                 <GitBranch size={18} style={{ color: slide.architectureLayers[1].color }} />
               </div>
               <div className="flex items-start gap-2 mb-2">
-                <div className="text-4xl font-black text-ucsd-navy/20 leading-none">{slide.architectureLayers[1].number}</div>
                 <div className="flex-1">
                   <div className="text-2xl font-black text-ucsd-navy uppercase tracking-wide leading-none mb-1">{slide.architectureLayers[1].name}</div>
                   <div className="text-base font-bold text-ucsd-blue">{slide.architectureLayers[1].description}</div>
@@ -1862,7 +1859,6 @@ const Slide = ({ slide }) => {
                   <Grid3x3 size={18} style={{ color: slide.architectureLayers[2].color }} />
                 </div>
                 <div className="flex items-start gap-2 mb-1.5">
-                  <div className="text-4xl font-black text-ucsd-navy/20 leading-none">{slide.architectureLayers[2].number}</div>
                   <div className="flex-1">
                     <div className="text-xl font-black text-ucsd-navy uppercase tracking-wide leading-none mb-1">{slide.architectureLayers[2].name}</div>
                     <div className="text-sm font-bold text-ucsd-blue mb-0.5">{slide.architectureLayers[2].description}</div>
@@ -1904,7 +1900,6 @@ const Slide = ({ slide }) => {
                   <Database size={18} style={{ color: slide.architectureLayers[3].color }} />
                 </div>
                 <div className="flex items-start gap-2">
-                  <div className="text-4xl font-black text-ucsd-navy/20 leading-none">{slide.architectureLayers[3].number}</div>
                   <div className="flex-1">
                     <div className="text-xl font-black text-ucsd-navy uppercase tracking-wide leading-none mb-1">{slide.architectureLayers[3].name}</div>
                     <div className="text-sm font-bold text-ucsd-blue mb-0.5">{slide.architectureLayers[3].description}</div>
