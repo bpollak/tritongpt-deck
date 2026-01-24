@@ -570,30 +570,30 @@ export const slides = [
     "id": 21,
     "type": "content",
     "layout": "compound-architecture",
-    "title": "2026 Development: Agentic Architecture",
-    "subtitle": "Building the Foundation for Next-Gen Software Development",
+    "title": "The Agentic AI Stack",
+    "subtitle": "How Autonomous Agents Execute Complex University Workflows",
     "backgroundColor": "#F5F0E6",
     "architectureLayers": [
       {
         "number": "1",
-        "name": "Orchestration Layer",
-        "description": "Agent Management & Coordination",
-        "details": "Spawns agent teams, defines goals, coordinates resources across workflows.",
+        "name": "Agent Orchestrator",
+        "description": "The Brain: Task Planning & Delegation",
+        "details": "Receives goals → Breaks into subtasks → Assigns specialized agents → Monitors completion.",
         "color": "#6B9BD1",
         "icon": "Cpu"
       },
       {
         "number": "2",
-        "name": "Model Context Protocol (MCP)",
-        "description": "Standardized Interface Layer",
+        "name": "Model Context Protocol",
+        "description": "Universal Connector: Apps ↔ AI",
         "details": [
           {
-            "label": "Tools",
-            "text": "Actions agents can perform (approve, analyze, execute)"
+            "label": "What AI Can Do",
+            "text": "Execute actions (send email, approve purchase, run analysis)"
           },
           {
-            "label": "Data Sources",
-            "text": "Knowledge agents can access (databases, documents, APIs)"
+            "label": "What AI Can Know",
+            "text": "Access data (employee records, invoices, contracts)"
           }
         ],
         "color": "#8FB89C",
@@ -601,9 +601,9 @@ export const slides = [
       },
       {
         "number": "3",
-        "name": "Application Layer",
-        "description": "Modular Tool Integration",
-        "details": "Enterprise systems (HR, Finance, CRM) exposed as agent-accessible tools.",
+        "name": "Enterprise Tools",
+        "description": "Existing Systems Become Agent Tools",
+        "details": "Finance, HR, CRM systems transformed into callable functions agents use to complete work.",
         "color": "#A8C5DD",
         "tools": [
           "CRM",
@@ -615,25 +615,25 @@ export const slides = [
       },
       {
         "number": "4",
-        "name": "AI-Ready Data Layer",
-        "description": "Structured Knowledge Environment",
-        "details": "Partitioned data with memory storage for agent reasoning and context.",
+        "name": "Institutional Knowledge",
+        "description": "Memory + Context for Decisions",
+        "details": "University policies, historical decisions, reasoning logs that inform agent actions.",
         "color": "#B8D4A8",
         "icon": "Database"
       },
       {
         "number": "5",
-        "name": "Multi-Agent Orchestration",
-        "description": "Collaborative Agent Teams",
-        "details": "Agents organized into specialized teams for complex tasks.",
+        "name": "Agent Teams",
+        "description": "How Agents Work Together",
+        "details": "Complex workflows require coordination between multiple specialized agents.",
         "structures": [
           {
-            "type": "Decentralized",
-            "description": "Peer collaboration patterns"
+            "type": "Peer Networks",
+            "description": "Agents collaborate as equals"
           },
           {
-            "type": "Hierarchical",
-            "description": "Supervisor-agent structures"
+            "type": "Supervisor Teams",
+            "description": "Lead agent coordinates subordinates"
           }
         ],
         "color": "#C4A8D4",
