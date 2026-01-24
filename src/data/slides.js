@@ -571,7 +571,7 @@ export const slides = [
     "type": "content",
     "layout": "compound-architecture",
     "title": "The Agentic AI Stack",
-    "subtitle": "How Autonomous Agents Execute Complex University Workflows",
+    "subtitle": "UC San Diego environment build out to support agentic workflows",
     "backgroundColor": "#F5F0E6",
     "architectureLayers": [
       {
@@ -603,13 +603,13 @@ export const slides = [
         "number": "3",
         "name": "Enterprise Tools",
         "description": "Existing Systems Become Agent Tools",
-        "details": "Finance, HR, CRM systems transformed into callable functions agents use to complete work.",
+        "details": "Finance, HR, Research, and Student systems transformed into callable functions agents use to complete work.",
         "color": "#A8C5DD",
         "tools": [
-          "CRM",
           "Finance",
-          "Teams",
-          "HR"
+          "HR",
+          "Research",
+          "Student"
         ],
         "icon": "Grid3x3"
       },
@@ -648,6 +648,89 @@ export const slides = [
   },
   {
     "id": 22,
+    "type": "content",
+    "layout": "agent-workflow",
+    "title": "How Agents Actually Work",
+    "subtitle": "Employee Onboarding: From Offer Letter to Day One",
+    "backgroundColor": "#F5F0E6",
+    "workflowStages": [
+      {
+        "number": "1",
+        "name": "Task Decomposition",
+        "description": "Orchestrator breaks goal into subtasks, spawns specialized agents",
+        "example": "New hire 'Jane Doe' → Provision accounts + Schedule orientation + Setup equipment",
+        "color": "#00629B",
+        "icon": "GitBranch"
+      },
+      {
+        "number": "2",
+        "name": "Agent Planning",
+        "description": "Each agent plans its approach autonomously",
+        "example": "IT Agent: 'I need role type, department, and start date from HR system'",
+        "color": "#6B9BD1",
+        "icon": "Brain"
+      },
+      {
+        "number": "3",
+        "name": "Parallel Execution",
+        "description": "Agents work simultaneously, accessing tools and knowledge",
+        "example": "IT creates accounts | Facilities assigns desk | HR schedules orientation",
+        "color": "#8FB89C",
+        "icon": "Network"
+      },
+      {
+        "number": "4",
+        "name": "Observe & Adapt",
+        "description": "Agents check results, retry on failure, request help if stuck",
+        "example": "Badge system unavailable → Agent queues request → Retries in 1 hour → Success",
+        "color": "#FFCD00",
+        "icon": "RefreshCw"
+      },
+      {
+        "number": "5",
+        "name": "Coordination",
+        "description": "Agents share findings, hand off work, resolve conflicts",
+        "example": "IT confirms accounts ready → Notifies Training Agent → Welcome email triggered",
+        "color": "#FC8900",
+        "icon": "ArrowRightLeft"
+      },
+      {
+        "number": "6",
+        "name": "Results & Learning",
+        "description": "Orchestrator synthesizes outputs, logs decisions for future reference",
+        "example": "All 12 onboarding tasks complete → Manager notified → Checklist archived",
+        "color": "#6E963B",
+        "icon": "CheckCircle"
+      }
+    ],
+    "centralConcept": {
+      "title": "Onboarding Agent Team",
+      "agents": [
+        { "name": "IT Provisioning Agent", "icon": "Monitor" },
+        { "name": "HR Coordinator Agent", "icon": "Users" },
+        { "name": "Facilities Agent", "icon": "Building2" }
+      ]
+    },
+    "supportingLayers": [
+      {
+        "name": "Tools",
+        "items": ["HRIS", "Active Directory", "ServiceNow", "Email"],
+        "color": "#A8C5DD"
+      },
+      {
+        "name": "Knowledge",
+        "items": ["Policies", "Role Templates", "Checklists", "Org Chart"],
+        "color": "#B8D4A8"
+      }
+    ],
+    "audiences": [
+      "all",
+      "technical",
+      "internal"
+    ]
+  },
+  {
+    "id": 23,
     "type": "content",
     "layout": "key-takeaways",
     "title": "Key Takeaways",
@@ -691,7 +774,7 @@ export const slides = [
     ]
   },
   {
-    "id": 23,
+    "id": 24,
     "type": "content",
     "layout": "assistant-categories",
     "title": "AI Roadmap 2026",
@@ -784,7 +867,7 @@ export const slides = [
     ]
   },
   {
-    "id": 24,
+    "id": 25,
     "type": "title",
     "content": [],
     "title": "Thank You",
