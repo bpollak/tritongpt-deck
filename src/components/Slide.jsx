@@ -109,79 +109,141 @@ const Slide = ({ slide }) => {
   if (isTitleHero) {
     return (
       <div className="w-full h-full relative overflow-hidden bg-gradient-to-br from-[#182B49] via-[#0f1f33] to-[#182B49] flex flex-col items-center justify-center text-white break-words">
-        {/* Simplified background - single subtle glow */}
+        {/* Enhanced animated background glows */}
         <motion.div
-          animate={{ scale: [1, 1.15, 1], opacity: [0.2, 0.35, 0.2] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70vw] h-[70vw] bg-ucsd-blue rounded-full blur-[140px] mix-blend-screen opacity-25"
+          animate={{ scale: [1, 1.2, 1], opacity: [0.25, 0.4, 0.25], x: [0, 30, 0], y: [0, -20, 0] }}
+          transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-[-15%] left-[-10%] w-[65vw] h-[65vw] bg-ucsd-blue rounded-full blur-[130px] mix-blend-screen opacity-30"
         />
+        <motion.div
+          animate={{ scale: [1, 1.15, 1], opacity: [0.2, 0.35, 0.2], x: [0, -25, 0], y: [0, 30, 0] }}
+          transition={{ duration: 22, repeat: Infinity, ease: "easeInOut", delay: 3 }}
+          className="absolute bottom-[-10%] right-[-15%] w-[55vw] h-[55vw] bg-ucsd-gold rounded-full blur-[150px] mix-blend-screen opacity-25"
+        />
+
+        {/* Animated accent circles */}
+        <motion.div
+          animate={{ rotate: [0, 360] }}
+          transition={{ duration: 100, repeat: Infinity, ease: "linear" }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[75vw] h-[75vw] border border-ucsd-gold/10 rounded-full"
+        />
+        <motion.div
+          animate={{ rotate: [360, 0] }}
+          transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85vw] h-[85vw] border border-ucsd-sky/8 rounded-full"
+        />
+
+        {/* Decorative corner accents */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 0.4, x: 0 }}
+          transition={{ delay: 0.3, duration: 1 }}
+          className="absolute top-0 left-0 w-32 h-32 border-t-4 border-l-4 border-ucsd-gold/40 rounded-tl-3xl"
+        />
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 0.4, x: 0 }}
+          transition={{ delay: 0.3, duration: 1 }}
+          className="absolute top-0 right-0 w-32 h-32 border-t-4 border-r-4 border-ucsd-sky/40 rounded-tr-3xl"
+        />
+
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10" />
 
         <div className="relative z-10 max-w-7xl w-full px-8 md:px-12 flex flex-col items-center text-center">
-          {/* Conference badge - cleaner design */}
+          {/* Conference badge with enhanced animation */}
           {slide.conference && (
             <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="mb-8 px-5 py-1.5 rounded-full border border-ucsd-gold/50 bg-ucsd-gold/5 backdrop-blur-sm text-ucsd-gold text-sm md:text-base tracking-[0.15em] font-semibold uppercase"
+              initial={{ opacity: 0, y: -30, scale: 0.9 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ delay: 0.2, duration: 0.7, type: "spring", bounce: 0.3 }}
+              className="mb-8 px-6 py-2 rounded-full border-2 border-ucsd-gold/60 bg-gradient-to-r from-ucsd-gold/10 via-ucsd-gold/5 to-ucsd-gold/10 backdrop-blur-md text-ucsd-gold text-sm md:text-base tracking-[0.15em] font-bold uppercase shadow-[0_0_20px_rgba(255,205,0,0.2)] flex items-center gap-3"
             >
+              <motion.div
+                animate={{ width: [8, 16, 8] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                className="h-0.5 bg-ucsd-gold rounded-full"
+              />
               {slide.conference}
+              <motion.div
+                animate={{ width: [8, 16, 8] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                className="h-0.5 bg-ucsd-gold rounded-full"
+              />
             </motion.div>
           )}
 
-          {/* UC San Diego branding - more subtle */}
+          {/* UC San Diego branding with color accent */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="mb-6"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.4, type: "spring" }}
+            className="mb-6 relative"
           >
-            <div className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-wide uppercase text-ucsd-gold/90 drop-shadow-[0_0_20px_rgba(255,205,0,0.4)]">
+            <div className="text-2xl md:text-3xl lg:text-4xl font-black tracking-wider uppercase text-transparent bg-clip-text bg-gradient-to-r from-ucsd-gold via-yellow-400 to-ucsd-gold drop-shadow-[0_0_25px_rgba(255,205,0,0.5)]">
               UC San Diego
             </div>
+            <motion.div
+              animate={{ scaleX: [0.8, 1.1, 0.8] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-24 h-0.5 bg-gradient-to-r from-transparent via-ucsd-gold to-transparent rounded-full"
+            />
           </motion.div>
 
-          {/* Main title - better scaling and readability */}
+          {/* Main title with enhanced effects */}
           <motion.h1
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, ease: "easeOut", delay: 0.6 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight mb-8 text-white drop-shadow-[0_2px_15px_rgba(0,0,0,0.6)] leading-[1] max-w-6xl"
+            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
+            className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight mb-8 text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.7)] leading-[1] max-w-6xl relative"
           >
-            {slide.title}
+            <span className="relative inline-block">
+              {slide.title}
+              <motion.div
+                initial={{ width: 0 }}
+                animate={{ width: "100%" }}
+                transition={{ delay: 1.4, duration: 0.8, ease: "easeInOut" }}
+                className="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-ucsd-sky via-ucsd-gold to-ucsd-blue rounded-full shadow-[0_0_15px_rgba(255,205,0,0.6)]"
+              />
+            </span>
           </motion.h1>
 
-          {/* Subtitle - improved size and spacing */}
+          {/* Subtitle with color gradient */}
           <motion.h2
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.7 }}
-            className="text-xl md:text-2xl lg:text-3xl font-normal text-white/95 tracking-wide max-w-4xl leading-relaxed mb-10 drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)]"
+            transition={{ delay: 0.9, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="text-xl md:text-2xl lg:text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-100 to-white tracking-wide max-w-4xl leading-relaxed mb-10 drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]"
           >
             {slide.subtitle}
           </motion.h2>
 
-          {/* Accent divider - shorter and more refined */}
+          {/* Enhanced animated accent divider */}
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
-            transition={{ delay: 1, duration: 0.6 }}
-            className="w-32 h-1 bg-gradient-to-r from-transparent via-ucsd-gold to-transparent rounded-full mb-10 opacity-60"
-          />
-
-          {/* Presenter info - cleaner layout */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.2 }}
-            className="flex flex-col items-center gap-2"
+            transition={{ delay: 1.1, duration: 0.7, ease: "easeOut" }}
+            className="relative w-48 h-1.5 mb-12"
           >
-            <div className="text-lg md:text-xl font-semibold text-white tracking-wide">
+            <div className="absolute inset-0 bg-gradient-to-r from-ucsd-sky via-ucsd-gold to-ucsd-blue rounded-full opacity-80 shadow-[0_0_20px_rgba(255,205,0,0.5)]" />
+            <motion.div
+              animate={{ x: ["-100%", "200%"] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "linear", repeatDelay: 1 }}
+              className="absolute inset-0 w-1/3 bg-gradient-to-r from-transparent via-white to-transparent rounded-full opacity-60"
+            />
+          </motion.div>
+
+          {/* Presenter info with card design */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.3, duration: 0.7 }}
+            className="flex flex-col items-center gap-2 px-8 py-4 rounded-2xl border border-ucsd-gold/20 bg-gradient-to-br from-ucsd-gold/5 to-transparent backdrop-blur-sm shadow-[0_8px_30px_rgba(0,0,0,0.3)]"
+          >
+            <div className="text-lg md:text-xl font-bold text-white tracking-wide">
               {slide.presenterName || "UC SAN DIEGO"}
             </div>
             {slide.presenterTitle && (
-              <div className="text-ucsd-sky/90 text-sm md:text-base font-normal tracking-wide max-w-2xl px-4">
+              <div className="text-ucsd-sky text-sm md:text-base font-normal tracking-wide max-w-2xl px-4">
                 {slide.presenterTitle}
               </div>
             )}
