@@ -1594,16 +1594,19 @@ const Slide = ({ slide }) => {
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.5, duration: 0.8 }}
-                className="flex-1 bg-white rounded-xl p-3 shadow-lg border-l-6 h-full"
+                className="flex-1 bg-white rounded-xl p-3 shadow-lg border-l-6 h-full relative overflow-hidden"
                 style={{ borderLeftColor: slide.architectureLayers[4].color }}
               >
-                <div className="flex items-center gap-2 mb-1">
-                  <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: `${slide.architectureLayers[4].color}20` }}>
-                    <Network size={16} style={{ color: slide.architectureLayers[4].color }} />
-                  </div>
-                  <div className="text-xl font-black text-ucsd-navy uppercase leading-none">{slide.architectureLayers[4].name}</div>
+                <div className="absolute top-2 right-2 w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: `${slide.architectureLayers[4].color}20` }}>
+                  <Network size={16} style={{ color: slide.architectureLayers[4].color }} />
                 </div>
-                <div className="text-base font-bold text-ucsd-blue mb-1">{slide.architectureLayers[4].description}</div>
+                <div className="flex items-start gap-2 mb-1">
+                  <div className="text-4xl font-black text-ucsd-navy/20 leading-none">{slide.architectureLayers[4].number}</div>
+                  <div className="flex-1">
+                    <div className="text-xl font-black text-ucsd-navy uppercase leading-none mb-1">{slide.architectureLayers[4].name}</div>
+                    <div className="text-base font-bold text-ucsd-blue">{slide.architectureLayers[4].description}</div>
+                  </div>
+                </div>
                 <div className="text-lg text-ucsd-navy/70 mb-1.5 leading-tight">{slide.architectureLayers[4].details}</div>
                 <div className="space-y-1">
                   {slide.architectureLayers[4].structures.map((struct, idx) => (

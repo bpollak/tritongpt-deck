@@ -570,30 +570,30 @@ export const slides = [
     "id": 21,
     "type": "content",
     "layout": "compound-architecture",
-    "title": "Compound AI System Architecture",
-    "subtitle": "Multi-Layer Orchestration for Agentic Workflows",
+    "title": "2026 Development: Agentic Architecture",
+    "subtitle": "Building the Foundation for Next-Gen Software Development",
     "backgroundColor": "#F5F0E6",
     "architectureLayers": [
       {
         "number": "1",
-        "name": "The Orchestration Layer",
-        "description": "Central Management Hub",
-        "details": "Spawns 'armies' of agents. Defines goals, coordinates resources. Acts as strategist.",
+        "name": "Orchestration Layer",
+        "description": "Agent Management & Coordination",
+        "details": "Spawns agent teams, defines goals, coordinates resources across workflows.",
         "color": "#6B9BD1",
         "icon": "Cpu"
       },
       {
         "number": "2",
         "name": "Model Context Protocol (MCP)",
-        "description": "Standardized Interface",
+        "description": "Standardized Interface Layer",
         "details": [
           {
             "label": "Tools",
-            "text": "What the app can do (e.g., approve invoice)"
+            "text": "Actions agents can perform (approve, analyze, execute)"
           },
           {
             "label": "Data Sources",
-            "text": "What the app knows (e.g., client address)"
+            "text": "Knowledge agents can access (databases, documents, APIs)"
           }
         ],
         "color": "#8FB89C",
@@ -601,9 +601,9 @@ export const slides = [
       },
       {
         "number": "3",
-        "name": "The Application Layer (Tools)",
-        "description": "Modular Executive Functions",
-        "details": "Existing apps (HR, Finance, CRM) repurposed as modular tools. Uses programmatic or agentic approach based on complexity.",
+        "name": "Application Layer",
+        "description": "Modular Tool Integration",
+        "details": "Enterprise systems (HR, Finance, CRM) exposed as agent-accessible tools.",
         "color": "#A8C5DD",
         "tools": [
           "CRM",
@@ -615,25 +615,25 @@ export const slides = [
       },
       {
         "number": "4",
-        "name": "The AI-Ready Data Layer",
-        "description": "Organized Data Environment",
-        "details": "Logically partitioned data. Supports memory storage (reasoning logs, interaction history).",
+        "name": "AI-Ready Data Layer",
+        "description": "Structured Knowledge Environment",
+        "details": "Partitioned data with memory storage for agent reasoning and context.",
         "color": "#B8D4A8",
         "icon": "Database"
       },
       {
         "number": "5",
-        "name": "Multi-Agent Structures",
-        "description": "Specialized Agent Teams",
-        "details": "Organizes individual agents into teams for complex workflows.",
+        "name": "Multi-Agent Orchestration",
+        "description": "Collaborative Agent Teams",
+        "details": "Agents organized into specialized teams for complex tasks.",
         "structures": [
           {
             "type": "Decentralized",
-            "description": "Peer-to-peer agent collaboration"
+            "description": "Peer collaboration patterns"
           },
           {
             "type": "Hierarchical",
-            "description": "Supervisor-led agent coordination"
+            "description": "Supervisor-agent structures"
           }
         ],
         "color": "#C4A8D4",
