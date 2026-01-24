@@ -194,7 +194,7 @@ const Slide = ({ slide }) => {
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight mb-8 text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.7)] leading-[1] max-w-6xl relative"
+            className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight mb-12 text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.7)] leading-[1] max-w-6xl relative pb-4"
           >
             <span className="relative inline-block">
               {slide.title}
@@ -202,7 +202,7 @@ const Slide = ({ slide }) => {
                 initial={{ width: 0 }}
                 animate={{ width: "100%" }}
                 transition={{ delay: 1.4, duration: 0.8, ease: "easeInOut" }}
-                className="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-ucsd-sky via-ucsd-gold to-ucsd-blue rounded-full shadow-[0_0_15px_rgba(255,205,0,0.6)]"
+                className="absolute -bottom-4 left-0 h-1 bg-gradient-to-r from-ucsd-sky via-ucsd-gold to-ucsd-blue rounded-full shadow-[0_0_15px_rgba(255,205,0,0.6)]"
               />
             </span>
           </motion.h1>
