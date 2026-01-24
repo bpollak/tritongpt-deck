@@ -509,6 +509,17 @@ export const slides = [
   },
   {
     "id": 19,
+    "type": "video",
+    "content": [],
+    "videoSrc": "/media/media7.mp4",
+    "poster": "/media/image47.png",
+    "audiences": [
+      "all",
+      "internal"
+    ]
+  },
+  {
+    "id": 20,
     "type": "content",
     "content": [
       {
@@ -550,17 +561,6 @@ export const slides = [
         "author": "Procurement Lead"
       }
     ],
-    "audiences": [
-      "all",
-      "internal"
-    ]
-  },
-  {
-    "id": 20,
-    "type": "video",
-    "content": [],
-    "videoSrc": "/media/media7.mp4",
-    "poster": "/media/image47.png",
     "audiences": [
       "all",
       "internal"
