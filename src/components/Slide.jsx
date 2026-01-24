@@ -109,83 +109,79 @@ const Slide = ({ slide }) => {
   if (isTitleHero) {
     return (
       <div className="w-full h-full relative overflow-hidden bg-gradient-to-br from-[#182B49] via-[#0f1f33] to-[#182B49] flex flex-col items-center justify-center text-white break-words">
+        {/* Simplified background - single subtle glow */}
         <motion.div
-          animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3], x: [0, 50, 0], y: [0, -30, 0] }}
-          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-[-10%] left-[-10%] w-[60vw] h-[60vw] bg-ucsd-blue rounded-full blur-[120px] mix-blend-screen opacity-30"
-        />
-        <motion.div
-          animate={{ scale: [1, 1.1, 1], opacity: [0.2, 0.4, 0.2], x: [0, -50, 0], y: [0, 50, 0] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-          className="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] bg-ucsd-gold rounded-full blur-[150px] mix-blend-screen opacity-20"
-        />
-        <motion.div
-          animate={{ rotate: [0, 360] }}
-          transition={{ duration: 120, repeat: Infinity, ease: "linear" }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] border border-ucsd-gold/10 rounded-full"
+          animate={{ scale: [1, 1.15, 1], opacity: [0.2, 0.35, 0.2] }}
+          transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70vw] h-[70vw] bg-ucsd-blue rounded-full blur-[140px] mix-blend-screen opacity-25"
         />
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10" />
-        <div className="relative z-10 max-w-7xl w-full px-8 flex flex-col items-center text-center">
+
+        <div className="relative z-10 max-w-7xl w-full px-8 md:px-12 flex flex-col items-center text-center">
+          {/* Conference badge - cleaner design */}
           {slide.conference && (
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="mb-5 px-6 py-2 rounded-full border border-ucsd-gold/40 bg-ucsd-gold/10 backdrop-blur-md text-ucsd-gold text-base md:text-lg tracking-[0.25em] font-bold uppercase flex items-center gap-3"
+              transition={{ delay: 0.2 }}
+              className="mb-8 px-5 py-1.5 rounded-full border border-ucsd-gold/50 bg-ucsd-gold/5 backdrop-blur-sm text-ucsd-gold text-sm md:text-base tracking-[0.15em] font-semibold uppercase"
             >
-              <div className="w-12 h-0.5 bg-ucsd-gold rounded-full" />
               {slide.conference}
-              <div className="w-12 h-0.5 bg-ucsd-gold rounded-full" />
             </motion.div>
           )}
 
+          {/* UC San Diego branding - more subtle */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
-            className="mb-5"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mb-6"
           >
-            <div className="text-3xl md:text-5xl lg:text-6xl font-black tracking-wider uppercase text-ucsd-gold mb-2 drop-shadow-[0_0_40px_rgba(255,205,0,0.6)]">
+            <div className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-wide uppercase text-ucsd-gold/90 drop-shadow-[0_0_20px_rgba(255,205,0,0.4)]">
               UC San Diego
             </div>
           </motion.div>
 
+          {/* Main title - better scaling and readability */}
           <motion.h1
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.7 }}
-            className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tight mb-6 text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)] leading-[0.95]"
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0.6 }}
+            className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight mb-8 text-white drop-shadow-[0_2px_15px_rgba(0,0,0,0.6)] leading-[1] max-w-6xl"
           >
             {slide.title}
           </motion.h1>
 
-          <motion.div
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ delay: 1, duration: 0.8 }}
-            className="w-48 h-2.5 bg-gradient-to-r from-ucsd-gold via-ucsd-sky to-ucsd-blue rounded-full mb-6 shadow-[0_0_25px_rgba(255,205,0,0.6)]"
-          />
-
+          {/* Subtitle - improved size and spacing */}
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.2, duration: 0.8 }}
-            className="text-2xl md:text-4xl lg:text-5xl font-medium text-white tracking-wide max-w-5xl leading-relaxed mb-6 drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]"
+            transition={{ delay: 0.8, duration: 0.7 }}
+            className="text-xl md:text-2xl lg:text-3xl font-normal text-white/95 tracking-wide max-w-4xl leading-relaxed mb-10 drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)]"
           >
             {slide.subtitle}
           </motion.h2>
 
-           <motion.div
+          {/* Accent divider - shorter and more refined */}
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ delay: 1, duration: 0.6 }}
+            className="w-32 h-1 bg-gradient-to-r from-transparent via-ucsd-gold to-transparent rounded-full mb-10 opacity-60"
+          />
+
+          {/* Presenter info - cleaner layout */}
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1.6 }}
-            className="mt-8 flex flex-col items-center border-t-2 border-ucsd-gold/30 pt-6"
+            transition={{ delay: 1.2 }}
+            className="flex flex-col items-center gap-2"
           >
-            <div className="text-xl md:text-3xl font-bold text-white tracking-wider uppercase mb-3">
+            <div className="text-lg md:text-xl font-semibold text-white tracking-wide">
               {slide.presenterName || "UC SAN DIEGO"}
             </div>
             {slide.presenterTitle && (
-              <div className="text-ucsd-sky text-base md:text-xl font-medium tracking-wide max-w-3xl">
+              <div className="text-ucsd-sky/90 text-sm md:text-base font-normal tracking-wide max-w-2xl px-4">
                 {slide.presenterTitle}
               </div>
             )}
