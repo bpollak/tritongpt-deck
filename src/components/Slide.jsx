@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion'; // eslint-disable-line no-unused-vars
 import clsx from 'clsx';
-import { Target, Database, Cpu, Blocks, GraduationCap, Building2, FileText, FileCheck, DollarSign, Shield, BookOpen, Code, Presentation, Globe, FileEdit, FolderOpen, TrendingUp, ClipboardCheck, Search, Heart, Calendar, GitBranch, Network, Grid3x3, ArrowDown, ArrowRight } from 'lucide-react';
+import { Target, Database, Cpu, Blocks, GraduationCap, Building2, FileText, FileCheck, DollarSign, Shield, BookOpen, Code, Presentation, Globe, FileEdit, FolderOpen, TrendingUp, ClipboardCheck, Search, Heart, Calendar, GitBranch, Network, Grid3x3, ArrowDown, ArrowRight, Brain, RefreshCw, ArrowRightLeft, CheckCircle, Monitor, Users } from 'lucide-react';
 import VideoSlide from './VideoSlide';
 
 const iconMap = {
@@ -28,7 +28,13 @@ const iconMap = {
   'Calendar': Calendar,
   'GitBranch': GitBranch,
   'Network': Network,
-  'Grid3x3': Grid3x3
+  'Grid3x3': Grid3x3,
+  'Brain': Brain,
+  'RefreshCw': RefreshCw,
+  'ArrowRightLeft': ArrowRightLeft,
+  'CheckCircle': CheckCircle,
+  'Monitor': Monitor,
+  'Users': Users
 };
 
 const containerVariants = {
@@ -105,6 +111,7 @@ const Slide = ({ slide }) => {
   const isProblemStatement = slide.layout === 'problem-statement';
   const isComparisonTable = slide.layout === 'comparison-table';
   const isCompoundArchitecture = slide.layout === 'compound-architecture';
+  const isAgentWorkflow = slide.layout === 'agent-workflow';
 
   if (isTitleHero) {
     return (
@@ -265,6 +272,7 @@ const Slide = ({ slide }) => {
           (!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isRoadmap && !isProblemStatement && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture) && "border-b-4 border-ucsd-gold pb-3 inline-block self-start",
           (isSolution || isSolutionVideo || isCaseStudyHero || isAssistantCategories || isKeyTakeaways || isRoadmap || isProblemStatement || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isComparisonTable || isCompoundArchitecture) && "text-center w-full",
           (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isCompoundArchitecture) && "hidden",
+          isAgentWorkflow && "text-center text-6xl mb-4 w-full",
           isCaseStudyHero && "text-3xl md:text-4xl mb-4",
           isProblemStatement && "text-4xl md:text-5xl mb-4 font-black",
           (isVeryDense || useThreeColumns) && !isTitle && "text-2xl md:text-3xl mb-4",
@@ -284,8 +292,9 @@ const Slide = ({ slide }) => {
            transition={{ delay: 0.4, duration: 0.6 }}
            className={clsx(
              "text-xl md:text-2xl font-light mt-2 mb-6",
-             (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isSolution || isSolutionVideo || isAssistantCategories || isKeyTakeaways || isRoadmap || isProblemStatement || isComparisonTable) && "text-center w-full mb-8",
+             (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isSolution || isSolutionVideo || isAssistantCategories || isKeyTakeaways || isRoadmap || isProblemStatement || isComparisonTable || isAgentWorkflow) && "text-center w-full mb-8",
              isProblemStatement && "text-2xl md:text-3xl mb-10 font-medium text-red-600",
+             isAgentWorkflow && "text-2xl font-semibold",
              isDark ? "text-ucsd-sky" : "text-ucsd-blue"
            )}
          >
@@ -1566,6 +1575,34 @@ const Slide = ({ slide }) => {
                 className="flex-1 bg-white rounded-xl p-3 shadow-lg border-l-6 relative overflow-hidden h-full"
                 style={{ borderLeftColor: slide.architectureLayers[0].color }}
               >
+                <motion.div
+                  animate={{
+                    boxShadow: [
+                      `0 0 0px ${slide.architectureLayers[0].color}40`,
+                      `0 0 20px ${slide.architectureLayers[0].color}60`,
+                      `0 0 0px ${slide.architectureLayers[0].color}40`
+                    ]
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="absolute inset-0 rounded-xl pointer-events-none"
+                />
+                <motion.div
+                  animate={{
+                    scale: [1, 1.1, 1],
+                    opacity: [0.5, 0.8, 0.5]
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="absolute top-2 right-2 w-8 h-8 rounded-full"
+                  style={{ backgroundColor: `${slide.architectureLayers[0].color}20` }}
+                />
                 <div className="absolute top-2 right-2 w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: `${slide.architectureLayers[0].color}20` }}>
                   <Cpu size={18} style={{ color: slide.architectureLayers[0].color }} />
                 </div>
@@ -1579,13 +1616,26 @@ const Slide = ({ slide }) => {
                 </div>
               </div>
 
-              {/* Arrow to Multi-Agent */}
+              {/* Animated Arrow to Multi-Agent */}
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.8 }}
-                className="flex items-center"
+                className="flex items-center relative"
               >
+                <motion.div
+                  animate={{
+                    x: [0, 10, 0],
+                    opacity: [0.5, 1, 0.5]
+                  }}
+                  transition={{
+                    duration: 1.5,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="absolute w-3 h-3 rounded-full bg-ucsd-blue"
+                  style={{ left: '-6px' }}
+                />
                 <ArrowRight size={32} className="text-ucsd-blue" strokeWidth={3} />
               </motion.div>
 
@@ -1597,6 +1647,36 @@ const Slide = ({ slide }) => {
                 className="flex-1 bg-white rounded-xl p-3 shadow-lg border-l-6 h-full relative overflow-hidden"
                 style={{ borderLeftColor: slide.architectureLayers[4].color }}
               >
+                <motion.div
+                  animate={{
+                    boxShadow: [
+                      `0 0 0px ${slide.architectureLayers[4].color}40`,
+                      `0 0 20px ${slide.architectureLayers[4].color}60`,
+                      `0 0 0px ${slide.architectureLayers[4].color}40`
+                    ]
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 0.5
+                  }}
+                  className="absolute inset-0 rounded-xl pointer-events-none"
+                />
+                <motion.div
+                  animate={{
+                    scale: [1, 1.1, 1],
+                    opacity: [0.5, 0.8, 0.5]
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 0.3
+                  }}
+                  className="absolute top-2 right-2 w-8 h-8 rounded-full"
+                  style={{ backgroundColor: `${slide.architectureLayers[4].color}20` }}
+                />
                 <div className="absolute top-2 right-2 w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: `${slide.architectureLayers[4].color}20` }}>
                   <Network size={16} style={{ color: slide.architectureLayers[4].color }} />
                 </div>
@@ -1619,13 +1699,27 @@ const Slide = ({ slide }) => {
               </motion.div>
             </motion.div>
 
-            {/* Center Arrow Down */}
+            {/* Center Arrow Down with flowing animation */}
             <motion.div
               initial={{ opacity: 0, scaleY: 0 }}
               animate={{ opacity: 1, scaleY: 1 }}
               transition={{ delay: 0.6 }}
-              className="flex justify-center -my-2"
+              className="flex justify-center -my-2 relative"
             >
+              <motion.div
+                animate={{
+                  y: [0, 10, 0],
+                  opacity: [0.5, 1, 0.5]
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0.3
+                }}
+                className="absolute w-3 h-3 rounded-full bg-ucsd-navy"
+                style={{ top: '-6px' }}
+              />
               <ArrowDown size={28} className="text-ucsd-navy" strokeWidth={3} />
             </motion.div>
 
@@ -1637,6 +1731,36 @@ const Slide = ({ slide }) => {
               className="bg-white rounded-xl p-3 shadow-lg border-l-6 relative overflow-hidden"
               style={{ borderLeftColor: slide.architectureLayers[1].color }}
             >
+              <motion.div
+                animate={{
+                  boxShadow: [
+                    `0 0 0px ${slide.architectureLayers[1].color}40`,
+                    `0 0 20px ${slide.architectureLayers[1].color}60`,
+                    `0 0 0px ${slide.architectureLayers[1].color}40`
+                  ]
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0.7
+                }}
+                className="absolute inset-0 rounded-xl pointer-events-none"
+              />
+              <motion.div
+                animate={{
+                  scale: [1, 1.1, 1],
+                  opacity: [0.5, 0.8, 0.5]
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0.7
+                }}
+                className="absolute top-2 right-2 w-8 h-8 rounded-full"
+                style={{ backgroundColor: `${slide.architectureLayers[1].color}20` }}
+              />
               <div className="absolute top-2 right-2 w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: `${slide.architectureLayers[1].color}20` }}>
                 <GitBranch size={18} style={{ color: slide.architectureLayers[1].color }} />
               </div>
@@ -1657,18 +1781,62 @@ const Slide = ({ slide }) => {
               </div>
             </motion.div>
 
-            {/* Center Arrow Down */}
+            {/* Center Arrow Down with flowing animation */}
             <motion.div
               initial={{ opacity: 0, scaleY: 0 }}
               animate={{ opacity: 1, scaleY: 1 }}
               transition={{ delay: 1.2 }}
-              className="flex justify-center -my-2"
+              className="flex justify-center -my-2 relative"
             >
+              <motion.div
+                animate={{
+                  y: [0, 10, 0],
+                  opacity: [0.5, 1, 0.5]
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0.6
+                }}
+                className="absolute w-3 h-3 rounded-full bg-ucsd-navy"
+                style={{ top: '-6px' }}
+              />
               <ArrowDown size={28} className="text-ucsd-navy" strokeWidth={3} />
             </motion.div>
 
             {/* Layers 3 & 4: Application and Data side by side */}
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-3 relative">
+              {/* Curved flow lines from layers 3 & 4 back to layer 2 */}
+              <motion.svg
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0.3 }}
+                transition={{ delay: 2 }}
+                className="absolute -top-12 left-0 right-0 h-16 pointer-events-none"
+                style={{ width: '100%' }}
+              >
+                <motion.path
+                  d="M 25% 100% Q 25% 20%, 50% 0%"
+                  stroke="#00629B"
+                  strokeWidth="2"
+                  fill="none"
+                  strokeDasharray="5,5"
+                  initial={{ pathLength: 0 }}
+                  animate={{ pathLength: 1 }}
+                  transition={{ delay: 2, duration: 1.5, repeat: Infinity, repeatDelay: 1 }}
+                />
+                <motion.path
+                  d="M 75% 100% Q 75% 20%, 50% 0%"
+                  stroke="#00629B"
+                  strokeWidth="2"
+                  fill="none"
+                  strokeDasharray="5,5"
+                  initial={{ pathLength: 0 }}
+                  animate={{ pathLength: 1 }}
+                  transition={{ delay: 2.3, duration: 1.5, repeat: Infinity, repeatDelay: 1 }}
+                />
+              </motion.svg>
+
               {/* Layer 3: Application */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
@@ -1677,6 +1845,19 @@ const Slide = ({ slide }) => {
                 className="bg-white rounded-xl p-3 shadow-lg border-l-6 relative overflow-hidden"
                 style={{ borderLeftColor: slide.architectureLayers[2].color }}
               >
+                <motion.div
+                  animate={{
+                    scale: [1, 1.1, 1],
+                    opacity: [0.5, 0.8, 0.5]
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="absolute top-2 right-2 w-8 h-8 rounded-full"
+                  style={{ backgroundColor: `${slide.architectureLayers[2].color}20` }}
+                />
                 <div className="absolute top-2 right-2 w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: `${slide.architectureLayers[2].color}20` }}>
                   <Grid3x3 size={18} style={{ color: slide.architectureLayers[2].color }} />
                 </div>
@@ -1705,6 +1886,20 @@ const Slide = ({ slide }) => {
                 className="bg-white rounded-xl p-3 shadow-lg border-l-6 relative overflow-hidden"
                 style={{ borderLeftColor: slide.architectureLayers[3].color }}
               >
+                <motion.div
+                  animate={{
+                    scale: [1, 1.1, 1],
+                    opacity: [0.5, 0.8, 0.5]
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 0.5
+                  }}
+                  className="absolute top-2 right-2 w-8 h-8 rounded-full"
+                  style={{ backgroundColor: `${slide.architectureLayers[3].color}20` }}
+                />
                 <div className="absolute top-2 right-2 w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: `${slide.architectureLayers[3].color}20` }}>
                   <Database size={18} style={{ color: slide.architectureLayers[3].color }} />
                 </div>
@@ -1722,7 +1917,125 @@ const Slide = ({ slide }) => {
         </div>
       )}
 
-      {!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isRoadmap && !isProblemStatement && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && slide.content && slide.content.length > 0 && (
+      {isAgentWorkflow && (
+        <div className="relative w-full h-full flex flex-col items-center justify-start px-8 pt-0 pb-4 max-w-[1900px] mx-auto">
+          {/* Main Layout: Circular workflow with center agents */}
+          <div className="relative w-full max-w-[1700px] grid grid-cols-3 gap-5">
+
+            {/* Left Column: Stages 1-3 */}
+            <div className="flex flex-col gap-3">
+              {slide.workflowStages.slice(0, 3).map((stage, idx) => {
+                const StageIcon = iconMap[stage.icon];
+                return (
+                  <div
+                    key={idx}
+                    className="bg-white rounded-lg p-4 shadow-lg border-l-4"
+                    style={{ borderLeftColor: stage.color }}
+                  >
+                    <div className="flex items-start gap-4">
+                      <div
+                        className="flex-shrink-0 w-14 h-14 rounded-full flex items-center justify-center"
+                        style={{ backgroundColor: `${stage.color}20` }}
+                      >
+                        <StageIcon size={32} style={{ color: stage.color }} />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2 mb-1">
+                          <div className="text-5xl font-black" style={{ color: stage.color }}>{stage.number}</div>
+                          <div className="text-2xl font-black text-ucsd-navy uppercase leading-none">{stage.name}</div>
+                        </div>
+                        <div className="text-xl font-bold text-ucsd-navy/70 mb-2 leading-snug">{stage.description}</div>
+                        <div className="text-lg text-ucsd-navy/60 italic bg-gray-50 rounded px-3 py-2 border-l-2 leading-snug" style={{ borderLeftColor: `${stage.color}40` }}>
+                          {stage.example}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Center Column: Agent Team + Resources */}
+            <div className="flex flex-col gap-3">
+              {/* Central Agent Team */}
+              <div className="bg-gradient-to-br from-ucsd-navy to-ucsd-blue rounded-lg p-4 shadow-2xl text-white">
+                <div className="text-3xl font-black text-center mb-3">{slide.centralConcept.title}</div>
+                <div className="space-y-2">
+                  {slide.centralConcept.agents.map((agent, idx) => {
+                    const AgentIcon = iconMap[agent.icon];
+                    return (
+                      <div
+                        key={idx}
+                        className="flex items-center gap-4 bg-white/10 backdrop-blur rounded-lg p-3"
+                      >
+                        <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
+                          <AgentIcon size={26} className="text-white" />
+                        </div>
+                        <div className="text-xl font-bold">{agent.name}</div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Supporting Resources */}
+              <div className="grid grid-cols-2 gap-3">
+                {slide.supportingLayers.map((layer, idx) => (
+                  <div
+                    key={idx}
+                    className="bg-white rounded-lg p-3 shadow-md border-t-4"
+                    style={{ borderTopColor: layer.color }}
+                  >
+                    <div className="text-xl font-black text-ucsd-navy mb-2">{layer.name}</div>
+                    <div className="flex flex-wrap gap-1.5">
+                      {layer.items.map((item, i) => (
+                        <div key={i} className="text-lg font-semibold text-white rounded px-2.5 py-1" style={{ backgroundColor: layer.color }}>
+                          {item}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right Column: Stages 4-6 */}
+            <div className="flex flex-col gap-3">
+              {slide.workflowStages.slice(3, 6).map((stage, idx) => {
+                const StageIcon = iconMap[stage.icon];
+                return (
+                  <div
+                    key={idx}
+                    className="bg-white rounded-lg p-4 shadow-lg border-l-4"
+                    style={{ borderLeftColor: stage.color }}
+                  >
+                    <div className="flex items-start gap-4">
+                      <div
+                        className="flex-shrink-0 w-14 h-14 rounded-full flex items-center justify-center"
+                        style={{ backgroundColor: `${stage.color}20` }}
+                      >
+                        <StageIcon size={32} style={{ color: stage.color }} />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2 mb-1">
+                          <div className="text-5xl font-black" style={{ color: stage.color }}>{stage.number}</div>
+                          <div className="text-2xl font-black text-ucsd-navy uppercase leading-none">{stage.name}</div>
+                        </div>
+                        <div className="text-xl font-bold text-ucsd-navy/70 mb-2 leading-snug">{stage.description}</div>
+                        <div className="text-lg text-ucsd-navy/60 italic bg-gray-50 rounded px-3 py-2 border-l-2 leading-snug" style={{ borderLeftColor: `${stage.color}40` }}>
+                          {stage.example}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isRoadmap && !isProblemStatement && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isAgentWorkflow && slide.content && slide.content.length > 0 && (
         <motion.ul 
           variants={containerVariants}
           initial="hidden"
