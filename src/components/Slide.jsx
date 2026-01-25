@@ -165,17 +165,9 @@ const Slide = ({ slide }) => {
               transition={{ delay: 0.2, duration: 0.7, type: "spring", bounce: 0.3 }}
               className="mb-8 px-6 py-2 rounded-full border-2 border-ucsd-gold/60 bg-gradient-to-r from-ucsd-gold/10 via-ucsd-gold/5 to-ucsd-gold/10 backdrop-blur-md text-ucsd-gold text-sm md:text-base tracking-[0.15em] font-bold uppercase shadow-[0_0_20px_rgba(255,205,0,0.2)] flex items-center gap-3"
             >
-              <motion.div
-                animate={{ width: [8, 16, 8] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                className="h-0.5 bg-ucsd-gold rounded-full"
-              />
+              <div className="w-2 h-0.5 bg-ucsd-gold rounded-full" />
               {slide.conference}
-              <motion.div
-                animate={{ width: [8, 16, 8] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="h-0.5 bg-ucsd-gold rounded-full"
-              />
+              <div className="w-2 h-0.5 bg-ucsd-gold rounded-full" />
             </motion.div>
           )}
 
@@ -209,8 +201,14 @@ const Slide = ({ slide }) => {
                 initial={{ width: 0 }}
                 animate={{ width: "100%" }}
                 transition={{ delay: 1.4, duration: 0.8, ease: "easeInOut" }}
-                className="absolute -bottom-4 left-0 h-1 bg-gradient-to-r from-ucsd-sky via-ucsd-gold to-ucsd-blue rounded-full shadow-[0_0_15px_rgba(255,205,0,0.6)]"
-              />
+                className="absolute -bottom-4 left-0 h-1 bg-gradient-to-r from-ucsd-sky via-ucsd-gold to-ucsd-blue rounded-full shadow-[0_0_15px_rgba(255,205,0,0.6)] overflow-hidden"
+              >
+                <motion.div
+                  animate={{ x: ["-100%", "200%"] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "linear", repeatDelay: 1 }}
+                  className="absolute inset-0 w-1/3 bg-gradient-to-r from-transparent via-white/40 to-transparent"
+                />
+              </motion.div>
             </span>
           </motion.h1>
 
@@ -232,11 +230,6 @@ const Slide = ({ slide }) => {
             className="relative w-48 h-1.5 mb-12"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-ucsd-sky via-ucsd-gold to-ucsd-blue rounded-full opacity-80 shadow-[0_0_20px_rgba(255,205,0,0.5)]" />
-            <motion.div
-              animate={{ x: ["-100%", "200%"] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "linear", repeatDelay: 1 }}
-              className="absolute inset-0 w-1/3 bg-gradient-to-r from-transparent via-white to-transparent rounded-full opacity-60"
-            />
           </motion.div>
 
           {/* Presenter info with card design */}
