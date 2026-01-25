@@ -53,7 +53,8 @@ export const slides = [
     "backgroundColor": "#F5F0E6",
     "audiences": [
       "all",
-      "internal"
+      "internal",
+      "public"
     ]
   },
   {
@@ -90,7 +91,8 @@ export const slides = [
     "layout": "feature-grid",
     "audiences": [
       "all",
-      "internal"
+      "internal",
+      "public"
     ]
   },
   {
@@ -194,7 +196,8 @@ export const slides = [
     ],
     "audiences": [
       "all",
-      "internal"
+      "internal",
+      "public"
     ]
   },
   {
@@ -205,7 +208,8 @@ export const slides = [
     "poster": "/media/image36.png",
     "audiences": [
       "all",
-      "internal"
+      "internal",
+      "public"
     ]
   },
   {
@@ -304,7 +308,8 @@ export const slides = [
     ],
     "audiences": [
       "all",
-      "internal"
+      "internal",
+      "public"
     ]
   },
   {
@@ -315,7 +320,8 @@ export const slides = [
     "poster": "/media/image49.png",
     "audiences": [
       "all",
-      "internal"
+      "internal",
+      "public"
     ]
   },
   {
@@ -370,7 +376,8 @@ export const slides = [
     ],
     "audiences": [
       "all",
-      "internal"
+      "internal",
+      "public"
     ]
   },
   {
@@ -414,7 +421,8 @@ export const slides = [
     ],
     "audiences": [
       "all",
-      "internal"
+      "internal",
+      "public"
     ]
   },
   {
@@ -465,7 +473,8 @@ export const slides = [
     "audiences": [
       "all",
       "technical",
-      "internal"
+      "internal",
+      "public"
     ]
   },
   {
@@ -504,7 +513,8 @@ export const slides = [
     "audiences": [
       "all",
       "executive",
-      "internal"
+      "internal",
+      "public"
     ]
   },
   {
@@ -515,7 +525,8 @@ export const slides = [
     "poster": "/media/image47.png",
     "audiences": [
       "all",
-      "internal"
+      "internal",
+      "public"
     ]
   },
   {
@@ -563,7 +574,8 @@ export const slides = [
     ],
     "audiences": [
       "all",
-      "internal"
+      "internal",
+      "public"
     ]
   },
   {
@@ -638,7 +650,8 @@ export const slides = [
     "audiences": [
       "all",
       "technical",
-      "internal"
+      "internal",
+      "public"
     ]
   },
   {
@@ -701,27 +714,47 @@ export const slides = [
     "centralConcept": {
       "title": "Onboarding Agent Team",
       "agents": [
-        { "name": "IT Provisioning Agent", "icon": "Monitor" },
-        { "name": "HR Coordinator Agent", "icon": "Users" },
-        { "name": "Facilities Agent", "icon": "Building2" }
+        {
+          "name": "IT Provisioning Agent",
+          "icon": "Monitor"
+        },
+        {
+          "name": "HR Coordinator Agent",
+          "icon": "Users"
+        },
+        {
+          "name": "Facilities Agent",
+          "icon": "Building2"
+        }
       ]
     },
     "supportingLayers": [
       {
         "name": "Tools",
-        "items": ["HRIS", "Active Directory", "ServiceNow", "Email"],
+        "items": [
+          "HRIS",
+          "Active Directory",
+          "ServiceNow",
+          "Email"
+        ],
         "color": "#A8C5DD"
       },
       {
         "name": "Knowledge",
-        "items": ["Policies", "Role Templates", "Checklists", "Org Chart"],
+        "items": [
+          "Policies",
+          "Role Templates",
+          "Checklists",
+          "Org Chart"
+        ],
         "color": "#B8D4A8"
       }
     ],
     "audiences": [
       "all",
       "technical",
-      "internal"
+      "internal",
+      "public"
     ]
   },
   {
@@ -765,7 +798,8 @@ export const slides = [
     ],
     "audiences": [
       "all",
-      "internal"
+      "internal",
+      "public"
     ]
   },
   {
@@ -858,7 +892,8 @@ export const slides = [
       "text": "Onboard new institutions adopting TritonGPT as a Software-as-a-Service AI platform"
     },
     "audiences": [
-      "internal"
+      "internal",
+      "public"
     ]
   },
   {
@@ -872,7 +907,8 @@ export const slides = [
     "presenterTitle": "Executive Director, Workplace Technology & Infrastructure Services",
     "audiences": [
       "all",
-      "internal"
+      "internal",
+      "public"
     ]
   }
 ];
