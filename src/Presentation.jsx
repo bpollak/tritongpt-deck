@@ -6,11 +6,9 @@ import { slides } from './data/slides';
 
 // Utility function to filter slides based on audience
 const filterSlidesByAudience = (slides, audienceType) => {
-  if (!audienceType || audienceType === 'all') {
-    return slides;
-  }
+  const targetAudience = audienceType || 'all';
   return slides.filter(slide =>
-    slide.audiences && slide.audiences.includes(audienceType)
+    slide.audiences && slide.audiences.includes(targetAudience)
   );
 };
 
