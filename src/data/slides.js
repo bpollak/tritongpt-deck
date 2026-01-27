@@ -898,6 +898,102 @@ export const slides = [
   },
   {
     "id": 25,
+    "type": "content",
+    "content": [],
+    "title": "TritonGPT Usage Analytics",
+    "subtitle": "Sessions and Prompts (Jan-Nov 2025)",
+    "layout": "analytics-chart",
+    "backgroundColor": "#F5F0E6",
+    "chartData": {
+      "title": "TritonGPT Sessions vs. Prompts (Jan-Dec 2025)",
+      "xAxis": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      "xAxisTitle": "Month",
+      "yAxis": ["40,000", "35,000", "30,000", "25,000", "20,000", "15,000", "10,000", "5,000", "0"],
+      "maxValue": 42000,
+      "series": [
+        {
+          "name": "Prompts (Total)",
+          "color": "#00A99D",
+          "data": [16874, 20425, 16457, 23437, 29403, 25103, 26873, 21806, 25282, 35823, 29017, 30623],
+          "areaFill": true
+        },
+        {
+          "name": "Sessions (Total)",
+          "color": "#E85A4F",
+          "data": [6528, 7387, 6725, 9504, 9921, 9466, 9765, 7382, 9001, 11371, 9464, 9346],
+          "areaFill": false
+        }
+      ]
+    },
+    "audiences": [
+      "internal",
+      "executive"
+    ]
+  },
+  {
+    "id": 26,
+    "type": "content",
+    "content": [],
+    "title": "TritonGPT Widget Analytics",
+    "subtitle": "Widget Sessions and Prompts (Jul-Nov 2025)",
+    "layout": "analytics-chart",
+    "backgroundColor": "#F5F0E6",
+    "chartData": {
+      "title": "TritonGPT Widget - Sessions vs. Prompts (Jul-Dec 2025)",
+      "xAxis": ["Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      "xAxisTitle": "Month",
+      "yAxis": ["12,000", "10,000", "8,000", "6,000", "4,000", "2,000", "0"],
+      "maxValue": 14000,
+      "series": [
+        {
+          "name": "Widget Prompts",
+          "color": "#00A99D",
+          "data": [8120, 5478, 7085, 11318, 8457, 8729],
+          "areaFill": true
+        },
+        {
+          "name": "Widget Sessions",
+          "color": "#E85A4F",
+          "data": [2763, 1916, 3403, 4446, 4034, 4192],
+          "areaFill": false
+        }
+      ]
+    },
+    "audiences": [
+      "internal",
+      "executive"
+    ]
+  },
+  {
+    "id": 27,
+    "type": "content",
+    "content": [],
+    "title": "TritonGPT User Growth",
+    "subtitle": "Unique Users (Aug-Nov 2025)",
+    "layout": "analytics-chart",
+    "backgroundColor": "#F5F0E6",
+    "chartData": {
+      "title": "TritonGPT Unique Users (Aug-Dec 2025)",
+      "xAxis": ["Aug", "Sep", "Oct", "Nov", "Dec"],
+      "xAxisTitle": "Month",
+      "yAxis": ["3,000", "2,500", "2,000", "1,500", "1,000", "500", "0"],
+      "maxValue": 3000,
+      "series": [
+        {
+          "name": "Unique Users",
+          "color": "#F5A962",
+          "data": [1723, 2027, 2529, 2199, 2488],
+          "areaFill": true
+        }
+      ]
+    },
+    "audiences": [
+      "internal",
+      "executive"
+    ]
+  },
+  {
+    "id": 28,
     "type": "title",
     "content": [],
     "title": "Thank You",

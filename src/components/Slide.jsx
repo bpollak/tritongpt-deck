@@ -112,6 +112,7 @@ const Slide = ({ slide }) => {
   const isComparisonTable = slide.layout === 'comparison-table';
   const isCompoundArchitecture = slide.layout === 'compound-architecture';
   const isAgentWorkflow = slide.layout === 'agent-workflow';
+  const isAnalyticsChart = slide.layout === 'analytics-chart';
 
   if (isTitleHero) {
     return (
@@ -278,7 +279,7 @@ const Slide = ({ slide }) => {
         {slide.title}
       </motion.h1>
 
-      {slide.subtitle && !isCaseStudyHero && !isCompoundArchitecture && (
+      {slide.subtitle && !isCaseStudyHero && !isCompoundArchitecture && !isAnalyticsChart && (
          <motion.h2
            initial={{ opacity: 0 }}
            animate={{ opacity: 1 }}
@@ -2031,7 +2032,188 @@ const Slide = ({ slide }) => {
         </div>
       )}
 
-      {!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isRoadmap && !isProblemStatement && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isAgentWorkflow && slide.content && slide.content.length > 0 && (
+      {/* Analytics Chart Layout */}
+      {isAnalyticsChart && slide.chartData && (() => {
+        const ucsdColors = ['#00629B', '#C69214', '#00C6D7', '#182B49'];
+        const maxValue = slide.chartData.maxValue;
+        const dataPoints = slide.chartData.xAxis.length;
+
+        // Fixed viewBox dimensions - this ensures consistent scaling
+        const vbWidth = 1000;
+        const vbHeight = 450;
+        const margin = { top: 50, right: 30, bottom: 50, left: 30 };
+        const plotWidth = vbWidth - margin.left - margin.right;
+        const plotHeight = vbHeight - margin.top - margin.bottom;
+
+        return (
+          <div className="w-full h-full flex flex-col items-center justify-start pt-2 px-2 sm:px-4">
+            <div className="w-full max-w-7xl bg-white rounded-xl shadow-lg p-4 sm:p-6">
+              {/* Title */}
+              <h3 className="text-xl sm:text-3xl font-bold text-ucsd-navy text-center mb-2">
+                {slide.chartData.title}
+              </h3>
+
+              {/* Legend */}
+              <div className="flex justify-center gap-8 mb-3">
+                {slide.chartData.series.map((series, idx) => (
+                  <div key={idx} className="flex items-center gap-2">
+                    <svg width="24" height="24">
+                      <circle cx="12" cy="12" r="8" fill="white" stroke={ucsdColors[idx]} strokeWidth="3"/>
+                    </svg>
+                    <span className="text-base sm:text-lg text-slate-600 font-medium">{series.name}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Chart with Y-axis */}
+              <div className="flex">
+                {/* Y-Axis Labels - height matches SVG, with padding to align with plot area */}
+                <div className="flex flex-col justify-between pr-3 shrink-0" style={{ height: '450px', paddingTop: '50px', paddingBottom: '60px' }}>
+                  {slide.chartData.yAxis.map((label, idx) => (
+                    <span key={idx} className="text-sm sm:text-base text-slate-400 text-right w-16 leading-none">{label}</span>
+                  ))}
+                </div>
+
+                {/* Chart SVG */}
+                <div className="flex-1" style={{ height: '450px' }}>
+                  <svg
+                    viewBox={`0 0 ${vbWidth} ${vbHeight}`}
+                    preserveAspectRatio="xMidYMid meet"
+                    style={{ width: '100%', height: '100%' }}
+                  >
+                    {/* Grid lines */}
+                    {slide.chartData.yAxis.map((_, idx) => {
+                      const y = margin.top + (idx / (slide.chartData.yAxis.length - 1)) * plotHeight;
+                      return (
+                        <line
+                          key={idx}
+                          x1={margin.left}
+                          y1={y}
+                          x2={vbWidth - margin.right}
+                          y2={y}
+                          stroke="#e5e7eb"
+                          strokeWidth="1"
+                        />
+                      );
+                    })}
+
+                    {/* Area fills */}
+                    {slide.chartData.series.map((series, seriesIdx) => {
+                      if (!series.areaFill) return null;
+                      const color = ucsdColors[seriesIdx];
+                      const points = series.data.map((value, idx) => {
+                        const x = margin.left + (idx / (dataPoints - 1)) * plotWidth;
+                        const y = margin.top + plotHeight - (value / maxValue) * plotHeight;
+                        return `${x},${y}`;
+                      }).join(' ');
+                      const bottomY = margin.top + plotHeight;
+                      return (
+                        <polygon
+                          key={seriesIdx}
+                          points={`${margin.left},${bottomY} ${points} ${margin.left + plotWidth},${bottomY}`}
+                          fill={color}
+                          fillOpacity="0.12"
+                        />
+                      );
+                    })}
+
+                    {/* Lines */}
+                    {slide.chartData.series.map((series, seriesIdx) => {
+                      const color = ucsdColors[seriesIdx];
+                      const pathData = series.data.map((value, idx) => {
+                        const x = margin.left + (idx / (dataPoints - 1)) * plotWidth;
+                        const y = margin.top + plotHeight - (value / maxValue) * plotHeight;
+                        return `${idx === 0 ? 'M' : 'L'} ${x} ${y}`;
+                      }).join(' ');
+                      return (
+                        <path
+                          key={seriesIdx}
+                          d={pathData}
+                          fill="none"
+                          stroke={color}
+                          strokeWidth="3"
+                          strokeLinejoin="round"
+                          strokeLinecap="round"
+                        />
+                      );
+                    })}
+
+                    {/* Data points */}
+                    {slide.chartData.series.map((series, seriesIdx) => {
+                      const color = ucsdColors[seriesIdx];
+                      return series.data.map((value, idx) => {
+                        const x = margin.left + (idx / (dataPoints - 1)) * plotWidth;
+                        const y = margin.top + plotHeight - (value / maxValue) * plotHeight;
+                        return (
+                          <circle
+                            key={`point-${seriesIdx}-${idx}`}
+                            cx={x}
+                            cy={y}
+                            r="8"
+                            fill="white"
+                            stroke={color}
+                            strokeWidth="3"
+                          />
+                        );
+                      });
+                    })}
+
+                    {/* Data labels */}
+                    {slide.chartData.series.map((series, seriesIdx) => {
+                      const color = ucsdColors[seriesIdx];
+                      return series.data.map((value, idx) => {
+                        const x = margin.left + (idx / (dataPoints - 1)) * plotWidth;
+                        const y = margin.top + plotHeight - (value / maxValue) * plotHeight;
+                        return (
+                          <text
+                            key={`label-${seriesIdx}-${idx}`}
+                            x={x}
+                            y={y - 18}
+                            textAnchor="middle"
+                            fill={color}
+                            fontSize="22"
+                            fontWeight="bold"
+                            fontFamily="system-ui, sans-serif"
+                          >
+                            {value.toLocaleString()}
+                          </text>
+                        );
+                      });
+                    })}
+
+                    {/* X-Axis Labels - inside SVG for perfect alignment */}
+                    {slide.chartData.xAxis.map((label, idx) => {
+                      const x = margin.left + (idx / (dataPoints - 1)) * plotWidth;
+                      const y = margin.top + plotHeight + 30;
+                      return (
+                        <text
+                          key={`xaxis-${idx}`}
+                          x={x}
+                          y={y}
+                          textAnchor="middle"
+                          fill="#64748b"
+                          fontSize="20"
+                          fontWeight="500"
+                          fontFamily="system-ui, sans-serif"
+                        >
+                          {label}
+                        </text>
+                      );
+                    })}
+                  </svg>
+                </div>
+              </div>
+
+              {/* X-Axis Title */}
+              <div className="text-center mt-3">
+                <span className="text-sm text-slate-400">{slide.chartData.xAxisTitle || 'Month'}</span>
+              </div>
+            </div>
+          </div>
+        );
+      })()}
+
+      {!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isRoadmap && !isProblemStatement && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isAgentWorkflow && !isAnalyticsChart && slide.content && slide.content.length > 0 && (
         <motion.ul 
           variants={containerVariants}
           initial="hidden"
