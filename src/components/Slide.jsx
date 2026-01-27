@@ -296,7 +296,7 @@ const Slide = ({ slide }) => {
       )}
 
       {isCaseStudyHero && (
-        <div className="flex flex-col gap-3 sm:gap-6 w-full max-w-[1700px] mx-auto overflow-y-auto">
+        <div className="flex flex-col gap-3 sm:gap-6 w-full max-w-[1700px] mx-auto">
           {/* Stats Section - HERO TREATMENT - The primary focus */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-8">
             {slide.stats?.map((stat, index) => (
@@ -455,7 +455,7 @@ const Slide = ({ slide }) => {
       )}
 
       {(isSolution || isSolutionVideo) && (
-        <div className="w-full max-w-[1700px] mx-auto overflow-y-auto">
+        <div className="w-full max-w-[1700px] mx-auto">
           <div className={clsx(
             "grid gap-4 sm:gap-8 md:gap-12",
             isSolutionVideo ? "grid-cols-1 md:grid-cols-[1.1fr_0.9fr]" : "grid-cols-1 md:grid-cols-[0.8fr_1.2fr]"
@@ -710,7 +710,7 @@ const Slide = ({ slide }) => {
       )}
 
       {isPlatformArchitecture && (
-        <div className="relative w-full h-full flex flex-col justify-center max-w-[1900px] mx-auto px-8 overflow-hidden">
+        <div className="relative w-full min-h-full flex flex-col justify-center max-w-[1900px] mx-auto px-8">
           {/* Animated background elements */}
           <motion.div
             animate={{
@@ -989,7 +989,7 @@ const Slide = ({ slide }) => {
       )}
 
       {isPlatformLayers && (
-        <div className="relative w-full h-full flex flex-col justify-center items-center max-w-[1800px] mx-auto px-12">
+        <div className="relative w-full min-h-full flex flex-col justify-center items-center max-w-[1800px] mx-auto px-12">
           {/* Title */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -1196,7 +1196,7 @@ const Slide = ({ slide }) => {
       )}
 
       {isPlatformSimple && (
-        <div className="relative w-full h-full flex items-center justify-center overflow-y-auto">
+        <div className="relative w-full h-full flex items-center justify-center">
           <div className="w-full max-w-[1400px] py-4 sm:py-0">
             {/* Title */}
             <motion.div
@@ -1299,7 +1299,7 @@ const Slide = ({ slide }) => {
       )}
 
       {isAssistantCategories && slide.categories && (
-        <div className="flex flex-col gap-3 sm:gap-6 w-full max-w-[1800px] mx-auto overflow-y-auto">
+        <div className="flex flex-col gap-3 sm:gap-6 w-full max-w-[1800px] mx-auto">
           <div className={clsx(
             "grid grid-cols-1 gap-3 sm:gap-6",
             slide.categories.length === 3 ? "sm:grid-cols-2 md:grid-cols-3" : "md:grid-cols-2"
@@ -1546,7 +1546,7 @@ const Slide = ({ slide }) => {
       )}
 
       {isCompoundArchitecture && (
-        <div className="relative w-full h-full flex flex-col items-center justify-start sm:justify-center px-3 sm:px-6 py-2 sm:py-3 max-w-[1800px] mx-auto overflow-y-auto">
+        <div className="relative w-full min-h-full flex flex-col items-center justify-start sm:justify-center px-3 sm:px-6 py-2 sm:py-3 max-w-[1800px] mx-auto">
           {/* Title */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -1914,7 +1914,7 @@ const Slide = ({ slide }) => {
       )}
 
       {isAgentWorkflow && (
-        <div className="relative w-full h-full flex flex-col items-center justify-start px-4 sm:px-6 pt-0 pb-0 max-w-[1900px] mx-auto overflow-hidden">
+        <div className="relative w-full min-h-full flex flex-col items-center justify-start px-4 sm:px-6 pt-0 pb-0 max-w-[1900px] mx-auto">
           {/* Main Layout: Stacked on mobile, 3-column grid on desktop */}
           <div className="relative w-full max-w-[1700px] flex flex-col lg:grid lg:grid-cols-3 gap-2 lg:gap-5">
 
@@ -2175,7 +2175,7 @@ const Slide = ({ slide }) => {
       <div className="flex-1 w-full h-full z-10 flex flex-col justify-center">
         {hasImage ? (
           <div className={clsx("h-full items-center gap-8", isGraphicHeavy ? "grid grid-cols-1 lg:grid-cols-12" : "flex flex-col md:flex-row")}>
-            <div className={clsx("flex flex-col h-full overflow-y-auto pr-4 custom-scrollbar", isGraphicHeavy ? "lg:col-span-4 order-2 lg:order-1 pt-4" : "flex-1", isDense ? "justify-start pt-4" : "justify-center")}>
+            <div className={clsx("flex flex-col h-full overflow-y-auto touch-pan-y pr-4 custom-scrollbar", isGraphicHeavy ? "lg:col-span-4 order-2 lg:order-1 pt-4" : "flex-1", isDense ? "justify-start pt-4" : "justify-center")}>
               {renderContent()}
             </div>
             <div className={clsx("h-full flex items-center justify-center p-4", isGraphicHeavy ? "lg:col-span-8 order-1 lg:order-2 bg-gray-50/50 rounded-xl" : "flex-1")}>
@@ -2183,7 +2183,7 @@ const Slide = ({ slide }) => {
             </div>
           </div>
         ) : (
-          <div className={clsx("flex flex-col h-full w-full", isTitle ? "justify-center items-center text-center" : "justify-start pt-4 overflow-y-auto custom-scrollbar")}>
+          <div className={clsx("flex flex-col h-full w-full", isTitle ? "justify-center items-center text-center" : "justify-start pt-4 overflow-y-auto touch-pan-y custom-scrollbar")}>
             <div className={clsx("w-full mx-auto", (isSolution || isSolutionVideo || isCaseStudyHero || isProblemStatement || isFeatureGrid) ? "max-w-[1800px]" : "max-w-7xl")}>{renderContent()}</div>
           </div>
         )}
