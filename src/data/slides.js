@@ -762,37 +762,37 @@ export const slides = [
     "type": "content",
     "layout": "key-takeaways",
     "title": "Key Takeaways",
-    "subtitle": "From Strategy to Impact: UC San Diego's AI Journey",
+    "subtitle": "Lessons for Your Institution",
     "backgroundColor": "#F5F0E6",
     "content": [
       {
-        "heading": "Vertical AI Powers Real Outcomes",
-        "text": "18 specialized assistants deployed across Legal, Procurement, Instruction, and Research delivering measurable impact: 120min→11min contract reviews, 81% student material mastery, $300K annual savings.",
+        "heading": "Start Vertical, Not Horizontal",
+        "text": "General-purpose chatbots struggle to deliver ROI. Purpose-built assistants for contracts, instruction, and procurement drove our highest-impact outcomes—91% legal time savings, 81% student mastery.",
         "icon": "Target"
       },
       {
-        "heading": "Compound Architecture Enables Agentic Workflows",
-        "text": "Moving beyond conversational AI to autonomous systems that orchestrate multi-agent collaboration, tool integration, and complex decision-making through a five-layer architecture.",
+        "heading": "Build the Agentic Foundation Now",
+        "text": "Conversational AI is table stakes. The infrastructure you build today—tool integrations, data connectors, orchestration layers—determines whether you're ready when agents become essential.",
         "icon": "Blocks"
       },
       {
-        "heading": "Security + Sovereignty = Trust",
-        "text": "On-premises hosting within SDSC firewalls ensures P3 compliance and full data sovereignty, connecting open-source models to institutional knowledge without external data exposure.",
+        "heading": "Data Sovereignty Unlocks Adoption",
+        "text": "Faculty, legal, and procurement won't trust AI with sensitive data unless it stays on-premises. P3-compliant local hosting removed our biggest adoption barrier.",
         "icon": "Shield"
       },
       {
-        "heading": "Zero Marginal Cost = Universal Access",
-        "text": "Eliminating per-token fees democratizes AI for all 73,000+ faculty, staff, and students—transforming AI from a premium service into an institutional utility.",
+        "heading": "Eliminate Per-Token to Democratize Access",
+        "text": "Per-token pricing creates a two-tier system where only well-funded units can afford AI. Local hosting eliminated variable costs, making AI a utility for all 73,000+ users.",
         "icon": "Cpu"
       },
       {
-        "heading": "Federated Impact Beyond Campus",
-        "text": "16 deployments and growing: powering AI platforms for UC Berkeley, UC Merced, and expanding adoption demonstrates scalable, replicable success across higher education.",
+        "heading": "This Model Travels",
+        "text": "UC Berkeley, UC Merced, and others adopted our platform because the architecture is replicable. Your institution can build on—or join—this federated approach.",
         "icon": "Globe"
       },
       {
-        "heading": "Open-Source Agility Drives Innovation",
-        "text": "Model-agnostic infrastructure adapts instantly to emerging capabilities, continuously integrating best-in-class open-source models without vendor lock-in or architectural rewrites.",
+        "heading": "Avoid Vendor Lock-In from Day One",
+        "text": "We've swapped models multiple times as better options emerged. Model-agnostic infrastructure ensures you're never stuck when the next breakthrough arrives.",
         "icon": "TrendingUp"
       }
     ],

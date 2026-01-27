@@ -456,9 +456,9 @@ const Slide = ({ slide }) => {
       )}
 
       {(isSolution || isSolutionVideo) && (
-        <div className="w-full max-w-[1700px] mx-auto">
+        <div className="w-full max-w-[1700px] mx-auto h-full">
           <div className={clsx(
-            "grid gap-4 sm:gap-8 md:gap-12",
+            "grid gap-4 sm:gap-8 md:gap-12 h-full",
             isSolutionVideo ? "grid-cols-1 md:grid-cols-[1.1fr_0.9fr]" : "grid-cols-1 md:grid-cols-[0.8fr_1.2fr]"
           )}>
             {/* Left: Media (Image or Video) */}
@@ -467,30 +467,32 @@ const Slide = ({ slide }) => {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.7 }}
-                className="relative flex flex-col justify-center"
+                className={clsx("flex flex-col", isSolutionVideo ? "justify-start" : "justify-center")}
               >
-                <div className="absolute -inset-1 bg-gradient-to-br from-ucsd-navy/5 to-ucsd-blue/5 rounded-2xl blur-sm" />
-                {slide.videoSrc ? (
-                   <video
-                     src={slide.videoSrc}
-                     className="relative w-full h-auto rounded-2xl shadow-lg ring-1 ring-black/5 object-cover"
-                     autoPlay
-                     loop
-                     muted
-                     playsInline
-                   />
-                ) : (
-                  <img
-                    src={slide.imageSrc}
-                    alt={slide.title}
-                    className="relative w-full h-auto rounded-2xl shadow-lg ring-1 ring-black/5"
-                  />
-                )}
+                <div className="relative inline-block">
+                  <div className="absolute -inset-1 bg-gradient-to-br from-ucsd-navy/5 to-ucsd-blue/5 rounded-2xl blur-sm" />
+                  {slide.videoSrc ? (
+                     <video
+                       src={slide.videoSrc}
+                       className="relative w-full h-auto rounded-2xl shadow-lg ring-1 ring-black/5 object-cover"
+                       autoPlay
+                       loop
+                       muted
+                       playsInline
+                     />
+                  ) : (
+                    <img
+                      src={slide.imageSrc}
+                      alt={slide.title}
+                      className="relative w-full h-auto rounded-2xl shadow-lg ring-1 ring-black/5"
+                    />
+                  )}
+                </div>
               </motion.div>
             )}
 
             {/* Right: Stats + Features */}
-            <div className={clsx("flex flex-col justify-center", isSolutionVideo ? "gap-3 sm:gap-6" : "gap-4 sm:gap-8")}>
+            <div className={clsx("flex flex-col", isSolutionVideo ? "justify-start gap-4 sm:gap-5" : "justify-center gap-4 sm:gap-8")}>
               {/* Horizontal Stats Bar */}
               <div className={clsx("flex flex-wrap sm:flex-nowrap", isSolutionVideo ? "gap-2 sm:gap-3" : "gap-2 sm:gap-4")}>
                 {slide.stats?.map((stat, index) => (
@@ -501,24 +503,24 @@ const Slide = ({ slide }) => {
                     transition={{ delay: 0.3 + index * 0.1 }}
                     className={clsx(
                       "flex-1 min-w-[45%] sm:min-w-0 bg-white rounded-lg sm:rounded-xl shadow-md border-t-4 border-ucsd-navy text-center",
-                      isSolutionVideo ? "p-2 sm:p-4" : "p-3 sm:p-5"
+                      isSolutionVideo ? "p-2 sm:p-3" : "p-3 sm:p-5"
                     )}
                   >
                     <div className={clsx(
-                      "font-bold text-ucsd-blue uppercase tracking-wide opacity-80 mb-0.5 sm:mb-1",
-                      isSolutionVideo ? "text-[8px] sm:text-[10px]" : "text-[10px] sm:text-xs"
+                      "font-bold text-ucsd-blue uppercase tracking-wide opacity-80 mb-0.5",
+                      isSolutionVideo ? "text-[9px] sm:text-xs" : "text-[10px] sm:text-xs"
                     )}>
                       {stat.label}
                     </div>
                     <div className={clsx(
-                      "font-black text-ucsd-navy leading-none mb-0.5 sm:mb-1",
-                      isSolutionVideo ? "text-xl sm:text-3xl" : "text-2xl sm:text-4xl"
+                      "font-black text-ucsd-navy leading-none mb-0.5",
+                      isSolutionVideo ? "text-2xl sm:text-4xl" : "text-2xl sm:text-4xl"
                     )}>
                       {stat.value}
                     </div>
                     <div className={clsx(
                       "text-slate-600 font-bold uppercase tracking-wide",
-                      isSolutionVideo ? "text-[10px]" : "text-xs"
+                      isSolutionVideo ? "text-[10px] sm:text-xs" : "text-xs"
                     )}>
                       {stat.sub}
                     </div>
@@ -526,8 +528,8 @@ const Slide = ({ slide }) => {
                 ))}
               </div>
 
-              {/* Feature List - Compact */}
-              <div className="space-y-2 sm:space-y-4">
+              {/* Feature List */}
+              <div className={clsx("flex flex-col", isSolutionVideo ? "gap-3 sm:gap-4" : "space-y-2 sm:space-y-4")}>
                 {slide.content.map((item, index) => (
                   <motion.div
                     key={index}
@@ -535,21 +537,21 @@ const Slide = ({ slide }) => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.5 + index * 0.1 }}
                     className={clsx(
-                      "flex gap-2 sm:gap-4 items-start bg-white/60 backdrop-blur-sm rounded-lg sm:rounded-xl shadow-sm border-l-4 border-ucsd-sky hover:shadow-md transition-shadow",
-                      isSolutionVideo ? "p-2 sm:p-4" : "p-3 sm:p-6"
+                      "flex gap-3 sm:gap-4 items-start bg-white/60 backdrop-blur-sm rounded-lg sm:rounded-xl shadow-sm border-l-4 border-ucsd-sky hover:shadow-md transition-shadow",
+                      isSolutionVideo ? "p-3 sm:p-4" : "p-3 sm:p-6"
                     )}
                   >
-                    <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-ucsd-gold flex-shrink-0 mt-1.5 sm:mt-2" />
+                    <div className="w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-full bg-ucsd-gold flex-shrink-0 mt-1.5" />
                     <div className="flex-1 min-w-0">
                       <h3 className={clsx(
-                        "font-bold text-ucsd-navy leading-tight mb-1 sm:mb-2",
-                        isSolutionVideo ? "text-sm sm:text-lg" : "text-base sm:text-xl"
+                        "font-bold text-ucsd-navy leading-tight mb-1",
+                        isSolutionVideo ? "text-lg sm:text-2xl" : "text-base sm:text-xl"
                       )}>
                         {item.heading}
                       </h3>
                       <p className={clsx(
-                        "text-slate-700 leading-relaxed font-medium",
-                        isSolutionVideo ? "text-xs sm:text-sm" : "text-xs sm:text-base"
+                        "text-slate-700 leading-snug font-medium",
+                        isSolutionVideo ? "text-base sm:text-lg" : "text-xs sm:text-base"
                       )}>
                         {item.text}
                       </p>
