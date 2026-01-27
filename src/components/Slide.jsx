@@ -261,8 +261,8 @@ const Slide = ({ slide }) => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         className={clsx(
-          "font-bold mb-6",
-          isTitle ? "text-4xl md:text-6xl" : "text-3xl md:text-5xl",
+          "font-bold mb-4 sm:mb-6",
+          isTitle ? "text-2xl sm:text-4xl md:text-6xl" : "text-xl sm:text-3xl md:text-5xl",
           (!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isRoadmap && !isProblemStatement && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture) && "border-b-4 border-ucsd-gold pb-3 inline-block self-start",
           (isSolution || isSolutionVideo || isCaseStudyHero || isAssistantCategories || isKeyTakeaways || isRoadmap || isProblemStatement || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isComparisonTable || isCompoundArchitecture) && "text-center w-full",
           (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isCompoundArchitecture) && "hidden",

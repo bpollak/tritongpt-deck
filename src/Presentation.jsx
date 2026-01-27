@@ -106,63 +106,9 @@ const Presentation = () => {
   };
 
   return (
-    <div className="w-screen h-screen bg-gray-50 flex items-center justify-center overflow-hidden relative font-sans" role="application" aria-label="Presentation viewer">
-      <AnimatePresence initial={false} custom={direction} mode="wait">
-        <motion.div
-          key={currentIndex}
-          custom={direction}
-          variants={slideVariants}
-          initial="enter"
-          animate="center"
-          exit="exit"
-          transition={{
-            x: { type: "spring", stiffness: 300, damping: 30 },
-            opacity: { duration: 0.2 }
-          }}
-          drag="x"
-          dragDirectionLock
-          dragConstraints={{ left: 0, right: 0 }}
-          dragElastic={1}
-          onDragEnd={(e, { offset, velocity }) => {
-            const swipe = swipePower(offset.x, velocity.x);
-
-            if (swipe < -swipeConfidenceThreshold) {
-              nextSlide();
-            } else if (swipe > swipeConfidenceThreshold) {
-              prevSlide();
-            }
-          }}
-          className="absolute w-full h-full"
-        >
-          <Slide slide={filteredSlides[currentIndex]} />
-        </motion.div>
-      </AnimatePresence>
-
-      {/* Navigation Controls */}
-      <nav className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex items-center gap-4 z-50" aria-label="Slide navigation">
-        <button
-          onClick={prevSlide}
-          className="p-2 rounded-full bg-white/80 hover:bg-white shadow-lg text-ucsd-navy transition-all"
-          aria-label="Previous slide"
-        >
-          <ChevronLeft size={24} aria-hidden="true" />
-        </button>
-
-        <span className="text-sm font-semibold text-ucsd-navy/60 bg-white/50 px-3 py-1 rounded-full backdrop-blur-sm" aria-live="polite" aria-atomic="true">
-          Slide {currentIndex + 1} of {filteredSlides.length}
-        </span>
-
-        <button
-          onClick={nextSlide}
-          className="p-2 rounded-full bg-white/80 hover:bg-white shadow-lg text-ucsd-navy transition-all"
-          aria-label="Next slide"
-        >
-          <ChevronRight size={24} aria-hidden="true" />
-        </button>
-      </nav>
-
+    <div className="w-screen h-screen bg-gray-50 flex flex-col overflow-hidden relative font-sans" role="application" aria-label="Presentation viewer">
       {/* Progress Bar */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gray-200 z-50" role="progressbar" aria-valuenow={currentIndex + 1} aria-valuemin={1} aria-valuemax={filteredSlides.length} aria-label="Presentation progress">
+      <div className="w-full h-1 bg-gray-200 z-50 shrink-0" role="progressbar" aria-valuenow={currentIndex + 1} aria-valuemin={1} aria-valuemax={filteredSlides.length} aria-label="Presentation progress">
         <motion.div
           className="h-full bg-ucsd-gold"
           initial={{ width: "0%" }}
@@ -171,6 +117,62 @@ const Presentation = () => {
         />
       </div>
 
+      {/* Slide Content Area */}
+      <div className="flex-1 relative overflow-hidden">
+        <AnimatePresence initial={false} custom={direction} mode="wait">
+          <motion.div
+            key={currentIndex}
+            custom={direction}
+            variants={slideVariants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={{
+              x: { type: "spring", stiffness: 300, damping: 30 },
+              opacity: { duration: 0.2 }
+            }}
+            drag="x"
+            dragDirectionLock
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={1}
+            onDragEnd={(e, { offset, velocity }) => {
+              const swipe = swipePower(offset.x, velocity.x);
+
+              if (swipe < -swipeConfidenceThreshold) {
+                nextSlide();
+              } else if (swipe > swipeConfidenceThreshold) {
+                prevSlide();
+              }
+            }}
+            className="absolute w-full h-full"
+          >
+            <Slide slide={filteredSlides[currentIndex]} />
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      {/* Navigation Controls - Fixed bottom bar on mobile, floating on desktop */}
+      <nav className="shrink-0 bg-white/95 backdrop-blur-sm border-t border-gray-200 px-4 py-2 flex items-center justify-between sm:absolute sm:bottom-6 sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:border sm:rounded-full sm:shadow-lg sm:px-2 sm:py-1 sm:bg-white/80 sm:w-auto sm:gap-4 z-50" aria-label="Slide navigation">
+        <button
+          onClick={prevSlide}
+          className="p-2 rounded-full hover:bg-gray-100 sm:hover:bg-white/80 text-ucsd-navy transition-all"
+          aria-label="Previous slide"
+        >
+          <ChevronLeft size={24} aria-hidden="true" />
+        </button>
+
+        <span className="text-sm font-semibold text-ucsd-navy/70" aria-live="polite" aria-atomic="true">
+          {currentIndex + 1} / {filteredSlides.length}
+        </span>
+
+        <button
+          onClick={nextSlide}
+          className="p-2 rounded-full hover:bg-gray-100 sm:hover:bg-white/80 text-ucsd-navy transition-all"
+          aria-label="Next slide"
+        >
+          <ChevronRight size={24} aria-hidden="true" />
+        </button>
+      </nav>
     </div>
   );
 };
