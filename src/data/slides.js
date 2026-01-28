@@ -777,7 +777,7 @@ export const slides = [
       },
       {
         "heading": "Data Sovereignty Unlocks Adoption",
-        "text": "Faculty, legal, and procurement won't trust AI with sensitive data unless it stays on-premises. P3-compliant local hosting removed our biggest adoption barrier.",
+        "text": "Faculty, legal, and procurement require robust data protections. It can be on premise or with a vendor where we have solid agreements in place to protect our data.",
         "icon": "Shield"
       },
       {
