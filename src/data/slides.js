@@ -47,7 +47,7 @@ export const slides = [
         "icon": "Globe"
       }
     ],
-    "title": "UC San Diego AI Strategy",
+    "title": "UC San Diego AI Strategy 2026",
     "subtitle": "From Chatbots to Agentic Workflows",
     "layout": "hero-list",
     "dark": false,
