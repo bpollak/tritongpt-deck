@@ -22,6 +22,11 @@ export const slides = [
     "type": "content",
     "content": [
       {
+        "heading": "Sovereign Infrastructure as a Feature",
+        "text": "On-prem hosting isn't just about cost—it's about giving agents safe access to sensitive systems (HR, Finance) that cloud models can't touch.",
+        "icon": "Shield"
+      },
+      {
         "heading": "Ground AI in Institutional Reality",
         "text": "Unlock institutional value by grounding AI in real-time data, policy, and decision logs—not just information, but context for action.",
         "icon": "Database"
@@ -30,11 +35,6 @@ export const slides = [
         "heading": "Move from Assisting to Doing",
         "text": "Evolve from passive assistants that answer questions to active agents that execute workflows—drafting, routing, and approving.",
         "icon": "Target"
-      },
-      {
-        "heading": "Sovereign Infrastructure as a Feature",
-        "text": "On-prem hosting isn't just about cost—it's about giving agents safe access to sensitive systems (HR, Finance) that cloud models can't touch.",
-        "icon": "Shield"
       },
       {
         "heading": "Democratize Development",
