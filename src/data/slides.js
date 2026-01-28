@@ -22,32 +22,33 @@ export const slides = [
     "type": "content",
     "content": [
       {
-        "heading": "Ground AI in UC San Diego Data",
-        "text": "Build agents, tools, and connectors that unlock value from institutional data. Eliminate per-token costs by hosting locally at SDSC.",
+        "heading": "Ground AI in Institutional Reality",
+        "text": "Unlock institutional value by grounding AI in real-time data, policy, and decision logs—not just information, but context for action.",
         "icon": "Database"
       },
       {
-        "heading": "Prioritize Vertical AI Over Horizontal",
-        "text": "Focus development on AI solutions tailored to institutional needs with measurable business outcomes rather than general-purpose tools.",
+        "heading": "Move from Assisting to Doing",
+        "text": "Evolve from passive assistants that answer questions to active agents that execute workflows—drafting, routing, and approving.",
         "icon": "Target"
       },
       {
-        "heading": "Leverage Open-Source & Commercial Models",
-        "text": "Deploy open-source on-premises at SDSC for privacy and cost. Supplement with commercial models via campus Azure and GCP agreements.",
-        "icon": "Cpu"
+        "heading": "Sovereign Infrastructure as a Feature",
+        "text": "On-prem hosting isn't just about cost—it's about giving agents safe access to sensitive systems (HR, Finance) that cloud models can't touch.",
+        "icon": "Shield"
       },
       {
-        "heading": "Enable Broad Deployment at Scale",
-        "text": "Serve 73,000+ users (28,000 staff, 45,000 students) without runaway operational costs through local hosting.",
-        "icon": "Blocks"
+        "heading": "Democratize Development",
+        "text": "Empower distributed teams to build their own tools. Provide the Agentic Stack (Orchestrator + Tools) as a shared utility.",
+        "icon": "Code"
       },
       {
-        "heading": "Deliver Measurable Impact",
-        "text": "Focus on assistants that demonstrate concrete efficiency gains and cost savings across the institution.",
-        "icon": "GraduationCap"
+        "heading": "Federation by Default",
+        "text": "Build once, deploy system-wide. Share architectures with sister campuses (BearGPT, BobcatGPT) to multiply impact.",
+        "icon": "Globe"
       }
     ],
     "title": "UC San Diego AI Strategy",
+    "subtitle": "From Chatbots to Agentic Workflows",
     "layout": "hero-list",
     "dark": false,
     "backgroundColor": "#F5F0E6",
