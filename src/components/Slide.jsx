@@ -272,7 +272,7 @@ const Slide = ({ slide }) => {
           (isVeryDense || useThreeColumns) && !isTitle && "text-2xl md:text-3xl mb-4",
           isGraphicHeavy && "text-2xl md:text-4xl",
           isFeatureGrid && "w-full text-center border-b-0 border-none mb-4 sm:mb-12",
-          isHeroList && "mb-4 sm:mb-10",
+          isHeroList && "mb-1 sm:mb-4",
           isDark ? "text-white" : "text-ucsd-navy"
         )}
       >
