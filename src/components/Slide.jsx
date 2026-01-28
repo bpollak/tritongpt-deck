@@ -1365,23 +1365,28 @@ const Slide = ({ slide }) => {
         </div>
       )}
 
-      {isKeyTakeaways && (
+      {isKeyTakeaways && (() => {
+        const takeawayColors = ['#00629B', '#C69214', '#00C6D7', '#6E963B', '#FC8900', '#182B49'];
+        return (
         <div className="flex flex-col gap-3 sm:gap-6 w-full max-w-7xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
             {slide.content.map((item, index) => {
               const IconComponent = item.icon ? iconMap[item.icon] : null;
+              const borderColor = takeawayColors[index % takeawayColors.length];
               return (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 + index * 0.2, type: "spring", stiffness: 100 }}
-                  className="flex flex-col items-center text-center gap-2 sm:gap-4 p-4 sm:p-6 bg-white rounded-xl sm:rounded-3xl shadow-xl border-b-4 sm:border-b-8 border-ucsd-gold hover:-translate-y-2 transition-transform"
+                  className="flex flex-col items-center text-center gap-2 sm:gap-4 p-4 sm:p-6 bg-white rounded-xl sm:rounded-3xl shadow-xl border-b-4 sm:border-b-8 hover:-translate-y-2 transition-transform"
+                  style={{ borderBottomColor: borderColor }}
                 >
                   {IconComponent && (
                     <motion.div
                       animate={floatAnimation}
-                      className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-ucsd-navy to-ucsd-blue flex items-center justify-center text-ucsd-gold shadow-lg"
+                      className="w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center text-white shadow-lg"
+                      style={{ backgroundColor: borderColor }}
                     >
                       <IconComponent size={24} className="sm:w-8 sm:h-8" />
                     </motion.div>
@@ -1393,7 +1398,8 @@ const Slide = ({ slide }) => {
             })}
           </div>
         </div>
-      )}
+        );
+      })()}
 
       {isRoadmap && (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-7xl mx-auto">
