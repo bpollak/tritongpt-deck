@@ -65,19 +65,19 @@ export const slides = [
     "content": [
       {
         "heading": "Serves 73,000+ Users",
-        "text": "28,000 staff and faculty, plus 45,000 students. Equitable access across the entire institution."
+        "text": "28,000 staff and faculty, plus 45,000 students. Equal access for every employee and student—no paywalls, no gatekeeping."
       },
       {
         "heading": "Secure, On-Prem Hosting",
         "text": "Hosted at SDSC with enterprise-grade controls and P3 data compliance."
       },
       {
-        "heading": "Powered by Onyx + Open Source",
-        "text": "Built on Onyx (founded by UC San Diego alumni) for secure multi-agent orchestration and institutional data retrieval."
+        "heading": "Open-Source Foundation",
+        "text": "Built on open-source foundations with enterprise-grade RAG and emerging agentic capabilities."
       },
       {
         "heading": "Zero Per-Token Costs",
-        "text": "Local hosting eliminates variable costs, enabling broad deployment without runaway expenses."
+        "text": "Local hosting eliminates variable costs, enabling institution-wide deployment at predictable cost."
       },
       {
         "heading": "Award-Winning Innovation",
@@ -85,10 +85,10 @@ export const slides = [
       },
       {
         "heading": "Federated & Scalable",
-        "text": "Powers BearGPT (UC Berkeley), BobcatGPT (UC Merced), AggieGPT (UC AN&R), and Farleigh Dickinson."
+        "text": "Powers BearGPT (UC Berkeley), BobcatGPT (UC Merced), AggieGPT (UC Davis), and Farleigh Dickinson."
       }
     ],
-    "title": "TritonAI: Secure, Scalable AI Platform",
+    "title": "TritonGPT: Secure, Scalable AI Platform",
     "layout": "feature-grid",
     "audiences": [
       "all",
