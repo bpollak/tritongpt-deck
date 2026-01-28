@@ -313,18 +313,6 @@ export const slides = [
     ]
   },
   {
-    "id": 12,
-    "type": "video",
-    "content": [],
-    "videoSrc": "/media/media8.mov",
-    "poster": "/media/image49.png",
-    "audiences": [
-      "all",
-      "internal",
-      "public"
-    ]
-  },
-  {
     "id": 13,
     "type": "video",
     "content": [],
