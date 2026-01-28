@@ -648,72 +648,72 @@ export const slides = [
     "type": "content",
     "layout": "agent-workflow",
     "title": "How Agents Actually Work",
-    "subtitle": "Employee Onboarding: From Offer Letter to Day One",
+    "subtitle": "Self-Healing Incident Response",
     "backgroundColor": "#F5F0E6",
     "workflowStages": [
       {
         "number": "1",
         "name": "Task Decomposition",
-        "description": "Orchestrator breaks goal into subtasks, spawns specialized agents",
-        "example": "New hire 'Jane Doe' → Provision accounts + Schedule orientation + Setup equipment",
+        "description": "Trigger: PagerDuty alert 'High Latency on API Gateway'",
+        "example": "Orchestrator: Analyze alert → Identify root cause → Fix → Document",
         "color": "#00629B",
         "icon": "GitBranch"
       },
       {
         "number": "2",
         "name": "Agent Planning",
-        "description": "Each agent plans its approach autonomously",
-        "example": "IT Agent: 'I need role type, department, and start date from HR system'",
+        "description": "Diagnostics Agent queries Splunk for error logs and Datadog for CPU/Memory spikes",
+        "example": "Policy Agent checks ServiceNow Knowledge Base for 'Safe Restart' protocols",
         "color": "#6B9BD1",
         "icon": "Brain"
       },
       {
         "number": "3",
         "name": "Parallel Execution",
-        "description": "Agents work simultaneously, accessing tools and knowledge",
-        "example": "IT creates accounts | Facilities assigns desk | HR schedules orientation",
+        "description": "Diagnostics Agent finds 'Memory Leak in Container X' via Datadog APM",
+        "example": "Policy Agent confirms auto-restart permitted for non-production containers",
         "color": "#8FB89C",
         "icon": "Network"
       },
       {
         "number": "4",
         "name": "Observe & Adapt",
-        "description": "Agents check results, retry on failure, request help if stuck",
-        "example": "Badge system unavailable → Agent queues request → Retries in 1 hour → Success",
+        "description": "Ops Agent executes restart. Error: Service hanging",
+        "example": "Agent adapts → Attempts 'Force Kill' command → Success: Service restarts",
         "color": "#FFCD00",
         "icon": "RefreshCw"
       },
       {
         "number": "5",
         "name": "Coordination",
-        "description": "Agents share findings, hand off work, resolve conflicts",
-        "example": "IT confirms accounts ready → Notifies Training Agent → Welcome email triggered",
+        "description": "Diagnostics Agent verifies metrics in Datadog have stabilized",
+        "example": "Hand-off complete to Results phase",
         "color": "#FC8900",
         "icon": "ArrowRightLeft"
       },
       {
         "number": "6",
         "name": "Results & Learning",
-        "description": "Orchestrator synthesizes outputs, logs decisions for future reference",
-        "example": "All 12 onboarding tasks complete → Manager notified → Checklist archived",
+        "description": "Creates/Closes ServiceNow Incident ticket with logs attached",
+        "example": "Posts to Teams: 'Resolved API latency via restart. Ticket #INC1234 closed.'",
         "color": "#6E963B",
         "icon": "CheckCircle"
       }
     ],
     "centralConcept": {
-      "title": "Onboarding Agent Team",
+      "title": "Incident Response Team",
       "agents": [
         {
-          "name": "IT Provisioning Agent",
+          "name": "Diagnostics Agent",
           "icon": "Monitor"
         },
         {
-          "name": "HR Coordinator Agent",
-          "icon": "Users"
+          "name": "Policy Agent",
+          "icon": "Shield"
         },
         {
-          "name": "Facilities Agent",
-          "icon": "Building2"
+          "name": "Ops Agent",
+          "icon": "RefreshCw"
         }
       ]
     },
@@ -721,20 +721,20 @@ export const slides = [
       {
         "name": "Tools",
         "items": [
-          "HRIS",
-          "Active Directory",
-          "ServiceNow",
-          "Email"
+          "PagerDuty",
+          "Splunk",
+          "Datadog",
+          "ServiceNow"
         ],
         "color": "#A8C5DD"
       },
       {
         "name": "Knowledge",
         "items": [
-          "Policies",
-          "Role Templates",
-          "Checklists",
-          "Org Chart"
+          "Restart Protocols",
+          "Runbooks",
+          "Incident History",
+          "Teams"
         ],
         "color": "#B8D4A8"
       }
