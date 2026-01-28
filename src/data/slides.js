@@ -781,7 +781,7 @@ export const slides = [
       },
       {
         "heading": "Stay Model-Agnostic",
-        "text": "We've swapped LLMs four times in 18 months. Fine-tuning locks you in; prompt engineering and RAG let you upgrade. Users pick their model; you stay flexible.",
+        "text": "Models are a commodity; your architecture is the asset. Fine-tuning locks you in; prompt engineering and RAG let you upgrade. Users pick their model; you stay flexible.",
         "icon": "TrendingUp"
       }
     ],
