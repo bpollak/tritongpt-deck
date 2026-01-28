@@ -1199,16 +1199,16 @@ const Slide = ({ slide }) => {
       )}
 
       {isPlatformSimple && (
-        <div className="relative w-full h-full flex items-center justify-center">
-          <div className="w-full max-w-[1400px] py-4 sm:py-0">
+        <div className="relative w-full h-full flex items-start sm:items-center justify-center overflow-y-auto">
+          <div className="w-full max-w-[1400px] py-2 sm:py-0">
             {/* Title */}
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-center mb-4 sm:mb-10"
+              className="text-center mb-2 sm:mb-10"
             >
-              <div className="text-2xl sm:text-4xl md:text-5xl font-black text-ucsd-navy">TritonAI Platform</div>
+              <div className="text-xl sm:text-4xl md:text-5xl font-black text-ucsd-navy">TritonAI Platform</div>
             </motion.div>
 
             {/* Big platform box containing all assistants */}
@@ -1216,23 +1216,23 @@ const Slide = ({ slide }) => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="relative bg-gradient-to-br from-white to-ucsd-blue/5 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-10 shadow-2xl border-2 sm:border-4 border-ucsd-navy/20 mt-6 sm:mt-0"
+              className="relative bg-gradient-to-br from-white to-ucsd-blue/5 rounded-2xl sm:rounded-3xl p-3 sm:p-6 md:p-10 shadow-2xl border-2 sm:border-4 border-ucsd-navy/20 mt-4 sm:mt-0"
             >
               {/* Platform label */}
               <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="absolute -top-5 sm:-top-6 left-1/2 -translate-x-1/2 bg-gradient-to-r from-ucsd-navy to-ucsd-blue text-white px-4 sm:px-8 py-2 sm:py-3 rounded-full shadow-xl"
+                className="absolute -top-3 sm:-top-6 left-1/2 -translate-x-1/2 bg-gradient-to-r from-ucsd-navy to-ucsd-blue text-white px-3 sm:px-8 py-1.5 sm:py-3 rounded-full shadow-xl"
               >
-                <div className="flex items-center gap-2 sm:gap-3">
-                  <Database size={18} className="text-ucsd-gold sm:w-6 sm:h-6" />
-                  <span className="font-black text-xs sm:text-lg tracking-wide uppercase whitespace-nowrap">AI Assistants and Agents</span>
+                <div className="flex items-center gap-1.5 sm:gap-3">
+                  <Database size={14} className="text-ucsd-gold sm:w-6 sm:h-6" />
+                  <span className="font-black text-[10px] sm:text-lg tracking-wide uppercase whitespace-nowrap">AI Assistants and Agents</span>
                 </div>
               </motion.div>
 
               {/* Grid of assistants */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5 mt-2 sm:mt-0">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-5 mt-2 sm:mt-0">
                 {slide.assistants?.map((assistant, index) => {
                   const IconComponent = assistant.icon ? iconMap[assistant.icon] : null;
 
@@ -1261,21 +1261,21 @@ const Slide = ({ slide }) => {
                         stiffness: 150
                       }}
                       whileHover={{ scale: 1.05, y: -2 }}
-                      className="bg-white rounded-lg sm:rounded-xl px-3 sm:px-5 py-3 sm:py-4 shadow-md border-l-4 sm:border-l-8 hover:shadow-lg transition-shadow cursor-pointer"
+                      className="bg-white rounded-lg sm:rounded-xl px-2 sm:px-5 py-2 sm:py-4 shadow-md border-l-3 sm:border-l-8 hover:shadow-lg transition-shadow cursor-pointer"
                       style={{ borderLeftColor: borderColor }}
                     >
-                      <div className="flex items-start gap-2 sm:gap-4">
+                      <div className="flex items-start gap-1.5 sm:gap-4">
                         {IconComponent && (
                           <div className="flex-shrink-0 mt-0.5 sm:mt-1">
-                            <IconComponent size={20} className="text-ucsd-blue sm:w-6 sm:h-6" style={{ color: borderColor }} />
+                            <IconComponent size={16} className="text-ucsd-blue sm:w-6 sm:h-6" style={{ color: borderColor }} />
                           </div>
                         )}
                         <div className="flex-1 min-w-0">
-                          <div className="text-sm sm:text-xl font-bold text-ucsd-navy leading-tight mb-0.5 sm:mb-1">
+                          <div className="text-xs sm:text-xl font-bold text-ucsd-navy leading-tight mb-0 sm:mb-1">
                             {typeof assistant === 'string' ? assistant : assistant.name}
                           </div>
                           {assistant.description && (
-                            <div className="text-xs sm:text-base text-ucsd-navy/60 font-semibold leading-snug">
+                            <div className="text-[10px] sm:text-base text-ucsd-navy/60 font-semibold leading-snug">
                               {assistant.description}
                             </div>
                           )}
