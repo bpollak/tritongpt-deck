@@ -85,7 +85,7 @@ export const slides = [
       },
       {
         "heading": "Federated & Scalable",
-        "text": "Powers BearGPT (UC Berkeley), BobcatGPT (UC Merced), AggieGPT (UC Davis), and Farleigh Dickinson."
+        "text": "Powers BearGPT (UC Berkeley), BobcatGPT (UC Merced), AggieGPT (UC ANR), and Farleigh Dickinson."
       }
     ],
     "title": "TritonGPT: Secure, Scalable AI Platform",
