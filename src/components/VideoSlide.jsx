@@ -49,7 +49,7 @@ const VideoSlide = ({ videoSrc, title, poster }) => {
   return (
     <div className="w-full h-full flex flex-col items-center justify-center bg-black relative">
       {/* Video Container */}
-      <div className="relative w-full h-full max-w-[95vw] max-h-[90vh] flex items-center justify-center">
+      <div className="relative w-full h-full max-w-[98vw] max-h-[95vh] flex items-center justify-center">
         <video
           ref={videoRef}
           src={videoSrc}
