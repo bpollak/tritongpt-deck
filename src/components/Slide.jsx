@@ -2227,11 +2227,11 @@ const Slide = ({ slide }) => {
             isDense ? "grid grid-cols-1 md:grid-cols-2 text-base md:text-lg" : 
             isGraphicHeavy ? "flex flex-col text-sm md:text-base gap-3" :
             isFeatureGrid ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto max-w-[1600px]" :
-            isHeroList ? "flex flex-col gap-5 max-w-7xl w-full" :
+            isHeroList ? "flex flex-col gap-2 sm:gap-4 max-w-7xl w-full" :
             "flex flex-col text-lg md:text-xl"
           )}
         >
-          {isHeroList && <div className="absolute top-10 sm:top-14 bottom-10 sm:bottom-14 left-[1.75rem] sm:left-[3rem] w-0.5 sm:w-1 bg-ucsd-blue/30 -z-10" />}
+          {isHeroList && <div className="absolute top-8 sm:top-14 bottom-8 sm:bottom-14 left-[1.25rem] sm:left-[3rem] w-0.5 sm:w-1 bg-ucsd-blue/30 -z-10" />}
           {slide.content.map((item, index) => {
             const borderColors = ['border-ucsd-navy', 'border-ucsd-sky', 'border-ucsd-blue', 'border-ucsd-gold', 'border-ucsd-poppy-orange', 'border-ucsd-palm-green', 'border-ucsd-tierra-clay', 'border-ucsd-pacific-blue', 'border-ucsd-navy', 'border-ucsd-sky','border-ucsd-poppy-orange', 'border-ucsd-palm-green', 'border-ucsd-tierra-clay','border-ucsd-navy', 'border-ucsd-blue', 'border-ucsd-pacific-blue', 'border-ucsd-sky'];
             const bgColors = ['bg-ucsd-navy', 'bg-ucsd-gold', 'bg-ucsd-blue', 'bg-ucsd-sky', 'bg-ucsd-poppy-orange', 'bg-ucsd-palm-green', 'bg-ucsd-tierra-clay', 'bg-ucsd-pacific-blue'];
@@ -2256,7 +2256,7 @@ const Slide = ({ slide }) => {
                   useThreeColumns && clsx("flex-col p-4 rounded-lg border shadow-sm", isDark ? "bg-white/10 border-white/10" : "bg-white/60 border-ucsd-blue/10"),
                   isGraphicHeavy && clsx("flex-col p-3 rounded-md border-l-4 border-ucsd-gold", isDark ? "bg-white/10" : "bg-white/50"),
                   isFeatureGrid && clsx("flex-col p-8 bg-white rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-2 border-t-8", borderColorClass),
-                  isHeroList && "flex-row items-center gap-3 sm:gap-6"
+                  isHeroList && "flex-row items-center gap-2 sm:gap-6"
                 )}
               >
                  {isFeatureGrid && (
@@ -2268,27 +2268,27 @@ const Slide = ({ slide }) => {
                  {isHeroList && (
                    <motion.div
                      animate={pulseAnimation}
-                     className={clsx("flex-shrink-0 w-12 h-12 sm:w-20 sm:h-20 rounded-full flex items-center justify-center shadow-xl z-10 relative", !customBgColor && bgColorClass)}
+                     className={clsx("flex-shrink-0 w-10 h-10 sm:w-20 sm:h-20 rounded-full flex items-center justify-center shadow-xl z-10 relative", !customBgColor && bgColorClass)}
                      style={customBgColor ? { backgroundColor: customBgColor } : {}}
                    >
-                     {IconComponent ? <IconComponent size={24} className="text-white drop-shadow-md sm:w-10 sm:h-10" strokeWidth={2.5} /> : <span className="text-xl sm:text-3xl font-bold text-white">{index + 1}</span>}
+                     {IconComponent ? <IconComponent size={20} className="text-white drop-shadow-md sm:w-10 sm:h-10" strokeWidth={2.5} /> : <span className="text-lg sm:text-3xl font-bold text-white">{index + 1}</span>}
                    </motion.div>
                  )}
-                <div className={clsx("flex flex-col flex-1", isHeroList && clsx("p-2 sm:p-4 rounded-xl sm:rounded-2xl border-l-4 sm:border-l-8 bg-white shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all",borderColorClass))}>
+                <div className={clsx("flex flex-col flex-1", isHeroList && clsx("p-1.5 sm:p-4 rounded-lg sm:rounded-2xl border-l-3 sm:border-l-8 bg-white shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all",borderColorClass))}>
                   {item.heading && (
                     <span className={clsx(
                       "font-semibold mb-1",
                       useThreeColumns ? clsx("text-sm uppercase tracking-wide border-b pb-1 mb-2", isDark ? "text-ucsd-sky border-white/20" : "text-ucsd-blue border-ucsd-gold/30") : "text-lg",
                       isGraphicHeavy && "text-base font-bold text-ucsd-blue",
                       isFeatureGrid && clsx("text-2xl md:text-3xl font-bold mb-4 tracking-tight leading-tight pr-20", headerColorClass),
-                      isHeroList && "text-lg sm:text-3xl font-black text-ucsd-navy mb-0.5 sm:mb-1.5 leading-tight"
+                      isHeroList && "text-sm sm:text-3xl font-black text-ucsd-navy mb-0 sm:mb-1.5 leading-tight"
                     )}>{item.heading}</span>
                   )}
                   {item.text && (
                     <span className={clsx(
                       "leading-relaxed",
                       isFeatureGrid && "text-lg md:text-xl text-slate-800 font-semibold",
-                      isHeroList && "text-xs sm:text-xl text-slate-700 font-medium leading-relaxed",
+                      isHeroList && "text-[10px] sm:text-xl text-slate-700 font-medium leading-snug",
                       !isFeatureGrid && !isHeroList && isDark ? "text-white/80" : ""
                     )}>{item.text}</span>
                   )}
