@@ -1919,10 +1919,10 @@ const Slide = ({ slide }) => {
       {isAgentWorkflow && (
         <div className="relative w-full min-h-full flex flex-col items-center justify-start px-4 sm:px-6 pt-0 pb-0 max-w-[1900px] mx-auto">
           {/* Main Layout: Stacked on mobile, 3-column grid on desktop */}
-          <div className="relative w-full max-w-[1700px] flex flex-col lg:grid lg:grid-cols-3 gap-2 lg:gap-5">
+          <div className="relative w-full h-full max-w-[1700px] flex flex-col lg:grid lg:grid-cols-3 lg:items-stretch gap-2 lg:gap-5">
 
             {/* Mobile: All stages in order. Desktop: Left Column shows Stages 1-3 */}
-            <div className="flex flex-col gap-1.5 lg:gap-4 order-1 lg:order-1">
+            <div className="flex flex-col gap-1.5 lg:justify-between order-1 lg:order-1">
               {slide.workflowStages.slice(0, 3).map((stage, idx) => {
                 const StageIcon = iconMap[stage.icon];
                 return (
@@ -1999,7 +1999,7 @@ const Slide = ({ slide }) => {
             </div>
 
             {/* Right Column: Stages 4-6 - Shows after center on mobile */}
-            <div className="flex flex-col gap-1.5 lg:gap-4 order-2 lg:order-3">
+            <div className="flex flex-col gap-1.5 lg:justify-between order-2 lg:order-3">
               {slide.workflowStages.slice(3, 6).map((stage, idx) => {
                 const StageIcon = iconMap[stage.icon];
                 return (
