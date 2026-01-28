@@ -284,7 +284,7 @@ export const slides = [
         "text": "Displaces expensive third-party vendors (Ocelot), resulting in immediate, recurring savings for Student Affairs and Admissions."
       }
     ],
-    "imageSrc": "/media/image48.png",
+    "videoSrc": "/media/media8.mov",
     "title": "Scaling Engagement: The TritonGPT Widget",
     "layout": "solution-showcase",
     "subtitle": "High-Quality Public Support at Zero Variable Cost",
