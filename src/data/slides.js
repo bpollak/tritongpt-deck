@@ -100,7 +100,7 @@ export const slides = [
     "id": 4,
     "type": "content",
     "layout": "platform-simple",
-    "title": "TritonAI Platform",
+    "title": "TritonGPT Platform",
     "subtitle": "",
     "backgroundColor": "#F5F0E6",
     "assistants": [
@@ -314,7 +314,7 @@ export const slides = [
     ]
   },
   {
-    "id": 13,
+    "id": 12,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media9.mov",
@@ -325,7 +325,7 @@ export const slides = [
     ]
   },
   {
-    "id": 14,
+    "id": 13,
     "type": "content",
     "content": [
       {
@@ -370,7 +370,7 @@ export const slides = [
     ]
   },
   {
-    "id": 15,
+    "id": 14,
     "type": "content",
     "content": [
       {
@@ -415,7 +415,7 @@ export const slides = [
     ]
   },
   {
-    "id": 16,
+    "id": 15,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media11.mov",
@@ -426,7 +426,7 @@ export const slides = [
     ]
   },
   {
-    "id": 17,
+    "id": 16,
     "type": "content",
     "layout": "comparison-table",
     "title": "The Evolution of AI Workflows",
@@ -467,7 +467,7 @@ export const slides = [
     ]
   },
   {
-    "id": 18,
+    "id": 17,
     "type": "content",
     "layout": "problem-statement",
     "title": "The Contract Review Challenge",
@@ -507,7 +507,7 @@ export const slides = [
     ]
   },
   {
-    "id": 19,
+    "id": 18,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media7.mp4",
@@ -519,7 +519,7 @@ export const slides = [
     ]
   },
   {
-    "id": 20,
+    "id": 19,
     "type": "content",
     "content": [
       {
@@ -568,7 +568,7 @@ export const slides = [
     ]
   },
   {
-    "id": 21,
+    "id": 20,
     "type": "content",
     "layout": "compound-architecture",
     "title": "The Agentic AI Stack",
@@ -644,7 +644,7 @@ export const slides = [
     ]
   },
   {
-    "id": 22,
+    "id": 21,
     "type": "content",
     "layout": "agent-workflow",
     "title": "How Agents Actually Work",
@@ -747,7 +747,7 @@ export const slides = [
     ]
   },
   {
-    "id": 23,
+    "id": 22,
     "type": "content",
     "layout": "key-takeaways",
     "title": "Key Takeaways",
@@ -792,7 +792,7 @@ export const slides = [
     ]
   },
   {
-    "id": 24,
+    "id": 23,
     "type": "content",
     "layout": "assistant-categories",
     "title": "AI Roadmap 2026",
@@ -886,7 +886,7 @@ export const slides = [
     ]
   },
   {
-    "id": 25,
+    "id": 24,
     "type": "content",
     "content": [],
     "title": "TritonGPT Usage Analytics",
@@ -969,7 +969,7 @@ export const slides = [
     ]
   },
   {
-    "id": 26,
+    "id": 25,
     "type": "content",
     "content": [],
     "title": "TritonGPT Widget Analytics",
@@ -1032,7 +1032,7 @@ export const slides = [
     ]
   },
   {
-    "id": 27,
+    "id": 26,
     "type": "content",
     "content": [],
     "title": "TritonGPT User Growth",
@@ -1079,7 +1079,7 @@ export const slides = [
     ]
   },
   {
-    "id": 28,
+    "id": 27,
     "type": "title",
     "content": [],
     "title": "Thank You",
