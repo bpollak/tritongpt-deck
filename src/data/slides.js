@@ -778,6 +778,11 @@ export const slides = [
         "heading": "Don't Build Alone",
         "text": "We built the stack so you don't have to. Join the UC AI Federation (BearGPT/TritonGPT) and leverage our shared architecture.",
         "icon": "Globe"
+      },
+      {
+        "heading": "Stay Model-Agnostic",
+        "text": "We've swapped LLMs four times in 18 months. Fine-tuning locks you in; prompt engineering and RAG let you upgrade. Abstraction is survival.",
+        "icon": "TrendingUp"
       }
     ],
     "audiences": [
