@@ -281,7 +281,7 @@ export const slides = [
       },
       {
         "heading": "Operational ROI",
-        "text": "Displaces expensive third-party vendors (Ocelot), resulting in immediate, recurring savings for Student Affairs and Admissions."
+        "text": "Displaces expensive third-party vendors (Ocelot), resulting in immediate, recurring savings for Student Affairs, Admissions, and Student Financial Solutions."
       }
     ],
     "videoSrc": "/media/media8.mov",
