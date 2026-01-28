@@ -755,34 +755,29 @@ export const slides = [
     "backgroundColor": "#F5F0E6",
     "content": [
       {
-        "heading": "Start Vertical, Not Horizontal",
-        "text": "General-purpose chatbots struggle to deliver ROI. Purpose-built assistants for contracts, instruction, and procurement drove our highest-impact outcomes—91% legal time savings, 81% student mastery.",
+        "heading": "Solve Specific Pain Points",
+        "text": "Don't build 'Chat for Everyone.' Build 'Contract Review for Legal.' Specialized agents drive 90%+ efficiency; general chatbots just drive curiosity.",
         "icon": "Target"
       },
       {
-        "heading": "Build the Agentic Foundation Now",
-        "text": "Conversational AI is table stakes. The infrastructure you build today—tool integrations, data connectors, orchestration layers—determines whether you're ready when agents become essential.",
+        "heading": "Prepare for Agency",
+        "text": "Chatbots are 2025. Agents are 2026. The integration work you do today (connecting APIs, cleaning data) is the prerequisite for the autonomous workforce of tomorrow.",
         "icon": "Blocks"
       },
       {
-        "heading": "Data Sovereignty Unlocks Adoption",
-        "text": "Faculty, legal, and procurement require robust data protections. It can be on premise or with a vendor where we have solid agreements in place to protect our data.",
+        "heading": "Trust is Infrastructure",
+        "text": "You can't automate HR or Finance in the public cloud. Local hosting isn't just about cost—it's the only way to get your most sensitive data into the AI loop.",
         "icon": "Shield"
       },
       {
-        "heading": "Eliminate Per-Token to Democratize Access",
-        "text": "Per-token pricing creates a two-tier system where only well-funded units can afford AI. Local hosting eliminated variable costs, making AI a utility for all 73,000+ users.",
+        "heading": "Make Intelligence a Utility",
+        "text": "If every question costs $0.03, you ration it. If it costs $0.00, you innovate. Local compute makes AI abundant and equitable for all 73,000 users.",
         "icon": "Cpu"
       },
       {
-        "heading": "This Model Travels",
-        "text": "UC Berkeley, UC Merced, and others adopted our platform because the architecture is replicable. Your institution can build on—or join—this federated approach.",
+        "heading": "Don't Build Alone",
+        "text": "We built the stack so you don't have to. Join the UC AI Federation (BearGPT/TritonGPT) and leverage our shared architecture.",
         "icon": "Globe"
-      },
-      {
-        "heading": "Avoid Vendor Lock-In from Day One",
-        "text": "We've swapped models multiple times as better options emerged. Model-agnostic infrastructure ensures you're never stuck when the next breakthrough arrives.",
-        "icon": "TrendingUp"
       }
     ],
     "audiences": [
