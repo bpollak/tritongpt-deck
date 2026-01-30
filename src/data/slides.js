@@ -1091,7 +1091,7 @@ export const slides = [
         "title": "Strategy & Governance",
         "category": "Strategy",
         "employmentType": "Career Staff",
-        "allocation": "10%",
+        "allocation": "20%",
         "icon": "TrendingUp",
         "color": "#C69214",
         "responsibilities": "Set TritonGPT strategy; manage budget; governance with AI Development Workgroup; align with cabinet/VCs and UC peers; external partnerships and licensing."
