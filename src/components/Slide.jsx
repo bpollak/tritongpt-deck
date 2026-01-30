@@ -113,6 +113,7 @@ const Slide = ({ slide }) => {
   const isCompoundArchitecture = slide.layout === 'compound-architecture';
   const isAgentWorkflow = slide.layout === 'agent-workflow';
   const isAnalyticsChart = slide.layout === 'analytics-chart';
+  const isTeamGrid = slide.layout === 'team-grid';
 
   if (isTitleHero) {
     return (
@@ -2221,7 +2222,132 @@ const Slide = ({ slide }) => {
         );
       })()}
 
-      {!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isRoadmap && !isProblemStatement && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isAgentWorkflow && !isAnalyticsChart && slide.content && slide.content.length > 0 && (
+      {isTeamGrid && slide.teamMembers && (
+        <div className="w-full max-w-[1700px] mx-auto">
+          {/* Team grid - responsive layout */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
+            {slide.teamMembers.map((member, index) => {
+              const roleColors = {
+                'Platform': '#00629B',
+                'Infrastructure': '#006A96',
+                'Delivery': '#182B49',
+                'Knowledge': '#00C6D7',
+                'Governance': '#C69214',
+                'Services': '#6E963B',
+                'Strategy': '#FC8900',
+                'Architecture': '#B56200'
+              };
+              const roleColor = roleColors[member.category] || '#182B49';
+              const IconComponent = member.icon ? iconMap[member.icon] : Users;
+
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30, scale: 0.9 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{
+                    delay: 0.1 + index * 0.08,
+                    type: "spring",
+                    stiffness: 100,
+                    damping: 15
+                  }}
+                  whileHover={{ y: -4, scale: 1.02 }}
+                  className="relative bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all overflow-hidden group"
+                >
+                  {/* Top accent bar */}
+                  <div
+                    className="h-1.5 sm:h-2 w-full"
+                    style={{ backgroundColor: roleColor }}
+                  />
+
+                  {/* Content */}
+                  <div className="p-3 sm:p-5">
+                    {/* Icon and Category */}
+                    <div className="flex items-center justify-between mb-2 sm:mb-3">
+                      <motion.div
+                        animate={{
+                          scale: [1, 1.1, 1],
+                        }}
+                        transition={{
+                          duration: 3,
+                          repeat: Infinity,
+                          delay: index * 0.2
+                        }}
+                        className="w-8 h-8 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shadow-md"
+                        style={{ backgroundColor: `${roleColor}15` }}
+                      >
+                        <IconComponent
+                          size={16}
+                          className="sm:w-6 sm:h-6"
+                          style={{ color: roleColor }}
+                        />
+                      </motion.div>
+                      <span
+                        className="text-[8px] sm:text-xs font-bold uppercase tracking-wider px-2 py-0.5 sm:py-1 rounded-full text-white"
+                        style={{ backgroundColor: roleColor }}
+                      >
+                        {member.allocation}
+                      </span>
+                    </div>
+
+                    {/* Role Title */}
+                    <h3 className="text-xs sm:text-base font-bold text-ucsd-navy leading-tight mb-1 sm:mb-2 line-clamp-2">
+                      {member.role}
+                    </h3>
+
+                    {/* Employment Type Badge */}
+                    <div className="flex items-center gap-1 sm:gap-2 mb-2 sm:mb-3">
+                      <span className={clsx(
+                        "text-[8px] sm:text-xs font-semibold px-1.5 sm:px-2 py-0.5 rounded-full",
+                        member.employmentType.includes('Career')
+                          ? "bg-ucsd-navy/10 text-ucsd-navy"
+                          : "bg-ucsd-sky/20 text-ucsd-blue"
+                      )}>
+                        {member.employmentType}
+                      </span>
+                    </div>
+
+                    {/* Responsibilities */}
+                    <p className="text-[9px] sm:text-sm text-slate-600 leading-snug line-clamp-3 sm:line-clamp-4">
+                      {member.responsibilities}
+                    </p>
+                  </div>
+
+                  {/* Decorative corner element */}
+                  <div
+                    className="absolute bottom-0 right-0 w-12 h-12 sm:w-16 sm:h-16 opacity-5 pointer-events-none"
+                    style={{
+                      background: `radial-gradient(circle at bottom right, ${roleColor}, transparent 70%)`
+                    }}
+                  />
+                </motion.div>
+              );
+            })}
+          </div>
+
+          {/* Footer stats */}
+          {slide.teamStats && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 }}
+              className="mt-4 sm:mt-6 flex flex-wrap justify-center gap-3 sm:gap-6"
+            >
+              {slide.teamStats.map((stat, index) => (
+                <div
+                  key={index}
+                  className="flex items-center gap-2 sm:gap-3 bg-white/80 backdrop-blur-sm px-3 sm:px-5 py-2 sm:py-3 rounded-full shadow-md"
+                >
+                  <span className="text-lg sm:text-2xl font-black text-ucsd-navy">{stat.value}</span>
+                  <span className="text-[10px] sm:text-sm font-semibold text-slate-600 uppercase tracking-wide">{stat.label}</span>
+                </div>
+              ))}
+            </motion.div>
+          )}
+        </div>
+      )}
+
+      {!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isRoadmap && !isProblemStatement && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isAgentWorkflow && !isAnalyticsChart && !isTeamGrid && slide.content && slide.content.length > 0 && (
         <motion.ul 
           variants={containerVariants}
           initial="hidden"

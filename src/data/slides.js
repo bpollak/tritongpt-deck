@@ -1080,6 +1080,90 @@ export const slides = [
   },
   {
     "id": 27,
+    "type": "content",
+    "layout": "team-grid",
+    "title": "The Team Behind TritonAI",
+    "subtitle": "Dedicated professionals powering AI innovation at UC San Diego",
+    "backgroundColor": "#F5F0E6",
+    "teamMembers": [
+      {
+        "role": "Platform Engineer for Onyx",
+        "category": "Platform",
+        "employmentType": "Contract Employee",
+        "allocation": "80%",
+        "icon": "Code",
+        "responsibilities": "Own Onyx platform operations (rebasing, upgrades, deployments); manage multi-tenant deployments for UCSD and partners; configure SSO/RBAC; maintain search index pipelines; incident response; support platform scaling."
+      },
+      {
+        "role": "Infra/DevOps for LLM Hosting",
+        "category": "Infrastructure",
+        "employmentType": "Contract Employee",
+        "allocation": "80%",
+        "icon": "Database",
+        "responsibilities": "Operate on-prem LLM/GPU clusters at San Diego Supercomputer Center; manage Kubernetes infrastructure on National Research Platform; CI/CD pipelines; secrets management; network/security baselines."
+      },
+      {
+        "role": "Platform Lead & Delivery Owner",
+        "category": "Delivery",
+        "employmentType": "Career Staff",
+        "allocation": "80%",
+        "icon": "Target",
+        "responsibilities": "Oversee TritonGPT platform environment; plan releases and feature rollouts; bridge architecture to delivery; support vertical AI development (EDA, Contract Reviewer, specialized assistants)."
+      },
+      {
+        "role": "Knowledge Graphs & Enrollment Management",
+        "category": "Knowledge",
+        "employmentType": "Contract Employee",
+        "allocation": "80%",
+        "icon": "Network",
+        "responsibilities": "Build knowledge graphs/ontologies in support of Enrollment Management use cases; develop graph-backed RAG patterns for student services; design semantic data models for admissions and student success."
+      },
+      {
+        "role": "Program Delivery & Governance",
+        "category": "Governance",
+        "employmentType": "Contractor",
+        "allocation": "50%",
+        "icon": "ClipboardCheck",
+        "responsibilities": "Drive schedules, risks, dependencies; manage intake from AI Development Workgroup; coordinate multi-institution stakeholders including partners; track OKRs; manage expansion to additional higher ed institutions."
+      },
+      {
+        "role": "AI Services Offering Manager",
+        "category": "Services",
+        "employmentType": "Career Staff",
+        "allocation": "30%",
+        "icon": "Heart",
+        "responsibilities": "Own offering lifecycle: intake triage, prototyping oversight; manage customer support readiness; training/outreach programs; liaison with Operational Strategic Initiatives (OSI); support partner licensing."
+      },
+      {
+        "role": "Strategy & Executive Liaison",
+        "category": "Strategy",
+        "employmentType": "Career Staff",
+        "allocation": "10%",
+        "icon": "TrendingUp",
+        "responsibilities": "Set TritonGPT strategy; manage budget; align with cabinet/VCs and UC peers (UC AI Council); governance with AI Development Workgroup/CDS; external partnerships and revenue-generating licensing."
+      },
+      {
+        "role": "Lead Architect — AI & DS/ML Platform",
+        "category": "Architecture",
+        "employmentType": "Career Staff",
+        "allocation": "20%",
+        "icon": "Cpu",
+        "responsibilities": "Define reference architecture for on-prem LLM hosting at SDSC; ensure security/compliance; own platform performance & scalability; steer model/tool choices; sponsor SRE practices; oversee EDA integration."
+      }
+    ],
+    "teamStats": [
+      { "value": "8", "label": "Team Members" },
+      { "value": "4.9", "label": "FTE Equivalent" },
+      { "value": "73K+", "label": "Users Served" }
+    ],
+    "audiences": [
+      "all",
+      "internal",
+      "public"
+    ]
+  },
+  {
+    "id": 28,
     "type": "title",
     "content": [],
     "title": "Thank You",
