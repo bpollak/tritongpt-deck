@@ -1189,6 +1189,7 @@ export const slides = [
     "layout": "title-hero",
     "presenterName": "Brett Pollak",
     "presenterTitle": "Executive Director, Workplace Technology & Infrastructure Services",
+    "presenterImage": "/media/headshot.jpg",
     "audiences": [
       "all",
       "internal",

@@ -239,13 +239,36 @@ const Slide = ({ slide }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.3, duration: 0.7 }}
-            className="flex flex-col items-center gap-1 sm:gap-2 px-4 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl border border-ucsd-gold/20 bg-gradient-to-br from-ucsd-gold/5 to-transparent backdrop-blur-sm shadow-[0_8px_30px_rgba(0,0,0,0.3)]"
+            className="flex flex-col items-center gap-3 sm:gap-4 px-6 sm:px-10 py-4 sm:py-6 rounded-xl sm:rounded-2xl border border-ucsd-gold/20 bg-gradient-to-br from-ucsd-gold/5 to-transparent backdrop-blur-sm shadow-[0_8px_30px_rgba(0,0,0,0.3)]"
           >
+            {/* Circular headshot */}
+            {slide.presenterImage && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 1.5, duration: 0.6, type: "spring" }}
+                className="relative"
+              >
+                <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-ucsd-gold shadow-[0_0_30px_rgba(255,205,0,0.4)]">
+                  <img
+                    src={slide.presenterImage}
+                    alt={slide.presenterName}
+                    className="w-full h-full object-cover object-center"
+                  />
+                </div>
+                {/* Animated ring around headshot */}
+                <motion.div
+                  animate={{ rotate: [0, 360] }}
+                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  className="absolute inset-[-8px] rounded-full border-2 border-dashed border-ucsd-sky/40"
+                />
+              </motion.div>
+            )}
             <div className="text-sm sm:text-lg md:text-xl font-bold text-white tracking-wide">
               {slide.presenterName || "UC SAN DIEGO"}
             </div>
             {slide.presenterTitle && (
-              <div className="text-ucsd-sky text-xs sm:text-sm md:text-base font-normal tracking-wide max-w-2xl px-2 sm:px-4">
+              <div className="text-ucsd-sky text-xs sm:text-sm md:text-base font-normal tracking-wide max-w-2xl px-2 sm:px-4 text-center">
                 {slide.presenterTitle}
               </div>
             )}
