@@ -2330,7 +2330,7 @@ const Slide = ({ slide }) => {
                           <IconComponent size={16} className="lg:w-5 lg:h-5" style={{ color: roleColor }} />
                         </motion.div>
                         <span
-                          className="text-xs lg:text-sm font-black text-white px-2 py-0.5 rounded-full"
+                          className="text-sm lg:text-base font-black text-white px-2.5 py-1 rounded-full"
                           style={{ backgroundColor: roleColor }}
                         >
                           {member.allocation}
@@ -2393,7 +2393,7 @@ const Slide = ({ slide }) => {
                           <IconComponent size={12} style={{ color: roleColor }} />
                         </div>
                         <span
-                          className="text-[10px] font-bold text-white px-1.5 py-0.5 rounded-full"
+                          className="text-xs font-bold text-white px-2 py-0.5 rounded-full"
                           style={{ backgroundColor: roleColor }}
                         >
                           {member.allocation}
