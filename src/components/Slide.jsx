@@ -2223,9 +2223,39 @@ const Slide = ({ slide }) => {
       })()}
 
       {isTeamGrid && slide.teamMembers && (
-        <div className="w-full max-w-[1700px] mx-auto">
-          {/* Team grid - responsive layout */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
+        <div className="w-full max-w-[1800px] mx-auto h-full flex flex-col">
+          {/* Main content area - orbital layout on desktop, cards on mobile */}
+          <div className="flex-1 relative hidden md:flex items-center justify-center min-h-[500px]">
+            {/* Central hub - TritonAI Core */}
+            <motion.div
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 0.2, type: "spring", stiffness: 100 }}
+              className="absolute z-20 w-36 h-36 lg:w-44 lg:h-44 rounded-full bg-gradient-to-br from-ucsd-navy via-ucsd-blue to-ucsd-navy shadow-2xl flex flex-col items-center justify-center border-4 border-ucsd-gold/40"
+            >
+              <motion.div
+                animate={{ rotate: [0, 360] }}
+                transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-0 rounded-full border-2 border-dashed border-ucsd-gold/20"
+              />
+              <Users size={32} className="text-ucsd-gold mb-1" />
+              <div className="text-white font-black text-base lg:text-lg text-center">TritonAI</div>
+              <div className="text-ucsd-sky text-[10px] font-semibold uppercase tracking-wider">Team</div>
+            </motion.div>
+
+            {/* Orbital rings */}
+            <motion.div
+              animate={{ rotate: [0, 360] }}
+              transition={{ duration: 120, repeat: Infinity, ease: "linear" }}
+              className="absolute w-[420px] h-[420px] lg:w-[520px] lg:h-[520px] rounded-full border border-ucsd-navy/10"
+            />
+            <motion.div
+              animate={{ rotate: [360, 0] }}
+              transition={{ duration: 90, repeat: Infinity, ease: "linear" }}
+              className="absolute w-[560px] h-[560px] lg:w-[680px] lg:h-[680px] rounded-full border border-ucsd-gold/10"
+            />
+
+            {/* Team member nodes in orbital positions */}
             {slide.teamMembers.map((member, index) => {
               const roleColors = {
                 'Platform': '#00629B',
@@ -2240,65 +2270,81 @@ const Slide = ({ slide }) => {
               const roleColor = roleColors[member.category] || '#182B49';
               const IconComponent = member.icon ? iconMap[member.icon] : Users;
 
+              // Position nodes in a circle
+              const totalMembers = slide.teamMembers.length;
+              const angle = (index * 360 / totalMembers) - 90; // Start from top
+              const radius = 240; // Distance from center
+              const x = Math.cos(angle * Math.PI / 180) * radius;
+              const y = Math.sin(angle * Math.PI / 180) * radius;
+
               return (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30, scale: 0.9 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: 1, scale: 1 }}
                   transition={{
-                    delay: 0.1 + index * 0.08,
+                    delay: 0.4 + index * 0.1,
                     type: "spring",
-                    stiffness: 100,
-                    damping: 15
+                    stiffness: 100
                   }}
-                  whileHover={{ y: -4, scale: 1.02 }}
-                  className="relative bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all overflow-hidden group"
+                  className="absolute z-10"
+                  style={{
+                    left: `calc(50% + ${x}px)`,
+                    top: `calc(50% + ${y}px)`,
+                    transform: 'translate(-50%, -50%)'
+                  }}
                 >
-                  {/* Top accent bar */}
-                  <div
-                    className="h-1.5 sm:h-2 w-full"
-                    style={{ backgroundColor: roleColor }}
+                  {/* Connection line to center */}
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 0.3 }}
+                    transition={{ delay: 0.6 + index * 0.1 }}
+                    className="absolute w-px h-px"
+                    style={{
+                      background: `linear-gradient(${angle + 90}deg, ${roleColor}, transparent)`,
+                      width: '2px',
+                      height: `${radius - 90}px`,
+                      transformOrigin: 'top center',
+                      transform: `rotate(${angle + 90}deg)`,
+                      left: '50%',
+                      top: '50%',
+                      opacity: 0.2
+                    }}
                   />
 
-                  {/* Content */}
-                  <div className="p-3 sm:p-5">
-                    {/* Icon and Category */}
-                    <div className="flex items-center justify-between mb-2 sm:mb-3">
-                      <motion.div
-                        animate={{
-                          scale: [1, 1.1, 1],
-                        }}
-                        transition={{
-                          duration: 3,
-                          repeat: Infinity,
-                          delay: index * 0.2
-                        }}
-                        className="w-8 h-8 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shadow-md"
-                        style={{ backgroundColor: `${roleColor}15` }}
-                      >
-                        <IconComponent
-                          size={16}
-                          className="sm:w-6 sm:h-6"
-                          style={{ color: roleColor }}
-                        />
-                      </motion.div>
-                      <span
-                        className="text-[8px] sm:text-xs font-bold uppercase tracking-wider px-2 py-0.5 sm:py-1 rounded-full text-white"
-                        style={{ backgroundColor: roleColor }}
-                      >
-                        {member.allocation}
-                      </span>
-                    </div>
+                  {/* Node card */}
+                  <motion.div
+                    whileHover={{ scale: 1.08, zIndex: 30 }}
+                    className="relative bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all cursor-pointer w-40 lg:w-48 overflow-hidden"
+                    style={{ borderTop: `4px solid ${roleColor}` }}
+                  >
+                    <div className="p-2.5 lg:p-3">
+                      {/* Header with icon and allocation */}
+                      <div className="flex items-center justify-between mb-1.5">
+                        <motion.div
+                          animate={{ scale: [1, 1.15, 1] }}
+                          transition={{ duration: 2, repeat: Infinity, delay: index * 0.3 }}
+                          className="w-8 h-8 lg:w-10 lg:h-10 rounded-full flex items-center justify-center"
+                          style={{ backgroundColor: `${roleColor}15` }}
+                        >
+                          <IconComponent size={16} className="lg:w-5 lg:h-5" style={{ color: roleColor }} />
+                        </motion.div>
+                        <span
+                          className="text-[10px] lg:text-xs font-black text-white px-2 py-0.5 rounded-full"
+                          style={{ backgroundColor: roleColor }}
+                        >
+                          {member.allocation}
+                        </span>
+                      </div>
 
-                    {/* Role Title */}
-                    <h3 className="text-xs sm:text-base font-bold text-ucsd-navy leading-tight mb-1 sm:mb-2 line-clamp-2">
-                      {member.role}
-                    </h3>
+                      {/* Role */}
+                      <h3 className="text-[11px] lg:text-sm font-bold text-ucsd-navy leading-tight mb-1 line-clamp-2">
+                        {member.role}
+                      </h3>
 
-                    {/* Employment Type Badge */}
-                    <div className="flex items-center gap-1 sm:gap-2 mb-2 sm:mb-3">
+                      {/* Employment type */}
                       <span className={clsx(
-                        "text-[8px] sm:text-xs font-semibold px-1.5 sm:px-2 py-0.5 rounded-full",
+                        "inline-block text-[8px] lg:text-[10px] font-semibold px-1.5 py-0.5 rounded-full",
                         member.employmentType.includes('Career')
                           ? "bg-ucsd-navy/10 text-ucsd-navy"
                           : "bg-ucsd-sky/20 text-ucsd-blue"
@@ -2306,41 +2352,80 @@ const Slide = ({ slide }) => {
                         {member.employmentType}
                       </span>
                     </div>
-
-                    {/* Responsibilities */}
-                    <p className="text-[9px] sm:text-sm text-slate-600 leading-snug line-clamp-3 sm:line-clamp-4">
-                      {member.responsibilities}
-                    </p>
-                  </div>
-
-                  {/* Decorative corner element */}
-                  <div
-                    className="absolute bottom-0 right-0 w-12 h-12 sm:w-16 sm:h-16 opacity-5 pointer-events-none"
-                    style={{
-                      background: `radial-gradient(circle at bottom right, ${roleColor}, transparent 70%)`
-                    }}
-                  />
+                  </motion.div>
                 </motion.div>
               );
             })}
           </div>
 
-          {/* Footer stats */}
+          {/* Mobile fallback - compact cards */}
+          <div className="md:hidden flex-1 overflow-auto px-2">
+            <div className="grid grid-cols-2 gap-2">
+              {slide.teamMembers.map((member, index) => {
+                const roleColors = {
+                  'Platform': '#00629B',
+                  'Infrastructure': '#006A96',
+                  'Delivery': '#182B49',
+                  'Knowledge': '#00C6D7',
+                  'Governance': '#C69214',
+                  'Services': '#6E963B',
+                  'Strategy': '#FC8900',
+                  'Architecture': '#B56200'
+                };
+                const roleColor = roleColors[member.category] || '#182B49';
+                const IconComponent = member.icon ? iconMap[member.icon] : Users;
+
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 + index * 0.05 }}
+                    className="bg-white rounded-lg shadow-md overflow-hidden"
+                    style={{ borderTop: `3px solid ${roleColor}` }}
+                  >
+                    <div className="p-2">
+                      <div className="flex items-center gap-2 mb-1">
+                        <div
+                          className="w-6 h-6 rounded-full flex items-center justify-center"
+                          style={{ backgroundColor: `${roleColor}15` }}
+                        >
+                          <IconComponent size={12} style={{ color: roleColor }} />
+                        </div>
+                        <span
+                          className="text-[8px] font-bold text-white px-1.5 py-0.5 rounded-full"
+                          style={{ backgroundColor: roleColor }}
+                        >
+                          {member.allocation}
+                        </span>
+                      </div>
+                      <h3 className="text-[10px] font-bold text-ucsd-navy leading-tight line-clamp-2">
+                        {member.role}
+                      </h3>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Footer stats - always visible */}
           {slide.teamStats && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8 }}
-              className="mt-4 sm:mt-6 flex flex-wrap justify-center gap-3 sm:gap-6"
+              transition={{ delay: 1.2 }}
+              className="mt-auto pt-3 flex flex-wrap justify-center gap-3 sm:gap-6 lg:gap-10"
             >
               {slide.teamStats.map((stat, index) => (
-                <div
+                <motion.div
                   key={index}
-                  className="flex items-center gap-2 sm:gap-3 bg-white/80 backdrop-blur-sm px-3 sm:px-5 py-2 sm:py-3 rounded-full shadow-md"
+                  whileHover={{ scale: 1.05 }}
+                  className="flex items-center gap-2 sm:gap-3 bg-white/95 backdrop-blur-sm px-4 sm:px-8 py-2 sm:py-4 rounded-full shadow-xl border-2 border-ucsd-gold/30"
                 >
-                  <span className="text-lg sm:text-2xl font-black text-ucsd-navy">{stat.value}</span>
-                  <span className="text-[10px] sm:text-sm font-semibold text-slate-600 uppercase tracking-wide">{stat.label}</span>
-                </div>
+                  <span className="text-2xl sm:text-4xl font-black text-ucsd-navy">{stat.value}</span>
+                  <span className="text-[10px] sm:text-sm font-bold text-slate-600 uppercase tracking-wider">{stat.label}</span>
+                </motion.div>
               ))}
             </motion.div>
           )}
