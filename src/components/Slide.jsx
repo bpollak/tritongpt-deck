@@ -2330,7 +2330,7 @@ const Slide = ({ slide }) => {
                           <IconComponent size={16} className="lg:w-5 lg:h-5" style={{ color: roleColor }} />
                         </motion.div>
                         <span
-                          className="text-[10px] lg:text-xs font-black text-white px-2 py-0.5 rounded-full"
+                          className="text-xs lg:text-sm font-black text-white px-2 py-0.5 rounded-full"
                           style={{ backgroundColor: roleColor }}
                         >
                           {member.allocation}
@@ -2338,13 +2338,13 @@ const Slide = ({ slide }) => {
                       </div>
 
                       {/* Role */}
-                      <h3 className="text-[11px] lg:text-sm font-bold text-ucsd-navy leading-tight mb-1 line-clamp-2">
+                      <h3 className="text-sm lg:text-base font-bold text-ucsd-navy leading-tight mb-1 line-clamp-2">
                         {member.role}
                       </h3>
 
                       {/* Employment type */}
                       <span className={clsx(
-                        "inline-block text-[8px] lg:text-[10px] font-semibold px-1.5 py-0.5 rounded-full",
+                        "inline-block text-[10px] lg:text-xs font-semibold px-1.5 py-0.5 rounded-full",
                         member.employmentType.includes('Career')
                           ? "bg-ucsd-navy/10 text-ucsd-navy"
                           : "bg-ucsd-sky/20 text-ucsd-blue"
@@ -2393,13 +2393,13 @@ const Slide = ({ slide }) => {
                           <IconComponent size={12} style={{ color: roleColor }} />
                         </div>
                         <span
-                          className="text-[8px] font-bold text-white px-1.5 py-0.5 rounded-full"
+                          className="text-[10px] font-bold text-white px-1.5 py-0.5 rounded-full"
                           style={{ backgroundColor: roleColor }}
                         >
                           {member.allocation}
                         </span>
                       </div>
-                      <h3 className="text-[10px] font-bold text-ucsd-navy leading-tight line-clamp-2">
+                      <h3 className="text-xs font-bold text-ucsd-navy leading-tight line-clamp-2">
                         {member.role}
                       </h3>
                     </div>
