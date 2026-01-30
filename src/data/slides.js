@@ -1152,7 +1152,7 @@ export const slides = [
       }
     ],
     "teamStats": [
-      { "value": "8", "label": "Team Members" },
+      { "value": "9K", "label": "Avg Sessions/Month" },
       { "value": "4.9", "label": "FTE Equivalent" },
       { "value": "73K+", "label": "Users Served" }
     ],
