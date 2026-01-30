@@ -2263,7 +2263,6 @@ const Slide = ({ slide }) => {
                     {/* Role info and responsibilities */}
                     <div className="flex-1 min-w-0">
                       <div className="text-base lg:text-lg font-black text-ucsd-navy leading-tight">{leader.role}</div>
-                      <div className="text-sm lg:text-base text-slate-500 font-medium">{leader.title}</div>
                       <p className="text-sm lg:text-base text-slate-600 leading-snug line-clamp-2">
                         {leader.responsibilities}
                       </p>
@@ -2274,21 +2273,37 @@ const Slide = ({ slide }) => {
             </div>
           )}
 
-          {/* Connecting lines visual */}
+          {/* Connecting lines visual with slide animation */}
           <motion.div
-            initial={{ scaleY: 0 }}
-            animate={{ scaleY: 1 }}
-            transition={{ delay: 0.5, duration: 0.3 }}
-            className="hidden md:flex justify-center mb-1"
+            initial={{ scaleY: 0, opacity: 0 }}
+            animate={{ scaleY: 1, opacity: 1 }}
+            transition={{ delay: 0.5, duration: 0.4, ease: "easeOut" }}
+            className="hidden md:flex justify-center mb-1 origin-top"
           >
-            <div className="w-1 h-6 bg-ucsd-navy/60 rounded-full" />
+            <div className="w-1 h-6 bg-ucsd-navy/60 rounded-full overflow-hidden">
+              <motion.div
+                initial={{ y: "-100%" }}
+                animate={{ y: "0%" }}
+                transition={{ delay: 0.5, duration: 0.3, ease: "easeOut" }}
+                className="w-full h-full bg-ucsd-gold"
+              />
+            </div>
           </motion.div>
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
-            transition={{ delay: 0.6, duration: 0.4 }}
-            className="hidden md:block w-4/5 h-1 bg-gradient-to-r from-ucsd-navy/20 via-ucsd-navy/60 to-ucsd-navy/20 mx-auto mb-2 rounded-full"
-          />
+            transition={{ delay: 0.7, duration: 0.5, ease: "easeOut" }}
+            className="hidden md:block w-4/5 mx-auto mb-2 origin-center"
+          >
+            <div className="h-1 bg-gradient-to-r from-ucsd-navy/20 via-ucsd-navy/60 to-ucsd-navy/20 rounded-full overflow-hidden">
+              <motion.div
+                initial={{ x: "-100%" }}
+                animate={{ x: "100%" }}
+                transition={{ delay: 0.8, duration: 0.8, ease: "easeInOut" }}
+                className="w-1/3 h-full bg-gradient-to-r from-transparent via-ucsd-gold to-transparent"
+              />
+            </div>
+          </motion.div>
 
           {/* Team members grid - 3 columns */}
           <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1.5 lg:gap-2">
@@ -2341,7 +2356,7 @@ const Slide = ({ slide }) => {
                   {/* Role info and responsibilities */}
                   <div className="flex-1 min-w-0">
                     <h3 className="text-lg lg:text-xl font-bold text-ucsd-navy leading-tight">
-                      {member.role} <span className="font-normal text-slate-500">· {member.title}</span>
+                      {member.role}
                     </h3>
                     <p className="text-base lg:text-lg text-slate-600 leading-snug line-clamp-2">
                       {member.responsibilities}
