@@ -1170,7 +1170,7 @@ export const slides = [
       { "role": "Student Developer", "allocation": "20%" }
     ],
     "teamStats": [
-      { "value": "12", "label": "Team Members" },
+      { "value": "25K", "label": "Avg Chats/Month" },
       { "value": "5.7", "label": "FTE Equivalent" },
       { "value": "73K+", "label": "Users Served" }
     ],
