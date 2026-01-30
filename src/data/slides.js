@@ -1189,6 +1189,9 @@ export const slides = [
     "layout": "title-hero",
     "presenterName": "Brett Pollak",
     "presenterTitle": "Executive Director, Workplace Technology & Infrastructure Services",
+    "presenterImage": "/media/headshot.jpg",
+    "presenterWebsite": "brettcpollak.com",
+    "qrCodeUrl": "https://brettcpollak.com/tritongpt",
     "audiences": [
       "all",
       "internal",

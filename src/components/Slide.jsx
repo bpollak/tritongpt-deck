@@ -116,6 +116,8 @@ const Slide = ({ slide }) => {
   const isTeamGrid = slide.layout === 'team-grid';
 
   if (isTitleHero) {
+    const hasPresenterContent = slide.presenterImage || slide.presenterName || slide.qrCodeUrl;
+
     return (
       <div className="w-full h-full relative overflow-hidden bg-gradient-to-br from-[#182B49] via-[#0f1f33] to-[#182B49] flex flex-col items-center justify-center text-white break-words">
         {/* Enhanced animated background glows */}
@@ -158,14 +160,14 @@ const Slide = ({ slide }) => {
 
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10" />
 
-        <div className="relative z-10 max-w-7xl w-full px-4 sm:px-8 md:px-12 flex flex-col items-center text-center">
+        <div className="relative z-10 max-w-7xl w-full px-4 sm:px-8 md:px-12 flex flex-col items-center">
           {/* Conference badge with enhanced animation */}
           {slide.conference && (
             <motion.div
               initial={{ opacity: 0, y: -30, scale: 0.9 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.7, type: "spring", bounce: 0.3 }}
-              className="mb-4 sm:mb-8 px-4 sm:px-6 py-2 rounded-full border-2 border-ucsd-gold/60 bg-gradient-to-r from-ucsd-gold/10 via-ucsd-gold/5 to-ucsd-gold/10 backdrop-blur-md text-ucsd-gold text-xs sm:text-sm md:text-base tracking-[0.1em] sm:tracking-[0.15em] font-bold uppercase shadow-[0_0_20px_rgba(255,205,0,0.2)] flex items-center gap-2 sm:gap-3"
+              className="mb-4 sm:mb-6 px-4 sm:px-6 py-2 rounded-full border-2 border-ucsd-gold/60 bg-gradient-to-r from-ucsd-gold/10 via-ucsd-gold/5 to-ucsd-gold/10 backdrop-blur-md text-ucsd-gold text-xs sm:text-sm md:text-base tracking-[0.1em] sm:tracking-[0.15em] font-bold uppercase shadow-[0_0_20px_rgba(255,205,0,0.2)] flex items-center gap-2 sm:gap-3"
             >
               <div className="w-2 h-0.5 bg-ucsd-gold rounded-full" />
               {slide.conference}
@@ -173,83 +175,127 @@ const Slide = ({ slide }) => {
             </motion.div>
           )}
 
-          {/* UC San Diego branding with color accent */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.4, type: "spring" }}
-            className="mb-6 relative"
-          >
-            <div className="text-2xl md:text-3xl lg:text-4xl font-black tracking-wider uppercase text-transparent bg-clip-text bg-gradient-to-r from-ucsd-gold via-yellow-400 to-ucsd-gold drop-shadow-[0_0_25px_rgba(255,205,0,0.5)]">
-              UC San Diego
-            </div>
-            <motion.div
-              animate={{ scaleX: [0.8, 1.1, 0.8] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-24 h-0.5 bg-gradient-to-r from-transparent via-ucsd-gold to-transparent rounded-full"
-            />
-          </motion.div>
-
-          {/* Main title with enhanced effects */}
+          {/* Main title */}
           <motion.h1
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
-            className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tight mb-6 sm:mb-12 text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.7)] leading-[1.1] sm:leading-[1] max-w-6xl relative pb-2 sm:pb-4"
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
+            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight mb-2 sm:mb-4 text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.7)] leading-[1.1] sm:leading-[1] text-center"
           >
-            <span className="relative inline-block">
-              {slide.title}
-              <motion.div
-                initial={{ width: 0 }}
-                animate={{ width: "100%" }}
-                transition={{ delay: 1.4, duration: 0.8, ease: "easeInOut" }}
-                className="absolute -bottom-4 left-0 h-1 bg-gradient-to-r from-ucsd-sky via-ucsd-gold to-ucsd-blue rounded-full shadow-[0_0_15px_rgba(255,205,0,0.6)] overflow-hidden"
-              >
-                <motion.div
-                  animate={{ x: ["-100%", "200%"] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "linear", repeatDelay: 1 }}
-                  className="absolute inset-0 w-1/3 bg-gradient-to-r from-transparent via-white/40 to-transparent"
-                />
-              </motion.div>
-            </span>
+            {slide.title}
           </motion.h1>
 
-          {/* Subtitle with color gradient */}
+          {/* Subtitle */}
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.9, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="text-base sm:text-xl md:text-2xl lg:text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-100 to-white tracking-wide max-w-4xl leading-relaxed mb-6 sm:mb-10 drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)] px-2 sm:px-0"
+            transition={{ delay: 0.5, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="text-lg sm:text-2xl md:text-3xl font-medium text-ucsd-gold tracking-wide mb-8 sm:mb-12 text-center"
           >
             {slide.subtitle}
           </motion.h2>
 
-          {/* Enhanced animated accent divider */}
-          <motion.div
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ delay: 1.1, duration: 0.7, ease: "easeOut" }}
-            className="relative w-32 sm:w-48 h-1 sm:h-1.5 mb-6 sm:mb-12"
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-ucsd-sky via-ucsd-gold to-ucsd-blue rounded-full opacity-80 shadow-[0_0_20px_rgba(255,205,0,0.5)]" />
-          </motion.div>
+          {/* Two-column presenter section */}
+          {hasPresenterContent && (
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7, duration: 0.8 }}
+              className="flex flex-col md:flex-row items-center justify-center gap-8 sm:gap-12 md:gap-20 w-full"
+            >
+              {/* Left side: Headshot + Info */}
+              <div className="flex flex-col items-center gap-4 sm:gap-5">
+                {/* Circular headshot with glow effect */}
+                {slide.presenterImage && (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.9, duration: 0.6, type: "spring", bounce: 0.3 }}
+                    className="relative"
+                  >
+                    {/* Outer glow ring */}
+                    <motion.div
+                      animate={{ rotate: [0, 360] }}
+                      transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                      className="absolute -inset-2 sm:-inset-3 rounded-full bg-gradient-to-r from-ucsd-gold via-ucsd-sky to-ucsd-gold opacity-60 blur-sm"
+                    />
+                    {/* Inner border ring */}
+                    <div className="absolute -inset-1 sm:-inset-2 rounded-full bg-gradient-to-br from-ucsd-gold to-ucsd-sky" />
+                    {/* Image container */}
+                    <div className="relative w-32 h-32 sm:w-44 sm:h-44 md:w-52 md:h-52 rounded-full overflow-hidden border-4 border-white/20 shadow-[0_0_40px_rgba(255,205,0,0.3)]">
+                      <img
+                        src={slide.presenterImage}
+                        alt={slide.presenterName || "Presenter"}
+                        className="w-full h-full object-cover object-top scale-150"
+                      />
+                    </div>
+                  </motion.div>
+                )}
 
-          {/* Presenter info with card design */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.3, duration: 0.7 }}
-            className="flex flex-col items-center gap-1 sm:gap-2 px-4 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl border border-ucsd-gold/20 bg-gradient-to-br from-ucsd-gold/5 to-transparent backdrop-blur-sm shadow-[0_8px_30px_rgba(0,0,0,0.3)]"
-          >
-            <div className="text-sm sm:text-lg md:text-xl font-bold text-white tracking-wide">
-              {slide.presenterName || "UC SAN DIEGO"}
-            </div>
-            {slide.presenterTitle && (
-              <div className="text-ucsd-sky text-xs sm:text-sm md:text-base font-normal tracking-wide max-w-2xl px-2 sm:px-4">
-                {slide.presenterTitle}
+                {/* Presenter info */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 1.1, duration: 0.7 }}
+                  className="flex flex-col items-center gap-1 text-center"
+                >
+                  <div className="text-lg sm:text-xl md:text-2xl font-bold text-white tracking-wide">
+                    {slide.presenterName || "UC SAN DIEGO"}
+                  </div>
+                  {slide.presenterTitle && (
+                    <div className="text-ucsd-sky text-xs sm:text-sm md:text-base font-normal tracking-wide max-w-xs">
+                      {slide.presenterTitle}
+                    </div>
+                  )}
+                  {slide.presenterWebsite && (
+                    <a
+                      href={`https://${slide.presenterWebsite}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-ucsd-gold text-sm sm:text-base font-medium tracking-wide mt-2 hover:text-yellow-300 transition-colors flex items-center gap-2"
+                    >
+                      <Globe className="w-4 h-4" />
+                      {slide.presenterWebsite}
+                    </a>
+                  )}
+                </motion.div>
               </div>
-            )}
-          </motion.div>
+
+              {/* Vertical divider - hidden on mobile */}
+              <motion.div
+                initial={{ scaleY: 0 }}
+                animate={{ scaleY: 1 }}
+                transition={{ delay: 1.0, duration: 0.6 }}
+                className="hidden md:block w-px h-48 bg-gradient-to-b from-transparent via-ucsd-gold/50 to-transparent"
+              />
+
+              {/* Right side: QR Code */}
+              {slide.qrCodeUrl && (
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 1.0, duration: 0.7 }}
+                  className="flex flex-col items-center gap-4"
+                >
+                  <div className="bg-white p-3 sm:p-4 rounded-2xl shadow-[0_0_50px_rgba(255,205,0,0.25)]">
+                    <img
+                      src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(slide.qrCodeUrl)}&bgcolor=ffffff&color=182B49`}
+                      alt="QR Code"
+                      className="w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48"
+                    />
+                  </div>
+                  <div className="flex flex-col items-center gap-1">
+                    <div className="text-white text-sm sm:text-base font-semibold tracking-wide">
+                      Learn More
+                    </div>
+                    <div className="text-ucsd-sky/80 text-xs sm:text-sm font-medium">
+                      brettcpollak.com/tritongpt
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </motion.div>
+          )}
         </div>
       </div>
     );
