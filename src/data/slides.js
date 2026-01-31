@@ -14,7 +14,8 @@ export const slides = [
       "internal",
       "public",
       "executive",
-      "technical"
+      "technical",
+      "CCW"
     ]
   },
   {
@@ -55,7 +56,8 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "public"
+      "public",
+      "CCW"
     ]
   },
   {
@@ -93,7 +95,8 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "public"
+      "public",
+      "CCW"
     ]
   },
   {
@@ -198,7 +201,8 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "public"
+      "public",
+      "CCW"
     ]
   },
   {
@@ -210,7 +214,8 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "public"
+      "public",
+      "CCW"
     ]
   },
   {
@@ -243,7 +248,8 @@ export const slides = [
     "poster": "/media/image39.png",
     "audiences": [
       "all",
-      "internal"
+      "internal",
+      "CCW"
     ]
   },
   {
@@ -310,7 +316,8 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "public"
+      "public",
+      "CCW"
     ]
   },
   {
@@ -321,7 +328,8 @@ export const slides = [
     "poster": "/media/image50.png",
     "audiences": [
       "all",
-      "internal"
+      "internal",
+      "CCW"
     ]
   },
   {
@@ -366,7 +374,8 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "public"
+      "public",
+      "CCW"
     ]
   },
   {
@@ -411,7 +420,8 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "public"
+      "public",
+      "CCW"
     ]
   },
   {
@@ -462,8 +472,8 @@ export const slides = [
     "audiences": [
       "all",
       "technical",
-      "internal",
-      "public"
+      "public",
+      "CCW"
     ]
   },
   {
@@ -503,7 +513,8 @@ export const slides = [
       "all",
       "executive",
       "internal",
-      "public"
+      "public",
+      "CCW"
     ]
   },
   {
@@ -515,7 +526,8 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "public"
+      "public",
+      "CCW"
     ]
   },
   {
@@ -564,7 +576,8 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "public"
+      "public",
+      "CCW"
     ]
   },
   {
@@ -640,7 +653,8 @@ export const slides = [
       "all",
       "technical",
       "internal",
-      "public"
+      "public",
+      "CCW"
     ]
   },
   {
@@ -743,7 +757,8 @@ export const slides = [
       "all",
       "technical",
       "internal",
-      "public"
+      "public",
+      "CCW"
     ]
   },
   {
@@ -1164,20 +1179,42 @@ export const slides = [
       }
     ],
     "studentWorkers": [
-      { "role": "Student Developer", "allocation": "20%" },
-      { "role": "Student Developer", "allocation": "20%" },
-      { "role": "Student Developer", "allocation": "20%" },
-      { "role": "Student Developer", "allocation": "20%" }
+      {
+        "role": "Student Developer",
+        "allocation": "20%"
+      },
+      {
+        "role": "Student Developer",
+        "allocation": "20%"
+      },
+      {
+        "role": "Student Developer",
+        "allocation": "20%"
+      },
+      {
+        "role": "Student Developer",
+        "allocation": "20%"
+      }
     ],
     "teamStats": [
-      { "value": "25K", "label": "Avg Chats/Month" },
-      { "value": "5.7", "label": "FTE Equivalent" },
-      { "value": "73K+", "label": "Users Served" }
+      {
+        "value": "25K",
+        "label": "Avg Chats/Month"
+      },
+      {
+        "value": "5.7",
+        "label": "FTE Equivalent"
+      },
+      {
+        "value": "73K+",
+        "label": "Users Served"
+      }
     ],
     "audiences": [
       "all",
       "internal",
-      "public"
+      "public",
+      "CCW"
     ]
   },
   {
@@ -1195,7 +1232,8 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "public"
+      "public",
+      "CCW"
     ]
   }
 ];
