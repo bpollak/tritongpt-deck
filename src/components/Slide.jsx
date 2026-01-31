@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion'; // eslint-disable-line no-unused-vars
 import clsx from 'clsx';
-import { Target, Database, Cpu, Blocks, GraduationCap, Building2, FileText, FileCheck, DollarSign, Shield, BookOpen, Code, Presentation, Globe, FileEdit, FolderOpen, TrendingUp, ClipboardCheck, Search, Heart, Calendar, GitBranch, Network, Grid3x3, ArrowDown, ArrowRight, Brain, RefreshCw, ArrowRightLeft, CheckCircle, Monitor, Users } from 'lucide-react';
+import { Target, Database, Cpu, Blocks, GraduationCap, Building2, FileText, FileCheck, DollarSign, Shield, BookOpen, Code, Presentation, Globe, FileEdit, FolderOpen, TrendingUp, ClipboardCheck, Search, Heart, Calendar, GitBranch, Network, Grid3x3, ArrowDown, ArrowRight, Brain, RefreshCw, ArrowRightLeft, CheckCircle, Monitor, Users, Award, Server, Layers, Wallet, Share2 } from 'lucide-react';
 import VideoSlide from './VideoSlide';
 
 const iconMap = {
@@ -556,7 +556,7 @@ const Slide = ({ slide }) => {
       {(isSolution || isSolutionVideo) && (
         <div className="w-full max-w-[1700px] mx-auto h-full">
           <div className={clsx(
-            "grid gap-4 sm:gap-8 md:gap-12 h-full",
+            "grid gap-4 sm:gap-8 md:gap-12 h-full items-start pt-2 sm:pt-4",
             isSolutionVideo ? "grid-cols-1 md:grid-cols-[1.1fr_0.9fr]" : "grid-cols-1 md:grid-cols-[1.1fr_0.9fr]"
           )}>
             {/* Left: Media (Image or Video) */}
@@ -565,7 +565,7 @@ const Slide = ({ slide }) => {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.7 }}
-                className={clsx("flex flex-col", isSolutionVideo ? "justify-start" : "justify-center")}
+                className={clsx("flex flex-col", isSolutionVideo ? "justify-start" : "justify-start")}
               >
                 <div className="relative inline-block">
                   <div className="absolute -inset-1 bg-gradient-to-br from-ucsd-navy/5 to-ucsd-blue/5 rounded-2xl blur-sm" />
@@ -590,7 +590,7 @@ const Slide = ({ slide }) => {
             )}
 
             {/* Right: Stats + Features */}
-            <div className={clsx("flex flex-col", isSolutionVideo ? "justify-start gap-4 sm:gap-5" : "justify-center gap-4 sm:gap-8")}>
+            <div className={clsx("flex flex-col", isSolutionVideo ? "justify-start gap-4 sm:gap-5" : "justify-start gap-4 sm:gap-6")}>
               {/* Horizontal Stats Bar */}
               <div className={clsx("flex flex-wrap sm:flex-nowrap", isSolutionVideo ? "gap-2 sm:gap-3" : "gap-2 sm:gap-4")}>
                 {slide.stats?.map((stat, index) => (
@@ -1314,7 +1314,7 @@ const Slide = ({ slide }) => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="relative bg-gradient-to-br from-white to-ucsd-blue/5 rounded-xl sm:rounded-3xl p-2 sm:p-6 md:p-10 shadow-2xl border-2 sm:border-4 border-ucsd-navy/20 mt-3 sm:mt-0"
+              className="relative bg-gradient-to-br from-white to-ucsd-blue/5 rounded-xl sm:rounded-3xl p-2 sm:p-6 md:p-10 shadow-2xl border-2 sm:border-4 border-ucsd-navy/20 mt-3 sm:mt-0 overflow-hidden"
             >
               {/* Platform label */}
               <motion.div
@@ -1389,10 +1389,14 @@ const Slide = ({ slide }) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.5 }}
-                className="mt-4 sm:mt-6 pt-3 sm:pt-4 border-t-2 border-ucsd-gold/30 text-center text-xs sm:text-sm text-ucsd-navy/70 font-semibold"
+                className="mt-4 sm:mt-6 pt-3 sm:pt-4 border-t-2 border-ucsd-gold/30 text-center text-xs sm:text-base md:text-lg font-semibold flex items-center justify-center gap-2 sm:gap-4 text-black"
               >
-                <span className="hidden sm:inline">Hosted at San Diego Supercomputer Center · Low Cost and Open Source Frameworks · Model Agnostic</span>
-                <span className="sm:hidden">Hosted at SDSC · Open Source · Model Agnostic</span>
+                <span className="hidden sm:inline">Hosted at San Diego Supercomputer Center</span>
+                <span className="sm:hidden">Hosted at SDSC</span>
+                <span className="text-ucsd-gold text-lg sm:text-xl">◆</span>
+                <span>Low Cost & Open Source</span>
+                <span className="text-ucsd-gold text-lg sm:text-xl">◆</span>
+                <span>Model Agnostic</span>
               </motion.div>
             </motion.div>
           </div>
@@ -1567,6 +1571,22 @@ const Slide = ({ slide }) => {
             const topBarColors = ['#182B49', '#00C6D7', '#00629B', '#FFCD00', '#FC8900', '#6E963B'];
             const topBarColor = topBarColors[index % topBarColors.length];
 
+            // Contextual icons based on heading content
+            const getContextIcon = (heading) => {
+              const h = heading.toLowerCase();
+              if (h.includes('user') || h.includes('serves') || h.includes('73,000')) return Users;
+              if (h.includes('secure') || h.includes('hosting') || h.includes('on-prem')) return Server;
+              if (h.includes('open-source') || h.includes('foundation')) return Layers;
+              if (h.includes('cost') || h.includes('token') || h.includes('zero')) return Wallet;
+              if (h.includes('award') || h.includes('innovation') || h.includes('winning')) return Award;
+              if (h.includes('federat') || h.includes('scalab') || h.includes('power')) return Share2;
+              if (h.includes('shield') || h.includes('protect')) return Shield;
+              if (h.includes('code') || h.includes('develop')) return Code;
+              return Target; // default
+            };
+
+            const IconComponent = item.icon ? iconMap[item.icon] : getContextIcon(item.heading);
+
             return (
               <motion.div
                 key={index}
@@ -1580,9 +1600,9 @@ const Slide = ({ slide }) => {
 
                 {/* Content */}
                 <div className="p-4 sm:p-8">
-                  {/* Number watermark */}
-                  <div className="absolute top-2 sm:top-3 right-3 sm:right-5 text-4xl sm:text-7xl font-black text-ucsd-navy/10 pointer-events-none select-none">
-                    {index + 1}
+                  {/* Icon watermark */}
+                  <div className="absolute top-4 sm:top-6 right-4 sm:right-6 pointer-events-none select-none" style={{ color: topBarColor, opacity: 0.15 }}>
+                    <IconComponent size={48} strokeWidth={1.5} className="sm:w-16 sm:h-16 md:w-20 md:h-20" />
                   </div>
 
                   {/* Heading */}
