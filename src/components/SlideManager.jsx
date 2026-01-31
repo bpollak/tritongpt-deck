@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { slides } from '../data/slides';
 import { Eye, EyeOff, ChevronDown, ChevronUp, Save, Upload, ExternalLink } from 'lucide-react';
 
-const AUDIENCE_TYPES = ['all', 'technical', 'executive', 'internal', 'public'];
+const AUDIENCE_TYPES = ['all', 'technical', 'executive', 'internal', 'public', 'CCW'];
 
 const AUDIENCE_COLORS = {
   all: 'bg-gray-500',
