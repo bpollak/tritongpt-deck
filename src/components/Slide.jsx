@@ -1314,7 +1314,7 @@ const Slide = ({ slide }) => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="relative bg-gradient-to-br from-white to-ucsd-blue/5 rounded-xl sm:rounded-3xl p-2 sm:p-6 md:p-10 shadow-2xl border-2 sm:border-4 border-ucsd-navy/20 mt-3 sm:mt-0 overflow-hidden"
+              className="relative bg-gradient-to-br from-white to-ucsd-blue/5 rounded-xl sm:rounded-3xl p-2 sm:p-6 md:p-10 shadow-2xl border-2 sm:border-4 border-ucsd-navy/20 mt-5 sm:mt-8"
             >
               {/* Platform label */}
               <motion.div
