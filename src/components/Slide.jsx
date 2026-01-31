@@ -116,7 +116,9 @@ const Slide = ({ slide }) => {
   const isTeamGrid = slide.layout === 'team-grid';
 
   if (isTitleHero) {
-    const hasPresenterContent = slide.presenterImage || slide.presenterName || slide.qrCodeUrl;
+    // Determine if this is a closing slide (has QR code/image) vs opening slide
+    const isClosingSlide = slide.presenterImage || slide.qrCodeUrl;
+    const hasPresenterInfo = slide.presenterName || slide.presenterTitle;
 
     return (
       <div className="w-full h-full relative overflow-hidden bg-gradient-to-br from-[#182B49] via-[#0f1f33] to-[#182B49] flex flex-col items-center justify-center text-white break-words">
@@ -160,43 +162,92 @@ const Slide = ({ slide }) => {
 
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10" />
 
-        <div className="relative z-10 max-w-7xl w-full px-4 sm:px-8 md:px-12 flex flex-col items-center">
+        <div className="relative z-10 max-w-7xl w-full px-4 sm:px-8 md:px-12 flex flex-col items-center text-center">
           {/* Conference badge with enhanced animation */}
           {slide.conference && (
             <motion.div
               initial={{ opacity: 0, y: -30, scale: 0.9 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.7, type: "spring", bounce: 0.3 }}
-              className="mb-4 sm:mb-6 px-4 sm:px-6 py-2 rounded-full border-2 border-ucsd-gold/60 bg-gradient-to-r from-ucsd-gold/10 via-ucsd-gold/5 to-ucsd-gold/10 backdrop-blur-md text-ucsd-gold text-xs sm:text-sm md:text-base tracking-[0.1em] sm:tracking-[0.15em] font-bold uppercase shadow-[0_0_20px_rgba(255,205,0,0.2)] flex items-center gap-2 sm:gap-3"
+              className="mb-6 sm:mb-8 px-5 sm:px-8 py-2.5 rounded-full border-2 border-ucsd-gold/60 bg-gradient-to-r from-ucsd-gold/15 via-ucsd-gold/5 to-ucsd-gold/15 backdrop-blur-md text-ucsd-gold text-sm sm:text-base md:text-lg tracking-[0.12em] sm:tracking-[0.18em] font-bold uppercase shadow-[0_0_30px_rgba(255,205,0,0.25)] flex items-center gap-3 sm:gap-4"
             >
-              <div className="w-2 h-0.5 bg-ucsd-gold rounded-full" />
+              <div className="w-2.5 h-0.5 bg-ucsd-gold rounded-full" />
               {slide.conference}
-              <div className="w-2 h-0.5 bg-ucsd-gold rounded-full" />
+              <div className="w-2.5 h-0.5 bg-ucsd-gold rounded-full" />
+            </motion.div>
+          )}
+
+          {/* UC San Diego branding for opening slide */}
+          {!isClosingSlide && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.35 }}
+              className="mb-4 sm:mb-6 relative"
+            >
+              <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold tracking-[0.15em] uppercase text-ucsd-gold">
+                UC San Diego
+              </div>
+              <div className="mt-2 w-24 sm:w-32 h-0.5 mx-auto bg-gradient-to-r from-transparent via-ucsd-gold to-transparent rounded-full" />
             </motion.div>
           )}
 
           {/* Main title */}
           <motion.h1
-            initial={{ opacity: 0, scale: 0.9, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight mb-2 sm:mb-4 text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.7)] leading-[1.1] sm:leading-[1] text-center"
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: isClosingSlide ? 0.3 : 0.5 }}
+            className={clsx(
+              "font-black tracking-tight text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] leading-[1.1]",
+              isClosingSlide
+                ? "text-4xl sm:text-6xl md:text-7xl lg:text-8xl mb-2 sm:mb-4"
+                : "text-3xl sm:text-5xl md:text-6xl lg:text-7xl mb-4 sm:mb-6"
+            )}
           >
             {slide.title}
           </motion.h1>
 
+          {/* Simple underline for opening slide title */}
+          {!isClosingSlide && (
+            <div className="w-32 sm:w-48 md:w-64 h-1 mb-6 sm:mb-8 bg-gradient-to-r from-ucsd-sky via-ucsd-gold to-ucsd-sky rounded-full" />
+          )}
+
           {/* Subtitle */}
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="text-lg sm:text-2xl md:text-3xl font-medium text-ucsd-gold tracking-wide mb-8 sm:mb-12 text-center"
+            transition={{ delay: isClosingSlide ? 0.5 : 0.65, duration: 0.5, ease: "easeOut" }}
+            className={clsx(
+              "font-medium tracking-wide text-center",
+              isClosingSlide
+                ? "text-lg sm:text-2xl md:text-3xl text-ucsd-gold mb-8 sm:mb-12"
+                : "text-base sm:text-xl md:text-2xl text-white/80 mb-10 sm:mb-12 max-w-3xl leading-relaxed"
+            )}
           >
             {slide.subtitle}
           </motion.h2>
 
-          {/* Two-column presenter section */}
-          {hasPresenterContent && (
+          {/* Opening slide: Simple presenter info card at bottom */}
+          {!isClosingSlide && hasPresenterInfo && (
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.85, duration: 0.5 }}
+              className="flex flex-col items-center gap-1.5 px-6 sm:px-10 py-3 sm:py-4 rounded-xl border border-ucsd-gold/25 bg-gradient-to-br from-ucsd-gold/8 to-transparent backdrop-blur-sm"
+            >
+              <div className="text-base sm:text-lg md:text-xl font-semibold text-white tracking-wide">
+                {slide.presenterName}
+              </div>
+              {slide.presenterTitle && (
+                <div className="text-ucsd-sky text-xs sm:text-sm md:text-base font-normal tracking-wide max-w-md text-center">
+                  {slide.presenterTitle}
+                </div>
+              )}
+            </motion.div>
+          )}
+
+          {/* Closing slide: Two-column presenter section with image and QR */}
+          {isClosingSlide && (
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
