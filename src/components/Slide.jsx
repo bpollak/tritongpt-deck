@@ -39,9 +39,9 @@ const iconMap = {
 
 const containerVariants = {
   hidden: { opacity: 0 },
-  visible: { 
+  visible: {
     opacity: 1,
-    transition: { 
+    transition: {
       staggerChildren: 0.1,
       delayChildren: 0.2
     }
@@ -89,7 +89,7 @@ const Slide = ({ slide }) => {
   const hasImage = !!slide.imageSrc && !isSolution && !isSolutionVideo;
   const isDark = slide.dark;
   const itemCount = slide.content ? slide.content.length : 0;
-  
+
   const isDense = itemCount > 6;
   const isVeryDense = itemCount > 12;
   const isTableLike = itemCount > 20;
@@ -252,7 +252,7 @@ const Slide = ({ slide }) => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.8 }}
-              className="flex flex-col md:flex-row items-center justify-center gap-8 sm:gap-12 md:gap-20 w-full"
+              className="flex flex-col md:flex-row items-center md:items-start justify-center gap-8 sm:gap-12 md:gap-20 w-full"
             >
               {/* Left side: Headshot + Info */}
               <div className="flex flex-col items-center gap-4 sm:gap-5">
@@ -273,7 +273,7 @@ const Slide = ({ slide }) => {
                     {/* Inner border ring */}
                     <div className="absolute -inset-1 sm:-inset-2 rounded-full bg-gradient-to-br from-ucsd-gold to-ucsd-sky" />
                     {/* Image container */}
-                    <div className="relative w-32 h-32 sm:w-44 sm:h-44 md:w-52 md:h-52 rounded-full overflow-hidden border-4 border-white/20 shadow-[0_0_40px_rgba(255,205,0,0.3)]">
+                    <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white/20 shadow-[0_0_40px_rgba(255,205,0,0.3)]">
                       <img
                         src={slide.presenterImage}
                         alt={slide.presenterName || "Presenter"}
@@ -317,7 +317,7 @@ const Slide = ({ slide }) => {
                 initial={{ scaleY: 0 }}
                 animate={{ scaleY: 1 }}
                 transition={{ delay: 1.0, duration: 0.6 }}
-                className="hidden md:block w-px h-48 bg-gradient-to-b from-transparent via-ucsd-gold/50 to-transparent"
+                className="hidden md:block w-px h-48 bg-gradient-to-b from-transparent via-ucsd-gold/50 to-transparent mt-16"
               />
 
               {/* Right side: QR Code */}
@@ -328,18 +328,18 @@ const Slide = ({ slide }) => {
                   transition={{ delay: 1.0, duration: 0.7 }}
                   className="flex flex-col items-center gap-4"
                 >
-                  <div className="bg-white p-3 sm:p-4 rounded-2xl shadow-[0_0_50px_rgba(255,205,0,0.25)]">
+                  <div className="bg-white p-4 sm:p-5 rounded-2xl shadow-[0_0_50px_rgba(255,205,0,0.25)]">
                     <img
-                      src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(slide.qrCodeUrl)}&bgcolor=ffffff&color=182B49`}
+                      src={`https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(slide.qrCodeUrl)}&bgcolor=ffffff&color=182B49`}
                       alt="QR Code"
-                      className="w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48"
+                      className="w-52 h-52 sm:w-64 sm:h-64 md:w-72 md:h-72"
                     />
                   </div>
                   <div className="flex flex-col items-center gap-1">
-                    <div className="text-white text-sm sm:text-base font-semibold tracking-wide">
+                    <div className="text-white text-lg sm:text-xl md:text-2xl font-bold tracking-wide">
                       Learn More
                     </div>
-                    <div className="text-ucsd-sky/80 text-xs sm:text-sm font-medium">
+                    <div className="text-ucsd-sky/80 text-xs sm:text-sm md:text-base font-normal">
                       brettcpollak.com/tritongpt
                     </div>
                   </div>
@@ -354,7 +354,7 @@ const Slide = ({ slide }) => {
 
   const renderContent = () => (
     <>
-      <motion.h1 
+      <motion.h1
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -378,20 +378,20 @@ const Slide = ({ slide }) => {
       </motion.h1>
 
       {slide.subtitle && !isCaseStudyHero && !isCompoundArchitecture && !isAnalyticsChart && (
-         <motion.h2
-           initial={{ opacity: 0 }}
-           animate={{ opacity: 1 }}
-           transition={{ delay: 0.4, duration: 0.6 }}
-           className={clsx(
-             "text-base sm:text-xl md:text-2xl font-light mt-1 sm:mt-2 mb-3 sm:mb-6",
-             (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isSolution || isSolutionVideo || isAssistantCategories || isKeyTakeaways || isRoadmap || isProblemStatement || isComparisonTable || isAgentWorkflow) && "text-center w-full mb-4 sm:mb-8",
-             isProblemStatement && "text-lg sm:text-2xl md:text-3xl mb-4 sm:mb-10 font-medium text-red-600",
-             isAgentWorkflow && "text-lg sm:text-2xl font-semibold",
-             isDark ? "text-ucsd-sky" : "text-ucsd-blue"
-           )}
-         >
-           {slide.subtitle}
-         </motion.h2>
+        <motion.h2
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4, duration: 0.6 }}
+          className={clsx(
+            "text-base sm:text-xl md:text-2xl font-light mt-1 sm:mt-2 mb-3 sm:mb-6",
+            (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isSolution || isSolutionVideo || isAssistantCategories || isKeyTakeaways || isRoadmap || isProblemStatement || isComparisonTable || isAgentWorkflow) && "text-center w-full mb-4 sm:mb-8",
+            isProblemStatement && "text-lg sm:text-2xl md:text-3xl mb-4 sm:mb-10 font-medium text-red-600",
+            isAgentWorkflow && "text-lg sm:text-2xl font-semibold",
+            isDark ? "text-ucsd-sky" : "text-ucsd-blue"
+          )}
+        >
+          {slide.subtitle}
+        </motion.h2>
       )}
 
       {isCaseStudyHero && (
@@ -570,14 +570,14 @@ const Slide = ({ slide }) => {
                 <div className="relative inline-block">
                   <div className="absolute -inset-1 bg-gradient-to-br from-ucsd-navy/5 to-ucsd-blue/5 rounded-2xl blur-sm" />
                   {slide.videoSrc ? (
-                     <video
-                       src={slide.videoSrc}
-                       className="relative w-full h-auto rounded-2xl shadow-lg ring-1 ring-black/5 object-cover"
-                       autoPlay
-                       loop
-                       muted
-                       playsInline
-                     />
+                    <video
+                      src={slide.videoSrc}
+                      className="relative w-full h-auto rounded-2xl shadow-lg ring-1 ring-black/5 object-cover"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                    />
                   ) : (
                     <img
                       src={slide.imageSrc}
@@ -954,8 +954,8 @@ const Slide = ({ slide }) => {
                 transition={{ delay: 1.2 }}
                 className="text-xs text-white/80 text-center font-medium leading-relaxed"
               >
-                SDSC Infrastructure<br/>
-                Onyx Framework<br/>
+                SDSC Infrastructure<br />
+                Onyx Framework<br />
                 Open-Source Models
               </motion.div>
 
@@ -1470,36 +1470,36 @@ const Slide = ({ slide }) => {
       {isKeyTakeaways && (() => {
         const takeawayColors = ['#00629B', '#C69214', '#00C6D7', '#6E963B', '#FC8900', '#182B49'];
         return (
-        <div className="flex flex-col gap-3 sm:gap-6 w-full max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
-            {slide.content.map((item, index) => {
-              const IconComponent = item.icon ? iconMap[item.icon] : null;
-              const borderColor = takeawayColors[index % takeawayColors.length];
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 + index * 0.2, type: "spring", stiffness: 100 }}
-                  className="flex flex-col items-center text-center gap-2 sm:gap-4 p-4 sm:p-6 bg-white rounded-xl sm:rounded-3xl shadow-xl border-b-4 sm:border-b-8 hover:-translate-y-2 transition-transform"
-                  style={{ borderBottomColor: borderColor }}
-                >
-                  {IconComponent && (
-                    <motion.div
-                      animate={floatAnimation}
-                      className="w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center text-white shadow-lg"
-                      style={{ backgroundColor: borderColor }}
-                    >
-                      <IconComponent size={24} className="sm:w-8 sm:h-8" />
-                    </motion.div>
-                  )}
-                  <div className="text-base sm:text-xl font-bold text-ucsd-navy">{item.heading}</div>
-                  <div className="text-sm sm:text-base text-slate-700 leading-relaxed font-medium">{item.text}</div>
-                </motion.div>
-              );
-            })}
+          <div className="flex flex-col gap-3 sm:gap-6 w-full max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
+              {slide.content.map((item, index) => {
+                const IconComponent = item.icon ? iconMap[item.icon] : null;
+                const borderColor = takeawayColors[index % takeawayColors.length];
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 + index * 0.2, type: "spring", stiffness: 100 }}
+                    className="flex flex-col items-center text-center gap-2 sm:gap-4 p-4 sm:p-6 bg-white rounded-xl sm:rounded-3xl shadow-xl border-b-4 sm:border-b-8 hover:-translate-y-2 transition-transform"
+                    style={{ borderBottomColor: borderColor }}
+                  >
+                    {IconComponent && (
+                      <motion.div
+                        animate={floatAnimation}
+                        className="w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center text-white shadow-lg"
+                        style={{ backgroundColor: borderColor }}
+                      >
+                        <IconComponent size={24} className="sm:w-8 sm:h-8" />
+                      </motion.div>
+                    )}
+                    <div className="text-base sm:text-xl font-bold text-ucsd-navy">{item.heading}</div>
+                    <div className="text-sm sm:text-base text-slate-700 leading-relaxed font-medium">{item.text}</div>
+                  </motion.div>
+                );
+              })}
+            </div>
           </div>
-        </div>
         );
       })()}
 
@@ -1659,13 +1659,13 @@ const Slide = ({ slide }) => {
 
               {/* Agentic AI - with label on mobile */}
               <div className="text-ucsd-navy font-bold text-sm sm:text-xl leading-relaxed relative z-10 flex items-start gap-2 sm:gap-4 bg-ucsd-blue/5 md:bg-transparent p-2 md:p-0 rounded-lg">
-                 <span className="md:hidden text-xs text-ucsd-blue font-bold uppercase mr-1">2026:</span>
-                 <div className="mt-0.5 sm:mt-1 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-ucsd-gold flex items-center justify-center flex-shrink-0 text-white shadow-sm">
-                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="sm:w-[14px] sm:h-[14px]"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                 </div>
-                 <span className="bg-gradient-to-r from-ucsd-blue to-ucsd-navy bg-clip-text text-transparent">
+                <span className="md:hidden text-xs text-ucsd-blue font-bold uppercase mr-1">2026:</span>
+                <div className="mt-0.5 sm:mt-1 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-ucsd-gold flex items-center justify-center flex-shrink-0 text-white shadow-sm">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="sm:w-[14px] sm:h-[14px]"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <span className="bg-gradient-to-r from-ucsd-blue to-ucsd-navy bg-clip-text text-transparent">
                   {row.agenticAI}
-                 </span>
+                </span>
               </div>
             </motion.div>
           ))}
@@ -2184,7 +2184,7 @@ const Slide = ({ slide }) => {
                 {slide.chartData.series.map((series, idx) => (
                   <div key={idx} className="flex items-center gap-2">
                     <svg width="24" height="24">
-                      <circle cx="12" cy="12" r="8" fill="white" stroke={ucsdColors[idx]} strokeWidth="3"/>
+                      <circle cx="12" cy="12" r="8" fill="white" stroke={ucsdColors[idx]} strokeWidth="3" />
                     </svg>
                     <span className="text-base sm:text-lg text-slate-600 font-medium">{series.name}</span>
                   </div>
@@ -2514,24 +2514,24 @@ const Slide = ({ slide }) => {
                   const studentAvatarSeeds = ['Alex', 'Emma', 'Ryan', 'Mia'];
                   const studentSeed = studentAvatarSeeds[index] || `student${index}`;
                   return (
-                  <motion.div
-                    key={index}
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ delay: 1.1 + index * 0.1, type: "spring" }}
-                    className="relative"
-                  >
-                    <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-full overflow-hidden shadow-md border-2 border-ucsd-sky bg-gradient-to-br from-slate-100 to-slate-200">
-                      <img
-                        src={`https://api.dicebear.com/7.x/notionists/svg?seed=${studentSeed}&backgroundColor=f8fafc`}
-                        alt={student.role}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <span className="absolute -bottom-1 -right-1 text-[10px] font-bold text-ucsd-navy bg-ucsd-gold px-1.5 py-0.5 rounded-full shadow">
-                      {student.allocation}
-                    </span>
-                  </motion.div>
+                    <motion.div
+                      key={index}
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{ delay: 1.1 + index * 0.1, type: "spring" }}
+                      className="relative"
+                    >
+                      <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-full overflow-hidden shadow-md border-2 border-ucsd-sky bg-gradient-to-br from-slate-100 to-slate-200">
+                        <img
+                          src={`https://api.dicebear.com/7.x/notionists/svg?seed=${studentSeed}&backgroundColor=f8fafc`}
+                          alt={student.role}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <span className="absolute -bottom-1 -right-1 text-[10px] font-bold text-ucsd-navy bg-ucsd-gold px-1.5 py-0.5 rounded-full shadow">
+                        {student.allocation}
+                      </span>
+                    </motion.div>
                   );
                 })}
               </div>
@@ -2582,24 +2582,24 @@ const Slide = ({ slide }) => {
       )}
 
       {!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isRoadmap && !isProblemStatement && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isAgentWorkflow && !isAnalyticsChart && !isTeamGrid && slide.content && slide.content.length > 0 && (
-        <motion.ul 
+        <motion.ul
           variants={containerVariants}
           initial="hidden"
           animate="visible"
           className={clsx(
             "w-full gap-x-12 gap-y-12 relative",
-            useThreeColumns ? "grid grid-cols-1 md:grid-cols-3 text-sm" : 
-            (isVeryDense || useDenseList) ? "grid grid-cols-1 md:grid-cols-2 text-sm md:text-base" : 
-            isDense ? "grid grid-cols-1 md:grid-cols-2 text-base md:text-lg" : 
-            isGraphicHeavy ? "flex flex-col text-sm md:text-base gap-3" :
-            isFeatureGrid ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto max-w-[1600px]" :
-            isHeroList ? "flex flex-col gap-2 sm:gap-4 max-w-7xl w-full" :
-            "flex flex-col text-lg md:text-xl"
+            useThreeColumns ? "grid grid-cols-1 md:grid-cols-3 text-sm" :
+              (isVeryDense || useDenseList) ? "grid grid-cols-1 md:grid-cols-2 text-sm md:text-base" :
+                isDense ? "grid grid-cols-1 md:grid-cols-2 text-base md:text-lg" :
+                  isGraphicHeavy ? "flex flex-col text-sm md:text-base gap-3" :
+                    isFeatureGrid ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto max-w-[1600px]" :
+                      isHeroList ? "flex flex-col gap-2 sm:gap-4 max-w-7xl w-full" :
+                        "flex flex-col text-lg md:text-xl"
           )}
         >
           {isHeroList && <div className="absolute top-8 sm:top-14 bottom-8 sm:bottom-14 left-[1.25rem] sm:left-[3rem] w-0.5 sm:w-1 bg-ucsd-blue/30 -z-10" />}
           {slide.content.map((item, index) => {
-            const borderColors = ['border-ucsd-navy', 'border-ucsd-sky', 'border-ucsd-blue', 'border-ucsd-gold', 'border-ucsd-poppy-orange', 'border-ucsd-palm-green', 'border-ucsd-tierra-clay', 'border-ucsd-pacific-blue', 'border-ucsd-navy', 'border-ucsd-sky','border-ucsd-poppy-orange', 'border-ucsd-palm-green', 'border-ucsd-tierra-clay','border-ucsd-navy', 'border-ucsd-blue', 'border-ucsd-pacific-blue', 'border-ucsd-sky'];
+            const borderColors = ['border-ucsd-navy', 'border-ucsd-sky', 'border-ucsd-blue', 'border-ucsd-gold', 'border-ucsd-poppy-orange', 'border-ucsd-palm-green', 'border-ucsd-tierra-clay', 'border-ucsd-pacific-blue', 'border-ucsd-navy', 'border-ucsd-sky', 'border-ucsd-poppy-orange', 'border-ucsd-palm-green', 'border-ucsd-tierra-clay', 'border-ucsd-navy', 'border-ucsd-blue', 'border-ucsd-pacific-blue', 'border-ucsd-sky'];
             const bgColors = ['bg-ucsd-navy', 'bg-ucsd-gold', 'bg-ucsd-blue', 'bg-ucsd-sky', 'bg-ucsd-poppy-orange', 'bg-ucsd-palm-green', 'bg-ucsd-tierra-clay', 'bg-ucsd-pacific-blue'];
             const topBarColors = ['#182B49', '#00C6D7', '#00629B', '#FFCD00', '#FC8900', '#6E963B', '#B56200', '#006A96'];
             const headerColors = isDark
@@ -2614,8 +2614,8 @@ const Slide = ({ slide }) => {
             // Custom background for "Deliver Measurable Impact" (index 4, GraduationCap icon)
             const customBgColor = (isHeroList && index === 4) ? '#6E963B' : null;
             return (
-              <motion.li 
-                key={index} 
+              <motion.li
+                key={index}
                 variants={itemVariants}
                 className={clsx(
                   "flex relative group transition-all duration-300",
@@ -2625,22 +2625,22 @@ const Slide = ({ slide }) => {
                   isHeroList && "flex-row items-center gap-2 sm:gap-6"
                 )}
               >
-                 {isFeatureGrid && (
-                   <>
-                     <div className="absolute top-0 left-0 right-0 h-3 rounded-t-2xl" style={{ backgroundColor: topBarColor }} />
-                     <div className={clsx("absolute top-0 right-0 p-5 opacity-[0.07] text-7xl font-black pointer-events-none select-none",headerColorClass)}>{index + 1}</div>
-                   </>
-                 )}
-                 {isHeroList && (
-                   <motion.div
-                     animate={pulseAnimation}
-                     className={clsx("flex-shrink-0 w-10 h-10 sm:w-20 sm:h-20 rounded-full flex items-center justify-center shadow-xl z-10 relative", !customBgColor && bgColorClass)}
-                     style={customBgColor ? { backgroundColor: customBgColor } : {}}
-                   >
-                     {IconComponent ? <IconComponent size={20} className="text-white drop-shadow-md sm:w-10 sm:h-10" strokeWidth={2.5} /> : <span className="text-lg sm:text-3xl font-bold text-white">{index + 1}</span>}
-                   </motion.div>
-                 )}
-                <div className={clsx("flex flex-col flex-1", isHeroList && clsx("p-1.5 sm:p-4 rounded-lg sm:rounded-2xl border-l-3 sm:border-l-8 bg-white shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all",borderColorClass))}>
+                {isFeatureGrid && (
+                  <>
+                    <div className="absolute top-0 left-0 right-0 h-3 rounded-t-2xl" style={{ backgroundColor: topBarColor }} />
+                    <div className={clsx("absolute top-0 right-0 p-5 opacity-[0.07] text-7xl font-black pointer-events-none select-none", headerColorClass)}>{index + 1}</div>
+                  </>
+                )}
+                {isHeroList && (
+                  <motion.div
+                    animate={pulseAnimation}
+                    className={clsx("flex-shrink-0 w-10 h-10 sm:w-20 sm:h-20 rounded-full flex items-center justify-center shadow-xl z-10 relative", !customBgColor && bgColorClass)}
+                    style={customBgColor ? { backgroundColor: customBgColor } : {}}
+                  >
+                    {IconComponent ? <IconComponent size={20} className="text-white drop-shadow-md sm:w-10 sm:h-10" strokeWidth={2.5} /> : <span className="text-lg sm:text-3xl font-bold text-white">{index + 1}</span>}
+                  </motion.div>
+                )}
+                <div className={clsx("flex flex-col flex-1", isHeroList && clsx("p-1.5 sm:p-4 rounded-lg sm:rounded-2xl border-l-3 sm:border-l-8 bg-white shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all", borderColorClass))}>
                   {item.heading && (
                     <span className={clsx(
                       "font-semibold mb-1",

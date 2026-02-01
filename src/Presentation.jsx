@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion'; // eslint-disable-line no-unused-vars
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Slide from './components/Slide';
-import { slides } from './data/slides';
+import { slides as defaultSlides } from './data/slides';
 
 // Utility function to filter slides based on audience
 const filterSlidesByAudience = (slides, audienceType) => {
@@ -15,6 +15,7 @@ const filterSlidesByAudience = (slides, audienceType) => {
 const Presentation = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
+  const [slidesData, setSlidesData] = useState(defaultSlides);
 
   // Get audience type from URL parameter
   const audienceType = useMemo(() => {
@@ -22,10 +23,28 @@ const Presentation = () => {
     return params.get('audience') || 'all';
   }, []);
 
+  // Load slides from generated output if available
+  useEffect(() => {
+    const loadSlides = async () => {
+      try {
+        const response = await fetch('./slides.json', { cache: 'no-store' });
+        if (!response.ok) return;
+        const data = await response.json();
+        if (Array.isArray(data) && data.length > 0) {
+          setSlidesData(data);
+        }
+      } catch (error) {
+        // Fallback to bundled data
+      }
+    };
+
+    loadSlides();
+  }, []);
+
   // Filter slides based on audience type
   const filteredSlides = useMemo(() => {
-    return filterSlidesByAudience(slides, audienceType);
-  }, [audienceType]);
+    return filterSlidesByAudience(slidesData, audienceType);
+  }, [audienceType, slidesData]);
 
   const nextSlide = useCallback(() => {
     setDirection(1);
