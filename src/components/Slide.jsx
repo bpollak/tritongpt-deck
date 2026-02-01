@@ -2345,8 +2345,12 @@ const Slide = ({ slide }) => {
           {slide.teamLeadership && (
             <div className="flex justify-center gap-4 lg:gap-8 mb-2">
               {slide.teamLeadership.map((leader, index) => {
-                // Simple avatar seeds for leadership
-                const avatarSeeds = ['leader1', 'leader2'];
+                // Custom avatar seeds for leadership - Service Owner has mohawk, Offering Manager is male
+                const leaderAvatarSeeds = {
+                  'Service Owner': 'Felix',  // mohawk style
+                  'Offering Manager': 'Robert'  // male
+                };
+                const avatarSeed = leaderAvatarSeeds[leader.role] || `leader${index}`;
                 return (
                   <motion.div
                     key={index}
@@ -2363,17 +2367,17 @@ const Slide = ({ slide }) => {
                     {/* Professional avatar */}
                     <div className="flex-shrink-0 relative">
                       <div
-                        className="w-12 h-12 lg:w-14 lg:h-14 rounded-full shadow-sm overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200"
-                        style={{ border: `2px solid ${leader.color}` }}
+                        className="w-20 h-20 lg:w-28 lg:h-28 rounded-full shadow-sm overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200"
+                        style={{ border: `3px solid ${leader.color}` }}
                       >
                         <img
-                          src={`https://api.dicebear.com/7.x/notionists/svg?seed=${leader.role}&backgroundColor=f8fafc`}
+                          src={`https://api.dicebear.com/7.x/notionists/svg?seed=${avatarSeed}&backgroundColor=f8fafc`}
                           alt={leader.role}
                           className="w-full h-full object-cover"
                         />
                       </div>
                       {/* Allocation badge */}
-                      <span className="absolute -bottom-0.5 -right-0.5 text-[10px] font-bold text-ucsd-navy bg-ucsd-gold px-1 py-0 rounded-full shadow">
+                      <span className="absolute -bottom-0.5 -right-0.5 text-[11px] font-bold text-ucsd-navy bg-ucsd-gold px-1.5 py-0.5 rounded-full shadow">
                         {leader.allocation}
                       </span>
                     </div>
@@ -2437,6 +2441,17 @@ const Slide = ({ slide }) => {
               };
               const roleColor = roleColors[member.category] || '#182B49';
 
+              // Custom avatar seeds - Project Manager is female, others are male
+              const memberAvatarSeeds = {
+                'Lead Architect': 'James',
+                'Platform Lead': 'Michael',
+                'Project Manager': 'Jennifer',  // female
+                'Platform Engineer': 'David',
+                'Infra/DevOps': 'Thomas',
+                'Knowledge Engineer': 'Marcus'
+              };
+              const memberAvatarSeed = memberAvatarSeeds[member.role] || `team${index}`;
+
               return (
                 <motion.div
                   key={index}
@@ -2455,17 +2470,17 @@ const Slide = ({ slide }) => {
                   {/* Professional avatar */}
                   <div className="flex-shrink-0 relative">
                     <div
-                      className="w-12 h-12 lg:w-14 lg:h-14 rounded-full overflow-hidden shadow-sm bg-gradient-to-br from-slate-100 to-slate-200"
+                      className="w-16 h-16 lg:w-24 lg:h-24 rounded-full overflow-hidden shadow-sm bg-gradient-to-br from-slate-100 to-slate-200"
                       style={{ border: `2px solid ${roleColor}` }}
                     >
                       <img
-                        src={`https://api.dicebear.com/7.x/notionists/svg?seed=${member.role}${index}&backgroundColor=f8fafc`}
+                        src={`https://api.dicebear.com/7.x/notionists/svg?seed=${memberAvatarSeed}&backgroundColor=f8fafc`}
                         alt={member.role}
                         className="w-full h-full object-cover"
                       />
                     </div>
                     {/* Allocation badge */}
-                    <span className="absolute -bottom-0.5 -right-0.5 text-[10px] font-bold text-ucsd-navy bg-ucsd-gold px-1 py-0 rounded-full shadow">
+                    <span className="absolute -bottom-0.5 -right-0.5 text-[11px] font-bold text-ucsd-navy bg-ucsd-gold px-1.5 py-0.5 rounded-full shadow">
                       {member.allocation}
                     </span>
                   </div>
@@ -2490,11 +2505,15 @@ const Slide = ({ slide }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.0 }}
-              className="mt-2 flex items-center justify-center gap-3"
+              className="mt-3 flex items-center justify-center gap-4"
             >
               <span className="text-base lg:text-lg font-semibold text-slate-500">Student Workers:</span>
-              <div className="flex items-center gap-2">
-                {slide.studentWorkers.map((student, index) => (
+              <div className="flex items-center gap-3">
+                {slide.studentWorkers.map((student, index) => {
+                  // Mix of male and female student avatars
+                  const studentAvatarSeeds = ['Alex', 'Emma', 'Ryan', 'Mia'];
+                  const studentSeed = studentAvatarSeeds[index] || `student${index}`;
+                  return (
                   <motion.div
                     key={index}
                     initial={{ scale: 0 }}
@@ -2502,18 +2521,19 @@ const Slide = ({ slide }) => {
                     transition={{ delay: 1.1 + index * 0.1, type: "spring" }}
                     className="relative"
                   >
-                    <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full overflow-hidden shadow-md border-2 border-ucsd-sky">
+                    <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-full overflow-hidden shadow-md border-2 border-ucsd-sky bg-gradient-to-br from-slate-100 to-slate-200">
                       <img
-                        src={`https://api.dicebear.com/7.x/initials/svg?seed=SW${index + 1}&backgroundColor=00C6D7&fontFamily=Arial&fontSize=36`}
+                        src={`https://api.dicebear.com/7.x/notionists/svg?seed=${studentSeed}&backgroundColor=f8fafc`}
                         alt={student.role}
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <span className="absolute -bottom-1 -right-1 text-[9px] font-bold text-ucsd-navy bg-ucsd-gold px-1 py-0.5 rounded-full shadow">
+                    <span className="absolute -bottom-1 -right-1 text-[10px] font-bold text-ucsd-navy bg-ucsd-gold px-1.5 py-0.5 rounded-full shadow">
                       {student.allocation}
                     </span>
                   </motion.div>
-                ))}
+                  );
+                })}
               </div>
               <span className="text-sm text-slate-400 ml-2">(Part-time)</span>
             </motion.div>
