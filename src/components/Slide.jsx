@@ -2360,14 +2360,14 @@ const Slide = ({ slide }) => {
                     className="flex items-center gap-1.5 bg-white rounded-lg shadow-lg px-1.5 py-1 lg:px-2 lg:py-1.5 max-w-xl"
                     style={{ borderLeft: `5px solid ${leader.color}` }}
                   >
-                    {/* Simple initials avatar */}
+                    {/* Professional avatar */}
                     <div className="flex-shrink-0 relative">
                       <div
-                        className="w-12 h-12 lg:w-14 lg:h-14 rounded-full shadow-sm overflow-hidden"
+                        className="w-12 h-12 lg:w-14 lg:h-14 rounded-full shadow-sm overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200"
                         style={{ border: `2px solid ${leader.color}` }}
                       >
                         <img
-                          src={`https://api.dicebear.com/7.x/initials/svg?seed=${leader.role}&backgroundColor=${leader.color.replace('#', '')}&fontFamily=Arial&fontSize=40`}
+                          src={`https://api.dicebear.com/7.x/notionists/svg?seed=${leader.role}&backgroundColor=f8fafc`}
                           alt={leader.role}
                           className="w-full h-full object-cover"
                         />
@@ -2452,14 +2452,14 @@ const Slide = ({ slide }) => {
                   className="flex items-center gap-2 bg-white rounded-lg shadow-md hover:shadow-lg px-1.5 py-0.5 lg:px-2 lg:py-1 transition-all"
                   style={{ borderLeft: `4px solid ${roleColor}` }}
                 >
-                  {/* Simple initials avatar */}
+                  {/* Professional avatar */}
                   <div className="flex-shrink-0 relative">
                     <div
-                      className="w-12 h-12 lg:w-14 lg:h-14 rounded-full overflow-hidden shadow-sm"
+                      className="w-12 h-12 lg:w-14 lg:h-14 rounded-full overflow-hidden shadow-sm bg-gradient-to-br from-slate-100 to-slate-200"
                       style={{ border: `2px solid ${roleColor}` }}
                     >
                       <img
-                        src={`https://api.dicebear.com/7.x/initials/svg?seed=${member.role}&backgroundColor=${roleColor.replace('#', '')}&fontFamily=Arial&fontSize=36`}
+                        src={`https://api.dicebear.com/7.x/notionists/svg?seed=${member.role}${index}&backgroundColor=f8fafc`}
                         alt={member.role}
                         className="w-full h-full object-cover"
                       />
