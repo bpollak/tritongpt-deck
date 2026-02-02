@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion'; // eslint-disable-line no-unused-vars
 import clsx from 'clsx';
 import { Target, Database, Cpu, Blocks, GraduationCap, Building2, FileText, FileCheck, DollarSign, Shield, BookOpen, Code, Presentation, Globe, FileEdit, FolderOpen, TrendingUp, ClipboardCheck, Search, Heart, Calendar, GitBranch, Network, Grid3x3, ArrowDown, ArrowRight, Brain, RefreshCw, ArrowRightLeft, CheckCircle, Monitor, Users, Award, Server, Layers, Wallet, Share2 } from 'lucide-react';
+import { QRCodeSVG } from 'qrcode.react';
 import VideoSlide from './VideoSlide';
 
 const iconMap = {
@@ -329,9 +330,12 @@ const Slide = ({ slide }) => {
                   className="flex flex-col items-center gap-4"
                 >
                   <div className="bg-white p-4 sm:p-5 rounded-2xl shadow-[0_0_50px_rgba(255,205,0,0.25)]">
-                    <img
-                      src={`https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(slide.qrCodeUrl)}&bgcolor=ffffff&color=182B49`}
-                      alt="QR Code"
+                    <QRCodeSVG
+                      value={slide.qrCodeUrl}
+                      size={288}
+                      bgColor="#ffffff"
+                      fgColor="#182B49"
+                      level="M"
                       className="w-52 h-52 sm:w-64 sm:h-64 md:w-72 md:h-72"
                     />
                   </div>
