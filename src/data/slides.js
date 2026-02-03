@@ -8,7 +8,7 @@ export const slides = [
     "layout": "title-hero",
     "conference": "Rolling Updates | February 2026",
     "presenterName": "Brett Pollak",
-    "presenterTitle": "Executive Director, Workplace Technology & Infrastructure Services",
+    "presenterTitle": "Executive Director, IT Services",
     "audiences": [
       "all",
       "internal",
@@ -1232,7 +1232,7 @@ export const slides = [
     "subtitle": "Questions?",
     "layout": "title-hero",
     "presenterName": "Brett Pollak",
-    "presenterTitle": "Executive Director, Workplace Technology & Infrastructure Services",
+    "presenterTitle": "Executive Director, IT Services",
     "presenterImage": "/media/headshot.jpg",
     "presenterWebsite": "brettcpollak.com",
     "qrCodeUrl": "https://brettcpollak.com/tritongpt",
