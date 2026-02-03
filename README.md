@@ -2,6 +2,8 @@
 
 This is a high-performance, web-based presentation platform built with React, Vite, Tailwind CSS, and Framer Motion, customized with UC San Diego branding.
 
+**Live Demo**: https://tritongpt-deck.vercel.app/
+
 ## Features
 
 - **UCSD Branding**: Custom colors (Navy, Gold, Blue) and typography (Montserrat/Source Sans Pro).
