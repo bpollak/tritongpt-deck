@@ -236,11 +236,11 @@ const Slide = ({ slide }) => {
               transition={{ delay: 0.85, duration: 0.5 }}
               className="flex flex-col items-center gap-1.5 px-6 sm:px-10 py-3 sm:py-4 rounded-xl border border-ucsd-gold/25 bg-gradient-to-br from-ucsd-gold/8 to-transparent backdrop-blur-sm"
             >
-              <div className="text-base sm:text-lg md:text-xl font-semibold text-white tracking-wide">
+              <div className="text-xl sm:text-2xl md:text-3xl font-semibold text-white tracking-wide">
                 {slide.presenterName}
               </div>
               {slide.presenterTitle && (
-                <div className="text-ucsd-sky text-xs sm:text-sm md:text-base font-normal tracking-wide max-w-md text-center">
+                <div className="text-ucsd-sky text-sm sm:text-base md:text-lg font-normal tracking-wide max-w-md text-center">
                   {slide.presenterTitle}
                 </div>
               )}
