@@ -364,7 +364,8 @@ export const slides = [
     "poster": "/media/image37.png",
     "audiences": [
       "all",
-      "internal"
+      "internal",
+      "public"
     ]
   },
   {
@@ -376,7 +377,8 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "CCW"
+      "CCW",
+      "public"
     ]
   },
   {
@@ -387,7 +389,8 @@ export const slides = [
     "poster": "/media/image38.png",
     "audiences": [
       "all",
-      "internal"
+      "internal",
+      "public"
     ]
   },
   {
@@ -398,7 +401,8 @@ export const slides = [
     "poster": "/media/image40.png",
     "audiences": [
       "all",
-      "internal"
+      "internal",
+      "public"
     ]
   },
   {
@@ -409,7 +413,8 @@ export const slides = [
     "poster": "/media/image41.png",
     "audiences": [
       "all",
-      "internal"
+      "internal",
+      "public"
     ]
   },
   {
@@ -1034,7 +1039,8 @@ export const slides = [
       "text": "Onboard new institutions adopting TritonGPT as a Software-as-a-Service AI platform"
     },
     "audiences": [
-      "internal"
+      "internal",
+      "public"
     ]
   },
   {
