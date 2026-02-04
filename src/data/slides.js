@@ -248,7 +248,8 @@ export const slides = [
     "poster": "/media/image38.png",
     "audiences": [
       "all",
-      "internal"
+      "internal",
+      "CCW"
     ]
   },
   {
