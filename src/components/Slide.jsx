@@ -115,6 +115,7 @@ const Slide = ({ slide }) => {
   const isAgentWorkflow = slide.layout === 'agent-workflow';
   const isAnalyticsChart = slide.layout === 'analytics-chart';
   const isTeamGrid = slide.layout === 'team-grid';
+  const isTimelineEvolution = slide.layout === 'timeline-evolution';
 
   if (isTitleHero) {
     // Determine if this is a closing slide (has QR code/image) vs opening slide
@@ -365,8 +366,8 @@ const Slide = ({ slide }) => {
         className={clsx(
           "font-bold mb-4 sm:mb-6",
           isTitle ? "text-2xl sm:text-4xl md:text-6xl" : "text-xl sm:text-3xl md:text-5xl",
-          (!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isRoadmap && !isProblemStatement && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture) && "border-b-4 border-ucsd-gold pb-3 inline-block self-start",
-          (isSolution || isSolutionVideo || isCaseStudyHero || isAssistantCategories || isKeyTakeaways || isRoadmap || isProblemStatement || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isComparisonTable || isCompoundArchitecture) && "text-center w-full",
+          (!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isRoadmap && !isProblemStatement && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isTimelineEvolution) && "border-b-4 border-ucsd-gold pb-3 inline-block self-start",
+          (isSolution || isSolutionVideo || isCaseStudyHero || isAssistantCategories || isKeyTakeaways || isRoadmap || isProblemStatement || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isComparisonTable || isCompoundArchitecture || isTimelineEvolution) && "text-center w-full",
           (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isCompoundArchitecture) && "hidden",
           isAgentWorkflow && "text-center text-3xl sm:text-5xl md:text-6xl mb-2 sm:mb-4 w-full",
           isCaseStudyHero && "text-3xl md:text-4xl mb-4",
@@ -388,7 +389,7 @@ const Slide = ({ slide }) => {
           transition={{ delay: 0.4, duration: 0.6 }}
           className={clsx(
             "text-base sm:text-xl md:text-2xl font-light mt-1 sm:mt-2 mb-3 sm:mb-6",
-            (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isSolution || isSolutionVideo || isAssistantCategories || isKeyTakeaways || isRoadmap || isProblemStatement || isComparisonTable || isAgentWorkflow) && "text-center w-full mb-4 sm:mb-8",
+            (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isSolution || isSolutionVideo || isAssistantCategories || isKeyTakeaways || isRoadmap || isProblemStatement || isComparisonTable || isAgentWorkflow || isTimelineEvolution) && "text-center w-full mb-4 sm:mb-8",
             isProblemStatement && "text-lg sm:text-2xl md:text-3xl mb-4 sm:mb-10 font-medium text-red-600",
             isAgentWorkflow && "text-lg sm:text-2xl font-semibold",
             isDark ? "text-ucsd-sky" : "text-ucsd-blue"
@@ -1525,6 +1526,183 @@ const Slide = ({ slide }) => {
         </div>
       )}
 
+      {isTimelineEvolution && (() => {
+        // Split milestones by year for better organization
+        const milestones2023_24 = slide.milestones?.filter(m => m.month.includes("'23") || m.month.includes("'24") || m.month.includes("Spring")) || [];
+        const milestones2025 = slide.milestones?.filter(m => m.month.includes("'25")) || [];
+
+        return (
+          <div className="w-full max-w-[1900px] mx-auto flex flex-col h-full gap-2">
+            {/* Row 1: 2023-2024 Foundation */}
+            <div className="flex-1 flex flex-col">
+              {/* Year label for row 1 */}
+              <div className="flex items-center gap-3 mb-2">
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  className="text-2xl sm:text-3xl font-black text-ucsd-gold"
+                >
+                  2023-2024
+                </motion.div>
+                <div className="text-sm sm:text-base font-semibold text-ucsd-sky/80 uppercase tracking-wider">Foundation & Launch</div>
+                <div className="flex-1 h-0.5 bg-gradient-to-r from-ucsd-gold/40 to-transparent rounded-full" />
+              </div>
+
+              {/* Timeline track */}
+              <div className="relative flex-1">
+                <div className="absolute top-5 left-0 right-0 h-1 bg-gradient-to-r from-ucsd-gold/50 via-ucsd-sky/50 to-ucsd-gold/50 rounded-full" />
+
+                {/* Milestones */}
+                <div className="flex justify-between items-start gap-3">
+                  {milestones2023_24.map((milestone, index) => {
+                    const colors = ['#00C6D7', '#E879A0', '#FFCD00', '#FC8900', '#00629B', '#6E963B'];
+                    const color = colors[index % colors.length];
+
+                    return (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.15 + index * 0.08, type: "spring", stiffness: 120 }}
+                        className="flex flex-col items-center flex-1 min-w-0"
+                      >
+                        {/* Connector dot */}
+                        <motion.div
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          transition={{ delay: 0.25 + index * 0.08, type: "spring", stiffness: 200 }}
+                          className="w-4 h-4 sm:w-5 sm:h-5 rounded-full border-3 border-white shadow-lg z-10 mb-2"
+                          style={{ backgroundColor: color }}
+                        />
+
+                        {/* Card */}
+                        <div className="w-full bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                          {/* Header bar */}
+                          <div className="px-2.5 py-1.5 text-white" style={{ backgroundColor: color }}>
+                            <div className="text-[10px] sm:text-xs font-bold uppercase tracking-wide truncate">
+                              {milestone.phase}
+                            </div>
+                          </div>
+
+                          {/* Content */}
+                          <div className="px-2.5 py-2">
+                            <div
+                              className="inline-block px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-bold text-white mb-1.5"
+                              style={{ backgroundColor: color }}
+                            >
+                              {milestone.month}
+                            </div>
+                            <h3 className="text-xs sm:text-sm font-bold text-ucsd-navy mb-1.5 leading-tight">
+                              {milestone.title}
+                            </h3>
+                            <ul className="space-y-1">
+                              {milestone.items?.map((item, itemIndex) => (
+                                <li key={itemIndex} className="flex items-start gap-1.5 text-[10px] sm:text-xs text-slate-700 leading-snug">
+                                  <span className="w-1.5 h-1.5 rounded-full flex-shrink-0 mt-1" style={{ backgroundColor: color }} />
+                                  <span>{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+
+            {/* Row 2: 2025 Rapid Innovation - Highlighted */}
+            <div className="flex-1 flex flex-col">
+              {/* Year label for row 2 - More prominent */}
+              <div className="flex items-center gap-3 mb-2">
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.5 }}
+                  className="text-3xl sm:text-4xl font-black text-ucsd-gold drop-shadow-[0_0_10px_rgba(255,205,0,0.4)]"
+                >
+                  2025
+                </motion.div>
+                <div className="text-base sm:text-lg font-bold text-white uppercase tracking-wider bg-gradient-to-r from-ucsd-gold/30 to-transparent px-3 py-1 rounded-full">
+                  Rapid Innovation
+                </div>
+                <div className="flex-1 h-1 bg-gradient-to-r from-ucsd-gold via-ucsd-sky/60 to-ucsd-gold/30 rounded-full" />
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 1.5 }}
+                  className="w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[16px] border-l-ucsd-gold"
+                />
+              </div>
+
+              {/* Timeline track */}
+              <div className="relative flex-1">
+                <div className="absolute top-5 left-0 right-0 h-1.5 bg-gradient-to-r from-ucsd-gold via-ucsd-sky to-ucsd-gold rounded-full shadow-[0_0_8px_rgba(255,205,0,0.3)]" />
+
+                {/* Milestones */}
+                <div className="flex justify-between items-start gap-3">
+                  {milestones2025.map((milestone, index) => {
+                    const colors = ['#00629B', '#6E963B', '#00C6D7', '#E879A0', '#FFCD00', '#FC8900'];
+                    const color = colors[index % colors.length];
+
+                    return (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.5 + index * 0.1, type: "spring", stiffness: 120 }}
+                        className="flex flex-col items-center flex-1 min-w-0"
+                      >
+                        {/* Connector dot - larger for 2025 */}
+                        <motion.div
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          transition={{ delay: 0.6 + index * 0.1, type: "spring", stiffness: 200 }}
+                          className="w-5 h-5 sm:w-6 sm:h-6 rounded-full border-4 border-white shadow-lg z-10 mb-2"
+                          style={{ backgroundColor: color, boxShadow: `0 0 12px ${color}40` }}
+                        />
+
+                        {/* Card - slightly larger for 2025 */}
+                        <div className="w-full bg-white backdrop-blur-sm rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 overflow-hidden border border-white/50">
+                          {/* Header bar */}
+                          <div className="px-3 py-2 text-white" style={{ backgroundColor: color }}>
+                            <div className="text-[11px] sm:text-sm font-bold uppercase tracking-wide truncate">
+                              {milestone.phase}
+                            </div>
+                          </div>
+
+                          {/* Content */}
+                          <div className="px-3 py-2.5">
+                            <div
+                              className="inline-block px-2.5 py-1 rounded-full text-[11px] sm:text-sm font-bold text-white mb-2"
+                              style={{ backgroundColor: color }}
+                            >
+                              {milestone.month}
+                            </div>
+                            <h3 className="text-sm sm:text-base font-bold text-ucsd-navy mb-2 leading-tight">
+                              {milestone.title}
+                            </h3>
+                            <ul className="space-y-1">
+                              {milestone.items?.map((item, itemIndex) => (
+                                <li key={itemIndex} className="flex items-start gap-1.5 text-[11px] sm:text-sm text-slate-700 leading-snug">
+                                  <span className="w-1.5 h-1.5 rounded-full flex-shrink-0 mt-1.5" style={{ backgroundColor: color }} />
+                                  <span className="font-medium">{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      })()}
+
       {isProblemStatement && (
         <div className="w-full max-w-[1700px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-6 sm:gap-x-12 gap-y-4 sm:gap-y-8">
@@ -2585,7 +2763,7 @@ const Slide = ({ slide }) => {
         </div>
       )}
 
-      {!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isRoadmap && !isProblemStatement && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isAgentWorkflow && !isAnalyticsChart && !isTeamGrid && slide.content && slide.content.length > 0 && (
+      {!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isRoadmap && !isProblemStatement && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isAgentWorkflow && !isAnalyticsChart && !isTeamGrid && !isTimelineEvolution && slide.content && slide.content.length > 0 && (
         <motion.ul
           variants={containerVariants}
           initial="hidden"

@@ -21,6 +21,142 @@ export const slides = [
   {
     "id": 2,
     "type": "content",
+    "layout": "timeline-evolution",
+    "title": "TritonGPT Initiative",
+    "subtitle": "From Development to Campus-Wide Deployment",
+    "backgroundColor": "#182B49",
+    "dark": true,
+    "years": ["2023", "2024", "2025"],
+    "milestones": [
+      {
+        "phase": "Development",
+        "month": "Jun '23",
+        "title": "Project Inception",
+        "items": [
+          "Led by IT Services",
+          "Funded by Chancellor's Office"
+        ]
+      },
+      {
+        "phase": "Pilot Launch",
+        "month": "Oct '23",
+        "title": "Beta Testing",
+        "items": [
+          "400+ staff invited",
+          "Feedback collection begins"
+        ]
+      },
+      {
+        "phase": "Training Launch",
+        "month": "Nov '23",
+        "title": "AI Essentials I",
+        "items": [
+          "Async AI course",
+          "UC Learning Center"
+        ]
+      },
+      {
+        "phase": "Phased Rollout",
+        "month": "Mar '24",
+        "title": "First Assistants",
+        "items": [
+          "UC San Diego Assistant",
+          "Job Description Helper"
+        ]
+      },
+      {
+        "phase": "Platform Upgrade",
+        "month": "Apr '24",
+        "title": "AI Essentials II",
+        "items": [
+          "Campus SSO auth",
+          "Llama 3 LLM upgrade"
+        ]
+      },
+      {
+        "phase": "Campus-Wide",
+        "month": "Spring '24",
+        "title": "Full Availability",
+        "items": [
+          "Refreshed UI",
+          "File upload",
+          "Fund Manager Coach"
+        ]
+      },
+      {
+        "phase": "UI Overhaul",
+        "month": "Apr '25",
+        "title": "Multi-LLM Support",
+        "items": [
+          "GPT-4o & Llama 3.3",
+          "128K context window",
+          "My Documents feature",
+          "Theme customization"
+        ]
+      },
+      {
+        "phase": "Student Access",
+        "month": "Jun '25",
+        "title": "Universal Access",
+        "items": [
+          "45K students onboarded",
+          "GPT-4.1 available",
+          "Expert Notetaker"
+        ]
+      },
+      {
+        "phase": "Widget Launch",
+        "month": "Jul '25",
+        "title": "AI Chatbot Widget",
+        "items": [
+          "Deployed on Blink",
+          "Public-facing support",
+          "No login required"
+        ]
+      },
+      {
+        "phase": "Backend Upgrades",
+        "month": "Sep '25",
+        "title": "Infrastructure",
+        "items": [
+          "Improved embeddings",
+          "LiteLLM integration",
+          "User model selection"
+        ]
+      },
+      {
+        "phase": "Search Integration",
+        "month": "Oct '25",
+        "title": "AI-Powered Search",
+        "items": [
+          "GPT-5 available",
+          "Blink AI overview",
+          "Data Dictionary Assistant",
+          "GPT OSS default model"
+        ]
+      },
+      {
+        "phase": "Next-Gen Platform",
+        "month": "Nov '25",
+        "title": "Latest Release",
+        "items": [
+          "GPT-5.1 & Gemini 3 Pro",
+          "Deep Research tool",
+          "Projects organization",
+          "Enhanced personalization"
+        ]
+      }
+    ],
+    "audiences": [
+      "all",
+      "internal",
+      "public",
+      "CCW"
+    ]
+  },
+  {
+    "id": 3,
+    "type": "content",
     "content": [
       {
         "heading": "Sovereign Infrastructure as a Feature",
@@ -61,7 +197,7 @@ export const slides = [
     ]
   },
   {
-    "id": 3,
+    "id": 4,
     "backgroundColor": "#F5F0E6",
     "type": "content",
     "content": [
@@ -99,7 +235,7 @@ export const slides = [
     ]
   },
   {
-    "id": 4,
+    "id": 5,
     "type": "content",
     "layout": "platform-simple",
     "title": "TritonGPT Platform",
@@ -205,7 +341,7 @@ export const slides = [
     ]
   },
   {
-    "id": 5,
+    "id": 6,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media4.mov",
@@ -241,11 +377,11 @@ export const slides = [
     ]
   },
   {
-    "id": 8,
+    "id": 9,
     "type": "video",
     "content": [],
-    "videoSrc": "/media/media3.mov",
-    "poster": "/media/image38.png",
+    "videoSrc": "/media/media4.mov",
+    "poster": "/media/image39.png",
     "audiences": [
       "all",
       "internal",
@@ -253,7 +389,18 @@ export const slides = [
     ]
   },
   {
-    "id": 9,
+    "id": 8,
+    "type": "video",
+    "content": [],
+    "videoSrc": "/media/media3.mov",
+    "poster": "/media/image38.png",
+    "audiences": [
+      "all",
+      "internal"
+    ]
+  },
+  {
+    "id": 10,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media5.mov",
@@ -264,7 +411,7 @@ export const slides = [
     ]
   },
   {
-    "id": 10,
+    "id": 11,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media6.mov",
@@ -275,7 +422,7 @@ export const slides = [
     ]
   },
   {
-    "id": 11,
+    "id": 12,
     "type": "content",
     "content": [
       {
@@ -321,7 +468,7 @@ export const slides = [
     ]
   },
   {
-    "id": 12,
+    "id": 13,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media9.mov",
@@ -333,7 +480,7 @@ export const slides = [
     ]
   },
   {
-    "id": 13,
+    "id": 14,
     "type": "content",
     "content": [
       {
@@ -379,7 +526,7 @@ export const slides = [
     ]
   },
   {
-    "id": 14,
+    "id": 15,
     "type": "content",
     "content": [
       {
@@ -425,7 +572,7 @@ export const slides = [
     ]
   },
   {
-    "id": 15,
+    "id": 16,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media11.mov",
@@ -436,7 +583,7 @@ export const slides = [
     ]
   },
   {
-    "id": 16,
+    "id": 17,
     "type": "content",
     "layout": "comparison-table",
     "title": "The Evolution of AI Workflows",
@@ -477,7 +624,7 @@ export const slides = [
     ]
   },
   {
-    "id": 17,
+    "id": 18,
     "type": "content",
     "layout": "problem-statement",
     "title": "The Contract Review Challenge",
@@ -518,7 +665,7 @@ export const slides = [
     ]
   },
   {
-    "id": 18,
+    "id": 19,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media7.mp4",
@@ -531,7 +678,7 @@ export const slides = [
     ]
   },
   {
-    "id": 19,
+    "id": 20,
     "type": "content",
     "content": [
       {
@@ -581,7 +728,7 @@ export const slides = [
     ]
   },
   {
-    "id": 20,
+    "id": 21,
     "type": "content",
     "layout": "compound-architecture",
     "title": "The Agentic AI Stack",
@@ -658,7 +805,7 @@ export const slides = [
     ]
   },
   {
-    "id": 21,
+    "id": 22,
     "type": "content",
     "layout": "agent-workflow",
     "title": "How Agents Actually Work",
@@ -762,7 +909,7 @@ export const slides = [
     ]
   },
   {
-    "id": 22,
+    "id": 23,
     "type": "content",
     "layout": "key-takeaways",
     "title": "Key Takeaways",
@@ -807,7 +954,7 @@ export const slides = [
     ]
   },
   {
-    "id": 23,
+    "id": 24,
     "type": "content",
     "layout": "assistant-categories",
     "title": "AI Roadmap 2026",
@@ -901,7 +1048,7 @@ export const slides = [
     ]
   },
   {
-    "id": 24,
+    "id": 25,
     "type": "content",
     "content": [],
     "title": "TritonGPT Usage Analytics",
@@ -987,7 +1134,7 @@ export const slides = [
     ]
   },
   {
-    "id": 25,
+    "id": 26,
     "type": "content",
     "content": [],
     "title": "TritonGPT Widget Analytics",
@@ -1053,7 +1200,7 @@ export const slides = [
     ]
   },
   {
-    "id": 26,
+    "id": 27,
     "type": "content",
     "content": [],
     "title": "TritonGPT User Growth",
@@ -1102,7 +1249,7 @@ export const slides = [
     ]
   },
   {
-    "id": 27,
+    "id": 28,
     "type": "content",
     "layout": "team-grid",
     "title": "The Team Behind TritonAI",
@@ -1226,7 +1373,7 @@ export const slides = [
     ]
   },
   {
-    "id": 28,
+    "id": 29,
     "type": "title",
     "content": [],
     "title": "Thank You",
