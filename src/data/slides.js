@@ -26,7 +26,11 @@ export const slides = [
     "subtitle": "From Development to Campus-Wide Deployment",
     "backgroundColor": "#182B49",
     "dark": true,
-    "years": ["2023", "2024", "2025"],
+    "years": [
+      "2023",
+      "2024",
+      "2025"
+    ],
     "milestones": [
       {
         "phase": "Development",
@@ -336,8 +340,7 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "public",
-      "CCW"
+      "public"
     ]
   },
   {
@@ -349,6 +352,7 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
+      "public",
       "CCW"
     ]
   },
