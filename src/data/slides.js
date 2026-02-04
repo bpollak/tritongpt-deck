@@ -208,6 +208,18 @@ export const slides = [
     "id": 5,
     "type": "video",
     "content": [],
+    "videoSrc": "/media/media4.mov",
+    "poster": "/media/image39.png",
+    "audiences": [
+      "all",
+      "internal",
+      "CCW"
+    ]
+  },
+  {
+    "id": 6,
+    "type": "video",
+    "content": [],
     "videoSrc": "/media/media1.mov",
     "poster": "/media/image36.png",
     "audiences": [
@@ -218,7 +230,7 @@ export const slides = [
     ]
   },
   {
-    "id": 6,
+    "id": 7,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media2.mov",
@@ -229,7 +241,7 @@ export const slides = [
     ]
   },
   {
-    "id": 7,
+    "id": 8,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media3.mov",
@@ -237,18 +249,6 @@ export const slides = [
     "audiences": [
       "all",
       "internal"
-    ]
-  },
-  {
-    "id": 8,
-    "type": "video",
-    "content": [],
-    "videoSrc": "/media/media4.mov",
-    "poster": "/media/image39.png",
-    "audiences": [
-      "all",
-      "internal",
-      "CCW"
     ]
   },
   {
