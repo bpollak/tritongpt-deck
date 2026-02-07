@@ -1529,31 +1529,31 @@ const Slide = ({ slide }) => {
       {isTimelineEvolution && (() => {
         // Split milestones by year for better organization
         const milestones2023_24 = slide.milestones?.filter(m => m.month.includes("'23") || m.month.includes("'24") || m.month.includes("Spring")) || [];
-        const milestones2025 = slide.milestones?.filter(m => m.month.includes("'25")) || [];
+        const milestones2025_26 = slide.milestones?.filter(m => m.month.includes("'25") || m.month.includes("'26")) || [];
 
         return (
           <div className="w-full max-w-[1900px] mx-auto flex flex-col h-full gap-2">
             {/* Row 1: 2023-2024 Foundation */}
-            <div className="flex-1 flex flex-col">
+            <div className="flex-1 flex flex-col min-h-0">
               {/* Year label for row 1 */}
-              <div className="flex items-center gap-3 mb-2">
+              <div className="flex items-center gap-2 sm:gap-3 mb-2">
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  className="text-2xl sm:text-3xl font-black text-ucsd-gold"
+                  className="text-xl sm:text-3xl font-black text-ucsd-gold whitespace-nowrap"
                 >
                   2023-2024
                 </motion.div>
-                <div className="text-sm sm:text-base font-semibold text-ucsd-sky/80 uppercase tracking-wider">Foundation & Launch</div>
-                <div className="flex-1 h-0.5 bg-gradient-to-r from-ucsd-gold/40 to-transparent rounded-full" />
+                <div className="text-xs sm:text-base font-semibold text-ucsd-sky/80 uppercase tracking-wider whitespace-nowrap">Foundation & Launch</div>
+                <div className="flex-1 h-0.5 bg-gradient-to-r from-ucsd-gold/40 to-transparent rounded-full hidden sm:block" />
               </div>
 
               {/* Timeline track */}
-              <div className="relative flex-1">
-                <div className="absolute top-5 left-0 right-0 h-1 bg-gradient-to-r from-ucsd-gold/50 via-ucsd-sky/50 to-ucsd-gold/50 rounded-full" />
+              <div className="relative flex-1 min-h-0">
+                <div className="absolute top-5 left-0 right-0 h-1 bg-gradient-to-r from-ucsd-gold/50 via-ucsd-sky/50 to-ucsd-gold/50 rounded-full hidden sm:block" />
 
-                {/* Milestones */}
-                <div className="flex justify-between items-start gap-3">
+                {/* Milestones - scrollable on mobile */}
+                <div className="flex items-start gap-2 sm:gap-3 overflow-x-auto sm:overflow-x-visible pb-2 sm:pb-0 snap-x snap-mandatory sm:snap-none scrollbar-hide">
                   {milestones2023_24.map((milestone, index) => {
                     const colors = ['#00C6D7', '#E879A0', '#FFCD00', '#FC8900', '#00629B', '#6E963B'];
                     const color = colors[index % colors.length];
@@ -1564,41 +1564,41 @@ const Slide = ({ slide }) => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.15 + index * 0.08, type: "spring", stiffness: 120 }}
-                        className="flex flex-col items-center flex-1 min-w-0"
+                        className="flex flex-col items-center flex-1 min-w-[140px] sm:min-w-0 snap-start"
                       >
                         {/* Connector dot */}
                         <motion.div
                           initial={{ scale: 0 }}
                           animate={{ scale: 1 }}
                           transition={{ delay: 0.25 + index * 0.08, type: "spring", stiffness: 200 }}
-                          className="w-4 h-4 sm:w-5 sm:h-5 rounded-full border-3 border-white shadow-lg z-10 mb-2"
+                          className="w-3.5 h-3.5 sm:w-5 sm:h-5 rounded-full border-2 sm:border-3 border-white shadow-lg z-10 mb-1.5 sm:mb-2"
                           style={{ backgroundColor: color }}
                         />
 
                         {/* Card */}
-                        <div className="w-full bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                        <div className="w-full bg-white/90 backdrop-blur-sm rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden">
                           {/* Header bar */}
-                          <div className="px-2.5 py-1.5 text-white" style={{ backgroundColor: color }}>
+                          <div className="px-2 sm:px-2.5 py-1 sm:py-1.5 text-white" style={{ backgroundColor: color }}>
                             <div className="text-[10px] sm:text-xs font-bold uppercase tracking-wide truncate">
                               {milestone.phase}
                             </div>
                           </div>
 
                           {/* Content */}
-                          <div className="px-2.5 py-2">
+                          <div className="px-2 sm:px-2.5 py-1.5 sm:py-2">
                             <div
-                              className="inline-block px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-bold text-white mb-1.5"
+                              className="inline-block px-1.5 sm:px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-bold text-white mb-1 sm:mb-1.5"
                               style={{ backgroundColor: color }}
                             >
                               {milestone.month}
                             </div>
-                            <h3 className="text-xs sm:text-sm font-bold text-ucsd-navy mb-1.5 leading-tight">
+                            <h3 className="text-[11px] sm:text-sm font-bold text-ucsd-navy mb-1 sm:mb-1.5 leading-tight">
                               {milestone.title}
                             </h3>
-                            <ul className="space-y-1">
+                            <ul className="space-y-0.5 sm:space-y-1">
                               {milestone.items?.map((item, itemIndex) => (
-                                <li key={itemIndex} className="flex items-start gap-1.5 text-[10px] sm:text-xs text-slate-700 leading-snug">
-                                  <span className="w-1.5 h-1.5 rounded-full flex-shrink-0 mt-1" style={{ backgroundColor: color }} />
+                                <li key={itemIndex} className="flex items-start gap-1 sm:gap-1.5 text-[10px] sm:text-xs text-slate-700 leading-snug">
+                                  <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full flex-shrink-0 mt-1" style={{ backgroundColor: color }} />
                                   <span>{item}</span>
                                 </li>
                               ))}
@@ -1612,38 +1612,38 @@ const Slide = ({ slide }) => {
               </div>
             </div>
 
-            {/* Row 2: 2025 Rapid Innovation - Highlighted */}
-            <div className="flex-1 flex flex-col">
+            {/* Row 2: 2025-2026 Rapid Innovation - Highlighted */}
+            <div className="flex-1 flex flex-col min-h-0">
               {/* Year label for row 2 - More prominent */}
-              <div className="flex items-center gap-3 mb-2">
+              <div className="flex items-center gap-2 sm:gap-3 mb-2">
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.5 }}
-                  className="text-3xl sm:text-4xl font-black text-ucsd-gold drop-shadow-[0_0_10px_rgba(255,205,0,0.4)]"
+                  className="text-2xl sm:text-4xl font-black text-ucsd-gold drop-shadow-[0_0_10px_rgba(255,205,0,0.4)] whitespace-nowrap"
                 >
-                  2025
+                  2025-2026
                 </motion.div>
-                <div className="text-base sm:text-lg font-bold text-white uppercase tracking-wider bg-gradient-to-r from-ucsd-gold/30 to-transparent px-3 py-1 rounded-full">
+                <div className="text-xs sm:text-lg font-bold text-white uppercase tracking-wider bg-gradient-to-r from-ucsd-gold/30 to-transparent px-2 sm:px-3 py-0.5 sm:py-1 rounded-full whitespace-nowrap">
                   Rapid Innovation
                 </div>
-                <div className="flex-1 h-1 bg-gradient-to-r from-ucsd-gold via-ucsd-sky/60 to-ucsd-gold/30 rounded-full" />
+                <div className="flex-1 h-1 bg-gradient-to-r from-ucsd-gold via-ucsd-sky/60 to-ucsd-gold/30 rounded-full hidden sm:block" />
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 1.5 }}
-                  className="w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[16px] border-l-ucsd-gold"
+                  className="hidden sm:block w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[16px] border-l-ucsd-gold"
                 />
               </div>
 
               {/* Timeline track */}
-              <div className="relative flex-1">
-                <div className="absolute top-5 left-0 right-0 h-1.5 bg-gradient-to-r from-ucsd-gold via-ucsd-sky to-ucsd-gold rounded-full shadow-[0_0_8px_rgba(255,205,0,0.3)]" />
+              <div className="relative flex-1 min-h-0">
+                <div className="absolute top-5 left-0 right-0 h-1.5 bg-gradient-to-r from-ucsd-gold via-ucsd-sky to-ucsd-gold rounded-full shadow-[0_0_8px_rgba(255,205,0,0.3)] hidden sm:block" />
 
-                {/* Milestones */}
-                <div className="flex justify-between items-start gap-3">
-                  {milestones2025.map((milestone, index) => {
-                    const colors = ['#00629B', '#6E963B', '#00C6D7', '#E879A0', '#FFCD00', '#FC8900'];
+                {/* Milestones - scrollable on mobile */}
+                <div className="flex items-start gap-2 sm:gap-3 overflow-x-auto sm:overflow-x-visible pb-2 sm:pb-0 snap-x snap-mandatory sm:snap-none scrollbar-hide">
+                  {milestones2025_26.map((milestone, index) => {
+                    const colors = ['#00629B', '#6E963B', '#00C6D7', '#E879A0', '#FFCD00', '#FC8900', '#00629B', '#6E963B', '#00C6D7'];
                     const color = colors[index % colors.length];
 
                     return (
@@ -1652,41 +1652,41 @@ const Slide = ({ slide }) => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5 + index * 0.1, type: "spring", stiffness: 120 }}
-                        className="flex flex-col items-center flex-1 min-w-0"
+                        className="flex flex-col items-center flex-1 min-w-[150px] sm:min-w-0 snap-start"
                       >
-                        {/* Connector dot - larger for 2025 */}
+                        {/* Connector dot - larger for 2025-2026 */}
                         <motion.div
                           initial={{ scale: 0 }}
                           animate={{ scale: 1 }}
                           transition={{ delay: 0.6 + index * 0.1, type: "spring", stiffness: 200 }}
-                          className="w-5 h-5 sm:w-6 sm:h-6 rounded-full border-4 border-white shadow-lg z-10 mb-2"
+                          className="w-4 h-4 sm:w-6 sm:h-6 rounded-full border-2 sm:border-4 border-white shadow-lg z-10 mb-1.5 sm:mb-2"
                           style={{ backgroundColor: color, boxShadow: `0 0 12px ${color}40` }}
                         />
 
-                        {/* Card - slightly larger for 2025 */}
-                        <div className="w-full bg-white backdrop-blur-sm rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 overflow-hidden border border-white/50">
+                        {/* Card - slightly larger for 2025-2026 */}
+                        <div className="w-full bg-white backdrop-blur-sm rounded-lg sm:rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 overflow-hidden border border-white/50">
                           {/* Header bar */}
-                          <div className="px-3 py-2 text-white" style={{ backgroundColor: color }}>
-                            <div className="text-[11px] sm:text-sm font-bold uppercase tracking-wide truncate">
+                          <div className="px-2 sm:px-3 py-1.5 sm:py-2 text-white" style={{ backgroundColor: color }}>
+                            <div className="text-[10px] sm:text-sm font-bold uppercase tracking-wide truncate">
                               {milestone.phase}
                             </div>
                           </div>
 
                           {/* Content */}
-                          <div className="px-3 py-2.5">
+                          <div className="px-2 sm:px-3 py-2 sm:py-2.5">
                             <div
-                              className="inline-block px-2.5 py-1 rounded-full text-[11px] sm:text-sm font-bold text-white mb-2"
+                              className="inline-block px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-sm font-bold text-white mb-1.5 sm:mb-2"
                               style={{ backgroundColor: color }}
                             >
                               {milestone.month}
                             </div>
-                            <h3 className="text-sm sm:text-base font-bold text-ucsd-navy mb-2 leading-tight">
+                            <h3 className="text-xs sm:text-base font-bold text-ucsd-navy mb-1.5 sm:mb-2 leading-tight">
                               {milestone.title}
                             </h3>
-                            <ul className="space-y-1">
+                            <ul className="space-y-0.5 sm:space-y-1">
                               {milestone.items?.map((item, itemIndex) => (
-                                <li key={itemIndex} className="flex items-start gap-1.5 text-[11px] sm:text-sm text-slate-700 leading-snug">
-                                  <span className="w-1.5 h-1.5 rounded-full flex-shrink-0 mt-1.5" style={{ backgroundColor: color }} />
+                                <li key={itemIndex} className="flex items-start gap-1 sm:gap-1.5 text-[10px] sm:text-sm text-slate-700 leading-snug">
+                                  <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full flex-shrink-0 mt-1.5" style={{ backgroundColor: color }} />
                                   <span className="font-medium">{item}</span>
                                 </li>
                               ))}
@@ -2920,7 +2920,7 @@ const Slide = ({ slide }) => {
           </div>
         )}
       </div>
-      <div className="absolute bottom-6 right-8 text-ucsd-navy/30 text-xs font-bold tracking-widest z-20">UC SAN DIEGO | {slide.id}</div>
+      <div className="absolute bottom-1 right-2 sm:bottom-6 sm:right-8 text-ucsd-navy/20 sm:text-ucsd-navy/30 text-[10px] sm:text-xs font-bold tracking-widest z-20">UC SAN DIEGO | {slide.id}</div>
     </div>
   );
 };

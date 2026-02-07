@@ -171,10 +171,10 @@ const Presentation = () => {
       </div>
 
       {/* Navigation Controls - Fixed bottom bar on mobile, floating on desktop */}
-      <nav className="shrink-0 bg-white/95 backdrop-blur-sm border-t border-gray-200 px-4 py-2 flex items-center justify-between sm:absolute sm:bottom-6 sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:border sm:rounded-full sm:shadow-lg sm:px-2 sm:py-1 sm:bg-white/80 sm:w-auto sm:gap-4 z-50" aria-label="Slide navigation">
+      <nav className="shrink-0 bg-white/95 backdrop-blur-sm border-t border-gray-200 px-4 py-1.5 flex items-center justify-between sm:absolute sm:bottom-6 sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:border sm:rounded-full sm:shadow-lg sm:px-2 sm:py-1 sm:bg-white/80 sm:w-auto sm:gap-4 z-50" aria-label="Slide navigation">
         <button
           onClick={prevSlide}
-          className="p-2 rounded-full hover:bg-gray-100 sm:hover:bg-white/80 text-ucsd-navy transition-all"
+          className="p-2.5 sm:p-2 rounded-full hover:bg-gray-100 sm:hover:bg-white/80 text-ucsd-navy transition-all active:bg-gray-200"
           aria-label="Previous slide"
         >
           <ChevronLeft size={24} aria-hidden="true" />
@@ -186,7 +186,7 @@ const Presentation = () => {
 
         <button
           onClick={nextSlide}
-          className="p-2 rounded-full hover:bg-gray-100 sm:hover:bg-white/80 text-ucsd-navy transition-all"
+          className="p-2.5 sm:p-2 rounded-full hover:bg-gray-100 sm:hover:bg-white/80 text-ucsd-navy transition-all active:bg-gray-200"
           aria-label="Next slide"
         >
           <ChevronRight size={24} aria-hidden="true" />
