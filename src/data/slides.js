@@ -29,7 +29,8 @@ export const slides = [
     "years": [
       "2023",
       "2024",
-      "2025"
+      "2025",
+      "2026"
     ],
     "milestones": [
       {
@@ -160,6 +161,17 @@ export const slides = [
           "Deep Research tool",
           "Refreshed Chat UI",
           "Projects: Documents & Chat Folders"
+        ]
+      },
+      {
+        "phase": "Operational Scale",
+        "month": "Jan '26",
+        "title": "Roadmap Delivery",
+        "items": [
+          "Transcript Verification automation",
+          "Fund Manager Coach data warehouse",
+          "Instructional AI expansion",
+          "Contract Review full rollout"
         ]
       }
     ],
