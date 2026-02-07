@@ -26,6 +26,16 @@
 
 
 
+/* Hide scrollbar for horizontal swipe areas on mobile */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 /* Custom Scrollbar */
 .custom-scrollbar {
   -webkit-overflow-scrolling: touch;

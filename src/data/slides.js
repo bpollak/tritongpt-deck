@@ -29,7 +29,8 @@ export const slides = [
     "years": [
       "2023",
       "2024",
-      "2025"
+      "2025",
+      "2026"
     ],
     "milestones": [
       {
@@ -79,9 +80,10 @@ export const slides = [
       },
       {
         "phase": "Campus-Wide",
-        "month": "Spring '24",
+        "month": "May '24",
         "title": "Full Availability",
         "items": [
+          "~37K employees onboarded",
           "Refreshed UI",
           "File upload",
           "Fund Manager Coach"
@@ -96,6 +98,17 @@ export const slides = [
           "128K context window",
           "My Documents feature",
           "Theme customization"
+        ]
+      },
+      {
+        "phase": "New Defaults",
+        "month": "May '25",
+        "title": "Llama 4 Scout",
+        "items": [
+          "Llama 4 Scout default model",
+          "Internet Search Assistant",
+          "Email Phishing Analyzer",
+          "Prompt Gallery"
         ]
       },
       {
@@ -146,8 +159,19 @@ export const slides = [
         "items": [
           "GPT-5.1 & Gemini 3 Pro",
           "Deep Research tool",
-          "Projects organization",
-          "Enhanced personalization"
+          "Refreshed Chat UI",
+          "Projects: Documents & Chat Folders"
+        ]
+      },
+      {
+        "phase": "Operational Scale",
+        "month": "Jan '26",
+        "title": "Roadmap Delivery",
+        "items": [
+          "Transcript Verification automation",
+          "Fund Manager Coach data warehouse",
+          "Instructional AI expansion",
+          "Contract Review full rollout"
         ]
       }
     ],
