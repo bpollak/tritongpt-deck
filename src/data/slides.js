@@ -79,9 +79,10 @@ export const slides = [
       },
       {
         "phase": "Campus-Wide",
-        "month": "Spring '24",
+        "month": "May '24",
         "title": "Full Availability",
         "items": [
+          "~37K employees onboarded",
           "Refreshed UI",
           "File upload",
           "Fund Manager Coach"
@@ -96,6 +97,17 @@ export const slides = [
           "128K context window",
           "My Documents feature",
           "Theme customization"
+        ]
+      },
+      {
+        "phase": "New Defaults",
+        "month": "May '25",
+        "title": "Llama 4 Scout",
+        "items": [
+          "Llama 4 Scout default model",
+          "Internet Search Assistant",
+          "Email Phishing Analyzer",
+          "Prompt Gallery"
         ]
       },
       {
@@ -146,8 +158,8 @@ export const slides = [
         "items": [
           "GPT-5.1 & Gemini 3 Pro",
           "Deep Research tool",
-          "Projects organization",
-          "Enhanced personalization"
+          "Refreshed Chat UI",
+          "Projects: Documents & Chat Folders"
         ]
       }
     ],
