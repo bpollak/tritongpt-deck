@@ -1553,7 +1553,7 @@ const Slide = ({ slide }) => {
                 <div className="absolute top-5 left-0 right-0 h-1 bg-gradient-to-r from-ucsd-gold/50 via-ucsd-sky/50 to-ucsd-gold/50 rounded-full hidden sm:block" />
 
                 {/* Milestones - scrollable on mobile */}
-                <div className="flex items-start gap-2 sm:gap-3 overflow-x-auto sm:overflow-x-visible pb-2 sm:pb-0 snap-x snap-mandatory sm:snap-none scrollbar-hide">
+                <div className="flex flex-col sm:flex-row items-start gap-2 sm:gap-3 overflow-y-auto sm:overflow-y-visible sm:overflow-x-visible pb-2 sm:pb-0 snap-y sm:snap-none scrollbar-hide">
                   {milestones2023_24.map((milestone, index) => {
                     const colors = ['#00C6D7', '#E879A0', '#FFCD00', '#FC8900', '#00629B', '#6E963B'];
                     const color = colors[index % colors.length];
@@ -1564,7 +1564,7 @@ const Slide = ({ slide }) => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.15 + index * 0.08, type: "spring", stiffness: 120 }}
-                        className="flex flex-col items-center flex-1 min-w-[140px] sm:min-w-0 snap-start"
+                        className="flex flex-col items-center w-full sm:flex-1 sm:min-w-0 snap-start"
                       >
                         {/* Connector dot */}
                         <motion.div
@@ -1641,7 +1641,7 @@ const Slide = ({ slide }) => {
                 <div className="absolute top-5 left-0 right-0 h-1.5 bg-gradient-to-r from-ucsd-gold via-ucsd-sky to-ucsd-gold rounded-full shadow-[0_0_8px_rgba(255,205,0,0.3)] hidden sm:block" />
 
                 {/* Milestones - scrollable on mobile */}
-                <div className="flex items-start gap-2 sm:gap-3 overflow-x-auto sm:overflow-x-visible pb-2 sm:pb-0 snap-x snap-mandatory sm:snap-none scrollbar-hide">
+                <div className="flex flex-col sm:flex-row items-start gap-2 sm:gap-3 overflow-y-auto sm:overflow-y-visible sm:overflow-x-visible pb-2 sm:pb-0 snap-y sm:snap-none scrollbar-hide">
                   {milestones2025_26.map((milestone, index) => {
                     const colors = ['#00629B', '#6E963B', '#00C6D7', '#E879A0', '#FFCD00', '#FC8900', '#00629B', '#6E963B', '#00C6D7'];
                     const color = colors[index % colors.length];
@@ -1652,7 +1652,7 @@ const Slide = ({ slide }) => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5 + index * 0.1, type: "spring", stiffness: 120 }}
-                        className="flex flex-col items-center flex-1 min-w-[150px] sm:min-w-0 snap-start"
+                        className="flex flex-col items-center w-full sm:flex-1 sm:min-w-0 snap-start"
                       >
                         {/* Connector dot - larger for 2025-2026 */}
                         <motion.div
