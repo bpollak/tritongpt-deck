@@ -90,7 +90,7 @@ export const slides = [
         ]
       },
       {
-        "phase": "UI Overhaul",
+        "phase": "UI Refresh",
         "month": "Apr '25",
         "title": "Multi-LLM Support",
         "items": [
@@ -101,7 +101,7 @@ export const slides = [
         ]
       },
       {
-        "phase": "New Defaults",
+        "phase": "Defaults",
         "month": "May '25",
         "title": "Llama 4 Scout",
         "items": [
@@ -112,7 +112,7 @@ export const slides = [
         ]
       },
       {
-        "phase": "Student Access",
+        "phase": "Students",
         "month": "Jun '25",
         "title": "Universal Access",
         "items": [
@@ -122,7 +122,7 @@ export const slides = [
         ]
       },
       {
-        "phase": "Widget Launch",
+        "phase": "Widget",
         "month": "Jul '25",
         "title": "AI Chatbot Widget",
         "items": [
@@ -132,7 +132,7 @@ export const slides = [
         ]
       },
       {
-        "phase": "Backend Upgrades",
+        "phase": "Backend",
         "month": "Sep '25",
         "title": "Infrastructure",
         "items": [
@@ -142,7 +142,7 @@ export const slides = [
         ]
       },
       {
-        "phase": "Search Integration",
+        "phase": "Search",
         "month": "Oct '25",
         "title": "AI-Powered Search",
         "items": [
@@ -153,7 +153,7 @@ export const slides = [
         ]
       },
       {
-        "phase": "Next-Gen Platform",
+        "phase": "Next-Gen",
         "month": "Nov '25",
         "title": "Latest Release",
         "items": [
@@ -164,7 +164,7 @@ export const slides = [
         ]
       },
       {
-        "phase": "Operational Scale",
+        "phase": "Ops Scale",
         "month": "Jan '26",
         "title": "Roadmap Delivery",
         "items": [
