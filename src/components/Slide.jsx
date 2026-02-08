@@ -1809,7 +1809,7 @@ const Slide = ({ slide }) => {
           <div className="hidden md:grid grid-cols-[0.8fr_2.1fr_2.1fr] gap-6 px-7 mb-1.5">
             <div className="text-ucsd-navy font-bold text-sm uppercase tracking-[0.15em] opacity-40 self-end pb-1.5">Feature</div>
             <div className="text-slate-400 font-bold text-2xl flex items-center gap-2 opacity-80">
-              Generative AI <span className="text-sm font-medium opacity-60 bg-slate-100 px-2 py-0.5 rounded">2025</span>
+              Gen AI <span className="text-sm font-medium opacity-60 bg-slate-100 px-2 py-0.5 rounded">2025</span>
             </div>
             <div className="text-ucsd-blue font-black text-2xl flex items-center gap-2">
               Agentic AI <span className="text-sm font-bold text-white bg-ucsd-blue px-2 py-0.5 rounded shadow-sm">2026</span>
