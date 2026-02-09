@@ -21,6 +21,90 @@ export const slides = [
   {
     "id": 2,
     "type": "content",
+    "layout": "campus-metrics",
+    "title": "UC San Diego",
+    "dark": true,
+    "campusImage": "/media/campus-geisel.jpg",
+    "metrics": [
+      {
+        "value": "$1.73B",
+        "label": "Research Funding",
+        "icon": "DollarSign",
+        "tier": "hero"
+      },
+      {
+        "value": "#6",
+        "label": "Public University",
+        "icon": "Award",
+        "tier": "hero"
+      },
+      {
+        "value": "1.29M",
+        "label": "Patient Visits",
+        "icon": "Heart",
+        "tier": "hero"
+      },
+      {
+        "value": "45,273",
+        "label": "Students",
+        "icon": "GraduationCap",
+        "category": "people"
+      },
+      {
+        "value": "41,700+",
+        "label": "Employees",
+        "icon": "Users",
+        "category": "people"
+      },
+      {
+        "value": "3,685",
+        "label": "Faculty",
+        "icon": "BookOpen",
+        "category": "people"
+      },
+      {
+        "value": "256K",
+        "label": "Alumni Worldwide",
+        "icon": "Globe",
+        "category": "people"
+      },
+      {
+        "value": "16",
+        "label": "Nobel Laureates",
+        "icon": "Star",
+        "category": "academic"
+      },
+      {
+        "value": "12",
+        "label": "Schools",
+        "icon": "Building2",
+        "category": "academic"
+      },
+      {
+        "value": "200+",
+        "label": "Degree Programs",
+        "icon": "Layers",
+        "category": "academic"
+      },
+      {
+        "value": "100+",
+        "label": "Research Centers",
+        "icon": "FlaskConical",
+        "category": "academic"
+      }
+    ],
+    "audiences": [
+      "all",
+      "internal",
+      "public",
+      "executive",
+      "technical",
+      "CCW"
+    ]
+  },
+  {
+    "id": 3,
+    "type": "content",
     "layout": "timeline-evolution",
     "title": "TritonGPT Initiative",
     "subtitle": "From Development to Campus-Wide Deployment",
@@ -183,7 +267,7 @@ export const slides = [
     ]
   },
   {
-    "id": 3,
+    "id": 4,
     "type": "content",
     "content": [
       {
@@ -225,7 +309,7 @@ export const slides = [
     ]
   },
   {
-    "id": 4,
+    "id": 5,
     "backgroundColor": "#F5F0E6",
     "type": "content",
     "content": [
@@ -263,7 +347,7 @@ export const slides = [
     ]
   },
   {
-    "id": 5,
+    "id": 6,
     "type": "content",
     "layout": "platform-simple",
     "title": "TritonGPT Platform",
@@ -368,7 +452,7 @@ export const slides = [
     ]
   },
   {
-    "id": 6,
+    "id": 7,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media1.mov",
@@ -381,7 +465,7 @@ export const slides = [
     ]
   },
   {
-    "id": 7,
+    "id": 8,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media2.mov",
@@ -393,7 +477,7 @@ export const slides = [
     ]
   },
   {
-    "id": 8,
+    "id": 9,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media4.mov",
@@ -406,7 +490,7 @@ export const slides = [
     ]
   },
   {
-    "id": 9,
+    "id": 10,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media3.mov",
@@ -418,7 +502,7 @@ export const slides = [
     ]
   },
   {
-    "id": 10,
+    "id": 11,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media5.mov",
@@ -430,7 +514,7 @@ export const slides = [
     ]
   },
   {
-    "id": 11,
+    "id": 12,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media6.mov",
@@ -442,7 +526,7 @@ export const slides = [
     ]
   },
   {
-    "id": 12,
+    "id": 13,
     "type": "content",
     "content": [
       {
@@ -488,7 +572,7 @@ export const slides = [
     ]
   },
   {
-    "id": 13,
+    "id": 14,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media9.mov",
@@ -500,7 +584,7 @@ export const slides = [
     ]
   },
   {
-    "id": 14,
+    "id": 15,
     "type": "content",
     "content": [
       {
@@ -546,7 +630,7 @@ export const slides = [
     ]
   },
   {
-    "id": 15,
+    "id": 16,
     "type": "content",
     "content": [
       {
@@ -592,7 +676,7 @@ export const slides = [
     ]
   },
   {
-    "id": 16,
+    "id": 17,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media11.mov",
@@ -603,7 +687,7 @@ export const slides = [
     ]
   },
   {
-    "id": 17,
+    "id": 18,
     "type": "content",
     "layout": "comparison-table",
     "title": "The Evolution of AI Workflows",
@@ -644,7 +728,7 @@ export const slides = [
     ]
   },
   {
-    "id": 18,
+    "id": 19,
     "type": "content",
     "layout": "problem-statement",
     "title": "The Contract Review Challenge",
@@ -685,7 +769,7 @@ export const slides = [
     ]
   },
   {
-    "id": 19,
+    "id": 20,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media7.mp4",
@@ -698,7 +782,7 @@ export const slides = [
     ]
   },
   {
-    "id": 20,
+    "id": 21,
     "type": "content",
     "content": [
       {
@@ -748,7 +832,7 @@ export const slides = [
     ]
   },
   {
-    "id": 21,
+    "id": 22,
     "type": "content",
     "layout": "compound-architecture",
     "title": "The Agentic AI Stack",
@@ -825,7 +909,7 @@ export const slides = [
     ]
   },
   {
-    "id": 22,
+    "id": 23,
     "type": "content",
     "layout": "agent-workflow",
     "title": "How Agents Actually Work",
@@ -929,7 +1013,7 @@ export const slides = [
     ]
   },
   {
-    "id": 23,
+    "id": 24,
     "type": "content",
     "layout": "key-takeaways",
     "title": "Key Takeaways",
@@ -974,7 +1058,7 @@ export const slides = [
     ]
   },
   {
-    "id": 24,
+    "id": 25,
     "type": "content",
     "layout": "assistant-categories",
     "title": "AI Roadmap 2026",
@@ -1067,7 +1151,7 @@ export const slides = [
     ]
   },
   {
-    "id": 25,
+    "id": 26,
     "type": "content",
     "content": [],
     "title": "TritonGPT Usage Analytics",
@@ -1153,7 +1237,7 @@ export const slides = [
     ]
   },
   {
-    "id": 26,
+    "id": 27,
     "type": "content",
     "content": [],
     "title": "TritonGPT Widget Analytics",
@@ -1219,7 +1303,7 @@ export const slides = [
     ]
   },
   {
-    "id": 27,
+    "id": 28,
     "type": "content",
     "content": [],
     "title": "TritonGPT User Growth",
@@ -1268,7 +1352,7 @@ export const slides = [
     ]
   },
   {
-    "id": 28,
+    "id": 29,
     "type": "content",
     "layout": "team-grid",
     "title": "The Team Behind TritonAI",
@@ -1391,7 +1475,7 @@ export const slides = [
     ]
   },
   {
-    "id": 29,
+    "id": 30,
     "type": "title",
     "content": [],
     "title": "Thank You",

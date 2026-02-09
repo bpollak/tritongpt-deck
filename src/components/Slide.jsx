@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion'; // eslint-disable-line no-unused-vars
 import clsx from 'clsx';
-import { Target, Database, Cpu, Blocks, GraduationCap, Building2, FileText, FileCheck, DollarSign, Shield, BookOpen, Code, Presentation, Globe, FileEdit, FolderOpen, TrendingUp, ClipboardCheck, Search, Heart, Calendar, GitBranch, Network, Grid3x3, ArrowDown, ArrowRight, Brain, RefreshCw, ArrowRightLeft, CheckCircle, Monitor, Users, Award, Server, Layers, Wallet, Share2 } from 'lucide-react';
+import { Target, Database, Cpu, Blocks, GraduationCap, Building2, FileText, FileCheck, DollarSign, Shield, BookOpen, Code, Presentation, Globe, FileEdit, FolderOpen, TrendingUp, ClipboardCheck, Search, Heart, Calendar, GitBranch, Network, Grid3x3, ArrowDown, ArrowRight, Brain, RefreshCw, ArrowRightLeft, CheckCircle, Monitor, Users, Award, Server, Layers, Wallet, Share2, Star, FlaskConical } from 'lucide-react';
 import { QRCodeSVG } from 'qrcode.react';
 import VideoSlide from './VideoSlide';
 
@@ -35,7 +35,11 @@ const iconMap = {
   'ArrowRightLeft': ArrowRightLeft,
   'CheckCircle': CheckCircle,
   'Monitor': Monitor,
-  'Users': Users
+  'Users': Users,
+  'Star': Star,
+  'FlaskConical': FlaskConical,
+  'Award': Award,
+  'Layers': Layers
 };
 
 const containerVariants = {
@@ -116,6 +120,7 @@ const Slide = ({ slide }) => {
   const isAnalyticsChart = slide.layout === 'analytics-chart';
   const isTeamGrid = slide.layout === 'team-grid';
   const isTimelineEvolution = slide.layout === 'timeline-evolution';
+  const isCampusMetrics = slide.layout === 'campus-metrics';
 
   if (isTitleHero) {
     // Determine if this is a closing slide (has QR code/image) vs opening slide
@@ -366,8 +371,8 @@ const Slide = ({ slide }) => {
         className={clsx(
           "font-bold mb-4 sm:mb-6",
           isTitle ? "text-2xl sm:text-4xl md:text-6xl" : "text-xl sm:text-3xl md:text-5xl",
-          (!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isRoadmap && !isProblemStatement && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isTimelineEvolution) && "border-b-4 border-ucsd-gold pb-3 inline-block self-start",
-          (isSolution || isSolutionVideo || isCaseStudyHero || isAssistantCategories || isKeyTakeaways || isRoadmap || isProblemStatement || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isComparisonTable || isCompoundArchitecture || isTimelineEvolution) && "text-center w-full",
+          (!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isRoadmap && !isProblemStatement && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isTimelineEvolution && !isCampusMetrics) && "border-b-4 border-ucsd-gold pb-3 inline-block self-start",
+          (isSolution || isSolutionVideo || isCaseStudyHero || isAssistantCategories || isKeyTakeaways || isRoadmap || isProblemStatement || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isComparisonTable || isCompoundArchitecture || isTimelineEvolution || isCampusMetrics) && "text-center w-full",
           (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isCompoundArchitecture) && "hidden",
           isAgentWorkflow && "text-center text-3xl sm:text-5xl md:text-6xl mb-2 sm:mb-4 w-full",
           isCaseStudyHero && "text-3xl md:text-4xl mb-4",
@@ -376,20 +381,21 @@ const Slide = ({ slide }) => {
           isGraphicHeavy && "text-2xl md:text-4xl",
           isFeatureGrid && "w-full text-center border-b-0 border-none mb-4 sm:mb-12",
           isHeroList && "mb-1 sm:mb-4",
+          isTimelineEvolution && "mb-1 sm:mb-2",
           isDark ? "text-white" : "text-ucsd-navy"
         )}
       >
         {slide.title}
       </motion.h1>
 
-      {slide.subtitle && !isCaseStudyHero && !isCompoundArchitecture && !isAnalyticsChart && (
+      {slide.subtitle && !isCaseStudyHero && !isCompoundArchitecture && !isAnalyticsChart && !isTimelineEvolution && (
         <motion.h2
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.6 }}
           className={clsx(
             "text-base sm:text-xl md:text-2xl font-light mt-1 sm:mt-2 mb-3 sm:mb-6",
-            (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isSolution || isSolutionVideo || isAssistantCategories || isKeyTakeaways || isRoadmap || isProblemStatement || isComparisonTable || isAgentWorkflow || isTimelineEvolution) && "text-center w-full mb-4 sm:mb-8",
+            (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isSolution || isSolutionVideo || isAssistantCategories || isKeyTakeaways || isRoadmap || isProblemStatement || isComparisonTable || isAgentWorkflow || isTimelineEvolution || isCampusMetrics) && "text-center w-full mb-4 sm:mb-8",
             isProblemStatement && "text-lg sm:text-2xl md:text-3xl mb-4 sm:mb-10 font-medium text-red-600",
             isAgentWorkflow && "text-lg sm:text-2xl font-semibold",
             isDark ? "text-ucsd-sky" : "text-ucsd-blue"
@@ -1532,11 +1538,11 @@ const Slide = ({ slide }) => {
         const milestones2025_26 = slide.milestones?.filter(m => m.month.includes("'25") || m.month.includes("'26")) || [];
 
         return (
-          <div className="w-full max-w-[1900px] mx-auto flex flex-col h-full gap-2">
+          <div className="w-full max-w-[1900px] mx-auto flex flex-col h-full gap-5">
             {/* Row 1: 2023-2024 Foundation */}
-            <div className="flex-1 flex flex-col min-h-0">
+            <div className="flex-none flex flex-col">
               {/* Year label for row 1 */}
-              <div className="flex items-center gap-2 sm:gap-3 mb-2">
+              <div className="flex items-center gap-2 sm:gap-3 mb-1">
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -1549,7 +1555,7 @@ const Slide = ({ slide }) => {
               </div>
 
               {/* Timeline track */}
-              <div className="relative flex-1 min-h-0">
+              <div className="relative min-h-0">
                 <div className="absolute top-5 left-0 right-0 h-1 bg-gradient-to-r from-ucsd-gold/50 via-ucsd-sky/50 to-ucsd-gold/50 rounded-full hidden sm:block" />
 
                 {/* Milestones - scrollable on mobile */}
@@ -1571,7 +1577,7 @@ const Slide = ({ slide }) => {
                           initial={{ scale: 0 }}
                           animate={{ scale: 1 }}
                           transition={{ delay: 0.25 + index * 0.08, type: "spring", stiffness: 200 }}
-                          className="w-3.5 h-3.5 sm:w-5 sm:h-5 rounded-full border-2 sm:border-3 border-white shadow-lg z-10 mb-1.5 sm:mb-2"
+                          className="w-3.5 h-3.5 sm:w-5 sm:h-5 rounded-full border-2 sm:border-3 border-white shadow-lg z-10 mb-1 sm:mb-1.5"
                           style={{ backgroundColor: color }}
                         />
 
@@ -1615,7 +1621,7 @@ const Slide = ({ slide }) => {
             {/* Row 2: 2025-2026 Rapid Innovation - Highlighted */}
             <div className="flex-1 flex flex-col min-h-0">
               {/* Year label for row 2 - More prominent */}
-              <div className="flex items-center gap-2 sm:gap-3 mb-2">
+              <div className="flex items-center gap-2 sm:gap-3 mb-1">
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -1659,7 +1665,7 @@ const Slide = ({ slide }) => {
                           initial={{ scale: 0 }}
                           animate={{ scale: 1 }}
                           transition={{ delay: 0.6 + index * 0.1, type: "spring", stiffness: 200 }}
-                          className="w-4 h-4 sm:w-6 sm:h-6 rounded-full border-2 sm:border-4 border-white shadow-lg z-10 mb-1.5 sm:mb-2"
+                          className="w-4 h-4 sm:w-6 sm:h-6 rounded-full border-2 sm:border-4 border-white shadow-lg z-10 mb-1 sm:mb-1.5"
                           style={{ backgroundColor: color, boxShadow: `0 0 12px ${color}40` }}
                         />
 
@@ -2763,7 +2769,7 @@ const Slide = ({ slide }) => {
         </div>
       )}
 
-      {!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isRoadmap && !isProblemStatement && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isAgentWorkflow && !isAnalyticsChart && !isTeamGrid && !isTimelineEvolution && slide.content && slide.content.length > 0 && (
+      {!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isRoadmap && !isProblemStatement && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isAgentWorkflow && !isAnalyticsChart && !isTeamGrid && !isTimelineEvolution && !isCampusMetrics && slide.content && slide.content.length > 0 && (
         <motion.ul
           variants={containerVariants}
           initial="hidden"
@@ -2775,11 +2781,11 @@ const Slide = ({ slide }) => {
                 isDense ? "grid grid-cols-1 md:grid-cols-2 text-base md:text-lg" :
                   isGraphicHeavy ? "flex flex-col text-sm md:text-base gap-3" :
                     isFeatureGrid ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto max-w-[1600px]" :
-                      isHeroList ? "flex flex-col gap-2 sm:gap-4 max-w-7xl w-full" :
+                      isHeroList ? "flex flex-col gap-2 sm:gap-3 max-w-7xl w-full" :
                         "flex flex-col text-lg md:text-xl"
           )}
         >
-          {isHeroList && <div className="absolute top-8 sm:top-14 bottom-8 sm:bottom-14 left-[1.25rem] sm:left-[3rem] w-0.5 sm:w-1 bg-ucsd-blue/30 -z-10" />}
+          {isHeroList && <div className="absolute top-7 sm:top-12 bottom-7 sm:bottom-12 left-[1.2rem] sm:left-[2.5rem] w-0.5 sm:w-1 bg-ucsd-blue/30 -z-10" />}
           {slide.content.map((item, index) => {
             const borderColors = ['border-ucsd-navy', 'border-ucsd-sky', 'border-ucsd-blue', 'border-ucsd-gold', 'border-ucsd-poppy-orange', 'border-ucsd-palm-green', 'border-ucsd-tierra-clay', 'border-ucsd-pacific-blue', 'border-ucsd-navy', 'border-ucsd-sky', 'border-ucsd-poppy-orange', 'border-ucsd-palm-green', 'border-ucsd-tierra-clay', 'border-ucsd-navy', 'border-ucsd-blue', 'border-ucsd-pacific-blue', 'border-ucsd-sky'];
             const bgColors = ['bg-ucsd-navy', 'bg-ucsd-gold', 'bg-ucsd-blue', 'bg-ucsd-sky', 'bg-ucsd-poppy-orange', 'bg-ucsd-palm-green', 'bg-ucsd-tierra-clay', 'bg-ucsd-pacific-blue'];
@@ -2804,7 +2810,7 @@ const Slide = ({ slide }) => {
                   useThreeColumns && clsx("flex-col p-4 rounded-lg border shadow-sm", isDark ? "bg-white/10 border-white/10" : "bg-white/60 border-ucsd-blue/10"),
                   isGraphicHeavy && clsx("flex-col p-3 rounded-md border-l-4 border-ucsd-gold", isDark ? "bg-white/10" : "bg-white/50"),
                   isFeatureGrid && clsx("flex-col p-8 bg-white rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-2 border-t-8", borderColorClass),
-                  isHeroList && "flex-row items-center gap-2 sm:gap-6"
+                  isHeroList && "flex-row items-center gap-2 sm:gap-5"
                 )}
               >
                 {isFeatureGrid && (
@@ -2816,27 +2822,27 @@ const Slide = ({ slide }) => {
                 {isHeroList && (
                   <motion.div
                     animate={pulseAnimation}
-                    className={clsx("flex-shrink-0 w-10 h-10 sm:w-20 sm:h-20 rounded-full flex items-center justify-center shadow-xl z-10 relative", !customBgColor && bgColorClass)}
+                    className={clsx("flex-shrink-0 w-10 h-10 sm:w-16 sm:h-16 rounded-full flex items-center justify-center shadow-xl z-10 relative", !customBgColor && bgColorClass)}
                     style={customBgColor ? { backgroundColor: customBgColor } : {}}
                   >
-                    {IconComponent ? <IconComponent size={20} className="text-white drop-shadow-md sm:w-10 sm:h-10" strokeWidth={2.5} /> : <span className="text-lg sm:text-3xl font-bold text-white">{index + 1}</span>}
+                    {IconComponent ? <IconComponent size={20} className="text-white drop-shadow-md sm:w-8 sm:h-8" strokeWidth={2.5} /> : <span className="text-lg sm:text-2xl font-bold text-white">{index + 1}</span>}
                   </motion.div>
                 )}
-                <div className={clsx("flex flex-col flex-1", isHeroList && clsx("p-1.5 sm:p-4 rounded-lg sm:rounded-2xl border-l-3 sm:border-l-8 bg-white shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all", borderColorClass))}>
+                <div className={clsx("flex flex-col flex-1", isHeroList && clsx("p-1.5 sm:p-3 rounded-lg sm:rounded-xl border-l-3 sm:border-l-6 bg-white shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all", borderColorClass))}>
                   {item.heading && (
                     <span className={clsx(
                       "font-semibold mb-1",
                       useThreeColumns ? clsx("text-sm uppercase tracking-wide border-b pb-1 mb-2", isDark ? "text-ucsd-sky border-white/20" : "text-ucsd-blue border-ucsd-gold/30") : "text-lg",
                       isGraphicHeavy && "text-base font-bold text-ucsd-blue",
                       isFeatureGrid && clsx("text-2xl md:text-3xl font-bold mb-4 tracking-tight leading-tight pr-20", headerColorClass),
-                      isHeroList && "text-sm sm:text-3xl font-black text-ucsd-navy mb-0 sm:mb-1.5 leading-tight"
+                      isHeroList && "text-sm sm:text-[1.65rem] font-black text-ucsd-navy mb-0 sm:mb-1 leading-tight"
                     )}>{item.heading}</span>
                   )}
                   {item.text && (
                     <span className={clsx(
                       "leading-relaxed",
                       isFeatureGrid && "text-lg md:text-xl text-slate-800 font-semibold",
-                      isHeroList && "text-[10px] sm:text-xl text-slate-700 font-medium leading-snug",
+                      isHeroList && "text-[10px] sm:text-lg text-slate-700 font-medium leading-snug",
                       !isFeatureGrid && !isHeroList && isDark ? "text-white/80" : ""
                     )}>{item.text}</span>
                   )}
@@ -2866,10 +2872,203 @@ const Slide = ({ slide }) => {
   ];
   const upperRightOrbColor = upperRightOrbColors[(slide.id + 1) % upperRightOrbColors.length];
 
+  // ── CAMPUS METRICS: Hero Trio + Categorized Clusters ──
+  if (isCampusMetrics) {
+    const metrics = slide.metrics || [];
+    const heroes = metrics.filter(m => m.tier === 'hero');
+    const people = metrics.filter(m => m.category === 'people');
+    const academic = metrics.filter(m => m.category === 'academic');
+    const heroAccents = ['#FFCD00', '#00629B', '#00C6D7'];
+    const peopleAccent = '#FC8900';
+    const academicAccent = '#00C6D7';
+
+    return (
+      <div className="w-full h-full relative overflow-hidden bg-[#0a1628]">
+        {/* ── Background: campus photo with cinematic dark overlay ── */}
+        {slide.campusImage && (
+          <>
+            <motion.div
+              initial={{ scale: 1.1, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 2, ease: "easeOut" }}
+              className="absolute inset-0 bg-cover bg-center z-0"
+              style={{ backgroundImage: `url(${slide.campusImage})` }}
+            />
+            <div className="absolute inset-0 z-[1] bg-gradient-to-t from-[#0a1628] via-[#0a1628]/75 to-[#0a1628]/50" />
+            <div className="absolute inset-0 z-[1] bg-gradient-to-r from-[#0a1628]/80 via-transparent to-[#0a1628]/60" />
+          </>
+        )}
+
+        {/* ── Decorative ambient glows ── */}
+        <motion.div
+          animate={{ opacity: [0.08, 0.15, 0.08], scale: [1, 1.1, 1] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-[-10%] right-[-5%] w-[50vw] h-[50vw] bg-ucsd-blue rounded-full blur-[160px] z-[2] pointer-events-none"
+        />
+        <motion.div
+          animate={{ opacity: [0.05, 0.1, 0.05], scale: [1, 1.15, 1] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+          className="absolute bottom-[-15%] left-[-10%] w-[40vw] h-[40vw] bg-ucsd-gold rounded-full blur-[140px] z-[2] pointer-events-none"
+        />
+
+        {/* ── Content layer ── */}
+        <div className="relative z-10 w-full h-full flex flex-col p-4 sm:p-8 md:p-10">
+
+          {/* ── Title block — compact, top-left ── */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="mb-6 sm:mb-10"
+          >
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-black text-white tracking-tight leading-[0.9] drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
+              {slide.title}
+            </h1>
+            <motion.div
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
+              className="h-1 sm:h-1.5 w-20 sm:w-28 bg-ucsd-gold mt-2 origin-left rounded-full"
+            />
+          </motion.div>
+
+          {/* ── Hero Metrics — the 3 most impressive numbers ── */}
+          <div className="flex justify-center items-end gap-8 sm:gap-12 md:gap-16 lg:gap-24 mb-4 sm:mb-6">
+            {heroes.map((metric, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 + index * 0.12, type: "spring", stiffness: 80, damping: 16 }}
+                className="flex flex-col items-center text-center"
+              >
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.5 + index * 0.12, type: "spring", stiffness: 100 }}
+                  className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tight leading-none drop-shadow-[0_2px_20px_rgba(0,0,0,0.4)]"
+                >
+                  {metric.value}
+                </motion.div>
+                <motion.div
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ delay: 0.7 + index * 0.12, duration: 0.6, ease: "easeOut" }}
+                  className="h-1 w-full max-w-[120px] rounded-full mt-2 mb-1.5 origin-center"
+                  style={{ backgroundColor: heroAccents[index] }}
+                />
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.8 + index * 0.12 }}
+                  className="text-[10px] sm:text-xs md:text-sm lg:text-base font-bold uppercase tracking-[0.15em] text-white/70"
+                >
+                  {metric.label}
+                </motion.div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* ── Subtle divider ── */}
+          <motion.div
+            initial={{ scaleX: 0, opacity: 0 }}
+            animate={{ scaleX: 1, opacity: 1 }}
+            transition={{ delay: 1.2, duration: 0.8, ease: "easeOut" }}
+            className="w-full max-w-2xl mx-auto h-px bg-gradient-to-r from-transparent via-white/15 to-transparent mb-4 sm:mb-6"
+          />
+
+          {/* ── Category Clusters ── */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-6 max-w-[1400px] mx-auto w-full">
+
+            {/* People Cluster */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.4, type: "spring", stiffness: 80, damping: 18 }}
+              className="bg-white/[0.05] backdrop-blur-sm border border-white/[0.08] rounded-2xl px-5 sm:px-6 md:px-8 py-3 sm:py-4"
+            >
+              <div className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] mb-3 sm:mb-4" style={{ color: peopleAccent }}>
+                People
+              </div>
+              <div className="grid grid-cols-2 gap-x-4 sm:gap-x-8 gap-y-3 sm:gap-y-5">
+                {people.map((metric, index) => {
+                  const IconComponent = metric.icon ? iconMap[metric.icon] : null;
+                  return (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 1.5 + index * 0.06 }}
+                      className="flex items-center gap-2 sm:gap-3"
+                    >
+                      {IconComponent && (
+                        <IconComponent size={28} className="sm:w-8 sm:h-8 md:w-9 md:h-9 flex-shrink-0" style={{ color: peopleAccent }} strokeWidth={1.5} />
+                      )}
+                      <div>
+                        <div className="text-2xl sm:text-3xl md:text-5xl font-black text-white leading-none">
+                          {metric.value}
+                        </div>
+                        <div className="text-[9px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-white/50 mt-0.5 leading-tight">
+                          {metric.label}
+                        </div>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            </motion.div>
+
+            {/* Academic & Research Cluster */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.5, type: "spring", stiffness: 80, damping: 18 }}
+              className="bg-white/[0.05] backdrop-blur-sm border border-white/[0.08] rounded-2xl px-5 sm:px-6 md:px-8 py-3 sm:py-4"
+            >
+              <div className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] mb-3 sm:mb-4" style={{ color: academicAccent }}>
+                Academic & Research
+              </div>
+              <div className="grid grid-cols-2 gap-x-4 sm:gap-x-8 gap-y-3 sm:gap-y-5">
+                {academic.map((metric, index) => {
+                  const IconComponent = metric.icon ? iconMap[metric.icon] : null;
+                  return (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 1.6 + index * 0.06 }}
+                      className="flex items-center gap-2 sm:gap-3"
+                    >
+                      {IconComponent && (
+                        <IconComponent size={28} className="sm:w-8 sm:h-8 md:w-9 md:h-9 flex-shrink-0" style={{ color: academicAccent }} strokeWidth={1.5} />
+                      )}
+                      <div>
+                        <div className="text-2xl sm:text-3xl md:text-5xl font-black text-white leading-none">
+                          {metric.value}
+                        </div>
+                        <div className="text-[9px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-white/50 mt-0.5 leading-tight">
+                          {metric.label}
+                        </div>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            </motion.div>
+          </div>
+        </div>
+
+        {/* ── Footer ── */}
+        <div className="absolute bottom-4 right-6 sm:bottom-6 sm:right-8 text-white/20 text-xs font-bold tracking-widest z-20">UC SAN DIEGO | {slide.id}</div>
+      </div>
+    );
+  }
+
   return (
     <div
       className={clsx(
-        "w-full h-full flex flex-col p-2 sm:p-6 md:p-12 relative overflow-hidden transition-colors duration-500 break-words",
+        "w-full h-full flex flex-col relative overflow-hidden transition-colors duration-500 break-words",
+        isTimelineEvolution ? "p-2 sm:p-4 md:p-6" : "p-2 sm:p-6 md:p-12",
         !slide.backgroundColor && (isDark ? "bg-[#1a1a1a]" : "bg-gray-50")
       )}
       style={slide.backgroundColor ? { backgroundColor: slide.backgroundColor } : {}}
@@ -2916,7 +3115,7 @@ const Slide = ({ slide }) => {
           </div>
         ) : (
           <div className={clsx("flex flex-col h-full w-full", isTitle ? "justify-center items-center text-center" : "justify-start pt-4 overflow-y-auto touch-pan-y custom-scrollbar")}>
-            <div className={clsx("w-full mx-auto", (isSolution || isSolutionVideo || isCaseStudyHero || isProblemStatement || isFeatureGrid) ? "max-w-[1800px]" : "max-w-7xl")}>{renderContent()}</div>
+            <div className={clsx("w-full mx-auto", (isSolution || isSolutionVideo || isCaseStudyHero || isProblemStatement || isFeatureGrid || isCampusMetrics) ? "max-w-[1800px]" : "max-w-7xl")}>{renderContent()}</div>
           </div>
         )}
       </div>
