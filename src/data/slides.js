@@ -95,6 +95,7 @@ export const slides = [
     ],
     "audiences": [
       "all",
+      "internal",
       "public",
       "executive",
       "technical",
@@ -1146,7 +1147,8 @@ export const slides = [
       "text": "Onboard new institutions adopting TritonGPT as a Software-as-a-Service AI platform"
     },
     "audiences": [
-      "internal"
+      "internal",
+      "all"
     ]
   },
   {
