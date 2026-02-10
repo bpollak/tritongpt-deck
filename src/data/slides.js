@@ -11,11 +11,8 @@ export const slides = [
     "presenterTitle": "Executive Director, IT Services",
     "audiences": [
       "all",
-      "internal",
-      "public",
       "executive",
-      "technical",
-      "CCW"
+      "technical"
     ]
   },
   {
