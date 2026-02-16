@@ -306,6 +306,46 @@ export const slides = [
   },
   {
     "id": 5,
+    "type": "content",
+    "title": "From TritonGPT to TritonAI",
+    "subtitle": "Expanding from a chat platform to a self-service AI ecosystem",
+    "layout": "feature-grid",
+    "backgroundColor": "#F5F0E6",
+    "content": [
+      {
+        "heading": "AI Tools Hub",
+        "text": "A centralized catalog of AI services and campus-ready utilities so teams can discover and adopt tools faster without custom engineering."
+      },
+      {
+        "heading": "Agent Builder (Low-Code)",
+        "text": "Self-service workflow automation lets units design and deploy AI agents with drag-and-drop tooling, reducing dependency on central development queues."
+      },
+      {
+        "heading": "MCP Server Hub",
+        "text": "Upcoming shared connectors let assistants securely access data sources and services, enabling reusable integrations instead of one-off builds."
+      },
+      {
+        "heading": "Agent Skills Library",
+        "text": "Reusable skill packages provide pre-built instructions and workflows for common campus tasks, accelerating consistent solution delivery."
+      },
+      {
+        "heading": "Developer APIs + Training",
+        "text": "Get-started API documentation, FAQs, webinars, and prompting resources support both technical builders and non-technical adopters."
+      },
+      {
+        "heading": "Pre-Packaged Tools Pipeline",
+        "text": "A 2026 launch roadmap for transcription, captioning, summarization, accessibility, and OCR tools brings self-service AI capabilities to everyday operations."
+      }
+    ],
+    "audiences": [
+      "all",
+      "internal",
+      "public",
+      "CCW"
+    ]
+  },
+  {
+    "id": 6,
     "backgroundColor": "#F5F0E6",
     "type": "content",
     "content": [
@@ -343,7 +383,7 @@ export const slides = [
     ]
   },
   {
-    "id": 6,
+    "id": 7,
     "type": "content",
     "layout": "platform-simple",
     "title": "TritonGPT Platform",
@@ -448,7 +488,7 @@ export const slides = [
     ]
   },
   {
-    "id": 7,
+    "id": 8,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media1.mov",
@@ -461,7 +501,7 @@ export const slides = [
     ]
   },
   {
-    "id": 8,
+    "id": 9,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media2.mov",
@@ -473,7 +513,7 @@ export const slides = [
     ]
   },
   {
-    "id": 9,
+    "id": 10,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media4.mov",
@@ -486,7 +526,7 @@ export const slides = [
     ]
   },
   {
-    "id": 10,
+    "id": 11,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media3.mov",
@@ -498,7 +538,7 @@ export const slides = [
     ]
   },
   {
-    "id": 11,
+    "id": 12,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media5.mov",
@@ -510,7 +550,7 @@ export const slides = [
     ]
   },
   {
-    "id": 12,
+    "id": 13,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media6.mov",
@@ -522,7 +562,7 @@ export const slides = [
     ]
   },
   {
-    "id": 13,
+    "id": 14,
     "type": "content",
     "content": [
       {
@@ -568,7 +608,7 @@ export const slides = [
     ]
   },
   {
-    "id": 14,
+    "id": 15,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media9.mov",
@@ -580,7 +620,7 @@ export const slides = [
     ]
   },
   {
-    "id": 15,
+    "id": 16,
     "type": "content",
     "content": [
       {
@@ -626,7 +666,7 @@ export const slides = [
     ]
   },
   {
-    "id": 16,
+    "id": 17,
     "type": "content",
     "content": [
       {
@@ -672,7 +712,7 @@ export const slides = [
     ]
   },
   {
-    "id": 17,
+    "id": 18,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media11.mov",
@@ -683,7 +723,7 @@ export const slides = [
     ]
   },
   {
-    "id": 18,
+    "id": 19,
     "type": "content",
     "layout": "comparison-table",
     "title": "The Evolution of AI Workflows",
@@ -724,7 +764,7 @@ export const slides = [
     ]
   },
   {
-    "id": 19,
+    "id": 20,
     "type": "content",
     "layout": "problem-statement",
     "title": "The Contract Review Challenge",
@@ -765,7 +805,7 @@ export const slides = [
     ]
   },
   {
-    "id": 20,
+    "id": 21,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media7.mp4",
@@ -778,7 +818,7 @@ export const slides = [
     ]
   },
   {
-    "id": 21,
+    "id": 22,
     "type": "content",
     "content": [
       {
@@ -828,7 +868,7 @@ export const slides = [
     ]
   },
   {
-    "id": 22,
+    "id": 23,
     "type": "content",
     "layout": "compound-architecture",
     "title": "The Agentic AI Stack",
@@ -905,7 +945,7 @@ export const slides = [
     ]
   },
   {
-    "id": 23,
+    "id": 24,
     "type": "content",
     "layout": "agent-workflow",
     "title": "How Agents Actually Work",
@@ -1009,7 +1049,7 @@ export const slides = [
     ]
   },
   {
-    "id": 24,
+    "id": 25,
     "type": "content",
     "layout": "key-takeaways",
     "title": "Key Takeaways",
@@ -1054,7 +1094,7 @@ export const slides = [
     ]
   },
   {
-    "id": 25,
+    "id": 26,
     "type": "content",
     "layout": "assistant-categories",
     "title": "AI Roadmap 2026",
@@ -1148,7 +1188,7 @@ export const slides = [
     ]
   },
   {
-    "id": 26,
+    "id": 27,
     "type": "content",
     "content": [],
     "title": "TritonGPT Usage Analytics",
@@ -1234,7 +1274,7 @@ export const slides = [
     ]
   },
   {
-    "id": 27,
+    "id": 28,
     "type": "content",
     "content": [],
     "title": "TritonGPT Widget Analytics",
@@ -1300,7 +1340,7 @@ export const slides = [
     ]
   },
   {
-    "id": 28,
+    "id": 29,
     "type": "content",
     "content": [],
     "title": "TritonGPT User Growth",
@@ -1349,7 +1389,7 @@ export const slides = [
     ]
   },
   {
-    "id": 29,
+    "id": 30,
     "type": "content",
     "layout": "team-grid",
     "title": "The Team Behind TritonAI",
@@ -1472,7 +1512,7 @@ export const slides = [
     ]
   },
   {
-    "id": 30,
+    "id": 31,
     "type": "title",
     "content": [],
     "title": "Thank You",
