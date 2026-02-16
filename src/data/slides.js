@@ -305,56 +305,6 @@ export const slides = [
     ]
   },
   {
-    "id": 5,
-    "type": "content",
-    "title": "From TritonGPT to TritonAI",
-    "subtitle": "Evolving from chat into an AI Tools Hub that unifies campus-ready capabilities",
-    "layout": "feature-grid",
-    "backgroundColor": "#F5F0E6",
-    "content": [
-      {
-        "heading": "AI Tools Hub",
-        "text": "The overarching TritonAI layer: a centralized hub that contains Agent Builder, MCP Server Hub, Developer APIs, the Pre-Packaged Tools Pipeline, Training Capability, and the Skills Library so teams can discover, govern, and adopt capabilities in one place."
-      },
-      {
-        "heading": "Agent Builder (Low-Code)",
-        "text": "Low-code workflow automation lets units design and launch AI agents with drag-and-drop tooling, reducing dependency on central development queues.",
-        "icon": "Blocks"
-      },
-      {
-        "heading": "MCP Server Hub",
-        "text": "Shared connectors let assistants securely access enterprise data sources and services, enabling reusable integrations instead of one-off builds.",
-        "icon": "Database"
-      },
-      {
-        "heading": "Agent Skills Library",
-        "text": "Reusable skill packages provide pre-built instructions and workflows for common campus tasks, accelerating delivery with consistent quality.",
-        "icon": "BookOpen"
-      },
-      {
-        "heading": "Developer APIs",
-        "text": "Getting-started API documentation, integration guides, and reference patterns help technical teams build campus-ready AI services quickly.",
-        "icon": "Code"
-      },
-      {
-        "heading": "Pre-Packaged Tools Pipeline",
-        "text": "A 2026 roadmap for transcription, captioning, summarization, accessibility, and OCR brings high-impact self-service AI capabilities into everyday operations.",
-        "icon": "Cpu"
-      },
-      {
-        "heading": "Training Capability",
-        "text": "Workshops, FAQs, webinars, and prompting resources support non-technical adopters and help teams operationalize AI with confidence.",
-        "icon": "GraduationCap"
-      }
-    ],
-    "audiences": [
-      "all",
-      "internal",
-      "public",
-      "CCW"
-    ]
-  },
-  {
     "id": 6,
     "backgroundColor": "#F5F0E6",
     "type": "content",
@@ -868,6 +818,56 @@ export const slides = [
       {
         "text": "It's enabling me to work on other things... I can run the tool, jump on something else, and then go back. It only takes minutes to process the contract.",
         "author": "Procurement Lead"
+      }
+    ],
+    "audiences": [
+      "all",
+      "internal",
+      "public",
+      "CCW"
+    ]
+  },
+  {
+    "id": 5,
+    "type": "content",
+    "title": "From TritonGPT to TritonAI",
+    "subtitle": "Evolving from chat into an AI Tools Hub that unifies campus-ready capabilities",
+    "layout": "feature-grid",
+    "backgroundColor": "#F5F0E6",
+    "content": [
+      {
+        "heading": "AI Tools Hub",
+        "text": "The overarching TritonAI layer: a centralized hub that contains Agent Builder, MCP Server Hub, Developer APIs, the Pre-Packaged Tools Pipeline, Training Capability, and the Skills Library so teams can discover, govern, and adopt capabilities in one place."
+      },
+      {
+        "heading": "Agent Builder (Low-Code)",
+        "text": "Low-code workflow automation lets units design and launch AI agents with drag-and-drop tooling, reducing dependency on central development queues.",
+        "icon": "Blocks"
+      },
+      {
+        "heading": "MCP Server Hub",
+        "text": "Shared connectors let assistants securely access enterprise data sources and services, enabling reusable integrations instead of one-off builds.",
+        "icon": "Database"
+      },
+      {
+        "heading": "Agent Skills Library",
+        "text": "Reusable skill packages provide pre-built instructions and workflows for common campus tasks, accelerating delivery with consistent quality.",
+        "icon": "BookOpen"
+      },
+      {
+        "heading": "Developer APIs",
+        "text": "Getting-started API documentation, integration guides, and reference patterns help technical teams build campus-ready AI services quickly.",
+        "icon": "Code"
+      },
+      {
+        "heading": "Pre-Packaged Tools Pipeline",
+        "text": "A 2026 roadmap for transcription, captioning, summarization, accessibility, and OCR brings high-impact self-service AI capabilities into everyday operations.",
+        "icon": "Cpu"
+      },
+      {
+        "heading": "Training Capability",
+        "text": "Workshops, FAQs, webinars, and prompting resources support non-technical adopters and help teams operationalize AI with confidence.",
+        "icon": "GraduationCap"
       }
     ],
     "audiences": [
