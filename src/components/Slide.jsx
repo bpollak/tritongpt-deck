@@ -1799,7 +1799,8 @@ const Slide = ({ slide }) => {
           <div className={clsx('grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8', isTritonAIEvolutionSlide && 'lg:grid-cols-5')}>
             {(isTritonAIEvolutionSlide ? slide.content.slice(1) : slide.content).map((item, index) => {
               const displayIndex = isTritonAIEvolutionSlide ? index + 1 : index;
-            const topBarColors = ['#182B49', '#00C6D7', '#00629B', '#FFCD00', '#FC8900', '#6E963B'];
+              const capabilityNumber = isTritonAIEvolutionSlide ? index + 1 : displayIndex + 1;
+              const topBarColors = ['#182B49', '#00C6D7', '#00629B', '#FFCD00', '#FC8900', '#6E963B'];
             const topBarColor = topBarColors[displayIndex % topBarColors.length];
             const evolutionCardStyles = [
               {
@@ -1864,7 +1865,7 @@ const Slide = ({ slide }) => {
                   {isTritonAIEvolutionSlide && (
                     <div className="mb-3 sm:mb-4 inline-flex items-center gap-2">
                       <div className={clsx('rounded-full px-2.5 py-1 text-[10px] sm:text-xs font-bold tracking-wider uppercase', evolutionStyle.iconBadgeClass)}>
-                        Capability {String(displayIndex + 1).padStart(2, '0')}
+                        Capability {String(capabilityNumber).padStart(2, '0')}
                       </div>
                     </div>
                   )}

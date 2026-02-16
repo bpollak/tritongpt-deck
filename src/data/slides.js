@@ -318,27 +318,33 @@ export const slides = [
       },
       {
         "heading": "Agent Builder (Low-Code)",
-        "text": "Low-code workflow automation lets units design and launch AI agents with drag-and-drop tooling, reducing dependency on central development queues."
+        "text": "Low-code workflow automation lets units design and launch AI agents with drag-and-drop tooling, reducing dependency on central development queues.",
+        "icon": "Blocks"
       },
       {
         "heading": "MCP Server Hub",
-        "text": "Shared connectors let assistants securely access enterprise data sources and services, enabling reusable integrations instead of one-off builds."
+        "text": "Shared connectors let assistants securely access enterprise data sources and services, enabling reusable integrations instead of one-off builds.",
+        "icon": "Database"
       },
       {
         "heading": "Agent Skills Library",
-        "text": "Reusable skill packages provide pre-built instructions and workflows for common campus tasks, accelerating delivery with consistent quality."
+        "text": "Reusable skill packages provide pre-built instructions and workflows for common campus tasks, accelerating delivery with consistent quality.",
+        "icon": "BookOpen"
       },
       {
         "heading": "Developer APIs",
-        "text": "Getting-started API documentation, integration guides, and reference patterns help technical teams build campus-ready AI services quickly."
+        "text": "Getting-started API documentation, integration guides, and reference patterns help technical teams build campus-ready AI services quickly.",
+        "icon": "Code"
       },
       {
         "heading": "Pre-Packaged Tools Pipeline",
-        "text": "A 2026 roadmap for transcription, captioning, summarization, accessibility, and OCR brings high-impact self-service AI capabilities into everyday operations."
+        "text": "A 2026 roadmap for transcription, captioning, summarization, accessibility, and OCR brings high-impact self-service AI capabilities into everyday operations.",
+        "icon": "Cpu"
       },
       {
         "heading": "Training Capability",
-        "text": "Workshops, FAQs, webinars, and prompting resources support non-technical adopters and help teams operationalize AI with confidence."
+        "text": "Workshops, FAQs, webinars, and prompting resources support non-technical adopters and help teams operationalize AI with confidence.",
+        "icon": "GraduationCap"
       }
     ],
     "audiences": [
