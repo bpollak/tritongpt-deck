@@ -121,6 +121,7 @@ const Slide = ({ slide }) => {
   const isTeamGrid = slide.layout === 'team-grid';
   const isTimelineEvolution = slide.layout === 'timeline-evolution';
   const isCampusMetrics = slide.layout === 'campus-metrics';
+  const isTritonAIEvolutionSlide = slide.title === 'From TritonGPT to TritonAI';
 
   if (isTitleHero) {
     // Determine if this is a closing slide (has QR code/image) vs opening slide
@@ -1758,6 +1759,33 @@ const Slide = ({ slide }) => {
           {slide.content.map((item, index) => {
             const topBarColors = ['#182B49', '#00C6D7', '#00629B', '#FFCD00', '#FC8900', '#6E963B'];
             const topBarColor = topBarColors[index % topBarColors.length];
+            const evolutionCardStyles = [
+              {
+                cardClass: 'bg-gradient-to-br from-[#f9fbff] to-[#eef4ff] border-[#7aa7ff]',
+                iconBadgeClass: 'bg-[#e9f1ff] text-[#184aa3]',
+              },
+              {
+                cardClass: 'bg-gradient-to-br from-[#f5feff] to-[#e7fbff] border-[#55d2df]',
+                iconBadgeClass: 'bg-[#dcfbff] text-[#0e6f7a]',
+              },
+              {
+                cardClass: 'bg-gradient-to-br from-[#f5f9ff] to-[#e9f2ff] border-[#6f95d3]',
+                iconBadgeClass: 'bg-[#e3edff] text-[#1f4f92]',
+              },
+              {
+                cardClass: 'bg-gradient-to-br from-[#fffdf5] to-[#fff5cf] border-[#ffd85c]',
+                iconBadgeClass: 'bg-[#ffefb2] text-[#815f00]',
+              },
+              {
+                cardClass: 'bg-gradient-to-br from-[#fff8f3] to-[#ffe9d9] border-[#ffb67a]',
+                iconBadgeClass: 'bg-[#ffe2cb] text-[#9f4d0d]',
+              },
+              {
+                cardClass: 'bg-gradient-to-br from-[#f7fcf2] to-[#ebf8df] border-[#9ac77d]',
+                iconBadgeClass: 'bg-[#def2cc] text-[#3f6c1f]',
+              }
+            ];
+            const evolutionStyle = evolutionCardStyles[index % evolutionCardStyles.length];
 
             // Contextual icons based on heading content
             const getContextIcon = (heading) => {
@@ -1781,13 +1809,23 @@ const Slide = ({ slide }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 + index * 0.1, type: "spring", stiffness: 100 }}
-                className="relative flex flex-col bg-white rounded-xl sm:rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all overflow-hidden"
+                className={clsx(
+                  'relative flex flex-col rounded-xl sm:rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all overflow-hidden border',
+                  isTritonAIEvolutionSlide ? evolutionStyle.cardClass : 'bg-white border-transparent'
+                )}
               >
                 {/* Colored top bar */}
                 <div className="h-2 sm:h-3 w-full" style={{ backgroundColor: topBarColor }} />
 
                 {/* Content */}
                 <div className="p-4 sm:p-8">
+                  {isTritonAIEvolutionSlide && (
+                    <div className="mb-3 sm:mb-4 inline-flex items-center gap-2">
+                      <div className={clsx('rounded-full px-2.5 py-1 text-[10px] sm:text-xs font-bold tracking-wider uppercase', evolutionStyle.iconBadgeClass)}>
+                        Capability {String(index + 1).padStart(2, '0')}
+                      </div>
+                    </div>
+                  )}
                   {/* Icon watermark */}
                   <div className="absolute top-4 sm:top-6 right-4 sm:right-6 pointer-events-none select-none" style={{ color: topBarColor, opacity: 0.15 }}>
                     <IconComponent size={48} strokeWidth={1.5} className="sm:w-16 sm:h-16 md:w-20 md:h-20" />
