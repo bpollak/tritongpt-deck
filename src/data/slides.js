@@ -314,7 +314,7 @@ export const slides = [
     "content": [
       {
         "heading": "AI Tools Hub",
-        "text": "The overarching TritonAI layer: a centralized hub that contains Agent Builder, MCP Server Hub, Skills Library, Developer APIs/Training, and the Pre-Packaged Tools Pipeline so teams can discover, govern, and adopt capabilities in one place."
+        "text": "The overarching TritonAI layer: a centralized hub that contains Agent Builder, MCP Server Hub, Developer APIs, the Pre-Packaged Tools Pipeline, Training Capability, and the Skills Library so teams can discover, govern, and adopt capabilities in one place."
       },
       {
         "heading": "Agent Builder (Low-Code)",
@@ -329,12 +329,16 @@ export const slides = [
         "text": "Reusable skill packages provide pre-built instructions and workflows for common campus tasks, accelerating delivery with consistent quality."
       },
       {
-        "heading": "Developer APIs + Training",
-        "text": "Getting-started API documentation, FAQs, webinars, and prompting resources support both technical builders and non-technical adopters."
+        "heading": "Developer APIs",
+        "text": "Getting-started API documentation, integration guides, and reference patterns help technical teams build campus-ready AI services quickly."
       },
       {
         "heading": "Pre-Packaged Tools Pipeline",
         "text": "A 2026 roadmap for transcription, captioning, summarization, accessibility, and OCR brings high-impact self-service AI capabilities into everyday operations."
+      },
+      {
+        "heading": "Training Capability",
+        "text": "Workshops, FAQs, webinars, and prompting resources support non-technical adopters and help teams operationalize AI with confidence."
       }
     ],
     "audiences": [
