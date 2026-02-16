@@ -1755,10 +1755,52 @@ const Slide = ({ slide }) => {
       )}
 
       {isFeatureGrid && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 w-full max-w-[1600px] mx-auto">
-          {slide.content.map((item, index) => {
+        <div className={clsx('w-full mx-auto', isTritonAIEvolutionSlide ? 'max-w-[1700px]' : 'max-w-[1600px]')}>
+          {isTritonAIEvolutionSlide && (
+            <>
+              <motion.div
+                initial={{ opacity: 0, y: -16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45, ease: 'easeOut' }}
+                className="relative mb-4 sm:mb-6 lg:mb-8 overflow-hidden rounded-2xl sm:rounded-3xl border-2 border-[#3e6cbe]/40 bg-gradient-to-r from-[#d9e8ff] via-[#c6dcff] to-[#b2d1ff] shadow-xl"
+              >
+                <div className="absolute -right-10 -top-10 h-36 w-36 rounded-full bg-[#184aa3]/10 blur-2xl pointer-events-none" />
+                <div className="absolute -left-10 -bottom-10 h-36 w-36 rounded-full bg-[#00a6b6]/10 blur-2xl pointer-events-none" />
+                <div className="relative p-4 sm:p-8 lg:p-10">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-white/75 px-3 py-1.5 text-[11px] sm:text-xs font-bold tracking-[0.18em] uppercase text-[#184aa3] mb-3 sm:mb-4">
+                    <Layers size={14} className="sm:w-4 sm:h-4" />
+                    Overarching Platform Layer
+                  </div>
+                  <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+                    <div>
+                      <h3 className="text-2xl sm:text-4xl lg:text-5xl font-black text-ucsd-navy tracking-tight leading-tight">
+                        {slide.content[0].heading}
+                      </h3>
+                      <p className="mt-2 sm:mt-3 text-sm sm:text-lg lg:text-xl text-slate-800 font-semibold max-w-6xl leading-relaxed">
+                        {slide.content[0].text}
+                      </p>
+                    </div>
+                    <div className="hidden md:flex items-center gap-2 text-[#184aa3] font-extrabold uppercase tracking-[0.14em] text-xs lg:text-sm whitespace-nowrap">
+                      Powers every capability <ArrowRight size={18} />
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              <div className="flex justify-center mb-4 sm:mb-6 lg:mb-8">
+                <div className="flex flex-col items-center text-[#184aa3]">
+                  <ArrowDown size={24} className="sm:w-7 sm:h-7" />
+                  <div className="mt-1 h-7 sm:h-10 w-px bg-gradient-to-b from-[#184aa3]/70 to-[#184aa3]/0" />
+                </div>
+              </div>
+            </>
+          )}
+
+          <div className={clsx('grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8', isTritonAIEvolutionSlide && 'lg:grid-cols-5')}>
+            {(isTritonAIEvolutionSlide ? slide.content.slice(1) : slide.content).map((item, index) => {
+              const displayIndex = isTritonAIEvolutionSlide ? index + 1 : index;
             const topBarColors = ['#182B49', '#00C6D7', '#00629B', '#FFCD00', '#FC8900', '#6E963B'];
-            const topBarColor = topBarColors[index % topBarColors.length];
+            const topBarColor = topBarColors[displayIndex % topBarColors.length];
             const evolutionCardStyles = [
               {
                 cardClass: 'bg-gradient-to-br from-[#f9fbff] to-[#eef4ff] border-[#7aa7ff]',
@@ -1785,7 +1827,7 @@ const Slide = ({ slide }) => {
                 iconBadgeClass: 'bg-[#def2cc] text-[#3f6c1f]',
               }
             ];
-            const evolutionStyle = evolutionCardStyles[index % evolutionCardStyles.length];
+            const evolutionStyle = evolutionCardStyles[displayIndex % evolutionCardStyles.length];
 
             // Contextual icons based on heading content
             const getContextIcon = (heading) => {
@@ -1822,7 +1864,7 @@ const Slide = ({ slide }) => {
                   {isTritonAIEvolutionSlide && (
                     <div className="mb-3 sm:mb-4 inline-flex items-center gap-2">
                       <div className={clsx('rounded-full px-2.5 py-1 text-[10px] sm:text-xs font-bold tracking-wider uppercase', evolutionStyle.iconBadgeClass)}>
-                        Capability {String(index + 1).padStart(2, '0')}
+                        Capability {String(displayIndex + 1).padStart(2, '0')}
                       </div>
                     </div>
                   )}
@@ -1844,6 +1886,7 @@ const Slide = ({ slide }) => {
               </motion.div>
             );
           })}
+          </div>
         </div>
       )}
 
