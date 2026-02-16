@@ -36,9 +36,9 @@ export const slides = [
         "tier": "hero"
       },
       {
-        "value": "1.29M",
-        "label": "Patient Visits",
-        "icon": "Heart",
+        "value": "24.7%",
+        "label": "Undergraduate Admit Rate",
+        "icon": "GraduationCap",
         "tier": "hero"
       },
       {
