@@ -308,13 +308,13 @@ export const slides = [
     "id": 5,
     "type": "content",
     "title": "From TritonGPT to TritonAI",
-    "subtitle": "Evolving from a chat experience into a secure, self-service AI ecosystem",
+    "subtitle": "Evolving from chat into an AI Tools Hub that unifies campus-ready capabilities",
     "layout": "feature-grid",
     "backgroundColor": "#F5F0E6",
     "content": [
       {
         "heading": "AI Tools Hub",
-        "text": "A centralized catalog of AI services and campus-ready utilities so teams can quickly discover, evaluate, and adopt tools without custom engineering."
+        "text": "The overarching TritonAI layer: a centralized hub that contains Agent Builder, MCP Server Hub, Skills Library, Developer APIs/Training, and the Pre-Packaged Tools Pipeline so teams can discover, govern, and adopt capabilities in one place."
       },
       {
         "heading": "Agent Builder (Low-Code)",
