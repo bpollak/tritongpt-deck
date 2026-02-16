@@ -308,33 +308,33 @@ export const slides = [
     "id": 5,
     "type": "content",
     "title": "From TritonGPT to TritonAI",
-    "subtitle": "Expanding from a chat platform to a self-service AI ecosystem",
+    "subtitle": "Evolving from a chat experience into a secure, self-service AI ecosystem",
     "layout": "feature-grid",
     "backgroundColor": "#F5F0E6",
     "content": [
       {
         "heading": "AI Tools Hub",
-        "text": "A centralized catalog of AI services and campus-ready utilities so teams can discover and adopt tools faster without custom engineering."
+        "text": "A centralized catalog of AI services and campus-ready utilities so teams can quickly discover, evaluate, and adopt tools without custom engineering."
       },
       {
         "heading": "Agent Builder (Low-Code)",
-        "text": "Self-service workflow automation lets units design and deploy AI agents with drag-and-drop tooling, reducing dependency on central development queues."
+        "text": "Low-code workflow automation lets units design and launch AI agents with drag-and-drop tooling, reducing dependency on central development queues."
       },
       {
         "heading": "MCP Server Hub",
-        "text": "Upcoming shared connectors let assistants securely access data sources and services, enabling reusable integrations instead of one-off builds."
+        "text": "Shared connectors let assistants securely access enterprise data sources and services, enabling reusable integrations instead of one-off builds."
       },
       {
         "heading": "Agent Skills Library",
-        "text": "Reusable skill packages provide pre-built instructions and workflows for common campus tasks, accelerating consistent solution delivery."
+        "text": "Reusable skill packages provide pre-built instructions and workflows for common campus tasks, accelerating delivery with consistent quality."
       },
       {
         "heading": "Developer APIs + Training",
-        "text": "Get-started API documentation, FAQs, webinars, and prompting resources support both technical builders and non-technical adopters."
+        "text": "Getting-started API documentation, FAQs, webinars, and prompting resources support both technical builders and non-technical adopters."
       },
       {
         "heading": "Pre-Packaged Tools Pipeline",
-        "text": "A 2026 launch roadmap for transcription, captioning, summarization, accessibility, and OCR tools brings self-service AI capabilities to everyday operations."
+        "text": "A 2026 roadmap for transcription, captioning, summarization, accessibility, and OCR brings high-impact self-service AI capabilities into everyday operations."
       }
     ],
     "audiences": [
