@@ -5,12 +5,21 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  // Basic auth check - you can add password protection here
+  const adminPassword = process.env.ADMIN_PASSWORD;
+  if (!adminPassword) {
+    return res.status(500).json({ error: 'ADMIN_PASSWORD is not configured on the server' });
+  }
+
+  // Basic auth check
   const authHeader = req.headers.authorization;
-  const expectedAuth = `Bearer ${process.env.ADMIN_PASSWORD || 'changeme'}`;
+  const expectedAuth = `Bearer ${adminPassword}`;
+
+  if (!authHeader) {
+    return res.status(401).json({ error: 'Missing authorization header' });
+  }
 
   if (authHeader !== expectedAuth) {
-    return res.status(401).json({ error: 'Unauthorized' });
+    return res.status(401).json({ error: 'Unauthorized: invalid admin password' });
   }
 
   try {
@@ -31,7 +40,7 @@ export default async function handler(req, res) {
     const BRANCH = 'main';
 
     if (!GITHUB_TOKEN) {
-      return res.status(500).json({ error: 'GitHub token not configured' });
+      return res.status(500).json({ error: 'GITHUB_TOKEN is not configured on the server' });
     }
 
     // Get current file SHA (required for updates)

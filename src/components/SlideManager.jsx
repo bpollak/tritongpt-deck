@@ -126,6 +126,9 @@ const SlideManager = ({ onClose, onExport, standalone = false }) => {
       const data = await response.json();
 
       if (!response.ok) {
+        if (response.status === 401) {
+          throw new Error(`${data.error || 'Unauthorized'}. Check the admin password configured in Vercel as ADMIN_PASSWORD.`);
+        }
         throw new Error(data.error || 'Failed to save');
       }
 
