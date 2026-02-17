@@ -40,9 +40,24 @@ const SlideManager = ({ onClose, onExport, standalone = false }) => {
     });
   };
 
+  const toTitleCase = (value) =>
+    value.replace(/\w\S*/g, (word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
+
+  const getVideoLabelFromSrc = (videoSrc) => {
+    if (!videoSrc) return null;
+    const filename = videoSrc.split('/').pop();
+    if (!filename) return null;
+    const stem = filename.replace(/\.[^.]+$/, '');
+    return toTitleCase(stem.replace(/([a-zA-Z])(\d)/g, '$1 $2').replace(/[-_]+/g, ' ').trim());
+  };
+
   const getSlideTitle = (slide) => {
     if (slide.title) return slide.title;
-    if (slide.type === 'video') return `Video Slide ${slide.id}`;
+    if (slide.managerLabel) return slide.managerLabel;
+    if (slide.type === 'video') {
+      const inferredLabel = getVideoLabelFromSrc(slide.videoSrc);
+      return inferredLabel ? `Video: ${inferredLabel}` : `Video Slide ${slide.id}`;
+    }
     return `Slide ${slide.id}`;
   };
 

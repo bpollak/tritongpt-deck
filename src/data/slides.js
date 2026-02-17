@@ -837,7 +837,7 @@ export const slides = [
     "content": [
       {
         "heading": "AI Tools Hub",
-        "text": "The overarching TritonAI layer: a centralized hub that brings together Agent Builder for low-code automation, Agent Skills Library for reusable workflows, MCP Server Hub for secure connectors, Developer APIs for custom integrations, Agent Oberservability for run monitoring, and a Pre-Packaged Tools Pipeline for turnkey AI services."
+        "text": "The overarching TritonAI layer: a centralized hub that brings together Agent Builder for low-code automation, Agent Skills Library for reusable workflows, MCP Server Hub for secure connectors, Developer APIs for custom integrations, Agent Observability for run monitoring, and a Pre-Packaged Tools Pipeline for turnkey AI services."
       },
       {
         "heading": "Agent Builder",
@@ -860,7 +860,7 @@ export const slides = [
         "icon": "Code"
       },
       {
-        "heading": "Agent Oberservability",
+        "heading": "Agent Observability",
         "text": "Provides real-time visibility into agent runs, tool calls, latency, and errors so teams can trace behavior, debug failures, and continuously improve reliability.",
         "icon": "Monitor"
       },
@@ -961,6 +961,7 @@ export const slides = [
     "content": [],
     "videoSrc": "/media/pdf-remediator-1.6x.mov",
     "poster": "/media/pdf-remediator-poster.png",
+    "managerLabel": "PDF Remediator Demo",
     "audiences": [
       "all",
       "technical",
