@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { slides } from '../data/slides';
-import { Eye, EyeOff, ChevronDown, ChevronUp, Save, Upload, ExternalLink } from 'lucide-react';
+import { Eye, EyeOff, ChevronDown, ChevronUp, ExternalLink } from 'lucide-react';
 
 const AUDIENCE_TYPES = ['all', 'technical', 'executive', 'internal', 'public', 'CCW'];
 
@@ -22,8 +22,6 @@ const SlideManager = ({ onClose, onExport, standalone = false }) => {
   );
   const [expandedSlide, setExpandedSlide] = useState(null);
   const [filterAudience, setFilterAudience] = useState('all');
-  const [isSaving, setIsSaving] = useState(false);
-  const [saveStatus, setSaveStatus] = useState(null);
 
   const toggleAudience = (slideId, audience) => {
     setSlideAudiences(prev => {
@@ -94,63 +92,6 @@ const SlideManager = ({ onClose, onExport, standalone = false }) => {
     a.download = 'slides.js';
     a.click();
     URL.revokeObjectURL(url);
-  };
-
-  const saveAndDeploy = async () => {
-    setIsSaving(true);
-    setSaveStatus(null);
-
-    try {
-      const updatedSlides = slides.map(slide => ({
-        ...slide,
-        audiences: slideAudiences[slide.id]
-      }));
-
-      // Get admin password from prompt or environment
-      const password = prompt('Enter admin password:');
-      if (!password) {
-        setSaveStatus({ type: 'error', message: 'Password required' });
-        setIsSaving(false);
-        return;
-      }
-
-      const response = await fetch('/api/save-slides', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${password}`
-        },
-        body: JSON.stringify({ slides: updatedSlides })
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        const detailsMessage = data?.details?.message ? ` (${data.details.message})` : '';
-        if (response.status === 401) {
-          throw new Error(`${data.error || 'Unauthorized'}. Check the admin password configured in Vercel as ADMIN_PASSWORD.`);
-        }
-        throw new Error(`${data.error || 'Failed to save'}${detailsMessage}`);
-      }
-
-      setSaveStatus({
-        type: 'success',
-        message: 'Saved! Deploying to Vercel... (1-2 min)'
-      });
-
-      // Reload page after 3 seconds to get updated slides
-      setTimeout(() => {
-        window.location.reload();
-      }, 3000);
-
-    } catch (error) {
-      setSaveStatus({
-        type: 'error',
-        message: error.message || 'Failed to save changes'
-      });
-    } finally {
-      setIsSaving(false);
-    }
   };
 
   const containerClasses = standalone
@@ -305,56 +246,23 @@ const SlideManager = ({ onClose, onExport, standalone = false }) => {
 
         {/* Footer */}
         <div className="p-6 border-t border-gray-200 bg-gray-50">
-          {saveStatus && (
-            <div className={`mb-4 p-3 rounded-lg ${
-              saveStatus.type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
-            }`}>
-              {saveStatus.message}
-            </div>
-          )}
           <div className="flex items-center justify-between gap-4">
             <div className="text-sm text-gray-600">
-              Click a slide to edit its audience tags
+              Click a slide to edit its audience tags, then export `slides.js`
             </div>
             <div className="flex gap-3">
-              {standalone ? (
-                <button
-                  onClick={saveAndDeploy}
-                  disabled={isSaving}
-                  className={`px-6 py-2 font-semibold rounded-lg transition-colors flex items-center gap-2 ${
-                    isSaving
-                      ? 'bg-gray-400 text-white cursor-not-allowed'
-                      : 'bg-green-600 text-white hover:bg-green-700'
-                  }`}
-                >
-                  {isSaving ? (
-                    <>
-                      <Upload size={20} className="animate-spin" />
-                      Saving...
-                    </>
-                  ) : (
-                    <>
-                      <Save size={20} />
-                      Save & Deploy
-                    </>
-                  )}
-                </button>
-              ) : (
-                <>
-                  <button
-                    onClick={exportConfig}
-                    className="px-6 py-2 bg-ucsd-gold text-ucsd-navy font-semibold rounded-lg hover:bg-yellow-500 transition-colors"
-                  >
-                    Copy to Clipboard
-                  </button>
-                  <button
-                    onClick={downloadConfig}
-                    className="px-6 py-2 bg-ucsd-navy text-white font-semibold rounded-lg hover:bg-blue-900 transition-colors"
-                  >
-                    Download slides.js
-                  </button>
-                </>
-              )}
+              <button
+                onClick={exportConfig}
+                className="px-6 py-2 bg-ucsd-gold text-ucsd-navy font-semibold rounded-lg hover:bg-yellow-500 transition-colors"
+              >
+                Copy to Clipboard
+              </button>
+              <button
+                onClick={downloadConfig}
+                className="px-6 py-2 bg-ucsd-navy text-white font-semibold rounded-lg hover:bg-blue-900 transition-colors"
+              >
+                Download slides.js
+              </button>
             </div>
           </div>
         </div>
