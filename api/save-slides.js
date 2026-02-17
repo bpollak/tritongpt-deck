@@ -48,7 +48,7 @@ export default async function handler(req, res) {
       `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}?ref=${BRANCH}`,
       {
         headers: {
-          'Authorization': `token ${GITHUB_TOKEN}`,
+          'Authorization': `Bearer ${GITHUB_TOKEN}`,
           'Accept': 'application/vnd.github.v3+json'
         }
       }
@@ -67,7 +67,7 @@ export default async function handler(req, res) {
       {
         method: 'PUT',
         headers: {
-          'Authorization': `token ${GITHUB_TOKEN}`,
+          'Authorization': `Bearer ${GITHUB_TOKEN}`,
           'Accept': 'application/vnd.github.v3+json',
           'Content-Type': 'application/json'
         },
@@ -82,6 +82,12 @@ export default async function handler(req, res) {
 
     if (!updateResponse.ok) {
       const errorData = await updateResponse.json();
+      if (errorData?.message?.includes('Resource not accessible by personal access token')) {
+        return res.status(500).json({
+          error: 'Failed to update file: GITHUB_TOKEN lacks Contents write permission for this repository',
+          details: errorData
+        });
+      }
       return res.status(500).json({ error: 'Failed to update file', details: errorData });
     }
 
