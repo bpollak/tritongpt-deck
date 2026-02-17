@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { slides } from '../data/slides';
-import { Eye, EyeOff, ChevronDown, ChevronUp, ExternalLink } from 'lucide-react';
+import { Eye, EyeOff, ChevronDown, ChevronUp, ExternalLink, Save, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
 
 const AUDIENCE_TYPES = ['all', 'technical', 'executive', 'internal', 'public', 'CCW'];
 
@@ -22,6 +22,11 @@ const SlideManager = ({ onClose, onExport, standalone = false }) => {
   );
   const [expandedSlide, setExpandedSlide] = useState(null);
   const [filterAudience, setFilterAudience] = useState('all');
+  const [saveStatus, setSaveStatus] = useState(null); // null | 'saving' | 'success' | 'error' | 'password'
+  const [saveMessage, setSaveMessage] = useState('');
+  const [adminPassword, setAdminPassword] = useState('');
+  const [showPasswordModal, setShowPasswordModal] = useState(false);
+  const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false);
 
   const toggleAudience = (slideId, audience) => {
     setSlideAudiences(prev => {
@@ -36,6 +41,7 @@ const SlideManager = ({ onClose, onExport, standalone = false }) => {
         [slideId]: newAudiences.length > 0 ? newAudiences : ['all']
       };
     });
+    setHasUnsavedChanges(true);
   };
 
   const toTitleCase = (value) =>
@@ -92,6 +98,53 @@ const SlideManager = ({ onClose, onExport, standalone = false }) => {
     a.download = 'slides.js';
     a.click();
     URL.revokeObjectURL(url);
+  };
+
+  const getUpdatedSlides = () => {
+    return slides.map(slide => ({
+      ...slide,
+      audiences: slideAudiences[slide.id]
+    }));
+  };
+
+  const handleSaveAndDeploy = () => {
+    setShowPasswordModal(true);
+    setSaveStatus('password');
+  };
+
+  const submitSave = async () => {
+    if (!adminPassword.trim()) return;
+
+    setShowPasswordModal(false);
+    setSaveStatus('saving');
+    setSaveMessage('Saving to GitHub and triggering deploy...');
+
+    try {
+      const updatedSlides = getUpdatedSlides();
+      const response = await fetch('/api/save-slides', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${adminPassword.trim()}`
+        },
+        body: JSON.stringify({ slides: updatedSlides })
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSaveStatus('success');
+        setSaveMessage(`Saved! Commit: ${data.commit?.substring(0, 7) || 'done'}. Vercel will deploy in ~1-2 minutes.`);
+        setHasUnsavedChanges(false);
+        setTimeout(() => setSaveStatus(null), 10000);
+      } else {
+        setSaveStatus('error');
+        setSaveMessage(data.error || 'Failed to save. Check your password and try again.');
+      }
+    } catch (err) {
+      setSaveStatus('error');
+      setSaveMessage(`Network error: ${err.message}. Are you on the deployed site?`);
+    }
   };
 
   const containerClasses = standalone
@@ -246,26 +299,97 @@ const SlideManager = ({ onClose, onExport, standalone = false }) => {
 
         {/* Footer */}
         <div className="p-6 border-t border-gray-200 bg-gray-50">
+          {/* Status Banner */}
+          {saveStatus && saveStatus !== 'password' && (
+            <div className={`mb-4 px-4 py-3 rounded-lg flex items-center gap-3 text-sm ${
+              saveStatus === 'saving' ? 'bg-blue-50 text-blue-700 border border-blue-200' :
+              saveStatus === 'success' ? 'bg-green-50 text-green-700 border border-green-200' :
+              'bg-red-50 text-red-700 border border-red-200'
+            }`}>
+              {saveStatus === 'saving' && <Loader2 size={16} className="animate-spin" />}
+              {saveStatus === 'success' && <CheckCircle size={16} />}
+              {saveStatus === 'error' && <AlertCircle size={16} />}
+              <span>{saveMessage}</span>
+              {saveStatus === 'error' && (
+                <button onClick={() => setSaveStatus(null)} className="ml-auto underline hover:no-underline">Dismiss</button>
+              )}
+            </div>
+          )}
+
           <div className="flex items-center justify-between gap-4">
             <div className="text-sm text-gray-600">
-              Click a slide to edit its audience tags, then export `slides.js`
+              {hasUnsavedChanges
+                ? <span className="text-amber-600 font-medium">You have unsaved changes</span>
+                : 'Click a slide to edit its audience tags'
+              }
             </div>
             <div className="flex gap-3">
               <button
                 onClick={exportConfig}
-                className="px-6 py-2 bg-ucsd-gold text-ucsd-navy font-semibold rounded-lg hover:bg-yellow-500 transition-colors"
+                className="px-4 py-2 bg-gray-200 text-gray-700 font-medium rounded-lg hover:bg-gray-300 transition-colors text-sm"
               >
                 Copy to Clipboard
               </button>
               <button
                 onClick={downloadConfig}
-                className="px-6 py-2 bg-ucsd-navy text-white font-semibold rounded-lg hover:bg-blue-900 transition-colors"
+                className="px-4 py-2 bg-gray-200 text-gray-700 font-medium rounded-lg hover:bg-gray-300 transition-colors text-sm"
               >
                 Download slides.js
+              </button>
+              <button
+                onClick={handleSaveAndDeploy}
+                disabled={saveStatus === 'saving'}
+                className={`px-6 py-2 font-semibold rounded-lg transition-colors flex items-center gap-2 ${
+                  saveStatus === 'saving'
+                    ? 'bg-gray-400 text-white cursor-not-allowed'
+                    : hasUnsavedChanges
+                      ? 'bg-ucsd-gold text-ucsd-navy hover:bg-yellow-500 ring-2 ring-amber-400'
+                      : 'bg-ucsd-gold text-ucsd-navy hover:bg-yellow-500'
+                }`}
+              >
+                {saveStatus === 'saving' ? <Loader2 size={16} className="animate-spin" /> : <Save size={16} />}
+                Save & Deploy
               </button>
             </div>
           </div>
         </div>
+
+        {/* Password Modal */}
+        {showPasswordModal && (
+          <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+            <div className="bg-white rounded-xl shadow-2xl max-w-md w-full p-6">
+              <h3 className="text-lg font-bold text-ucsd-navy mb-2">Save & Deploy</h3>
+              <p className="text-sm text-gray-600 mb-4">
+                This will commit your changes to GitHub and trigger a Vercel deployment. Changes go live in ~1-2 minutes.
+              </p>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Admin Password</label>
+              <input
+                type="password"
+                value={adminPassword}
+                onChange={(e) => setAdminPassword(e.target.value)}
+                onKeyDown={(e) => e.key === 'Enter' && submitSave()}
+                placeholder="Enter admin password"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ucsd-gold focus:border-ucsd-gold outline-none mb-4"
+                autoFocus
+              />
+              <div className="flex gap-3 justify-end">
+                <button
+                  onClick={() => { setShowPasswordModal(false); setSaveStatus(null); }}
+                  className="px-4 py-2 bg-gray-200 text-gray-700 font-medium rounded-lg hover:bg-gray-300 transition-colors"
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={submitSave}
+                  disabled={!adminPassword.trim()}
+                  className="px-6 py-2 bg-ucsd-gold text-ucsd-navy font-semibold rounded-lg hover:bg-yellow-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  Deploy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
