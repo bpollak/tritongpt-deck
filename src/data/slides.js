@@ -956,6 +956,20 @@ export const slides = [
     ]
   },
   {
+    "id": 33,
+    "type": "video",
+    "content": [],
+    "videoSrc": "/media/pdf-remediator-1.6x.mov",
+    "poster": "/media/pdf-remediator-poster.png",
+    "audiences": [
+      "all",
+      "technical",
+      "internal",
+      "public",
+      "CCW"
+    ]
+  },
+  {
     "id": 23,
     "type": "content",
     "layout": "compound-architecture",
@@ -1036,8 +1050,7 @@ export const slides = [
     "id": 24,
     "type": "content",
     "layout": "agent-workflow",
-    "title": "How Agents Actually Work",
-    "subtitle": "Self-Healing Incident Response",
+    "title": "Multi-Agent Incident Response Orchestration",
     "backgroundColor": "#F5F0E6",
     "workflowStages": [
       {
