@@ -112,6 +112,8 @@ const Slide = ({ slide }) => {
   const isCaseStudyHero = slide.layout === 'case-study-hero';
   const isAssistantCategories = slide.layout === 'assistant-categories';
   const isKeyTakeaways = slide.layout === 'key-takeaways';
+  const isAgentDevStrategy = slide.layout === 'agent-dev-strategy';
+  const isContractReviewChallenge = slide.layout === 'contract-review-challenge';
   const isRoadmap = slide.layout === 'roadmap';
   const isProblemStatement = slide.layout === 'problem-statement';
   const isComparisonTable = slide.layout === 'comparison-table';
@@ -387,12 +389,14 @@ const Slide = ({ slide }) => {
         className={clsx(
           "font-bold mb-4 sm:mb-6",
           isTitle ? "text-2xl sm:text-4xl md:text-6xl" : "text-xl sm:text-3xl md:text-5xl",
-          (!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isRoadmap && !isProblemStatement && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isTimelineEvolution && !isCampusMetrics) && "border-b-4 border-ucsd-gold pb-3 inline-block self-start",
-          (isSolution || isSolutionVideo || isCaseStudyHero || isAssistantCategories || isKeyTakeaways || isRoadmap || isProblemStatement || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isComparisonTable || isCompoundArchitecture || isTimelineEvolution || isCampusMetrics) && "text-center w-full",
+          (!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isAgentDevStrategy && !isRoadmap && !isProblemStatement && !isContractReviewChallenge && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isTimelineEvolution && !isCampusMetrics) && "border-b-4 border-ucsd-gold pb-3 inline-block self-start",
+          (isSolution || isSolutionVideo || isCaseStudyHero || isAssistantCategories || isKeyTakeaways || isAgentDevStrategy || isRoadmap || isProblemStatement || isContractReviewChallenge || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isComparisonTable || isCompoundArchitecture || isTimelineEvolution || isCampusMetrics) && "text-center w-full",
           (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isCompoundArchitecture) && "hidden",
           isAgentWorkflow && "text-center text-3xl sm:text-5xl md:text-6xl mb-2 sm:mb-4 w-full",
           isCaseStudyHero && "text-3xl md:text-4xl mb-4",
           isProblemStatement && "text-2xl sm:text-4xl md:text-5xl mb-2 sm:mb-4 font-black",
+          isContractReviewChallenge && "text-2xl sm:text-4xl md:text-5xl mb-1 sm:mb-1.5 font-black",
+          isAgentDevStrategy && "text-2xl sm:text-4xl md:text-5xl mb-1 sm:mb-2",
           (isVeryDense || useThreeColumns) && !isTitle && "text-2xl md:text-3xl mb-4",
           isGraphicHeavy && "text-2xl md:text-4xl",
           isFeatureGrid && "w-full text-center border-b-0 border-none mb-4 sm:mb-12",
@@ -412,9 +416,11 @@ const Slide = ({ slide }) => {
           transition={{ delay: 0.4, duration: 0.6 }}
           className={clsx(
             "text-base sm:text-xl md:text-2xl font-light mt-1 sm:mt-2 mb-3 sm:mb-6",
-            (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isSolution || isSolutionVideo || isAssistantCategories || isKeyTakeaways || isRoadmap || isProblemStatement || isComparisonTable || isAgentWorkflow || isTimelineEvolution || isCampusMetrics) && "text-center w-full mb-4 sm:mb-8",
+            (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isSolution || isSolutionVideo || isAssistantCategories || isKeyTakeaways || isAgentDevStrategy || isRoadmap || isProblemStatement || isContractReviewChallenge || isComparisonTable || isAgentWorkflow || isTimelineEvolution || isCampusMetrics) && "text-center w-full mb-4 sm:mb-8",
             isProblemStatement && "text-lg sm:text-2xl md:text-3xl mb-4 sm:mb-10 font-medium text-red-600",
+            isContractReviewChallenge && "text-base sm:text-xl md:text-2xl mb-2 sm:mb-2.5 font-semibold text-ucsd-blue",
             isAgentWorkflow && "text-lg sm:text-2xl font-semibold",
+            isAgentDevStrategy && "text-sm sm:text-lg md:text-xl mb-2 sm:mb-3 font-semibold text-ucsd-blue",
             isDark ? "text-ucsd-sky" : "text-ucsd-blue"
           )}
         >
@@ -1531,6 +1537,159 @@ const Slide = ({ slide }) => {
         );
       })()}
 
+      {isAgentDevStrategy && (() => {
+        const platforms = slide.platforms || [];
+        const models = slide.models || [];
+        const routingFactors = slide.routingFactors || [];
+        const codexStrengths = slide.codex?.strengths || [];
+        const claudeStrengths = slide.claude?.strengths || [];
+
+        return (
+          <div className="w-full max-w-[1800px] mx-auto flex flex-col gap-2 sm:gap-4">
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.45, ease: "easeOut" }}
+              className="relative overflow-hidden rounded-xl sm:rounded-2xl border border-ucsd-navy/10 bg-gradient-to-r from-[#e9f1ff] via-[#f4f8ff] to-[#f8fbff] shadow-lg p-3 sm:p-4"
+            >
+              <div className="absolute -top-10 -left-10 h-32 w-32 rounded-full bg-[#00629b]/10 blur-2xl pointer-events-none" />
+              <div className="absolute -bottom-8 -right-8 h-32 w-32 rounded-full bg-[#00c6d7]/15 blur-2xl pointer-events-none" />
+              <div className="relative grid grid-cols-1 lg:grid-cols-[1.35fr_1fr] gap-3 sm:gap-4">
+                <div className="rounded-lg sm:rounded-xl bg-white/85 backdrop-blur-sm border border-white/80 p-3 sm:p-4">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-ucsd-navy text-white px-2.5 py-1 text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] mb-2">
+                    <Wallet size={13} />
+                    {slide.recharge?.title || "Recharge Service"}
+                  </div>
+                  <div className="text-xs sm:text-base font-semibold text-ucsd-navy leading-snug sm:leading-relaxed">
+                    {slide.recharge?.text}
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 gap-2">
+                  <div className="rounded-lg sm:rounded-xl bg-white/85 border border-white/80 p-2.5 sm:p-3">
+                    <div className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.16em] text-ucsd-navy/70 mb-2">
+                      Institutional Cloud Agreements
+                    </div>
+                    <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                      {platforms.map((platform, index) => (
+                        <div key={index} className="px-2.5 py-1 rounded-full border text-[10px] sm:text-xs font-bold uppercase tracking-wide bg-white text-ucsd-navy border-ucsd-navy/20">
+                          {platform}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="rounded-lg sm:rounded-xl bg-white/85 border border-white/80 p-2.5 sm:p-3">
+                    <div className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.16em] text-ucsd-navy/70 mb-2">
+                      Supported Engineering Interfaces
+                    </div>
+                    <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                      {models.map((model, index) => {
+                        const IconComponent = model.icon ? iconMap[model.icon] : Cpu;
+                        return (
+                          <div key={index} className="inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 bg-white text-ucsd-navy border-ucsd-navy/20 text-[10px] sm:text-xs font-bold">
+                            <IconComponent size={12} />
+                            <span>{model.name}</span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <div className="grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_90px_minmax(0,1fr)] gap-2 sm:gap-4 items-stretch">
+              <motion.div
+                initial={{ opacity: 0, x: -18 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.15, duration: 0.45 }}
+                className="relative overflow-hidden rounded-xl sm:rounded-2xl border-2 border-[#10A37F]/45 bg-gradient-to-br from-[#e8fbf4] via-[#f7fffb] to-white shadow-xl p-3 sm:p-4"
+              >
+                <div className="absolute -right-10 -top-8 h-24 w-24 rounded-full bg-[#10A37F]/15 blur-2xl pointer-events-none" />
+                <div className="flex items-center justify-between mb-2 sm:mb-3">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-[#10A37F]/15 text-[#0f7a5f] px-2.5 py-1 text-[10px] sm:text-xs font-black uppercase tracking-[0.16em]">
+                    <CheckCircle size={13} />
+                    {slide.codex?.brand || "OpenAI"}
+                  </div>
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#10A37F] text-white text-xs font-black flex items-center justify-center shadow-md">CX</div>
+                </div>
+                <div className="text-lg sm:text-2xl font-black text-[#0b5a47] leading-tight">{slide.codex?.title}</div>
+                <div className="mt-1 text-[10px] sm:text-xs font-bold uppercase tracking-[0.16em] text-[#0f7a5f]/80">{slide.codex?.tag}</div>
+                <ul className="mt-2 sm:mt-3 space-y-1.5 sm:space-y-2">
+                  {codexStrengths.map((item, index) => (
+                    <li key={index} className="flex items-start gap-2 text-xs sm:text-sm text-slate-700 font-semibold leading-snug">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#10A37F] mt-1.5 flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+
+              <div className="hidden xl:flex flex-col items-center justify-center gap-1 text-ucsd-navy/70">
+                <div className="text-[10px] font-black uppercase tracking-[0.16em]">Task Router</div>
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-ucsd-blue to-ucsd-navy text-white flex items-center justify-center shadow-lg">
+                  <ArrowRightLeft size={18} />
+                </div>
+                <div className="text-[10px] font-bold uppercase tracking-[0.12em] text-center">Choose by work pattern</div>
+              </div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 18 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.25, duration: 0.45 }}
+                className="relative overflow-hidden rounded-xl sm:rounded-2xl border-2 border-[#D97757]/45 bg-gradient-to-br from-[#fff2eb] via-[#fff9f5] to-white shadow-xl p-3 sm:p-4"
+              >
+                <div className="absolute -left-10 -top-8 h-24 w-24 rounded-full bg-[#D97757]/15 blur-2xl pointer-events-none" />
+                <div className="flex items-center justify-between mb-2 sm:mb-3">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-[#D97757]/15 text-[#b65a3e] px-2.5 py-1 text-[10px] sm:text-xs font-black uppercase tracking-[0.16em]">
+                    <Brain size={13} />
+                    {slide.claude?.brand || "Anthropic"}
+                  </div>
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#D97757] text-white text-xs font-black flex items-center justify-center shadow-md">CL</div>
+                </div>
+                <div className="text-lg sm:text-2xl font-black text-[#95452f] leading-tight">{slide.claude?.title}</div>
+                <div className="mt-1 text-[10px] sm:text-xs font-bold uppercase tracking-[0.16em] text-[#b65a3e]/80">{slide.claude?.tag}</div>
+                <ul className="mt-2 sm:mt-3 space-y-1.5 sm:space-y-2">
+                  {claudeStrengths.map((item, index) => (
+                    <li key={index} className="flex items-start gap-2 text-xs sm:text-sm text-slate-700 font-semibold leading-snug">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#D97757] mt-1.5 flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-3">
+              {routingFactors.map((factor, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.35 + index * 0.08 }}
+                  className="rounded-lg sm:rounded-xl bg-white/95 border border-ucsd-navy/10 shadow-md p-2.5 sm:p-3"
+                >
+                  <div className="text-[10px] sm:text-xs font-black uppercase tracking-[0.16em] text-ucsd-navy mb-2">
+                    {factor.factor}
+                  </div>
+                  <div className="space-y-1.5">
+                    <div className="rounded-md border border-[#10A37F]/25 bg-[#e8fbf4] p-2">
+                      <div className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.12em] text-[#0f7a5f] mb-0.5">Codex Fit</div>
+                      <div className="text-[11px] sm:text-xs font-semibold text-slate-700 leading-snug">{factor.codex}</div>
+                    </div>
+                    <div className="rounded-md border border-[#D97757]/25 bg-[#fff2eb] p-2">
+                      <div className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.12em] text-[#b65a3e] mb-0.5">Claude Fit</div>
+                      <div className="text-[11px] sm:text-xs font-semibold text-slate-700 leading-snug">{factor.claude}</div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        );
+      })()}
+
       {isRoadmap && (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-7xl mx-auto">
           {slide.content.map((item, index) => (
@@ -1722,6 +1881,116 @@ const Slide = ({ slide }) => {
                 </div>
               </div>
             </div>
+          </div>
+        );
+      })()}
+
+      {isContractReviewChallenge && (() => {
+        const challenges = slide.content || [];
+        const challengeTheme = {
+          accent: '#00629B',
+          light: '#F3F8FF',
+          border: '#C7DDF5',
+          text: '#1F3659'
+        };
+        const challengeIcons = [Calendar, Shield, TrendingUp, Users];
+        const challengeSignals = ['Delay', 'Variance', 'Backlog', 'Bottleneck'];
+        const challengeSignalStyles = [
+          { bg: '#FEF3C7', text: '#92400E' }, // Delay
+          { bg: '#CFFAFE', text: '#0E7490' }, // Variance
+          { bg: '#E0E7FF', text: '#3730A3' }, // Backlog
+          { bg: '#D1FAE5', text: '#065F46' }  // Bottleneck
+        ];
+
+        return (
+          <div className="w-full max-w-[1800px] mx-auto flex flex-col gap-2 sm:gap-2.5">
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.45, ease: "easeOut" }}
+              className="relative overflow-hidden rounded-xl sm:rounded-2xl border border-[#C7DDF5] bg-gradient-to-r from-[#eef5ff] via-[#f5f9ff] to-[#f8fbff] shadow-lg p-3 sm:p-4"
+            >
+              <div className="absolute -left-10 -top-10 h-28 w-28 rounded-full bg-[#00629B]/10 blur-2xl pointer-events-none" />
+              <div className="absolute -right-10 -bottom-10 h-28 w-28 rounded-full bg-[#00C6D7]/10 blur-2xl pointer-events-none" />
+              <div className="relative grid grid-cols-1 gap-2 sm:gap-3">
+                <div className="rounded-lg sm:rounded-xl bg-white/90 border border-white p-3 sm:p-3.5">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-ucsd-blue text-white px-3 py-1 text-sm sm:text-base font-bold uppercase tracking-[0.16em] mb-2.5">
+                    <FileText size={15} />
+                    Contract Operations Today
+                  </div>
+                  <p className="text-base sm:text-lg font-semibold text-slate-700 leading-snug sm:leading-relaxed mb-2.5">
+                    Review work is manual, policy-intensive, and concentrated in a small expert pool. As volume grows, delays and risk variability compound across campus operations.
+                  </p>
+                  <div className="flex flex-wrap items-center gap-2 sm:gap-2.5">
+                    {['Intake', 'Manual Review', 'Risk Check', 'Redline', 'Approval'].map((step, index) => (
+                      <React.Fragment key={step}>
+                        <div className="rounded-full px-2.5 py-1 border border-[#C7DDF5] bg-white text-xs sm:text-sm font-bold text-ucsd-navy uppercase tracking-wide">
+                          {step}
+                        </div>
+                        {index < 4 && <ArrowRight size={16} className="text-ucsd-blue/60" />}
+                      </React.Fragment>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: -16 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.15, duration: 0.45 }}
+              className="rounded-xl sm:rounded-2xl bg-white border border-[#C7DDF5] shadow-lg p-3 sm:p-4"
+            >
+              <div className="text-xs sm:text-sm font-black uppercase tracking-[0.16em] text-ucsd-blue mb-2.5">
+                Where The Workflow Breaks
+              </div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-2.5 sm:gap-3">
+                {challenges.map((item, index) => {
+                  const IconComponent = challengeIcons[index % challengeIcons.length];
+                  const signalStyle = challengeSignalStyles[index % challengeSignalStyles.length];
+                  return (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: -14 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.2 + index * 0.08 }}
+                      className="relative rounded-lg sm:rounded-xl border p-3 sm:p-3.5"
+                      style={{ borderLeftWidth: '5px', borderLeftColor: challengeTheme.accent, borderColor: challengeTheme.border, backgroundColor: challengeTheme.light }}
+                    >
+                      <div
+                        className="absolute top-2.5 right-2.5 rounded-full px-2.5 py-0.5 text-[10px] sm:text-xs font-black uppercase tracking-[0.12em]"
+                        style={{ backgroundColor: signalStyle.bg, color: signalStyle.text }}
+                      >
+                        {challengeSignals[index] || 'Issue'}
+                      </div>
+                      <div className="flex items-start gap-3 sm:gap-3.5">
+                        <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-white shadow-sm flex-shrink-0" style={{ backgroundColor: challengeTheme.accent }}>
+                          <IconComponent size={18} className="sm:w-5 sm:h-5" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div
+                            className="inline-flex items-center gap-2 rounded-full px-2.5 py-0.5 text-[10px] sm:text-xs font-bold uppercase tracking-[0.12em] mb-2"
+                            style={{ backgroundColor: challengeTheme.border, color: challengeTheme.text }}
+                          >
+                            <span>{item.stat}</span>
+                            <span style={{ color: challengeTheme.accent }}>|</span>
+                            <span>{item.statLabel}</span>
+                          </div>
+                          <h3 className="text-base sm:text-lg font-black text-ucsd-navy leading-tight mb-1.5">{item.heading}</h3>
+                          <p className="text-sm sm:text-base text-slate-700 font-medium leading-snug sm:leading-relaxed">{item.text}</p>
+                        </div>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
+              <div className="mt-2.5 sm:mt-3 rounded-lg sm:rounded-xl border border-[#C7DDF5] bg-[#f4f9ff] p-3 sm:p-3.5">
+                <div className="text-xs sm:text-sm font-black uppercase tracking-[0.14em] text-ucsd-blue mb-1.5">Design Implication</div>
+                <p className="text-sm sm:text-base font-semibold text-slate-700 leading-snug sm:leading-relaxed">
+                  Scale requires policy-grounded automation that standardizes risk assessment, accelerates redlining, and frees senior attorneys for strategic work.
+                </p>
+              </div>
+            </motion.div>
           </div>
         );
       })()}
@@ -2881,7 +3150,7 @@ const Slide = ({ slide }) => {
         </div>
       )}
 
-      {!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isRoadmap && !isProblemStatement && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isAgentWorkflow && !isAnalyticsChart && !isTeamGrid && !isTimelineEvolution && !isCampusMetrics && slide.content && slide.content.length > 0 && (
+      {!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isAgentDevStrategy && !isRoadmap && !isProblemStatement && !isContractReviewChallenge && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isAgentWorkflow && !isAnalyticsChart && !isTeamGrid && !isTimelineEvolution && !isCampusMetrics && slide.content && slide.content.length > 0 && (
         <motion.ul
           variants={containerVariants}
           initial="hidden"
@@ -3180,7 +3449,7 @@ const Slide = ({ slide }) => {
     <div
       className={clsx(
         "w-full h-full flex flex-col relative overflow-hidden transition-colors duration-500 break-words",
-        isTimelineEvolution ? "p-2 sm:p-4 md:p-6" : isTritonAIEvolutionSlide ? "p-2 sm:p-3 md:p-4" : "p-2 sm:p-6 md:p-12",
+        isTimelineEvolution ? "p-2 sm:p-4 md:p-6" : isContractReviewChallenge ? "p-2 sm:p-2.5 md:p-3" : (isTritonAIEvolutionSlide || isAgentDevStrategy) ? "p-2 sm:p-3 md:p-4" : "p-2 sm:p-6 md:p-12",
         !slide.backgroundColor && (isDark ? "bg-[#1a1a1a]" : "bg-gray-50")
       )}
       style={slide.backgroundColor ? { backgroundColor: slide.backgroundColor } : {}}
@@ -3226,8 +3495,8 @@ const Slide = ({ slide }) => {
             </div>
           </div>
         ) : (
-          <div className={clsx("flex flex-col h-full w-full", isTitle ? "justify-center items-center text-center" : isTritonAIEvolutionSlide ? "justify-start pt-1 sm:pt-2 overflow-y-auto touch-pan-y custom-scrollbar" : "justify-start pt-4 overflow-y-auto touch-pan-y custom-scrollbar")}>
-            <div className={clsx("w-full mx-auto", (isSolution || isSolutionVideo || isCaseStudyHero || isProblemStatement || isFeatureGrid || isCampusMetrics) ? "max-w-[1800px]" : "max-w-7xl")}>{renderContent()}</div>
+          <div className={clsx("flex flex-col h-full w-full", isTitle ? "justify-center items-center text-center" : isContractReviewChallenge ? "justify-start pt-0 sm:pt-0.5 overflow-y-auto touch-pan-y custom-scrollbar" : (isTritonAIEvolutionSlide || isAgentDevStrategy) ? "justify-start pt-1 sm:pt-2 overflow-y-auto touch-pan-y custom-scrollbar" : "justify-start pt-4 overflow-y-auto touch-pan-y custom-scrollbar")}>
+            <div className={clsx("w-full mx-auto", (isSolution || isSolutionVideo || isCaseStudyHero || isProblemStatement || isContractReviewChallenge || isFeatureGrid || isCampusMetrics || isAgentDevStrategy) ? "max-w-[1800px]" : "max-w-7xl")}>{renderContent()}</div>
           </div>
         )}
       </div>

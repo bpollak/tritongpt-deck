@@ -726,7 +726,7 @@ export const slides = [
   {
     "id": 20,
     "type": "content",
-    "layout": "problem-statement",
+    "layout": "contract-review-challenge",
     "title": "The Contract Review Challenge",
     "subtitle": "Legal teams face mounting pressure as contract volumes grow",
     "backgroundColor": "#F5F0E6",
@@ -872,6 +872,84 @@ export const slides = [
     ],
     "audiences": [
       "all",
+      "internal",
+      "public",
+      "CCW"
+    ]
+  },
+  {
+    "id": 32,
+    "type": "content",
+    "layout": "agent-dev-strategy",
+    "title": "Agent Engineering Strategy: Codex + Claude Code",
+    "subtitle": "Recharge-backed, model-agnostic delivery through institutional agreements and on-prem controls",
+    "backgroundColor": "#F5F0E6",
+    "recharge": {
+      "title": "Campus Recharge + On-Prem Controls",
+      "text": "Faculty and staff leverage a managed recharge service for LLM API usage, backed by UC San Diego institutional agreements and on-prem governance."
+    },
+    "platforms": [
+      "AWS",
+      "Azure",
+      "GCP"
+    ],
+    "models": [
+      {
+        "name": "Codex",
+        "vendor": "OpenAI",
+        "icon": "CheckCircle"
+      },
+      {
+        "name": "Claude Code",
+        "vendor": "Anthropic",
+        "icon": "Brain"
+      },
+      {
+        "name": "Gemini Antigravity",
+        "vendor": "Google",
+        "icon": "Star"
+      }
+    ],
+    "codex": {
+      "brand": "OpenAI",
+      "title": "Codex: Autonomous Delegation",
+      "tag": "Command Center",
+      "strengths": [
+        "High-correctness execution for self-contained software tasks.",
+        "Parallel isolated environments for independent workstreams.",
+        "Strong fit where accuracy and verification are non-negotiable."
+      ]
+    },
+    "claude": {
+      "brand": "Anthropic",
+      "title": "Claude Code: Collaborative Coordination",
+      "tag": "Open Office",
+      "strengths": [
+        "Cross-tool coordination across GitHub, docs, chat, and planning tools.",
+        "Handles interdependent work where teams and agents must stay aligned.",
+        "Best for human-in-the-loop delivery with rapid iteration."
+      ]
+    },
+    "routingFactors": [
+      {
+        "factor": "Error Tolerance",
+        "codex": "Use Codex when correctness and autonomous recovery are critical.",
+        "claude": "Use Claude Code when iterative drafting and review are acceptable."
+      },
+      {
+        "factor": "Environment Scope",
+        "codex": "Prefer Codex for self-contained repo or dataset execution.",
+        "claude": "Prefer Claude Code for workflows spanning multiple systems."
+      },
+      {
+        "factor": "Task Dependencies",
+        "codex": "Best for independent tasks that can run in parallel.",
+        "claude": "Best for interdependent outputs that require coordination."
+      }
+    ],
+    "audiences": [
+      "all",
+      "technical",
       "internal",
       "public",
       "CCW"
