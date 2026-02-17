@@ -12,7 +12,8 @@ export const slides = [
     "audiences": [
       "all",
       "executive",
-      "technical"
+      "technical",
+      "CCW"
     ]
   },
   {
