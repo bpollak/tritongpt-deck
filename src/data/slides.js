@@ -837,17 +837,12 @@ export const slides = [
     "content": [
       {
         "heading": "AI Tools Hub",
-        "text": "The overarching TritonAI layer: a centralized hub that contains Agent Builder, MCP Server Hub, Developer APIs, the Pre-Packaged Tools Pipeline, Training Capability, and the Skills Library so teams can discover, govern, and adopt capabilities in one place."
+        "text": "The overarching TritonAI layer: a centralized hub that brings together Agent Builder for low-code automation, Agent Skills Library for reusable workflows, MCP Server Hub for secure connectors, Developer APIs for custom integrations, Agent Oberservability for run monitoring, and a Pre-Packaged Tools Pipeline for turnkey AI services."
       },
       {
-        "heading": "Agent Builder (Low-Code)",
+        "heading": "Agent Builder",
         "text": "Low-code workflow automation lets units design and launch AI agents with drag-and-drop tooling, reducing dependency on central development queues.",
         "icon": "Blocks"
-      },
-      {
-        "heading": "MCP Server Hub",
-        "text": "Shared connectors let assistants securely access enterprise data sources and services, enabling reusable integrations instead of one-off builds.",
-        "icon": "Database"
       },
       {
         "heading": "Agent Skills Library",
@@ -855,19 +850,24 @@ export const slides = [
         "icon": "BookOpen"
       },
       {
+        "heading": "MCP Server Hub",
+        "text": "Shared connectors let assistants securely access enterprise data sources and services, enabling reusable integrations instead of one-off builds.",
+        "icon": "Database"
+      },
+      {
         "heading": "Developer APIs",
         "text": "Getting-started API documentation, integration guides, and reference patterns help technical teams build campus-ready AI services quickly.",
         "icon": "Code"
       },
       {
+        "heading": "Agent Oberservability",
+        "text": "Provides real-time visibility into agent runs, tool calls, latency, and errors so teams can trace behavior, debug failures, and continuously improve reliability.",
+        "icon": "Monitor"
+      },
+      {
         "heading": "Pre-Packaged Tools Pipeline",
         "text": "A 2026 roadmap for transcription, captioning, summarization, accessibility, and OCR brings high-impact self-service AI capabilities into everyday operations.",
         "icon": "Cpu"
-      },
-      {
-        "heading": "Training Capability",
-        "text": "Workshops, FAQs, webinars, and prompting resources support non-technical adopters and help teams operationalize AI with confidence.",
-        "icon": "GraduationCap"
       }
     ],
     "audiences": [

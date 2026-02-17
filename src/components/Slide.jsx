@@ -122,6 +122,21 @@ const Slide = ({ slide }) => {
   const isTimelineEvolution = slide.layout === 'timeline-evolution';
   const isCampusMetrics = slide.layout === 'campus-metrics';
   const isTritonAIEvolutionSlide = slide.title === 'From TritonGPT to TritonAI';
+  const tritonAICapabilityItems = isTritonAIEvolutionSlide ? (slide.content?.slice(1) || []) : [];
+  const tritonAICapabilityBadgeLabels = {
+    'Agent Builder': 'Build Agents',
+    'Agent Skills Library': 'Reusable Skills',
+    'MCP Server Hub': 'Secure Connectors',
+    'Developer APIs': 'API Access',
+    'Agent Oberservability': 'Run Insights',
+    'Pre-Packaged Tools Pipeline': 'Ready Tools'
+  };
+  const tritonAIConnectorPositions = (() => {
+    const cardCount = tritonAICapabilityItems.length;
+    if (cardCount <= 1) return [50];
+    return Array.from({ length: cardCount }, (_, idx) => 10 + (idx * (80 / (cardCount - 1))));
+  })();
+  const tritonAICapabilityGridClass = tritonAICapabilityItems.length > 5 ? 'lg:grid-cols-6' : 'lg:grid-cols-5';
 
   if (isTitleHero) {
     // Determine if this is a closing slide (has QR code/image) vs opening slide
@@ -381,6 +396,7 @@ const Slide = ({ slide }) => {
           (isVeryDense || useThreeColumns) && !isTitle && "text-2xl md:text-3xl mb-4",
           isGraphicHeavy && "text-2xl md:text-4xl",
           isFeatureGrid && "w-full text-center border-b-0 border-none mb-4 sm:mb-12",
+          isTritonAIEvolutionSlide && "text-lg sm:text-2xl md:text-4xl mb-1 sm:mb-2 leading-tight",
           isHeroList && "mb-1 sm:mb-4",
           isTimelineEvolution && "mb-1 sm:mb-2",
           isDark ? "text-white" : "text-ucsd-navy"
@@ -389,7 +405,7 @@ const Slide = ({ slide }) => {
         {slide.title}
       </motion.h1>
 
-      {slide.subtitle && !isCaseStudyHero && !isCompoundArchitecture && !isAnalyticsChart && !isTimelineEvolution && (
+      {slide.subtitle && !isCaseStudyHero && !isCompoundArchitecture && !isAnalyticsChart && !isTimelineEvolution && !isTritonAIEvolutionSlide && (
         <motion.h2
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -1539,7 +1555,7 @@ const Slide = ({ slide }) => {
         const milestones2025_26 = slide.milestones?.filter(m => m.month.includes("'25") || m.month.includes("'26")) || [];
 
         return (
-          <div className="w-full max-w-[1900px] mx-auto flex flex-col h-full gap-5">
+          <div className="w-full max-w-[1900px] mx-auto flex flex-col h-full gap-1">
             {/* Row 1: 2023-2024 Foundation */}
             <div className="flex-none flex flex-col">
               {/* Year label for row 1 */}
@@ -1762,89 +1778,103 @@ const Slide = ({ slide }) => {
                 initial={{ opacity: 0, y: -16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45, ease: 'easeOut' }}
-                className="relative mb-4 sm:mb-6 lg:mb-8 overflow-hidden rounded-2xl sm:rounded-3xl border-2 border-[#3e6cbe]/40 bg-gradient-to-r from-[#d9e8ff] via-[#c6dcff] to-[#b2d1ff] shadow-xl"
+                className="relative mb-2 sm:mb-3 lg:mb-4 overflow-hidden rounded-xl sm:rounded-2xl border-2 border-[#3e6cbe]/40 bg-gradient-to-r from-[#d9e8ff] via-[#c6dcff] to-[#b2d1ff] shadow-xl"
               >
                 <div className="absolute -right-10 -top-10 h-36 w-36 rounded-full bg-[#184aa3]/10 blur-2xl pointer-events-none" />
                 <div className="absolute -left-10 -bottom-10 h-36 w-36 rounded-full bg-[#00a6b6]/10 blur-2xl pointer-events-none" />
-                <div className="relative p-4 sm:p-8 lg:p-10">
-                  <div className="inline-flex items-center gap-2 rounded-full bg-white/75 px-3 py-1.5 text-[11px] sm:text-xs font-bold tracking-[0.18em] uppercase text-[#184aa3] mb-3 sm:mb-4">
+                <div className="relative p-3 sm:p-5 lg:p-6">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-white/75 px-2.5 py-1 text-[10px] sm:text-[11px] font-bold tracking-[0.16em] uppercase text-[#184aa3] mb-2 sm:mb-3">
                     <Layers size={14} className="sm:w-4 sm:h-4" />
                     Overarching Platform Layer
                   </div>
-                  <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+                  <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-2 sm:gap-3">
                     <div>
-                      <h3 className="text-2xl sm:text-4xl lg:text-5xl font-black text-ucsd-navy tracking-tight leading-tight">
+                      <h3 className="text-xl sm:text-3xl lg:text-4xl font-black text-ucsd-navy tracking-tight leading-tight">
                         {slide.content[0].heading}
                       </h3>
-                      <p className="mt-2 sm:mt-3 text-sm sm:text-lg lg:text-xl text-slate-800 font-semibold max-w-6xl leading-relaxed">
+                      <p className="mt-1.5 sm:mt-2 text-xs sm:text-base lg:text-lg text-slate-800 font-semibold max-w-6xl leading-snug sm:leading-relaxed">
                         {slide.content[0].text}
                       </p>
                     </div>
-                    <div className="hidden md:flex items-center gap-2 text-[#184aa3] font-extrabold uppercase tracking-[0.14em] text-xs lg:text-sm whitespace-nowrap">
+                    <div className="hidden md:flex items-center gap-2 text-[#184aa3] font-extrabold uppercase tracking-[0.14em] text-[10px] lg:text-xs whitespace-nowrap">
                       Powers every capability <ArrowRight size={18} />
                     </div>
                   </div>
                 </div>
               </motion.div>
 
-              <div className="flex justify-center mb-4 sm:mb-6 lg:mb-8">
-                <div className="flex flex-col items-center text-[#184aa3]">
-                  <ArrowDown size={24} className="sm:w-7 sm:h-7" />
-                  <div className="mt-1 h-7 sm:h-10 w-px bg-gradient-to-b from-[#184aa3]/70 to-[#184aa3]/0" />
+              <div className="mb-1 sm:mb-2 lg:mb-0">
+                {/* Mobile/tablet connector */}
+                <div className="flex justify-center lg:hidden">
+                  <div className="flex flex-col items-center text-[#184aa3]">
+                    <ArrowDown size={20} className="sm:w-6 sm:h-6" />
+                    <div className="mt-1 h-7 sm:h-9 w-1 rounded-full bg-gradient-to-b from-[#184aa3] via-[#00a6b6]/80 to-[#184aa3]/10" />
+                  </div>
+                </div>
+
+                {/* Desktop branching connector from Hub to all capability cards */}
+                <div className="hidden lg:block relative h-12">
+                  <div className="absolute left-1/2 top-0 -translate-x-1/2 h-4 w-1 rounded-full bg-gradient-to-b from-[#184aa3] to-[#00a6b6]" />
+                  <div className="absolute left-[10%] right-[10%] top-4 h-1 rounded-full bg-gradient-to-r from-[#184aa3]/90 via-[#00a6b6]/90 to-[#184aa3]/90 shadow-[0_0_10px_rgba(24,74,163,0.35)]" />
+                  {tritonAIConnectorPositions.map((position, idx) => (
+                    <div key={idx} className="absolute top-4 -translate-x-1/2" style={{ left: `${position}%` }}>
+                      <div className="w-2.5 h-2.5 rounded-full bg-white border-2 border-[#184aa3] shadow-sm" />
+                      <div className="mx-auto h-7 w-0.5 bg-gradient-to-b from-[#184aa3]/90 to-[#184aa3]/20" />
+                    </div>
+                  ))}
                 </div>
               </div>
             </>
           )}
 
-          <div className={clsx('grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8', isTritonAIEvolutionSlide && 'lg:grid-cols-5')}>
-            {(isTritonAIEvolutionSlide ? slide.content.slice(1) : slide.content).map((item, index) => {
+          <div className={clsx('grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4', isTritonAIEvolutionSlide && tritonAICapabilityGridClass)}>
+            {(isTritonAIEvolutionSlide ? tritonAICapabilityItems : slide.content).map((item, index) => {
               const displayIndex = isTritonAIEvolutionSlide ? index + 1 : index;
-              const capabilityNumber = isTritonAIEvolutionSlide ? index + 1 : displayIndex + 1;
               const topBarColors = ['#182B49', '#00C6D7', '#00629B', '#FFCD00', '#FC8900', '#6E963B'];
-            const topBarColor = topBarColors[displayIndex % topBarColors.length];
-            const evolutionCardStyles = [
-              {
-                cardClass: 'bg-gradient-to-br from-[#f9fbff] to-[#eef4ff] border-[#7aa7ff]',
-                iconBadgeClass: 'bg-[#e9f1ff] text-[#184aa3]',
-              },
-              {
-                cardClass: 'bg-gradient-to-br from-[#f5feff] to-[#e7fbff] border-[#55d2df]',
-                iconBadgeClass: 'bg-[#dcfbff] text-[#0e6f7a]',
-              },
-              {
-                cardClass: 'bg-gradient-to-br from-[#f5f9ff] to-[#e9f2ff] border-[#6f95d3]',
-                iconBadgeClass: 'bg-[#e3edff] text-[#1f4f92]',
-              },
-              {
-                cardClass: 'bg-gradient-to-br from-[#fffdf5] to-[#fff5cf] border-[#ffd85c]',
-                iconBadgeClass: 'bg-[#ffefb2] text-[#815f00]',
-              },
-              {
-                cardClass: 'bg-gradient-to-br from-[#fff8f3] to-[#ffe9d9] border-[#ffb67a]',
-                iconBadgeClass: 'bg-[#ffe2cb] text-[#9f4d0d]',
-              },
-              {
-                cardClass: 'bg-gradient-to-br from-[#f7fcf2] to-[#ebf8df] border-[#9ac77d]',
-                iconBadgeClass: 'bg-[#def2cc] text-[#3f6c1f]',
-              }
-            ];
-            const evolutionStyle = evolutionCardStyles[displayIndex % evolutionCardStyles.length];
+              const topBarColor = topBarColors[displayIndex % topBarColors.length];
+              const evolutionCardStyles = [
+                {
+                  cardClass: 'bg-gradient-to-br from-[#f9fbff] to-[#eef4ff] border-[#7aa7ff]',
+                  iconBadgeClass: 'bg-[#e9f1ff] text-[#184aa3]',
+                },
+                {
+                  cardClass: 'bg-gradient-to-br from-[#f5feff] to-[#e7fbff] border-[#55d2df]',
+                  iconBadgeClass: 'bg-[#dcfbff] text-[#0e6f7a]',
+                },
+                {
+                  cardClass: 'bg-gradient-to-br from-[#f5f9ff] to-[#e9f2ff] border-[#6f95d3]',
+                  iconBadgeClass: 'bg-[#e3edff] text-[#1f4f92]',
+                },
+                {
+                  cardClass: 'bg-gradient-to-br from-[#fffdf5] to-[#fff5cf] border-[#ffd85c]',
+                  iconBadgeClass: 'bg-[#ffefb2] text-[#815f00]',
+                },
+                {
+                  cardClass: 'bg-gradient-to-br from-[#fff8f3] to-[#ffe9d9] border-[#ffb67a]',
+                  iconBadgeClass: 'bg-[#ffe2cb] text-[#9f4d0d]',
+                },
+                {
+                  cardClass: 'bg-gradient-to-br from-[#f7fcf2] to-[#ebf8df] border-[#9ac77d]',
+                  iconBadgeClass: 'bg-[#def2cc] text-[#3f6c1f]',
+                }
+              ];
+              const evolutionStyle = evolutionCardStyles[displayIndex % evolutionCardStyles.length];
 
-            // Contextual icons based on heading content
-            const getContextIcon = (heading) => {
-              const h = heading.toLowerCase();
-              if (h.includes('user') || h.includes('serves') || h.includes('73,000')) return Users;
-              if (h.includes('secure') || h.includes('hosting') || h.includes('on-prem')) return Server;
-              if (h.includes('open-source') || h.includes('foundation')) return Layers;
-              if (h.includes('cost') || h.includes('token') || h.includes('zero')) return Wallet;
-              if (h.includes('award') || h.includes('innovation') || h.includes('winning')) return Award;
-              if (h.includes('federat') || h.includes('scalab') || h.includes('power')) return Share2;
-              if (h.includes('shield') || h.includes('protect')) return Shield;
-              if (h.includes('code') || h.includes('develop')) return Code;
-              return Target; // default
-            };
+              // Contextual icons based on heading content
+              const getContextIcon = (heading) => {
+                const h = heading.toLowerCase();
+                if (h.includes('user') || h.includes('serves') || h.includes('73,000')) return Users;
+                if (h.includes('secure') || h.includes('hosting') || h.includes('on-prem')) return Server;
+                if (h.includes('open-source') || h.includes('foundation')) return Layers;
+                if (h.includes('cost') || h.includes('token') || h.includes('zero')) return Wallet;
+                if (h.includes('award') || h.includes('innovation') || h.includes('winning')) return Award;
+                if (h.includes('federat') || h.includes('scalab') || h.includes('power')) return Share2;
+                if (h.includes('shield') || h.includes('protect')) return Shield;
+                if (h.includes('code') || h.includes('develop')) return Code;
+                return Target; // default
+              };
 
-            const IconComponent = item.icon ? iconMap[item.icon] : getContextIcon(item.heading);
+              const IconComponent = item.icon ? iconMap[item.icon] : getContextIcon(item.heading);
 
             return (
               <motion.div
@@ -1853,34 +1883,34 @@ const Slide = ({ slide }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 + index * 0.1, type: "spring", stiffness: 100 }}
                 className={clsx(
-                  'relative flex flex-col rounded-xl sm:rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all overflow-hidden border',
+                  'relative flex flex-col rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all overflow-hidden border',
                   isTritonAIEvolutionSlide ? evolutionStyle.cardClass : 'bg-white border-transparent'
                 )}
               >
                 {/* Colored top bar */}
-                <div className="h-2 sm:h-3 w-full" style={{ backgroundColor: topBarColor }} />
+                <div className="h-1.5 sm:h-2 w-full" style={{ backgroundColor: topBarColor }} />
 
                 {/* Content */}
-                <div className="p-4 sm:p-8">
+                <div className="p-3 sm:p-4 lg:p-5">
                   {isTritonAIEvolutionSlide && (
-                    <div className="mb-3 sm:mb-4 inline-flex items-center gap-2">
-                      <div className={clsx('rounded-full px-2.5 py-1 text-[10px] sm:text-xs font-bold tracking-wider uppercase', evolutionStyle.iconBadgeClass)}>
-                        Capability {String(capabilityNumber).padStart(2, '0')}
+                    <div className="mb-2 sm:mb-2.5 inline-flex items-center gap-2">
+                      <div className={clsx('rounded-full px-2 py-0.5 text-[10px] sm:text-[11px] font-bold tracking-wider uppercase', evolutionStyle.iconBadgeClass)}>
+                        {tritonAICapabilityBadgeLabels[item.heading] || 'Core Capability'}
                       </div>
                     </div>
                   )}
                   {/* Icon watermark */}
-                  <div className="absolute top-4 sm:top-6 right-4 sm:right-6 pointer-events-none select-none" style={{ color: topBarColor, opacity: 0.15 }}>
-                    <IconComponent size={48} strokeWidth={1.5} className="sm:w-16 sm:h-16 md:w-20 md:h-20" />
+                  <div className="absolute top-3 sm:top-4 right-3 sm:right-4 pointer-events-none select-none" style={{ color: topBarColor, opacity: 0.15 }}>
+                    <IconComponent size={34} strokeWidth={1.5} className="sm:w-12 sm:h-12 md:w-14 md:h-14" />
                   </div>
 
                   {/* Heading */}
-                  <h3 className="text-lg sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-4 text-ucsd-navy tracking-tight leading-tight pr-10 sm:pr-20">
+                  <h3 className="text-sm sm:text-lg md:text-xl font-bold mb-1.5 sm:mb-2.5 text-ucsd-navy tracking-tight leading-tight pr-8 sm:pr-14">
                     {item.heading}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-sm sm:text-lg md:text-xl text-slate-800 font-semibold leading-relaxed">
+                  <p className="text-xs sm:text-sm md:text-base text-slate-800 font-medium leading-snug sm:leading-relaxed">
                     {item.text}
                   </p>
                 </div>
@@ -3150,7 +3180,7 @@ const Slide = ({ slide }) => {
     <div
       className={clsx(
         "w-full h-full flex flex-col relative overflow-hidden transition-colors duration-500 break-words",
-        isTimelineEvolution ? "p-2 sm:p-4 md:p-6" : "p-2 sm:p-6 md:p-12",
+        isTimelineEvolution ? "p-2 sm:p-4 md:p-6" : isTritonAIEvolutionSlide ? "p-2 sm:p-3 md:p-4" : "p-2 sm:p-6 md:p-12",
         !slide.backgroundColor && (isDark ? "bg-[#1a1a1a]" : "bg-gray-50")
       )}
       style={slide.backgroundColor ? { backgroundColor: slide.backgroundColor } : {}}
@@ -3196,7 +3226,7 @@ const Slide = ({ slide }) => {
             </div>
           </div>
         ) : (
-          <div className={clsx("flex flex-col h-full w-full", isTitle ? "justify-center items-center text-center" : "justify-start pt-4 overflow-y-auto touch-pan-y custom-scrollbar")}>
+          <div className={clsx("flex flex-col h-full w-full", isTitle ? "justify-center items-center text-center" : isTritonAIEvolutionSlide ? "justify-start pt-1 sm:pt-2 overflow-y-auto touch-pan-y custom-scrollbar" : "justify-start pt-4 overflow-y-auto touch-pan-y custom-scrollbar")}>
             <div className={clsx("w-full mx-auto", (isSolution || isSolutionVideo || isCaseStudyHero || isProblemStatement || isFeatureGrid || isCampusMetrics) ? "max-w-[1800px]" : "max-w-7xl")}>{renderContent()}</div>
           </div>
         )}
