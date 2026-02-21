@@ -268,17 +268,17 @@ export const slides = [
     "type": "content",
     "content": [
       {
-        "heading": "Sovereignty Enables Trust",
+        "heading": "Host Locally, Access Everything",
         "text": "Hosting AI on-prem lets it access sensitive systems like HR and Finance. If the data can't leave campus, the AI has to live on campus.",
         "icon": "Shield"
       },
       {
-        "heading": "Make Intelligence a Utility",
+        "heading": "Free for Every User",
         "text": "Zero per-query cost means every employee and student can use AI without limits. Free access drives adoption and experimentation.",
         "icon": "Cpu"
       },
       {
-        "heading": "Specialize, Don't Generalize",
+        "heading": "Build for Specific Problems",
         "text": "Build AI for specific problems, not generic chat. Purpose-built tools solve real workflows and deliver measurable results.",
         "icon": "Target"
       },
@@ -288,12 +288,12 @@ export const slides = [
         "icon": "Globe"
       },
       {
-        "heading": "Own the Architecture, Rent the Models",
+        "heading": "Stay Model-Agnostic",
         "text": "Models change constantly. The integrations, data connections, and orchestration you build are what last. Stay model-agnostic with institutional agreements across AWS, Azure, and GCP.",
         "icon": "Code"
       },
       {
-        "heading": "From Answering to Acting",
+        "heading": "Move from Chat to Agents",
         "text": "Move beyond chatbots that answer questions to agents that execute multi-step workflows across enterprise systems with human oversight.",
         "icon": "Database"
       }
