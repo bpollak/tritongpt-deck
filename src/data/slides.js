@@ -268,29 +268,34 @@ export const slides = [
     "type": "content",
     "content": [
       {
-        "heading": "Sovereign Infrastructure as a Feature",
-        "text": "On-prem hosting isn't just about cost—it's about giving agents safe access to sensitive systems (HR, Finance) that cloud models can't touch.",
+        "heading": "Sovereignty Enables Trust",
+        "text": "Local infrastructure isn't a cost play—it's a trust play. AI can only reach the most sensitive institutional workflows when the data never leaves your control.",
         "icon": "Shield"
       },
       {
-        "heading": "Ground AI in Institutional Reality",
-        "text": "Unlock institutional value by grounding AI in real-time data, policy, and decision logs—not just information, but context for action.",
-        "icon": "Database"
+        "heading": "Make Intelligence a Utility",
+        "text": "When every query costs zero, you stop rationing and start innovating. Universal access changes who builds, who benefits, and what gets attempted.",
+        "icon": "Cpu"
       },
       {
-        "heading": "Move from Assisting to Doing",
-        "text": "Evolve from passive assistants that answer questions to active agents that execute workflows—drafting, routing, and approving.",
+        "heading": "Specialize, Don't Generalize",
+        "text": "General chatbots drive curiosity. Purpose-built AI drives outcomes. Design for specific pain points and let the results make the case.",
         "icon": "Target"
       },
       {
-        "heading": "Democratize Development",
-        "text": "Empower distributed teams to build their own tools. Provide the Agentic Stack (Orchestrator + Tools) as a shared utility.",
+        "heading": "Meet People Where They Work",
+        "text": "Don't ask users to change behavior. Embed intelligence into the surfaces they already use—search, websites, mobile, and classrooms.",
+        "icon": "Globe"
+      },
+      {
+        "heading": "Own the Architecture, Rent the Models",
+        "text": "Models are a commodity on a relentless upgrade cycle. Your integration layer, data connections, and orchestration patterns are the durable asset.",
         "icon": "Code"
       },
       {
-        "heading": "Federation by Default",
-        "text": "Build once, deploy system-wide. Share architectures with sister campuses (BearGPT, BobcatGPT) to multiply impact.",
-        "icon": "Globe"
+        "heading": "From Answering to Acting",
+        "text": "The next shift isn't a better chatbot—it's AI that executes multi-step workflows across enterprise systems with human oversight.",
+        "icon": "Database"
       }
     ],
     "title": "UC San Diego AI Strategy 2026",
