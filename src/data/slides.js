@@ -269,32 +269,32 @@ export const slides = [
     "content": [
       {
         "heading": "Sovereignty Enables Trust",
-        "text": "Local infrastructure isn't a cost play—it's a trust play. AI can only reach the most sensitive institutional workflows when the data never leaves your control.",
+        "text": "Hosting AI on-prem lets it access sensitive systems like HR and Finance. If the data can't leave campus, the AI has to live on campus.",
         "icon": "Shield"
       },
       {
         "heading": "Make Intelligence a Utility",
-        "text": "When every query costs zero, you stop rationing and start innovating. Universal access changes who builds, who benefits, and what gets attempted.",
+        "text": "Zero per-query cost means every employee and student can use AI without limits. Free access drives adoption and experimentation.",
         "icon": "Cpu"
       },
       {
         "heading": "Specialize, Don't Generalize",
-        "text": "General chatbots drive curiosity. Purpose-built AI drives outcomes. Design for specific pain points and let the results make the case.",
+        "text": "Build AI for specific problems, not generic chat. Purpose-built tools solve real workflows and deliver measurable results.",
         "icon": "Target"
       },
       {
         "heading": "Meet People Where They Work",
-        "text": "Don't ask users to change behavior. Embed intelligence into the surfaces they already use—search, websites, mobile, and classrooms.",
+        "text": "Put AI into the tools people already use—search, websites, mobile apps, and course platforms—instead of asking them to go somewhere new.",
         "icon": "Globe"
       },
       {
         "heading": "Own the Architecture, Rent the Models",
-        "text": "Models are a commodity on a relentless upgrade cycle. Your integration layer, data connections, and orchestration patterns are the durable asset.",
+        "text": "Models change constantly. The integrations, data connections, and orchestration you build are what last. Stay model-agnostic.",
         "icon": "Code"
       },
       {
         "heading": "From Answering to Acting",
-        "text": "The next shift isn't a better chatbot—it's AI that executes multi-step workflows across enterprise systems with human oversight.",
+        "text": "Move beyond chatbots that answer questions to agents that execute multi-step workflows across enterprise systems with human oversight.",
         "icon": "Database"
       }
     ],
