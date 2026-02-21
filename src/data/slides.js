@@ -289,7 +289,7 @@ export const slides = [
       },
       {
         "heading": "Own the Architecture, Rent the Models",
-        "text": "Models change constantly. The integrations, data connections, and orchestration you build are what last. Stay model-agnostic.",
+        "text": "Models change constantly. The integrations, data connections, and orchestration you build are what last. Stay model-agnostic with institutional agreements across AWS, Azure, and GCP.",
         "icon": "Code"
       },
       {
