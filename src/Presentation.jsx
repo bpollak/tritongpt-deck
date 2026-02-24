@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion'; // eslint-disable-line no-unused-vars
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Slide from './components/Slide';
@@ -12,8 +12,16 @@ const filterSlidesByAudience = (slides, audienceType) => {
   );
 };
 
+// Parse slide number from URL hash (e.g. #slide=5 -> 4, since it's 1-based in URL)
+const getSlideIndexFromHash = () => {
+  const match = window.location.hash.match(/^#slide=(\d+)$/);
+  if (match) return parseInt(match[1], 10) - 1;
+  return 0;
+};
+
 const Presentation = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(() => Math.max(0, getSlideIndexFromHash()));
+  const isPopstateNav = useRef(false);
   const [direction, setDirection] = useState(0);
   const [slidesData, setSlidesData] = useState(defaultSlides);
 
@@ -45,6 +53,39 @@ const Presentation = () => {
   const filteredSlides = useMemo(() => {
     return filterSlidesByAudience(slidesData, audienceType);
   }, [audienceType, slidesData]);
+
+  // Clamp currentIndex to valid range when filteredSlides changes (e.g. after async load)
+  useEffect(() => {
+    if (filteredSlides.length > 0 && currentIndex >= filteredSlides.length) {
+      setCurrentIndex(filteredSlides.length - 1);
+    }
+  }, [filteredSlides.length, currentIndex]);
+
+  // Sync URL hash with current slide
+  useEffect(() => {
+    const newHash = `#slide=${currentIndex + 1}`;
+    if (window.location.hash !== newHash) {
+      if (isPopstateNav.current) {
+        // Browser back/forward triggered this — don't push a new entry
+        isPopstateNav.current = false;
+      } else {
+        window.history.pushState(null, '', newHash);
+      }
+    }
+  }, [currentIndex]);
+
+  // Handle browser back/forward
+  useEffect(() => {
+    const handlePopState = () => {
+      const idx = getSlideIndexFromHash();
+      const clamped = Math.max(0, Math.min(idx, filteredSlides.length - 1));
+      isPopstateNav.current = true;
+      setDirection(clamped > currentIndex ? 1 : -1);
+      setCurrentIndex(clamped);
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [filteredSlides.length, currentIndex]);
 
   const nextSlide = useCallback(() => {
     setDirection(1);
