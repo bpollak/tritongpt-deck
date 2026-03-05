@@ -246,14 +246,46 @@ export const slides = [
         ]
       },
       {
-        "phase": "Ops Scale",
+        "phase": "Completed",
         "month": "Jan '26",
-        "title": "Roadmap Delivery",
+        "title": "Transcript Verification POC",
         "items": [
-          "Transcript Verification automation",
-          "Fund Manager Coach data warehouse",
-          "Instructional AI expansion",
-          "Contract Review full rollout"
+          "Transcript OCR & student record matching",
+          "Instructional AI expanded to 8 courses",
+          "Instructional AI pilot launched",
+          "AI Contract Review rollout"
+        ]
+      },
+      {
+        "phase": "Delivered",
+        "month": "Feb '26",
+        "title": "New Tools & Infrastructure",
+        "items": [
+          "Class Scheduling Assistant — AI-assisted course planning for academic & life schedules",
+          "Research Proposal Risk POC",
+          "Launched new Triton AI site with API access to local & commercial LLMs",
+          "Early access to N8N agentic workflow orchestration"
+        ]
+      },
+      {
+        "phase": "In Progress",
+        "month": "Mar '26",
+        "title": "Agents & Integrations",
+        "items": [
+          "Transcript matching integrated with Hyland OnBase, handed to Enrollment Management",
+          "AI IT Observability pilot",
+          "Academic Advising Agent POC",
+          "Faculty Finder POC — AI-powered faculty discovery across research focus, capabilities & experience",
+          "Instructional AI spring enhancements with one-click assistant creation",
+          "UCSD Mobile: TritonGPT integrated into campus flagship app"
+        ]
+      },
+      {
+        "phase": "Upcoming",
+        "month": "Apr '26",
+        "title": "Platform Enhancements",
+        "items": [
+          "Contract review refinements — adjustable redlining rule set strength"
         ]
       }
     ],
@@ -1214,18 +1246,13 @@ export const slides = [
         "color": "#182B49",
         "assistants": [
           {
-            "heading": "Transcript Verification (P1)",
-            "text": "Automate review and verification for incoming students.",
+            "heading": "Transcript Verification POC",
+            "text": "Transcript OCR and matching to student records.",
             "icon": "FileCheck"
           },
           {
-            "heading": "Fund Manager Coach (P2)",
-            "text": "Direct AI access to data warehouse for grant reporting.",
-            "icon": "DollarSign"
-          },
-          {
             "heading": "Instructional AI Expansion",
-            "text": "Scale AI Assistants for faculty and personalized student support.",
+            "text": "Expanded to eight courses; instructional AI pilot launched.",
             "icon": "GraduationCap"
           },
           {
@@ -1240,24 +1267,24 @@ export const slides = [
         "color": "#00629B",
         "assistants": [
           {
-            "heading": "Academic Advising Agent",
-            "text": "Support Tier 1 questions via the Virtual Advising Center.",
-            "icon": "GraduationCap"
+            "heading": "Class Scheduling Assistant",
+            "text": "Students work with AI to build a course schedule that meets their academic and life/work schedules.",
+            "icon": "Calendar"
           },
           {
-            "heading": "Research Proposal Risk",
+            "heading": "Research Proposal Risk POC",
             "text": "Assess and prioritize proposal risk for compliance workflows.",
             "icon": "Shield"
           },
           {
-            "heading": "UCSD Mobile Integration",
-            "text": "Enable TritonGPT access within the campus flagship mobile app.",
-            "icon": "Cpu"
+            "heading": "Launched New Triton AI Site",
+            "text": "Centralized hub for campus AI resources and documentation.",
+            "icon": "Globe"
           },
           {
-            "heading": "GASB 87 Lease Analysis",
-            "text": "Extract financial data from real estate lease agreements.",
-            "icon": "Building2"
+            "heading": "API Access to Local LLMs",
+            "text": "Direct API access to locally hosted large language and commercial LLMs.",
+            "icon": "Code"
           }
         ]
       },
@@ -1266,24 +1293,50 @@ export const slides = [
         "color": "#00C6D7",
         "assistants": [
           {
-            "heading": "Transcript Matching (P2)",
-            "text": "Automated matching of transcripts to student records.",
+            "heading": "Transcript Matching → OnBase",
+            "text": "Integration with Hyland OnBase; handed over to Enrollment Management.",
             "icon": "FileCheck"
           },
           {
-            "heading": "GASB 96 IT Review",
-            "text": "Compliance for subscription-based IT arrangement data.",
-            "icon": "Database"
+            "heading": "Faculty Finder POC",
+            "text": "AI traverses multiple data sources to discover faculty by research focus, capabilities, and experience.",
+            "icon": "Search"
           },
           {
-            "heading": "AI IT Observability",
+            "heading": "Instructional AI Spring Enhancements",
+            "text": "Continued pilot enhancements with one-click assistant creation.",
+            "icon": "Presentation"
+          },
+          {
+            "heading": "UCSD Mobile Integration",
+            "text": "TritonGPT enabled within the campus flagship mobile app.",
+            "icon": "Cpu"
+          }
+        ]
+      },
+      {
+        "name": "April",
+        "color": "#6E963B",
+        "assistants": [
+          {
+            "heading": "AI IT Observability Pilot",
             "text": "Automated response to system anomalies via log analysis.",
             "icon": "Target"
           },
           {
-            "heading": "OneStop Virtual Advisor",
-            "text": "Personalized support using student demographic and academic data.",
-            "icon": "Heart"
+            "heading": "Academic Advising Agent POC",
+            "text": "Proof of concept for AI-assisted academic advising support.",
+            "icon": "GraduationCap"
+          },
+          {
+            "heading": "N8N Agent Builder",
+            "text": "Agentic workflow orchestration platform now available.",
+            "icon": "Share2"
+          },
+          {
+            "heading": "Contract Review Refinements",
+            "text": "Tunable redlining rule set strength for tailored review.",
+            "icon": "FileText"
           }
         ]
       }

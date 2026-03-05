@@ -39,7 +39,10 @@ const iconMap = {
   'Star': Star,
   'FlaskConical': FlaskConical,
   'Award': Award,
-  'Layers': Layers
+  'Layers': Layers,
+  'Share2': Share2,
+  'Server': Server,
+  'Wallet': Wallet
 };
 
 const containerVariants = {
@@ -1438,10 +1441,11 @@ const Slide = ({ slide }) => {
       )}
 
       {isAssistantCategories && slide.categories && (
-        <div className="flex flex-col gap-3 sm:gap-6 w-full max-w-[1800px] mx-auto">
+        <div className="flex flex-col gap-2 sm:gap-4 w-full max-w-[1800px] mx-auto">
           <div className={clsx(
-            "grid grid-cols-1 gap-3 sm:gap-6",
-            slide.categories.length === 3 ? "sm:grid-cols-2 md:grid-cols-3" : "md:grid-cols-2"
+            "grid grid-cols-1 gap-2 sm:gap-4",
+            slide.categories.length === 4 ? "md:grid-cols-2 lg:grid-cols-4" :
+              slide.categories.length === 3 ? "sm:grid-cols-2 md:grid-cols-3" : "md:grid-cols-2"
           )}>
             {slide.categories.map((category, catIndex) => (
               <motion.div
@@ -1449,14 +1453,14 @@ const Slide = ({ slide }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 + catIndex * 0.1 }}
-                className="bg-white rounded-xl sm:rounded-2xl shadow-xl p-3 sm:p-6 border-t-4 sm:border-t-8"
+                className="bg-white rounded-xl sm:rounded-2xl shadow-xl p-2 sm:p-4 border-t-4 sm:border-t-8"
                 style={{ borderTopColor: category.color }}
               >
-                <h3 className="text-lg sm:text-2xl font-bold mb-2 sm:mb-5 text-ucsd-navy flex items-center gap-2 sm:gap-3">
-                  <div className="w-2 h-6 sm:w-3 sm:h-8 rounded-full" style={{ backgroundColor: category.color }} />
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-ucsd-navy flex items-center gap-2 sm:gap-3">
+                  <div className="w-2 h-6 sm:w-2.5 sm:h-7 rounded-full" style={{ backgroundColor: category.color }} />
                   {category.name}
                 </h3>
-                <div className="flex flex-col gap-2 sm:gap-3">
+                <div className="flex flex-col gap-1.5 sm:gap-2">
                   {category.assistants.map((assistant, idx) => {
                     const IconComponent = assistant.icon ? iconMap[assistant.icon] : null;
                     return (
@@ -1465,18 +1469,18 @@ const Slide = ({ slide }) => {
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.4 + catIndex * 0.1 + idx * 0.05 }}
-                        className="flex items-start gap-2 sm:gap-3 p-2 sm:p-3 rounded-lg sm:rounded-xl hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-100"
+                        className="flex items-start gap-2 sm:gap-2.5 p-1.5 sm:p-2 rounded-lg sm:rounded-xl hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-100"
                       >
                         {IconComponent ? (
-                          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: category.color }}>
-                            <IconComponent size={16} className="text-white sm:w-5 sm:h-5" />
+                          <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: category.color }}>
+                            <IconComponent size={14} className="text-white sm:w-4 sm:h-4" />
                           </div>
                         ) : (
-                          <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full mt-1.5 sm:mt-2 flex-shrink-0" style={{ backgroundColor: category.color }} />
+                          <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full mt-1.5 flex-shrink-0" style={{ backgroundColor: category.color }} />
                         )}
                         <div>
-                          <div className="font-bold text-ucsd-navy text-sm sm:text-lg md:text-xl leading-tight">{assistant.heading}</div>
-                          <div className="text-xs sm:text-sm md:text-base text-slate-600 font-medium leading-relaxed mt-0.5 sm:mt-1">{assistant.text}</div>
+                          <div className="font-bold text-ucsd-navy text-sm sm:text-base md:text-lg leading-tight">{assistant.heading}</div>
+                          <div className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed mt-0.5">{assistant.text}</div>
                         </div>
                       </motion.div>
                     );
@@ -2145,47 +2149,47 @@ const Slide = ({ slide }) => {
 
               const IconComponent = item.icon ? iconMap[item.icon] : getContextIcon(item.heading);
 
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 + index * 0.1, type: "spring", stiffness: 100 }}
-                className={clsx(
-                  'relative flex flex-col rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all overflow-hidden border',
-                  isTritonAIEvolutionSlide ? evolutionStyle.cardClass : 'bg-white border-transparent'
-                )}
-              >
-                {/* Colored top bar */}
-                <div className="h-1.5 sm:h-2 w-full" style={{ backgroundColor: topBarColor }} />
-
-                {/* Content */}
-                <div className="p-3 sm:p-4 lg:p-5">
-                  {isTritonAIEvolutionSlide && (
-                    <div className="mb-2 sm:mb-2.5 inline-flex items-center gap-2">
-                      <div className={clsx('rounded-full px-2 py-0.5 text-[10px] sm:text-[11px] font-bold tracking-wider uppercase', evolutionStyle.iconBadgeClass)}>
-                        {tritonAICapabilityBadgeLabels[item.heading] || 'Core Capability'}
-                      </div>
-                    </div>
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 + index * 0.1, type: "spring", stiffness: 100 }}
+                  className={clsx(
+                    'relative flex flex-col rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all overflow-hidden border',
+                    isTritonAIEvolutionSlide ? evolutionStyle.cardClass : 'bg-white border-transparent'
                   )}
-                  {/* Icon watermark */}
-                  <div className="absolute top-3 sm:top-4 right-3 sm:right-4 pointer-events-none select-none" style={{ color: topBarColor, opacity: 0.15 }}>
-                    <IconComponent size={34} strokeWidth={1.5} className="sm:w-12 sm:h-12 md:w-14 md:h-14" />
+                >
+                  {/* Colored top bar */}
+                  <div className="h-1.5 sm:h-2 w-full" style={{ backgroundColor: topBarColor }} />
+
+                  {/* Content */}
+                  <div className="p-3 sm:p-4 lg:p-5">
+                    {isTritonAIEvolutionSlide && (
+                      <div className="mb-2 sm:mb-2.5 inline-flex items-center gap-2">
+                        <div className={clsx('rounded-full px-2 py-0.5 text-[10px] sm:text-[11px] font-bold tracking-wider uppercase', evolutionStyle.iconBadgeClass)}>
+                          {tritonAICapabilityBadgeLabels[item.heading] || 'Core Capability'}
+                        </div>
+                      </div>
+                    )}
+                    {/* Icon watermark */}
+                    <div className="absolute top-3 sm:top-4 right-3 sm:right-4 pointer-events-none select-none" style={{ color: topBarColor, opacity: 0.15 }}>
+                      <IconComponent size={34} strokeWidth={1.5} className="sm:w-12 sm:h-12 md:w-14 md:h-14" />
+                    </div>
+
+                    {/* Heading */}
+                    <h3 className="text-sm sm:text-lg md:text-xl font-bold mb-1.5 sm:mb-2.5 text-ucsd-navy tracking-tight leading-tight pr-8 sm:pr-14">
+                      {item.heading}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-xs sm:text-sm md:text-base text-slate-800 font-medium leading-snug sm:leading-relaxed">
+                      {item.text}
+                    </p>
                   </div>
-
-                  {/* Heading */}
-                  <h3 className="text-sm sm:text-lg md:text-xl font-bold mb-1.5 sm:mb-2.5 text-ucsd-navy tracking-tight leading-tight pr-8 sm:pr-14">
-                    {item.heading}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-xs sm:text-sm md:text-base text-slate-800 font-medium leading-snug sm:leading-relaxed">
-                    {item.text}
-                  </p>
-                </div>
-              </motion.div>
-            );
-          })}
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       )}
