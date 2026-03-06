@@ -230,8 +230,8 @@ const EXPORT_PROFILES = Object.freeze({
     shrinkDisableMaxFontPt: 12.5,
     paginationItemScale: 1.35,
     paginationWeightScale: 1.35,
-    maxContinuationSlidesPerSection: 4,
-    detailLineLimit: 3,
+    maxContinuationSlidesPerSection: null,
+    detailLineLimit: null,
     includeHiddenAccessibilityLayer: false,
   }),
   [EXPORT_MODE.ARCHIVE]: Object.freeze({
