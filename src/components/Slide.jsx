@@ -2646,6 +2646,30 @@ const Slide = ({ slide }) => {
         const ucsdColors = ['#00629B', '#C69214', '#00C6D7', '#182B49'];
         const maxValue = slide.chartData.maxValue;
         const dataPoints = slide.chartData.xAxis.length;
+        const labelFontSize = dataPoints >= 14 ? 18 : dataPoints >= 12 ? 20 : 22;
+        const xAxisLabelFontSize = dataPoints >= 14 ? 16 : dataPoints >= 12 ? 18 : 20;
+        const pointRadius = dataPoints >= 14 ? 7 : 8;
+        const lastPointIndex = dataPoints - 1;
+        const getDataLabelPlacement = (idx, seriesIdx) => {
+          const baseYOffset = seriesIdx === 0 ? 18 : 16;
+
+          if (idx === lastPointIndex - 1) {
+            return { textAnchor: 'end', xOffset: -8, yOffset: baseYOffset + 4 };
+          }
+          if (idx === lastPointIndex) {
+            return { textAnchor: 'end', xOffset: -8, yOffset: baseYOffset - 2 };
+          }
+          if (idx === 0) {
+            return { textAnchor: 'start', xOffset: 6, yOffset: baseYOffset };
+          }
+          return { textAnchor: 'middle', xOffset: 0, yOffset: baseYOffset };
+        };
+        const getXAxisLabelPlacement = (idx) => {
+          if (idx === lastPointIndex - 1) return { textAnchor: 'end', xOffset: -2 };
+          if (idx === lastPointIndex) return { textAnchor: 'end', xOffset: -2 };
+          if (idx === 0) return { textAnchor: 'start', xOffset: 2 };
+          return { textAnchor: 'middle', xOffset: 0 };
+        };
 
         // Fixed viewBox dimensions - this ensures consistent scaling
         const vbWidth = 1000;
@@ -2758,7 +2782,7 @@ const Slide = ({ slide }) => {
                             key={`point-${seriesIdx}-${idx}`}
                             cx={x}
                             cy={y}
-                            r="8"
+                            r={pointRadius}
                             fill="white"
                             stroke={color}
                             strokeWidth="3"
@@ -2773,14 +2797,15 @@ const Slide = ({ slide }) => {
                       return series.data.map((value, idx) => {
                         const x = margin.left + (idx / (dataPoints - 1)) * plotWidth;
                         const y = margin.top + plotHeight - (value / maxValue) * plotHeight;
+                        const placement = getDataLabelPlacement(idx, seriesIdx);
                         return (
                           <text
                             key={`label-${seriesIdx}-${idx}`}
-                            x={x}
-                            y={y - 18}
-                            textAnchor="middle"
+                            x={x + placement.xOffset}
+                            y={y - placement.yOffset}
+                            textAnchor={placement.textAnchor}
                             fill={color}
-                            fontSize="22"
+                            fontSize={labelFontSize}
                             fontWeight="bold"
                             fontFamily="system-ui, sans-serif"
                           >
@@ -2794,14 +2819,15 @@ const Slide = ({ slide }) => {
                     {slide.chartData.xAxis.map((label, idx) => {
                       const x = margin.left + (idx / (dataPoints - 1)) * plotWidth;
                       const y = margin.top + plotHeight + 30;
+                      const placement = getXAxisLabelPlacement(idx);
                       return (
                         <text
                           key={`xaxis-${idx}`}
-                          x={x}
+                          x={x + placement.xOffset}
                           y={y}
-                          textAnchor="middle"
+                          textAnchor={placement.textAnchor}
                           fill="#64748b"
-                          fontSize="20"
+                          fontSize={xAxisLabelFontSize}
                           fontWeight="500"
                           fontFamily="system-ui, sans-serif"
                         >
