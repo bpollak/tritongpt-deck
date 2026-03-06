@@ -14,7 +14,8 @@ export const slides = [
       "executive",
       "technical",
       "CCW",
-      "public"
+      "public",
+      "internal"
     ]
   },
   {
@@ -123,25 +124,39 @@ export const slides = [
             "quarter": "Q3-Q4 '23",
             "phase": "Alpha",
             "title": "Beta & Training",
-            "items": ["Project inception & funding by Chancellor's Office", "Beta testing with 400+ staff invited", "AI Essentials I training launch on UC Learning Center"]
+            "items": [
+              "Project inception & funding by Chancellor's Office",
+              "Beta testing with 400+ staff invited",
+              "AI Essentials I training launch on UC Learning Center"
+            ]
           },
           {
             "quarter": "Q1 '24",
             "phase": "Rollout",
             "title": "Early Launch",
-            "items": ["Phased rollout begins", "UC San Diego Assistant & Job Description Helper"]
+            "items": [
+              "Phased rollout begins",
+              "UC San Diego Assistant & Job Description Helper"
+            ]
           },
           {
             "quarter": "Q2 '24",
             "phase": "Live",
             "title": "Campus-Wide",
-            "items": ["Full Availability (~37K employees onboarded)", "Llama 3 upgrade & Campus SSO auth", "Refreshed UI & File upload"]
+            "items": [
+              "Full Availability (~37K employees onboarded)",
+              "Llama 3 upgrade & Campus SSO auth",
+              "Refreshed UI & File upload"
+            ]
           },
           {
             "quarter": "Q3-Q4 '24",
             "phase": "Growth",
             "title": "Adoption",
-            "items": ["Fund Manager Coach adoption", "Expanded departmental use cases & infrastructure planning"]
+            "items": [
+              "Fund Manager Coach adoption",
+              "Expanded departmental use cases & infrastructure planning"
+            ]
           }
         ]
       },
@@ -153,25 +168,39 @@ export const slides = [
             "quarter": "Q1 '25",
             "phase": "Build",
             "title": "Platform Prep",
-            "items": ["Architecture upgrades for scale", "Preparation for Multi-LLM backend integration"]
+            "items": [
+              "Architecture upgrades for scale",
+              "Preparation for Multi-LLM backend integration"
+            ]
           },
           {
             "quarter": "Q2 '25",
             "phase": "Students",
             "title": "Universal Access",
-            "items": ["45K students onboarded", "GPT-4o & Llama 4 Scout default model", "128K context window & My Documents feature"]
+            "items": [
+              "45K students onboarded",
+              "GPT-4o & Llama 4 Scout default model",
+              "128K context window & My Documents feature"
+            ]
           },
           {
             "quarter": "Q3 '25",
             "phase": "Integrate",
             "title": "Widget & Infra",
-            "items": ["AI Chatbot Widget deployed on Blink (No login required)", "LiteLLM integration & User model selection"]
+            "items": [
+              "AI Chatbot Widget deployed on Blink (No login required)",
+              "LiteLLM integration & User model selection"
+            ]
           },
           {
             "quarter": "Q4 '25",
             "phase": "Next-Gen",
             "title": "Advanced Tools",
-            "items": ["AI-Powered Search & Blink AI overview", "GPT-5.1 & Gemini 3 Pro available", "Deep Research tool & Refreshed Chat UI projects"]
+            "items": [
+              "AI-Powered Search & Blink AI overview",
+              "GPT-5.1 & Gemini 3 Pro available",
+              "Deep Research tool & Refreshed Chat UI projects"
+            ]
           }
         ]
       },
@@ -183,13 +212,23 @@ export const slides = [
             "quarter": "Q1 '26",
             "phase": "Agents",
             "title": "Ecosystem Expansion",
-            "items": ["Transcript OCR & student record matching", "Instructional AI expanded to 8 courses", "Class Scheduling Assistant (academic & life)", "Triton AI site with API access to local/commercial LLMs", "Early access to N8N agentic workflow orchestration"]
+            "items": [
+              "Transcript OCR & student record matching",
+              "Instructional AI expanded to 8 courses",
+              "Class Scheduling Assistant (academic & life)",
+              "Triton AI site with API access to local/commercial LLMs",
+              "Early access to N8N agentic workflow orchestration"
+            ]
           },
           {
             "quarter": "Q2 '26",
             "phase": "Refine",
             "title": "Process Automation",
-            "items": ["Contract review refinements (adjustable redlining strength)", "Academic Advising Agent POC", "AI IT Observability pilot"]
+            "items": [
+              "Contract review refinements (adjustable redlining strength)",
+              "Academic Advising Agent POC",
+              "AI IT Observability pilot"
+            ]
           }
         ]
       }
