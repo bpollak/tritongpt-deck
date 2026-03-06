@@ -2664,12 +2664,6 @@ const Slide = ({ slide }) => {
           }
           return { textAnchor: 'middle', xOffset: 0, yOffset: baseYOffset };
         };
-        const getXAxisLabelPlacement = (idx) => {
-          if (idx === lastPointIndex - 1) return { textAnchor: 'end', xOffset: -2 };
-          if (idx === lastPointIndex) return { textAnchor: 'end', xOffset: -2 };
-          if (idx === 0) return { textAnchor: 'start', xOffset: 2 };
-          return { textAnchor: 'middle', xOffset: 0 };
-        };
 
         // Fixed viewBox dimensions - this ensures consistent scaling
         const vbWidth = 1000;
@@ -2819,13 +2813,12 @@ const Slide = ({ slide }) => {
                     {slide.chartData.xAxis.map((label, idx) => {
                       const x = margin.left + (idx / (dataPoints - 1)) * plotWidth;
                       const y = margin.top + plotHeight + 30;
-                      const placement = getXAxisLabelPlacement(idx);
                       return (
                         <text
                           key={`xaxis-${idx}`}
-                          x={x + placement.xOffset}
+                          x={x}
                           y={y}
-                          textAnchor={placement.textAnchor}
+                          textAnchor="middle"
                           fill="#64748b"
                           fontSize={xAxisLabelFontSize}
                           fontWeight="500"
