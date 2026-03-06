@@ -2652,16 +2652,6 @@ const Slide = ({ slide }) => {
         const lastPointIndex = dataPoints - 1;
         const getDataLabelPlacement = (idx, seriesIdx) => {
           const baseYOffset = seriesIdx === 0 ? 18 : 16;
-
-          if (idx === lastPointIndex - 1) {
-            return { textAnchor: 'end', xOffset: -8, yOffset: baseYOffset + 4 };
-          }
-          if (idx === lastPointIndex) {
-            return { textAnchor: 'end', xOffset: -8, yOffset: baseYOffset - 2 };
-          }
-          if (idx === 0) {
-            return { textAnchor: 'start', xOffset: 6, yOffset: baseYOffset };
-          }
           return { textAnchor: 'middle', xOffset: 0, yOffset: baseYOffset };
         };
 
