@@ -1713,178 +1713,88 @@ const Slide = ({ slide }) => {
       )}
 
       {isTimelineEvolution && (() => {
-        // Split milestones by year for better organization
-        const milestones2023_24 = slide.milestones?.filter(m => m.month.includes("'23") || m.month.includes("'24") || m.month.includes("Spring")) || [];
-        const milestones2025_26 = slide.milestones?.filter(m => m.month.includes("'25") || m.month.includes("'26")) || [];
-
         return (
-          <div className="w-full max-w-[1900px] mx-auto flex flex-col h-full gap-1">
-            {/* Row 1: 2023-2024 Foundation */}
-            <div className="flex-none flex flex-col">
-              {/* Year label for row 1 */}
-              <div className="flex items-center gap-2 sm:gap-3 mb-1">
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  className="text-xl sm:text-3xl font-black text-ucsd-gold whitespace-nowrap"
-                >
-                  2023-2024
-                </motion.div>
-                <div className="text-xs sm:text-base font-semibold text-ucsd-sky/80 uppercase tracking-wider whitespace-nowrap">Foundation & Launch</div>
-                <div className="flex-1 h-0.5 bg-gradient-to-r from-ucsd-gold/40 to-transparent rounded-full hidden sm:block" />
-              </div>
+          <div className="w-full h-full max-w-none mx-auto flex flex-col gap-0.5 sm:gap-1 lg:gap-2 px-1 sm:px-2">
+            {slide.milestones?.map((row, rowIndex) => (
+              <div key={rowIndex} className="flex-1 flex flex-col min-h-0 bg-white/50 backdrop-blur-sm rounded-lg sm:rounded-xl p-1 sm:p-1.5 lg:p-2 border border-white/60 shadow-sm relative">
+                {/* Year label for row */}
+                <div className="flex items-center gap-2 mb-0.5 sm:mb-1">
+                  <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.1 * rowIndex }}
+                    className="text-lg sm:text-2xl lg:text-3xl font-black text-ucsd-gold drop-shadow-sm whitespace-nowrap leading-none"
+                  >
+                    {row.rowLabel}
+                  </motion.div>
+                  <div className="text-[10px] sm:text-xs lg:text-sm font-bold text-ucsd-navy/80 uppercase tracking-widest bg-white/60 px-2 sm:px-3 py-0.5 rounded-full whitespace-nowrap border border-white/50 leading-none">
+                    {row.rowTitle}
+                  </div>
+                  <div className="flex-1 h-0.5 bg-gradient-to-r from-ucsd-gold/40 via-ucsd-sky/30 to-transparent rounded-full hidden sm:block" />
+                </div>
 
-              {/* Timeline track */}
-              <div className="relative min-h-0">
-                <div className="absolute top-5 left-0 right-0 h-1 bg-gradient-to-r from-ucsd-gold/50 via-ucsd-sky/50 to-ucsd-gold/50 rounded-full hidden sm:block" />
+                {/* Timeline track */}
+                <div className="relative flex-1 min-h-0">
+                  <div className="absolute top-2.5 sm:top-3 left-0 right-0 h-1 bg-gradient-to-r from-ucsd-gold/30 via-ucsd-sky/30 to-ucsd-gold/30 rounded-full hidden sm:block" />
 
-                {/* Milestones - scrollable on mobile */}
-                <div className="flex flex-col sm:flex-row items-start gap-2 sm:gap-3 overflow-y-auto sm:overflow-y-visible sm:overflow-x-visible pb-2 sm:pb-0 snap-y sm:snap-none scrollbar-hide">
-                  {milestones2023_24.map((milestone, index) => {
-                    const colors = ['#00C6D7', '#E879A0', '#FFCD00', '#FC8900', '#00629B', '#6E963B'];
-                    const color = colors[index % colors.length];
+                  {/* Milestones / Quarters */}
+                  <div className="flex flex-col sm:flex-row justify-between items-stretch gap-1 sm:gap-2 h-full">
+                    {row.quarters?.map((quarterData, qIndex) => {
+                      const colors = ['#00629B', '#6E963B', '#00C6D7', '#FC8900', '#E879A0', '#FFCD00'];
+                      const colorIndex = (rowIndex * 4) + qIndex;
+                      const color = colors[colorIndex % colors.length];
 
-                    return (
-                      <motion.div
-                        key={index}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.15 + index * 0.08, type: "spring", stiffness: 120 }}
-                        className="flex flex-col items-center w-full sm:flex-1 sm:min-w-0 snap-start"
-                      >
-                        {/* Connector dot */}
+                      return (
                         <motion.div
-                          initial={{ scale: 0 }}
-                          animate={{ scale: 1 }}
-                          transition={{ delay: 0.25 + index * 0.08, type: "spring", stiffness: 200 }}
-                          className="w-3.5 h-3.5 sm:w-5 sm:h-5 rounded-full border-2 sm:border-3 border-white shadow-lg z-10 mb-1 sm:mb-1.5"
-                          style={{ backgroundColor: color }}
-                        />
+                          key={qIndex}
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.2 + (rowIndex * 0.1) + (qIndex * 0.05), type: "spring", stiffness: 120 }}
+                          className="flex flex-col items-center w-full sm:flex-1 sm:w-1/4"
+                        >
+                          {/* Connector dot */}
+                          <motion.div
+                            initial={{ scale: 0 }}
+                            animate={{ scale: 1 }}
+                            transition={{ delay: 0.3 + (rowIndex * 0.1) + (qIndex * 0.05), type: "spring", stiffness: 200 }}
+                            className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 lg:w-4 lg:h-4 rounded-full border-2 border-white shadow-md z-10 mb-0.5 sm:mb-1"
+                            style={{ backgroundColor: color }}
+                          />
 
-                        {/* Card */}
-                        <div className="w-full bg-white/90 backdrop-blur-sm rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden">
-                          {/* Header bar */}
-                          <div className="px-2 sm:px-2.5 py-1 sm:py-1.5 text-white" style={{ backgroundColor: color }}>
-                            <div className="text-[10px] sm:text-xs font-bold uppercase tracking-wide truncate">
-                              {milestone.phase}
+                          {/* Card */}
+                          <div className="w-full h-full bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 overflow-hidden border border-gray-100 flex flex-col">
+                            {/* Header bar */}
+                            <div className="px-1.5 py-0.5 sm:px-2 sm:py-1 flex justify-between items-center" style={{ backgroundColor: color }}>
+                              <div className="text-[9px] lg:text-xs font-extrabold uppercase tracking-widest text-white/95 truncate">
+                                {quarterData.phase}
+                              </div>
+                              <div className="text-[9px] lg:text-[10px] font-bold bg-white/20 text-white px-1 leading-tight rounded">
+                                {quarterData.quarter}
+                              </div>
+                            </div>
+
+                            {/* Content */}
+                            <div className="p-1 sm:p-1.5 lg:p-2 flex-1 flex flex-col justify-start">
+                              <h3 className="text-sm sm:text-base lg:text-lg font-bold text-ucsd-navy mb-0.5 sm:mb-1 leading-tight">
+                                {quarterData.title}
+                              </h3>
+                              <ul className="space-y-0 sm:space-y-0.5 mt-auto">
+                                {quarterData.items?.map((item, itemIndex) => (
+                                  <li key={itemIndex} className="flex items-start gap-1 sm:gap-1.5 text-xs sm:text-sm lg:text-[15px] font-medium text-slate-700 leading-tight">
+                                    <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full flex-shrink-0 mt-1" style={{ backgroundColor: color }} />
+                                    <span>{item}</span>
+                                  </li>
+                                ))}
+                              </ul>
                             </div>
                           </div>
-
-                          {/* Content */}
-                          <div className="px-2 sm:px-2.5 py-1.5 sm:py-2">
-                            <div
-                              className="inline-block px-1.5 sm:px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-bold text-white mb-1 sm:mb-1.5"
-                              style={{ backgroundColor: color }}
-                            >
-                              {milestone.month}
-                            </div>
-                            <h3 className="text-[11px] sm:text-sm font-bold text-ucsd-navy mb-1 sm:mb-1.5 leading-tight">
-                              {milestone.title}
-                            </h3>
-                            <ul className="space-y-0.5 sm:space-y-1">
-                              {milestone.items?.map((item, itemIndex) => (
-                                <li key={itemIndex} className="flex items-start gap-1 sm:gap-1.5 text-[10px] sm:text-xs text-slate-700 leading-snug">
-                                  <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full flex-shrink-0 mt-1" style={{ backgroundColor: color }} />
-                                  <span>{item}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        </div>
-                      </motion.div>
-                    );
-                  })}
+                        </motion.div>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
-            </div>
-
-            {/* Row 2: 2025-2026 Rapid Innovation - Highlighted */}
-            <div className="flex-1 flex flex-col min-h-0">
-              {/* Year label for row 2 - More prominent */}
-              <div className="flex items-center gap-2 sm:gap-3 mb-1">
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.5 }}
-                  className="text-2xl sm:text-4xl font-black text-ucsd-gold drop-shadow-[0_0_10px_rgba(255,205,0,0.4)] whitespace-nowrap"
-                >
-                  2025-2026
-                </motion.div>
-                <div className="text-xs sm:text-lg font-bold text-white uppercase tracking-wider bg-gradient-to-r from-ucsd-gold/30 to-transparent px-2 sm:px-3 py-0.5 sm:py-1 rounded-full whitespace-nowrap">
-                  Rapid Innovation
-                </div>
-                <div className="flex-1 h-1 bg-gradient-to-r from-ucsd-gold via-ucsd-sky/60 to-ucsd-gold/30 rounded-full hidden sm:block" />
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 1.5 }}
-                  className="hidden sm:block w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[16px] border-l-ucsd-gold"
-                />
-              </div>
-
-              {/* Timeline track */}
-              <div className="relative flex-1 min-h-0">
-                <div className="absolute top-5 left-0 right-0 h-1.5 bg-gradient-to-r from-ucsd-gold via-ucsd-sky to-ucsd-gold rounded-full shadow-[0_0_8px_rgba(255,205,0,0.3)] hidden sm:block" />
-
-                {/* Milestones - scrollable on mobile */}
-                <div className="flex flex-col sm:flex-row items-start gap-2 sm:gap-3 overflow-y-auto sm:overflow-y-visible sm:overflow-x-visible pb-2 sm:pb-0 snap-y sm:snap-none scrollbar-hide">
-                  {milestones2025_26.map((milestone, index) => {
-                    const colors = ['#00629B', '#6E963B', '#00C6D7', '#E879A0', '#FFCD00', '#FC8900', '#00629B', '#6E963B', '#00C6D7'];
-                    const color = colors[index % colors.length];
-
-                    return (
-                      <motion.div
-                        key={index}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.5 + index * 0.1, type: "spring", stiffness: 120 }}
-                        className="flex flex-col items-center w-full sm:flex-1 sm:min-w-0 snap-start"
-                      >
-                        {/* Connector dot - larger for 2025-2026 */}
-                        <motion.div
-                          initial={{ scale: 0 }}
-                          animate={{ scale: 1 }}
-                          transition={{ delay: 0.6 + index * 0.1, type: "spring", stiffness: 200 }}
-                          className="w-4 h-4 sm:w-6 sm:h-6 rounded-full border-2 sm:border-4 border-white shadow-lg z-10 mb-1 sm:mb-1.5"
-                          style={{ backgroundColor: color, boxShadow: `0 0 12px ${color}40` }}
-                        />
-
-                        {/* Card - slightly larger for 2025-2026 */}
-                        <div className="w-full bg-white backdrop-blur-sm rounded-lg sm:rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 overflow-hidden border border-white/50">
-                          {/* Header bar */}
-                          <div className="px-2 sm:px-3 py-1.5 sm:py-2 text-white" style={{ backgroundColor: color }}>
-                            <div className="text-[10px] sm:text-sm font-bold uppercase tracking-wide truncate">
-                              {milestone.phase}
-                            </div>
-                          </div>
-
-                          {/* Content */}
-                          <div className="px-2 sm:px-3 py-2 sm:py-2.5">
-                            <div
-                              className="inline-block px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-sm font-bold text-white mb-1.5 sm:mb-2"
-                              style={{ backgroundColor: color }}
-                            >
-                              {milestone.month}
-                            </div>
-                            <h3 className="text-xs sm:text-base font-bold text-ucsd-navy mb-1.5 sm:mb-2 leading-tight">
-                              {milestone.title}
-                            </h3>
-                            <ul className="space-y-0.5 sm:space-y-1">
-                              {milestone.items?.map((item, itemIndex) => (
-                                <li key={itemIndex} className="flex items-start gap-1 sm:gap-1.5 text-[10px] sm:text-sm text-slate-700 leading-snug">
-                                  <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full flex-shrink-0 mt-1.5" style={{ backgroundColor: color }} />
-                                  <span className="font-medium">{item}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        </div>
-                      </motion.div>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         );
       })()}

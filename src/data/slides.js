@@ -116,176 +116,81 @@ export const slides = [
     ],
     "milestones": [
       {
-        "phase": "Development",
-        "month": "Jun '23",
-        "title": "Project Inception",
-        "items": [
-          "Led by IT Services",
-          "Funded by Chancellor's Office"
+        "rowLabel": "2023-2024",
+        "rowTitle": "Foundation & Launch",
+        "quarters": [
+          {
+            "quarter": "Q3-Q4 '23",
+            "phase": "Alpha",
+            "title": "Beta & Training",
+            "items": ["Project inception & funding by Chancellor's Office", "Beta testing with 400+ staff invited", "AI Essentials I training launch on UC Learning Center"]
+          },
+          {
+            "quarter": "Q1 '24",
+            "phase": "Rollout",
+            "title": "Early Launch",
+            "items": ["Phased rollout begins", "UC San Diego Assistant & Job Description Helper"]
+          },
+          {
+            "quarter": "Q2 '24",
+            "phase": "Live",
+            "title": "Campus-Wide",
+            "items": ["Full Availability (~37K employees onboarded)", "Llama 3 upgrade & Campus SSO auth", "Refreshed UI & File upload"]
+          },
+          {
+            "quarter": "Q3-Q4 '24",
+            "phase": "Growth",
+            "title": "Adoption",
+            "items": ["Fund Manager Coach adoption", "Expanded departmental use cases & infrastructure planning"]
+          }
         ]
       },
       {
-        "phase": "Pilot Launch",
-        "month": "Oct '23",
-        "title": "Beta Testing",
-        "items": [
-          "400+ staff invited",
-          "Feedback collection begins"
+        "rowLabel": "2025",
+        "rowTitle": "Rapid Innovation",
+        "quarters": [
+          {
+            "quarter": "Q1 '25",
+            "phase": "Build",
+            "title": "Platform Prep",
+            "items": ["Architecture upgrades for scale", "Preparation for Multi-LLM backend integration"]
+          },
+          {
+            "quarter": "Q2 '25",
+            "phase": "Students",
+            "title": "Universal Access",
+            "items": ["45K students onboarded", "GPT-4o & Llama 4 Scout default model", "128K context window & My Documents feature"]
+          },
+          {
+            "quarter": "Q3 '25",
+            "phase": "Integrate",
+            "title": "Widget & Infra",
+            "items": ["AI Chatbot Widget deployed on Blink (No login required)", "LiteLLM integration & User model selection"]
+          },
+          {
+            "quarter": "Q4 '25",
+            "phase": "Next-Gen",
+            "title": "Advanced Tools",
+            "items": ["AI-Powered Search & Blink AI overview", "GPT-5.1 & Gemini 3 Pro available", "Deep Research tool & Refreshed Chat UI projects"]
+          }
         ]
       },
       {
-        "phase": "Training Launch",
-        "month": "Nov '23",
-        "title": "AI Essentials I",
-        "items": [
-          "Async AI course",
-          "UC Learning Center"
-        ]
-      },
-      {
-        "phase": "Phased Rollout",
-        "month": "Mar '24",
-        "title": "First Assistants",
-        "items": [
-          "UC San Diego Assistant",
-          "Job Description Helper"
-        ]
-      },
-      {
-        "phase": "Platform Upgrade",
-        "month": "Apr '24",
-        "title": "AI Essentials II",
-        "items": [
-          "Campus SSO auth",
-          "Llama 3 LLM upgrade"
-        ]
-      },
-      {
-        "phase": "Campus-Wide",
-        "month": "May '24",
-        "title": "Full Availability",
-        "items": [
-          "~37K employees onboarded",
-          "Refreshed UI",
-          "File upload",
-          "Fund Manager Coach"
-        ]
-      },
-      {
-        "phase": "UI Refresh",
-        "month": "Apr '25",
-        "title": "Multi-LLM Support",
-        "items": [
-          "GPT-4o & Llama 3.3",
-          "128K context window",
-          "My Documents feature",
-          "Theme customization"
-        ]
-      },
-      {
-        "phase": "Defaults",
-        "month": "May '25",
-        "title": "Llama 4 Scout",
-        "items": [
-          "Llama 4 Scout default model",
-          "Internet Search Assistant",
-          "Email Phishing Analyzer",
-          "Prompt Gallery"
-        ]
-      },
-      {
-        "phase": "Students",
-        "month": "Jun '25",
-        "title": "Universal Access",
-        "items": [
-          "45K students onboarded",
-          "GPT-4.1 available",
-          "Expert Notetaker"
-        ]
-      },
-      {
-        "phase": "Widget",
-        "month": "Jul '25",
-        "title": "AI Chatbot Widget",
-        "items": [
-          "Deployed on Blink",
-          "Public-facing support",
-          "No login required"
-        ]
-      },
-      {
-        "phase": "Backend",
-        "month": "Sep '25",
-        "title": "Infrastructure",
-        "items": [
-          "Improved embeddings",
-          "LiteLLM integration",
-          "User model selection"
-        ]
-      },
-      {
-        "phase": "Search",
-        "month": "Oct '25",
-        "title": "AI-Powered Search",
-        "items": [
-          "GPT-5 available",
-          "Blink AI overview",
-          "Data Dictionary Assistant",
-          "GPT OSS default model"
-        ]
-      },
-      {
-        "phase": "Next-Gen",
-        "month": "Nov '25",
-        "title": "Latest Release",
-        "items": [
-          "GPT-5.1 & Gemini 3 Pro",
-          "Deep Research tool",
-          "Refreshed Chat UI",
-          "Projects: Documents & Chat Folders"
-        ]
-      },
-      {
-        "phase": "Completed",
-        "month": "Jan '26",
-        "title": "Transcript Verification POC",
-        "items": [
-          "Transcript OCR & student record matching",
-          "Instructional AI expanded to 8 courses",
-          "Instructional AI pilot launched",
-          "AI Contract Review rollout"
-        ]
-      },
-      {
-        "phase": "Delivered",
-        "month": "Feb '26",
-        "title": "New Tools & Infrastructure",
-        "items": [
-          "Class Scheduling Assistant — AI-assisted course planning for academic & life schedules",
-          "Research Proposal Risk POC",
-          "Launched new Triton AI site with API access to local & commercial LLMs",
-          "Early access to N8N agentic workflow orchestration"
-        ]
-      },
-      {
-        "phase": "In Progress",
-        "month": "Mar '26",
-        "title": "Agents & Integrations",
-        "items": [
-          "Transcript matching integrated with Hyland OnBase, handed to Enrollment Management",
-          "AI IT Observability pilot",
-          "Academic Advising Agent POC",
-          "Faculty Finder POC — AI-powered faculty discovery across research focus, capabilities & experience",
-          "Instructional AI spring enhancements with one-click assistant creation",
-          "UCSD Mobile: TritonGPT integrated into campus flagship app"
-        ]
-      },
-      {
-        "phase": "Upcoming",
-        "month": "Apr '26",
-        "title": "Platform Enhancements",
-        "items": [
-          "Contract review refinements — adjustable redlining rule set strength"
+        "rowLabel": "2026",
+        "rowTitle": "Agents & Automation",
+        "quarters": [
+          {
+            "quarter": "Q1 '26",
+            "phase": "Agents",
+            "title": "Ecosystem Expansion",
+            "items": ["Transcript OCR & student record matching", "Instructional AI expanded to 8 courses", "Class Scheduling Assistant (academic & life)", "Triton AI site with API access to local/commercial LLMs", "Early access to N8N agentic workflow orchestration"]
+          },
+          {
+            "quarter": "Q2 '26",
+            "phase": "Refine",
+            "title": "Process Automation",
+            "items": ["Contract review refinements (adjustable redlining strength)", "Academic Advising Agent POC", "AI IT Observability pilot"]
+          }
         ]
       }
     ],
