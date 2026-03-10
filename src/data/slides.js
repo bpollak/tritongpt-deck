@@ -288,7 +288,7 @@ export const slides = [
     ]
   },
   {
-    "id": 6,
+    "id": 5,
     "backgroundColor": "#F5F0E6",
     "type": "content",
     "content": [
@@ -326,7 +326,7 @@ export const slides = [
     ]
   },
   {
-    "id": 7,
+    "id": 6,
     "type": "content",
     "layout": "platform-simple",
     "title": "TritonGPT Platform",
@@ -431,7 +431,7 @@ export const slides = [
     ]
   },
   {
-    "id": 8,
+    "id": 7,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media1.mov",
@@ -444,7 +444,7 @@ export const slides = [
     ]
   },
   {
-    "id": 9,
+    "id": 8,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media2.mov",
@@ -456,7 +456,7 @@ export const slides = [
     ]
   },
   {
-    "id": 10,
+    "id": 9,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media4.mov",
@@ -469,7 +469,7 @@ export const slides = [
     ]
   },
   {
-    "id": 11,
+    "id": 10,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media3.mov",
@@ -481,7 +481,7 @@ export const slides = [
     ]
   },
   {
-    "id": 12,
+    "id": 11,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media5.mov",
@@ -493,7 +493,7 @@ export const slides = [
     ]
   },
   {
-    "id": 13,
+    "id": 12,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media6.mov",
@@ -505,7 +505,7 @@ export const slides = [
     ]
   },
   {
-    "id": 14,
+    "id": 13,
     "type": "content",
     "content": [
       {
@@ -551,7 +551,7 @@ export const slides = [
     ]
   },
   {
-    "id": 15,
+    "id": 14,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media9.mov",
@@ -563,7 +563,7 @@ export const slides = [
     ]
   },
   {
-    "id": 16,
+    "id": 15,
     "type": "content",
     "content": [
       {
@@ -609,7 +609,7 @@ export const slides = [
     ]
   },
   {
-    "id": 17,
+    "id": 16,
     "type": "content",
     "content": [
       {
@@ -655,7 +655,7 @@ export const slides = [
     ]
   },
   {
-    "id": 18,
+    "id": 17,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media11.mov",
@@ -666,7 +666,7 @@ export const slides = [
     ]
   },
   {
-    "id": 19,
+    "id": 18,
     "type": "content",
     "layout": "comparison-table",
     "title": "The Evolution of AI Workflows",
@@ -707,7 +707,7 @@ export const slides = [
     ]
   },
   {
-    "id": 20,
+    "id": 19,
     "type": "content",
     "layout": "contract-review-challenge",
     "title": "The Contract Review Challenge",
@@ -748,7 +748,7 @@ export const slides = [
     ]
   },
   {
-    "id": 21,
+    "id": 20,
     "type": "video",
     "content": [],
     "videoSrc": "/media/media7.mp4",
@@ -761,7 +761,7 @@ export const slides = [
     ]
   },
   {
-    "id": 22,
+    "id": 21,
     "type": "content",
     "content": [
       {
@@ -811,7 +811,7 @@ export const slides = [
     ]
   },
   {
-    "id": 5,
+    "id": 22,
     "type": "content",
     "title": "From TritonGPT to TritonAI",
     "subtitle": "Evolving from chat into an AI Tools Hub that unifies campus-ready capabilities",
@@ -861,7 +861,96 @@ export const slides = [
     ]
   },
   {
-    "id": 32,
+    "id": 23,
+    "type": "content",
+    "layout": "api-gateway",
+    "title": "TritonAI Developer API Program",
+    "subtitle": "One Gateway to Secure AI Model Access for the Entire Campus",
+    "backgroundColor": "#F5F0E6",
+    "providers": [
+      { "name": "Azure OpenAI", "color": "#0078D4", "icon": "Server" },
+      { "name": "Google Cloud", "color": "#4285F4", "icon": "Server" },
+      { "name": "AWS Bedrock", "color": "#FF9900", "icon": "Server" },
+      { "name": "SDSC Self-Hosted", "color": "#182B49", "icon": "Database" }
+    ],
+    "gateway": {
+      "name": "LLM Gateway",
+      "subtitle": ""
+    },
+    "consumers": [
+      { "name": "Faculty", "icon": "BookOpen" },
+      { "name": "Researchers", "icon": "FlaskConical" },
+      { "name": "Staff", "icon": "Users" },
+      { "name": "Students", "icon": "GraduationCap" }
+    ],
+    "devTools": [
+      { "name": "Claude Code", "vendor": "Anthropic", "icon": "Brain", "color": "#D97757" },
+      { "name": "Codex", "vendor": "OpenAI", "icon": "CheckCircle", "color": "#10A37F" }
+    ],
+    "devToolsAnnotation": "These tools use TritonAI APIs to build the apps that enter Campus App Hosting",
+    "modelTypes": [
+      { "name": "Chat", "icon": "Brain" },
+      { "name": "Reasoning", "icon": "Cpu" },
+      { "name": "Vision", "icon": "Monitor" },
+      { "name": "Image Gen", "icon": "Presentation" },
+      { "name": "OCR", "icon": "FileCheck" },
+      { "name": "Coding", "icon": "Code" }
+    ],
+    "accessSteps": [
+      { "number": "1", "title": "Request", "description": "Submit Kuali request with project context", "icon": "FileText", "color": "#182B49" },
+      { "number": "2", "title": "Receive", "description": "API key + $15/mo free self-hosted credits", "icon": "CheckCircle", "color": "#00629B" },
+      { "number": "3", "title": "Build", "description": "Experiment, POC, and model selection", "icon": "Code", "color": "#00C6D7" },
+      { "number": "4", "title": "Scale", "description": "Chartstring-backed cloud & production use", "icon": "TrendingUp", "color": "#FFCD00" }
+    ],
+    "guardrails": ["P1-P3 Approved", "No Model Training", "Full Usage Tracking", "2-3 Day Review"],
+    "audiences": [
+      "all",
+      "internal",
+      "technical",
+      "public",
+      "CCW"
+    ]
+  },
+  {
+    "id": 24,
+    "type": "content",
+    "layout": "hosting-pipeline",
+    "title": "Campus App Hosting",
+    "subtitle": "Tier 1 in a 3-tier deployment path",
+    "backgroundColor": "#F5F0E6",
+    "pipelineSteps": [
+      { "number": "1", "name": "Build & Test", "description": "Prototype using Claude Code or Codex, powered by TritonAI APIs", "example": "Faculty uses Claude Code to build PDF accessibility checker", "icon": "Code", "color": "#00629B" },
+      { "number": "2", "name": "Apply to Host", "description": "Submit code, audience, data class, and contact", "example": "PDF Remediator for Title II, P1 data, 200 staff", "icon": "FileText", "color": "#006A96" },
+      { "number": "3", "name": "Lightweight Review", "description": "ITS checks risk, stack fit, scope", "example": "2-3 day turnaround for campus-only tools", "icon": "ClipboardCheck", "color": "#00C6D7" },
+      { "number": "4", "name": "Deploy & Share", "description": "Campus-only hosting with SSO by default", "example": "Reduces attack surface, speeds review", "icon": "Globe", "color": "#FFCD00" },
+      { "number": "5", "name": "Operate", "description": "Builders own app logic, ITS owns infra", "example": "ITS can pull unsafe or abandoned apps", "icon": "RefreshCw", "color": "#FC8900" },
+      { "number": "6", "name": "Promote", "description": "High-value apps can graduate to Tier 2 or Tier 3", "example": "PDF Remediator → Triton AI Tool or enterprise path", "icon": "TrendingUp", "color": "#6E963B" }
+    ],
+    "ownership": {
+      "its": { "title": "ITS Owns", "items": ["Framework Standards", "Hosting & Platform", "Lightweight Review", "Right to Pull Apps"], "color": "#00629B" },
+      "builder": { "title": "Builders Own", "items": ["App Logic & Behavior", "Bug Fixes", "User Support", "Technical Contact"], "color": "#FFCD00" }
+    },
+    "deploymentTiers": [
+      { "tier": "Tier 1", "title": "Campus App Hosting", "subtitle": "Low-friction, owner-operated deployment", "badges": [".app.ucsd.edu", "P1-P3"], "review": "Automated scan + template/P4 checks", "support": "Infra only; owner handles app issues", "icon": "Globe", "color": "#6E963B" },
+      { "tier": "Tier 2", "title": "Triton AI Tools", "subtitle": "ITS-supported tools for broad campus use", "badges": ["tritonai.ucsd.edu", "P1-P3"], "review": "Automated scan + human quality/UX review", "support": "ITS monitoring, patching, support channel", "icon": "Layers", "color": "#00C6D7" },
+      { "tier": "Tier 3", "title": "Full ITS Deployment", "subtitle": "Enterprise path for campus-critical apps", "badges": ["ITS / EKS infra", "P1-P4"], "review": "Architecture, security, compliance review", "support": "SLAs, dedicated team, monitoring, DR", "icon": "Building2", "color": "#00629B" }
+    ],
+    "deploymentTierNote": "Apps move up tiers as adoption and criticality increase",
+    "platformNote": "Powered by Triton AI Developer API (LLM Gateway)",
+    "boundaries": {
+      "whatItIs": { "items": ["Low-Friction Hosting", "Compact Intake", "Lightweight Review", "Templates & Guidance"], "color": "#00629B" },
+      "whatItIsNot": { "items": ["Enterprise Bypass", "For Critical Systems", "Unreviewed Deployment", "Vendor Replacement"], "color": "#B56200" }
+    },
+    "audiences": [
+      "all",
+      "internal",
+      "technical",
+      "public",
+      "CCW"
+    ]
+  },
+  {
+    "id": 26,
     "type": "content",
     "layout": "agent-dev-strategy",
     "title": "Agent Engineering Strategy: Codex + Claude Code",
@@ -939,7 +1028,62 @@ export const slides = [
     ]
   },
   {
-    "id": 33,
+    "id": 27,
+    "type": "content",
+    "layout": "flywheel-case-study",
+    "title": "The Flywheel in Action: PDF Remediator",
+    "subtitle": "How a staff member — not an engineer — solved a campus-wide compliance challenge with AI",
+    "backgroundColor": "#F5F0E6",
+    "flywheelStages": [
+      {
+        "name": "Identify Problem",
+        "shortLabel": "Identify",
+        "description": "Title II requires accessible PDFs, but the volume is massive and the people publishing them aren't accessibility experts.",
+        "icon": "Target",
+        "color": "#00629B"
+      },
+      {
+        "name": "Build with AI",
+        "shortLabel": "Build",
+        "description": "A staff member used Claude Code and Codex through the TritonAI Developer API to build the solution — no engineering background required.",
+        "icon": "Code",
+        "color": "#00C6D7"
+      },
+      {
+        "name": "Host on Campus",
+        "shortLabel": "Host",
+        "description": "Browser-first, no database, SSO-ready — maps directly to the Campus App Hosting pipeline and shared responsibility model.",
+        "icon": "Globe",
+        "color": "#FC8900"
+      },
+      {
+        "name": "Solve & Promote",
+        "shortLabel": "Scale",
+        "description": "Hours of manual Acrobat work reduced to minutes; non-experts get clear guidance; compliance documentation is built in.",
+        "icon": "TrendingUp",
+        "color": "#6E963B"
+      }
+    ],
+    "impactMetrics": [
+      { "value": "17+", "label": "Automated Checks", "sub": "9 categories" },
+      { "value": "Hours → Min", "label": "Time Savings", "sub": "Per document" },
+      { "value": "Built-in", "label": "Compliance Evidence", "sub": "Auditable packs" }
+    ],
+    "videoSrc": "/media/pdf-remediator-1.6x.mov",
+    "poster": "/media/pdf-remediator-poster.png",
+    "demoLabel": "PDF Remediator Demo",
+    "toolHighlights": ["veraPDF Validation", "PDF/UA Standard", "Evidence Packs"],
+    "keyMessage": "Identified by someone close to the work, built with AI tools, ready for lightweight review and campus-only deployment",
+    "audiences": [
+      "all",
+      "internal",
+      "technical",
+      "public",
+      "CCW"
+    ]
+  },
+  {
+    "id": 28,
     "type": "video",
     "content": [],
     "videoSrc": "/media/pdf-remediator-1.6x.mov",
@@ -954,7 +1098,7 @@ export const slides = [
     ]
   },
   {
-    "id": 23,
+    "id": 29,
     "type": "content",
     "layout": "compound-architecture",
     "title": "The Agentic AI Stack",
@@ -1031,7 +1175,7 @@ export const slides = [
     ]
   },
   {
-    "id": 24,
+    "id": 30,
     "type": "content",
     "layout": "agent-workflow",
     "title": "Multi-Agent Incident Response Orchestration",
@@ -1134,7 +1278,7 @@ export const slides = [
     ]
   },
   {
-    "id": 25,
+    "id": 31,
     "type": "content",
     "layout": "key-takeaways",
     "title": "Key Takeaways",
@@ -1179,7 +1323,7 @@ export const slides = [
     ]
   },
   {
-    "id": 26,
+    "id": 32,
     "type": "content",
     "layout": "assistant-categories",
     "title": "AI Roadmap 2026",
@@ -1294,7 +1438,7 @@ export const slides = [
     ]
   },
   {
-    "id": 27,
+    "id": 33,
     "type": "content",
     "content": [],
     "title": "TritonGPT Usage Analytics",
@@ -1383,7 +1527,7 @@ export const slides = [
     ]
   },
   {
-    "id": 28,
+    "id": 34,
     "type": "content",
     "content": [],
     "title": "TritonGPT Widget Analytics",
@@ -1452,7 +1596,7 @@ export const slides = [
     ]
   },
   {
-    "id": 29,
+    "id": 35,
     "type": "content",
     "content": [],
     "title": "TritonGPT User Growth",
@@ -1503,7 +1647,7 @@ export const slides = [
     ]
   },
   {
-    "id": 30,
+    "id": 36,
     "type": "content",
     "layout": "team-grid",
     "title": "The Team Behind TritonAI",
@@ -1626,7 +1770,7 @@ export const slides = [
     ]
   },
   {
-    "id": 31,
+    "id": 37,
     "type": "title",
     "content": [],
     "title": "Thank You",

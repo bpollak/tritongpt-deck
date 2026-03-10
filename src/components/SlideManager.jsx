@@ -13,7 +13,7 @@ const AUDIENCE_COLORS = {
   CCW: 'bg-rose-500'
 };
 
-const SlideManager = ({ onClose, onExport, standalone = false }) => {
+const SlideManager = ({ onClose, standalone = false }) => {
   const [slideAudiences, setSlideAudiences] = useState(
     slides.reduce((acc, slide) => {
       acc[slide.id] = slide.audiences || ['all'];

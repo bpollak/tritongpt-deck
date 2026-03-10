@@ -126,6 +126,10 @@ const Slide = ({ slide }) => {
   const isTeamGrid = slide.layout === 'team-grid';
   const isTimelineEvolution = slide.layout === 'timeline-evolution';
   const isCampusMetrics = slide.layout === 'campus-metrics';
+  const isApiGateway = slide.layout === 'api-gateway';
+  const isHostingPipeline = slide.layout === 'hosting-pipeline';
+  const isInnovationFlywheel = slide.layout === 'innovation-flywheel';
+  const isFlywheelCaseStudy = slide.layout === 'flywheel-case-study';
   const isTritonAIEvolutionSlide = slide.title === 'From TritonGPT to TritonAI';
   const tritonAICapabilityItems = isTritonAIEvolutionSlide ? (slide.content?.slice(1) || []) : [];
   const tritonAICapabilityBadgeLabels = {
@@ -392,9 +396,9 @@ const Slide = ({ slide }) => {
         className={clsx(
           "font-bold mb-4 sm:mb-6",
           isTitle ? "text-2xl sm:text-4xl md:text-6xl" : "text-xl sm:text-3xl md:text-5xl",
-          (!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isAgentDevStrategy && !isRoadmap && !isProblemStatement && !isContractReviewChallenge && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isTimelineEvolution && !isCampusMetrics) && "border-b-4 border-ucsd-gold pb-3 inline-block self-start",
+          (!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isAgentDevStrategy && !isRoadmap && !isProblemStatement && !isContractReviewChallenge && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isTimelineEvolution && !isCampusMetrics && !isApiGateway && !isHostingPipeline && !isInnovationFlywheel && !isFlywheelCaseStudy) && "border-b-4 border-ucsd-gold pb-3 inline-block self-start",
           (isSolution || isSolutionVideo || isCaseStudyHero || isAssistantCategories || isKeyTakeaways || isAgentDevStrategy || isRoadmap || isProblemStatement || isContractReviewChallenge || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isComparisonTable || isCompoundArchitecture || isTimelineEvolution || isCampusMetrics) && "text-center w-full",
-          (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isCompoundArchitecture) && "hidden",
+          (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isCompoundArchitecture || isApiGateway || isHostingPipeline || isInnovationFlywheel || isFlywheelCaseStudy) && "hidden",
           isAgentWorkflow && "text-center text-3xl sm:text-5xl md:text-6xl mb-2 sm:mb-4 w-full",
           isCaseStudyHero && "text-3xl md:text-4xl mb-4",
           isProblemStatement && "text-2xl sm:text-4xl md:text-5xl mb-2 sm:mb-4 font-black",
@@ -412,7 +416,7 @@ const Slide = ({ slide }) => {
         {slide.title}
       </motion.h1>
 
-      {slide.subtitle && !isCaseStudyHero && !isCompoundArchitecture && !isAnalyticsChart && !isTimelineEvolution && !isTritonAIEvolutionSlide && (
+      {slide.subtitle && !isCaseStudyHero && !isCompoundArchitecture && !isAnalyticsChart && !isTimelineEvolution && !isTritonAIEvolutionSlide && !isApiGateway && !isHostingPipeline && !isInnovationFlywheel && !isFlywheelCaseStudy && (
         <motion.h2
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -2641,6 +2645,982 @@ const Slide = ({ slide }) => {
         </div>
       )}
 
+      {/* API Gateway Layout */}
+      {isApiGateway && (() => {
+        const providers = slide.providers || [];
+        const consumers = slide.consumers || [];
+        const devTools = slide.devTools || [];
+        const modelTypes = slide.modelTypes || [];
+        const accessSteps = slide.accessSteps || [];
+        const guardrails = slide.guardrails || [];
+        const hasDevTools = devTools.length > 0;
+        const stageHeaderClass = "text-xs sm:text-sm font-black uppercase tracking-[0.16em] text-ucsd-navy/60 text-center md:min-h-[18px] md:flex md:items-end md:justify-center";
+        const stageColumnClass = "flex flex-col gap-1.5 sm:gap-2 md:grid md:grid-rows-[18px_1fr] md:gap-y-1";
+        const stageContentClass = "flex flex-col gap-1.5 sm:gap-2 md:min-h-[320px] md:justify-start md:pt-1";
+        const centeredStageContentClass = "flex flex-col gap-1.5 sm:gap-2 md:min-h-[320px] md:justify-center";
+        const renderFlowConnector = (label, delay) => (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay, duration: 0.45 }}
+            className="flex flex-row items-center justify-center gap-2 md:grid md:grid-rows-[18px_1fr] md:gap-y-1"
+          >
+            <div className="hidden md:block" aria-hidden />
+            <div className="flex flex-row md:flex-col items-center justify-center gap-1 text-ucsd-blue/70 md:min-h-[320px]">
+              <span className="rounded-full border border-ucsd-blue/20 bg-white/75 px-2 py-0.5 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.18em] text-ucsd-navy/70 shadow-sm">
+                {label}
+              </span>
+              <ArrowRight size={18} className="hidden md:block text-ucsd-blue/45" />
+              <ArrowDown size={18} className="md:hidden text-ucsd-blue/45" />
+            </div>
+          </motion.div>
+        );
+
+        return (
+          <div className="w-full max-w-[1800px] mx-auto flex flex-col gap-2 sm:gap-3">
+            {/* Title */}
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-3 sm:mb-4"
+            >
+              <div className="text-2xl sm:text-4xl md:text-5xl font-black text-ucsd-navy leading-none">{slide.title}</div>
+            </motion.div>
+
+            {/* Gateway Architecture Diagram */}
+            <div className="relative px-2 sm:px-4">
+              <div className="flex flex-col md:grid md:grid-cols-[minmax(0,1.05fr)_auto_minmax(0,0.88fr)_auto_minmax(0,0.78fr)_auto_minmax(0,1.05fr)] items-stretch justify-center gap-2 sm:gap-3">
+                {/* Campus Users */}
+                <motion.div
+                  initial={{ opacity: 0, x: -40 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.3, duration: 0.7 }}
+                  className={stageColumnClass}
+                >
+                  <div className={stageHeaderClass}>Campus Users</div>
+                  <div className={stageContentClass}>
+                    {consumers.map((c, i) => {
+                      const IconComp = iconMap[c.icon] || Users;
+                      return (
+                        <motion.div
+                          key={i}
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: 0.4 + i * 0.08 }}
+                          className="flex items-center gap-2 bg-white rounded-lg p-2 sm:p-2.5 shadow-sm border-l-4 hover:shadow-md transition-shadow"
+                          style={{ borderLeftColor: '#00629B' }}
+                        >
+                          <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center flex-shrink-0 bg-ucsd-blue/10">
+                            <IconComp size={14} className="sm:w-4 sm:h-4 text-ucsd-blue" />
+                          </div>
+                          <span className="text-xs sm:text-sm font-bold text-ucsd-navy leading-tight">{c.name}</span>
+                        </motion.div>
+                      );
+                    })}
+                  </div>
+                </motion.div>
+
+                {hasDevTools && renderFlowConnector('Use', 0.55)}
+
+                {/* Dev Tools */}
+                {hasDevTools && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.45, duration: 0.6 }}
+                    className={stageColumnClass}
+                  >
+                    <div className={stageHeaderClass}>Claude Code / Codex</div>
+                    <div className={centeredStageContentClass}>
+                      {devTools.map((tool, i) => {
+                        const IconComp = iconMap[tool.icon] || Code;
+                        return (
+                          <motion.div
+                            key={`tool-${i}`}
+                            initial={{ opacity: 0, scale: 0.92 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: 0.55 + i * 0.1, type: "spring", stiffness: 150 }}
+                            className="flex items-center gap-2.5 bg-white rounded-xl px-3.5 py-2.5 shadow-md border-2 hover:shadow-lg transition-shadow"
+                            style={{ borderColor: `${tool.color}40` }}
+                          >
+                            <div className="w-9 h-9 rounded-full flex items-center justify-center" style={{ backgroundColor: `${tool.color}15` }}>
+                              <IconComp size={18} style={{ color: tool.color }} />
+                            </div>
+                            <div className="flex flex-col min-w-0">
+                              <span className="text-sm sm:text-base font-black text-ucsd-navy leading-tight">{tool.name}</span>
+                              <span className="text-[9px] sm:text-[10px] font-medium text-slate-500">{tool.vendor}</span>
+                            </div>
+                          </motion.div>
+                        );
+                      })}
+                    </div>
+                  </motion.div>
+                )}
+
+                {hasDevTools && renderFlowConnector('Connect to', 0.72)}
+
+                {/* LiteLLM Hub */}
+                <motion.div
+                  initial={{ scale: 0, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ delay: 0.5, type: "spring", stiffness: 200, damping: 20 }}
+                  className="relative z-10 md:grid md:grid-rows-[18px_1fr] md:gap-y-1"
+                >
+                  <div className="hidden md:block" aria-hidden />
+                  <div className="flex items-center justify-center py-2 sm:py-0 md:min-h-[320px]">
+                    <motion.div
+                      animate={{
+                        boxShadow: [
+                          '0 0 0px rgba(0,98,155,0.2)',
+                          '0 0 30px rgba(0,98,155,0.4)',
+                          '0 0 0px rgba(0,98,155,0.2)'
+                        ]
+                      }}
+                      transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                      className="w-28 h-28 sm:w-36 sm:h-36 rounded-full bg-gradient-to-br from-ucsd-navy to-ucsd-blue text-white flex flex-col items-center justify-center shadow-2xl border-4 border-ucsd-gold/30"
+                    >
+                      <Server size={24} className="mb-1 text-ucsd-gold sm:w-8 sm:h-8" />
+                      <span className="px-2 text-center text-base sm:text-lg font-black tracking-wider leading-tight">{slide.gateway?.name}</span>
+                      {slide.gateway?.subtitle && (
+                        <span className="px-2 text-center text-[9px] sm:text-[10px] font-medium text-ucsd-sky uppercase tracking-[0.15em] mt-0.5 leading-tight">
+                          {slide.gateway.subtitle}
+                        </span>
+                      )}
+                    </motion.div>
+                  </div>
+                </motion.div>
+
+                {renderFlowConnector('Accesses', hasDevTools ? 0.9 : 0.65)}
+
+                {/* Model Providers */}
+                <motion.div
+                  initial={{ opacity: 0, x: 40 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.3, duration: 0.7 }}
+                  className={stageColumnClass}
+                >
+                  <div className={stageHeaderClass}>Model Providers</div>
+                  <div className={`${stageContentClass} md:grid md:grid-cols-[minmax(0,1fr)_132px] md:items-start md:content-start md:gap-3`}>
+                    <div className="flex flex-col gap-1.5 sm:gap-2">
+                      {providers.map((p, i) => {
+                        const IconComp = iconMap[p.icon] || Server;
+                        return (
+                          <motion.div
+                            key={i}
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 0.4 + i * 0.08 }}
+                            className="flex items-center gap-2 bg-white rounded-lg p-2 sm:p-2.5 shadow-sm border-r-4 hover:shadow-md transition-shadow"
+                            style={{ borderRightColor: p.color }}
+                          >
+                            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: `${p.color}15` }}>
+                              <IconComp size={14} className="sm:w-4 sm:h-4" style={{ color: p.color }} />
+                            </div>
+                            <span className="text-xs sm:text-sm font-bold text-ucsd-navy leading-tight">{p.name}</span>
+                          </motion.div>
+                        );
+                      })}
+                    </div>
+
+                    {modelTypes.length > 0 && (
+                      <div className="flex flex-wrap md:flex-col justify-center md:justify-start gap-1.5 sm:gap-2 md:gap-2.5 pt-1 md:pt-0">
+                        {modelTypes.map((m, i) => {
+                          const IconComp = iconMap[m.icon] || Cpu;
+                          return (
+                            <motion.div
+                              key={i}
+                              initial={{ opacity: 0, scale: 0.8 }}
+                              animate={{ opacity: 1, scale: 1 }}
+                              transition={{ delay: 1.0 + i * 0.06 }}
+                              className="flex items-center justify-center gap-1.5 bg-white/80 backdrop-blur-sm rounded-full px-2.5 py-1 sm:px-3 sm:py-1.5 border border-ucsd-blue/20 shadow-sm md:w-full"
+                            >
+                              <IconComp size={12} className="text-ucsd-blue sm:w-3.5 sm:h-3.5 flex-shrink-0" />
+                              <span className="text-[10px] sm:text-xs font-bold text-ucsd-navy uppercase tracking-wide whitespace-nowrap">{m.name}</span>
+                            </motion.div>
+                          );
+                        })}
+                      </div>
+                    )}
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+
+            {/* Access Journey Pipeline */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.2, duration: 0.6 }}
+              className="bg-white/90 backdrop-blur-sm rounded-xl sm:rounded-2xl border border-white/60 shadow-lg p-3 sm:px-4 sm:py-3.5"
+            >
+              <div className="text-[11px] sm:text-[13px] font-black uppercase tracking-[0.16em] text-ucsd-navy/60 mb-1.5 sm:mb-2.5 text-center">How to Get Access</div>
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-0">
+                {accessSteps.map((step, i) => {
+                  const IconComp = iconMap[step.icon] || CheckCircle;
+                  return (
+                    <React.Fragment key={i}>
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1.3 + i * 0.1 }}
+                        className="flex-1 flex items-center gap-2.5 sm:gap-3 lg:gap-3.5 px-2 sm:px-2.5 lg:px-3 min-w-0"
+                      >
+                        <div className="w-8 h-8 sm:w-11 sm:h-11 rounded-full flex items-center justify-center text-white shadow-md flex-shrink-0" style={{ backgroundColor: step.color }}>
+                          <span className="text-sm sm:text-lg font-black">{step.number}</span>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="text-[15px] sm:text-[20px] font-black text-ucsd-navy leading-none">{step.title}</div>
+                          <div className="text-[13px] sm:text-[15px] text-slate-600 font-medium leading-[1.15] sm:leading-[1.2] mt-0.5">{step.description}</div>
+                        </div>
+                      </motion.div>
+                      {i < accessSteps.length - 1 && (
+                        <div className="hidden sm:flex items-center px-0.5 lg:px-1">
+                          <ArrowRight size={16} className="text-ucsd-blue/35" />
+                        </div>
+                      )}
+                    </React.Fragment>
+                  );
+                })}
+              </div>
+            </motion.div>
+
+            {/* Guardrails Bar */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.6 }}
+              className="flex flex-wrap justify-center gap-2 sm:gap-3"
+            >
+              {guardrails.map((g, i) => (
+                <div key={i} className="flex items-center gap-1.5 text-[10px] sm:text-xs font-bold text-ucsd-navy/70 uppercase tracking-wide">
+                  <Shield size={12} className="text-ucsd-blue/60" />
+                  <span>{g}</span>
+                  {i < guardrails.length - 1 && <span className="text-ucsd-gold ml-1">|</span>}
+                </div>
+              ))}
+            </motion.div>
+          </div>
+        );
+      })()}
+
+      {/* Hosting Pipeline Layout */}
+      {isHostingPipeline && (() => {
+        const steps = slide.pipelineSteps || [];
+        const ownership = slide.ownership || {};
+        const boundaries = slide.boundaries || {};
+        const deploymentTiers = slide.deploymentTiers || [];
+        const deploymentTierNote = slide.deploymentTierNote;
+        const platformNote = slide.platformNote;
+
+        return (
+          <div className="w-full max-w-[1800px] mx-auto flex flex-col gap-2 sm:gap-2.5">
+            {/* Title */}
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center"
+            >
+              <div className="text-[28px] sm:text-[42px] md:text-[48px] font-black text-ucsd-navy leading-none">{slide.title}</div>
+              <div className="text-xs sm:text-base text-ucsd-blue font-medium mt-0.5">{slide.subtitle}</div>
+            </motion.div>
+
+            {/* Pipeline Track */}
+            <div className="relative px-2 sm:px-4">
+              {/* Track line (desktop) */}
+              <div className="hidden sm:block absolute top-[24px] left-[8%] right-[8%] h-1 z-0">
+                <motion.div
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ delay: 0.4, duration: 1.2, ease: "easeOut" }}
+                  className="h-full bg-gradient-to-r from-ucsd-blue via-ucsd-sky to-ucsd-gold rounded-full origin-left"
+                />
+              </div>
+
+              {/* Step nodes */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-2.5 relative z-10">
+                {steps.map((step, i) => {
+                  const IconComp = iconMap[step.icon] || Code;
+                  return (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.5 + i * 0.12, type: "spring", stiffness: 120 }}
+                      className="flex h-full flex-col items-center"
+                    >
+                      {/* Number badge on track */}
+                      <motion.div
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        transition={{ delay: 0.6 + i * 0.12, type: "spring", stiffness: 200 }}
+                        className="w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center text-white shadow-lg border-3 border-white mb-1.5 sm:mb-2 z-10"
+                        style={{ backgroundColor: step.color }}
+                      >
+                        <span className="text-sm sm:text-base font-black">{step.number}</span>
+                      </motion.div>
+
+                      {/* Card below */}
+                      <div className="w-full flex-1 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 overflow-hidden border border-gray-100">
+                        <div className="h-1" style={{ backgroundColor: step.color }} />
+                        <div className="flex h-full flex-col p-2.5 sm:p-2.5">
+                          <div className="flex items-center gap-1.5 mb-0.5 sm:mb-1">
+                            <IconComp size={14} style={{ color: step.color }} />
+                            <span className="text-[13px] sm:text-[15px] font-black text-ucsd-navy uppercase tracking-wide leading-tight">{step.name}</span>
+                          </div>
+                          <p className="text-[11px] sm:text-[13px] text-slate-700 font-medium leading-[1.18]">{step.description}</p>
+                        </div>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Responsibility Split */}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.3, duration: 0.5 }}
+              className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-2.5 relative"
+            >
+              {/* ITS Panel */}
+              <div className="rounded-xl p-2.5 sm:p-3.5 border-2 shadow-sm" style={{ borderColor: ownership.its?.color, backgroundColor: `${ownership.its?.color}08` }}>
+                <div className="flex items-center gap-2 mb-1.5">
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center" style={{ backgroundColor: `${ownership.its?.color}15` }}>
+                    <Server size={16} style={{ color: ownership.its?.color }} />
+                  </div>
+                  <span className="text-[15px] sm:text-[17px] font-black uppercase tracking-wide leading-none" style={{ color: ownership.its?.color }}>{ownership.its?.title}</span>
+                </div>
+                <div className="space-y-0.5">
+                  {ownership.its?.items?.map((item, i) => (
+                    <div key={i} className="flex items-center gap-2 text-[13px] sm:text-[15px] font-semibold text-ucsd-navy leading-tight">
+                      <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: ownership.its?.color }} />
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Animated arrow between panels (desktop) */}
+              <motion.div
+                animate={{ x: [0, 6, 0, -6, 0] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                className="hidden sm:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-white shadow-lg border-2 border-ucsd-navy/20 items-center justify-center"
+              >
+                <ArrowRightLeft size={16} className="text-ucsd-navy" />
+              </motion.div>
+
+              {/* Builder Panel */}
+              <div className="rounded-xl p-2.5 sm:p-3.5 border-2 shadow-sm" style={{ borderColor: ownership.builder?.color, backgroundColor: `${ownership.builder?.color}08` }}>
+                <div className="flex items-center gap-2 mb-1.5">
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center" style={{ backgroundColor: `${ownership.builder?.color}15` }}>
+                    <Code size={16} style={{ color: ownership.builder?.color }} />
+                  </div>
+                  <span className="text-[15px] sm:text-[17px] font-black uppercase tracking-wide leading-none" style={{ color: '#182B49' }}>{ownership.builder?.title}</span>
+                </div>
+                <div className="space-y-0.5">
+                  {ownership.builder?.items?.map((item, i) => (
+                    <div key={i} className="flex items-center gap-2 text-[13px] sm:text-[15px] font-semibold text-ucsd-navy leading-tight">
+                      <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: ownership.builder?.color }} />
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Deployment Path / Boundary Context */}
+            {deploymentTiers.length > 0 ? (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.6 }}
+                className="rounded-xl p-2.5 sm:p-3 border border-ucsd-navy/10 bg-white/80 shadow-sm"
+              >
+                <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-0.5 sm:gap-2 mb-2">
+                  <div className="text-[11px] sm:text-xs font-black uppercase tracking-[0.18em] text-ucsd-navy/60">3-Tier Deployment Path</div>
+                  {deploymentTierNote && (
+                    <div className="text-[10px] sm:text-[11px] font-semibold text-slate-500">{deploymentTierNote}</div>
+                  )}
+                </div>
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-2">
+                  {deploymentTiers.map((tier, i) => {
+                    return (
+                      <motion.div
+                        key={tier.title || i}
+                        initial={{ opacity: 0, y: 12 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1.68 + i * 0.08 }}
+                        className="rounded-lg border bg-white/90 p-2.5 sm:p-3 shadow-sm"
+                        style={{
+                          borderColor: `${tier.color}40`,
+                          boxShadow: `inset 0 3px 0 ${tier.color}55`
+                        }}
+                      >
+                        <div className="mb-1.5">
+                          <div>
+                            <div className="text-[11px] sm:text-xs font-black uppercase tracking-[0.18em] leading-none" style={{ color: tier.color }}>
+                              {tier.tier}
+                            </div>
+                            <div className="text-[17px] sm:text-[19px] font-black text-ucsd-navy leading-tight mt-0.5">{tier.title}</div>
+                            <div className="text-[12px] sm:text-[13px] text-slate-500 font-medium leading-tight mt-0.5">{tier.subtitle}</div>
+                          </div>
+                        </div>
+                        <div className="flex flex-wrap gap-1 mb-1.5">
+                          {tier.badges?.map((badge, badgeIndex) => (
+                            <span
+                              key={badgeIndex}
+                              className="text-[11px] sm:text-xs font-black uppercase tracking-wide px-2 py-0.5 rounded-full"
+                              style={{ backgroundColor: `${tier.color}10`, color: tier.color }}
+                            >
+                              {badge}
+                            </span>
+                          ))}
+                        </div>
+                        <div className="space-y-1 text-[11px] sm:text-xs">
+                          <div className="flex gap-2 leading-tight">
+                            <span className="w-[72px] sm:w-[78px] flex-shrink-0 whitespace-nowrap font-black uppercase tracking-[0.12em] text-slate-500">Review</span>
+                            <span className="font-semibold text-ucsd-navy">{tier.review}</span>
+                          </div>
+                          <div className="flex gap-2 leading-tight">
+                            <span className="w-[72px] sm:w-[78px] flex-shrink-0 whitespace-nowrap font-black uppercase tracking-[0.12em] text-slate-500">Support</span>
+                            <span className="font-semibold text-ucsd-navy">{tier.support}</span>
+                          </div>
+                        </div>
+                      </motion.div>
+                    );
+                  })}
+                </div>
+                {platformNote && (
+                  <div className="mt-2 text-center text-[10px] sm:text-[11px] font-semibold text-slate-500 leading-tight">
+                    {platformNote}
+                  </div>
+                )}
+              </motion.div>
+            ) : (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.6 }}
+                className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+              >
+                {/* What It Is */}
+                <div className="rounded-lg p-2.5 sm:p-3 border" style={{ borderColor: `${boundaries.whatItIs?.color}40`, backgroundColor: `${boundaries.whatItIs?.color}08` }}>
+                  <div className="text-sm sm:text-[15px] font-black uppercase tracking-[0.14em] leading-none mb-1" style={{ color: boundaries.whatItIs?.color }}>
+                    <CheckCircle size={14} className="inline mr-1" style={{ color: boundaries.whatItIs?.color }} />
+                    What This Is
+                  </div>
+                  <div className="flex flex-wrap gap-1.5">
+                    {boundaries.whatItIs?.items?.map((item, i) => (
+                      <span key={i} className="text-sm sm:text-[15px] font-bold leading-none px-2 py-0.5 rounded-full" style={{ backgroundColor: `${boundaries.whatItIs?.color}15`, color: boundaries.whatItIs?.color }}>{item}</span>
+                    ))}
+                  </div>
+                </div>
+                {/* What It Is Not */}
+                <div className="rounded-lg p-2.5 sm:p-3 border" style={{ borderColor: `${boundaries.whatItIsNot?.color}40`, backgroundColor: `${boundaries.whatItIsNot?.color}08` }}>
+                  <div className="text-sm sm:text-[15px] font-black uppercase tracking-[0.14em] leading-none mb-1" style={{ color: boundaries.whatItIsNot?.color }}>
+                    <Shield size={14} className="inline mr-1" style={{ color: boundaries.whatItIsNot?.color }} />
+                    What This Is Not
+                  </div>
+                  <div className="flex flex-wrap gap-1.5">
+                    {boundaries.whatItIsNot?.items?.map((item, i) => (
+                      <span key={i} className="text-sm sm:text-[15px] font-bold leading-none px-2 py-0.5 rounded-full" style={{ backgroundColor: `${boundaries.whatItIsNot?.color}15`, color: boundaries.whatItIsNot?.color }}>{item}</span>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </div>
+        );
+      })()}
+
+      {/* Innovation Flywheel Layout */}
+      {isInnovationFlywheel && (() => {
+        const stages = slide.flywheelStages || [];
+        const centerX = 160;
+        const centerY = 160;
+        const radius = 120;
+
+        return (
+          <div className="w-full max-w-[1800px] mx-auto flex flex-col gap-2 sm:gap-3">
+            {/* Title */}
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center"
+            >
+              <div className="text-2xl sm:text-4xl md:text-5xl font-black text-ucsd-navy leading-none">{slide.title}</div>
+              <div className="text-sm sm:text-lg text-ucsd-blue font-medium mt-1">{slide.subtitle}</div>
+            </motion.div>
+
+            {/* Main Content: Flywheel + Detail Cards */}
+            <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 sm:gap-6 px-2 sm:px-4">
+              {/* Flywheel Diagram */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.3, duration: 0.8 }}
+                className="relative flex-shrink-0"
+              >
+                <svg width="320" height="320" viewBox="0 0 320 320" className="w-[260px] h-[260px] sm:w-[320px] sm:h-[320px]">
+                  {/* Outer decorative ring */}
+                  <motion.circle
+                    cx={centerX} cy={centerY} r={radius + 25}
+                    fill="none" stroke="#00629B" strokeWidth="1" strokeOpacity="0.15" strokeDasharray="4,4"
+                    animate={{ rotate: [0, 360] }}
+                    transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+                    style={{ transformOrigin: `${centerX}px ${centerY}px` }}
+                  />
+
+                  {/* Main ring track */}
+                  <motion.circle
+                    cx={centerX} cy={centerY} r={radius}
+                    fill="none" stroke="#E5E7EB" strokeWidth="8"
+                    initial={{ pathLength: 0 }}
+                    animate={{ pathLength: 1 }}
+                    transition={{ delay: 0.5, duration: 1.5, ease: "easeOut" }}
+                  />
+
+                  {/* Colored arc segments for each stage */}
+                  {stages.map((stage, i) => {
+                    const circumference = 2 * Math.PI * radius;
+                    const segmentLength = circumference / stages.length;
+                    const gapLength = circumference - segmentLength;
+                    const rotationDeg = (i * 360) / stages.length - 90;
+                    return (
+                      <motion.circle
+                        key={`arc-${i}`}
+                        cx={centerX} cy={centerY} r={radius}
+                        fill="none" stroke={stage.color} strokeWidth="8" strokeLinecap="round"
+                        strokeDasharray={`${segmentLength - 8} ${gapLength + 8}`}
+                        initial={{ pathLength: 0, opacity: 0 }}
+                        animate={{ pathLength: 1, opacity: 1 }}
+                        transition={{ delay: 0.8 + i * 0.2, duration: 0.6 }}
+                        style={{ transformOrigin: `${centerX}px ${centerY}px`, transform: `rotate(${rotationDeg}deg)` }}
+                      />
+                    );
+                  })}
+
+                  {/* Arrow indicators between stages */}
+                  {stages.map((_, i) => {
+                    const angleBetween = ((i + 0.5) * 360) / stages.length - 90;
+                    const rad = (angleBetween * Math.PI) / 180;
+                    const ax = centerX + (radius + 14) * Math.cos(rad);
+                    const ay = centerY + (radius + 14) * Math.sin(rad);
+                    const arrowRad = rad + Math.PI / 2;
+                    return (
+                      <motion.polygon
+                        key={`arrow-${i}`}
+                        points={`${ax + 5 * Math.cos(arrowRad)},${ay + 5 * Math.sin(arrowRad)} ${ax - 5 * Math.cos(arrowRad)},${ay - 5 * Math.sin(arrowRad)} ${ax + 8 * Math.cos(rad)},${ay + 8 * Math.sin(rad)}`}
+                        fill="#00629B"
+                        fillOpacity="0.4"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 1.5 + i * 0.15 }}
+                      />
+                    );
+                  })}
+
+                  {/* Stage nodes on the ring */}
+                  {stages.map((stage, i) => {
+                    const angle = (i * 360) / stages.length - 90;
+                    const rad = (angle * Math.PI) / 180;
+                    const nx = centerX + radius * Math.cos(rad);
+                    const ny = centerY + radius * Math.sin(rad);
+                    const IconComp = iconMap[stage.icon] || Target;
+                    return (
+                      <g key={`node-${i}`}>
+                        <motion.circle
+                          cx={nx} cy={ny} r="22"
+                          fill="white" stroke={stage.color} strokeWidth="3"
+                          initial={{ scale: 0, opacity: 0 }}
+                          animate={{ scale: 1, opacity: 1 }}
+                          transition={{ delay: 1.0 + i * 0.15, type: "spring", stiffness: 200 }}
+                          style={{ transformOrigin: `${nx}px ${ny}px` }}
+                        />
+                        <foreignObject x={nx - 11} y={ny - 11} width="22" height="22">
+                          <div className="w-full h-full flex items-center justify-center">
+                            <IconComp size={14} style={{ color: stage.color }} />
+                          </div>
+                        </foreignObject>
+                        <text x={nx} y={ny + 34} textAnchor="middle" className="text-[10px] sm:text-xs font-bold fill-ucsd-navy">{stage.shortLabel}</text>
+                      </g>
+                    );
+                  })}
+
+                  {/* Center text */}
+                  <motion.g
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.6, type: "spring" }}
+                    style={{ transformOrigin: `${centerX}px ${centerY}px` }}
+                  >
+                    <circle cx={centerX} cy={centerY} r="38" fill="white" stroke="#E5E7EB" strokeWidth="2" />
+                    <text x={centerX} y={centerY - 4} textAnchor="middle" className="text-sm font-black fill-ucsd-navy">TritonAI</text>
+                    <text x={centerX} y={centerY + 10} textAnchor="middle" className="text-[8px] font-bold fill-ucsd-blue uppercase tracking-wider">Flywheel</text>
+                  </motion.g>
+
+                  {/* Animated flowing dot */}
+                  <motion.circle
+                    r="5" fill="#00629B"
+                    animate={{
+                      cx: stages.map((_, i) => {
+                        const angle = (i * 360) / stages.length - 90;
+                        const rad = (angle * Math.PI) / 180;
+                        return centerX + radius * Math.cos(rad);
+                      }).concat([centerX + radius * Math.cos(-Math.PI / 2)]),
+                      cy: stages.map((_, i) => {
+                        const angle = (i * 360) / stages.length - 90;
+                        const rad = (angle * Math.PI) / 180;
+                        return centerY + radius * Math.sin(rad);
+                      }).concat([centerY + radius * Math.sin(-Math.PI / 2)])
+                    }}
+                    transition={{ delay: 2, duration: 4, repeat: Infinity, ease: "linear" }}
+                  />
+                </svg>
+              </motion.div>
+
+              {/* Detail Cards */}
+              <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2 sm:gap-2.5 w-full">
+                {stages.map((stage, i) => {
+                  const IconComp = iconMap[stage.icon] || Target;
+                  return (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, x: 30 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 1.2 + i * 0.15 }}
+                      className="bg-white rounded-lg sm:rounded-xl p-2.5 sm:p-3 shadow-sm border-l-4 hover:shadow-md transition-all duration-300 hover:-translate-y-0.5"
+                      style={{ borderLeftColor: stage.color }}
+                    >
+                      <div className="flex items-start gap-2.5">
+                        <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm" style={{ backgroundColor: `${stage.color}15` }}>
+                          <IconComp size={16} className="sm:w-[18px] sm:h-[18px]" style={{ color: stage.color }} />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="text-sm sm:text-base font-black text-ucsd-navy leading-tight mb-0.5">{stage.name}</div>
+                          <p className="text-xs sm:text-sm text-slate-700 font-medium leading-snug">{stage.description}</p>
+                        </div>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Key Message Bar */}
+            {slide.keyMessage && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.8 }}
+                className="text-center px-4"
+              >
+                <div className="inline-flex items-center gap-2 bg-ucsd-navy/5 rounded-full px-4 py-2 sm:px-6 sm:py-2.5 border border-ucsd-navy/10">
+                  <Star size={14} className="text-ucsd-gold flex-shrink-0" />
+                  <span className="text-xs sm:text-sm font-bold text-ucsd-navy italic">{slide.keyMessage}</span>
+                </div>
+              </motion.div>
+            )}
+          </div>
+        );
+      })()}
+
+      {/* Flywheel Case Study Layout */}
+      {isFlywheelCaseStudy && (() => {
+        const stages = slide.flywheelStages || [];
+        const metrics = slide.impactMetrics || [];
+        const highlights = slide.toolHighlights || [];
+        const caseStudyVideoSrc = slide.videoSrc;
+        const caseStudyPoster = slide.poster;
+        const caseStudyDemoLabel = slide.demoLabel || 'Demo Preview';
+        const centerX = 120;
+        const centerY = 120;
+        const radius = 90;
+
+        return (
+          <div className="w-full max-w-[1800px] mx-auto flex flex-col gap-1.5 sm:gap-2">
+            {/* Title */}
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center"
+            >
+              <div className="inline-flex items-center gap-2 rounded-full bg-ucsd-navy/8 px-3 py-1 mb-1.5">
+                <RefreshCw size={12} className="text-ucsd-blue" />
+                <span className="text-[10px] sm:text-xs font-black text-ucsd-navy uppercase tracking-[0.2em]">Use Case</span>
+              </div>
+              <div className="text-2xl sm:text-4xl md:text-5xl font-black text-ucsd-navy leading-none">{slide.title}</div>
+              <div className="text-sm sm:text-lg text-ucsd-blue font-medium mt-1.5 max-w-4xl mx-auto leading-snug">{slide.subtitle}</div>
+            </motion.div>
+
+            {/* Main Content: Flywheel + Stage Cards */}
+            <div className="flex flex-col lg:grid lg:grid-cols-2 items-center lg:items-start gap-2 sm:gap-4 px-2 sm:px-4">
+              {caseStudyVideoSrc ? (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.96, y: 12 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  transition={{ delay: 0.3, duration: 0.6 }}
+                  className="w-full max-w-[640px] lg:max-w-none flex-shrink-0 self-start"
+                >
+                  <div className="rounded-[28px] border border-ucsd-navy/10 bg-white/88 p-2.5 shadow-[0_20px_44px_rgba(24,43,73,0.12)]">
+                    <div className="relative aspect-[16/10] overflow-hidden rounded-[22px] bg-slate-950">
+                      <video
+                        src={caseStudyVideoSrc}
+                        poster={caseStudyPoster}
+                        className="absolute inset-0 h-full w-full object-cover"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        preload="metadata"
+                      />
+                      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/80 via-slate-950/35 to-transparent px-3 py-2">
+                        <div className="inline-flex items-center gap-2 rounded-full bg-white/12 px-2.5 py-1 backdrop-blur-sm">
+                          <div className="w-2 h-2 rounded-full bg-emerald-400" />
+                          <span className="text-[10px] font-black uppercase tracking-[0.18em] text-white">{caseStudyDemoLabel}</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-between gap-2 px-1.5 pt-2.5">
+                      <div className="text-[11px] sm:text-xs font-black uppercase tracking-[0.16em] text-ucsd-navy/55">Live Product Preview</div>
+                      <div className="text-[11px] sm:text-xs font-semibold text-ucsd-blue">Browser-first, campus-hosted</div>
+                    </div>
+                  </div>
+                </motion.div>
+              ) : (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.3, duration: 0.8 }}
+                  className="relative flex-shrink-0"
+                >
+                  <svg width="240" height="240" viewBox="0 0 240 240" className="w-[180px] h-[180px] sm:w-[240px] sm:h-[240px]">
+                    {/* Outer decorative ring */}
+                    <motion.circle
+                      cx={centerX} cy={centerY} r={radius + 22}
+                      fill="none" stroke="#00629B" strokeWidth="1" strokeOpacity="0.12" strokeDasharray="4,4"
+                      animate={{ rotate: [0, 360] }}
+                      transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+                      style={{ transformOrigin: `${centerX}px ${centerY}px` }}
+                    />
+
+                    {/* Main ring track */}
+                    <motion.circle
+                      cx={centerX} cy={centerY} r={radius}
+                      fill="none" stroke="#E5E7EB" strokeWidth="7"
+                      initial={{ pathLength: 0 }}
+                      animate={{ pathLength: 1 }}
+                      transition={{ delay: 0.5, duration: 1.5, ease: "easeOut" }}
+                    />
+
+                    {/* Colored arc segments */}
+                    {stages.map((stage, i) => {
+                      const circumference = 2 * Math.PI * radius;
+                      const segmentLength = circumference / stages.length;
+                      const gapLength = circumference - segmentLength;
+                      const rotationDeg = (i * 360) / stages.length - 90;
+                      return (
+                        <motion.circle
+                          key={`arc-${i}`}
+                          cx={centerX} cy={centerY} r={radius}
+                          fill="none" stroke={stage.color} strokeWidth="7" strokeLinecap="round"
+                          strokeDasharray={`${segmentLength - 8} ${gapLength + 8}`}
+                          initial={{ pathLength: 0, opacity: 0 }}
+                          animate={{ pathLength: 1, opacity: 1 }}
+                          transition={{ delay: 0.8 + i * 0.2, duration: 0.6 }}
+                          style={{ transformOrigin: `${centerX}px ${centerY}px`, transform: `rotate(${rotationDeg}deg)` }}
+                        />
+                      );
+                    })}
+
+                    {/* Arrow indicators */}
+                    {stages.map((_, i) => {
+                      const angleBetween = ((i + 0.5) * 360) / stages.length - 90;
+                      const rad = (angleBetween * Math.PI) / 180;
+                      const ax = centerX + (radius + 12) * Math.cos(rad);
+                      const ay = centerY + (radius + 12) * Math.sin(rad);
+                      const arrowRad = rad + Math.PI / 2;
+                      return (
+                        <motion.polygon
+                          key={`arrow-${i}`}
+                          points={`${ax + 4 * Math.cos(arrowRad)},${ay + 4 * Math.sin(arrowRad)} ${ax - 4 * Math.cos(arrowRad)},${ay - 4 * Math.sin(arrowRad)} ${ax + 7 * Math.cos(rad)},${ay + 7 * Math.sin(rad)}`}
+                          fill="#00629B"
+                          fillOpacity="0.35"
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ delay: 1.5 + i * 0.15 }}
+                        />
+                      );
+                    })}
+
+                    {/* Stage nodes */}
+                    {stages.map((stage, i) => {
+                      const angle = (i * 360) / stages.length - 90;
+                      const rad = (angle * Math.PI) / 180;
+                      const nx = centerX + radius * Math.cos(rad);
+                      const ny = centerY + radius * Math.sin(rad);
+                      const IconComp = iconMap[stage.icon] || Target;
+                      return (
+                        <g key={`node-${i}`}>
+                          <motion.circle
+                            cx={nx} cy={ny} r="20"
+                            fill="white" stroke={stage.color} strokeWidth="3"
+                            filter="url(#nodeShadow)"
+                            initial={{ scale: 0, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            transition={{ delay: 1.0 + i * 0.15, type: "spring", stiffness: 200 }}
+                            style={{ transformOrigin: `${nx}px ${ny}px` }}
+                          />
+                          <foreignObject x={nx - 10} y={ny - 10} width="20" height="20">
+                            <div className="w-full h-full flex items-center justify-center">
+                              <IconComp size={13} style={{ color: stage.color }} />
+                            </div>
+                          </foreignObject>
+                          <text x={nx} y={ny + 32} textAnchor="middle" className="text-[11px] sm:text-[13px] font-black fill-ucsd-navy">{stage.shortLabel}</text>
+                        </g>
+                      );
+                    })}
+
+                    {/* Center */}
+                    <motion.g
+                      initial={{ opacity: 0, scale: 0.5 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: 0.6, type: "spring" }}
+                      style={{ transformOrigin: `${centerX}px ${centerY}px` }}
+                    >
+                      <circle cx={centerX} cy={centerY} r="36" fill="white" stroke="#E5E7EB" strokeWidth="2" />
+                      <text x={centerX} y={centerY - 7} textAnchor="middle" className="text-[13px] font-black fill-ucsd-navy">PDF</text>
+                      <text x={centerX} y={centerY + 9} textAnchor="middle" className="text-[9px] font-bold fill-ucsd-blue uppercase tracking-wider">Remediator</text>
+                    </motion.g>
+
+                    {/* Animated flowing dot */}
+                    <motion.circle
+                      r="4" fill="#FFCD00"
+                      filter="url(#dotGlow)"
+                      animate={{
+                        cx: stages.map((_, i) => {
+                          const angle = (i * 360) / stages.length - 90;
+                          const rad = (angle * Math.PI) / 180;
+                          return centerX + radius * Math.cos(rad);
+                        }).concat([centerX + radius * Math.cos(-Math.PI / 2)]),
+                        cy: stages.map((_, i) => {
+                          const angle = (i * 360) / stages.length - 90;
+                          const rad = (angle * Math.PI) / 180;
+                          return centerY + radius * Math.sin(rad);
+                        }).concat([centerY + radius * Math.sin(-Math.PI / 2)])
+                      }}
+                      transition={{ delay: 2, duration: 4, repeat: Infinity, ease: "linear" }}
+                    />
+
+                    {/* Filters */}
+                    <defs>
+                      <filter id="nodeShadow" x="-50%" y="-50%" width="200%" height="200%">
+                        <feDropShadow dx="0" dy="1" stdDeviation="2" floodOpacity="0.1" />
+                      </filter>
+                      <filter id="dotGlow" x="-200%" y="-200%" width="500%" height="500%">
+                        <feGaussianBlur stdDeviation="3" result="blur" />
+                        <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+                      </filter>
+                    </defs>
+                  </svg>
+                </motion.div>
+              )}
+
+              {/* Stage Detail Cards */}
+              <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-1.5 sm:gap-2 w-full">
+                {stages.map((stage, i) => {
+                  const IconComp = iconMap[stage.icon] || Target;
+                  return (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, x: 30 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 1.2 + i * 0.15 }}
+                      className="bg-white/90 backdrop-blur-sm rounded-lg sm:rounded-xl p-3 sm:p-4 shadow-sm border-l-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 group"
+                      style={{ borderLeftColor: stage.color }}
+                    >
+                      <div className="flex items-start gap-3">
+                        <div
+                          className="w-9 h-9 sm:w-11 sm:h-11 rounded-lg flex items-center justify-center flex-shrink-0 shadow-sm group-hover:scale-110 transition-transform"
+                          style={{ backgroundColor: `${stage.color}15` }}
+                        >
+                          <IconComp size={18} className="sm:w-5 sm:h-5" style={{ color: stage.color }} />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="text-base sm:text-lg lg:text-[1.35rem] font-black text-ucsd-navy leading-tight mb-1">{stage.name}</div>
+                          <p className="text-sm sm:text-base lg:text-[1.05rem] text-slate-600 font-medium leading-[1.35]">{stage.description}</p>
+                        </div>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Impact Metrics */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.8 }}
+              className="grid grid-cols-3 gap-1.5 sm:gap-2.5 px-2 sm:px-4"
+            >
+              {metrics.map((metric, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1.9 + i * 0.1 }}
+                  className="bg-gradient-to-br from-ucsd-navy to-ucsd-blue p-2 sm:p-3 rounded-lg sm:rounded-xl shadow-lg text-center text-white relative overflow-hidden group hover:scale-[1.02] transition-transform"
+                >
+                  <div className="absolute top-0 right-0 w-12 h-12 sm:w-14 sm:h-14 bg-ucsd-gold/10 rounded-full blur-2xl group-hover:bg-ucsd-gold/20 transition-colors" />
+                  <div className="relative z-10">
+                    <div className="text-[8px] sm:text-[10px] font-bold text-ucsd-sky uppercase tracking-[0.12em] mb-0.5">{metric.label}</div>
+                    <div className="text-lg sm:text-[2rem] font-black bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80 leading-none">{metric.value}</div>
+                    <div className="text-[8px] sm:text-[10px] font-medium text-white/70 uppercase tracking-wide mt-0.5">{metric.sub}</div>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+
+            {/* Tool Highlights + Key Message */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 2.2 }}
+              className="flex flex-col items-center gap-1.5 px-4"
+            >
+              {/* Tool pills */}
+              <div className="flex flex-wrap justify-center gap-1.5">
+                {highlights.map((h, i) => (
+                  <motion.span
+                    key={i}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 2.3 + i * 0.1 }}
+                    className="px-2.5 py-0.5 rounded-full border border-ucsd-navy/15 bg-white/80 backdrop-blur-sm text-[9px] sm:text-[11px] font-bold text-ucsd-navy uppercase tracking-wide shadow-sm"
+                  >
+                    {h}
+                  </motion.span>
+                ))}
+              </div>
+
+              {/* Key Message */}
+              {slide.keyMessage && (
+                <div className="inline-flex items-center gap-2 bg-ucsd-navy/5 rounded-full px-3 py-1.5 sm:px-5 sm:py-2 border border-ucsd-navy/10">
+                  <Star size={12} className="text-ucsd-gold flex-shrink-0" />
+                  <span className="text-[11px] sm:text-xs font-bold text-ucsd-navy italic">{slide.keyMessage}</span>
+                </div>
+              )}
+            </motion.div>
+          </div>
+        );
+      })()}
+
       {/* Analytics Chart Layout */}
       {isAnalyticsChart && slide.chartData && (() => {
         const ucsdColors = ['#00629B', '#C69214', '#00C6D7', '#182B49'];
@@ -2649,7 +3629,6 @@ const Slide = ({ slide }) => {
         const labelFontSize = dataPoints >= 14 ? 18 : dataPoints >= 12 ? 20 : 22;
         const xAxisLabelFontSize = dataPoints >= 14 ? 16 : dataPoints >= 12 ? 18 : 20;
         const pointRadius = dataPoints >= 14 ? 7 : 8;
-        const lastPointIndex = dataPoints - 1;
         const getDataLabelPlacement = (idx, seriesIdx) => {
           const baseYOffset = seriesIdx === 0 ? 18 : 16;
           return { textAnchor: 'middle', xOffset: 0, yOffset: baseYOffset };
@@ -3073,7 +4052,7 @@ const Slide = ({ slide }) => {
         </div>
       )}
 
-      {!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isAgentDevStrategy && !isRoadmap && !isProblemStatement && !isContractReviewChallenge && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isAgentWorkflow && !isAnalyticsChart && !isTeamGrid && !isTimelineEvolution && !isCampusMetrics && slide.content && slide.content.length > 0 && (
+      {!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isAgentDevStrategy && !isRoadmap && !isProblemStatement && !isContractReviewChallenge && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isAgentWorkflow && !isAnalyticsChart && !isTeamGrid && !isTimelineEvolution && !isCampusMetrics && !isApiGateway && !isHostingPipeline && !isInnovationFlywheel && !isFlywheelCaseStudy && slide.content && slide.content.length > 0 && (
         <motion.ul
           variants={containerVariants}
           initial="hidden"
@@ -3419,7 +4398,7 @@ const Slide = ({ slide }) => {
           </div>
         ) : (
           <div className={clsx("flex flex-col h-full w-full", isTitle ? "justify-center items-center text-center" : isContractReviewChallenge ? "justify-start pt-0 sm:pt-0.5 overflow-y-auto touch-pan-y custom-scrollbar" : (isTritonAIEvolutionSlide || isAgentDevStrategy) ? "justify-start pt-1 sm:pt-2 overflow-y-auto touch-pan-y custom-scrollbar" : "justify-start pt-4 overflow-y-auto touch-pan-y custom-scrollbar")}>
-            <div className={clsx("w-full mx-auto", (isSolution || isSolutionVideo || isCaseStudyHero || isProblemStatement || isContractReviewChallenge || isFeatureGrid || isCampusMetrics || isAgentDevStrategy) ? "max-w-[1800px]" : "max-w-7xl")}>{renderContent()}</div>
+            <div className={clsx("w-full mx-auto", (isSolution || isSolutionVideo || isCaseStudyHero || isProblemStatement || isContractReviewChallenge || isFeatureGrid || isCampusMetrics || isAgentDevStrategy || isFlywheelCaseStudy) ? "max-w-[1800px]" : "max-w-7xl")}>{renderContent()}</div>
           </div>
         )}
       </div>
