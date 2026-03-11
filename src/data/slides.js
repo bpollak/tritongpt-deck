@@ -96,8 +96,7 @@ export const slides = [
       "all",
       "public",
       "executive",
-      "technical",
-      "CCW"
+      "technical"
     ]
   },
   {
@@ -865,41 +864,126 @@ export const slides = [
     "subtitle": "One Gateway to Secure AI Model Access for the Entire Campus",
     "backgroundColor": "#F5F0E6",
     "providers": [
-      { "name": "Azure OpenAI", "color": "#0078D4", "icon": "Server" },
-      { "name": "Google Cloud", "color": "#4285F4", "icon": "Server" },
-      { "name": "AWS Bedrock", "color": "#FF9900", "icon": "Server" },
-      { "name": "SDSC Self-Hosted", "color": "#182B49", "icon": "Database" }
+      {
+        "name": "Azure OpenAI",
+        "color": "#0078D4",
+        "icon": "Server"
+      },
+      {
+        "name": "Google Cloud",
+        "color": "#4285F4",
+        "icon": "Server"
+      },
+      {
+        "name": "AWS Bedrock",
+        "color": "#FF9900",
+        "icon": "Server"
+      },
+      {
+        "name": "SDSC Self-Hosted",
+        "color": "#182B49",
+        "icon": "Database"
+      }
     ],
     "gateway": {
       "name": "LLM Gateway",
       "subtitle": ""
     },
     "consumers": [
-      { "name": "Faculty", "icon": "BookOpen" },
-      { "name": "Researchers", "icon": "FlaskConical" },
-      { "name": "Staff", "icon": "Users" },
-      { "name": "Students", "icon": "GraduationCap" }
+      {
+        "name": "Faculty",
+        "icon": "BookOpen"
+      },
+      {
+        "name": "Researchers",
+        "icon": "FlaskConical"
+      },
+      {
+        "name": "Staff",
+        "icon": "Users"
+      },
+      {
+        "name": "Students",
+        "icon": "GraduationCap"
+      }
     ],
     "devTools": [
-      { "name": "Claude Code", "vendor": "Anthropic", "icon": "Brain", "color": "#D97757" },
-      { "name": "Codex", "vendor": "OpenAI", "icon": "CheckCircle", "color": "#10A37F" }
+      {
+        "name": "Claude Code",
+        "vendor": "Anthropic",
+        "icon": "Brain",
+        "color": "#D97757"
+      },
+      {
+        "name": "Codex",
+        "vendor": "OpenAI",
+        "icon": "CheckCircle",
+        "color": "#10A37F"
+      }
     ],
     "devToolsAnnotation": "These tools use TritonAI APIs to build the apps that enter Campus App Hosting",
     "modelTypes": [
-      { "name": "Chat", "icon": "Brain" },
-      { "name": "Reasoning", "icon": "Cpu" },
-      { "name": "Vision", "icon": "Monitor" },
-      { "name": "Image Gen", "icon": "Presentation" },
-      { "name": "OCR", "icon": "FileCheck" },
-      { "name": "Coding", "icon": "Code" }
+      {
+        "name": "Chat",
+        "icon": "Brain"
+      },
+      {
+        "name": "Reasoning",
+        "icon": "Cpu"
+      },
+      {
+        "name": "Vision",
+        "icon": "Monitor"
+      },
+      {
+        "name": "Image Gen",
+        "icon": "Presentation"
+      },
+      {
+        "name": "OCR",
+        "icon": "FileCheck"
+      },
+      {
+        "name": "Coding",
+        "icon": "Code"
+      }
     ],
     "accessSteps": [
-      { "number": "1", "title": "Request", "description": "Submit an intake form with project context", "icon": "FileText", "color": "#182B49" },
-      { "number": "2", "title": "Receive", "description": "API key plus starter credits for prototyping", "icon": "CheckCircle", "color": "#00629B" },
-      { "number": "3", "title": "Build", "description": "Experiment, validate the use case, and choose models", "icon": "Code", "color": "#00C6D7" },
-      { "number": "4", "title": "Scale", "description": "Move to funded cloud and production workloads", "icon": "TrendingUp", "color": "#FFCD00" }
+      {
+        "number": "1",
+        "title": "Request",
+        "description": "Submit an intake form with project context",
+        "icon": "FileText",
+        "color": "#182B49"
+      },
+      {
+        "number": "2",
+        "title": "Receive",
+        "description": "API key plus starter credits for prototyping",
+        "icon": "CheckCircle",
+        "color": "#00629B"
+      },
+      {
+        "number": "3",
+        "title": "Build",
+        "description": "Experiment, validate the use case, and choose models",
+        "icon": "Code",
+        "color": "#00C6D7"
+      },
+      {
+        "number": "4",
+        "title": "Scale",
+        "description": "Move to funded cloud and production workloads",
+        "icon": "TrendingUp",
+        "color": "#FFCD00"
+      }
     ],
-    "guardrails": ["P1-P3 Approved", "No Model Training", "Full Usage Tracking", "2-3 Day Review"],
+    "guardrails": [
+      "P1-P3 Approved",
+      "No Model Training",
+      "Full Usage Tracking",
+      "2-3 Day Review"
+    ],
     "audiences": [
       "all",
       "internal",
@@ -916,27 +1000,139 @@ export const slides = [
     "subtitle": "The lightweight path from prototype to secure internal deployment",
     "backgroundColor": "#F5F0E6",
     "pipelineSteps": [
-      { "number": "1", "name": "Build & Test", "description": "Prototype using Claude Code or Codex, powered by TritonAI APIs", "example": "Faculty uses Claude Code to build PDF accessibility checker", "icon": "Code", "color": "#00629B" },
-      { "number": "2", "name": "Apply to Host", "description": "Submit code, audience, data class, and contact", "example": "PDF Remediator for Title II, P1 data, 200 staff", "icon": "FileText", "color": "#006A96" },
-      { "number": "3", "name": "Lightweight Review", "description": "ITS checks risk, stack fit, scope", "example": "2-3 day turnaround for campus-only tools", "icon": "ClipboardCheck", "color": "#00C6D7" },
-      { "number": "4", "name": "Deploy & Share", "description": "Campus-only hosting with SSO by default", "example": "Reduces attack surface, speeds review", "icon": "Globe", "color": "#FFCD00" },
-      { "number": "5", "name": "Operate", "description": "Builders own app logic, ITS owns infra", "example": "ITS can pull unsafe or abandoned apps", "icon": "RefreshCw", "color": "#FC8900" },
-      { "number": "6", "name": "Promote", "description": "High-value apps can graduate to Tier 2 or Tier 3", "example": "PDF Remediator → Triton AI Tool or enterprise path", "icon": "TrendingUp", "color": "#6E963B" }
+      {
+        "number": "1",
+        "name": "Build & Test",
+        "description": "Prototype using Claude Code or Codex, powered by TritonAI APIs",
+        "example": "Faculty uses Claude Code to build PDF accessibility checker",
+        "icon": "Code",
+        "color": "#00629B"
+      },
+      {
+        "number": "2",
+        "name": "Apply to Host",
+        "description": "Submit code, audience, data class, and contact",
+        "example": "PDF Remediator for Title II, P1 data, 200 staff",
+        "icon": "FileText",
+        "color": "#006A96"
+      },
+      {
+        "number": "3",
+        "name": "Lightweight Review",
+        "description": "ITS checks risk, stack fit, scope",
+        "example": "2-3 day turnaround for campus-only tools",
+        "icon": "ClipboardCheck",
+        "color": "#00C6D7"
+      },
+      {
+        "number": "4",
+        "name": "Deploy & Share",
+        "description": "Campus-only hosting with SSO by default",
+        "example": "Reduces attack surface, speeds review",
+        "icon": "Globe",
+        "color": "#FFCD00"
+      },
+      {
+        "number": "5",
+        "name": "Operate",
+        "description": "Builders own app logic, ITS owns infra",
+        "example": "ITS can pull unsafe or abandoned apps",
+        "icon": "RefreshCw",
+        "color": "#FC8900"
+      },
+      {
+        "number": "6",
+        "name": "Promote",
+        "description": "High-value apps can graduate to Tier 2 or Tier 3",
+        "example": "PDF Remediator → Triton AI Tool or enterprise path",
+        "icon": "TrendingUp",
+        "color": "#6E963B"
+      }
     ],
     "ownership": {
-      "its": { "title": "ITS Owns", "items": ["Framework Standards", "Hosting & Platform", "Lightweight Review", "Right to Pull Apps"], "color": "#00629B" },
-      "builder": { "title": "Builders Own", "items": ["App Logic & Behavior", "Bug Fixes", "User Support", "Technical Contact"], "color": "#FFCD00" }
+      "its": {
+        "title": "ITS Owns",
+        "items": [
+          "Framework Standards",
+          "Hosting & Platform",
+          "Lightweight Review",
+          "Right to Pull Apps"
+        ],
+        "color": "#00629B"
+      },
+      "builder": {
+        "title": "Builders Own",
+        "items": [
+          "App Logic & Behavior",
+          "Bug Fixes",
+          "User Support",
+          "Technical Contact"
+        ],
+        "color": "#FFCD00"
+      }
     },
     "deploymentTiers": [
-      { "tier": "Tier 1", "title": "Campus App Hosting", "subtitle": "Low-friction, owner-operated deployment", "badges": [".app.ucsd.edu", "P1-P3"], "review": "Automated scan + template/P4 checks", "support": "Infra only; owner handles app issues", "icon": "Globe", "color": "#6E963B" },
-      { "tier": "Tier 2", "title": "Triton AI Tools", "subtitle": "ITS-supported tools for broad campus use", "badges": ["tritonai.ucsd.edu", "P1-P3"], "review": "Automated scan + human quality/UX review", "support": "ITS monitoring, patching, support channel", "icon": "Layers", "color": "#00C6D7" },
-      { "tier": "Tier 3", "title": "Full ITS Deployment", "subtitle": "Enterprise path for campus-critical apps", "badges": ["ITS / EKS infra", "P1-P4"], "review": "Architecture, security, compliance review", "support": "SLAs, dedicated team, monitoring, DR", "icon": "Building2", "color": "#00629B" }
+      {
+        "tier": "Tier 1",
+        "title": "Campus App Hosting",
+        "subtitle": "Low-friction, owner-operated deployment",
+        "badges": [
+          ".app.ucsd.edu",
+          "P1-P3"
+        ],
+        "review": "Automated scan + template/P4 checks",
+        "support": "Infra only; owner handles app issues",
+        "icon": "Globe",
+        "color": "#6E963B"
+      },
+      {
+        "tier": "Tier 2",
+        "title": "Triton AI Tools",
+        "subtitle": "ITS-supported tools for broad campus use",
+        "badges": [
+          "tritonai.ucsd.edu",
+          "P1-P3"
+        ],
+        "review": "Automated scan + human quality/UX review",
+        "support": "ITS monitoring, patching, support channel",
+        "icon": "Layers",
+        "color": "#00C6D7"
+      },
+      {
+        "tier": "Tier 3",
+        "title": "Full ITS Deployment",
+        "subtitle": "Enterprise path for campus-critical apps",
+        "badges": [
+          "ITS / EKS infra",
+          "P1-P4"
+        ],
+        "review": "Architecture, security, compliance review",
+        "support": "SLAs, dedicated team, monitoring, DR",
+        "icon": "Building2",
+        "color": "#00629B"
+      }
     ],
     "deploymentTierNote": "Apps move up tiers as adoption and criticality increase",
     "platformNote": "Powered by Triton AI Developer API (LLM Gateway)",
     "boundaries": {
-      "whatItIs": { "items": ["Low-Friction Hosting", "Compact Intake", "Lightweight Review", "Templates & Guidance"], "color": "#00629B" },
-      "whatItIsNot": { "items": ["Enterprise Bypass", "For Critical Systems", "Unreviewed Deployment", "Vendor Replacement"], "color": "#B56200" }
+      "whatItIs": {
+        "items": [
+          "Low-Friction Hosting",
+          "Compact Intake",
+          "Lightweight Review",
+          "Templates & Guidance"
+        ],
+        "color": "#00629B"
+      },
+      "whatItIsNot": {
+        "items": [
+          "Enterprise Bypass",
+          "For Critical Systems",
+          "Unreviewed Deployment",
+          "Vendor Replacement"
+        ],
+        "color": "#B56200"
+      }
     },
     "audiences": [
       "all",
@@ -1062,14 +1258,30 @@ export const slides = [
       }
     ],
     "impactMetrics": [
-      { "value": "17+", "label": "Automated Checks", "sub": "9 categories" },
-      { "value": "Hours → Min", "label": "Time Savings", "sub": "Per document" },
-      { "value": "Built-in", "label": "Compliance Evidence", "sub": "Auditable packs" }
+      {
+        "value": "17+",
+        "label": "Automated Checks",
+        "sub": "9 categories"
+      },
+      {
+        "value": "Hours → Min",
+        "label": "Time Savings",
+        "sub": "Per document"
+      },
+      {
+        "value": "Built-in",
+        "label": "Compliance Evidence",
+        "sub": "Auditable packs"
+      }
     ],
     "videoSrc": "/media/pdf-remediator-1.6x.mov",
     "poster": "/media/pdf-remediator-poster.png",
     "demoLabel": "PDF Remediator Demo",
-    "toolHighlights": ["veraPDF Validation", "PDF/UA Standard", "Evidence Packs"],
+    "toolHighlights": [
+      "veraPDF Validation",
+      "PDF/UA Standard",
+      "Evidence Packs"
+    ],
     "keyMessage": "Identified by someone close to the work, built with AI tools, ready for lightweight review and campus-only deployment",
     "audiences": [
       "all",
