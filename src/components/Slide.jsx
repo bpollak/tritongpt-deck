@@ -409,7 +409,7 @@ const Slide = ({ slide }) => {
           isFeatureGrid && "w-full text-center border-b-0 border-none mb-4 sm:mb-12",
           isTritonAIEvolutionSlide && "text-lg sm:text-2xl md:text-4xl mb-1 sm:mb-2 leading-tight",
           isHeroList && "mb-1 sm:mb-4",
-          isTimelineEvolution && "mb-1 sm:mb-2",
+          isTimelineEvolution && "mb-0.5 sm:mb-1 leading-none",
           isDark ? "text-white" : "text-ucsd-navy"
         )}
       >
@@ -1718,11 +1718,11 @@ const Slide = ({ slide }) => {
 
       {isTimelineEvolution && (() => {
         return (
-          <div className="w-full h-full max-w-none mx-auto flex flex-col gap-0.5 sm:gap-1 lg:gap-2 px-1 sm:px-2">
+          <div className="w-full max-w-none mx-auto flex flex-col gap-0.5 sm:gap-1 px-0.5 sm:px-1 pb-12 sm:pb-14">
             {slide.milestones?.map((row, rowIndex) => (
-              <div key={rowIndex} className="flex-1 flex flex-col min-h-0 bg-white/50 backdrop-blur-sm rounded-lg sm:rounded-xl p-1 sm:p-1.5 lg:p-2 border border-white/60 shadow-sm relative">
+              <div key={rowIndex} className="flex-none flex flex-col min-h-0 bg-white/50 backdrop-blur-sm rounded-lg sm:rounded-xl p-1 sm:p-1.5 border border-white/60 shadow-sm relative">
                 {/* Year label for row */}
-                <div className="flex items-center gap-2 mb-0.5 sm:mb-1">
+                <div className="flex items-center gap-1.5 sm:gap-2 mb-0.5">
                   <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -1738,11 +1738,11 @@ const Slide = ({ slide }) => {
                 </div>
 
                 {/* Timeline track */}
-                <div className="relative flex-1 min-h-0">
-                  <div className="absolute top-2.5 sm:top-3 left-0 right-0 h-1 bg-gradient-to-r from-ucsd-gold/30 via-ucsd-sky/30 to-ucsd-gold/30 rounded-full hidden sm:block" />
+                <div className="relative min-h-0">
+                  <div className="absolute top-1.5 sm:top-2 left-0 right-0 h-1 bg-gradient-to-r from-ucsd-gold/30 via-ucsd-sky/30 to-ucsd-gold/30 rounded-full hidden sm:block" />
 
                   {/* Milestones / Quarters */}
-                  <div className="flex flex-col sm:flex-row justify-between items-stretch gap-1 sm:gap-2 h-full">
+                  <div className="flex flex-col sm:flex-row justify-between items-stretch gap-0.5 sm:gap-1">
                     {row.quarters?.map((quarterData, qIndex) => {
                       const colors = ['#00629B', '#6E963B', '#00C6D7', '#FC8900', '#E879A0', '#FFCD00'];
                       const colorIndex = (rowIndex * 4) + qIndex;
@@ -1754,22 +1754,22 @@ const Slide = ({ slide }) => {
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.2 + (rowIndex * 0.1) + (qIndex * 0.05), type: "spring", stiffness: 120 }}
-                          className="flex flex-col items-center w-full sm:flex-1 sm:w-1/4"
+                          className="flex flex-col items-center sm:items-stretch w-full sm:flex-1 sm:w-1/4 self-stretch"
                         >
                           {/* Connector dot */}
                           <motion.div
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
                             transition={{ delay: 0.3 + (rowIndex * 0.1) + (qIndex * 0.05), type: "spring", stiffness: 200 }}
-                            className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 lg:w-4 lg:h-4 rounded-full border-2 border-white shadow-md z-10 mb-0.5 sm:mb-1"
+                            className="w-2.5 h-2.5 sm:w-3 sm:h-3 lg:w-3.5 lg:h-3.5 rounded-full border-2 border-white shadow-md z-10 mb-0.5"
                             style={{ backgroundColor: color }}
                           />
 
                           {/* Card */}
-                          <div className="w-full h-full bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 overflow-hidden border border-gray-100 flex flex-col">
+                          <div className="w-full flex-1 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 overflow-hidden border border-gray-100 flex flex-col">
                             {/* Header bar */}
                             <div className="px-1.5 py-0.5 sm:px-2 sm:py-1 flex justify-between items-center" style={{ backgroundColor: color }}>
-                              <div className="text-[9px] lg:text-xs font-extrabold uppercase tracking-widest text-white/95 truncate">
+                              <div className="text-[9px] sm:text-[11px] lg:text-xs font-extrabold uppercase tracking-widest text-white/95 truncate">
                                 {quarterData.phase}
                               </div>
                               <div className="text-[9px] lg:text-[10px] font-bold bg-white/20 text-white px-1 leading-tight rounded">
@@ -1778,13 +1778,15 @@ const Slide = ({ slide }) => {
                             </div>
 
                             {/* Content */}
-                            <div className="p-1 sm:p-1.5 lg:p-2 flex-1 flex flex-col justify-start">
-                              <h3 className="text-sm sm:text-base lg:text-lg font-bold text-ucsd-navy mb-0.5 sm:mb-1 leading-tight">
-                                {quarterData.title}
-                              </h3>
-                              <ul className="space-y-0 sm:space-y-0.5 mt-auto">
+                            <div className="p-1.5 sm:p-2 lg:p-2 flex flex-col justify-start min-h-0">
+                              <div className="min-h-[1.55rem] sm:min-h-[1.9rem] lg:min-h-[2rem]">
+                                <h3 className="text-sm sm:text-[15px] lg:text-[17px] font-bold text-ucsd-navy leading-tight">
+                                  {quarterData.title}
+                                </h3>
+                              </div>
+                              <ul className="mt-0.5 flex flex-col gap-0.5 sm:gap-0.5">
                                 {quarterData.items?.map((item, itemIndex) => (
-                                  <li key={itemIndex} className="flex items-start gap-1 sm:gap-1.5 text-xs sm:text-sm lg:text-[15px] font-medium text-slate-700 leading-tight">
+                                  <li key={itemIndex} className="flex items-start gap-1 sm:gap-1.5 text-[11px] sm:text-[12.5px] lg:text-[13px] font-medium text-slate-700 leading-snug">
                                     <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full flex-shrink-0 mt-1" style={{ backgroundColor: color }} />
                                     <span>{item}</span>
                                   </li>
@@ -4351,7 +4353,7 @@ const Slide = ({ slide }) => {
     <div
       className={clsx(
         "w-full h-full flex flex-col relative overflow-hidden transition-colors duration-500 break-words",
-        isTimelineEvolution ? "p-2 sm:p-4 md:p-6" : isContractReviewChallenge ? "p-2 sm:p-2.5 md:p-3" : (isTritonAIEvolutionSlide || isAgentDevStrategy) ? "p-2 sm:p-3 md:p-4" : "p-2 sm:p-6 md:p-12",
+        isTimelineEvolution ? "p-1.5 sm:p-3 md:p-4" : isContractReviewChallenge ? "p-2 sm:p-2.5 md:p-3" : (isTritonAIEvolutionSlide || isAgentDevStrategy) ? "p-2 sm:p-3 md:p-4" : "p-2 sm:p-6 md:p-12",
         !slide.backgroundColor && (isDark ? "bg-[#1a1a1a]" : "bg-gray-50")
       )}
       style={slide.backgroundColor ? { backgroundColor: slide.backgroundColor } : {}}
@@ -4386,7 +4388,7 @@ const Slide = ({ slide }) => {
         </>
       )}
       {isDark && <div className="absolute top-0 right-0 w-[40vw] h-[40vw] bg-ucsd-blue/10 rounded-full blur-[100px] -mr-[10vw] -mt-[10vw] pointer-events-none" />}
-      <div className="flex-1 w-full h-full z-10 flex flex-col justify-center">
+      <div className={clsx("flex-1 w-full h-full z-10 flex flex-col", isTimelineEvolution ? "justify-start" : "justify-center")}>
         {hasImage ? (
           <div className={clsx("h-full items-center gap-8", isGraphicHeavy ? "grid grid-cols-1 lg:grid-cols-12" : "flex flex-col md:flex-row")}>
             <div className={clsx("flex flex-col h-full overflow-y-auto touch-pan-y pr-4 custom-scrollbar", isGraphicHeavy ? "lg:col-span-4 order-2 lg:order-1 pt-4" : "flex-1", isDense ? "justify-start pt-4" : "justify-center")}>
@@ -4397,8 +4399,8 @@ const Slide = ({ slide }) => {
             </div>
           </div>
         ) : (
-          <div className={clsx("flex flex-col h-full w-full", isTitle ? "justify-center items-center text-center" : isContractReviewChallenge ? "justify-start pt-0 sm:pt-0.5 overflow-y-auto touch-pan-y custom-scrollbar" : (isTritonAIEvolutionSlide || isAgentDevStrategy) ? "justify-start pt-1 sm:pt-2 overflow-y-auto touch-pan-y custom-scrollbar" : "justify-start pt-4 overflow-y-auto touch-pan-y custom-scrollbar")}>
-            <div className={clsx("w-full mx-auto", (isSolution || isSolutionVideo || isCaseStudyHero || isProblemStatement || isContractReviewChallenge || isFeatureGrid || isCampusMetrics || isAgentDevStrategy || isFlywheelCaseStudy) ? "max-w-[1800px]" : "max-w-7xl")}>{renderContent()}</div>
+          <div className={clsx("flex flex-col h-full w-full", isTitle ? "justify-center items-center text-center" : isTimelineEvolution ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isContractReviewChallenge ? "justify-start pt-0 sm:pt-0.5 overflow-y-auto touch-pan-y custom-scrollbar" : (isTritonAIEvolutionSlide || isAgentDevStrategy) ? "justify-start pt-1 sm:pt-2 overflow-y-auto touch-pan-y custom-scrollbar" : "justify-start pt-4 overflow-y-auto touch-pan-y custom-scrollbar")}>
+            <div className={clsx("w-full mx-auto", isTimelineEvolution && "max-w-[1800px] h-full flex flex-col", (isSolution || isSolutionVideo || isCaseStudyHero || isProblemStatement || isContractReviewChallenge || isFeatureGrid || isCampusMetrics || isAgentDevStrategy || isFlywheelCaseStudy) ? "max-w-[1800px]" : !isTimelineEvolution && "max-w-7xl")}>{renderContent()}</div>
           </div>
         )}
       </div>

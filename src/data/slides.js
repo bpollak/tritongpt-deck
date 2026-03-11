@@ -6,7 +6,6 @@ export const slides = [
     "title": "The AI-Enabled University",
     "subtitle": "Operationalizing TritonAI for Service & Support at Scale",
     "layout": "title-hero",
-    "conference": "Rolling Updates | February 2026",
     "presenterName": "Brett Pollak",
     "presenterTitle": "Executive Director, IT Services",
     "audiences": [
@@ -125,9 +124,9 @@ export const slides = [
             "phase": "Alpha",
             "title": "Beta & Training",
             "items": [
-              "Project inception & funding by Chancellor's Office",
-              "Beta testing with 400+ staff invited",
-              "AI Essentials I training launch on UC Learning Center"
+              "Chancellor's Office funding secured",
+              "400+ staff invited to beta testing",
+              "AI Essentials I launched in UC Learning Center"
             ]
           },
           {
@@ -136,7 +135,7 @@ export const slides = [
             "title": "Early Launch",
             "items": [
               "Phased rollout begins",
-              "UC San Diego Assistant & Job Description Helper"
+              "UC San Diego Assistant and Job Description Helper launch"
             ]
           },
           {
@@ -144,9 +143,9 @@ export const slides = [
             "phase": "Live",
             "title": "Campus-Wide",
             "items": [
-              "Full Availability (~37K employees onboarded)",
-              "Llama 3 upgrade & Campus SSO auth",
-              "Refreshed UI & File upload"
+              "Campus-wide availability for ~37K employees",
+              "Llama 3 upgrade with campus SSO",
+              "Refreshed UI and file upload"
             ]
           },
           {
@@ -154,8 +153,8 @@ export const slides = [
             "phase": "Growth",
             "title": "Adoption",
             "items": [
-              "Fund Manager Coach adoption",
-              "Expanded departmental use cases & infrastructure planning"
+              "Fund Manager Coach adoption grows",
+              "Departmental use cases expand; infrastructure planning begins"
             ]
           }
         ]
@@ -169,8 +168,8 @@ export const slides = [
             "phase": "Build",
             "title": "Platform Prep",
             "items": [
-              "Architecture upgrades for scale",
-              "Preparation for Multi-LLM backend integration"
+              "Platform architecture upgraded for scale",
+              "Multi-LLM backend integration prepared"
             ]
           },
           {
@@ -179,8 +178,8 @@ export const slides = [
             "title": "Universal Access",
             "items": [
               "45K students onboarded",
-              "GPT-4o & Llama 4 Scout default model",
-              "128K context window & My Documents feature"
+              "GPT-4o and Llama 4 Scout become defaults",
+              "128K context window and My Documents launch"
             ]
           },
           {
@@ -188,8 +187,8 @@ export const slides = [
             "phase": "Integrate",
             "title": "Widget & Infra",
             "items": [
-              "AI Chatbot Widget deployed on Blink (No login required)",
-              "LiteLLM integration & User model selection"
+              "Blink AI widget deployed without login",
+              "LiteLLM integration enables model choice"
             ]
           },
           {
@@ -197,9 +196,9 @@ export const slides = [
             "phase": "Next-Gen",
             "title": "Advanced Tools",
             "items": [
-              "AI-Powered Search & Blink AI overview",
-              "GPT-5.1 & Gemini 3 Pro available",
-              "Deep Research tool & Refreshed Chat UI projects"
+              "AI-powered search and Blink AI overview launch",
+              "GPT-5.1 and Gemini 3 Pro added",
+              "Deep Research and chat UI refresh underway"
             ]
           }
         ]
@@ -213,11 +212,9 @@ export const slides = [
             "phase": "Agents",
             "title": "Ecosystem Expansion",
             "items": [
-              "Transcript OCR & student record matching",
-              "Instructional AI expanded to 8 courses",
-              "Class Scheduling Assistant (academic & life)",
-              "Triton AI site with API access to local/commercial LLMs",
-              "Early access to N8N agentic workflow orchestration"
+              "Transcript OCR and student record matching launch",
+              "Instructional AI expands to 8 courses; scheduling assistant pilots begin",
+              "Triton AI site opens with API access and early N8N workflows"
             ]
           },
           {
@@ -225,9 +222,9 @@ export const slides = [
             "phase": "Refine",
             "title": "Process Automation",
             "items": [
-              "Contract review refinements (adjustable redlining strength)",
-              "Academic Advising Agent POC",
-              "AI IT Observability pilot"
+              "Contract review refinements with adjustable redlining",
+              "Academic Advising Agent proof of concept",
+              "AI IT observability pilot"
             ]
           }
         ]
