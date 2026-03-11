@@ -247,12 +247,12 @@ export const slides = [
         "icon": "Shield"
       },
       {
-        "heading": "Make AI a Utility",
+        "heading": "Make AI a Utility (Horizontal AI)",
         "text": "Shared campus infrastructure and zero variable cost make AI abundant instead of rationed. Broad access drives adoption, experimentation, and institution-wide scale.",
         "icon": "Cpu"
       },
       {
-        "heading": "Solve Specific Pain Points",
+        "heading": "Solve Specific Pain Points (Vertical AI)",
         "text": "Prioritize high-friction workflows like contract review, search, scheduling, accessibility, and instructional support. Purpose-built tools create measurable value faster than general-purpose chat.",
         "icon": "Target"
       },
@@ -894,10 +894,10 @@ export const slides = [
       { "name": "Coding", "icon": "Code" }
     ],
     "accessSteps": [
-      { "number": "1", "title": "Request", "description": "Submit Kuali request with project context", "icon": "FileText", "color": "#182B49" },
-      { "number": "2", "title": "Receive", "description": "API key + $15/mo free self-hosted credits", "icon": "CheckCircle", "color": "#00629B" },
-      { "number": "3", "title": "Build", "description": "Experiment, POC, and model selection", "icon": "Code", "color": "#00C6D7" },
-      { "number": "4", "title": "Scale", "description": "Chartstring-backed cloud & production use", "icon": "TrendingUp", "color": "#FFCD00" }
+      { "number": "1", "title": "Request", "description": "Submit an intake form with project context", "icon": "FileText", "color": "#182B49" },
+      { "number": "2", "title": "Receive", "description": "API key plus starter credits for prototyping", "icon": "CheckCircle", "color": "#00629B" },
+      { "number": "3", "title": "Build", "description": "Experiment, validate the use case, and choose models", "icon": "Code", "color": "#00C6D7" },
+      { "number": "4", "title": "Scale", "description": "Move to funded cloud and production workloads", "icon": "TrendingUp", "color": "#FFCD00" }
     ],
     "guardrails": ["P1-P3 Approved", "No Model Training", "Full Usage Tracking", "2-3 Day Review"],
     "audiences": [
@@ -913,7 +913,7 @@ export const slides = [
     "type": "content",
     "layout": "hosting-pipeline",
     "title": "Campus App Hosting",
-    "subtitle": "Tier 1 in a 3-tier deployment path",
+    "subtitle": "The lightweight path from prototype to secure internal deployment",
     "backgroundColor": "#F5F0E6",
     "pipelineSteps": [
       { "number": "1", "name": "Build & Test", "description": "Prototype using Claude Code or Codex, powered by TritonAI APIs", "example": "Faculty uses Claude Code to build PDF accessibility checker", "icon": "Code", "color": "#00629B" },

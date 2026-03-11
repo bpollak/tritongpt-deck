@@ -130,6 +130,54 @@ const Slide = ({ slide }) => {
   const isHostingPipeline = slide.layout === 'hosting-pipeline';
   const isInnovationFlywheel = slide.layout === 'innovation-flywheel';
   const isFlywheelCaseStudy = slide.layout === 'flywheel-case-study';
+  const parseHeroHeading = (heading = '') => {
+    const match = heading.match(/^(.*?)\s*\(([^)]+)\)$/);
+    if (!match) return { title: heading, badge: '' };
+    return {
+      title: match[1].trim(),
+      badge: match[2].trim()
+    };
+  };
+  const heroListSections = isHeroList
+    ? [
+      {
+        label: 'Foundation',
+        descriptor: 'Governed Infrastructure',
+        summary: 'Trust, controls, and portable architecture that campus teams can build on.',
+        accent: '#FFCD00',
+        cardTint: 'from-[#fff7d6] via-[#fffdf4] to-white',
+        indexes: [0, 4]
+      },
+      {
+        label: 'Scale',
+        descriptor: 'Horizontal Reach',
+        summary: 'Shared utilities embedded across the systems people already use every day.',
+        accent: '#00C6D7',
+        cardTint: 'from-[#ddfbff] via-[#f6feff] to-white',
+        indexes: [1, 3]
+      },
+      {
+        label: 'Outcomes',
+        descriptor: 'Vertical Execution',
+        summary: 'Workflow-specific tools that create immediate value and mature into agents.',
+        accent: '#FC8900',
+        cardTint: 'from-[#fff0df] via-[#fff8f1] to-white',
+        indexes: [2, 5]
+      }
+    ].map((section) => ({
+      ...section,
+      items: section.indexes
+        .map((index) => {
+          const item = slide.content?.[index];
+          if (!item) return null;
+          return {
+            ...item,
+            ...parseHeroHeading(item.heading || '')
+          };
+        })
+        .filter(Boolean)
+    }))
+    : [];
   const isTritonAIEvolutionSlide = slide.title === 'From TritonGPT to TritonAI';
   const tritonAICapabilityItems = isTritonAIEvolutionSlide ? (slide.content?.slice(1) || []) : [];
   const tritonAICapabilityBadgeLabels = {
@@ -400,15 +448,18 @@ const Slide = ({ slide }) => {
           (isSolution || isSolutionVideo || isCaseStudyHero || isAssistantCategories || isKeyTakeaways || isAgentDevStrategy || isRoadmap || isProblemStatement || isContractReviewChallenge || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isComparisonTable || isCompoundArchitecture || isTimelineEvolution || isCampusMetrics) && "text-center w-full",
           (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isCompoundArchitecture || isApiGateway || isHostingPipeline || isInnovationFlywheel || isFlywheelCaseStudy) && "hidden",
           isAgentWorkflow && "text-center text-3xl sm:text-5xl md:text-6xl mb-2 sm:mb-4 w-full",
-          isCaseStudyHero && "text-3xl md:text-4xl mb-4",
+          isCaseStudyHero && "text-3xl md:text-4xl mb-2 sm:mb-3 leading-tight",
+          isRoadmap && "mb-2 sm:mb-3 leading-tight",
+          isTeamGrid && "mb-2 sm:mb-3",
           isProblemStatement && "text-2xl sm:text-4xl md:text-5xl mb-2 sm:mb-4 font-black",
           isContractReviewChallenge && "text-2xl sm:text-4xl md:text-5xl mb-1 sm:mb-1.5 font-black",
           isAgentDevStrategy && "text-2xl sm:text-4xl md:text-5xl mb-1 sm:mb-2",
           (isVeryDense || useThreeColumns) && !isTitle && "text-2xl md:text-3xl mb-4",
           isGraphicHeavy && "text-2xl md:text-4xl",
           isFeatureGrid && "w-full text-center border-b-0 border-none mb-4 sm:mb-12",
+          isSolutionVideo && "mb-2 sm:mb-3 leading-tight",
           isTritonAIEvolutionSlide && "text-lg sm:text-2xl md:text-4xl mb-1 sm:mb-2 leading-tight",
-          isHeroList && "mb-0.5 sm:mb-2",
+          isHeroList && "mb-0 sm:mb-1",
           isTimelineEvolution && "mb-0.5 sm:mb-1 leading-none",
           isDark ? "text-white" : "text-ucsd-navy"
         )}
@@ -424,7 +475,8 @@ const Slide = ({ slide }) => {
           className={clsx(
             "text-base sm:text-xl md:text-2xl font-light mt-1 sm:mt-2 mb-3 sm:mb-6",
             (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isSolution || isSolutionVideo || isAssistantCategories || isKeyTakeaways || isAgentDevStrategy || isRoadmap || isProblemStatement || isContractReviewChallenge || isComparisonTable || isAgentWorkflow || isTimelineEvolution || isCampusMetrics) && "text-center w-full mb-4 sm:mb-8",
-            isHeroList && "mt-0 sm:mt-0.5 mb-2 sm:mb-3",
+            isSolutionVideo && "mt-0 sm:mt-0.5 mb-2 sm:mb-4",
+            isHeroList && "mt-0 mb-1.5 sm:mb-2",
             isProblemStatement && "text-lg sm:text-2xl md:text-3xl mb-4 sm:mb-10 font-medium text-red-600",
             isContractReviewChallenge && "text-base sm:text-xl md:text-2xl mb-2 sm:mb-2.5 font-semibold text-ucsd-blue",
             isAgentWorkflow && "text-lg sm:text-2xl font-semibold",
@@ -436,43 +488,139 @@ const Slide = ({ slide }) => {
         </motion.h2>
       )}
 
-      {isCaseStudyHero && (
-        <div className="flex flex-col gap-3 sm:gap-6 w-full max-w-[1700px] mx-auto">
-          {/* Stats Section - HERO TREATMENT - The primary focus */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-8">
-            {slide.stats?.map((stat, index) => (
+      {isHeroList && (
+        <div className="relative w-full max-w-[1800px] mx-auto mb-12 sm:mb-14">
+          <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-[#15305b] via-[#10284f] to-[#09172d] shadow-[0_24px_80px_-24px_rgba(9,23,45,0.85)] overflow-hidden">
+            <div className="absolute -top-16 left-[8%] h-44 w-44 rounded-full bg-ucsd-gold/18 blur-3xl pointer-events-none" />
+            <div className="absolute top-1/3 -right-10 h-48 w-48 rounded-full bg-ucsd-sky/15 blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-16 left-1/3 h-52 w-52 rounded-full bg-[#FC8900]/12 blur-3xl pointer-events-none" />
+            <div className="absolute inset-0 opacity-[0.08] pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.9) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.9) 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
+          </div>
+
+          <div className="relative flex flex-col gap-1.5 sm:gap-2 p-2.5 sm:p-3 lg:p-4">
+            {heroListSections.map((section, sectionIndex) => (
               <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
+                key={section.label}
+                initial={{ opacity: 0, y: 18 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 + index * 0.1 }}
-                className="bg-gradient-to-br from-ucsd-navy to-ucsd-blue p-4 sm:p-12 rounded-xl sm:rounded-3xl shadow-2xl text-center text-white relative overflow-hidden group hover:scale-105 transition-transform"
+                transition={{ delay: 0.2 + sectionIndex * 0.1, duration: 0.45, ease: "easeOut" }}
+                className="grid grid-cols-1 xl:grid-cols-[220px_minmax(0,1fr)] items-start gap-2 sm:gap-2.5 rounded-[1.6rem] border-[2.5px] bg-white/[0.06] backdrop-blur-sm p-2.5 sm:p-3 min-h-0"
+                style={{ borderColor: `${section.accent}66` }}
               >
-                <div className="absolute top-0 right-0 w-20 sm:w-40 h-20 sm:h-40 bg-ucsd-gold/10 rounded-full blur-3xl group-hover:bg-ucsd-gold/20 transition-colors" />
-                <div className="relative z-10">
-                  <div className="text-xs sm:text-base font-bold text-ucsd-sky uppercase tracking-[0.1em] sm:tracking-[0.15em] mb-1 sm:mb-3">{stat.label}</div>
-                  <div className="text-4xl sm:text-8xl font-black mb-1 sm:mb-3 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80 drop-shadow-lg">{stat.value}</div>
-                  <div className="text-xs sm:text-base font-medium text-white/80 uppercase tracking-wide">{stat.sub}</div>
+                <div className="flex flex-col gap-2 sm:gap-2.5 border-b xl:border-b-0 xl:border-r border-white/10 pb-2.5 xl:pb-0 xl:pr-3">
+                  <div>
+                    <div className="text-[10px] sm:text-xs font-black uppercase tracking-[0.22em] text-white/55 mb-2">
+                      Strategic Layer {sectionIndex + 1}
+                    </div>
+                    <div className="text-2xl sm:text-3xl lg:text-[2rem] font-black leading-none" style={{ color: section.accent }}>
+                      {section.label}
+                    </div>
+                    <div className="mt-1 text-sm sm:text-base font-bold text-white/85">
+                      {section.descriptor}
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-2 sm:gap-2.5">
+                    <div className="mt-0.5 h-7 w-7 rounded-full border border-white/15 bg-white/10 flex items-center justify-center text-white/70 flex-shrink-0">
+                      <ArrowRight size={15} />
+                    </div>
+                    <p className="text-[11px] sm:text-[13px] lg:text-sm leading-snug text-white/68 font-medium max-w-[18rem]">
+                      {section.summary}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-2.5 min-h-0">
+                  {section.items.map((item, itemIndex) => {
+                    const IconComponent = item.icon ? iconMap[item.icon] : null;
+                    return (
+                      <motion.div
+                        key={`${section.label}-${item.title}`}
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.3 + sectionIndex * 0.12 + itemIndex * 0.06, duration: 0.4 }}
+                        className={clsx(
+                          "relative h-full overflow-hidden rounded-[1.35rem] border border-white/60 bg-gradient-to-br shadow-[0_18px_48px_-28px_rgba(15,35,68,0.65)]",
+                          section.cardTint
+                        )}
+                      >
+                        <div className="absolute inset-y-0 left-0 w-1.5" style={{ backgroundColor: section.accent }} />
+                        <div className="h-full p-3 sm:p-3.5 lg:p-4 pl-4 sm:pl-5 flex flex-col">
+                          <div className="flex items-start gap-3">
+                            <div
+                              className="mt-0.5 w-10 h-10 sm:w-11 sm:h-11 rounded-2xl flex items-center justify-center text-white shadow-lg flex-shrink-0"
+                              style={{ backgroundColor: section.accent }}
+                            >
+                              {IconComponent ? <IconComponent size={20} className="sm:w-5 sm:h-5" strokeWidth={2.3} /> : <span className="text-sm font-black">{itemIndex + 1}</span>}
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <div className="flex flex-wrap items-center gap-2 mb-1">
+                                <h3 className="text-lg sm:text-[1.35rem] lg:text-[1.5rem] font-black text-ucsd-navy leading-tight">
+                                  {item.title}
+                                </h3>
+                                {item.badge && (
+                                  <span
+                                    className="inline-flex items-center rounded-full px-2.5 py-1 text-[10px] sm:text-[11px] font-black uppercase tracking-[0.16em]"
+                                    style={{ backgroundColor: `${section.accent}20`, color: section.accent }}
+                                  >
+                                    {item.badge}
+                                  </span>
+                                )}
+                              </div>
+                              <p className="text-[12px] sm:text-[13.5px] lg:text-[15px] leading-snug text-slate-700 font-medium">
+                                {item.text}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </motion.div>
+                    );
+                  })}
                 </div>
               </motion.div>
             ))}
           </div>
+        </div>
+      )}
+
+      {isCaseStudyHero && (
+        <div className="flex flex-col gap-2 sm:gap-4 w-full max-w-[1700px] mx-auto">
+          {/* Stats Section - HERO TREATMENT - The primary focus */}
+          {!!slide.stats?.length && (
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6">
+              {slide.stats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 + index * 0.1 }}
+                  className="bg-gradient-to-br from-ucsd-navy to-ucsd-blue p-4 sm:p-10 rounded-xl sm:rounded-3xl shadow-2xl text-center text-white relative overflow-hidden group hover:scale-105 transition-transform"
+                >
+                  <div className="absolute top-0 right-0 w-20 sm:w-40 h-20 sm:h-40 bg-ucsd-gold/10 rounded-full blur-3xl group-hover:bg-ucsd-gold/20 transition-colors" />
+                  <div className="relative z-10">
+                    <div className="text-xs sm:text-base font-bold text-ucsd-sky uppercase tracking-[0.1em] sm:tracking-[0.15em] mb-1 sm:mb-2.5">{stat.label}</div>
+                    <div className="text-4xl sm:text-8xl font-black mb-1 sm:mb-2.5 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80 drop-shadow-lg">{stat.value}</div>
+                    <div className="text-xs sm:text-base font-medium text-white/80 uppercase tracking-wide">{stat.sub}</div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          )}
 
           {/* Two-column layout for Quotes + Features */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-2.5 sm:gap-4">
             {/* Quotes Section - Supporting Evidence */}
-            <div className="flex flex-col gap-2 sm:gap-4">
+            <div className="flex flex-col gap-2 sm:gap-3">
               {slide.quotes?.map((quote, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.5 + index * 0.15 }}
-                  className="bg-white/80 backdrop-blur-sm p-3 sm:p-5 rounded-lg sm:rounded-xl border-l-4 border-ucsd-gold shadow-lg relative group hover:shadow-xl transition-all"
+                  className="bg-white/80 backdrop-blur-sm p-3 sm:p-4 rounded-lg sm:rounded-xl border-l-4 border-ucsd-gold shadow-lg relative group hover:shadow-xl transition-all"
                 >
                   <div className="absolute top-2 sm:top-4 left-2 sm:left-4 text-2xl sm:text-4xl text-ucsd-gold/15 font-serif leading-none">"</div>
                   <div className="relative z-10 pl-4 sm:pl-6">
-                    <div className="text-sm sm:text-lg text-ucsd-navy font-medium mb-1 sm:mb-2 leading-relaxed italic">
+                    <div className="text-sm sm:text-lg text-ucsd-navy font-medium mb-1 sm:mb-1.5 leading-relaxed italic">
                       {quote.text}
                     </div>
                     <div className="text-xs sm:text-sm font-bold text-ucsd-blue tracking-wide">— {quote.author}</div>
@@ -486,7 +634,7 @@ const Slide = ({ slide }) => {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.7 }}
-              className="grid grid-cols-1 gap-2 sm:gap-4"
+              className="grid grid-cols-1 gap-2 sm:gap-3"
             >
               {slide.content.map((item, index) => (
                 <motion.div
@@ -494,13 +642,13 @@ const Slide = ({ slide }) => {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.8 + index * 0.1 }}
-                  className="bg-gradient-to-br from-ucsd-sky/10 to-ucsd-blue/5 p-3 sm:p-4 rounded-lg sm:rounded-xl border-2 border-ucsd-sky/30 hover:border-ucsd-gold transition-all hover:shadow-md"
+                  className="bg-gradient-to-br from-ucsd-sky/10 to-ucsd-blue/5 p-3 sm:p-3.5 rounded-lg sm:rounded-xl border-2 border-ucsd-sky/30 hover:border-ucsd-gold transition-all hover:shadow-md"
                 >
                   <div className="flex items-start gap-2 sm:gap-3">
                     <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-ucsd-gold flex-shrink-0 mt-1.5 sm:mt-2" />
                     <div className="flex-1">
-                      <h3 className="font-bold text-ucsd-navy text-sm sm:text-lg mb-1 sm:mb-1.5">{item.heading}</h3>
-                      <p className="text-slate-700 text-xs sm:text-base leading-relaxed">{item.text}</p>
+                      <h3 className="font-bold text-ucsd-navy text-sm sm:text-lg mb-1">{item.heading}</h3>
+                      <p className="text-slate-700 text-xs sm:text-base leading-snug sm:leading-relaxed">{item.text}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -514,7 +662,7 @@ const Slide = ({ slide }) => {
               initial={{ opacity: 0, y: 30, scale: 0.9 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ delay: 1.2, duration: 1, type: "spring", stiffness: 80 }}
-              className="relative text-center w-full mt-2 sm:mt-4 px-4 sm:px-8 py-4 sm:py-6 rounded-xl sm:rounded-[2rem] overflow-hidden shadow-[0_8px_60px_-12px_rgba(0,98,155,0.15)] border border-ucsd-sky/15"
+              className="relative text-center w-full mt-1.5 sm:mt-2.5 px-4 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-[2rem] overflow-hidden shadow-[0_8px_60px_-12px_rgba(0,98,155,0.15)] border border-ucsd-sky/15"
             >
               {/* Animated gradient background */}
               <motion.div
@@ -549,7 +697,7 @@ const Slide = ({ slide }) => {
                   initial={{ opacity: 0, scale: 0 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 1.4, duration: 0.5, type: "spring", stiffness: 200 }}
-                  className="inline-flex items-center gap-2 px-4 py-1.5 mb-3 bg-white/90 rounded-full border-2 border-white shadow-lg backdrop-blur-sm"
+                  className="inline-flex items-center gap-2 px-4 py-1.5 mb-2 bg-white/90 rounded-full border-2 border-white shadow-lg backdrop-blur-sm"
                 >
                   <div className="text-lg">⚡</div>
                   <div className="text-xs font-black text-ucsd-navy uppercase tracking-[0.25em]">
@@ -574,7 +722,7 @@ const Slide = ({ slide }) => {
                   initial={{ scaleX: 0, opacity: 0 }}
                   animate={{ scaleX: 1, opacity: 1 }}
                   transition={{ delay: 1.8, duration: 1, ease: "easeOut" }}
-                  className="mx-auto mt-3 relative"
+                  className="mx-auto mt-2 relative"
                 >
                   <div className="w-36 h-1 bg-gradient-to-r from-transparent via-ucsd-navy to-transparent rounded-full" />
                   <div className="absolute inset-0 w-36 h-1 bg-gradient-to-r from-transparent via-ucsd-navy to-transparent rounded-full blur-md opacity-60" />
@@ -585,7 +733,7 @@ const Slide = ({ slide }) => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 2, duration: 0.8 }}
-                  className="mt-2 text-xs md:text-sm font-semibold text-ucsd-navy tracking-wide"
+                  className="mt-1.5 text-xs md:text-sm font-semibold text-ucsd-navy tracking-wide"
                 >
                   91% Faster Contract Review
                 </motion.div>
@@ -596,10 +744,10 @@ const Slide = ({ slide }) => {
       )}
 
       {(isSolution || isSolutionVideo) && (
-        <div className="w-full max-w-[1700px] mx-auto h-full">
+        <div className="w-full max-w-[1760px] mx-auto h-full">
           <div className={clsx(
             "grid gap-4 sm:gap-8 md:gap-12 h-full items-start pt-2 sm:pt-4",
-            isSolutionVideo ? "grid-cols-1 md:grid-cols-[1.1fr_0.9fr]" : "grid-cols-1 md:grid-cols-[1.1fr_0.9fr]"
+            isSolutionVideo ? "grid-cols-1 md:grid-cols-[1.02fr_0.98fr] gap-3 sm:gap-5 md:gap-7 pt-1 sm:pt-2" : "grid-cols-1 md:grid-cols-[1.1fr_0.9fr]"
           )}>
             {/* Left: Media (Image or Video) */}
             {(slide.imageSrc || slide.videoSrc) && (
@@ -614,7 +762,7 @@ const Slide = ({ slide }) => {
                   {slide.videoSrc ? (
                     <video
                       src={slide.videoSrc}
-                      className="relative w-full h-auto rounded-2xl shadow-lg ring-1 ring-black/5 object-cover"
+                      className="relative w-full h-auto max-h-[56vh] rounded-2xl shadow-lg ring-1 ring-black/5 object-contain"
                       autoPlay
                       loop
                       muted
@@ -624,7 +772,10 @@ const Slide = ({ slide }) => {
                     <img
                       src={slide.imageSrc}
                       alt={slide.title}
-                      className="relative w-full h-auto rounded-2xl shadow-lg ring-1 ring-black/5"
+                      className={clsx(
+                        "relative w-full h-auto rounded-2xl shadow-lg ring-1 ring-black/5",
+                        isSolutionVideo && "max-h-[56vh] object-contain"
+                      )}
                     />
                   )}
                 </div>
@@ -632,9 +783,9 @@ const Slide = ({ slide }) => {
             )}
 
             {/* Right: Stats + Features */}
-            <div className={clsx("flex flex-col", isSolutionVideo ? "justify-start gap-4 sm:gap-5" : "justify-start gap-4 sm:gap-6")}>
+            <div className={clsx("flex flex-col", isSolutionVideo ? "justify-start gap-3 sm:gap-4" : "justify-start gap-4 sm:gap-6")}>
               {/* Horizontal Stats Bar */}
-              <div className={clsx("flex flex-wrap sm:flex-nowrap", isSolutionVideo ? "gap-2 sm:gap-3" : "gap-2 sm:gap-4")}>
+              <div className={clsx("flex flex-wrap sm:flex-nowrap", isSolutionVideo ? "gap-1.5 sm:gap-2.5" : "gap-2 sm:gap-4")}>
                 {slide.stats?.map((stat, index) => (
                   <motion.div
                     key={index}
@@ -643,7 +794,7 @@ const Slide = ({ slide }) => {
                     transition={{ delay: 0.3 + index * 0.1 }}
                     className={clsx(
                       "flex-1 min-w-[45%] sm:min-w-0 bg-white rounded-lg sm:rounded-xl shadow-md border-t-4 border-ucsd-navy text-center",
-                      isSolutionVideo ? "p-2 sm:p-3" : "p-3 sm:p-5"
+                      isSolutionVideo ? "p-2 sm:p-2.5" : "p-3 sm:p-5"
                     )}
                   >
                     <div className={clsx(
@@ -669,7 +820,7 @@ const Slide = ({ slide }) => {
               </div>
 
               {/* Feature List */}
-              <div className={clsx("flex flex-col", isSolutionVideo ? "gap-3 sm:gap-4" : "space-y-2 sm:space-y-4")}>
+              <div className={clsx("flex flex-col", isSolutionVideo ? "gap-2.5 sm:gap-3" : "space-y-2 sm:space-y-4")}>
                 {slide.content.map((item, index) => (
                   <motion.div
                     key={index}
@@ -678,20 +829,20 @@ const Slide = ({ slide }) => {
                     transition={{ delay: 0.5 + index * 0.1 }}
                     className={clsx(
                       "flex gap-3 sm:gap-4 items-start bg-white/60 backdrop-blur-sm rounded-lg sm:rounded-xl shadow-sm border-l-4 border-ucsd-sky hover:shadow-md transition-shadow",
-                      isSolutionVideo ? "p-3 sm:p-4" : "p-3 sm:p-6"
+                      isSolutionVideo ? "p-2.5 sm:p-3.5" : "p-3 sm:p-6"
                     )}
                   >
                     <div className="w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-full bg-ucsd-gold flex-shrink-0 mt-1.5" />
                     <div className="flex-1 min-w-0">
                       <h3 className={clsx(
                         "font-bold text-ucsd-navy leading-tight mb-1",
-                        isSolutionVideo ? "text-lg sm:text-2xl" : "text-base sm:text-xl"
+                        isSolutionVideo ? "text-lg sm:text-[1.75rem]" : "text-base sm:text-xl"
                       )}>
                         {item.heading}
                       </h3>
                       <p className={clsx(
                         "text-slate-700 leading-snug font-medium",
-                        isSolutionVideo ? "text-base sm:text-lg" : "text-xs sm:text-base"
+                        isSolutionVideo ? "text-sm sm:text-[1.05rem]" : "text-xs sm:text-base"
                       )}>
                         {item.text}
                       </p>
@@ -1340,13 +1491,13 @@ const Slide = ({ slide }) => {
 
       {isPlatformSimple && (
         <div className="relative w-full h-full flex items-start sm:items-center justify-center overflow-y-auto">
-          <div className="w-full max-w-[1400px] py-1 sm:py-0 px-1 sm:px-0">
+          <div className="w-full max-w-[1400px] py-0.5 sm:py-0 px-1 sm:px-0">
             {/* Title */}
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-center mb-1 sm:mb-10"
+              className="text-center mb-0.5 sm:mb-5"
             >
               <div className="text-lg sm:text-4xl md:text-5xl font-black text-ucsd-navy">TritonAI Platform</div>
             </motion.div>
@@ -1356,14 +1507,14 @@ const Slide = ({ slide }) => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="relative bg-gradient-to-br from-white to-ucsd-blue/5 rounded-xl sm:rounded-3xl p-2 sm:p-6 md:p-10 shadow-2xl border-2 sm:border-4 border-ucsd-navy/20 mt-5 sm:mt-8"
+              className="relative bg-gradient-to-br from-white to-ucsd-blue/5 rounded-xl sm:rounded-3xl p-2 sm:p-4 md:p-7 shadow-2xl border-2 sm:border-4 border-ucsd-navy/20 mt-4 sm:mt-5"
             >
               {/* Platform label */}
               <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="absolute -top-2.5 sm:-top-6 left-1/2 -translate-x-1/2 bg-gradient-to-r from-ucsd-navy to-ucsd-blue text-white px-2 sm:px-8 py-1 sm:py-3 rounded-full shadow-xl"
+                className="absolute -top-2 sm:-top-5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-ucsd-navy to-ucsd-blue text-white px-2 sm:px-7 py-1 sm:py-2.5 rounded-full shadow-xl"
               >
                 <div className="flex items-center gap-1 sm:gap-3">
                   <Database size={12} className="text-ucsd-gold sm:w-6 sm:h-6" />
@@ -1372,7 +1523,7 @@ const Slide = ({ slide }) => {
               </motion.div>
 
               {/* Grid of assistants */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1.5 sm:gap-5 mt-1 sm:mt-0">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1.5 sm:gap-3.5 mt-1 sm:mt-0">
                 {slide.assistants?.map((assistant, index) => {
                   const IconComponent = assistant.icon ? iconMap[assistant.icon] : null;
 
@@ -1401,7 +1552,7 @@ const Slide = ({ slide }) => {
                         stiffness: 150
                       }}
                       whileHover={{ scale: 1.05, y: -2 }}
-                      className="bg-white rounded-md sm:rounded-xl px-1.5 sm:px-5 py-1.5 sm:py-4 shadow-md border-l-2 sm:border-l-8 hover:shadow-lg transition-shadow cursor-pointer"
+                      className="bg-white rounded-md sm:rounded-xl px-1.5 sm:px-4 py-1.5 sm:py-3 shadow-md border-l-2 sm:border-l-8 hover:shadow-lg transition-shadow cursor-pointer"
                       style={{ borderLeftColor: borderColor }}
                     >
                       <div className="flex items-center gap-1 sm:gap-4">
@@ -1431,7 +1582,7 @@ const Slide = ({ slide }) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.5 }}
-                className="mt-4 sm:mt-6 pt-3 sm:pt-4 border-t-2 border-ucsd-gold/30 text-center text-xs sm:text-base md:text-lg font-semibold flex items-center justify-center gap-2 sm:gap-4 text-black"
+                className="mt-3 sm:mt-4 pt-2 sm:pt-3 border-t-2 border-ucsd-gold/30 text-center text-xs sm:text-base md:text-lg font-semibold flex items-center justify-center gap-2 sm:gap-4 text-black"
               >
                 <span className="hidden sm:inline">Hosted at San Diego Supercomputer Center</span>
                 <span className="sm:hidden">Hosted at SDSC</span>
@@ -1446,9 +1597,9 @@ const Slide = ({ slide }) => {
       )}
 
       {isAssistantCategories && slide.categories && (
-        <div className="flex flex-col gap-2 sm:gap-4 w-full max-w-[1800px] mx-auto">
+        <div className="flex flex-col gap-1.5 sm:gap-3 w-full max-w-[1800px] mx-auto">
           <div className={clsx(
-            "grid grid-cols-1 gap-2 sm:gap-4",
+            "grid grid-cols-1 gap-1.5 sm:gap-3",
             slide.categories.length === 4 ? "md:grid-cols-2 lg:grid-cols-4" :
               slide.categories.length === 3 ? "sm:grid-cols-2 md:grid-cols-3" : "md:grid-cols-2"
           )}>
@@ -1458,14 +1609,14 @@ const Slide = ({ slide }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 + catIndex * 0.1 }}
-                className="bg-white rounded-xl sm:rounded-2xl shadow-xl p-2 sm:p-4 border-t-4 sm:border-t-8"
+                className="bg-white rounded-xl sm:rounded-2xl shadow-xl p-2 sm:p-3 border-t-4 sm:border-t-8"
                 style={{ borderTopColor: category.color }}
               >
-                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-ucsd-navy flex items-center gap-2 sm:gap-3">
-                  <div className="w-2 h-6 sm:w-2.5 sm:h-7 rounded-full" style={{ backgroundColor: category.color }} />
+                <h3 className="text-lg sm:text-xl font-bold mb-1.5 sm:mb-2 text-ucsd-navy flex items-center gap-2 sm:gap-2.5">
+                  <div className="w-2 h-5 sm:w-2.5 sm:h-6 rounded-full" style={{ backgroundColor: category.color }} />
                   {category.name}
                 </h3>
-                <div className="flex flex-col gap-1.5 sm:gap-2">
+                <div className="flex flex-col gap-1 sm:gap-1.5">
                   {category.assistants.map((assistant, idx) => {
                     const IconComponent = assistant.icon ? iconMap[assistant.icon] : null;
                     return (
@@ -1474,18 +1625,18 @@ const Slide = ({ slide }) => {
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.4 + catIndex * 0.1 + idx * 0.05 }}
-                        className="flex items-start gap-2 sm:gap-2.5 p-1.5 sm:p-2 rounded-lg sm:rounded-xl hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-100"
+                        className="flex items-start gap-2 sm:gap-2.5 p-1 sm:p-1.5 rounded-lg sm:rounded-xl hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-100"
                       >
                         {IconComponent ? (
-                          <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: category.color }}>
-                            <IconComponent size={14} className="text-white sm:w-4 sm:h-4" />
+                          <div className="w-7 h-7 sm:w-7 sm:h-7 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: category.color }}>
+                            <IconComponent size={14} className="text-white sm:w-[15px] sm:h-[15px]" />
                           </div>
                         ) : (
                           <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full mt-1.5 flex-shrink-0" style={{ backgroundColor: category.color }} />
                         )}
                         <div>
                           <div className="font-bold text-ucsd-navy text-sm sm:text-base md:text-lg leading-tight">{assistant.heading}</div>
-                          <div className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed mt-0.5">{assistant.text}</div>
+                          <div className="text-xs sm:text-sm text-slate-600 font-medium leading-snug mt-0.5">{assistant.text}</div>
                         </div>
                       </motion.div>
                     );
@@ -1500,7 +1651,7 @@ const Slide = ({ slide }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="mt-2 sm:mt-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6 border-2 border-green-600"
+              className="mt-1.5 sm:mt-2.5 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl sm:rounded-2xl shadow-lg p-3 sm:p-4 border-2 border-green-600"
             >
               <div className="text-center text-sm sm:text-lg md:text-xl font-bold text-green-900">
                 {slide.saasOnboarding.text}
@@ -1968,21 +2119,21 @@ const Slide = ({ slide }) => {
                 initial={{ opacity: 0, y: -16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45, ease: 'easeOut' }}
-                className="relative mb-2 sm:mb-3 lg:mb-4 overflow-hidden rounded-xl sm:rounded-2xl border-2 border-[#3e6cbe]/40 bg-gradient-to-r from-[#d9e8ff] via-[#c6dcff] to-[#b2d1ff] shadow-xl"
+                className="relative mb-1 sm:mb-2 lg:mb-2.5 overflow-hidden rounded-xl sm:rounded-2xl border-2 border-[#3e6cbe]/40 bg-gradient-to-r from-[#d9e8ff] via-[#c6dcff] to-[#b2d1ff] shadow-xl"
               >
                 <div className="absolute -right-10 -top-10 h-36 w-36 rounded-full bg-[#184aa3]/10 blur-2xl pointer-events-none" />
                 <div className="absolute -left-10 -bottom-10 h-36 w-36 rounded-full bg-[#00a6b6]/10 blur-2xl pointer-events-none" />
-                <div className="relative p-3 sm:p-5 lg:p-6">
-                  <div className="inline-flex items-center gap-2 rounded-full bg-white/75 px-2.5 py-1 text-[10px] sm:text-[11px] font-bold tracking-[0.16em] uppercase text-[#184aa3] mb-2 sm:mb-3">
+                <div className="relative p-2.5 sm:p-4 lg:p-4">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-white/75 px-2.5 py-1 text-[10px] sm:text-[11px] font-bold tracking-[0.16em] uppercase text-[#184aa3] mb-1.5 sm:mb-2">
                     <Layers size={14} className="sm:w-4 sm:h-4" />
                     Overarching Platform Layer
                   </div>
-                  <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-2 sm:gap-3">
+                  <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-1.5 sm:gap-2.5">
                     <div>
                       <h3 className="text-xl sm:text-3xl lg:text-4xl font-black text-ucsd-navy tracking-tight leading-tight">
                         {slide.content[0].heading}
                       </h3>
-                      <p className="mt-1.5 sm:mt-2 text-xs sm:text-base lg:text-lg text-slate-800 font-semibold max-w-6xl leading-snug sm:leading-relaxed">
+                      <p className="mt-1 sm:mt-1.5 text-xs sm:text-base lg:text-lg text-slate-800 font-semibold max-w-6xl leading-snug sm:leading-relaxed">
                         {slide.content[0].text}
                       </p>
                     </div>
@@ -1993,23 +2144,23 @@ const Slide = ({ slide }) => {
                 </div>
               </motion.div>
 
-              <div className="mb-1 sm:mb-2 lg:mb-0">
+              <div className="mb-0.5 sm:mb-1.5 lg:mb-0">
                 {/* Mobile/tablet connector */}
                 <div className="flex justify-center lg:hidden">
                   <div className="flex flex-col items-center text-[#184aa3]">
                     <ArrowDown size={20} className="sm:w-6 sm:h-6" />
-                    <div className="mt-1 h-7 sm:h-9 w-1 rounded-full bg-gradient-to-b from-[#184aa3] via-[#00a6b6]/80 to-[#184aa3]/10" />
+                    <div className="mt-1 h-5 sm:h-7 w-1 rounded-full bg-gradient-to-b from-[#184aa3] via-[#00a6b6]/80 to-[#184aa3]/10" />
                   </div>
                 </div>
 
                 {/* Desktop branching connector from Hub to all capability cards */}
-                <div className="hidden lg:block relative h-12">
-                  <div className="absolute left-1/2 top-0 -translate-x-1/2 h-4 w-1 rounded-full bg-gradient-to-b from-[#184aa3] to-[#00a6b6]" />
-                  <div className="absolute left-[10%] right-[10%] top-4 h-1 rounded-full bg-gradient-to-r from-[#184aa3]/90 via-[#00a6b6]/90 to-[#184aa3]/90 shadow-[0_0_10px_rgba(24,74,163,0.35)]" />
+                <div className="hidden lg:block relative h-9">
+                  <div className="absolute left-1/2 top-0 -translate-x-1/2 h-3 w-1 rounded-full bg-gradient-to-b from-[#184aa3] to-[#00a6b6]" />
+                  <div className="absolute left-[10%] right-[10%] top-3 h-1 rounded-full bg-gradient-to-r from-[#184aa3]/90 via-[#00a6b6]/90 to-[#184aa3]/90 shadow-[0_0_10px_rgba(24,74,163,0.35)]" />
                   {tritonAIConnectorPositions.map((position, idx) => (
-                    <div key={idx} className="absolute top-4 -translate-x-1/2" style={{ left: `${position}%` }}>
+                    <div key={idx} className="absolute top-3 -translate-x-1/2" style={{ left: `${position}%` }}>
                       <div className="w-2.5 h-2.5 rounded-full bg-white border-2 border-[#184aa3] shadow-sm" />
-                      <div className="mx-auto h-7 w-0.5 bg-gradient-to-b from-[#184aa3]/90 to-[#184aa3]/20" />
+                      <div className="mx-auto h-5 w-0.5 bg-gradient-to-b from-[#184aa3]/90 to-[#184aa3]/20" />
                     </div>
                   ))}
                 </div>
@@ -2017,7 +2168,7 @@ const Slide = ({ slide }) => {
             </>
           )}
 
-          <div className={clsx('grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4', isTritonAIEvolutionSlide && tritonAICapabilityGridClass)}>
+          <div className={clsx('grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-3', isTritonAIEvolutionSlide && tritonAICapabilityGridClass)}>
             {(isTritonAIEvolutionSlide ? tritonAICapabilityItems : slide.content).map((item, index) => {
               const displayIndex = isTritonAIEvolutionSlide ? index + 1 : index;
               const topBarColors = ['#182B49', '#00C6D7', '#00629B', '#FFCD00', '#FC8900', '#6E963B'];
@@ -2081,9 +2232,9 @@ const Slide = ({ slide }) => {
                   <div className="h-1.5 sm:h-2 w-full" style={{ backgroundColor: topBarColor }} />
 
                   {/* Content */}
-                  <div className="p-3 sm:p-4 lg:p-5">
+                  <div className="p-2.5 sm:p-3.5 lg:p-4">
                     {isTritonAIEvolutionSlide && (
-                      <div className="mb-2 sm:mb-2.5 inline-flex items-center gap-2">
+                      <div className="mb-1.5 sm:mb-2 inline-flex items-center gap-2">
                         <div className={clsx('rounded-full px-2 py-0.5 text-[10px] sm:text-[11px] font-bold tracking-wider uppercase', evolutionStyle.iconBadgeClass)}>
                           {tritonAICapabilityBadgeLabels[item.heading] || 'Core Capability'}
                         </div>
@@ -2095,7 +2246,7 @@ const Slide = ({ slide }) => {
                     </div>
 
                     {/* Heading */}
-                    <h3 className="text-sm sm:text-lg md:text-xl font-bold mb-1.5 sm:mb-2.5 text-ucsd-navy tracking-tight leading-tight pr-8 sm:pr-14">
+                    <h3 className="text-sm sm:text-lg md:text-xl font-bold mb-1 sm:mb-1.5 text-ucsd-navy tracking-tight leading-tight pr-8 sm:pr-14">
                       {item.heading}
                     </h3>
 
@@ -3345,7 +3496,7 @@ const Slide = ({ slide }) => {
         const radius = 90;
 
         return (
-          <div className="w-full max-w-[1800px] mx-auto flex flex-col gap-1.5 sm:gap-2">
+          <div className="w-full max-w-[1800px] mx-auto flex flex-col gap-1 sm:gap-1.5">
             {/* Title */}
             <motion.div
               initial={{ opacity: 0, y: -20 }}
@@ -3353,16 +3504,16 @@ const Slide = ({ slide }) => {
               transition={{ duration: 0.6 }}
               className="text-center"
             >
-              <div className="inline-flex items-center gap-2 rounded-full bg-ucsd-navy/8 px-3 py-1 mb-1.5">
+              <div className="inline-flex items-center gap-2 rounded-full bg-ucsd-navy/8 px-3 py-1 mb-1">
                 <RefreshCw size={12} className="text-ucsd-blue" />
                 <span className="text-[10px] sm:text-xs font-black text-ucsd-navy uppercase tracking-[0.2em]">Use Case</span>
               </div>
               <div className="text-2xl sm:text-4xl md:text-5xl font-black text-ucsd-navy leading-none">{slide.title}</div>
-              <div className="text-sm sm:text-lg text-ucsd-blue font-medium mt-1.5 max-w-4xl mx-auto leading-snug">{slide.subtitle}</div>
+              <div className="text-sm sm:text-lg text-ucsd-blue font-medium mt-1 max-w-4xl mx-auto leading-snug">{slide.subtitle}</div>
             </motion.div>
 
             {/* Main Content: Flywheel + Stage Cards */}
-            <div className="flex flex-col lg:grid lg:grid-cols-2 items-center lg:items-start gap-2 sm:gap-4 px-2 sm:px-4">
+            <div className="flex flex-col lg:grid lg:grid-cols-2 items-center lg:items-start gap-1.5 sm:gap-3 px-2 sm:px-4">
               {caseStudyVideoSrc ? (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.96, y: 12 }}
@@ -3370,7 +3521,7 @@ const Slide = ({ slide }) => {
                   transition={{ delay: 0.3, duration: 0.6 }}
                   className="w-full max-w-[640px] lg:max-w-none flex-shrink-0 self-start"
                 >
-                  <div className="rounded-[28px] border border-ucsd-navy/10 bg-white/88 p-2.5 shadow-[0_20px_44px_rgba(24,43,73,0.12)]">
+                  <div className="rounded-[28px] border border-ucsd-navy/10 bg-white/88 p-2 shadow-[0_20px_44px_rgba(24,43,73,0.12)]">
                     <div className="relative aspect-[16/10] overflow-hidden rounded-[22px] bg-slate-950">
                       <video
                         src={caseStudyVideoSrc}
@@ -3382,14 +3533,14 @@ const Slide = ({ slide }) => {
                         playsInline
                         preload="metadata"
                       />
-                      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/80 via-slate-950/35 to-transparent px-3 py-2">
+                      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/80 via-slate-950/35 to-transparent px-3 py-1.5">
                         <div className="inline-flex items-center gap-2 rounded-full bg-white/12 px-2.5 py-1 backdrop-blur-sm">
                           <div className="w-2 h-2 rounded-full bg-emerald-400" />
                           <span className="text-[10px] font-black uppercase tracking-[0.18em] text-white">{caseStudyDemoLabel}</span>
                         </div>
                       </div>
                     </div>
-                    <div className="flex items-center justify-between gap-2 px-1.5 pt-2.5">
+                    <div className="flex items-center justify-between gap-2 px-1.5 pt-2">
                       <div className="text-[11px] sm:text-xs font-black uppercase tracking-[0.16em] text-ucsd-navy/55">Live Product Preview</div>
                       <div className="text-[11px] sm:text-xs font-semibold text-ucsd-blue">Browser-first, campus-hosted</div>
                     </div>
@@ -3535,7 +3686,7 @@ const Slide = ({ slide }) => {
               )}
 
               {/* Stage Detail Cards */}
-              <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-1.5 sm:gap-2 w-full">
+              <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-1 sm:gap-1.5 w-full">
                 {stages.map((stage, i) => {
                   const IconComp = iconMap[stage.icon] || Target;
                   return (
@@ -3544,19 +3695,19 @@ const Slide = ({ slide }) => {
                       initial={{ opacity: 0, x: 30 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 1.2 + i * 0.15 }}
-                      className="bg-white/90 backdrop-blur-sm rounded-lg sm:rounded-xl p-3 sm:p-4 shadow-sm border-l-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 group"
+                      className="bg-white/90 backdrop-blur-sm rounded-lg sm:rounded-xl p-2.5 sm:p-3.5 shadow-sm border-l-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 group"
                       style={{ borderLeftColor: stage.color }}
                     >
-                      <div className="flex items-start gap-3">
+                      <div className="flex items-start gap-2.5">
                         <div
-                          className="w-9 h-9 sm:w-11 sm:h-11 rounded-lg flex items-center justify-center flex-shrink-0 shadow-sm group-hover:scale-110 transition-transform"
+                          className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center flex-shrink-0 shadow-sm group-hover:scale-110 transition-transform"
                           style={{ backgroundColor: `${stage.color}15` }}
                         >
-                          <IconComp size={18} className="sm:w-5 sm:h-5" style={{ color: stage.color }} />
+                          <IconComp size={16} className="sm:w-[18px] sm:h-[18px]" style={{ color: stage.color }} />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <div className="text-base sm:text-lg lg:text-[1.35rem] font-black text-ucsd-navy leading-tight mb-1">{stage.name}</div>
-                          <p className="text-sm sm:text-base lg:text-[1.05rem] text-slate-600 font-medium leading-[1.35]">{stage.description}</p>
+                          <div className="text-base sm:text-lg lg:text-[1.3rem] font-black text-ucsd-navy leading-tight mb-0.5">{stage.name}</div>
+                          <p className="text-sm sm:text-base lg:text-[1rem] text-slate-600 font-medium leading-[1.3]">{stage.description}</p>
                         </div>
                       </div>
                     </motion.div>
@@ -3570,7 +3721,7 @@ const Slide = ({ slide }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.8 }}
-              className="grid grid-cols-3 gap-1.5 sm:gap-2.5 px-2 sm:px-4"
+              className="grid grid-cols-3 gap-1.5 sm:gap-2 px-2 sm:px-4"
             >
               {metrics.map((metric, i) => (
                 <motion.div
@@ -3578,7 +3729,7 @@ const Slide = ({ slide }) => {
                   initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1.9 + i * 0.1 }}
-                  className="bg-gradient-to-br from-ucsd-navy to-ucsd-blue p-2 sm:p-3 rounded-lg sm:rounded-xl shadow-lg text-center text-white relative overflow-hidden group hover:scale-[1.02] transition-transform"
+                  className="bg-gradient-to-br from-ucsd-navy to-ucsd-blue p-2 sm:p-2.5 rounded-lg sm:rounded-xl shadow-lg text-center text-white relative overflow-hidden group hover:scale-[1.02] transition-transform"
                 >
                   <div className="absolute top-0 right-0 w-12 h-12 sm:w-14 sm:h-14 bg-ucsd-gold/10 rounded-full blur-2xl group-hover:bg-ucsd-gold/20 transition-colors" />
                   <div className="relative z-10">
@@ -3595,10 +3746,10 @@ const Slide = ({ slide }) => {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 2.2 }}
-              className="flex flex-col items-center gap-1.5 px-4"
+              className="flex flex-col items-center gap-1 px-4"
             >
               {/* Tool pills */}
-              <div className="flex flex-wrap justify-center gap-1.5">
+              <div className="flex flex-wrap justify-center gap-1">
                 {highlights.map((h, i) => (
                   <motion.span
                     key={i}
@@ -3614,7 +3765,7 @@ const Slide = ({ slide }) => {
 
               {/* Key Message */}
               {slide.keyMessage && (
-                <div className="inline-flex items-center gap-2 bg-ucsd-navy/5 rounded-full px-3 py-1.5 sm:px-5 sm:py-2 border border-ucsd-navy/10">
+                <div className="inline-flex items-center gap-2 bg-ucsd-navy/5 rounded-full px-3 py-1 sm:px-5 sm:py-1.5 border border-ucsd-navy/10">
                   <Star size={12} className="text-ucsd-gold flex-shrink-0" />
                   <span className="text-[11px] sm:text-xs font-bold text-ucsd-navy italic">{slide.keyMessage}</span>
                 </div>
@@ -3814,10 +3965,10 @@ const Slide = ({ slide }) => {
       })()}
 
       {isTeamGrid && slide.teamMembers && (
-        <div className="w-full max-w-[1800px] mx-auto h-full flex flex-col px-4">
+        <div className="w-full max-w-[1800px] mx-auto h-full flex flex-col px-2 sm:px-4">
           {/* Leadership row - Service Owner & Offering Manager */}
           {slide.teamLeadership && (
-            <div className="flex justify-center gap-4 lg:gap-8 mb-2">
+            <div className="flex justify-center gap-3 lg:gap-5 mb-1.5">
               {slide.teamLeadership.map((leader, index) => {
                 // Custom avatar seeds for leadership - Service Owner has mohawk, Offering Manager is male
                 const leaderAvatarSeeds = {
@@ -3835,13 +3986,13 @@ const Slide = ({ slide }) => {
                       type: "spring",
                       stiffness: 100
                     }}
-                    className="flex items-center gap-1.5 bg-white rounded-lg shadow-lg px-1.5 py-1 lg:px-2 lg:py-1.5 max-w-xl"
+                    className="flex items-center gap-1.5 bg-white rounded-lg shadow-lg px-1.5 py-1 lg:px-2 lg:py-1 max-w-xl"
                     style={{ borderLeft: `5px solid ${leader.color}` }}
                   >
                     {/* Professional avatar */}
                     <div className="flex-shrink-0 relative">
                       <div
-                        className="w-20 h-20 lg:w-28 lg:h-28 rounded-full shadow-sm overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200"
+                        className="w-[4.5rem] h-[4.5rem] lg:w-24 lg:h-24 rounded-full shadow-sm overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200"
                         style={{ border: `3px solid ${leader.color}` }}
                       >
                         <img
@@ -3858,7 +4009,7 @@ const Slide = ({ slide }) => {
                     {/* Role info and responsibilities */}
                     <div className="flex-1 min-w-0">
                       <div className="text-base lg:text-lg font-black text-ucsd-navy leading-tight">{leader.role}</div>
-                      <p className="text-sm lg:text-base text-slate-600 leading-snug line-clamp-2">
+                      <p className="text-sm lg:text-[15px] text-slate-600 leading-snug line-clamp-2">
                         {leader.responsibilities}
                       </p>
                     </div>
@@ -3873,9 +4024,9 @@ const Slide = ({ slide }) => {
             initial={{ scaleY: 0, opacity: 0 }}
             animate={{ scaleY: 1, opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.4, ease: "easeOut" }}
-            className="hidden md:flex justify-center mb-1 origin-top"
+            className="hidden md:flex justify-center mb-0.5 origin-top"
           >
-            <div className="w-1 h-6 bg-ucsd-navy/60 rounded-full overflow-hidden">
+            <div className="w-1 h-5 bg-ucsd-navy/60 rounded-full overflow-hidden">
               <motion.div
                 initial={{ y: "-100%" }}
                 animate={{ y: "0%" }}
@@ -3888,7 +4039,7 @@ const Slide = ({ slide }) => {
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ delay: 0.7, duration: 0.5, ease: "easeOut" }}
-            className="hidden md:block w-4/5 mx-auto mb-2 origin-center"
+            className="hidden md:block w-4/5 mx-auto mb-1.5 origin-center"
           >
             <div className="h-1 bg-gradient-to-r from-ucsd-navy/20 via-ucsd-navy/60 to-ucsd-navy/20 rounded-full overflow-hidden">
               <motion.div
@@ -3901,7 +4052,7 @@ const Slide = ({ slide }) => {
           </motion.div>
 
           {/* Team members grid - 3 columns */}
-          <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1.5 lg:gap-2">
+          <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 lg:gap-1.5">
             {slide.teamMembers.map((member, index) => {
               const roleColors = {
                 'Platform': '#00629B',
@@ -3938,13 +4089,13 @@ const Slide = ({ slide }) => {
                     damping: 14
                   }}
                   whileHover={{ scale: 1.02, y: -2 }}
-                  className="flex items-center gap-2 bg-white rounded-lg shadow-md hover:shadow-lg px-1.5 py-0.5 lg:px-2 lg:py-1 transition-all"
+                  className="flex items-center gap-2 bg-white rounded-lg shadow-md hover:shadow-lg px-1.5 py-0.5 lg:px-2 lg:py-0.5 transition-all"
                   style={{ borderLeft: `4px solid ${roleColor}` }}
                 >
                   {/* Professional avatar */}
                   <div className="flex-shrink-0 relative">
                     <div
-                      className="w-16 h-16 lg:w-24 lg:h-24 rounded-full overflow-hidden shadow-sm bg-gradient-to-br from-slate-100 to-slate-200"
+                      className="w-14 h-14 lg:w-20 lg:h-20 rounded-full overflow-hidden shadow-sm bg-gradient-to-br from-slate-100 to-slate-200"
                       style={{ border: `2px solid ${roleColor}` }}
                     >
                       <img
@@ -3961,10 +4112,10 @@ const Slide = ({ slide }) => {
 
                   {/* Role info and responsibilities */}
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-lg lg:text-xl font-bold text-ucsd-navy leading-tight">
+                    <h3 className="text-lg lg:text-[1.35rem] font-bold text-ucsd-navy leading-tight">
                       {member.role}
                     </h3>
-                    <p className="text-base lg:text-lg text-slate-600 leading-snug line-clamp-2">
+                    <p className="text-[15px] lg:text-base text-slate-600 leading-snug line-clamp-2">
                       {member.responsibilities}
                     </p>
                   </div>
@@ -3979,10 +4130,10 @@ const Slide = ({ slide }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.0 }}
-              className="mt-3 flex items-center justify-center gap-4"
+              className="mt-2 flex items-center justify-center gap-3"
             >
               <span className="text-base lg:text-lg font-semibold text-slate-500">Student Workers:</span>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2.5">
                 {slide.studentWorkers.map((student, index) => {
                   // Mix of male and female student avatars
                   const studentAvatarSeeds = ['Alex', 'Emma', 'Ryan', 'Mia'];
@@ -3995,7 +4146,7 @@ const Slide = ({ slide }) => {
                       transition={{ delay: 1.1 + index * 0.1, type: "spring" }}
                       className="relative"
                     >
-                      <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-full overflow-hidden shadow-md border-2 border-ucsd-sky bg-gradient-to-br from-slate-100 to-slate-200">
+                      <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-full overflow-hidden shadow-md border-2 border-ucsd-sky bg-gradient-to-br from-slate-100 to-slate-200">
                         <img
                           src={`https://api.dicebear.com/7.x/notionists/svg?seed=${studentSeed}&backgroundColor=f8fafc`}
                           alt={student.role}
@@ -4019,9 +4170,9 @@ const Slide = ({ slide }) => {
               initial={{ opacity: 0, y: 20, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ delay: 1.2, type: "spring", stiffness: 80 }}
-              className="mt-8"
+              className="mt-3 sm:mt-4"
             >
-              <div className="relative bg-gradient-to-r from-ucsd-gold/20 via-ucsd-sky/40 to-ucsd-gold/20 rounded-2xl px-10 lg:px-16 py-5 lg:py-6 overflow-hidden shadow-lg border-2 border-ucsd-navy/20">
+              <div className="relative bg-gradient-to-r from-ucsd-gold/20 via-ucsd-sky/40 to-ucsd-gold/20 rounded-2xl px-8 lg:px-12 py-3.5 lg:py-4 overflow-hidden shadow-lg border-2 border-ucsd-navy/20">
                 {/* Decorative elements */}
                 <div className="absolute left-0 top-0 bottom-0 w-2 bg-gradient-to-b from-ucsd-gold via-ucsd-navy to-ucsd-gold" />
                 <div className="absolute right-0 top-0 bottom-0 w-2 bg-gradient-to-b from-ucsd-gold via-ucsd-navy to-ucsd-gold" />
@@ -4033,7 +4184,7 @@ const Slide = ({ slide }) => {
                 <div className="absolute left-12 top-3 w-2 h-2 bg-ucsd-gold/60 rounded-full" />
                 <div className="absolute right-16 bottom-3 w-2 h-2 bg-ucsd-sky/80 rounded-full" />
 
-                <div className="flex items-center justify-center gap-12 lg:gap-24">
+                <div className="flex items-center justify-center gap-10 lg:gap-16">
                   {slide.teamStats.map((stat, index) => (
                     <motion.div
                       key={index}
@@ -4042,10 +4193,10 @@ const Slide = ({ slide }) => {
                       transition={{ delay: 1.4 + index * 0.1 }}
                       className="text-center relative"
                     >
-                      <div className="text-4xl lg:text-6xl font-black text-ucsd-navy">
+                      <div className="text-4xl lg:text-5xl font-black text-ucsd-navy leading-none">
                         {stat.value}
                       </div>
-                      <div className="text-sm lg:text-base font-bold text-ucsd-navy/80 uppercase tracking-wider mt-1">{stat.label}</div>
+                      <div className="text-sm lg:text-base font-bold text-ucsd-navy/80 uppercase tracking-wider mt-0.5">{stat.label}</div>
                     </motion.div>
                   ))}
                 </div>
@@ -4055,7 +4206,7 @@ const Slide = ({ slide }) => {
         </div>
       )}
 
-      {!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isAgentDevStrategy && !isRoadmap && !isProblemStatement && !isContractReviewChallenge && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isAgentWorkflow && !isAnalyticsChart && !isTeamGrid && !isTimelineEvolution && !isCampusMetrics && !isApiGateway && !isHostingPipeline && !isInnovationFlywheel && !isFlywheelCaseStudy && slide.content && slide.content.length > 0 && (
+      {!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isAgentDevStrategy && !isRoadmap && !isProblemStatement && !isContractReviewChallenge && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isAgentWorkflow && !isAnalyticsChart && !isTeamGrid && !isTimelineEvolution && !isCampusMetrics && !isApiGateway && !isHostingPipeline && !isInnovationFlywheel && !isFlywheelCaseStudy && !isHeroList && slide.content && slide.content.length > 0 && (
         <motion.ul
           variants={containerVariants}
           initial="hidden"
@@ -4354,7 +4505,7 @@ const Slide = ({ slide }) => {
     <div
       className={clsx(
         "w-full h-full flex flex-col relative overflow-hidden transition-colors duration-500 break-words",
-        isTimelineEvolution ? "p-1.5 sm:p-3 md:p-4" : isHeroList ? "p-2 sm:p-4 md:p-6" : isContractReviewChallenge ? "p-2 sm:p-2.5 md:p-3" : (isTritonAIEvolutionSlide || isAgentDevStrategy) ? "p-2 sm:p-3 md:p-4" : "p-2 sm:p-6 md:p-12",
+        isTimelineEvolution ? "p-1.5 sm:p-3 md:p-4" : isHeroList ? "p-2 sm:p-3 md:p-4" : isContractReviewChallenge ? "p-2 sm:p-2.5 md:p-3" : isTritonAIEvolutionSlide ? "p-1.5 sm:p-2.5 md:p-3" : isPlatformSimple ? "p-2 sm:p-4 md:p-6" : isSolutionVideo ? "p-2 sm:p-4 md:p-6" : isCaseStudyHero ? "p-2 sm:p-4 md:p-6" : isRoadmap ? "p-2 sm:p-4 md:p-5" : isFlywheelCaseStudy ? "p-2 sm:p-3 md:p-4" : isAgentDevStrategy ? "p-2 sm:p-3 md:p-4" : "p-2 sm:p-6 md:p-12",
         !slide.backgroundColor && (isDark ? "bg-[#1a1a1a]" : "bg-gray-50")
       )}
       style={slide.backgroundColor ? { backgroundColor: slide.backgroundColor } : {}}
@@ -4400,8 +4551,8 @@ const Slide = ({ slide }) => {
             </div>
           </div>
         ) : (
-          <div className={clsx("flex flex-col h-full w-full", isTitle ? "justify-center items-center text-center" : isTimelineEvolution ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isHeroList ? "justify-start pt-1 sm:pt-2 overflow-y-auto touch-pan-y custom-scrollbar" : isContractReviewChallenge ? "justify-start pt-0 sm:pt-0.5 overflow-y-auto touch-pan-y custom-scrollbar" : (isTritonAIEvolutionSlide || isAgentDevStrategy) ? "justify-start pt-1 sm:pt-2 overflow-y-auto touch-pan-y custom-scrollbar" : "justify-start pt-4 overflow-y-auto touch-pan-y custom-scrollbar")}>
-            <div className={clsx("w-full mx-auto", isTimelineEvolution && "max-w-[1800px] h-full flex flex-col", (isSolution || isSolutionVideo || isCaseStudyHero || isProblemStatement || isContractReviewChallenge || isFeatureGrid || isCampusMetrics || isAgentDevStrategy || isFlywheelCaseStudy) ? "max-w-[1800px]" : !isTimelineEvolution && "max-w-7xl")}>{renderContent()}</div>
+          <div className={clsx("flex flex-col h-full w-full", isTitle ? "justify-center items-center text-center" : isTimelineEvolution ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isHeroList ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isContractReviewChallenge ? "justify-start pt-0 sm:pt-0.5 overflow-y-auto touch-pan-y custom-scrollbar" : isTritonAIEvolutionSlide ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isPlatformSimple ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isSolutionVideo ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isCaseStudyHero ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isRoadmap ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isFlywheelCaseStudy ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isAgentDevStrategy ? "justify-start pt-1 sm:pt-2 overflow-y-auto touch-pan-y custom-scrollbar" : "justify-start pt-4 overflow-y-auto touch-pan-y custom-scrollbar")}>
+            <div className={clsx("w-full mx-auto", (isTimelineEvolution || isHeroList) && "max-w-[1800px] h-full flex flex-col", (isSolution || isSolutionVideo || isCaseStudyHero || isProblemStatement || isContractReviewChallenge || isFeatureGrid || isCampusMetrics || isAgentDevStrategy || isFlywheelCaseStudy || isHeroList) ? "max-w-[1800px]" : !isTimelineEvolution && "max-w-7xl")}>{renderContent()}</div>
           </div>
         )}
       </div>
