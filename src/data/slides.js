@@ -242,34 +242,34 @@ export const slides = [
     "type": "content",
     "content": [
       {
-        "heading": "Host Locally, Access Everything",
-        "text": "Hosting AI on-prem lets it access sensitive systems like HR and Finance. If the data can't leave campus, the AI has to live on campus.",
+        "heading": "Trust is Infrastructure",
+        "text": "Sensitive workflows in HR, finance, legal, and student support require governed infrastructure. Use on-prem models when data must stay on campus, and enterprise-approved hosted models when institutional agreements provide the right security, compliance, and scale.",
         "icon": "Shield"
       },
       {
-        "heading": "Free for Every User",
-        "text": "Zero per-query cost means every employee and student can use AI without limits. Free access drives adoption and experimentation.",
+        "heading": "Make AI a Utility",
+        "text": "Shared campus infrastructure and zero variable cost make AI abundant instead of rationed. Broad access drives adoption, experimentation, and institution-wide scale.",
         "icon": "Cpu"
       },
       {
-        "heading": "Build for Specific Problems",
-        "text": "Build AI for specific problems, not generic chat. Purpose-built tools solve real workflows and deliver measurable results.",
+        "heading": "Solve Specific Pain Points",
+        "text": "Prioritize high-friction workflows like contract review, search, scheduling, accessibility, and instructional support. Purpose-built tools create measurable value faster than general-purpose chat.",
         "icon": "Target"
       },
       {
-        "heading": "Meet People Where They Work",
-        "text": "Put AI into the tools people already use—search, websites, mobile apps, and course platforms—instead of asking them to go somewhere new.",
+        "heading": "Meet Users in the Workflow",
+        "text": "Embed AI in Blink, public websites, teaching tools, mobile, and departmental applications. Adoption rises when AI appears inside the systems people already use.",
         "icon": "Globe"
       },
       {
         "heading": "Stay Model-Agnostic",
-        "text": "Models change constantly. The integrations, data connections, and orchestration you build are what last. Stay model-agnostic with institutional agreements across AWS, Azure, and GCP.",
+        "text": "Build around gateways, connectors, and governance, not a single model vendor. Institutional agreements across AWS, Azure, GCP, and self-hosted models keep the platform flexible.",
         "icon": "Code"
       },
       {
-        "heading": "Move from Chat to Agents",
-        "text": "Move beyond chatbots that answer questions to agents that execute multi-step workflows across enterprise systems with human oversight.",
-        "icon": "Database"
+        "heading": "Prepare for Agency",
+        "text": "Move from assistants that answer questions to agents that retrieve data, call tools, and complete multi-step work with oversight. Skills, APIs, connectors, and observability are the foundation.",
+        "icon": "Blocks"
       }
     ],
     "title": "UC San Diego AI Strategy 2026",

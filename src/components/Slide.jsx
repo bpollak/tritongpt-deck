@@ -408,7 +408,7 @@ const Slide = ({ slide }) => {
           isGraphicHeavy && "text-2xl md:text-4xl",
           isFeatureGrid && "w-full text-center border-b-0 border-none mb-4 sm:mb-12",
           isTritonAIEvolutionSlide && "text-lg sm:text-2xl md:text-4xl mb-1 sm:mb-2 leading-tight",
-          isHeroList && "mb-1 sm:mb-4",
+          isHeroList && "mb-0.5 sm:mb-2",
           isTimelineEvolution && "mb-0.5 sm:mb-1 leading-none",
           isDark ? "text-white" : "text-ucsd-navy"
         )}
@@ -424,6 +424,7 @@ const Slide = ({ slide }) => {
           className={clsx(
             "text-base sm:text-xl md:text-2xl font-light mt-1 sm:mt-2 mb-3 sm:mb-6",
             (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isSolution || isSolutionVideo || isAssistantCategories || isKeyTakeaways || isAgentDevStrategy || isRoadmap || isProblemStatement || isContractReviewChallenge || isComparisonTable || isAgentWorkflow || isTimelineEvolution || isCampusMetrics) && "text-center w-full mb-4 sm:mb-8",
+            isHeroList && "mt-0 sm:mt-0.5 mb-2 sm:mb-3",
             isProblemStatement && "text-lg sm:text-2xl md:text-3xl mb-4 sm:mb-10 font-medium text-red-600",
             isContractReviewChallenge && "text-base sm:text-xl md:text-2xl mb-2 sm:mb-2.5 font-semibold text-ucsd-blue",
             isAgentWorkflow && "text-lg sm:text-2xl font-semibold",
@@ -4066,11 +4067,11 @@ const Slide = ({ slide }) => {
                 isDense ? "grid grid-cols-1 md:grid-cols-2 text-base md:text-lg" :
                   isGraphicHeavy ? "flex flex-col text-sm md:text-base gap-3" :
                     isFeatureGrid ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto max-w-[1600px]" :
-                      isHeroList ? "flex flex-col gap-2 sm:gap-3 max-w-7xl w-full" :
+                      isHeroList ? "flex flex-col gap-1.5 sm:gap-2 max-w-7xl w-full" :
                         "flex flex-col text-lg md:text-xl"
           )}
         >
-          {isHeroList && <div className="absolute top-7 sm:top-12 bottom-7 sm:bottom-12 left-[1.2rem] sm:left-[2.5rem] w-0.5 sm:w-1 bg-ucsd-blue/30 -z-10" />}
+          {isHeroList && <div className="absolute top-5 sm:top-8 bottom-5 sm:bottom-8 left-[1.1rem] sm:left-[2.15rem] w-0.5 sm:w-1 bg-ucsd-blue/30 -z-10" />}
           {slide.content.map((item, index) => {
             const borderColors = ['border-ucsd-navy', 'border-ucsd-sky', 'border-ucsd-blue', 'border-ucsd-gold', 'border-ucsd-poppy-orange', 'border-ucsd-palm-green', 'border-ucsd-tierra-clay', 'border-ucsd-pacific-blue', 'border-ucsd-navy', 'border-ucsd-sky', 'border-ucsd-poppy-orange', 'border-ucsd-palm-green', 'border-ucsd-tierra-clay', 'border-ucsd-navy', 'border-ucsd-blue', 'border-ucsd-pacific-blue', 'border-ucsd-sky'];
             const bgColors = ['bg-ucsd-navy', 'bg-ucsd-gold', 'bg-ucsd-blue', 'bg-ucsd-sky', 'bg-ucsd-poppy-orange', 'bg-ucsd-palm-green', 'bg-ucsd-tierra-clay', 'bg-ucsd-pacific-blue'];
@@ -4095,7 +4096,7 @@ const Slide = ({ slide }) => {
                   useThreeColumns && clsx("flex-col p-4 rounded-lg border shadow-sm", isDark ? "bg-white/10 border-white/10" : "bg-white/60 border-ucsd-blue/10"),
                   isGraphicHeavy && clsx("flex-col p-3 rounded-md border-l-4 border-ucsd-gold", isDark ? "bg-white/10" : "bg-white/50"),
                   isFeatureGrid && clsx("flex-col p-8 bg-white rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-2 border-t-8", borderColorClass),
-                  isHeroList && "flex-row items-center gap-2 sm:gap-5"
+                  isHeroList && "flex-row items-center gap-2 sm:gap-4"
                 )}
               >
                 {isFeatureGrid && (
@@ -4107,27 +4108,27 @@ const Slide = ({ slide }) => {
                 {isHeroList && (
                   <motion.div
                     animate={pulseAnimation}
-                    className={clsx("flex-shrink-0 w-10 h-10 sm:w-16 sm:h-16 rounded-full flex items-center justify-center shadow-xl z-10 relative", !customBgColor && bgColorClass)}
+                    className={clsx("flex-shrink-0 w-9 h-9 sm:w-14 sm:h-14 rounded-full flex items-center justify-center shadow-xl z-10 relative", !customBgColor && bgColorClass)}
                     style={customBgColor ? { backgroundColor: customBgColor } : {}}
                   >
-                    {IconComponent ? <IconComponent size={20} className="text-white drop-shadow-md sm:w-8 sm:h-8" strokeWidth={2.5} /> : <span className="text-lg sm:text-2xl font-bold text-white">{index + 1}</span>}
+                    {IconComponent ? <IconComponent size={18} className="text-white drop-shadow-md sm:w-7 sm:h-7" strokeWidth={2.5} /> : <span className="text-lg sm:text-xl font-bold text-white">{index + 1}</span>}
                   </motion.div>
                 )}
-                <div className={clsx("flex flex-col flex-1", isHeroList && clsx("p-1.5 sm:p-3 rounded-lg sm:rounded-xl border-l-3 sm:border-l-6 bg-white shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all", borderColorClass))}>
+                <div className={clsx("flex flex-col flex-1", isHeroList && clsx("p-1.5 sm:p-2.5 rounded-lg sm:rounded-xl border-l-3 sm:border-l-6 bg-white shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all", borderColorClass))}>
                   {item.heading && (
                     <span className={clsx(
                       "font-semibold mb-1",
                       useThreeColumns ? clsx("text-sm uppercase tracking-wide border-b pb-1 mb-2", isDark ? "text-ucsd-sky border-white/20" : "text-ucsd-blue border-ucsd-gold/30") : "text-lg",
                       isGraphicHeavy && "text-base font-bold text-ucsd-blue",
                       isFeatureGrid && clsx("text-2xl md:text-3xl font-bold mb-4 tracking-tight leading-tight pr-20", headerColorClass),
-                      isHeroList && "text-sm sm:text-[1.65rem] font-black text-ucsd-navy mb-0 sm:mb-1 leading-tight"
+                      isHeroList && "text-sm sm:text-[1.5rem] font-black text-ucsd-navy mb-0 sm:mb-0.5 leading-tight"
                     )}>{item.heading}</span>
                   )}
                   {item.text && (
                     <span className={clsx(
                       "leading-relaxed",
                       isFeatureGrid && "text-lg md:text-xl text-slate-800 font-semibold",
-                      isHeroList && "text-[10px] sm:text-lg text-slate-700 font-medium leading-snug",
+                      isHeroList && "text-[10px] sm:text-base text-slate-700 font-medium leading-snug",
                       !isFeatureGrid && !isHeroList && isDark ? "text-white/80" : ""
                     )}>{item.text}</span>
                   )}
@@ -4353,7 +4354,7 @@ const Slide = ({ slide }) => {
     <div
       className={clsx(
         "w-full h-full flex flex-col relative overflow-hidden transition-colors duration-500 break-words",
-        isTimelineEvolution ? "p-1.5 sm:p-3 md:p-4" : isContractReviewChallenge ? "p-2 sm:p-2.5 md:p-3" : (isTritonAIEvolutionSlide || isAgentDevStrategy) ? "p-2 sm:p-3 md:p-4" : "p-2 sm:p-6 md:p-12",
+        isTimelineEvolution ? "p-1.5 sm:p-3 md:p-4" : isHeroList ? "p-2 sm:p-4 md:p-6" : isContractReviewChallenge ? "p-2 sm:p-2.5 md:p-3" : (isTritonAIEvolutionSlide || isAgentDevStrategy) ? "p-2 sm:p-3 md:p-4" : "p-2 sm:p-6 md:p-12",
         !slide.backgroundColor && (isDark ? "bg-[#1a1a1a]" : "bg-gray-50")
       )}
       style={slide.backgroundColor ? { backgroundColor: slide.backgroundColor } : {}}
@@ -4399,7 +4400,7 @@ const Slide = ({ slide }) => {
             </div>
           </div>
         ) : (
-          <div className={clsx("flex flex-col h-full w-full", isTitle ? "justify-center items-center text-center" : isTimelineEvolution ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isContractReviewChallenge ? "justify-start pt-0 sm:pt-0.5 overflow-y-auto touch-pan-y custom-scrollbar" : (isTritonAIEvolutionSlide || isAgentDevStrategy) ? "justify-start pt-1 sm:pt-2 overflow-y-auto touch-pan-y custom-scrollbar" : "justify-start pt-4 overflow-y-auto touch-pan-y custom-scrollbar")}>
+          <div className={clsx("flex flex-col h-full w-full", isTitle ? "justify-center items-center text-center" : isTimelineEvolution ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isHeroList ? "justify-start pt-1 sm:pt-2 overflow-y-auto touch-pan-y custom-scrollbar" : isContractReviewChallenge ? "justify-start pt-0 sm:pt-0.5 overflow-y-auto touch-pan-y custom-scrollbar" : (isTritonAIEvolutionSlide || isAgentDevStrategy) ? "justify-start pt-1 sm:pt-2 overflow-y-auto touch-pan-y custom-scrollbar" : "justify-start pt-4 overflow-y-auto touch-pan-y custom-scrollbar")}>
             <div className={clsx("w-full mx-auto", isTimelineEvolution && "max-w-[1800px] h-full flex flex-col", (isSolution || isSolutionVideo || isCaseStudyHero || isProblemStatement || isContractReviewChallenge || isFeatureGrid || isCampusMetrics || isAgentDevStrategy || isFlywheelCaseStudy) ? "max-w-[1800px]" : !isTimelineEvolution && "max-w-7xl")}>{renderContent()}</div>
           </div>
         )}
