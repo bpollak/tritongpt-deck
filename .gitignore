@@ -23,5 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 .vercel
+.claude/
+TritonGPT-Presentation*.pptx
 public/slides.json
 public/slide-manager-registry.json
