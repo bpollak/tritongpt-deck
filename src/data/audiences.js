@@ -11,6 +11,18 @@ export const AUDIENCE_COLORS = {
   CCW: 'bg-rose-500'
 };
 
+const findCanonicalAudience = (audienceType) => {
+  if (!audienceType) return null;
+
+  return AUDIENCE_TYPES.find((candidate) => (
+    candidate.toLowerCase() === String(audienceType).trim().toLowerCase()
+  )) || null;
+};
+
+export const normalizeAudienceType = (audienceType) => (
+  findCanonicalAudience(audienceType) || DEFAULT_AUDIENCE
+);
+
 export const getEffectiveAudiences = (slide) => (
   Array.isArray(slide?.audiences) && slide.audiences.length > 0
     ? slide.audiences
@@ -18,12 +30,8 @@ export const getEffectiveAudiences = (slide) => (
 );
 
 export const isSlideVisibleForAudience = (slide, audienceType) => {
-  const targetAudience = audienceType || DEFAULT_AUDIENCE;
-
-  if (targetAudience === DEFAULT_AUDIENCE) {
-    return true;
-  }
-
+  const targetAudience = normalizeAudienceType(audienceType);
   const audiences = getEffectiveAudiences(slide);
-  return audiences.includes(DEFAULT_AUDIENCE) || audiences.includes(targetAudience);
+
+  return audiences.some((audience) => findCanonicalAudience(audience) === targetAudience);
 };
