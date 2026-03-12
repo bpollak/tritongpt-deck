@@ -22,6 +22,14 @@ const getSlideIndexFromHash = () => {
   return 0;
 };
 
+const getSlideVideoInfo = (slide) => {
+  if (!slide?.videoSrc) return null;
+  return {
+    src: slide.videoSrc,
+    poster: slide.poster || null,
+  };
+};
+
 const Presentation = () => {
   const [currentIndex, setCurrentIndex] = useState(() => Math.max(0, getSlideIndexFromHash()));
   const isPopstateNav = useRef(false);
@@ -85,12 +93,30 @@ const Presentation = () => {
     return filterSlidesByAudience(slidesData, audienceType);
   }, [audienceType, slidesData]);
 
+  const nearbyVideoAssets = useMemo(() => {
+    const nearbyIndexes = [currentIndex - 1, currentIndex + 1, currentIndex + 2]
+      .filter((index) => index >= 0 && index < filteredSlides.length);
+
+    return nearbyIndexes
+      .map((index) => getSlideVideoInfo(filteredSlides[index]))
+      .filter(Boolean)
+      .filter((video, index, videos) => videos.findIndex((candidate) => candidate.src === video.src) === index);
+  }, [currentIndex, filteredSlides]);
+
   // Clamp currentIndex to valid range when filteredSlides changes (e.g. after async load)
   useEffect(() => {
     if (filteredSlides.length > 0 && currentIndex >= filteredSlides.length) {
       setCurrentIndex(filteredSlides.length - 1);
     }
   }, [filteredSlides.length, currentIndex]);
+
+  useEffect(() => {
+    nearbyVideoAssets.forEach(({ poster }) => {
+      if (!poster) return;
+      const image = new Image();
+      image.src = poster;
+    });
+  }, [nearbyVideoAssets]);
 
   // Sync URL hash with current slide
   useEffect(() => {
@@ -215,6 +241,20 @@ const Presentation = () => {
 
   return (
     <div className="w-screen h-screen bg-gray-50 flex flex-col overflow-hidden relative font-sans" role="application" aria-label="Presentation viewer">
+      <div aria-hidden="true" className="absolute w-0 h-0 overflow-hidden opacity-0 pointer-events-none">
+        {nearbyVideoAssets.map(({ src, poster }) => (
+          <video
+            key={src}
+            src={src}
+            poster={poster || undefined}
+            preload="metadata"
+            muted
+            playsInline
+            tabIndex={-1}
+          />
+        ))}
+      </div>
+
       {/* Progress Bar */}
       <div className="w-full h-1 bg-gray-200 z-50 shrink-0" role="progressbar" aria-valuenow={currentIndex + 1} aria-valuemin={1} aria-valuemax={filteredSlides.length} aria-label="Presentation progress">
         <motion.div

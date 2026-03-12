@@ -55,6 +55,7 @@ const VideoSlide = ({ videoSrc, title, poster }) => {
           src={videoSrc}
           poster={poster}
           className="w-full h-full object-contain"
+          preload="auto"
           onTimeUpdate={handleTimeUpdate}
           onEnded={() => setIsPlaying(false)}
           onClick={togglePlay}
