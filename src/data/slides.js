@@ -9,7 +9,8 @@ export const slides = [
     "presenterName": "Brett Pollak",
     "presenterTitle": "Executive Director, IT Services",
     "audiences": [
-      "all"
+      "all",
+      "public"
     ]
   },
   {
@@ -88,7 +89,8 @@ export const slides = [
       }
     ],
     "audiences": [
-      "all"
+      "all",
+      "public"
     ]
   },
   {
@@ -222,7 +224,8 @@ export const slides = [
       }
     ],
     "audiences": [
-      "all"
+      "all",
+      "public"
     ]
   },
   {
@@ -266,7 +269,8 @@ export const slides = [
     "dark": false,
     "backgroundColor": "#F5F0E6",
     "audiences": [
-      "all"
+      "all",
+      "public"
     ]
   },
   {
@@ -303,7 +307,6 @@ export const slides = [
     "layout": "feature-grid",
     "audiences": [
       "all",
-      "internal",
       "public"
     ]
   },
@@ -408,7 +411,6 @@ export const slides = [
     ],
     "audiences": [
       "all",
-      "internal",
       "public"
     ]
   },
@@ -420,9 +422,8 @@ export const slides = [
     "poster": "/media/image36.png",
     "audiences": [
       "all",
-      "internal",
-      "public",
-      "CCW"
+      "CCW",
+      "public"
     ]
   },
   {
@@ -433,7 +434,6 @@ export const slides = [
     "poster": "/media/image37.png",
     "audiences": [
       "all",
-      "internal",
       "public"
     ]
   },
@@ -446,7 +446,6 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "CCW",
       "public"
     ]
   },
@@ -527,9 +526,7 @@ export const slides = [
     ],
     "audiences": [
       "all",
-      "internal",
-      "public",
-      "CCW"
+      "public"
     ]
   },
   {
@@ -540,8 +537,7 @@ export const slides = [
     "poster": "/media/image50.png",
     "audiences": [
       "all",
-      "internal",
-      "CCW"
+      "internal"
     ]
   },
   {
@@ -585,9 +581,7 @@ export const slides = [
     ],
     "audiences": [
       "all",
-      "internal",
-      "public",
-      "CCW"
+      "public"
     ]
   },
   {
@@ -631,9 +625,7 @@ export const slides = [
     ],
     "audiences": [
       "all",
-      "internal",
-      "public",
-      "CCW"
+      "public"
     ]
   },
   {
@@ -644,7 +636,8 @@ export const slides = [
     "poster": "/media/image53.png",
     "audiences": [
       "all",
-      "internal"
+      "internal",
+      "public"
     ]
   },
   {
@@ -684,8 +677,7 @@ export const slides = [
     "audiences": [
       "all",
       "technical",
-      "public",
-      "CCW"
+      "public"
     ]
   },
   {
@@ -723,10 +715,8 @@ export const slides = [
     ],
     "audiences": [
       "all",
-      "executive",
-      "internal",
       "public",
-      "CCW"
+      "internal"
     ]
   },
   {
@@ -738,8 +728,7 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "public",
-      "CCW"
+      "public"
     ]
   },
   {
@@ -787,9 +776,8 @@ export const slides = [
     ],
     "audiences": [
       "all",
-      "internal",
       "public",
-      "CCW"
+      "internal"
     ]
   },
   {
@@ -838,8 +826,7 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "public",
-      "CCW"
+      "public"
     ]
   },
   {
@@ -1201,9 +1188,8 @@ export const slides = [
     "audiences": [
       "all",
       "technical",
-      "internal",
       "public",
-      "CCW"
+      "internal"
     ]
   },
   {
@@ -1272,9 +1258,7 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "technical",
-      "public",
-      "CCW"
+      "technical"
     ]
   },
   {
@@ -1350,8 +1334,7 @@ export const slides = [
       "all",
       "technical",
       "internal",
-      "public",
-      "CCW"
+      "public"
     ]
   },
   {
@@ -1453,8 +1436,7 @@ export const slides = [
       "all",
       "technical",
       "internal",
-      "public",
-      "CCW"
+      "public"
     ]
   },
   {
@@ -1945,8 +1927,7 @@ export const slides = [
     ],
     "audiences": [
       "all",
-      "internal",
-      "CCW"
+      "internal"
     ]
   },
   {
@@ -1964,8 +1945,7 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "public",
-      "CCW"
+      "public"
     ]
   }
 ];
