@@ -1,5 +1,3 @@
-/* global Buffer, process */
-
 // Vercel Serverless Function to save slide audience tags
 export default async function handler(req, res) {
   // Only allow POST requests

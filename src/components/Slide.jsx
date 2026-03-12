@@ -3534,7 +3534,6 @@ const Slide = ({ slide }) => {
                         loop
                         muted
                         playsInline
-                        preload="metadata"
                       />
                       <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/80 via-slate-950/35 to-transparent px-3 py-1.5">
                         <div className="inline-flex items-center gap-2 rounded-full bg-white/12 px-2.5 py-1 backdrop-blur-sm">

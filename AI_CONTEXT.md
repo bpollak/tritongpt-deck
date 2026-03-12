@@ -4,7 +4,7 @@
 This project is a **React-based single-page application (SPA)** designed to serve as a dynamic, interactive presentation deck for **UC San Diego's TritonAI** initiatives. It replaces traditional PowerPoint slides with a web-native experience featuring rich animations, responsive layouts, and embedded media.
 
 ## Technology Stack
--   **Build Tool**: [Vite](https://vitejs.dev/) (using `rolldown` bundler).
+-   **Build Tool**: [Vite](https://vitejs.dev/).
 -   **Framework**: [React](https://react.dev/) (v19).
 -   **Styling**: [Tailwind CSS](https://tailwindcss.com/) (v4), `clsx` for conditional classes.
 -   **Animation**: [Framer Motion](https://www.framer.com/motion/) for slide transitions and element animations.
@@ -54,4 +54,3 @@ This project is a **React-based single-page application (SPA)** designed to serv
     -   Read this file first to understand the existing context.
     -   Append or modify the relevant sections above to reflect your changes.
     -   Ensure the "Technology Stack" and "Project Structure" sections remain accurate.
-
