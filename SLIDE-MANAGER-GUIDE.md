@@ -45,6 +45,14 @@ Once you've configured the slides:
 2. The file will download to your Downloads folder
 3. Move it to `src/data/slides.js` (replacing the old one)
 
+### Deployment Guardrails
+
+- The slide manager inventory is derived from `src/data/slides.js`, so newly added slides appear automatically.
+- `npm run dev` and `npm run build` validate slide audiences, duplicate ids, and local `/media/...` references before starting.
+- Production builds generate `public/slides.json` and `public/slide-manager-registry.json` automatically, so Vercel deploys the same slide set the manager was built against.
+- On `localhost`, audience edits are saved into browser-local preview state immediately so you can review every change before deciding to save locally or push to GitHub.
+- The localhost manager can now write directly to `src/data/slides.js` and, after confirmation, commit and push that file through the local git checkout.
+
 ### Quick Examples
 
 **Hide a slide from default view:**

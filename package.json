@@ -4,7 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "sync:slides": "node scripts/sync-slide-artifacts.mjs",
+    "predev": "npm run sync:slides",
     "dev": "vite",
+    "prebuild": "npm run sync:slides",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",

@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'; // eslint-disable-line 
 import { ChevronLeft, ChevronRight, Download } from 'lucide-react';
 import Slide from './components/Slide';
 import { slides as defaultSlides } from './data/slides';
+import { LOCAL_SLIDE_PREVIEW_EVENT, LOCAL_SLIDE_PREVIEW_KEY, isLocalPreviewHost, readLocalSlidePreview } from './utils/localSlidePreview';
 import { generatePPTX } from './utils/pptxExport';
 import { captureSlideSnapshots } from './utils/slideSnapshots';
 
@@ -25,7 +26,7 @@ const Presentation = () => {
   const [currentIndex, setCurrentIndex] = useState(() => Math.max(0, getSlideIndexFromHash()));
   const isPopstateNav = useRef(false);
   const [direction, setDirection] = useState(0);
-  const [slidesData, setSlidesData] = useState(defaultSlides);
+  const [slidesData, setSlidesData] = useState(() => readLocalSlidePreview(defaultSlides) || defaultSlides);
   const [isExporting, setIsExporting] = useState(false);
   const [qaReport, setQaReport] = useState(null);
   const [showQaPanel, setShowQaPanel] = useState(false);
@@ -36,11 +37,36 @@ const Presentation = () => {
     return params.get('audience') || 'all';
   }, []);
 
+  useEffect(() => {
+    if (!isLocalPreviewHost()) return;
+
+    const syncSlidesFromLocalPreview = () => {
+      const previewSlides = readLocalSlidePreview(defaultSlides);
+      setSlidesData(previewSlides || defaultSlides);
+    };
+
+    const handleStorage = (event) => {
+      if (event.key && event.key !== LOCAL_SLIDE_PREVIEW_KEY) return;
+      syncSlidesFromLocalPreview();
+    };
+
+    syncSlidesFromLocalPreview();
+    window.addEventListener('storage', handleStorage);
+    window.addEventListener(LOCAL_SLIDE_PREVIEW_EVENT, syncSlidesFromLocalPreview);
+
+    return () => {
+      window.removeEventListener('storage', handleStorage);
+      window.removeEventListener(LOCAL_SLIDE_PREVIEW_EVENT, syncSlidesFromLocalPreview);
+    };
+  }, []);
+
   // Load slides from generated output if available
   useEffect(() => {
+    if (import.meta.env.DEV || isLocalPreviewHost()) return;
+
     const loadSlides = async () => {
       try {
-        const response = await fetch('./slides.json', { cache: 'no-store' });
+        const response = await fetch('/slides.json', { cache: 'no-store' });
         if (!response.ok) return;
         const data = await response.json();
         if (Array.isArray(data) && data.length > 0) {

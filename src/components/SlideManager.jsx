@@ -1,32 +1,53 @@
-import React, { useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { slides } from '../data/slides';
+import { AUDIENCE_COLORS, AUDIENCE_TYPES } from '../data/audiences';
+import { slideManagerRegistry } from '../data/slideRegistry';
+import { clearLocalSlidePreview, isLocalPreviewHost, readLocalSlidePreview, writeLocalSlidePreview } from '../utils/localSlidePreview';
 import { Eye, EyeOff, ChevronDown, ChevronUp, ExternalLink, Save, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
 
-const AUDIENCE_TYPES = ['all', 'technical', 'executive', 'internal', 'public', 'CCW'];
+const buildSlideAudienceMap = (sourceSlides) => {
+  return slideManagerRegistry.reduce((acc, slide) => {
+    const matchingSlide = sourceSlides.find((candidate) => String(candidate.id) === String(slide.id));
+    acc[slide.id] = matchingSlide?.audiences || slide.audiences || ['all'];
+    return acc;
+  }, {});
+};
 
-const AUDIENCE_COLORS = {
-  all: 'bg-gray-500',
-  technical: 'bg-blue-500',
-  executive: 'bg-purple-500',
-  internal: 'bg-green-500',
-  public: 'bg-orange-500',
-  CCW: 'bg-rose-500'
+const hasAudienceChanges = (candidateSlides, sourceSlides) => {
+  return sourceSlides.some((slide, index) => {
+    const candidateAudiences = candidateSlides[index]?.audiences || [];
+    const sourceAudiences = slide.audiences || [];
+    return JSON.stringify(candidateAudiences) !== JSON.stringify(sourceAudiences);
+  });
 };
 
 const SlideManager = ({ onClose, standalone = false }) => {
-  const [slideAudiences, setSlideAudiences] = useState(
-    slides.reduce((acc, slide) => {
-      acc[slide.id] = slide.audiences || ['all'];
-      return acc;
-    }, {})
-  );
+  const localPreviewEnabled = isLocalPreviewHost();
+  const initialPreviewSlides = useMemo(() => readLocalSlidePreview(slides), []);
+  const initialSlides = initialPreviewSlides || slides;
+  const [slideAudiences, setSlideAudiences] = useState(() => buildSlideAudienceMap(initialSlides));
   const [expandedSlide, setExpandedSlide] = useState(null);
   const [filterAudience, setFilterAudience] = useState('all');
-  const [saveStatus, setSaveStatus] = useState(null); // null | 'saving' | 'success' | 'error' | 'password'
+  const [saveStatus, setSaveStatus] = useState(null); // null | 'local' | 'saving' | 'success' | 'error' | 'password'
   const [saveMessage, setSaveMessage] = useState('');
   const [adminPassword, setAdminPassword] = useState('');
   const [showPasswordModal, setShowPasswordModal] = useState(false);
-  const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false);
+  const [showPushConfirmModal, setShowPushConfirmModal] = useState(false);
+  const [sourceSlidesSnapshot, setSourceSlidesSnapshot] = useState(slides);
+  const [hasUnsavedRepoChanges, setHasUnsavedRepoChanges] = useState(() => hasAudienceChanges(initialSlides, slides));
+  const [hasPendingGitHubChanges, setHasPendingGitHubChanges] = useState(() => hasAudienceChanges(initialSlides, slides));
+
+  const updatedSlides = useMemo(() => {
+    return slides.map((slide) => ({
+      ...slide,
+      audiences: slideAudiences[slide.id]
+    }));
+  }, [slideAudiences]);
+
+  useEffect(() => {
+    if (!localPreviewEnabled) return;
+    writeLocalSlidePreview(updatedSlides);
+  }, [localPreviewEnabled, updatedSlides]);
 
   const toggleAudience = (slideId, audience) => {
     setSlideAudiences(prev => {
@@ -41,41 +62,24 @@ const SlideManager = ({ onClose, standalone = false }) => {
         [slideId]: newAudiences.length > 0 ? newAudiences : ['all']
       };
     });
-    setHasUnsavedChanges(true);
-  };
+    setHasUnsavedRepoChanges(true);
+    setHasPendingGitHubChanges(true);
 
-  const toTitleCase = (value) =>
-    value.replace(/\w\S*/g, (word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
-
-  const getVideoLabelFromSrc = (videoSrc) => {
-    if (!videoSrc) return null;
-    const filename = videoSrc.split('/').pop();
-    if (!filename) return null;
-    const stem = filename.replace(/\.[^.]+$/, '');
-    return toTitleCase(stem.replace(/([a-zA-Z])(\d)/g, '$1 $2').replace(/[-_]+/g, ' ').trim());
-  };
-
-  const getSlideTitle = (slide) => {
-    if (slide.title) return slide.title;
-    if (slide.managerLabel) return slide.managerLabel;
-    if (slide.type === 'video') {
-      const inferredLabel = getVideoLabelFromSrc(slide.videoSrc);
-      return inferredLabel ? `Video: ${inferredLabel}` : `Video Slide ${slide.id}`;
+    if (localPreviewEnabled) {
+      setSaveStatus('local');
+      setSaveMessage('Saved to localhost preview. Open any preview link to review before pushing to GitHub.');
+    } else {
+      setSaveStatus(null);
+      setSaveMessage('');
     }
-    return `Slide ${slide.id}`;
   };
 
-  const filteredSlides = slides.filter(slide => {
+  const filteredSlides = slideManagerRegistry.filter(slide => {
     if (filterAudience === 'all') return true;
     return slideAudiences[slide.id]?.includes(filterAudience);
   });
 
   const exportConfig = () => {
-    const updatedSlides = slides.map(slide => ({
-      ...slide,
-      audiences: slideAudiences[slide.id]
-    }));
-
     const output = `export const slides = ${JSON.stringify(updatedSlides, null, 2)};`;
 
     // Copy to clipboard
@@ -85,11 +89,6 @@ const SlideManager = ({ onClose, standalone = false }) => {
   };
 
   const downloadConfig = () => {
-    const updatedSlides = slides.map(slide => ({
-      ...slide,
-      audiences: slideAudiences[slide.id]
-    }));
-
     const output = `export const slides = ${JSON.stringify(updatedSlides, null, 2)};`;
     const blob = new Blob([output], { type: 'text/javascript' });
     const url = URL.createObjectURL(blob);
@@ -100,14 +99,65 @@ const SlideManager = ({ onClose, standalone = false }) => {
     URL.revokeObjectURL(url);
   };
 
-  const getUpdatedSlides = () => {
-    return slides.map(slide => ({
-      ...slide,
-      audiences: slideAudiences[slide.id]
-    }));
+  const handlePushRequest = () => {
+    if (!hasPendingGitHubChanges) return;
+    setShowPushConfirmModal(true);
   };
 
-  const handleSaveAndDeploy = () => {
+  const submitLocalSave = async ({ pushToGitHub = false } = {}) => {
+    setShowPushConfirmModal(false);
+    setSaveStatus('saving');
+    setSaveMessage(
+      pushToGitHub
+        ? 'Saving locally, committing src/data/slides.js, and pushing to GitHub...'
+        : 'Saving changes to src/data/slides.js on localhost...'
+    );
+
+    try {
+      const response = await fetch('/api/local-slides', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ slides: updatedSlides, pushToGitHub })
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSaveStatus('success');
+        setSaveMessage(data.message || 'Slides saved locally.');
+        setSourceSlidesSnapshot(updatedSlides);
+        setHasUnsavedRepoChanges(false);
+        setHasPendingGitHubChanges(!pushToGitHub);
+        setTimeout(() => setSaveStatus(null), 10000);
+      } else {
+        const details = Array.isArray(data.details) ? data.details.join(' ') : data.details;
+        setSaveStatus('error');
+        setSaveMessage(details ? `${data.error}: ${details}` : (data.error || 'Failed to save locally.'));
+      }
+    } catch (err) {
+      setSaveStatus('error');
+      setSaveMessage(`Local save failed: ${err.message}`);
+    }
+  };
+
+  const handleResetLocalPreview = () => {
+    clearLocalSlidePreview();
+    setSlideAudiences(buildSlideAudienceMap(sourceSlidesSnapshot));
+    setExpandedSlide(null);
+    setHasUnsavedRepoChanges(false);
+    setHasPendingGitHubChanges(false);
+    setSaveStatus('local');
+    setSaveMessage('Localhost preview reset to the checked-in slide data.');
+  };
+
+  const confirmPushRequest = () => {
+    setShowPushConfirmModal(false);
+    if (localPreviewEnabled) {
+      submitLocalSave({ pushToGitHub: true });
+      return;
+    }
     setShowPasswordModal(true);
     setSaveStatus('password');
   };
@@ -120,7 +170,6 @@ const SlideManager = ({ onClose, standalone = false }) => {
     setSaveMessage('Saving to GitHub and triggering deploy...');
 
     try {
-      const updatedSlides = getUpdatedSlides();
       const response = await fetch('/api/save-slides', {
         method: 'POST',
         headers: {
@@ -135,7 +184,9 @@ const SlideManager = ({ onClose, standalone = false }) => {
       if (response.ok) {
         setSaveStatus('success');
         setSaveMessage(`Saved! Commit: ${data.commit?.substring(0, 7) || 'done'}. Vercel will deploy in ~1-2 minutes.`);
-        setHasUnsavedChanges(false);
+        setSourceSlidesSnapshot(updatedSlides);
+        setHasUnsavedRepoChanges(false);
+        setHasPendingGitHubChanges(false);
         setTimeout(() => setSaveStatus(null), 10000);
       } else {
         setSaveStatus('error');
@@ -192,7 +243,7 @@ const SlideManager = ({ onClose, standalone = false }) => {
 
           <div className="mt-4 flex items-center justify-between">
             <div className="text-sm text-gray-600">
-              Showing {filteredSlides.length} of {slides.length} slides
+              Showing {filteredSlides.length} of {slideManagerRegistry.length} slides
             </div>
 
             {/* Preview Links */}
@@ -243,7 +294,7 @@ const SlideManager = ({ onClose, standalone = false }) => {
                     </div>
                     <div className="flex-1">
                       <div className="font-semibold text-ucsd-navy">
-                        {getSlideTitle(slide)}
+                        {slide.title}
                       </div>
                       {slide.subtitle && (
                         <div className="text-xs text-gray-500 mt-1">
@@ -302,10 +353,12 @@ const SlideManager = ({ onClose, standalone = false }) => {
           {/* Status Banner */}
           {saveStatus && saveStatus !== 'password' && (
             <div className={`mb-4 px-4 py-3 rounded-lg flex items-center gap-3 text-sm ${
+              saveStatus === 'local' ? 'bg-amber-50 text-amber-800 border border-amber-200' :
               saveStatus === 'saving' ? 'bg-blue-50 text-blue-700 border border-blue-200' :
               saveStatus === 'success' ? 'bg-green-50 text-green-700 border border-green-200' :
               'bg-red-50 text-red-700 border border-red-200'
             }`}>
+              {saveStatus === 'local' && <CheckCircle size={16} />}
               {saveStatus === 'saving' && <Loader2 size={16} className="animate-spin" />}
               {saveStatus === 'success' && <CheckCircle size={16} />}
               {saveStatus === 'error' && <AlertCircle size={16} />}
@@ -318,12 +371,37 @@ const SlideManager = ({ onClose, standalone = false }) => {
 
           <div className="flex items-center justify-between gap-4">
             <div className="text-sm text-gray-600">
-              {hasUnsavedChanges
-                ? <span className="text-amber-600 font-medium">You have unsaved changes</span>
-                : 'Click a slide to edit its audience tags'
+              {localPreviewEnabled && hasPendingGitHubChanges
+                ? <span className="text-amber-700 font-medium">Changes are visible on localhost. Save them into the repo locally, then push to GitHub when ready.</span>
+                : localPreviewEnabled
+                  ? 'Localhost preview matches the checked-in slide data'
+                  : hasPendingGitHubChanges
+                    ? <span className="text-amber-600 font-medium">You have unpublished GitHub changes</span>
+                    : 'Click a slide to edit its audience tags'
               }
             </div>
             <div className="flex gap-3">
+              {localPreviewEnabled && (
+                <button
+                  onClick={handleResetLocalPreview}
+                  className="px-4 py-2 bg-white text-gray-700 font-medium rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors text-sm"
+                >
+                  Reset Local Preview
+                </button>
+              )}
+              {localPreviewEnabled && (
+                <button
+                  onClick={() => submitLocalSave({ pushToGitHub: false })}
+                  disabled={saveStatus === 'saving' || !hasUnsavedRepoChanges}
+                  className={`px-4 py-2 font-medium rounded-lg transition-colors text-sm ${
+                    saveStatus === 'saving' || !hasUnsavedRepoChanges
+                      ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                      : 'bg-white text-ucsd-navy border border-ucsd-navy hover:bg-gray-50'
+                  }`}
+                >
+                  Save to Repo
+                </button>
+              )}
               <button
                 onClick={exportConfig}
                 className="px-4 py-2 bg-gray-200 text-gray-700 font-medium rounded-lg hover:bg-gray-300 transition-colors text-sm"
@@ -337,28 +415,58 @@ const SlideManager = ({ onClose, standalone = false }) => {
                 Download slides.js
               </button>
               <button
-                onClick={handleSaveAndDeploy}
-                disabled={saveStatus === 'saving'}
+                onClick={handlePushRequest}
+                disabled={saveStatus === 'saving' || !hasPendingGitHubChanges}
                 className={`px-6 py-2 font-semibold rounded-lg transition-colors flex items-center gap-2 ${
-                  saveStatus === 'saving'
+                  saveStatus === 'saving' || !hasPendingGitHubChanges
                     ? 'bg-gray-400 text-white cursor-not-allowed'
-                    : hasUnsavedChanges
+                    : hasPendingGitHubChanges
                       ? 'bg-ucsd-gold text-ucsd-navy hover:bg-yellow-500 ring-2 ring-amber-400'
                       : 'bg-ucsd-gold text-ucsd-navy hover:bg-yellow-500'
                 }`}
               >
                 {saveStatus === 'saving' ? <Loader2 size={16} className="animate-spin" /> : <Save size={16} />}
-                Save & Deploy
+                Push to GitHub
               </button>
             </div>
           </div>
+          {localPreviewEnabled && (
+            <div className="mt-3 text-xs text-gray-500">
+              Localhost changes are applied automatically in this browser. "Save to Repo" writes `src/data/slides.js`; "Push to GitHub" also commits and pushes that file after confirmation.
+            </div>
+          )}
         </div>
+
+        {showPushConfirmModal && (
+          <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+            <div className="bg-white rounded-xl shadow-2xl max-w-md w-full p-6">
+              <h3 className="text-lg font-bold text-ucsd-navy mb-2">Push Changes to GitHub?</h3>
+              <p className="text-sm text-gray-600 mb-4">
+                Your local slide selections are ready. Do you want to commit these changes to GitHub and trigger a Vercel deployment now?
+              </p>
+              <div className="flex gap-3 justify-end">
+                <button
+                  onClick={() => setShowPushConfirmModal(false)}
+                  className="px-4 py-2 bg-gray-200 text-gray-700 font-medium rounded-lg hover:bg-gray-300 transition-colors"
+                >
+                  Not Yet
+                </button>
+                <button
+                  onClick={confirmPushRequest}
+                  className="px-6 py-2 bg-ucsd-gold text-ucsd-navy font-semibold rounded-lg hover:bg-yellow-500 transition-colors"
+                >
+                  Continue
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Password Modal */}
         {showPasswordModal && (
           <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
             <div className="bg-white rounded-xl shadow-2xl max-w-md w-full p-6">
-              <h3 className="text-lg font-bold text-ucsd-navy mb-2">Save & Deploy</h3>
+              <h3 className="text-lg font-bold text-ucsd-navy mb-2">Push to GitHub</h3>
               <p className="text-sm text-gray-600 mb-4">
                 This will commit your changes to GitHub and trigger a Vercel deployment. Changes go live in ~1-2 minutes.
               </p>
@@ -384,7 +492,7 @@ const SlideManager = ({ onClose, standalone = false }) => {
                   disabled={!adminPassword.trim()}
                   className="px-6 py-2 bg-ucsd-gold text-ucsd-navy font-semibold rounded-lg hover:bg-yellow-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Deploy Now
+                  Push Now
                 </button>
               </div>
             </div>
