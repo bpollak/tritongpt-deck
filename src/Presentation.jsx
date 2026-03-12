@@ -13,11 +13,28 @@ const filterSlidesByAudience = (slides, audienceType) => {
   return slides.filter((slide) => isSlideVisibleForAudience(slide, audienceType));
 };
 
-// Parse slide number from URL hash (e.g. #slide=5 -> 4, since it's 1-based in URL)
-const getSlideIndexFromHash = () => {
-  const match = window.location.hash.match(/^#slide=(\d+)$/);
-  if (match) return parseInt(match[1], 10) - 1;
-  return 0;
+const getSlideIdFromHash = () => {
+  const params = new URLSearchParams(window.location.hash.replace(/^#/, ''));
+  const slideId = params.get('slide');
+  return slideId && slideId.trim() ? slideId.trim() : null;
+};
+
+const buildSlideHash = (slideId) => {
+  const params = new URLSearchParams(window.location.hash.replace(/^#/, ''));
+
+  if (slideId === undefined || slideId === null || slideId === '') {
+    params.delete('slide');
+  } else {
+    params.set('slide', String(slideId));
+  }
+
+  const hash = params.toString();
+  return hash ? `#${hash}` : '';
+};
+
+const findSlideIndexById = (slides, slideId) => {
+  if (slideId === undefined || slideId === null) return -1;
+  return slides.findIndex((slide) => String(slide.id) === String(slideId));
 };
 
 const getSlideVideoInfo = (slide) => {
@@ -29,7 +46,7 @@ const getSlideVideoInfo = (slide) => {
 };
 
 const Presentation = () => {
-  const [currentIndex, setCurrentIndex] = useState(() => Math.max(0, getSlideIndexFromHash()));
+  const [currentSlideId, setCurrentSlideId] = useState(() => getSlideIdFromHash());
   const isPopstateNav = useRef(false);
   const [direction, setDirection] = useState(0);
   const [slidesData, setSlidesData] = useState(() => readLocalSlidePreview(defaultSlides) || defaultSlides);
@@ -104,6 +121,15 @@ const Presentation = () => {
     return filterSlidesByAudience(slidesData, audienceType);
   }, [audienceType, slidesData]);
 
+  const currentIndex = useMemo(() => {
+    if (filteredSlides.length === 0) return -1;
+
+    const matchedIndex = findSlideIndexById(filteredSlides, currentSlideId);
+    return matchedIndex >= 0 ? matchedIndex : 0;
+  }, [currentSlideId, filteredSlides]);
+
+  const currentSlide = currentIndex >= 0 ? filteredSlides[currentIndex] : null;
+
   const nearbyVideoAssets = useMemo(() => {
     const nearbyIndexes = [currentIndex - 1, currentIndex + 1, currentIndex + 2]
       .filter((index) => index >= 0 && index < filteredSlides.length);
@@ -114,12 +140,19 @@ const Presentation = () => {
       .filter((video, index, videos) => videos.findIndex((candidate) => candidate.src === video.src) === index);
   }, [currentIndex, filteredSlides]);
 
-  // Clamp currentIndex to valid range when filteredSlides changes (e.g. after async load)
+  // Keep the selected slide anchored to a visible slide in the filtered set.
   useEffect(() => {
-    if (filteredSlides.length > 0 && currentIndex >= filteredSlides.length) {
-      setCurrentIndex(filteredSlides.length - 1);
+    if (filteredSlides.length === 0) {
+      if (currentSlideId !== null) {
+        setCurrentSlideId(null);
+      }
+      return;
     }
-  }, [filteredSlides.length, currentIndex]);
+
+    if (findSlideIndexById(filteredSlides, currentSlideId) === -1) {
+      setCurrentSlideId(filteredSlides[0].id);
+    }
+  }, [filteredSlides, currentSlideId]);
 
   useEffect(() => {
     nearbyVideoAssets.forEach(({ poster }) => {
@@ -131,61 +164,72 @@ const Presentation = () => {
 
   // Sync URL hash with current slide
   useEffect(() => {
-    const newHash = `#slide=${currentIndex + 1}`;
+    const newHash = buildSlideHash(currentSlide?.id);
+
     if (window.location.hash !== newHash) {
       if (isPopstateNav.current) {
-        // Browser back/forward triggered this — don't push a new entry
-        isPopstateNav.current = false;
+        // Canonicalize history-driven navigation without creating another entry.
+        window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}${newHash}`);
       } else {
-        window.history.pushState(null, '', newHash);
+        window.history.pushState(null, '', `${window.location.pathname}${window.location.search}${newHash}`);
       }
     }
-  }, [currentIndex]);
 
-  // Handle browser back/forward
+    if (isPopstateNav.current) {
+      isPopstateNav.current = false;
+    }
+  }, [currentSlide?.id]);
+
+  // Handle browser back/forward and direct hash changes.
   useEffect(() => {
-    const handlePopState = () => {
-      const idx = getSlideIndexFromHash();
-      const clamped = Math.max(0, Math.min(idx, filteredSlides.length - 1));
+    const syncSlideFromLocation = () => {
+      const nextSlideId = getSlideIdFromHash();
+      const nextIndex = findSlideIndexById(filteredSlides, nextSlideId);
+      const resolvedIndex = nextIndex >= 0 ? nextIndex : (filteredSlides.length > 0 ? 0 : -1);
+
       isPopstateNav.current = true;
-      setDirection(clamped > currentIndex ? 1 : -1);
-      setCurrentIndex(clamped);
+      setDirection(resolvedIndex > currentIndex ? 1 : -1);
+      setCurrentSlideId(resolvedIndex >= 0 ? filteredSlides[resolvedIndex].id : null);
     };
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
-  }, [filteredSlides.length, currentIndex]);
+
+    window.addEventListener('popstate', syncSlideFromLocation);
+    window.addEventListener('hashchange', syncSlideFromLocation);
+
+    return () => {
+      window.removeEventListener('popstate', syncSlideFromLocation);
+      window.removeEventListener('hashchange', syncSlideFromLocation);
+    };
+  }, [filteredSlides, currentIndex]);
 
   const nextSlide = useCallback(() => {
+    if (filteredSlides.length === 0) return;
+
     setDirection(1);
-    if (currentIndex < filteredSlides.length - 1) {
-      setCurrentIndex(prev => prev + 1);
-    } else {
-      setCurrentIndex(0);
-    }
-  }, [currentIndex, filteredSlides.length]);
+    const nextIndex = currentIndex < filteredSlides.length - 1 ? currentIndex + 1 : 0;
+    setCurrentSlideId(filteredSlides[nextIndex].id);
+  }, [currentIndex, filteredSlides]);
 
   const prevSlide = useCallback(() => {
+    if (filteredSlides.length === 0) return;
+
     setDirection(-1);
-    if (currentIndex > 0) {
-      setCurrentIndex(prev => prev - 1);
-    } else {
-      setCurrentIndex(filteredSlides.length - 1);
-    }
-  }, [currentIndex, filteredSlides.length]);
+    const nextIndex = currentIndex > 0 ? currentIndex - 1 : filteredSlides.length - 1;
+    setCurrentSlideId(filteredSlides[nextIndex].id);
+  }, [currentIndex, filteredSlides]);
 
   const goToFirstSlide = useCallback(() => {
-    if (currentIndex > 0) {
+    if (filteredSlides.length > 0 && currentIndex > 0) {
       setDirection(-1);
-      setCurrentIndex(0);
+      setCurrentSlideId(filteredSlides[0].id);
     }
-  }, [currentIndex]);
+  }, [currentIndex, filteredSlides]);
 
   const goToLastSlide = useCallback(() => {
-    if (currentIndex < filteredSlides.length - 1) {
+    if (filteredSlides.length > 0 && currentIndex < filteredSlides.length - 1) {
       setDirection(1);
-      setCurrentIndex(filteredSlides.length - 1);
+      setCurrentSlideId(filteredSlides[filteredSlides.length - 1].id);
     }
-  }, [currentIndex, filteredSlides.length]);
+  }, [currentIndex, filteredSlides]);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -248,6 +292,8 @@ const Presentation = () => {
   const swipePower = (offset, velocity) => {
     return Math.abs(offset) * velocity;
   };
+  const progressValue = currentIndex >= 0 ? currentIndex + 1 : 0;
+  const progressPercent = filteredSlides.length > 0 ? (progressValue / filteredSlides.length) * 100 : 0;
   const isLastSlide = filteredSlides.length > 0 && currentIndex === filteredSlides.length - 1;
 
   return (
@@ -267,47 +313,53 @@ const Presentation = () => {
       </div>
 
       {/* Progress Bar */}
-      <div className="w-full h-1 bg-gray-200 z-50 shrink-0" role="progressbar" aria-valuenow={currentIndex + 1} aria-valuemin={1} aria-valuemax={filteredSlides.length} aria-label="Presentation progress">
+      <div className="w-full h-1 bg-gray-200 z-50 shrink-0" role="progressbar" aria-valuenow={progressValue} aria-valuemin={0} aria-valuemax={Math.max(filteredSlides.length, 1)} aria-label="Presentation progress">
         <motion.div
           className="h-full bg-ucsd-gold"
           initial={{ width: "0%" }}
-          animate={{ width: `${((currentIndex + 1) / filteredSlides.length) * 100}%` }}
+          animate={{ width: `${progressPercent}%` }}
           transition={{ duration: 0.3 }}
         />
       </div>
 
       {/* Slide Content Area */}
       <div className="flex-1 relative overflow-hidden">
-        <AnimatePresence initial={false} custom={direction} mode="wait">
-          <motion.div
-            key={currentIndex}
-            custom={direction}
-            variants={slideVariants}
-            initial="enter"
-            animate="center"
-            exit="exit"
-            transition={{
-              x: { type: "spring", stiffness: 300, damping: 30 },
-              opacity: { duration: 0.2 }
-            }}
-            drag="x"
-            dragDirectionLock
-            dragConstraints={{ left: 0, right: 0 }}
-            dragElastic={1}
-            onDragEnd={(e, { offset, velocity }) => {
-              const swipe = swipePower(offset.x, velocity.x);
+        {currentSlide ? (
+          <AnimatePresence initial={false} custom={direction} mode="wait">
+            <motion.div
+              key={currentSlide.id}
+              custom={direction}
+              variants={slideVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{
+                x: { type: "spring", stiffness: 300, damping: 30 },
+                opacity: { duration: 0.2 }
+              }}
+              drag="x"
+              dragDirectionLock
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={1}
+              onDragEnd={(e, { offset, velocity }) => {
+                const swipe = swipePower(offset.x, velocity.x);
 
-              if (swipe < -swipeConfidenceThreshold) {
-                nextSlide();
-              } else if (swipe > swipeConfidenceThreshold) {
-                prevSlide();
-              }
-            }}
-            className="absolute w-full h-full"
-          >
-            <Slide slide={filteredSlides[currentIndex]} />
-          </motion.div>
-        </AnimatePresence>
+                if (swipe < -swipeConfidenceThreshold) {
+                  nextSlide();
+                } else if (swipe > swipeConfidenceThreshold) {
+                  prevSlide();
+                }
+              }}
+              className="absolute w-full h-full"
+            >
+              <Slide slide={currentSlide} />
+            </motion.div>
+          </AnimatePresence>
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center px-6 text-center text-sm font-medium text-slate-500">
+            No slides are available for this audience filter.
+          </div>
+        )}
 
         {isLastSlide && (
           <div className="absolute bottom-20 right-4 sm:bottom-8 sm:right-6 z-50">
@@ -434,7 +486,7 @@ const Presentation = () => {
         </button>
 
         <span className="text-sm font-semibold text-ucsd-navy/70" aria-live="polite" aria-atomic="true">
-          {currentIndex + 1} / {filteredSlides.length}
+          {progressValue} / {filteredSlides.length}
         </span>
 
         <button
