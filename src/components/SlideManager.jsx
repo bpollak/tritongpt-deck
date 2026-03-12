@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { slides } from '../data/slides';
-import { AUDIENCE_COLORS, AUDIENCE_TYPES } from '../data/audiences';
+import { AUDIENCE_COLORS, AUDIENCE_TYPES, isSlideVisibleForAudience } from '../data/audiences';
 import { slideManagerRegistry } from '../data/slideRegistry';
 import { clearLocalSlidePreview, isLocalPreviewHost, readLocalSlidePreview, writeLocalSlidePreview } from '../utils/localSlidePreview';
 import { Eye, EyeOff, ChevronDown, ChevronUp, ExternalLink, Save, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
@@ -75,8 +75,10 @@ const SlideManager = ({ onClose, standalone = false }) => {
   };
 
   const filteredSlides = slideManagerRegistry.filter(slide => {
-    if (filterAudience === 'all') return true;
-    return slideAudiences[slide.id]?.includes(filterAudience);
+    return isSlideVisibleForAudience(
+      { ...slide, audiences: slideAudiences[slide.id] || slide.audiences },
+      filterAudience
+    );
   });
 
   const exportConfig = () => {

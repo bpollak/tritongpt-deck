@@ -1292,21 +1292,6 @@ export const slides = [
     ]
   },
   {
-    "id": 28,
-    "type": "video",
-    "content": [],
-    "videoSrc": "/media/pdf-remediator-1.6x.mov",
-    "poster": "/media/pdf-remediator-poster.png",
-    "managerLabel": "PDF Remediator Demo",
-    "audiences": [
-      "all",
-      "technical",
-      "internal",
-      "public",
-      "CCW"
-    ]
-  },
-  {
     "id": 29,
     "type": "content",
     "layout": "compound-architecture",
@@ -1871,7 +1856,7 @@ export const slides = [
         "allocation": "20%",
         "icon": "TrendingUp",
         "color": "#C69214",
-        "responsibilities": "Sets strategy, budget, governance, and executive partnerships."
+        "responsibilities": "Sets TritonAI strategy, governance, funding, and cross-campus partnerships."
       },
       {
         "role": "Offering Manager",
@@ -1881,7 +1866,7 @@ export const slides = [
         "allocation": "30%",
         "icon": "Heart",
         "color": "#00629B",
-        "responsibilities": "Owns intake, prototypes, support readiness, training, and rollout."
+        "responsibilities": "Turns campus use cases into launch-ready AI services, training, and adoption."
       }
     ],
     "teamMembers": [
@@ -1892,7 +1877,7 @@ export const slides = [
         "employmentType": "Career Staff",
         "allocation": "20%",
         "icon": "Cpu",
-        "responsibilities": "Designs secure, scalable on-prem LLM architecture."
+        "responsibilities": "Designs the secure, model-agnostic architecture behind TritonGPT, APIs, and agents."
       },
       {
         "role": "Platform Lead",
@@ -1901,7 +1886,7 @@ export const slides = [
         "employmentType": "Career Staff",
         "allocation": "80%",
         "icon": "Target",
-        "responsibilities": "Runs the platform environment, releases, and delivery handoffs."
+        "responsibilities": "Owns TritonGPT platform delivery, release planning, and cross-product execution."
       },
       {
         "role": "Project Manager",
@@ -1910,7 +1895,7 @@ export const slides = [
         "employmentType": "Contractor",
         "allocation": "50%",
         "icon": "ClipboardCheck",
-        "responsibilities": "Manages intake, timeline, risks, dependencies, and stakeholders."
+        "responsibilities": "Coordinates intake, roadmap sequencing, risk, and stakeholder alignment across the portfolio."
       },
       {
         "role": "Platform Engineer",
@@ -1919,7 +1904,7 @@ export const slides = [
         "employmentType": "Contract Employee",
         "allocation": "80%",
         "icon": "Code",
-        "responsibilities": "Operates Onyx, access controls, search pipelines, and incidents."
+        "responsibilities": "Operates Onyx, identity controls, indexing, and shared application services."
       },
       {
         "role": "Infra/DevOps",
@@ -1928,7 +1913,7 @@ export const slides = [
         "employmentType": "Contract Employee",
         "allocation": "80%",
         "icon": "Database",
-        "responsibilities": "Runs SDSC GPU clusters, Kubernetes, CI/CD, and secrets."
+        "responsibilities": "Runs SDSC GPU infrastructure, Kubernetes, CI/CD, and production reliability."
       },
       {
         "role": "Knowledge Engineer",
@@ -1937,7 +1922,7 @@ export const slides = [
         "employmentType": "Contract Employee",
         "allocation": "80%",
         "icon": "Network",
-        "responsibilities": "Builds knowledge graphs and graph-backed RAG for Enrollment Management."
+        "responsibilities": "Builds knowledge graphs, semantic models, and RAG workflows for student services."
       }
     ],
     "studentWorkers": [

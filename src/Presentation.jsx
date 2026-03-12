@@ -3,16 +3,14 @@ import { motion, AnimatePresence } from 'framer-motion'; // eslint-disable-line 
 import { ChevronLeft, ChevronRight, Download } from 'lucide-react';
 import Slide from './components/Slide';
 import { slides as defaultSlides } from './data/slides';
+import { isSlideVisibleForAudience } from './data/audiences';
 import { LOCAL_SLIDE_PREVIEW_EVENT, LOCAL_SLIDE_PREVIEW_KEY, isLocalPreviewHost, readLocalSlidePreview } from './utils/localSlidePreview';
 import { generatePPTX } from './utils/pptxExport';
 import { captureSlideSnapshots } from './utils/slideSnapshots';
 
 // Utility function to filter slides based on audience
 const filterSlidesByAudience = (slides, audienceType) => {
-  const targetAudience = audienceType || 'all';
-  return slides.filter(slide =>
-    slide.audiences && slide.audiences.includes(targetAudience)
-  );
+  return slides.filter((slide) => isSlideVisibleForAudience(slide, audienceType));
 };
 
 // Parse slide number from URL hash (e.g. #slide=5 -> 4, since it's 1-based in URL)
@@ -43,6 +41,19 @@ const Presentation = () => {
   const audienceType = useMemo(() => {
     const params = new URLSearchParams(window.location.search);
     return params.get('audience') || 'all';
+  }, []);
+
+  useEffect(() => {
+    const previousBodyOverflow = document.body.style.overflow;
+    const previousHtmlOverflow = document.documentElement.style.overflow;
+
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
+
+    return () => {
+      document.body.style.overflow = previousBodyOverflow;
+      document.documentElement.style.overflow = previousHtmlOverflow;
+    };
   }, []);
 
   useEffect(() => {
