@@ -1871,7 +1871,7 @@ export const slides = [
         "allocation": "20%",
         "icon": "TrendingUp",
         "color": "#C69214",
-        "responsibilities": "Set TritonGPT strategy; manage budget; governance with AI Development Workgroup; align with cabinet/VCs and UC peers; external partnerships and licensing."
+        "responsibilities": "Sets strategy, budget, governance, and executive partnerships."
       },
       {
         "role": "Offering Manager",
@@ -1881,7 +1881,7 @@ export const slides = [
         "allocation": "30%",
         "icon": "Heart",
         "color": "#00629B",
-        "responsibilities": "Own offering lifecycle: intake triage, prototyping oversight; customer support readiness; training/outreach programs; liaison with OSI; partner licensing."
+        "responsibilities": "Owns intake, prototypes, support readiness, training, and rollout."
       }
     ],
     "teamMembers": [
@@ -1892,7 +1892,7 @@ export const slides = [
         "employmentType": "Career Staff",
         "allocation": "20%",
         "icon": "Cpu",
-        "responsibilities": "Define reference architecture for on-prem LLM hosting; ensure security/compliance; own platform performance & scalability; steer model/tool choices."
+        "responsibilities": "Designs secure, scalable on-prem LLM architecture."
       },
       {
         "role": "Platform Lead",
@@ -1901,7 +1901,7 @@ export const slides = [
         "employmentType": "Career Staff",
         "allocation": "80%",
         "icon": "Target",
-        "responsibilities": "Oversee TritonGPT platform environment; plan releases and feature rollouts; bridge architecture to delivery; support vertical AI development."
+        "responsibilities": "Runs the platform environment, releases, and delivery handoffs."
       },
       {
         "role": "Project Manager",
@@ -1910,7 +1910,7 @@ export const slides = [
         "employmentType": "Contractor",
         "allocation": "50%",
         "icon": "ClipboardCheck",
-        "responsibilities": "Drive schedules, risks, dependencies; manage intake from AI Development Workgroup; coordinate stakeholders; track OKRs; manage expansion."
+        "responsibilities": "Manages intake, timeline, risks, dependencies, and stakeholders."
       },
       {
         "role": "Platform Engineer",
@@ -1919,7 +1919,7 @@ export const slides = [
         "employmentType": "Contract Employee",
         "allocation": "80%",
         "icon": "Code",
-        "responsibilities": "Own Onyx platform operations; manage multi-tenant deployments; configure SSO/RBAC; maintain search index pipelines; incident response."
+        "responsibilities": "Operates Onyx, access controls, search pipelines, and incidents."
       },
       {
         "role": "Infra/DevOps",
@@ -1928,7 +1928,7 @@ export const slides = [
         "employmentType": "Contract Employee",
         "allocation": "80%",
         "icon": "Database",
-        "responsibilities": "Operate on-prem LLM/GPU clusters at SDSC; manage Kubernetes infrastructure; CI/CD pipelines; secrets management; network/security baselines."
+        "responsibilities": "Runs SDSC GPU clusters, Kubernetes, CI/CD, and secrets."
       },
       {
         "role": "Knowledge Engineer",
@@ -1937,7 +1937,7 @@ export const slides = [
         "employmentType": "Contract Employee",
         "allocation": "80%",
         "icon": "Network",
-        "responsibilities": "Build knowledge graphs/ontologies for Enrollment Management; develop graph-backed RAG patterns; design semantic data models."
+        "responsibilities": "Builds knowledge graphs and graph-backed RAG for Enrollment Management."
       }
     ],
     "studentWorkers": [
