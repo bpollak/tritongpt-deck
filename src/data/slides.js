@@ -9,12 +9,7 @@ export const slides = [
     "presenterName": "Brett Pollak",
     "presenterTitle": "Executive Director, IT Services",
     "audiences": [
-      "all",
-      "executive",
-      "technical",
-      "CCW",
-      "public",
-      "internal"
+      "all"
     ]
   },
   {
@@ -93,10 +88,7 @@ export const slides = [
       }
     ],
     "audiences": [
-      "all",
-      "public",
-      "executive",
-      "technical"
+      "all"
     ]
   },
   {
@@ -230,10 +222,7 @@ export const slides = [
       }
     ],
     "audiences": [
-      "all",
-      "internal",
-      "public",
-      "CCW"
+      "all"
     ]
   },
   {
@@ -277,10 +266,7 @@ export const slides = [
     "dark": false,
     "backgroundColor": "#F5F0E6",
     "audiences": [
-      "all",
-      "internal",
-      "public",
-      "CCW"
+      "all"
     ]
   },
   {
