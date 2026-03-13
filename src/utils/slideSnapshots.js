@@ -8,6 +8,8 @@ const SNAPSHOT_HEIGHT = 900;
 const SNAPSHOT_WAIT_MS = 1100;
 
 export const SNAPSHOT_LAYOUTS = new Set([
+  'api-gateway',
+  'hosting-pipeline',
   'compound-architecture',
   'agent-workflow',
   'analytics-chart'
@@ -99,4 +101,3 @@ export const captureSlideSnapshots = async (slidesData, layoutFilter = SNAPSHOT_
 
   return snapshotsById;
 };
-

@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'; // eslint-disable-line no-unused-vars
 import clsx from 'clsx';
 import { Target, Database, Cpu, Blocks, GraduationCap, Building2, FileText, FileCheck, DollarSign, Shield, BookOpen, Code, Presentation, Globe, FileEdit, FolderOpen, TrendingUp, ClipboardCheck, Search, Heart, Calendar, GitBranch, Network, Grid3x3, ArrowDown, ArrowRight, Brain, RefreshCw, ArrowRightLeft, CheckCircle, Monitor, Users, Award, Server, Layers, Wallet, Share2, Star, FlaskConical } from 'lucide-react';
 import { QRCodeSVG } from 'qrcode.react';
-import VideoSlide from './VideoSlide';
 
 const iconMap = {
   'Target': Target,
@@ -88,7 +87,25 @@ const Slide = ({ slide }) => {
   if (!slide) return <div className="text-red-500 p-10">Slide Error: No data provided</div>;
 
   if (slide.type === 'video') {
-    return <VideoSlide videoSrc={slide.videoSrc} title={slide.title} poster={slide.poster} />;
+    return (
+      <div className="relative w-full h-full overflow-hidden bg-black">
+        <video
+          src={slide.videoSrc}
+          poster={slide.poster}
+          className="absolute inset-0 h-full w-full object-contain"
+          controls
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
+        {slide.title && (
+          <div className="absolute left-6 top-6 rounded-full bg-black/55 px-4 py-2 text-sm font-black uppercase tracking-[0.18em] text-white backdrop-blur-sm">
+            {slide.title}
+          </div>
+        )}
+      </div>
+    );
   }
 
   const isTitle = slide.type === 'title';
@@ -3068,223 +3085,266 @@ const Slide = ({ slide }) => {
         const deploymentTiers = slide.deploymentTiers || [];
         const deploymentTierNote = slide.deploymentTierNote;
         const platformNote = slide.platformNote;
+        const hasBoundaryPanels = Boolean(boundaries.whatItIs?.items?.length || boundaries.whatItIsNot?.items?.length);
+        const phaseDefinitions = [
+          {
+            label: 'Build',
+            color: '#00629B',
+            surface: 'linear-gradient(180deg, rgba(0,98,155,0.16) 0%, rgba(0,98,155,0.05) 100%)',
+            halo: '0 18px 36px rgba(0,98,155,0.10)',
+            items: steps.slice(0, 2)
+          },
+          {
+            label: 'Launch',
+            color: '#00C6D7',
+            surface: 'linear-gradient(180deg, rgba(0,198,215,0.16) 0%, rgba(0,198,215,0.05) 100%)',
+            halo: '0 18px 36px rgba(0,198,215,0.10)',
+            items: steps.slice(2, 4)
+          },
+          {
+            label: 'Operate',
+            color: '#FC8900',
+            surface: 'linear-gradient(180deg, rgba(252,137,0,0.16) 0%, rgba(252,137,0,0.05) 100%)',
+            halo: '0 18px 36px rgba(252,137,0,0.10)',
+            items: steps.slice(4, 6)
+          }
+        ].filter((phase) => phase.items.length > 0);
 
         return (
-          <div className="w-full max-w-[1800px] mx-auto flex flex-col gap-2 sm:gap-2.5">
-            {/* Title */}
+          <div className="w-full max-w-[1800px] mx-auto flex flex-col gap-3 sm:gap-3.5">
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-center"
+              className="flex flex-col gap-3"
             >
-              <div className="text-[28px] sm:text-[42px] md:text-[48px] font-black text-ucsd-navy leading-none">{slide.title}</div>
-              <div className="text-xs sm:text-base text-ucsd-blue font-medium mt-0.5">{slide.subtitle}</div>
+              <div className="text-left">
+                <div className="text-[28px] sm:text-[42px] md:text-[48px] font-black text-ucsd-navy leading-none">{slide.title}</div>
+                <div className="text-xs sm:text-base text-ucsd-blue font-medium mt-1">{slide.subtitle}</div>
+              </div>
             </motion.div>
 
-            {/* Pipeline Track */}
-            <div className="relative px-2 sm:px-4">
-              {/* Track line (desktop) */}
-              <div className="hidden sm:block absolute top-[24px] left-[8%] right-[8%] h-1 z-0">
-                <motion.div
-                  initial={{ scaleX: 0 }}
-                  animate={{ scaleX: 1 }}
-                  transition={{ delay: 0.4, duration: 1.2, ease: "easeOut" }}
-                  className="h-full bg-gradient-to-r from-ucsd-blue via-ucsd-sky to-ucsd-gold rounded-full origin-left"
-                />
-              </div>
-
-              {/* Step nodes */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-2.5 relative z-10">
-                {steps.map((step, i) => {
-                  const IconComp = iconMap[step.icon] || Code;
-                  return (
-                    <motion.div
-                      key={i}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.5 + i * 0.12, type: "spring", stiffness: 120 }}
-                      className="flex h-full flex-col items-center"
-                    >
-                      {/* Number badge on track */}
-                      <motion.div
-                        initial={{ scale: 0 }}
-                        animate={{ scale: 1 }}
-                        transition={{ delay: 0.6 + i * 0.12, type: "spring", stiffness: 200 }}
-                        className="w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center text-white shadow-lg border-3 border-white mb-1.5 sm:mb-2 z-10"
-                        style={{ backgroundColor: step.color }}
-                      >
-                        <span className="text-sm sm:text-base font-black">{step.number}</span>
-                      </motion.div>
-
-                      {/* Card below */}
-                      <div className="w-full flex-1 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 overflow-hidden border border-gray-100">
-                        <div className="h-1" style={{ backgroundColor: step.color }} />
-                        <div className="flex h-full flex-col p-2.5 sm:p-2.5">
-                          <div className="flex items-center gap-1.5 mb-0.5 sm:mb-1">
-                            <IconComp size={14} style={{ color: step.color }} />
-                            <span className="text-[13px] sm:text-[15px] font-black text-ucsd-navy uppercase tracking-wide leading-tight">{step.name}</span>
-                          </div>
-                          <p className="text-[11px] sm:text-[13px] text-slate-700 font-medium leading-[1.18]">{step.description}</p>
-                        </div>
-                      </div>
-                    </motion.div>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Responsibility Split */}
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.3, duration: 0.5 }}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-2.5 relative"
-            >
-              {/* ITS Panel */}
-              <div className="rounded-xl p-2.5 sm:p-3.5 border-2 shadow-sm" style={{ borderColor: ownership.its?.color, backgroundColor: `${ownership.its?.color}08` }}>
-                <div className="flex items-center gap-2 mb-1.5">
-                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center" style={{ backgroundColor: `${ownership.its?.color}15` }}>
-                    <Server size={16} style={{ color: ownership.its?.color }} />
-                  </div>
-                  <span className="text-[15px] sm:text-[17px] font-black uppercase tracking-wide leading-none" style={{ color: ownership.its?.color }}>{ownership.its?.title}</span>
-                </div>
-                <div className="space-y-0.5">
-                  {ownership.its?.items?.map((item, i) => (
-                    <div key={i} className="flex items-center gap-2 text-[13px] sm:text-[15px] font-semibold text-ucsd-navy leading-tight">
-                      <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: ownership.its?.color }} />
-                      {item}
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Animated arrow between panels (desktop) */}
+            <div className="grid grid-cols-1 xl:grid-cols-[1.55fr_1fr] gap-3 items-stretch">
               <motion.div
-                animate={{ x: [0, 6, 0, -6, 0] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                className="hidden sm:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-white shadow-lg border-2 border-ucsd-navy/20 items-center justify-center"
+                initial={{ opacity: 0, y: 14 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.5 }}
+                className="relative overflow-hidden rounded-[28px] border border-white/75 bg-white/88 p-3 sm:p-4 shadow-[0_18px_36px_rgba(24,43,73,0.10)]"
               >
-                <ArrowRightLeft size={16} className="text-ucsd-navy" />
+                <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-r from-ucsd-blue/10 via-ucsd-sky/5 to-transparent" />
+                <div className="relative">
+                  <div className="flex items-center justify-between gap-3 mb-3">
+                    <div>
+                      <div className="whitespace-nowrap text-[16px] sm:text-[20px] lg:text-[22px] font-black tracking-[-0.025em] text-ucsd-navy leading-[1.04]">The Path to Governed Hosting</div>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 md:[grid-template-rows:auto_auto_auto] gap-2.5 items-stretch">
+                    {phaseDefinitions.map((phase, phaseIndex) => (
+                      <motion.div
+                        key={phase.label}
+                        initial={{ opacity: 0, y: 12 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.42 + phaseIndex * 0.1, duration: 0.4 }}
+                        className="relative grid overflow-hidden rounded-[22px] border p-3 shadow-sm gap-2.5 md:row-span-3 md:[grid-template-rows:subgrid]"
+                        style={{
+                          borderColor: `${phase.color}35`,
+                          background: phase.surface,
+                          boxShadow: `${phase.halo}, inset 0 4px 0 ${phase.color}55`
+                        }}
+                      >
+                        <div
+                          className="absolute inset-x-0 top-0 h-14 opacity-80"
+                          style={{ background: `linear-gradient(180deg, ${phase.color}18 0%, transparent 100%)` }}
+                        />
+                        <div className="relative flex items-center justify-between gap-2">
+                          <div className="inline-flex items-center gap-2 rounded-full px-3 py-1.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.75)]" style={{ backgroundColor: `${phase.color}14` }}>
+                            <div className="h-3 w-3 rounded-full shadow-sm" style={{ backgroundColor: phase.color }} />
+                            <div className="text-[12px] sm:text-[13px] font-black uppercase tracking-[0.18em]" style={{ color: phase.color }}>
+                              {phase.label}
+                            </div>
+                          </div>
+                          {phaseIndex < phaseDefinitions.length - 1 && (
+                            <ArrowRight size={16} className="hidden md:block text-ucsd-blue/35" />
+                          )}
+                        </div>
+                        {phase.items.map((step, stepIndex) => {
+                          const IconComp = iconMap[step.icon] || Code;
+                          return (
+                            <div
+                              key={`${phase.label}-${step.number}-${stepIndex}`}
+                              className="relative h-full rounded-[18px] border px-3 py-2.5"
+                              style={{
+                                borderColor: `${phase.color}18`,
+                                backgroundColor: 'rgba(255,255,255,0.82)',
+                                boxShadow: '0 8px 18px rgba(24,43,73,0.06)'
+                              }}
+                            >
+                              <div className="grid grid-cols-1 gap-1.5 items-start">
+                                <div className="min-w-0">
+                                  <div className="flex items-center gap-2">
+                                    <IconComp size={16} style={{ color: phase.color }} />
+                                    <div className="text-[16px] sm:text-[17px] font-black text-ucsd-navy leading-tight">{step.name}</div>
+                                  </div>
+                                  <div className="mt-1 text-[13px] sm:text-[14px] font-medium leading-[1.3] text-slate-700">
+                                    {step.description}
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </motion.div>
+                    ))}
+                  </div>
+
+                  {platformNote && (
+                    <div className="mt-2.5 text-[11px] sm:text-xs font-semibold text-slate-500 leading-tight">
+                      {platformNote}
+                    </div>
+                  )}
+                </div>
               </motion.div>
 
-              {/* Builder Panel */}
-              <div className="rounded-xl p-2.5 sm:p-3.5 border-2 shadow-sm" style={{ borderColor: ownership.builder?.color, backgroundColor: `${ownership.builder?.color}08` }}>
-                <div className="flex items-center gap-2 mb-1.5">
-                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center" style={{ backgroundColor: `${ownership.builder?.color}15` }}>
-                    <Code size={16} style={{ color: ownership.builder?.color }} />
-                  </div>
-                  <span className="text-[15px] sm:text-[17px] font-black uppercase tracking-wide leading-none" style={{ color: '#182B49' }}>{ownership.builder?.title}</span>
-                </div>
-                <div className="space-y-0.5">
-                  {ownership.builder?.items?.map((item, i) => (
-                    <div key={i} className="flex items-center gap-2 text-[13px] sm:text-[15px] font-semibold text-ucsd-navy leading-tight">
-                      <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: ownership.builder?.color }} />
-                      {item}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Deployment Path / Boundary Context */}
-            {deploymentTiers.length > 0 ? (
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.6 }}
-                className="rounded-xl p-2.5 sm:p-3 border border-ucsd-navy/10 bg-white/80 shadow-sm"
+                initial={{ opacity: 0, y: 14 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.42, duration: 0.5 }}
+                className="rounded-[28px] border border-white/75 bg-white/88 p-3 sm:p-4 shadow-[0_18px_36px_rgba(24,43,73,0.10)]"
               >
-                <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-0.5 sm:gap-2 mb-2">
-                  <div className="text-[11px] sm:text-xs font-black uppercase tracking-[0.18em] text-ucsd-navy/60">3-Tier Deployment Path</div>
+                <div className="flex items-center justify-between gap-3 mb-3">
+                  <div>
+                    <div className="whitespace-nowrap text-[17px] sm:text-[20px] xl:text-[22px] font-black tracking-[-0.02em] text-ucsd-navy leading-tight">ITS manages the platform; departments own the software</div>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-0 rounded-[22px] overflow-hidden border border-slate-200/80 bg-slate-50/70">
+                  <div className="p-3 border-b md:border-b-0 md:border-r border-slate-200/80">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="w-9 h-9 rounded-full flex items-center justify-center" style={{ backgroundColor: `${ownership.its?.color}15` }}>
+                        <Server size={16} style={{ color: ownership.its?.color }} />
+                      </div>
+                      <span className="text-[17px] sm:text-[19px] font-black uppercase tracking-wide leading-none" style={{ color: ownership.its?.color }}>
+                        {ownership.its?.title}
+                      </span>
+                    </div>
+                    <div className="space-y-1.5">
+                      {ownership.its?.items?.map((item, i) => (
+                        <div key={i} className="flex items-start gap-2 text-[15px] sm:text-[16px] font-semibold text-ucsd-navy leading-tight">
+                          <div className="mt-[7px] h-1.5 w-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: ownership.its?.color }} />
+                          <span>{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="p-3">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="w-9 h-9 rounded-full flex items-center justify-center" style={{ backgroundColor: `${ownership.builder?.color}15` }}>
+                        <Code size={16} style={{ color: ownership.builder?.color }} />
+                      </div>
+                      <span className="text-[17px] sm:text-[19px] font-black uppercase tracking-wide leading-none text-ucsd-navy">
+                        {ownership.builder?.title}
+                      </span>
+                    </div>
+                    <div className="space-y-1.5">
+                      {ownership.builder?.items?.map((item, i) => (
+                        <div key={i} className="flex items-start gap-2 text-[15px] sm:text-[16px] font-semibold text-ucsd-navy leading-tight">
+                          <div className="mt-[7px] h-1.5 w-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: ownership.builder?.color }} />
+                          <span>{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {hasBoundaryPanels && (
+                  <div className="mt-3 grid grid-cols-1 gap-2">
+                    <div className="rounded-[18px] border border-ucsd-blue/18 bg-ucsd-blue/5 px-3 py-2">
+                      <div className="text-[12px] sm:text-[13px] font-black uppercase tracking-[0.16em] leading-none mb-1.5 text-ucsd-blue">In Scope</div>
+                      <div className="flex flex-wrap gap-1.5">
+                        {boundaries.whatItIs?.items?.map((item, i) => (
+                          <span key={i} className="text-[13px] sm:text-[14px] font-bold leading-none px-2.5 py-1.5 rounded-full bg-white/85 text-ucsd-blue">
+                            {item}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="rounded-[18px] border border-[#B56200]/18 bg-[#B56200]/5 px-3 py-2">
+                      <div className="text-[12px] sm:text-[13px] font-black uppercase tracking-[0.16em] leading-none mb-1.5 text-[#B56200]">Not For</div>
+                      <div className="flex flex-wrap gap-1.5">
+                        {boundaries.whatItIsNot?.items?.map((item, i) => (
+                          <span key={i} className="text-[13px] sm:text-[14px] font-bold leading-none px-2.5 py-1.5 rounded-full bg-white/85 text-[#B56200]">
+                            {item}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </motion.div>
+            </div>
+
+            {deploymentTiers.length > 0 && (
+              <motion.div
+                initial={{ opacity: 0, y: 18 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6, duration: 0.5 }}
+                className="rounded-[28px] border border-white/75 bg-white/88 p-3 sm:p-4 shadow-[0_18px_36px_rgba(24,43,73,0.10)]"
+              >
+                <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-1.5 sm:gap-3 mb-2.5">
+                  <div className="text-[11px] sm:text-xs font-black uppercase tracking-[0.18em] text-ucsd-navy/55">3-Tier Deployment Path</div>
                   {deploymentTierNote && (
                     <div className="text-[10px] sm:text-[11px] font-semibold text-slate-500">{deploymentTierNote}</div>
                   )}
                 </div>
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-2">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-2.5">
                   {deploymentTiers.map((tier, i) => {
+                    const TierIcon = iconMap[tier.icon] || Layers;
                     return (
                       <motion.div
                         key={tier.title || i}
-                        initial={{ opacity: 0, y: 12 }}
+                        initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 1.68 + i * 0.08 }}
-                        className="rounded-lg border bg-white/90 p-2.5 sm:p-3 shadow-sm"
+                        transition={{ delay: 0.68 + i * 0.08, duration: 0.35 }}
+                        className="rounded-[20px] border bg-white/92 p-3 shadow-sm"
                         style={{
-                          borderColor: `${tier.color}40`,
+                          borderColor: `${tier.color}35`,
                           boxShadow: `inset 0 3px 0 ${tier.color}55`
                         }}
                       >
-                        <div className="mb-1.5">
-                          <div>
+                        <div className="flex items-start justify-between gap-3 mb-1.5">
+                          <div className="min-w-0">
                             <div className="text-[11px] sm:text-xs font-black uppercase tracking-[0.18em] leading-none" style={{ color: tier.color }}>
                               {tier.tier}
                             </div>
-                            <div className="text-[17px] sm:text-[19px] font-black text-ucsd-navy leading-tight mt-0.5">{tier.title}</div>
-                            <div className="text-[12px] sm:text-[13px] text-slate-500 font-medium leading-tight mt-0.5">{tier.subtitle}</div>
+                            <div className="text-[18px] sm:text-[19px] font-black text-ucsd-navy leading-tight mt-1">{tier.title}</div>
+                          </div>
+                          <div className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: `${tier.color}12` }}>
+                            <TierIcon size={16} style={{ color: tier.color }} />
                           </div>
                         </div>
-                        <div className="flex flex-wrap gap-1 mb-1.5">
+                        <div className="text-[12px] sm:text-[13px] text-slate-600 font-medium leading-snug">{tier.subtitle}</div>
+                        <div className="flex flex-wrap gap-1 mt-2 mb-2">
                           {tier.badges?.map((badge, badgeIndex) => (
                             <span
                               key={badgeIndex}
-                              className="text-[11px] sm:text-xs font-black uppercase tracking-wide px-2 py-0.5 rounded-full"
+                              className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.12em] px-2 py-0.5 rounded-full"
                               style={{ backgroundColor: `${tier.color}10`, color: tier.color }}
                             >
                               {badge}
                             </span>
                           ))}
                         </div>
-                        <div className="space-y-1 text-[11px] sm:text-xs">
-                          <div className="flex gap-2 leading-tight">
-                            <span className="w-[72px] sm:w-[78px] flex-shrink-0 whitespace-nowrap font-black uppercase tracking-[0.12em] text-slate-500">Review</span>
-                            <span className="font-semibold text-ucsd-navy">{tier.review}</span>
-                          </div>
-                          <div className="flex gap-2 leading-tight">
-                            <span className="w-[72px] sm:w-[78px] flex-shrink-0 whitespace-nowrap font-black uppercase tracking-[0.12em] text-slate-500">Support</span>
-                            <span className="font-semibold text-ucsd-navy">{tier.support}</span>
-                          </div>
+                        <div className="grid grid-cols-[92px_1fr] sm:grid-cols-[98px_1fr] gap-x-2 gap-y-1 text-[11px] sm:text-xs">
+                          <span className="whitespace-nowrap font-black uppercase tracking-[0.12em] leading-none text-slate-500">Review</span>
+                          <span className="font-semibold text-ucsd-navy leading-snug">{tier.review}</span>
+                          <span className="whitespace-nowrap font-black uppercase tracking-[0.12em] leading-none text-slate-500">Support</span>
+                          <span className="font-semibold text-ucsd-navy leading-snug">{tier.support}</span>
                         </div>
                       </motion.div>
                     );
                   })}
-                </div>
-                {platformNote && (
-                  <div className="mt-2 text-center text-[10px] sm:text-[11px] font-semibold text-slate-500 leading-tight">
-                    {platformNote}
-                  </div>
-                )}
-              </motion.div>
-            ) : (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.6 }}
-                className="grid grid-cols-1 sm:grid-cols-2 gap-2"
-              >
-                {/* What It Is */}
-                <div className="rounded-lg p-2.5 sm:p-3 border" style={{ borderColor: `${boundaries.whatItIs?.color}40`, backgroundColor: `${boundaries.whatItIs?.color}08` }}>
-                  <div className="text-sm sm:text-[15px] font-black uppercase tracking-[0.14em] leading-none mb-1" style={{ color: boundaries.whatItIs?.color }}>
-                    <CheckCircle size={14} className="inline mr-1" style={{ color: boundaries.whatItIs?.color }} />
-                    What This Is
-                  </div>
-                  <div className="flex flex-wrap gap-1.5">
-                    {boundaries.whatItIs?.items?.map((item, i) => (
-                      <span key={i} className="text-sm sm:text-[15px] font-bold leading-none px-2 py-0.5 rounded-full" style={{ backgroundColor: `${boundaries.whatItIs?.color}15`, color: boundaries.whatItIs?.color }}>{item}</span>
-                    ))}
-                  </div>
-                </div>
-                {/* What It Is Not */}
-                <div className="rounded-lg p-2.5 sm:p-3 border" style={{ borderColor: `${boundaries.whatItIsNot?.color}40`, backgroundColor: `${boundaries.whatItIsNot?.color}08` }}>
-                  <div className="text-sm sm:text-[15px] font-black uppercase tracking-[0.14em] leading-none mb-1" style={{ color: boundaries.whatItIsNot?.color }}>
-                    <Shield size={14} className="inline mr-1" style={{ color: boundaries.whatItIsNot?.color }} />
-                    What This Is Not
-                  </div>
-                  <div className="flex flex-wrap gap-1.5">
-                    {boundaries.whatItIsNot?.items?.map((item, i) => (
-                      <span key={i} className="text-sm sm:text-[15px] font-bold leading-none px-2 py-0.5 rounded-full" style={{ backgroundColor: `${boundaries.whatItIsNot?.color}15`, color: boundaries.whatItIsNot?.color }}>{item}</span>
-                    ))}
-                  </div>
                 </div>
               </motion.div>
             )}

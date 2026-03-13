@@ -856,7 +856,7 @@ export const slides = [
     "type": "content",
     "layout": "api-gateway",
     "title": "TritonAI Developer API Program",
-    "subtitle": "One Gateway to Secure AI Model Access for the Entire Campus",
+    "subtitle": "A governed starting point for AI-built departmental tools",
     "backgroundColor": "#F5F0E6",
     "providers": [
       {
@@ -882,26 +882,28 @@ export const slides = [
     ],
     "gateway": {
       "name": "LLM Gateway",
-      "subtitle": ""
+      "subtitle": "Templates + Guardrails"
     },
+    "consumersHeading": "Builder Personas",
     "consumers": [
       {
-        "name": "Faculty",
-        "icon": "BookOpen"
-      },
-      {
-        "name": "Researchers",
-        "icon": "FlaskConical"
-      },
-      {
-        "name": "Staff",
+        "name": "Dept. Staff",
         "icon": "Users"
       },
       {
-        "name": "Students",
-        "icon": "GraduationCap"
+        "name": "Research Labs",
+        "icon": "FlaskConical"
+      },
+      {
+        "name": "Admin Analysts",
+        "icon": "Wallet"
+      },
+      {
+        "name": "Faculty Teams",
+        "icon": "BookOpen"
       }
     ],
+    "devToolsHeading": "AI Coding Agents",
     "devTools": [
       {
         "name": "Claude Code",
@@ -916,7 +918,7 @@ export const slides = [
         "color": "#10A37F"
       }
     ],
-    "devToolsAnnotation": "These tools use TritonAI APIs to build the apps that enter Campus App Hosting",
+    "devToolsAnnotation": "Builders use Claude Code or Codex with ITS templates, identity patterns, and curated integrations to create internal apps safely.",
     "modelTypes": [
       {
         "name": "Chat",
@@ -943,41 +945,45 @@ export const slides = [
         "icon": "Code"
       }
     ],
+    "accessHeading": "Paved Path",
     "accessSteps": [
       {
         "number": "1",
         "title": "Request",
-        "description": "Submit an intake form with project context",
+        "description": "Describe the use case, audience, and campus data involved",
         "icon": "FileText",
         "color": "#182B49"
       },
       {
         "number": "2",
         "title": "Receive",
-        "description": "API key plus starter credits for prototyping",
+        "description": "Get API key, starter credits, template repo, and agent instructions",
         "icon": "CheckCircle",
         "color": "#00629B"
       },
       {
         "number": "3",
         "title": "Build",
-        "description": "Experiment, validate the use case, and choose models",
+        "description": "Use approved stacks, campus auth patterns, and curated integrations",
         "icon": "Code",
         "color": "#00C6D7"
       },
       {
         "number": "4",
-        "title": "Scale",
-        "description": "Move to funded cloud and production workloads",
+        "title": "Host",
+        "description": "Apply for Campus App Hosting or graduate to enterprise delivery",
         "icon": "TrendingUp",
         "color": "#FFCD00"
       }
     ],
     "guardrails": [
-      "P1-P3 Approved",
+      "P1-P3 Only",
+      "Approved Stacks",
+      "Curated Integrations",
+      "Campus Auth Pattern",
+      "Usage Tracking",
       "No Model Training",
-      "Full Usage Tracking",
-      "2-3 Day Review"
+      "Starter Credits"
     ],
     "audiences": [
       "all",
@@ -993,54 +999,54 @@ export const slides = [
     "type": "content",
     "layout": "hosting-pipeline",
     "title": "Campus App Hosting",
-    "subtitle": "The lightweight path from prototype to secure internal deployment",
+    "subtitle": "Constrained, campus-only hosting for internal, department-owned apps",
     "backgroundColor": "#F5F0E6",
     "pipelineSteps": [
       {
         "number": "1",
-        "name": "Build & Test",
-        "description": "Prototype using Claude Code or Codex, powered by TritonAI APIs",
-        "example": "Faculty uses Claude Code to build PDF accessibility checker",
+        "name": "Prototype",
+        "description": "Build locally or in a sandbox using TritonAI APIs and ITS templates",
+        "example": "Early proof of concept for a departmental workflow",
         "icon": "Code",
         "color": "#00629B"
       },
       {
         "number": "2",
-        "name": "Apply to Host",
-        "description": "Submit code, audience, data class, and contact",
-        "example": "PDF Remediator for Title II, P1 data, 200 staff",
+        "name": "Apply",
+        "description": "Submit department, audience, data class, and value",
+        "example": "Department sponsor, named technical POC, P1-P3 data, and target user group",
         "icon": "FileText",
         "color": "#006A96"
       },
       {
         "number": "3",
-        "name": "Lightweight Review",
-        "description": "ITS checks risk, stack fit, scope",
-        "example": "2-3 day turnaround for campus-only tools",
+        "name": "Review",
+        "description": "Automated checks plus guided ITS review",
+        "example": "Sensitive data, restricted APIs, and stack fit are checked early",
         "icon": "ClipboardCheck",
         "color": "#00C6D7"
       },
       {
         "number": "4",
-        "name": "Deploy & Share",
-        "description": "Campus-only hosting with SSO by default",
-        "example": "Reduces attack surface, speeds review",
+        "name": "Deploy",
+        "description": "Campus-only hosting with SSO, logging, and network controls",
+        "example": "Internal app is available only on campus or over VPN",
         "icon": "Globe",
         "color": "#FFCD00"
       },
       {
         "number": "5",
         "name": "Operate",
-        "description": "Builders own app logic, ITS owns infra",
-        "example": "ITS can pull unsafe or abandoned apps",
+        "description": "Departments support the app; ITS manages platform health",
+        "example": "ITS may remove unsafe, abandoned, or non-compliant apps",
         "icon": "RefreshCw",
         "color": "#FC8900"
       },
       {
         "number": "6",
         "name": "Promote",
-        "description": "High-value apps can graduate to Tier 2 or Tier 3",
-        "example": "PDF Remediator → Triton AI Tool or enterprise path",
+        "description": "High-value apps move up in tiers; unsupported apps are retired",
+        "example": "Proven apps graduate to enterprise support when warranted",
         "icon": "TrendingUp",
         "color": "#6E963B"
       }
@@ -1049,20 +1055,20 @@ export const slides = [
       "its": {
         "title": "ITS Owns",
         "items": [
-          "Framework Standards",
-          "Hosting & Platform",
-          "Lightweight Review",
-          "Right to Pull Apps"
+          "Templates & Standards",
+          "Hosting, SSO & Logs",
+          "Baseline Risk Review",
+          "Right to Remove Apps"
         ],
         "color": "#00629B"
       },
       "builder": {
-        "title": "Builders Own",
+        "title": "Department Owns",
         "items": [
-          "App Logic & Behavior",
-          "Bug Fixes",
-          "User Support",
-          "Technical Contact"
+          "App Logic & Dependencies",
+          "Accessibility & Testing",
+          "End-User Support",
+          "Named Technical POC"
         ],
         "color": "#FFCD00"
       }
@@ -1070,62 +1076,62 @@ export const slides = [
     "deploymentTiers": [
       {
         "tier": "Tier 1",
-        "title": "Campus App Hosting",
-        "subtitle": "Low-friction, owner-operated deployment",
+        "title": "Testing & Ideation",
+        "subtitle": "Local or user-funded sandbox for proof-of-concept work",
         "badges": [
-          ".app.ucsd.edu",
-          "P1-P3"
+          "Local / Sandbox",
+          "Prototype"
         ],
-        "review": "Automated scan + template/P4 checks",
-        "support": "Infra only; owner handles app issues",
+        "review": "No ITS code support; intake starts once the app is functional",
+        "support": "Self-service docs, templates, and starter credits",
         "icon": "Globe",
         "color": "#6E963B"
       },
       {
         "tier": "Tier 2",
-        "title": "Triton AI Tools",
-        "subtitle": "ITS-supported tools for broad campus use",
+        "title": "Triton AI Apps",
+        "subtitle": "Campus-only, department-owned internal apps",
         "badges": [
-          "tritonai.ucsd.edu",
+          "Campus / VPN",
           "P1-P3"
         ],
-        "review": "Automated scan + human quality/UX review",
-        "support": "ITS monitoring, patching, support channel",
+        "review": "Automated checks + lightweight ITS review + exclusion screening",
+        "support": "ITS infra only; department handles logic, accessibility, and user issues",
         "icon": "Layers",
         "color": "#00C6D7"
       },
       {
         "tier": "Tier 3",
-        "title": "Full ITS Deployment",
-        "subtitle": "Enterprise path for campus-critical apps",
+        "title": "Enterprise Solutions",
+        "subtitle": "Campus-critical or high-ROI tools with full ITS ownership",
         "badges": [
-          "ITS / EKS infra",
+          "ITS Platform",
           "P1-P4"
         ],
-        "review": "Architecture, security, compliance review",
-        "support": "SLAs, dedicated team, monitoring, DR",
+        "review": "Standard architecture, security, compliance, and support review",
+        "support": "ITS team, SLAs, monitoring, backups, lifecycle management",
         "icon": "Building2",
         "color": "#00629B"
       }
     ],
-    "deploymentTierNote": "Apps move up tiers as adoption and criticality increase",
-    "platformNote": "Powered by Triton AI Developer API (LLM Gateway)",
+    "deploymentTierNote": "Most tools stay department-owned; only proven critical apps move up",
+    "platformNote": "Paved path for internal apps built with TritonAI Developer API",
     "boundaries": {
       "whatItIs": {
         "items": [
-          "Low-Friction Hosting",
-          "Compact Intake",
-          "Lightweight Review",
-          "Templates & Guidance"
+          "Campus-Only",
+          "Internal Apps",
+          "Department-Owned",
+          "Shared Templates"
         ],
         "color": "#00629B"
       },
       "whatItIsNot": {
         "items": [
-          "Enterprise Bypass",
-          "For Critical Systems",
-          "Unreviewed Deployment",
-          "Vendor Replacement"
+          "No Public Sites",
+          "No Clinical",
+          "No Payments",
+          "Not Critical Ops"
         ],
         "color": "#B56200"
       }

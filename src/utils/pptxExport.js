@@ -2943,6 +2943,44 @@ const renderAnalyticsChartSlide = ({ pres, slide, options }) => {
   return true;
 };
 
+const renderApiGatewaySnapshotSlide = ({ pres, slide, options }) => {
+  if (slide.layout !== "api-gateway") return false;
+
+  const snapshotImage = getSnapshotImageOptions(options, slide);
+  if (!snapshotImage) return false;
+
+  const shell = addSlideShell({
+    pres,
+    slideData: slide,
+    pageIndex: 0,
+    pageCount: 1,
+  });
+
+  addSnapshotBackdrop({ shell, imageOpts: snapshotImage, pres });
+  addSnapshotSummaryPanel({ shell, slide, pres, title: "Program Notes" });
+  addAccessibilityTextLayer({ shell, slide });
+  return true;
+};
+
+const renderHostingPipelineSnapshotSlide = ({ pres, slide, options }) => {
+  if (slide.layout !== "hosting-pipeline") return false;
+
+  const snapshotImage = getSnapshotImageOptions(options, slide);
+  if (!snapshotImage) return false;
+
+  const shell = addSlideShell({
+    pres,
+    slideData: slide,
+    pageIndex: 0,
+    pageCount: 1,
+  });
+
+  addSnapshotBackdrop({ shell, imageOpts: snapshotImage, pres });
+  addSnapshotSummaryPanel({ shell, slide, pres, title: "Hosting Notes" });
+  addAccessibilityTextLayer({ shell, slide });
+  return true;
+};
+
 const renderContractReviewChallengeSlide = ({ pres, slide }) => {
   if (slide.layout !== "contract-review-challenge") return false;
 
@@ -4238,6 +4276,8 @@ const TEMPLATE_RENDERER_FAMILIES = {
   [TEMPLATE_KIND.TITLE_BODY]: [
     renderTitleHeroSlide,
     renderVideoPosterSlide,
+    renderApiGatewaySnapshotSlide,
+    renderHostingPipelineSnapshotSlide,
   ],
   [TEMPLATE_KIND.TWO_COLUMN]: [
     renderFeatureGridSlide,
