@@ -12,7 +12,7 @@ This project is a **React-based single-page application (SPA)** designed to serv
 -   **Utilities**: `qrcode.react` for client-side QR code generation.
 
 ## Project Structure
--   **`src/data/slides.js`**: **CRITICAL**. This file is the specific single source of truth for all presentation content. It exports a `slides` array containing objects with properties like `type`, `layout`, `title`, `content`, `imageSrc`, etc.
+-   **`src/data/slides.js`**: **CRITICAL**. This file is the specific single source of truth for all presentation content. It exports a `slides` array containing objects with properties like `id`, stable `slug`, `type`, `layout`, `title`, `content`, `imageSrc`, etc.
 -   **`src/components/Slide.jsx`**: The main rendering component. It acts as a factory, rendering different layouts based on the `slide.layout` prop (e.g., `title-hero`, `solution-showcase`, `ecosystem-visual`).
 -   **`src/App.jsx`**: Handles the slide navigation state (`currentSlide`), keyboard event listeners (ArrowRight, ArrowLeft), and mounts the `Slide` component.
 -   **`public/media/`**: Stores static assets like images (`headshot.jpg`) and videos. Referenced as absolute paths (e.g., `/media/file.jpg`).

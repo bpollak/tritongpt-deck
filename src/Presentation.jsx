@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight, Download } from 'lucide-react';
 import Slide from './components/Slide';
 import { slides as defaultSlides } from './data/slides';
 import { isSlideVisibleForAudience } from './data/audiences';
+import { findSlideIndexByPermalink, getSlidePermalinkValue } from './data/slidePermalinks';
 import { LOCAL_SLIDE_PREVIEW_EVENT, LOCAL_SLIDE_PREVIEW_KEY, isLocalPreviewHost, readLocalSlidePreview } from './utils/localSlidePreview';
 import { generatePPTX } from './utils/pptxExport';
 import { captureSlideSnapshots } from './utils/slideSnapshots';
@@ -13,28 +14,23 @@ const filterSlidesByAudience = (slides, audienceType) => {
   return slides.filter((slide) => isSlideVisibleForAudience(slide, audienceType));
 };
 
-const getSlideIdFromHash = () => {
+const getSlideRefFromHash = () => {
   const params = new URLSearchParams(window.location.hash.replace(/^#/, ''));
-  const slideId = params.get('slide');
-  return slideId && slideId.trim() ? slideId.trim() : null;
+  const slideRef = params.get('slide');
+  return slideRef && slideRef.trim() ? slideRef.trim() : null;
 };
 
-const buildSlideHash = (slideId) => {
+const buildSlideHash = (slideRef) => {
   const params = new URLSearchParams(window.location.hash.replace(/^#/, ''));
 
-  if (slideId === undefined || slideId === null || slideId === '') {
+  if (slideRef === undefined || slideRef === null || slideRef === '') {
     params.delete('slide');
   } else {
-    params.set('slide', String(slideId));
+    params.set('slide', String(slideRef));
   }
 
   const hash = params.toString();
   return hash ? `#${hash}` : '';
-};
-
-const findSlideIndexById = (slides, slideId) => {
-  if (slideId === undefined || slideId === null) return -1;
-  return slides.findIndex((slide) => String(slide.id) === String(slideId));
 };
 
 const getSlideVideoInfo = (slide) => {
@@ -46,7 +42,7 @@ const getSlideVideoInfo = (slide) => {
 };
 
 const Presentation = () => {
-  const [currentSlideId, setCurrentSlideId] = useState(() => getSlideIdFromHash());
+  const [currentSlideRef, setCurrentSlideRef] = useState(() => getSlideRefFromHash());
   const isPopstateNav = useRef(false);
   const [direction, setDirection] = useState(0);
   const [slidesData, setSlidesData] = useState(() => readLocalSlidePreview(defaultSlides) || defaultSlides);
@@ -124,9 +120,9 @@ const Presentation = () => {
   const currentIndex = useMemo(() => {
     if (filteredSlides.length === 0) return -1;
 
-    const matchedIndex = findSlideIndexById(filteredSlides, currentSlideId);
+    const matchedIndex = findSlideIndexByPermalink(filteredSlides, currentSlideRef);
     return matchedIndex >= 0 ? matchedIndex : 0;
-  }, [currentSlideId, filteredSlides]);
+  }, [currentSlideRef, filteredSlides]);
 
   const currentSlide = currentIndex >= 0 ? filteredSlides[currentIndex] : null;
 
@@ -143,16 +139,16 @@ const Presentation = () => {
   // Keep the selected slide anchored to a visible slide in the filtered set.
   useEffect(() => {
     if (filteredSlides.length === 0) {
-      if (currentSlideId !== null) {
-        setCurrentSlideId(null);
+      if (currentSlideRef !== null) {
+        setCurrentSlideRef(null);
       }
       return;
     }
 
-    if (findSlideIndexById(filteredSlides, currentSlideId) === -1) {
-      setCurrentSlideId(filteredSlides[0].id);
+    if (findSlideIndexByPermalink(filteredSlides, currentSlideRef) === -1) {
+      setCurrentSlideRef(getSlidePermalinkValue(filteredSlides[0]));
     }
-  }, [filteredSlides, currentSlideId]);
+  }, [filteredSlides, currentSlideRef]);
 
   useEffect(() => {
     nearbyVideoAssets.forEach(({ poster }) => {
@@ -164,7 +160,7 @@ const Presentation = () => {
 
   // Sync URL hash with current slide
   useEffect(() => {
-    const newHash = buildSlideHash(currentSlide?.id);
+    const newHash = buildSlideHash(currentSlide ? getSlidePermalinkValue(currentSlide) : null);
 
     if (window.location.hash !== newHash) {
       if (isPopstateNav.current) {
@@ -178,18 +174,18 @@ const Presentation = () => {
     if (isPopstateNav.current) {
       isPopstateNav.current = false;
     }
-  }, [currentSlide?.id]);
+  }, [currentSlide, currentSlideRef]);
 
   // Handle browser back/forward and direct hash changes.
   useEffect(() => {
     const syncSlideFromLocation = () => {
-      const nextSlideId = getSlideIdFromHash();
-      const nextIndex = findSlideIndexById(filteredSlides, nextSlideId);
+      const nextSlideRef = getSlideRefFromHash();
+      const nextIndex = findSlideIndexByPermalink(filteredSlides, nextSlideRef);
       const resolvedIndex = nextIndex >= 0 ? nextIndex : (filteredSlides.length > 0 ? 0 : -1);
 
       isPopstateNav.current = true;
       setDirection(resolvedIndex > currentIndex ? 1 : -1);
-      setCurrentSlideId(resolvedIndex >= 0 ? filteredSlides[resolvedIndex].id : null);
+      setCurrentSlideRef(resolvedIndex >= 0 ? getSlidePermalinkValue(filteredSlides[resolvedIndex]) : null);
     };
 
     window.addEventListener('popstate', syncSlideFromLocation);
@@ -206,7 +202,7 @@ const Presentation = () => {
 
     setDirection(1);
     const nextIndex = currentIndex < filteredSlides.length - 1 ? currentIndex + 1 : 0;
-    setCurrentSlideId(filteredSlides[nextIndex].id);
+    setCurrentSlideRef(getSlidePermalinkValue(filteredSlides[nextIndex]));
   }, [currentIndex, filteredSlides]);
 
   const prevSlide = useCallback(() => {
@@ -214,20 +210,20 @@ const Presentation = () => {
 
     setDirection(-1);
     const nextIndex = currentIndex > 0 ? currentIndex - 1 : filteredSlides.length - 1;
-    setCurrentSlideId(filteredSlides[nextIndex].id);
+    setCurrentSlideRef(getSlidePermalinkValue(filteredSlides[nextIndex]));
   }, [currentIndex, filteredSlides]);
 
   const goToFirstSlide = useCallback(() => {
     if (filteredSlides.length > 0 && currentIndex > 0) {
       setDirection(-1);
-      setCurrentSlideId(filteredSlides[0].id);
+      setCurrentSlideRef(getSlidePermalinkValue(filteredSlides[0]));
     }
   }, [currentIndex, filteredSlides]);
 
   const goToLastSlide = useCallback(() => {
     if (filteredSlides.length > 0 && currentIndex < filteredSlides.length - 1) {
       setDirection(1);
-      setCurrentSlideId(filteredSlides[filteredSlides.length - 1].id);
+      setCurrentSlideRef(getSlidePermalinkValue(filteredSlides[filteredSlides.length - 1]));
     }
   }, [currentIndex, filteredSlides]);
 

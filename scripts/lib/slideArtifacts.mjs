@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 
 import { AUDIENCE_TYPES } from '../../src/data/audiences.js';
+import { SLIDE_SLUG_PATTERN } from '../../src/data/slidePermalinks.js';
 import { buildSlideManagerRegistry } from '../../src/data/slideRegistry.js';
 
 const allowedAudiences = new Set(AUDIENCE_TYPES);
@@ -58,6 +59,7 @@ export const validateSlides = async (slides, { rootDir }) => {
   }
 
   const seenSlideIds = new Set();
+  const seenSlideSlugs = new Set();
 
   slides.forEach((slide, index) => {
     const location = `slides[${index}]`;
@@ -75,6 +77,22 @@ export const validateSlides = async (slides, { rootDir }) => {
         errors.push(`Duplicate slide id "${slide.id}" found at ${location}.`);
       }
       seenSlideIds.add(idKey);
+    }
+
+    if (typeof slide.slug !== 'string' || !slide.slug.trim()) {
+      errors.push(`Slide ${slide.id ?? index + 1} is missing a stable slug.`);
+    } else {
+      const slug = slide.slug.trim();
+
+      if (!SLIDE_SLUG_PATTERN.test(slug)) {
+        errors.push(`Slide ${slide.id ?? index + 1} has invalid slug "${slide.slug}". Use lowercase letters, numbers, and hyphens only.`);
+      }
+
+      if (seenSlideSlugs.has(slug)) {
+        errors.push(`Duplicate slide slug "${slug}" found at ${location}.`);
+      }
+
+      seenSlideSlugs.add(slug);
     }
 
     if (!Array.isArray(slide.audiences) || slide.audiences.length === 0) {

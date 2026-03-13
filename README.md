@@ -10,6 +10,7 @@ This is a high-performance, web-based presentation platform built with React, Vi
 - **Smooth Animations**: Framer Motion powered transitions and staggered content entry.
 - **Responsive**: Works on desktop, tablet, and mobile.
 - **Content**: Extracted from the provided PowerPoint.
+- **Stable Deep Links**: Shared `#slide=<slug>` links stay attached to the same slide even when slides are reordered.
 - **Keyboard Navigation**: Use Arrow keys, Space, or Enter to navigate.
 - **Touch Support**: Swipe left/right on touch devices.
 
@@ -30,13 +31,14 @@ This is a high-performance, web-based presentation platform built with React, Vi
     npm run build
     ```
 
-`npm run dev` and `npm run build` now run a slide sync step first. That step validates slide ids, audiences, local media references, and generates deployment artifacts in `public/slides.json` and `public/slide-manager-registry.json`.
+`npm run dev` and `npm run build` now run a slide sync step first. That step validates slide ids, stable slide slugs, audiences, local media references, and generates deployment artifacts in `public/slides.json` and `public/slide-manager-registry.json`.
 
 On `localhost`, slide audience edits are mirrored into browser-local preview state so the presentation view updates immediately, and the local admin UI can also write those changes back to `src/data/slides.js` through a Vite dev-only endpoint.
 
 ## Customization
 
 -   **Slides**: Edit `src/data/slides.js` to update content.
+-   **Permalinks**: Each slide now needs a unique `slug`. Use that stable slug for shared links, and do not change it after sending links out.
 -   **Slide Registry**: `src/data/slideRegistry.js` derives the slide-manager inventory directly from `src/data/slides.js`, so new slides show up in the manager automatically.
 -   **Styling**: Modify `tailwind.config.js` or `src/index.css`.
 -   **Components**: Adjust `src/components/Slide.jsx` for layout changes.

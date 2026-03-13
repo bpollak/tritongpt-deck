@@ -27,6 +27,7 @@ export const getSlideManagerTitle = (slide) => {
 
 export const buildSlideManagerRegistry = (sourceSlides) => sourceSlides.map((slide, index) => ({
   id: slide.id,
+  slug: slide.slug || '',
   order: index + 1,
   title: getSlideManagerTitle(slide),
   subtitle: slide.subtitle || '',

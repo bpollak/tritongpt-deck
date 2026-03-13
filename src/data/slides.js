@@ -1,6 +1,7 @@
 export const slides = [
   {
     "id": 1,
+    "slug": "the-ai-enabled-university",
     "type": "title",
     "content": [],
     "title": "The AI-Enabled University",
@@ -15,6 +16,7 @@ export const slides = [
   },
   {
     "id": 2,
+    "slug": "uc-san-diego",
     "type": "content",
     "layout": "campus-metrics",
     "title": "UC San Diego",
@@ -95,6 +97,7 @@ export const slides = [
   },
   {
     "id": 3,
+    "slug": "tritongpt-initiative",
     "type": "content",
     "layout": "timeline-evolution",
     "title": "TritonGPT Initiative",
@@ -230,6 +233,7 @@ export const slides = [
   },
   {
     "id": 4,
+    "slug": "uc-san-diego-ai-strategy-2026",
     "type": "content",
     "content": [
       {
@@ -275,6 +279,7 @@ export const slides = [
   },
   {
     "id": 5,
+    "slug": "tritongpt-secure-scalable-ai-platform",
     "backgroundColor": "#F5F0E6",
     "type": "content",
     "content": [
@@ -312,6 +317,7 @@ export const slides = [
   },
   {
     "id": 6,
+    "slug": "tritongpt-platform",
     "type": "content",
     "layout": "platform-simple",
     "title": "TritonGPT Platform",
@@ -416,6 +422,7 @@ export const slides = [
   },
   {
     "id": 7,
+    "slug": "video-media1",
     "type": "video",
     "content": [],
     "videoSrc": "/media/media1.mov",
@@ -427,6 +434,7 @@ export const slides = [
   },
   {
     "id": 8,
+    "slug": "video-media2",
     "type": "video",
     "content": [],
     "videoSrc": "/media/media2.mov",
@@ -438,6 +446,7 @@ export const slides = [
   },
   {
     "id": 9,
+    "slug": "video-media4",
     "type": "video",
     "content": [],
     "videoSrc": "/media/media4.mov",
@@ -450,6 +459,7 @@ export const slides = [
   },
   {
     "id": 10,
+    "slug": "video-media3",
     "type": "video",
     "content": [],
     "videoSrc": "/media/media3.mov",
@@ -462,6 +472,7 @@ export const slides = [
   },
   {
     "id": 11,
+    "slug": "video-media5",
     "type": "video",
     "content": [],
     "videoSrc": "/media/media5.mov",
@@ -474,6 +485,7 @@ export const slides = [
   },
   {
     "id": 12,
+    "slug": "video-media6",
     "type": "video",
     "content": [],
     "videoSrc": "/media/media6.mov",
@@ -486,6 +498,7 @@ export const slides = [
   },
   {
     "id": 13,
+    "slug": "scaling-engagement-the-tritongpt-widget",
     "type": "content",
     "content": [
       {
@@ -530,6 +543,7 @@ export const slides = [
   },
   {
     "id": 14,
+    "slug": "video-media9",
     "type": "video",
     "content": [],
     "videoSrc": "/media/media9.mov",
@@ -541,6 +555,7 @@ export const slides = [
   },
   {
     "id": 15,
+    "slug": "ai-driven-search-blink-integration",
     "type": "content",
     "content": [
       {
@@ -585,6 +600,7 @@ export const slides = [
   },
   {
     "id": 16,
+    "slug": "instructional-ai-socratic-tutor-faculty-assistant",
     "type": "content",
     "content": [
       {
@@ -629,6 +645,7 @@ export const slides = [
   },
   {
     "id": 17,
+    "slug": "video-media11",
     "type": "video",
     "content": [],
     "videoSrc": "/media/media11.mov",
@@ -641,6 +658,7 @@ export const slides = [
   },
   {
     "id": 18,
+    "slug": "the-evolution-of-ai-workflows",
     "type": "content",
     "layout": "comparison-table",
     "title": "The Evolution of AI Workflows",
@@ -681,6 +699,7 @@ export const slides = [
   },
   {
     "id": 19,
+    "slug": "the-contract-review-challenge",
     "type": "content",
     "layout": "contract-review-challenge",
     "title": "The Contract Review Challenge",
@@ -720,6 +739,7 @@ export const slides = [
   },
   {
     "id": 20,
+    "slug": "video-media7",
     "type": "video",
     "content": [],
     "videoSrc": "/media/media7.mp4",
@@ -732,6 +752,7 @@ export const slides = [
   },
   {
     "id": 21,
+    "slug": "ai-contract-reviewer",
     "type": "content",
     "content": [
       {
@@ -781,6 +802,7 @@ export const slides = [
   },
   {
     "id": 22,
+    "slug": "from-tritongpt-to-tritonai",
     "type": "content",
     "title": "From TritonGPT to TritonAI",
     "subtitle": "Evolving from chat into an AI Tools Hub that unifies campus-ready capabilities",
@@ -830,6 +852,7 @@ export const slides = [
   },
   {
     "id": 23,
+    "slug": "tritonai-developer-api-program",
     "type": "content",
     "layout": "api-gateway",
     "title": "TritonAI Developer API Program",
@@ -966,6 +989,7 @@ export const slides = [
   },
   {
     "id": 24,
+    "slug": "campus-app-hosting",
     "type": "content",
     "layout": "hosting-pipeline",
     "title": "Campus App Hosting",
@@ -1116,6 +1140,7 @@ export const slides = [
   },
   {
     "id": 26,
+    "slug": "agent-engineering-strategy-codex-claude-code",
     "type": "content",
     "layout": "agent-dev-strategy",
     "title": "Agent Engineering Strategy: Codex + Claude Code",
@@ -1193,6 +1218,7 @@ export const slides = [
   },
   {
     "id": 27,
+    "slug": "the-flywheel-in-action-pdf-remediator",
     "type": "content",
     "layout": "flywheel-case-study",
     "title": "The Flywheel in Action: PDF Remediator",
@@ -1262,6 +1288,7 @@ export const slides = [
   },
   {
     "id": 29,
+    "slug": "the-agentic-ai-stack",
     "type": "content",
     "layout": "compound-architecture",
     "title": "The Agentic AI Stack",
@@ -1338,6 +1365,7 @@ export const slides = [
   },
   {
     "id": 30,
+    "slug": "multi-agent-incident-response-orchestration",
     "type": "content",
     "layout": "agent-workflow",
     "title": "Multi-Agent Incident Response Orchestration",
@@ -1440,6 +1468,7 @@ export const slides = [
   },
   {
     "id": 31,
+    "slug": "key-takeaways",
     "type": "content",
     "layout": "key-takeaways",
     "title": "Key Takeaways",
@@ -1485,6 +1514,7 @@ export const slides = [
   },
   {
     "id": 32,
+    "slug": "ai-roadmap-2026",
     "type": "content",
     "layout": "assistant-categories",
     "title": "AI Roadmap 2026",
@@ -1600,6 +1630,7 @@ export const slides = [
   },
   {
     "id": 33,
+    "slug": "tritongpt-usage-analytics",
     "type": "content",
     "content": [],
     "title": "TritonGPT Usage Analytics",
@@ -1689,6 +1720,7 @@ export const slides = [
   },
   {
     "id": 34,
+    "slug": "tritongpt-widget-analytics",
     "type": "content",
     "content": [],
     "title": "TritonGPT Widget Analytics",
@@ -1758,6 +1790,7 @@ export const slides = [
   },
   {
     "id": 35,
+    "slug": "tritongpt-user-growth",
     "type": "content",
     "content": [],
     "title": "TritonGPT User Growth",
@@ -1809,6 +1842,7 @@ export const slides = [
   },
   {
     "id": 36,
+    "slug": "the-team-behind-tritonai",
     "type": "content",
     "layout": "team-grid",
     "title": "The Team Behind TritonAI",
@@ -1931,6 +1965,7 @@ export const slides = [
   },
   {
     "id": 37,
+    "slug": "thank-you",
     "type": "title",
     "content": [],
     "title": "Thank You",
