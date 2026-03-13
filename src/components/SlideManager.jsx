@@ -3,7 +3,9 @@ import { slides } from '../data/slides';
 import { AUDIENCE_COLORS, AUDIENCE_TYPES, isSlideVisibleForAudience } from '../data/audiences';
 import { slideManagerRegistry } from '../data/slideRegistry';
 import { clearLocalSlidePreview, isLocalPreviewHost, readLocalSlidePreview, writeLocalSlidePreview } from '../utils/localSlidePreview';
-import { Eye, EyeOff, ChevronDown, ChevronUp, ExternalLink, Save, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
+import { captureSlideSnapshots } from '../utils/slideSnapshots';
+import { generatePPTX } from '../utils/pptxExport';
+import { Eye, EyeOff, ChevronDown, ChevronUp, ExternalLink, Save, Loader2, CheckCircle, AlertCircle, Download } from 'lucide-react';
 
 const buildSlideAudienceMap = (sourceSlides) => {
   return slideManagerRegistry.reduce((acc, slide) => {
@@ -36,6 +38,9 @@ const SlideManager = ({ onClose, standalone = false }) => {
   const [sourceSlidesSnapshot, setSourceSlidesSnapshot] = useState(slides);
   const [hasUnsavedRepoChanges, setHasUnsavedRepoChanges] = useState(() => hasAudienceChanges(initialSlides, slides));
   const [hasPendingGitHubChanges, setHasPendingGitHubChanges] = useState(() => hasAudienceChanges(initialSlides, slides));
+  const [isExporting, setIsExporting] = useState(false);
+  const [qaReport, setQaReport] = useState(null);
+  const [showQaPanel, setShowQaPanel] = useState(false);
 
   const updatedSlides = useMemo(() => {
     return slides.map((slide) => ({
@@ -81,6 +86,10 @@ const SlideManager = ({ onClose, standalone = false }) => {
     );
   });
 
+  const exportSlides = useMemo(() => {
+    return updatedSlides.filter((slide) => isSlideVisibleForAudience(slide, filterAudience));
+  }, [filterAudience, updatedSlides]);
+
   const exportConfig = () => {
     const output = `export const slides = ${JSON.stringify(updatedSlides, null, 2)};`;
 
@@ -99,6 +108,25 @@ const SlideManager = ({ onClose, standalone = false }) => {
     a.download = 'slides.js';
     a.click();
     URL.revokeObjectURL(url);
+  };
+
+  const handleExport = async () => {
+    if (exportSlides.length === 0) return;
+
+    setIsExporting(true);
+    setShowQaPanel(false);
+
+    try {
+      const snapshotBySlideId = await captureSlideSnapshots(exportSlides);
+      const report = await generatePPTX(exportSlides, { snapshotBySlideId, exportMode: 'presentation' });
+      setQaReport(report || null);
+      if (report) setShowQaPanel(true);
+    } catch (error) {
+      console.error('Failed to export PPTX:', error);
+      alert('Error generating PowerPoint file.');
+    } finally {
+      setIsExporting(false);
+    }
   };
 
   const handlePushRequest = () => {
@@ -382,7 +410,7 @@ const SlideManager = ({ onClose, standalone = false }) => {
                     : 'Click a slide to edit its audience tags'
               }
             </div>
-            <div className="flex gap-3">
+            <div className="flex gap-3 flex-wrap justify-end">
               {localPreviewEnabled && (
                 <button
                   onClick={handleResetLocalPreview}
@@ -417,6 +445,18 @@ const SlideManager = ({ onClose, standalone = false }) => {
                 Download slides.js
               </button>
               <button
+                onClick={handleExport}
+                disabled={isExporting || exportSlides.length === 0}
+                className={`px-4 py-2 font-medium rounded-lg transition-colors text-sm flex items-center gap-2 ${
+                  isExporting || exportSlides.length === 0
+                    ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                    : 'bg-ucsd-navy text-white hover:bg-opacity-90'
+                }`}
+              >
+                {isExporting ? <Loader2 size={16} className="animate-spin" /> : <Download size={16} />}
+                {isExporting ? 'Exporting...' : `Download ${filterAudience === 'all' ? 'PPTX' : `${filterAudience} PPTX`}`}
+              </button>
+              <button
                 onClick={handlePushRequest}
                 disabled={saveStatus === 'saving' || !hasPendingGitHubChanges}
                 className={`px-6 py-2 font-semibold rounded-lg transition-colors flex items-center gap-2 ${
@@ -438,6 +478,102 @@ const SlideManager = ({ onClose, standalone = false }) => {
             </div>
           )}
         </div>
+
+        {showQaPanel && qaReport && (
+          <div className="fixed inset-0 z-[60] bg-black/45 flex items-center justify-center p-4 sm:p-6">
+            <div className="w-full max-w-4xl max-h-[85vh] bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
+              <div className="px-5 py-4 border-b border-gray-200 flex items-start justify-between gap-4">
+                <div>
+                  <div className="text-lg sm:text-xl font-bold text-ucsd-navy">PowerPoint Export QA</div>
+                  <div className="text-sm text-slate-600">
+                    {qaReport.slideCount} slide(s) checked • {qaReport.issueCount} issue category(ies) • {qaReport.exportMode === 'presentation' ? 'Presentation mode' : 'Archive mode'}
+                  </div>
+                </div>
+                <button
+                  onClick={() => setShowQaPanel(false)}
+                  className="px-3 py-1.5 rounded-md text-sm font-semibold bg-gray-100 text-ucsd-navy hover:bg-gray-200"
+                  aria-label="Close QA report"
+                >
+                  Close
+                </button>
+              </div>
+
+              <div className="p-5 overflow-y-auto max-h-[calc(85vh-8rem)] space-y-5">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                  <div className="rounded-lg border border-gray-200 bg-gray-50 p-3">
+                    <div className="text-xs uppercase tracking-wide text-slate-500">Font Adjustments</div>
+                    <div className="text-lg font-bold text-ucsd-navy">{qaReport.fontFloorAdjustments || 0}</div>
+                  </div>
+                  <div className="rounded-lg border border-gray-200 bg-gray-50 p-3">
+                    <div className="text-xs uppercase tracking-wide text-slate-500">Shrink Disabled</div>
+                    <div className="text-lg font-bold text-ucsd-navy">{qaReport.shrinkDisabledCount || 0}</div>
+                  </div>
+                  <div className="rounded-lg border border-gray-200 bg-gray-50 p-3">
+                    <div className="text-xs uppercase tracking-wide text-slate-500">Dense Slides</div>
+                    <div className="text-lg font-bold text-ucsd-navy">{qaReport.denseSlides?.length || 0}</div>
+                  </div>
+                  <div className="rounded-lg border border-gray-200 bg-gray-50 p-3">
+                    <div className="text-xs uppercase tracking-wide text-slate-500">Missing Notes</div>
+                    <div className="text-lg font-bold text-ucsd-navy">{qaReport.slidesWithoutNotes?.length || 0}</div>
+                  </div>
+                </div>
+
+                {Array.isArray(qaReport.issues) && qaReport.issues.length > 0 ? (
+                  <div>
+                    <div className="text-sm font-bold text-ucsd-navy mb-2">Issue Summary</div>
+                    <ul className="space-y-2">
+                      {qaReport.issues.map((issue, idx) => (
+                        <li key={idx} className="text-sm text-slate-700 leading-relaxed">
+                          • {issue}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : (
+                  <div className="text-sm font-semibold text-green-700 bg-green-50 border border-green-200 rounded-lg p-3">
+                    No QA issues detected in this export.
+                  </div>
+                )}
+
+                {qaReport.templateCounts && Object.keys(qaReport.templateCounts).length > 0 && (
+                  <div>
+                    <div className="text-sm font-bold text-ucsd-navy mb-2">Template Mix</div>
+                    <div className="text-sm text-slate-700 leading-relaxed">
+                      {Object.entries(qaReport.templateCounts).map(([template, count]) => `${template}: ${count}`).join(' | ')}
+                    </div>
+                  </div>
+                )}
+
+                {Array.isArray(qaReport.slidesWithDisabledShrink) && qaReport.slidesWithDisabledShrink.length > 0 && (
+                  <div>
+                    <div className="text-sm font-bold text-ucsd-navy mb-2">Slides With Shrink Disabled</div>
+                    <div className="text-sm text-slate-700 leading-relaxed">
+                      {qaReport.slidesWithDisabledShrink.join(' | ')}
+                    </div>
+                  </div>
+                )}
+
+                {Array.isArray(qaReport.denseSlides) && qaReport.denseSlides.length > 0 && (
+                  <div>
+                    <div className="text-sm font-bold text-ucsd-navy mb-2">Dense Slides</div>
+                    <div className="text-sm text-slate-700 leading-relaxed">
+                      {qaReport.denseSlides.join(' | ')}
+                    </div>
+                  </div>
+                )}
+
+                {Array.isArray(qaReport.cappedSections) && qaReport.cappedSections.length > 0 && (
+                  <div>
+                    <div className="text-sm font-bold text-ucsd-navy mb-2">Continuation Caps Applied</div>
+                    <div className="text-sm text-slate-700 leading-relaxed">
+                      {qaReport.cappedSections.map((entry) => `${entry.title} (${entry.originalPageCount}→${entry.cappedPageCount})`).join(' | ')}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
 
         {showPushConfirmModal && (
           <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
