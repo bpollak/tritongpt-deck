@@ -3111,7 +3111,7 @@ const Slide = ({ slide }) => {
         ].filter((phase) => phase.items.length > 0);
 
         return (
-          <div className="w-full max-w-[1800px] mx-auto flex flex-col gap-3 sm:gap-3.5">
+          <div className="w-full max-w-[1800px] mx-auto flex flex-col gap-2.5 sm:gap-3">
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -3120,33 +3120,35 @@ const Slide = ({ slide }) => {
             >
               <div className="text-left">
                 <div className="text-[28px] sm:text-[42px] md:text-[48px] font-black text-ucsd-navy leading-none">{slide.title}</div>
-                <div className="text-xs sm:text-base text-ucsd-blue font-medium mt-1">{slide.subtitle}</div>
+                <div className="text-xs sm:text-base text-ucsd-blue font-medium mt-0.5">{slide.subtitle}</div>
               </div>
             </motion.div>
 
-            <div className="grid grid-cols-1 xl:grid-cols-[1.55fr_1fr] gap-3 items-stretch">
+            <div className="grid grid-cols-1 xl:grid-cols-[1.55fr_1fr] gap-2.5 items-stretch">
               <motion.div
                 initial={{ opacity: 0, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.5 }}
-                className="relative overflow-hidden rounded-[28px] border border-white/75 bg-white/90 p-3 sm:p-4 shadow-[0_16px_32px_rgba(24,43,73,0.08)]"
+                className="relative overflow-hidden rounded-[28px] border border-white/75 bg-white/90 p-3 sm:p-3.5 shadow-[0_16px_32px_rgba(24,43,73,0.08)]"
               >
+                <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-ucsd-blue/30 via-ucsd-sky/28 to-ucsd-blue/18" />
                 <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-r from-ucsd-blue/8 via-ucsd-sky/4 to-transparent" />
                 <div className="relative">
-                  <div className="flex items-center justify-between gap-3 mb-3">
+                  <div className="flex items-center justify-between gap-3 mb-2">
                     <div>
+                      <div className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.18em] text-ucsd-navy/45 mb-0.5">01 Path</div>
                       <div className="whitespace-nowrap text-[16px] sm:text-[20px] lg:text-[22px] font-black tracking-[-0.025em] text-ucsd-navy leading-[1.04]">The Path to Governed Hosting</div>
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-3 md:[grid-template-rows:auto_auto_auto] gap-2.5 items-stretch">
+                  <div className="grid grid-cols-1 md:grid-cols-3 md:[grid-template-rows:auto_auto_auto] gap-2 items-stretch">
                     {phaseDefinitions.map((phase, phaseIndex) => (
                       <motion.div
                         key={phase.label}
                         initial={{ opacity: 0, y: 12 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.42 + phaseIndex * 0.1, duration: 0.4 }}
-                        className="relative grid overflow-hidden rounded-[22px] border p-3 shadow-sm gap-2.5 md:row-span-3 md:[grid-template-rows:subgrid]"
+                        className="relative grid overflow-hidden rounded-[22px] border p-2.5 shadow-sm gap-2 md:row-span-3 md:[grid-template-rows:subgrid]"
                         style={{
                           borderColor: `${phase.color}24`,
                           background: phase.surface,
@@ -3170,7 +3172,7 @@ const Slide = ({ slide }) => {
                           return (
                             <div
                               key={`${phase.label}-${step.number}-${stepIndex}`}
-                              className="relative h-full rounded-[18px] border px-3 py-2.5"
+                              className="relative h-full rounded-[18px] border px-2.5 py-2"
                               style={{
                                 borderColor: `${phase.color}12`,
                                 backgroundColor: 'rgba(255,255,255,0.94)',
@@ -3181,9 +3183,9 @@ const Slide = ({ slide }) => {
                                 <div className="min-w-0">
                                   <div className="flex items-center gap-2">
                                     <IconComp size={16} style={{ color: phase.color }} />
-                                    <div className="text-[16px] sm:text-[17px] font-black text-ucsd-navy leading-tight">{step.name}</div>
+                                    <div className="text-[15px] sm:text-[16px] font-black text-ucsd-navy leading-tight">{step.name}</div>
                                   </div>
-                                  <div className="mt-1 text-[13px] sm:text-[14px] font-medium leading-[1.3] text-slate-700">
+                                  <div className="mt-0.5 text-[12px] sm:text-[13px] font-medium leading-[1.28] text-slate-700">
                                     {step.description}
                                   </div>
                                 </div>
@@ -3196,7 +3198,7 @@ const Slide = ({ slide }) => {
                   </div>
 
                   {platformNote && (
-                    <div className="mt-2.5 text-[11px] sm:text-xs font-semibold text-slate-500 leading-tight">
+                    <div className="mt-2 text-[11px] sm:text-xs font-semibold text-slate-500 leading-tight">
                       {platformNote}
                     </div>
                   )}
@@ -3207,16 +3209,18 @@ const Slide = ({ slide }) => {
                 initial={{ opacity: 0, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.42, duration: 0.5 }}
-                className="rounded-[28px] border border-white/75 bg-white/90 p-3 sm:p-4 shadow-[0_16px_32px_rgba(24,43,73,0.08)]"
+                className="relative overflow-hidden rounded-[28px] border border-white/75 bg-white/90 p-3 sm:p-3.5 shadow-[0_16px_32px_rgba(24,43,73,0.08)]"
               >
-                <div className="flex items-center justify-between gap-3 mb-3">
+                <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-ucsd-blue/30 via-ucsd-sky/28 to-ucsd-blue/18" />
+                <div className="flex items-center justify-between gap-3 mb-2.5">
                   <div>
-                    <div className="whitespace-nowrap text-[16px] sm:text-[19px] xl:text-[20px] font-black tracking-[-0.018em] text-ucsd-navy leading-tight">ITS manages the platform; departments own the software</div>
+                    <div className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.18em] text-ucsd-navy/45 mb-0.5">02 Responsibility</div>
+                    <div className="text-[16px] sm:text-[19px] xl:text-[20px] font-black tracking-[-0.018em] text-ucsd-navy leading-tight">ITS manages the platform; departments own the software</div>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-0 rounded-[22px] overflow-hidden border border-slate-200/75 bg-slate-50/55">
-                  <div className="p-3 border-b md:border-b-0 md:border-r border-slate-200/75">
+                  <div className="p-2.5 border-b md:border-b-0 md:border-r border-slate-200/75">
                     <div className="flex items-center gap-2 mb-2">
                       <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: `${ownership.its?.color}10` }}>
                         <Server size={15} style={{ color: ownership.its?.color }} />
@@ -3225,9 +3229,9 @@ const Slide = ({ slide }) => {
                         {ownership.its?.title}
                       </span>
                     </div>
-                    <div className="space-y-1.5">
+                    <div className="space-y-1.25">
                       {ownership.its?.items?.map((item, i) => (
-                        <div key={i} className="flex items-start gap-2 text-[14px] sm:text-[15px] font-semibold text-ucsd-navy leading-tight">
+                        <div key={i} className="flex items-start gap-2 text-[13px] sm:text-[14px] font-semibold text-ucsd-navy leading-tight">
                           <div className="mt-[7px] h-1.5 w-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: ownership.its?.color }} />
                           <span>{item}</span>
                         </div>
@@ -3235,7 +3239,7 @@ const Slide = ({ slide }) => {
                     </div>
                   </div>
 
-                  <div className="p-3">
+                  <div className="p-2.5">
                     <div className="flex items-center gap-2 mb-2">
                       <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: `${ownership.builder?.color}10` }}>
                         <Code size={15} style={{ color: ownership.builder?.color }} />
@@ -3244,9 +3248,9 @@ const Slide = ({ slide }) => {
                         {ownership.builder?.title}
                       </span>
                     </div>
-                    <div className="space-y-1.5">
+                    <div className="space-y-1.25">
                       {ownership.builder?.items?.map((item, i) => (
-                        <div key={i} className="flex items-start gap-2 text-[14px] sm:text-[15px] font-semibold text-ucsd-navy leading-tight">
+                        <div key={i} className="flex items-start gap-2 text-[13px] sm:text-[14px] font-semibold text-ucsd-navy leading-tight">
                           <div className="mt-[7px] h-1.5 w-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: ownership.builder?.color }} />
                           <span>{item}</span>
                         </div>
@@ -3256,31 +3260,31 @@ const Slide = ({ slide }) => {
                 </div>
 
                 {hasBoundaryPanels && (
-                  <div className="mt-3 grid grid-cols-1 gap-2">
-                    <div className="rounded-[18px] border border-ucsd-blue/14 bg-ucsd-blue/4 px-3 py-2.5">
-                      <div className="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-2.5">
-                        <div className="text-[11px] sm:text-[12px] font-black uppercase tracking-[0.16em] leading-none text-ucsd-blue">In Scope:</div>
-                        <div className="min-w-0 flex flex-wrap xl:flex-nowrap items-center gap-x-1.5 xl:gap-x-2 gap-y-1 text-[12px] sm:text-[13px] font-semibold text-ucsd-navy/88">
-                          {boundaries.whatItIs?.items?.map((item, i) => (
-                            <div key={i} className="flex shrink-0 items-center gap-1.5 whitespace-nowrap">
-                              {i > 0 && <span className="shrink-0 text-ucsd-blue/30">•</span>}
-                              <span>{item}</span>
-                            </div>
-                          ))}
-                        </div>
+                  <div className="mt-2.5 grid grid-cols-1 gap-1.5">
+                    <div className="rounded-[18px] border border-ucsd-blue/14 bg-ucsd-blue/4 px-3 py-2">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <div className="shrink-0 whitespace-nowrap text-[11px] sm:text-[12px] font-black uppercase tracking-[0.16em] leading-none text-ucsd-blue">In Scope:</div>
+                        {boundaries.whatItIs?.items?.map((item, i) => (
+                          <span
+                            key={i}
+                            className="shrink-0 whitespace-nowrap rounded-full border border-ucsd-blue/12 bg-white/88 px-2.5 py-1 text-[12px] sm:text-[13px] font-semibold leading-none text-ucsd-navy/88"
+                          >
+                            {item}
+                          </span>
+                        ))}
                       </div>
                     </div>
-                    <div className="rounded-[18px] border border-[#B56200]/14 bg-[#B56200]/4 px-3 py-2.5">
-                      <div className="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-3">
-                        <div className="text-[11px] sm:text-[12px] font-black uppercase tracking-[0.16em] leading-none text-[#B56200]">Not For:</div>
-                        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px] sm:text-[14px] font-semibold text-[#8A5600]">
-                          {boundaries.whatItIsNot?.items?.map((item, i) => (
-                            <div key={i} className="flex items-center gap-2">
-                              {i > 0 && <span className="text-[#B56200]/28">•</span>}
-                              <span>{item}</span>
-                            </div>
-                          ))}
-                        </div>
+                    <div className="rounded-[18px] border border-[#B56200]/14 bg-[#B56200]/4 px-3 py-2">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <div className="shrink-0 whitespace-nowrap text-[11px] sm:text-[12px] font-black uppercase tracking-[0.16em] leading-none text-[#B56200]">Not For:</div>
+                        {boundaries.whatItIsNot?.items?.map((item, i) => (
+                          <span
+                            key={i}
+                            className="shrink-0 whitespace-nowrap rounded-full border border-[#B56200]/12 bg-white/88 px-2.5 py-1 text-[12px] sm:text-[13px] font-semibold leading-none text-[#8A5600]"
+                          >
+                            {item}
+                          </span>
+                        ))}
                       </div>
                     </div>
                   </div>
@@ -3293,17 +3297,21 @@ const Slide = ({ slide }) => {
                 initial={{ opacity: 0, y: 18 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.5 }}
-                className="rounded-[28px] border border-white/75 bg-white/90 p-3 sm:p-4 shadow-[0_14px_28px_rgba(24,43,73,0.07)]"
+                className="relative overflow-hidden rounded-[28px] border border-white/75 bg-white/90 p-3 sm:p-3.5 shadow-[0_14px_28px_rgba(24,43,73,0.07)]"
               >
-                <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-1.5 sm:gap-3 mb-2.5">
-                  <div className="text-[11px] sm:text-xs font-black uppercase tracking-[0.18em] text-ucsd-navy/55">3-Tier Deployment Path</div>
+                <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-ucsd-blue/30 via-ucsd-sky/28 to-ucsd-blue/18" />
+                <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-1 sm:gap-2.5 mb-2">
+                  <div>
+                    <div className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.18em] text-ucsd-navy/45 mb-0.5">03 Hosting Tiers</div>
+                    <div className="text-[11px] sm:text-xs font-black uppercase tracking-[0.18em] text-ucsd-navy/55">3-Tier Deployment Path</div>
+                  </div>
                   {deploymentTierNote && (
                     <div className="text-[10px] sm:text-[11px] font-semibold text-slate-400">{deploymentTierNote}</div>
                   )}
                 </div>
                 {deploymentTiers.length > 1 && (
-                  <div className="hidden lg:grid lg:grid-cols-3 gap-2.5 items-center mb-1.5 px-3">
-                    <div className="relative col-span-2 h-7">
+                  <div className="hidden lg:grid lg:grid-cols-3 gap-2 items-center mb-1 px-3">
+                    <div className="relative col-span-2 h-5">
                       <div className="absolute left-[12%] right-[12%] top-1/2 h-[1.5px] -translate-y-1/2 bg-gradient-to-r from-[#6E963B2C] via-[#00C6D720] to-[#00C6D72C]" />
                       <div
                         className="absolute left-[12%] top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/80"
@@ -3314,7 +3322,7 @@ const Slide = ({ slide }) => {
                         style={{ backgroundColor: '#00C6D755', boxShadow: '0 0 0 4px rgba(0,198,215,0.10)' }}
                       />
                     </div>
-                    <div className="relative h-7">
+                    <div className="relative h-5">
                       <div
                         className="absolute left-[-1.35rem] right-[12%] top-1/2 h-px -translate-y-1/2 border-t border-dashed border-slate-300/90"
                       />
@@ -3326,7 +3334,7 @@ const Slide = ({ slide }) => {
                     </div>
                   </div>
                 )}
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-2.5">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-2">
                   {deploymentTiers.map((tier, i) => {
                     const TierIcon = iconMap[tier.icon] || Layers;
                     return (
@@ -3335,25 +3343,25 @@ const Slide = ({ slide }) => {
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.68 + i * 0.08, duration: 0.35 }}
-                        className="rounded-[20px] border bg-white/95 p-3 shadow-sm"
+                        className="rounded-[20px] border bg-white/95 p-2.5 shadow-sm"
                         style={{
                           borderColor: `${tier.color}24`,
                           boxShadow: `inset 0 2px 0 ${tier.color}35`
                         }}
                       >
-                        <div className="flex items-start justify-between gap-3 mb-1.5">
+                        <div className="flex items-start justify-between gap-2.5 mb-1">
                           <div className="min-w-0">
                             <div className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.18em] leading-none" style={{ color: tier.color }}>
                               {tier.tier}
                             </div>
-                            <div className="text-[17px] sm:text-[18px] font-black text-ucsd-navy leading-tight mt-1">{tier.title}</div>
+                            <div className="text-[16px] sm:text-[17px] font-black text-ucsd-navy leading-tight mt-0.5">{tier.title}</div>
                           </div>
                           <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: `${tier.color}08` }}>
                             <TierIcon size={15} style={{ color: tier.color }} />
                           </div>
                         </div>
-                        <div className="text-[12px] sm:text-[13px] text-slate-600 font-medium leading-snug">{tier.subtitle}</div>
-                        <div className="flex flex-wrap gap-1 mt-2 mb-2">
+                        <div className="text-[11px] sm:text-[12px] text-slate-600 font-medium leading-snug">{tier.subtitle}</div>
+                        <div className="flex flex-wrap gap-1 mt-1.5 mb-1.5">
                           {tier.badges?.map((badge, badgeIndex) => (
                             <span
                               key={badgeIndex}
@@ -3364,7 +3372,7 @@ const Slide = ({ slide }) => {
                             </span>
                           ))}
                         </div>
-                        <div className="grid grid-cols-[92px_1fr] sm:grid-cols-[98px_1fr] gap-x-2 gap-y-1 text-[10px] sm:text-[11px]">
+                        <div className="grid grid-cols-[88px_1fr] sm:grid-cols-[94px_1fr] gap-x-2 gap-y-0.5 text-[10px] sm:text-[11px]">
                           <span className="whitespace-nowrap font-black uppercase tracking-[0.12em] leading-none text-slate-400">Review</span>
                           <span className="font-semibold text-ucsd-navy leading-snug">{tier.review}</span>
                           <span className="whitespace-nowrap font-black uppercase tracking-[0.12em] leading-none text-slate-400">Support</span>
