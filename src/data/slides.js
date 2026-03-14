@@ -1076,62 +1076,60 @@ export const slides = [
     "deploymentTiers": [
       {
         "tier": "Tier 1",
-        "title": "Testing & Ideation",
-        "subtitle": "Local or user-funded sandbox for proof-of-concept work",
+        "title": "Experiment & Iterate",
+        "subtitle": "Local or sandbox builds with ITS templates and agent guidance",
         "badges": [
           "Local / Sandbox",
-          "Prototype"
+          "ITS Templates"
         ],
-        "review": "No ITS code support; intake starts once the app is functional",
-        "support": "Self-service docs, templates, and starter credits",
+        "review": "No ITS review until the app is functional",
+        "support": "Docs, agents.md, curated tools, starter credits",
         "icon": "Globe",
         "color": "#6E963B"
       },
       {
         "tier": "Tier 2",
-        "title": "Triton AI Apps",
-        "subtitle": "Campus-only, department-owned internal apps",
+        "title": "Hosted Apps",
+        "subtitle": "Campus/VPN-hosted internal apps with UCSD sign-in",
         "badges": [
           "Campus / VPN",
           "P1-P3"
         ],
-        "review": "Automated checks + lightweight ITS review + exclusion screening",
-        "support": "ITS infra only; department handles logic, accessibility, and user issues",
+        "review": "Application, automated flags, and guided ITS review",
+        "support": "ITS runs the platform only; department owns app support and POC",
         "icon": "Layers",
         "color": "#00C6D7"
       },
       {
         "tier": "Tier 3",
-        "title": "Enterprise Solutions",
-        "subtitle": "Campus-critical or high-ROI tools with full ITS ownership",
+        "title": "ITS Enterprise Apps",
+        "subtitle": "High-ROI or critical tools moved to full ITS delivery",
         "badges": [
           "ITS Platform",
           "P1-P4"
         ],
-        "review": "Standard architecture, security, compliance, and support review",
-        "support": "ITS team, SLAs, monitoring, backups, lifecycle management",
+        "review": "Full architecture, security, compliance, and support review",
+        "support": "ITS team, SLAs, monitoring, backups, lifecycle",
         "icon": "Building2",
         "color": "#00629B"
       }
     ],
-    "deploymentTierNote": "Most tools stay department-owned; only proven critical apps move up",
+    "deploymentTierNote": "Most apps stay in Tier 1 or Tier 2; only high-value apps graduate",
     "platformNote": "Paved path for internal apps built with TritonAI Developer API",
     "boundaries": {
       "whatItIs": {
         "items": [
-          "Campus-Only",
-          "Internal Apps",
-          "Department-Owned",
+          "Department Workflows",
+          "Single-Purpose Tools",
           "Shared Templates"
         ],
         "color": "#00629B"
       },
       "whatItIsNot": {
         "items": [
-          "No Public Sites",
-          "No Clinical",
-          "No Payments",
-          "Not Critical Ops"
+          "Public Websites",
+          "HIPAA Workloads",
+          "Payment Processing"
         ],
         "color": "#B56200"
       }

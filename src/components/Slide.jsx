@@ -3090,22 +3090,22 @@ const Slide = ({ slide }) => {
           {
             label: 'Build',
             color: '#00629B',
-            surface: 'linear-gradient(180deg, rgba(0,98,155,0.16) 0%, rgba(0,98,155,0.05) 100%)',
-            halo: '0 18px 36px rgba(0,98,155,0.10)',
+            surface: 'linear-gradient(180deg, rgba(0,98,155,0.10) 0%, rgba(0,98,155,0.03) 100%)',
+            halo: '0 12px 24px rgba(0,98,155,0.08)',
             items: steps.slice(0, 2)
           },
           {
             label: 'Launch',
             color: '#00C6D7',
-            surface: 'linear-gradient(180deg, rgba(0,198,215,0.16) 0%, rgba(0,198,215,0.05) 100%)',
-            halo: '0 18px 36px rgba(0,198,215,0.10)',
+            surface: 'linear-gradient(180deg, rgba(0,198,215,0.10) 0%, rgba(0,198,215,0.03) 100%)',
+            halo: '0 12px 24px rgba(0,198,215,0.08)',
             items: steps.slice(2, 4)
           },
           {
             label: 'Operate',
             color: '#FC8900',
-            surface: 'linear-gradient(180deg, rgba(252,137,0,0.16) 0%, rgba(252,137,0,0.05) 100%)',
-            halo: '0 18px 36px rgba(252,137,0,0.10)',
+            surface: 'linear-gradient(180deg, rgba(252,137,0,0.10) 0%, rgba(252,137,0,0.03) 100%)',
+            halo: '0 12px 24px rgba(252,137,0,0.08)',
             items: steps.slice(4, 6)
           }
         ].filter((phase) => phase.items.length > 0);
@@ -3129,9 +3129,9 @@ const Slide = ({ slide }) => {
                 initial={{ opacity: 0, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.5 }}
-                className="relative overflow-hidden rounded-[28px] border border-white/75 bg-white/88 p-3 sm:p-4 shadow-[0_18px_36px_rgba(24,43,73,0.10)]"
+                className="relative overflow-hidden rounded-[28px] border border-white/75 bg-white/90 p-3 sm:p-4 shadow-[0_16px_32px_rgba(24,43,73,0.08)]"
               >
-                <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-r from-ucsd-blue/10 via-ucsd-sky/5 to-transparent" />
+                <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-r from-ucsd-blue/8 via-ucsd-sky/4 to-transparent" />
                 <div className="relative">
                   <div className="flex items-center justify-between gap-3 mb-3">
                     <div>
@@ -3148,25 +3148,22 @@ const Slide = ({ slide }) => {
                         transition={{ delay: 0.42 + phaseIndex * 0.1, duration: 0.4 }}
                         className="relative grid overflow-hidden rounded-[22px] border p-3 shadow-sm gap-2.5 md:row-span-3 md:[grid-template-rows:subgrid]"
                         style={{
-                          borderColor: `${phase.color}35`,
+                          borderColor: `${phase.color}24`,
                           background: phase.surface,
-                          boxShadow: `${phase.halo}, inset 0 4px 0 ${phase.color}55`
+                          boxShadow: `${phase.halo}, inset 0 3px 0 ${phase.color}40`
                         }}
                       >
                         <div
-                          className="absolute inset-x-0 top-0 h-14 opacity-80"
-                          style={{ background: `linear-gradient(180deg, ${phase.color}18 0%, transparent 100%)` }}
+                          className="absolute inset-x-0 top-0 h-12 opacity-60"
+                          style={{ background: `linear-gradient(180deg, ${phase.color}12 0%, transparent 100%)` }}
                         />
                         <div className="relative flex items-center justify-between gap-2">
-                          <div className="inline-flex items-center gap-2 rounded-full px-3 py-1.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.75)]" style={{ backgroundColor: `${phase.color}14` }}>
+                          <div className="inline-flex items-center gap-2 rounded-full px-3 py-1.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.75)]" style={{ backgroundColor: `${phase.color}10` }}>
                             <div className="h-3 w-3 rounded-full shadow-sm" style={{ backgroundColor: phase.color }} />
-                            <div className="text-[12px] sm:text-[13px] font-black uppercase tracking-[0.18em]" style={{ color: phase.color }}>
+                            <div className="text-[11px] sm:text-[12px] font-black uppercase tracking-[0.16em]" style={{ color: phase.color }}>
                               {phase.label}
                             </div>
                           </div>
-                          {phaseIndex < phaseDefinitions.length - 1 && (
-                            <ArrowRight size={16} className="hidden md:block text-ucsd-blue/35" />
-                          )}
                         </div>
                         {phase.items.map((step, stepIndex) => {
                           const IconComp = iconMap[step.icon] || Code;
@@ -3175,9 +3172,9 @@ const Slide = ({ slide }) => {
                               key={`${phase.label}-${step.number}-${stepIndex}`}
                               className="relative h-full rounded-[18px] border px-3 py-2.5"
                               style={{
-                                borderColor: `${phase.color}18`,
-                                backgroundColor: 'rgba(255,255,255,0.82)',
-                                boxShadow: '0 8px 18px rgba(24,43,73,0.06)'
+                                borderColor: `${phase.color}12`,
+                                backgroundColor: 'rgba(255,255,255,0.94)',
+                                boxShadow: '0 6px 14px rgba(24,43,73,0.05)'
                               }}
                             >
                               <div className="grid grid-cols-1 gap-1.5 items-start">
@@ -3210,27 +3207,27 @@ const Slide = ({ slide }) => {
                 initial={{ opacity: 0, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.42, duration: 0.5 }}
-                className="rounded-[28px] border border-white/75 bg-white/88 p-3 sm:p-4 shadow-[0_18px_36px_rgba(24,43,73,0.10)]"
+                className="rounded-[28px] border border-white/75 bg-white/90 p-3 sm:p-4 shadow-[0_16px_32px_rgba(24,43,73,0.08)]"
               >
                 <div className="flex items-center justify-between gap-3 mb-3">
                   <div>
-                    <div className="whitespace-nowrap text-[17px] sm:text-[20px] xl:text-[22px] font-black tracking-[-0.02em] text-ucsd-navy leading-tight">ITS manages the platform; departments own the software</div>
+                    <div className="whitespace-nowrap text-[16px] sm:text-[19px] xl:text-[20px] font-black tracking-[-0.018em] text-ucsd-navy leading-tight">ITS manages the platform; departments own the software</div>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-0 rounded-[22px] overflow-hidden border border-slate-200/80 bg-slate-50/70">
-                  <div className="p-3 border-b md:border-b-0 md:border-r border-slate-200/80">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-0 rounded-[22px] overflow-hidden border border-slate-200/75 bg-slate-50/55">
+                  <div className="p-3 border-b md:border-b-0 md:border-r border-slate-200/75">
                     <div className="flex items-center gap-2 mb-2">
-                      <div className="w-9 h-9 rounded-full flex items-center justify-center" style={{ backgroundColor: `${ownership.its?.color}15` }}>
-                        <Server size={16} style={{ color: ownership.its?.color }} />
+                      <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: `${ownership.its?.color}10` }}>
+                        <Server size={15} style={{ color: ownership.its?.color }} />
                       </div>
-                      <span className="text-[17px] sm:text-[19px] font-black uppercase tracking-wide leading-none" style={{ color: ownership.its?.color }}>
+                      <span className="text-[16px] sm:text-[17px] font-black uppercase tracking-[0.06em] leading-none" style={{ color: ownership.its?.color }}>
                         {ownership.its?.title}
                       </span>
                     </div>
                     <div className="space-y-1.5">
                       {ownership.its?.items?.map((item, i) => (
-                        <div key={i} className="flex items-start gap-2 text-[15px] sm:text-[16px] font-semibold text-ucsd-navy leading-tight">
+                        <div key={i} className="flex items-start gap-2 text-[14px] sm:text-[15px] font-semibold text-ucsd-navy leading-tight">
                           <div className="mt-[7px] h-1.5 w-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: ownership.its?.color }} />
                           <span>{item}</span>
                         </div>
@@ -3240,16 +3237,16 @@ const Slide = ({ slide }) => {
 
                   <div className="p-3">
                     <div className="flex items-center gap-2 mb-2">
-                      <div className="w-9 h-9 rounded-full flex items-center justify-center" style={{ backgroundColor: `${ownership.builder?.color}15` }}>
-                        <Code size={16} style={{ color: ownership.builder?.color }} />
+                      <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: `${ownership.builder?.color}10` }}>
+                        <Code size={15} style={{ color: ownership.builder?.color }} />
                       </div>
-                      <span className="text-[17px] sm:text-[19px] font-black uppercase tracking-wide leading-none text-ucsd-navy">
+                      <span className="text-[16px] sm:text-[17px] font-black uppercase tracking-[0.06em] leading-none text-ucsd-navy">
                         {ownership.builder?.title}
                       </span>
                     </div>
                     <div className="space-y-1.5">
                       {ownership.builder?.items?.map((item, i) => (
-                        <div key={i} className="flex items-start gap-2 text-[15px] sm:text-[16px] font-semibold text-ucsd-navy leading-tight">
+                        <div key={i} className="flex items-start gap-2 text-[14px] sm:text-[15px] font-semibold text-ucsd-navy leading-tight">
                           <div className="mt-[7px] h-1.5 w-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: ownership.builder?.color }} />
                           <span>{item}</span>
                         </div>
@@ -3260,24 +3257,30 @@ const Slide = ({ slide }) => {
 
                 {hasBoundaryPanels && (
                   <div className="mt-3 grid grid-cols-1 gap-2">
-                    <div className="rounded-[18px] border border-ucsd-blue/18 bg-ucsd-blue/5 px-3 py-2">
-                      <div className="text-[12px] sm:text-[13px] font-black uppercase tracking-[0.16em] leading-none mb-1.5 text-ucsd-blue">In Scope</div>
-                      <div className="flex flex-wrap gap-1.5">
-                        {boundaries.whatItIs?.items?.map((item, i) => (
-                          <span key={i} className="text-[13px] sm:text-[14px] font-bold leading-none px-2.5 py-1.5 rounded-full bg-white/85 text-ucsd-blue">
-                            {item}
-                          </span>
-                        ))}
+                    <div className="rounded-[18px] border border-ucsd-blue/14 bg-ucsd-blue/4 px-3 py-2.5">
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-2.5">
+                        <div className="text-[11px] sm:text-[12px] font-black uppercase tracking-[0.16em] leading-none text-ucsd-blue">In Scope:</div>
+                        <div className="min-w-0 flex flex-wrap xl:flex-nowrap items-center gap-x-1.5 xl:gap-x-2 gap-y-1 text-[12px] sm:text-[13px] font-semibold text-ucsd-navy/88">
+                          {boundaries.whatItIs?.items?.map((item, i) => (
+                            <div key={i} className="flex shrink-0 items-center gap-1.5 whitespace-nowrap">
+                              {i > 0 && <span className="shrink-0 text-ucsd-blue/30">•</span>}
+                              <span>{item}</span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
-                    <div className="rounded-[18px] border border-[#B56200]/18 bg-[#B56200]/5 px-3 py-2">
-                      <div className="text-[12px] sm:text-[13px] font-black uppercase tracking-[0.16em] leading-none mb-1.5 text-[#B56200]">Not For</div>
-                      <div className="flex flex-wrap gap-1.5">
-                        {boundaries.whatItIsNot?.items?.map((item, i) => (
-                          <span key={i} className="text-[13px] sm:text-[14px] font-bold leading-none px-2.5 py-1.5 rounded-full bg-white/85 text-[#B56200]">
-                            {item}
-                          </span>
-                        ))}
+                    <div className="rounded-[18px] border border-[#B56200]/14 bg-[#B56200]/4 px-3 py-2.5">
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-3">
+                        <div className="text-[11px] sm:text-[12px] font-black uppercase tracking-[0.16em] leading-none text-[#B56200]">Not For:</div>
+                        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px] sm:text-[14px] font-semibold text-[#8A5600]">
+                          {boundaries.whatItIsNot?.items?.map((item, i) => (
+                            <div key={i} className="flex items-center gap-2">
+                              {i > 0 && <span className="text-[#B56200]/28">•</span>}
+                              <span>{item}</span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -3290,14 +3293,39 @@ const Slide = ({ slide }) => {
                 initial={{ opacity: 0, y: 18 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.5 }}
-                className="rounded-[28px] border border-white/75 bg-white/88 p-3 sm:p-4 shadow-[0_18px_36px_rgba(24,43,73,0.10)]"
+                className="rounded-[28px] border border-white/75 bg-white/90 p-3 sm:p-4 shadow-[0_14px_28px_rgba(24,43,73,0.07)]"
               >
                 <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-1.5 sm:gap-3 mb-2.5">
                   <div className="text-[11px] sm:text-xs font-black uppercase tracking-[0.18em] text-ucsd-navy/55">3-Tier Deployment Path</div>
                   {deploymentTierNote && (
-                    <div className="text-[10px] sm:text-[11px] font-semibold text-slate-500">{deploymentTierNote}</div>
+                    <div className="text-[10px] sm:text-[11px] font-semibold text-slate-400">{deploymentTierNote}</div>
                   )}
                 </div>
+                {deploymentTiers.length > 1 && (
+                  <div className="hidden lg:grid lg:grid-cols-3 gap-2.5 items-center mb-1.5 px-3">
+                    <div className="relative col-span-2 h-7">
+                      <div className="absolute left-[12%] right-[12%] top-1/2 h-[1.5px] -translate-y-1/2 bg-gradient-to-r from-[#6E963B2C] via-[#00C6D720] to-[#00C6D72C]" />
+                      <div
+                        className="absolute left-[12%] top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/80"
+                        style={{ backgroundColor: '#6E963B55', boxShadow: '0 0 0 4px rgba(110,150,59,0.10)' }}
+                      />
+                      <div
+                        className="absolute right-[12%] top-1/2 h-2.5 w-2.5 translate-x-1/2 -translate-y-1/2 rounded-full border border-white/80"
+                        style={{ backgroundColor: '#00C6D755', boxShadow: '0 0 0 4px rgba(0,198,215,0.10)' }}
+                      />
+                    </div>
+                    <div className="relative h-7">
+                      <div
+                        className="absolute left-[-1.35rem] right-[12%] top-1/2 h-px -translate-y-1/2 border-t border-dashed border-slate-300/90"
+                      />
+                      <ArrowRight size={12} className="absolute left-[28%] top-1/2 -translate-y-1/2 text-slate-300" />
+                      <div
+                        className="absolute right-[12%] top-1/2 h-2.5 w-2.5 translate-x-1/2 -translate-y-1/2 rounded-full border border-white/80"
+                        style={{ backgroundColor: '#00629B50', boxShadow: '0 0 0 4px rgba(0,98,155,0.08)' }}
+                      />
+                    </div>
+                  </div>
+                )}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-2.5">
                   {deploymentTiers.map((tier, i) => {
                     const TierIcon = iconMap[tier.icon] || Layers;
@@ -3307,21 +3335,21 @@ const Slide = ({ slide }) => {
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.68 + i * 0.08, duration: 0.35 }}
-                        className="rounded-[20px] border bg-white/92 p-3 shadow-sm"
+                        className="rounded-[20px] border bg-white/95 p-3 shadow-sm"
                         style={{
-                          borderColor: `${tier.color}35`,
-                          boxShadow: `inset 0 3px 0 ${tier.color}55`
+                          borderColor: `${tier.color}24`,
+                          boxShadow: `inset 0 2px 0 ${tier.color}35`
                         }}
                       >
                         <div className="flex items-start justify-between gap-3 mb-1.5">
                           <div className="min-w-0">
-                            <div className="text-[11px] sm:text-xs font-black uppercase tracking-[0.18em] leading-none" style={{ color: tier.color }}>
+                            <div className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.18em] leading-none" style={{ color: tier.color }}>
                               {tier.tier}
                             </div>
-                            <div className="text-[18px] sm:text-[19px] font-black text-ucsd-navy leading-tight mt-1">{tier.title}</div>
+                            <div className="text-[17px] sm:text-[18px] font-black text-ucsd-navy leading-tight mt-1">{tier.title}</div>
                           </div>
-                          <div className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: `${tier.color}12` }}>
-                            <TierIcon size={16} style={{ color: tier.color }} />
+                          <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: `${tier.color}08` }}>
+                            <TierIcon size={15} style={{ color: tier.color }} />
                           </div>
                         </div>
                         <div className="text-[12px] sm:text-[13px] text-slate-600 font-medium leading-snug">{tier.subtitle}</div>
@@ -3329,17 +3357,17 @@ const Slide = ({ slide }) => {
                           {tier.badges?.map((badge, badgeIndex) => (
                             <span
                               key={badgeIndex}
-                              className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.12em] px-2 py-0.5 rounded-full"
-                              style={{ backgroundColor: `${tier.color}10`, color: tier.color }}
+                              className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.12em] px-2 py-0.5 rounded-full"
+                              style={{ backgroundColor: `${tier.color}08`, color: tier.color }}
                             >
                               {badge}
                             </span>
                           ))}
                         </div>
-                        <div className="grid grid-cols-[92px_1fr] sm:grid-cols-[98px_1fr] gap-x-2 gap-y-1 text-[11px] sm:text-xs">
-                          <span className="whitespace-nowrap font-black uppercase tracking-[0.12em] leading-none text-slate-500">Review</span>
+                        <div className="grid grid-cols-[92px_1fr] sm:grid-cols-[98px_1fr] gap-x-2 gap-y-1 text-[10px] sm:text-[11px]">
+                          <span className="whitespace-nowrap font-black uppercase tracking-[0.12em] leading-none text-slate-400">Review</span>
                           <span className="font-semibold text-ucsd-navy leading-snug">{tier.review}</span>
-                          <span className="whitespace-nowrap font-black uppercase tracking-[0.12em] leading-none text-slate-500">Support</span>
+                          <span className="whitespace-nowrap font-black uppercase tracking-[0.12em] leading-none text-slate-400">Support</span>
                           <span className="font-semibold text-ucsd-navy leading-snug">{tier.support}</span>
                         </div>
                       </motion.div>
