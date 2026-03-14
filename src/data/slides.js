@@ -1120,8 +1120,7 @@ export const slides = [
       "whatItIs": {
         "items": [
           "Department Workflows",
-          "Single-Purpose Tools",
-          "Shared Templates"
+          "Single-Purpose Tools"
         ],
         "color": "#00629B"
       },

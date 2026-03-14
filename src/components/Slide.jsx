@@ -3261,30 +3261,34 @@ const Slide = ({ slide }) => {
 
                 {hasBoundaryPanels && (
                   <div className="mt-2.5 grid grid-cols-1 gap-1.5">
-                    <div className="rounded-[18px] border border-ucsd-blue/14 bg-ucsd-blue/4 px-3 py-2">
-                      <div className="flex flex-wrap items-center gap-2">
-                        <div className="shrink-0 whitespace-nowrap text-[11px] sm:text-[12px] font-black uppercase tracking-[0.16em] leading-none text-ucsd-blue">In Scope:</div>
+                    <div className="rounded-[18px] border border-ucsd-blue/14 bg-ucsd-blue/4 px-2.5 py-1.5">
+                      <div className="grid grid-cols-[auto_1fr] items-center gap-x-1">
+                        <div className="shrink-0 whitespace-nowrap text-[9px] sm:text-[10px] font-black uppercase tracking-[0.12em] leading-none text-ucsd-blue">In Scope:</div>
+                        <div className="min-w-0 flex flex-nowrap items-center gap-0.5">
                         {boundaries.whatItIs?.items?.map((item, i) => (
                           <span
                             key={i}
-                            className="shrink-0 whitespace-nowrap rounded-full border border-ucsd-blue/12 bg-white/88 px-2.5 py-1 text-[12px] sm:text-[13px] font-semibold leading-none text-ucsd-navy/88"
+                            className="shrink-0 whitespace-nowrap rounded-full bg-white/90 px-1.5 py-[3px] text-[11px] sm:text-[12px] font-semibold leading-none text-ucsd-navy/88"
                           >
                             {item}
                           </span>
                         ))}
+                        </div>
                       </div>
                     </div>
-                    <div className="rounded-[18px] border border-[#B56200]/14 bg-[#B56200]/4 px-3 py-2">
-                      <div className="flex flex-wrap items-center gap-2">
-                        <div className="shrink-0 whitespace-nowrap text-[11px] sm:text-[12px] font-black uppercase tracking-[0.16em] leading-none text-[#B56200]">Not For:</div>
+                    <div className="rounded-[18px] border border-[#B56200]/14 bg-[#B56200]/4 px-2.5 py-1.5">
+                      <div className="grid grid-cols-[auto_1fr] items-center gap-x-1">
+                        <div className="shrink-0 whitespace-nowrap text-[9px] sm:text-[10px] font-black uppercase tracking-[0.12em] leading-none text-[#B56200]">Not For:</div>
+                        <div className="min-w-0 flex flex-nowrap items-center gap-0.5">
                         {boundaries.whatItIsNot?.items?.map((item, i) => (
                           <span
                             key={i}
-                            className="shrink-0 whitespace-nowrap rounded-full border border-[#B56200]/12 bg-white/88 px-2.5 py-1 text-[12px] sm:text-[13px] font-semibold leading-none text-[#8A5600]"
+                            className="shrink-0 whitespace-nowrap rounded-full bg-white/90 px-1.5 py-[3px] text-[11px] sm:text-[12px] font-semibold leading-none text-[#8A5600]"
                           >
                             {item}
                           </span>
                         ))}
+                        </div>
                       </div>
                     </div>
                   </div>
