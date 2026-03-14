@@ -3316,7 +3316,7 @@ const Slide = ({ slide }) => {
                 {deploymentTiers.length > 1 && (
                   <div className="hidden lg:grid lg:grid-cols-3 gap-2 items-center mb-1 px-3">
                     <div className="relative col-span-2 h-5">
-                      <div className="absolute left-[12%] right-[12%] top-1/2 h-[1.5px] -translate-y-1/2 bg-gradient-to-r from-[#6E963B2C] via-[#00C6D720] to-[#00C6D72C]" />
+                      <div className="absolute left-[12%] right-[12%] top-1/2 h-[1.5px] -translate-y-1/2 bg-gradient-to-r from-[#6E963B4A] via-[#00C6D73A] to-[#00C6D74A]" />
                       <div
                         className="absolute left-[12%] top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/80"
                         style={{ backgroundColor: '#6E963B55', boxShadow: '0 0 0 4px rgba(110,150,59,0.10)' }}
@@ -3328,9 +3328,9 @@ const Slide = ({ slide }) => {
                     </div>
                     <div className="relative h-5">
                       <div
-                        className="absolute left-[-1.35rem] right-[12%] top-1/2 h-px -translate-y-1/2 border-t border-dashed border-slate-300/90"
+                        className="absolute left-[-1.35rem] right-[12%] top-1/2 h-px -translate-y-1/2 border-t border-dashed border-slate-400/95"
                       />
-                      <ArrowRight size={12} className="absolute left-[28%] top-1/2 -translate-y-1/2 text-slate-300" />
+                      <ArrowRight size={12} className="absolute left-[28%] top-1/2 -translate-y-1/2 text-slate-400" />
                       <div
                         className="absolute right-[12%] top-1/2 h-2.5 w-2.5 translate-x-1/2 -translate-y-1/2 rounded-full border border-white/80"
                         style={{ backgroundColor: '#00629B50', boxShadow: '0 0 0 4px rgba(0,98,155,0.08)' }}

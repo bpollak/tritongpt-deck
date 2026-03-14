@@ -977,7 +977,7 @@ export const slides = [
       }
     ],
     "guardrails": [
-      "P1-P3 Only",
+      "P1-P3 Data Only",
       "Approved Stacks",
       "Curated Integrations",
       "Campus Auth Pattern",
@@ -1093,7 +1093,7 @@ export const slides = [
         "subtitle": "Campus/VPN-hosted internal apps with UCSD sign-in",
         "badges": [
           "Campus / VPN",
-          "P1-P3"
+          "Data: P1-P3"
         ],
         "review": "Application, automated flags, and guided ITS review",
         "support": "ITS runs the platform only; department owns app support and POC",
@@ -1106,7 +1106,7 @@ export const slides = [
         "subtitle": "High-ROI or critical tools moved to full ITS delivery",
         "badges": [
           "ITS Platform",
-          "P1-P4"
+          "Data: P1-P4"
         ],
         "review": "Full architecture, security, compliance, and support review",
         "support": "ITS team, SLAs, monitoring, backups, lifecycle",
