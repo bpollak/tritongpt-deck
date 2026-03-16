@@ -11,7 +11,8 @@ export const slides = [
     "presenterTitle": "Executive Director, IT Services",
     "audiences": [
       "all",
-      "public"
+      "public",
+      "internal"
     ]
   },
   {
@@ -92,7 +93,8 @@ export const slides = [
     ],
     "audiences": [
       "all",
-      "public"
+      "public",
+      "internal"
     ]
   },
   {
@@ -228,7 +230,8 @@ export const slides = [
     ],
     "audiences": [
       "all",
-      "public"
+      "public",
+      "internal"
     ]
   },
   {
@@ -274,7 +277,8 @@ export const slides = [
     "backgroundColor": "#F5F0E6",
     "audiences": [
       "all",
-      "public"
+      "public",
+      "internal"
     ]
   },
   {
@@ -312,7 +316,8 @@ export const slides = [
     "layout": "feature-grid",
     "audiences": [
       "all",
-      "public"
+      "public",
+      "internal"
     ]
   },
   {
@@ -417,7 +422,8 @@ export const slides = [
     ],
     "audiences": [
       "all",
-      "public"
+      "public",
+      "internal"
     ]
   },
   {
@@ -429,7 +435,8 @@ export const slides = [
     "poster": "/media/image36.png",
     "audiences": [
       "all",
-      "public"
+      "public",
+      "internal"
     ]
   },
   {
@@ -441,7 +448,8 @@ export const slides = [
     "poster": "/media/image37.png",
     "audiences": [
       "all",
-      "public"
+      "public",
+      "internal"
     ]
   },
   {
@@ -538,7 +546,8 @@ export const slides = [
     ],
     "audiences": [
       "all",
-      "public"
+      "public",
+      "internal"
     ]
   },
   {
@@ -595,7 +604,8 @@ export const slides = [
     ],
     "audiences": [
       "all",
-      "public"
+      "public",
+      "internal"
     ]
   },
   {
@@ -640,7 +650,8 @@ export const slides = [
     ],
     "audiences": [
       "all",
-      "public"
+      "public",
+      "internal"
     ]
   },
   {
@@ -694,7 +705,8 @@ export const slides = [
     "audiences": [
       "all",
       "technical",
-      "public"
+      "public",
+      "internal"
     ]
   },
   {
