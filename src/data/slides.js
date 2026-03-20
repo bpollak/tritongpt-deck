@@ -2014,7 +2014,6 @@ export const slides = [
     "title": "Thank You",
     "subtitle": "Questions?",
     "layout": "title-hero",
-    "qrCodeUrl": "https://brettcpollak.com/tritongpt",
     "audiences": [
       "all",
       "public"
