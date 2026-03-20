@@ -95,7 +95,8 @@ export const slides = [
     "audiences": [
       "all",
       "public",
-      "internal"
+      "internal",
+      "technical"
     ]
   },
   {
@@ -232,7 +233,8 @@ export const slides = [
     "audiences": [
       "all",
       "public",
-      "internal"
+      "internal",
+      "technical"
     ]
   },
   {
@@ -279,7 +281,8 @@ export const slides = [
     "audiences": [
       "all",
       "public",
-      "internal"
+      "internal",
+      "technical"
     ]
   },
   {
@@ -318,7 +321,8 @@ export const slides = [
     "audiences": [
       "all",
       "public",
-      "internal"
+      "internal",
+      "technical"
     ]
   },
   {
@@ -424,7 +428,8 @@ export const slides = [
     "audiences": [
       "all",
       "public",
-      "internal"
+      "internal",
+      "technical"
     ]
   },
   {
@@ -437,7 +442,8 @@ export const slides = [
     "audiences": [
       "all",
       "public",
-      "internal"
+      "internal",
+      "technical"
     ]
   },
   {
@@ -463,7 +469,8 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "public"
+      "public",
+      "technical"
     ]
   },
   {
@@ -476,7 +483,8 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "public"
+      "public",
+      "technical"
     ]
   },
   {
@@ -548,7 +556,8 @@ export const slides = [
     "audiences": [
       "all",
       "public",
-      "internal"
+      "internal",
+      "technical"
     ]
   },
   {
@@ -560,7 +569,8 @@ export const slides = [
     "poster": "/media/image50.png",
     "audiences": [
       "all",
-      "internal"
+      "internal",
+      "technical"
     ]
   },
   {
@@ -652,7 +662,8 @@ export const slides = [
     "audiences": [
       "all",
       "public",
-      "internal"
+      "internal",
+      "technical"
     ]
   },
   {
@@ -665,7 +676,8 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "public"
+      "public",
+      "technical"
     ]
   },
   {
@@ -705,7 +717,6 @@ export const slides = [
     ],
     "audiences": [
       "all",
-      "technical",
       "public",
       "internal"
     ]
@@ -747,7 +758,8 @@ export const slides = [
     "audiences": [
       "all",
       "public",
-      "internal"
+      "internal",
+      "technical"
     ]
   },
   {
@@ -760,7 +772,8 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "public"
+      "public",
+      "technical"
     ]
   },
   {
@@ -810,7 +823,8 @@ export const slides = [
     "audiences": [
       "all",
       "public",
-      "internal"
+      "internal",
+      "technical"
     ]
   },
   {
@@ -1001,7 +1015,6 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "technical",
       "public",
       "CCW"
     ]
@@ -1149,7 +1162,6 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "technical",
       "public",
       "CCW"
     ]
@@ -1227,7 +1239,6 @@ export const slides = [
     ],
     "audiences": [
       "all",
-      "technical",
       "public",
       "internal"
     ]
@@ -1298,8 +1309,7 @@ export const slides = [
     "keyMessage": "Identified by someone close to the work, built with AI tools, ready for lightweight review and campus-only deployment",
     "audiences": [
       "all",
-      "internal",
-      "technical"
+      "internal"
     ]
   },
   {
@@ -1374,7 +1384,6 @@ export const slides = [
     ],
     "audiences": [
       "all",
-      "technical",
       "internal",
       "public"
     ]
@@ -1477,7 +1486,6 @@ export const slides = [
     ],
     "audiences": [
       "all",
-      "technical",
       "internal",
       "public"
     ]
