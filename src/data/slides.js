@@ -7,8 +7,6 @@ export const slides = [
     "title": "The AI-Enabled University",
     "subtitle": "Operationalizing TritonAI for Service & Support at Scale",
     "layout": "title-hero",
-    "presenterName": "Brett Pollak",
-    "presenterTitle": "Executive Director, IT Services",
     "audiences": [
       "all",
       "public",
@@ -2005,6 +2003,20 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
+      "public"
+    ]
+  },
+  {
+    "id": 38,
+    "slug": "thank-you-questions",
+    "type": "title",
+    "content": [],
+    "title": "Thank You",
+    "subtitle": "Questions?",
+    "layout": "title-hero",
+    "qrCodeUrl": "https://brettcpollak.com/tritongpt",
+    "audiences": [
+      "all",
       "public"
     ]
   }
