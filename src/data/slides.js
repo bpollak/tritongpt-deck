@@ -11,7 +11,8 @@ export const slides = [
       "all",
       "public",
       "internal",
-      "CCW"
+      "CCW",
+      "technical"
     ]
   },
   {
@@ -2016,7 +2017,8 @@ export const slides = [
     "layout": "title-hero",
     "audiences": [
       "all",
-      "public"
+      "public",
+      "technical"
     ]
   }
 ];
