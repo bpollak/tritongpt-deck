@@ -1214,11 +1214,11 @@ export const slides = [
   },
   {
     "id": 26,
-    "slug": "agent-engineering-strategy-codex-claude-code",
+    "slug": "agent-engineering-strategy",
     "type": "content",
     "layout": "agent-dev-strategy",
-    "title": "Agent Engineering Strategy: Codex + Claude Code",
-    "subtitle": "Recharge-backed, model-agnostic delivery through institutional agreements and on-prem controls",
+    "title": "Agent Engineering Strategy",
+    "subtitle": "Codex and Claude Code as primary engineering interfaces — with Gemini Antigravity also supported",
     "backgroundColor": "#F5F0E6",
     "recharge": {
       "title": "Campus Recharge + On-Prem Controls",
@@ -1233,17 +1233,20 @@ export const slides = [
       {
         "name": "Codex",
         "vendor": "OpenAI",
-        "icon": "CheckCircle"
+        "icon": "CheckCircle",
+        "primary": true
       },
       {
         "name": "Claude Code",
         "vendor": "Anthropic",
-        "icon": "Brain"
+        "icon": "Brain",
+        "primary": true
       },
       {
         "name": "Gemini Antigravity",
         "vendor": "Google",
-        "icon": "Star"
+        "icon": "Star",
+        "primary": false
       }
     ],
     "codex": {

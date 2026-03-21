@@ -1763,11 +1763,20 @@ const Slide = ({ slide }) => {
                     <div className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.16em] text-ucsd-navy/70 mb-2">
                       Supported Engineering Interfaces
                     </div>
-                    <div className="flex flex-wrap gap-1.5 sm:gap-2">
-                      {models.map((model, index) => {
+                    <div className="flex flex-wrap gap-1.5 sm:gap-2 items-center">
+                      {models.filter(m => m.primary).map((model, index) => {
                         const IconComponent = model.icon ? iconMap[model.icon] : Cpu;
                         return (
-                          <div key={index} className="inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 bg-white text-ucsd-navy border-ucsd-navy/20 text-[10px] sm:text-xs font-bold">
+                          <div key={index} className="inline-flex items-center gap-1.5 rounded-full border-2 px-2.5 py-1 bg-ucsd-navy text-white border-ucsd-navy text-[10px] sm:text-xs font-bold shadow-sm">
+                            <IconComponent size={12} />
+                            <span>{model.name}</span>
+                          </div>
+                        );
+                      })}
+                      {models.filter(m => !m.primary).map((model, index) => {
+                        const IconComponent = model.icon ? iconMap[model.icon] : Cpu;
+                        return (
+                          <div key={index} className="inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 bg-white text-ucsd-navy/70 border-ucsd-navy/15 text-[10px] sm:text-xs font-medium">
                             <IconComponent size={12} />
                             <span>{model.name}</span>
                           </div>
@@ -1779,7 +1788,7 @@ const Slide = ({ slide }) => {
               </div>
             </motion.div>
 
-            <div className="grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_90px_minmax(0,1fr)] gap-2 sm:gap-4 items-stretch">
+            <div className="grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_90px_minmax(0,1fr)] gap-2 sm:gap-4 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -18 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -1806,7 +1815,7 @@ const Slide = ({ slide }) => {
                 </ul>
               </motion.div>
 
-              <div className="hidden xl:flex flex-col items-center justify-center gap-1 text-ucsd-navy/70">
+              <div className="hidden xl:flex flex-col items-center justify-center gap-1 text-ucsd-navy/70 text-center">
                 <div className="text-[10px] font-black uppercase tracking-[0.16em]">Task Router</div>
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-ucsd-blue to-ucsd-navy text-white flex items-center justify-center shadow-lg">
                   <ArrowRightLeft size={18} />
