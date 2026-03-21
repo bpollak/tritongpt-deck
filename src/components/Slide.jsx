@@ -3558,26 +3558,8 @@ const Slide = ({ slide }) => {
                             initial={{ opacity: 0, scale: 0.7 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: 0.7 + laneIndex * 0.15, duration: 0.35 }}
-                            className="flex-shrink-0 relative flex items-center justify-center"
-                            style={{ width: 95, height: 95 }}
                           >
-                            <div
-                              className="absolute rounded-[6px] border-2"
-                              style={{
-                                width: 66,
-                                height: 66,
-                                transform: 'rotate(45deg)',
-                                borderColor: lane.color,
-                                backgroundColor: `${lane.color}10`,
-                                boxShadow: `0 3px 10px ${lane.color}15`
-                              }}
-                            />
-                            <span
-                              className="relative z-10 font-bold text-center leading-[1.15]"
-                              style={{ color: lane.color, fontSize: '9.5px', maxWidth: 74 }}
-                            >
-                              Recurring Risk / Scope Review
-                            </span>
+                            <DiamondNode label="Recurring Risk / Scope Review" color={lane.color} />
                           </motion.div>
                         </>
                       )}
