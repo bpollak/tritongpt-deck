@@ -1024,54 +1024,49 @@ export const slides = [
     "type": "content",
     "layout": "hosting-pipeline",
     "title": "Campus App Hosting",
-    "subtitle": "Constrained, campus-only hosting for internal, department-owned apps",
+    "subtitle": "What happens after you build — the hosting path for campus apps",
+    "contextNote": "Step 4 of the TritonAI Developer API paved path",
     "backgroundColor": "#F5F0E6",
     "pipelineSteps": [
       {
         "number": "1",
         "name": "Prototype",
-        "description": "Build locally or in a sandbox using TritonAI APIs and ITS templates",
-        "example": "Early proof of concept for a departmental workflow",
+        "description": "Build locally with Claude Code, Codex, or curated ITS templates via the TritonAI Developer API",
         "icon": "Code",
         "color": "#00629B"
       },
       {
         "number": "2",
         "name": "Apply",
-        "description": "Submit department, audience, data class, and value",
-        "example": "Department sponsor, named technical POC, P1-P3 data, and target user group",
+        "description": "Submit department sponsor, technical POC, audience, and data classification",
         "icon": "FileText",
         "color": "#006A96"
       },
       {
         "number": "3",
         "name": "Review",
-        "description": "Automated checks plus guided ITS review",
-        "example": "Sensitive data, restricted APIs, and stack fit are checked early",
+        "description": "Automated checks plus guided ITS review of data sensitivity, restricted APIs, and stack fit",
         "icon": "ClipboardCheck",
         "color": "#00C6D7"
       },
       {
         "number": "4",
         "name": "Deploy",
-        "description": "Campus-only hosting with SSO, logging, and network controls",
-        "example": "Internal app is available only on campus or over VPN",
+        "description": "Campus-only hosting with SSO, logging, and network controls — available on campus or VPN",
         "icon": "Globe",
         "color": "#FFCD00"
       },
       {
         "number": "5",
         "name": "Operate",
-        "description": "Departments support the app; ITS manages platform health",
-        "example": "ITS may remove unsafe, abandoned, or non-compliant apps",
+        "description": "Department supports the app; ITS manages platform health and may remove non-compliant apps",
         "icon": "RefreshCw",
         "color": "#FC8900"
       },
       {
         "number": "6",
         "name": "Promote",
-        "description": "High-value apps move up in tiers; unsupported apps are retired",
-        "example": "Proven apps graduate to enterprise support when warranted",
+        "description": "High-value apps graduate to enterprise support; unsupported apps are retired",
         "icon": "TrendingUp",
         "color": "#6E963B"
       }
@@ -1098,49 +1093,6 @@ export const slides = [
         "color": "#FFCD00"
       }
     },
-    "deploymentTiers": [
-      {
-        "tier": "Tier 1",
-        "title": "Experiment & Iterate",
-        "subtitle": "Local or sandbox builds with ITS templates and agent guidance",
-        "badges": [
-          "Local / Sandbox",
-          "ITS Templates"
-        ],
-        "review": "No ITS review until the app is functional",
-        "support": "Docs, agents.md, curated tools, starter credits",
-        "icon": "Globe",
-        "color": "#6E963B"
-      },
-      {
-        "tier": "Tier 2",
-        "title": "Hosted Apps",
-        "subtitle": "Campus/VPN-hosted internal apps with UCSD sign-in",
-        "badges": [
-          "Campus / VPN",
-          "Data: P1-P3"
-        ],
-        "review": "Application, automated flags, and guided ITS review",
-        "support": "ITS runs the platform only; department owns app support and POC",
-        "icon": "Layers",
-        "color": "#00C6D7"
-      },
-      {
-        "tier": "Tier 3",
-        "title": "ITS Enterprise Apps",
-        "subtitle": "High-ROI or critical tools moved to full ITS delivery",
-        "badges": [
-          "ITS Platform",
-          "Data: P1-P4"
-        ],
-        "review": "Full architecture, security, compliance, and support review",
-        "support": "ITS team, SLAs, monitoring, backups, lifecycle",
-        "icon": "Building2",
-        "color": "#00629B"
-      }
-    ],
-    "deploymentTierNote": "Most apps stay in Tier 1 or Tier 2; only high-value apps graduate",
-    "platformNote": "Paved path for internal apps built with TritonAI Developer API",
     "boundaries": {
       "whatItIs": {
         "items": [

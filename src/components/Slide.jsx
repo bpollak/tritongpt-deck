@@ -3083,312 +3083,176 @@ const Slide = ({ slide }) => {
         const steps = slide.pipelineSteps || [];
         const ownership = slide.ownership || {};
         const boundaries = slide.boundaries || {};
-        const deploymentTiers = slide.deploymentTiers || [];
-        const deploymentTierNote = slide.deploymentTierNote;
-        const platformNote = slide.platformNote;
         const hasBoundaryPanels = Boolean(boundaries.whatItIs?.items?.length || boundaries.whatItIsNot?.items?.length);
-        const phaseDefinitions = [
-          {
-            label: 'Build',
-            color: '#00629B',
-            surface: 'linear-gradient(180deg, rgba(0,98,155,0.10) 0%, rgba(0,98,155,0.03) 100%)',
-            halo: '0 12px 24px rgba(0,98,155,0.08)',
-            items: steps.slice(0, 2)
-          },
-          {
-            label: 'Launch',
-            color: '#00C6D7',
-            surface: 'linear-gradient(180deg, rgba(0,198,215,0.10) 0%, rgba(0,198,215,0.03) 100%)',
-            halo: '0 12px 24px rgba(0,198,215,0.08)',
-            items: steps.slice(2, 4)
-          },
-          {
-            label: 'Operate',
-            color: '#FC8900',
-            surface: 'linear-gradient(180deg, rgba(252,137,0,0.10) 0%, rgba(252,137,0,0.03) 100%)',
-            halo: '0 12px 24px rgba(252,137,0,0.08)',
-            items: steps.slice(4, 6)
-          }
-        ].filter((phase) => phase.items.length > 0);
+        const contextNote = slide.contextNote;
 
         return (
           <div className="w-full max-w-[1800px] mx-auto flex flex-col gap-2.5 sm:gap-3">
+            {/* Title + Context Note */}
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="flex flex-col gap-3"
+              className="text-left"
             >
-              <div className="text-left">
-                <div className="text-[28px] sm:text-[42px] md:text-[48px] font-black text-ucsd-navy leading-none">{slide.title}</div>
-                <div className="text-xs sm:text-base text-ucsd-blue font-medium mt-0.5">{slide.subtitle}</div>
+              <div className="flex items-end gap-4">
+                <div>
+                  <div className="text-[28px] sm:text-[42px] md:text-[48px] font-black text-ucsd-navy leading-none">{slide.title}</div>
+                  <div className="text-xs sm:text-base text-ucsd-blue font-medium mt-0.5">{slide.subtitle}</div>
+                </div>
+                {contextNote && (
+                  <div className="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-ucsd-blue/8 border border-ucsd-blue/15 px-3 py-1.5 mb-1">
+                    <ArrowRight size={12} className="text-ucsd-blue/60" />
+                    <span className="text-[11px] sm:text-[12px] font-bold text-ucsd-blue/80 whitespace-nowrap">{contextNote}</span>
+                  </div>
+                )}
               </div>
             </motion.div>
 
-            <div className="grid grid-cols-1 xl:grid-cols-[1.55fr_1fr] gap-2.5 items-stretch">
-              <motion.div
-                initial={{ opacity: 0, y: 14 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.5 }}
-                className="relative overflow-hidden rounded-[28px] border border-white/75 bg-white/90 p-3 sm:p-3.5 shadow-[0_16px_32px_rgba(24,43,73,0.08)]"
-              >
-                <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-ucsd-blue/30 via-ucsd-sky/28 to-ucsd-blue/18" />
-                <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-r from-ucsd-blue/8 via-ucsd-sky/4 to-transparent" />
-                <div className="relative">
-                  <div className="flex items-center justify-between gap-3 mb-2">
-                    <div>
-                      <div className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.18em] text-ucsd-navy/45 mb-0.5">01 Path</div>
-                      <div className="whitespace-nowrap text-[16px] sm:text-[20px] lg:text-[22px] font-black tracking-[-0.025em] text-ucsd-navy leading-[1.04]">The Path to Governed Hosting</div>
-                    </div>
-                  </div>
+            {/* Full-Width Pipeline */}
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.25, duration: 0.5 }}
+              className="relative overflow-hidden rounded-[28px] border border-white/75 bg-white/90 p-4 sm:p-5 shadow-[0_16px_32px_rgba(24,43,73,0.08)]"
+            >
+              <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-ucsd-blue/30 via-ucsd-sky/28 to-ucsd-blue/18" />
 
-                  <div className="grid grid-cols-1 md:grid-cols-3 md:[grid-template-rows:auto_auto_auto] gap-2 items-stretch">
-                    {phaseDefinitions.map((phase, phaseIndex) => (
-                      <motion.div
-                        key={phase.label}
-                        initial={{ opacity: 0, y: 12 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.42 + phaseIndex * 0.1, duration: 0.4 }}
-                        className="relative grid overflow-hidden rounded-[22px] border p-2.5 shadow-sm gap-2 md:row-span-3 md:[grid-template-rows:subgrid]"
-                        style={{
-                          borderColor: `${phase.color}24`,
-                          background: phase.surface,
-                          boxShadow: `${phase.halo}, inset 0 3px 0 ${phase.color}40`
-                        }}
-                      >
+              {/* Connecting line behind steps */}
+              <div className="hidden md:block absolute top-[50%] left-[8%] right-[8%] h-[2px] -translate-y-4 bg-gradient-to-r from-[#00629B20] via-[#00C6D720] to-[#6E963B20]" />
+
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
+                {steps.map((step, i) => {
+                  const IconComp = iconMap[step.icon] || Code;
+                  return (
+                    <motion.div
+                      key={step.number}
+                      initial={{ opacity: 0, y: 16 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.35 + i * 0.08, duration: 0.4 }}
+                      className="relative rounded-[20px] border bg-white/95 p-3 sm:p-3.5 shadow-sm flex flex-col"
+                      style={{
+                        borderColor: `${step.color}20`,
+                        boxShadow: `inset 0 3px 0 ${step.color}35, 0 6px 16px rgba(24,43,73,0.05)`
+                      }}
+                    >
+                      {/* Step number + icon */}
+                      <div className="flex items-center justify-between mb-2">
                         <div
-                          className="absolute inset-x-0 top-0 h-12 opacity-60"
-                          style={{ background: `linear-gradient(180deg, ${phase.color}12 0%, transparent 100%)` }}
-                        />
-                        <div className="relative flex items-center justify-between gap-2">
-                          <div className="inline-flex items-center gap-2 rounded-full px-3 py-1.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.75)]" style={{ backgroundColor: `${phase.color}10` }}>
-                            <div className="h-3 w-3 rounded-full shadow-sm" style={{ backgroundColor: phase.color }} />
-                            <div className="text-[11px] sm:text-[12px] font-black uppercase tracking-[0.16em]" style={{ color: phase.color }}>
-                              {phase.label}
-                            </div>
-                          </div>
+                          className="w-8 h-8 rounded-full flex items-center justify-center text-[13px] font-black text-white"
+                          style={{ backgroundColor: step.color }}
+                        >
+                          {step.number}
                         </div>
-                        {phase.items.map((step, stepIndex) => {
-                          const IconComp = iconMap[step.icon] || Code;
-                          return (
-                            <div
-                              key={`${phase.label}-${step.number}-${stepIndex}`}
-                              className="relative h-full rounded-[18px] border px-2.5 py-2"
-                              style={{
-                                borderColor: `${phase.color}12`,
-                                backgroundColor: 'rgba(255,255,255,0.94)',
-                                boxShadow: '0 6px 14px rgba(24,43,73,0.05)'
-                              }}
-                            >
-                              <div className="grid grid-cols-1 gap-1.5 items-start">
-                                <div className="min-w-0">
-                                  <div className="flex items-center gap-2">
-                                    <IconComp size={16} style={{ color: phase.color }} />
-                                    <div className="text-[15px] sm:text-[16px] font-black text-ucsd-navy leading-tight">{step.name}</div>
-                                  </div>
-                                  <div className="mt-0.5 text-[12px] sm:text-[13px] font-medium leading-[1.28] text-slate-700">
-                                    {step.description}
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          );
-                        })}
-                      </motion.div>
-                    ))}
-                  </div>
-
-                  {platformNote && (
-                    <div className="mt-2 text-[11px] sm:text-xs font-semibold text-slate-500 leading-tight">
-                      {platformNote}
-                    </div>
-                  )}
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 14 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.42, duration: 0.5 }}
-                className="relative overflow-hidden rounded-[28px] border border-white/75 bg-white/90 p-3 sm:p-3.5 shadow-[0_16px_32px_rgba(24,43,73,0.08)]"
-              >
-                <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-ucsd-blue/30 via-ucsd-sky/28 to-ucsd-blue/18" />
-                <div className="flex items-center justify-between gap-3 mb-2.5">
-                  <div>
-                    <div className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.18em] text-ucsd-navy/45 mb-0.5">02 Responsibility</div>
-                    <div className="text-[16px] sm:text-[19px] xl:text-[20px] font-black tracking-[-0.018em] text-ucsd-navy leading-tight">ITS manages the platform; departments own the software</div>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-0 rounded-[22px] overflow-hidden border border-slate-200/75 bg-slate-50/55">
-                  <div className="p-2.5 border-b md:border-b-0 md:border-r border-slate-200/75">
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: `${ownership.its?.color}10` }}>
-                        <Server size={15} style={{ color: ownership.its?.color }} />
+                        <IconComp size={18} style={{ color: step.color }} className="opacity-50" />
                       </div>
-                      <span className="text-[16px] sm:text-[17px] font-black uppercase tracking-[0.06em] leading-none" style={{ color: ownership.its?.color }}>
+
+                      {/* Step name */}
+                      <div className="text-[16px] sm:text-[18px] font-black text-ucsd-navy leading-tight mb-1.5">
+                        {step.name}
+                      </div>
+
+                      {/* Step description */}
+                      <div className="text-[12px] sm:text-[13px] font-medium leading-[1.35] text-slate-600 flex-1">
+                        {step.description}
+                      </div>
+
+                      {/* Arrow between steps (desktop) */}
+                      {i < steps.length - 1 && (
+                        <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 z-10">
+                          <ArrowRight size={14} className="text-slate-300" />
+                        </div>
+                      )}
+                    </motion.div>
+                  );
+                })}
+              </div>
+            </motion.div>
+
+            {/* Ownership + Boundaries Footer */}
+            <div className="grid grid-cols-1 xl:grid-cols-[1fr_1fr] gap-2.5">
+              <motion.div
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7, duration: 0.4 }}
+                className="relative overflow-hidden rounded-[22px] border border-white/75 bg-white/90 p-3 sm:p-3.5 shadow-[0_10px_20px_rgba(24,43,73,0.06)]"
+              >
+                <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-ucsd-blue/25 via-ucsd-sky/20 to-ucsd-blue/12" />
+                <div className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.18em] text-ucsd-navy/40 mb-2">Responsibility</div>
+                <div className="grid grid-cols-2 gap-0 rounded-[18px] overflow-hidden border border-slate-200/75 bg-slate-50/55">
+                  <div className="p-2.5 border-r border-slate-200/75">
+                    <div className="flex items-center gap-2 mb-1.5">
+                      <div className="w-7 h-7 rounded-full flex items-center justify-center" style={{ backgroundColor: `${ownership.its?.color}10` }}>
+                        <Server size={14} style={{ color: ownership.its?.color }} />
+                      </div>
+                      <span className="text-[13px] sm:text-[14px] font-black uppercase tracking-[0.06em] leading-none" style={{ color: ownership.its?.color }}>
                         {ownership.its?.title}
                       </span>
                     </div>
-                    <div className="space-y-1.25">
+                    <div className="space-y-1">
                       {ownership.its?.items?.map((item, i) => (
-                        <div key={i} className="flex items-start gap-2 text-[13px] sm:text-[14px] font-semibold text-ucsd-navy leading-tight">
-                          <div className="mt-[7px] h-1.5 w-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: ownership.its?.color }} />
+                        <div key={i} className="flex items-start gap-2 text-[12px] sm:text-[13px] font-semibold text-ucsd-navy leading-tight">
+                          <div className="mt-[6px] h-1.5 w-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: ownership.its?.color }} />
                           <span>{item}</span>
                         </div>
                       ))}
                     </div>
                   </div>
-
                   <div className="p-2.5">
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: `${ownership.builder?.color}10` }}>
-                        <Code size={15} style={{ color: ownership.builder?.color }} />
+                    <div className="flex items-center gap-2 mb-1.5">
+                      <div className="w-7 h-7 rounded-full flex items-center justify-center" style={{ backgroundColor: `${ownership.builder?.color}10` }}>
+                        <Code size={14} style={{ color: ownership.builder?.color }} />
                       </div>
-                      <span className="text-[16px] sm:text-[17px] font-black uppercase tracking-[0.06em] leading-none text-ucsd-navy">
+                      <span className="text-[13px] sm:text-[14px] font-black uppercase tracking-[0.06em] leading-none text-ucsd-navy">
                         {ownership.builder?.title}
                       </span>
                     </div>
-                    <div className="space-y-1.25">
+                    <div className="space-y-1">
                       {ownership.builder?.items?.map((item, i) => (
-                        <div key={i} className="flex items-start gap-2 text-[13px] sm:text-[14px] font-semibold text-ucsd-navy leading-tight">
-                          <div className="mt-[7px] h-1.5 w-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: ownership.builder?.color }} />
+                        <div key={i} className="flex items-start gap-2 text-[12px] sm:text-[13px] font-semibold text-ucsd-navy leading-tight">
+                          <div className="mt-[6px] h-1.5 w-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: ownership.builder?.color }} />
                           <span>{item}</span>
                         </div>
                       ))}
                     </div>
                   </div>
                 </div>
-
-                {hasBoundaryPanels && (
-                  <div className="mt-2.5 grid grid-cols-1 gap-1.5">
-                    <div className="rounded-[18px] border border-ucsd-blue/14 bg-ucsd-blue/4 px-2.5 py-1.5">
-                      <div className="grid grid-cols-[auto_1fr] items-center gap-x-1">
-                        <div className="shrink-0 whitespace-nowrap text-[9px] sm:text-[10px] font-black uppercase tracking-[0.12em] leading-none text-ucsd-blue">In Scope:</div>
-                        <div className="min-w-0 flex flex-nowrap items-center gap-0.5">
-                        {boundaries.whatItIs?.items?.map((item, i) => (
-                          <span
-                            key={i}
-                            className="shrink-0 whitespace-nowrap rounded-full bg-white/90 px-1.5 py-[3px] text-[11px] sm:text-[12px] font-semibold leading-none text-ucsd-navy/88"
-                          >
-                            {item}
-                          </span>
-                        ))}
-                        </div>
-                      </div>
-                    </div>
-                    <div className="rounded-[18px] border border-[#B56200]/14 bg-[#B56200]/4 px-2.5 py-1.5">
-                      <div className="grid grid-cols-[auto_1fr] items-center gap-x-1">
-                        <div className="shrink-0 whitespace-nowrap text-[9px] sm:text-[10px] font-black uppercase tracking-[0.12em] leading-none text-[#B56200]">Not For:</div>
-                        <div className="min-w-0 flex flex-nowrap items-center gap-0.5">
-                        {boundaries.whatItIsNot?.items?.map((item, i) => (
-                          <span
-                            key={i}
-                            className="shrink-0 whitespace-nowrap rounded-full bg-white/90 px-1.5 py-[3px] text-[11px] sm:text-[12px] font-semibold leading-none text-[#8A5600]"
-                          >
-                            {item}
-                          </span>
-                        ))}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                )}
               </motion.div>
-            </div>
 
-            {deploymentTiers.length > 0 && (
-              <motion.div
-                initial={{ opacity: 0, y: 18 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6, duration: 0.5 }}
-                className="relative overflow-hidden rounded-[28px] border border-white/75 bg-white/90 p-3 sm:p-3.5 shadow-[0_14px_28px_rgba(24,43,73,0.07)]"
-              >
-                <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-ucsd-blue/30 via-ucsd-sky/28 to-ucsd-blue/18" />
-                <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-1 sm:gap-2.5 mb-2">
-                  <div>
-                    <div className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.18em] text-ucsd-navy/45 mb-0.5">03 Hosting Tiers</div>
-                    <div className="text-[11px] sm:text-xs font-black uppercase tracking-[0.18em] text-ucsd-navy/55">3-Tier Deployment Path</div>
-                  </div>
-                  {deploymentTierNote && (
-                    <div className="text-[10px] sm:text-[11px] font-semibold text-slate-400">{deploymentTierNote}</div>
-                  )}
-                </div>
-                {deploymentTiers.length > 1 && (
-                  <div className="hidden lg:grid lg:grid-cols-3 gap-2 items-center mb-1 px-3">
-                    <div className="relative col-span-2 h-5">
-                      <div className="absolute left-[12%] right-[12%] top-1/2 h-[1.5px] -translate-y-1/2 bg-gradient-to-r from-[#6E963B4A] via-[#00C6D73A] to-[#00C6D74A]" />
-                      <div
-                        className="absolute left-[12%] top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/80"
-                        style={{ backgroundColor: '#6E963B55', boxShadow: '0 0 0 4px rgba(110,150,59,0.10)' }}
-                      />
-                      <div
-                        className="absolute right-[12%] top-1/2 h-2.5 w-2.5 translate-x-1/2 -translate-y-1/2 rounded-full border border-white/80"
-                        style={{ backgroundColor: '#00C6D755', boxShadow: '0 0 0 4px rgba(0,198,215,0.10)' }}
-                      />
-                    </div>
-                    <div className="relative h-5">
-                      <div
-                        className="absolute left-[-1.35rem] right-[12%] top-1/2 h-px -translate-y-1/2 border-t border-dashed border-slate-400/95"
-                      />
-                      <ArrowRight size={12} className="absolute left-[28%] top-1/2 -translate-y-1/2 text-slate-400" />
-                      <div
-                        className="absolute right-[12%] top-1/2 h-2.5 w-2.5 translate-x-1/2 -translate-y-1/2 rounded-full border border-white/80"
-                        style={{ backgroundColor: '#00629B50', boxShadow: '0 0 0 4px rgba(0,98,155,0.08)' }}
-                      />
-                    </div>
-                  </div>
-                )}
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-2">
-                  {deploymentTiers.map((tier, i) => {
-                    const TierIcon = iconMap[tier.icon] || Layers;
-                    return (
-                      <motion.div
-                        key={tier.title || i}
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.68 + i * 0.08, duration: 0.35 }}
-                        className="rounded-[20px] border bg-white/95 p-2.5 shadow-sm"
-                        style={{
-                          borderColor: `${tier.color}24`,
-                          boxShadow: `inset 0 2px 0 ${tier.color}35`
-                        }}
-                      >
-                        <div className="flex items-start justify-between gap-2.5 mb-1">
-                          <div className="min-w-0">
-                            <div className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.18em] leading-none" style={{ color: tier.color }}>
-                              {tier.tier}
-                            </div>
-                            <div className="text-[16px] sm:text-[17px] font-black text-ucsd-navy leading-tight mt-0.5">{tier.title}</div>
-                          </div>
-                          <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: `${tier.color}08` }}>
-                            <TierIcon size={15} style={{ color: tier.color }} />
-                          </div>
-                        </div>
-                        <div className="text-[11px] sm:text-[12px] text-slate-600 font-medium leading-snug">{tier.subtitle}</div>
-                        <div className="flex flex-wrap gap-1 mt-1.5 mb-1.5">
-                          {tier.badges?.map((badge, badgeIndex) => (
-                            <span
-                              key={badgeIndex}
-                              className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.12em] px-2 py-0.5 rounded-full"
-                              style={{ backgroundColor: `${tier.color}08`, color: tier.color }}
-                            >
-                              {badge}
-                            </span>
+              {hasBoundaryPanels && (
+                <motion.div
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.75, duration: 0.4 }}
+                  className="relative overflow-hidden rounded-[22px] border border-white/75 bg-white/90 p-3 sm:p-3.5 shadow-[0_10px_20px_rgba(24,43,73,0.06)]"
+                >
+                  <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-ucsd-blue/25 via-ucsd-sky/20 to-ucsd-blue/12" />
+                  <div className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.18em] text-ucsd-navy/40 mb-2">Scope</div>
+                  <div className="flex flex-col gap-2">
+                    <div className="rounded-[16px] border border-ucsd-blue/14 bg-ucsd-blue/4 px-3 py-2">
+                      <div className="flex items-center gap-2.5">
+                        <div className="shrink-0 text-[10px] sm:text-[11px] font-black uppercase tracking-[0.12em] text-ucsd-blue">In Scope:</div>
+                        <div className="flex flex-wrap items-center gap-1.5">
+                          {boundaries.whatItIs?.items?.map((item, i) => (
+                            <span key={i} className="rounded-full bg-white/90 px-2.5 py-1 text-[12px] sm:text-[13px] font-semibold text-ucsd-navy/88">{item}</span>
                           ))}
                         </div>
-                        <div className="grid grid-cols-[88px_1fr] sm:grid-cols-[94px_1fr] gap-x-2 gap-y-0.5 text-[10px] sm:text-[11px]">
-                          <span className="whitespace-nowrap font-black uppercase tracking-[0.12em] leading-none text-slate-400">Review</span>
-                          <span className="font-semibold text-ucsd-navy leading-snug">{tier.review}</span>
-                          <span className="whitespace-nowrap font-black uppercase tracking-[0.12em] leading-none text-slate-400">Support</span>
-                          <span className="font-semibold text-ucsd-navy leading-snug">{tier.support}</span>
+                      </div>
+                    </div>
+                    <div className="rounded-[16px] border border-[#B56200]/14 bg-[#B56200]/4 px-3 py-2">
+                      <div className="flex items-center gap-2.5">
+                        <div className="shrink-0 text-[10px] sm:text-[11px] font-black uppercase tracking-[0.12em] text-[#B56200]">Not For:</div>
+                        <div className="flex flex-wrap items-center gap-1.5">
+                          {boundaries.whatItIsNot?.items?.map((item, i) => (
+                            <span key={i} className="rounded-full bg-white/90 px-2.5 py-1 text-[12px] sm:text-[13px] font-semibold text-[#8A5600]">{item}</span>
+                          ))}
                         </div>
-                      </motion.div>
-                    );
-                  })}
-                </div>
-              </motion.div>
-            )}
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </div>
           </div>
         );
       })()}
