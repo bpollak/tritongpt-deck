@@ -3400,38 +3400,30 @@ const Slide = ({ slide }) => {
         const boundaries = slide.boundaries || {};
         const hasBoundaryPanels = Boolean(boundaries.whatItIs?.items?.length || boundaries.whatItIsNot?.items?.length);
 
-        const DiamondNode = ({ label, color, size = 'normal' }) => {
-          const dim = size === 'small' ? 80 : 100;
-          const innerDim = size === 'small' ? 56 : 70;
-          return (
-            <div className="relative flex items-center justify-center flex-shrink-0" style={{ width: dim, height: dim }}>
-              <div
-                className="absolute rounded-[6px] border-2"
-                style={{
-                  width: innerDim,
-                  height: innerDim,
-                  transform: 'rotate(45deg)',
-                  borderColor: color,
-                  backgroundColor: `${color}10`,
-                  boxShadow: `0 4px 14px ${color}18`
-                }}
-              />
-              <span
-                className="relative z-10 font-bold text-center leading-[1.18] px-1"
-                style={{
-                  color,
-                  fontSize: size === 'small' ? '10px' : '11px',
-                  maxWidth: size === 'small' ? 68 : 84
-                }}
-              >
-                {label}
-              </span>
-            </div>
-          );
-        };
+        const DiamondNode = ({ label, color }) => (
+          <div className="relative flex items-center justify-center flex-shrink-0" style={{ width: 110, height: 110 }}>
+            <div
+              className="absolute rounded-[7px] border-2"
+              style={{
+                width: 78,
+                height: 78,
+                transform: 'rotate(45deg)',
+                borderColor: color,
+                backgroundColor: `${color}10`,
+                boxShadow: `0 4px 14px ${color}18`
+              }}
+            />
+            <span
+              className="relative z-10 font-bold text-center leading-[1.18] px-1"
+              style={{ color, fontSize: '11px', maxWidth: 90 }}
+            >
+              {label}
+            </span>
+          </div>
+        );
 
         const HorizontalArrow = ({ label, color, dashed = false, grow = false }) => (
-          <div className={`flex flex-col items-center justify-center flex-shrink-0 ${grow ? 'flex-1 min-w-[40px]' : ''}`} style={grow ? undefined : { width: 70 }}>
+          <div className={`flex flex-col items-center justify-center flex-shrink-0 ${grow ? 'flex-1 min-w-[30px]' : ''}`} style={grow ? undefined : { width: 55 }}>
             {label && (
               <div className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.1em] mb-0.5 whitespace-nowrap" style={{ color }}>
                 {label}
@@ -3488,7 +3480,7 @@ const Slide = ({ slide }) => {
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25, duration: 0.5 }}
-              className="relative overflow-hidden rounded-[28px] border border-white/75 bg-white/90 px-4 sm:px-6 py-4 sm:py-5 shadow-[0_16px_32px_rgba(24,43,73,0.08)]"
+              className="relative rounded-[28px] border border-white/75 bg-white/90 pl-4 pr-3 sm:pl-6 sm:pr-4 py-4 sm:py-5 shadow-[0_16px_32px_rgba(24,43,73,0.08)]"
             >
               <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-ucsd-blue/30 via-ucsd-sky/28 to-ucsd-blue/18" />
 
@@ -3504,7 +3496,7 @@ const Slide = ({ slide }) => {
                       style={{ borderLeft: `5px solid ${lane.color}`, paddingLeft: 16 }}
                     >
                       {/* Volume + Team Info */}
-                      <div className="flex flex-col items-center gap-1 flex-shrink-0" style={{ width: 120 }}>
+                      <div className="flex flex-col items-center gap-1 flex-shrink-0" style={{ width: 105 }}>
                         <div
                           className="text-[22px] sm:text-[28px] font-black leading-none"
                           style={{ color: lane.color }}
@@ -3530,18 +3522,17 @@ const Slide = ({ slide }) => {
                       </motion.div>
 
                       {/* Arrow: Approved */}
-                      <HorizontalArrow label="Approved" color={lane.color} grow />
+                      <HorizontalArrow label="Approved" color={lane.color} />
 
                       {/* Deployment Box */}
                       <motion.div
                         initial={{ opacity: 0, y: 8 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6 + laneIndex * 0.15, duration: 0.35 }}
-                        className="rounded-[18px] border bg-white/95 px-4 py-2.5 shadow-sm flex-shrink-0"
+                        className="rounded-[18px] border bg-white/95 px-3.5 py-2.5 shadow-sm flex-1 min-w-0"
                         style={{
                           borderColor: `${lane.color}28`,
-                          boxShadow: `inset 0 2px 0 ${lane.color}30`,
-                          minWidth: 220
+                          boxShadow: `inset 0 2px 0 ${lane.color}30`
                         }}
                       >
                         <div className="text-[14px] sm:text-[16px] font-black text-ucsd-navy leading-tight">
@@ -3562,13 +3553,31 @@ const Slide = ({ slide }) => {
                       {/* Arrow to recurring review (if applicable) */}
                       {lane.recurringReview && (
                         <>
-                          <HorizontalArrow color={lane.color} grow />
+                          <HorizontalArrow color={lane.color} />
                           <motion.div
                             initial={{ opacity: 0, scale: 0.7 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: 0.7 + laneIndex * 0.15, duration: 0.35 }}
+                            className="flex-shrink-0 relative flex items-center justify-center"
+                            style={{ width: 95, height: 95 }}
                           >
-                            <DiamondNode label="Recurring Risk / Scope Review" color={lane.color} size="small" />
+                            <div
+                              className="absolute rounded-[6px] border-2"
+                              style={{
+                                width: 66,
+                                height: 66,
+                                transform: 'rotate(45deg)',
+                                borderColor: lane.color,
+                                backgroundColor: `${lane.color}10`,
+                                boxShadow: `0 3px 10px ${lane.color}15`
+                              }}
+                            />
+                            <span
+                              className="relative z-10 font-bold text-center leading-[1.15]"
+                              style={{ color: lane.color, fontSize: '9.5px', maxWidth: 74 }}
+                            >
+                              Recurring Risk / Scope Review
+                            </span>
                           </motion.div>
                         </>
                       )}
