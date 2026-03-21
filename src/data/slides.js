@@ -1166,6 +1166,101 @@ export const slides = [
     ]
   },
   {
+    "id": 25,
+    "slug": "campus-app-hosting-intake",
+    "type": "content",
+    "layout": "intake-funnel",
+    "title": "Campus App Hosting",
+    "subtitle": "Tiered intake from citizen apps to enterprise — with governance gates at every level",
+    "backgroundColor": "#F5F0E6",
+    "lanes": [
+      {
+        "id": "citizen",
+        "label": "Citizen Apps",
+        "volume": "~200/yr",
+        "teamSize": 1,
+        "teamLabel": "Individual developers",
+        "color": "#6E963B",
+        "gate": "Citizen App Risk / Scope Review",
+        "deployment": "Citizen-Curated Deployment",
+        "domain": "*.apps.ucsd.edu",
+        "recurringReview": true,
+        "escalatesTo": "tritonai"
+      },
+      {
+        "id": "tritonai",
+        "label": "TritonAI Rapid Dev",
+        "volume": "~20/yr",
+        "teamSize": 3,
+        "teamLabel": "Small teams",
+        "color": "#00C6D7",
+        "gate": "TritonAI Tools & Rapid Dev",
+        "deployment": "TritonAI Dev",
+        "domain": "*.tritonai.ucsd.edu",
+        "recurringReview": true,
+        "escalatesTo": "enterprise"
+      },
+      {
+        "id": "enterprise",
+        "label": "Enterprise",
+        "volume": "~1-5/yr",
+        "teamSize": 6,
+        "teamLabel": "Large cross-functional teams",
+        "color": "#00629B",
+        "gate": "Enterprise Architecture / Dev",
+        "deployment": "Traditional Enterprise Dev / Deployment",
+        "domain": "iPaaS Patterns",
+        "recurringReview": false,
+        "escalatesTo": null
+      }
+    ],
+    "ownership": {
+      "its": {
+        "title": "ITS Owns",
+        "items": [
+          "Templates & Standards",
+          "Hosting, SSO & Logs",
+          "Baseline Risk Review",
+          "Right to Remove Apps"
+        ],
+        "color": "#00629B"
+      },
+      "builder": {
+        "title": "Department Owns",
+        "items": [
+          "App Logic & Dependencies",
+          "Accessibility & Testing",
+          "End-User Support",
+          "Named Technical POC"
+        ],
+        "color": "#FFCD00"
+      }
+    },
+    "boundaries": {
+      "whatItIs": {
+        "items": [
+          "Department Workflows",
+          "Single-Purpose Tools"
+        ],
+        "color": "#00629B"
+      },
+      "whatItIsNot": {
+        "items": [
+          "Public Websites",
+          "HIPAA Workloads",
+          "Payment Processing"
+        ],
+        "color": "#B56200"
+      }
+    },
+    "audiences": [
+      "all",
+      "internal",
+      "public",
+      "CCW"
+    ]
+  },
+  {
     "id": 26,
     "slug": "agent-engineering-strategy-codex-claude-code",
     "type": "content",

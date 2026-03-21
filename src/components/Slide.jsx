@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion'; // eslint-disable-line no-unused-vars
 import clsx from 'clsx';
-import { Target, Database, Cpu, Blocks, GraduationCap, Building2, FileText, FileCheck, DollarSign, Shield, BookOpen, Code, Presentation, Globe, FileEdit, FolderOpen, TrendingUp, ClipboardCheck, Search, Heart, Calendar, GitBranch, Network, Grid3x3, ArrowDown, ArrowRight, Brain, RefreshCw, ArrowRightLeft, CheckCircle, Monitor, Users, Award, Server, Layers, Wallet, Share2, Star, FlaskConical } from 'lucide-react';
+import { Target, Database, Cpu, Blocks, GraduationCap, Building2, FileText, FileCheck, DollarSign, Shield, BookOpen, Code, Presentation, Globe, FileEdit, FolderOpen, TrendingUp, ClipboardCheck, Search, Heart, Calendar, GitBranch, Network, Grid3x3, ArrowDown, ArrowRight, Brain, RefreshCw, ArrowRightLeft, CheckCircle, Monitor, User, Users, Award, Server, Layers, Wallet, Share2, Star, FlaskConical } from 'lucide-react';
 import { QRCodeSVG } from 'qrcode.react';
 
 const iconMap = {
@@ -145,6 +145,7 @@ const Slide = ({ slide }) => {
   const isCampusMetrics = slide.layout === 'campus-metrics';
   const isApiGateway = slide.layout === 'api-gateway';
   const isHostingPipeline = slide.layout === 'hosting-pipeline';
+  const isIntakeFunnel = slide.layout === 'intake-funnel';
   const isInnovationFlywheel = slide.layout === 'innovation-flywheel';
   const isFlywheelCaseStudy = slide.layout === 'flywheel-case-study';
   const parseHeroHeading = (heading = '') => {
@@ -461,9 +462,9 @@ const Slide = ({ slide }) => {
         className={clsx(
           "font-bold mb-4 sm:mb-6",
           isTitle ? "text-2xl sm:text-4xl md:text-6xl" : "text-xl sm:text-3xl md:text-5xl",
-          (!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isAgentDevStrategy && !isRoadmap && !isProblemStatement && !isContractReviewChallenge && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isTimelineEvolution && !isCampusMetrics && !isApiGateway && !isHostingPipeline && !isInnovationFlywheel && !isFlywheelCaseStudy) && "border-b-4 border-ucsd-gold pb-3 inline-block self-start",
+          (!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isAgentDevStrategy && !isRoadmap && !isProblemStatement && !isContractReviewChallenge && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isTimelineEvolution && !isCampusMetrics && !isApiGateway && !isHostingPipeline && !isIntakeFunnel && !isInnovationFlywheel && !isFlywheelCaseStudy) && "border-b-4 border-ucsd-gold pb-3 inline-block self-start",
           (isSolution || isSolutionVideo || isCaseStudyHero || isAssistantCategories || isKeyTakeaways || isAgentDevStrategy || isRoadmap || isProblemStatement || isContractReviewChallenge || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isComparisonTable || isCompoundArchitecture || isTimelineEvolution || isCampusMetrics) && "text-center w-full",
-          (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isCompoundArchitecture || isApiGateway || isHostingPipeline || isInnovationFlywheel || isFlywheelCaseStudy) && "hidden",
+          (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isCompoundArchitecture || isApiGateway || isHostingPipeline || isIntakeFunnel || isInnovationFlywheel || isFlywheelCaseStudy) && "hidden",
           isAgentWorkflow && "text-center text-3xl sm:text-5xl md:text-6xl mb-2 sm:mb-4 w-full",
           isCaseStudyHero && "text-3xl md:text-4xl mb-2 sm:mb-3 leading-tight",
           isRoadmap && "mb-2 sm:mb-3 leading-tight",
@@ -484,7 +485,7 @@ const Slide = ({ slide }) => {
         {slide.title}
       </motion.h1>
 
-      {slide.subtitle && !isCaseStudyHero && !isCompoundArchitecture && !isAnalyticsChart && !isTimelineEvolution && !isTritonAIEvolutionSlide && !isApiGateway && !isHostingPipeline && !isInnovationFlywheel && !isFlywheelCaseStudy && (
+      {slide.subtitle && !isCaseStudyHero && !isCompoundArchitecture && !isAnalyticsChart && !isTimelineEvolution && !isTritonAIEvolutionSlide && !isApiGateway && !isHostingPipeline && !isIntakeFunnel && !isInnovationFlywheel && !isFlywheelCaseStudy && (
         <motion.h2
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -3392,6 +3393,318 @@ const Slide = ({ slide }) => {
         );
       })()}
 
+      {/* Intake Funnel Layout */}
+      {isIntakeFunnel && (() => {
+        const lanes = slide.lanes || [];
+        const ownership = slide.ownership || {};
+        const boundaries = slide.boundaries || {};
+        const hasBoundaryPanels = Boolean(boundaries.whatItIs?.items?.length || boundaries.whatItIsNot?.items?.length);
+
+        const DiamondNode = ({ label, color, size = 'normal' }) => {
+          const dim = size === 'small' ? 80 : 100;
+          const innerDim = size === 'small' ? 56 : 70;
+          return (
+            <div className="relative flex items-center justify-center flex-shrink-0" style={{ width: dim, height: dim }}>
+              <div
+                className="absolute rounded-[6px] border-2"
+                style={{
+                  width: innerDim,
+                  height: innerDim,
+                  transform: 'rotate(45deg)',
+                  borderColor: color,
+                  backgroundColor: `${color}10`,
+                  boxShadow: `0 4px 14px ${color}18`
+                }}
+              />
+              <span
+                className="relative z-10 font-bold text-center leading-[1.18] px-1"
+                style={{
+                  color,
+                  fontSize: size === 'small' ? '10px' : '11px',
+                  maxWidth: size === 'small' ? 68 : 84
+                }}
+              >
+                {label}
+              </span>
+            </div>
+          );
+        };
+
+        const HorizontalArrow = ({ label, color, dashed = false, grow = false }) => (
+          <div className={`flex flex-col items-center justify-center flex-shrink-0 ${grow ? 'flex-1 min-w-[40px]' : ''}`} style={grow ? undefined : { width: 70 }}>
+            {label && (
+              <div className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.1em] mb-0.5 whitespace-nowrap" style={{ color }}>
+                {label}
+              </div>
+            )}
+            <div className="relative w-full flex items-center">
+              <div
+                className="flex-1 h-0"
+                style={{
+                  borderTop: `2px ${dashed ? 'dashed' : 'solid'} ${color}55`
+                }}
+              />
+              <ArrowRight size={14} style={{ color: `${color}75` }} className="flex-shrink-0 -ml-1" />
+            </div>
+          </div>
+        );
+
+        const TeamIcons = ({ count, color }) => {
+          if (count <= 1) {
+            return <User size={22} style={{ color }} />;
+          }
+          if (count <= 3) {
+            return (
+              <div className="flex items-center -space-x-1">
+                {Array.from({ length: count }).map((_, i) => (
+                  <User key={i} size={18} style={{ color: i === 0 ? color : `${color}80` }} />
+                ))}
+              </div>
+            );
+          }
+          return (
+            <div className="flex items-center gap-1">
+              <Users size={20} style={{ color }} />
+              <span className="text-[12px] font-bold" style={{ color }}>{count}</span>
+            </div>
+          );
+        };
+
+        return (
+          <div className="w-full max-w-[1800px] mx-auto flex flex-col gap-2.5 sm:gap-3">
+            {/* Title */}
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-left"
+            >
+              <div className="text-[28px] sm:text-[42px] md:text-[48px] font-black text-ucsd-navy leading-none">{slide.title}</div>
+              <div className="text-xs sm:text-base text-ucsd-blue font-medium mt-0.5">{slide.subtitle}</div>
+            </motion.div>
+
+            {/* Main Swim Lane Panel */}
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.25, duration: 0.5 }}
+              className="relative overflow-hidden rounded-[28px] border border-white/75 bg-white/90 px-4 sm:px-6 py-4 sm:py-5 shadow-[0_16px_32px_rgba(24,43,73,0.08)]"
+            >
+              <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-ucsd-blue/30 via-ucsd-sky/28 to-ucsd-blue/18" />
+
+              <div className="flex flex-col gap-0">
+                {lanes.map((lane, laneIndex) => (
+                  <React.Fragment key={lane.id}>
+                    {/* Lane Row */}
+                    <motion.div
+                      initial={{ opacity: 0, x: -24 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.35 + laneIndex * 0.15, duration: 0.45 }}
+                      className="flex items-center gap-2 sm:gap-3 py-3 sm:py-4"
+                      style={{ borderLeft: `5px solid ${lane.color}`, paddingLeft: 16 }}
+                    >
+                      {/* Volume + Team Info */}
+                      <div className="flex flex-col items-center gap-1 flex-shrink-0" style={{ width: 120 }}>
+                        <div
+                          className="text-[22px] sm:text-[28px] font-black leading-none"
+                          style={{ color: lane.color }}
+                        >
+                          {lane.volume}
+                        </div>
+                        <TeamIcons count={lane.teamSize} color={lane.color} />
+                        <div className="text-[11px] sm:text-[12px] font-black text-ucsd-navy/75 text-center leading-tight">
+                          {lane.label}
+                        </div>
+                      </div>
+
+                      {/* Arrow to gate */}
+                      <HorizontalArrow color={lane.color} />
+
+                      {/* Gate Diamond */}
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0.7 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.5 + laneIndex * 0.15, duration: 0.35 }}
+                      >
+                        <DiamondNode label={lane.gate} color={lane.color} />
+                      </motion.div>
+
+                      {/* Arrow: Approved */}
+                      <HorizontalArrow label="Approved" color={lane.color} grow />
+
+                      {/* Deployment Box */}
+                      <motion.div
+                        initial={{ opacity: 0, y: 8 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.6 + laneIndex * 0.15, duration: 0.35 }}
+                        className="rounded-[18px] border bg-white/95 px-4 py-2.5 shadow-sm flex-shrink-0"
+                        style={{
+                          borderColor: `${lane.color}28`,
+                          boxShadow: `inset 0 2px 0 ${lane.color}30`,
+                          minWidth: 220
+                        }}
+                      >
+                        <div className="text-[14px] sm:text-[16px] font-black text-ucsd-navy leading-tight">
+                          {lane.deployment}
+                        </div>
+                        <div
+                          className="mt-1.5 inline-block rounded-full px-2.5 py-0.5 text-[11px] sm:text-[12px] font-bold"
+                          style={{
+                            backgroundColor: `${lane.color}10`,
+                            color: lane.color,
+                            fontFamily: 'monospace'
+                          }}
+                        >
+                          {lane.domain}
+                        </div>
+                      </motion.div>
+
+                      {/* Arrow to recurring review (if applicable) */}
+                      {lane.recurringReview && (
+                        <>
+                          <HorizontalArrow color={lane.color} grow />
+                          <motion.div
+                            initial={{ opacity: 0, scale: 0.7 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: 0.7 + laneIndex * 0.15, duration: 0.35 }}
+                          >
+                            <DiamondNode label="Recurring Risk / Scope Review" color={lane.color} size="small" />
+                          </motion.div>
+                        </>
+                      )}
+                    </motion.div>
+
+                    {/* Escalation indicator between lanes */}
+                    {lane.escalatesTo && laneIndex < lanes.length - 1 && (
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.85, duration: 0.4 }}
+                        className="relative flex items-stretch ml-[131px] mr-4 py-0"
+                        style={{ height: 28 }}
+                      >
+                        {/* Left escalate arrow under gate area */}
+                        <div className="absolute left-[70px] top-0 bottom-0 flex items-center gap-2">
+                          <div className="flex flex-col items-center h-full justify-between">
+                            <div
+                              className="flex-1 w-0 border-l-2 border-dashed"
+                              style={{ borderColor: `${lane.color}45` }}
+                            />
+                            <ArrowDown size={11} style={{ color: `${lane.color}65` }} className="-mt-0.5" />
+                          </div>
+                          <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.12em] whitespace-nowrap" style={{ color: `${lane.color}80` }}>
+                            Escalate
+                          </span>
+                        </div>
+
+                        {/* Right escalate/migrate arrow under deployment area */}
+                        <div className="absolute right-[25%] top-0 bottom-0 flex items-center gap-2">
+                          <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.12em] whitespace-nowrap" style={{ color: `${lane.color}80` }}>
+                            Escalate / Migrate
+                          </span>
+                          <div className="flex flex-col items-center h-full justify-between">
+                            <div
+                              className="flex-1 w-0 border-l-2 border-dashed"
+                              style={{ borderColor: `${lane.color}45` }}
+                            />
+                            <ArrowDown size={11} style={{ color: `${lane.color}65` }} className="-mt-0.5" />
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </React.Fragment>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Ownership + Boundaries Footer */}
+            <div className="grid grid-cols-1 xl:grid-cols-[1fr_1fr] gap-2.5">
+              <motion.div
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7, duration: 0.4 }}
+                className="relative overflow-hidden rounded-[22px] border border-white/75 bg-white/90 p-3 sm:p-3.5 shadow-[0_10px_20px_rgba(24,43,73,0.06)]"
+              >
+                <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-ucsd-blue/25 via-ucsd-sky/20 to-ucsd-blue/12" />
+                <div className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.18em] text-ucsd-navy/40 mb-2">Responsibility</div>
+                <div className="grid grid-cols-2 gap-0 rounded-[18px] overflow-hidden border border-slate-200/75 bg-slate-50/55">
+                  <div className="p-2.5 border-r border-slate-200/75">
+                    <div className="flex items-center gap-2 mb-1.5">
+                      <div className="w-7 h-7 rounded-full flex items-center justify-center" style={{ backgroundColor: `${ownership.its?.color}10` }}>
+                        <Server size={14} style={{ color: ownership.its?.color }} />
+                      </div>
+                      <span className="text-[13px] sm:text-[14px] font-black uppercase tracking-[0.06em] leading-none" style={{ color: ownership.its?.color }}>
+                        {ownership.its?.title}
+                      </span>
+                    </div>
+                    <div className="space-y-1">
+                      {ownership.its?.items?.map((item, i) => (
+                        <div key={i} className="flex items-start gap-2 text-[12px] sm:text-[13px] font-semibold text-ucsd-navy leading-tight">
+                          <div className="mt-[6px] h-1.5 w-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: ownership.its?.color }} />
+                          <span>{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="p-2.5">
+                    <div className="flex items-center gap-2 mb-1.5">
+                      <div className="w-7 h-7 rounded-full flex items-center justify-center" style={{ backgroundColor: `${ownership.builder?.color}10` }}>
+                        <Code size={14} style={{ color: ownership.builder?.color }} />
+                      </div>
+                      <span className="text-[13px] sm:text-[14px] font-black uppercase tracking-[0.06em] leading-none text-ucsd-navy">
+                        {ownership.builder?.title}
+                      </span>
+                    </div>
+                    <div className="space-y-1">
+                      {ownership.builder?.items?.map((item, i) => (
+                        <div key={i} className="flex items-start gap-2 text-[12px] sm:text-[13px] font-semibold text-ucsd-navy leading-tight">
+                          <div className="mt-[6px] h-1.5 w-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: ownership.builder?.color }} />
+                          <span>{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {hasBoundaryPanels && (
+                <motion.div
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.75, duration: 0.4 }}
+                  className="relative overflow-hidden rounded-[22px] border border-white/75 bg-white/90 p-3 sm:p-3.5 shadow-[0_10px_20px_rgba(24,43,73,0.06)]"
+                >
+                  <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-ucsd-blue/25 via-ucsd-sky/20 to-ucsd-blue/12" />
+                  <div className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.18em] text-ucsd-navy/40 mb-2">Scope</div>
+                  <div className="flex flex-col gap-2">
+                    <div className="rounded-[16px] border border-ucsd-blue/14 bg-ucsd-blue/4 px-3 py-2">
+                      <div className="flex items-center gap-2.5">
+                        <div className="shrink-0 text-[10px] sm:text-[11px] font-black uppercase tracking-[0.12em] text-ucsd-blue">In Scope:</div>
+                        <div className="flex flex-wrap items-center gap-1.5">
+                          {boundaries.whatItIs?.items?.map((item, i) => (
+                            <span key={i} className="rounded-full bg-white/90 px-2.5 py-1 text-[12px] sm:text-[13px] font-semibold text-ucsd-navy/88">{item}</span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="rounded-[16px] border border-[#B56200]/14 bg-[#B56200]/4 px-3 py-2">
+                      <div className="flex items-center gap-2.5">
+                        <div className="shrink-0 text-[10px] sm:text-[11px] font-black uppercase tracking-[0.12em] text-[#B56200]">Not For:</div>
+                        <div className="flex flex-wrap items-center gap-1.5">
+                          {boundaries.whatItIsNot?.items?.map((item, i) => (
+                            <span key={i} className="rounded-full bg-white/90 px-2.5 py-1 text-[12px] sm:text-[13px] font-semibold text-[#8A5600]">{item}</span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </div>
+          </div>
+        );
+      })()}
+
       {/* Innovation Flywheel Layout */}
       {isInnovationFlywheel && (() => {
         const stages = slide.flywheelStages || [];
@@ -4308,7 +4621,7 @@ const Slide = ({ slide }) => {
         </div>
       )}
 
-      {!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isAgentDevStrategy && !isRoadmap && !isProblemStatement && !isContractReviewChallenge && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isAgentWorkflow && !isAnalyticsChart && !isTeamGrid && !isTimelineEvolution && !isCampusMetrics && !isApiGateway && !isHostingPipeline && !isInnovationFlywheel && !isFlywheelCaseStudy && !isHeroList && slide.content && slide.content.length > 0 && (
+      {!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isAgentDevStrategy && !isRoadmap && !isProblemStatement && !isContractReviewChallenge && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isAgentWorkflow && !isAnalyticsChart && !isTeamGrid && !isTimelineEvolution && !isCampusMetrics && !isApiGateway && !isHostingPipeline && !isIntakeFunnel && !isInnovationFlywheel && !isFlywheelCaseStudy && !isHeroList && slide.content && slide.content.length > 0 && (
         <motion.ul
           variants={containerVariants}
           initial="hidden"
