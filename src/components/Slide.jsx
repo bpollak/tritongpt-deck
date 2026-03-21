@@ -325,8 +325,59 @@ const Slide = ({ slide }) => {
             {slide.subtitle}
           </motion.h2>
 
-          {/* Opening slide: Simple presenter info card at bottom */}
-          {!isClosingSlide && hasPresenterInfo && (
+          {/* Opening slide: Multi-presenter with photos */}
+          {!isClosingSlide && slide.presenters && (
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.85, duration: 0.5 }}
+              className="flex flex-row items-center gap-8 sm:gap-12 md:gap-16"
+            >
+              {slide.presenters.map((presenter, idx) => (
+                <div key={idx} className="flex flex-col items-center gap-3">
+                  {presenter.image && (
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: 0.95 + idx * 0.15, duration: 0.5, type: "spring", bounce: 0.3 }}
+                      className="relative"
+                    >
+                      <motion.div
+                        animate={{ rotate: [0, 360] }}
+                        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                        className="absolute -inset-1.5 rounded-full bg-gradient-to-r from-ucsd-gold via-ucsd-sky to-ucsd-gold opacity-50 blur-sm"
+                      />
+                      <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-ucsd-gold to-ucsd-sky" />
+                      <div className="relative w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full overflow-hidden border-3 border-white/20 shadow-[0_0_30px_rgba(255,205,0,0.2)]">
+                        <img
+                          src={presenter.image}
+                          alt={presenter.name}
+                          className="w-full h-full object-cover object-top"
+                          style={{
+                            ...(presenter.imageScale ? { transform: `scale(${presenter.imageScale})` } : {}),
+                            ...(presenter.imagePosition ? { objectPosition: presenter.imagePosition } : {}),
+                          }}
+                        />
+                      </div>
+                    </motion.div>
+                  )}
+                  <div className="flex flex-col items-center gap-0.5 px-5 py-2 rounded-lg">
+                    <div className="text-lg sm:text-xl md:text-2xl font-semibold text-white tracking-wide">
+                      {presenter.name}
+                    </div>
+                    {presenter.title && (
+                      <div className="text-ucsd-sky text-xs sm:text-sm md:text-base font-normal tracking-wide text-center">
+                        {presenter.title}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </motion.div>
+          )}
+
+          {/* Opening slide: Simple single presenter info card at bottom */}
+          {!isClosingSlide && !slide.presenters && hasPresenterInfo && (
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}

@@ -18,6 +18,37 @@ export const slides = [
     ]
   },
   {
+    "id": 1.3,
+    "slug": "the-ai-enabled-university-duo",
+    "type": "title",
+    "content": [],
+    "title": "The AI-Enabled University",
+    "subtitle": "Operationalizing TritonAI for Service & Support at Scale",
+    "presenters": [
+      {
+        "name": "Courtney Giordano",
+        "title": "Associate Chancellor",
+        "image": "/media/giordano.jpg"
+      },
+      {
+        "name": "Brett Pollak",
+        "title": "Executive Director, IT Services",
+        "image": "/media/headshot.jpg",
+        "imageScale": 1.6,
+        "imagePosition": "center 15%"
+      }
+    ],
+    "layout": "title-hero",
+    "hidden": true,
+    "audiences": [
+      "all",
+      "public",
+      "internal",
+      "CCW",
+      "technical"
+    ]
+  },
+  {
     "id": 1.5,
     "slug": "the-ai-enabled-university-generic",
     "type": "title",
