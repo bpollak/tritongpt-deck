@@ -469,7 +469,8 @@ export const slides = [
       "all",
       "public",
       "internal",
-      "technical"
+      "technical",
+      "ASU-GSV"
     ]
   },
   {
