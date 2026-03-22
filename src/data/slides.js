@@ -27,9 +27,7 @@ export const slides = [
       {
         "name": "Courtney Giordano",
         "title": "Associate Chancellor",
-        "image": "/media/giordano.jpg",
-        "imageScale": 1.15,
-        "imagePosition": "center 15%"
+        "image": "/media/giordano.jpg"
       },
       {
         "name": "Brett Pollak",
@@ -1721,7 +1719,8 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "public"
+      "public",
+      "ASU-GSV"
     ]
   },
   {
@@ -2174,8 +2173,7 @@ export const slides = [
     ],
     "audiences": [
       "all",
-      "internal",
-      "ASU-GSV"
+      "internal"
     ]
   },
   {
@@ -2203,15 +2201,13 @@ export const slides = [
     "type": "title",
     "content": [],
     "title": "Thank You",
-    "subtitle": "See us after if you have questions",
+    "subtitle": "Questions?",
     "layout": "title-hero",
     "presenters": [
       {
         "name": "Courtney Giordano",
         "title": "Associate Chancellor",
-        "image": "/media/giordano.jpg",
-        "imageScale": 1.15,
-        "imagePosition": "center 15%"
+        "image": "/media/giordano.jpg"
       },
       {
         "name": "Brett Pollak",
