@@ -529,7 +529,7 @@ const Slide = ({ slide }) => {
           (isVeryDense || useThreeColumns) && !isTitle && "text-2xl md:text-3xl mb-4",
           isGraphicHeavy && "text-2xl md:text-4xl",
           isFeatureGrid && "w-full text-center border-b-0 border-none mb-4 sm:mb-12",
-          isSolutionVideo && "mb-2 sm:mb-3 leading-tight",
+          isSolutionVideo && "mb-1 sm:mb-1.5 leading-tight",
           isTritonAIEvolutionSlide && "text-lg sm:text-2xl md:text-4xl mb-1 sm:mb-2 leading-tight",
           isHeroList && "mb-0 sm:mb-1",
           isTimelineEvolution && "mb-0.5 sm:mb-1 leading-none",
@@ -547,7 +547,7 @@ const Slide = ({ slide }) => {
           className={clsx(
             "text-base sm:text-xl md:text-2xl font-light mt-1 sm:mt-2 mb-3 sm:mb-6",
             (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isSolution || isSolutionVideo || isAssistantCategories || isKeyTakeaways || isAgentDevStrategy || isRoadmap || isProblemStatement || isContractReviewChallenge || isComparisonTable || isAgentWorkflow || isTimelineEvolution || isCampusMetrics) && "text-center w-full mb-4 sm:mb-8",
-            isSolutionVideo && "mt-0 sm:mt-0.5 mb-2 sm:mb-4",
+            isSolutionVideo && "mt-0 sm:mt-0.5 mb-1 sm:mb-2",
             isHeroList && "mt-0 mb-1.5 sm:mb-2",
             isProblemStatement && "text-lg sm:text-2xl md:text-3xl mb-4 sm:mb-10 font-medium text-red-600",
             isContractReviewChallenge && "text-base sm:text-xl md:text-2xl mb-2 sm:mb-2.5 font-semibold text-ucsd-blue",
