@@ -2264,7 +2264,7 @@ export const slides = [
     "type": "title",
     "content": [],
     "title": "Thank You",
-    "subtitle": "Questions?",
+    "subtitle": "See us after if you have questions",
     "layout": "title-hero",
     "presenters": [
       {
