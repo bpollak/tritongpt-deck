@@ -1609,6 +1609,12 @@ export const slides = [
         "description": "Memory + Context for Decisions",
         "details": "University policies, historical decisions, reasoning logs that inform agent actions.",
         "color": "#B8D4A8",
+        "tools": [
+          "Policies",
+          "Procedures",
+          "Contracts",
+          "Decision Logs"
+        ],
         "icon": "Database"
       },
       {

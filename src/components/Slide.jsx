@@ -2839,9 +2839,18 @@ const Slide = ({ slide }) => {
                   <div className="flex-1">
                     <div className="text-base sm:text-xl font-black text-ucsd-navy uppercase tracking-wide leading-none mb-1">{slide.architectureLayers[3].name}</div>
                     <div className="text-xs sm:text-sm font-bold text-ucsd-blue mb-0.5">{slide.architectureLayers[3].description}</div>
-                    <div className="text-xs sm:text-lg text-ucsd-navy/70 leading-tight">{slide.architectureLayers[3].details}</div>
+                    <div className="text-xs sm:text-lg text-ucsd-navy/70 leading-tight mb-1 sm:mb-1.5">{slide.architectureLayers[3].details}</div>
                   </div>
                 </div>
+                {slide.architectureLayers[3].tools && (
+                  <div className="grid grid-cols-2 gap-1 sm:gap-1.5">
+                    {slide.architectureLayers[3].tools.map((tool, idx) => (
+                      <div key={idx} className="bg-gradient-to-br from-ucsd-blue to-ucsd-navy text-white rounded-md p-1.5 sm:p-2 text-center text-xs sm:text-base font-bold shadow-md">
+                        {tool}
+                      </div>
+                    ))}
+                  </div>
+                )}
               </motion.div>
             </div>
           </div>
