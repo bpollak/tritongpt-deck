@@ -3335,19 +3335,19 @@ const Slide = ({ slide }) => {
         const DiamondNode = ({ label, color }) => (
           <div className="relative flex items-center justify-center flex-shrink-0" style={{ width: 110, height: 110 }}>
             <div
-              className="absolute rounded-[7px] border-2"
+              className="absolute rounded-[7px] border-[2.5px]"
               style={{
                 width: 78,
                 height: 78,
                 transform: 'rotate(45deg)',
                 borderColor: color,
-                backgroundColor: `${color}10`,
-                boxShadow: `0 4px 14px ${color}18`
+                backgroundColor: `${color}25`,
+                boxShadow: `0 4px 14px ${color}30`
               }}
             />
             <span
-              className="relative z-10 font-bold text-center leading-[1.18] px-1"
-              style={{ color, fontSize: '11px', maxWidth: 90 }}
+              className="relative z-10 font-extrabold text-center leading-[1.18] px-1"
+              style={{ color, fontSize: '11.5px', maxWidth: 90 }}
             >
               {label}
             </span>
@@ -3357,7 +3357,7 @@ const Slide = ({ slide }) => {
         const HorizontalArrow = ({ label, color, dashed = false, grow = false }) => (
           <div className={`flex flex-col items-center justify-center flex-shrink-0 ${grow ? 'flex-1 min-w-[30px]' : ''}`} style={grow ? undefined : { width: 55 }}>
             {label && (
-              <div className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.1em] mb-0.5 whitespace-nowrap" style={{ color }}>
+              <div className="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.1em] mb-0.5 whitespace-nowrap" style={{ color }}>
                 {label}
               </div>
             )}
@@ -3365,10 +3365,10 @@ const Slide = ({ slide }) => {
               <div
                 className="flex-1 h-0"
                 style={{
-                  borderTop: `2px ${dashed ? 'dashed' : 'solid'} ${color}55`
+                  borderTop: `2.5px ${dashed ? 'dashed' : 'solid'} ${color}88`
                 }}
               />
-              <ArrowRight size={14} style={{ color: `${color}75` }} className="flex-shrink-0 -ml-1" />
+              <ArrowRight size={14} style={{ color: `${color}` }} className="flex-shrink-0 -ml-1" />
             </div>
           </div>
         );
@@ -3427,17 +3427,19 @@ const Slide = ({ slide }) => {
                       className="flex items-center gap-2 sm:gap-3 py-3 sm:py-4"
                       style={{ borderLeft: `5px solid ${lane.color}`, paddingLeft: 16 }}
                     >
-                      {/* Volume + Team Info */}
-                      <div className="flex flex-col items-center gap-1 flex-shrink-0" style={{ width: 105 }}>
+                      {/* Lane Label + Volume */}
+                      <div className="flex flex-col items-center gap-1 flex-shrink-0" style={{ width: 120 }}>
                         <div
-                          className="text-[22px] sm:text-[28px] font-black leading-none"
+                          className="text-[16px] sm:text-[20px] font-black leading-tight text-center"
                           style={{ color: lane.color }}
                         >
-                          {lane.volume}
-                        </div>
-                        <TeamIcons count={lane.teamSize} color={lane.color} />
-                        <div className="text-[11px] sm:text-[12px] font-black text-ucsd-navy/75 text-center leading-tight">
                           {lane.label}
+                        </div>
+                        <div className="flex items-center gap-1.5">
+                          <TeamIcons count={lane.teamSize} color={lane.color} />
+                          <div className="text-[11px] sm:text-[12px] font-bold text-ucsd-navy/50 leading-none">
+                            {lane.volume}
+                          </div>
                         </div>
                       </div>
 
@@ -3461,19 +3463,19 @@ const Slide = ({ slide }) => {
                         initial={{ opacity: 0, y: 8 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6 + laneIndex * 0.15, duration: 0.35 }}
-                        className="rounded-[18px] border bg-white/95 px-3.5 py-2.5 shadow-sm flex-1 min-w-0"
+                        className="rounded-[18px] border-2 bg-white/95 px-3.5 py-2.5 shadow-sm flex-1 min-w-0"
                         style={{
-                          borderColor: `${lane.color}28`,
-                          boxShadow: `inset 0 2px 0 ${lane.color}30`
+                          borderColor: `${lane.color}50`,
+                          boxShadow: `inset 0 2px 0 ${lane.color}45`
                         }}
                       >
                         <div className="text-[14px] sm:text-[16px] font-black text-ucsd-navy leading-tight">
                           {lane.deployment}
                         </div>
                         <div
-                          className="mt-1.5 inline-block rounded-full px-2.5 py-0.5 text-[11px] sm:text-[12px] font-bold"
+                          className="mt-1.5 inline-block rounded-full px-2.5 py-0.5 text-[11px] sm:text-[12px] font-extrabold"
                           style={{
-                            backgroundColor: `${lane.color}10`,
+                            backgroundColor: `${lane.color}20`,
                             color: lane.color,
                             fontFamily: 'monospace'
                           }}
