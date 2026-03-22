@@ -988,9 +988,9 @@ export const slides = [
         "sublabel": "ANNUAL COST REDUCTION"
       },
       {
-        "label": "STAFF REDIRECTED",
-        "value": "18",
-        "sublabel": "12 TEMP ELIMINATED + 6 FTE TO STRATEGIC WORK"
+        "label": "TEMP STAFF ELIMINATED",
+        "value": "12",
+        "sublabel": "6 FTE REDIRECTED TO STRATEGIC WORK"
       },
       {
         "label": "APPROACH",
