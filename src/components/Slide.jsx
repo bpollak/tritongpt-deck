@@ -319,7 +319,7 @@ const Slide = ({ slide }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: isClosingSlide ? 0.5 : 0.65, duration: 0.5, ease: "easeOut" }}
             className={clsx(
-              "font-medium tracking-wide text-center",
+              "font-bold tracking-wide text-center",
               isClosingSlide
                 ? "text-lg sm:text-2xl md:text-3xl text-ucsd-gold mb-8 sm:mb-12"
                 : "text-base sm:text-xl md:text-2xl text-white/80 mb-10 sm:mb-12 max-w-3xl leading-relaxed"
@@ -624,7 +624,7 @@ const Slide = ({ slide }) => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.6 }}
           className={clsx(
-            "text-base sm:text-xl md:text-2xl font-light mt-1 sm:mt-2 mb-3 sm:mb-6",
+            "text-base sm:text-xl md:text-2xl font-bold mt-1 sm:mt-2 mb-3 sm:mb-6",
             (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isSolution || isSolutionVideo || isAssistantCategories || isKeyTakeaways || isAgentDevStrategy || isRoadmap || isProblemStatement || isContractReviewChallenge || isComparisonTable || isAgentWorkflow || isTimelineEvolution || isCampusMetrics) && "text-center w-full mb-4 sm:mb-8",
             isSolutionVideo && "mt-0 sm:mt-0 mb-0 sm:mb-0.5",
             isHeroList && "mt-0 mb-1.5 sm:mb-2",
@@ -2490,7 +2490,7 @@ const Slide = ({ slide }) => {
             className="text-center mb-3 sm:mb-6"
           >
             <div className="text-2xl sm:text-4xl md:text-5xl font-black text-ucsd-navy leading-none">{slide.title}</div>
-            <div className="text-sm sm:text-xl text-ucsd-blue font-medium mt-1">{slide.subtitle}</div>
+            <div className="text-sm sm:text-xl text-ucsd-blue font-bold mt-1">{slide.subtitle}</div>
           </motion.div>
 
           {/* Architecture Flow Diagram */}
@@ -3245,7 +3245,7 @@ const Slide = ({ slide }) => {
               <div className="flex items-end gap-4">
                 <div>
                   <div className="text-[28px] sm:text-[42px] md:text-[48px] font-black text-ucsd-navy leading-none">{slide.title}</div>
-                  <div className="text-xs sm:text-base text-ucsd-blue font-medium mt-0.5">{slide.subtitle}</div>
+                  <div className="text-xs sm:text-base text-ucsd-blue font-bold mt-0.5">{slide.subtitle}</div>
                 </div>
                 {contextNote && (
                   <div className="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-ucsd-blue/8 border border-ucsd-blue/15 px-3 py-1.5 mb-1">
@@ -3483,7 +3483,7 @@ const Slide = ({ slide }) => {
               className="text-left"
             >
               <div className="text-[28px] sm:text-[42px] md:text-[48px] font-black text-ucsd-navy leading-none">{slide.title}</div>
-              <div className="text-xs sm:text-base text-ucsd-blue font-medium mt-0.5">{slide.subtitle}</div>
+              <div className="text-xs sm:text-base text-ucsd-blue font-bold mt-0.5">{slide.subtitle}</div>
             </motion.div>
 
             {/* Main Swim Lane Panel */}
@@ -3726,7 +3726,7 @@ const Slide = ({ slide }) => {
               className="text-center"
             >
               <div className="text-2xl sm:text-4xl md:text-5xl font-black text-ucsd-navy leading-none">{slide.title}</div>
-              <div className="text-sm sm:text-lg text-ucsd-blue font-medium mt-1">{slide.subtitle}</div>
+              <div className="text-sm sm:text-lg text-ucsd-blue font-bold mt-1">{slide.subtitle}</div>
             </motion.div>
 
             {/* Main Content: Flywheel + Detail Cards */}
@@ -3928,7 +3928,7 @@ const Slide = ({ slide }) => {
                 <span className="text-[10px] sm:text-xs font-black text-ucsd-navy uppercase tracking-[0.2em]">Use Case</span>
               </div>
               <div className="text-2xl sm:text-4xl md:text-5xl font-black text-ucsd-navy leading-none">{slide.title}</div>
-              <div className="text-sm sm:text-lg text-ucsd-blue font-medium mt-1 max-w-4xl mx-auto leading-snug">{slide.subtitle}</div>
+              <div className="text-sm sm:text-lg text-ucsd-blue font-bold mt-1 max-w-4xl mx-auto leading-snug">{slide.subtitle}</div>
             </motion.div>
 
             {/* Main Content: Flywheel + Stage Cards */}
@@ -4650,7 +4650,7 @@ const Slide = ({ slide }) => {
               <h1 className={clsx("text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight mb-1.5", isDarkOrigin ? "text-white" : "text-ucsd-navy")}>
                 {slide.title}
               </h1>
-              <p className={clsx("text-sm sm:text-base md:text-lg font-medium tracking-wide", isDarkOrigin ? "text-white/60" : "text-ucsd-navy/60")}>
+              <p className={clsx("text-sm sm:text-base md:text-lg font-bold tracking-wide", isDarkOrigin ? "text-white/60" : "text-ucsd-navy/60")}>
                 {slide.subtitle}
               </p>
             </motion.div>
