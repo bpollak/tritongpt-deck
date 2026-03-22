@@ -987,7 +987,7 @@ export const slides = [
         "sublabel": "ANNUAL COST REDUCTION"
       },
       {
-        "label": "TEMP STAFF ELIMINATED",
+        "label": "TEMP STAFF NOT NEEDED",
         "value": "12",
         "sublabel": "6 FTE REDIRECTED TO STRATEGIC WORK"
       },
@@ -1008,7 +1008,7 @@ export const slides = [
       },
       {
         "heading": "Phased Trust-Building",
-        "text": "Year 1: 100% human review to build trust. Year 2: confidence-score thresholds auto-approve high-certainty matches, eliminating manual review."
+        "text": "Year 1: career staff monitor AI outputs — temp staff no longer needed. Year 2: confidence-score thresholds auto-approve high-certainty matches, further reducing oversight."
       },
       {
         "heading": "Validation Roadmap",
