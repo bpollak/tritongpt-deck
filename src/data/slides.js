@@ -814,6 +814,58 @@ export const slides = [
     ]
   },
   {
+    "id": 18.8,
+    "slug": "contract-reviewer-consolidated",
+    "type": "content",
+    "layout": "solution-showcase-video",
+    "title": "AI Contract Reviewer",
+    "subtitle": "Turning a 2-hour manual review into an 11-minute automated workflow",
+    "backgroundColor": "#F5F0E6",
+    "videoSrc": "/media/media7.mp4",
+    "stats": [
+      {
+        "label": "TIME SAVINGS",
+        "value": "91%",
+        "sublabel": "120 MIN → 11 MIN"
+      },
+      {
+        "label": "RISK CATEGORIES",
+        "value": "50+",
+        "sublabel": "AUTOMATED ANALYSIS"
+      },
+      {
+        "label": "CONTRACT TYPES",
+        "value": "3",
+        "sublabel": "NDAs · PROCUREMENT · SOFTWARE"
+      }
+    ],
+    "content": [
+      {
+        "heading": "The Challenge",
+        "text": "Legal teams spend 2+ hours per contract on manual review. Policy interpretation varies across reviewers, creating inconsistent risk management and growing backlogs."
+      },
+      {
+        "heading": "Automated Review & Redlining",
+        "text": "Applies UC San Diego playbooks to propose redlines with policy-backed rationales — analyzing liability, indemnification, data rights, security, SLAs, IP, and compliance."
+      },
+      {
+        "heading": "Complete Output Package",
+        "text": "Delivers redlined contracts with tracked changes, issue summaries, and routing metadata — enabling attorneys to focus on strategic legal counsel."
+      },
+      {
+        "heading": "What Users Are Saying",
+        "text": "\"It's like having an extra attorney\" — \"It's saving us hours to days per contract\" — \"Highlighting issues I might have overlooked... extremely thorough.\""
+      }
+    ],
+    "audiences": [
+      "all",
+      "public",
+      "internal",
+      "technical",
+      "ASU-GSV"
+    ]
+  },
+  {
     "id": 19,
     "slug": "the-contract-review-challenge",
     "type": "content",
