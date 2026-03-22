@@ -810,8 +810,7 @@ export const slides = [
       "all",
       "public",
       "internal",
-      "technical",
-      "ASU-GSV"
+      "technical"
     ]
   },
   {
