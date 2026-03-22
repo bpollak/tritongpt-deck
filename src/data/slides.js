@@ -968,7 +968,8 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "public"
+      "public",
+      "ASU-GSV"
     ]
   },
   {
