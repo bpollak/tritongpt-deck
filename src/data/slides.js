@@ -1454,7 +1454,8 @@ export const slides = [
     "keyMessage": "Identified by someone close to the work, built with AI tools, ready for lightweight review and campus-only deployment",
     "audiences": [
       "all",
-      "internal"
+      "internal",
+      "ASU-GSV"
     ]
   },
   {
