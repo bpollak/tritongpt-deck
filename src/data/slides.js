@@ -931,11 +931,27 @@ export const slides = [
     "subtitle": "Automating Enrollment Management's most labor-intensive workflow",
     "backgroundColor": "#F5F0E6",
     "videoSrc": "/media/transcript-matching-cut.mp4",
-    "stats": [],
+    "stats": [
+      {
+        "label": "PROJECTED SAVINGS",
+        "value": "$500K",
+        "sublabel": "ANNUAL COST REDUCTION"
+      },
+      {
+        "label": "STAFF DISPLACED",
+        "value": "18",
+        "sublabel": "12 TEMP + 6 FTE REDIRECTED"
+      },
+      {
+        "label": "APPROACH",
+        "value": "Phased",
+        "sublabel": "HUMAN-IN-THE-LOOP → AUTO-APPROVE"
+      }
+    ],
     "content": [
       {
         "heading": "The Problem",
-        "text": "Enrollment Management hires 12 temporary staff and redirects 6 full-time staff each year to manually match and validate thousands of incoming transcripts — a process ripe for AI automation."
+        "text": "Enrollment Management hires 12 temporary staff and redirects 6 full-time staff each year to manually match and validate thousands of incoming transcripts."
       },
       {
         "heading": "AI-Powered OCR Extraction",
@@ -943,15 +959,11 @@ export const slides = [
       },
       {
         "heading": "Phased Trust-Building",
-        "text": "Year 1: 100% human review of AI output to build trust. Year 2: confidence-score thresholds auto-approve high-certainty matches, eliminating manual review."
+        "text": "Year 1: 100% human review to build trust. Year 2: confidence-score thresholds auto-approve high-certainty matches, eliminating manual review."
       },
       {
         "heading": "Validation Roadmap",
-        "text": "Subsequent sprints tackle self-reported discrepancies, admissions requirements verification, and course transferability analysis — each mapped to FTE savings via a Pain-Point Traceability Matrix."
-      },
-      {
-        "heading": "Projected Impact",
-        "text": "Up to $500K in cost savings by systematically automating extraction, matching, and validation across the full transcript lifecycle."
+        "text": "Subsequent sprints tackle self-reported discrepancies, admissions requirements, and course transferability — each mapped to FTE savings via a Pain-Point Traceability Matrix."
       }
     ],
     "audiences": [
