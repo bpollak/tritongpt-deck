@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion'; // eslint-disable-line no-unused-vars
 import clsx from 'clsx';
-import { Target, Database, Cpu, Blocks, GraduationCap, Building2, FileText, FileCheck, DollarSign, Shield, BookOpen, Code, Presentation, Globe, FileEdit, FolderOpen, TrendingUp, ClipboardCheck, Search, Heart, Calendar, GitBranch, Network, Grid3x3, ArrowDown, ArrowRight, Brain, RefreshCw, ArrowRightLeft, CheckCircle, Monitor, User, Users, Award, Server, Layers, Wallet, Share2, Star, FlaskConical } from 'lucide-react';
+import { Target, Database, Cpu, Blocks, GraduationCap, Building2, FileText, FileCheck, DollarSign, Shield, BookOpen, Code, Presentation, Globe, FileEdit, FolderOpen, TrendingUp, ClipboardCheck, Search, Heart, Calendar, GitBranch, Network, Grid3x3, ArrowDown, ArrowRight, Brain, RefreshCw, ArrowRightLeft, CheckCircle, Monitor, User, Users, Award, Server, Layers, Wallet, Share2, Star, FlaskConical, Lightbulb, Landmark } from 'lucide-react';
 import { QRCodeSVG } from 'qrcode.react';
 
 const iconMap = {
@@ -41,7 +41,9 @@ const iconMap = {
   'Layers': Layers,
   'Share2': Share2,
   'Server': Server,
-  'Wallet': Wallet
+  'Wallet': Wallet,
+  'Lightbulb': Lightbulb,
+  'Landmark': Landmark
 };
 
 const containerVariants = {
@@ -148,6 +150,7 @@ const Slide = ({ slide }) => {
   const isIntakeFunnel = slide.layout === 'intake-funnel';
   const isInnovationFlywheel = slide.layout === 'innovation-flywheel';
   const isFlywheelCaseStudy = slide.layout === 'flywheel-case-study';
+  const isOriginStory = slide.layout === 'origin-story';
   const parseHeroHeading = (heading = '') => {
     const match = heading.match(/^(.*?)\s*\(([^)]+)\)$/);
     if (!match) return { title: heading, badge: '' };
@@ -513,9 +516,9 @@ const Slide = ({ slide }) => {
         className={clsx(
           "font-bold mb-4 sm:mb-6",
           isTitle ? "text-2xl sm:text-4xl md:text-6xl" : "text-xl sm:text-3xl md:text-5xl",
-          (!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isAgentDevStrategy && !isRoadmap && !isProblemStatement && !isContractReviewChallenge && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isTimelineEvolution && !isCampusMetrics && !isApiGateway && !isHostingPipeline && !isIntakeFunnel && !isInnovationFlywheel && !isFlywheelCaseStudy) && "border-b-4 border-ucsd-gold pb-3 inline-block self-start",
+          (!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isAgentDevStrategy && !isRoadmap && !isProblemStatement && !isContractReviewChallenge && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isTimelineEvolution && !isCampusMetrics && !isApiGateway && !isHostingPipeline && !isIntakeFunnel && !isInnovationFlywheel && !isFlywheelCaseStudy && !isOriginStory) && "border-b-4 border-ucsd-gold pb-3 inline-block self-start",
           (isSolution || isSolutionVideo || isCaseStudyHero || isAssistantCategories || isKeyTakeaways || isAgentDevStrategy || isRoadmap || isProblemStatement || isContractReviewChallenge || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isComparisonTable || isCompoundArchitecture || isTimelineEvolution || isCampusMetrics) && "text-center w-full",
-          (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isCompoundArchitecture || isApiGateway || isHostingPipeline || isIntakeFunnel || isInnovationFlywheel || isFlywheelCaseStudy) && "hidden",
+          (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isCompoundArchitecture || isApiGateway || isHostingPipeline || isIntakeFunnel || isInnovationFlywheel || isFlywheelCaseStudy || isOriginStory) && "hidden",
           isAgentWorkflow && "text-center text-3xl sm:text-5xl md:text-6xl mb-2 sm:mb-4 w-full",
           isCaseStudyHero && "text-3xl md:text-4xl mb-2 sm:mb-3 leading-tight",
           isRoadmap && "mb-2 sm:mb-3 leading-tight",
@@ -536,7 +539,7 @@ const Slide = ({ slide }) => {
         {slide.title}
       </motion.h1>
 
-      {slide.subtitle && !isCaseStudyHero && !isCompoundArchitecture && !isAnalyticsChart && !isTimelineEvolution && !isTritonAIEvolutionSlide && !isApiGateway && !isHostingPipeline && !isIntakeFunnel && !isInnovationFlywheel && !isFlywheelCaseStudy && (
+      {slide.subtitle && !isCaseStudyHero && !isCompoundArchitecture && !isAnalyticsChart && !isTimelineEvolution && !isTritonAIEvolutionSlide && !isApiGateway && !isHostingPipeline && !isIntakeFunnel && !isInnovationFlywheel && !isFlywheelCaseStudy && !isOriginStory && (
         <motion.h2
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -4536,7 +4539,109 @@ const Slide = ({ slide }) => {
         </div>
       )}
 
-      {!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isAgentDevStrategy && !isRoadmap && !isProblemStatement && !isContractReviewChallenge && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isAgentWorkflow && !isAnalyticsChart && !isTeamGrid && !isTimelineEvolution && !isCampusMetrics && !isApiGateway && !isHostingPipeline && !isIntakeFunnel && !isInnovationFlywheel && !isFlywheelCaseStudy && !isHeroList && slide.content && slide.content.length > 0 && (
+      {/* Origin Story Layout */}
+      {isOriginStory && (() => {
+        const storyBeats = slide.storyBeats || [];
+        const beatIcons = {
+          'Lightbulb': Lightbulb,
+          'Landmark': Landmark,
+          'GraduationCap': GraduationCap,
+          'FlaskConical': FlaskConical,
+          'TrendingUp': TrendingUp,
+        };
+        const beatColors = ['#FFCD00', '#00629B', '#00C6D7', '#6E963B', '#FC8900'];
+
+        const isDarkOrigin = slide.dark;
+        return (
+          <div className="w-full flex flex-col items-center relative">
+            {/* Title section */}
+            <motion.div
+              initial={{ opacity: 0, y: -15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-4 md:mb-6 w-full"
+            >
+              <h1 className={clsx("text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight mb-1.5", isDarkOrigin ? "text-white" : "text-ucsd-navy")}>
+                {slide.title}
+              </h1>
+              <p className={clsx("text-sm sm:text-base md:text-lg font-medium tracking-wide", isDarkOrigin ? "text-white/60" : "text-ucsd-navy/60")}>
+                {slide.subtitle}
+              </p>
+            </motion.div>
+
+            {/* Two-column layout */}
+            <div className="flex flex-col lg:flex-row gap-5 md:gap-6 lg:gap-8 items-center w-full max-w-[1600px]">
+              {/* Left: Video */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.3, duration: 0.6 }}
+                className="w-full lg:w-[48%] flex-shrink-0"
+              >
+                <div className={clsx("relative rounded-2xl overflow-hidden shadow-2xl", isDarkOrigin ? "ring-1 ring-white/10" : "ring-1 ring-black/10")}>
+                  <video
+                    src={slide.videoSrc}
+                    className="w-full h-auto object-contain bg-black"
+                    preload="auto"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  />
+                  {/* Video label overlay */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-4 py-3">
+                    <div className="text-white font-bold text-sm sm:text-base tracking-wide">
+                      {slide.videoLabel}
+                    </div>
+                    {slide.videoCaption && (
+                      <div className="text-white/60 text-xs sm:text-sm mt-0.5">
+                        {slide.videoCaption}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Right: Story beats */}
+              <div className="w-full lg:w-[52%] flex flex-col gap-2.5 md:gap-3">
+                {storyBeats.map((beat, idx) => {
+                  const BeatIcon = beatIcons[beat.icon] || Lightbulb;
+                  const color = beatColors[idx % beatColors.length];
+                  return (
+                    <motion.div
+                      key={idx}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.4 + idx * 0.12, duration: 0.5, ease: "easeOut" }}
+                      className={clsx(
+                        "flex items-start gap-3 md:gap-4 p-2.5 md:p-3.5 rounded-xl border backdrop-blur-sm transition-colors",
+                        isDarkOrigin ? "bg-white/5 border-white/8 hover:bg-white/8" : "bg-white/60 border-ucsd-navy/8 hover:bg-white/80 shadow-sm"
+                      )}
+                    >
+                      <div
+                        className="flex-shrink-0 w-9 h-9 md:w-11 md:h-11 rounded-xl flex items-center justify-center shadow-lg"
+                        style={{ backgroundColor: `${color}20`, border: `2px solid ${color}40` }}
+                      >
+                        <BeatIcon className="w-5 h-5 md:w-6 md:h-6" style={{ color }} />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className={clsx("text-sm md:text-base lg:text-lg font-bold tracking-wide mb-0.5", isDarkOrigin ? "text-white" : "text-ucsd-navy")}>
+                          {beat.heading}
+                        </div>
+                        <div className={clsx("text-xs md:text-sm text-leading-relaxed", isDarkOrigin ? "text-white/65" : "text-ucsd-navy/65")}>
+                          {beat.description}
+                        </div>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        );
+      })()}
+
+      {!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isAgentDevStrategy && !isRoadmap && !isProblemStatement && !isContractReviewChallenge && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isAgentWorkflow && !isAnalyticsChart && !isTeamGrid && !isTimelineEvolution && !isCampusMetrics && !isApiGateway && !isHostingPipeline && !isIntakeFunnel && !isInnovationFlywheel && !isFlywheelCaseStudy && !isOriginStory && !isHeroList && slide.content && slide.content.length > 0 && (
         <motion.ul
           variants={containerVariants}
           initial="hidden"
