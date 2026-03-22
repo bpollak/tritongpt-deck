@@ -355,10 +355,10 @@ const Slide = ({ slide }) => {
                         <img
                           src={presenter.image}
                           alt={presenter.name}
-                          className="w-full h-full object-cover object-top"
+                          className="w-full h-full object-cover"
                           style={{
+                            objectPosition: presenter.imagePosition || 'top',
                             ...(presenter.imageScale ? { transform: `scale(${presenter.imageScale})` } : {}),
-                            ...(presenter.imagePosition ? { objectPosition: presenter.imagePosition } : {}),
                           }}
                         />
                       </div>

@@ -27,7 +27,9 @@ export const slides = [
       {
         "name": "Courtney Giordano",
         "title": "Associate Chancellor",
-        "image": "/media/giordano.jpg"
+        "image": "/media/giordano.jpg",
+        "imageScale": 0.85,
+        "imagePosition": "center 30%"
       },
       {
         "name": "Brett Pollak",
@@ -2201,13 +2203,15 @@ export const slides = [
     "type": "title",
     "content": [],
     "title": "Thank You",
-    "subtitle": "Questions?",
+    "subtitle": "See us after if you have questions",
     "layout": "title-hero",
     "presenters": [
       {
         "name": "Courtney Giordano",
         "title": "Associate Chancellor",
-        "image": "/media/giordano.jpg"
+        "image": "/media/giordano.jpg",
+        "imageScale": 0.85,
+        "imagePosition": "center 30%"
       },
       {
         "name": "Brett Pollak",
