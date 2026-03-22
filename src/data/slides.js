@@ -1673,8 +1673,7 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "public",
-      "ASU-GSV"
+      "public"
     ]
   },
   {
