@@ -818,8 +818,8 @@ const Slide = ({ slide }) => {
       {(isSolution || isSolutionVideo) && (
         <div className="w-full max-w-[1760px] mx-auto h-full">
           <div className={clsx(
-            "grid gap-4 sm:gap-8 md:gap-12 h-full items-start pt-2 sm:pt-4",
-            isSolutionVideo ? "grid-cols-1 md:grid-cols-[1.02fr_0.98fr] gap-3 sm:gap-5 md:gap-7 pt-1 sm:pt-2" : "grid-cols-1 md:grid-cols-[1.1fr_0.9fr]"
+            "grid gap-4 sm:gap-8 md:gap-12 h-full pt-2 sm:pt-4",
+            isSolutionVideo ? "grid-cols-1 md:grid-cols-[1.12fr_0.88fr] gap-3 sm:gap-5 md:gap-7 pt-1 sm:pt-2 items-center" : "grid-cols-1 md:grid-cols-[1.1fr_0.9fr] items-start"
           )}>
             {/* Left: Media (Image or Video) */}
             {(slide.imageSrc || slide.videoSrc) && (

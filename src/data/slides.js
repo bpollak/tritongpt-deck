@@ -891,7 +891,7 @@ export const slides = [
         "text": "Redlined contracts with tracked changes, issue summaries, and routing metadata."
       }
     ],
-    "title": "AI Contract Reviewer",
+    "title": "Contract Reviewer Results",
     "layout": "case-study-hero",
     "subtitle": "From 120 Minutes to 11 Minutes Per Contract",
     "backgroundColor": "#F5F0E6",
