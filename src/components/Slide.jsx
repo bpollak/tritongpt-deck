@@ -2802,11 +2802,19 @@ const Slide = ({ slide }) => {
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-1 sm:gap-1.5">
-                  {slide.architectureLayers[2].tools.map((tool, idx) => (
-                    <div key={idx} className="bg-gradient-to-br from-ucsd-blue to-ucsd-navy text-white rounded-md p-1.5 sm:p-2 text-center text-xs sm:text-base font-bold shadow-md">
-                      {tool}
-                    </div>
-                  ))}
+                  {slide.architectureLayers[2].tools.map((tool, idx) => {
+                    const toolColors = [
+                      'from-[#00629B] to-[#004471]',
+                      'from-[#006A4E] to-[#004D38]',
+                      'from-[#B56200] to-[#8A4B00]',
+                      'from-[#7C4D8A] to-[#5C3868]'
+                    ];
+                    return (
+                      <div key={idx} className={`bg-gradient-to-br ${toolColors[idx % toolColors.length]} text-white rounded-md p-1.5 sm:p-2 text-center text-xs sm:text-base font-bold shadow-md`}>
+                        {tool}
+                      </div>
+                    );
+                  })}
                 </div>
               </motion.div>
 
@@ -2844,11 +2852,19 @@ const Slide = ({ slide }) => {
                 </div>
                 {slide.architectureLayers[3].tools && (
                   <div className="grid grid-cols-2 gap-1 sm:gap-1.5">
-                    {slide.architectureLayers[3].tools.map((tool, idx) => (
-                      <div key={idx} className="bg-gradient-to-br from-ucsd-blue to-ucsd-navy text-white rounded-md p-1.5 sm:p-2 text-center text-xs sm:text-base font-bold shadow-md">
-                        {tool}
-                      </div>
-                    ))}
+                    {slide.architectureLayers[3].tools.map((tool, idx) => {
+                      const knowledgeColors = [
+                        'from-[#182B49] to-[#0f1f33]',
+                        'from-[#00629B] to-[#004471]',
+                        'from-[#6E963B] to-[#556F2F]',
+                        'from-[#00C6D7] to-[#008B96]'
+                      ];
+                      return (
+                        <div key={idx} className={`bg-gradient-to-br ${knowledgeColors[idx % knowledgeColors.length]} text-white rounded-md p-1.5 sm:p-2 text-center text-xs sm:text-base font-bold shadow-md`}>
+                          {tool}
+                        </div>
+                      );
+                    })}
                   </div>
                 )}
               </motion.div>
