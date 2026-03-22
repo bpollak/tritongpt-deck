@@ -164,11 +164,11 @@ export const slides = [
       },
       {
         "heading": "Strategic Investment",
-        "text": "Chancellor's Office funding secured, leveraging our partnership with the San Diego Supercomputer Center and Onyx — a startup founded by two UCSD alumni — to power the orchestration platform."
+        "text": "Chancellor's Office funding secured, leveraging our partnership with the San Diego Supercomputer Center to invest in open-source, low-cost AI solutions."
       },
       {
         "heading": "Campus Context Integration",
-        "text": "Integrated UC San Diego's institutional knowledge — policies, procedures, and data — via open-source, low-cost AI solutions to deliver context-aware experiences."
+        "text": "Integrated UC San Diego's institutional knowledge — policies, procedures, and data — to deliver relevant, context-aware AI experiences."
       },
       {
         "heading": "Research-First Approach",
@@ -323,6 +323,55 @@ export const slides = [
       "public",
       "internal",
       "technical"
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "uc-san-diego-ai-strategy-2026",
+    "type": "content",
+    "content": [
+      {
+        "heading": "Trust is Infrastructure",
+        "text": "Sensitive workflows in HR, finance, legal, and student support require governed infrastructure. Use on-prem models when data must stay on campus, and enterprise-approved hosted models when institutional agreements provide the right security, compliance, and scale.",
+        "icon": "Shield"
+      },
+      {
+        "heading": "Make AI a Utility (Horizontal AI)",
+        "text": "Shared campus infrastructure and zero variable cost make AI abundant instead of rationed. Broad access drives adoption, experimentation, and institution-wide scale.",
+        "icon": "Cpu"
+      },
+      {
+        "heading": "Solve Specific Pain Points (Vertical AI)",
+        "text": "Prioritize high-friction workflows like contract review, search, scheduling, accessibility, and instructional support. Purpose-built tools create measurable value faster than general-purpose chat.",
+        "icon": "Target"
+      },
+      {
+        "heading": "Meet Users in the Workflow",
+        "text": "Embed AI in Blink, public websites, teaching tools, mobile, and departmental applications. Adoption rises when AI appears inside the systems people already use.",
+        "icon": "Globe"
+      },
+      {
+        "heading": "Stay Model-Agnostic",
+        "text": "Build around gateways, connectors, and governance, not a single model vendor. Institutional agreements across AWS, Azure, GCP, and self-hosted models keep the platform flexible.",
+        "icon": "Code"
+      },
+      {
+        "heading": "Prepare for Agency",
+        "text": "Move from assistants that answer questions to agents that retrieve data, call tools, and complete multi-step work with oversight. Skills, APIs, connectors, and observability are the foundation.",
+        "icon": "Blocks"
+      }
+    ],
+    "title": "UC San Diego AI Strategy 2026",
+    "subtitle": "From Chatbots to Agentic Workflows",
+    "layout": "hero-list",
+    "dark": false,
+    "backgroundColor": "#F5F0E6",
+    "audiences": [
+      "all",
+      "public",
+      "internal",
+      "technical",
+      "ASU-GSV"
     ]
   },
   {
@@ -765,55 +814,6 @@ export const slides = [
     ]
   },
   {
-    "id": 18.5,
-    "slug": "uc-san-diego-ai-strategy-2026",
-    "type": "content",
-    "content": [
-      {
-        "heading": "Trust is Infrastructure",
-        "text": "Sensitive workflows in HR, finance, legal, and student support require governed infrastructure. Use on-prem models when data must stay on campus, and enterprise-approved hosted models when institutional agreements provide the right security, compliance, and scale.",
-        "icon": "Shield"
-      },
-      {
-        "heading": "Make AI a Utility (Horizontal AI)",
-        "text": "Shared campus infrastructure and zero variable cost make AI abundant instead of rationed. Broad access drives adoption, experimentation, and institution-wide scale.",
-        "icon": "Cpu"
-      },
-      {
-        "heading": "Solve Specific Pain Points (Vertical AI)",
-        "text": "Prioritize high-friction workflows like contract review, search, scheduling, accessibility, and instructional support. Purpose-built tools create measurable value faster than general-purpose chat.",
-        "icon": "Target"
-      },
-      {
-        "heading": "Meet Users in the Workflow",
-        "text": "Embed AI in Blink, public websites, teaching tools, mobile, and departmental applications. Adoption rises when AI appears inside the systems people already use.",
-        "icon": "Globe"
-      },
-      {
-        "heading": "Stay Model-Agnostic",
-        "text": "Build around gateways, connectors, and governance, not a single model vendor. Institutional agreements across AWS, Azure, GCP, and self-hosted models keep the platform flexible.",
-        "icon": "Code"
-      },
-      {
-        "heading": "Prepare for Agency",
-        "text": "Move from assistants that answer questions to agents that retrieve data, call tools, and complete multi-step work with oversight. Skills, APIs, connectors, and observability are the foundation.",
-        "icon": "Blocks"
-      }
-    ],
-    "title": "UC San Diego AI Strategy 2026",
-    "subtitle": "From Chatbots to Agentic Workflows",
-    "layout": "hero-list",
-    "dark": false,
-    "backgroundColor": "#F5F0E6",
-    "audiences": [
-      "all",
-      "public",
-      "internal",
-      "technical",
-      "ASU-GSV"
-    ]
-  },
-  {
     "id": 19,
     "slug": "the-contract-review-challenge",
     "type": "content",
@@ -918,7 +918,8 @@ export const slides = [
       "all",
       "public",
       "internal",
-      "technical"
+      "technical",
+      "ASU-GSV"
     ]
   },
   {
