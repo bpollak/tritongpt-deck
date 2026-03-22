@@ -411,7 +411,8 @@ export const slides = [
       "all",
       "public",
       "internal",
-      "technical"
+      "technical",
+      "ASU-GSV"
     ]
   },
   {
@@ -891,7 +892,7 @@ export const slides = [
         "text": "Redlined contracts with tracked changes, issue summaries, and routing metadata."
       }
     ],
-    "title": "Contract Reviewer Results",
+    "title": "AI Contract Reviewer",
     "layout": "case-study-hero",
     "subtitle": "From 120 Minutes to 11 Minutes Per Contract",
     "backgroundColor": "#F5F0E6",
