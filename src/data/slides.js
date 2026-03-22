@@ -2196,6 +2196,38 @@ export const slides = [
     ]
   },
   {
+    "id": 37.5,
+    "slug": "thank-you-duo",
+    "type": "title",
+    "content": [],
+    "title": "Thank You",
+    "subtitle": "Questions?",
+    "layout": "title-hero",
+    "presenters": [
+      {
+        "name": "Courtney Giordano",
+        "title": "Associate Chancellor",
+        "image": "/media/giordano.jpg"
+      },
+      {
+        "name": "Brett Pollak",
+        "title": "Executive Director, IT Services",
+        "image": "/media/headshot.jpg",
+        "imageScale": 1.6,
+        "imagePosition": "center 15%"
+      }
+    ],
+    "linkUrl": "https://tritonai.ucsd.edu",
+    "linkLabel": "tritonai.ucsd.edu",
+    "hidden": true,
+    "audiences": [
+      "all",
+      "public",
+      "internal",
+      "ASU-GSV"
+    ]
+  },
+  {
     "id": 38,
     "slug": "thank-you-questions",
     "type": "title",

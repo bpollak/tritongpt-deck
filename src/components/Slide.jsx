@@ -218,7 +218,7 @@ const Slide = ({ slide }) => {
 
   if (isTitleHero) {
     // Determine if this is a closing slide (has QR code/image) vs opening slide
-    const isClosingSlide = slide.presenterImage || slide.qrCodeUrl;
+    const isClosingSlide = slide.presenterImage || slide.qrCodeUrl || slide.linkUrl;
     const hasPresenterInfo = slide.presenterName || slide.presenterTitle;
 
     return (
@@ -398,8 +398,87 @@ const Slide = ({ slide }) => {
             </motion.div>
           )}
 
-          {/* Closing slide: Two-column presenter section with image and QR */}
-          {isClosingSlide && (
+          {/* Closing slide: Multi-presenter with QR */}
+          {isClosingSlide && slide.presenters && (
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7, duration: 0.8 }}
+              className="flex flex-col items-center gap-8 sm:gap-10 w-full"
+            >
+              {/* Presenters row */}
+              <div className="flex flex-row items-start justify-center gap-10 sm:gap-16 md:gap-24">
+                {slide.presenters.map((presenter, idx) => (
+                  <div key={idx} className="flex flex-col items-center gap-3 sm:gap-4">
+                    {presenter.image && (
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.9 + idx * 0.15, duration: 0.6, type: "spring", bounce: 0.3 }}
+                        className="relative"
+                      >
+                        <motion.div
+                          animate={{ rotate: [0, 360] }}
+                          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                          className="absolute -inset-2 rounded-full bg-gradient-to-r from-ucsd-gold via-ucsd-sky to-ucsd-gold opacity-60 blur-sm"
+                        />
+                        <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-ucsd-gold to-ucsd-sky" />
+                        <div className="relative w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 rounded-full overflow-hidden border-4 border-white/20 shadow-[0_0_40px_rgba(255,205,0,0.3)]">
+                          <img
+                            src={presenter.image}
+                            alt={presenter.name}
+                            className="w-full h-full object-cover"
+                            style={{
+                              transform: `scale(${presenter.imageScale || 1})`,
+                              objectPosition: presenter.imagePosition || 'center center'
+                            }}
+                          />
+                        </div>
+                      </motion.div>
+                    )}
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 1.1 + idx * 0.15, duration: 0.7 }}
+                      className="flex flex-col items-center gap-0.5 text-center"
+                    >
+                      <div className="text-lg sm:text-xl md:text-2xl font-bold text-white tracking-wide">
+                        {presenter.name}
+                      </div>
+                      {presenter.title && (
+                        <div className="text-ucsd-sky text-xs sm:text-sm md:text-base font-normal tracking-wide max-w-xs">
+                          {presenter.title}
+                        </div>
+                      )}
+                    </motion.div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Link */}
+              {slide.linkUrl && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1.2, duration: 0.7 }}
+                  className="flex flex-col items-center gap-2 mt-2"
+                >
+                  <a
+                    href={slide.linkUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-10 py-4 rounded-full border-2 border-ucsd-gold/60 bg-gradient-to-r from-ucsd-gold/15 via-ucsd-gold/5 to-ucsd-gold/15 backdrop-blur-md text-ucsd-gold text-2xl sm:text-3xl md:text-4xl font-bold tracking-wide hover:text-yellow-300 hover:border-yellow-300 transition-colors flex items-center gap-4"
+                  >
+                    <Globe className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
+                    {slide.linkLabel || slide.linkUrl}
+                  </a>
+                </motion.div>
+              )}
+            </motion.div>
+          )}
+
+          {/* Closing slide: Single-presenter with image and QR */}
+          {isClosingSlide && !slide.presenters && (
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
