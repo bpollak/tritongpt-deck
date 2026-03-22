@@ -2210,8 +2210,8 @@ export const slides = [
         "name": "Courtney Giordano",
         "title": "Associate Chancellor",
         "image": "/media/giordano.jpg",
-        "imageScale": 0.85,
-        "imagePosition": "center 30%"
+        "imageScale": 0.75,
+        "imagePosition": "center 25%"
       },
       {
         "name": "Brett Pollak",
