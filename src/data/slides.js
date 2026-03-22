@@ -183,7 +183,8 @@ export const slides = [
       "all",
       "public",
       "internal",
-      "technical"
+      "technical",
+      "ASU-GSV"
     ]
   },
   {
@@ -1102,7 +1103,7 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "public",
+      "public"
     ]
   },
   {
@@ -1200,7 +1201,7 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "public",
+      "public"
     ]
   },
   {
@@ -1294,7 +1295,7 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "public",
+      "public"
     ]
   },
   {
