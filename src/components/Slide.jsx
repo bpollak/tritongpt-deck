@@ -529,7 +529,7 @@ const Slide = ({ slide }) => {
           (isVeryDense || useThreeColumns) && !isTitle && "text-2xl md:text-3xl mb-4",
           isGraphicHeavy && "text-2xl md:text-4xl",
           isFeatureGrid && "w-full text-center border-b-0 border-none mb-4 sm:mb-12",
-          isSolutionVideo && "mb-1 sm:mb-1.5 leading-tight",
+          isSolutionVideo && "mb-0.5 sm:mb-1 leading-tight",
           isTritonAIEvolutionSlide && "text-lg sm:text-2xl md:text-4xl mb-1 sm:mb-2 leading-tight",
           isHeroList && "mb-0 sm:mb-1",
           isTimelineEvolution && "mb-0.5 sm:mb-1 leading-none",
@@ -547,7 +547,7 @@ const Slide = ({ slide }) => {
           className={clsx(
             "text-base sm:text-xl md:text-2xl font-light mt-1 sm:mt-2 mb-3 sm:mb-6",
             (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isSolution || isSolutionVideo || isAssistantCategories || isKeyTakeaways || isAgentDevStrategy || isRoadmap || isProblemStatement || isContractReviewChallenge || isComparisonTable || isAgentWorkflow || isTimelineEvolution || isCampusMetrics) && "text-center w-full mb-4 sm:mb-8",
-            isSolutionVideo && "mt-0 sm:mt-0.5 mb-1 sm:mb-2",
+            isSolutionVideo && "mt-0 sm:mt-0 mb-0 sm:mb-0.5",
             isHeroList && "mt-0 mb-1.5 sm:mb-2",
             isProblemStatement && "text-lg sm:text-2xl md:text-3xl mb-4 sm:mb-10 font-medium text-red-600",
             isContractReviewChallenge && "text-base sm:text-xl md:text-2xl mb-2 sm:mb-2.5 font-semibold text-ucsd-blue",
@@ -819,7 +819,7 @@ const Slide = ({ slide }) => {
         <div className="w-full max-w-[1760px] mx-auto h-full">
           <div className={clsx(
             "grid gap-4 sm:gap-8 md:gap-12 h-full pt-2 sm:pt-4",
-            isSolutionVideo ? "grid-cols-1 md:grid-cols-[1.12fr_0.88fr] gap-3 sm:gap-5 md:gap-7 pt-1 sm:pt-2 items-center" : "grid-cols-1 md:grid-cols-[1.1fr_0.9fr] items-start"
+            isSolutionVideo ? "grid-cols-1 md:grid-cols-[1.12fr_0.88fr] gap-3 sm:gap-5 md:gap-7 pt-0 sm:pt-0 items-start" : "grid-cols-1 md:grid-cols-[1.1fr_0.9fr] items-start"
           )}>
             {/* Left: Media (Image or Video) */}
             {(slide.imageSrc || slide.videoSrc) && (
@@ -859,7 +859,7 @@ const Slide = ({ slide }) => {
             {/* Right: Stats + Features */}
             <div className={clsx("flex flex-col", isSolutionVideo ? "justify-start gap-3 sm:gap-4" : "justify-start gap-4 sm:gap-6")}>
               {/* Horizontal Stats Bar */}
-              <div className={clsx("flex flex-wrap sm:flex-nowrap", isSolutionVideo ? "gap-1.5 sm:gap-2.5" : "gap-2 sm:gap-4")}>
+              {slide.stats?.length > 0 && <div className={clsx("flex flex-wrap sm:flex-nowrap", isSolutionVideo ? "gap-1.5 sm:gap-2.5" : "gap-2 sm:gap-4")}>
                 {slide.stats?.map((stat, index) => (
                   <motion.div
                     key={index}
@@ -891,7 +891,7 @@ const Slide = ({ slide }) => {
                     </div>
                   </motion.div>
                 ))}
-              </div>
+              </div>}
 
               {/* Feature List */}
               <div className={clsx("flex flex-col", isSolutionVideo ? "gap-2.5 sm:gap-3" : "space-y-2 sm:space-y-4")}>
@@ -4947,7 +4947,7 @@ const Slide = ({ slide }) => {
     <div
       className={clsx(
         "w-full h-full flex flex-col relative overflow-hidden transition-colors duration-500 break-words",
-        isTimelineEvolution ? "p-1.5 sm:p-3 md:p-4" : isHeroList ? "p-2 sm:p-3 md:p-4" : isContractReviewChallenge ? "p-2 sm:p-2.5 md:p-3" : isTritonAIEvolutionSlide ? "p-1.5 sm:p-2.5 md:p-3" : isPlatformSimple ? "p-2 sm:p-4 md:p-6" : isSolutionVideo ? "p-2 sm:p-4 md:p-6" : isCaseStudyHero ? "p-2 sm:p-4 md:p-6" : isRoadmap ? "p-2 sm:p-4 md:p-5" : isFlywheelCaseStudy ? "p-2 sm:p-3 md:p-4" : isAgentDevStrategy ? "p-2 sm:p-3 md:p-4" : "p-2 sm:p-6 md:p-12",
+        isTimelineEvolution ? "p-1.5 sm:p-3 md:p-4" : isHeroList ? "p-2 sm:p-3 md:p-4" : isContractReviewChallenge ? "p-2 sm:p-2.5 md:p-3" : isTritonAIEvolutionSlide ? "p-1.5 sm:p-2.5 md:p-3" : isPlatformSimple ? "p-2 sm:p-4 md:p-6" : isSolutionVideo ? "p-2 sm:p-3 md:p-4" : isCaseStudyHero ? "p-2 sm:p-4 md:p-6" : isRoadmap ? "p-2 sm:p-4 md:p-5" : isFlywheelCaseStudy ? "p-2 sm:p-3 md:p-4" : isAgentDevStrategy ? "p-2 sm:p-3 md:p-4" : "p-2 sm:p-6 md:p-12",
         !slide.backgroundColor && (isDark ? "bg-[#1a1a1a]" : "bg-gray-50")
       )}
       style={slide.backgroundColor ? { backgroundColor: slide.backgroundColor } : {}}
