@@ -13,7 +13,6 @@ export const slides = [
       "all",
       "public",
       "internal",
-      "CCW",
       "technical"
     ]
   },
@@ -44,7 +43,6 @@ export const slides = [
       "all",
       "public",
       "internal",
-      "CCW",
       "technical",
       "ASU-GSV"
     ]
@@ -62,7 +60,6 @@ export const slides = [
       "all",
       "public",
       "internal",
-      "CCW",
       "technical"
     ]
   },
@@ -154,38 +151,32 @@ export const slides = [
     "id": 2.5,
     "slug": "tritongpt-origin",
     "type": "content",
-    "layout": "origin-story",
+    "layout": "solution-showcase-video",
     "title": "TritonGPT: The Origin Story",
     "subtitle": "How a chancellor's vision became a campus-wide AI platform",
     "backgroundColor": "#F5F0E6",
     "videoSrc": "/media/media1.mov",
-    "videoLabel": "UC San Diego Assistant",
-    "videoCaption": "The first TritonGPT-powered experience",
-    "storyBeats": [
+    "stats": [],
+    "content": [
       {
-        "icon": "Lightbulb",
         "heading": "Chancellor's Vision",
-        "description": "Chancellor Khosla recognized the Transformer / GPT revolution as an opportunity to realize major administrative efficiencies across campus."
+        "text": "Chancellor Khosla recognized the Transformer / GPT revolution as an opportunity to realize major administrative efficiencies across campus."
       },
       {
-        "icon": "Landmark",
         "heading": "Strategic Investment",
-        "description": "Chancellor's Office funding secured, leveraging our partnership with the San Diego Supercomputer Center to invest in open-source, low-cost AI solutions."
+        "text": "Chancellor's Office funding secured, leveraging our partnership with the San Diego Supercomputer Center to invest in open-source, low-cost AI solutions."
       },
       {
-        "icon": "GraduationCap",
         "heading": "Campus Context Integration",
-        "description": "Integrated UC San Diego's institutional knowledge — policies, procedures, and data — to deliver relevant, context-aware AI experiences."
+        "text": "Integrated UC San Diego's institutional knowledge — policies, procedures, and data — to deliver relevant, context-aware AI experiences."
       },
       {
-        "icon": "FlaskConical",
         "heading": "Research-First Approach",
-        "description": "Built as a research project: get in front of real end users, prototype rapidly, and determine what works and what doesn't."
+        "text": "Built as a research project: get in front of real end users, prototype rapidly, and determine what works and what doesn't."
       },
       {
-        "icon": "TrendingUp",
         "heading": "Scale What Works",
-        "description": "Double down on the tools driving impact, retire what isn't working, and continuously expand the platform's reach."
+        "text": "Double down on the tools driving impact, retire what isn't working, and continuously expand the platform's reach."
       }
     ],
     "audiences": [
@@ -1112,7 +1103,6 @@ export const slides = [
       "all",
       "internal",
       "public",
-      "CCW"
     ]
   },
   {
@@ -1211,7 +1201,6 @@ export const slides = [
       "all",
       "internal",
       "public",
-      "CCW"
     ]
   },
   {
@@ -1306,7 +1295,6 @@ export const slides = [
       "all",
       "internal",
       "public",
-      "CCW"
     ]
   },
   {

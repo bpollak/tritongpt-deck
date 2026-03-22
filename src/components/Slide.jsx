@@ -895,18 +895,22 @@ const Slide = ({ slide }) => {
 
               {/* Feature List */}
               <div className={clsx("flex flex-col", isSolutionVideo ? "gap-2.5 sm:gap-3" : "space-y-2 sm:space-y-4")}>
-                {slide.content.map((item, index) => (
+                {(() => {
+                const borderColors = ['#00C6D7', '#00629B', '#6E963B', '#FC8900', '#FFCD00'];
+                const dotColors = ['#FFCD00', '#00C6D7', '#FC8900', '#6E963B', '#00629B'];
+                return slide.content.map((item, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.5 + index * 0.1 }}
                     className={clsx(
-                      "flex gap-3 sm:gap-4 items-start bg-white/60 backdrop-blur-sm rounded-lg sm:rounded-xl shadow-sm border-l-4 border-ucsd-sky hover:shadow-md transition-shadow",
+                      "flex gap-3 sm:gap-4 items-start bg-white/60 backdrop-blur-sm rounded-lg sm:rounded-xl shadow-sm border-l-4 hover:shadow-md transition-shadow",
                       isSolutionVideo ? "p-2.5 sm:p-3.5" : "p-3 sm:p-6"
                     )}
+                    style={{ borderLeftColor: borderColors[index % borderColors.length] }}
                   >
-                    <div className="w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-full bg-ucsd-gold flex-shrink-0 mt-1.5" />
+                    <div className="w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-full flex-shrink-0 mt-1.5" style={{ backgroundColor: dotColors[index % dotColors.length] }} />
                     <div className="flex-1 min-w-0">
                       <h3 className={clsx(
                         "font-bold text-ucsd-navy leading-tight mb-1",
@@ -922,7 +926,8 @@ const Slide = ({ slide }) => {
                       </p>
                     </div>
                   </motion.div>
-                ))}
+                ));
+                })()}
               </div>
             </div>
           </div>
@@ -4733,7 +4738,7 @@ const Slide = ({ slide }) => {
     'rgba(110, 150, 59, 0.15)',    // Green
     'rgba(255, 205, 0, 0.15)',     // Gold
   ];
-  const quarterCircleColor = quarterCircleColors[slide.id % quarterCircleColors.length];
+  const quarterCircleColor = quarterCircleColors[Math.floor(slide.id) % quarterCircleColors.length];
 
   // Upper right orb colors - offset by 1 to ensure always different color from lower left
   const upperRightOrbColors = [
@@ -4742,7 +4747,7 @@ const Slide = ({ slide }) => {
     'rgba(255, 205, 0, 0.12)',     // Gold (lighter)
     'rgba(0, 198, 215, 0.12)',     // Sky blue (lighter)
   ];
-  const upperRightOrbColor = upperRightOrbColors[(slide.id + 1) % upperRightOrbColors.length];
+  const upperRightOrbColor = upperRightOrbColors[(Math.floor(slide.id) + 1) % upperRightOrbColors.length];
 
   // ── CAMPUS METRICS: Hero Trio + Categorized Clusters ──
   if (isCampusMetrics) {
