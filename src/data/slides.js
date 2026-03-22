@@ -164,11 +164,11 @@ export const slides = [
       },
       {
         "heading": "Strategic Investment",
-        "text": "Chancellor's Office funding secured, leveraging our partnership with the San Diego Supercomputer Center to invest in open-source, low-cost AI solutions."
+        "text": "Chancellor's Office funding secured, leveraging our partnership with the San Diego Supercomputer Center and Onyx — a startup founded by two UCSD alumni — to power the orchestration platform."
       },
       {
         "heading": "Campus Context Integration",
-        "text": "Integrated UC San Diego's institutional knowledge — policies, procedures, and data — to deliver relevant, context-aware AI experiences."
+        "text": "Integrated UC San Diego's institutional knowledge — policies, procedures, and data — via open-source, low-cost AI solutions to deliver context-aware experiences."
       },
       {
         "heading": "Research-First Approach",
