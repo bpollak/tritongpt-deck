@@ -3500,7 +3500,7 @@ const Slide = ({ slide }) => {
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25, duration: 0.5 }}
-              className="relative rounded-[28px] border border-white/75 bg-white/90 pl-4 pr-3 sm:pl-6 sm:pr-4 py-3 sm:py-3.5 shadow-[0_16px_32px_rgba(24,43,73,0.08)]"
+              className="relative overflow-hidden rounded-[28px] border border-white/75 bg-white/90 pl-4 pr-3 sm:pl-6 sm:pr-4 py-3 sm:py-3.5 shadow-[0_16px_32px_rgba(24,43,73,0.08)]"
             >
               <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-ucsd-blue/30 via-ucsd-sky/28 to-ucsd-blue/18" />
 
