@@ -3326,7 +3326,7 @@ const Slide = ({ slide }) => {
             </motion.div>
 
             {/* Ownership + Boundaries Footer */}
-            <div className="grid grid-cols-1 xl:grid-cols-[1fr_1fr] gap-2.5">
+            <div className="grid grid-cols-2 gap-2.5">
               <motion.div
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -3500,7 +3500,7 @@ const Slide = ({ slide }) => {
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25, duration: 0.5 }}
-              className="relative rounded-[28px] border border-white/75 bg-white/90 pl-4 pr-3 sm:pl-6 sm:pr-4 py-4 sm:py-5 shadow-[0_16px_32px_rgba(24,43,73,0.08)]"
+              className="relative rounded-[28px] border border-white/75 bg-white/90 pl-4 pr-3 sm:pl-6 sm:pr-4 py-3 sm:py-3.5 shadow-[0_16px_32px_rgba(24,43,73,0.08)]"
             >
               <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-ucsd-blue/30 via-ucsd-sky/28 to-ucsd-blue/18" />
 
@@ -3512,7 +3512,7 @@ const Slide = ({ slide }) => {
                       initial={{ opacity: 0, x: -24 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.35 + laneIndex * 0.15, duration: 0.45 }}
-                      className="flex items-center gap-2 sm:gap-3 py-3 sm:py-4"
+                      className="flex items-center gap-2 sm:gap-3 py-2 sm:py-2.5"
                       style={{ borderLeft: `5px solid ${lane.color}`, paddingLeft: 16 }}
                     >
                       {/* Lane Label + Volume */}
@@ -3594,7 +3594,7 @@ const Slide = ({ slide }) => {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.85, duration: 0.4 }}
                         className="relative flex items-stretch ml-[131px] mr-4 py-0"
-                        style={{ height: 28 }}
+                        style={{ height: 22 }}
                       >
                         {/* Escalate/migrate arrow under deployment area */}
                         <div className="absolute right-[25%] top-0 bottom-0 flex items-center gap-2">
@@ -3617,7 +3617,7 @@ const Slide = ({ slide }) => {
             </motion.div>
 
             {/* Ownership + Boundaries Footer */}
-            <div className="grid grid-cols-1 xl:grid-cols-[1fr_1fr] gap-2.5">
+            <div className="grid grid-cols-2 gap-2.5">
               <motion.div
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
