@@ -3596,31 +3596,17 @@ const Slide = ({ slide }) => {
                         className="relative flex items-stretch ml-[131px] mr-4 py-0"
                         style={{ height: 28 }}
                       >
-                        {/* Left escalate arrow under gate area */}
-                        <div className="absolute left-[70px] top-0 bottom-0 flex items-center gap-2">
-                          <div className="flex flex-col items-center h-full justify-between">
-                            <div
-                              className="flex-1 w-0 border-l-2 border-dashed"
-                              style={{ borderColor: `${lane.color}45` }}
-                            />
-                            <ArrowDown size={11} style={{ color: `${lane.color}65` }} className="-mt-0.5" />
-                          </div>
-                          <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.12em] whitespace-nowrap" style={{ color: `${lane.color}80` }}>
-                            Escalate
-                          </span>
-                        </div>
-
-                        {/* Right escalate/migrate arrow under deployment area */}
+                        {/* Escalate/migrate arrow under deployment area */}
                         <div className="absolute right-[25%] top-0 bottom-0 flex items-center gap-2">
-                          <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.12em] whitespace-nowrap" style={{ color: `${lane.color}80` }}>
+                          <span className="text-[11px] sm:text-[13px] font-black uppercase tracking-[0.12em] whitespace-nowrap" style={{ color: lane.color }}>
                             Escalate / Migrate
                           </span>
                           <div className="flex flex-col items-center h-full justify-between">
                             <div
                               className="flex-1 w-0 border-l-2 border-dashed"
-                              style={{ borderColor: `${lane.color}45` }}
+                              style={{ borderColor: `${lane.color}70` }}
                             />
-                            <ArrowDown size={11} style={{ color: `${lane.color}65` }} className="-mt-0.5" />
+                            <ArrowDown size={14} style={{ color: `${lane.color}` }} className="-mt-0.5" />
                           </div>
                         </div>
                       </motion.div>
