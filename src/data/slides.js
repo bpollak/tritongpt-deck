@@ -42,7 +42,6 @@ export const slides = [
     "hidden": true,
     "audiences": [
       "all",
-      "public",
       "internal",
       "technical",
       "ASU-GSV"
@@ -2269,59 +2268,40 @@ export const slides = [
     "id": 30.7,
     "slug": "training-and-outreach",
     "type": "content",
-    "layout": "data-dashboard",
+    "layout": "feature-grid",
     "title": "Training & Outreach",
     "subtitle": "Building AI fluency across 73,000 campus users",
     "backgroundColor": "#F5F0E6",
-    "dashboardSections": [
+    "content": [
       {
-        "type": "gauge-row",
-        "items": [
-          {
-            "value": "2,500+",
-            "numericValue": 65,
-            "label": "Staff Trained",
-            "source": "FY 2024-25",
-            "color": "#00629B"
-          },
-          {
-            "value": "150+",
-            "numericValue": 45,
-            "label": "TritonAI Champions",
-            "source": "Community of Practice",
-            "color": "#6E963B"
-          },
-          {
-            "value": "45+",
-            "numericValue": 80,
-            "label": "Sessions Delivered",
-            "source": "Webinars + Workshops",
-            "color": "#FC8900"
-          }
-        ]
+        "heading": "Self-Paced Learning",
+        "text": "Two UC Learning modules — AI Foundations covers concepts and UC policies; TritonGPT Training teaches hands-on tool application to real workflows.",
+        "icon": "GraduationCap"
       },
       {
-        "type": "metric-grid",
-        "items": [
-          { "value": "2", "label": "UC Learning Modules", "icon": "BookOpen", "color": "#00629B" },
-          { "value": "START", "label": "Prompting Framework", "icon": "Target", "color": "#FC8900" },
-          { "value": "50+", "label": "Prompt Templates", "icon": "FileText", "color": "#6E963B" },
-          { "value": "15+", "label": "Everyday I AI Videos", "icon": "Rocket", "color": "#00C6D7" },
-          { "value": "6+", "label": "Webinar Series", "icon": "Presentation", "color": "#E85D75" },
-          { "value": "UC-Wide", "label": "Shared Resources", "icon": "Globe", "color": "#182B49" }
-        ]
+        "heading": "START Prompting Framework",
+        "text": "Situation, Task, Action, References, Tone — a repeatable method for getting strong results from any AI tool, with a prompt library of ready-made templates.",
+        "icon": "Target"
       },
       {
-        "type": "horizontal-bars",
-        "sectionTitle": "Training Reach by Format",
-        "items": [
-          { "label": "Self-Paced UC Learning (AI Foundations + TritonGPT)", "value": 85, "color": "#00629B" },
-          { "label": "Live Webinars & Deep Dives (Recorded)", "value": 62, "color": "#FC8900" },
-          { "label": "In-Person Workshops (Spring Series)", "value": 35, "color": "#00C6D7" },
-          { "label": "Everyday I AI Video Series (YouTube)", "value": 48, "color": "#6E963B" },
-          { "label": "TritonAI Champions Community of Practice", "value": 28, "color": "#E85D75" }
-        ],
-        "caption": "Relative engagement across training modalities"
+        "heading": "Live Webinars & Workshops",
+        "text": "Recurring sessions covering real use cases — from Lean Six Sigma + AI to TritonGPT deep dives. Recordings and slide decks available for async learning.",
+        "icon": "Presentation"
+      },
+      {
+        "heading": "Everyday I AI Video Series",
+        "text": "Short YouTube videos demonstrating practical applications — showing staff how to apply TritonGPT to the tasks they already do every day.",
+        "icon": "Rocket"
+      },
+      {
+        "heading": "TritonAI Champions",
+        "text": "Community of Practice connecting AI advocates across departments — collaborative learning, shared use cases, and peer support for adoption.",
+        "icon": "Users"
+      },
+      {
+        "heading": "UC-Wide Resources",
+        "text": "Shared training materials and responsible AI guidance across the University of California system — leveraging the federation for consistent standards.",
+        "icon": "Globe"
       }
     ],
     "hidden": true,
