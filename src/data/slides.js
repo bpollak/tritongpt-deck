@@ -940,16 +940,16 @@ export const slides = [
     "type": "content",
     "content": [
       {
-        "heading": "Socratic AI Tutor",
-        "text": "Student-facing assistant that guides learning through Socratic questioning, helping navigate and synthesize course materials."
+        "heading": "Instructor Controlled",
+        "text": "Connects securely to private Google Drive folders, allowing faculty to strictly define the knowledge base."
       },
       {
         "heading": "Faculty AI Assistant",
         "text": "Instructor-only tool for lesson planning, quiz generation, and creating study guides from lecture content."
       },
       {
-        "heading": "Instructor Controlled",
-        "text": "Connects securely to private Google Drive folders, allowing faculty to strictly define the knowledge base."
+        "heading": "Socratic AI Tutor",
+        "text": "Student-facing assistant that guides learning through Socratic questioning, helping navigate and synthesize course materials."
       }
     ],
     "title": "Instructional AI: Socratic Tutor & Faculty Assistant",
@@ -957,6 +957,7 @@ export const slides = [
     "layout": "solution-showcase-video",
     "subtitle": "Dual AI Tools for Learning & Teaching",
     "backgroundColor": "#F5F0E6",
+    "statsPosition": "bottom",
     "stats": [
       {
         "label": "Material Mastery",
