@@ -268,21 +268,21 @@ export const slides = [
             "value": "25%",
             "numericValue": 25,
             "label": "US Tasks Automatable",
-            "source": "Goldman Sachs, 2025",
+            "source": "Goldman Sachs, 2025 · McKinsey: 57%",
             "color": "#00629B"
           },
           {
             "value": "9%",
             "numericValue": 9,
             "label": "Roles Fully Replaced by AI",
-            "source": "Resume.org — 1,000 hiring mgrs",
+            "source": "Resume.org — 1,000 hiring mgrs, 2026",
             "color": "#6E963B"
           },
           {
             "value": "60%",
             "numericValue": 60,
             "label": "AI-Washing Layoffs",
-            "source": "Managers cite AI for optics",
+            "source": "Resume.org / Bloomberg, 2026",
             "color": "#E85D75"
           }
         ]
@@ -301,10 +301,10 @@ export const slides = [
             "label": "Observed real-world usage",
             "value": 32,
             "color": "#FC8900",
-            "annotation": "Anthropic research"
+            "annotation": "Anthropic · Stanford HAI 2025"
           }
         ],
-        "caption": "The gap between AI benchmarks and real workplace impact — Carnegie Mellon + Stanford"
+        "caption": "AI benchmarks cover coding & math — just 7.6% of jobs — Carnegie Mellon + Stanford"
       },
       {
         "type": "stat-callouts",
@@ -312,14 +312,14 @@ export const slides = [
           {
             "icon": "TrendingDown",
             "stat": "Wage Compression",
-            "detail": "Displaced workers flood remaining roles, compressing wages. College graduate underemployment already rising.",
+            "detail": "College graduate underemployment hit 42.5% in late 2025. Displaced workers flood remaining roles, compressing wages.",
             "color": "#E85D75"
           },
           {
             "icon": "TrendingUp",
             "stat": "AI Firms Create More Jobs",
-            "detail": "Companies most inclined toward AI created more jobs than they lost.",
-            "source": "European Central Bank",
+            "detail": "ECB study of 5,000 eurozone firms: AI-adopting companies 4% more likely to hire. Only 15% cite labor cost reduction as motivation.",
+            "source": "European Central Bank, March 2026",
             "color": "#6E963B"
           }
         ]
@@ -328,7 +328,8 @@ export const slides = [
     "hidden": true,
     "audiences": [
       "cabinet",
-      "all"
+      "all",
+      "ASU-GSV"
     ]
   },
   {
