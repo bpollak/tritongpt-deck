@@ -452,7 +452,8 @@ export const slides = [
       "internal",
       "technical",
       "ASU-GSV",
-      "cabinet"
+      "cabinet",
+      "executive"
     ]
   },
   {
@@ -590,7 +591,8 @@ export const slides = [
       "all",
       "public",
       "internal",
-      "technical"
+      "technical",
+      "executive"
     ]
   },
   {
