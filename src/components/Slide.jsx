@@ -5314,11 +5314,17 @@ const Slide = ({ slide }) => {
   if (isCampusMetrics) {
     const metrics = slide.metrics || [];
     const heroes = metrics.filter(m => m.tier === 'hero');
-    const people = metrics.filter(m => m.category === 'people');
-    const academic = metrics.filter(m => m.category === 'academic');
+    const nonHeroes = metrics.filter(m => m.category && m.category !== 'hero');
+    const categoryNames = [...new Set(nonHeroes.map(m => m.category))];
+    const categoryAccents = ['#FC8900', '#00C6D7', '#6E963B', '#E85D75'];
+    // Legacy support: map old category names
+    const people = metrics.filter(m => m.category === (categoryNames[0] || 'people'));
+    const academic = metrics.filter(m => m.category === (categoryNames[1] || 'academic'));
     const heroAccents = ['#FFCD00', '#00629B', '#00C6D7'];
-    const peopleAccent = '#FC8900';
-    const academicAccent = '#00C6D7';
+    const peopleAccent = categoryAccents[0];
+    const academicAccent = categoryAccents[1];
+    const categoryLabel1 = categoryNames[0] || 'People';
+    const categoryLabel2 = categoryNames[1] || 'Academic & Research';
 
     return (
       <div className="w-full h-full relative overflow-hidden bg-[#0a1628]">
@@ -5426,7 +5432,7 @@ const Slide = ({ slide }) => {
               className="bg-white/[0.05] backdrop-blur-sm border border-white/[0.08] rounded-2xl px-5 sm:px-6 md:px-8 py-3 sm:py-4"
             >
               <div className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] mb-3 sm:mb-4" style={{ color: peopleAccent }}>
-                People
+                {categoryLabel1}
               </div>
               <div className="grid grid-cols-2 gap-x-4 sm:gap-x-8 gap-y-3 sm:gap-y-5">
                 {people.map((metric, index) => {
@@ -5464,7 +5470,7 @@ const Slide = ({ slide }) => {
               className="bg-white/[0.05] backdrop-blur-sm border border-white/[0.08] rounded-2xl px-5 sm:px-6 md:px-8 py-3 sm:py-4"
             >
               <div className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] mb-3 sm:mb-4" style={{ color: academicAccent }}>
-                Academic & Research
+                {categoryLabel2}
               </div>
               <div className="grid grid-cols-2 gap-x-4 sm:gap-x-8 gap-y-3 sm:gap-y-5">
                 {academic.map((metric, index) => {

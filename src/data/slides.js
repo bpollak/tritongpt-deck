@@ -2269,40 +2269,76 @@ export const slides = [
     "id": 30.7,
     "slug": "training-and-outreach",
     "type": "content",
-    "layout": "feature-grid",
+    "layout": "campus-metrics",
     "title": "Training & Outreach",
-    "subtitle": "Building AI fluency across 73,000 campus users",
-    "backgroundColor": "#F5F0E6",
-    "content": [
+    "dark": true,
+    "campusImage": "/media/campus-geisel.jpg",
+    "metrics": [
       {
-        "heading": "Self-Paced Learning",
-        "text": "Two UC Learning modules — AI Foundations covers concepts and UC policies; TritonGPT Training teaches hands-on tool application to real workflows.",
-        "icon": "GraduationCap"
+        "value": "2,500+",
+        "label": "Staff Trained",
+        "icon": "Users",
+        "tier": "hero"
       },
       {
-        "heading": "START Prompting Framework",
-        "text": "Situation, Task, Action, References, Tone — a repeatable method for getting strong results from any AI tool, with a prompt library of ready-made templates.",
-        "icon": "Target"
+        "value": "6",
+        "label": "Training Formats",
+        "icon": "Layers",
+        "tier": "hero"
       },
       {
-        "heading": "Live Webinars & Workshops",
-        "text": "Recurring sessions covering real use cases — from Lean Six Sigma + AI to TritonGPT deep dives. Recordings and slide decks available for async learning.",
-        "icon": "Presentation"
+        "value": "45+",
+        "label": "Sessions Delivered",
+        "icon": "Presentation",
+        "tier": "hero"
       },
       {
-        "heading": "Everyday I AI Video Series",
-        "text": "Short YouTube videos demonstrating practical applications — showing staff how to apply TritonGPT to the tasks they already do every day.",
-        "icon": "Rocket"
+        "value": "2",
+        "label": "UC Learning Modules",
+        "icon": "BookOpen",
+        "category": "self-paced"
       },
       {
-        "heading": "TritonAI Champions",
-        "text": "Community of Practice connecting AI advocates across departments — collaborative learning, shared use cases, and peer support for adoption.",
-        "icon": "Users"
+        "value": "START",
+        "label": "Prompting Framework",
+        "icon": "Target",
+        "category": "self-paced"
       },
       {
-        "heading": "UC-Wide Resources",
-        "text": "Shared training materials and responsible AI guidance across the University of California system — leveraging the federation for consistent standards.",
-        "icon": "Globe"
+        "value": "15+",
+        "label": "Everyday I AI Videos",
+        "icon": "Rocket",
+        "category": "self-paced"
+      },
+      {
+        "value": "50+",
+        "label": "Prompt Library Templates",
+        "icon": "FileText",
+        "category": "self-paced"
+      },
+      {
+        "value": "6+",
+        "label": "Webinar Series",
+        "icon": "Presentation",
+        "category": "live & community"
+      },
+      {
+        "value": "4",
+        "label": "Spring Workshops",
+        "icon": "GraduationCap",
+        "category": "live & community"
+      },
+      {
+        "value": "150+",
+        "label": "TritonAI Champions",
+        "icon": "Star",
+        "category": "live & community"
+      },
+      {
+        "value": "UC-Wide",
+        "label": "Shared Resources",
+        "icon": "Globe",
+        "category": "live & community"
       }
     ],
     "hidden": true,
