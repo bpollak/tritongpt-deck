@@ -3904,6 +3904,7 @@ const Slide = ({ slide }) => {
         const lanes = slide.lanes || [];
         const ownership = slide.ownership || {};
         const boundaries = slide.boundaries || {};
+        const pipelineSteps = slide.pipelineSteps || [];
         const hasBoundaryPanels = Boolean(boundaries.whatItIs?.items?.length || boundaries.whatItIsNot?.items?.length);
 
         const DiamondNode = ({ label, color }) => (
@@ -3980,6 +3981,52 @@ const Slide = ({ slide }) => {
               <div className="text-[28px] sm:text-[42px] md:text-[48px] font-black text-ucsd-navy leading-none">{slide.title}</div>
               <div className="text-xs sm:text-base text-ucsd-blue font-bold mt-0.5">{slide.subtitle}</div>
             </motion.div>
+
+            {/* Pipeline Steps Row */}
+            {pipelineSteps.length > 0 && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.15, duration: 0.45 }}
+                className="relative overflow-hidden rounded-[22px] border border-white/75 bg-white/90 px-3 sm:px-5 py-2.5 sm:py-3 shadow-[0_10px_20px_rgba(24,43,73,0.06)]"
+              >
+                <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-ucsd-blue/25 via-ucsd-sky/20 to-ucsd-blue/12" />
+                <div className="flex items-stretch gap-1 sm:gap-2">
+                  {pipelineSteps.map((step, i) => {
+                    const IconComponent = iconMap[step.icon];
+                    return (
+                      <React.Fragment key={i}>
+                        <motion.div
+                          initial={{ opacity: 0, y: 8 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.2 + i * 0.08, duration: 0.35 }}
+                          className="flex-1 rounded-[16px] bg-slate-50/80 border border-slate-200/60 p-2 sm:p-2.5 flex flex-col gap-1"
+                        >
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center gap-1.5">
+                              <div
+                                className="w-6 h-6 rounded-full flex items-center justify-center text-[11px] font-black text-white"
+                                style={{ backgroundColor: step.color }}
+                              >
+                                {step.number}
+                              </div>
+                              <div className="text-[13px] sm:text-[14px] font-black text-ucsd-navy">{step.name}</div>
+                            </div>
+                            {IconComponent && <IconComponent size={15} style={{ color: step.color }} className="opacity-50" />}
+                          </div>
+                          <div className="text-[9px] sm:text-[10px] text-slate-500 leading-snug">{step.description}</div>
+                        </motion.div>
+                        {i < pipelineSteps.length - 1 && (
+                          <div className="flex items-center flex-shrink-0 text-slate-300">
+                            <ArrowRight size={14} />
+                          </div>
+                        )}
+                      </React.Fragment>
+                    );
+                  })}
+                </div>
+              </motion.div>
+            )}
 
             {/* Main Swim Lane Panel */}
             <motion.div
@@ -4102,90 +4149,41 @@ const Slide = ({ slide }) => {
               </div>
             </motion.div>
 
-            {/* Ownership + Boundaries Footer */}
-            <div className="grid grid-cols-2 gap-2.5">
-              <motion.div
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7, duration: 0.4 }}
-                className="relative overflow-hidden rounded-[22px] border border-white/75 bg-white/90 p-3 sm:p-3.5 shadow-[0_10px_20px_rgba(24,43,73,0.06)]"
-              >
-                <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-ucsd-blue/25 via-ucsd-sky/20 to-ucsd-blue/12" />
-                <div className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.18em] text-ucsd-navy/40 mb-2">Responsibility</div>
-                <div className="grid grid-cols-2 gap-0 rounded-[18px] overflow-hidden border border-slate-200/75 bg-slate-50/55">
-                  <div className="p-2.5 border-r border-slate-200/75">
-                    <div className="flex items-center gap-2 mb-1.5">
-                      <div className="w-7 h-7 rounded-full flex items-center justify-center" style={{ backgroundColor: `${ownership.its?.color}10` }}>
-                        <Server size={14} style={{ color: ownership.its?.color }} />
-                      </div>
-                      <span className="text-[13px] sm:text-[14px] font-black uppercase tracking-[0.06em] leading-none" style={{ color: ownership.its?.color }}>
-                        {ownership.its?.title}
-                      </span>
-                    </div>
-                    <div className="space-y-1">
-                      {ownership.its?.items?.map((item, i) => (
-                        <div key={i} className="flex items-start gap-2 text-[12px] sm:text-[13px] font-semibold text-ucsd-navy leading-tight">
-                          <div className="mt-[6px] h-1.5 w-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: ownership.its?.color }} />
-                          <span>{item}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="p-2.5">
-                    <div className="flex items-center gap-2 mb-1.5">
-                      <div className="w-7 h-7 rounded-full flex items-center justify-center" style={{ backgroundColor: `${ownership.builder?.color}10` }}>
-                        <Code size={14} style={{ color: ownership.builder?.color }} />
-                      </div>
-                      <span className="text-[13px] sm:text-[14px] font-black uppercase tracking-[0.06em] leading-none text-ucsd-navy">
-                        {ownership.builder?.title}
-                      </span>
-                    </div>
-                    <div className="space-y-1">
-                      {ownership.builder?.items?.map((item, i) => (
-                        <div key={i} className="flex items-start gap-2 text-[12px] sm:text-[13px] font-semibold text-ucsd-navy leading-tight">
-                          <div className="mt-[6px] h-1.5 w-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: ownership.builder?.color }} />
-                          <span>{item}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+            {/* Compact Ownership + Scope Footer */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7, duration: 0.4 }}
+              className="relative overflow-hidden rounded-[18px] border border-white/75 bg-white/90 px-4 sm:px-5 py-2 sm:py-2.5 shadow-[0_6px_14px_rgba(24,43,73,0.05)]"
+            >
+              <div className="flex items-center gap-3 sm:gap-5 flex-wrap">
+                <div className="flex items-center gap-1.5 flex-shrink-0">
+                  <Server size={13} style={{ color: ownership.its?.color }} />
+                  <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.08em]" style={{ color: ownership.its?.color }}>{ownership.its?.title}:</span>
+                  <span className="text-[10px] sm:text-[11px] text-ucsd-navy/70 font-semibold">{ownership.its?.items?.join(' · ')}</span>
                 </div>
-              </motion.div>
-
-              {hasBoundaryPanels && (
-                <motion.div
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.75, duration: 0.4 }}
-                  className="relative overflow-hidden rounded-[22px] border border-white/75 bg-white/90 p-3 sm:p-3.5 shadow-[0_10px_20px_rgba(24,43,73,0.06)]"
-                >
-                  <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-ucsd-blue/25 via-ucsd-sky/20 to-ucsd-blue/12" />
-                  <div className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.18em] text-ucsd-navy/40 mb-2">Scope</div>
-                  <div className="flex flex-col gap-2">
-                    <div className="rounded-[16px] border border-ucsd-blue/14 bg-ucsd-blue/4 px-3 py-2">
-                      <div className="flex items-center gap-2.5">
-                        <div className="shrink-0 text-[10px] sm:text-[11px] font-black uppercase tracking-[0.12em] text-ucsd-blue">In Scope:</div>
-                        <div className="flex flex-wrap items-center gap-1.5">
-                          {boundaries.whatItIs?.items?.map((item, i) => (
-                            <span key={i} className="rounded-full bg-white/90 px-2.5 py-1 text-[12px] sm:text-[13px] font-semibold text-ucsd-navy/88">{item}</span>
-                          ))}
-                        </div>
-                      </div>
+                <div className="h-4 w-px bg-slate-200 flex-shrink-0" />
+                <div className="flex items-center gap-1.5 flex-shrink-0">
+                  <Code size={13} className="text-ucsd-navy/50" />
+                  <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.08em] text-ucsd-navy/60">{ownership.builder?.title}:</span>
+                  <span className="text-[10px] sm:text-[11px] text-ucsd-navy/70 font-semibold">{ownership.builder?.items?.join(' · ')}</span>
+                </div>
+                {hasBoundaryPanels && (
+                  <>
+                    <div className="h-4 w-px bg-slate-200 flex-shrink-0" />
+                    <div className="flex items-center gap-1.5 flex-shrink-0">
+                      <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.08em] text-ucsd-blue">In Scope:</span>
+                      <span className="text-[10px] sm:text-[11px] text-ucsd-navy/70 font-semibold">{boundaries.whatItIs?.items?.join(' · ')}</span>
                     </div>
-                    <div className="rounded-[16px] border border-[#B56200]/14 bg-[#B56200]/4 px-3 py-2">
-                      <div className="flex items-center gap-2.5">
-                        <div className="shrink-0 text-[10px] sm:text-[11px] font-black uppercase tracking-[0.12em] text-[#B56200]">Not For:</div>
-                        <div className="flex flex-wrap items-center gap-1.5">
-                          {boundaries.whatItIsNot?.items?.map((item, i) => (
-                            <span key={i} className="rounded-full bg-white/90 px-2.5 py-1 text-[12px] sm:text-[13px] font-semibold text-[#8A5600]">{item}</span>
-                          ))}
-                        </div>
-                      </div>
+                    <div className="h-4 w-px bg-slate-200 flex-shrink-0" />
+                    <div className="flex items-center gap-1.5 flex-shrink-0">
+                      <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.08em] text-[#B56200]">Not For:</span>
+                      <span className="text-[10px] sm:text-[11px] text-[#8A5600]/70 font-semibold">{boundaries.whatItIsNot?.items?.join(' · ')}</span>
                     </div>
-                  </div>
-                </motion.div>
-              )}
-            </div>
+                  </>
+                )}
+              </div>
+            </motion.div>
           </div>
         );
       })()}
