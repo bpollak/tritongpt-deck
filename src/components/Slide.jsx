@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion'; // eslint-disable-line no-unused-vars
 import clsx from 'clsx';
-import { Target, Database, Cpu, Blocks, GraduationCap, Building2, FileText, FileCheck, DollarSign, Shield, BookOpen, Code, Presentation, Globe, FileEdit, FolderOpen, TrendingUp, ClipboardCheck, Search, Heart, Calendar, GitBranch, Network, Grid3x3, ArrowDown, ArrowRight, Brain, RefreshCw, ArrowRightLeft, CheckCircle, Monitor, User, Users, Award, Server, Layers, Wallet, Share2, Star, FlaskConical, Lightbulb, Landmark } from 'lucide-react';
+import { Target, Database, Cpu, Blocks, GraduationCap, Building2, FileText, FileCheck, DollarSign, Shield, ShieldCheck, BookOpen, Code, Presentation, Globe, FileEdit, FolderOpen, TrendingUp, TrendingDown, ClipboardCheck, Search, Heart, Calendar, GitBranch, Network, Grid3x3, ArrowDown, ArrowRight, Brain, RefreshCw, ArrowRightLeft, CheckCircle, Monitor, User, Users, Award, Server, Layers, Wallet, Share2, Star, FlaskConical, Lightbulb, Landmark, Scale, Headphones, Hammer, Zap, Rocket, BarChart3, AlertTriangle } from 'lucide-react';
 import { QRCodeSVG } from 'qrcode.react';
 
 const iconMap = {
@@ -43,7 +43,16 @@ const iconMap = {
   'Server': Server,
   'Wallet': Wallet,
   'Lightbulb': Lightbulb,
-  'Landmark': Landmark
+  'Landmark': Landmark,
+  'Scale': Scale,
+  'ShieldCheck': ShieldCheck,
+  'Headphones': Headphones,
+  'Hammer': Hammer,
+  'Zap': Zap,
+  'Rocket': Rocket,
+  'BarChart3': BarChart3,
+  'AlertTriangle': AlertTriangle,
+  'TrendingDown': TrendingDown
 };
 
 const containerVariants = {
@@ -582,6 +591,482 @@ const Slide = ({ slide }) => {
             </motion.div>
           )}
         </div>
+      </div>
+    );
+  }
+
+  // ── IMPACT-STATS LAYOUT ──────────────────────────────────────────────
+  // Semicircular gauge visualizations with stats on warm background
+  const isImpactStats = slide.layout === 'impact-stats';
+  if (isImpactStats) {
+    const GaugeChart = ({ value, numericValue, label, detail, color, delay = 0 }) => {
+      const radius = 70;
+      const strokeWidth = 10;
+      const circumference = Math.PI * radius;
+      const percent = Math.min(numericValue || 0, 100) / 100;
+
+      return (
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay, duration: 0.6 }}
+          className="flex flex-col items-center"
+        >
+          <div className="relative w-40 h-24 sm:w-52 sm:h-32 md:w-60 md:h-36">
+            <svg viewBox="0 0 160 90" className="w-full h-full overflow-visible">
+              {/* Background arc */}
+              <path
+                d="M 10 80 A 70 70 0 0 1 150 80"
+                fill="none"
+                stroke="#e2e8f0"
+                strokeWidth={strokeWidth}
+                strokeLinecap="round"
+              />
+              {/* Filled arc */}
+              <motion.path
+                d="M 10 80 A 70 70 0 0 1 150 80"
+                fill="none"
+                stroke={color}
+                strokeWidth={strokeWidth}
+                strokeLinecap="round"
+                strokeDasharray={circumference}
+                initial={{ strokeDashoffset: circumference }}
+                animate={{ strokeDashoffset: circumference * (1 - percent) }}
+                transition={{ delay: delay + 0.3, duration: 1.2, ease: "easeOut" }}
+              />
+            </svg>
+            <div className="absolute inset-0 flex flex-col items-center justify-end pb-0">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: delay + 0.6, duration: 0.5 }}
+                className="text-3xl sm:text-4xl md:text-5xl font-black leading-none"
+                style={{ color }}
+              >
+                {value}
+              </motion.div>
+            </div>
+          </div>
+          <div className="text-center mt-2 sm:mt-3">
+            <div className="text-ucsd-navy text-sm sm:text-base md:text-lg font-bold leading-tight">{label}</div>
+            <div className="text-slate-400 text-xs sm:text-sm mt-0.5">{detail}</div>
+          </div>
+        </motion.div>
+      );
+    };
+
+    return (
+      <div className="w-full h-full relative overflow-hidden flex flex-col items-center justify-center px-4 sm:px-8" style={{ backgroundColor: '#F5F0E6' }}>
+        {/* Decorative background shapes */}
+        <div className="absolute top-[-8%] left-[-5%] w-[30vw] h-[30vw] rounded-full bg-ucsd-gold/8 blur-[60px]" />
+        <div className="absolute bottom-[-10%] right-[-5%] w-[25vw] h-[25vw] rounded-full bg-ucsd-blue/8 blur-[60px]" />
+
+        {/* Title */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-6 sm:mb-10 md:mb-14 z-10"
+        >
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-ucsd-navy leading-tight">{slide.title}</h1>
+          <div className="text-ucsd-blue text-sm sm:text-xl font-bold mt-1 sm:mt-2">{slide.subtitle}</div>
+        </motion.div>
+
+        {/* Gauges Row */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12 md:gap-20 z-10">
+          {(slide.impactStats || []).map((stat, i) => (
+            <GaugeChart
+              key={i}
+              value={stat.value}
+              numericValue={stat.numericValue}
+              label={stat.label}
+              detail={stat.detail}
+              color={stat.color}
+              delay={0.2 + i * 0.2}
+            />
+          ))}
+        </div>
+
+        {/* Bottom Message */}
+        {slide.bottomMessage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.4, duration: 0.8 }}
+            className="mt-8 sm:mt-12 z-10 text-center px-4"
+          >
+            <div className="text-ucsd-navy/60 text-sm sm:text-lg md:text-xl font-medium italic">{slide.bottomMessage}</div>
+          </motion.div>
+        )}
+
+        <div className="absolute bottom-1 right-2 sm:bottom-6 sm:right-8 text-ucsd-navy/20 text-[10px] sm:text-xs font-bold tracking-widest z-20">UC SAN DIEGO | {slide.id}</div>
+      </div>
+    );
+  }
+
+  // ── BOLD-MANIFESTO LAYOUT ────────────────────────────────────────────
+  // Infographic: headline + horizontal bar chart with claims as data bars
+  const isBoldManifesto = slide.layout === 'bold-manifesto';
+  if (isBoldManifesto) {
+    const renderHeadline = () => {
+      if (!slide.headlineAccent) return slide.headline;
+      const parts = slide.headline.split(new RegExp(`(${slide.headlineAccent})`, 'gi'));
+      return parts.map((part, i) =>
+        part.toLowerCase() === slide.headlineAccent.toLowerCase()
+          ? <span key={i} className="text-ucsd-blue">{part}</span>
+          : part
+      );
+    };
+
+    return (
+      <div className="w-full h-full relative overflow-hidden flex flex-col px-6 sm:px-12 md:px-20 py-6 sm:py-10" style={{ backgroundColor: '#F5F0E6' }}>
+        {/* Decorative elements */}
+        <div className="absolute top-[-5%] right-[-3%] w-[20vw] h-[20vw] rounded-full bg-ucsd-blue/6 blur-[50px]" />
+        <div className="absolute bottom-[-8%] left-[-3%] w-[18vw] h-[18vw] rounded-full bg-ucsd-gold/10 blur-[40px]" />
+
+        <div className="max-w-6xl mx-auto w-full flex flex-col h-full justify-center z-10">
+          {/* Headline */}
+          <motion.h1
+            initial={{ opacity: 0, y: -15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-2xl sm:text-4xl md:text-5xl font-black text-ucsd-navy leading-tight mb-8 sm:mb-12 whitespace-pre-line"
+          >
+            {renderHeadline()}
+          </motion.h1>
+
+          {/* Evidence as horizontal bar chart */}
+          <div className="space-y-5 sm:space-y-7">
+            {(slide.evidence || []).map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.3 + i * 0.12, duration: 0.5 }}
+                className="flex flex-col gap-1.5"
+              >
+                {/* Claim label */}
+                <div className="flex items-center gap-3">
+                  <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full flex-shrink-0" style={{ backgroundColor: item.color }} />
+                  <span className="text-base sm:text-xl md:text-2xl font-bold text-ucsd-navy">{item.claim}</span>
+                </div>
+                {/* Bar + detail */}
+                <div className="ml-6 sm:ml-7">
+                  <div className="w-full h-2 sm:h-2.5 bg-slate-200 rounded-full overflow-hidden">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      animate={{ width: `${item.barWidth || 70}%` }}
+                      transition={{ delay: 0.5 + i * 0.15, duration: 0.8, ease: "easeOut" }}
+                      className="h-full rounded-full"
+                      style={{ backgroundColor: item.color }}
+                    />
+                  </div>
+                  <div className="text-xs sm:text-sm md:text-base text-slate-500 mt-1.5 leading-relaxed">{item.detail}</div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        <div className="absolute bottom-1 right-2 sm:bottom-6 sm:right-8 text-ucsd-navy/20 text-[10px] sm:text-xs font-bold tracking-widest z-20">UC SAN DIEGO | {slide.id}</div>
+      </div>
+    );
+  }
+
+  // ── VERSUS-SPLIT LAYOUT ──────────────────────────────────────────────
+  // Balanced visual comparison with weight/scale metaphor
+  const isVersusSplit = slide.layout === 'versus-split';
+  if (isVersusSplit) {
+    return (
+      <div className="w-full h-full relative overflow-hidden flex flex-col" style={{ backgroundColor: '#F5F0E6' }}>
+        {/* Decorative */}
+        <div className="absolute top-[-5%] left-[45%] w-[15vw] h-[15vw] rounded-full bg-ucsd-gold/10 blur-[40px]" />
+
+        {/* Title area */}
+        <motion.div
+          initial={{ opacity: 0, y: -15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center pt-6 sm:pt-10 pb-4 sm:pb-6 z-10"
+        >
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-ucsd-navy">Efficiency AI vs. Opportunity AI</h1>
+          <div className="text-ucsd-blue text-sm sm:text-lg font-bold mt-1">The strategic choice every institution must make</div>
+        </motion.div>
+
+        {/* Two columns */}
+        <div className="flex-1 flex flex-col md:flex-row gap-4 sm:gap-6 px-6 sm:px-12 md:px-16 pb-20 sm:pb-24 z-10">
+          {/* Left — Efficiency */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            className="flex-1 bg-slate-100/80 rounded-2xl p-5 sm:p-8 border border-slate-200 relative overflow-hidden"
+          >
+            <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-slate-300 to-slate-400" />
+            <div className="flex items-center gap-3 mb-4 sm:mb-6">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-300 flex items-center justify-center">
+                <TrendingDown size={20} className="text-slate-500 sm:w-6 sm:h-6" />
+              </div>
+              <div>
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-slate-500">{slide.leftTitle}</h2>
+                <div className="text-slate-400 text-xs sm:text-sm font-medium">{slide.leftSubtitle}</div>
+              </div>
+            </div>
+            <div className="space-y-2.5 sm:space-y-3">
+              {(slide.leftItems || []).map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.4 + i * 0.08 }}
+                  className="flex items-start gap-2.5 sm:gap-3"
+                >
+                  <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-slate-200 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" strokeWidth="3" strokeLinecap="round"><line x1="5" y1="12" x2="19" y2="12" /></svg>
+                  </div>
+                  <span className="text-slate-500 text-sm sm:text-base md:text-lg font-medium">{item}</span>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Center divider with "vs" */}
+          <div className="hidden md:flex flex-col items-center justify-center">
+            <div className="w-px h-full bg-gradient-to-b from-transparent via-ucsd-navy/20 to-transparent relative">
+              <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-ucsd-navy flex items-center justify-center text-white text-xs font-black">VS</div>
+            </div>
+          </div>
+
+          {/* Right — Opportunity */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            className="flex-1 bg-white rounded-2xl p-5 sm:p-8 border-2 border-ucsd-gold/30 shadow-lg relative overflow-hidden"
+          >
+            <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-ucsd-gold to-[#FC8900]" />
+            <div className="flex items-center gap-3 mb-4 sm:mb-6">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-ucsd-gold/20 flex items-center justify-center">
+                <TrendingUp size={20} className="text-ucsd-gold sm:w-6 sm:h-6" />
+              </div>
+              <div>
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-ucsd-navy">{slide.rightTitle}</h2>
+                <div className="text-ucsd-blue text-xs sm:text-sm font-medium">{slide.rightSubtitle}</div>
+              </div>
+            </div>
+            <div className="space-y-2.5 sm:space-y-3">
+              {(slide.rightItems || []).map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.5 + i * 0.08 }}
+                  className="flex items-start gap-2.5 sm:gap-3"
+                >
+                  <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-ucsd-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#FFCD00" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                  </div>
+                  <span className="text-ucsd-navy text-sm sm:text-base md:text-lg font-bold">{item}</span>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Quote Banner */}
+        {slide.quote && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1, duration: 0.6 }}
+            className="absolute bottom-0 left-0 right-0 bg-ucsd-navy px-6 sm:px-12 py-3 sm:py-4 z-30"
+          >
+            <div className="max-w-5xl mx-auto text-center">
+              <div className="text-white/80 text-xs sm:text-base md:text-lg italic font-medium leading-relaxed">"{slide.quote.text}"</div>
+              <div className="text-ucsd-gold/60 text-xs sm:text-sm font-bold mt-1 uppercase tracking-wider">— {slide.quote.attribution}</div>
+            </div>
+          </motion.div>
+        )}
+
+        <div className="absolute bottom-1 right-2 sm:bottom-6 sm:right-8 text-ucsd-navy/20 text-[10px] sm:text-xs font-bold tracking-widest z-40">UC SAN DIEGO | {slide.id}</div>
+      </div>
+    );
+  }
+
+  // ── DATA-DASHBOARD LAYOUT ──────────────────────────────────────────────
+  // Dense infographic layout with SVG gauges, donuts, bars, metric grids
+  const isDataDashboard = slide.layout === 'data-dashboard';
+  if (isDataDashboard) {
+    const sections = slide.dashboardSections || [];
+
+    const renderGaugeRow = (section, sIdx) => {
+      const items = section.items || [];
+      return (
+        <motion.div key={sIdx} initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 + sIdx * 0.15, duration: 0.5 }}
+          className="flex flex-wrap justify-center gap-6 sm:gap-10 md:gap-16">
+          {items.map((item, i) => {
+            const radius = 52, stroke = 10, cx = 65, cy = 60;
+            const circumference = Math.PI * radius;
+            const pct = typeof item.numericValue === 'number' ? Math.min(item.numericValue, 100) : 50;
+            const offset = circumference - (pct / 100) * circumference;
+            return (
+              <motion.div key={i} initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.3 + i * 0.12, type: 'spring', stiffness: 200 }}
+                className="flex flex-col items-center w-[130px] sm:w-[160px]">
+                <svg viewBox="0 0 130 75" className="w-full">
+                  <path d={`M ${cx - radius} ${cy} A ${radius} ${radius} 0 0 1 ${cx + radius} ${cy}`} fill="none" stroke="#e5e7eb" strokeWidth={stroke} strokeLinecap="round" />
+                  <motion.path d={`M ${cx - radius} ${cy} A ${radius} ${radius} 0 0 1 ${cx + radius} ${cy}`} fill="none" stroke={item.color || '#00629B'} strokeWidth={stroke} strokeLinecap="round"
+                    initial={{ strokeDasharray: circumference, strokeDashoffset: circumference }}
+                    animate={{ strokeDashoffset: offset }}
+                    transition={{ delay: 0.5 + i * 0.15, duration: 1.2, ease: 'easeOut' }} />
+                  <text x={cx} y={cy - 8} textAnchor="middle" className="text-[22px] sm:text-[26px] font-black" fill="#182B49">{item.value}</text>
+                </svg>
+                <div className="text-center mt-1">
+                  <div className="text-ucsd-navy text-[11px] sm:text-xs font-bold leading-tight">{item.label}</div>
+                  <div className="text-slate-400 text-[9px] sm:text-[10px] mt-0.5">{item.source}</div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </motion.div>
+      );
+    };
+
+    const renderDonutRow = (section, sIdx) => {
+      const items = section.items || [];
+      return (
+        <motion.div key={sIdx} initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 + sIdx * 0.15, duration: 0.5 }}
+          className="flex flex-wrap justify-center gap-6 sm:gap-10 md:gap-16">
+          {items.map((item, i) => {
+            const radius = 40, stroke = 9, cx = 50, cy = 50;
+            const circumference = 2 * Math.PI * radius;
+            const pct = typeof item.value === 'number' ? Math.min(item.value, 100) : 50;
+            const offset = circumference - (pct / 100) * circumference;
+            return (
+              <motion.div key={i} initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.3 + i * 0.12, type: 'spring', stiffness: 200 }}
+                className="flex flex-col items-center w-[120px] sm:w-[150px]">
+                <svg viewBox="0 0 100 100" className="w-[80px] sm:w-[95px]">
+                  <circle cx={cx} cy={cy} r={radius} fill="none" stroke="#e5e7eb" strokeWidth={stroke} />
+                  <motion.circle cx={cx} cy={cy} r={radius} fill="none" stroke={item.color || '#00629B'} strokeWidth={stroke} strokeLinecap="round"
+                    transform={`rotate(-90 ${cx} ${cy})`}
+                    initial={{ strokeDasharray: circumference, strokeDashoffset: circumference }}
+                    animate={{ strokeDashoffset: offset }}
+                    transition={{ delay: 0.5 + i * 0.15, duration: 1.2, ease: 'easeOut' }} />
+                  <text x={cx} y={cy + 6} textAnchor="middle" className="text-[18px] sm:text-[20px] font-black" fill="#182B49">{item.innerLabel || item.value}</text>
+                </svg>
+                <div className="text-center mt-1">
+                  <div className="text-ucsd-navy text-[11px] sm:text-xs font-bold leading-tight">{item.label}</div>
+                  <div className="text-slate-400 text-[9px] sm:text-[10px] mt-0.5">{item.source}</div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </motion.div>
+      );
+    };
+
+    const renderHorizontalBars = (section, sIdx) => {
+      const items = section.items || [];
+      return (
+        <motion.div key={sIdx} initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 + sIdx * 0.15, duration: 0.5 }}
+          className="w-full max-w-3xl mx-auto space-y-2 sm:space-y-3">
+          {section.sectionTitle && <div className="text-ucsd-navy text-xs sm:text-sm font-bold mb-1">{section.sectionTitle}</div>}
+          {items.map((item, i) => (
+            <div key={i} className="space-y-0.5">
+              <div className="flex justify-between items-baseline">
+                <span className="text-ucsd-navy text-[11px] sm:text-xs font-semibold">{item.label}</span>
+                {item.displayValue && <span className="text-ucsd-navy text-[11px] sm:text-xs font-black">{item.displayValue}</span>}
+                {item.annotation && <span className="text-slate-400 text-[9px] sm:text-[10px] italic">{item.annotation}</span>}
+              </div>
+              <div className="h-5 sm:h-6 bg-gray-100 rounded-full overflow-hidden relative">
+                <motion.div className="h-full rounded-full" style={{ backgroundColor: item.color || '#00629B' }}
+                  initial={{ width: 0 }} animate={{ width: `${item.value}%` }}
+                  transition={{ delay: 0.5 + i * 0.12, duration: 0.9, ease: 'easeOut' }} />
+                {item.highlight && <div className="absolute inset-0 rounded-full ring-2 ring-offset-1" style={{ ringColor: item.color || '#00629B' }} />}
+              </div>
+            </div>
+          ))}
+          {section.caption && <div className="text-slate-400 text-[9px] sm:text-[10px] italic text-center mt-1">{section.caption}</div>}
+        </motion.div>
+      );
+    };
+
+    const renderStatCallouts = (section, sIdx) => {
+      const items = section.items || [];
+      return (
+        <motion.div key={sIdx} initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 + sIdx * 0.15, duration: 0.5 }}
+          className="flex flex-wrap justify-center gap-4 sm:gap-6 max-w-4xl mx-auto">
+          {items.map((item, i) => {
+            const IconComp = iconMap[item.icon] || AlertTriangle;
+            return (
+              <motion.div key={i} initial={{ opacity: 0, x: i === 0 ? -20 : 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.6 + i * 0.1, duration: 0.5 }}
+                className="flex-1 min-w-[200px] max-w-[360px] bg-white/70 rounded-xl p-3 sm:p-4 border border-gray-100 shadow-sm flex items-start gap-3">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: (item.color || '#00629B') + '18' }}>
+                  <IconComp size={18} style={{ color: item.color || '#00629B' }} />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="text-ucsd-navy text-xs sm:text-sm font-black">{item.stat}</div>
+                  <div className="text-slate-500 text-[10px] sm:text-xs leading-snug mt-0.5">{item.detail}</div>
+                  {item.source && <div className="text-slate-400 text-[9px] mt-0.5">{item.source}</div>}
+                </div>
+              </motion.div>
+            );
+          })}
+        </motion.div>
+      );
+    };
+
+    const renderMetricGrid = (section, sIdx) => {
+      const items = section.items || [];
+      return (
+        <motion.div key={sIdx} initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 + sIdx * 0.15, duration: 0.5 }}
+          className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 max-w-4xl mx-auto">
+          {items.map((item, i) => {
+            const IconComp = iconMap[item.icon] || BarChart3;
+            return (
+              <motion.div key={i} initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.3 + i * 0.08, type: 'spring', stiffness: 200 }}
+                className="bg-white/80 rounded-xl p-3 sm:p-4 border border-gray-100 shadow-sm text-center">
+                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg mx-auto mb-2 flex items-center justify-center" style={{ backgroundColor: (item.color || '#00629B') + '18' }}>
+                  <IconComp size={16} style={{ color: item.color || '#00629B' }} />
+                </div>
+                <div className="text-xl sm:text-2xl md:text-3xl font-black text-ucsd-navy leading-none">{item.value}</div>
+                <div className="text-slate-500 text-[10px] sm:text-xs font-semibold mt-1 leading-tight">{item.label}</div>
+              </motion.div>
+            );
+          })}
+        </motion.div>
+      );
+    };
+
+    const sectionRenderers = {
+      'gauge-row': renderGaugeRow,
+      'donut-row': renderDonutRow,
+      'horizontal-bars': renderHorizontalBars,
+      'stat-callouts': renderStatCallouts,
+      'metric-grid': renderMetricGrid,
+    };
+
+    return (
+      <div className="w-full h-full relative overflow-hidden flex flex-col" style={{ backgroundColor: slide.backgroundColor || '#F5F0E6' }}>
+        {/* Decorative blurs */}
+        <div className="absolute top-[-8%] right-[-5%] w-[20vw] h-[20vw] rounded-full bg-ucsd-blue/5 blur-[60px]" />
+        <div className="absolute bottom-[-5%] left-[-3%] w-[15vw] h-[15vw] rounded-full bg-ucsd-gold/8 blur-[50px]" />
+
+        {/* Title */}
+        <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
+          className="text-center pt-5 sm:pt-8 pb-3 sm:pb-5 px-4 z-10">
+          <h1 className="text-xl sm:text-3xl md:text-4xl font-black text-ucsd-navy leading-tight">{slide.title}</h1>
+          {slide.subtitle && <div className="text-ucsd-blue text-[11px] sm:text-sm md:text-base font-bold mt-1 max-w-3xl mx-auto">{slide.subtitle}</div>}
+        </motion.div>
+
+        {/* Dashboard sections */}
+        <div className="flex-1 flex flex-col justify-evenly gap-3 sm:gap-4 px-4 sm:px-8 md:px-12 pb-16 sm:pb-20 z-10 overflow-hidden">
+          {sections.map((section, sIdx) => {
+            const renderer = sectionRenderers[section.type];
+            return renderer ? renderer(section, sIdx) : null;
+          })}
+        </div>
+
+        <div className="absolute bottom-1 right-2 sm:bottom-6 sm:right-8 text-ucsd-navy/20 text-[10px] sm:text-xs font-bold tracking-widest z-40">UC SAN DIEGO | {slide.id}</div>
       </div>
     );
   }
@@ -2435,10 +2920,10 @@ const Slide = ({ slide }) => {
           <div className="hidden md:grid grid-cols-[0.8fr_2.1fr_2.1fr] gap-6 px-7 mb-1.5">
             <div className="text-ucsd-navy font-bold text-sm uppercase tracking-[0.15em] opacity-40 self-end pb-1.5">Feature</div>
             <div className="text-slate-400 font-bold text-2xl flex items-center gap-2 opacity-80">
-              Gen AI <span className="text-sm font-medium opacity-60 bg-slate-100 px-2 py-0.5 rounded">2025</span>
+              {slide.columnHeaders?.left || 'Gen AI'} {!slide.columnHeaders && <span className="text-sm font-medium opacity-60 bg-slate-100 px-2 py-0.5 rounded">2025</span>}
             </div>
             <div className="text-ucsd-blue font-black text-2xl flex items-center gap-2">
-              Agentic AI <span className="text-sm font-bold text-white bg-ucsd-blue px-2 py-0.5 rounded shadow-sm">2026</span>
+              {slide.columnHeaders?.right || 'Agentic AI'} {!slide.columnHeaders && <span className="text-sm font-bold text-white bg-ucsd-blue px-2 py-0.5 rounded shadow-sm">2026</span>}
             </div>
           </div>
 
@@ -2459,15 +2944,15 @@ const Slide = ({ slide }) => {
                 {row.feature}
               </div>
 
-              {/* Gen AI - with label on mobile */}
+              {/* Gen AI / Left column - with label on mobile */}
               <div className="text-slate-600 font-semibold text-sm sm:text-xl leading-relaxed relative z-10 md:pr-6 md:border-r-2 md:border-slate-200 md:h-full flex items-center">
-                <span className="md:hidden text-xs text-slate-400 font-bold uppercase mr-2">2025:</span>
+                <span className="md:hidden text-xs text-slate-400 font-bold uppercase mr-2">{slide.columnHeaders?.left || '2025'}:</span>
                 {row.genAI}
               </div>
 
-              {/* Agentic AI - with label on mobile */}
+              {/* Agentic AI / Right column - with label on mobile */}
               <div className="text-ucsd-navy font-bold text-sm sm:text-xl leading-relaxed relative z-10 flex items-start gap-2 sm:gap-4 bg-ucsd-blue/5 md:bg-transparent p-2 md:p-0 rounded-lg">
-                <span className="md:hidden text-xs text-ucsd-blue font-bold uppercase mr-1">2026:</span>
+                <span className="md:hidden text-xs text-ucsd-blue font-bold uppercase mr-1">{slide.columnHeaders?.right || '2026'}:</span>
                 <div className="mt-0.5 sm:mt-1 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-ucsd-gold flex items-center justify-center flex-shrink-0 text-white shadow-sm">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="sm:w-[14px] sm:h-[14px]"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 </div>

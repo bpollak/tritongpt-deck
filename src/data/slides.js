@@ -49,6 +49,33 @@ export const slides = [
     ]
   },
   {
+    "id": 1.4,
+    "slug": "the-ai-enabled-university-cabinet",
+    "type": "title",
+    "content": [],
+    "title": "The AI-Enabled University",
+    "subtitle": "Operationalizing TritonAI for Service & Support at Scale",
+    "presenters": [
+      {
+        "name": "Brett Pollak",
+        "title": "Executive Director, IT Services",
+        "image": "/media/headshot.jpg",
+        "imageScale": 1.6,
+        "imagePosition": "center 15%"
+      },
+      {
+        "name": "Allorah Pradenas",
+        "title": "Asst. Vice Chancellor & Chief of Staff",
+        "image": "/media/pradenas.jpg"
+      }
+    ],
+    "layout": "title-hero",
+    "hidden": true,
+    "audiences": [
+      "cabinet"
+    ]
+  },
+  {
     "id": 1.5,
     "slug": "the-ai-enabled-university-generic",
     "type": "title",
@@ -149,6 +176,240 @@ export const slides = [
     ]
   },
   {
+    "id": 2.1,
+    "slug": "the-workforce-our-graduates-enter",
+    "type": "content",
+    "layout": "impact-stats",
+    "title": "The Workforce Our Graduates Enter",
+    "subtitle": "The rules have changed — and higher ed must respond",
+    "impactStats": [
+      {
+        "value": "25%",
+        "numericValue": 25,
+        "label": "US Tasks Automatable",
+        "detail": "Goldman Sachs, 2025",
+        "color": "#00629B"
+      },
+      {
+        "value": "1,600",
+        "numericValue": 65,
+        "label": "AI-First Layoffs",
+        "detail": "Atlassian — single announcement",
+        "color": "#FC8900"
+      },
+      {
+        "value": "54%",
+        "numericValue": 54,
+        "label": "Preferred AI Writing",
+        "detail": "NYT quiz — 86K readers",
+        "color": "#00C6D7"
+      }
+    ],
+    "bottomMessage": "This is the world our 45,000 students graduate into.",
+    "hidden": true,
+    "audiences": [
+      "ASU-GSV"
+    ]
+  },
+  {
+    "id": 2.2,
+    "slug": "the-real-disruption-tasks-not-jobs",
+    "type": "content",
+    "layout": "bold-manifesto",
+    "headline": "AI doesn't replace jobs.\nIt transforms tasks.",
+    "headlineAccent": "tasks",
+    "evidence": [
+      {
+        "claim": "Exposure ≠ displacement",
+        "detail": "Chicago Booth: 'Exposure can literally mean the opposite — jobs may increase hiring and attract higher wages.'",
+        "color": "#00629B",
+        "barWidth": 75
+      },
+      {
+        "claim": "Benchmarks ≠ reality",
+        "detail": "Carnegie Mellon + Stanford: AI benchmarks are coding-centric. Most jobs aren't coding. The true trajectory is less clear than we think.",
+        "color": "#FC8900",
+        "barWidth": 60
+      },
+      {
+        "claim": "Wage pressure is the real threat",
+        "detail": "Displaced workers flood remaining roles, compressing wages. College graduate underemployment is already rising.",
+        "color": "#E85D75",
+        "barWidth": 85
+      },
+      {
+        "claim": "60% of 'AI layoffs' are AI-washing",
+        "detail": "Hiring managers admit they emphasize AI's role because it's viewed more favorably by stakeholders than financial constraints.",
+        "color": "#FFCD00",
+        "barWidth": 60
+      }
+    ],
+    "hidden": true,
+    "audiences": [
+      "ASU-GSV"
+    ]
+  },
+  {
+    "id": 2.3,
+    "slug": "ai-workforce-landscape",
+    "type": "content",
+    "layout": "data-dashboard",
+    "title": "The AI Workforce Landscape",
+    "subtitle": "What the data actually says — separating signal from noise",
+    "backgroundColor": "#F5F0E6",
+    "dashboardSections": [
+      {
+        "type": "gauge-row",
+        "items": [
+          {
+            "value": "25%",
+            "numericValue": 25,
+            "label": "US Tasks Automatable",
+            "source": "Goldman Sachs, 2025",
+            "color": "#00629B"
+          },
+          {
+            "value": "9%",
+            "numericValue": 9,
+            "label": "Roles Fully Replaced by AI",
+            "source": "Resume.org — 1,000 hiring mgrs",
+            "color": "#6E963B"
+          },
+          {
+            "value": "60%",
+            "numericValue": 60,
+            "label": "AI-Washing Layoffs",
+            "source": "Managers cite AI for optics",
+            "color": "#E85D75"
+          }
+        ]
+      },
+      {
+        "type": "horizontal-bars",
+        "sectionTitle": "AI Coverage: Benchmarks vs. Reality",
+        "items": [
+          {
+            "label": "Theoretical AI task coverage",
+            "value": 78,
+            "color": "#00629B",
+            "annotation": "Benchmarks predict"
+          },
+          {
+            "label": "Observed real-world usage",
+            "value": 32,
+            "color": "#FC8900",
+            "annotation": "Anthropic research"
+          }
+        ],
+        "caption": "The gap between AI benchmarks and real workplace impact — Carnegie Mellon + Stanford"
+      },
+      {
+        "type": "stat-callouts",
+        "items": [
+          {
+            "icon": "TrendingDown",
+            "stat": "Wage Compression",
+            "detail": "Displaced workers flood remaining roles, compressing wages. College graduate underemployment already rising.",
+            "color": "#E85D75"
+          },
+          {
+            "icon": "TrendingUp",
+            "stat": "AI Firms Create More Jobs",
+            "detail": "Companies most inclined toward AI created more jobs than they lost.",
+            "source": "European Central Bank",
+            "color": "#6E963B"
+          }
+        ]
+      }
+    ],
+    "hidden": true,
+    "audiences": [
+      "cabinet"
+    ]
+  },
+  {
+    "id": 2.4,
+    "slug": "higher-ed-reskilling-gap",
+    "type": "content",
+    "layout": "data-dashboard",
+    "title": "The Higher Ed Reskilling Gap",
+    "subtitle": "The workforce pipeline was already straining — AI is accelerating the crisis",
+    "backgroundColor": "#F5F0E6",
+    "dashboardSections": [
+      {
+        "type": "donut-row",
+        "items": [
+          {
+            "value": 54,
+            "label": "Preferred AI Writing",
+            "source": "NYT quiz — 86K readers",
+            "color": "#00629B",
+            "innerLabel": "54%"
+          },
+          {
+            "value": 66,
+            "label": "Non-Coders > Engineers",
+            "source": "Long-term AI impact survey",
+            "color": "#FC8900",
+            "innerLabel": "2/3"
+          },
+          {
+            "value": 87,
+            "label": "Orgs Have AI Access",
+            "source": "Enterprise AI adoption",
+            "color": "#00C6D7",
+            "innerLabel": "87%"
+          }
+        ]
+      },
+      {
+        "type": "horizontal-bars",
+        "sectionTitle": "The Readiness Gap",
+        "items": [
+          {
+            "label": "Orgs already deploying AI tools",
+            "value": 87,
+            "color": "#00629B"
+          },
+          {
+            "label": "Graduates estimated AI-workforce ready",
+            "value": 15,
+            "color": "#E85D75"
+          },
+          {
+            "label": "Federal reskilling framework substance",
+            "value": 5,
+            "color": "#999999",
+            "annotation": "White House framework — 'bereft of ideas'"
+          }
+        ],
+        "caption": "The gap between employer expectations and graduate readiness"
+      },
+      {
+        "type": "stat-callouts",
+        "items": [
+          {
+            "icon": "Rocket",
+            "stat": "Entrepreneurship Cost → Zero",
+            "detail": "Marginal cost of starting a business has never been lower. Economic benefits skew toward entrepreneurs and side-project workers.",
+            "source": "Anthropic Economic Research",
+            "color": "#6E963B"
+          },
+          {
+            "icon": "AlertTriangle",
+            "stat": "No One Has Answers Yet",
+            "detail": "Traditional courses and LinkedIn badges are nowhere close to actual reskilling. The deficit is real and growing.",
+            "color": "#FC8900"
+          }
+        ]
+      }
+    ],
+    "hidden": true,
+    "audiences": [
+      "cabinet"
+    ]
+  },
+  {
     "id": 2.5,
     "slug": "tritongpt-origin",
     "type": "content",
@@ -185,7 +446,8 @@ export const slides = [
       "public",
       "internal",
       "technical",
-      "ASU-GSV"
+      "ASU-GSV",
+      "cabinet"
     ]
   },
   {
@@ -600,7 +862,8 @@ export const slides = [
       "public",
       "internal",
       "technical",
-      "ASU-GSV"
+      "ASU-GSV",
+      "cabinet"
     ]
   },
   {
@@ -707,7 +970,8 @@ export const slides = [
       "public",
       "internal",
       "technical",
-      "ASU-GSV"
+      "ASU-GSV",
+      "cabinet"
     ]
   },
   {
@@ -811,7 +1075,54 @@ export const slides = [
       "all",
       "public",
       "internal",
-      "technical"
+      "technical",
+      "cabinet"
+    ]
+  },
+  {
+    "id": 18.6,
+    "slug": "administrative-ai-the-efficiency-imperative",
+    "type": "content",
+    "layout": "feature-grid",
+    "title": "Administrative AI: The Efficiency Imperative",
+    "subtitle": "Higher ed runs on processes designed for a pre-digital era. AI eliminates drudgery so people do work that requires human judgment.",
+    "backgroundColor": "#F5F0E6",
+    "content": [
+      {
+        "heading": "Enrollment Operations",
+        "text": "AI-powered transcript matching, admissions processing, and credential verification. Projected $500K annual savings; 12 temporary positions eliminated, 6 FTE redirected to strategic work.",
+        "icon": "FileCheck"
+      },
+      {
+        "heading": "Legal & Procurement",
+        "text": "Automated contract review across 50+ risk categories — NDAs, procurement, software agreements. 91% time reduction: 120 minutes to 11 minutes per contract.",
+        "icon": "Scale"
+      },
+      {
+        "heading": "Compliance & Accessibility",
+        "text": "PDF remediation for Title II compliance. 17+ automated checks across 9 categories. Hours of manual Acrobat work reduced to minutes with built-in evidence packs.",
+        "icon": "ShieldCheck"
+      },
+      {
+        "heading": "IT Service & Support",
+        "text": "73,000+ users served through AI-powered widget on 16 campus websites. No login required. $300K annual vendor displacement with zero variable cost per conversation.",
+        "icon": "Headphones"
+      },
+      {
+        "heading": "Academic Operations",
+        "text": "Class scheduling assistance, faculty support tools, research proposal risk assessment. Socratic tutor with 81% student satisfaction and faculty-controlled knowledge boundaries.",
+        "icon": "GraduationCap"
+      },
+      {
+        "heading": "Financial Management",
+        "text": "Fund management coaching for grant compliance, budget analysis, and resource allocation guidance. Institutional knowledge embedded in every interaction.",
+        "icon": "DollarSign"
+      }
+    ],
+    "hidden": true,
+    "audiences": [
+      "ASU-GSV",
+      "cabinet"
     ]
   },
   {
@@ -863,7 +1174,8 @@ export const slides = [
       "public",
       "internal",
       "technical",
-      "ASU-GSV"
+      "ASU-GSV",
+      "cabinet"
     ]
   },
   {
@@ -1021,7 +1333,8 @@ export const slides = [
       "public",
       "internal",
       "technical",
-      "ASU-GSV"
+      "ASU-GSV",
+      "cabinet"
     ]
   },
   {
@@ -1561,6 +1874,89 @@ export const slides = [
     ]
   },
   {
+    "id": 27.1,
+    "slug": "the-new-workforce-competency",
+    "type": "content",
+    "layout": "bold-manifesto",
+    "headline": "The skill isn't using AI.\nIt's building with it.",
+    "headlineAccent": "building",
+    "evidence": [
+      {
+        "claim": "Non-coders building > engineers adapting",
+        "detail": "Two-thirds believe non-coders building with code will have bigger long-term impact than engineers changing how they code.",
+        "color": "#00629B",
+        "barWidth": 66
+      },
+      {
+        "claim": "93% already use multiple AI models",
+        "detail": "87% of organizations have wide or selective AI access. Graduates who can't work with AI are already behind.",
+        "color": "#00C6D7",
+        "barWidth": 93
+      },
+      {
+        "claim": "Domain experts build the best solutions",
+        "detail": "Palantir CTO: 'Incredible AI developers who aren't formally trained computer scientists — they've always been there.'",
+        "color": "#6E963B",
+        "barWidth": 72
+      },
+      {
+        "claim": "Entrepreneurship cost → zero",
+        "detail": "The marginal cost of starting a business has never been lower. Anthropic: economic benefit skews toward entrepreneurs and side-project workers.",
+        "color": "#FC8900",
+        "barWidth": 80
+      }
+    ],
+    "hidden": true,
+    "audiences": [
+      "ASU-GSV"
+    ]
+  },
+  {
+    "id": 27.2,
+    "slug": "preparing-the-ai-ready-graduate",
+    "type": "content",
+    "layout": "feature-grid",
+    "title": "Preparing the AI-Ready Graduate",
+    "subtitle": "A layered framework for workforce-ready AI education",
+    "backgroundColor": "#F5F0E6",
+    "content": [
+      {
+        "heading": "AI Literacy & Ethics",
+        "text": "How AI actually works, its limitations, biases, and appropriate use boundaries. The human-to-machine judgment of when to delegate vs. stay hands-on.",
+        "icon": "BookOpen"
+      },
+      {
+        "heading": "Domain-Specific AI Application",
+        "text": "AI tools embedded in discipline-specific workflows — research, analysis, creative work. Faculty-controlled knowledge boundaries ensure academic integrity.",
+        "icon": "Layers"
+      },
+      {
+        "heading": "Building & Problem-Solving",
+        "text": "Low-code tool creation, identifying pain points, prototyping solutions. Working with AI coding agents as collaborative partners — not just using pre-built apps.",
+        "icon": "Code"
+      },
+      {
+        "heading": "Entrepreneurial Capacity",
+        "text": "Launching ventures at near-zero cost, managing AI agent teams, building a portfolio of what you've created. The marginal cost of starting a business is approaching zero.",
+        "icon": "Rocket"
+      },
+      {
+        "heading": "Continuous Reskilling Mindset",
+        "text": "The job you graduate into won't be the job you have in five years. Traditional courses and badges aren't enough — graduates need the capacity to continuously adapt.",
+        "icon": "RefreshCw"
+      },
+      {
+        "heading": "Portfolio Over Resume",
+        "text": "Show what you built, not what you studied. In an AI-enabled economy, demonstrable capability matters more than credentials on paper.",
+        "icon": "Star"
+      }
+    ],
+    "hidden": true,
+    "audiences": [
+      "ASU-GSV"
+    ]
+  },
+  {
     "id": 29,
     "slug": "the-agentic-ai-stack",
     "type": "content",
@@ -1746,6 +2142,74 @@ export const slides = [
     ]
   },
   {
+    "id": 30.5,
+    "slug": "efficiency-ai-vs-opportunity-ai",
+    "type": "content",
+    "layout": "versus-split",
+    "leftTitle": "Efficiency AI",
+    "leftSubtitle": "Do the same with less",
+    "leftItems": [
+      "Reduce staff, automate roles",
+      "Ration AI access to save costs",
+      "Central IT builds everything",
+      "Fewer services, more self-service",
+      "Brittle, cost-optimized"
+    ],
+    "rightTitle": "Opportunity AI",
+    "rightSubtitle": "Do more with more",
+    "rightItems": [
+      "Amplify people, expand capability",
+      "Make intelligence a utility for all",
+      "Anyone closest to the problem builds",
+      "New services previously impossible",
+      "Expansionary, talent-attracting"
+    ],
+    "quote": {
+      "text": "For companies with imagination, you will do more with more. For companies where the leadership is just out of ideas... they don't do more.",
+      "attribution": "Jensen Huang, NVIDIA CEO"
+    },
+    "hidden": true,
+    "audiences": [
+      "ASU-GSV"
+    ]
+  },
+  {
+    "id": 30.6,
+    "slug": "ucsd-ai-by-the-numbers",
+    "type": "content",
+    "layout": "data-dashboard",
+    "title": "UC San Diego AI by the Numbers",
+    "subtitle": "Aggregate impact across TritonAI initiatives — FY 2025-26",
+    "backgroundColor": "#F5F0E6",
+    "dashboardSections": [
+      {
+        "type": "metric-grid",
+        "items": [
+          { "value": "$800K+", "label": "Annual Cost Avoidance", "icon": "DollarSign", "color": "#6E963B" },
+          { "value": "73,000+", "label": "Users Served", "icon": "Users", "color": "#00629B" },
+          { "value": "91%", "label": "Time Reduction (Contracts)", "icon": "FileCheck", "color": "#FC8900" },
+          { "value": "16", "label": "Websites with AI Widget", "icon": "Globe", "color": "#00C6D7" },
+          { "value": "12", "label": "Temp Positions Eliminated", "icon": "TrendingDown", "color": "#E85D75" },
+          { "value": "81%", "label": "Student Satisfaction", "icon": "GraduationCap", "color": "#00629B" }
+        ]
+      },
+      {
+        "type": "horizontal-bars",
+        "sectionTitle": "Where the Savings Come From",
+        "items": [
+          { "label": "Transcript Matching (Enrollment Mgmt)", "value": 63, "displayValue": "$500K", "color": "#00629B" },
+          { "label": "Widget Vendor Displacement (Ocelot)", "value": 38, "displayValue": "$300K", "color": "#00C6D7" },
+          { "label": "Contract Review Labor Savings", "value": 15, "displayValue": "Est. TBD", "color": "#FC8900" }
+        ],
+        "caption": "Projected annual savings by initiative"
+      }
+    ],
+    "hidden": true,
+    "audiences": [
+      "cabinet"
+    ]
+  },
+  {
     "id": 31,
     "slug": "key-takeaways",
     "type": "content",
@@ -1790,6 +2254,56 @@ export const slides = [
       "internal",
       "public",
       "ASU-GSV"
+    ]
+  },
+  {
+    "id": 31.5,
+    "slug": "cost-of-inaction",
+    "type": "content",
+    "layout": "data-dashboard",
+    "title": "The Cost of Inaction",
+    "subtitle": "What happens if higher ed doesn't adapt — the evidence is accumulating",
+    "backgroundColor": "#F5F0E6",
+    "dashboardSections": [
+      {
+        "type": "horizontal-bars",
+        "sectionTitle": "Peer Institution AI Adoption",
+        "items": [
+          { "label": "Arizona State (AI across operations)", "value": 90, "color": "#00629B" },
+          { "label": "Georgia Tech (AI curriculum mandate)", "value": 85, "color": "#00C6D7" },
+          { "label": "Carnegie Mellon (AI research integration)", "value": 95, "color": "#FC8900" },
+          { "label": "UC San Diego (current trajectory)", "value": 70, "color": "#6E963B", "highlight": true }
+        ],
+        "caption": "Approximate institutional AI maturity across operations, curriculum, and research"
+      },
+      {
+        "type": "stat-callouts",
+        "items": [
+          {
+            "icon": "AlertTriangle",
+            "stat": "Work Intensification",
+            "detail": "AI doesn't save time — it raises the bar. Without institutional support, burnout replaces efficiency.",
+            "color": "#E85D75"
+          },
+          {
+            "icon": "Users",
+            "stat": "Graduate Employability at Risk",
+            "detail": "87% of orgs have AI access. Graduates who can't work with AI are behind before they start.",
+            "color": "#FC8900"
+          },
+          {
+            "icon": "Lightbulb",
+            "stat": "Imagination Is the Differentiator",
+            "detail": "Institutions with vision do more with more. Those without simply do less.",
+            "source": "Adapted from Jensen Huang, NVIDIA CEO",
+            "color": "#00629B"
+          }
+        ]
+      }
+    ],
+    "hidden": true,
+    "audiences": [
+      "cabinet"
     ]
   },
   {
@@ -2292,6 +2806,35 @@ export const slides = [
       "public",
       "internal",
       "ASU-GSV"
+    ]
+  },
+  {
+    "id": 37.6,
+    "slug": "thank-you-cabinet",
+    "type": "title",
+    "content": [],
+    "title": "Thank You",
+    "subtitle": "Questions?",
+    "layout": "title-hero",
+    "presenters": [
+      {
+        "name": "Brett Pollak",
+        "title": "Executive Director, IT Services",
+        "image": "/media/headshot.jpg",
+        "imageScale": 1.6,
+        "imagePosition": "center 15%"
+      },
+      {
+        "name": "Allorah Pradenas",
+        "title": "Asst. Vice Chancellor & Chief of Staff",
+        "image": "/media/pradenas.jpg"
+      }
+    ],
+    "linkUrl": "https://tritonai.ucsd.edu",
+    "linkLabel": "tritonai.ucsd.edu",
+    "hidden": true,
+    "audiences": [
+      "cabinet"
     ]
   },
   {

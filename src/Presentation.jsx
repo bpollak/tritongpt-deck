@@ -299,7 +299,7 @@ const Presentation = () => {
       {/* Slide Content Area */}
       <div className="flex-1 relative overflow-hidden">
         {currentSlide ? (
-          <AnimatePresence initial={false} custom={direction} mode="wait">
+          <AnimatePresence initial={false} custom={direction} mode="popLayout">
             <motion.div
               key={currentSlide.id}
               custom={direction}
