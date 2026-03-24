@@ -2269,76 +2269,59 @@ export const slides = [
     "id": 30.7,
     "slug": "training-and-outreach",
     "type": "content",
-    "layout": "campus-metrics",
+    "layout": "data-dashboard",
     "title": "Training & Outreach",
-    "dark": true,
-    "campusImage": "/media/campus-geisel.jpg",
-    "metrics": [
+    "subtitle": "Building AI fluency across 73,000 campus users",
+    "backgroundColor": "#F5F0E6",
+    "dashboardSections": [
       {
-        "value": "2,500+",
-        "label": "Staff Trained",
-        "icon": "Users",
-        "tier": "hero"
+        "type": "gauge-row",
+        "items": [
+          {
+            "value": "2,500+",
+            "numericValue": 65,
+            "label": "Staff Trained",
+            "source": "FY 2024-25",
+            "color": "#00629B"
+          },
+          {
+            "value": "150+",
+            "numericValue": 45,
+            "label": "TritonAI Champions",
+            "source": "Community of Practice",
+            "color": "#6E963B"
+          },
+          {
+            "value": "45+",
+            "numericValue": 80,
+            "label": "Sessions Delivered",
+            "source": "Webinars + Workshops",
+            "color": "#FC8900"
+          }
+        ]
       },
       {
-        "value": "6",
-        "label": "Training Formats",
-        "icon": "Layers",
-        "tier": "hero"
+        "type": "metric-grid",
+        "items": [
+          { "value": "2", "label": "UC Learning Modules", "icon": "BookOpen", "color": "#00629B" },
+          { "value": "START", "label": "Prompting Framework", "icon": "Target", "color": "#FC8900" },
+          { "value": "50+", "label": "Prompt Templates", "icon": "FileText", "color": "#6E963B" },
+          { "value": "15+", "label": "Everyday I AI Videos", "icon": "Rocket", "color": "#00C6D7" },
+          { "value": "6+", "label": "Webinar Series", "icon": "Presentation", "color": "#E85D75" },
+          { "value": "UC-Wide", "label": "Shared Resources", "icon": "Globe", "color": "#182B49" }
+        ]
       },
       {
-        "value": "45+",
-        "label": "Sessions Delivered",
-        "icon": "Presentation",
-        "tier": "hero"
-      },
-      {
-        "value": "2",
-        "label": "UC Learning Modules",
-        "icon": "BookOpen",
-        "category": "self-paced"
-      },
-      {
-        "value": "START",
-        "label": "Prompting Framework",
-        "icon": "Target",
-        "category": "self-paced"
-      },
-      {
-        "value": "15+",
-        "label": "Everyday I AI Videos",
-        "icon": "Rocket",
-        "category": "self-paced"
-      },
-      {
-        "value": "50+",
-        "label": "Prompt Library Templates",
-        "icon": "FileText",
-        "category": "self-paced"
-      },
-      {
-        "value": "6+",
-        "label": "Webinar Series",
-        "icon": "Presentation",
-        "category": "live & community"
-      },
-      {
-        "value": "4",
-        "label": "Spring Workshops",
-        "icon": "GraduationCap",
-        "category": "live & community"
-      },
-      {
-        "value": "150+",
-        "label": "TritonAI Champions",
-        "icon": "Star",
-        "category": "live & community"
-      },
-      {
-        "value": "UC-Wide",
-        "label": "Shared Resources",
-        "icon": "Globe",
-        "category": "live & community"
+        "type": "horizontal-bars",
+        "sectionTitle": "Training Reach by Format",
+        "items": [
+          { "label": "Self-Paced UC Learning (AI Foundations + TritonGPT)", "value": 85, "color": "#00629B" },
+          { "label": "Live Webinars & Deep Dives (Recorded)", "value": 62, "color": "#FC8900" },
+          { "label": "In-Person Workshops (Spring Series)", "value": 35, "color": "#00C6D7" },
+          { "label": "Everyday I AI Video Series (YouTube)", "value": 48, "color": "#6E963B" },
+          { "label": "TritonAI Champions Community of Practice", "value": 28, "color": "#E85D75" }
+        ],
+        "caption": "Relative engagement across training modalities"
       }
     ],
     "hidden": true,
