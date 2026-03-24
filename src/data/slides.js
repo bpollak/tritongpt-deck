@@ -940,16 +940,16 @@ export const slides = [
     "type": "content",
     "content": [
       {
-        "heading": "Instructor Controlled",
-        "text": "Connects securely to private Google Drive folders, allowing faculty to strictly define the knowledge base."
+        "heading": "Socratic AI Tutor",
+        "text": "Student-facing assistant that guides learning through Socratic questioning, helping navigate and synthesize course materials."
       },
       {
         "heading": "Faculty AI Assistant",
         "text": "Instructor-only tool for lesson planning, quiz generation, and creating study guides from lecture content."
       },
       {
-        "heading": "Socratic AI Tutor",
-        "text": "Student-facing assistant that guides learning through Socratic questioning, helping navigate and synthesize course materials."
+        "heading": "Instructor Controlled",
+        "text": "Connects securely to private Google Drive folders, allowing faculty to strictly define the knowledge base."
       }
     ],
     "title": "Instructional AI: Socratic Tutor & Faculty Assistant",
@@ -957,7 +957,6 @@ export const slides = [
     "layout": "solution-showcase-video",
     "subtitle": "Dual AI Tools for Learning & Teaching",
     "backgroundColor": "#F5F0E6",
-    "statsPosition": "bottom",
     "stats": [
       {
         "label": "Material Mastery",
@@ -1089,8 +1088,7 @@ export const slides = [
       "public",
       "internal",
       "technical",
-      "cabinet",
-      "executive"
+      "cabinet"
     ]
   },
   {
@@ -1657,50 +1655,6 @@ export const slides = [
     "title": "Campus App Hosting",
     "subtitle": "Tiered intake from citizen apps to enterprise — with governance gates at every level",
     "backgroundColor": "#F5F0E6",
-    "pipelineSteps": [
-      {
-        "number": "1",
-        "name": "Prototype",
-        "description": "Build locally with Claude Code, Codex, or curated ITS templates via the TritonAI Developer API",
-        "icon": "Code",
-        "color": "#00629B"
-      },
-      {
-        "number": "2",
-        "name": "Apply",
-        "description": "Submit department sponsor, technical POC, audience, and data classification",
-        "icon": "FileText",
-        "color": "#006A96"
-      },
-      {
-        "number": "3",
-        "name": "Review",
-        "description": "Automated checks plus guided ITS review of data sensitivity, restricted APIs, and stack fit",
-        "icon": "ClipboardCheck",
-        "color": "#00C6D7"
-      },
-      {
-        "number": "4",
-        "name": "Deploy",
-        "description": "Campus-only hosting with SSO, logging, and network controls — available on campus or VPN",
-        "icon": "Globe",
-        "color": "#FFCD00"
-      },
-      {
-        "number": "5",
-        "name": "Operate",
-        "description": "Department supports the app; ITS manages platform health and may remove non-compliant apps",
-        "icon": "RefreshCw",
-        "color": "#FC8900"
-      },
-      {
-        "number": "6",
-        "name": "Promote",
-        "description": "High-value apps graduate to enterprise support; unsupported apps are retired",
-        "icon": "TrendingUp",
-        "color": "#6E963B"
-      }
-    ],
     "lanes": [
       {
         "id": "citizen",
