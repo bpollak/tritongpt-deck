@@ -2308,7 +2308,8 @@ export const slides = [
     "hidden": true,
     "audiences": [
       "ASU-GSV",
-      "cabinet"
+      "cabinet",
+      "all"
     ]
   },
   {
