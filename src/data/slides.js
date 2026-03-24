@@ -177,72 +177,68 @@ export const slides = [
   },
   {
     "id": 2.1,
-    "slug": "the-workforce-our-graduates-enter",
+    "slug": "the-ai-workforce-landscape",
     "type": "content",
-    "layout": "impact-stats",
-    "title": "The Workforce Our Graduates Enter",
-    "subtitle": "The rules have changed — and higher ed must respond",
-    "impactStats": [
+    "layout": "data-dashboard",
+    "title": "The AI Workforce Landscape",
+    "subtitle": "What the data actually says — separating signal from noise",
+    "backgroundColor": "#F5F0E6",
+    "dashboardSections": [
       {
-        "value": "25%",
-        "numericValue": 25,
-        "label": "US Tasks Automatable",
-        "detail": "Goldman Sachs, 2025",
-        "color": "#00629B"
+        "type": "gauge-row",
+        "items": [
+          {
+            "value": "25%",
+            "numericValue": 25,
+            "label": "US Tasks Automatable",
+            "source": "Goldman Sachs, 2025",
+            "detail": "300M jobs globally exposed to automation. Expected to displace 6-7% of workers over a 10-year adoption cycle.",
+            "color": "#00629B"
+          },
+          {
+            "value": "9%",
+            "numericValue": 9,
+            "label": "Roles Fully Replaced by AI",
+            "source": "Resume.org — 1,000 hiring mgrs",
+            "detail": "Despite automation fears, only 9% of employers report AI fully replacing any roles. The rest are augmenting, not eliminating.",
+            "color": "#6E963B"
+          },
+          {
+            "value": "60%",
+            "numericValue": 60,
+            "label": "AI-Washing Layoffs",
+            "source": "Managers cite AI for optics",
+            "detail": "Hiring managers admit emphasizing AI in layoff announcements because it's viewed more favorably than financial constraints.",
+            "color": "#E85D75"
+          }
+        ]
       },
       {
-        "value": "1,600",
-        "numericValue": 65,
-        "label": "AI-First Layoffs",
-        "detail": "Atlassian — single announcement",
-        "color": "#FC8900"
+        "type": "horizontal-bars",
+        "sectionTitle": "AI Coverage: Benchmarks vs. Reality",
+        "items": [
+          { "label": "Theoretical AI task coverage", "value": 78, "color": "#00629B", "annotation": "Benchmarks predict" },
+          { "label": "Observed real-world usage", "value": 35, "color": "#FC8900", "annotation": "Anthropic research" }
+        ],
+        "caption": "The gap between AI benchmarks and real workplace impact — Carnegie Mellon + Stanford"
       },
       {
-        "value": "54%",
-        "numericValue": 54,
-        "label": "Preferred AI Writing",
-        "detail": "NYT quiz — 86K readers",
-        "color": "#00C6D7"
-      }
-    ],
-    "bottomMessage": "This is the world our 45,000 students graduate into.",
-    "hidden": true,
-    "audiences": [
-      "ASU-GSV",
-      "all"
-    ]
-  },
-  {
-    "id": 2.2,
-    "slug": "the-real-disruption-tasks-not-jobs",
-    "type": "content",
-    "layout": "bold-manifesto",
-    "headline": "AI doesn't replace jobs.\nIt transforms tasks.",
-    "headlineAccent": "tasks",
-    "evidence": [
-      {
-        "claim": "Exposure ≠ displacement",
-        "detail": "Chicago Booth: 'Exposure can literally mean the opposite — jobs may increase hiring and attract higher wages.'",
-        "color": "#00629B",
-        "barWidth": 75
-      },
-      {
-        "claim": "Benchmarks ≠ reality",
-        "detail": "Carnegie Mellon + Stanford: AI benchmarks are coding-centric. Most jobs aren't coding. The true trajectory is less clear than we think.",
-        "color": "#FC8900",
-        "barWidth": 60
-      },
-      {
-        "claim": "Wage pressure is the real threat",
-        "detail": "Displaced workers flood remaining roles, compressing wages. College graduate underemployment is already rising.",
-        "color": "#E85D75",
-        "barWidth": 85
-      },
-      {
-        "claim": "60% of 'AI layoffs' are AI-washing",
-        "detail": "Hiring managers admit they emphasize AI's role because it's viewed more favorably by stakeholders than financial constraints.",
-        "color": "#FFCD00",
-        "barWidth": 60
+        "type": "stat-callouts",
+        "items": [
+          {
+            "icon": "TrendingDown",
+            "stat": "Wage Compression",
+            "detail": "Displaced workers flood remaining roles, compressing wages. College graduate underemployment already rising.",
+            "color": "#E85D75"
+          },
+          {
+            "icon": "TrendingUp",
+            "stat": "AI Firms Create More Jobs",
+            "detail": "Companies most inclined toward AI created more jobs than they lost.",
+            "source": "European Central Bank",
+            "color": "#6E963B"
+          }
+        ]
       }
     ],
     "hidden": true,

@@ -923,6 +923,7 @@ const Slide = ({ slide }) => {
                 <div className="text-center mt-1">
                   <div className="text-ucsd-navy text-[11px] sm:text-xs font-bold leading-tight">{item.label}</div>
                   <div className="text-slate-400 text-[9px] sm:text-[10px] mt-0.5">{item.source}</div>
+                  {item.detail && <div className="text-slate-500 text-[9px] sm:text-[10px] mt-1 leading-snug max-w-[180px] sm:max-w-[220px]">{item.detail}</div>}
                 </div>
               </motion.div>
             );
