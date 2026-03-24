@@ -2266,6 +2266,52 @@ export const slides = [
     ]
   },
   {
+    "id": 30.7,
+    "slug": "training-and-outreach",
+    "type": "content",
+    "layout": "feature-grid",
+    "title": "Training & Outreach",
+    "subtitle": "Building AI fluency across 73,000 campus users",
+    "backgroundColor": "#F5F0E6",
+    "content": [
+      {
+        "heading": "Self-Paced Learning",
+        "text": "Two UC Learning modules — AI Foundations covers concepts and UC policies; TritonGPT Training teaches hands-on tool application to real workflows.",
+        "icon": "GraduationCap"
+      },
+      {
+        "heading": "START Prompting Framework",
+        "text": "Situation, Task, Action, References, Tone — a repeatable method for getting strong results from any AI tool, with a prompt library of ready-made templates.",
+        "icon": "Target"
+      },
+      {
+        "heading": "Live Webinars & Workshops",
+        "text": "Recurring sessions covering real use cases — from Lean Six Sigma + AI to TritonGPT deep dives. Recordings and slide decks available for async learning.",
+        "icon": "Presentation"
+      },
+      {
+        "heading": "Everyday I AI Video Series",
+        "text": "Short YouTube videos demonstrating practical applications — showing staff how to apply TritonGPT to the tasks they already do every day.",
+        "icon": "Rocket"
+      },
+      {
+        "heading": "TritonAI Champions",
+        "text": "Community of Practice connecting AI advocates across departments — collaborative learning, shared use cases, and peer support for adoption.",
+        "icon": "Users"
+      },
+      {
+        "heading": "UC-Wide Resources",
+        "text": "Shared training materials and responsible AI guidance across the University of California system — leveraging the federation for consistent standards.",
+        "icon": "Globe"
+      }
+    ],
+    "hidden": true,
+    "audiences": [
+      "ASU-GSV",
+      "cabinet"
+    ]
+  },
+  {
     "id": 31,
     "slug": "key-takeaways",
     "type": "content",
