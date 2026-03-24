@@ -80,6 +80,7 @@ const SlideManager = ({ onClose, standalone = false }) => {
   };
 
   const filteredSlides = slideManagerRegistry.filter(slide => {
+    if (filterAudience === 'all') return true;
     return isSlideVisibleForAudience(
       { ...slide, audiences: slideAudiences[slide.id] || slide.audiences },
       filterAudience
