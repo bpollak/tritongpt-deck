@@ -246,7 +246,8 @@ export const slides = [
     ],
     "hidden": true,
     "audiences": [
-      "ASU-GSV"
+      "ASU-GSV",
+      "all"
     ]
   },
   {
@@ -2185,21 +2186,66 @@ export const slides = [
       {
         "type": "metric-grid",
         "items": [
-          { "value": "$800K+", "label": "Annual Cost Avoidance", "icon": "DollarSign", "color": "#6E963B" },
-          { "value": "73,000+", "label": "Users Served", "icon": "Users", "color": "#00629B" },
-          { "value": "91%", "label": "Time Reduction (Contracts)", "icon": "FileCheck", "color": "#FC8900" },
-          { "value": "16", "label": "Websites with AI Widget", "icon": "Globe", "color": "#00C6D7" },
-          { "value": "12", "label": "Temp Positions Eliminated", "icon": "TrendingDown", "color": "#E85D75" },
-          { "value": "81%", "label": "Student Satisfaction", "icon": "GraduationCap", "color": "#00629B" }
+          {
+            "value": "$800K+",
+            "label": "Annual Cost Avoidance",
+            "icon": "DollarSign",
+            "color": "#6E963B"
+          },
+          {
+            "value": "73,000+",
+            "label": "Users Served",
+            "icon": "Users",
+            "color": "#00629B"
+          },
+          {
+            "value": "91%",
+            "label": "Time Reduction (Contracts)",
+            "icon": "FileCheck",
+            "color": "#FC8900"
+          },
+          {
+            "value": "16",
+            "label": "Websites with AI Widget",
+            "icon": "Globe",
+            "color": "#00C6D7"
+          },
+          {
+            "value": "12",
+            "label": "Temp Positions Eliminated",
+            "icon": "TrendingDown",
+            "color": "#E85D75"
+          },
+          {
+            "value": "81%",
+            "label": "Student Satisfaction",
+            "icon": "GraduationCap",
+            "color": "#00629B"
+          }
         ]
       },
       {
         "type": "horizontal-bars",
         "sectionTitle": "Where the Savings Come From",
         "items": [
-          { "label": "Transcript Matching (Enrollment Mgmt)", "value": 63, "displayValue": "$500K", "color": "#00629B" },
-          { "label": "Widget Vendor Displacement (Ocelot)", "value": 38, "displayValue": "$300K", "color": "#00C6D7" },
-          { "label": "Contract Review Labor Savings", "value": 15, "displayValue": "Est. TBD", "color": "#FC8900" }
+          {
+            "label": "Transcript Matching (Enrollment Mgmt)",
+            "value": 63,
+            "displayValue": "$500K",
+            "color": "#00629B"
+          },
+          {
+            "label": "Widget Vendor Displacement (Ocelot)",
+            "value": 38,
+            "displayValue": "$300K",
+            "color": "#00C6D7"
+          },
+          {
+            "label": "Contract Review Labor Savings",
+            "value": 15,
+            "displayValue": "Est. TBD",
+            "color": "#FC8900"
+          }
         ],
         "caption": "Projected annual savings by initiative"
       }
@@ -2269,10 +2315,27 @@ export const slides = [
         "type": "horizontal-bars",
         "sectionTitle": "Peer Institution AI Adoption",
         "items": [
-          { "label": "Arizona State (AI across operations)", "value": 90, "color": "#00629B" },
-          { "label": "Georgia Tech (AI curriculum mandate)", "value": 85, "color": "#00C6D7" },
-          { "label": "Carnegie Mellon (AI research integration)", "value": 95, "color": "#FC8900" },
-          { "label": "UC San Diego (current trajectory)", "value": 70, "color": "#6E963B", "highlight": true }
+          {
+            "label": "Arizona State (AI across operations)",
+            "value": 90,
+            "color": "#00629B"
+          },
+          {
+            "label": "Georgia Tech (AI curriculum mandate)",
+            "value": 85,
+            "color": "#00C6D7"
+          },
+          {
+            "label": "Carnegie Mellon (AI research integration)",
+            "value": 95,
+            "color": "#FC8900"
+          },
+          {
+            "label": "UC San Diego (current trajectory)",
+            "value": 70,
+            "color": "#6E963B",
+            "highlight": true
+          }
         ],
         "caption": "Approximate institutional AI maturity across operations, curriculum, and research"
       },
