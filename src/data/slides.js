@@ -72,7 +72,8 @@ export const slides = [
     "layout": "title-hero",
     "hidden": true,
     "audiences": [
-      "cabinet"
+      "cabinet",
+      "all"
     ]
   },
   {
@@ -208,7 +209,8 @@ export const slides = [
     "bottomMessage": "This is the world our 45,000 students graduate into.",
     "hidden": true,
     "audiences": [
-      "ASU-GSV"
+      "ASU-GSV",
+      "all"
     ]
   },
   {
@@ -325,7 +327,8 @@ export const slides = [
     ],
     "hidden": true,
     "audiences": [
-      "cabinet"
+      "cabinet",
+      "all"
     ]
   },
   {
@@ -407,7 +410,8 @@ export const slides = [
     ],
     "hidden": true,
     "audiences": [
-      "cabinet"
+      "cabinet",
+      "all"
     ]
   },
   {
@@ -1123,7 +1127,8 @@ export const slides = [
     "hidden": true,
     "audiences": [
       "ASU-GSV",
-      "cabinet"
+      "cabinet",
+      "all"
     ]
   },
   {
@@ -1909,7 +1914,8 @@ export const slides = [
     ],
     "hidden": true,
     "audiences": [
-      "ASU-GSV"
+      "ASU-GSV",
+      "all"
     ]
   },
   {
@@ -1954,7 +1960,8 @@ export const slides = [
     ],
     "hidden": true,
     "audiences": [
-      "ASU-GSV"
+      "ASU-GSV",
+      "all"
     ]
   },
   {
@@ -2171,7 +2178,8 @@ export const slides = [
     },
     "hidden": true,
     "audiences": [
-      "ASU-GSV"
+      "ASU-GSV",
+      "all"
     ]
   },
   {
@@ -2252,7 +2260,8 @@ export const slides = [
     ],
     "hidden": true,
     "audiences": [
-      "cabinet"
+      "cabinet",
+      "all"
     ]
   },
   {
@@ -2366,7 +2375,8 @@ export const slides = [
     ],
     "hidden": true,
     "audiences": [
-      "cabinet"
+      "cabinet",
+      "all"
     ]
   },
   {
@@ -2572,7 +2582,8 @@ export const slides = [
     },
     "audiences": [
       "internal",
-      "technical"
+      "technical",
+      "all"
     ]
   },
   {
@@ -2642,7 +2653,8 @@ export const slides = [
     },
     "audiences": [
       "internal",
-      "technical"
+      "technical",
+      "all"
     ]
   },
   {
@@ -2694,7 +2706,8 @@ export const slides = [
       ]
     },
     "audiences": [
-      "internal"
+      "internal",
+      "all"
     ]
   },
   {
@@ -2897,7 +2910,8 @@ export const slides = [
     "linkLabel": "tritonai.ucsd.edu",
     "hidden": true,
     "audiences": [
-      "cabinet"
+      "cabinet",
+      "all"
     ]
   },
   {
