@@ -4189,32 +4189,54 @@ const Slide = ({ slide }) => {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.4 }}
-              className="relative overflow-hidden rounded-[18px] border border-white/75 bg-white/90 px-5 sm:px-6 py-2.5 sm:py-3 shadow-[0_6px_14px_rgba(24,43,73,0.05)]"
+              className="grid grid-cols-4 gap-2"
             >
-              <div className="grid grid-cols-2 gap-x-6 gap-y-1.5">
-                <div className="flex items-center gap-2">
-                  <Server size={15} style={{ color: ownership.its?.color }} />
-                  <span className="text-[12px] sm:text-[13px] font-black uppercase tracking-[0.06em]" style={{ color: ownership.its?.color }}>{ownership.its?.title}:</span>
-                  <span className="text-[12px] sm:text-[13px] text-ucsd-navy/70 font-semibold">{ownership.its?.items?.join(' · ')}</span>
+              {/* ITS Owns */}
+              <div className="rounded-[14px] border border-white/75 bg-white/90 px-3.5 py-2.5 shadow-[0_4px_10px_rgba(24,43,73,0.04)]">
+                <div className="flex items-center gap-1.5 mb-1.5">
+                  <Server size={14} style={{ color: ownership.its?.color }} />
+                  <span className="text-[13px] sm:text-[14px] font-black uppercase tracking-[0.06em]" style={{ color: ownership.its?.color }}>{ownership.its?.title}</span>
                 </div>
-                {hasBoundaryPanels && (
-                  <div className="flex items-center gap-2">
-                    <span className="text-[12px] sm:text-[13px] font-black uppercase tracking-[0.06em] text-ucsd-blue">In Scope:</span>
-                    <span className="text-[12px] sm:text-[13px] text-ucsd-navy/70 font-semibold">{boundaries.whatItIs?.items?.join(' · ')}</span>
-                  </div>
-                )}
-                <div className="flex items-center gap-2">
-                  <Code size={15} className="text-ucsd-navy/50" />
-                  <span className="text-[12px] sm:text-[13px] font-black uppercase tracking-[0.06em] text-ucsd-navy/60">{ownership.builder?.title}:</span>
-                  <span className="text-[12px] sm:text-[13px] text-ucsd-navy/70 font-semibold">{ownership.builder?.items?.join(' · ')}</span>
+                <div className="flex flex-wrap gap-1">
+                  {ownership.its?.items?.map((item, i) => (
+                    <span key={i} className="rounded-full bg-slate-100 px-2.5 py-0.5 text-[11px] sm:text-[12px] font-semibold text-ucsd-navy/75">{item}</span>
+                  ))}
                 </div>
-                {hasBoundaryPanels && (
-                  <div className="flex items-center gap-2">
-                    <span className="text-[12px] sm:text-[13px] font-black uppercase tracking-[0.06em] text-[#B56200]">Not For:</span>
-                    <span className="text-[12px] sm:text-[13px] text-[#8A5600]/70 font-semibold">{boundaries.whatItIsNot?.items?.join(' · ')}</span>
-                  </div>
-                )}
               </div>
+              {/* Department Owns */}
+              <div className="rounded-[14px] border border-white/75 bg-white/90 px-3.5 py-2.5 shadow-[0_4px_10px_rgba(24,43,73,0.04)]">
+                <div className="flex items-center gap-1.5 mb-1.5">
+                  <Code size={14} className="text-ucsd-navy/50" />
+                  <span className="text-[13px] sm:text-[14px] font-black uppercase tracking-[0.06em] text-ucsd-navy/65">{ownership.builder?.title}</span>
+                </div>
+                <div className="flex flex-wrap gap-1">
+                  {ownership.builder?.items?.map((item, i) => (
+                    <span key={i} className="rounded-full bg-slate-100 px-2.5 py-0.5 text-[11px] sm:text-[12px] font-semibold text-ucsd-navy/75">{item}</span>
+                  ))}
+                </div>
+              </div>
+              {/* In Scope */}
+              {hasBoundaryPanels && (
+                <div className="rounded-[14px] border border-ucsd-blue/15 bg-ucsd-blue/[0.03] px-3.5 py-2.5 shadow-[0_4px_10px_rgba(24,43,73,0.04)]">
+                  <div className="text-[13px] sm:text-[14px] font-black uppercase tracking-[0.06em] text-ucsd-blue mb-1.5">In Scope</div>
+                  <div className="flex flex-wrap gap-1">
+                    {boundaries.whatItIs?.items?.map((item, i) => (
+                      <span key={i} className="rounded-full bg-white/90 border border-ucsd-blue/12 px-2.5 py-0.5 text-[11px] sm:text-[12px] font-semibold text-ucsd-navy/80">{item}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
+              {/* Not For */}
+              {hasBoundaryPanels && (
+                <div className="rounded-[14px] border border-[#B56200]/15 bg-[#B56200]/[0.03] px-3.5 py-2.5 shadow-[0_4px_10px_rgba(24,43,73,0.04)]">
+                  <div className="text-[13px] sm:text-[14px] font-black uppercase tracking-[0.06em] text-[#B56200] mb-1.5">Not For</div>
+                  <div className="flex flex-wrap gap-1">
+                    {boundaries.whatItIsNot?.items?.map((item, i) => (
+                      <span key={i} className="rounded-full bg-white/90 border border-[#B56200]/12 px-2.5 py-0.5 text-[11px] sm:text-[12px] font-semibold text-[#8A5600]/80">{item}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
             </motion.div>
           </div>
         );
