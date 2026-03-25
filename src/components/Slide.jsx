@@ -4217,22 +4217,22 @@ const Slide = ({ slide }) => {
               </div>
               {/* In Scope */}
               {hasBoundaryPanels && (
-                <div className="rounded-[14px] border border-ucsd-blue/15 bg-ucsd-blue/[0.03] px-3.5 py-2.5 shadow-[0_4px_10px_rgba(24,43,73,0.04)]">
+                <div className="rounded-[14px] border border-ucsd-blue/25 bg-ucsd-blue/[0.06] px-3.5 py-2.5 shadow-[0_4px_10px_rgba(24,43,73,0.04)]">
                   <div className="text-[13px] sm:text-[14px] font-black uppercase tracking-[0.06em] text-ucsd-blue mb-1.5">In Scope</div>
                   <div className="flex flex-wrap gap-1">
                     {boundaries.whatItIs?.items?.map((item, i) => (
-                      <span key={i} className="rounded-full bg-white/90 border border-ucsd-blue/12 px-2.5 py-0.5 text-[11px] sm:text-[12px] font-semibold text-ucsd-navy/80">{item}</span>
+                      <span key={i} className="rounded-full bg-white border border-ucsd-blue/20 px-2.5 py-0.5 text-[11px] sm:text-[12px] font-bold text-ucsd-navy">{item}</span>
                     ))}
                   </div>
                 </div>
               )}
               {/* Not For */}
               {hasBoundaryPanels && (
-                <div className="rounded-[14px] border border-[#B56200]/15 bg-[#B56200]/[0.03] px-3.5 py-2.5 shadow-[0_4px_10px_rgba(24,43,73,0.04)]">
+                <div className="rounded-[14px] border border-[#B56200]/25 bg-[#B56200]/[0.06] px-3.5 py-2.5 shadow-[0_4px_10px_rgba(24,43,73,0.04)]">
                   <div className="text-[13px] sm:text-[14px] font-black uppercase tracking-[0.06em] text-[#B56200] mb-1.5">Not For</div>
                   <div className="flex flex-wrap gap-1">
                     {boundaries.whatItIsNot?.items?.map((item, i) => (
-                      <span key={i} className="rounded-full bg-white/90 border border-[#B56200]/12 px-2.5 py-0.5 text-[11px] sm:text-[12px] font-semibold text-[#8A5600]/80">{item}</span>
+                      <span key={i} className="rounded-full bg-white border border-[#B56200]/20 px-2.5 py-0.5 text-[11px] sm:text-[12px] font-bold text-[#7A4A00]">{item}</span>
                     ))}
                   </div>
                 </div>
