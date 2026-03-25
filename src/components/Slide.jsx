@@ -4035,21 +4035,21 @@ const Slide = ({ slide }) => {
                           initial={{ opacity: 0, y: 8 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.2 + i * 0.08, duration: 0.35 }}
-                          className="flex-1 rounded-[16px] bg-slate-50/80 border border-slate-200/60 p-2 sm:p-2.5 flex flex-col gap-1"
+                          className="flex-1 rounded-[16px] bg-slate-50/80 border border-slate-200/60 p-2.5 sm:p-3 flex flex-col gap-1.5"
                         >
                           <div className="flex items-center justify-between">
-                            <div className="flex items-center gap-1.5">
+                            <div className="flex items-center gap-2">
                               <div
-                                className="w-6 h-6 rounded-full flex items-center justify-center text-[11px] font-black text-white"
+                                className="w-7 h-7 rounded-full flex items-center justify-center text-[12px] font-black text-white"
                                 style={{ backgroundColor: step.color }}
                               >
                                 {step.number}
                               </div>
-                              <div className="text-[13px] sm:text-[14px] font-black text-ucsd-navy">{step.name}</div>
+                              <div className="text-[15px] sm:text-[17px] font-black text-ucsd-navy">{step.name}</div>
                             </div>
-                            {IconComponent && <IconComponent size={15} style={{ color: step.color }} className="opacity-50" />}
+                            {IconComponent && <IconComponent size={17} style={{ color: step.color }} className="opacity-50" />}
                           </div>
-                          <div className="text-[9px] sm:text-[10px] text-slate-500 leading-snug">{step.description}</div>
+                          <div className="text-[10px] sm:text-[12px] text-slate-500 leading-snug">{step.description}</div>
                         </motion.div>
                         {i < pipelineSteps.length - 1 && (
                           <div className="flex items-center flex-shrink-0 text-slate-300">
@@ -4189,33 +4189,30 @@ const Slide = ({ slide }) => {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.4 }}
-              className="relative overflow-hidden rounded-[18px] border border-white/75 bg-white/90 px-4 sm:px-5 py-2 sm:py-2.5 shadow-[0_6px_14px_rgba(24,43,73,0.05)]"
+              className="relative overflow-hidden rounded-[18px] border border-white/75 bg-white/90 px-5 sm:px-6 py-2.5 sm:py-3 shadow-[0_6px_14px_rgba(24,43,73,0.05)]"
             >
-              <div className="flex items-center gap-3 sm:gap-5 flex-wrap">
-                <div className="flex items-center gap-1.5 flex-shrink-0">
-                  <Server size={13} style={{ color: ownership.its?.color }} />
-                  <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.08em]" style={{ color: ownership.its?.color }}>{ownership.its?.title}:</span>
-                  <span className="text-[10px] sm:text-[11px] text-ucsd-navy/70 font-semibold">{ownership.its?.items?.join(' · ')}</span>
-                </div>
-                <div className="h-4 w-px bg-slate-200 flex-shrink-0" />
-                <div className="flex items-center gap-1.5 flex-shrink-0">
-                  <Code size={13} className="text-ucsd-navy/50" />
-                  <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.08em] text-ucsd-navy/60">{ownership.builder?.title}:</span>
-                  <span className="text-[10px] sm:text-[11px] text-ucsd-navy/70 font-semibold">{ownership.builder?.items?.join(' · ')}</span>
+              <div className="grid grid-cols-2 gap-x-6 gap-y-1.5">
+                <div className="flex items-center gap-2">
+                  <Server size={15} style={{ color: ownership.its?.color }} />
+                  <span className="text-[12px] sm:text-[13px] font-black uppercase tracking-[0.06em]" style={{ color: ownership.its?.color }}>{ownership.its?.title}:</span>
+                  <span className="text-[12px] sm:text-[13px] text-ucsd-navy/70 font-semibold">{ownership.its?.items?.join(' · ')}</span>
                 </div>
                 {hasBoundaryPanels && (
-                  <>
-                    <div className="h-4 w-px bg-slate-200 flex-shrink-0" />
-                    <div className="flex items-center gap-1.5 flex-shrink-0">
-                      <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.08em] text-ucsd-blue">In Scope:</span>
-                      <span className="text-[10px] sm:text-[11px] text-ucsd-navy/70 font-semibold">{boundaries.whatItIs?.items?.join(' · ')}</span>
-                    </div>
-                    <div className="h-4 w-px bg-slate-200 flex-shrink-0" />
-                    <div className="flex items-center gap-1.5 flex-shrink-0">
-                      <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.08em] text-[#B56200]">Not For:</span>
-                      <span className="text-[10px] sm:text-[11px] text-[#8A5600]/70 font-semibold">{boundaries.whatItIsNot?.items?.join(' · ')}</span>
-                    </div>
-                  </>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[12px] sm:text-[13px] font-black uppercase tracking-[0.06em] text-ucsd-blue">In Scope:</span>
+                    <span className="text-[12px] sm:text-[13px] text-ucsd-navy/70 font-semibold">{boundaries.whatItIs?.items?.join(' · ')}</span>
+                  </div>
+                )}
+                <div className="flex items-center gap-2">
+                  <Code size={15} className="text-ucsd-navy/50" />
+                  <span className="text-[12px] sm:text-[13px] font-black uppercase tracking-[0.06em] text-ucsd-navy/60">{ownership.builder?.title}:</span>
+                  <span className="text-[12px] sm:text-[13px] text-ucsd-navy/70 font-semibold">{ownership.builder?.items?.join(' · ')}</span>
+                </div>
+                {hasBoundaryPanels && (
+                  <div className="flex items-center gap-2">
+                    <span className="text-[12px] sm:text-[13px] font-black uppercase tracking-[0.06em] text-[#B56200]">Not For:</span>
+                    <span className="text-[12px] sm:text-[13px] text-[#8A5600]/70 font-semibold">{boundaries.whatItIsNot?.items?.join(' · ')}</span>
+                  </div>
                 )}
               </div>
             </motion.div>
