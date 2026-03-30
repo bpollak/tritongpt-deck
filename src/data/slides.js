@@ -326,7 +326,6 @@ export const slides = [
     ],
     "hidden": true,
     "audiences": [
-      "cabinet",
       "all",
       "ASU-GSV"
     ]
@@ -870,7 +869,6 @@ export const slides = [
       "internal",
       "technical",
       "ASU-GSV",
-      "cabinet",
       "executive"
     ]
   },
@@ -1932,8 +1930,7 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "ASU-GSV",
-      "cabinet"
+      "ASU-GSV"
     ]
   },
   {
