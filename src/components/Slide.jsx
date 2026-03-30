@@ -1398,6 +1398,7 @@ const Slide = ({ slide }) => {
                   <div className="absolute -inset-1 bg-gradient-to-br from-ucsd-navy/5 to-ucsd-blue/5 rounded-2xl blur-sm" />
                   {slide.videoSrc ? (
                     <video
+                      ref={el => { if (el) el.playbackRate = slide.videoPlaybackRate || 1; }}
                       src={slide.videoSrc}
                       poster={slide.poster}
                       className="relative w-full h-auto max-h-[56vh] rounded-2xl shadow-lg ring-1 ring-black/5 object-contain"

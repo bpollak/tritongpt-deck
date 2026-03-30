@@ -2881,6 +2881,71 @@ export const slides = [
     ]
   },
   {
+    "id": 36.5,
+    "slug": "research-alignment-poc",
+    "type": "content",
+    "layout": "solution-showcase-video",
+    "title": "Research Alignment",
+    "subtitle": "AI-powered discovery connecting funding opportunities with faculty expertise",
+    "backgroundColor": "#F5F0E6",
+    "videoSrc": "/media/Research Alignment _ UC San Diego - 27 March 2026.mp4",
+    "videoPlaybackRate": 1.9,
+    "content": [
+      {
+        "heading": "The Problem",
+        "text": "Matching funding opportunities to the right investigators is manual, time-intensive, and relies on institutional knowledge that doesn't scale across a research university."
+      },
+      {
+        "heading": "AI-Powered Discovery",
+        "text": "Upload a funding opportunity or describe expertise requirements — the system surfaces relevant faculty and explains why their background aligns with the opportunity."
+      },
+      {
+        "heading": "Contextual & Transparent",
+        "text": "Each recommendation includes an AI-generated explanation highlighting relevant expertise, methodologies, and track record — giving research offices actionable context instead of guesswork."
+      },
+      {
+        "heading": "Vision",
+        "text": "Accelerate research funding capture by reducing the time from opportunity identification to investigator engagement — turning days of committee work into minutes."
+      }
+    ],
+    "audiences": [
+      "all",
+      "internal",
+      "public",
+      "executive"
+    ]
+  },
+  {
+    "id": 36.6,
+    "slug": "ai-enablement",
+    "type": "content",
+    "layout": "default",
+    "title": "AI Enablement",
+    "subtitle": "Placeholder — content coming soon",
+    "backgroundColor": "#F5F0E6",
+    "audiences": [
+      "all",
+      "internal",
+      "public",
+      "executive"
+    ]
+  },
+  {
+    "id": 36.7,
+    "slug": "health-sciences-ai-use-cases",
+    "type": "content",
+    "layout": "default",
+    "title": "Health Sciences AI Use Cases",
+    "subtitle": "Placeholder — content coming soon",
+    "backgroundColor": "#F5F0E6",
+    "audiences": [
+      "all",
+      "internal",
+      "public",
+      "executive"
+    ]
+  },
+  {
     "id": 37,
     "slug": "thank-you",
     "type": "title",
