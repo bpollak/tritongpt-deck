@@ -3736,11 +3736,50 @@ const Slide = ({ slide }) => {
               </div>
             </motion.div>
 
+            {/* Ownership Row */}
+            {slide.ownership && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.6, duration: 0.5 }}
+                className="flex flex-col sm:flex-row items-stretch gap-2 sm:gap-3"
+              >
+                {/* ITS Owns */}
+                {slide.ownership.its && (
+                  <div className="flex-1 rounded-xl border border-white/75 bg-white/90 px-4 py-2.5 shadow-sm">
+                    <div className="flex items-center gap-1.5 mb-1.5">
+                      <Server size={14} style={{ color: slide.ownership.its.color }} />
+                      <span className="text-[12px] sm:text-[13px] font-black uppercase tracking-[0.08em]" style={{ color: slide.ownership.its.color }}>{slide.ownership.its.title}</span>
+                    </div>
+                    <div className="flex flex-wrap gap-1">
+                      {slide.ownership.its.items.map((item, i) => (
+                        <span key={i} className="rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] sm:text-[11px] font-semibold text-ucsd-navy/75">{item}</span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {/* Department Owns */}
+                {slide.ownership.builder && (
+                  <div className="flex-1 rounded-xl border border-white/75 bg-white/90 px-4 py-2.5 shadow-sm">
+                    <div className="flex items-center gap-1.5 mb-1.5">
+                      <Code size={14} className="text-ucsd-navy/50" />
+                      <span className="text-[12px] sm:text-[13px] font-black uppercase tracking-[0.08em] text-ucsd-navy/65">{slide.ownership.builder.title}</span>
+                    </div>
+                    <div className="flex flex-wrap gap-1">
+                      {slide.ownership.builder.items.map((item, i) => (
+                        <span key={i} className="rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] sm:text-[11px] font-semibold text-ucsd-navy/75">{item}</span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </motion.div>
+            )}
+
             {/* Guardrails Bar */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 1.6 }}
+              transition={{ delay: 1.8 }}
               className="flex flex-wrap justify-center gap-2 sm:gap-3"
             >
               {guardrails.map((g, i) => (
@@ -4182,62 +4221,7 @@ const Slide = ({ slide }) => {
                   </React.Fragment>
                 ))}
               </div>
-            </motion.div>
-
-            {/* Compact Ownership + Scope Footer */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7, duration: 0.4 }}
-              className="grid grid-cols-4 gap-2"
-            >
-              {/* ITS Owns */}
-              <div className="rounded-[14px] border border-white/75 bg-white/90 px-3.5 py-2.5 shadow-[0_4px_10px_rgba(24,43,73,0.04)]">
-                <div className="flex items-center gap-1.5 mb-1.5">
-                  <Server size={14} style={{ color: ownership.its?.color }} />
-                  <span className="text-[13px] sm:text-[14px] font-black uppercase tracking-[0.06em]" style={{ color: ownership.its?.color }}>{ownership.its?.title}</span>
-                </div>
-                <div className="flex flex-wrap gap-1">
-                  {ownership.its?.items?.map((item, i) => (
-                    <span key={i} className="rounded-full bg-slate-100 px-2.5 py-0.5 text-[11px] sm:text-[12px] font-semibold text-ucsd-navy/75">{item}</span>
-                  ))}
-                </div>
-              </div>
-              {/* Department Owns */}
-              <div className="rounded-[14px] border border-white/75 bg-white/90 px-3.5 py-2.5 shadow-[0_4px_10px_rgba(24,43,73,0.04)]">
-                <div className="flex items-center gap-1.5 mb-1.5">
-                  <Code size={14} className="text-ucsd-navy/50" />
-                  <span className="text-[13px] sm:text-[14px] font-black uppercase tracking-[0.06em] text-ucsd-navy/65">{ownership.builder?.title}</span>
-                </div>
-                <div className="flex flex-wrap gap-1">
-                  {ownership.builder?.items?.map((item, i) => (
-                    <span key={i} className="rounded-full bg-slate-100 px-2.5 py-0.5 text-[11px] sm:text-[12px] font-semibold text-ucsd-navy/75">{item}</span>
-                  ))}
-                </div>
-              </div>
-              {/* In Scope */}
-              {hasBoundaryPanels && (
-                <div className="rounded-[14px] border border-ucsd-blue/25 bg-ucsd-blue/[0.06] px-3.5 py-2.5 shadow-[0_4px_10px_rgba(24,43,73,0.04)]">
-                  <div className="text-[13px] sm:text-[14px] font-black uppercase tracking-[0.06em] text-ucsd-blue mb-1.5">In Scope</div>
-                  <div className="flex flex-wrap gap-1">
-                    {boundaries.whatItIs?.items?.map((item, i) => (
-                      <span key={i} className="rounded-full bg-white border border-ucsd-blue/20 px-2.5 py-0.5 text-[11px] sm:text-[12px] font-bold text-ucsd-navy">{item}</span>
-                    ))}
-                  </div>
-                </div>
-              )}
-              {/* Not For */}
-              {hasBoundaryPanels && (
-                <div className="rounded-[14px] border border-[#B56200]/25 bg-[#B56200]/[0.06] px-3.5 py-2.5 shadow-[0_4px_10px_rgba(24,43,73,0.04)]">
-                  <div className="text-[13px] sm:text-[14px] font-black uppercase tracking-[0.06em] text-[#B56200] mb-1.5">Not For</div>
-                  <div className="flex flex-wrap gap-1">
-                    {boundaries.whatItIsNot?.items?.map((item, i) => (
-                      <span key={i} className="rounded-full bg-white border border-[#B56200]/20 px-2.5 py-0.5 text-[11px] sm:text-[12px] font-bold text-[#7A4A00]">{item}</span>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </motion.div>
+          </motion.div>
           </div>
         );
       })()}
