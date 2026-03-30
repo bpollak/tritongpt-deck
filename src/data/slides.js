@@ -979,7 +979,6 @@ export const slides = [
       "internal",
       "technical",
       "ASU-GSV",
-      "cabinet",
       "executive"
     ]
   },
@@ -1086,8 +1085,7 @@ export const slides = [
       "all",
       "public",
       "internal",
-      "technical",
-      "cabinet"
+      "technical"
     ]
   },
   {
@@ -1133,7 +1131,6 @@ export const slides = [
     "hidden": true,
     "audiences": [
       "ASU-GSV",
-      "cabinet",
       "all"
     ]
   },
@@ -1545,7 +1542,8 @@ export const slides = [
       "internal",
       "public",
       "ASU-GSV",
-      "executive"
+      "executive",
+      "cabinet"
     ]
   },
   {
@@ -1783,7 +1781,8 @@ export const slides = [
       "internal",
       "public",
       "ASU-GSV",
-      "executive"
+      "executive",
+      "cabinet"
     ]
   },
   {
@@ -1933,7 +1932,8 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "ASU-GSV"
+      "ASU-GSV",
+      "cabinet"
     ]
   },
   {
@@ -2317,7 +2317,6 @@ export const slides = [
     ],
     "hidden": true,
     "audiences": [
-      "cabinet",
       "all"
     ]
   },
@@ -2364,7 +2363,6 @@ export const slides = [
     "hidden": true,
     "audiences": [
       "ASU-GSV",
-      "cabinet",
       "all"
     ]
   },
@@ -2479,7 +2477,6 @@ export const slides = [
     ],
     "hidden": true,
     "audiences": [
-      "cabinet",
       "all"
     ]
   },
@@ -3016,7 +3013,6 @@ export const slides = [
     "linkLabel": "tritonai.ucsd.edu",
     "hidden": true,
     "audiences": [
-      "cabinet",
       "all"
     ]
   },
