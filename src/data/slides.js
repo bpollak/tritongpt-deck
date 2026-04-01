@@ -1913,7 +1913,8 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "ASU-GSV"
+      "ASU-GSV",
+      "cabinet"
     ]
   },
   {
