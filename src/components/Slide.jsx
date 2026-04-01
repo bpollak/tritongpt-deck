@@ -272,7 +272,7 @@ const Slide = ({ slide }) => {
 
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10" />
 
-        <div className="relative z-10 max-w-7xl w-full px-4 sm:px-8 md:px-12 flex flex-col items-center text-center">
+        <div className={clsx("relative z-10 max-w-7xl w-full px-4 sm:px-8 md:px-12 flex flex-col items-center text-center", slide.presenterRows && "-mt-16 sm:-mt-20 md:-mt-24")}>
           {/* Conference badge with enhanced animation */}
           {slide.conference && (
             <motion.div
@@ -331,7 +331,7 @@ const Slide = ({ slide }) => {
               "font-bold tracking-wide text-center",
               isClosingSlide
                 ? "text-lg sm:text-2xl md:text-3xl text-ucsd-gold mb-8 sm:mb-12"
-                : "text-base sm:text-xl md:text-2xl text-white/80 mb-10 sm:mb-12 max-w-3xl leading-relaxed"
+                : `text-base sm:text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed ${slide.presenterRows ? 'mb-6 sm:mb-8' : 'mb-10 sm:mb-12'}`
             )}
           >
             {slide.subtitle}
@@ -383,6 +383,47 @@ const Slide = ({ slide }) => {
                       </div>
                     )}
                   </div>
+                </div>
+              ))}
+            </motion.div>
+          )}
+
+          {/* Opening slide: Multi-presenter in rows */}
+          {!isClosingSlide && slide.presenterRows && (
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.85, duration: 0.5 }}
+              className="flex flex-col items-center gap-3 sm:gap-4"
+            >
+              {slide.presenterRows.map((row, rowIdx) => (
+                <div key={rowIdx} className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 w-full max-w-2xl">
+                  {row.map((presenter, idx) => (
+                    <div key={idx} className="flex flex-col items-center justify-center gap-1 px-6 sm:px-8 py-4 sm:py-5 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm">
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.95 + rowIdx * 0.2 + idx * 0.1, duration: 0.5, type: "spring", bounce: 0.3 }}
+                        className="flex flex-col items-center gap-1"
+                      >
+                        <div className="text-lg sm:text-xl md:text-2xl font-semibold text-white tracking-wide">
+                          {presenter.name}
+                        </div>
+                        {presenter.titleLines && (
+                          <div className="text-ucsd-sky text-xs sm:text-sm md:text-base font-normal tracking-wide text-center whitespace-nowrap">
+                            {presenter.titleLines.map((line, i) => (
+                              <div key={i}>{line}</div>
+                            ))}
+                          </div>
+                        )}
+                        {presenter.title && !presenter.titleLines && (
+                          <div className="text-ucsd-sky text-xs sm:text-sm md:text-base font-normal tracking-wide text-center max-w-[200px]">
+                            {presenter.title}
+                          </div>
+                        )}
+                      </motion.div>
+                    </div>
+                  ))}
                 </div>
               ))}
             </motion.div>
@@ -774,6 +815,117 @@ const Slide = ({ slide }) => {
   }
 
   // ── VERSUS-SPLIT LAYOUT ──────────────────────────────────────────────
+  // ── VENN-ROLES LAYOUT ──────────────────────────────────────────────
+  const isVennRoles = slide.layout === 'venn-roles';
+  if (isVennRoles) {
+    return (
+      <div className="w-full h-full relative overflow-hidden flex flex-col" style={{ backgroundColor: '#F5F0E6' }}>
+        <div className="absolute top-[-5%] left-[30%] w-[20vw] h-[20vw] rounded-full bg-ucsd-blue/8 blur-[60px]" />
+        <div className="absolute bottom-[-5%] right-[30%] w-[20vw] h-[20vw] rounded-full bg-ucsd-gold/8 blur-[60px]" />
+
+        {/* Title */}
+        <motion.div
+          initial={{ opacity: 0, y: -15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center pt-4 sm:pt-6 pb-1 sm:pb-2 z-10"
+        >
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-ucsd-navy">{slide.title}</h1>
+        </motion.div>
+
+        {/* Venn diagram area */}
+        <div className="flex-1 flex items-center justify-center px-4 sm:px-8 md:px-12 pb-8 sm:pb-12 z-10">
+          <div className="relative w-full max-w-7xl flex items-center justify-center" style={{ minHeight: '480px' }}>
+
+            {/* Left circle */}
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="absolute left-0 sm:left-[1%] md:left-[3%] w-[52%] sm:w-[50%] aspect-square rounded-full border-2 border-ucsd-blue/25 bg-ucsd-blue/8 flex flex-col items-center justify-center px-8 sm:px-12 md:px-16"
+              style={{ maxWidth: '520px' }}
+            >
+              <div className="flex flex-col items-start mb-3 sm:mb-4 -mt-2 sm:-mt-4" style={{ marginRight: '18%' }}>
+                <div className="text-sm sm:text-base md:text-lg font-bold text-ucsd-blue uppercase tracking-wider">{slide.leftLabel}</div>
+                <div className="text-xl sm:text-2xl md:text-3xl font-black text-ucsd-navy">{slide.leftName}</div>
+                <div className="text-xs sm:text-sm md:text-base text-ucsd-navy/60 font-medium">{slide.leftFocus}</div>
+              </div>
+              <div className="space-y-1.5 sm:space-y-2" style={{ marginRight: '22%' }}>
+                {(slide.leftItems || []).map((item, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.5 + i * 0.08 }}
+                    className="flex items-start gap-2 sm:gap-2.5"
+                  >
+                    <div className="w-2 h-2 rounded-full bg-ucsd-blue/50 flex-shrink-0 mt-2" />
+                    <span className="text-ucsd-navy text-sm sm:text-base md:text-lg font-medium leading-tight">{item}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Right circle */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="absolute right-0 sm:right-[1%] md:right-[3%] w-[52%] sm:w-[50%] aspect-square rounded-full border-2 border-teal-400/30 bg-teal-500/8 flex flex-col items-center justify-center px-8 sm:px-12 md:px-16"
+              style={{ maxWidth: '520px' }}
+            >
+              <div className="flex flex-col items-start mb-3 sm:mb-4 -mt-2 sm:-mt-4" style={{ marginLeft: '18%' }}>
+                <div className="text-sm sm:text-base md:text-lg font-bold text-teal-600 uppercase tracking-wider">{slide.rightLabel}</div>
+                <div className="text-xl sm:text-2xl md:text-3xl font-black text-ucsd-navy">{slide.rightName}</div>
+                <div className="text-xs sm:text-sm md:text-base text-ucsd-navy/60 font-medium">{slide.rightFocus}</div>
+              </div>
+              <div className="space-y-1.5 sm:space-y-2" style={{ marginLeft: '20%' }}>
+                {(slide.rightItems || []).map((item, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.6 + i * 0.08 }}
+                    className="flex items-start gap-2 sm:gap-2.5"
+                  >
+                    <div className="w-2 h-2 rounded-full bg-teal-500/50 flex-shrink-0 mt-2" />
+                    <span className="text-ucsd-navy text-sm sm:text-base md:text-lg font-medium leading-tight">{item}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Center overlap */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+              className="relative z-10 flex flex-col items-start gap-2 sm:gap-2.5 px-5 sm:px-7 py-4 sm:py-5 rounded-2xl bg-white/90 backdrop-blur-sm border border-ucsd-navy/15 shadow-lg"
+              style={{ maxWidth: '260px' }}
+            >
+              <div className="text-sm sm:text-base font-bold text-ucsd-navy/50 uppercase tracking-wider self-center">Shared</div>
+              <div className="w-10 h-0.5 bg-gradient-to-r from-ucsd-blue via-ucsd-navy to-teal-500 rounded-full self-center" />
+              {(slide.sharedItems || []).map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.7 + i * 0.1 }}
+                  className="flex items-start gap-2"
+                >
+                  <div className="w-2 h-2 rounded-full bg-ucsd-navy/40 flex-shrink-0 mt-1.5" />
+                  <span className="text-ucsd-navy text-sm sm:text-base md:text-lg font-semibold leading-tight">{item}</span>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+
+        <div className="absolute bottom-1 right-2 sm:bottom-6 sm:right-8 text-ucsd-navy/20 text-[10px] sm:text-xs font-bold tracking-widest z-40">UC SAN DIEGO | {slide.id}</div>
+      </div>
+    );
+  }
+
   // Balanced visual comparison with weight/scale metaphor
   const isVersusSplit = slide.layout === 'versus-split';
   if (isVersusSplit) {
@@ -1384,7 +1536,7 @@ const Slide = ({ slide }) => {
         <div className="w-full max-w-[1760px] mx-auto h-full">
           <div className={clsx(
             "grid gap-4 sm:gap-8 md:gap-12 h-full pt-2 sm:pt-4",
-            isSolutionVideo ? "grid-cols-1 md:grid-cols-[1.12fr_0.88fr] gap-3 sm:gap-5 md:gap-7 pt-0 sm:pt-0 items-start" : "grid-cols-1 md:grid-cols-[1.1fr_0.9fr] items-start"
+            isSolutionVideo ? "grid-cols-1 md:grid-cols-[1.12fr_0.88fr] gap-3 sm:gap-5 md:gap-7 pt-0 sm:pt-0 items-start" : "grid-cols-1 md:grid-cols-[1.3fr_0.7fr] items-start"
           )}>
             {/* Left: Media (Image or Video) */}
             {(slide.imageSrc || slide.videoSrc) && (
@@ -1414,7 +1566,7 @@ const Slide = ({ slide }) => {
                       alt={slide.title}
                       className={clsx(
                         "relative w-full h-auto rounded-2xl shadow-lg ring-1 ring-black/5",
-                        isSolutionVideo && "max-h-[56vh] object-contain"
+                        isSolutionVideo ? "max-h-[56vh] object-contain" : "max-h-[65vh] object-cover object-top"
                       )}
                     />
                   )}
@@ -1480,7 +1632,7 @@ const Slide = ({ slide }) => {
                     <div className="flex-1 min-w-0">
                       <h3 className={clsx(
                         "font-bold text-ucsd-navy leading-tight mb-1",
-                        isSolutionVideo ? "text-lg sm:text-[1.75rem]" : "text-base sm:text-xl"
+                        isSolutionVideo ? "text-base sm:text-xl" : "text-base sm:text-xl"
                       )}>
                         {item.heading}
                       </h3>
@@ -2857,7 +3009,7 @@ const Slide = ({ slide }) => {
             </>
           )}
 
-          <div className={clsx('grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-3', isTritonAIEvolutionSlide && tritonAICapabilityGridClass)}>
+          <div className={clsx('grid grid-cols-1 gap-2.5 sm:gap-3', isTritonAIEvolutionSlide && tritonAICapabilityGridClass, slide.gridColumns === 2 ? 'sm:grid-cols-2 lg:grid-cols-2' : 'sm:grid-cols-2 lg:grid-cols-3')}>
             {(isTritonAIEvolutionSlide ? tritonAICapabilityItems : slide.content).map((item, index) => {
               const displayIndex = isTritonAIEvolutionSlide ? index + 1 : index;
               const topBarColors = ['#182B49', '#00C6D7', '#00629B', '#FFCD00', '#FC8900', '#6E963B'];
@@ -2935,14 +3087,39 @@ const Slide = ({ slide }) => {
                     </div>
 
                     {/* Heading */}
-                    <h3 className="text-sm sm:text-lg md:text-xl font-bold mb-1 sm:mb-1.5 text-ucsd-navy tracking-tight leading-tight pr-8 sm:pr-14">
-                      {item.heading}
-                    </h3>
+                    <div className="flex flex-wrap items-center gap-2 mb-1 sm:mb-1.5 pr-8 sm:pr-14">
+                      <h3 className="text-sm sm:text-lg md:text-xl font-bold text-ucsd-navy tracking-tight leading-tight">
+                        {item.heading}
+                      </h3>
+                      {item.status && (
+                        <span className={clsx(
+                          "inline-flex items-center px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider whitespace-nowrap",
+                          item.statusType === 'confirmed' && "bg-emerald-100 text-emerald-700",
+                          item.statusType === 'in-development' && "bg-blue-100 text-blue-700",
+                          item.statusType === 'exploring' && "bg-amber-100 text-amber-700",
+                          item.statusType === 'continuing' && "bg-slate-100 text-slate-600",
+                          !item.statusType && "bg-slate-100 text-slate-600"
+                        )}>
+                          {item.status}
+                        </span>
+                      )}
+                    </div>
 
                     {/* Description */}
-                    <p className="text-xs sm:text-sm md:text-base text-slate-800 font-medium leading-snug sm:leading-relaxed">
-                      {item.text}
-                    </p>
+                    {item.bullets ? (
+                      <ul className="space-y-1 sm:space-y-1.5">
+                        {item.bullets.map((bullet, bIdx) => (
+                          <li key={bIdx} className="flex items-start gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-base text-slate-800 font-medium leading-snug sm:leading-relaxed">
+                            <div className="w-1.5 h-1.5 rounded-full bg-ucsd-navy/30 flex-shrink-0 mt-1.5 sm:mt-2" />
+                            <span dangerouslySetInnerHTML={{ __html: bullet }} />
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className="text-xs sm:text-sm md:text-base text-slate-800 font-medium leading-snug sm:leading-relaxed">
+                        {item.text}
+                      </p>
+                    )}
                   </div>
                 </motion.div>
               );

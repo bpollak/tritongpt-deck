@@ -81,7 +81,67 @@ export const slides = [
     "content": [],
     "title": "The AI-Enabled University",
     "subtitle": "Operationalizing TritonAI for Service & Support at Scale",
+    "presenterRows": [
+      [
+        {
+          "name": "Allorah Pradenas",
+          "titleLines": ["AVC &", "Chief of Staff to VCFA"]
+        },
+        {
+          "name": "Brett Pollak",
+          "titleLines": ["Executive Director", "IT Services"]
+        }
+      ],
+      [
+        {
+          "name": "Emily Cowley",
+          "titleLines": ["Director AI Engagement", "Operational Strategic Initiatives"]
+        },
+        {
+          "name": "Zachary Johnson",
+          "titleLines": ["Director AI Strategy", "Operational Strategic Initiatives"]
+        }
+      ]
+    ],
     "layout": "title-hero",
+    "hidden": true,
+    "audiences": [
+      "all",
+      "public",
+      "internal",
+      "technical",
+      "cabinet"
+    ]
+  },
+  {
+    "id": 1.6,
+    "slug": "ai-strategy-and-engagement",
+    "type": "content",
+    "layout": "venn-roles",
+    "title": "UC San Diego AI Strategy and Engagement",
+    "leftLabel": "The Strategy Director",
+    "leftName": "Zachary Johnson",
+    "leftFocus": "Structural, Technical, and System-Wide Policy",
+    "leftItems": [
+      "Vendor & Industry Relations",
+      "Data Governance & Security Protocols",
+      "Technical Requirements for ITS & SDSC",
+      "UCOP System-wide Policy Alignment"
+    ],
+    "rightLabel": "The Engagement Director",
+    "rightName": "Emily Cowley",
+    "rightFocus": "Cultural, Behavioral, and Pedagogical",
+    "rightItems": [
+      "Faculty Relations & Academic Senate Diplomacy",
+      "Behavioral Change & User Resistance Management",
+      "Training Strategy & Delivery at Scale",
+      "Business Impact & Time-Saved Metrics"
+    ],
+    "sharedItems": [
+      "AI Policy & Governance Alignment",
+      "Academic Workflow Integration",
+      "Tool Selection & Adoption"
+    ],
     "hidden": true,
     "audiences": [
       "all",
@@ -173,6 +233,36 @@ export const slides = [
       "internal",
       "technical",
       "ASU-GSV"
+    ]
+  },
+  {
+    "id": 2.05,
+    "slug": "triton-ai-website",
+    "type": "content",
+    "layout": "solution-showcase",
+    "title": "TritonAI Website",
+    "subtitle": "Centralized training, resources, and access for the campus AI community",
+    "backgroundColor": "#F5F0E6",
+    "imageSrc": "/media/tritonaiwebsite.png",
+    "content": [
+      {
+        "heading": "Self-Paced Learning",
+        "text": "UC Learning courses covering AI Foundations (concepts, UC policies, higher ed applications) and hands-on TritonGPT training for applying AI tools to real workflows."
+      },
+      {
+        "heading": "Guides, Webinars & Developer APIs",
+        "text": "Prompt engineering best practices, AI webinars, TritonGPT guides, and developer API documentation — all in one place alongside UC-wide resources."
+      },
+      {
+        "heading": "Everyday AI Video Series",
+        "text": "Short videos demonstrating practical applications of generative AI tools using the TritonGPT platform — showing staff how to apply AI to tasks they already do."
+      }
+    ],
+    "audiences": [
+      "all",
+      "public",
+      "internal",
+      "executive"
     ]
   },
   {
@@ -996,37 +1086,41 @@ export const slides = [
   },
   {
     "id": 18,
-    "slug": "the-evolution-of-ai-workflows",
+    "slug": "tritongpt-to-tritonai-comparison",
     "type": "content",
     "layout": "comparison-table",
-    "title": "The Evolution of AI Workflows",
-    "subtitle": "Moving from Generative to Agentic AI",
+    "title": "From TritonGPT to TritonAI",
+    "subtitle": "From campus chatbot to vertical AI solutions that take real work off people's plates",
     "backgroundColor": "#F5F0E6",
+    "columnHeaders": {
+      "left": "TritonGPT (2024-25)",
+      "right": "TritonAI (2026+)"
+    },
     "tableData": [
       {
         "feature": "Primary Interaction",
         "genAI": "Chat/Prompt: You ask, it answers.",
-        "agenticAI": "Goal/Objective: You define a goal; it plans the steps."
+        "agenticAI": "Goal-Driven: You define a problem; it handles the workflow."
       },
       {
         "feature": "Scope of Work",
-        "genAI": "Single-step tasks (drafting, summarizing).",
-        "agenticAI": "Multi-step workflows (research, tool-use, execution)."
+        "genAI": "Horizontal: drafting, summarizing, Q&A.",
+        "agenticAI": "Vertical: purpose-built solutions for contracts, scheduling, onboarding."
       },
       {
-        "feature": "Interactivity",
-        "genAI": "Stateless (one-and-done).",
-        "agenticAI": "Memory-enabled: Tracks progress over time."
+        "feature": "Impact",
+        "genAI": "Saves minutes on individual tasks.",
+        "agenticAI": "Takes entire workflows off people's plates."
       },
       {
-        "feature": "Tool Usage",
-        "genAI": "Mostly contained within the LLM.",
-        "agenticAI": "Action-oriented: Interacts with APIs, CRMs, and ERPs."
+        "feature": "Data Access",
+        "genAI": "Self-contained within the chat interface.",
+        "agenticAI": "Securely accesses campus data via governed protocols like MCP, APIs, and institutional connectors."
       },
       {
         "feature": "Human Role",
         "genAI": "Prompt engineer / Editor.",
-        "agenticAI": "Supervisor / Orchestrator."
+        "agenticAI": "Supervisor who reviews outcomes, not steps."
       }
     ],
     "audiences": [
@@ -1143,37 +1237,37 @@ export const slides = [
     "videoSrc": "/media/media7.mp4",
     "stats": [
       {
+        "label": "BEFORE",
+        "value": "2+ hrs",
+        "sublabel": "MANUAL REVIEW"
+      },
+      {
+        "label": "AFTER",
+        "value": "11 min",
+        "sublabel": "AUTOMATED REVIEW"
+      },
+      {
         "label": "TIME SAVINGS",
         "value": "91%",
-        "sublabel": "120 MIN → 11 MIN"
-      },
-      {
-        "label": "RISK CATEGORIES",
-        "value": "50+",
-        "sublabel": "AUTOMATED ANALYSIS"
-      },
-      {
-        "label": "CONTRACT TYPES",
-        "value": "3",
-        "sublabel": "NDAs · PROCUREMENT · SOFTWARE"
+        "sublabel": "PER CONTRACT"
       }
     ],
     "content": [
       {
-        "heading": "The Challenge",
-        "text": "Legal teams spend 2+ hours per contract on manual review. Policy interpretation varies across reviewers, creating inconsistent risk management and growing backlogs."
+        "heading": "Multi-Agent Review",
+        "text": "Specialized subagents apply UC San Diego's legal positions to each clause, proposing redlines with policy-backed rationales."
       },
       {
-        "heading": "Automated Review & Redlining",
-        "text": "Applies UC San Diego playbooks to propose redlines with policy-backed rationales — analyzing liability, indemnification, data rights, security, SLAs, IP, and compliance."
+        "heading": "Expandable by Design",
+        "text": "Supports NDAs, procurement, and software today. New contract types require only a new playbook — the framework scales automatically."
       },
       {
-        "heading": "Complete Output Package",
-        "text": "Delivers redlined contracts with tracked changes, issue summaries, and routing metadata — enabling attorneys to focus on strategic legal counsel."
+        "heading": "Complete Output",
+        "text": "Redlined contracts with tracked changes and issue summaries — attorneys focus on strategy, not markup."
       },
       {
         "heading": "What Users Are Saying",
-        "text": "\"It's like having an extra attorney\" — \"It's saving us hours to days per contract\" — \"Highlighting issues I might have overlooked... extremely thorough.\""
+        "text": "\"It's like having an extra attorney.\" — \"Saving us hours to days per contract.\" — \"Highlighting issues I might have overlooked... extremely thorough.\""
       }
     ],
     "audiences": [
@@ -1310,9 +1404,9 @@ export const slides = [
         "sublabel": "ANNUAL COST REDUCTION"
       },
       {
-        "label": "TEMP STAFF NOT NEEDED",
+        "label": "TEMP POSITIONS",
         "value": "12",
-        "sublabel": "6 FTE REDIRECTED TO STRATEGIC WORK"
+        "sublabel": "TARGETED FOR ELIMINATION"
       },
       {
         "label": "APPROACH",
@@ -1323,19 +1417,19 @@ export const slides = [
     "content": [
       {
         "heading": "The Problem",
-        "text": "Enrollment Management hires 12 temporary staff and redirects 6 full-time staff each year to manually match and validate thousands of incoming transcripts."
+        "text": "Enrollment Management hires 12 temp staff and redirects 6 FTE each year to manually match thousands of incoming transcripts."
       },
       {
-        "heading": "AI-Powered OCR Extraction",
-        "text": "OCR models extract data from wildly diverse transcript formats — scanned, stained, or distorted — and match documents to the correct student record with high confidence."
+        "heading": "AI-Powered OCR",
+        "text": "Extracts data from diverse transcript formats — scanned, stained, or distorted — and matches documents to the correct student record."
       },
       {
         "heading": "Phased Trust-Building",
-        "text": "Year 1: career staff monitor AI outputs — temp staff no longer needed. Year 2: confidence-score thresholds auto-approve high-certainty matches, further reducing oversight."
+        "text": "Year 1: career staff monitor AI outputs with a reduced temp workforce. Year 2: confidence-score thresholds auto-approve high-certainty matches, further reducing oversight."
       },
       {
         "heading": "Validation Roadmap",
-        "text": "Subsequent sprints tackle self-reported discrepancies, admissions requirements, and course transferability — each mapped to FTE savings via a Pain-Point Traceability Matrix."
+        "text": "Subsequent sprints tackle self-reported discrepancies, admissions requirements, and course transferability — each mapped to FTE savings."
       }
     ],
     "audiences": [
@@ -2922,26 +3016,26 @@ export const slides = [
     "type": "content",
     "layout": "solution-showcase-video",
     "title": "Research Alignment",
-    "subtitle": "AI-powered discovery connecting funding opportunities with faculty expertise",
+    "subtitle": "Connecting faculty expertise with funding, collaborations, and partnerships — regardless of who knows who",
     "backgroundColor": "#F5F0E6",
     "videoSrc": "/media/Research Alignment _ UC San Diego - 27 March 2026.mp4",
     "videoPlaybackRate": 1.9,
     "content": [
       {
-        "heading": "The Problem",
-        "text": "Matching funding opportunities to the right investigators is manual, time-intensive, and relies on institutional knowledge that doesn't scale across a research university."
+        "heading": "How It Works",
+        "text": "Uses the TritonAI API to parse what an opportunity is looking for, then ranks faculty across three schools (Public Health, Scripps, Jacobs) by how well their work fits."
       },
       {
-        "heading": "AI-Powered Discovery",
-        "text": "Upload a funding opportunity or describe expertise requirements — the system surfaces relevant faculty and explains why their background aligns with the opportunity."
+        "heading": "Real Research Data",
+        "text": "Faculty profiles enriched from six public academic sources — NIH RePORTER, NSF Awards, PubMed, ORCID, Semantic Scholar, and institutional profiles — so matching is based on actual research output."
       },
       {
-        "heading": "Contextual & Transparent",
-        "text": "Each recommendation includes an AI-generated explanation highlighting relevant expertise, methodologies, and track record — giving research offices actionable context instead of guesswork."
+        "heading": "Surface the Right Expertise",
+        "text": "Whether starting from a federal RFP, an industry partnership, or a speculative question — the system finds relevant faculty regardless of department, school, or personal network."
       },
       {
-        "heading": "Vision",
-        "text": "Accelerate research funding capture by reducing the time from opportunity identification to investigator engagement — turning days of committee work into minutes."
+        "heading": "Reusable Semantic Layer",
+        "text": "Builds a shared foundation on top of faculty research data: opportunity matching today, strategic research planning and collaboration discovery tomorrow."
       }
     ],
     "audiences": [
@@ -2951,25 +3045,58 @@ export const slides = [
   },
   {
     "id": 36.6,
-    "slug": "ai-enablement",
+    "slug": "ai-engagement-at-scale",
     "type": "content",
-    "layout": "default",
-    "title": "AI Enablement",
-    "subtitle": "Placeholder — content coming soon",
+    "layout": "feature-grid",
+    "title": "AI Engagement at Scale",
     "backgroundColor": "#F5F0E6",
-    "audiences": [
-      "all",
-      "cabinet"
-    ]
-  },
-  {
-    "id": 36.7,
-    "slug": "health-sciences-ai-use-cases",
-    "type": "content",
-    "layout": "default",
-    "title": "Health Sciences AI Use Cases",
-    "subtitle": "Placeholder — content coming soon",
-    "backgroundColor": "#F5F0E6",
+    "gridColumns": 2,
+    "content": [
+      {
+        "heading": "Faculty AI Symposium — 29 May",
+        "status": "Confirmed",
+        "statusType": "confirmed",
+        "bullets": [
+          "<b>Format:</b> 150-person in-person event, livestreamed campus-wide",
+          "<b>Content:</b> Faculty-led AI use cases, panel discussions, and community building",
+          "<b>Goal:</b> Catalyze faculty-led AI Champions groups and use-case communities that self-organize beyond the event",
+          "<b>Participation:</b> Three seats per school for in-person; open call first-come, first-served"
+        ],
+        "icon": "GraduationCap"
+      },
+      {
+        "heading": "My TritonAI Learning Journey",
+        "status": "In Development",
+        "statusType": "in-development",
+        "bullets": [
+          "<b>What:</b> Self-directed, scaled-up AI education resource built with the Teaching & Learning Commons",
+          "<b>Features:</b> Role-appropriate pathways, optional orientation activities, and peer learning communities",
+          "<b>Approach:</b> Voluntary for faculty; support-focused and building from the GenAI learning community"
+        ],
+        "icon": "BookOpen"
+      },
+      {
+        "heading": "Proposed AI Council",
+        "status": "Exploring Options",
+        "statusType": "exploring",
+        "bullets": [
+          "<b>Concept:</b> Lightweight campus-wide hub for AI guidance, communication, and two-way dialogue",
+          "<b>Foundation:</b> Building on AIDWG in partnership with Academic Senate",
+          "<b>Status:</b> Not a decided direction — proposal being shaped for Chancellor feedback before next steps"
+        ],
+        "icon": "Landmark"
+      },
+      {
+        "heading": "Workshops & Roadshows",
+        "status": "Continuing",
+        "statusType": "continuing",
+        "bullets": [
+          "<b>Ongoing:</b> OSI runs operational and administrative AI training and workflow support across campus",
+          "<b>Model:</b> No changes to the current engagement approach"
+        ],
+        "icon": "Presentation"
+      }
+    ],
     "audiences": [
       "all",
       "cabinet"
