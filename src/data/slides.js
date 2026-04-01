@@ -85,21 +85,33 @@ export const slides = [
       [
         {
           "name": "Allorah Pradenas",
-          "titleLines": ["AVC &", "Chief of Staff to VCFA"]
+          "titleLines": [
+            "AVC &",
+            "Chief of Staff to VCFA"
+          ]
         },
         {
           "name": "Brett Pollak",
-          "titleLines": ["Executive Director", "IT Services"]
+          "titleLines": [
+            "Executive Director",
+            "IT Services"
+          ]
         }
       ],
       [
         {
           "name": "Emily Cowley",
-          "titleLines": ["Director AI Engagement", "Operational Strategic Initiatives"]
+          "titleLines": [
+            "Director AI Engagement",
+            "Operational Strategic Initiatives"
+          ]
         },
         {
           "name": "Zachary Johnson",
-          "titleLines": ["Director AI Strategy", "Operational Strategic Initiatives"]
+          "titleLines": [
+            "Director AI Strategy",
+            "Operational Strategic Initiatives"
+          ]
         }
       ]
     ],
@@ -262,7 +274,8 @@ export const slides = [
       "all",
       "public",
       "internal",
-      "executive"
+      "executive",
+      "cabinet"
     ]
   },
   {
