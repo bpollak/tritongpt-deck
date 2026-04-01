@@ -3070,10 +3070,11 @@ export const slides = [
         "status": "Confirmed",
         "statusType": "confirmed",
         "bullets": [
-          "<b>Format:</b> 150-person in-person event, livestreamed campus-wide",
-          "<b>Content:</b> Faculty-led AI use cases, panel discussions, and community building",
-          "<b>Goal:</b> Catalyze faculty-led AI Champions groups and use-case communities that self-organize beyond the event",
-          "<b>Participation:</b> Three seats per school for in-person; open call first-come, first-served"
+          "A 150-person in-person event, livestreamed campus-wide",
+          "Faculty-led AI use cases, panel discussions, and genuine community building",
+          "AI use-case submissions analysis",
+          "Three seats per school allocation for in-person participation",
+          "Open call first-come, first-serve invitations"
         ],
         "icon": "GraduationCap"
       },
@@ -3089,13 +3090,13 @@ export const slides = [
         "icon": "BookOpen"
       },
       {
-        "heading": "Proposed AI Council",
+        "heading": "AI Council Concept",
         "status": "Exploring Options",
         "statusType": "exploring",
         "bullets": [
-          "<b>Concept:</b> Lightweight campus-wide hub for AI guidance, communication, and two-way dialogue",
-          "<b>Foundation:</b> Building on AIDWG in partnership with Academic Senate",
-          "<b>Status:</b> Not a decided direction — proposal being shaped for Chancellor feedback before next steps"
+          "Exploring a campus-wide hub for AI guidance, communication, and two-way dialogue",
+          "Builds on the AI Development Workgroup within IT Governance",
+          "Aims to strengthen partnership with Academic Senate"
         ],
         "icon": "Landmark"
       },
