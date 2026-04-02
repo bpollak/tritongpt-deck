@@ -1419,7 +1419,7 @@ export const slides = [
       {
         "label": "TEMP POSITIONS",
         "value": "12",
-        "sublabel": "TARGETED FOR ELIMINATION"
+        "sublabel": "TEMP & STUDENT POSITIONS"
       },
       {
         "label": "APPROACH",
@@ -1430,7 +1430,7 @@ export const slides = [
     "content": [
       {
         "heading": "The Problem",
-        "text": "Enrollment Management hires 12 temp staff and redirects 6 FTE each year to manually match thousands of incoming transcripts."
+        "text": "Enrollment Management hires 12 temporary and student employees each peak processing period — and redirects 6 FTE — to manually match thousands of incoming transcripts."
       },
       {
         "heading": "AI-Powered OCR",
@@ -1438,7 +1438,7 @@ export const slides = [
       },
       {
         "heading": "Phased Trust-Building",
-        "text": "Year 1: career staff monitor AI outputs with a reduced temp workforce. Year 2: confidence-score thresholds auto-approve high-certainty matches, further reducing oversight."
+        "text": "Year 1: career staff monitor AI outputs with a reduced temp and student workforce. Year 2: confidence-score thresholds auto-approve high-certainty matches, further reducing oversight."
       },
       {
         "heading": "Validation Roadmap",
