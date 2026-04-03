@@ -2641,7 +2641,7 @@ export const slides = [
             "heading": "Instructional AI Spring Enhancements",
             "text": "Continued pilot enhancements with one-click assistant creation.",
             "icon": "Presentation"
-          },
+          }
         ]
       }
     ],
@@ -2650,7 +2650,8 @@ export const slides = [
     },
     "audiences": [
       "internal",
-      "all"
+      "all",
+      "PK"
     ]
   },
   {
@@ -2760,7 +2761,8 @@ export const slides = [
     },
     "audiences": [
       "internal",
-      "all"
+      "all",
+      "PK"
     ]
   },
   {
@@ -2854,7 +2856,8 @@ export const slides = [
     "audiences": [
       "internal",
       "technical",
-      "all"
+      "all",
+      "PK"
     ]
   },
   {
@@ -2929,7 +2932,8 @@ export const slides = [
     "audiences": [
       "internal",
       "technical",
-      "all"
+      "all",
+      "PK"
     ]
   },
   {
@@ -2984,7 +2988,8 @@ export const slides = [
     },
     "audiences": [
       "internal",
-      "all"
+      "all",
+      "PK"
     ]
   },
   {
