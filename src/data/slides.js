@@ -2573,7 +2573,7 @@ export const slides = [
     "slug": "ai-roadmap-2026",
     "type": "content",
     "layout": "assistant-categories",
-    "title": "AI Roadmap 2026",
+    "title": "AI Roadmap 2026 — Quarter 1",
     "backgroundColor": "#F5F0E6",
     "categories": [
       {
@@ -2633,14 +2633,62 @@ export const slides = [
             "icon": "FileCheck"
           },
           {
-            "heading": "Faculty Finder POC",
-            "text": "AI traverses multiple data sources to discover faculty by research focus, capabilities, and experience.",
+            "heading": "Research Alignment Agent POC",
+            "text": "Proof of concept matching faculty expertise to funding opportunities and collaborations across schools using enriched profiles from academic and institutional data sources.",
             "icon": "Search"
           },
           {
             "heading": "Instructional AI Spring Enhancements",
             "text": "Continued pilot enhancements with one-click assistant creation.",
             "icon": "Presentation"
+          },
+        ]
+      }
+    ],
+    "saasOnboarding": {
+      "text": "Onboard new institutions adopting TritonGPT as a Software-as-a-Service AI platform"
+    },
+    "audiences": [
+      "internal",
+      "all"
+    ]
+  },
+  {
+    "id": "32b",
+    "slug": "ai-roadmap-2026-q2",
+    "type": "content",
+    "layout": "assistant-categories",
+    "title": "AI Roadmap 2026 — Quarter 2",
+    "backgroundColor": "#F5F0E6",
+    "categories": [
+      {
+        "name": "April",
+        "color": "#182B49",
+        "assistants": [
+          {
+            "heading": "Transcript Validation Kick-Off",
+            "text": "Building on the transcript verification POC; aligning validation workflows with the admissions timeline.",
+            "icon": "FileCheck"
+          },
+          {
+            "heading": "N8N Agent Builder",
+            "text": "Agentic workflow orchestration platform is now available.",
+            "icon": "Share2"
+          },
+          {
+            "heading": "Contract Review Refinements",
+            "text": "Front-end app and tunable red-lining rule sets for tailored review of supported documents.",
+            "icon": "FileText"
+          },
+          {
+            "heading": "Triton AI Developer API Launch",
+            "text": "Allows campus users to build apps via the LLM gateway using local and commercial models.",
+            "icon": "Code"
+          },
+          {
+            "heading": "Onyx Platform 3.0 Release",
+            "text": "Features additional personalization and updated state-of-the-art large language models.",
+            "icon": "Cpu"
           },
           {
             "heading": "UCSD Mobile Integration",
@@ -2650,13 +2698,13 @@ export const slides = [
         ]
       },
       {
-        "name": "April",
-        "color": "#6E963B",
+        "name": "May",
+        "color": "#00629B",
         "assistants": [
           {
-            "heading": "AI IT Observability Pilot",
-            "text": "Automated response to system anomalies via log analysis.",
-            "icon": "Target"
+            "heading": "Transcript Validation Continued Work",
+            "text": "Further apply validation logic to admissions workflows.",
+            "icon": "FileCheck"
           },
           {
             "heading": "Academic Advising Agent POC",
@@ -2664,14 +2712,45 @@ export const slides = [
             "icon": "GraduationCap"
           },
           {
-            "heading": "N8N Agent Builder",
-            "text": "Agentic workflow orchestration platform now available.",
-            "icon": "Share2"
+            "heading": "AI IT Observability Pilot",
+            "text": "Automated response to system anomalies via log analysis.",
+            "icon": "Target"
           },
           {
-            "heading": "Contract Review Refinements",
-            "text": "Tunable redlining rule set strength for tailored review.",
-            "icon": "FileText"
+            "heading": "Risk-Based Review Partnership",
+            "text": "Collaboration with Onyx to triage sponsor proposals by risk before submission.",
+            "icon": "Shield"
+          },
+          {
+            "heading": "App Hosting Early Prototype & AI Tools Hub",
+            "text": "Initial campus hosting environment and centralized AI Tools Hub. Equips citizen developers with an agent builder, skills library, secure MCP connectors, APIs, observability, and turnkey AI services.",
+            "icon": "Globe"
+          }
+        ]
+      },
+      {
+        "name": "June",
+        "color": "#00C6D7",
+        "assistants": [
+          {
+            "heading": "Transcript Validation Continued Work",
+            "text": "Further apply validation logic to admissions workflows and continued rollout of deliverables.",
+            "icon": "FileCheck"
+          },
+          {
+            "heading": "Campus App Hosting Rollout",
+            "text": "Full rollout of the app hosting environment for citizen developers.",
+            "icon": "Globe"
+          },
+          {
+            "heading": "Student Advising Assistant",
+            "text": "Full campus release of the AI-assisted academic advising tool.",
+            "icon": "GraduationCap"
+          },
+          {
+            "heading": "Onyx Instructional Assistant — Canvas Integration",
+            "text": "First delivery of a collaborative instructional assistant with Onyx, fully integrated into the Canvas LMS.",
+            "icon": "GraduationCap"
           }
         ]
       }
