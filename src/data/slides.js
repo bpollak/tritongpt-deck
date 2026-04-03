@@ -2690,11 +2690,11 @@ export const slides = [
     "type": "content",
     "content": [],
     "title": "TritonGPT Usage Analytics",
-    "subtitle": "Sessions and Prompts (Jan 2025-Feb 2026)",
+    "subtitle": "Sessions and Prompts (Jan 2025-Mar 2026)",
     "layout": "analytics-chart",
     "backgroundColor": "#F5F0E6",
     "chartData": {
-      "title": "TritonGPT Sessions vs. Prompts (Jan 2025-Feb 2026)",
+      "title": "TritonGPT Sessions vs. Prompts (Jan 2025-Mar 2026)",
       "xAxis": [
         "Jan",
         "Feb",
@@ -2709,7 +2709,8 @@ export const slides = [
         "Nov",
         "Dec",
         "Jan '26",
-        "Feb '26"
+        "Feb '26",
+        "Mar '26"
       ],
       "xAxisTitle": "Month",
       "yAxis": [
@@ -2742,7 +2743,8 @@ export const slides = [
             29017,
             20586,
             32934,
-            30774
+            30774,
+            39436
           ],
           "areaFill": true
         },
@@ -2763,7 +2765,8 @@ export const slides = [
             9464,
             6283,
             10837,
-            10550
+            10550,
+            12544
           ],
           "areaFill": false
         }
@@ -2781,11 +2784,11 @@ export const slides = [
     "type": "content",
     "content": [],
     "title": "TritonGPT Widget Analytics",
-    "subtitle": "Widget Sessions and Prompts (Jul 2025-Feb 2026)",
+    "subtitle": "Widget Sessions and Prompts (Jul 2025-Mar 2026)",
     "layout": "analytics-chart",
     "backgroundColor": "#F5F0E6",
     "chartData": {
-      "title": "TritonGPT Widget - Sessions vs. Prompts (Jul 2025-Feb 2026)",
+      "title": "TritonGPT Widget - Sessions vs. Prompts (Jul 2025-Mar 2026)",
       "xAxis": [
         "Jul",
         "Aug",
@@ -2794,10 +2797,12 @@ export const slides = [
         "Nov",
         "Dec",
         "Jan '26",
-        "Feb '26"
+        "Feb '26",
+        "Mar '26"
       ],
       "xAxisTitle": "Month",
       "yAxis": [
+        "14,000",
         "12,000",
         "10,000",
         "8,000",
@@ -2806,7 +2811,7 @@ export const slides = [
         "2,000",
         "0"
       ],
-      "maxValue": 14000,
+      "maxValue": 16000,
       "series": [
         {
           "name": "Widget Prompts",
@@ -2819,7 +2824,8 @@ export const slides = [
             8457,
             5982,
             8339,
-            7666
+            7666,
+            13945
           ],
           "areaFill": true
         },
@@ -2834,7 +2840,8 @@ export const slides = [
             4034,
             2932,
             4285,
-            4019
+            4019,
+            6788
           ],
           "areaFill": false
         }
@@ -2852,11 +2859,11 @@ export const slides = [
     "type": "content",
     "content": [],
     "title": "TritonGPT User Growth",
-    "subtitle": "Unique Users (Aug 2025-Feb 2026)",
+    "subtitle": "Unique Users (Aug 2025-Mar 2026)",
     "layout": "analytics-chart",
     "backgroundColor": "#F5F0E6",
     "chartData": {
-      "title": "TritonGPT Unique Users (Aug 2025-Feb 2026)",
+      "title": "TritonGPT Unique Users (Aug 2025-Mar 2026)",
       "xAxis": [
         "Aug",
         "Sep",
@@ -2864,7 +2871,8 @@ export const slides = [
         "Nov",
         "Dec",
         "Jan '26",
-        "Feb '26"
+        "Feb '26",
+        "Mar '26"
       ],
       "xAxisTitle": "Month",
       "yAxis": [
@@ -2888,7 +2896,8 @@ export const slides = [
             2199,
             1837,
             2363,
-            2319
+            2319,
+            2453
           ],
           "areaFill": true
         }
