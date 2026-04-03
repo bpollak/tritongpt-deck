@@ -343,6 +343,16 @@ const SlideManager = ({ onClose, standalone = false }) => {
                         </span>
                       ))}
                     </div>
+                    <a
+                      href={`/#slide=${slide.slug || slide.id}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="ml-2 p-1.5 rounded-md text-gray-400 hover:text-ucsd-blue hover:bg-blue-50 transition-colors"
+                      title={`Open slide: ${slide.title}`}
+                    >
+                      <ExternalLink size={16} />
+                    </a>
                   </div>
                   {isExpanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
                 </div>

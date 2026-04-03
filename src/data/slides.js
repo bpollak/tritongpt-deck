@@ -135,10 +135,10 @@ export const slides = [
     "leftName": "Zachary Johnson",
     "leftFocus": "Structural, Technical, and System-Wide Policy",
     "leftItems": [
-      "Vendor & Industry Relations",
-      "Data Governance & Security Protocols",
-      "Technical Requirements for ITS & SDSC",
-      "UCOP System-wide Policy Alignment"
+      "Decision Frameworks for Senior Leaders",
+      "Adoption at Scale",
+      "Institutional Readiness & Measurement",
+      "UC System-wide Policy Alignment"
     ],
     "rightLabel": "The Engagement Director",
     "rightName": "Emily Cowley",
@@ -151,7 +151,7 @@ export const slides = [
     ],
     "sharedItems": [
       "AI Policy & Governance Alignment",
-      "Academic Workflow Integration",
+      "Workflow Integration",
       "Tool Selection & Adoption"
     ],
     "hidden": true,
@@ -1409,7 +1409,7 @@ export const slides = [
     "title": "AI Transcript Matching & Validation",
     "subtitle": "Automating Enrollment Management's most labor-intensive workflow",
     "backgroundColor": "#F5F0E6",
-    "videoSrc": "/media/transcript-matching-cut.mp4",
+    "videoSrc": "/media/tms-onbase-demo.mp4",
     "stats": [
       {
         "label": "PROJECTED SAVINGS",
@@ -1434,7 +1434,7 @@ export const slides = [
       },
       {
         "heading": "AI-Powered OCR",
-        "text": "Extracts data from diverse transcript formats — scanned, stained, or distorted — and matches documents to the correct student record."
+        "text": "Extracts data from diverse transcript formats — scanned, stained, or distorted — and matches documents to the correct student record. Processes ~225 transcripts per hour at ~95% accuracy, continually improving as more transcripts are fed through the system."
       },
       {
         "heading": "Phased Trust-Building",
@@ -2743,8 +2743,8 @@ export const slides = [
             "icon": "Globe"
           },
           {
-            "heading": "Student Advising Assistant",
-            "text": "Full campus release of the AI-assisted academic advising tool.",
+            "heading": "Student Scheduling Assistant",
+            "text": "Full campus release allowing students to plan their course schedule through dialogue based on courses offered that term.",
             "icon": "GraduationCap"
           },
           {
@@ -3117,26 +3117,26 @@ export const slides = [
     "type": "content",
     "layout": "solution-showcase-video",
     "title": "Research Alignment",
-    "subtitle": "Connecting faculty expertise with funding, collaborations, and partnerships — regardless of who knows who",
+    "subtitle": "Connecting expertise with funding, collaborations, and partnerships, regardless of who knows who",
     "backgroundColor": "#F5F0E6",
     "videoSrc": "/media/Research Alignment _ UC San Diego - 27 March 2026.mp4",
     "videoPlaybackRate": 1.9,
     "content": [
       {
         "heading": "How It Works",
-        "text": "Uses the TritonAI API to parse what an opportunity is looking for, then ranks faculty across three schools (Public Health, Scripps, Jacobs) by how well their work fits."
+        "text": "Parses the requirements of an opportunity and identifies experts whose published research, grants, and methods are a strong fit. Searches can be within or across divisions and schools."
       },
       {
         "heading": "Real Research Data",
-        "text": "Faculty profiles enriched from six public academic sources — NIH RePORTER, NSF Awards, PubMed, ORCID, Semantic Scholar, and institutional profiles — so matching is based on actual research output."
+        "text": "Profiles are seeded from Employee Activity Hub and enriched from public academic sources (currently NIH RePORTER, NSF Awards, PubMed, ORCID, Semantic Scholar.) Data is refreshed weekly to reflect current work."
       },
       {
         "heading": "Surface the Right Expertise",
-        "text": "Whether starting from a federal RFP, an industry partnership, or a speculative question — the system finds relevant faculty regardless of department, school, or personal network."
+        "text": "Helps research operations and leadership identify relevant expertise across schools, whether the starting point is a federal solicitation, an industry inquiry, or an internal question."
       },
       {
-        "heading": "Reusable Semantic Layer",
-        "text": "Builds a shared foundation on top of faculty research data: opportunity matching today, strategic research planning and collaboration discovery tomorrow."
+        "heading": "Built to Grow",
+        "text": "The underlying data serves more than one purpose: opportunity matching today, collaboration discovery, and strategic planning over time."
       }
     ],
     "audiences": [
