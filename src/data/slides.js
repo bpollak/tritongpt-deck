@@ -133,7 +133,7 @@ export const slides = [
     "title": "UC San Diego AI Strategy and Engagement",
     "leftLabel": "The Strategy Director",
     "leftName": "Zachary Johnson",
-    "leftFocus": "Structural, Technical, and System-Wide Policy",
+    "leftFocus": "Org Readiness, Strategic Alignment, and Decision Partner",
     "leftItems": [
       "Decision Frameworks for Senior Leaders",
       "Adoption at Scale",
