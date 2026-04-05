@@ -1412,19 +1412,19 @@ export const slides = [
     "videoSrc": "/media/tms-onbase-demo.mp4",
     "stats": [
       {
-        "label": "PROJECTED SAVINGS",
-        "value": "$500K",
-        "sublabel": "ANNUAL COST REDUCTION"
+        "label": "ANNUAL VOLUME",
+        "value": "60,000",
+        "sublabel": "TRANSCRIPTS PER YEAR"
       },
       {
-        "label": "TEMP POSITIONS",
-        "value": "12",
-        "sublabel": "TEMP & STUDENT POSITIONS"
+        "label": "AI THROUGHPUT",
+        "value": "225/hr",
+        "sublabel": "TRANSCRIPTS PROCESSED"
       },
       {
-        "label": "APPROACH",
-        "value": "Phased",
-        "sublabel": "HUMAN-IN-THE-LOOP → AUTO-APPROVE"
+        "label": "MATCH ACCURACY",
+        "value": "95%+",
+        "sublabel": "AND IMPROVING"
       }
     ],
     "content": [
