@@ -927,55 +927,6 @@ export const slides = [
     ]
   },
   {
-    "id": 13,
-    "slug": "scaling-engagement-the-tritongpt-widget",
-    "type": "content",
-    "content": [
-      {
-        "heading": "Universal Accessibility",
-        "text": "Provides instant, knowledge-grounded answers to visitor questions across public-facing sites — no campus login required. Answers are generated from curated campus knowledge bases using RAG, ensuring accuracy for prospective students, parents, and the public."
-      },
-      {
-        "heading": "Technical Consolidation",
-        "text": "A lightweight, embeddable JavaScript solution that departments add with a single script tag — no procurement or integration project needed. Standardizes the AI experience across different department web properties."
-      },
-      {
-        "heading": "Operational ROI",
-        "text": "Displaces expensive third-party vendors (Ocelot), resulting in $300K in recurring annual savings. Self-hosted on SDSC infrastructure means zero variable cost per conversation — unlimited public interactions without per-query fees."
-      }
-    ],
-    "videoSrc": "/media/media8.mov",
-    "title": "Scaling Engagement: The TritonGPT Widget",
-    "layout": "solution-showcase",
-    "subtitle": "High-Quality Public Support at Zero Variable Cost",
-    "backgroundColor": "#F5F0E6",
-    "stats": [
-      {
-        "label": "Cost Avoidance",
-        "value": "$300K",
-        "sub": "Recurring Annual Savings"
-      },
-      {
-        "label": "Deployment",
-        "value": "16",
-        "sub": "Campus Websites Live"
-      },
-      {
-        "label": "Access",
-        "value": "Public",
-        "sub": "No Login Required"
-      }
-    ],
-    "audiences": [
-      "all",
-      "public",
-      "internal",
-      "technical",
-      "ASU-GSV",
-      "executive"
-    ]
-  },
-  {
     "id": 14,
     "slug": "video-media9",
     "type": "video",
@@ -1142,6 +1093,55 @@ export const slides = [
       "internal",
       "ASU-GSV",
       "cabinet",
+      "executive"
+    ]
+  },
+  {
+    "id": 13,
+    "slug": "scaling-engagement-the-tritongpt-widget",
+    "type": "content",
+    "content": [
+      {
+        "heading": "Universal Accessibility",
+        "text": "Provides instant, knowledge-grounded answers to visitor questions across public-facing sites — no campus login required. Answers are generated from curated campus knowledge bases using RAG, ensuring accuracy for prospective students, parents, and the public."
+      },
+      {
+        "heading": "Technical Consolidation",
+        "text": "A lightweight, embeddable JavaScript solution that departments add with a single script tag — no procurement or integration project needed. Standardizes the AI experience across different department web properties."
+      },
+      {
+        "heading": "Operational ROI",
+        "text": "Displaces expensive third-party vendors (Ocelot), resulting in $300K in recurring annual savings. Self-hosted on SDSC infrastructure means zero variable cost per conversation — unlimited public interactions without per-query fees."
+      }
+    ],
+    "videoSrc": "/media/media8.mov",
+    "title": "Scaling Engagement: The TritonGPT Widget",
+    "layout": "solution-showcase",
+    "subtitle": "High-Quality Public Support at Zero Variable Cost",
+    "backgroundColor": "#F5F0E6",
+    "stats": [
+      {
+        "label": "Cost Avoidance",
+        "value": "$300K",
+        "sub": "Recurring Annual Savings"
+      },
+      {
+        "label": "Deployment",
+        "value": "16",
+        "sub": "Campus Websites Live"
+      },
+      {
+        "label": "Access",
+        "value": "Public",
+        "sub": "No Login Required"
+      }
+    ],
+    "audiences": [
+      "all",
+      "public",
+      "internal",
+      "technical",
+      "ASU-GSV",
       "executive"
     ]
   },
