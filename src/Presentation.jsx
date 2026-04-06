@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'; // eslint-disable-line no-unused-vars
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Slide from './components/Slide';
+import TranscriptionOverlay from './components/TranscriptionOverlay';
 import { slides as defaultSlides } from './data/slides';
 import { isSlideVisibleForAudience } from './data/audiences';
 import { findSlideIndexByPermalink, getSlidePermalinkValue } from './data/slidePermalinks';
@@ -239,6 +240,8 @@ const Presentation = () => {
       } else if (e.key === 'End') {
         e.preventDefault();
         goToLastSlide();
+      } else if (e.key === 't' || e.key === 'T') {
+        window.dispatchEvent(new CustomEvent('toggle-transcription'));
       }
     };
 
@@ -358,6 +361,8 @@ const Presentation = () => {
           <ChevronRight size={24} aria-hidden="true" />
         </button>
       </nav>
+
+      <TranscriptionOverlay />
     </div>
   );
 };
