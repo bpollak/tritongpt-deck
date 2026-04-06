@@ -1456,59 +1456,6 @@ export const slides = [
     ]
   },
   {
-    "id": 22,
-    "slug": "from-tritongpt-to-tritonai",
-    "type": "content",
-    "title": "From TritonGPT to TritonAI",
-    "subtitle": "Evolving from chat into an AI Tools Hub that unifies campus-ready capabilities",
-    "layout": "feature-grid",
-    "backgroundColor": "#F5F0E6",
-    "content": [
-      {
-        "heading": "AI Tools Hub",
-        "text": "The overarching TritonAI layer: a centralized hub that brings together Agent Builder for low-code automation, Agent Skills Library for reusable workflows, MCP Server Hub for secure connectors, Developer APIs for custom integrations, Agent Observability for run monitoring, and a Pre-Packaged Tools Pipeline for turnkey AI services."
-      },
-      {
-        "heading": "Agent Builder",
-        "text": "Low-code workflow automation lets units design and launch AI agents with drag-and-drop tooling, reducing dependency on central development queues.",
-        "icon": "Blocks"
-      },
-      {
-        "heading": "Agent Skills Library",
-        "text": "Reusable skill packages provide pre-built instructions and workflows for common campus tasks, accelerating delivery with consistent quality.",
-        "icon": "BookOpen"
-      },
-      {
-        "heading": "MCP Server Hub",
-        "text": "Shared connectors let assistants securely access enterprise data sources and services, enabling reusable integrations instead of one-off builds.",
-        "icon": "Database"
-      },
-      {
-        "heading": "Developer APIs",
-        "text": "Getting-started API documentation, integration guides, and reference patterns help technical teams build campus-ready AI services quickly.",
-        "icon": "Code"
-      },
-      {
-        "heading": "Agent Observability",
-        "text": "Provides real-time visibility into agent runs, tool calls, latency, and errors so teams can trace behavior, debug failures, and continuously improve reliability.",
-        "icon": "Monitor"
-      },
-      {
-        "heading": "Pre-Packaged Tools Pipeline",
-        "text": "A 2026 roadmap for transcription, captioning, summarization, accessibility, and OCR brings high-impact self-service AI capabilities into everyday operations.",
-        "icon": "Cpu"
-      }
-    ],
-    "audiences": [
-      "all",
-      "internal",
-      "public",
-      "ASU-GSV",
-      "executive",
-      "cabinet"
-    ]
-  },
-  {
     "id": 23,
     "slug": "tritonai-developer-api-program",
     "type": "content",
@@ -2108,6 +2055,59 @@ export const slides = [
     "audiences": [
       "ASU-GSV",
       "all"
+    ]
+  },
+  {
+    "id": 22,
+    "slug": "from-tritongpt-to-tritonai",
+    "type": "content",
+    "title": "From TritonGPT to TritonAI",
+    "subtitle": "Evolving from chat into an AI Tools Hub that unifies campus-ready capabilities",
+    "layout": "feature-grid",
+    "backgroundColor": "#F5F0E6",
+    "content": [
+      {
+        "heading": "AI Tools Hub",
+        "text": "The overarching TritonAI layer: a centralized hub that brings together Agent Builder for low-code automation, Agent Skills Library for reusable workflows, MCP Server Hub for secure connectors, Developer APIs for custom integrations, Agent Observability for run monitoring, and a Pre-Packaged Tools Pipeline for turnkey AI services."
+      },
+      {
+        "heading": "Agent Builder",
+        "text": "Low-code workflow automation lets units design and launch AI agents with drag-and-drop tooling, reducing dependency on central development queues.",
+        "icon": "Blocks"
+      },
+      {
+        "heading": "Agent Skills Library",
+        "text": "Reusable skill packages provide pre-built instructions and workflows for common campus tasks, accelerating delivery with consistent quality.",
+        "icon": "BookOpen"
+      },
+      {
+        "heading": "MCP Server Hub",
+        "text": "Shared connectors let assistants securely access enterprise data sources and services, enabling reusable integrations instead of one-off builds.",
+        "icon": "Database"
+      },
+      {
+        "heading": "Developer APIs",
+        "text": "Getting-started API documentation, integration guides, and reference patterns help technical teams build campus-ready AI services quickly.",
+        "icon": "Code"
+      },
+      {
+        "heading": "Agent Observability",
+        "text": "Provides real-time visibility into agent runs, tool calls, latency, and errors so teams can trace behavior, debug failures, and continuously improve reliability.",
+        "icon": "Monitor"
+      },
+      {
+        "heading": "Pre-Packaged Tools Pipeline",
+        "text": "A 2026 roadmap for transcription, captioning, summarization, accessibility, and OCR brings high-impact self-service AI capabilities into everyday operations.",
+        "icon": "Cpu"
+      }
+    ],
+    "audiences": [
+      "all",
+      "internal",
+      "public",
+      "ASU-GSV",
+      "executive",
+      "cabinet"
     ]
   },
   {
