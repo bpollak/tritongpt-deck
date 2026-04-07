@@ -52,7 +52,7 @@ const TranscriptionOverlay = () => {
       {/* Mic toggle button */}
       <button
         onClick={toggleListening}
-        className="fixed bottom-6 right-6 sm:bottom-6 sm:right-8 z-50 p-3 rounded-full shadow-lg border border-gray-200 transition-all hover:scale-105 active:scale-95"
+        className="fixed bottom-6 left-6 sm:bottom-6 sm:left-8 z-50 p-3 rounded-full shadow-lg border border-gray-200 transition-all hover:scale-105 active:scale-95"
         style={{
           backgroundColor: isListening ? 'rgba(220, 38, 38, 0.9)' : 'rgba(255, 255, 255, 0.85)',
           backdropFilter: 'blur(8px)',
