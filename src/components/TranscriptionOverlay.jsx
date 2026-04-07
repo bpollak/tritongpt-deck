@@ -3,7 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion'; // eslint-disable-line 
 import { Mic, MicOff } from 'lucide-react';
 import useSpeechRecognition from '../hooks/useSpeechRecognition';
 
-const MAX_VISIBLE_LINES = 3;
+// Max characters to keep in the visible ticker
+const MAX_TICKER_CHARS = 300;
 
 const TranscriptionOverlay = () => {
   const {
@@ -16,7 +17,7 @@ const TranscriptionOverlay = () => {
     clearTranscript,
   } = useSpeechRecognition();
 
-  const captionRef = useRef(null);
+  const tickerRef = useRef(null);
 
   // Listen for keyboard shortcut event from Presentation.jsx
   useEffect(() => {
@@ -25,26 +26,26 @@ const TranscriptionOverlay = () => {
     return () => window.removeEventListener('toggle-transcription', handler);
   }, [toggleListening]);
 
-  // Keep only the last few lines of transcript visible
-  const recentLines = useMemo(() => {
-    if (!transcript) return [];
-    // Split on sentence-ending punctuation to get natural lines
-    const sentences = transcript
-      .split(/(?<=[.!?])\s+/)
-      .filter((s) => s.trim());
-    return sentences.slice(-MAX_VISIBLE_LINES);
+  // Trim transcript to a trailing window for the ticker
+  const tickerText = useMemo(() => {
+    if (!transcript) return '';
+    if (transcript.length <= MAX_TICKER_CHARS) return transcript;
+    // Cut at a word boundary
+    const trimmed = transcript.slice(-MAX_TICKER_CHARS);
+    const firstSpace = trimmed.indexOf(' ');
+    return firstSpace > 0 ? trimmed.slice(firstSpace + 1) : trimmed;
   }, [transcript]);
 
-  // Auto-scroll caption area
+  // Auto-scroll ticker to the right (latest text)
   useEffect(() => {
-    if (captionRef.current) {
-      captionRef.current.scrollTop = captionRef.current.scrollHeight;
+    if (tickerRef.current) {
+      tickerRef.current.scrollLeft = tickerRef.current.scrollWidth;
     }
-  }, [recentLines, interimText]);
+  }, [tickerText, interimText]);
 
   if (!isSupported) return null;
 
-  const showCaptions = isListening || recentLines.length > 0 || interimText;
+  const showTicker = isListening || tickerText || interimText;
 
   return (
     <>
@@ -71,52 +72,67 @@ const TranscriptionOverlay = () => {
         )}
       </button>
 
-      {/* Caption overlay */}
+      {/* News ticker caption bar */}
       <AnimatePresence>
-        {showCaptions && (
+        {showTicker && (
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 20 }}
-            transition={{ duration: 0.25 }}
-            className="fixed bottom-16 sm:bottom-20 left-1/2 -translate-x-1/2 w-[90vw] max-w-4xl z-40 rounded-2xl px-6 py-4 pointer-events-none"
-            style={{
-              backgroundColor: 'rgba(0, 32, 69, 0.82)',
-              backdropFilter: 'blur(8px)',
-            }}
+            exit={{ opacity: 0, y: 10 }}
+            transition={{ duration: 0.2 }}
+            className="fixed bottom-12 sm:bottom-16 left-0 right-0 z-40 pointer-events-none"
             role="status"
             aria-live="polite"
             aria-label="Live captions"
           >
-            <div ref={captionRef} className="max-h-28 overflow-hidden">
-              {error ? (
-                <p className="text-red-300 text-center text-base">{error}</p>
-              ) : (
-                <p className="text-white text-lg sm:text-xl leading-relaxed text-center font-sans">
-                  {recentLines.join(' ')}
-                  {interimText && (
-                    <span className="opacity-50 italic">
-                      {recentLines.length > 0 ? ' ' : ''}
-                      {interimText}
-                    </span>
-                  )}
-                  {!recentLines.length && !interimText && isListening && (
-                    <span className="opacity-40 italic">Listening...</span>
-                  )}
-                </p>
+            <div
+              className="w-full px-4 py-1.5 flex items-center gap-3"
+              style={{
+                backgroundColor: 'rgba(0, 22, 50, 0.95)',
+                backdropFilter: 'blur(6px)',
+              }}
+            >
+              {/* LIVE badge */}
+              {isListening && (
+                <span className="shrink-0 px-2 py-0.5 bg-red-600 text-white text-xs font-bold uppercase rounded tracking-wider">
+                  Live
+                </span>
+              )}
+
+              {/* Scrolling ticker text */}
+              <div
+                ref={tickerRef}
+                className="flex-1 overflow-x-hidden whitespace-nowrap"
+              >
+                {error ? (
+                  <span className="text-red-200 text-sm font-medium">{error}</span>
+                ) : (
+                  <span className="text-white text-sm sm:text-base font-sans font-medium">
+                    {tickerText}
+                    {interimText && (
+                      <span className="text-yellow-200 italic">
+                        {tickerText ? ' ' : ''}
+                        {interimText}
+                      </span>
+                    )}
+                    {!tickerText && !interimText && isListening && (
+                      <span className="text-yellow-200/70 italic">Listening...</span>
+                    )}
+                  </span>
+                )}
+              </div>
+
+              {/* Clear button */}
+              {tickerText && (
+                <button
+                  onClick={clearTranscript}
+                  className="pointer-events-auto shrink-0 text-white/40 hover:text-white/80 text-xs transition-colors"
+                  aria-label="Clear captions"
+                >
+                  Clear
+                </button>
               )}
             </div>
-
-            {/* Clear button */}
-            {recentLines.length > 0 && (
-              <button
-                onClick={clearTranscript}
-                className="pointer-events-auto absolute top-2 right-3 text-white/40 hover:text-white/80 text-xs transition-colors"
-                aria-label="Clear captions"
-              >
-                Clear
-              </button>
-            )}
           </motion.div>
         )}
       </AnimatePresence>
