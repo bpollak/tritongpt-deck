@@ -173,9 +173,15 @@ export const slides = [
     "campusImage": "/media/campus-geisel.jpg",
     "metrics": [
       {
-        "value": "$1.73B",
+        "value": "$1.7B",
         "label": "Research Funding",
         "icon": "DollarSign",
+        "tier": "hero"
+      },
+      {
+        "value": "#1",
+        "label": "Public College for Research",
+        "icon": "Star",
         "tier": "hero"
       },
       {
@@ -185,13 +191,31 @@ export const slides = [
         "tier": "hero"
       },
       {
-        "value": "24.7%",
-        "label": "Undergraduate Admit Rate",
-        "icon": "GraduationCap",
-        "tier": "hero"
+        "value": "#5",
+        "label": "Scientific Output, U.S. Public (Nature Index)",
+        "icon": "FlaskConical",
+        "category": "research"
       },
       {
-        "value": "45,273",
+        "value": "16",
+        "label": "Nobel Laureate Faculty",
+        "icon": "Star",
+        "category": "research"
+      },
+      {
+        "value": "#2",
+        "label": "Most Applied-To University in U.S.",
+        "icon": "TrendingUp",
+        "category": "research"
+      },
+      {
+        "value": "100+",
+        "label": "Research Centers",
+        "icon": "Building2",
+        "category": "research"
+      },
+      {
+        "value": "~45,000",
         "label": "Students",
         "icon": "GraduationCap",
         "category": "people"
@@ -209,34 +233,10 @@ export const slides = [
         "category": "people"
       },
       {
-        "value": "256K",
-        "label": "Alumni Worldwide",
-        "icon": "Globe",
+        "value": "28.4%",
+        "label": "Admit Rate (Fall 2025)",
+        "icon": "GraduationCap",
         "category": "people"
-      },
-      {
-        "value": "16",
-        "label": "Nobel Laureates",
-        "icon": "Star",
-        "category": "academic"
-      },
-      {
-        "value": "12",
-        "label": "Schools",
-        "icon": "Building2",
-        "category": "academic"
-      },
-      {
-        "value": "200+",
-        "label": "Degree Programs",
-        "icon": "Layers",
-        "category": "academic"
-      },
-      {
-        "value": "100+",
-        "label": "Research Centers",
-        "icon": "FlaskConical",
-        "category": "academic"
       }
     ],
     "audiences": [
