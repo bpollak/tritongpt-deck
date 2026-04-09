@@ -244,7 +244,8 @@ export const slides = [
       "public",
       "internal",
       "technical",
-      "ASU-GSV"
+      "ASU-GSV",
+      "regent"
     ]
   },
   {
@@ -312,7 +313,8 @@ export const slides = [
     "hidden": true,
     "audiences": [
       "ASU-GSV",
-      "all"
+      "all",
+      "regent"
     ]
   },
   {
@@ -512,7 +514,8 @@ export const slides = [
     ],
     "hidden": true,
     "audiences": [
-      "all"
+      "all",
+      "regent"
     ]
   },
   {
@@ -553,7 +556,8 @@ export const slides = [
       "internal",
       "technical",
       "ASU-GSV",
-      "executive"
+      "executive",
+      "regent"
     ]
   },
   {
@@ -692,7 +696,8 @@ export const slides = [
       "public",
       "internal",
       "technical",
-      "executive"
+      "executive",
+      "regent"
     ]
   },
   {
@@ -732,7 +737,8 @@ export const slides = [
       "all",
       "public",
       "internal",
-      "technical"
+      "technical",
+      "regent"
     ]
   },
   {
@@ -842,7 +848,8 @@ export const slides = [
       "technical",
       "ASU-GSV",
       "executive",
-      "cabinet"
+      "cabinet",
+      "regent"
     ]
   },
   {
@@ -972,7 +979,8 @@ export const slides = [
       "internal",
       "technical",
       "ASU-GSV",
-      "executive"
+      "executive",
+      "regent"
     ]
   },
   {
@@ -1080,7 +1088,8 @@ export const slides = [
       "internal",
       "technical",
       "ASU-GSV",
-      "executive"
+      "executive",
+      "regent"
     ]
   },
   {
@@ -1142,7 +1151,8 @@ export const slides = [
       "internal",
       "ASU-GSV",
       "cabinet",
-      "executive"
+      "executive",
+      "regent"
     ]
   },
   {
@@ -1190,7 +1200,8 @@ export const slides = [
       "all",
       "public",
       "internal",
-      "technical"
+      "technical",
+      "regent"
     ]
   },
   {
@@ -1236,7 +1247,8 @@ export const slides = [
     "hidden": true,
     "audiences": [
       "ASU-GSV",
-      "all"
+      "all",
+      "regent"
     ]
   },
   {
@@ -1289,7 +1301,8 @@ export const slides = [
       "internal",
       "technical",
       "ASU-GSV",
-      "cabinet"
+      "cabinet",
+      "regent"
     ]
   },
   {
@@ -1452,7 +1465,8 @@ export const slides = [
       "technical",
       "ASU-GSV",
       "cabinet",
-      "executive"
+      "executive",
+      "regent"
     ]
   },
   {
@@ -1618,7 +1632,8 @@ export const slides = [
       "public",
       "ASU-GSV",
       "executive",
-      "cabinet"
+      "cabinet",
+      "regent"
     ]
   },
   {
@@ -1818,7 +1833,8 @@ export const slides = [
       "public",
       "ASU-GSV",
       "executive",
-      "cabinet"
+      "cabinet",
+      "regent"
     ]
   },
   {
@@ -1969,7 +1985,8 @@ export const slides = [
       "all",
       "internal",
       "ASU-GSV",
-      "cabinet"
+      "cabinet",
+      "regent"
     ]
   },
   {
@@ -2325,7 +2342,8 @@ export const slides = [
     "hidden": true,
     "audiences": [
       "ASU-GSV",
-      "all"
+      "all",
+      "regent"
     ]
   },
   {
@@ -2406,7 +2424,8 @@ export const slides = [
     ],
     "hidden": true,
     "audiences": [
-      "all"
+      "all",
+      "regent"
     ]
   },
   {
@@ -2499,7 +2518,8 @@ export const slides = [
       "all",
       "internal",
       "public",
-      "ASU-GSV"
+      "ASU-GSV",
+      "regent"
     ]
   },
   {
@@ -3227,7 +3247,8 @@ export const slides = [
       "all",
       "internal",
       "public",
-      "executive"
+      "executive",
+      "regent"
     ]
   },
   {
