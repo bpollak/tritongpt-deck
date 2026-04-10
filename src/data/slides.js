@@ -313,7 +313,6 @@ export const slides = [
     "bottomMessage": "This is the world our 45,000 students graduate into.",
     "hidden": true,
     "audiences": [
-      "ASU-GSV",
       "all"
     ]
   },
@@ -352,7 +351,6 @@ export const slides = [
     ],
     "hidden": true,
     "audiences": [
-      "ASU-GSV",
       "all"
     ]
   },
@@ -431,8 +429,7 @@ export const slides = [
     ],
     "hidden": true,
     "audiences": [
-      "all",
-      "ASU-GSV"
+      "all"
     ]
   },
   {
