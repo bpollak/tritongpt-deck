@@ -704,34 +704,58 @@ export const slides = [
     "slug": "tritongpt-secure-scalable-ai-platform",
     "backgroundColor": "#F5F0E6",
     "type": "content",
-    "content": [
+    "title": "TritonGPT Platform Architecture",
+    "subtitle": "On-premise infrastructure delivered as software-as-a-service",
+    "layout": "infrastructure-stack",
+    "architectureLayers": [
       {
-        "heading": "Serves 73,000+ Users",
-        "text": "28,000 staff and faculty, plus 45,000 students. Equal access for every employee and student—no paywalls, no gatekeeping."
+        "name": "San Diego Supercomputer Center",
+        "description": "On-Premise Infrastructure",
+        "details": "UC-owned GPU clusters and compute with enterprise-grade security and P3 data compliance",
+        "color": "#182B49",
+        "icon": "Server"
       },
       {
-        "heading": "Secure, On-Prem Hosting",
-        "text": "Hosted at SDSC with enterprise-grade controls and P3 data compliance."
+        "name": "Per-Institution Kubernetes Clusters",
+        "description": "Software-as-a-Service Delivery",
+        "details": "Each UC institution receives its own dedicated Kubernetes cluster — isolated tenancy on shared SDSC hardware with zero variable cost to scale",
+        "color": "#00629B",
+        "icon": "Layers",
+        "tools": ["TritonGPT (UCSD)", "BearGPT (Berkeley)", "BobcatGPT (Merced)", "AggieGPT (ANR)"]
       },
       {
-        "heading": "Open-Source Foundation",
-        "text": "Built on open-source foundations with enterprise-grade RAG and emerging agentic capabilities."
+        "name": "LLM Gateway",
+        "description": "Shared Model Inference",
+        "details": "Model-agnostic routing across commercial and open-source providers — single API, multiple back-ends",
+        "color": "#006A96",
+        "icon": "GitBranch",
+        "tools": ["Gemini", "OpenAI", "Anthropic", "Open Source"]
       },
       {
-        "heading": "Zero Per-Token Costs",
-        "text": "Local hosting eliminates variable costs, enabling institution-wide deployment at predictable cost."
+        "name": "Knowledge Sources",
+        "description": "Institutional Data",
+        "details": "Campus policies, websites, contracts, procedures, and departmental knowledge bases",
+        "color": "#6E963B",
+        "icon": "Database",
+        "tools": ["Policies", "Websites", "Contracts", "Procedures"]
       },
       {
-        "heading": "Award-Winning Innovation",
-        "text": "CIO 100 Award (2025) and Gartner Eye on Innovation Finalist recognition."
+        "name": "Onyx Orchestration",
+        "description": "RAG & Prompt Routing Layer",
+        "details": "Open-source orchestration connecting inference to institutional knowledge — founded by two UC San Diego alumni",
+        "color": "#FC8900",
+        "icon": "Cpu",
+        "badge": "Founded by UCSD Alumni"
       },
       {
-        "heading": "Federated & Scalable",
-        "text": "Powers BearGPT (UC Berkeley), BobcatGPT (UC Merced), AggieGPT (UC ANR), and Farleigh Dickinson."
+        "name": "AI Assistants",
+        "description": "18 Purpose-Built Tools",
+        "details": "From contract review to academic tutoring — each assistant combines LLM inference with campus-specific knowledge",
+        "color": "#FFCD00",
+        "icon": "Blocks",
+        "tools": ["UC San Diego Assistant", "Contract Reviewer", "Socratic Tutor", "Job Description Helper", "+14 more"]
       }
     ],
-    "title": "TritonGPT: Secure, Scalable AI Platform",
-    "layout": "feature-grid",
     "audiences": [
       "all",
       "public",

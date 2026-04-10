@@ -149,6 +149,7 @@ const Slide = ({ slide }) => {
   const isProblemStatement = slide.layout === 'problem-statement';
   const isComparisonTable = slide.layout === 'comparison-table';
   const isCompoundArchitecture = slide.layout === 'compound-architecture';
+  const isInfrastructureStack = slide.layout === 'infrastructure-stack';
   const isAgentWorkflow = slide.layout === 'agent-workflow';
   const isAnalyticsChart = slide.layout === 'analytics-chart';
   const isTeamGrid = slide.layout === 'team-grid';
@@ -1233,9 +1234,9 @@ const Slide = ({ slide }) => {
         className={clsx(
           "font-bold mb-4 sm:mb-6",
           isTitle ? "text-2xl sm:text-4xl md:text-6xl" : "text-xl sm:text-3xl md:text-5xl",
-          (!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isAgentDevStrategy && !isRoadmap && !isProblemStatement && !isContractReviewChallenge && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isTimelineEvolution && !isCampusMetrics && !isApiGateway && !isHostingPipeline && !isIntakeFunnel && !isInnovationFlywheel && !isFlywheelCaseStudy && !isOriginStory) && "border-b-4 border-ucsd-gold pb-3 inline-block self-start",
+          (!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isAgentDevStrategy && !isRoadmap && !isProblemStatement && !isContractReviewChallenge && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isInfrastructureStack && !isTimelineEvolution && !isCampusMetrics && !isApiGateway && !isHostingPipeline && !isIntakeFunnel && !isInnovationFlywheel && !isFlywheelCaseStudy && !isOriginStory) && "border-b-4 border-ucsd-gold pb-3 inline-block self-start",
           (isSolution || isSolutionVideo || isCaseStudyHero || isAssistantCategories || isKeyTakeaways || isAgentDevStrategy || isRoadmap || isProblemStatement || isContractReviewChallenge || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isComparisonTable || isCompoundArchitecture || isTimelineEvolution || isCampusMetrics) && "text-center w-full",
-          (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isCompoundArchitecture || isApiGateway || isHostingPipeline || isIntakeFunnel || isInnovationFlywheel || isFlywheelCaseStudy || isOriginStory) && "hidden",
+          (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isCompoundArchitecture || isInfrastructureStack || isApiGateway || isHostingPipeline || isIntakeFunnel || isInnovationFlywheel || isFlywheelCaseStudy || isOriginStory) && "hidden",
           isAgentWorkflow && "text-center text-3xl sm:text-5xl md:text-6xl mb-2 sm:mb-4 w-full",
           isCaseStudyHero && "text-3xl md:text-4xl mb-2 sm:mb-3 leading-tight",
           isRoadmap && "mb-2 sm:mb-3 leading-tight",
@@ -1256,7 +1257,7 @@ const Slide = ({ slide }) => {
         {slide.title}
       </motion.h1>
 
-      {slide.subtitle && !isCaseStudyHero && !isCompoundArchitecture && !isAnalyticsChart && !isTimelineEvolution && !isTritonAIEvolutionSlide && !isApiGateway && !isHostingPipeline && !isIntakeFunnel && !isInnovationFlywheel && !isFlywheelCaseStudy && !isOriginStory && (
+      {slide.subtitle && !isCaseStudyHero && !isCompoundArchitecture && !isInfrastructureStack && !isAnalyticsChart && !isTimelineEvolution && !isTritonAIEvolutionSlide && !isApiGateway && !isHostingPipeline && !isIntakeFunnel && !isInnovationFlywheel && !isFlywheelCaseStudy && !isOriginStory && (
         <motion.h2
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -3556,6 +3557,201 @@ const Slide = ({ slide }) => {
         </div>
       )}
 
+      {isInfrastructureStack && slide.architectureLayers && (() => {
+        const layers = slide.architectureLayers;
+        const sdsc = layers[0];
+        const k8s = layers[1];
+        const gateway = layers[2];
+        const knowledge = layers[3];
+        const onyx = layers[4];
+        const assistants = layers[5];
+
+        const FlowArrow = () => (
+          <div className="flex justify-center my-0.5" aria-hidden="true">
+            <div className="w-0.5 h-2 sm:h-3 bg-gradient-to-t from-ucsd-navy/40 to-ucsd-navy/10" />
+          </div>
+        );
+
+        // Light colors that need dark text for contrast
+        const lightColors = new Set(['#FFCD00', '#FFD100', '#FFDE00']);
+        const pillTextForColor = (color) => (lightColors.has(color?.toUpperCase?.()) ? 'text-ucsd-navy' : 'text-white');
+
+        const renderLayer = (layer, options = {}) => {
+          if (!layer) return null;
+          const IconComp = layer.icon ? (iconMap[layer.icon] || Server) : Server;
+          const { compact = false, emphasize = false } = options;
+          const pillText = pillTextForColor(layer.color);
+          return (
+            <div
+              className={clsx(
+                "relative rounded-xl bg-white/90 backdrop-blur-sm shadow-md border-l-4 flex items-center gap-3 sm:gap-4",
+                compact ? "px-3 sm:px-4 py-1.5 sm:py-2" : "px-3 sm:px-4 py-2 sm:py-2.5",
+                emphasize && "ring-2 ring-ucsd-gold/60 shadow-lg"
+              )}
+              style={{ borderLeftColor: layer.color }}
+            >
+              <div
+                className="flex-shrink-0 w-9 h-9 sm:w-11 sm:h-11 rounded-lg flex items-center justify-center"
+                style={{ backgroundColor: layer.color }}
+              >
+                <IconComp className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="flex flex-wrap items-baseline gap-x-2">
+                  <div className="text-sm sm:text-base md:text-lg font-black text-ucsd-navy uppercase tracking-wide leading-tight">{layer.name}</div>
+                  <div className="text-[10px] sm:text-xs font-bold text-ucsd-blue uppercase tracking-wider">{layer.description}</div>
+                </div>
+                <div className="text-[11px] sm:text-xs md:text-sm text-ucsd-navy/75 leading-snug">{layer.details}</div>
+              </div>
+              {layer.badge && (
+                <div className="hidden md:flex flex-shrink-0 items-center gap-1.5 bg-ucsd-gold text-ucsd-navy font-black text-[10px] sm:text-xs uppercase tracking-wide px-2.5 py-1 rounded-full shadow">
+                  <Star className="w-3 h-3" />
+                  {layer.badge}
+                </div>
+              )}
+              {layer.tools && !options.hideTools && (
+                <div className="hidden lg:flex flex-shrink-0 flex-wrap gap-1 justify-end max-w-[42%]">
+                  {layer.tools.map((tool, idx) => (
+                    <span
+                      key={idx}
+                      className={clsx("text-[10px] sm:text-xs font-bold px-2 py-0.5 rounded-full shadow-sm", pillText)}
+                      style={{ backgroundColor: layer.color }}
+                    >
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+          );
+        };
+
+        return (
+          <div className="relative w-full flex flex-col items-center justify-start px-3 sm:px-6 pt-1 sm:pt-2 pb-2 max-w-[1600px] mx-auto">
+            {/* Title */}
+            <motion.div
+              initial={{ opacity: 0, y: -15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-center mb-2 sm:mb-3"
+            >
+              <div className="text-xl sm:text-3xl md:text-4xl font-black text-ucsd-navy leading-none">{slide.title}</div>
+              {slide.subtitle && (
+                <div className="text-xs sm:text-base md:text-lg text-ucsd-blue font-bold mt-0.5 sm:mt-1">{slide.subtitle}</div>
+              )}
+            </motion.div>
+
+            {/* Header stats: scale + awards + federation */}
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.5 }}
+              className="mb-0.5 sm:mb-1 w-full grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3"
+            >
+              <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-lg px-3 py-1.5 sm:py-2 shadow-sm border border-ucsd-navy/10">
+                <Users className="w-4 h-4 sm:w-5 sm:h-5 text-ucsd-blue flex-shrink-0" />
+                <div className="leading-tight">
+                  <div className="text-sm sm:text-base font-black text-ucsd-navy">73,000+ users</div>
+                  <div className="text-[10px] sm:text-xs text-ucsd-navy/70">Equal access — no paywalls, no gatekeeping</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-lg px-3 py-1.5 sm:py-2 shadow-sm border border-ucsd-navy/10">
+                <Award className="w-4 h-4 sm:w-5 sm:h-5 text-ucsd-gold flex-shrink-0" />
+                <div className="leading-tight">
+                  <div className="text-sm sm:text-base font-black text-ucsd-navy">CIO 100 · Gartner Finalist</div>
+                  <div className="text-[10px] sm:text-xs text-ucsd-navy/70">2025 award-winning innovation</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-lg px-3 py-1.5 sm:py-2 shadow-sm border border-ucsd-navy/10">
+                <Share2 className="w-4 h-4 sm:w-5 sm:h-5 text-ucsd-palm-green flex-shrink-0" />
+                <div className="leading-tight">
+                  <div className="text-sm sm:text-base font-black text-ucsd-navy">Federated across UC</div>
+                  <div className="text-[10px] sm:text-xs text-ucsd-navy/70">Powering Berkeley, Merced, ANR &amp; more</div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Section divider between stats and architecture */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.18, duration: 0.5 }}
+              className="w-full flex items-center gap-3 mt-1 mb-1.5 sm:mt-1.5 sm:mb-2"
+            >
+              <div className="flex-1 h-px bg-gradient-to-r from-transparent via-ucsd-navy/25 to-ucsd-navy/25" />
+              <div className="text-[10px] sm:text-xs font-black uppercase tracking-[0.18em] text-ucsd-navy/60 whitespace-nowrap">Platform Architecture</div>
+              <div className="flex-1 h-px bg-gradient-to-l from-transparent via-ucsd-navy/25 to-ucsd-navy/25" />
+            </motion.div>
+
+            {/* Stack (top-down visually; bottom-up conceptually) */}
+            <div className="w-full flex flex-col">
+              {/* TIER 5: Assistants */}
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.15, duration: 0.5 }}
+              >
+                {renderLayer(assistants, { compact: true })}
+              </motion.div>
+
+              <FlowArrow />
+
+              {/* TIER 4: Onyx */}
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.25, duration: 0.5 }}
+              >
+                {renderLayer(onyx, { emphasize: true })}
+              </motion.div>
+
+              <FlowArrow />
+
+              {/* TIER 3: Gateway + Knowledge side-by-side */}
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.35, duration: 0.5 }}
+                className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-3"
+              >
+                {renderLayer(gateway)}
+                {renderLayer(knowledge)}
+              </motion.div>
+
+              <FlowArrow />
+
+              {/* TIER 2: Kubernetes */}
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.45, duration: 0.5 }}
+              >
+                {renderLayer(k8s, { compact: true })}
+              </motion.div>
+
+              <FlowArrow />
+
+              {/* TIER 1: SDSC Foundation */}
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.55, duration: 0.5 }}
+              >
+                {renderLayer(sdsc, { compact: true })}
+              </motion.div>
+            </div>
+
+            {/* Mobile fallback badge for Onyx (since it's hidden on small screens) */}
+            {onyx?.badge && (
+              <div className="md:hidden mt-2 flex items-center gap-1.5 bg-ucsd-gold text-ucsd-navy font-black text-[10px] uppercase tracking-wide px-2.5 py-1 rounded-full shadow">
+                <Star className="w-3 h-3" />
+                {onyx.badge}
+              </div>
+            )}
+          </div>
+        );
+      })()}
+
       {isAgentWorkflow && (
         <div className="relative w-full min-h-full flex flex-col items-center justify-start px-4 sm:px-6 pt-0 pb-0 max-w-[1900px] mx-auto">
           {/* Main Layout: Stacked on mobile, 3-column grid on desktop */}
@@ -5422,7 +5618,7 @@ const Slide = ({ slide }) => {
         );
       })()}
 
-      {!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isAgentDevStrategy && !isRoadmap && !isProblemStatement && !isContractReviewChallenge && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isAgentWorkflow && !isAnalyticsChart && !isTeamGrid && !isTimelineEvolution && !isCampusMetrics && !isApiGateway && !isHostingPipeline && !isIntakeFunnel && !isInnovationFlywheel && !isFlywheelCaseStudy && !isOriginStory && !isHeroList && slide.content && slide.content.length > 0 && (
+      {!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isAgentDevStrategy && !isRoadmap && !isProblemStatement && !isContractReviewChallenge && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isInfrastructureStack && !isAgentWorkflow && !isAnalyticsChart && !isTeamGrid && !isTimelineEvolution && !isCampusMetrics && !isApiGateway && !isHostingPipeline && !isIntakeFunnel && !isInnovationFlywheel && !isFlywheelCaseStudy && !isOriginStory && !isHeroList && slide.content && slide.content.length > 0 && (
         <motion.ul
           variants={containerVariants}
           initial="hidden"
@@ -5774,7 +5970,7 @@ const Slide = ({ slide }) => {
           </div>
         ) : (
           <div className={clsx("flex flex-col h-full w-full", isTitle ? "justify-center items-center text-center" : isTimelineEvolution ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isHeroList ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isContractReviewChallenge ? "justify-start pt-0 sm:pt-0.5 overflow-y-auto touch-pan-y custom-scrollbar" : isTritonAIEvolutionSlide ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isPlatformSimple ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isSolution ? "justify-start pt-4 overflow-hidden" : isSolutionVideo ? "justify-start pt-0.5 sm:pt-1 overflow-hidden" : isCaseStudyHero ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isRoadmap ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isFlywheelCaseStudy ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isAgentDevStrategy ? "justify-start pt-1 sm:pt-2 overflow-y-auto touch-pan-y custom-scrollbar" : "justify-start pt-4 overflow-y-auto touch-pan-y custom-scrollbar")}>
-            <div className={clsx("w-full mx-auto", (isTimelineEvolution || isHeroList) && "max-w-[1800px] h-full flex flex-col", (isSolution || isSolutionVideo || isCaseStudyHero || isProblemStatement || isContractReviewChallenge || isFeatureGrid || isCampusMetrics || isAgentDevStrategy || isFlywheelCaseStudy || isHeroList) ? "max-w-[1800px]" : !isTimelineEvolution && "max-w-7xl")}>{renderContent()}</div>
+            <div className={clsx("w-full mx-auto", (isTimelineEvolution || isHeroList) && "max-w-[1800px] h-full flex flex-col", (isSolution || isSolutionVideo || isCaseStudyHero || isProblemStatement || isContractReviewChallenge || isFeatureGrid || isCampusMetrics || isAgentDevStrategy || isFlywheelCaseStudy || isHeroList || isInfrastructureStack) ? "max-w-[1800px]" : !isTimelineEvolution && "max-w-7xl")}>{renderContent()}</div>
           </div>
         )}
       </div>
