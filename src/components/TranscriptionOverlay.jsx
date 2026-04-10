@@ -80,7 +80,7 @@ const TranscriptionOverlay = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 10 }}
             transition={{ duration: 0.2 }}
-            className="fixed bottom-12 sm:bottom-16 left-0 right-0 z-40 pointer-events-none"
+            className="fixed bottom-16 sm:bottom-20 left-0 right-0 z-40 pointer-events-none"
             role="status"
             aria-live="polite"
             aria-label="Live captions"
