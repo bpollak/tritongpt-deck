@@ -1287,7 +1287,6 @@ export const slides = [
     ],
     "hidden": true,
     "audiences": [
-      "ASU-GSV",
       "all"
     ]
   },
