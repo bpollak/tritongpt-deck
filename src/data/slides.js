@@ -2168,7 +2168,8 @@ export const slides = [
       "public",
       "ASU-GSV",
       "executive",
-      "cabinet"
+      "cabinet",
+      "regent"
     ]
   },
   {
@@ -2251,7 +2252,8 @@ export const slides = [
       "all",
       "internal",
       "public",
-      "ASU-GSV"
+      "ASU-GSV",
+      "regent"
     ]
   },
   {
@@ -2353,7 +2355,8 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "public"
+      "public",
+      "regent"
     ]
   },
   {
@@ -2386,8 +2389,7 @@ export const slides = [
     "hidden": true,
     "audiences": [
       "ASU-GSV",
-      "all",
-      "regent"
+      "all"
     ]
   },
   {
