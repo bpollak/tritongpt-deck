@@ -721,7 +721,12 @@ export const slides = [
         "details": "Each UC institution receives its own dedicated Kubernetes cluster — isolated tenancy on shared SDSC hardware with zero variable cost to scale",
         "color": "#00629B",
         "icon": "Layers",
-        "tools": ["TritonGPT (UCSD)", "BearGPT (Berkeley)", "BobcatGPT (Merced)", "AggieGPT (ANR)"]
+        "tools": [
+          "TritonGPT (UCSD)",
+          "BearGPT (Berkeley)",
+          "BobcatGPT (Merced)",
+          "AggieGPT (ANR)"
+        ]
       },
       {
         "name": "LLM Gateway",
@@ -729,7 +734,12 @@ export const slides = [
         "details": "Model-agnostic routing across commercial and open-source providers — single API, multiple back-ends",
         "color": "#006A96",
         "icon": "GitBranch",
-        "tools": ["Gemini", "OpenAI", "Anthropic", "Open Source"]
+        "tools": [
+          "Gemini",
+          "OpenAI",
+          "Anthropic",
+          "Open Source"
+        ]
       },
       {
         "name": "Knowledge Sources",
@@ -737,7 +747,12 @@ export const slides = [
         "details": "Campus policies, websites, contracts, procedures, and departmental knowledge bases",
         "color": "#6E963B",
         "icon": "Database",
-        "tools": ["Policies", "Websites", "Contracts", "Procedures"]
+        "tools": [
+          "Policies",
+          "Websites",
+          "Contracts",
+          "Procedures"
+        ]
       },
       {
         "name": "Onyx Orchestration",
@@ -753,7 +768,13 @@ export const slides = [
         "details": "From contract review to academic tutoring — each assistant combines LLM inference with campus-specific knowledge",
         "color": "#FFCD00",
         "icon": "Blocks",
-        "tools": ["UC San Diego Assistant", "Contract Reviewer", "Socratic Tutor", "Job Description Helper", "+14 more"]
+        "tools": [
+          "UC San Diego Assistant",
+          "Contract Reviewer",
+          "Socratic Tutor",
+          "Job Description Helper",
+          "+14 more"
+        ]
       }
     ],
     "audiences": [
@@ -2695,7 +2716,8 @@ export const slides = [
     "audiences": [
       "internal",
       "all",
-      "PK"
+      "PK",
+      "regent"
     ]
   },
   {
@@ -2806,7 +2828,8 @@ export const slides = [
     "audiences": [
       "internal",
       "all",
-      "PK"
+      "PK",
+      "regent"
     ]
   },
   {
@@ -2901,7 +2924,8 @@ export const slides = [
       "internal",
       "technical",
       "all",
-      "PK"
+      "PK",
+      "regent"
     ]
   },
   {
@@ -2977,7 +3001,8 @@ export const slides = [
       "internal",
       "technical",
       "all",
-      "PK"
+      "PK",
+      "regent"
     ]
   },
   {
@@ -3033,7 +3058,8 @@ export const slides = [
     "audiences": [
       "internal",
       "all",
-      "PK"
+      "PK",
+      "regent"
     ]
   },
   {
@@ -3157,7 +3183,8 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "executive"
+      "executive",
+      "regent"
     ]
   },
   {
@@ -3190,7 +3217,8 @@ export const slides = [
     ],
     "audiences": [
       "all",
-      "cabinet"
+      "cabinet",
+      "regent"
     ]
   },
   {
