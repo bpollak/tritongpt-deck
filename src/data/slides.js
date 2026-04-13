@@ -2130,6 +2130,11 @@ export const slides = [
         "icon": "Blocks"
       },
       {
+        "heading": "Developer APIs",
+        "text": "Getting-started API documentation, integration guides, and reference patterns help technical teams build campus-ready AI services quickly.",
+        "icon": "Code"
+      },
+      {
         "heading": "Agent Skills Library",
         "text": "Reusable skill packages provide pre-built instructions and workflows for common campus tasks, accelerating delivery with consistent quality.",
         "icon": "BookOpen"
@@ -2140,19 +2145,14 @@ export const slides = [
         "icon": "Database"
       },
       {
-        "heading": "Developer APIs",
-        "text": "Getting-started API documentation, integration guides, and reference patterns help technical teams build campus-ready AI services quickly.",
-        "icon": "Code"
+        "heading": "Pre-Packaged Tools Pipeline",
+        "text": "A 2026 roadmap for transcription, captioning, summarization, accessibility, and OCR brings high-impact self-service AI capabilities into everyday operations.",
+        "icon": "Cpu"
       },
       {
         "heading": "Agent Observability",
         "text": "Provides real-time visibility into agent runs, tool calls, latency, and errors so teams can trace behavior, debug failures, and continuously improve reliability.",
         "icon": "Monitor"
-      },
-      {
-        "heading": "Pre-Packaged Tools Pipeline",
-        "text": "A 2026 roadmap for transcription, captioning, summarization, accessibility, and OCR brings high-impact self-service AI capabilities into everyday operations.",
-        "icon": "Cpu"
       }
     ],
     "audiences": [
