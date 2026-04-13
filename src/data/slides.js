@@ -958,8 +958,7 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "public",
-      "regent"
+      "public"
     ]
   },
   {
@@ -1035,8 +1034,7 @@ export const slides = [
     "audiences": [
       "all",
       "internal",
-      "technical",
-      "regent"
+      "technical"
     ]
   },
   {
