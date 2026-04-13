@@ -3641,48 +3641,6 @@ const Slide = ({ slide }) => {
               )}
             </motion.div>
 
-            {/* Header stats: scale + awards + federation */}
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1, duration: 0.5 }}
-              className="mb-0.5 sm:mb-1 w-full grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3"
-            >
-              <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-lg px-3 py-1.5 sm:py-2 shadow-sm border border-ucsd-navy/10">
-                <Users className="w-4 h-4 sm:w-5 sm:h-5 text-ucsd-blue flex-shrink-0" />
-                <div className="leading-tight">
-                  <div className="text-sm sm:text-base font-black text-ucsd-navy">73,000+ users</div>
-                  <div className="text-[10px] sm:text-xs text-ucsd-navy/70">Equal access — no paywalls, no gatekeeping</div>
-                </div>
-              </div>
-              <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-lg px-3 py-1.5 sm:py-2 shadow-sm border border-ucsd-navy/10">
-                <Award className="w-4 h-4 sm:w-5 sm:h-5 text-ucsd-gold flex-shrink-0" />
-                <div className="leading-tight">
-                  <div className="text-sm sm:text-base font-black text-ucsd-navy">CIO 100 · Gartner Finalist</div>
-                  <div className="text-[10px] sm:text-xs text-ucsd-navy/70">2025 award-winning innovation</div>
-                </div>
-              </div>
-              <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-lg px-3 py-1.5 sm:py-2 shadow-sm border border-ucsd-navy/10">
-                <Share2 className="w-4 h-4 sm:w-5 sm:h-5 text-ucsd-palm-green flex-shrink-0" />
-                <div className="leading-tight">
-                  <div className="text-sm sm:text-base font-black text-ucsd-navy">Federated across UC</div>
-                  <div className="text-[10px] sm:text-xs text-ucsd-navy/70">Powering Berkeley, Merced, ANR &amp; more</div>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Section divider between stats and architecture */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.18, duration: 0.5 }}
-              className="w-full flex items-center gap-3 mt-1 mb-1.5 sm:mt-1.5 sm:mb-2"
-            >
-              <div className="flex-1 h-px bg-gradient-to-r from-transparent via-ucsd-navy/25 to-ucsd-navy/25" />
-              <div className="text-[10px] sm:text-xs font-black uppercase tracking-[0.18em] text-ucsd-navy/60 whitespace-nowrap">Platform Architecture</div>
-              <div className="flex-1 h-px bg-gradient-to-l from-transparent via-ucsd-navy/25 to-ucsd-navy/25" />
-            </motion.div>
-
             {/* Stack (top-down visually; bottom-up conceptually) */}
             <div className="w-full flex flex-col">
               {/* TIER 5: Assistants */}
@@ -5280,10 +5238,9 @@ const Slide = ({ slide }) => {
           {slide.teamLeadership && (
             <div className="flex justify-center gap-3 lg:gap-5 mb-1.5">
               {slide.teamLeadership.map((leader, index) => {
-                // Custom avatar seeds for leadership - Service Owner has mohawk, Offering Manager is male
                 const leaderAvatarSeeds = {
-                  'Service Owner': 'Felix',  // mohawk style
-                  'Offering Manager': 'Robert'  // male
+                  'Service Owner': 'Felix',
+                  'Offering Manager': 'Sarah'
                 };
                 const avatarSeed = leaderAvatarSeeds[leader.role] || `leader${index}`;
                 return (
@@ -5376,14 +5333,13 @@ const Slide = ({ slide }) => {
               };
               const roleColor = roleColors[member.category] || '#182B49';
 
-              // Custom avatar seeds - Project Manager is female, others are male
               const memberAvatarSeeds = {
                 'Lead Architect': 'James',
                 'Platform Lead': 'Michael',
-                'Project Manager': 'Jennifer',  // female
+                'Project Manager': 'Jennifer',
                 'Platform Engineer': 'David',
                 'Infra/DevOps': 'Thomas',
-                'Knowledge Engineer': 'Marcus'
+                'Knowledge Engineer': 'Priya'
               };
               const memberAvatarSeed = memberAvatarSeeds[member.role] || `team${index}`;
 
@@ -5445,7 +5401,6 @@ const Slide = ({ slide }) => {
               <span className="text-base lg:text-lg font-semibold text-slate-500">Student Workers:</span>
               <div className="flex items-center gap-2.5">
                 {slide.studentWorkers.map((student, index) => {
-                  // Mix of male and female student avatars
                   const studentAvatarSeeds = ['Alex', 'Emma', 'Ryan', 'Mia'];
                   const studentSeed = studentAvatarSeeds[index] || `student${index}`;
                   return (
