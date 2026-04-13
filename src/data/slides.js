@@ -161,7 +161,8 @@ export const slides = [
       "public",
       "internal",
       "technical",
-      "cabinet"
+      "cabinet",
+      "regent"
     ]
   },
   {
@@ -245,8 +246,7 @@ export const slides = [
       "public",
       "internal",
       "technical",
-      "ASU-GSV",
-      "regent"
+      "ASU-GSV"
     ]
   },
   {
@@ -981,15 +981,15 @@ export const slides = [
     "content": [
       {
         "heading": "Universal Accessibility",
-        "text": "RAG-grounded answers on public-facing sites — no campus login required. Accurate for prospective students, parents, and the public."
+        "text": "Provides instant, knowledge-grounded answers to visitor questions across public-facing sites — no campus login required. Answers are generated from curated campus knowledge bases using RAG, ensuring accuracy for prospective students, parents, and the public."
       },
       {
         "heading": "Technical Consolidation",
-        "text": "Embeddable via a single script tag — no procurement or integration project. Standardizes the AI experience across department websites."
+        "text": "A lightweight, embeddable JavaScript solution that departments add with a single script tag — no procurement or integration project needed. Standardizes the AI experience across different department web properties."
       },
       {
         "heading": "Operational ROI",
-        "text": "Displaces third-party vendors (Ocelot) for $300K in annual savings. Zero variable cost per conversation on SDSC infrastructure."
+        "text": "Displaces expensive third-party vendors (Ocelot), resulting in $300K in recurring annual savings. Self-hosted on SDSC infrastructure means zero variable cost per conversation — unlimited public interactions without per-query fees."
       }
     ],
     "videoSrc": "/media/media8.mov",
@@ -3159,8 +3159,16 @@ export const slides = [
     ],
     "teamStats": [
       {
+        "value": "25K",
+        "label": "Avg Chats/Month"
+      },
+      {
         "value": "5.7",
         "label": "FTE Equivalent"
+      },
+      {
+        "value": "73K+",
+        "label": "Users Served"
       }
     ],
     "audiences": [
