@@ -3567,8 +3567,8 @@ const Slide = ({ slide }) => {
         const assistants = layers[5];
 
         const FlowArrow = () => (
-          <div className="flex justify-center my-0.5" aria-hidden="true">
-            <div className="w-0.5 h-2 sm:h-3 bg-gradient-to-t from-ucsd-navy/40 to-ucsd-navy/10" />
+          <div className="flex justify-center my-1 sm:my-1.5" aria-hidden="true">
+            <div className="w-0.5 h-3 sm:h-5 bg-gradient-to-t from-ucsd-navy/40 to-ucsd-navy/10" />
           </div>
         );
 
@@ -3584,24 +3584,24 @@ const Slide = ({ slide }) => {
           return (
             <div
               className={clsx(
-                "relative rounded-xl bg-white/90 backdrop-blur-sm shadow-md border-l-4 flex items-center gap-3 sm:gap-4",
-                compact ? "px-3 sm:px-4 py-1.5 sm:py-2" : "px-3 sm:px-4 py-2 sm:py-2.5",
+                "relative rounded-xl bg-white/90 backdrop-blur-sm shadow-md border-l-4 flex items-center gap-3 sm:gap-5",
+                compact ? "px-4 sm:px-5 py-2.5 sm:py-3" : "px-4 sm:px-5 py-3 sm:py-4",
                 emphasize && "ring-2 ring-ucsd-gold/60 shadow-lg"
               )}
               style={{ borderLeftColor: layer.color }}
             >
               <div
-                className="flex-shrink-0 w-9 h-9 sm:w-11 sm:h-11 rounded-lg flex items-center justify-center"
+                className="flex-shrink-0 w-11 h-11 sm:w-14 sm:h-14 rounded-lg flex items-center justify-center"
                 style={{ backgroundColor: layer.color }}
               >
-                <IconComp className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                <IconComp className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
               </div>
               <div className="flex-1 min-w-0">
                 <div className="flex flex-wrap items-baseline gap-x-2">
-                  <div className="text-sm sm:text-base md:text-lg font-black text-ucsd-navy uppercase tracking-wide leading-tight">{layer.name}</div>
-                  <div className="text-[10px] sm:text-xs font-bold text-ucsd-blue uppercase tracking-wider">{layer.description}</div>
+                  <div className="text-base sm:text-lg md:text-xl font-black text-ucsd-navy uppercase tracking-wide leading-tight">{layer.name}</div>
+                  <div className="text-[11px] sm:text-sm font-bold text-ucsd-blue uppercase tracking-wider">{layer.description}</div>
                 </div>
-                <div className="text-[11px] sm:text-xs md:text-sm text-ucsd-navy/75 leading-snug">{layer.details}</div>
+                <div className="text-xs sm:text-sm md:text-base text-ucsd-navy/75 leading-snug mt-0.5">{layer.details}</div>
               </div>
               {layer.badge && (
                 <div className="hidden md:flex flex-shrink-0 items-center gap-1.5 bg-ucsd-gold text-ucsd-navy font-black text-[10px] sm:text-xs uppercase tracking-wide px-2.5 py-1 rounded-full shadow">
@@ -3614,7 +3614,7 @@ const Slide = ({ slide }) => {
                   {layer.tools.map((tool, idx) => (
                     <span
                       key={idx}
-                      className={clsx("text-[10px] sm:text-xs font-bold px-2 py-0.5 rounded-full shadow-sm", pillText)}
+                      className={clsx("text-[11px] sm:text-sm font-bold px-2.5 py-1 rounded-full shadow-sm", pillText)}
                       style={{ backgroundColor: layer.color }}
                     >
                       {tool}
@@ -3635,9 +3635,9 @@ const Slide = ({ slide }) => {
               transition={{ duration: 0.5 }}
               className="text-center mb-2 sm:mb-3"
             >
-              <div className="text-xl sm:text-3xl md:text-4xl font-black text-ucsd-navy leading-none">{slide.title}</div>
+              <div className="text-2xl sm:text-4xl md:text-5xl font-black text-ucsd-navy leading-none">{slide.title}</div>
               {slide.subtitle && (
-                <div className="text-xs sm:text-base md:text-lg text-ucsd-blue font-bold mt-0.5 sm:mt-1">{slide.subtitle}</div>
+                <div className="text-sm sm:text-lg md:text-xl text-ucsd-blue font-bold mt-1 sm:mt-2">{slide.subtitle}</div>
               )}
             </motion.div>
 
@@ -3670,7 +3670,7 @@ const Slide = ({ slide }) => {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.35, duration: 0.5 }}
-                className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-3"
+                className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-4"
               >
                 {renderLayer(gateway)}
                 {renderLayer(knowledge)}
