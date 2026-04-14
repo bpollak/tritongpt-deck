@@ -909,6 +909,32 @@ export const slides = [
     ]
   },
   {
+    "id": 39,
+    "slug": "video-screen-recording-1",
+    "type": "video",
+    "content": [],
+    "videoSrc": "/media/screen-recording-1.mov",
+    "audiences": [
+      "all",
+      "public",
+      "internal",
+      "technical"
+    ]
+  },
+  {
+    "id": 40,
+    "slug": "video-screen-recording-2",
+    "type": "video",
+    "content": [],
+    "videoSrc": "/media/screen-recording-2.mov",
+    "audiences": [
+      "all",
+      "public",
+      "internal",
+      "technical"
+    ]
+  },
+  {
     "id": 8,
     "slug": "video-media2",
     "type": "video",

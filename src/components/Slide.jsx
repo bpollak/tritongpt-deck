@@ -106,7 +106,6 @@ const Slide = ({ slide }) => {
           className="absolute inset-0 h-full w-full object-contain"
           controls
           autoPlay
-          loop
           muted
           playsInline
         />
