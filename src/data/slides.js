@@ -161,7 +161,8 @@ export const slides = [
       "public",
       "internal",
       "technical",
-      "cabinet"
+      "cabinet",
+      "regent"
     ]
   },
   {
@@ -1010,15 +1011,15 @@ export const slides = [
     "content": [
       {
         "heading": "Universal Accessibility",
-        "text": "Instant, RAG-grounded answers on public sites — no login. Accurate for prospective students, parents, and the public."
+        "text": "Provides instant, knowledge-grounded answers to visitor questions across public-facing sites — no campus login required. Answers are generated from curated campus knowledge bases using RAG, ensuring accuracy for prospective students, parents, and the public."
       },
       {
         "heading": "Technical Consolidation",
-        "text": "Embeddable JavaScript — one script tag, no procurement. Standardizes the AI experience across department sites."
+        "text": "A lightweight, embeddable JavaScript solution that departments add with a single script tag — no procurement or integration project needed. Standardizes the AI experience across different department web properties."
       },
       {
         "heading": "Operational ROI",
-        "text": "Replaces Ocelot for $300K in annual savings. Self-hosted on SDSC means zero per-query cost."
+        "text": "Displaces expensive third-party vendors (Ocelot), resulting in $300K in recurring annual savings. Self-hosted on SDSC infrastructure means zero variable cost per conversation — unlimited public interactions without per-query fees."
       }
     ],
     "videoSrc": "/media/media8.mov",
@@ -1099,6 +1100,11 @@ export const slides = [
         "label": "Query Speed",
         "value": "0.34s",
         "sub": "Average search time"
+      },
+      {
+        "label": "Feature",
+        "value": "AI Overview",
+        "sub": "Instant contextual answers"
       }
     ],
     "audiences": [
@@ -1499,7 +1505,7 @@ export const slides = [
       },
       {
         "label": "MATCH ACCURACY",
-        "value": "98%+",
+        "value": "95%+",
         "sublabel": "AND IMPROVING"
       }
     ],
@@ -1510,7 +1516,7 @@ export const slides = [
       },
       {
         "heading": "AI-Powered OCR",
-        "text": "Extracts data from diverse transcript formats — scanned, stained, or distorted — and matches documents to the correct student record. Processes ~225 transcripts per hour at 98%+ accuracy, continually improving as more transcripts are fed through the system."
+        "text": "Extracts data from diverse transcript formats — scanned, stained, or distorted — and matches documents to the correct student record. Processes ~225 transcripts per hour at ~95% accuracy, continually improving as more transcripts are fed through the system."
       },
       {
         "heading": "Phased Trust-Building",
@@ -3182,8 +3188,16 @@ export const slides = [
     ],
     "teamStats": [
       {
+        "value": "25K",
+        "label": "Avg Chats/Month"
+      },
+      {
         "value": "5.7",
         "label": "FTE Equivalent"
+      },
+      {
+        "value": "73K+",
+        "label": "Users Served"
       }
     ],
     "audiences": [
@@ -3223,7 +3237,8 @@ export const slides = [
     ],
     "audiences": [
       "all",
-      "cabinet"
+      "cabinet",
+      "regent"
     ]
   },
   {
