@@ -1099,11 +1099,6 @@ export const slides = [
         "label": "Query Speed",
         "value": "0.34s",
         "sub": "Average search time"
-      },
-      {
-        "label": "Feature",
-        "value": "AI Overview",
-        "sub": "Instant contextual answers"
       }
     ],
     "audiences": [
@@ -1504,7 +1499,7 @@ export const slides = [
       },
       {
         "label": "MATCH ACCURACY",
-        "value": "95%+",
+        "value": "98%+",
         "sublabel": "AND IMPROVING"
       }
     ],
@@ -1515,7 +1510,7 @@ export const slides = [
       },
       {
         "heading": "AI-Powered OCR",
-        "text": "Extracts data from diverse transcript formats — scanned, stained, or distorted — and matches documents to the correct student record. Processes ~225 transcripts per hour at ~95% accuracy, continually improving as more transcripts are fed through the system."
+        "text": "Extracts data from diverse transcript formats — scanned, stained, or distorted — and matches documents to the correct student record. Processes ~225 transcripts per hour at 98%+ accuracy, continually improving as more transcripts are fed through the system."
       },
       {
         "heading": "Phased Trust-Building",
@@ -3187,16 +3182,8 @@ export const slides = [
     ],
     "teamStats": [
       {
-        "value": "25K",
-        "label": "Avg Chats/Month"
-      },
-      {
         "value": "5.7",
         "label": "FTE Equivalent"
-      },
-      {
-        "value": "73K+",
-        "label": "Users Served"
       }
     ],
     "audiences": [
