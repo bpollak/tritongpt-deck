@@ -1010,15 +1010,15 @@ export const slides = [
     "content": [
       {
         "heading": "Universal Accessibility",
-        "text": "Provides instant, knowledge-grounded answers to visitor questions across public-facing sites — no campus login required. Answers are generated from curated campus knowledge bases using RAG, ensuring accuracy for prospective students, parents, and the public."
+        "text": "Instant, RAG-grounded answers on public sites — no login. Accurate for prospective students, parents, and the public."
       },
       {
         "heading": "Technical Consolidation",
-        "text": "A lightweight, embeddable JavaScript solution that departments add with a single script tag — no procurement or integration project needed. Standardizes the AI experience across different department web properties."
+        "text": "Embeddable JavaScript — one script tag, no procurement. Standardizes the AI experience across department sites."
       },
       {
         "heading": "Operational ROI",
-        "text": "Displaces expensive third-party vendors (Ocelot), resulting in $300K in recurring annual savings. Self-hosted on SDSC infrastructure means zero variable cost per conversation — unlimited public interactions without per-query fees."
+        "text": "Replaces Ocelot for $300K in annual savings. Self-hosted on SDSC means zero per-query cost."
       }
     ],
     "videoSrc": "/media/media8.mov",
