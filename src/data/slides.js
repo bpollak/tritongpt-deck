@@ -932,7 +932,8 @@ export const slides = [
       "all",
       "internal",
       "public",
-      "technical"
+      "technical",
+      "regent"
     ]
   },
   {
@@ -946,7 +947,8 @@ export const slides = [
       "all",
       "internal",
       "public",
-      "technical"
+      "technical",
+      "regent"
     ]
   },
   {
