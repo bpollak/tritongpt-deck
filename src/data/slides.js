@@ -2544,13 +2544,13 @@ export const slides = [
     "slug": "key-takeaways",
     "type": "content",
     "layout": "key-takeaways",
-    "title": "Key Takeaways",
-    "subtitle": "Lessons for Your Institution",
+    "title": "Our Principles",
+    "subtitle": "How UC San Diego Is Building AI for the Enterprise",
     "backgroundColor": "#F5F0E6",
     "content": [
       {
         "heading": "Solve Specific Pain Points",
-        "text": "Don't build 'Chat for Everyone.' Build 'Contract Review for Legal.' Specialized agents drive 90%+ efficiency; general chatbots just drive curiosity.",
+        "text": "Don't buy ChatGPT for everyone. Build 'Contract Review for Legal.' Specialized agents drive 90%+ efficiency; general-purpose chat just drives curiosity.",
         "icon": "Target"
       },
       {
