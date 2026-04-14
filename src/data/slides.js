@@ -1505,7 +1505,7 @@ export const slides = [
       },
       {
         "label": "MATCH ACCURACY",
-        "value": "95%+",
+        "value": "98%+",
         "sublabel": "AND IMPROVING"
       }
     ],
@@ -1516,7 +1516,7 @@ export const slides = [
       },
       {
         "heading": "AI-Powered OCR",
-        "text": "Extracts data from diverse transcript formats — scanned, stained, or distorted — and matches documents to the correct student record. Processes ~225 transcripts per hour at ~95% accuracy, continually improving as more transcripts are fed through the system."
+        "text": "Extracts data from diverse transcript formats — scanned, stained, or distorted — and matches documents to the correct student record. Processes ~225 transcripts per hour at 98%+ accuracy, continually improving as more transcripts are fed through the system."
       },
       {
         "heading": "Phased Trust-Building",
