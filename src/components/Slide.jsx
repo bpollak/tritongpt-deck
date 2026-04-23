@@ -4144,8 +4144,8 @@ const Slide = ({ slide }) => {
             >
               <div className="flex items-end gap-4">
                 <div>
-                  <div className="text-[28px] sm:text-[42px] md:text-[48px] font-black text-ucsd-navy leading-none">{slide.title}</div>
-                  <div className="text-xs sm:text-base text-ucsd-blue font-bold mt-0.5">{slide.subtitle}</div>
+                  <div className="text-[28px] sm:text-[42px] md:text-[48px] font-black text-ucsd-navy leading-none pb-1 md:pb-2">{slide.title}</div>
+                  <div className="text-xs sm:text-base text-ucsd-blue font-bold mt-1">{slide.subtitle}</div>
                 </div>
                 {contextNote && (
                   <div className="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-ucsd-blue/8 border border-ucsd-blue/15 px-3 py-1.5 mb-1">
@@ -4383,8 +4383,8 @@ const Slide = ({ slide }) => {
               transition={{ duration: 0.6 }}
               className="text-left"
             >
-              <div className="text-[28px] sm:text-[42px] md:text-[48px] font-black text-ucsd-navy leading-none">{slide.title}</div>
-              <div className="text-xs sm:text-base text-ucsd-blue font-bold mt-0.5">{slide.subtitle}</div>
+              <div className="text-[28px] sm:text-[42px] md:text-[48px] font-black text-ucsd-navy leading-none pb-1 md:pb-2">{slide.title}</div>
+              <div className="text-xs sm:text-base text-ucsd-blue font-bold mt-1">{slide.subtitle}</div>
             </motion.div>
 
             {/* Pipeline Steps Row */}
@@ -4775,7 +4775,7 @@ const Slide = ({ slide }) => {
                 <RefreshCw size={12} className="text-ucsd-blue" />
                 <span className="text-[10px] sm:text-xs font-black text-ucsd-navy uppercase tracking-[0.2em]">Use Case</span>
               </div>
-              <div className="text-2xl sm:text-4xl md:text-5xl font-black text-ucsd-navy leading-none">{slide.title}</div>
+              <div className="text-2xl sm:text-4xl md:text-5xl font-black text-ucsd-navy leading-none pb-1 md:pb-2">{slide.title}</div>
               <div className="text-sm sm:text-lg text-ucsd-blue font-bold mt-1 max-w-4xl mx-auto leading-snug">{slide.subtitle}</div>
             </motion.div>
 
