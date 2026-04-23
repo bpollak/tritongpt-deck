@@ -5,7 +5,8 @@ import { slideManagerRegistry } from '../data/slideRegistry';
 import { clearLocalSlidePreview, isLocalPreviewHost, readLocalSlidePreview, writeLocalSlidePreview } from '../utils/localSlidePreview';
 import { captureSlideSnapshots } from '../utils/slideSnapshots';
 import { generatePPTX } from '../utils/pptxExport';
-import { Eye, EyeOff, ChevronDown, ChevronUp, ExternalLink, Save, Loader2, CheckCircle, AlertCircle, Download } from 'lucide-react';
+import { exportSlidesToPdf } from '../utils/pdfExport';
+import { Eye, EyeOff, ChevronDown, ChevronUp, ExternalLink, Save, Loader2, CheckCircle, AlertCircle, Download, FileText } from 'lucide-react';
 
 const buildSlideAudienceMap = (sourceSlides) => {
   return slideManagerRegistry.reduce((acc, slide) => {
@@ -41,6 +42,8 @@ const SlideManager = ({ onClose, standalone = false }) => {
   const [isExporting, setIsExporting] = useState(false);
   const [qaReport, setQaReport] = useState(null);
   const [showQaPanel, setShowQaPanel] = useState(false);
+  const [isExportingPdf, setIsExportingPdf] = useState(false);
+  const [pdfProgress, setPdfProgress] = useState(null);
 
   const updatedSlides = useMemo(() => {
     return slides.map((slide) => ({
@@ -127,6 +130,26 @@ const SlideManager = ({ onClose, standalone = false }) => {
       alert('Error generating PowerPoint file.');
     } finally {
       setIsExporting(false);
+    }
+  };
+
+  const handleExportPdf = async () => {
+    if (exportSlides.length === 0) return;
+
+    setIsExportingPdf(true);
+    setPdfProgress({ current: 0, total: exportSlides.length });
+
+    try {
+      await exportSlidesToPdf(exportSlides, {
+        audienceLabel: filterAudience,
+        onProgress: ({ current, total }) => setPdfProgress({ current, total })
+      });
+    } catch (error) {
+      console.error('Failed to export PDF:', error);
+      alert(`Error generating PDF: ${error.message || error}`);
+    } finally {
+      setIsExportingPdf(false);
+      setPdfProgress(null);
     }
   };
 
@@ -270,6 +293,27 @@ const SlideManager = ({ onClose, standalone = false }) => {
                 {audience}
               </button>
             ))}
+            <div className="ml-auto flex items-center gap-2">
+              <button
+                onClick={handleExportPdf}
+                disabled={isExportingPdf || exportSlides.length === 0}
+                title={exportSlides.length === 0
+                  ? 'No slides visible for this filter'
+                  : `Export ${exportSlides.length} slide${exportSlides.length === 1 ? '' : 's'} to PDF`}
+                className={`px-3 py-1 rounded-full text-xs font-semibold transition-all flex items-center gap-1.5 ${
+                  isExportingPdf || exportSlides.length === 0
+                    ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                    : 'bg-ucsd-navy text-white hover:bg-opacity-90'
+                }`}
+              >
+                {isExportingPdf
+                  ? <Loader2 size={12} className="animate-spin" />
+                  : <FileText size={12} />}
+                {isExportingPdf && pdfProgress
+                  ? `Rendering ${pdfProgress.current} / ${pdfProgress.total}…`
+                  : `Export PDF (${exportSlides.length})`}
+              </button>
+            </div>
           </div>
 
           <div className="mt-4 flex items-center justify-between">

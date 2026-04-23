@@ -179,4 +179,7 @@ const localSlideApiPlugin = () => ({
 export default defineConfig({
   plugins: [react(), localSlideApiPlugin()],
   base: '/',
+  optimizeDeps: {
+    exclude: ['jspdf'],
+  },
 })
