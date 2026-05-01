@@ -2776,11 +2776,6 @@ export const slides = [
             "heading": "Onyx Platform 3.0 Release",
             "text": "Features additional personalization and updated state-of-the-art large language models.",
             "icon": "Cpu"
-          },
-          {
-            "heading": "UCSD Mobile Integration",
-            "text": "TritonGPT enabled within the campus flagship mobile app.",
-            "icon": "Cpu"
           }
         ]
       },
@@ -2812,6 +2807,11 @@ export const slides = [
             "heading": "App Hosting Early Prototype & AI Tools Hub",
             "text": "Initial campus hosting environment and centralized AI Tools Hub. Equips citizen developers with an agent builder, skills library, secure MCP connectors, APIs, observability, and turnkey AI services.",
             "icon": "Globe"
+          },
+          {
+            "heading": "UCSD Mobile Integration",
+            "text": "TritonGPT enabled within the campus flagship mobile app.",
+            "icon": "Cpu"
           }
         ]
       },
