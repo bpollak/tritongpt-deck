@@ -2794,11 +2794,6 @@ export const slides = [
             "icon": "GraduationCap"
           },
           {
-            "heading": "AI IT Observability Pilot",
-            "text": "Automated response to system anomalies via log analysis.",
-            "icon": "Target"
-          },
-          {
             "heading": "Risk-Based Review Partnership",
             "text": "Collaboration with Onyx to triage sponsor proposals by risk before submission.",
             "icon": "Shield"
@@ -2838,6 +2833,11 @@ export const slides = [
             "heading": "Onyx Instructional Assistant — Canvas Integration",
             "text": "First delivery of a collaborative instructional assistant with Onyx, fully integrated into the Canvas LMS.",
             "icon": "GraduationCap"
+          },
+          {
+            "heading": "AI IT Observability Pilot",
+            "text": "Automated response to system anomalies via log analysis.",
+            "icon": "Target"
           }
         ]
       }
