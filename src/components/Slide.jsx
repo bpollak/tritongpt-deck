@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion'; // eslint-disable-line no-unused-vars
 import clsx from 'clsx';
+import CabinetSlide from './CabinetSlide';
 import { Target, Database, Cpu, Blocks, GraduationCap, Building2, FileText, FileCheck, DollarSign, Shield, ShieldCheck, BookOpen, Code, Presentation, Globe, FileEdit, FolderOpen, TrendingUp, TrendingDown, ClipboardCheck, Search, Heart, Calendar, GitBranch, Network, Grid3x3, ArrowDown, ArrowRight, Brain, RefreshCw, ArrowRightLeft, CheckCircle, Monitor, User, Users, Award, Server, Layers, Wallet, Share2, Star, FlaskConical, Lightbulb, Landmark, Scale, Headphones, Hammer, Zap, Rocket, BarChart3, AlertTriangle } from 'lucide-react';
 import { QRCodeSVG } from 'qrcode.react';
 
@@ -96,6 +97,12 @@ const pulseAnimation = {
 
 const Slide = ({ slide }) => {
   if (!slide) return <div className="text-red-500 p-10">Slide Error: No data provided</div>;
+
+  // Cabinet sub-presentation has its own self-contained design system.
+  // It bypasses the rest of this file's layout dispatch.
+  if (slide.layout === 'cabinet-spread') {
+    return <CabinetSlide slide={slide} />;
+  }
 
   if (slide.type === 'video') {
     return (
