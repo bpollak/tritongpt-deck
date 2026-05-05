@@ -3409,5 +3409,499 @@ export const slides = [
       "technical",
       "cabinet"
     ]
+  },
+  {
+    "id": 100,
+    "slug": "cabinet-people-00-title",
+    "type": "title",
+    "content": [],
+    "title": "What This Phase of AI Means for Our People",
+    "subtitle": "The technology is the same for everyone. The lead is human.",
+    "layout": "title-hero",
+    "presenters": [
+      {
+        "name": "Brett Pollak",
+        "title": "Executive Director, IT Services",
+        "image": "/media/headshot.jpg",
+        "imageScale": 1.6,
+        "imagePosition": "center 15%"
+      }
+    ],
+    "linkUrl": "https://tritonai.ucsd.edu",
+    "linkLabel": "tritonai.ucsd.edu",
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 101,
+    "slug": "cabinet-people-01-out-of-the-workshop",
+    "type": "content",
+    "content": [],
+    "title": "AI Just Got Out of the Workshop",
+    "subtitle": "What just changed for the people who do the work",
+    "layout": "bold-manifesto",
+    "backgroundColor": "#F5F0E6",
+    "headline": "Until 30 days ago, working with AI agents was a hobbyist activity.\nToday, it isn't.",
+    "headlineAccent": "isn't",
+    "evidence": [
+      {
+        "claim": "1970s — PCs came as kits",
+        "detail": "Unpopulated boards, a soldering iron, a manual. A few thousand hobbyists built them. The masses didn't.",
+        "color": "#182B49",
+        "barWidth": 60
+      },
+      {
+        "claim": "1990s — off-the-shelf desktops arrived",
+        "detail": "\"The productivity revolution happened because users got dull desktops, not because more people learned to assemble motherboards.\" — Anders Carson, via The AI Daily Brief, May 2026",
+        "color": "#00629B",
+        "barWidth": 80
+      },
+      {
+        "claim": "Three launches in the past 30 days",
+        "detail": "Cursor SDK · Anthropic Managed Agents · Microsoft Foundry Hosted Agents. The hard parts come pre-assembled now.",
+        "color": "#FC8900",
+        "barWidth": 95
+      },
+      {
+        "claim": "What it asks of us",
+        "detail": "The right question is no longer \"should we prepare?\" The change happened in the four weeks before this meeting. The right question is: which of our people can suddenly do something they couldn't do a month ago?",
+        "color": "#E85D75",
+        "barWidth": 90
+      }
+    ],
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 102,
+    "slug": "cabinet-people-02-brilliant-new-hire",
+    "type": "content",
+    "content": [],
+    "title": "The Brilliant New Hire Problem",
+    "subtitle": "The unlock isn't a smarter AI — it's the work environment around it",
+    "layout": "bold-manifesto",
+    "backgroundColor": "#F5F0E6",
+    "headline": "A brilliant new hire with no desk, no files, and no manager fails.\nSame person with all three thrives.\nAI just got the desk.",
+    "headlineAccent": "the desk",
+    "evidence": [
+      {
+        "claim": "The model itself didn't change much",
+        "detail": "What's new is the environment around it — persistent memory of the work, access to the right tools, a way for humans to review and steer.",
+        "color": "#00629B",
+        "barWidth": 70
+      },
+      {
+        "claim": "Sam Altman, on the inseparability",
+        "detail": "\"Hard to overstate how critical it is. I no longer think of the harness and the model as these entirely separable things.\" — via Ben Thompson interview, cited by The AI Daily Brief, May 2026",
+        "color": "#182B49",
+        "barWidth": 85
+      },
+      {
+        "claim": "The cabinet's question",
+        "detail": "Not \"which AI vendor?\" but \"what work environment do our people need around it?\" Same AI in a thoughtful environment makes domain experts more effective. In a poor one, it adds noise.",
+        "color": "#FC8900",
+        "barWidth": 90
+      }
+    ],
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 103,
+    "slug": "cabinet-people-03-the-desk",
+    "type": "content",
+    "title": "What That \"Desk\" Actually Contains",
+    "subtitle": "Four things our people now have access to that they didn't have a year ago",
+    "layout": "key-takeaways",
+    "backgroundColor": "#F5F0E6",
+    "content": [
+      {
+        "heading": "Memory of the Work",
+        "text": "The AI remembers what your unit cares about across sessions — your documents, your conventions, your past decisions — instead of starting from zero every time.",
+        "icon": "Brain"
+      },
+      {
+        "heading": "The Right Tools at Hand",
+        "text": "The AI can reach into the systems your unit actually uses — calendars, Salesforce, internal databases — and act there, not just describe what to do.",
+        "icon": "Wrench"
+      },
+      {
+        "heading": "A Safe Space to Try Things",
+        "text": "The AI works in a sandbox: it can attempt complex steps, fail, and try again — without breaking production data or sending live emails by mistake.",
+        "icon": "Shield"
+      },
+      {
+        "heading": "A Review Loop With Humans",
+        "text": "A person stays in the loop on consequential actions. The AI flags decisions; humans approve or course-correct. The work compounds; the accountability stays with the person.",
+        "icon": "CheckCircle"
+      }
+    ],
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 104,
+    "slug": "cabinet-people-04-engineer-day",
+    "type": "content",
+    "content": [],
+    "title": "What One Engineer's Day Actually Looks Like Now",
+    "subtitle": "This isn't a forecast. This is one engineer's normal Tuesday in May 2026.",
+    "layout": "bold-manifesto",
+    "backgroundColor": "#F5F0E6",
+    "headline": "Boris Cherny, who created Claude Code at Anthropic.\nHasn't hand-written code in six months. Works mostly from his phone.",
+    "headlineAccent": "from his phone",
+    "evidence": [
+      {
+        "claim": "100% AI-written code",
+        "detail": "\"For me it's 100%.\" — referring to AI-written code on the Claude codebase, since Oct/Nov 2025",
+        "color": "#00629B",
+        "barWidth": 100
+      },
+      {
+        "claim": "A few dozen PRs every day",
+        "detail": "\"I write somewhere — usually a few dozen PRs every day. There was a day last week I did 150 PRs in a day.\"",
+        "color": "#FC8900",
+        "barWidth": 90
+      },
+      {
+        "claim": "From typing the work to directing it",
+        "detail": "His role is no longer to write the work — it's to direct it. He starts agents, reviews their output, intervenes where they get stuck, lets dozens of background processes run on their own.",
+        "color": "#00C6D7",
+        "barWidth": 85
+      },
+      {
+        "claim": "What this means for our people",
+        "detail": "The job didn't disappear. The job changed shape. The skills that matter most are increasingly judgment, taste, direction-setting, and review — skills most of your unit's people are already strong at.",
+        "color": "#182B49",
+        "barWidth": 95
+      },
+      {
+        "claim": "Honest qualifier (Cherny verbatim)",
+        "detail": "\"But this is not the case everywhere. There are very big complicated code bases. There are kind of weird languages the model's not good at yet.\"",
+        "color": "#6E963B",
+        "barWidth": 50
+      }
+    ],
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 105,
+    "slug": "cabinet-people-05-roles-converged",
+    "type": "content",
+    "content": [],
+    "title": "The Role Lines Already Collapsed — Here's a Real Team",
+    "subtitle": "On Cherny's team, the designer codes. The PM codes. The user researcher codes.",
+    "layout": "bold-manifesto",
+    "backgroundColor": "#F5F0E6",
+    "headline": "\"Every single person on our team writes code.\"\n— Boris Cherny, Anthropic, May 2026",
+    "headlineAccent": "Every single person",
+    "evidence": [
+      {
+        "claim": "His actual team",
+        "detail": "\"Our engineering manager, our product manager, our designers, our data scientists, our finance guy, our user researcher — every single person on our team writes code.\"",
+        "color": "#182B49",
+        "barWidth": 100
+      },
+      {
+        "claim": "The role isn't gone. The boundary around the role is.",
+        "detail": "These people didn't become engineers. They stayed designers, PMs, data scientists. They retained their domain expertise and gained a new tool. That's a fundamentally different story than \"AI replaces jobs.\"",
+        "color": "#00629B",
+        "barWidth": 90
+      },
+      {
+        "claim": "Cherny on what's next",
+        "detail": "\"There's going to be a lot more generalists than there are today. The thing we're going to start to see a lot more of is generalists that are cross-disciplinary.\"",
+        "color": "#FC8900",
+        "barWidth": 80
+      },
+      {
+        "claim": "What this asks of cabinet members",
+        "detail": "Their own staffs are full of specialists from disciplines whose boundaries have been softening for 30 years. What does this look like for the people in advancement, in research administration, in finance?",
+        "color": "#E85D75",
+        "barWidth": 85
+      }
+    ],
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 106,
+    "slug": "cabinet-people-06-stays-human",
+    "type": "content",
+    "layout": "versus-split",
+    "title": "What Stays Human",
+    "subtitle": "The work changes. The judgment doesn't move.",
+    "leftTitle": "What stays unmistakably human",
+    "leftSubtitle": "More valuable, not less",
+    "leftItems": [
+      "Judgment under ambiguity",
+      "Stakeholder trust and relationships",
+      "Accountability for consequential decisions",
+      "Institutional politics and history",
+      "Hiring and people-development",
+      "Choosing which problem is worth solving"
+    ],
+    "rightTitle": "What's honestly not solved yet",
+    "rightSubtitle": "Cherny's own qualifier",
+    "rightItems": [
+      "Very big, complicated codebases",
+      "\"Kind of weird languages the model's not good at yet\"",
+      "Legacy systems with unreachable data",
+      "Niche domains without verifiable outputs",
+      "Anything where the institutional context isn't written down",
+      "Anything that requires trust outside the institution"
+    ],
+    "quote": {
+      "text": "The roles your unit needs most — the mature judgment, the institutional memory, the relationships across campus — those become more valuable, not less. The work that's most automatable is generally the work the most experienced people in your unit have always disliked doing.",
+      "attribution": "Reframe for staff who feel uncertain"
+    },
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 107,
+    "slug": "cabinet-people-07-ucsd-now",
+    "type": "content",
+    "layout": "impact-stats",
+    "title": "The Same Thing Is Already Happening to Our People",
+    "subtitle": "3,199 UCSD people used TritonGPT in April. One built software without writing code.",
+    "impactStats": [
+      {
+        "value": "3,199",
+        "numericValue": 90,
+        "label": "Unique UCSD people on TritonGPT in April",
+        "detail": "Trend: 2,303 (Feb) → 2,453 (Mar) → 3,199 (Apr)",
+        "color": "#00629B"
+      },
+      {
+        "value": "47,988",
+        "numericValue": 95,
+        "label": "Prompts in April",
+        "detail": "Three-month trend: 30.6K → 39.4K → 48.0K",
+        "color": "#FC8900"
+      },
+      {
+        "value": "1",
+        "numericValue": 100,
+        "label": "Non-engineer who built compliance software",
+        "detail": "PDF Remediator — domain expert with a harness, not a developer with a project",
+        "color": "#E85D75"
+      }
+    ],
+    "bottomMessage": "What used to require IT and a six-month project now requires a domain expert with a harness. The same components Anthropic and Cursor just shipped are commercially available to UCSD now.",
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 108,
+    "slug": "cabinet-people-08-organizational-lead",
+    "type": "content",
+    "content": [],
+    "title": "The Lead Is in Our People, Not in Our Technology",
+    "subtitle": "You can't out-procure Anthropic. You can out-adapt them.",
+    "layout": "bold-manifesto",
+    "backgroundColor": "#F5F0E6",
+    "headline": "\"The place that we're ahead is not the technology.\nThere's a far bigger lead in the organizational structure and organizational process.\"",
+    "headlineAccent": "organizational structure",
+    "evidence": [
+      {
+        "claim": "Boris Cherny, Anthropic, May 2026",
+        "detail": "Spoken from inside the company that builds the leading model. The technology lead is shrinking. The organizational lead is widening.",
+        "color": "#182B49",
+        "barWidth": 100
+      },
+      {
+        "claim": "What it looks like inside Anthropic (verbatim)",
+        "detail": "\"We use Claude for literally everything. Our Claudes are talking all day. We have no more manually written code anywhere at the company. All of the SQL is written by models.\"",
+        "color": "#00629B",
+        "barWidth": 95
+      },
+      {
+        "claim": "What's actually different there isn't the tools",
+        "detail": "It's the institutional habits around the tools — who initiates, who reviews, what gets handed off, when humans intervene, how trust is calibrated. That's institutional muscle. It can't be bought; it has to be built.",
+        "color": "#FC8900",
+        "barWidth": 90
+      },
+      {
+        "claim": "What this asks of the cabinet",
+        "detail": "UCSD's lead, if we're going to have one, will be in our people and our processes — not in our software. That makes the cabinet's job specific: authorize the people in your units to change how the work is done, not just to use new tools. That's the lever.",
+        "color": "#E85D75",
+        "barWidth": 100
+      }
+    ],
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 109,
+    "slug": "cabinet-people-09-printing-press",
+    "type": "content",
+    "content": [],
+    "title": "The Scribes Are About to Become Writers",
+    "subtitle": "Every cabinet member's staff will follow the same arc the scribes followed",
+    "layout": "bold-manifesto",
+    "backgroundColor": "#F5F0E6",
+    "headline": "When the printing press arrived, scribes feared obsolescence.\nWhat actually happened: many became writers.",
+    "headlineAccent": "became writers",
+    "evidence": [
+      {
+        "claim": "Cherny, verbatim, May 2026",
+        "detail": "\"In the 1400s, before the printing press, essentially 10% of the European population was literate. In the 50 years after the first printing press, there was more literature published in Europe than in the thousand years before. The cost of a book went down like 100x.\"",
+        "color": "#182B49",
+        "barWidth": 100
+      },
+      {
+        "claim": "What followed (also Cherny verbatim)",
+        "detail": "\"Over the next few hundred years, literacy globally went up to like 70%.\"",
+        "color": "#00629B",
+        "barWidth": 70
+      },
+      {
+        "claim": "The kicker (Cherny verbatim)",
+        "detail": "\"The thing that's about to happen — and it's going to be much faster than 50 years — is software will be a thing that is fully democratized, that anyone can do.\"",
+        "color": "#FC8900",
+        "barWidth": 95
+      },
+      {
+        "claim": "The honest precedent for the cabinet's staff",
+        "detail": "Not displacement — transition into work that didn't exist before. The work scribes did got absorbed; the people who had been scribes moved into work the prior era couldn't see.",
+        "color": "#E85D75",
+        "barWidth": 90
+      }
+    ],
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 110,
+    "slug": "cabinet-people-10-domain-expert",
+    "type": "content",
+    "content": [],
+    "title": "The Best Person to Do Your Unit's Work Is in Your Unit",
+    "subtitle": "The best person to build the tool isn't a developer. It's the person whose job it is.",
+    "layout": "bold-manifesto",
+    "backgroundColor": "#F5F0E6",
+    "headline": "\"The best person to write accounting software is not an engineer.\nIt's a really good accountant.\"",
+    "headlineAccent": "a really good accountant",
+    "evidence": [
+      {
+        "claim": "Cherny, verbatim, May 2026",
+        "detail": "\"They know the domain really well. And coding is the easy part. It's knowing the domain that's the hard part.\"",
+        "color": "#182B49",
+        "barWidth": 100
+      },
+      {
+        "claim": "The translation to UCSD",
+        "detail": "The best person to build a sponsored-research-compliance helper is the compliance officer who's been doing the work for 15 years. The best person to streamline transcript-validation is the senior registrar staff who already knows what \"wrong\" looks like.",
+        "color": "#00629B",
+        "barWidth": 95
+      },
+      {
+        "claim": "Your domain experts + a harness",
+        "detail": "Sponsored-research compliance officer · senior registrar staff · procurement contract reviewer · academic advisor · advancement officer · policy compliance officer. Each one is a person — not a project.",
+        "color": "#FC8900",
+        "barWidth": 90
+      },
+      {
+        "claim": "The conversation to have this week",
+        "detail": "Identify the most experienced domain expert in your unit. Ask them: \"If you could shape an AI helper for the part of your job you wish you didn't have to do, what would it do?\" That conversation, more than any technology purchase, unlocks the change.",
+        "color": "#E85D75",
+        "barWidth": 100
+      }
+    ],
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 111,
+    "slug": "cabinet-people-11-three-questions",
+    "type": "content",
+    "title": "Three Questions to Ask the Most Experienced Person in Your Unit",
+    "subtitle": "Bring these back to the people who've been doing the work longest",
+    "layout": "key-takeaways",
+    "backgroundColor": "#F5F0E6",
+    "content": [
+      {
+        "heading": "Which parts of your job have a clear right-or-wrong answer?",
+        "text": "AI helpers work where outputs are verifiable. Your unit's most experienced people already know which decisions check themselves and which don't. Ask them. That's where to start.",
+        "icon": "CheckCircle"
+      },
+      {
+        "heading": "What part of your job do you wish you didn't have to do?",
+        "text": "The honest answer is usually the part with verifiable outputs and reachable data — and it's the part that's about to change. Letting your most experienced person direct that change is your highest-leverage move.",
+        "icon": "Sparkles"
+      },
+      {
+        "heading": "Are we changing how the work is done — or just adding tools to it?",
+        "text": "If your unit can name three AI tools but not one workflow that's been redesigned around them, you're still on the procurement track. Cherny's lead is on the other track.",
+        "icon": "Compass"
+      }
+    ],
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 112,
+    "slug": "cabinet-people-12-the-ask",
+    "type": "content",
+    "title": "What I'm Asking the Cabinet to Do",
+    "subtitle": "Authorize one unit. Trust your people. Bring them the harness.",
+    "layout": "key-takeaways",
+    "backgroundColor": "#F5F0E6",
+    "content": [
+      {
+        "heading": "The change to people is here",
+        "text": "It happened in the last 30 days. Three product launches, a new category. Already visible inside Anthropic's own teams.",
+        "icon": "Zap"
+      },
+      {
+        "heading": "The technology is the same for everyone",
+        "text": "Including us. The lead is in our people and how their work changes — not in any tool we buy.",
+        "icon": "Users"
+      },
+      {
+        "heading": "Your most experienced person is your biggest lever",
+        "text": "Have the conversation. The best person to build the tool for your unit's work is already in your unit.",
+        "icon": "MessageCircle"
+      },
+      {
+        "heading": "Authorize one unit per cabinet member",
+        "text": "Authorize them to change how the work is done — not just to deploy a tool. Bring me the unit. I'll bring the harness.",
+        "icon": "Target"
+      },
+      {
+        "heading": "The closing reframe",
+        "text": "We're not heading toward a future with fewer people doing the work. We're heading toward a future where the people we already have can finally do the work they've always known how to do — without waiting for IT to build the bridge for them.",
+        "icon": "Heart"
+      }
+    ],
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 113,
+    "slug": "cabinet-people-13-closing",
+    "type": "title",
+    "content": [],
+    "title": "Who in your unit has been waiting for a tool like this?",
+    "subtitle": "And what would you want to ask them this week?",
+    "layout": "title-hero",
+    "audiences": [
+      "cabinet-may-2026"
+    ]
   }
 ];
