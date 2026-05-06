@@ -627,6 +627,567 @@ const HarnessVendorsVariant = ({ slide }) => {
 };
 
 // ───────────────────────────────────────────────────────────────────────────
+// Variant: harness-component
+// Per-component drilldown. Two-column body with a configurable diagram on
+// the left and a code/metrics/list panel on the right. Same visual depth as
+// the source's anatomy-component pages.
+//
+// Slide schema:
+//   {
+//     variant: 'harness-component',
+//     marker, parts, subhead,            // top section
+//     diagram: 'orbit' | 'flow' | 'bar', // left-side diagram type
+//     diagramData: { ... },              // see implementations below
+//     panel: { kind: 'code' | 'list' | 'table', ... },  // right-side panel
+//     footer
+//   }
+// ───────────────────────────────────────────────────────────────────────────
+
+const OrbitDiagram = ({ data, delay = 1.0 }) => {
+  // Center label + 4 satellite pills connected by thin-line spokes.
+  // data: { center, satellites: [{label, pos: 'tl'|'tr'|'bl'|'br'}], decideLabel, feedbackLabel }
+  const { center = 'M', satellites = [], decideLabel = 'DECIDE', feedbackLabel = 'FEED BACK' } = data || {};
+  const positions = {
+    tl: { x: 80, y: 130 },
+    tr: { x: 380, y: 130 },
+    bl: { x: 80, y: 330 },
+    br: { x: 380, y: 330 }
+  };
+  return (
+    <svg viewBox="0 0 540 460" className="w-full">
+      {satellites.map((s, i) => {
+        const p = positions[s.pos || ['tl', 'tr', 'bl', 'br'][i % 4]];
+        return (
+          <motion.line
+            key={`line-${i}`}
+            initial={{ pathLength: 0, opacity: 0 }}
+            animate={{ pathLength: 1, opacity: 1 }}
+            transition={{ duration: 0.5, delay: delay + 0.2 + i * 0.08, ease: 'easeOut' }}
+            x1="270"
+            y1="230"
+            x2={p.x + 80}
+            y2={p.y + 18}
+            stroke={H.inkMuted}
+            strokeWidth="0.8"
+          />
+        );
+      })}
+      <motion.g
+        initial={{ opacity: 0, scale: 0.85 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.45, delay, ease: [0.4, 0, 0.2, 1] }}
+      >
+        <circle cx="270" cy="230" r="44" fill="none" stroke={H.ink} strokeWidth="1" />
+        <text
+          x="270"
+          y="232"
+          textAnchor="middle"
+          dominantBaseline="middle"
+          style={{ fontFamily: H.serif, fontStyle: 'italic', fontWeight: 500, fontSize: 38 }}
+          fill={H.ink}
+        >
+          {center}
+        </text>
+        <text
+          x="270"
+          y="295"
+          textAnchor="middle"
+          style={{ fontFamily: H.mono, fontSize: 10, letterSpacing: '0.22em' }}
+          fill={H.inkMuted}
+        >
+          MODEL
+        </text>
+      </motion.g>
+      <text
+        x="200"
+        y="225"
+        textAnchor="end"
+        style={{ fontFamily: H.mono, fontSize: 10, letterSpacing: '0.18em' }}
+        fill={H.inkDim}
+      >
+        {decideLabel}
+      </text>
+      <text
+        x="340"
+        y="225"
+        style={{ fontFamily: H.mono, fontSize: 10, letterSpacing: '0.18em' }}
+        fill={H.inkDim}
+      >
+        {feedbackLabel}
+      </text>
+      {satellites.map((s, i) => {
+        const p = positions[s.pos || ['tl', 'tr', 'bl', 'br'][i % 4]];
+        return (
+          <motion.g
+            key={`pill-${i}`}
+            initial={{ opacity: 0, y: 4 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.35, delay: delay + 0.5 + i * 0.08, ease: [0.4, 0, 0.2, 1] }}
+          >
+            <rect
+              x={p.x}
+              y={p.y}
+              width="160"
+              height="36"
+              rx="6"
+              fill="none"
+              stroke={H.coralSoft}
+              strokeWidth="1"
+            />
+            <text
+              x={p.x + 80}
+              y={p.y + 22}
+              textAnchor="middle"
+              style={{ fontFamily: H.mono, fontSize: 12.5 }}
+              fill={H.ink}
+            >
+              {s.label}
+            </text>
+          </motion.g>
+        );
+      })}
+    </svg>
+  );
+};
+
+const FlowDiagram = ({ data, delay = 1.0 }) => {
+  // Left → middle → right vertical sequence with arrows.
+  // data: { steps: [{label, kind}], goal, output }
+  const { steps = [], goal = 'goal', output = 'done' } = data || {};
+  return (
+    <svg viewBox="0 0 540 460" className="w-full">
+      {/* outer harness frame */}
+      <motion.rect
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay }}
+        x="20"
+        y="20"
+        width="500"
+        height="420"
+        rx="12"
+        fill="none"
+        stroke={H.coralSoft}
+        strokeWidth="1"
+      />
+      <text
+        x="36"
+        y="44"
+        style={{
+          fontFamily: H.mono,
+          fontSize: 10,
+          letterSpacing: '0.22em',
+          textTransform: 'uppercase'
+        }}
+        fill={H.coral}
+      >
+        {data?.frameLabel || 'HARNESS · CLOSED LOOP'}
+      </text>
+      <text
+        x="36"
+        y="100"
+        style={{ fontFamily: H.serif, fontStyle: 'italic', fontSize: 16 }}
+        fill={H.inkMuted}
+      >
+        {goal}
+      </text>
+      {steps.map((s, i) => {
+        const y = 150 + i * 70;
+        return (
+          <motion.g
+            key={i}
+            initial={{ opacity: 0, x: -12 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4, delay: delay + 0.4 + i * 0.12, ease: [0.4, 0, 0.2, 1] }}
+          >
+            <rect
+              x="60"
+              y={y}
+              width="200"
+              height="44"
+              rx="6"
+              fill={H.coralFill}
+              stroke={H.coralSoft}
+              strokeWidth="1"
+            />
+            <text
+              x="80"
+              y={y + 22}
+              style={{ fontFamily: H.mono, fontSize: 12 }}
+              fill={H.ink}
+            >
+              {s.label}
+            </text>
+            <text
+              x="80"
+              y={y + 36}
+              style={{
+                fontFamily: H.mono,
+                fontSize: 9,
+                letterSpacing: '0.18em',
+                textTransform: 'uppercase'
+              }}
+              fill={H.coral}
+            >
+              {s.kind}
+            </text>
+            {/* connector to next step */}
+            {i < steps.length - 1 && (
+              <line
+                x1="160"
+                y1={y + 44}
+                x2="160"
+                y2={y + 70}
+                stroke={H.inkDim}
+                strokeWidth="0.8"
+                strokeDasharray="3 3"
+              />
+            )}
+            {/* lateral annotation */}
+            {s.note && (
+              <text
+                x="290"
+                y={y + 25}
+                style={{ fontFamily: H.serif, fontStyle: 'italic', fontSize: 13 }}
+                fill={H.inkSoft}
+              >
+                {s.note}
+              </text>
+            )}
+          </motion.g>
+        );
+      })}
+      <motion.text
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.4, delay: delay + 0.4 + steps.length * 0.12 + 0.2 }}
+        x="36"
+        y={150 + steps.length * 70 + 32}
+        style={{ fontFamily: H.serif, fontStyle: 'italic', fontSize: 16 }}
+        fill={H.coral}
+      >
+        ↳ {output}
+      </motion.text>
+    </svg>
+  );
+};
+
+const BarDiagram = ({ data, delay = 1.0 }) => {
+  // Horizontal usage bar with subdivisions and a reserve segment + side metric.
+  // data: { label, segments: [{label, weight}], reserveLabel, current, max, unit }
+  const { label = 'BUDGET', segments = [], reserveLabel = 'reserve', current = '0', max = '0', unit = '' } =
+    data || {};
+  const totalWeight = segments.reduce((s, x) => s + x.weight, 0) || 1;
+  const fillFraction = 0.78; // visual: 78% of bar is "used" (segments)
+  const barTotalWidth = 880;
+  const usedWidth = barTotalWidth * fillFraction;
+  const reserveWidth = barTotalWidth - usedWidth;
+
+  let cursor = 0;
+  return (
+    <svg viewBox="0 0 920 240" className="w-full">
+      <text
+        x="6"
+        y="20"
+        style={{
+          fontFamily: H.mono,
+          fontSize: 10,
+          letterSpacing: '0.22em',
+          textTransform: 'uppercase'
+        }}
+        fill={H.inkMuted}
+      >
+        {label}
+      </text>
+      <text
+        x={barTotalWidth + 18}
+        y={68}
+        textAnchor="end"
+        style={{
+          fontFamily: H.serif,
+          fontWeight: 500,
+          fontSize: 28
+        }}
+        fill={H.coral}
+      >
+        {current}
+      </text>
+      <text
+        x={barTotalWidth + 24}
+        y={68}
+        style={{ fontFamily: H.mono, fontSize: 11, letterSpacing: '0.12em' }}
+        fill={H.inkMuted}
+      >
+        of {max} {unit}
+      </text>
+      {/* outer rule */}
+      <motion.line
+        initial={{ pathLength: 0 }}
+        animate={{ pathLength: 1 }}
+        transition={{ duration: 0.7, delay }}
+        x1="6"
+        y1="34"
+        x2={barTotalWidth + 6}
+        y2="34"
+        stroke={H.rule}
+        strokeWidth="1"
+      />
+      {segments.map((seg, i) => {
+        const w = (seg.weight / totalWeight) * usedWidth;
+        const x = 6 + cursor;
+        cursor += w;
+        const opacity = 0.6 + (i / Math.max(1, segments.length - 1)) * 0.35;
+        return (
+          <motion.rect
+            key={i}
+            initial={{ width: 0, opacity: 0 }}
+            animate={{ width: w, opacity }}
+            transition={{ duration: 0.5, delay: delay + 0.2 + i * 0.08, ease: 'easeOut' }}
+            x={x}
+            y="50"
+            height="40"
+            fill={H.coral}
+          />
+        );
+      })}
+      {/* reserve segment */}
+      <motion.rect
+        initial={{ width: 0 }}
+        animate={{ width: reserveWidth }}
+        transition={{ duration: 0.5, delay: delay + 0.6, ease: 'easeOut' }}
+        x={6 + usedWidth}
+        y="50"
+        height="40"
+        fill="none"
+        stroke={H.coralSoft}
+        strokeWidth="1"
+        strokeDasharray="3 3"
+      />
+      <text
+        x={6 + usedWidth + reserveWidth / 2}
+        y="74"
+        textAnchor="middle"
+        style={{
+          fontFamily: H.mono,
+          fontSize: 10,
+          letterSpacing: '0.18em',
+          textTransform: 'uppercase'
+        }}
+        fill={H.inkDim}
+      >
+        {reserveLabel}
+      </text>
+      {/* segment labels */}
+      <motion.g
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: delay + 0.9 }}
+      >
+        {segments.map((seg, i) => (
+          <g key={i}>
+            <circle cx={20 + i * 130} cy="120" r="2" fill={H.coral} />
+            <text
+              x={28 + i * 130}
+              y="124"
+              style={{
+                fontFamily: H.serif,
+                fontStyle: 'italic',
+                fontSize: 14
+              }}
+              fill={H.inkSoft}
+            >
+              {seg.label}
+            </text>
+          </g>
+        ))}
+      </motion.g>
+    </svg>
+  );
+};
+
+const CodePanel = ({ data, delay = 1.4 }) => {
+  // Dark warm-navy block with traffic-light dots + monospace lines.
+  // data: { filename, lines: [{text, type?}] }
+  const { filename = 'example.py', lines = [] } = data || {};
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 8 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay, ease: [0.4, 0, 0.2, 1] }}
+      className="rounded-md p-4"
+      style={{
+        backgroundColor: '#1F2530',
+        fontFamily: H.mono,
+        fontSize: 12.5,
+        lineHeight: 1.55,
+        minHeight: 280
+      }}
+    >
+      <div className="flex items-center gap-1.5 mb-3">
+        <span className="block w-2.5 h-2.5 rounded-full" style={{ backgroundColor: '#FF5F57' }} />
+        <span className="block w-2.5 h-2.5 rounded-full" style={{ backgroundColor: '#FEBC2E' }} />
+        <span className="block w-2.5 h-2.5 rounded-full" style={{ backgroundColor: '#28C840' }} />
+        <span
+          className="ml-3"
+          style={{
+            color: 'rgba(245,241,234,0.5)',
+            fontFamily: H.mono,
+            fontSize: 11,
+            letterSpacing: '0.05em'
+          }}
+        >
+          {filename}
+        </span>
+      </div>
+      {lines.map((ln, i) => {
+        const color =
+          ln.type === 'kw' ? '#E2A892' :
+          ln.type === 'str' ? '#A6C77A' :
+          ln.type === 'comment' ? '#6F6B62' :
+          ln.type === 'flag' ? '#F4A088' :
+          'rgba(245,241,234,0.92)';
+        return (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.18, delay: delay + 0.25 + i * 0.06 }}
+            style={{ color, whiteSpace: 'pre' }}
+          >
+            {ln.text}
+          </motion.div>
+        );
+      })}
+    </motion.div>
+  );
+};
+
+const ListPanel = ({ data, delay = 1.4 }) => {
+  // Headed list of name/value/note rows for registry-style content.
+  // data: { heading, rows: [{name, value, note}] }
+  const { heading = 'REGISTRY', rows = [] } = data || {};
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 6 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay, ease: [0.4, 0, 0.2, 1] }}
+      className="rounded-md px-5 py-4"
+      style={{
+        backgroundColor: 'rgba(255,255,255,0.5)',
+        border: `1px solid ${H.coralSoft}`,
+        minHeight: 280
+      }}
+    >
+      <div
+        className="mb-4 text-[10.5px] uppercase"
+        style={{ fontFamily: H.mono, letterSpacing: '0.22em', color: H.coral }}
+      >
+        {heading}
+      </div>
+      <div className="space-y-2.5">
+        {rows.map((r, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, x: -6 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.3, delay: delay + 0.2 + i * 0.06 }}
+            className="flex items-baseline gap-3"
+          >
+            <span
+              style={{
+                fontFamily: H.mono,
+                fontSize: 12.5,
+                color: H.ink,
+                minWidth: 110
+              }}
+            >
+              {r.name}
+            </span>
+            <span
+              style={{
+                fontFamily: H.serif,
+                fontStyle: 'italic',
+                fontSize: 13,
+                color: H.coral,
+                minWidth: 80
+              }}
+            >
+              {r.value}
+            </span>
+            <span
+              style={{
+                fontFamily: H.mono,
+                fontSize: 10.5,
+                color: H.inkDim,
+                letterSpacing: '0.16em',
+                textTransform: 'uppercase'
+              }}
+            >
+              {r.note}
+            </span>
+          </motion.div>
+        ))}
+      </div>
+    </motion.div>
+  );
+};
+
+const HarnessComponentVariant = ({ slide }) => {
+  const { diagram = 'orbit', diagramData, panel } = slide;
+  const Diagram =
+    diagram === 'flow' ? FlowDiagram :
+    diagram === 'bar' ? BarDiagram :
+    OrbitDiagram;
+  const Panel =
+    panel?.kind === 'code' ? CodePanel :
+    panel?.kind === 'list' ? ListPanel :
+    null;
+
+  return (
+    <Shell>
+      <div className="absolute top-12 left-16">
+        <SectionMarker>{slide.marker || '§ COMPONENT'}</SectionMarker>
+      </div>
+      <div className={`flex-1 flex flex-col justify-center ${SHELL_PAD_X} ${BOTTOM_SAFE}`}>
+        <div className="max-w-6xl">
+          {slide.eyebrow && <Eyebrow delay={0.2}>{slide.eyebrow}</Eyebrow>}
+          <EditorialHeadline parts={slide.parts || []} delay={0.3} maxFontSize={68} />
+          {slide.subhead && <Subhead delay={0.7}>{slide.subhead}</Subhead>}
+          <div
+            className="mt-10 grid gap-10"
+            style={{ gridTemplateColumns: panel ? '1.1fr 1fr' : '1fr' }}
+          >
+            <div>
+              <Diagram data={diagramData} delay={1.0} />
+            </div>
+            {Panel && (
+              <div>
+                <Panel data={panel} delay={1.4} />
+              </div>
+            )}
+          </div>
+          {slide.footer && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 1.8 }}
+              className="mt-8 text-[12px] uppercase"
+              style={{
+                fontFamily: H.mono,
+                letterSpacing: '0.18em',
+                color: H.inkMuted
+              }}
+            >
+              {slide.footer}
+            </motion.div>
+          )}
+        </div>
+      </div>
+    </Shell>
+  );
+};
+
+// ───────────────────────────────────────────────────────────────────────────
 // Variant: harness-manifesto
 // Single-line editorial declaration; closes a section.
 // ───────────────────────────────────────────────────────────────────────────

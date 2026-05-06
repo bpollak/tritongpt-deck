@@ -3685,8 +3685,8 @@ export const slides = [
       { "text": "harness", "accent": true },
       { "text": "?" }
     ],
-    "subhead": "We keep saying the word. Few people define it the same way twice. Let's fix that — in plain terms — and then look at why it's the change that mattered.",
-    "footer": "AFTER STAFF CONVERSATIONS",
+    "subhead": "Everyone's saying the word. Few people define it the same way twice. Let's fix that — in plain terms — and then look at why it's the change that mattered.",
+    "footer": "§ DEFINITION · ANATOMY · CONVERGENCE",
     "audiences": [
       "cabinet-may-2026"
     ]
@@ -3810,6 +3810,143 @@ export const slides = [
       }
     ],
     "footer": "what changes is the surface you encounter — the runtime underneath has stabilized.",
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 117.1,
+    "slug": "cabinet-harness-04a-memory",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-component",
+    "marker": "§ COMPONENT · MEMORY",
+    "parts": [
+      { "text": "Memory" }
+    ],
+    "subhead": "what to keep · what to summarize · what to forget",
+    "diagram": "bar",
+    "diagramData": {
+      "label": "WORKING CONTEXT",
+      "segments": [
+        { "label": "active turn", "weight": 18 },
+        { "label": "recent turns", "weight": 28 },
+        { "label": "summarized history", "weight": 22 },
+        { "label": "indexed knowledge", "weight": 12 }
+      ],
+      "reserveLabel": "compact at ~80%",
+      "current": "780k",
+      "max": "1m",
+      "unit": "tokens"
+    },
+    "panel": {
+      "kind": "code",
+      "filename": "memory/policy.md",
+      "lines": [
+        { "text": "# memory policy", "type": "comment" },
+        { "text": "" },
+        { "text": "keep_verbatim:", "type": "kw" },
+        { "text": "  - active_turn" },
+        { "text": "  - last_3_tool_calls" },
+        { "text": "" },
+        { "text": "summarize_when:", "type": "kw" },
+        { "text": "  budget_used: 80%", "type": "flag" },
+        { "text": "  format: rolling_digest", "type": "str" },
+        { "text": "" },
+        { "text": "promote_to_index:", "type": "kw" },
+        { "text": "  on: decisions, errors", "type": "str" }
+      ]
+    },
+    "footer": "the harness decides which past matters next",
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 117.2,
+    "slug": "cabinet-harness-04b-tools",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-component",
+    "marker": "§ COMPONENT · TOOLS",
+    "parts": [
+      { "text": "Tools" }
+    ],
+    "subhead": "what the agent can reach · what it's allowed to do",
+    "diagram": "orbit",
+    "diagramData": {
+      "center": "M",
+      "decideLabel": "DECIDE",
+      "feedbackLabel": "OBSERVE",
+      "satellites": [
+        { "label": "search_docs", "pos": "tl" },
+        { "label": "query_records", "pos": "tr" },
+        { "label": "draft_email", "pos": "bl" },
+        { "label": "schedule_review", "pos": "br" }
+      ]
+    },
+    "panel": {
+      "kind": "list",
+      "heading": "REGISTRY",
+      "rows": [
+        { "name": "search_docs", "value": "read", "note": "indexed" },
+        { "name": "query_records", "value": "read", "note": "scoped" },
+        { "name": "draft_email", "value": "write", "note": "review_first" },
+        { "name": "schedule_review", "value": "write", "note": "human_approve" },
+        { "name": "summarize_thread", "value": "read", "note": "any" }
+      ]
+    },
+    "footer": "primitives below · domain skills above · permissions on every call",
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 117.3,
+    "slug": "cabinet-harness-04c-review-loop",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-component",
+    "marker": "§ COMPONENT · REVIEW LOOP",
+    "parts": [
+      { "text": "Review loop" }
+    ],
+    "subhead": "act · observe · adjust · ask the human when it matters",
+    "diagram": "flow",
+    "diagramData": {
+      "frameLabel": "HARNESS · ITERATIVE PROPOSE-AND-CHECK",
+      "goal": "goal from a person",
+      "output": "outcome the person signs off on",
+      "steps": [
+        { "label": "propose", "kind": "DRAFT", "note": "the agent commits an intent in writing" },
+        { "label": "execute", "kind": "ACT", "note": "scoped, reversible, sandboxed where it can be" },
+        { "label": "observe", "kind": "READ_BACK", "note": "what changed, what failed, what's uncertain" },
+        { "label": "decide", "kind": "BRANCH", "note": "continue, retry, or escalate to a human" }
+      ]
+    },
+    "panel": {
+      "kind": "code",
+      "filename": "policy/review.md",
+      "lines": [
+        { "text": "# escalation policy", "type": "comment" },
+        { "text": "" },
+        { "text": "auto_proceed:", "type": "kw" },
+        { "text": "  - read-only operations" },
+        { "text": "  - reversible writes in sandbox" },
+        { "text": "" },
+        { "text": "ask_human:", "type": "kw" },
+        { "text": "  - external_send", "type": "flag" },
+        { "text": "  - schema_change", "type": "flag" },
+        { "text": "  - low_confidence: true", "type": "flag" },
+        { "text": "" },
+        { "text": "always_log:", "type": "kw" },
+        { "text": "  every_step: true", "type": "str" }
+      ]
+    },
+    "footer": "the harness is the receipt · every action is reviewable later",
     "audiences": [
       "cabinet-may-2026"
     ]
