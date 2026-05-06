@@ -255,9 +255,29 @@ const HarnessQuestionVariant = ({ slide }) => (
     <motion.div {...fade(0.18)} className="absolute left-[4.8vw] top-[18vh] text-[13px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em' }}>
       {slide.kicker}
     </motion.div>
-    <h1 className="absolute left-[4.8vw] top-[23vh] max-w-[72vw] leading-[0.95]" style={{ fontSize: 'clamp(72px, 9vw, 140px)', fontWeight: 520 }}>
+    <h1 className="absolute left-[4.8vw] top-[23vh] max-w-[72vw] leading-[0.95]" style={{ fontSize: 'clamp(68px, 8.4vw, 130px)', fontWeight: 520 }}>
       <PartText parts={slide.parts} delay={0.25} />
     </h1>
+    {(slide.contextCards || []).length > 0 && (
+      <div className="absolute left-[4.8vw] right-[4.8vw] bottom-[17vh] grid max-w-[1120px] grid-cols-2 gap-5">
+        {slide.contextCards.map((card, index) => (
+          <Card key={card.title} delay={0.74 + index * 0.1} className="p-5">
+            <Kicker>{card.kicker}</Kicker>
+            <div className="mt-3" style={{ fontSize: 31, lineHeight: 1.02, fontWeight: 620 }}>
+              {card.title}
+            </div>
+            <div className="mt-3" style={{ color: T.muted, fontSize: 19, lineHeight: 1.26 }}>
+              {card.body}
+            </div>
+          </Card>
+        ))}
+      </div>
+    )}
+    {slide.bottomLine && (
+      <motion.div {...fade(1.0)} className="absolute left-[4.8vw] bottom-[9.7vh] italic" style={{ color: T.muted, fontSize: 24 }}>
+        {slide.bottomLine}
+      </motion.div>
+    )}
   </Shell>
 );
 

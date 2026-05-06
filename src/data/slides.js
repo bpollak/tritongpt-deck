@@ -3713,6 +3713,19 @@ export const slides = [
       { "text": "harness", "accent": true },
       { "text": "?" }
     ],
+    "contextCards": [
+      {
+        "kicker": "Chat app",
+        "title": "A model answers.",
+        "body": "ChatGPT or Claude in the browser is primarily a conversation surface: prompt in, answer back."
+      },
+      {
+        "kicker": "Harness",
+        "title": "A model works.",
+        "body": "A harness wraps models with context, tools, permissions, memory, and a loop so it can act on real work."
+      }
+    ],
+    "bottomLine": "Same underlying model class. Different operating environment.",
     "audiences": [
       "cabinet-may-2026"
     ]
