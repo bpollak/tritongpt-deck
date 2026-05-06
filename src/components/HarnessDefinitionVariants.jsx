@@ -259,14 +259,65 @@ const HarnessQuestionVariant = ({ slide }) => (
       <PartText parts={slide.parts} delay={0.25} />
     </h1>
     {(slide.contextCards || []).length > 0 && (
-      <div className="absolute left-[4.8vw] right-[4.8vw] bottom-[17vh] grid max-w-[1120px] grid-cols-2 gap-5">
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[53vh] grid max-w-[1180px] grid-cols-2 gap-5">
         {slide.contextCards.map((card, index) => (
-          <Card key={card.title} delay={0.74 + index * 0.1} className="p-5">
-            <Kicker>{card.kicker}</Kicker>
-            <div className="mt-3" style={{ fontSize: 31, lineHeight: 1.02, fontWeight: 620 }}>
-              {card.title}
+          <Card key={card.title} delay={0.74 + index * 0.1} className="p-4" style={index === 1 ? { background: '#fff8f2', borderColor: T.coralPale } : undefined}>
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <Kicker>{card.kicker}</Kicker>
+                <div className="mt-2" style={{ fontSize: 29, lineHeight: 1.02, fontWeight: 620 }}>
+                  {card.title}
+                </div>
+              </div>
+              {index === 0 ? (
+                <div className="flex items-center gap-2 pt-1" style={{ color: T.blue }}>
+                  <div className="rounded-[5px] border px-3 py-2 text-[11px]" style={{ borderColor: '#b9d3dc', background: T.bluePale, fontFamily: T.mono, fontWeight: 800 }}>PROMPT</div>
+                  <span style={{ color: '#9ab4c1' }}>→</span>
+                  <div className="rounded-full border px-3 py-2 text-[11px]" style={{ borderColor: '#b9d3dc', background: '#fff', fontFamily: T.mono, fontWeight: 800 }}>ANSWER</div>
+                </div>
+              ) : (
+                <div className="flex items-center gap-1 pt-1" style={{ color: T.coralDark, fontFamily: T.mono }}>
+                  {['context', 'tools', 'loop'].map((label) => (
+                    <span key={label} className="rounded-full border px-2.5 py-1 text-[10px] uppercase" style={{ borderColor: T.coralPale, background: '#fff' }}>
+                      {label}
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
-            <div className="mt-3" style={{ color: T.muted, fontSize: 19, lineHeight: 1.26 }}>
+            <div className="mt-3">
+              {index === 0 ? (
+                <div className="grid grid-cols-[1fr_74px_1fr] items-center gap-3">
+                  <div className="rounded-[7px] border px-4 py-2.5 text-center" style={{ borderColor: '#b9d3dc', background: T.bluePale, color: T.blue, fontFamily: T.mono, fontSize: 12, fontWeight: 800 }}>
+                    user asks
+                  </div>
+                  <div className="flex h-[52px] w-[52px] items-center justify-center rounded-full border" style={{ borderColor: T.blue, color: T.blue, fontFamily: T.serif, fontStyle: 'italic', fontSize: 31 }}>M</div>
+                  <div className="rounded-[7px] border px-4 py-2.5 text-center" style={{ borderColor: '#b9d3dc', background: '#fff', color: T.blue, fontFamily: T.mono, fontSize: 12, fontWeight: 800 }}>
+                    answer returns
+                  </div>
+                </div>
+              ) : (
+                <div className="rounded-[9px] border px-4 py-2.5" style={{ borderColor: T.coralPale, background: '#fff' }}>
+                  <div className="grid grid-cols-[1fr_72px_1fr] items-center gap-3">
+                    <div className="space-y-2">
+                      {['files', 'rules', 'memory'].map((label) => (
+                        <div key={label} className="rounded-[5px] border px-3 py-1.5 text-center text-[11px]" style={{ borderColor: T.faint, color: T.muted, fontFamily: T.mono, fontWeight: 800 }}>{label}</div>
+                      ))}
+                    </div>
+                    <div className="relative flex h-[62px] w-[62px] items-center justify-center rounded-full border" style={{ borderColor: T.coral, color: T.coralDark, fontFamily: T.serif, fontStyle: 'italic', fontSize: 36 }}>
+                      M
+                      <span className="absolute bottom-[-7px] right-[-7px] rounded-full px-1.5 text-[10px]" style={{ background: T.coral, color: '#fff', fontFamily: T.mono, fontStyle: 'normal' }}>↺</span>
+                    </div>
+                    <div className="space-y-2">
+                      {['read', 'edit', 'verify'].map((label) => (
+                        <div key={label} className="rounded-[5px] border px-3 py-1.5 text-center text-[11px]" style={{ borderColor: T.coralPale, color: T.coralDark, fontFamily: T.mono, fontWeight: 800 }}>{label}</div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+            <div className="mt-3" style={{ color: T.muted, fontSize: 17, lineHeight: 1.18 }}>
               {card.body}
             </div>
           </Card>
@@ -274,7 +325,7 @@ const HarnessQuestionVariant = ({ slide }) => (
       </div>
     )}
     {slide.bottomLine && (
-      <motion.div {...fade(1.0)} className="absolute left-[4.8vw] bottom-[9.7vh] italic" style={{ color: T.muted, fontSize: 24 }}>
+      <motion.div {...fade(1.0)} className="absolute left-[4.8vw] top-[86.5vh] italic" style={{ color: T.muted, fontSize: 20 }}>
         {slide.bottomLine}
       </motion.div>
     )}
