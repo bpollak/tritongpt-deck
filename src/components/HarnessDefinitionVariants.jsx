@@ -255,7 +255,7 @@ const HarnessQuestionVariant = ({ slide }) => (
     <motion.div {...fade(0.18)} className="absolute left-[4.8vw] top-[18vh] text-[13px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em' }}>
       {slide.kicker}
     </motion.div>
-    <h1 className="absolute left-[4.8vw] top-[23vh] max-w-[72vw] leading-[0.95]" style={{ fontSize: 'clamp(68px, 8.4vw, 130px)', fontWeight: 520 }}>
+    <h1 className="absolute left-[4.8vw] right-[4.8vw] top-[23vh] leading-[0.95]" style={{ fontSize: 'clamp(54px, 6.2vw, 100px)', fontWeight: 520 }}>
       <PartText parts={slide.parts} delay={0.25} />
     </h1>
     {(slide.contextCards || []).length > 0 && (
