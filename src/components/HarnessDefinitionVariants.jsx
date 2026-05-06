@@ -913,11 +913,18 @@ const ApiProgramPill = ({ children, delay = 0.4, color = T.blue }) => (
 const ApiProgramCard = ({ children, delay = 0.4, color = T.blue, className = '' }) => (
   <motion.div
     {...fade(delay)}
-    className={`rounded-[9px] border bg-white ${className}`}
-    style={{ borderColor: '#e7e0d2', borderLeft: `4px solid ${color}`, boxShadow: '0 7px 18px rgba(23,24,20,0.08)' }}
+    className={`rounded-[7px] border bg-white ${className}`}
+    style={{ borderColor: '#e7e0d2', borderLeft: `4px solid ${color}`, boxShadow: '0 4px 12px rgba(23,24,20,0.07)' }}
   >
     {children}
   </motion.div>
+);
+
+const ApiConnectorArrow = ({ width = 32 }) => (
+  <svg width={width} height="16" viewBox={`0 0 ${width} 16`} aria-hidden="true" className="shrink-0">
+    <path d={`M 0 8 H ${width - 8}`} stroke="#9ab4c1" strokeWidth="2" strokeLinecap="round" />
+    <path d={`M ${width - 8} 3 L ${width} 8 L ${width - 8} 13 Z`} fill="#9ab4c1" />
+  </svg>
 );
 
 const HarnessDeveloperApiProgramVariant = ({ slide }) => {
@@ -931,39 +938,39 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
 
   return (
     <Shell>
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[5vh] text-center">
-        <motion.h1 {...fade(0.12)} style={{ color: '#15243d', fontFamily: "'Inter','Helvetica Neue',system-ui,sans-serif", fontSize: 'clamp(38px, 3.5vw, 58px)', fontWeight: 820, letterSpacing: '0' }}>
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[4.8vh] text-center">
+        <motion.h1 {...fade(0.12)} style={{ color: T.ink, fontFamily: T.serif, fontSize: 'clamp(40px, 3.8vw, 62px)', lineHeight: 0.92, fontWeight: 560, letterSpacing: '0' }}>
           {slide.programTitle || 'TritonAI Developer API Program'}
         </motion.h1>
       </div>
 
-      <div className="absolute left-[5.8vw] right-[5.8vw] top-[14vh] grid grid-cols-[22%_21%_1fr_26%] items-center gap-5">
+      <div className="absolute left-[5.8vw] right-[5.8vw] top-[13.2vh] grid grid-cols-[22%_21%_1fr_26%] items-center gap-4">
         <div>
-          <Kicker className="mb-3" style={{ color: T.muted }}>Campus users</Kicker>
-          <div className="space-y-2.5">
+          <Kicker className="mb-2" style={{ color: T.muted }}>Campus users</Kicker>
+          <div className="space-y-2">
             {users.map((user, index) => (
-              <ApiProgramCard key={user.title} delay={0.28 + index * 0.06} color={T.blue} className="flex h-[62px] items-center gap-3 px-4">
-                <div className="flex h-9 w-9 items-center justify-center rounded-full" style={{ background: T.bluePale }}>
+              <ApiProgramCard key={user.title} delay={0.28 + index * 0.06} color={T.blue} className="flex h-[54px] items-center gap-3 px-4">
+                <div className="flex h-8 w-8 items-center justify-center rounded-full" style={{ background: T.bluePale }}>
                   <MiniIcon type={user.icon || 'people'} color={T.blue} />
                 </div>
-                <div style={{ color: '#15243d', fontFamily: "'Inter','Helvetica Neue',system-ui,sans-serif", fontSize: 16, fontWeight: 760 }}>{user.title}</div>
+                <div style={{ color: T.ink, fontFamily: T.serif, fontSize: 20, lineHeight: 1, fontWeight: 620 }}>{user.title}</div>
               </ApiProgramCard>
             ))}
           </div>
         </div>
 
         <div>
-          <Kicker className="mb-3">Claude Code / Codex</Kicker>
+          <Kicker className="mb-2">Claude Code / Codex</Kicker>
           <div className="relative">
-            <div className="space-y-3">
+            <div className="space-y-2.5">
               {harnesses.map((harness, index) => (
-                <ApiProgramCard key={harness.title} delay={0.48 + index * 0.08} color={harness.color || T.coral} className="flex h-[68px] items-center gap-4 px-5">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full" style={{ background: harness.fill || '#fff8f2' }}>
+                <ApiProgramCard key={harness.title} delay={0.48 + index * 0.08} color={harness.color || T.coral} className="flex h-[62px] items-center gap-4 px-5">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-full" style={{ background: harness.fill || '#fff8f2' }}>
                     <MiniIcon type={harness.icon || 'code'} color={harness.color || T.coralDark} />
                   </div>
                   <div>
-                    <div style={{ color: '#15243d', fontFamily: "'Inter','Helvetica Neue',system-ui,sans-serif", fontSize: 18, fontWeight: 820 }}>{harness.title}</div>
-                    <div className="mt-1" style={{ color: T.muted, fontFamily: "'Inter','Helvetica Neue',system-ui,sans-serif", fontSize: 12 }}>{harness.subtitle}</div>
+                    <div style={{ color: T.ink, fontFamily: T.serif, fontSize: 23, lineHeight: 0.95, fontWeight: 650 }}>{harness.title}</div>
+                    <div className="mt-1" style={{ color: T.muted, fontFamily: T.serif, fontSize: 14 }}>{harness.subtitle}</div>
                   </div>
                 </ApiProgramCard>
               ))}
@@ -972,31 +979,33 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
         </div>
 
         <div className="flex items-center justify-center">
-          <motion.div {...fade(0.74)} className="relative flex h-[155px] w-[155px] items-center justify-center rounded-full" style={{ background: 'radial-gradient(circle at 35% 28%, #1c5c91, #153457 72%)', boxShadow: '0 0 0 6px rgba(21,36,61,0.18), 0 12px 26px rgba(23,24,20,0.22)' }}>
-            <div className="text-center" style={{ color: '#fff', fontFamily: "'Inter','Helvetica Neue',system-ui,sans-serif" }}>
-              <MiniIcon type="gateway" color="#ffc928" />
-              <div className="mt-1" style={{ fontSize: 22, lineHeight: 1.03, fontWeight: 820 }}>LLM<br />Gateway</div>
+          <motion.div {...fade(0.74)} className="relative flex h-[168px] w-[168px] items-center justify-center rounded-full" style={{ background: 'radial-gradient(circle at 35% 28%, #1c5c91, #153457 72%)', boxShadow: '0 0 0 6px rgba(21,36,61,0.18), 0 12px 24px rgba(23,24,20,0.2)' }}>
+            <div className="text-center" style={{ color: '#fff', fontFamily: T.serif }}>
+              <div className="flex justify-center">
+                <MiniIcon type="gateway" color="#ffc928" />
+              </div>
+              <div className="mt-1" style={{ fontSize: 30, lineHeight: 0.93, fontWeight: 620 }}>LLM<br />Gateway</div>
               <div className="mt-2 text-[10px] uppercase" style={{ color: '#14b8d4', fontFamily: T.mono, letterSpacing: '0.16em', fontWeight: 800 }}>templates +<br />guardrails</div>
             </div>
           </motion.div>
         </div>
 
         <div>
-          <Kicker className="mb-3">Model providers</Kicker>
-          <div className="grid grid-cols-[1fr_1fr] gap-3">
-            <div className="space-y-2.5">
+          <Kicker className="mb-2">Model providers</Kicker>
+          <div className="grid grid-cols-[1fr_1fr] gap-2.5">
+            <div className="space-y-2">
               {providers.map((provider, index) => (
-                <ApiProgramCard key={provider.title} delay={0.88 + index * 0.06} color={provider.color || T.blue} className="flex h-[64px] items-center gap-3 px-4">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-full" style={{ background: provider.fill || T.bluePale }}>
+                <ApiProgramCard key={provider.title} delay={0.88 + index * 0.06} color={provider.color || T.blue} className="flex h-[56px] items-center gap-3 px-4">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full" style={{ background: provider.fill || T.bluePale }}>
                     <MiniIcon type={provider.icon || 'gateway'} color={provider.color || T.blue} />
                   </div>
-                  <div style={{ color: '#15243d', fontFamily: "'Inter','Helvetica Neue',system-ui,sans-serif", fontSize: 15.5, lineHeight: 1.05, fontWeight: 820 }}>{provider.title}</div>
+                  <div style={{ color: T.ink, fontFamily: T.serif, fontSize: 19, lineHeight: 0.95, fontWeight: 650 }}>{provider.title}</div>
                 </ApiProgramCard>
               ))}
             </div>
-            <div className="space-y-2.5">
+            <div className="space-y-2">
               {capabilities.map((capability, index) => (
-                <motion.div key={capability} {...fade(1.02 + index * 0.04, 0)} className="rounded-full border bg-white px-4 py-1.5 text-center" style={{ borderColor: '#c9d7df', color: '#15243d', boxShadow: '0 3px 10px rgba(23,24,20,0.08)', fontFamily: "'Inter','Helvetica Neue',system-ui,sans-serif", fontSize: 13, fontWeight: 820, letterSpacing: '0.03em' }}>
+                <motion.div key={capability} {...fade(1.02 + index * 0.04, 0)} className="rounded-full border bg-white px-4 py-1.5 text-center" style={{ borderColor: '#c9d7df', color: T.ink, boxShadow: '0 2px 8px rgba(23,24,20,0.07)', fontFamily: T.mono, fontSize: 12, fontWeight: 800, letterSpacing: '0.08em' }}>
                   {capability}
                 </motion.div>
               ))}
@@ -1004,54 +1013,54 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
           </div>
         </div>
         <div className="pointer-events-none absolute inset-0">
-          <div className="absolute left-[21.5%] top-[156px] flex items-center gap-2">
+          <div className="absolute left-[21.5%] top-[139px] flex items-center gap-2">
             <ApiProgramPill delay={0.72}>Use</ApiProgramPill>
-            <div style={{ color: '#9ab4c1', fontSize: 23 }}>→</div>
+            <ApiConnectorArrow width={28} />
           </div>
-          <div className="absolute left-[45.8%] top-[156px] flex items-center gap-2">
+          <div className="absolute left-[45.8%] top-[139px] flex items-center gap-2">
             <ApiProgramPill delay={0.78}>Connect to</ApiProgramPill>
-            <div style={{ color: '#9ab4c1', fontSize: 23 }}>→</div>
+            <ApiConnectorArrow width={26} />
           </div>
-          <div className="absolute left-[72.2%] top-[156px] flex items-center gap-2">
+          <div className="absolute left-[64.5%] top-[139px] flex items-center gap-2">
             <ApiProgramPill delay={0.95}>Accesses</ApiProgramPill>
-            <div style={{ color: '#9ab4c1', fontSize: 23 }}>→</div>
+            <ApiConnectorArrow width={28} />
           </div>
         </div>
       </div>
 
-      <Card delay={1.08} className="absolute left-[5.8vw] right-[5.8vw] top-[57.5vh] p-4">
+      <Card delay={1.08} className="absolute left-[5.8vw] right-[5.8vw] top-[47.8vh] p-3.5">
         <div className="mb-2 text-center text-[12px] uppercase" style={{ color: T.muted, fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.18em' }}>How to get access</div>
         <div className="grid grid-cols-4 gap-4">
           {accessSteps.map((step, index) => (
-            <motion.div key={step.title} {...fade(1.2 + index * 0.06, 0)} className="grid grid-cols-[48px_1fr] gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full" style={{ background: step.color || T.blue, color: '#fff', fontFamily: "'Inter','Helvetica Neue',system-ui,sans-serif", fontSize: 18, fontWeight: 820 }}>{index + 1}</div>
+            <motion.div key={step.title} {...fade(1.2 + index * 0.06, 0)} className="grid grid-cols-[42px_1fr] gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full" style={{ background: step.color || T.blue, color: '#fff', fontFamily: T.mono, fontSize: 17, fontWeight: 800 }}>{index + 1}</div>
               <div>
-                <div style={{ color: '#15243d', fontFamily: "'Inter','Helvetica Neue',system-ui,sans-serif", fontSize: 20, lineHeight: 1, fontWeight: 840 }}>{step.title}</div>
-                <div className="mt-1" style={{ color: '#5f6f82', fontFamily: "'Inter','Helvetica Neue',system-ui,sans-serif", fontSize: 13.5, lineHeight: 1.12 }}>{step.body}</div>
+                <div style={{ color: T.ink, fontFamily: T.serif, fontSize: 25, lineHeight: 0.9, fontWeight: 650 }}>{step.title}</div>
+                <div className="mt-1" style={{ color: '#5f6f82', fontFamily: T.serif, fontSize: 15, lineHeight: 1.08 }}>{step.body}</div>
               </div>
             </motion.div>
           ))}
         </div>
       </Card>
 
-      <div className="absolute left-[5.8vw] right-[5.8vw] top-[77.2vh] grid grid-cols-2 gap-4">
+      <div className="absolute left-[5.8vw] right-[5.8vw] top-[63.8vh] grid grid-cols-2 gap-4">
         {ownership.map((owner, index) => (
           <Card key={owner.title} delay={1.35 + index * 0.08} className="p-3">
             <Kicker>{owner.title}</Kicker>
             <div className="mt-2 grid grid-cols-2 gap-1.5">
               {owner.items.map((item) => (
-                <span key={item} className="rounded-full px-3 py-1 text-center text-[10.5px]" style={{ background: '#edf1f5', color: '#5f6f82', fontFamily: "'Inter','Helvetica Neue',system-ui,sans-serif", fontWeight: 760 }}>{item}</span>
+                <span key={item} className="rounded-full px-3 py-1 text-center text-[10.5px]" style={{ background: '#edf1f5', color: '#5f6f82', fontFamily: T.mono, fontWeight: 700, letterSpacing: '0' }}>{item}</span>
               ))}
             </div>
           </Card>
         ))}
       </div>
 
-      <div className="absolute left-[5.8vw] right-[5.8vw] bottom-[4.8vh] grid grid-cols-[1fr_290px_1fr] items-center gap-4">
+      <div className="absolute left-[5.8vw] right-[5.8vw] top-[75.6vh] grid grid-cols-[1fr_290px_1fr] items-center gap-4">
         {[footerBadges.slice(0, 3), footerBadges.slice(3)].map((group, groupIndex) => (
           <div key={`footer-group-${groupIndex}`} className={`flex items-center gap-4 ${groupIndex === 0 ? 'justify-end' : 'col-start-3 justify-start'}`}>
             {group.map((badge, index) => (
-              <motion.div key={badge} {...fade(1.52 + (groupIndex * 3 + index) * 0.04, 0)} className="text-[11px] uppercase" style={{ color: '#6f7b8b', fontFamily: "'Inter','Helvetica Neue',system-ui,sans-serif", fontWeight: 820, letterSpacing: '0.04em' }}>
+              <motion.div key={badge} {...fade(1.52 + (groupIndex * 3 + index) * 0.04, 0)} className="text-[11px] uppercase" style={{ color: '#6f7b8b', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.06em' }}>
                 {badge}
                 {index < group.length - 1 && <span className="ml-4" style={{ color: '#f0b400' }}>|</span>}
               </motion.div>
@@ -1063,11 +1072,23 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
   );
 };
 
+const hostingDiamondLines = (label = '') => {
+  if (label.includes('Recurring')) return ['Recurring', 'Risk / Scope', 'Review'];
+  if (label.includes('Citizen App')) return ['Citizen App', 'Risk / Scope', 'Review'];
+  if (label.includes('TritonAI')) return ['TritonAI Tools', '& Rapid Dev'];
+  if (label.includes('Enterprise')) return ['Enterprise', 'Architecture /', 'Dev'];
+  return label.split(' / ');
+};
+
 const HostingDiamond = ({ label, color, delay = 0.4 }) => (
-  <motion.div {...fade(delay)} className="relative flex h-24 w-24 items-center justify-center">
-    <div className="absolute inset-2 rotate-45 rounded-[8px] border-2 bg-white" style={{ borderColor: color, boxShadow: '0 6px 14px rgba(23,24,20,0.08)' }} />
-    <div className="relative text-center" style={{ color, fontFamily: "'Inter','Helvetica Neue',system-ui,sans-serif", fontSize: 12.5, lineHeight: 1.05, fontWeight: 820 }}>
-      {label}
+  <motion.div {...fade(delay)} className="relative flex h-[88px] w-[88px] items-center justify-center">
+    <div className="absolute inset-2 rotate-45 rounded-[7px] border-2 bg-white" style={{ borderColor: color, boxShadow: '0 4px 10px rgba(23,24,20,0.07)' }} />
+    <div className="relative flex max-w-[74px] flex-col items-center text-center" style={{ color, fontFamily: T.mono, fontSize: 10, lineHeight: 1.05, fontWeight: 800, letterSpacing: '0' }}>
+      {hostingDiamondLines(label).map((line, index) => (
+        <span key={`${label}-${index}`} className="block">
+          {line}
+        </span>
+      ))}
     </div>
   </motion.div>
 );
@@ -1079,59 +1100,59 @@ const HarnessCampusHostingVariant = ({ slide }) => {
   return (
     <Shell>
       <div className="absolute left-[4.8vw] right-[4.8vw] top-[4.6vh]">
-        <motion.h1 {...fade(0.12)} style={{ color: '#15243d', fontFamily: "'Inter','Helvetica Neue',system-ui,sans-serif", fontSize: 'clamp(46px, 4.8vw, 76px)', lineHeight: 0.98, fontWeight: 840 }}>
+        <motion.h1 {...fade(0.12)} style={{ color: T.ink, fontFamily: T.serif, fontSize: 'clamp(42px, 4.4vw, 68px)', lineHeight: 0.9, fontWeight: 560 }}>
           {slide.hostingTitle || 'Campus App Hosting'}
         </motion.h1>
-        <motion.div {...fade(0.26)} className="mt-3" style={{ color: '#00629b', fontFamily: "'Inter','Helvetica Neue',system-ui,sans-serif", fontSize: 21, lineHeight: 1.15, fontWeight: 820 }}>
+        <motion.div {...fade(0.26)} className="mt-2" style={{ color: '#00629b', fontFamily: T.serif, fontSize: 21, lineHeight: 1.02, fontWeight: 650 }}>
           {slide.hostingSubtitle || slide.subhead}
         </motion.div>
       </div>
 
-      <Card delay={0.38} className="absolute left-[4.8vw] right-[4.8vw] top-[17.5vh] rounded-[22px] p-4">
-        <div className="grid grid-cols-6 gap-3">
+      <Card delay={0.38} className="absolute left-[4.8vw] right-[4.8vw] top-[18vh] rounded-[14px] p-3">
+        <div className="grid grid-cols-6 gap-2.5">
           {steps.map((step, index) => {
             const color = step.color || ['#0076a8', '#0076a8', '#11c5d6', '#ffc928', '#ff8500', '#6f9363'][index] || T.blue;
             return (
-              <motion.div key={step.title} {...fade(0.5 + index * 0.055)} className="relative rounded-[14px] border bg-[#fbfcfd] p-4" style={{ borderColor: '#d9e4eb', minHeight: 154 }}>
+              <motion.div key={step.title} {...fade(0.5 + index * 0.055)} className="relative rounded-[8px] border bg-[#fbfcfd] px-3 py-3" style={{ borderColor: '#d9e4eb', minHeight: 118 }}>
                 {index < steps.length - 1 && (
-                  <div className="absolute right-[-15px] top-1/2 z-10 -translate-y-1/2" style={{ color: '#b5c5d0', fontSize: 24 }}>→</div>
+                  <div className="absolute right-[-13px] top-1/2 z-10 -translate-y-1/2" style={{ color: '#b5c5d0', fontSize: 20 }}>→</div>
                 )}
                 <div className="flex items-center justify-between gap-2">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full" style={{ background: color, color: '#fff', fontFamily: "'Inter','Helvetica Neue',system-ui,sans-serif", fontWeight: 840 }}>{index + 1}</div>
+                  <div className="flex h-7 w-7 items-center justify-center rounded-full" style={{ background: color, color: '#fff', fontFamily: T.mono, fontSize: 13, fontWeight: 800 }}>{index + 1}</div>
                   <MiniIcon type={step.icon || 'template'} color={color} />
                 </div>
-                <div className="mt-3" style={{ color: '#15243d', fontFamily: "'Inter','Helvetica Neue',system-ui,sans-serif", fontSize: 22, lineHeight: 1.02, fontWeight: 840 }}>{step.title}</div>
-                <div className="mt-2" style={{ color: '#627089', fontFamily: "'Inter','Helvetica Neue',system-ui,sans-serif", fontSize: 14.5, lineHeight: 1.2 }}>{step.body}</div>
+                <div className="mt-2" style={{ color: T.ink, fontFamily: T.serif, fontSize: 25, lineHeight: 0.9, fontWeight: 650 }}>{step.title}</div>
+                <div className="mt-1.5" style={{ color: '#627089', fontFamily: T.serif, fontSize: 15.2, lineHeight: 1.05 }}>{step.body}</div>
               </motion.div>
             );
           })}
         </div>
       </Card>
 
-      <Card delay={0.7} className="absolute left-[4.8vw] right-[4.8vw] top-[41vh] bottom-[6.8vh] rounded-[22px] p-6">
-        <div className="grid h-full grid-rows-3 gap-4">
+      <Card delay={0.7} className="absolute left-[4.8vw] right-[4.8vw] top-[40.6vh] bottom-[8.5vh] rounded-[14px] p-5">
+        <div className="grid h-full grid-rows-3 gap-3">
           {lanes.map((lane, index) => (
-            <motion.div key={lane.title} {...fade(0.82 + index * 0.08)} className="grid grid-cols-[14%_17%_1fr_17%] items-center gap-5">
-              <div className="flex h-full items-center gap-4 border-l-[6px] pl-5" style={{ borderColor: lane.color }}>
+            <motion.div key={lane.title} {...fade(0.82 + index * 0.08)} className="grid grid-cols-[14%_16%_1fr_16%] items-center gap-4">
+              <div className="flex h-full items-center gap-4 border-l-[5px] pl-5" style={{ borderColor: lane.color }}>
                 <div>
-                  <div style={{ color: lane.color, fontFamily: "'Inter','Helvetica Neue',system-ui,sans-serif", fontSize: 26, lineHeight: 1.05, fontWeight: 860 }}>{lane.title}</div>
-                  <div className="mt-2 text-[13px]" style={{ color: '#7a8596', fontFamily: "'Inter','Helvetica Neue',system-ui,sans-serif", fontWeight: 760 }}>{lane.volume}</div>
+                  <div style={{ color: lane.color, fontFamily: T.serif, fontSize: 29, lineHeight: 0.94, fontWeight: 650 }}>{lane.title}</div>
+                  <div className="mt-1.5 text-[12px]" style={{ color: '#7a8596', fontFamily: T.mono, fontWeight: 700 }}>{lane.volume}</div>
                 </div>
               </div>
 
               <div className="flex items-center justify-center gap-3">
-                <div className="hidden xl:block" style={{ color: lane.color, fontSize: 27 }}>→</div>
+                <div className="hidden xl:block" style={{ color: lane.color, fontSize: 23 }}>→</div>
                 <HostingDiamond label={lane.review} color={lane.color} delay={0.95 + index * 0.08} />
               </div>
 
               <div className="relative">
-                <div className="absolute left-[-24px] top-1/2 -translate-y-1/2 text-[11px] uppercase" style={{ color: lane.color, fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.12em' }}>Approved →</div>
-                <div className="rounded-[14px] border-2 bg-white px-5 py-4" style={{ borderColor: lane.softColor || lane.color }}>
-                  <div style={{ color: '#15243d', fontFamily: "'Inter','Helvetica Neue',system-ui,sans-serif", fontSize: 23, lineHeight: 1.05, fontWeight: 840 }}>{lane.deployment}</div>
-                  <div className="mt-2 inline-flex rounded-full px-3 py-1 text-[13px]" style={{ background: lane.fill, color: lane.color, fontFamily: T.mono, fontWeight: 800 }}>{lane.domain}</div>
+                <div className="absolute left-[-22px] top-1/2 -translate-y-1/2 text-[10px] uppercase" style={{ color: lane.color, fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.12em' }}>Approved →</div>
+                <div className="rounded-[9px] border-2 bg-white px-5 py-3" style={{ borderColor: lane.softColor || lane.color }}>
+                  <div style={{ color: T.ink, fontFamily: T.serif, fontSize: 29, lineHeight: 0.94, fontWeight: 650 }}>{lane.deployment}</div>
+                  <div className="mt-2 inline-flex rounded-full px-3 py-1 text-[12px]" style={{ background: lane.fill, color: lane.color, fontFamily: T.mono, fontWeight: 800 }}>{lane.domain}</div>
                 </div>
                 {index < lanes.length - 1 && (
-                  <div className="absolute left-1/2 top-[calc(100%+4px)] -translate-x-1/2 text-[13px] uppercase" style={{ color: lane.color, fontFamily: T.mono, letterSpacing: '0.16em', fontWeight: 800 }}>
+                  <div className="absolute left-1/2 top-[calc(100%+2px)] -translate-x-1/2 text-[11px] uppercase" style={{ color: lane.color, fontFamily: T.mono, letterSpacing: '0.16em', fontWeight: 800 }}>
                     escalate / migrate ↓
                   </div>
                 )}
@@ -1140,7 +1161,7 @@ const HarnessCampusHostingVariant = ({ slide }) => {
               <div className="flex items-center justify-center gap-3">
                 {lane.recurring && (
                   <>
-                    <div style={{ color: lane.color, fontSize: 27 }}>→</div>
+                    <div style={{ color: lane.color, fontSize: 23 }}>→</div>
                     <HostingDiamond label={lane.recurring} color={lane.color} delay={1.08 + index * 0.08} />
                   </>
                 )}
