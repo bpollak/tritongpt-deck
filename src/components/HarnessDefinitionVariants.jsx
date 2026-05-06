@@ -944,7 +944,7 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
         </motion.h1>
       </div>
 
-      <div className="absolute left-[5.8vw] right-[5.8vw] top-[13.2vh] grid grid-cols-[22%_21%_1fr_26%] items-center gap-4">
+      <div className="absolute left-[5.8vw] right-[5.8vw] top-[13.2vh] grid grid-cols-[22%_18.5%_1fr_26%] items-center gap-4">
         <div>
           <Kicker className="mb-2" style={{ color: T.muted }}>Campus users</Kicker>
           <div className="space-y-2">
@@ -964,13 +964,13 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
           <div className="relative">
             <div className="space-y-2.5">
               {harnesses.map((harness, index) => (
-                <ApiProgramCard key={harness.title} delay={0.48 + index * 0.08} color={harness.color || T.coral} className="flex h-[62px] items-center gap-4 px-5">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-full" style={{ background: harness.fill || '#fff8f2' }}>
+                <ApiProgramCard key={harness.title} delay={0.48 + index * 0.08} color={harness.color || T.coral} className="flex h-[56px] items-center gap-3 px-4">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full" style={{ background: harness.fill || '#fff8f2' }}>
                     <MiniIcon type={harness.icon || 'code'} color={harness.color || T.coralDark} />
                   </div>
                   <div>
-                    <div style={{ color: T.ink, fontFamily: T.serif, fontSize: 23, lineHeight: 0.95, fontWeight: 650 }}>{harness.title}</div>
-                    <div className="mt-1" style={{ color: T.muted, fontFamily: T.serif, fontSize: 14 }}>{harness.subtitle}</div>
+                    <div style={{ color: T.ink, fontFamily: T.serif, fontSize: 21, lineHeight: 0.95, fontWeight: 650 }}>{harness.title}</div>
+                    <div className="mt-0.5" style={{ color: T.muted, fontFamily: T.serif, fontSize: 13 }}>{harness.subtitle}</div>
                   </div>
                 </ApiProgramCard>
               ))}
@@ -1017,9 +1017,9 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
             <ApiProgramPill delay={0.72}>Use</ApiProgramPill>
             <ApiConnectorArrow width={28} />
           </div>
-          <div className="absolute left-[45.8%] top-[139px] flex items-center gap-2">
+          <div className="absolute left-[43.2%] top-[139px] flex items-center gap-2">
             <ApiProgramPill delay={0.78}>Connect to</ApiProgramPill>
-            <ApiConnectorArrow width={26} />
+            <ApiConnectorArrow width={18} />
           </div>
           <div className="absolute left-[64.5%] top-[139px] flex items-center gap-2">
             <ApiProgramPill delay={0.95}>Accesses</ApiProgramPill>
