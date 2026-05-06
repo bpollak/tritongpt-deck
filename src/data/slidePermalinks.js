@@ -20,12 +20,23 @@ export const getSlidePermalinkValue = (slide) => {
   return String(slide.id);
 };
 
+const getSlideAliases = (slide) => {
+  if (!Array.isArray(slide?.aliases)) return [];
+  return slide.aliases
+    .map((alias) => normalizeValue(alias))
+    .filter(Boolean);
+};
+
 export const doesSlideMatchPermalink = (slide, permalink) => {
   const candidate = normalizeValue(permalink);
   if (!candidate) return false;
 
   const slideSlug = getSlideSlug(slide);
   if (slideSlug && normalizeSlug(slideSlug) === normalizeSlug(candidate)) {
+    return true;
+  }
+
+  if (getSlideAliases(slide).some((alias) => normalizeSlug(alias) === normalizeSlug(candidate))) {
     return true;
   }
 

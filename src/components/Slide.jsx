@@ -100,7 +100,7 @@ const Slide = ({ slide }) => {
 
   // Cabinet sub-presentation has its own self-contained design system.
   // It bypasses the rest of this file's layout dispatch.
-  if (slide.layout === 'cabinet-spread') {
+  if (slide.layout === 'cabinet-spread' || slide.layout === 'harness-definition') {
     return <CabinetSlide slide={slide} />;
   }
 

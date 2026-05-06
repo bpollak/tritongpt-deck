@@ -3670,304 +3670,622 @@ export const slides = [
     ]
   },
   {
-    "id": 114,
-    "slug": "cabinet-harness-01-question",
-    "type": "content",
-    "content": [],
-    "layout": "harness-definition",
-    "variant": "harness-question",
-    "marker": "§ DEFINITION",
-    "eyebrow": "A simple question",
-    "parts": [
-      { "text": "What exactly " },
-      { "text": "is", "accent": true },
-      { "text": " a " },
-      { "text": "harness", "accent": true },
-      { "text": "?" }
-    ],
-    "subhead": "Everyone's saying the word. Few people define it the same way twice. Let's fix that — in plain terms — and then look at why it's the change that mattered.",
-    "footer": "§ DEFINITION · ANATOMY · CONVERGENCE",
-    "audiences": [
-      "cabinet-may-2026"
-    ]
-  },
-  {
     "id": 115,
-    "slug": "cabinet-harness-02-anatomy",
+    "slug": "cabinet-harness-02-adoption-rubric",
     "type": "content",
     "content": [],
     "layout": "harness-definition",
-    "variant": "harness-anatomy",
-    "marker": "§ ANATOMY",
+    "variant": "harness-rubric",
+    "marker": "§ 01 · THE RUBRIC",
+    "aliases": [
+      "cabinet-harness-01-ai-changed-the-signal"
+    ],
     "parts": [
-      { "text": "What's " },
-      { "text": "actually", "accent": true },
-      { "text": " inside one." }
+      { "text": "The adoption target is " },
+      { "text": "shipped work", "accent": true },
+      { "text": "." }
     ],
-    "subhead": "A harness is a small set of services wrapped around the AI. None of these are exotic; together they turn a one-shot answerer into a colleague who can finish work.",
-    "items": [
-      {
-        "label": "memory",
-        "kind": "PERSISTENT CONTEXT",
-        "note": "Remembers your unit's documents, decisions, and conventions across sessions — instead of starting from zero every time."
-      },
-      {
-        "label": "tools",
-        "kind": "REACH INTO YOUR SYSTEMS",
-        "note": "Can act inside the systems your unit already uses — calendars, Salesforce, internal databases — not just describe what to do."
-      },
-      {
-        "label": "sandbox",
-        "kind": "SAFE TRY-AND-RETRY",
-        "note": "Attempts complex steps, fails, and tries again — without breaking production data or sending live emails by mistake."
-      },
-      {
-        "label": "review_loop",
-        "kind": "HUMAN IN THE LOOP",
-        "note": "Flags consequential actions for human approval. The work compounds; accountability stays human."
-      },
-      {
-        "label": "persistence",
-        "kind": "SURVIVES THE CRASH",
-        "note": "Writes its work to disk continuously. If the process dies, it picks up where it left off — no lost institutional context."
-      },
-      {
-        "label": "permissions",
-        "kind": "GUARDRAILS",
-        "note": "Read-only by default. Each capability declares what it needs; the harness enforces it before anything runs."
-      }
+    "subhead": "Use the rubric as a coaching language, not a grading exercise: move people from awareness to useful artifacts.",
+    "levels": [
+      { "title": "Aware", "body": "Knows the tools exist but has not changed the work." },
+      { "title": "Uses", "body": "Drafts, summarizes, rewrites, and brainstorms for individual productivity." },
+      { "title": "Produces", "body": "Creates a document, deck, analysis, or workflow that advances real work.", "highlight": true },
+      { "title": "Automates", "body": "Builds a repeatable process a team can rely on." },
+      { "title": "Shares", "body": "Ships a reusable pattern, tool, or agent other teams can adopt." }
     ],
-    "footer": "SAME SHAPE ACROSS PRODUCTS · DIFFERENT SURFACE NAMES",
     "audiences": [
       "cabinet-may-2026"
     ]
   },
   {
     "id": 116,
-    "slug": "cabinet-harness-03-vs-model",
+    "slug": "cabinet-harness-03-question",
     "type": "content",
     "content": [],
     "layout": "harness-definition",
-    "variant": "harness-vs-model",
-    "marker": "§ DISTINCTION",
+    "variant": "harness-question",
+    "marker": "§ 02 · DEFINITION",
+    "kicker": "A simple question",
     "parts": [
-      { "text": "A model alone " },
-      { "text": "answers and stops", "accent": true },
-      { "text": "." }
+      { "text": "What exactly " },
+      { "text": "is", "muted": true },
+      { "text": " a " },
+      { "text": "harness", "accent": true },
+      { "text": "?" }
     ],
-    "subhead": "The same model, placed inside a harness, can act, observe what happened, and adjust — until the work is done. Same intelligence; very different capability.",
-    "leftLabel": "MODEL ALONE — ANSWERS, THEN STOPS",
-    "rightLabel": "INSIDE A HARNESS — ACT · OBSERVE · ADJUST",
     "audiences": [
       "cabinet-may-2026"
     ]
   },
   {
     "id": 117,
-    "slug": "cabinet-harness-04-vendors",
+    "slug": "cabinet-harness-04-model-to-agent",
     "type": "content",
     "content": [],
     "layout": "harness-definition",
-    "variant": "harness-vendors",
-    "marker": "§ ALREADY IN OUR TOOLBOX",
+    "variant": "harness-definition-core",
+    "marker": "§ 03 · THE SHIFT",
+    "mode": "wrapped",
     "parts": [
-      { "text": "Different vendors. " },
-      { "text": "Same architecture", "accent": true },
+      { "text": "A harness turns a model from an " },
+      { "text": "answerer", "accent": true },
+      { "text": " into a " },
+      { "text": "worker", "accent": "blue" },
       { "text": "." }
     ],
-    "subhead": "Four of the leading AI companies have shipped a harness in the past 30 days. We already have the fifth — and ours is the only one that ships indexed against UCSD's own data on day one.",
-    "vendors": [
-      {
-        "name": "Claude Code",
-        "org": "Anthropic",
-        "year": "2024",
-        "note": "The original developer-facing harness. Used internally at Anthropic to ship 100% of their own product."
-      },
-      {
-        "name": "Codex",
-        "org": "OpenAI · in ChatGPT",
-        "year": "2025",
-        "note": "Now folded into ChatGPT alongside browsing, computer use, and the Apps SDK — one surface for all of it."
-      },
-      {
-        "name": "Cursor",
-        "org": "Anysphere",
-        "year": "2023",
-        "note": "Reframed in April as an agent-execution runtime. Added an SDK so non-developers can build agents on it."
-      },
-      {
-        "name": "Foundry",
-        "org": "Microsoft",
-        "year": "2025",
-        "note": "Hosted agents inside Foundry. Each agent gets its own sandbox, durable state, identity, and governance."
-      },
-      {
-        "name": "Onyx Craft",
-        "org": "UCSD · TritonGPT",
-        "year": "ours",
-        "note": "Already running, indexed against our own documents. The harness our domain experts can use this week.",
-        "highlight": true
-      }
-    ],
-    "footer": "what changes is the surface you encounter — the runtime underneath has stabilized.",
-    "audiences": [
-      "cabinet-may-2026"
-    ]
-  },
-  {
-    "id": 117.1,
-    "slug": "cabinet-harness-04a-memory",
-    "type": "content",
-    "content": [],
-    "layout": "harness-definition",
-    "variant": "harness-component",
-    "marker": "§ COMPONENT · MEMORY",
-    "parts": [
-      { "text": "Memory" }
-    ],
-    "subhead": "what to keep · what to summarize · what to forget",
-    "diagram": "bar",
-    "diagramData": {
-      "label": "WORKING CONTEXT",
-      "segments": [
-        { "label": "active turn", "weight": 18 },
-        { "label": "recent turns", "weight": 28 },
-        { "label": "summarized history", "weight": 22 },
-        { "label": "indexed knowledge", "weight": 12 }
-      ],
-      "reserveLabel": "compact at ~80%",
-      "current": "780k",
-      "max": "1m",
-      "unit": "tokens"
-    },
-    "panel": {
-      "kind": "code",
-      "filename": "memory/policy.md",
-      "lines": [
-        { "text": "# memory policy", "type": "comment" },
-        { "text": "" },
-        { "text": "keep_verbatim:", "type": "kw" },
-        { "text": "  - active_turn" },
-        { "text": "  - last_3_tool_calls" },
-        { "text": "" },
-        { "text": "summarize_when:", "type": "kw" },
-        { "text": "  budget_used: 80%", "type": "flag" },
-        { "text": "  format: rolling_digest", "type": "str" },
-        { "text": "" },
-        { "text": "promote_to_index:", "type": "kw" },
-        { "text": "  on: decisions, errors", "type": "str" }
-      ]
-    },
-    "footer": "the harness decides which past matters next",
-    "audiences": [
-      "cabinet-may-2026"
-    ]
-  },
-  {
-    "id": 117.2,
-    "slug": "cabinet-harness-04b-tools",
-    "type": "content",
-    "content": [],
-    "layout": "harness-definition",
-    "variant": "harness-component",
-    "marker": "§ COMPONENT · TOOLS",
-    "parts": [
-      { "text": "Tools" }
-    ],
-    "subhead": "what the agent can reach · what it's allowed to do",
-    "diagram": "orbit",
-    "diagramData": {
-      "center": "M",
-      "decideLabel": "DECIDE",
-      "feedbackLabel": "OBSERVE",
-      "satellites": [
-        { "label": "search_docs", "pos": "tl" },
-        { "label": "query_records", "pos": "tr" },
-        { "label": "draft_email", "pos": "bl" },
-        { "label": "schedule_review", "pos": "br" }
-      ]
-    },
-    "panel": {
-      "kind": "list",
-      "heading": "REGISTRY",
-      "rows": [
-        { "name": "search_docs", "value": "read", "note": "indexed" },
-        { "name": "query_records", "value": "read", "note": "scoped" },
-        { "name": "draft_email", "value": "write", "note": "review_first" },
-        { "name": "schedule_review", "value": "write", "note": "human_approve" },
-        { "name": "summarize_thread", "value": "read", "note": "any" }
-      ]
-    },
-    "footer": "primitives below · domain skills above · permissions on every call",
-    "audiences": [
-      "cabinet-may-2026"
-    ]
-  },
-  {
-    "id": 117.3,
-    "slug": "cabinet-harness-04c-review-loop",
-    "type": "content",
-    "content": [],
-    "layout": "harness-definition",
-    "variant": "harness-component",
-    "marker": "§ COMPONENT · REVIEW LOOP",
-    "parts": [
-      { "text": "Review loop" }
-    ],
-    "subhead": "act · observe · adjust · ask the human when it matters",
-    "diagram": "flow",
-    "diagramData": {
-      "frameLabel": "HARNESS · ITERATIVE PROPOSE-AND-CHECK",
-      "goal": "goal from a person",
-      "output": "outcome the person signs off on",
-      "steps": [
-        { "label": "propose", "kind": "DRAFT", "note": "the agent commits an intent in writing" },
-        { "label": "execute", "kind": "ACT", "note": "scoped, reversible, sandboxed where it can be" },
-        { "label": "observe", "kind": "READ_BACK", "note": "what changed, what failed, what's uncertain" },
-        { "label": "decide", "kind": "BRANCH", "note": "continue, retry, or escalate to a human" }
-      ]
-    },
-    "panel": {
-      "kind": "code",
-      "filename": "policy/review.md",
-      "lines": [
-        { "text": "# escalation policy", "type": "comment" },
-        { "text": "" },
-        { "text": "auto_proceed:", "type": "kw" },
-        { "text": "  - read-only operations" },
-        { "text": "  - reversible writes in sandbox" },
-        { "text": "" },
-        { "text": "ask_human:", "type": "kw" },
-        { "text": "  - external_send", "type": "flag" },
-        { "text": "  - schema_change", "type": "flag" },
-        { "text": "  - low_confidence: true", "type": "flag" },
-        { "text": "" },
-        { "text": "always_log:", "type": "kw" },
-        { "text": "  every_step: true", "type": "str" }
-      ]
-    },
-    "footer": "the harness is the receipt · every action is reviewable later",
+    "subhead": "The model is still the brain. The harness gives it a loop, tools, state, and permission boundaries.",
     "audiences": [
       "cabinet-may-2026"
     ]
   },
   {
     "id": 118,
-    "slug": "cabinet-harness-05-manifesto",
+    "slug": "cabinet-harness-04b-fixed-architecture",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-definition-equation",
+    "marker": "§ 03 · DEFINITION",
+    "parts": [
+      { "text": "A harness is the " },
+      { "text": "fixed architecture", "accent": true },
+      { "text": " that turns\na " },
+      { "text": "model", "muted": true },
+      { "text": " into an " },
+      { "text": "agent", "accent": "blue" },
+      { "text": "." }
+    ],
+    "equation": [
+      {
+        "title": "Model",
+        "kicker": "is the",
+        "word": "engine",
+        "icon": "model",
+        "color": "#3f4139",
+        "wordColor": "#be634d"
+      },
+      {
+        "title": "Harness",
+        "kicker": "is the",
+        "word": "car",
+        "icon": "harness",
+        "color": "#d47a5f",
+        "wordColor": "#be634d"
+      },
+      {
+        "title": "Together",
+        "kicker": "they make an",
+        "word": "agent",
+        "icon": "agent",
+        "result": true,
+        "color": "#d47a5f",
+        "wordColor": "#0d5f93"
+      }
+    ],
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 119,
+    "slug": "cabinet-harness-06-already-in-toolbox",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-toolbox",
+    "marker": "§ 04 · ALREADY HERE",
+    "aliases": [
+      "cabinet-harness-05-work-product-example"
+    ],
+    "parts": [
+      { "text": "This is not future-state. " },
+      { "text": "harnesses", "accent": true },
+      { "text": " are already here." }
+    ],
+    "subhead": "They show up as command-line tools, desktop apps, and editor surfaces that can work with files, commands, and systems on your computer.",
+    "vendors": [
+      {
+        "name": "Claude Code",
+        "year": "2024",
+        "color": "#d88465",
+        "logoUrl": "https://cdn.simpleicons.org/anthropic/d88465",
+        "surface": "terminal · IDE · desktop",
+        "capability": "Works from the command line and can use developer tools and MCP servers."
+      },
+      {
+        "name": "Codex",
+        "year": "2025",
+        "color": "#333333",
+        "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg",
+        "surface": "CLI · desktop app",
+        "capability": "Reads, edits, and runs code locally with approval controls."
+      },
+      {
+        "name": "Cursor",
+        "year": "2023",
+        "color": "#111111",
+        "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/42/Cursor_logo.svg",
+        "surface": "editor · CLI",
+        "capability": "Brings agentic editing and terminal actions into the code editor workflow."
+      },
+      {
+        "name": "OpenCode",
+        "year": "2026",
+        "color": "#111111",
+        "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/opencode-wordmark-light.svg",
+        "surface": "terminal · IDE · desktop",
+        "capability": "Open source agent that runs in local developer surfaces with model choice."
+      }
+    ],
+    "localSurfaces": [
+      { "label": "CLI", "note": "runs commands" },
+      { "label": "Desktop app", "note": "manages local work" },
+      { "label": "Editor", "note": "edits files in context" }
+    ],
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 120,
+    "slug": "cabinet-harness-07-takeaway",
     "type": "content",
     "content": [],
     "layout": "harness-definition",
     "variant": "harness-manifesto",
-    "marker": "§ THE TAKEAWAY",
+    "marker": "§ 05 · TAKEAWAY",
     "parts": [
-      { "text": "You bring the " },
+      { "text": "You provide the " },
       { "text": "goal", "accent": true },
-      { "text": "." },
-      { "text": "\nThe harness handles the " },
-      { "text": "rest", "accent": true },
+      { "text": ".\nThe " },
+      { "text": "harness", "accent": true },
+      { "text": " handles the rest." }
+    ],
+    "subhead": "That is the management shift: set direction, then evaluate the artifact and the judgment behind it.",
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 121,
+    "slug": "cabinet-harness-08-architecture",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-anatomy-index",
+    "marker": "§ 06 · ARCHITECTURE",
+    "parts": [
+      { "text": "What makes that possible." }
+    ],
+    "subhead": "The audience does not need every implementation detail. They need the nine-part shape of the harness.",
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 121.5,
+    "slug": "cabinet-harness-08b-component-framework",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-components-framework",
+    "marker": "§ 07 · COMPONENTS",
+    "parts": [
+      { "text": "The harness has " },
+      { "text": "parts", "accent": true },
+      { "text": " managers can reason about." }
+    ],
+    "subhead": "This is the framework from the original walkthrough: a model becomes useful when these surrounding components work together.",
+    "leftKicker": "Manager lens",
+    "leftTitle": "The harness is where campus fit happens.",
+    "leftBody": "Lifecycle hooks let us configure when UCSD-specific tools, checks, identity patterns, and approvals are inserted into the run.",
+    "components": [
+      { "kicker": "Loop", "title": "while loop", "body": "Keeps acting, observing, and adjusting until the work is done." },
+      { "kicker": "Context", "title": "context management", "body": "Controls what history, files, and campus knowledge enter the run." },
+      { "kicker": "Tools", "title": "skills & tools", "body": "Gives the agent specific workflows and safe actions it can perform." },
+      { "kicker": "Scale", "title": "sub-agents", "body": "Splits larger work into isolated planning, building, and review tasks." },
+      { "kicker": "Reuse", "title": "built-in skills", "body": "Packages repeatable campus patterns so teams do not rebuild them." },
+      { "kicker": "Durability", "title": "session persistence", "body": "Preserves state, logs, and work products across a run." },
+      { "kicker": "Instruction", "title": "system prompt assembly", "body": "Combines institutional rules, project instructions, and task context." },
+      {
+        "kicker": "Controls",
+        "title": "lifecycle hooks",
+        "body": "Customize the harness to call UCSD-specific technologies before, during, or after key steps.",
+        "highlight": true,
+        "examples": ["TritonAI", "MCP", "SSO", "ServiceNow"]
+      },
+      { "kicker": "Safety", "title": "permissions & safety", "body": "Enforces approval gates, boundaries, and accountability for actions." }
+    ],
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 122,
+    "slug": "cabinet-harness-09-loop-context-tools",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-skills-tools",
+    "marker": "§ 08 · WORK SURFACE",
+    "aliases": [
+      "cabinet-harness-05-03-skills-tools",
+      "cabinet-harness-05-07-system-prompt"
+    ],
+    "parts": [
+      { "text": "Context and tools make the output " },
+      { "text": "real", "accent": true },
       { "text": "." }
     ],
-    "subhead": "That's the inflection. Everything in this section — and everything our memo asked of the cabinet — follows from that one shift.",
+    "subhead": "The system prompt and project context tell the model how to work; the tools let it act on real files and systems.",
+    "skillsLabel": "Context · what the model is given",
+    "skills": [
+      { "name": "system_prompt", "note": "rules" },
+      { "name": "project_files", "note": "context" },
+      { "name": "permissions", "note": "boundaries" },
+      { "name": "session_state", "note": "memory" }
+    ],
+    "toolsLabel": "Tools · what the model can do",
+    "tools": [
+      { "name": "read_file", "note": "file ops" },
+      { "name": "edit_file", "note": "file ops" },
+      { "name": "search", "note": "knowledge" },
+      { "name": "run_check", "note": "verify" }
+    ],
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 122.5,
+    "slug": "cabinet-harness-09b-context-management",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-context",
+    "marker": "§ 08.01 · CONTEXT MANAGEMENT",
+    "number": "02",
+    "title": "Context management",
+    "subtitle": "what to keep · what to summarize · what to drop",
+    "activeBudget": "520,000",
+    "peakBudget": "780,000",
+    "budgetTotal": "1,000,000 tokens",
+    "compactLabel": "compact at ~80%",
+    "summaries": [
+      "summary 1",
+      "summary 2",
+      "summary 3",
+      "summary 4"
+    ],
+    "legend": [
+      "user messages",
+      "tool calls",
+      "tool results",
+      "reasoning"
+    ],
+    "stats": [
+      { "value": "200k", "label": "budget · then" },
+      { "value": "→ 1M", "label": "tokens · opus today" },
+      { "value": "80%", "label": "trigger compaction" },
+      { "value": "4", "label": "summaries · retained" },
+      { "value": "∞", "label": "older · compressed" }
+    ],
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 123,
+    "slug": "cabinet-harness-10-subagents",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-subagents",
+    "marker": "§ 09 · SCALING WORK",
+    "aliases": [
+      "cabinet-harness-05-04-sub-agents"
+    ],
+    "parts": [
+      { "text": "Bigger tasks can be " },
+      { "text": "split", "accent": true },
+      { "text": "." }
+    ],
+    "subhead": "Planning, drafting, and verification can run separately, then roll back up into one coherent result.",
+    "agents": [
+      {
+        "kicker": "PLAN · read-only",
+        "letter": "P",
+        "name": "planning · recon",
+        "mode": "restricted tools",
+        "tools": ["read", "grep", "glob", "web"],
+        "purpose": "explore without changing work",
+        "fill": "#eef6f8",
+        "stroke": "#83a9bc"
+      },
+      {
+        "kicker": "BUILD · full",
+        "letter": "B",
+        "name": "everyday worker",
+        "mode": "bounded execution",
+        "tools": ["bash", "read", "edit", "+more"],
+        "purpose": "produce the artifact",
+        "locked": true,
+        "fill": "#f8eee6",
+        "stroke": "#d88465"
+      },
+      {
+        "kicker": "VERIFY · execute+read",
+        "letter": "V",
+        "name": "testing · confirmation",
+        "mode": "check the result",
+        "tools": ["bash", "read", "grep", "todo"],
+        "purpose": "confirm before collecting",
+        "fill": "#f6f8ee",
+        "stroke": "#8aa67a"
+      }
+    ],
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 124,
+    "slug": "cabinet-harness-11-ucsd-safe-path",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-ucsd",
+    "marker": "§ 10 · UCSD PATH",
+    "parts": [
+      { "text": "Make the safe path " },
+      { "text": "useful", "accent": true },
+      { "text": "." }
+    ],
+    "subhead": "The point is not one harness. It is UCSD-specific hooks that make the common harnesses useful, supportable, and aligned to our standards.",
+    "centerTitle": "UCSD hook layer",
+    "centerSubtitle": "standards inserted into the run",
+    "harnessKicker": "Harness surfaces",
+    "harnesses": [
+      { "name": "Claude Code", "note": "supported hooks" },
+      { "name": "Codex", "note": "supported hooks" },
+      { "name": "Cursor", "note": "editor surface" },
+      { "name": "OpenCode", "note": "open source", "highlight": true }
+    ],
+    "left": [
+      { "kicker": "Hooks", "title": "Campus standards", "body": "Insert identity, logging, data handling, approvals, and operational checks into the harness lifecycle." },
+      { "kicker": "Systems", "title": "UCSD technologies", "body": "Connect email, calendar, Confluence, ServiceNow, Drive, and campus APIs through governed patterns." }
+    ],
+    "right": [
+      { "kicker": "Commercial", "title": "Major harnesses", "body": "Claude Code, Codex, and Cursor can use templates, MCP connectors, and approval patterns where their surfaces allow." },
+      { "kicker": "Open source", "title": "OpenCode can go deeper", "body": "Because it is customizable, we can tune the harness around local and commercial models, UCSD workflows, and support needs.", "highlight": true }
+    ],
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 124.2,
+    "slug": "cabinet-harness-11b-tritonai-tools-hub",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-framework-cards",
+    "marker": "§ 11 · TRITONAI",
+    "aliases": [
+      "from-tritongpt-to-tritonai"
+    ],
+    "parts": [
+      { "text": "TritonGPT becomes the " },
+      { "text": "TritonAI tools hub", "accent": true },
+      { "text": "." }
+    ],
+    "subhead": "The campus platform is the local harness layer: builders get governed ways to create, connect, monitor, and reuse agentic work.",
+    "columns": [
+      { "kicker": "Build", "title": "Agent Builder", "icon": "builder", "color": "#d47a5f", "fill": "#fff8f2", "body": "Low-code workflow automation for units that need practical agents without waiting in a central queue." },
+      { "kicker": "Reuse", "title": "Skills Library", "icon": "library", "color": "#6f9363", "fill": "#f6f8ee", "body": "Reusable instructions and workflow packages for common campus tasks." },
+      { "kicker": "Connect", "title": "MCP Server Hub", "icon": "mcp", "color": "#0d5f93", "fill": "#e5f0f2", "body": "Shared connectors that expose campus systems and data sources safely." },
+      { "kicker": "Extend", "title": "Developer APIs", "icon": "api", "color": "#805a9c", "fill": "#f4eef8", "body": "Reference patterns and model access for technical teams building custom services." },
+      { "kicker": "Operate", "title": "Observability", "icon": "observe", "color": "#be634d", "fill": "#fff5ee", "body": "Run traces, tool calls, latency, errors, and accountability for agent behavior." },
+      { "kicker": "Package", "title": "Tools Pipeline", "icon": "pipeline", "color": "#6a7178", "fill": "#f3f4f5", "body": "Turnkey services such as transcription, captioning, summarization, accessibility, and OCR." }
+    ],
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 124.4,
+    "slug": "cabinet-harness-11c-developer-api-program",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-developer-api-program",
+    "marker": "§ 12 · API PATH",
+    "aliases": [
+      "tritonai-developer-api-program"
+    ],
+    "programTitle": "TritonAI Developer API Program",
+    "parts": [
+      { "text": "The Developer API is the " },
+      { "text": "paved path", "accent": true },
+      { "text": " for builders." }
+    ],
+    "users": [
+      { "title": "Dept. Staff", "icon": "people" },
+      { "title": "Research Labs", "icon": "builder" },
+      { "title": "Admin Analysts", "icon": "lane" },
+      { "title": "Faculty Teams", "icon": "library" }
+    ],
+    "harnesses": [
+      { "title": "Claude Code", "subtitle": "Anthropic", "icon": "mcp", "color": "#d47a5f", "fill": "#fff5ee" },
+      { "title": "Codex", "subtitle": "OpenAI", "icon": "builder", "color": "#10b981", "fill": "#ecfdf5" }
+    ],
+    "providers": [
+      { "title": "Azure OpenAI", "icon": "gateway", "color": "#1f78d1", "fill": "#e8f2ff" },
+      { "title": "Google Cloud", "icon": "gateway", "color": "#4b82f6", "fill": "#eef4ff" },
+      { "title": "AWS Bedrock", "icon": "pipeline", "color": "#f28c00", "fill": "#fff5e6" },
+      { "title": "SDSC Self-Hosted", "icon": "lane", "color": "#15243d", "fill": "#eef1f5" }
+    ],
+    "capabilities": [
+      "CHAT",
+      "REASONING",
+      "VISION",
+      "IMAGE GEN",
+      "OCR",
+      "CODING"
+    ],
+    "accessSteps": [
+      { "title": "Request", "body": "Describe the use case, audience, and campus data involved", "color": "#15243d" },
+      { "title": "Receive", "body": "Get API key, starter credits, template repo, and agent instructions", "color": "#0d5f93" },
+      { "title": "Build", "body": "Use approved stacks, campus auth patterns, and curated integrations", "color": "#11c5d6" },
+      { "title": "Host", "body": "Apply for Campus App Hosting or graduate to enterprise delivery", "color": "#ffc928" }
+    ],
+    "ownership": [
+      {
+        "title": "ITS owns",
+        "items": ["Templates & Standards", "Hosting, SSO & Logs", "Baseline Risk Review", "Right to Remove Apps"]
+      },
+      {
+        "title": "Department owns",
+        "items": ["App Logic & Dependencies", "Accessibility & Testing", "End-User Support", "Named Technical POC"]
+      }
+    ],
+    "footerBadges": [
+      "P1-P3 data only",
+      "Approved stacks",
+      "Curated integrations",
+      "Campus auth pattern",
+      "Usage tracking",
+      "No model training",
+      "Starter credits"
+    ],
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 124.6,
+    "slug": "cabinet-harness-11d-campus-app-hosting-intake",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-campus-hosting",
+    "marker": "§ 13 · HOSTING",
+    "aliases": [
+      "campus-app-hosting-intake"
+    ],
+    "parts": [
+      { "text": "Built artifacts need a " },
+      { "text": "hosting lane", "accent": true },
+      { "text": "." }
+    ],
+    "subhead": "The rubric should reward shipped work, but shipped work still needs intake, review, deployment, operation, and promotion paths.",
+    "hostingTitle": "Campus App Hosting",
+    "hostingSubtitle": "Tiered intake from citizen apps to enterprise -- with governance gates at every level",
+    "hostingSteps": [
+      { "title": "Apply", "icon": "template", "body": "Submit department sponsor, technical POC, audience, and data classification", "color": "#0076a8" },
+      { "title": "Prototype", "icon": "code", "body": "Build locally with Claude Code, Codex, or curated ITS templates via the TritonAI Developer API", "color": "#0076a8" },
+      { "title": "Review", "icon": "builder", "body": "Automated checks plus guided ITS review of data sensitivity, restricted APIs, and stack fit", "color": "#11c5d6" },
+      { "title": "Deploy", "icon": "gateway", "body": "Campus-only hosting with SSO, logging, and network controls on campus or VPN", "color": "#ffc928" },
+      { "title": "Operate", "icon": "pipeline", "body": "Department supports the app; ITS manages platform health and may remove non-compliant apps", "color": "#ff8500" },
+      { "title": "Promote", "icon": "observe", "body": "High-value apps graduate to enterprise support; unsupported apps are retired", "color": "#6f9363" }
+    ],
+    "hostingLanes": [
+      {
+        "title": "Citizen Apps",
+        "volume": "~200/yr",
+        "review": "Citizen App Risk / Scope Review",
+        "deployment": "Citizen-Curated Deployment",
+        "domain": "*.apps.ucsd.edu",
+        "recurring": "Recurring Risk / Scope Review",
+        "color": "#4f7f38",
+        "softColor": "#c8dac1",
+        "fill": "#eef6ea"
+      },
+      {
+        "title": "TritonAI Rapid Dev",
+        "volume": "~20/yr",
+        "review": "TritonAI Tools & Rapid Dev",
+        "deployment": "TritonAI Dev",
+        "domain": "*.tritonai.ucsd.edu",
+        "recurring": "Recurring Risk / Scope Review",
+        "color": "#009cad",
+        "softColor": "#b9e0e5",
+        "fill": "#e6f6f8"
+      },
+      {
+        "title": "Enterprise",
+        "volume": "~1-5/yr",
+        "review": "Enterprise Architecture / Dev",
+        "deployment": "Traditional Enterprise Dev / Deployment",
+        "domain": "iPaaS Patterns",
+        "color": "#00629b",
+        "softColor": "#b9d4e6",
+        "fill": "#e7f0f7"
+      }
+    ],
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 126,
+    "slug": "cabinet-harness-13-recap",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-recap",
+    "marker": "§ 14 · RECAP",
+    "aliases": [
+      "cabinet-harness-06-recap",
+      "cabinet-harness-12-action-plan"
+    ],
+    "parts": [
+      { "text": "Recap the " },
+      { "text": "rubric", "accent": true },
+      { "text": " and the staff expectation." }
+    ],
+    "subhead": "A single 5-point scale: to score above 3, automations must be reliable, documented, monitored, and aligned to P1-P3 controls.",
+    "practice": [
+      { "kicker": "01", "title": "Train" },
+      { "kicker": "02", "title": "Choose" },
+      { "kicker": "03", "title": "Ship" }
+    ],
+    "rubric": [
+      { "title": "Action required", "body": "Avoids the tools or has shipped automations that created reliability or compliance issues for the unit.", "expectation": "address the gap" },
+      { "title": "Developing", "body": "Aware and experimenting, but has not shipped an automation that meets the reliability and stewardship bar.", "expectation": "close the gaps" },
+      { "title": "Practitioner", "body": "Expected baseline: routinely uses a harness and has shipped one documented, basically monitored automation within data boundaries.", "expectation": "ship visible work", "highlight": true, "chipDark": true },
+      { "title": "Active automator", "body": "Owns at least two automations or agents that reduce toil, respect P1-P3 controls, and identify risk before audit.", "expectation": "make it repeatable", "chipDark": true },
+      { "title": "Force multiplier", "body": "Automated workflows other teams adopt; reliable, monitored, documented, and raises stewardship patterns others copy.", "expectation": "spread the pattern", "chipDark": true }
+    ],
+    "expectationTitle": "Move one level, using the safe path.",
+    "expectations": [
+      "Managers assess where each staff member currently sits on the rubric.",
+      "Each person selects one real work product or recurring process to improve.",
+      "Above level 3 requires operational reliability, monitoring, documentation, and P1-P3 stewardship.",
+      "Harnesses are the mechanism: context, tools, loop, permissions, review, and lifecycle hooks.",
+      "TritonAI provides the paved path: tools hub, Developer API, MCP connectors, and hosting intake.",
+      "The benchmark is shipped, inspectable work -- not polished AI-shaped text."
+    ],
     "audiences": [
       "cabinet-may-2026"
     ]
