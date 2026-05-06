@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion'; // eslint-disable-line no-unused-vars
+import harnessVariantMap from './HarnessDefinitionVariants';
 
 /**
  * CabinetSlide — self-contained editorial design system for the
@@ -1276,7 +1277,10 @@ const variantMap = {
   stats: StatsVariant,
   analogy: AnalogyVariant,
   hero: HeroVisualVariant,
-  roles: RolesVariant
+  roles: RolesVariant,
+  // Editorial harness-definition variants (light cream palette, Fraunces serif).
+  // Scoped to a subset of cabinet-may-2026 slides; do not affect the rest of the deck.
+  ...harnessVariantMap
 };
 
 const CabinetSlide = ({ slide }) => {

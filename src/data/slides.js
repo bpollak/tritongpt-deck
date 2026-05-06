@@ -3668,5 +3668,171 @@ export const slides = [
     "audiences": [
       "cabinet-may-2026"
     ]
+  },
+  {
+    "id": 114,
+    "slug": "cabinet-harness-01-question",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-question",
+    "marker": "§ DEFINITION",
+    "eyebrow": "A simple question",
+    "parts": [
+      { "text": "What exactly " },
+      { "text": "is", "accent": true },
+      { "text": " a " },
+      { "text": "harness", "accent": true },
+      { "text": "?" }
+    ],
+    "subhead": "We keep saying the word. Few people define it the same way twice. Let's fix that — in plain terms — and then look at why it's the change that mattered.",
+    "footer": "AFTER STAFF CONVERSATIONS",
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 115,
+    "slug": "cabinet-harness-02-anatomy",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-anatomy",
+    "marker": "§ ANATOMY",
+    "parts": [
+      { "text": "What's " },
+      { "text": "actually", "accent": true },
+      { "text": " inside one." }
+    ],
+    "subhead": "A harness is a small set of services wrapped around the AI. None of these are exotic; together they turn a one-shot answerer into a colleague who can finish work.",
+    "items": [
+      {
+        "label": "memory",
+        "kind": "PERSISTENT CONTEXT",
+        "note": "Remembers your unit's documents, decisions, and conventions across sessions — instead of starting from zero every time."
+      },
+      {
+        "label": "tools",
+        "kind": "REACH INTO YOUR SYSTEMS",
+        "note": "Can act inside the systems your unit already uses — calendars, Salesforce, internal databases — not just describe what to do."
+      },
+      {
+        "label": "sandbox",
+        "kind": "SAFE TRY-AND-RETRY",
+        "note": "Attempts complex steps, fails, and tries again — without breaking production data or sending live emails by mistake."
+      },
+      {
+        "label": "review_loop",
+        "kind": "HUMAN IN THE LOOP",
+        "note": "Flags consequential actions for human approval. The work compounds; accountability stays human."
+      },
+      {
+        "label": "persistence",
+        "kind": "SURVIVES THE CRASH",
+        "note": "Writes its work to disk continuously. If the process dies, it picks up where it left off — no lost institutional context."
+      },
+      {
+        "label": "permissions",
+        "kind": "GUARDRAILS",
+        "note": "Read-only by default. Each capability declares what it needs; the harness enforces it before anything runs."
+      }
+    ],
+    "footer": "SAME SHAPE ACROSS PRODUCTS · DIFFERENT SURFACE NAMES",
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 116,
+    "slug": "cabinet-harness-03-vs-model",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-vs-model",
+    "marker": "§ DISTINCTION",
+    "parts": [
+      { "text": "A model alone " },
+      { "text": "answers and stops", "accent": true },
+      { "text": "." }
+    ],
+    "subhead": "The same model, placed inside a harness, can act, observe what happened, and adjust — until the work is done. Same intelligence; very different capability.",
+    "leftLabel": "MODEL ALONE — ANSWERS, THEN STOPS",
+    "rightLabel": "INSIDE A HARNESS — ACT · OBSERVE · ADJUST",
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 117,
+    "slug": "cabinet-harness-04-vendors",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-vendors",
+    "marker": "§ ALREADY IN OUR TOOLBOX",
+    "parts": [
+      { "text": "Different vendors. " },
+      { "text": "Same architecture", "accent": true },
+      { "text": "." }
+    ],
+    "subhead": "Four of the leading AI companies have shipped a harness in the past 30 days. We already have the fifth — and ours is the only one that ships indexed against UCSD's own data on day one.",
+    "vendors": [
+      {
+        "name": "Claude Code",
+        "org": "Anthropic",
+        "year": "2024",
+        "note": "The original developer-facing harness. Used internally at Anthropic to ship 100% of their own product."
+      },
+      {
+        "name": "Codex",
+        "org": "OpenAI · in ChatGPT",
+        "year": "2025",
+        "note": "Now folded into ChatGPT alongside browsing, computer use, and the Apps SDK — one surface for all of it."
+      },
+      {
+        "name": "Cursor",
+        "org": "Anysphere",
+        "year": "2023",
+        "note": "Reframed in April as an agent-execution runtime. Added an SDK so non-developers can build agents on it."
+      },
+      {
+        "name": "Foundry",
+        "org": "Microsoft",
+        "year": "2025",
+        "note": "Hosted agents inside Foundry. Each agent gets its own sandbox, durable state, identity, and governance."
+      },
+      {
+        "name": "Onyx Craft",
+        "org": "UCSD · TritonGPT",
+        "year": "ours",
+        "note": "Already running, indexed against our own documents. The harness our domain experts can use this week.",
+        "highlight": true
+      }
+    ],
+    "footer": "what changes is the surface you encounter — the runtime underneath has stabilized.",
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 118,
+    "slug": "cabinet-harness-05-manifesto",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-manifesto",
+    "marker": "§ THE TAKEAWAY",
+    "parts": [
+      { "text": "You bring the " },
+      { "text": "goal", "accent": true },
+      { "text": "." },
+      { "text": "\nThe harness handles the " },
+      { "text": "rest", "accent": true },
+      { "text": "." }
+    ],
+    "subhead": "That's the inflection. Everything in this section — and everything our memo asked of the cabinet — follows from that one shift.",
+    "audiences": [
+      "cabinet-may-2026"
+    ]
   }
 ];
