@@ -259,7 +259,7 @@ const HarnessQuestionVariant = ({ slide }) => (
       <PartText parts={slide.parts} delay={0.25} />
     </h1>
     {(slide.contextCards || []).length > 0 && (
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[53vh] grid max-w-[1180px] grid-cols-2 gap-5">
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[43.8vh] grid max-w-[1180px] grid-cols-2 gap-5">
         {slide.contextCards.map((card, index) => (
           <Card key={card.title} delay={0.74 + index * 0.1} className="p-4" style={index === 1 ? { background: '#fff8f2', borderColor: T.coralPale } : undefined}>
             <div className="flex items-start justify-between gap-4">
