@@ -3670,34 +3670,6 @@ export const slides = [
     ]
   },
   {
-    "id": 115,
-    "slug": "cabinet-harness-02-adoption-rubric",
-    "type": "content",
-    "content": [],
-    "layout": "harness-definition",
-    "variant": "harness-rubric",
-    "marker": "§ 01 · THE RUBRIC",
-    "aliases": [
-      "cabinet-harness-01-ai-changed-the-signal"
-    ],
-    "parts": [
-      { "text": "The adoption target is " },
-      { "text": "shipped work", "accent": true },
-      { "text": "." }
-    ],
-    "subhead": "Use the rubric as a coaching language, not a grading exercise: move people from awareness to useful artifacts.",
-    "levels": [
-      { "title": "Aware", "body": "Knows the tools exist but has not changed the work." },
-      { "title": "Uses", "body": "Drafts, summarizes, rewrites, and brainstorms for individual productivity." },
-      { "title": "Produces", "body": "Creates a document, deck, analysis, or workflow that advances real work.", "highlight": true },
-      { "title": "Automates", "body": "Builds a repeatable process a team can rely on." },
-      { "title": "Shares", "body": "Ships a reusable pattern, tool, or agent other teams can adopt." }
-    ],
-    "audiences": [
-      "cabinet-may-2026"
-    ]
-  },
-  {
     "id": 116,
     "slug": "cabinet-harness-03-question",
     "type": "content",
