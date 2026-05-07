@@ -21,15 +21,10 @@ const T = {
 };
 
 const anatomyItems = [
-  'while loop',
-  'context management',
-  'skills & tools',
-  'sub-agents',
-  'built-in skills',
-  'session persistence',
-  'system prompt assembly',
-  'lifecycle hooks',
-  'permissions & safety'
+  'closed loop',
+  'context layer',
+  'action & controls',
+  'work scaling'
 ];
 
 const ease = [0.22, 1, 0.36, 1];
@@ -83,15 +78,15 @@ const PartText = ({ parts = [], delay = 0.16, stagger = 0.045 }) => (
   </>
 );
 
-const Header = ({ slide, maxWidth = '74vw' }) => (
+const Header = ({ slide, maxWidth = '74vw', titleFontSize = 'clamp(44px, 4.4vw, 70px)', subheadFontSize = 'clamp(18px, 1.35vw, 23px)' }) => (
   <>
     <Marker>{slide.marker}</Marker>
     <div className="absolute left-[4.8vw] right-[4.8vw] top-[8.3vh]" style={{ maxWidth }}>
-      <h1 className="leading-[0.98]" style={{ fontSize: 'clamp(44px, 4.4vw, 70px)', fontWeight: 520 }}>
+      <h1 className="leading-[0.98]" style={{ fontSize: titleFontSize, fontWeight: 520 }}>
         <PartText parts={slide.parts} />
       </h1>
       {slide.subhead && (
-        <motion.div {...fade(0.38)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(18px, 1.35vw, 23px)' }}>
+        <motion.div {...fade(0.38)} className="mt-2 italic" style={{ color: T.muted, fontSize: subheadFontSize }}>
           {slide.subhead}
         </motion.div>
       )}
@@ -480,7 +475,7 @@ const HarnessDefinitionEquationVariant = ({ slide }) => (
   <Shell>
     <Marker>{slide.marker}</Marker>
     <div className="absolute left-[5.4vw] right-[5.4vw] top-[8vh]">
-      <h1 className="leading-[1.03]" style={{ fontSize: 'clamp(46px, 4.9vw, 82px)', fontWeight: 520 }}>
+      <h1 className="leading-[1.02]" style={{ fontSize: 'clamp(44px, 4.35vw, 74px)', fontWeight: 520 }}>
         <PartText parts={slide.parts} />
       </h1>
       <motion.div {...fade(0.62, 0)} className="mt-6 h-px w-full" style={{ background: T.rule }} />
@@ -548,56 +543,56 @@ const HarnessWorkProductVariant = ({ slide }) => (
 
 const HarnessToolboxVariant = ({ slide }) => (
   <Shell>
-    <Header slide={slide} maxWidth="86vw" />
-    <Content className="grid grid-rows-[1fr_auto] gap-6" style={{ top: '33.5vh', bottom: '12vh' }}>
-      <div className="grid grid-cols-4 gap-5">
+    <Header slide={slide} maxWidth="92vw" titleFontSize="clamp(38px, 3.95vw, 64px)" subheadFontSize="clamp(17px, 1.22vw, 21px)" />
+    <Content className="grid grid-rows-[1fr_auto] gap-4" style={{ top: '31vh', bottom: '17vh' }}>
+      <div className="grid grid-cols-4 gap-4">
         {(slide.vendors || []).map((vendor, index) => (
-          <Card key={`${vendor.name}-${index}`} delay={0.42 + index * 0.09} className="flex min-h-[282px] flex-col p-6">
-            <div className="flex h-20 items-center justify-center">
+          <Card key={`${vendor.name}-${index}`} delay={0.42 + index * 0.09} className="flex min-h-[218px] flex-col p-5">
+            <div className="flex h-14 items-center justify-center">
               {vendor.logoUrl ? (
-                <img src={vendor.logoUrl} alt={`${vendor.name} logo`} className="max-h-14 max-w-[155px] object-contain" />
+                <img src={vendor.logoUrl} alt={`${vendor.name} logo`} className="max-h-11 max-w-[140px] object-contain" />
               ) : (
-                <div style={{ color: vendor.color || T.ink, fontSize: 32, fontWeight: 620 }}>{vendor.name}</div>
+                <div style={{ color: vendor.color || T.ink, fontSize: 28, fontWeight: 620 }}>{vendor.name}</div>
               )}
             </div>
-            <div className="mt-5 text-center" style={{ color: T.ink, fontSize: 30, lineHeight: 1, fontWeight: 620 }}>{vendor.name}</div>
-            <div className="mt-3 text-center text-[12px] uppercase" style={{ color: vendor.color || T.coralDark, fontFamily: T.mono, letterSpacing: '0.13em', fontWeight: 700 }}>
+            <div className="mt-4 text-center" style={{ color: T.ink, fontSize: 27, lineHeight: 1, fontWeight: 620 }}>{vendor.name}</div>
+            <div className="mt-2 text-center text-[11px] uppercase" style={{ color: vendor.color || T.coralDark, fontFamily: T.mono, letterSpacing: '0.13em', fontWeight: 700 }}>
               {vendor.surface || `agent · ${vendor.year}`}
             </div>
-            <div className="mt-4 text-center" style={{ color: T.muted, fontSize: 16, lineHeight: 1.35 }}>
+            <div className="mt-3 text-center" style={{ color: T.muted, fontSize: 14.5, lineHeight: 1.28 }}>
               {vendor.capability}
             </div>
           </Card>
         ))}
       </div>
-      <Card delay={0.95} className="p-5">
-        <div className="grid grid-cols-[34%_1fr] items-center gap-6">
+      <Card delay={0.95} className="p-4">
+        <div className="grid grid-cols-[32%_1fr] items-center gap-5">
           <div>
             <Kicker>Where the harness lives</Kicker>
-            <div className="mt-2" style={{ fontSize: 27, lineHeight: 1.08, fontWeight: 560 }}>
+            <div className="mt-1" style={{ fontSize: 25, lineHeight: 1.05, fontWeight: 560 }}>
               It runs where the work already is.
             </div>
-            <div className="mt-2" style={{ color: T.muted, fontSize: 17, lineHeight: 1.35 }}>
+            <div className="mt-1.5" style={{ color: T.muted, fontSize: 15.5, lineHeight: 1.25 }}>
               The shift is local agency: reading files, editing work, running commands, and calling approved tools.
             </div>
             {slide.toolboxTakeaway ? (
-              <div className="mt-4 rounded-[6px] border px-4 py-3" style={{ borderColor: T.coralPale, background: '#fff8f2' }}>
-                <div style={{ color: T.ink, fontSize: 23, lineHeight: 1.08, fontWeight: 560 }}>
+              <div className="mt-3 rounded-[6px] border px-3 py-2.5" style={{ borderColor: T.coralPale, background: '#fff8f2' }}>
+                <div style={{ color: T.ink, fontSize: 20, lineHeight: 1.05, fontWeight: 560 }}>
                   {slide.toolboxTakeaway.title}
                 </div>
-                <div className="mt-2" style={{ color: T.muted, fontSize: 15, lineHeight: 1.3 }}>
+                <div className="mt-1.5" style={{ color: T.muted, fontSize: 13.5, lineHeight: 1.22 }}>
                   {slide.toolboxTakeaway.body}
                 </div>
               </div>
             ) : null}
           </div>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-3 gap-3">
             {(slide.localSurfaces || []).map((surface, index) => (
-              <div key={`${surface.label}-${index}`} className="rounded-[6px] border px-5 py-4" style={{ borderColor: T.coralPale, background: '#fff8f2' }}>
-                <div style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 13, letterSpacing: '0.14em', fontWeight: 700, textTransform: 'uppercase' }}>
+              <div key={`${surface.label}-${index}`} className="rounded-[6px] border px-4 py-3" style={{ borderColor: T.coralPale, background: '#fff8f2' }}>
+                <div style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 11.5, letterSpacing: '0.14em', fontWeight: 700, textTransform: 'uppercase' }}>
                   {surface.label}
                 </div>
-                <div className="mt-2" style={{ color: T.ink, fontSize: 24, lineHeight: 1.08, fontWeight: 560 }}>
+                <div className="mt-1.5" style={{ color: T.ink, fontSize: 21, lineHeight: 1.04, fontWeight: 560 }}>
                   {surface.note}
                 </div>
               </div>
@@ -750,19 +745,26 @@ const HarnessComponentsFrameworkVariant = ({ slide }) => (
           {slide.leftBody}
         </div>
       </Card>
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-2 gap-4">
         {(slide.components || []).map((component, index) => (
           <Card
             key={`${component.title}-${index}`}
             delay={0.56 + index * 0.045}
-            className="min-h-[118px] p-4"
+            className="min-h-[205px] p-5"
             style={component.highlight ? { background: '#fff8f2', borderColor: T.coral } : undefined}
           >
-            <div className="text-[11px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.16em' }}>
-              {String(index + 1).padStart(2, '0')} · {component.kicker}
+            <div className="flex items-start justify-between gap-4">
+              <div className="text-[11px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.16em' }}>
+                {String(index + 1).padStart(2, '0')} · {component.kicker}
+              </div>
+              {component.icon && (
+                <div className="rounded-[6px] border bg-white p-1.5" style={{ borderColor: component.color || T.coralPale }}>
+                  <MiniIcon type={component.icon} color={component.color || T.coralDark} />
+                </div>
+              )}
             </div>
-            <div className="mt-2" style={{ fontSize: 22, lineHeight: 1.05, fontWeight: 610 }}>{component.title}</div>
-            <div className="mt-2" style={{ color: T.muted, fontSize: 14.5, lineHeight: 1.25 }}>{component.body}</div>
+            <div className="mt-2" style={{ fontSize: 30, lineHeight: 1.03, fontWeight: 610 }}>{component.title}</div>
+            <div className="mt-3" style={{ color: T.muted, fontSize: 16, lineHeight: 1.28 }}>{component.body}</div>
             {component.examples && (
               <div className="mt-3 flex flex-wrap gap-1.5">
                 {component.examples.map((example) => (

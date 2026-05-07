@@ -3734,7 +3734,8 @@ export const slides = [
     "parts": [
       { "text": "A harness is the " },
       { "text": "fixed architecture", "accent": true },
-      { "text": " that turns\na " },
+      { "text": " that turns\n" },
+      { "text": "a " },
       { "text": "model", "muted": true },
       { "text": " into an " },
       { "text": "agent", "accent": "blue" },
@@ -3846,7 +3847,7 @@ export const slides = [
     "parts": [
       { "text": "What makes that possible." }
     ],
-    "subhead": "The audience does not need every implementation detail. They need the nine-part shape of the harness.",
+    "subhead": "The nine implementation pieces compact into four manager-readable layers: loop, context, action, and scale.",
     "audiences": [
       "cabinet-may-2026"
     ]
@@ -3860,30 +3861,48 @@ export const slides = [
     "variant": "harness-components-framework",
     "marker": "§ 07 · COMPONENTS",
     "parts": [
-      { "text": "The harness has " },
-      { "text": "parts", "accent": true },
+      { "text": "A harness has four " },
+      { "text": "layers", "accent": true },
       { "text": " managers can reason about." }
     ],
-    "subhead": "This is the framework from the original walkthrough: a model becomes useful when these surrounding components work together.",
+    "subhead": "The original nine parts are still there, but this framing makes the architecture easier to explain and govern.",
     "leftKicker": "Manager lens",
-    "leftTitle": "The harness is where campus fit happens.",
-    "leftBody": "Lifecycle hooks let us configure when UCSD-specific tools, checks, identity patterns, and approvals are inserted into the run.",
+    "leftTitle": "Do not manage the model alone.",
+    "leftBody": "Manage the architecture around it: how work loops, what context enters, what actions are allowed, and how larger work is split.",
     "components": [
-      { "kicker": "Loop", "title": "while loop", "body": "Keeps acting, observing, and adjusting until the work is done." },
-      { "kicker": "Context", "title": "context management", "body": "Controls what history, files, and campus knowledge enter the run." },
-      { "kicker": "Tools", "title": "skills & tools", "body": "Gives the agent specific workflows and safe actions it can perform." },
-      { "kicker": "Scale", "title": "sub-agents", "body": "Splits larger work into isolated planning, building, and review tasks." },
-      { "kicker": "Reuse", "title": "built-in skills", "body": "Packages repeatable campus patterns so teams do not rebuild them." },
-      { "kicker": "Durability", "title": "session persistence", "body": "Preserves state, logs, and work products across a run." },
-      { "kicker": "Instruction", "title": "system prompt assembly", "body": "Combines institutional rules, project instructions, and task context." },
       {
-        "kicker": "Controls",
-        "title": "lifecycle hooks",
-        "body": "Customize the harness to call UCSD-specific technologies before, during, or after key steps.",
-        "highlight": true,
-        "examples": ["TritonAI", "MCP", "SSO", "ServiceNow"]
+        "kicker": "Loop",
+        "title": "Closed loop",
+        "icon": "pipeline",
+        "color": "#d47a5f",
+        "body": "Keeps acting, observing, and adjusting until the work is done or a control stops it.",
+        "examples": ["while loop"]
       },
-      { "kicker": "Safety", "title": "permissions & safety", "body": "Enforces approval gates, boundaries, and accountability for actions." }
+      {
+        "kicker": "Context",
+        "title": "Working memory",
+        "icon": "library",
+        "color": "#0d5f93",
+        "body": "Controls what the agent knows, what instructions govern it, and what survives as durable state.",
+        "examples": ["context management", "system prompt", "session persistence"]
+      },
+      {
+        "kicker": "Action",
+        "title": "Tools & controls",
+        "icon": "mcp",
+        "color": "#be634d",
+        "body": "Defines what actions are possible, which campus hooks run, and where approval boundaries apply.",
+        "highlight": true,
+        "examples": ["skills & tools", "built-in skills", "lifecycle hooks", "permissions"]
+      },
+      {
+        "kicker": "Scale",
+        "title": "Work decomposition",
+        "icon": "builder",
+        "color": "#6f9363",
+        "body": "Splits larger work into isolated planning, building, and verification sessions before collecting the result.",
+        "examples": ["sub-agents"]
+      }
     ],
     "audiences": [
       "cabinet-may-2026"
@@ -3916,9 +3935,9 @@ export const slides = [
     "variant": "harness-framework-cards",
     "marker": "§ 08.01 · CONTEXT",
     "parts": [
-      { "text": "The harness decides what the model " },
-      { "text": "knows", "accent": true },
-      { "text": " and remembers." }
+      { "text": "Working memory shapes the agent's " },
+      { "text": "judgment", "accent": true },
+      { "text": "." }
     ],
     "subhead": "These are the parts that shape judgment: what enters the run, what instructions govern it, and what state persists across the work.",
     "gridColumns": 3,
@@ -3945,7 +3964,7 @@ export const slides = [
     "variant": "harness-framework-cards",
     "marker": "§ 08.02 · CONTROLS",
     "parts": [
-      { "text": "The harness makes action " },
+      { "text": "Tools and controls make action " },
       { "text": "safe", "accent": true },
       { "text": " and repeatable." }
     ],
