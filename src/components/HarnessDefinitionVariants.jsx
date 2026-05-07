@@ -580,6 +580,16 @@ const HarnessToolboxVariant = ({ slide }) => (
             <div className="mt-2" style={{ color: T.muted, fontSize: 17, lineHeight: 1.35 }}>
               The shift is local agency: reading files, editing work, running commands, and calling approved tools.
             </div>
+            {slide.toolboxTakeaway ? (
+              <div className="mt-4 rounded-[6px] border px-4 py-3" style={{ borderColor: T.coralPale, background: '#fff8f2' }}>
+                <div style={{ color: T.ink, fontSize: 23, lineHeight: 1.08, fontWeight: 560 }}>
+                  {slide.toolboxTakeaway.title}
+                </div>
+                <div className="mt-2" style={{ color: T.muted, fontSize: 15, lineHeight: 1.3 }}>
+                  {slide.toolboxTakeaway.body}
+                </div>
+              </div>
+            ) : null}
           </div>
           <div className="grid grid-cols-3 gap-4">
             {(slide.localSurfaces || []).map((surface, index) => (
@@ -931,7 +941,10 @@ const HarnessFrameworkCardsVariant = ({ slide }) => (
   <Shell>
     <Header slide={slide} maxWidth="86vw" />
     <Content className="grid grid-rows-[1fr_auto] gap-6" style={{ top: '30vh', bottom: '12vh' }}>
-      <div className={`grid gap-4 ${slide.connected ? 'grid-cols-4' : slide.columns?.length > 4 ? 'grid-cols-3' : 'grid-cols-4'}`}>
+      <div
+        className="grid gap-4"
+        style={{ gridTemplateColumns: `repeat(${slide.gridColumns || (slide.connected ? 4 : slide.columns?.length > 4 ? 3 : 4)}, minmax(0, 1fr))` }}
+      >
         {(slide.columns || []).map((item, index) => (
           <div key={`${item.title}-${index}`} className="relative">
             {slide.connected && index > 0 && (

@@ -3788,6 +3788,10 @@ export const slides = [
       { "text": " are already here." }
     ],
     "subhead": "They show up as command-line tools, desktop apps, and editor surfaces that can work with files, commands, and systems on your computer.",
+    "toolboxTakeaway": {
+      "title": "You provide the goal. The harness handles the rest.",
+      "body": "That is the management shift: set direction, then evaluate the artifact and the judgment behind it."
+    },
     "vendors": [
       {
         "name": "Claude Code",
@@ -3827,26 +3831,6 @@ export const slides = [
       { "label": "Desktop app", "note": "manages local work" },
       { "label": "Editor", "note": "edits files in context" }
     ],
-    "audiences": [
-      "cabinet-may-2026"
-    ]
-  },
-  {
-    "id": 120,
-    "slug": "cabinet-harness-07-takeaway",
-    "type": "content",
-    "content": [],
-    "layout": "harness-definition",
-    "variant": "harness-manifesto",
-    "marker": "§ 05 · TAKEAWAY",
-    "parts": [
-      { "text": "You provide the " },
-      { "text": "goal", "accent": true },
-      { "text": ".\nThe " },
-      { "text": "harness", "accent": true },
-      { "text": " handles the rest." }
-    ],
-    "subhead": "That is the management shift: set direction, then evaluate the artifact and the judgment behind it.",
     "audiences": [
       "cabinet-may-2026"
     ]
@@ -3907,12 +3891,90 @@ export const slides = [
   },
   {
     "id": 122,
+    "slug": "cabinet-harness-08c-while-loop",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-while-loop",
+    "marker": "§ 08 · LOOP",
+    "parts": [
+      { "text": "The loop is what makes the model " },
+      { "text": "agentic", "accent": true },
+      { "text": "." }
+    ],
+    "subhead": "A chat app answers once. A harness keeps acting, observing, and adjusting until the work is done or a control stops it.",
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 122.1,
+    "slug": "cabinet-harness-08d-context-instruction-memory",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-framework-cards",
+    "marker": "§ 08.01 · CONTEXT",
+    "parts": [
+      { "text": "The harness decides what the model " },
+      { "text": "knows", "accent": true },
+      { "text": " and remembers." }
+    ],
+    "subhead": "These are the parts that shape judgment: what enters the run, what instructions govern it, and what state persists across the work.",
+    "gridColumns": 3,
+    "columns": [
+      { "kicker": "02 · Context", "title": "context management", "icon": "library", "color": "#0d5f93", "fill": "#e5f0f2", "body": "Controls which messages, files, tool results, and campus knowledge stay available as the run grows." },
+      { "kicker": "07 · Instruction", "title": "system prompt assembly", "icon": "api", "color": "#be634d", "fill": "#fff5ee", "body": "Combines institutional rules, project instructions, audience needs, and task-specific constraints." },
+      { "kicker": "06 · Durability", "title": "session persistence", "icon": "observe", "color": "#6f9363", "fill": "#f6f8ee", "body": "Preserves state, logs, summaries, and work products so the agent can resume and managers can inspect the path." }
+    ],
+    "steps": [
+      { "title": "Keep", "body": "recent detail and active files" },
+      { "title": "Summarize", "body": "older context into durable memory" },
+      { "title": "Apply", "body": "rules and standards every loop" }
+    ],
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 122.2,
+    "slug": "cabinet-harness-08e-tools-hooks-safety",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-framework-cards",
+    "marker": "§ 08.02 · CONTROLS",
+    "parts": [
+      { "text": "The harness makes action " },
+      { "text": "safe", "accent": true },
+      { "text": " and repeatable." }
+    ],
+    "subhead": "These are the parts that make agentic work operational: approved actions, reusable patterns, campus hooks, and boundaries.",
+    "gridColumns": 4,
+    "columns": [
+      { "kicker": "03 · Tools", "title": "skills & tools", "icon": "builder", "color": "#d47a5f", "fill": "#fff8f2", "body": "Gives the agent specific workflows and safe actions it can perform on real files and systems." },
+      { "kicker": "05 · Reuse", "title": "built-in skills", "icon": "library", "color": "#6f9363", "fill": "#f6f8ee", "body": "Packages repeatable campus patterns so teams do not rebuild the same instructions and workflows." },
+      { "kicker": "08 · Controls", "title": "lifecycle hooks", "icon": "mcp", "color": "#0d5f93", "fill": "#e5f0f2", "body": "Insert UCSD-specific checks, identity, logging, data handling, and approvals before or after key steps." },
+      { "kicker": "09 · Safety", "title": "permissions & safety", "icon": "observe", "color": "#be634d", "fill": "#fff5ee", "body": "Enforces approval gates, boundaries, and accountability for actions that touch campus systems." }
+    ],
+    "steps": [
+      { "title": "Approve", "body": "which tools can run" },
+      { "title": "Observe", "body": "what happened and why" },
+      { "title": "Govern", "body": "P1-P3 boundaries and controls" },
+      { "title": "Reuse", "body": "patterns other teams can adopt" }
+    ],
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
+    "id": 122.3,
     "slug": "cabinet-harness-09-loop-context-tools",
     "type": "content",
     "content": [],
     "layout": "harness-definition",
     "variant": "harness-skills-tools",
-    "marker": "§ 08 · WORK SURFACE",
+    "marker": "§ 08.03 · WORK SURFACE",
     "aliases": [
       "cabinet-harness-05-03-skills-tools",
       "cabinet-harness-05-07-system-prompt"
