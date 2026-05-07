@@ -3676,7 +3676,7 @@ export const slides = [
     "content": [],
     "layout": "harness-definition",
     "variant": "harness-question",
-    "marker": "§ 02 · DEFINITION",
+    "marker": "DEFINITION",
     "kicker": "A simple question",
     "parts": [
       { "text": "What exactly " },
@@ -3709,7 +3709,7 @@ export const slides = [
     "content": [],
     "layout": "harness-definition",
     "variant": "harness-definition-core",
-    "marker": "§ 03 · THE SHIFT",
+    "marker": "THE SHIFT",
     "mode": "wrapped",
     "parts": [
       { "text": "A harness turns a model from an " },
@@ -3730,7 +3730,7 @@ export const slides = [
     "content": [],
     "layout": "harness-definition",
     "variant": "harness-definition-equation",
-    "marker": "§ 03 · DEFINITION",
+    "marker": "DEFINITION",
     "parts": [
       { "text": "A harness is the " },
       { "text": "fixed architecture", "accent": true },
@@ -3779,7 +3779,7 @@ export const slides = [
     "content": [],
     "layout": "harness-definition",
     "variant": "harness-toolbox",
-    "marker": "§ 04 · ALREADY HERE",
+    "marker": "ALREADY HERE",
     "aliases": [
       "cabinet-harness-05-work-product-example"
     ],
@@ -3837,88 +3837,22 @@ export const slides = [
     ]
   },
   {
-    "id": 121,
-    "slug": "cabinet-harness-08-architecture",
-    "type": "content",
-    "content": [],
-    "layout": "harness-definition",
-    "variant": "harness-anatomy-index",
-    "marker": "§ 06 · ARCHITECTURE",
-    "parts": [
-      { "text": "What makes that possible." }
-    ],
-    "subhead": "Different tools expose the same four management questions: how the work continues, what stays in context, what it can touch, and when work should split.",
-    "architectureKicker": "The architecture",
-    "architectureTitle": "One harness. Four operating questions.",
-    "architectureBody": "Managers do not need nine implementation details to recognize what matters. They need the stable pattern around the model that makes work durable, governable, and reusable.",
-    "architectureListKicker": "How to read it",
-    "architectureSignals": [
-      "The same pattern appears across Claude Code, Codex, Cursor, and open-source harnesses.",
-      "UC San Diego standards fit into context, tools, permissions, approvals, and observability.",
-      "The next slides unpack each part in operating terms rather than vendor language."
-    ],
-    "architectureFooterLabel": "Shared pattern",
-    "architectureFooterPrefix": "Different tools. Different surfaces.",
-    "architectureFooterEmphasis": "Same architecture.",
-    "architectureItems": [
-      {
-        "kicker": "01 · LOOP",
-        "title": "Keep going",
-        "body": "The run can act, inspect the result, and continue until the work is done.",
-        "icon": "pipeline",
-        "color": "#d47a5f",
-        "fill": "#fff8f2",
-        "position": "top"
-      },
-      {
-        "kicker": "02 · CONTEXT",
-        "title": "Carry the right context",
-        "body": "Instructions, files, prior results, and working state stay available while the work is happening.",
-        "icon": "library",
-        "color": "#0d5f93",
-        "fill": "#e5f0f2",
-        "position": "left"
-      },
-      {
-        "kicker": "03 · ACTION",
-        "title": "Use tools safely",
-        "body": "Tools, connectors, APIs, and permissions determine what the harness can touch in real systems.",
-        "icon": "mcp",
-        "color": "#be634d",
-        "fill": "#fff5ee",
-        "position": "right"
-      },
-      {
-        "kicker": "04 · SCALE",
-        "title": "Split work when needed",
-        "body": "Larger jobs can separate planning, building, and verification without losing accountability.",
-        "icon": "builder",
-        "color": "#6f9363",
-        "fill": "#f6f8ee",
-        "position": "bottom"
-      }
-    ],
-    "audiences": [
-      "cabinet-may-2026"
-    ]
-  },
-  {
     "id": 121.5,
     "slug": "cabinet-harness-08b-component-framework",
     "type": "content",
     "content": [],
     "layout": "harness-definition",
     "variant": "harness-components-framework",
-    "marker": "§ 07 · COMPONENTS",
+    "marker": "ANATOMY",
     "parts": [
-      { "text": "A harness is four " },
-      { "text": "management questions", "accent": true },
+      { "text": "A harness has " },
+      { "text": "four jobs", "accent": true },
       { "text": "." }
     ],
-    "subhead": "This keeps the architecture concrete without asking the audience to learn vendor-specific implementation language.",
-    "leftKicker": "Manager lens",
+    "subhead": "Each one solves a problem the model alone cannot. Here is what each job is for, and what would go wrong without it.",
+    "leftKicker": "The shape",
     "leftTitle": "The model is only one part.",
-    "leftBody": "A harness is the working environment around it: the loop, the context, the tools, the controls, and the way larger work gets divided.",
+    "leftBody": "A harness is the working environment around the model: a loop to keep going, the context to know what matters, the tools to touch real systems, and the ability to split big work.",
     "components": [
       {
         "kicker": "Loop",
@@ -3926,7 +3860,7 @@ export const slides = [
         "icon": "pipeline",
         "color": "#d47a5f",
         "body": "The harness does not stop after one answer. It acts, checks the result, adjusts, and continues until the work is finished or a limit is reached.",
-        "question": "Manager takeaway: this is what makes it a worker, not a chat response.",
+        "question": "Why this matters: without this, the model gives one answer and stops — it cannot do work.",
         "examples": ["while loop", "observe", "adjust"]
       },
       {
@@ -3935,7 +3869,7 @@ export const slides = [
         "icon": "library",
         "color": "#0d5f93",
         "body": "The harness decides which files, messages, instructions, summaries, and prior results stay in view while the work is happening.",
-        "question": "Manager takeaway: quality depends on the right context, not just the model.",
+        "question": "Why this matters: without this, the model forgets what it is working on as soon as the page turns.",
         "examples": ["context management", "system prompt", "session persistence"]
       },
       {
@@ -3945,7 +3879,7 @@ export const slides = [
         "color": "#be634d",
         "body": "The harness gives the agent tools, reusable skills, campus-specific hooks, and permission boundaries for real systems.",
         "highlight": true,
-        "question": "Manager takeaway: this is where UC San Diego standards and safety enter the work.",
+        "question": "Why this matters: without this, the model can only talk about the work, not actually do it.",
         "examples": ["skills & tools", "built-in skills", "lifecycle hooks", "permissions"]
       },
       {
@@ -3954,7 +3888,7 @@ export const slides = [
         "icon": "builder",
         "color": "#6f9363",
         "body": "For bigger jobs, the harness can separate planning, building, and verification into focused sessions and collect the result.",
-        "question": "Manager takeaway: larger work can be divided without losing accountability.",
+        "question": "Why this matters: without this, big jobs collapse under their own weight in one long run.",
         "examples": ["sub-agents", "planning", "verification"]
       }
     ],
@@ -3969,7 +3903,8 @@ export const slides = [
     "content": [],
     "layout": "harness-definition",
     "variant": "harness-while-loop",
-    "marker": "§ 08 · LOOP",
+    "marker": "LOOP · keep going",
+    "spineActive": "loop",
     "parts": [
       { "text": "The loop is what makes the model " },
       { "text": "agentic", "accent": true },
@@ -3987,7 +3922,8 @@ export const slides = [
     "content": [],
     "layout": "harness-definition",
     "variant": "harness-framework-cards",
-    "marker": "§ 08.01 · CONTEXT",
+    "marker": "CONTEXT · know what matters",
+    "spineActive": "context",
     "parts": [
       { "text": "Working memory shapes the agent's " },
       { "text": "judgment", "accent": true },
@@ -3996,9 +3932,9 @@ export const slides = [
     "subhead": "These are the parts that shape judgment: what enters the run, what instructions govern it, and what state persists across the work.",
     "gridColumns": 3,
     "columns": [
-      { "kicker": "02 · Context", "title": "context management", "icon": "library", "color": "#0d5f93", "fill": "#e5f0f2", "body": "Controls which messages, files, tool results, and campus knowledge stay available as the run grows." },
-      { "kicker": "07 · Instruction", "title": "system prompt assembly", "icon": "api", "color": "#be634d", "fill": "#fff5ee", "body": "Combines institutional rules, project instructions, audience needs, and task-specific constraints." },
-      { "kicker": "06 · Durability", "title": "session persistence", "icon": "observe", "color": "#6f9363", "fill": "#f6f8ee", "body": "Preserves state, logs, summaries, and work products so the agent can resume and managers can inspect the path." }
+      { "kicker": "What enters the run", "title": "context management", "icon": "library", "color": "#0d5f93", "fill": "#e5f0f2", "body": "Controls which messages, files, tool results, and campus knowledge stay available as the run grows." },
+      { "kicker": "What governs the run", "title": "system prompt assembly", "icon": "api", "color": "#be634d", "fill": "#fff5ee", "body": "Combines institutional rules, project instructions, audience needs, and task-specific constraints." },
+      { "kicker": "What persists across runs", "title": "session persistence", "icon": "observe", "color": "#6f9363", "fill": "#f6f8ee", "body": "Preserves state, logs, summaries, and work products so the agent can resume and reviewers can inspect the path." }
     ],
     "steps": [
       { "title": "Keep", "body": "recent detail and active files" },
@@ -4016,7 +3952,8 @@ export const slides = [
     "content": [],
     "layout": "harness-definition",
     "variant": "harness-framework-cards",
-    "marker": "§ 08.02 · CONTROLS",
+    "marker": "ACTION · touch real systems",
+    "spineActive": "action",
     "parts": [
       { "text": "Tools and controls make action " },
       { "text": "safe", "accent": true },
@@ -4025,10 +3962,10 @@ export const slides = [
     "subhead": "These are the parts that make agentic work operational: approved actions, reusable patterns, campus hooks, and boundaries.",
     "gridColumns": 4,
     "columns": [
-      { "kicker": "03 · Tools", "title": "skills & tools", "icon": "builder", "color": "#d47a5f", "fill": "#fff8f2", "body": "Gives the agent specific workflows and safe actions it can perform on real files and systems." },
-      { "kicker": "05 · Reuse", "title": "built-in skills", "icon": "library", "color": "#6f9363", "fill": "#f6f8ee", "body": "Packages repeatable campus patterns so teams do not rebuild the same instructions and workflows." },
-      { "kicker": "08 · Controls", "title": "lifecycle hooks", "icon": "mcp", "color": "#0d5f93", "fill": "#e5f0f2", "body": "Insert UCSD-specific checks, identity, logging, data handling, and approvals before or after key steps." },
-      { "kicker": "09 · Safety", "title": "permissions & safety", "icon": "observe", "color": "#be634d", "fill": "#fff5ee", "body": "Enforces approval gates, boundaries, and accountability for actions that touch campus systems." }
+      { "kicker": "What it can do", "title": "skills & tools", "icon": "builder", "color": "#d47a5f", "fill": "#fff8f2", "body": "Gives the agent specific workflows and safe actions it can perform on real files and systems." },
+      { "kicker": "What it can reuse", "title": "built-in skills", "icon": "library", "color": "#6f9363", "fill": "#f6f8ee", "body": "Packages repeatable campus patterns so teams do not rebuild the same instructions and workflows." },
+      { "kicker": "What gates each step", "title": "lifecycle hooks", "icon": "mcp", "color": "#0d5f93", "fill": "#e5f0f2", "body": "Insert UC San Diego checks, identity, logging, data handling, and approvals before or after key steps." },
+      { "kicker": "What it cannot touch", "title": "permissions & safety", "icon": "observe", "color": "#be634d", "fill": "#fff5ee", "body": "Enforces approval gates, boundaries, and accountability for actions that touch campus systems." }
     ],
     "steps": [
       { "title": "Approve", "body": "which tools can run" },
@@ -4047,7 +3984,8 @@ export const slides = [
     "content": [],
     "layout": "harness-definition",
     "variant": "harness-skills-tools",
-    "marker": "§ 08.03 · WORK SURFACE",
+    "marker": "ACTION · what the harness exposes",
+    "spineActive": "action",
     "aliases": [
       "cabinet-harness-05-03-skills-tools",
       "cabinet-harness-05-07-system-prompt"
@@ -4057,20 +3995,20 @@ export const slides = [
       { "text": "real", "accent": true },
       { "text": "." }
     ],
-    "subhead": "The system prompt and project context tell the model how to work; the tools let it act on real files and systems.",
+    "subhead": "The system prompt and project context tell the model how to work; the tools let it act on real files and systems — under permission boundaries that govern what it may touch.",
     "skillsLabel": "Context · what the model is given",
     "skills": [
       { "name": "system_prompt", "note": "rules" },
       { "name": "project_files", "note": "context" },
-      { "name": "permissions", "note": "boundaries" },
       { "name": "session_state", "note": "memory" }
     ],
-    "toolsLabel": "Tools · what the model can do",
+    "toolsLabel": "Action · what the model can do (and not)",
     "tools": [
       { "name": "read_file", "note": "file ops" },
       { "name": "edit_file", "note": "file ops" },
       { "name": "search", "note": "knowledge" },
-      { "name": "run_check", "note": "verify" }
+      { "name": "run_check", "note": "verify" },
+      { "name": "permissions", "note": "boundary" }
     ],
     "audiences": [
       "cabinet-may-2026"
@@ -4083,8 +4021,8 @@ export const slides = [
     "content": [],
     "layout": "harness-definition",
     "variant": "harness-context",
-    "marker": "§ 08.01 · CONTEXT MANAGEMENT",
-    "number": "02",
+    "marker": "CONTEXT · in practice",
+    "spineActive": "context",
     "title": "Context management",
     "subtitle": "what to keep · what to summarize · what to drop",
     "activeBudget": "520,000",
@@ -4121,7 +4059,7 @@ export const slides = [
     "content": [],
     "layout": "harness-definition",
     "variant": "harness-subagents",
-    "marker": "§ 09 · SCALING WORK",
+    "marker": "SCALING WORK",
     "aliases": [
       "cabinet-harness-05-04-sub-agents"
     ],
@@ -4175,7 +4113,7 @@ export const slides = [
     "content": [],
     "layout": "harness-definition",
     "variant": "harness-ucsd",
-    "marker": "§ 10 · UCSD PATH",
+    "marker": "UCSD PATH",
     "parts": [
       { "text": "Make the safe path " },
       { "text": "useful", "accent": true },
@@ -4210,7 +4148,7 @@ export const slides = [
     "content": [],
     "layout": "harness-definition",
     "variant": "harness-framework-cards",
-    "marker": "§ 11 · TRITONAI",
+    "marker": "TRITONAI",
     "aliases": [
       "from-tritongpt-to-tritonai"
     ],
@@ -4239,7 +4177,7 @@ export const slides = [
     "content": [],
     "layout": "harness-definition",
     "variant": "harness-developer-api-program",
-    "marker": "§ 12 · API PATH",
+    "marker": "API PATH",
     "aliases": [
       "tritonai-developer-api-program"
     ],
@@ -4309,7 +4247,7 @@ export const slides = [
     "content": [],
     "layout": "harness-definition",
     "variant": "harness-campus-hosting",
-    "marker": "§ 13 · HOSTING",
+    "marker": "HOSTING",
     "aliases": [
       "campus-app-hosting-intake"
     ],
@@ -4374,7 +4312,7 @@ export const slides = [
     "content": [],
     "layout": "harness-definition",
     "variant": "harness-recap",
-    "marker": "§ 14 · EXPECTATION",
+    "marker": "EXPECTATION",
     "aliases": [
       "cabinet-harness-06-recap",
       "cabinet-harness-12-action-plan"

@@ -110,9 +110,47 @@ const PartText = ({ parts = [], delay = 0.16, stagger = 0.045 }) => (
   </>
 );
 
+const jobSpineEntries = [
+  { key: 'loop', label: 'LOOP', tone: '#d47a5f' },
+  { key: 'context', label: 'CONTEXT', tone: '#0d5f93' },
+  { key: 'action', label: 'ACTION', tone: '#be634d' },
+  { key: 'scale', label: 'SCALE', tone: '#6f9363' }
+];
+
+const JobSpine = ({ activeKey }) => {
+  if (!activeKey) return null;
+  return (
+    <motion.div
+      {...fade(0.1, -4)}
+      className="absolute right-[4.8vw] top-[4.0vh] flex items-center gap-2"
+      style={{ fontFamily: T.mono, fontSize: 11, letterSpacing: '0.2em', fontWeight: 700 }}
+    >
+      {jobSpineEntries.map((entry, index) => {
+        const isActive = entry.key === activeKey;
+        return (
+          <React.Fragment key={entry.key}>
+            {index > 0 && <span style={{ color: T.faint }}>·</span>}
+            <span
+              style={{
+                color: isActive ? entry.tone : T.muted,
+                opacity: isActive ? 1 : 0.62,
+                borderBottom: isActive ? `2px solid ${entry.tone}` : '2px solid transparent',
+                paddingBottom: 2
+              }}
+            >
+              {entry.label}
+            </span>
+          </React.Fragment>
+        );
+      })}
+    </motion.div>
+  );
+};
+
 const Header = ({ slide, maxWidth = '74vw', titleFontSize = 'clamp(44px, 4.4vw, 70px)', subheadFontSize = 'clamp(18px, 1.35vw, 23px)' }) => (
   <>
     <Marker>{slide.marker}</Marker>
+    <JobSpine activeKey={slide.spineActive} />
     <div className="absolute left-[4.8vw] right-[4.8vw] top-[8.3vh]" style={{ maxWidth }}>
       <h1 className="leading-[0.98]" style={{ fontSize: titleFontSize, fontWeight: 520 }}>
         <PartText parts={slide.parts} />
@@ -910,16 +948,19 @@ const HarnessWhileLoopVariant = ({ slide }) => (
 const HarnessContextVariant = ({ slide }) => (
   <Shell>
     <Marker>{slide.marker}</Marker>
+    <JobSpine activeKey={slide.spineActive} />
     <div className="absolute left-[4.8vw] right-[4.8vw] top-[9vh]">
       <div className="flex items-baseline gap-7">
-        <motion.div {...fade(0.16)} style={{ color: T.coral, fontSize: 'clamp(70px, 6.4vw, 108px)', fontStyle: 'italic', lineHeight: 0.9 }}>
-          {slide.number || '02'}
-        </motion.div>
+        {slide.number ? (
+          <motion.div {...fade(0.16)} style={{ color: T.coral, fontSize: 'clamp(70px, 6.4vw, 108px)', fontStyle: 'italic', lineHeight: 0.9 }}>
+            {slide.number}
+          </motion.div>
+        ) : null}
         <motion.div {...fade(0.22)} style={{ color: T.ink, fontSize: 'clamp(54px, 5vw, 86px)', lineHeight: 0.95, fontWeight: 520 }}>
           {slide.title || 'Context management'}
         </motion.div>
       </div>
-      <motion.div {...fade(0.38)} className="ml-[9.7vw] mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(22px, 1.9vw, 32px)', lineHeight: 1.15 }}>
+      <motion.div {...fade(0.38)} className={`${slide.number ? 'ml-[9.7vw]' : ''} mt-2 italic`} style={{ color: T.muted, fontSize: 'clamp(22px, 1.9vw, 32px)', lineHeight: 1.15 }}>
         {slide.subtitle || 'what to keep · what to summarize · what to drop'}
       </motion.div>
     </div>
