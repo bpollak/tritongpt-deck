@@ -3847,7 +3847,57 @@ export const slides = [
     "parts": [
       { "text": "What makes that possible." }
     ],
-    "subhead": "The nine implementation pieces compact into four manager-readable layers: loop, context, action, and scale.",
+    "subhead": "Different tools expose the same four management questions: how the work continues, what stays in context, what it can touch, and when work should split.",
+    "architectureKicker": "The architecture",
+    "architectureTitle": "One harness. Four operating questions.",
+    "architectureBody": "Managers do not need nine implementation details to recognize what matters. They need the stable pattern around the model that makes work durable, governable, and reusable.",
+    "architectureListKicker": "How to read it",
+    "architectureSignals": [
+      "The same pattern appears across Claude Code, Codex, Cursor, and open-source harnesses.",
+      "UC San Diego standards fit into context, tools, permissions, approvals, and observability.",
+      "The next slides unpack each part in operating terms rather than vendor language."
+    ],
+    "architectureFooterLabel": "Shared pattern",
+    "architectureFooterPrefix": "Different tools. Different surfaces.",
+    "architectureFooterEmphasis": "Same architecture.",
+    "architectureItems": [
+      {
+        "kicker": "01 · LOOP",
+        "title": "Keep going",
+        "body": "The run can act, inspect the result, and continue until the work is done.",
+        "icon": "pipeline",
+        "color": "#d47a5f",
+        "fill": "#fff8f2",
+        "position": "top"
+      },
+      {
+        "kicker": "02 · CONTEXT",
+        "title": "Carry the right context",
+        "body": "Instructions, files, prior results, and working state stay available while the work is happening.",
+        "icon": "library",
+        "color": "#0d5f93",
+        "fill": "#e5f0f2",
+        "position": "left"
+      },
+      {
+        "kicker": "03 · ACTION",
+        "title": "Use tools safely",
+        "body": "Tools, connectors, APIs, and permissions determine what the harness can touch in real systems.",
+        "icon": "mcp",
+        "color": "#be634d",
+        "fill": "#fff5ee",
+        "position": "right"
+      },
+      {
+        "kicker": "04 · SCALE",
+        "title": "Split work when needed",
+        "body": "Larger jobs can separate planning, building, and verification without losing accountability.",
+        "icon": "builder",
+        "color": "#6f9363",
+        "fill": "#f6f8ee",
+        "position": "bottom"
+      }
+    ],
     "audiences": [
       "cabinet-may-2026"
     ]
@@ -3861,47 +3911,51 @@ export const slides = [
     "variant": "harness-components-framework",
     "marker": "§ 07 · COMPONENTS",
     "parts": [
-      { "text": "A harness has four " },
-      { "text": "layers", "accent": true },
-      { "text": " managers can reason about." }
+      { "text": "A harness is four " },
+      { "text": "management questions", "accent": true },
+      { "text": "." }
     ],
-    "subhead": "The original nine parts are still there, but this framing makes the architecture easier to explain and govern.",
+    "subhead": "This keeps the architecture concrete without asking the audience to learn vendor-specific implementation language.",
     "leftKicker": "Manager lens",
-    "leftTitle": "Do not manage the model alone.",
-    "leftBody": "Manage the architecture around it: how work loops, what context enters, what actions are allowed, and how larger work is split.",
+    "leftTitle": "The model is only one part.",
+    "leftBody": "A harness is the working environment around it: the loop, the context, the tools, the controls, and the way larger work gets divided.",
     "components": [
       {
         "kicker": "Loop",
-        "title": "Closed loop",
+        "title": "How does it keep going?",
         "icon": "pipeline",
         "color": "#d47a5f",
-        "body": "Keeps acting, observing, and adjusting until the work is done or a control stops it.",
-        "examples": ["while loop"]
+        "body": "The harness does not stop after one answer. It acts, checks the result, adjusts, and continues until the work is finished or a limit is reached.",
+        "question": "Manager takeaway: this is what makes it a worker, not a chat response.",
+        "examples": ["while loop", "observe", "adjust"]
       },
       {
         "kicker": "Context",
-        "title": "Working memory",
+        "title": "What does it know?",
         "icon": "library",
         "color": "#0d5f93",
-        "body": "Controls what the agent knows, what instructions govern it, and what survives as durable state.",
+        "body": "The harness decides which files, messages, instructions, summaries, and prior results stay in view while the work is happening.",
+        "question": "Manager takeaway: quality depends on the right context, not just the model.",
         "examples": ["context management", "system prompt", "session persistence"]
       },
       {
         "kicker": "Action",
-        "title": "Tools & controls",
+        "title": "What can it touch?",
         "icon": "mcp",
         "color": "#be634d",
-        "body": "Defines what actions are possible, which campus hooks run, and where approval boundaries apply.",
+        "body": "The harness gives the agent tools, reusable skills, campus-specific hooks, and permission boundaries for real systems.",
         "highlight": true,
+        "question": "Manager takeaway: this is where UC San Diego standards and safety enter the work.",
         "examples": ["skills & tools", "built-in skills", "lifecycle hooks", "permissions"]
       },
       {
         "kicker": "Scale",
-        "title": "Work decomposition",
+        "title": "When should work split?",
         "icon": "builder",
         "color": "#6f9363",
-        "body": "Splits larger work into isolated planning, building, and verification sessions before collecting the result.",
-        "examples": ["sub-agents"]
+        "body": "For bigger jobs, the harness can separate planning, building, and verification into focused sessions and collect the result.",
+        "question": "Manager takeaway: larger work can be divided without losing accountability.",
+        "examples": ["sub-agents", "planning", "verification"]
       }
     ],
     "audiences": [

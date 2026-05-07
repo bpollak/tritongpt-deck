@@ -20,11 +20,43 @@ const T = {
   mono: "'JetBrains Mono','SF Mono',Menlo,monospace"
 };
 
-const anatomyItems = [
-  'closed loop',
-  'context layer',
-  'action & controls',
-  'work scaling'
+const defaultArchitectureItems = [
+  {
+    kicker: '01 · LOOP',
+    title: 'Keep going',
+    body: 'The run can act, inspect the result, and continue until the work is done.',
+    icon: 'pipeline',
+    color: '#d47a5f',
+    fill: '#fff8f2',
+    position: 'top'
+  },
+  {
+    kicker: '02 · CONTEXT',
+    title: 'Carry the right context',
+    body: 'Instructions, files, prior results, and working state stay available while the work is happening.',
+    icon: 'library',
+    color: '#0d5f93',
+    fill: '#e5f0f2',
+    position: 'left'
+  },
+  {
+    kicker: '03 · ACTION',
+    title: 'Use tools safely',
+    body: 'Tools, connectors, APIs, and permissions determine what the harness can touch in real systems.',
+    icon: 'mcp',
+    color: '#be634d',
+    fill: '#fff5ee',
+    position: 'right'
+  },
+  {
+    kicker: '04 · SCALE',
+    title: 'Split work when needed',
+    body: 'Larger jobs can separate planning, building, and verification without losing accountability.',
+    icon: 'builder',
+    color: '#6f9363',
+    fill: '#f6f8ee',
+    position: 'bottom'
+  }
 ];
 
 const ease = [0.22, 1, 0.36, 1];
@@ -433,7 +465,7 @@ const HarnessDefinitionCoreVariant = ({ slide }) => {
                 );
               })}
               <motion.text {...fade(1.55)} x="655" y="371" textAnchor="middle" style={{ fontFamily: T.serif, fontSize: 26, fontStyle: 'italic' }} fill={T.ink}>
-                the closed loop · what makes an agent capable
+                the operating loop · what lets the work continue
               </motion.text>
             </>
           )}
@@ -654,83 +686,121 @@ const HarnessManifestoVariant = ({ slide }) => (
   </Shell>
 );
 
-const AnatomyWheel = ({ filled = false, delay = 0.3 }) => {
-  const cx = 180;
-  const cy = 180;
-  const r = 128;
-  const circumference = 2 * Math.PI * r;
-  const segment = circumference / anatomyItems.length;
-  return (
-    <svg viewBox="0 0 360 360" className="h-full w-full overflow-visible">
-      <circle cx={cx} cy={cy} r="142" fill="none" stroke={filled ? T.faint : 'transparent'} strokeWidth="1.2" />
-      {anatomyItems.map((_, index) => (
-        <motion.circle
-          key={`segment-${index}`}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.42, delay: delay + index * 0.045 }}
-          cx={cx}
-          cy={cy}
-          r={r}
-          fill="none"
-          stroke={filled ? T.coral : T.faint}
-          strokeWidth={filled ? 50 : 1.4}
-          strokeDasharray={`${segment - 3} ${circumference - segment + 3}`}
-          transform={`rotate(${-90 + index * 40} ${cx} ${cy})`}
-        />
-      ))}
-      <circle cx={cx} cy={cy} r="80" fill={T.bg} stroke={T.faint} strokeWidth="1.2" />
-      {anatomyItems.map((_, index) => {
-        const angle = (-70 + index * 40) * Math.PI / 180;
-        return (
-          <motion.text
-            key={`number-${index}`}
-            {...fade(delay + 0.3 + index * 0.04)}
-            x={cx + Math.cos(angle) * 112}
-            y={cy + Math.sin(angle) * 112 + 5}
-            textAnchor="middle"
-            style={{ fontFamily: T.mono, fontSize: 13, fontWeight: 700 }}
-            fill={filled ? '#fff8f0' : T.ink}
-          >
-            {String(index + 1).padStart(2, '0')}
-          </motion.text>
-        );
-      })}
-      <text x={cx} y={cy - 4} textAnchor="middle" style={{ fontFamily: T.serif, fontSize: 28, fontWeight: 620 }} fill={T.ink}>HARNESS</text>
-      <text x={cx} y={cy + 22} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 9, letterSpacing: '0.2em' }} fill={T.muted}>ARCHITECTURE</text>
-    </svg>
-  );
+const architectureCardPositions = {
+  top: 'left-1/2 top-0 w-[320px] -translate-x-1/2',
+  left: 'left-0 top-1/2 w-[320px] -translate-y-1/2',
+  right: 'right-0 top-1/2 w-[320px] -translate-y-1/2',
+  bottom: 'left-1/2 bottom-0 w-[320px] -translate-x-1/2'
 };
 
-const HarnessAnatomyIndexVariant = ({ slide }) => (
-  <Shell>
-    <Header slide={slide} maxWidth="82vw" />
-    <Content className="grid grid-cols-[40%_1fr] gap-12 items-center" style={{ top: '30vh', bottom: '19vh' }}>
-      <motion.div {...fade(0.45)} className="mx-auto h-[45vh] w-[45vh] max-h-full max-w-full">
-        <AnatomyWheel filled />
-      </motion.div>
-      <div>
-        <Kicker>The architecture</Kicker>
-        <div className="mt-4">
-          {anatomyItems.map((item, index) => (
-            <motion.div key={`${item}-${index}`} {...fade(0.68 + index * 0.045)} className="grid grid-cols-[52px_1fr] border-b py-1.5" style={{ borderColor: T.rule }}>
-              <span style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 13, fontWeight: 700 }}>{String(index + 1).padStart(2, '0')}</span>
-              <span style={{ fontSize: 22, fontWeight: index === 0 ? 650 : 480 }}>{item}</span>
-            </motion.div>
-          ))}
+const HarnessArchitectureDiagram = ({ items }) => (
+  <div className="relative mx-auto h-[49vh] w-full max-w-[780px]">
+    <svg viewBox="0 0 780 520" className="absolute inset-0 h-full w-full overflow-visible">
+      <motion.circle {...lineDraw(0.45)} cx="390" cy="260" r="116" fill="none" stroke={T.faint} strokeWidth="1.2" />
+      <motion.circle {...lineDraw(0.52)} cx="390" cy="260" r="84" fill={T.paper} stroke={T.coralPale} strokeWidth="1.4" />
+      {[
+        ['390', '144', '390', '90', T.coral],
+        ['272', '260', '154', '260', T.blue],
+        ['508', '260', '626', '260', T.coralDark],
+        ['390', '376', '390', '430', T.green]
+      ].map(([x1, y1, x2, y2, stroke], index) => (
+        <motion.line
+          key={`architecture-link-${index}`}
+          {...lineDraw(0.68 + index * 0.08)}
+          x1={x1}
+          y1={y1}
+          x2={x2}
+          y2={y2}
+          stroke={stroke}
+          strokeWidth="1.5"
+          strokeDasharray="5 6"
+        />
+      ))}
+      <motion.text {...fade(0.8, 0)} x="390" y="246" textAnchor="middle" style={{ fontFamily: T.serif, fontSize: 34, fontWeight: 620 }} fill={T.ink}>
+        HARNESS
+      </motion.text>
+      <motion.text {...fade(0.9, 0)} x="390" y="272" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 10, letterSpacing: '0.18em', fontWeight: 700 }} fill={T.muted}>
+        WORKING ENVIRONMENT
+      </motion.text>
+      <motion.text {...fade(0.98, 0)} x="390" y="292" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 10, letterSpacing: '0.18em', fontWeight: 700 }} fill={T.muted}>
+        AROUND THE MODEL
+      </motion.text>
+    </svg>
+    {items.map((item, index) => (
+      <motion.div
+        key={`${item.title}-${index}`}
+        {...fade(0.72 + index * 0.08)}
+        className={`absolute rounded-[10px] border p-4 shadow-[0_8px_24px_rgba(23,24,20,0.06)] ${architectureCardPositions[item.position] || architectureCardPositions.top}`}
+        style={{ borderColor: item.color || T.faint, background: item.fill || '#fff' }}
+      >
+        <div className="flex items-start justify-between gap-3">
+          <div className="text-[11px] uppercase" style={{ color: item.color || T.coralDark, fontFamily: T.mono, letterSpacing: '0.15em', fontWeight: 700 }}>
+            {item.kicker}
+          </div>
+          <div className="rounded-[6px] border bg-white p-1.5" style={{ borderColor: item.color || T.faint }}>
+            <MiniIcon type={item.icon || 'dot'} color={item.color || T.coralDark} />
+          </div>
         </div>
-      </div>
-    </Content>
-    <motion.div {...fade(1.1, 0)} className="absolute left-[4.8vw] right-[4.8vw] bottom-[12.5vh] flex items-baseline gap-6">
-      <span className="text-[12px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, fontWeight: 700, letterSpacing: '0.24em' }}>
-        Patterns from the industry
-      </span>
-      <span style={{ color: T.ink, fontSize: 28, lineHeight: 1, fontWeight: 520 }}>
-        Different teams. Different vendors. <span style={{ color: T.coralDark, fontStyle: 'italic', fontWeight: 420 }}>Same architecture.</span>
-      </span>
-    </motion.div>
-  </Shell>
+        <div className="mt-3" style={{ color: T.ink, fontSize: 28, lineHeight: 1.02, fontWeight: 620 }}>
+          {item.title}
+        </div>
+        <div className="mt-2" style={{ color: T.muted, fontSize: 15.2, lineHeight: 1.28 }}>
+          {item.body}
+        </div>
+      </motion.div>
+    ))}
+  </div>
 );
+
+const HarnessAnatomyIndexVariant = ({ slide }) => {
+  const items = slide.architectureItems || defaultArchitectureItems;
+
+  return (
+    <Shell>
+      <Header slide={slide} maxWidth="84vw" />
+      <Content className="grid grid-cols-[58%_1fr] gap-8 items-center" style={{ top: '28vh', bottom: '12vh' }}>
+        <HarnessArchitectureDiagram items={items} />
+        <div className="space-y-4">
+          <Card delay={0.52} className="p-6">
+            <Kicker>{slide.architectureKicker || 'Manager lens'}</Kicker>
+            <div className="mt-3" style={{ fontSize: 38, lineHeight: 1.03, fontWeight: 560 }}>
+              {slide.architectureTitle || 'Four management questions, not nine technical parts.'}
+            </div>
+            <div className="mt-4" style={{ color: T.muted, fontSize: 18.5, lineHeight: 1.34 }}>
+              {slide.architectureBody || 'Different tools surface these patterns differently, but managers are still governing the same core architecture around the model.'}
+            </div>
+          </Card>
+          <Card delay={0.72} className="p-5">
+            <Kicker>{slide.architectureListKicker || 'What stays constant'}</Kicker>
+            <div className="mt-3 space-y-0">
+              {(slide.architectureSignals || [
+                'Vendors change, but the architecture does not.',
+                'UC San Diego standards fit around context, tools, permissions, and controls.',
+                'The next slides unpack each part in operating terms, not vendor jargon.'
+              ]).map((item, index) => (
+                <motion.div key={`${item}-${index}`} {...fade(0.9 + index * 0.06)} className="grid grid-cols-[34px_1fr] border-b py-2" style={{ borderColor: T.rule }}>
+                  <span style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 12, fontWeight: 700 }}>{String(index + 1).padStart(2, '0')}</span>
+                  <span style={{ fontSize: 17, lineHeight: 1.18 }}>{item}</span>
+                </motion.div>
+              ))}
+            </div>
+          </Card>
+        </div>
+      </Content>
+      <motion.div {...fade(1.12, 0)} className="absolute left-[4.8vw] right-[4.8vw] bottom-[8.8vh] flex items-baseline gap-5">
+        <span className="text-[12px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, fontWeight: 700, letterSpacing: '0.22em' }}>
+          {slide.architectureFooterLabel || 'Across tools'}
+        </span>
+        <span style={{ color: T.ink, fontSize: 28, lineHeight: 1, fontWeight: 520 }}>
+          {slide.architectureFooterPrefix || 'Different vendors. Different surfaces.'}{' '}
+          <span style={{ color: T.coralDark, fontStyle: 'italic', fontWeight: 420 }}>
+            {slide.architectureFooterEmphasis || 'Same architecture.'}
+          </span>
+        </span>
+      </motion.div>
+    </Shell>
+  );
+};
 
 const HarnessComponentsFrameworkVariant = ({ slide }) => (
   <Shell>
@@ -765,6 +835,11 @@ const HarnessComponentsFrameworkVariant = ({ slide }) => (
             </div>
             <div className="mt-2" style={{ fontSize: 30, lineHeight: 1.03, fontWeight: 610 }}>{component.title}</div>
             <div className="mt-3" style={{ color: T.muted, fontSize: 16, lineHeight: 1.28 }}>{component.body}</div>
+            {component.question && (
+              <div className="mt-3 rounded-[5px] border px-3 py-2" style={{ borderColor: T.rule, background: 'rgba(255,255,255,0.46)', color: T.ink, fontSize: 15, lineHeight: 1.2 }}>
+                {component.question}
+              </div>
+            )}
             {component.examples && (
               <div className="mt-3 flex flex-wrap gap-1.5">
                 {component.examples.map((example) => (
@@ -788,10 +863,10 @@ const HarnessWhileLoopVariant = ({ slide }) => (
       <svg viewBox="0 0 620 410" className="h-full w-full">
         <Model x={310} y={210} r={58} blue delay={0.45} />
         {[
-          ['read_file', 112, 95],
-          ['bash', 418, 95],
-          ['edit_file', 112, 300],
-          ['grep', 418, 300]
+          ['read', 112, 95],
+          ['run', 418, 95],
+          ['edit', 112, 300],
+          ['check', 418, 300]
         ].map(([label, x, y], index) => (
           <g key={`${label}-${index}`}>
             <motion.line {...lineDraw(0.62 + index * 0.08)} x1="310" y1="210" x2={x + 75} y2={y + 24} stroke={T.faint} strokeWidth="1.3" strokeDasharray="5 7" />
@@ -803,14 +878,27 @@ const HarnessWhileLoopVariant = ({ slide }) => (
         ))}
         <motion.g {...fade(1.15)}>
           <rect x="232" y="356" width="198" height="32" rx="16" fill={T.blue} />
-          <text x="331" y="377" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 13, fontWeight: 700 }} fill="#fff">response: done</text>
+          <text x="331" y="377" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 13, fontWeight: 700 }} fill="#fff">task complete</text>
         </motion.g>
       </svg>
       <Card delay={0.72} className="p-5">
-        <Kicker>Iteration</Kicker>
-        <div className="mt-1 mb-4" style={{ color: T.coralDark, fontSize: 42 }}>3 <span style={{ color: T.muted, fontSize: 18 }}>until done or max done</span></div>
+        <Kicker>Bounded loop</Kicker>
+        <div className="mt-1 mb-4" style={{ color: T.coralDark, fontSize: 34, lineHeight: 1.05, fontWeight: 600 }}>
+          repeat
+          <span className="ml-3" style={{ color: T.muted, fontSize: 18, fontWeight: 400 }}>
+            until done or a control stops the run
+          </span>
+        </div>
         <div className="rounded-[5px] p-5" style={{ background: T.black, color: '#f4eee2', fontFamily: T.mono, fontSize: 15, lineHeight: 1.55 }}>
-          {['while not done:', '  propose = model(', '    system_prompt,', '    messages, tools)', '  response = act(result)', '  result = dispatch(tool_call)', '  messages.append(result)'].map((line, index) => (
+          {[
+            'while task_not_done:',
+            '  decide_next_step()',
+            '  take_action_or_call_tool()',
+            '  inspect_the_result()',
+            '  update_context()',
+            '  if control_requires_stop: break',
+            'return completed_work'
+          ].map((line, index) => (
             <motion.div key={`${line}-${index}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.95 + index * 0.05 }}>{line}</motion.div>
           ))}
         </div>
@@ -1046,7 +1134,7 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
         </div>
 
         <div>
-          <Kicker className="mb-2">Claude Code / Codex</Kicker>
+          <Kicker className="mb-2">{slide.harnessLabel || 'Claude Code / Codex'}</Kicker>
           <div className="relative">
             <div className="space-y-2.5">
               {harnesses.map((harness, index) => (
@@ -1283,11 +1371,18 @@ const HarnessSkillsVariant = ({ slide }) => (
         ))}
       </div>
       <Card delay={0.82} className="p-5">
-        <Kicker>Registry</Kicker>
+        <Kicker>{slide.registryLabel || 'Registry'}</Kicker>
         <div className="mt-4">
-          {['read_file', 'edit_file', 'bash', 'search', 'api_request', 'open_url'].map((name, index) => (
-            <motion.div key={`${name}-${index}`} {...fade(0.96 + index * 0.045)} className="grid grid-cols-[1fr_62px] border-b py-3" style={{ borderColor: T.rule, fontFamily: T.mono, fontSize: 14 }}>
-              <span>{name}</span><span style={{ color: T.coralDark }}>allow</span>
+          {(slide.registry || [
+            { name: 'read_file', mode: 'allow' },
+            { name: 'edit_file', mode: 'allow' },
+            { name: 'bash', mode: 'allow' },
+            { name: 'search', mode: 'allow' },
+            { name: 'api_request', mode: 'allow' },
+            { name: 'open_url', mode: 'allow' }
+          ]).map((item, index) => (
+            <motion.div key={`${item.name}-${index}`} {...fade(0.96 + index * 0.045)} className="grid grid-cols-[1fr_62px] border-b py-3" style={{ borderColor: T.rule, fontFamily: T.mono, fontSize: 14 }}>
+              <span>{item.name}</span><span style={{ color: T.coralDark }}>{item.mode || 'allow'}</span>
             </motion.div>
           ))}
         </div>
@@ -1332,7 +1427,7 @@ const HarnessSubagentsVariant = ({ slide }) => (
               {agent.locked && (
                 <g>
                   <rect x={x + 42} y="224" width="236" height="18" rx="3" fill="#f4ded4" stroke={T.coralPale} />
-                  <text x={x + 160} y="237" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 9, letterSpacing: '0.12em', fontWeight: 700 }} fill={T.coralDark}>NO FURTHER SUB-AGENTS</text>
+                  <text x={x + 160} y="237" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 9, letterSpacing: '0.12em', fontWeight: 700 }} fill={T.coralDark}>NO NESTED DELEGATION</text>
                 </g>
               )}
               <text x={x + 160} y="274" textAnchor="middle" style={{ fontFamily: T.serif, fontSize: 24, fontStyle: 'italic' }} fill={T.ink}>{agent.name}</text>
@@ -1342,7 +1437,7 @@ const HarnessSubagentsVariant = ({ slide }) => (
         <motion.path {...lineDraw(1.25)} d="M90 292 C330 340, 850 340, 1090 292" fill="none" stroke={T.coralDark} strokeWidth="1.5" />
       </svg>
       <motion.div {...fade(1.35)} className="text-center" style={{ color: T.coralDark, fontSize: 45, fontStyle: 'italic' }}>
-        spawn · restrict · collect
+        divide · bound · reassemble
       </motion.div>
     </Content>
   </Shell>
