@@ -21,10 +21,10 @@ const T = {
 };
 
 const anatomyItems = [
-  'closed loop',
-  'context layer',
-  'action & controls',
-  'work scaling'
+  'keep going',
+  'carry context',
+  'use tools safely',
+  'split the work'
 ];
 
 const ease = [0.22, 1, 0.36, 1];
@@ -765,6 +765,11 @@ const HarnessComponentsFrameworkVariant = ({ slide }) => (
             </div>
             <div className="mt-2" style={{ fontSize: 30, lineHeight: 1.03, fontWeight: 610 }}>{component.title}</div>
             <div className="mt-3" style={{ color: T.muted, fontSize: 16, lineHeight: 1.28 }}>{component.body}</div>
+            {component.question && (
+              <div className="mt-3 rounded-[5px] border px-3 py-2" style={{ borderColor: T.rule, background: 'rgba(255,255,255,0.46)', color: T.ink, fontSize: 15, lineHeight: 1.2 }}>
+                {component.question}
+              </div>
+            )}
             {component.examples && (
               <div className="mt-3 flex flex-wrap gap-1.5">
                 {component.examples.map((example) => (
@@ -1532,7 +1537,7 @@ const HarnessUcsdVariant = ({ slide }) => (
           <div className="absolute inset-[22%] rounded-full" style={{ background: T.bluePale }} />
           <div className="relative text-center">
             <div style={{ color: T.blue, fontSize: 38, lineHeight: 1.02, fontWeight: 620 }}>{slide.centerTitle || 'TritonAI'}</div>
-            <div className="mt-2 text-[11px] uppercase" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.18em' }}>{slide.centerSubtitle || 'UCSD harness path'}</div>
+            <div className="mt-2 text-[11px] uppercase" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.18em' }}>{slide.centerSubtitle || 'UC San Diego harness path'}</div>
           </div>
         </motion.div>
         <Card delay={0.82} className="mx-auto mt-5 max-w-[430px] p-4">
