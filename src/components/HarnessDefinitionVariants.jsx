@@ -21,10 +21,10 @@ const T = {
 };
 
 const anatomyItems = [
-  'keep going',
-  'carry context',
-  'use tools safely',
-  'split the work'
+  'closed loop',
+  'context layer',
+  'action & controls',
+  'work scaling'
 ];
 
 const ease = [0.22, 1, 0.36, 1];
@@ -765,11 +765,6 @@ const HarnessComponentsFrameworkVariant = ({ slide }) => (
             </div>
             <div className="mt-2" style={{ fontSize: 30, lineHeight: 1.03, fontWeight: 610 }}>{component.title}</div>
             <div className="mt-3" style={{ color: T.muted, fontSize: 16, lineHeight: 1.28 }}>{component.body}</div>
-            {component.question && (
-              <div className="mt-3 rounded-[5px] border px-3 py-2" style={{ borderColor: T.rule, background: 'rgba(255,255,255,0.46)', color: T.ink, fontSize: 15, lineHeight: 1.2 }}>
-                {component.question}
-              </div>
-            )}
             {component.examples && (
               <div className="mt-3 flex flex-wrap gap-1.5">
                 {component.examples.map((example) => (
@@ -1537,7 +1532,7 @@ const HarnessUcsdVariant = ({ slide }) => (
           <div className="absolute inset-[22%] rounded-full" style={{ background: T.bluePale }} />
           <div className="relative text-center">
             <div style={{ color: T.blue, fontSize: 38, lineHeight: 1.02, fontWeight: 620 }}>{slide.centerTitle || 'TritonAI'}</div>
-            <div className="mt-2 text-[11px] uppercase" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.18em' }}>{slide.centerSubtitle || 'UC San Diego harness path'}</div>
+            <div className="mt-2 text-[11px] uppercase" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.18em' }}>{slide.centerSubtitle || 'UCSD harness path'}</div>
           </div>
         </motion.div>
         <Card delay={0.82} className="mx-auto mt-5 max-w-[430px] p-4">
@@ -1591,59 +1586,65 @@ const HarnessActionPlanVariant = ({ slide }) => (
   </Shell>
 );
 
-const HarnessRecapVariant = ({ slide }) => (
-  <Shell>
-    <Marker>{slide.marker}</Marker>
-    <div className="absolute left-[4.8vw] right-[4.8vw] top-[11vh] bottom-[15vh]">
-      <div className="max-w-[86vw]">
-        <h1 className="leading-[0.98]" style={{ fontSize: 'clamp(40px, 4vw, 64px)', fontWeight: 520 }}>
-          <PartText parts={slide.parts || [{ text: 'Recap: rubric, harness, expectations.' }]} />
-        </h1>
-        {slide.subhead && (
-          <motion.div {...fade(0.34)} className="mt-2 max-w-[78vw] italic" style={{ color: T.muted, fontSize: 'clamp(17px, 1.2vw, 21px)' }}>
-            {slide.subhead}
-          </motion.div>
-        )}
-      </div>
-      <div className="mt-6 grid grid-cols-[1fr_34%] items-start gap-6">
-        <div className="grid grid-cols-5 gap-3">
-          {(slide.rubric || []).map((level, index) => (
-            <Card key={`${level.title}-${index}`} delay={0.48 + index * 0.055} className="flex min-h-[285px] flex-col p-4" style={{ borderColor: level.highlight || level.chipDark ? T.coral : T.faint }}>
-              <div className="text-[12px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.16em' }}>Level {index + 1}</div>
-              <div className="mt-3" style={{ fontSize: 23, lineHeight: 1.05, fontWeight: 650 }}>{level.title}</div>
-              <div className="mt-3 flex-1" style={{ color: T.muted, fontSize: 14.2, lineHeight: 1.24 }}>{level.body}</div>
-              <div className="mt-auto rounded-[5px] px-3 py-2" style={{ background: level.highlight || level.chipDark ? T.coral : '#fff8f2', color: level.highlight || level.chipDark ? '#fff' : T.coralDark, fontFamily: T.mono, fontSize: 11.5, fontWeight: 700 }}>
-                {level.expectation}
-              </div>
-            </Card>
-          ))}
+const HarnessRecapVariant = ({ slide }) => {
+  const summaryCards = slide.summaryCards || slide.rubric || [];
+  const summaryColumns = Math.max(1, Math.min(slide.summaryColumns || summaryCards.length || 5, 5));
+  const usesWideCards = summaryColumns <= 4;
+
+  return (
+    <Shell>
+      <Marker>{slide.marker}</Marker>
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[9.5vh] bottom-[10.5vh]">
+        <div className="max-w-[88vw]">
+          <h1 className="leading-[0.98]" style={{ fontSize: 'clamp(42px, 4.2vw, 68px)', fontWeight: 520 }}>
+            <PartText parts={slide.parts || [{ text: 'Recap: rubric, harness, expectations.' }]} />
+          </h1>
+          {slide.subhead && (
+            <motion.div {...fade(0.34)} className="mt-2 max-w-[82vw] italic" style={{ color: T.muted, fontSize: 'clamp(18px, 1.28vw, 22px)' }}>
+              {slide.subhead}
+            </motion.div>
+          )}
         </div>
-        <Card delay={0.82} className="p-4">
-          <Kicker>Staff expectation</Kicker>
-          <div className="mt-2" style={{ fontSize: 27, lineHeight: 1.03, fontWeight: 560 }}>{slide.expectationTitle}</div>
-          {slide.practice && (
-            <div className="mt-3 grid grid-cols-3 gap-2">
-              {slide.practice.map((item, index) => (
-                <motion.div key={item.title} {...fade(0.92 + index * 0.06, 0)} className="rounded-[5px] border px-2 py-1.5 text-center" style={{ borderColor: T.coralPale, background: '#fff8f2' }}>
-                  <div style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 9, letterSpacing: '0.1em', fontWeight: 700 }}>{item.kicker}</div>
-                  <div className="mt-0.5" style={{ fontSize: 16, lineHeight: 1.05, fontWeight: 650 }}>{item.title}</div>
+        <div className="mt-5 grid items-start gap-6" style={{ gridTemplateColumns: usesWideCards ? 'minmax(0, 1fr) minmax(360px, 36%)' : 'minmax(0, 1fr) minmax(320px, 34%)' }}>
+          <div className="grid gap-3" style={{ gridTemplateColumns: `repeat(${summaryColumns}, minmax(0, 1fr))` }}>
+            {summaryCards.map((level, index) => (
+              <Card key={`${level.title}-${index}`} delay={0.48 + index * 0.055} className={usesWideCards ? 'flex min-h-[312px] flex-col p-5' : 'flex min-h-[285px] flex-col p-4'} style={{ borderColor: level.highlight || level.chipDark ? T.coral : T.faint }}>
+                <div className="text-[12px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.16em' }}>{level.label || `Level ${index + 1}`}</div>
+                <div className="mt-3" style={{ fontSize: usesWideCards ? 25 : 23, lineHeight: 1.04, fontWeight: 650 }}>{level.title}</div>
+                <div className="mt-3 flex-1" style={{ color: T.muted, fontSize: usesWideCards ? 15.3 : 14.2, lineHeight: usesWideCards ? 1.28 : 1.24 }}>{level.body}</div>
+                <div className="mt-auto rounded-[5px] px-3 py-2" style={{ background: level.highlight || level.chipDark ? T.coral : '#fff8f2', color: level.highlight || level.chipDark ? '#fff' : T.coralDark, fontFamily: T.mono, fontSize: usesWideCards ? 12.2 : 11.5, fontWeight: 700 }}>
+                  {level.expectation}
+                </div>
+              </Card>
+            ))}
+          </div>
+          <Card delay={0.82} className={usesWideCards ? 'p-5' : 'p-4'}>
+            <Kicker>{slide.expectationKicker || 'Staff expectation'}</Kicker>
+            <div className="mt-2" style={{ fontSize: usesWideCards ? 30 : 27, lineHeight: 1.02, fontWeight: 560 }}>{slide.expectationTitle}</div>
+            {slide.practice && (
+              <div className="mt-3 grid grid-cols-3 gap-2">
+                {slide.practice.map((item, index) => (
+                  <motion.div key={item.title} {...fade(0.92 + index * 0.06, 0)} className="rounded-[5px] border px-2 py-1.5 text-center" style={{ borderColor: T.coralPale, background: '#fff8f2' }}>
+                    <div style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 9, letterSpacing: '0.1em', fontWeight: 700 }}>{item.kicker}</div>
+                    <div className="mt-0.5" style={{ fontSize: usesWideCards ? 17 : 16, lineHeight: 1.05, fontWeight: 650 }}>{item.title}</div>
+                  </motion.div>
+                ))}
+              </div>
+            )}
+            <div className="mt-3 space-y-0">
+              {(slide.expectations || []).map((item, index) => (
+                <motion.div key={`${item}-${index}`} {...fade(1 + index * 0.055)} className="grid grid-cols-[38px_1fr] border-b py-2" style={{ borderColor: T.rule }}>
+                  <span style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 12, fontWeight: 700 }}>{String(index + 1).padStart(2, '0')}</span>
+                  <span style={{ fontSize: usesWideCards ? 17 : 16.2, lineHeight: usesWideCards ? 1.18 : 1.16 }}>{item}</span>
                 </motion.div>
               ))}
             </div>
-          )}
-          <div className="mt-3 space-y-0">
-            {(slide.expectations || []).map((item, index) => (
-              <motion.div key={`${item}-${index}`} {...fade(1 + index * 0.055)} className="grid grid-cols-[38px_1fr] border-b py-1.5" style={{ borderColor: T.rule }}>
-                <span style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 12, fontWeight: 700 }}>{String(index + 1).padStart(2, '0')}</span>
-                <span style={{ fontSize: 16.2, lineHeight: 1.16 }}>{item}</span>
-              </motion.div>
-            ))}
-          </div>
-        </Card>
+          </Card>
+        </div>
       </div>
-    </div>
-  </Shell>
-);
+    </Shell>
+  );
+};
 
 export const harnessVariantMap = {
   'harness-pressure': HarnessPressureVariant,

@@ -1005,6 +1005,56 @@ export const slides = [
     ]
   },
   {
+    "id": 13,
+    "slug": "scaling-engagement-the-tritongpt-widget",
+    "type": "content",
+    "content": [
+      {
+        "heading": "Universal Accessibility",
+        "text": "RAG-grounded answers on public sites — no login required."
+      },
+      {
+        "heading": "Technical Consolidation",
+        "text": "One-tag JavaScript embed standardizes AI across department sites."
+      },
+      {
+        "heading": "Operational ROI",
+        "text": "Replaces Ocelot for $300K/yr; SDSC-hosted at zero per-query cost."
+      }
+    ],
+    "videoSrc": "/media/media8.mov",
+    "title": "Scaling Engagement: The TritonGPT Widget",
+    "layout": "solution-showcase",
+    "subtitle": "High-Quality Public Support at Zero Variable Cost",
+    "backgroundColor": "#F5F0E6",
+    "stats": [
+      {
+        "label": "Cost Avoidance",
+        "value": "$300K",
+        "sub": "Recurring Annual Savings"
+      },
+      {
+        "label": "Deployment",
+        "value": "16",
+        "sub": "Campus Websites Live"
+      },
+      {
+        "label": "Access",
+        "value": "Public",
+        "sub": "No Login Required"
+      }
+    ],
+    "audiences": [
+      "all",
+      "public",
+      "internal",
+      "technical",
+      "ASU-GSV",
+      "executive",
+      "regent"
+    ]
+  },
+  {
     "id": 14,
     "slug": "video-media9",
     "type": "video",
@@ -1172,56 +1222,6 @@ export const slides = [
       "internal",
       "ASU-GSV",
       "cabinet",
-      "executive",
-      "regent"
-    ]
-  },
-  {
-    "id": 13,
-    "slug": "scaling-engagement-the-tritongpt-widget",
-    "type": "content",
-    "content": [
-      {
-        "heading": "Universal Accessibility",
-        "text": "RAG-grounded answers on public sites — no login required."
-      },
-      {
-        "heading": "Technical Consolidation",
-        "text": "One-tag JavaScript embed standardizes AI across department sites."
-      },
-      {
-        "heading": "Operational ROI",
-        "text": "Replaces Ocelot for $300K/yr; SDSC-hosted at zero per-query cost."
-      }
-    ],
-    "videoSrc": "/media/media8.mov",
-    "title": "Scaling Engagement: The TritonGPT Widget",
-    "layout": "solution-showcase",
-    "subtitle": "High-Quality Public Support at Zero Variable Cost",
-    "backgroundColor": "#F5F0E6",
-    "stats": [
-      {
-        "label": "Cost Avoidance",
-        "value": "$300K",
-        "sub": "Recurring Annual Savings"
-      },
-      {
-        "label": "Deployment",
-        "value": "16",
-        "sub": "Campus Websites Live"
-      },
-      {
-        "label": "Access",
-        "value": "Public",
-        "sub": "No Login Required"
-      }
-    ],
-    "audiences": [
-      "all",
-      "public",
-      "internal",
-      "technical",
-      "ASU-GSV",
       "executive",
       "regent"
     ]
@@ -3548,7 +3548,7 @@ export const slides = [
     "variant": "list",
     "eyebrow": "What it means here",
     "kicker": "It's already starting — quietly",
-    "title": "Three UC San Diego harnesses, in production or in pilot.",
+    "title": "Three UCSD harnesses, in production or in pilot.",
     "subtitle": "Each one is a domain expert doing white-collar work with an agentic harness — not a developer, not a vendor.",
     "items": [
       {
@@ -3847,7 +3847,7 @@ export const slides = [
     "parts": [
       { "text": "What makes that possible." }
     ],
-    "subhead": "You do not need to memorize nine parts. Remember four questions: how does it keep going, what does it know, what can it touch, and when does it split the work?",
+    "subhead": "The nine implementation pieces compact into four manager-readable layers: loop, context, action, and scale.",
     "audiences": [
       "cabinet-may-2026"
     ]
@@ -3861,51 +3861,47 @@ export const slides = [
     "variant": "harness-components-framework",
     "marker": "§ 07 · COMPONENTS",
     "parts": [
-      { "text": "A harness is four " },
-      { "text": "management questions", "accent": true },
-      { "text": "." }
+      { "text": "A harness has four " },
+      { "text": "layers", "accent": true },
+      { "text": " managers can reason about." }
     ],
-    "subhead": "This keeps the architecture concrete without asking the audience to learn vendor-specific implementation language.",
+    "subhead": "The original nine parts are still there, but this framing makes the architecture easier to explain and govern.",
     "leftKicker": "Manager lens",
-    "leftTitle": "The model is only one part.",
-    "leftBody": "A harness is the working environment around it: the loop, the context, the tools, the controls, and the way larger work gets divided.",
+    "leftTitle": "Do not manage the model alone.",
+    "leftBody": "Manage the architecture around it: how work loops, what context enters, what actions are allowed, and how larger work is split.",
     "components": [
       {
         "kicker": "Loop",
-        "title": "How does it keep going?",
+        "title": "Closed loop",
         "icon": "pipeline",
         "color": "#d47a5f",
-        "body": "The harness does not stop after one answer. It acts, checks the result, adjusts, and continues until the work is finished or a limit is reached.",
-        "question": "Manager takeaway: this is what makes it a worker, not a chat response.",
-        "examples": ["while loop", "observe", "adjust"]
+        "body": "Keeps acting, observing, and adjusting until the work is done or a control stops it.",
+        "examples": ["while loop"]
       },
       {
         "kicker": "Context",
-        "title": "What does it know?",
+        "title": "Working memory",
         "icon": "library",
         "color": "#0d5f93",
-        "body": "The harness decides which files, messages, instructions, summaries, and prior results stay in view while the work is happening.",
-        "question": "Manager takeaway: quality depends on the right context, not just the model.",
+        "body": "Controls what the agent knows, what instructions govern it, and what survives as durable state.",
         "examples": ["context management", "system prompt", "session persistence"]
       },
       {
         "kicker": "Action",
-        "title": "What can it touch?",
+        "title": "Tools & controls",
         "icon": "mcp",
         "color": "#be634d",
-        "body": "The harness gives the agent tools, reusable skills, campus-specific hooks, and permission boundaries for real systems.",
+        "body": "Defines what actions are possible, which campus hooks run, and where approval boundaries apply.",
         "highlight": true,
-        "question": "Manager takeaway: this is where UC San Diego standards and safety enter the work.",
         "examples": ["skills & tools", "built-in skills", "lifecycle hooks", "permissions"]
       },
       {
         "kicker": "Scale",
-        "title": "When should work split?",
+        "title": "Work decomposition",
         "icon": "builder",
         "color": "#6f9363",
-        "body": "For bigger jobs, the harness can separate planning, building, and verification into focused sessions and collect the result.",
-        "question": "Manager takeaway: larger work can be divided without losing accountability.",
-        "examples": ["sub-agents", "planning", "verification"]
+        "body": "Splits larger work into isolated planning, building, and verification sessions before collecting the result.",
+        "examples": ["sub-agents"]
       }
     ],
     "audiences": [
@@ -3977,7 +3973,7 @@ export const slides = [
     "columns": [
       { "kicker": "03 · Tools", "title": "skills & tools", "icon": "builder", "color": "#d47a5f", "fill": "#fff8f2", "body": "Gives the agent specific workflows and safe actions it can perform on real files and systems." },
       { "kicker": "05 · Reuse", "title": "built-in skills", "icon": "library", "color": "#6f9363", "fill": "#f6f8ee", "body": "Packages repeatable campus patterns so teams do not rebuild the same instructions and workflows." },
-      { "kicker": "08 · Controls", "title": "lifecycle hooks", "icon": "mcp", "color": "#0d5f93", "fill": "#e5f0f2", "body": "Insert UC San Diego checks, identity, logging, data handling, and approvals before or after key steps." },
+      { "kicker": "08 · Controls", "title": "lifecycle hooks", "icon": "mcp", "color": "#0d5f93", "fill": "#e5f0f2", "body": "Insert UCSD-specific checks, identity, logging, data handling, and approvals before or after key steps." },
       { "kicker": "09 · Safety", "title": "permissions & safety", "icon": "observe", "color": "#be634d", "fill": "#fff5ee", "body": "Enforces approval gates, boundaries, and accountability for actions that touch campus systems." }
     ],
     "steps": [
@@ -4076,11 +4072,11 @@ export const slides = [
       "cabinet-harness-05-04-sub-agents"
     ],
     "parts": [
-      { "text": "Specialized work needs " },
-      { "text": "coordination", "accent": true },
+      { "text": "Bigger tasks can be " },
+      { "text": "split", "accent": true },
       { "text": "." }
     ],
-    "subhead": "Planning, building, and verification can run separately, but the value comes from shared context, common tools, and one accountable result.",
+    "subhead": "Planning, drafting, and verification can run separately, then roll back up into one coherent result.",
     "agents": [
       {
         "kicker": "PLAN · read-only",
@@ -4125,29 +4121,29 @@ export const slides = [
     "content": [],
     "layout": "harness-definition",
     "variant": "harness-ucsd",
-    "marker": "§ 10 · SUPPORTED PATH",
+    "marker": "§ 10 · UCSD PATH",
     "parts": [
-      { "text": "UC San Diego makes agentic tools " },
-      { "text": "operational", "accent": true },
+      { "text": "Make the safe path " },
+      { "text": "useful", "accent": true },
       { "text": "." }
     ],
-    "subhead": "The advantage is not one tool by itself. It is the supported layer around it: governed context, MCP servers, OAuth-backed APIs, and campus standards that let teams build real solutions.",
-    "centerTitle": "UC San Diego support layer",
-    "centerSubtitle": "context · MCP · OAuth · controls",
-    "harnessKicker": "Supported harness surfaces",
+    "subhead": "The point is not one harness. It is UCSD-specific hooks that make the common harnesses useful, supportable, and aligned to our standards.",
+    "centerTitle": "UCSD hook layer",
+    "centerSubtitle": "standards inserted into the run",
+    "harnessKicker": "Harness surfaces",
     "harnesses": [
-      { "name": "Claude Code", "note": "supported surface" },
-      { "name": "Codex", "note": "supported surface" },
+      { "name": "Claude Code", "note": "supported hooks" },
+      { "name": "Codex", "note": "supported hooks" },
       { "name": "Cursor", "note": "editor surface" },
-      { "name": "OpenCode", "note": "customizable path", "highlight": true }
+      { "name": "OpenCode", "note": "open source", "highlight": true }
     ],
     "left": [
-      { "kicker": "Context", "title": "Shared context and reusable patterns", "body": "Prompt templates, skills, guardrails, and project context give builders a governed starting point instead of blank-page prompting." },
-      { "kicker": "Connect", "title": "MCP servers and OAuth-backed APIs", "body": "Secure patterns connect Google, Microsoft 365, ServiceNow, Drive, and campus systems through identity-aware access instead of hard-coded credentials." }
+      { "kicker": "Hooks", "title": "Campus standards", "body": "Insert identity, logging, data handling, approvals, and operational checks into the harness lifecycle." },
+      { "kicker": "Systems", "title": "UCSD technologies", "body": "Connect email, calendar, Confluence, ServiceNow, Drive, and campus APIs through governed patterns." }
     ],
     "right": [
-      { "kicker": "Control", "title": "UC San Diego standards in the run", "body": "Identity, logging, data handling, approvals, and P1-P3 boundaries are inserted into the workflow so solutions stay supportable." },
-      { "kicker": "Outcome", "title": "Build solutions with institutional value", "body": "Teams can move from demos to real departmental tools because they can safely reach the systems, context, and actions that create measurable impact.", "highlight": true }
+      { "kicker": "Commercial", "title": "Major harnesses", "body": "Claude Code, Codex, and Cursor can use templates, MCP connectors, and approval patterns where their surfaces allow." },
+      { "kicker": "Open source", "title": "OpenCode can go deeper", "body": "Because it is customizable, we can tune the harness around local and commercial models, UCSD workflows, and support needs.", "highlight": true }
     ],
     "audiences": [
       "cabinet-may-2026"
@@ -4324,37 +4320,36 @@ export const slides = [
     "content": [],
     "layout": "harness-definition",
     "variant": "harness-recap",
-    "marker": "§ 14 · RECAP",
+    "marker": "§ 14 · EXPECTATION",
     "aliases": [
       "cabinet-harness-06-recap",
       "cabinet-harness-12-action-plan"
     ],
     "parts": [
-      { "text": "Recap the " },
-      { "text": "rubric", "accent": true },
-      { "text": " and the staff expectation." }
+      { "text": "What we " },
+      { "text": "expect", "accent": true },
+      { "text": " from staff now." }
     ],
-    "subhead": "A single 5-point scale: to score above 3, automations must be reliable, documented, monitored, and aligned to P1-P3 controls.",
+    "subhead": "UC San Diego is putting supported harnesses, shared context, MCP servers, OAuth-backed APIs, Developer API access, and a hosting path in staff hands. The expectation is better work, not better demos.",
     "practice": [
-      { "kicker": "01", "title": "Train" },
-      { "kicker": "02", "title": "Choose" },
-      { "kicker": "03", "title": "Ship" }
+      { "kicker": "01", "title": "Pick" },
+      { "kicker": "02", "title": "Build" },
+      { "kicker": "03", "title": "Share" }
     ],
-    "rubric": [
-      { "title": "Action required", "body": "Avoids the tools or has shipped automations that created reliability or compliance issues for the unit.", "expectation": "address the gap" },
-      { "title": "Developing", "body": "Aware and experimenting, but has not shipped an automation that meets the reliability and stewardship bar.", "expectation": "close the gaps" },
-      { "title": "Practitioner", "body": "Expected baseline: routinely uses a harness and has shipped one documented, basically monitored automation within data boundaries.", "expectation": "ship visible work", "highlight": true, "chipDark": true },
-      { "title": "Active automator", "body": "Owns at least two automations or agents that reduce toil, respect P1-P3 controls, and identify risk before audit.", "expectation": "make it repeatable", "chipDark": true },
-      { "title": "Force multiplier", "body": "Automated workflows other teams adopt; reliable, monitored, documented, and raises stewardship patterns others copy.", "expectation": "spread the pattern", "chipDark": true }
+    "summaryColumns": 4,
+    "summaryCards": [
+      { "label": "Scope", "title": "Choose real work", "body": "Start with one recurring workflow, decision point, or manual process where better context, automation, or system access would create visible value.", "expectation": "one real workflow" },
+      { "label": "Path", "title": "Use the supported stack", "body": "Work through approved harnesses, TritonAI resources, shared skills, MCP servers, and OAuth-backed APIs instead of inventing an isolated one-off approach.", "expectation": "use the program", "highlight": true, "chipDark": true },
+      { "label": "Delivery", "title": "Ship something governable", "body": "If a solution touches systems or data, it should be inspectable, documented, logged, monitored, and aligned to approvals and P1-P3 boundaries.", "expectation": "make it supportable", "chipDark": true },
+      { "label": "Scale", "title": "Share what works", "body": "When a pattern succeeds, package it so another staff member, team, or unit can reuse it instead of starting from scratch.", "expectation": "raise the bar", "chipDark": true }
     ],
-    "expectationTitle": "Move one level, using the safe path.",
+    "expectationKicker": "Program expectation",
+    "expectationTitle": "Use these capabilities to improve one real workflow.",
     "expectations": [
-      "Managers assess where each staff member currently sits on the rubric.",
-      "Each person selects one real work product or recurring process to improve.",
-      "Above level 3 requires operational reliability, monitoring, documentation, and P1-P3 stewardship.",
-      "Harnesses are the mechanism: context, tools, loop, permissions, review, and lifecycle hooks.",
-      "TritonAI provides the paved path: tools hub, Developer API, MCP connectors, and hosting intake.",
-      "The benchmark is shipped, inspectable work -- not polished AI-shaped text."
+      "Pick one recurring task, service interaction, or decision workflow where better context, automation, or system access would create visible value.",
+      "Start with the supported path: approved harnesses, TritonAI resources, MCP connectors, OAuth-backed APIs, and hosting where needed.",
+      "Make the result inspectable and supportable with identity, approvals, logging, monitoring, documentation, and P1-P3 boundaries.",
+      "Measure success by operational value, then turn what works into a reusable pattern another team can adopt."
     ],
     "audiences": [
       "cabinet-may-2026"
