@@ -1730,7 +1730,7 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
         </div>
       </div>
 
-      <Card delay={1.08} className="absolute left-[5.8vw] right-[5.8vw] top-[42vh] p-4">
+      <Card delay={1.08} className="absolute left-[5.8vw] right-[5.8vw] top-[40vh] p-4">
         <div className="mb-3 text-center text-[15px] uppercase" style={{ color: T.muted, fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.18em' }}>How to get access</div>
         <div className="grid grid-cols-4 gap-5">
           {accessSteps.map((step, index) => (
@@ -1745,7 +1745,7 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
         </div>
       </Card>
 
-      <div className="absolute left-[5.8vw] right-[5.8vw] top-[62vh] grid grid-cols-2 gap-5">
+      <div className="absolute left-[5.8vw] right-[5.8vw] top-[58vh] grid grid-cols-2 gap-5">
         {ownership.map((owner, index) => (
           <Card key={owner.title} delay={1.35 + index * 0.08} className="p-4">
             <div className="text-[14px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.18em', fontWeight: 800 }}>
@@ -1760,16 +1760,16 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
         ))}
       </div>
 
-      <div className="absolute left-[5.8vw] right-[5.8vw] top-[80vh] grid grid-cols-[1fr_320px_1fr] items-center gap-4">
-        {[footerBadges.slice(0, 3), footerBadges.slice(3)].map((group, groupIndex) => (
-          <div key={`footer-group-${groupIndex}`} className={`flex items-center gap-4 ${groupIndex === 0 ? 'justify-end' : 'col-start-3 justify-start'}`}>
-            {group.map((badge, index) => (
-              <motion.div key={badge} {...fade(1.52 + (groupIndex * 3 + index) * 0.04, 0)} className="text-[15px] uppercase" style={{ color: '#6f7b8b', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.06em' }}>
-                {badge}
-                {index < group.length - 1 && <span className="ml-4" style={{ color: '#f0b400' }}>|</span>}
-              </motion.div>
-            ))}
-          </div>
+      <div className="absolute left-[5.8vw] right-[5.8vw] top-[78vh] flex items-center justify-between gap-3 flex-wrap">
+        {footerBadges.map((badge, index) => (
+          <React.Fragment key={badge}>
+            <motion.div {...fade(1.52 + index * 0.04, 0)} className="whitespace-nowrap text-[14px] uppercase" style={{ color: '#6f7b8b', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.06em' }}>
+              {badge}
+            </motion.div>
+            {index < footerBadges.length - 1 && (
+              <span className="text-[14px]" style={{ color: '#f0b400' }}>|</span>
+            )}
+          </React.Fragment>
         ))}
       </div>
     </Shell>
