@@ -2897,16 +2897,53 @@ const HarnessDataUnlockVariant = ({ slide }) => {
             </div>
           </Card>
 
-          {/* MCP connector */}
-          <motion.div {...fade(0.92)} className="flex items-center gap-3 px-2 py-1">
-            <div className="h-px flex-1" style={{ background: T.blue, opacity: 0.5 }} />
-            <div
-              className="rounded-full border px-5 py-2 text-[14px]"
-              style={{ borderColor: T.blue, background: T.bluePale, color: T.blue, fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.18em' }}
+          {/* MCP-enabled API layer — explained */}
+          <motion.div {...fade(0.92)} className="flex items-center gap-3">
+            <div className="h-px w-6" style={{ background: T.blue, opacity: 0.45 }} />
+            <Card
+              delay={0.95}
+              className="flex-1 p-3.5"
+              style={{ background: T.bluePale, borderColor: T.blue }}
             >
-              MCP
-            </div>
-            <div className="h-px flex-1" style={{ background: T.blue, opacity: 0.5 }} />
+              <div className="flex items-baseline flex-wrap gap-x-3 gap-y-1">
+                <span
+                  className="rounded-full px-2.5 py-1 text-[11px]"
+                  style={{ background: T.blue, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.22em' }}
+                >
+                  MCP
+                </span>
+                <span className="text-[13px] uppercase" style={{ color: T.blue, fontFamily: T.mono, letterSpacing: '0.2em', fontWeight: 800 }}>
+                  API layer
+                </span>
+                <span style={{ color: T.blue, fontFamily: T.serif, fontStyle: 'italic', fontSize: 14, opacity: 0.85 }}>
+                  model context protocol
+                </span>
+              </div>
+              <div className="mt-2" style={{ color: T.ink, fontSize: 14.5, lineHeight: 1.32 }}>
+                One standardized bridge between agents and enterprise systems — so any harness can call any system through the same auth-aware, audited interface.
+              </div>
+              <div className="mt-2.5 flex flex-wrap gap-2">
+                {[
+                  ['auth-aware', 'agent acts as the user, not as itself'],
+                  ['typed schemas', 'tools describe what they can do'],
+                  ['per-call audit', 'every read & write is logged']
+                ].map(([label, sub]) => (
+                  <div
+                    key={label}
+                    className="rounded-[5px] border px-2.5 py-1"
+                    style={{ borderColor: '#b9d3dc', background: '#fff', color: T.blue }}
+                  >
+                    <span style={{ fontFamily: T.mono, fontSize: 12.5, fontWeight: 800, letterSpacing: '0.04em' }}>
+                      {label}
+                    </span>
+                    <span className="ml-2" style={{ color: T.muted, fontFamily: T.serif, fontSize: 12.5, fontStyle: 'italic' }}>
+                      {sub}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </Card>
+            <div className="h-px w-6" style={{ background: T.blue, opacity: 0.45 }} />
           </motion.div>
 
           {/* Priority systems (highlighted) */}
