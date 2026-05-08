@@ -647,15 +647,15 @@ const HarnessDefinitionEquationVariant = ({ slide }) => (
             }}
           >
             <EquationIcon type={item.icon} color={item.color || T.ink} />
-            <div className="mt-6" style={{ fontSize: 30, lineHeight: 1, fontWeight: 560 }}>{item.title}</div>
-            <div className="mt-3 text-[11px] uppercase" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.2em', fontWeight: 700 }}>
+            <div className="mt-6" style={{ fontSize: 40, lineHeight: 1, fontWeight: 560 }}>{item.title}</div>
+            <div className="mt-3 text-[13px] uppercase" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.2em', fontWeight: 700 }}>
               {item.kicker}
             </div>
-            <div className="mt-2.5" style={{ color: item.wordColor || T.coralDark, fontSize: 38, lineHeight: 1, fontStyle: 'italic', fontWeight: 430 }}>
+            <div className="mt-2.5" style={{ color: item.wordColor || T.coralDark, fontSize: 52, lineHeight: 1, fontStyle: 'italic', fontWeight: 430 }}>
               {item.word}
             </div>
             {item.chips && item.chips.length > 0 && (
-              <div className="mt-5 flex flex-wrap items-center justify-center gap-1.5">
+              <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
                 {item.chips.map((chip) => {
                   const accentColor = item.result ? T.blue : T.coralDark;
                   const palette = item.result
@@ -664,7 +664,7 @@ const HarnessDefinitionEquationVariant = ({ slide }) => (
                   return (
                     <span
                       key={chip}
-                      className="rounded-[5px] border px-2.5 py-1 text-[11.5px]"
+                      className="rounded-[5px] border px-3 py-1.5 text-[14px]"
                       style={{
                         ...palette,
                         fontFamily: T.mono,
@@ -683,7 +683,7 @@ const HarnessDefinitionEquationVariant = ({ slide }) => (
             <motion.div
               {...fade(0.92 + index * 0.14, 0)}
               className="flex items-center justify-center"
-              style={{ color: T.muted, fontFamily: T.serif, fontSize: 56, fontWeight: 300 }}
+              style={{ color: T.muted, fontFamily: T.serif, fontSize: 68, fontWeight: 300 }}
             >
               {index === 0 ? '+' : '='}
             </motion.div>
@@ -2629,10 +2629,10 @@ const HarnessConvergenceVariant = ({ slide }) => {
       )}
 
       <div className="absolute left-[4.8vw] right-[4.8vw] top-[42vh] bottom-[20vh] grid grid-cols-[1fr_120px_1fr] items-stretch gap-0">
-        <Card delay={0.65} className="p-8">
+        <Card delay={0.65} className="p-9">
           <div className="flex items-center gap-3">
             <span
-              className="rounded-full px-3 py-1.5 text-[12px]"
+              className="rounded-full px-3.5 py-2 text-[14px]"
               style={{
                 background: T.bluePale,
                 color: T.blue,
@@ -2645,20 +2645,20 @@ const HarnessConvergenceVariant = ({ slide }) => {
             </span>
           </div>
           <div
-            className="mt-5"
-            style={{ fontSize: 36, lineHeight: 1.05, fontWeight: 620, color: T.blue }}
+            className="mt-6"
+            style={{ fontSize: 46, lineHeight: 1.05, fontWeight: 620, color: T.blue }}
           >
             {left.title}
           </div>
-          <div className="mt-4" style={{ color: T.muted, fontSize: 20, lineHeight: 1.34 }}>
+          <div className="mt-5" style={{ color: T.muted, fontSize: 24, lineHeight: 1.34 }}>
             {left.body}
           </div>
           {left.examples && (
-            <div className="mt-5 flex flex-wrap gap-2.5">
+            <div className="mt-6 flex flex-wrap gap-3">
               {left.examples.map((ex) => (
                 <span
                   key={ex}
-                  className="rounded-[6px] border px-3 py-1.5 text-[14px]"
+                  className="rounded-[6px] border px-3.5 py-2 text-[17px]"
                   style={{
                     borderColor: '#b9d3dc',
                     background: '#fff',
@@ -2724,12 +2724,12 @@ const HarnessConvergenceVariant = ({ slide }) => {
 
         <Card
           delay={0.78}
-          className="p-8"
+          className="p-9"
           style={{ background: '#fff8f2', borderColor: T.coralPale }}
         >
           <div className="flex items-center gap-3">
             <span
-              className="rounded-full px-3 py-1.5 text-[12px]"
+              className="rounded-full px-3.5 py-2 text-[14px]"
               style={{
                 background: T.coralPale,
                 color: T.coralDark,
@@ -2742,20 +2742,20 @@ const HarnessConvergenceVariant = ({ slide }) => {
             </span>
           </div>
           <div
-            className="mt-5"
-            style={{ fontSize: 36, lineHeight: 1.05, fontWeight: 620, color: T.coralDark }}
+            className="mt-6"
+            style={{ fontSize: 46, lineHeight: 1.05, fontWeight: 620, color: T.coralDark }}
           >
             {right.title}
           </div>
-          <div className="mt-4" style={{ color: T.muted, fontSize: 20, lineHeight: 1.34 }}>
+          <div className="mt-5" style={{ color: T.muted, fontSize: 24, lineHeight: 1.34 }}>
             {right.body}
           </div>
           {right.examples && (
-            <div className="mt-5 flex flex-wrap gap-2.5">
+            <div className="mt-6 flex flex-wrap gap-3">
               {right.examples.map((ex) => (
                 <span
                   key={ex}
-                  className="rounded-[6px] border px-3 py-1.5 text-[14px]"
+                  className="rounded-[6px] border px-3.5 py-2 text-[17px]"
                   style={{
                     borderColor: T.coralPale,
                     background: '#fff',
@@ -3010,7 +3010,7 @@ const HarnessActionVariant = ({ slide }) => {
       <div className="absolute left-[4.8vw] right-[4.8vw] top-[26vh] bottom-[14vh] grid grid-cols-[42%_1fr] gap-7 items-stretch">
         {/* Left: The action pipeline (vertical flow) */}
         <Card delay={0.5} className="flex flex-col p-6">
-          <div className="self-start text-[12px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
+          <div className="self-start text-[14px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
             The mechanic
           </div>
 
@@ -3019,7 +3019,7 @@ const HarnessActionVariant = ({ slide }) => {
               <React.Fragment key={step.label}>
                 <motion.div
                   {...fade(0.6 + i * 0.12)}
-                  className="rounded-[8px] border-2 bg-white px-4 py-3"
+                  className="rounded-[8px] border-2 bg-white px-4 py-3.5"
                   style={{
                     borderColor: step.color,
                     borderLeftWidth: 6,
@@ -3028,16 +3028,16 @@ const HarnessActionVariant = ({ slide }) => {
                 >
                   <div className="flex items-baseline gap-2.5">
                     <span
-                      className="rounded-[4px] px-2 py-0.5 text-[11px]"
+                      className="rounded-[4px] px-2 py-0.5 text-[13px]"
                       style={{ background: step.color, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.14em' }}
                     >
                       {String(i + 1).padStart(2, '0')}
                     </span>
-                    <span style={{ color: T.ink, fontFamily: T.serif, fontSize: 22, lineHeight: 1.1, fontWeight: 650 }}>
+                    <span style={{ color: T.ink, fontFamily: T.serif, fontSize: 26, lineHeight: 1.1, fontWeight: 650 }}>
                       {step.label}
                     </span>
                   </div>
-                  <div className="mt-1" style={{ color: T.muted, fontFamily: T.mono, fontSize: 13, lineHeight: 1.3 }}>
+                  <div className="mt-1.5" style={{ color: T.muted, fontFamily: T.mono, fontSize: 15, lineHeight: 1.3 }}>
                     {step.sub}
                   </div>
                 </motion.div>
@@ -3045,7 +3045,7 @@ const HarnessActionVariant = ({ slide }) => {
                   <motion.div
                     {...fade(0.7 + i * 0.12)}
                     className="flex items-center justify-center"
-                    style={{ color: pipeline[i + 1].color, fontSize: 22, fontWeight: 700, height: 8, lineHeight: 1 }}
+                    style={{ color: pipeline[i + 1].color, fontSize: 24, fontWeight: 700, height: 10, lineHeight: 1 }}
                   >
                     ↓
                   </motion.div>
@@ -3054,7 +3054,7 @@ const HarnessActionVariant = ({ slide }) => {
             ))}
           </div>
 
-          <div className="text-center mt-4" style={{ color: T.muted, fontSize: 17, lineHeight: 1.4, fontStyle: 'italic', fontWeight: 500 }}>
+          <div className="text-center mt-4" style={{ color: T.muted, fontSize: 19, lineHeight: 1.4, fontStyle: 'italic', fontWeight: 500 }}>
             Every tool call. Every time.
           </div>
         </Card>
@@ -3062,10 +3062,10 @@ const HarnessActionVariant = ({ slide }) => {
         {/* Right: Live trace + tool registry */}
         <Card delay={0.7} className="p-6 flex flex-col">
           <div className="flex items-baseline gap-3">
-            <span className="text-[11px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 700 }}>
+            <span className="text-[13px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 700 }}>
               Live trace
             </span>
-            <span style={{ color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 14 }}>
+            <span style={{ color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 16 }}>
               one action through the gates
             </span>
           </div>
@@ -3073,15 +3073,15 @@ const HarnessActionVariant = ({ slide }) => {
           {traceGoal && (
             <motion.div
               {...fade(0.85)}
-              className="mt-3 rounded-[7px] border-l-[3px] px-4 py-3"
+              className="mt-3 rounded-[7px] border-l-[3px] px-4 py-3.5"
               style={{ borderColor: T.blue, background: T.bluePale }}
             >
-              <div className="text-[13px] uppercase" style={{ color: T.blue, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>Action</div>
-              <div className="mt-1.5" style={{ color: T.blue, fontSize: 19, fontWeight: 600, lineHeight: 1.28 }}>{traceGoal}</div>
+              <div className="text-[15px] uppercase" style={{ color: T.blue, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>Action</div>
+              <div className="mt-1.5" style={{ color: T.blue, fontSize: 23, fontWeight: 600, lineHeight: 1.28 }}>{traceGoal}</div>
             </motion.div>
           )}
 
-          <div className="mt-3 space-y-2">
+          <div className="mt-3 space-y-2.5">
             {traceSteps.map((step, i) => {
               const matchedColor = (pipeline[i] && pipeline[i].color) || T.coral;
               return (
@@ -3090,14 +3090,14 @@ const HarnessActionVariant = ({ slide }) => {
                   initial={{ opacity: 0, y: 6 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 1.05 + i * 0.18, ease }}
-                  className="rounded-[6px] border-l-[3px] px-3 py-2.5"
+                  className="rounded-[6px] border-l-[3px] px-3.5 py-2.5"
                   style={{ borderColor: matchedColor, background: '#fcfaf3' }}
                 >
                   <div className="flex items-baseline gap-2.5">
-                    <span style={{ color: matchedColor, fontFamily: T.mono, fontSize: 12.5, fontWeight: 800, letterSpacing: '0.12em', textTransform: 'uppercase', minWidth: 92 }}>
+                    <span style={{ color: matchedColor, fontFamily: T.mono, fontSize: 14.5, fontWeight: 800, letterSpacing: '0.12em', textTransform: 'uppercase', minWidth: 108 }}>
                       {step.stage}
                     </span>
-                    <span style={{ color: T.ink, fontFamily: T.mono, fontSize: 15, lineHeight: 1.38 }}>
+                    <span style={{ color: T.ink, fontFamily: T.mono, fontSize: 17, lineHeight: 1.38 }}>
                       {step.detail}
                     </span>
                   </div>
@@ -3110,8 +3110,8 @@ const HarnessActionVariant = ({ slide }) => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 1.05 + traceSteps.length * 0.18 + 0.25, ease }}
-            className="mt-3 self-start inline-flex items-center gap-2.5 rounded-full px-4 py-1.5"
-            style={{ background: T.coralDark, color: '#fff', fontFamily: T.mono, fontSize: 13, fontWeight: 800, letterSpacing: '0.12em' }}
+            className="mt-3 self-start inline-flex items-center gap-2.5 rounded-full px-4 py-2"
+            style={{ background: T.coralDark, color: '#fff', fontFamily: T.mono, fontSize: 15, fontWeight: 800, letterSpacing: '0.12em' }}
           >
             <span>✓ APPROVED · SCOPED · AUDITED</span>
           </motion.div>
@@ -3120,7 +3120,7 @@ const HarnessActionVariant = ({ slide }) => {
 
           {/* Tool registry strip — pinned to card bottom */}
           <div className="pt-3 border-t" style={{ borderColor: T.rule }}>
-            <div className="text-[11px] uppercase mb-2" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
+            <div className="text-[13px] uppercase mb-2.5" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
               Tool registry · gated by what they can do
             </div>
             <div className="grid grid-cols-3 gap-2">
@@ -3128,17 +3128,17 @@ const HarnessActionVariant = ({ slide }) => {
                 <motion.div
                   key={tier.label}
                   {...fade(1.6 + i * 0.08)}
-                  className="rounded-[7px] border-l-[5px] px-3 py-2"
+                  className="rounded-[7px] border-l-[5px] px-3 py-2.5"
                   style={{ borderColor: tier.color, background: tier.fill }}
                 >
                   <div className="flex items-baseline gap-2">
                     <span
-                      className="rounded-[4px] px-1.5 py-0.5 text-[11px]"
+                      className="rounded-[4px] px-2 py-0.5 text-[13px]"
                       style={{ background: tier.color, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.12em' }}
                     >
                       {tier.label}
                     </span>
-                    <span style={{ color: tier.color, fontFamily: T.serif, fontStyle: 'italic', fontSize: 13, fontWeight: 500 }}>
+                    <span style={{ color: tier.color, fontFamily: T.serif, fontStyle: 'italic', fontSize: 15, fontWeight: 500 }}>
                       {tier.tagline}
                     </span>
                   </div>
@@ -3146,7 +3146,7 @@ const HarnessActionVariant = ({ slide }) => {
                     {tier.tools.map((tool) => (
                       <span
                         key={tool}
-                        className="rounded-[3px] border px-1.5 py-0.5 text-[11px]"
+                        className="rounded-[3px] border px-2 py-0.5 text-[13px]"
                         style={{
                           borderColor: tier.color,
                           background: '#fff',
