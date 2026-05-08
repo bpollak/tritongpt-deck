@@ -2507,7 +2507,7 @@ const HarnessRecapVariant = ({ slide }) => {
       </div>
 
       {/* Movement indicator — gradient arrow tight under the rubric */}
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[68vh] flex items-center gap-3">
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[62vh] flex items-center gap-3">
         <span className="text-[11px] uppercase shrink-0" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
           Direction of growth
         </span>
@@ -2535,7 +2535,7 @@ const HarnessRecapVariant = ({ slide }) => {
       {slide.bottomLine && (
         <motion.div
           {...fade(1.0)}
-          className="absolute left-[4.8vw] right-[4.8vw] top-[76vh] flex items-start gap-5"
+          className="absolute left-[4.8vw] right-[4.8vw] top-[70vh] flex items-start gap-5"
         >
           {slide.bottomLineLabel && (
             <span
@@ -2562,7 +2562,7 @@ const HarnessRecapVariant = ({ slide }) => {
       {slide.poweredBy && (
         <motion.div
           {...fade(1.2)}
-          className="absolute left-[4.8vw] right-[4.8vw] top-[86vh] flex items-center gap-4 flex-wrap"
+          className="absolute left-[4.8vw] right-[4.8vw] top-[80vh] flex items-center gap-4 flex-wrap"
         >
           <span className="text-[11px] uppercase shrink-0" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
             {slide.poweredByLabel || 'Powered by the program'}
