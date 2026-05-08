@@ -3670,6 +3670,47 @@ export const slides = [
     ]
   },
   {
+    "id": 115,
+    "slug": "cabinet-harness-02-convergence",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-convergence",
+    "marker": "WHY NOW",
+    "kicker": "Two trends, one moment",
+    "parts": [
+      { "text": "In " },
+      { "text": "2026", "accent": true },
+      { "text": ", the model got " },
+      { "text": "smart enough", "accent": "blue" },
+      { "text": ".\nThe " },
+      { "text": "harness", "accent": true },
+      { "text": " arrived to put it to work." }
+    ],
+    "subhead": "Two parallel breakthroughs converged this year — and together they reshape how AI gets leveraged.",
+    "streams": [
+      {
+        "kicker": "STREAM 1 · CAPABILITY",
+        "title": "Models that reason, plan, and use tools.",
+        "body": "Frontier models crossed a threshold: they sustain multi-step work, hold long context, and call tools natively — not just chat.",
+        "examples": ["Claude Opus", "GPT-5 series"]
+      },
+      {
+        "kicker": "STREAM 2 · ARCHITECTURE",
+        "title": "Harnesses arrived off the shelf.",
+        "body": "Production scaffolding now ships from the major vendors — loop, tools, memory, permissions — ready to point at real work.",
+        "examples": ["Claude Code", "OpenAI Codex", "OpenCode"]
+      }
+    ],
+    "outcome": {
+      "label": "PARADIGM SHIFT",
+      "headline": "AI moves from answering questions to doing the work."
+    },
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
     "id": 116,
     "slug": "cabinet-harness-03-question",
     "type": "content",
@@ -3697,28 +3738,8 @@ export const slides = [
         "body": "A harness wraps models with context, tools, permissions, memory, and a loop so it can act on real work."
       }
     ],
-    "bottomLine": "Same underlying model class. Different operating environment.",
-    "audiences": [
-      "cabinet-may-2026"
-    ]
-  },
-  {
-    "id": 117,
-    "slug": "cabinet-harness-04-model-to-agent",
-    "type": "content",
-    "content": [],
-    "layout": "harness-definition",
-    "variant": "harness-definition-core",
-    "marker": "THE SHIFT",
-    "mode": "wrapped",
-    "parts": [
-      { "text": "A harness turns a model from an " },
-      { "text": "answerer", "accent": true },
-      { "text": " into a " },
-      { "text": "worker", "accent": "blue" },
-      { "text": "." }
-    ],
-    "subhead": "The model is still the brain. The harness gives it a loop, tools, state, and permission boundaries.",
+    "bottomLineLabel": "THE ANSWER",
+    "bottomLine": "Same model inside both. The harness is everything around it.",
     "audiences": [
       "cabinet-may-2026"
     ]
@@ -3731,6 +3752,7 @@ export const slides = [
     "layout": "harness-definition",
     "variant": "harness-definition-equation",
     "marker": "DEFINITION",
+    "kicker": "Three pieces, one outcome",
     "parts": [
       { "text": "A harness is the " },
       { "text": "fixed architecture", "accent": true },
@@ -3748,7 +3770,8 @@ export const slides = [
         "word": "engine",
         "icon": "model",
         "color": "#3f4139",
-        "wordColor": "#be634d"
+        "wordColor": "#be634d",
+        "chips": ["reasons", "plans", "long context", "calls tools"]
       },
       {
         "title": "Harness",
@@ -3756,18 +3779,22 @@ export const slides = [
         "word": "car",
         "icon": "harness",
         "color": "#d47a5f",
-        "wordColor": "#be634d"
+        "wordColor": "#be634d",
+        "chips": ["loop", "tools", "memory", "permissions"]
       },
       {
         "title": "Together",
-        "kicker": "they make an",
-        "word": "agent",
+        "kicker": "they make",
+        "word": "a product",
         "icon": "agent",
         "result": true,
         "color": "#d47a5f",
-        "wordColor": "#0d5f93"
+        "wordColor": "#0d5f93",
+        "chips": ["a slide deck", "an n8n workflow", "a small app", "an automation"]
       }
     ],
+    "bottomLineLabel": "THE EQUATION",
+    "bottomLine": "Set the goal once. The agent runs the loop until the work is done.",
     "audiences": [
       "cabinet-may-2026"
     ]
@@ -3789,48 +3816,41 @@ export const slides = [
       { "text": " are already here." }
     ],
     "subhead": "They show up as command-line tools, desktop apps, and editor surfaces that can work with files, commands, and systems on your computer.",
-    "toolboxTakeaway": {
-      "title": "You provide the goal. The harness handles the rest.",
-      "body": "That is the management shift: set direction, then evaluate the artifact and the judgment behind it."
-    },
     "vendors": [
       {
         "name": "Claude Code",
-        "year": "2024",
         "color": "#d88465",
         "logoUrl": "https://cdn.simpleicons.org/anthropic/d88465",
-        "surface": "terminal · IDE · desktop",
-        "capability": "Works from the command line and can use developer tools and MCP servers."
+        "surface": "terminal · IDE · desktop · web",
+        "origin": "Feb 2025 — terminal-only research preview from Anthropic.",
+        "now": "Multi-agent platform with sub-agents, MCP servers, skills, auto-mode. 5.5× revenue growth in one year; viral with non-programmers."
       },
       {
         "name": "Codex",
-        "year": "2025",
         "color": "#333333",
         "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg",
-        "surface": "CLI · desktop app",
-        "capability": "Reads, edits, and runs code locally with approval controls."
+        "surface": "CLI · desktop · cloud",
+        "origin": "April 2025 — open-source Rust CLI (relaunch; original Codex API closed in 2023).",
+        "now": "3M+ weekly developers, GPT-5.4 family, parallel-agent desktop app, expanding into general enterprise work."
       },
       {
         "name": "Cursor",
-        "year": "2023",
         "color": "#111111",
         "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/42/Cursor_logo.svg",
-        "surface": "editor · CLI",
-        "capability": "Brings agentic editing and terminal actions into the code editor workflow."
+        "surface": "editor · CLI · background agents",
+        "origin": "March 2023 — VS Code fork with AI autocomplete, built by MIT students.",
+        "now": "$29B valuation, $2B+ ARR. Market-leading agentic IDE with composer mode and background agents."
       },
       {
         "name": "OpenCode",
-        "year": "2026",
         "color": "#111111",
         "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/opencode-wordmark-light.svg",
         "surface": "terminal · IDE · desktop",
-        "capability": "Open source agent that runs in local developer surfaces with model choice."
+        "powersBadge": "POWERS ONYX CRAFT",
+        "origin": "Open-source, community-built. Privacy-first — no code or context stored.",
+        "now": "150K GitHub stars, 6.5M monthly developers, 75+ supported models (Claude, GPT, Gemini, local).",
+        "highlight": "Open source — UCSD can shape the scaffolding ourselves. It's also the engine inside Onyx Craft (onyx.app), which lets non-developers build apps, docs, and decks from campus knowledge."
       }
-    ],
-    "localSurfaces": [
-      { "label": "CLI", "note": "runs commands" },
-      { "label": "Desktop app", "note": "manages local work" },
-      { "label": "Editor", "note": "edits files in context" }
     ],
     "audiences": [
       "cabinet-may-2026"
@@ -3843,52 +3863,49 @@ export const slides = [
     "content": [],
     "layout": "harness-definition",
     "variant": "harness-components-framework",
-    "marker": "ANATOMY",
+    "marker": "ARCHITECTURE",
     "parts": [
-      { "text": "A harness has " },
+      { "text": "Inside the harness: " },
       { "text": "four jobs", "accent": true },
       { "text": "." }
     ],
-    "subhead": "Each one solves a problem the model alone cannot. Here is what each job is for, and what would go wrong without it.",
-    "leftKicker": "The shape",
-    "leftTitle": "The model is only one part.",
-    "leftBody": "A harness is the working environment around the model: a loop to keep going, the context to know what matters, the tools to touch real systems, and the ability to split big work.",
+    "subhead": "Each piece does work the model alone cannot. The next four slides go deeper on each.",
     "components": [
       {
         "kicker": "Loop",
         "title": "How does it keep going?",
-        "icon": "pipeline",
+        "visual": "loop",
         "color": "#d47a5f",
-        "body": "The harness does not stop after one answer. It acts, checks the result, adjusts, and continues until the work is finished or a limit is reached.",
-        "question": "Why this matters: without this, the model gives one answer and stops — it cannot do work.",
+        "body": "Act → observe → adjust → repeat. Until the work is done or a control stops it.",
+        "question": "Without it: the model gives one answer and stops — it cannot do real work.",
         "examples": ["while loop", "observe", "adjust"]
       },
       {
         "kicker": "Context",
         "title": "What does it know?",
-        "icon": "library",
+        "visual": "context",
         "color": "#0d5f93",
-        "body": "The harness decides which files, messages, instructions, summaries, and prior results stay in view while the work is happening.",
-        "question": "Why this matters: without this, the model forgets what it is working on as soon as the page turns.",
-        "examples": ["context management", "system prompt", "session persistence"]
+        "body": "The harness decides which files, instructions, memory, and prior results stay in view while the work happens.",
+        "question": "Without it: the model forgets what it's working on as soon as the page turns.",
+        "examples": ["context window", "system prompt", "session persistence"]
       },
       {
         "kicker": "Action",
         "title": "What can it touch?",
-        "icon": "mcp",
+        "visual": "action",
         "color": "#be634d",
-        "body": "The harness gives the agent tools, reusable skills, campus-specific hooks, and permission boundaries for real systems.",
+        "body": "Tools, skills, hooks, and permission boundaries — the only things the agent can actually reach into.",
         "highlight": true,
-        "question": "Why this matters: without this, the model can only talk about the work, not actually do it.",
-        "examples": ["skills & tools", "built-in skills", "lifecycle hooks", "permissions"]
+        "question": "Without it: the model can only talk about the work, not produce a deliverable.",
+        "examples": ["skills & tools", "lifecycle hooks", "permissions"]
       },
       {
         "kicker": "Scale",
         "title": "When should work split?",
-        "icon": "builder",
+        "visual": "scale",
         "color": "#6f9363",
-        "body": "For bigger jobs, the harness can separate planning, building, and verification into focused sessions and collect the result.",
-        "question": "Why this matters: without this, big jobs collapse under their own weight in one long run.",
+        "body": "For bigger jobs, planning, building, and verification can run as separate focused sub-agents.",
+        "question": "Without it: big jobs collapse under their own weight in one long run.",
         "examples": ["sub-agents", "planning", "verification"]
       }
     ],
@@ -3910,121 +3927,40 @@ export const slides = [
       { "text": "agentic", "accent": true },
       { "text": "." }
     ],
-    "subhead": "A chat app answers once. A harness keeps acting, observing, and adjusting until the work is done or a control stops it.",
-    "audiences": [
-      "cabinet-may-2026"
-    ]
-  },
-  {
-    "id": 122.1,
-    "slug": "cabinet-harness-08d-context-instruction-memory",
-    "type": "content",
-    "content": [],
-    "layout": "harness-definition",
-    "variant": "harness-framework-cards",
-    "marker": "CONTEXT · know what matters",
-    "spineActive": "context",
-    "parts": [
-      { "text": "Working memory shapes the agent's " },
-      { "text": "judgment", "accent": true },
-      { "text": "." }
-    ],
-    "subhead": "These are the parts that shape judgment: what enters the run, what instructions govern it, and what state persists across the work.",
-    "gridColumns": 3,
-    "columns": [
-      { "kicker": "What enters the run", "title": "context management", "icon": "library", "color": "#0d5f93", "fill": "#e5f0f2", "body": "Controls which messages, files, tool results, and campus knowledge stay available as the run grows." },
-      { "kicker": "What governs the run", "title": "system prompt assembly", "icon": "api", "color": "#be634d", "fill": "#fff5ee", "body": "Combines institutional rules, project instructions, audience needs, and task-specific constraints." },
-      { "kicker": "What persists across runs", "title": "session persistence", "icon": "observe", "color": "#6f9363", "fill": "#f6f8ee", "body": "Preserves state, logs, summaries, and work products so the agent can resume and reviewers can inspect the path." }
-    ],
-    "steps": [
-      { "title": "Keep", "body": "recent detail and active files" },
-      { "title": "Summarize", "body": "older context into durable memory" },
-      { "title": "Apply", "body": "rules and standards every loop" }
+    "subhead": "A chat app answers once. A harness keeps acting, observing, and adjusting until the work is done.",
+    "scenarioGoal": "Draft this week's Cabinet briefing on system status.",
+    "iterations": [
+      {
+        "act": "pull this week's ServiceNow major incidents",
+        "observe": "4 P1 events — one with campus-wide impact",
+        "adjust": "lead the briefing with the campus-wide event"
+      },
+      {
+        "act": "add the ESR program update from Activity Hubs",
+        "observe": "2 milestones hit; 1 slipping its target",
+        "adjust": "include the slip and the recovery plan"
+      },
+      {
+        "act": "format as a 1-page Cabinet packet",
+        "observe": "concise; action items are visible",
+        "adjust": "ready for distribution"
+      }
     ],
     "audiences": [
       "cabinet-may-2026"
     ]
   },
   {
-    "id": 122.2,
-    "slug": "cabinet-harness-08e-tools-hooks-safety",
-    "type": "content",
-    "content": [],
-    "layout": "harness-definition",
-    "variant": "harness-framework-cards",
-    "marker": "ACTION · touch real systems",
-    "spineActive": "action",
-    "parts": [
-      { "text": "Tools and controls make action " },
-      { "text": "safe", "accent": true },
-      { "text": " and repeatable." }
-    ],
-    "subhead": "These are the parts that make agentic work operational: approved actions, reusable patterns, campus hooks, and boundaries.",
-    "gridColumns": 4,
-    "columns": [
-      { "kicker": "What it can do", "title": "skills & tools", "icon": "builder", "color": "#d47a5f", "fill": "#fff8f2", "body": "Gives the agent specific workflows and safe actions it can perform on real files and systems." },
-      { "kicker": "What it can reuse", "title": "built-in skills", "icon": "library", "color": "#6f9363", "fill": "#f6f8ee", "body": "Packages repeatable campus patterns so teams do not rebuild the same instructions and workflows." },
-      { "kicker": "What gates each step", "title": "lifecycle hooks", "icon": "mcp", "color": "#0d5f93", "fill": "#e5f0f2", "body": "Insert UC San Diego checks, identity, logging, data handling, and approvals before or after key steps." },
-      { "kicker": "What it cannot touch", "title": "permissions & safety", "icon": "observe", "color": "#be634d", "fill": "#fff5ee", "body": "Enforces approval gates, boundaries, and accountability for actions that touch campus systems." }
-    ],
-    "steps": [
-      { "title": "Approve", "body": "which tools can run" },
-      { "title": "Observe", "body": "what happened and why" },
-      { "title": "Govern", "body": "P1-P3 boundaries and controls" },
-      { "title": "Reuse", "body": "patterns other teams can adopt" }
-    ],
-    "audiences": [
-      "cabinet-may-2026"
-    ]
-  },
-  {
-    "id": 122.3,
-    "slug": "cabinet-harness-09-loop-context-tools",
-    "type": "content",
-    "content": [],
-    "layout": "harness-definition",
-    "variant": "harness-skills-tools",
-    "marker": "ACTION · what the harness exposes",
-    "spineActive": "action",
-    "aliases": [
-      "cabinet-harness-05-03-skills-tools",
-      "cabinet-harness-05-07-system-prompt"
-    ],
-    "parts": [
-      { "text": "Context and tools make the output " },
-      { "text": "real", "accent": true },
-      { "text": "." }
-    ],
-    "subhead": "The system prompt and project context tell the model how to work; the tools let it act on real files and systems — under permission boundaries that govern what it may touch.",
-    "skillsLabel": "Context · what the model is given",
-    "skills": [
-      { "name": "system_prompt", "note": "rules" },
-      { "name": "project_files", "note": "context" },
-      { "name": "session_state", "note": "memory" }
-    ],
-    "toolsLabel": "Action · what the model can do (and not)",
-    "tools": [
-      { "name": "read_file", "note": "file ops" },
-      { "name": "edit_file", "note": "file ops" },
-      { "name": "search", "note": "knowledge" },
-      { "name": "run_check", "note": "verify" },
-      { "name": "permissions", "note": "boundary" }
-    ],
-    "audiences": [
-      "cabinet-may-2026"
-    ]
-  },
-  {
-    "id": 122.5,
+    "id": 122.15,
     "slug": "cabinet-harness-09b-context-management",
     "type": "content",
     "content": [],
     "layout": "harness-definition",
     "variant": "harness-context",
-    "marker": "CONTEXT · in practice",
+    "marker": "CONTEXT · know what matters",
     "spineActive": "context",
-    "title": "Context management",
-    "subtitle": "what to keep · what to summarize · what to drop",
+    "title": "Context shapes the agent's judgment.",
+    "subtitle": "What enters the run · what governs it · what persists across runs.",
     "activeBudget": "520,000",
     "peakBudget": "780,000",
     "budgetTotal": "1,000,000 tokens",
@@ -4053,20 +3989,78 @@ export const slides = [
     ]
   },
   {
+    "id": 122.2,
+    "slug": "cabinet-harness-08e-tools-hooks-safety",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-action",
+    "marker": "ACTION · touch real systems",
+    "spineActive": "action",
+    "parts": [
+      { "text": "Every tool call passes through " },
+      { "text": "guardrails", "accent": true },
+      { "text": "." }
+    ],
+    "subhead": "Every step the loop takes has to touch a real system. ACTION is the gate that approves it, scopes it, and writes it to the audit trail before anything happens.",
+    "pipeline": [
+      { "label": "Agent intent", "sub": "what it wants to do", "color": "#0d5f93" },
+      { "label": "Pre-hook", "sub": "identity · scope · policy", "color": "#d47a5f" },
+      { "label": "Tool call", "sub": "the actual work", "color": "#6f9363" },
+      { "label": "Post-hook", "sub": "log · audit · verify", "color": "#be634d" }
+    ],
+    "traceGoal": "Send this week's Cabinet briefing to the Cabinet distribution list.",
+    "traceSteps": [
+      { "stage": "Agent intent", "detail": "send_email(to=cabinet@ucsd.edu, attach=briefing.pdf)" },
+      { "stage": "Pre-hook", "detail": "OCC sender? · list approved? · Chancellor signed off?" },
+      { "stage": "Tool call", "detail": "M365 send · attaches PDF · returns delivery receipt" },
+      { "stage": "Post-hook", "detail": "audit log entry · receipt filed · weekly compliance report" }
+    ],
+    "toolTiers": [
+      {
+        "label": "READ",
+        "tagline": "Auto-allow",
+        "color": "#6f9363",
+        "fill": "#f6f8ee",
+        "tools": ["read_file", "search", "browse"]
+      },
+      {
+        "label": "WRITE",
+        "tagline": "Approval required",
+        "color": "#d47a5f",
+        "fill": "#fff8f2",
+        "tools": ["edit_file", "commit", "send_email"]
+      },
+      {
+        "label": "EXTERNAL",
+        "tagline": "P3 approval",
+        "color": "#be634d",
+        "fill": "#fff5ee",
+        "tools": ["api_call", "deploy", "wire_money"]
+      }
+    ],
+    "bottomLineLabel": "WHY THIS MATTERS",
+    "bottomLine": "Without ACTION guardrails, an agent can talk about the work but not produce a deliverable. With them, every step the loop takes is approved, scoped, and audited before it touches real systems.",
+    "audiences": [
+      "cabinet-may-2026"
+    ]
+  },
+  {
     "id": 123,
     "slug": "cabinet-harness-10-subagents",
     "type": "content",
     "content": [],
     "layout": "harness-definition",
     "variant": "harness-subagents",
-    "marker": "SCALING WORK",
+    "marker": "SCALE · split the work",
+    "spineActive": "scale",
     "aliases": [
       "cabinet-harness-05-04-sub-agents"
     ],
     "parts": [
       { "text": "Bigger tasks can be " },
       { "text": "split", "accent": true },
-      { "text": "." }
+      { "text": " across sub-agents." }
     ],
     "subhead": "Planning, drafting, and verification can run separately, then roll back up into one coherent result.",
     "agents": [
@@ -4112,60 +4106,55 @@ export const slides = [
     "type": "content",
     "content": [],
     "layout": "harness-definition",
-    "variant": "harness-ucsd",
+    "variant": "harness-data-unlock",
     "marker": "UCSD PATH",
     "parts": [
-      { "text": "Make the safe path " },
-      { "text": "useful", "accent": true },
+      { "text": "The unlock is the " },
+      { "text": "data ecosystem", "accent": true },
       { "text": "." }
     ],
-    "subhead": "The point is not one harness. It is UCSD-specific hooks that make the common harnesses useful, supportable, and aligned to our standards.",
-    "centerTitle": "UCSD hook layer",
-    "centerSubtitle": "standards inserted into the run",
-    "harnessKicker": "Harness surfaces",
-    "harnesses": [
-      { "name": "Claude Code", "note": "supported hooks" },
-      { "name": "Codex", "note": "supported hooks" },
-      { "name": "Cursor", "note": "editor surface" },
-      { "name": "OpenCode", "note": "open source", "highlight": true }
+    "subhead": "Harnesses are only as useful as the data they can safely reach. MCP standardizes the connection — governance makes it operational.",
+    "harnesses": ["Claude Code", "Codex", "Cursor", "OpenCode"],
+    "priorityHeading": "Your personal context",
+    "prioritySystems": [
+      { "name": "Microsoft Graph" },
+      { "name": "Google Workspace" },
+      { "name": "Confluence" },
+      { "name": "Campus Resources" },
+      { "name": "Zoom meeting transcripts / AI summaries" }
     ],
-    "left": [
-      { "kicker": "Hooks", "title": "Campus standards", "body": "Insert identity, logging, data handling, approvals, and operational checks into the harness lifecycle." },
-      { "kicker": "Systems", "title": "UCSD technologies", "body": "Connect email, calendar, Confluence, ServiceNow, Drive, and campus APIs through governed patterns." }
+    "alsoHeading": "Plus the campus enterprise data sources you have access to",
+    "alsoSystems": [
+      "ServiceNow",
+      "Activity Hubs",
+      "Kuali Research",
+      "Kuali Build",
+      "Oracle FIS",
+      "UCPath",
+      "Concur",
+      "DocuSign",
+      "OnBase",
+      "Canvas",
+      "Slate",
+      "Interfolio",
+      "Kaltura",
+      "Splunk",
+      "Blackbaud CRM",
+      "Tririga",
+      "EcoTime",
+      "Library Apps",
+      "+ 150 more across the campus catalog"
     ],
-    "right": [
-      { "kicker": "Commercial", "title": "Major harnesses", "body": "Claude Code, Codex, and Cursor can use templates, MCP connectors, and approval patterns where their surfaces allow." },
-      { "kicker": "Open source", "title": "OpenCode can go deeper", "body": "Because it is customizable, we can tune the harness around local and commercial models, UCSD workflows, and support needs.", "highlight": true }
+    "governance": [
+      { "label": "SSO + MFA", "note": "Campus IdP via SAML / OIDC + Duo" },
+      { "label": "Delegated OAuth 2.1", "note": "Agent acts on the user's behalf — never as itself" },
+      { "label": "Scoped tokens", "note": "Per-system, least-privilege, short-lived" },
+      { "label": "Audit log", "note": "Every tool call: user · agent · scope · timestamp" },
+      { "label": "Approval gates", "note": "Human-in-the-loop on writes & P1 data" }
     ],
-    "audiences": [
-      "cabinet-may-2026"
-    ]
-  },
-  {
-    "id": 124.2,
-    "slug": "cabinet-harness-11b-tritonai-tools-hub",
-    "type": "content",
-    "content": [],
-    "layout": "harness-definition",
-    "variant": "harness-framework-cards",
-    "marker": "TRITONAI",
-    "aliases": [
-      "from-tritongpt-to-tritonai"
-    ],
-    "parts": [
-      { "text": "TritonGPT becomes the " },
-      { "text": "TritonAI tools hub", "accent": true },
-      { "text": "." }
-    ],
-    "subhead": "The campus platform is the local harness layer: builders get governed ways to create, connect, monitor, and reuse agentic work.",
-    "columns": [
-      { "kicker": "Build", "title": "Agent Builder", "icon": "builder", "color": "#d47a5f", "fill": "#fff8f2", "body": "Low-code workflow automation for units that need practical agents without waiting in a central queue." },
-      { "kicker": "Reuse", "title": "Skills Library", "icon": "library", "color": "#6f9363", "fill": "#f6f8ee", "body": "Reusable instructions and workflow packages for common campus tasks." },
-      { "kicker": "Connect", "title": "MCP Server Hub", "icon": "mcp", "color": "#0d5f93", "fill": "#e5f0f2", "body": "Shared connectors that expose campus systems and data sources safely." },
-      { "kicker": "Extend", "title": "Developer APIs", "icon": "api", "color": "#805a9c", "fill": "#f4eef8", "body": "Reference patterns and model access for technical teams building custom services." },
-      { "kicker": "Operate", "title": "Observability", "icon": "observe", "color": "#be634d", "fill": "#fff5ee", "body": "Run traces, tool calls, latency, errors, and accountability for agent behavior." },
-      { "kicker": "Package", "title": "Tools Pipeline", "icon": "pipeline", "color": "#6a7178", "fill": "#f3f4f5", "body": "Turnkey services such as transcription, captioning, summarization, accessibility, and OCR." }
-    ],
+    "tiersFooter": "Personal first. Team next. Department and campus aggregations follow — each tier wrapped in its own governance layer.",
+    "bottomLineLabel": "WHAT WE OWE TO MAKE THIS WORK",
+    "bottomLine": "MCP-enabled access to real campus systems with governance and security. That's what turns a frontier harness into a UCSD-ready agent.",
     "audiences": [
       "cabinet-may-2026"
     ]
@@ -4256,49 +4245,55 @@ export const slides = [
       { "text": "hosting lane", "accent": true },
       { "text": "." }
     ],
-    "subhead": "The rubric should reward shipped work, but shipped work still needs intake, review, deployment, operation, and promotion paths.",
-    "hostingTitle": "Campus App Hosting",
-    "hostingSubtitle": "Tiered intake from citizen apps to enterprise -- with governance gates at every level",
-    "hostingSteps": [
-      { "title": "Apply", "icon": "template", "body": "Submit department sponsor, technical POC, audience, and data classification", "color": "#0076a8" },
-      { "title": "Prototype", "icon": "code", "body": "Build locally with Claude Code, Codex, or curated ITS templates via the TritonAI Developer API", "color": "#0076a8" },
-      { "title": "Review", "icon": "builder", "body": "Automated checks plus guided ITS review of data sensitivity, restricted APIs, and stack fit", "color": "#11c5d6" },
-      { "title": "Deploy", "icon": "gateway", "body": "Campus-only hosting with SSO, logging, and network controls on campus or VPN", "color": "#ffc928" },
-      { "title": "Operate", "icon": "pipeline", "body": "Department supports the app; ITS manages platform health and may remove non-compliant apps", "color": "#ff8500" },
-      { "title": "Promote", "icon": "observe", "body": "High-value apps graduate to enterprise support; unsupported apps are retired", "color": "#6f9363" }
-    ],
-    "hostingLanes": [
+    "subhead": "Tiered intake for agentic builds — from individual desktops to enterprise. Volume drops as governance increases.",
+    "hostingTiers": [
       {
-        "title": "Citizen Apps",
-        "volume": "~200/yr",
+        "tierLabel": "Tier 0",
+        "users": "Individual Users",
+        "volume": "~1000+/y",
+        "color": "#4f7f38",
+        "softColor": "#c8dac1",
+        "fill": "#eef6ea",
+        "process": "Citizen-Initiated Development",
+        "deploymentLabel": "User Desktop / Laptop",
+        "tools": ["Claude Code", "Codex", "Onyx Craft + OpenCode", "Campus Jupyter + OpenCode"]
+      },
+      {
+        "tierLabel": "Tier 1",
+        "users": "Scattered Users",
+        "volume": "~200/y",
+        "color": "#0076a8",
+        "softColor": "#b9d4e6",
+        "fill": "#e7f0f7",
         "review": "Citizen App Risk / Scope Review",
         "deployment": "Citizen-Curated Deployment",
         "domain": "*.apps.ucsd.edu",
-        "recurring": "Recurring Risk / Scope Review",
-        "color": "#4f7f38",
-        "softColor": "#c8dac1",
-        "fill": "#eef6ea"
+        "recurring": "Recurring Risk / Scope Review"
       },
       {
-        "title": "TritonAI Rapid Dev",
-        "volume": "~20/yr",
-        "review": "TritonAI Tools & Rapid Dev",
-        "deployment": "TritonAI Dev",
-        "domain": "*.tritonai.ucsd.edu",
-        "recurring": "Recurring Risk / Scope Review",
+        "tierLabel": "Tier 2",
+        "users": "Many Users",
+        "volume": "~20/y",
         "color": "#009cad",
         "softColor": "#b9e0e5",
-        "fill": "#e6f6f8"
+        "fill": "#e6f6f8",
+        "review": "TritonAI Tools & Rapid Dev",
+        "deployments": [
+          { "name": "TritonAI Dev", "domain": "*.tritonai.ucsd.edu" },
+          { "name": "Rapid ITS Dev", "domain": "*.ucsd.edu" }
+        ],
+        "recurring": "Recurring Risk / Scope Review"
       },
       {
-        "title": "Enterprise",
-        "volume": "~1-5/yr",
+        "tierLabel": "Tier 3",
+        "users": "Campus-Wide Usage",
+        "volume": "~1-5/y",
+        "color": "#00629b",
+        "softColor": "#9eb9d6",
+        "fill": "#dfeaf3",
         "review": "Enterprise Architecture / Dev",
         "deployment": "Traditional Enterprise Dev / Deployment",
-        "domain": "iPaaS Patterns",
-        "color": "#00629b",
-        "softColor": "#b9d4e6",
-        "fill": "#e7f0f7"
+        "domain": "iPaaS Patterns"
       }
     ],
     "audiences": [
@@ -4312,37 +4307,67 @@ export const slides = [
     "content": [],
     "layout": "harness-definition",
     "variant": "harness-recap",
-    "marker": "EXPECTATION",
+    "marker": "PERFORMANCE REVIEW",
     "aliases": [
       "cabinet-harness-06-recap",
       "cabinet-harness-12-action-plan"
     ],
     "parts": [
-      { "text": "What we " },
-      { "text": "expect", "accent": true },
-      { "text": " from staff now." }
+      { "text": "ITS now evaluates staff on " },
+      { "text": "agentic AI adoption", "accent": true },
+      { "text": "." }
     ],
-    "subhead": "UC San Diego is putting supported harnesses, shared context, MCP servers, OAuth-backed APIs, Developer API access, and a hosting path in staff hands. The expectation is better work, not better demos.",
-    "practice": [
-      { "kicker": "01", "title": "Pick" },
-      { "kicker": "02", "title": "Build" },
-      { "kicker": "03", "title": "Share" }
+    "subhead": "A single 5-point scale. Reliability and stewardship are folded into the anchors — to score above a 3, work must be operationally sound and respect P1–P3 controls.",
+    "dimensionsHeading": "Four dimensions inside every score",
+    "dimensions": [
+      { "label": "Scope", "expectation": "one real workflow", "color": "#0d5f93" },
+      { "label": "Path", "expectation": "use the program", "color": "#d47a5f" },
+      { "label": "Delivery", "expectation": "make it supportable", "color": "#be634d" },
+      { "label": "Scale", "expectation": "raise the bar", "color": "#6f9363" }
     ],
-    "summaryColumns": 4,
-    "summaryCards": [
-      { "label": "Scope", "title": "Choose real work", "body": "Start with one recurring workflow, decision point, or manual process where better context, automation, or system access would create visible value.", "expectation": "one real workflow" },
-      { "label": "Path", "title": "Use the supported stack", "body": "Work through approved harnesses, TritonAI resources, shared skills, MCP servers, and OAuth-backed APIs instead of inventing an isolated one-off approach.", "expectation": "use the program", "highlight": true, "chipDark": true },
-      { "label": "Delivery", "title": "Ship something governable", "body": "If a solution touches systems or data, it should be inspectable, documented, logged, monitored, and aligned to approvals and P1-P3 boundaries.", "expectation": "make it supportable", "chipDark": true },
-      { "label": "Scale", "title": "Share what works", "body": "When a pattern succeeds, package it so another staff member, team, or unit can reuse it instead of starting from scratch.", "expectation": "raise the bar", "chipDark": true }
+    "rubric": [
+      {
+        "score": 1,
+        "label": "Action required",
+        "color": "#a04848",
+        "fill": "#fbeded",
+        "anchor": "**Avoids the harnesses** (browser chat doesn't count), **pattern of refusal**, or has shipped automations that created **reliability or compliance issues**."
+      },
+      {
+        "score": 2,
+        "label": "Developing",
+        "color": "#a89878",
+        "fill": "#f5f0e6",
+        "anchor": "Aware of the tools and **has tried them**, but **hasn't produced** a harness-built artifact meeting the **reliability and stewardship bar**."
+      },
+      {
+        "score": 3,
+        "label": "Practitioner",
+        "kicker": "Expected baseline",
+        "color": "#d47a5f",
+        "fill": "#fff8f2",
+        "highlight": true,
+        "anchor": "**Uses an AI harness routinely.** Has produced **at least one tangible artifact** (document, presentation, small tool, automation) with **concrete time savings** — documented and within **data-classification boundaries**."
+      },
+      {
+        "score": 4,
+        "label": "Active automator",
+        "color": "#83a06f",
+        "fill": "#f0f5e9",
+        "anchor": "**Owns 2+ harness-produced artifacts** that materially reduced toil — **at least one reusable** by teammates. Documented, monitored, compliant. **Shares patterns with peers.**"
+      },
+      {
+        "score": 5,
+        "label": "Force multiplier",
+        "color": "#5d8350",
+        "fill": "#e8f1e1",
+        "anchor": "**Builds harness-produced workflows or tools that other teams adopt.** Demonstrably reliable, monitored, documented. **Mentors others** on harness selection and agent patterns."
+      }
     ],
-    "expectationKicker": "Program expectation",
-    "expectationTitle": "Use these capabilities to improve one real workflow.",
-    "expectations": [
-      "Pick one recurring task, service interaction, or decision workflow where better context, automation, or system access would create visible value.",
-      "Start with the supported path: approved harnesses, TritonAI resources, MCP connectors, OAuth-backed APIs, and hosting where needed.",
-      "Make the result inspectable and supportable with identity, approvals, logging, monitoring, documentation, and P1-P3 boundaries.",
-      "Measure success by operational value, then turn what works into a reusable pattern another team can adopt."
-    ],
+    "bottomLineLabel": "WHAT THIS MEANS",
+    "bottomLine": "These five levels show up in every IT Services performance conversation. UCSD provides the platform; staff are expected to use it on real work.",
+    "poweredByLabel": "Backed by the program we just walked through",
+    "poweredBy": ["Claude Code", "Codex", "Cursor", "OpenCode", "TritonAI", "MCP gateway", "Activity Hubs", "Campus App Hosting"],
     "audiences": [
       "cabinet-may-2026"
     ]

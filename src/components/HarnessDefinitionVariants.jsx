@@ -317,72 +317,122 @@ const Pill = ({ children, delay = 0.4, tone = 'coral' }) => (
 const HarnessQuestionVariant = ({ slide }) => (
   <Shell>
     <Marker>{slide.marker}</Marker>
-    <motion.div {...fade(0.18)} className="absolute left-[4.8vw] top-[18vh] text-[13px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em' }}>
+    <motion.div {...fade(0.18)} className="absolute left-[4.8vw] top-[8vh] text-[13px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em' }}>
       {slide.kicker}
     </motion.div>
-    <h1 className="absolute left-[4.8vw] right-[4.8vw] top-[23vh] leading-[0.95]" style={{ fontSize: 'clamp(54px, 6.2vw, 100px)', fontWeight: 520 }}>
+    <h1 className="absolute left-[4.8vw] right-[4.8vw] top-[13vh] leading-[0.95]" style={{ fontSize: 'clamp(54px, 6.2vw, 100px)', fontWeight: 520 }}>
       <PartText parts={slide.parts} delay={0.25} />
     </h1>
     {(slide.contextCards || []).length > 0 && (
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[43.8vh] grid max-w-[1180px] grid-cols-2 gap-5">
+      <motion.div
+        {...fade(0.62)}
+        className="absolute left-[4.8vw] top-[26vh] flex items-center gap-3"
+      >
+        <span
+          className="flex h-[26px] w-[26px] items-center justify-center rounded-full border"
+          style={{ borderColor: T.muted, color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 17, fontWeight: 520 }}
+        >
+          M
+        </span>
+        <span
+          className="text-[11px] uppercase"
+          style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 700 }}
+        >
+          = the LLM &middot; the same model sits inside both
+        </span>
+      </motion.div>
+    )}
+    {(slide.contextCards || []).length > 0 && (
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[31vh] grid grid-cols-2 gap-8">
         {slide.contextCards.map((card, index) => (
-          <Card key={card.title} delay={0.74 + index * 0.1} className="p-4" style={index === 1 ? { background: '#fff8f2', borderColor: T.coralPale } : undefined}>
+          <Card key={card.title} delay={0.74 + index * 0.1} className="p-7" style={index === 1 ? { background: '#fff8f2', borderColor: T.coralPale } : undefined}>
             <div className="flex items-start justify-between gap-4">
               <div>
-                <Kicker>{card.kicker}</Kicker>
-                <div className="mt-2" style={{ fontSize: 29, lineHeight: 1.02, fontWeight: 620 }}>
+                <Kicker className="text-[14px]">{card.kicker}</Kicker>
+                <div className="mt-3" style={{ fontSize: 36, lineHeight: 1.04, fontWeight: 620 }}>
                   {card.title}
                 </div>
               </div>
               {index === 0 ? (
-                <div className="flex items-center gap-2 pt-1" style={{ color: T.blue }}>
-                  <div className="rounded-[5px] border px-3 py-2 text-[11px]" style={{ borderColor: '#b9d3dc', background: T.bluePale, fontFamily: T.mono, fontWeight: 800 }}>PROMPT</div>
+                <div className="flex items-center gap-2 pt-1.5" style={{ color: T.blue }}>
+                  <div className="rounded-[5px] border px-3 py-2 text-[12px]" style={{ borderColor: '#b9d3dc', background: T.bluePale, fontFamily: T.mono, fontWeight: 800 }}>PROMPT</div>
                   <span style={{ color: '#9ab4c1' }}>→</span>
-                  <div className="rounded-full border px-3 py-2 text-[11px]" style={{ borderColor: '#b9d3dc', background: '#fff', fontFamily: T.mono, fontWeight: 800 }}>ANSWER</div>
+                  <div className="rounded-full border px-3 py-2 text-[12px]" style={{ borderColor: '#b9d3dc', background: '#fff', fontFamily: T.mono, fontWeight: 800 }}>ANSWER</div>
                 </div>
               ) : (
-                <div className="flex items-center gap-1 pt-1" style={{ color: T.coralDark, fontFamily: T.mono }}>
+                <div className="flex items-center gap-1.5 pt-1.5" style={{ color: T.coralDark, fontFamily: T.mono }}>
                   {['context', 'tools', 'loop'].map((label) => (
-                    <span key={label} className="rounded-full border px-2.5 py-1 text-[10px] uppercase" style={{ borderColor: T.coralPale, background: '#fff' }}>
+                    <span key={label} className="rounded-full border px-3 py-1.5 text-[11px] uppercase" style={{ borderColor: T.coralPale, background: '#fff' }}>
                       {label}
                     </span>
                   ))}
                 </div>
               )}
             </div>
-            <div className="mt-3">
+            <div className="mt-6">
               {index === 0 ? (
-                <div className="grid grid-cols-[1fr_74px_1fr] items-center gap-3">
-                  <div className="rounded-[7px] border px-4 py-2.5 text-center" style={{ borderColor: '#b9d3dc', background: T.bluePale, color: T.blue, fontFamily: T.mono, fontSize: 12, fontWeight: 800 }}>
+                <div className="grid grid-cols-[1fr_104px_1fr] items-center gap-4">
+                  <div className="rounded-[7px] border px-5 py-3.5 text-center" style={{ borderColor: '#b9d3dc', background: T.bluePale, color: T.blue, fontFamily: T.mono, fontSize: 14, fontWeight: 800 }}>
                     user asks
                   </div>
-                  <div className="flex h-[52px] w-[52px] items-center justify-center rounded-full border" style={{ borderColor: T.blue, color: T.blue, fontFamily: T.serif, fontStyle: 'italic', fontSize: 31 }}>M</div>
-                  <div className="rounded-[7px] border px-4 py-2.5 text-center" style={{ borderColor: '#b9d3dc', background: '#fff', color: T.blue, fontFamily: T.mono, fontSize: 12, fontWeight: 800 }}>
+                  <div className="flex h-[76px] w-[76px] items-center justify-center rounded-full border mx-auto" style={{ borderColor: T.blue, color: T.blue, fontFamily: T.serif, fontStyle: 'italic', fontSize: 44 }}>M</div>
+                  <div className="rounded-[7px] border px-5 py-3.5 text-center" style={{ borderColor: '#b9d3dc', background: '#fff', color: T.blue, fontFamily: T.mono, fontSize: 14, fontWeight: 800 }}>
                     answer returns
                   </div>
                 </div>
               ) : (
-                <div className="rounded-[9px] border px-4 py-2.5" style={{ borderColor: T.coralPale, background: '#fff' }}>
-                  <div className="grid grid-cols-[1fr_72px_1fr] items-center gap-3">
-                    <div className="space-y-2">
+                <div className="rounded-[9px] border px-5 py-4" style={{ borderColor: T.coralPale, background: '#fff' }}>
+                  <div className="grid grid-cols-[1fr_104px_1fr] items-center gap-4">
+                    <div className="space-y-2.5">
                       {['files', 'rules', 'memory'].map((label) => (
-                        <div key={label} className="rounded-[5px] border px-3 py-1.5 text-center text-[11px]" style={{ borderColor: T.faint, color: T.muted, fontFamily: T.mono, fontWeight: 800 }}>{label}</div>
+                        <div key={label} className="rounded-[5px] border px-3 py-2 text-center text-[12px]" style={{ borderColor: T.faint, color: T.muted, fontFamily: T.mono, fontWeight: 800 }}>{label}</div>
                       ))}
                     </div>
-                    <div className="relative flex h-[62px] w-[62px] items-center justify-center rounded-full border" style={{ borderColor: T.coral, color: T.coralDark, fontFamily: T.serif, fontStyle: 'italic', fontSize: 36 }}>
+                    <div className="relative flex h-[88px] w-[88px] items-center justify-center rounded-full border mx-auto" style={{ borderColor: T.coral, color: T.coralDark, fontFamily: T.serif, fontStyle: 'italic', fontSize: 52 }}>
                       M
-                      <span className="absolute bottom-[-7px] right-[-7px] rounded-full px-1.5 text-[10px]" style={{ background: T.coral, color: '#fff', fontFamily: T.mono, fontStyle: 'normal' }}>↺</span>
+                      <span className="absolute bottom-[-8px] right-[-8px] rounded-full px-2 py-0.5 text-[11px]" style={{ background: T.coral, color: '#fff', fontFamily: T.mono, fontStyle: 'normal' }}>↺</span>
                     </div>
-                    <div className="space-y-2">
+                    <div className="space-y-2.5">
                       {['read', 'edit', 'verify'].map((label) => (
-                        <div key={label} className="rounded-[5px] border px-3 py-1.5 text-center text-[11px]" style={{ borderColor: T.coralPale, color: T.coralDark, fontFamily: T.mono, fontWeight: 800 }}>{label}</div>
+                        <div key={label} className="rounded-[5px] border px-3 py-2 text-center text-[12px]" style={{ borderColor: T.coralPale, color: T.coralDark, fontFamily: T.mono, fontWeight: 800 }}>{label}</div>
                       ))}
                     </div>
                   </div>
                 </div>
               )}
             </div>
-            <div className="mt-3" style={{ color: T.muted, fontSize: 17, lineHeight: 1.18 }}>
+            {/* outcome row — what you actually get */}
+            <div className="mt-6 rounded-[7px] border-t pt-4" style={{ borderColor: index === 1 ? T.coralPale : '#d9e2e6' }}>
+              {index === 0 ? (
+                <div className="flex items-center gap-3">
+                  <span className="text-[10px] uppercase" style={{ color: '#7a96a4', fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 700 }}>You get</span>
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <span className="rounded-[14px] border px-3 py-1.5 text-[13px]" style={{ borderColor: '#b9d3dc', background: '#fff', color: T.blue, fontFamily: T.serif }}>
+                      &ldquo;Here&rsquo;s a summary&hellip;&rdquo;
+                    </span>
+                    <span className="text-[11px]" style={{ color: '#9ab4c1', fontFamily: T.mono, fontWeight: 700, letterSpacing: '0.18em' }}>
+                      ▣ END OF TURN
+                    </span>
+                  </div>
+                </div>
+              ) : (
+                <div className="flex items-center gap-3">
+                  <span className="text-[10px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 700 }}>You get</span>
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <span className="rounded-[5px] border px-2.5 py-1.5 text-[12px]" style={{ borderColor: T.coralPale, background: '#fff', color: T.coralDark, fontFamily: T.mono, fontWeight: 700 }}>
+                      📄 contract.docx
+                    </span>
+                    <span className="rounded-[5px] border px-2.5 py-1.5 text-[12px]" style={{ borderColor: T.coralPale, background: '#fff', color: T.coralDark, fontFamily: T.mono, fontWeight: 700 }}>
+                      ✓ routed for sign-off
+                    </span>
+                    <span className="rounded-[5px] border px-2.5 py-1.5 text-[12px]" style={{ borderColor: T.coralPale, background: '#fff', color: T.coralDark, fontFamily: T.mono, fontWeight: 700 }}>
+                      🗒 logged
+                    </span>
+                  </div>
+                </div>
+              )}
+            </div>
+            <div className="mt-5" style={{ color: T.muted, fontSize: 19.5, lineHeight: 1.28 }}>
               {card.body}
             </div>
           </Card>
@@ -390,8 +440,28 @@ const HarnessQuestionVariant = ({ slide }) => (
       </div>
     )}
     {slide.bottomLine && (
-      <motion.div {...fade(1.0)} className="absolute left-[4.8vw] top-[86.5vh] italic" style={{ color: T.muted, fontSize: 20 }}>
-        {slide.bottomLine}
+      <motion.div
+        {...fade(1.0)}
+        className="absolute left-[4.8vw] right-[4.8vw] top-[82vh] flex items-center gap-5"
+      >
+        {slide.bottomLineLabel && (
+          <span
+            className="rounded-[5px] px-3 py-2 text-[12px]"
+            style={{
+              background: T.coral,
+              color: '#fff',
+              fontFamily: T.mono,
+              fontWeight: 800,
+              letterSpacing: '0.22em',
+              whiteSpace: 'nowrap'
+            }}
+          >
+            {slide.bottomLineLabel}
+          </span>
+        )}
+        <div style={{ fontSize: 'clamp(20px, 1.7vw, 28px)', fontWeight: 560, lineHeight: 1.2 }}>
+          {slide.bottomLine}
+        </div>
       </motion.div>
     )}
   </Shell>
@@ -485,10 +555,17 @@ const HarnessDefinitionCoreVariant = ({ slide }) => {
               <motion.text {...fade(0.48)} x="655" y="55" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 16, letterSpacing: '0.26em', fontWeight: 700 }} fill={T.coralDark}>
                 ACT · OBSERVE · ADJUST
               </motion.text>
-              <motion.text {...fade(0.55)} x="108" y="214" textAnchor="end" style={{ fontFamily: T.serif, fontSize: 26, fontStyle: 'italic' }} fill={T.blue}>goal</motion.text>
-              <Arrow x1={128} y1={205} x2={250} y2={205} delay={0.65} color={T.blue} />
-              <motion.rect {...lineDraw(0.75)} x="270" y="80" width="770" height="250" rx="14" fill="none" stroke={T.coral} strokeWidth="1.6" />
-              <motion.text {...fade(0.9)} x="300" y="116" style={{ fontFamily: T.mono, fontSize: 14, letterSpacing: '0.22em', fontWeight: 600 }} fill={T.coralDark}>HARNESS</motion.text>
+              {/* User figure — the human who hands a goal to the harness */}
+              <motion.g {...fade(0.42)}>
+                <circle cx="80" cy="178" r="14" fill="none" stroke={T.blue} strokeWidth="1.8" />
+                <path d="M 56 230 C 60 206, 100 206, 104 230" fill="none" stroke={T.blue} strokeWidth="1.8" strokeLinecap="round" />
+                <text x="80" y="260" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 11, letterSpacing: '0.22em', fontWeight: 700 }} fill={T.blue}>YOU</text>
+              </motion.g>
+              <motion.text {...fade(0.6)} x="200" y="195" textAnchor="middle" style={{ fontFamily: T.serif, fontSize: 24, fontStyle: 'italic' }} fill={T.blue}>"do this"</motion.text>
+              <motion.text {...fade(0.6)} x="200" y="222" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 11, letterSpacing: '0.2em', fontWeight: 700 }} fill={T.muted}>THE GOAL</motion.text>
+              <Arrow x1={108} y1={205} x2={260} y2={205} delay={0.7} color={T.blue} />
+              <motion.rect {...lineDraw(0.78)} x="270" y="80" width="770" height="250" rx="14" fill="none" stroke={T.coral} strokeWidth="1.6" />
+              <motion.text {...fade(0.92)} x="300" y="116" style={{ fontFamily: T.mono, fontSize: 14, letterSpacing: '0.22em', fontWeight: 600 }} fill={T.coralDark}>HARNESS</motion.text>
               <Model x={595} y={205} r={58} delay={1.05} loop />
               {['take action', 'observe', 'adjust'].map((label, index) => {
                 const y = 135 + index * 70;
@@ -544,33 +621,142 @@ const EquationIcon = ({ type, color = T.ink }) => {
 const HarnessDefinitionEquationVariant = ({ slide }) => (
   <Shell>
     <Marker>{slide.marker}</Marker>
-    <div className="absolute left-[5.4vw] right-[5.4vw] top-[8vh]">
+    {slide.kicker && (
+      <motion.div
+        {...fade(0.18)}
+        className="absolute left-[4.8vw] top-[8vh] text-[13px] uppercase"
+        style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em' }}
+      >
+        {slide.kicker}
+      </motion.div>
+    )}
+    <div className="absolute left-[4.8vw] right-[4.8vw] top-[13vh]">
       <h1 className="leading-[1.02]" style={{ fontSize: 'clamp(44px, 4.35vw, 74px)', fontWeight: 520 }}>
         <PartText parts={slide.parts} />
       </h1>
-      <motion.div {...fade(0.62, 0)} className="mt-6 h-px w-full" style={{ background: T.rule }} />
     </div>
-    <div className="absolute left-[10vw] right-[10vw] top-[46vh] grid grid-cols-[1fr_88px_1fr_88px_1fr] items-center">
+    <div className="absolute left-[5.5vw] right-[5.5vw] top-[34vh] grid grid-cols-[1fr_72px_1fr_72px_1fr] items-stretch">
       {(slide.equation || []).map((item, index) => (
         <React.Fragment key={`${item.title}-${index}`}>
-          <Card delay={0.75 + index * 0.14} className="flex h-[255px] flex-col items-center justify-center p-7 text-center" style={{ background: item.result ? '#f8f1ea' : 'rgba(255,255,255,0.55)', borderColor: item.result ? T.coralPale : 'rgba(217,210,196,0.62)' }}>
+          <Card
+            delay={0.75 + index * 0.14}
+            className="flex flex-col items-center p-7 text-center"
+            style={{
+              background: item.result ? '#f8f1ea' : 'rgba(255,255,255,0.55)',
+              borderColor: item.result ? T.coralPale : 'rgba(217,210,196,0.62)'
+            }}
+          >
             <EquationIcon type={item.icon} color={item.color || T.ink} />
-            <div className="mt-8" style={{ fontSize: 32, lineHeight: 1, fontWeight: 560 }}>{item.title}</div>
-            <div className="mt-5 text-[12px] uppercase" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.2em', fontWeight: 700 }}>
+            <div className="mt-6" style={{ fontSize: 30, lineHeight: 1, fontWeight: 560 }}>{item.title}</div>
+            <div className="mt-3 text-[11px] uppercase" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.2em', fontWeight: 700 }}>
               {item.kicker}
             </div>
-            <div className="mt-4" style={{ color: item.wordColor || T.coralDark, fontSize: 42, lineHeight: 1, fontStyle: 'italic', fontWeight: 430 }}>
+            <div className="mt-2.5" style={{ color: item.wordColor || T.coralDark, fontSize: 38, lineHeight: 1, fontStyle: 'italic', fontWeight: 430 }}>
               {item.word}
             </div>
+            {item.chips && item.chips.length > 0 && (
+              <div className="mt-5 flex flex-wrap items-center justify-center gap-1.5">
+                {item.chips.map((chip) => {
+                  const accentColor = item.result ? T.blue : T.coralDark;
+                  const palette = item.result
+                    ? { borderColor: '#b9d3dc', background: '#fff', color: T.blue }
+                    : { borderColor: T.coralPale, background: '#fff', color: T.coralDark };
+                  return (
+                    <span
+                      key={chip}
+                      className="rounded-[5px] border px-2.5 py-1 text-[11.5px]"
+                      style={{
+                        ...palette,
+                        fontFamily: T.mono,
+                        fontWeight: 700,
+                        letterSpacing: '0.02em'
+                      }}
+                    >
+                      {chip}
+                    </span>
+                  );
+                })}
+              </div>
+            )}
           </Card>
           {index < (slide.equation || []).length - 1 && (
-            <motion.div {...fade(0.92 + index * 0.14, 0)} className="flex items-center justify-center" style={{ color: T.muted, fontFamily: T.serif, fontSize: 58, fontWeight: 300 }}>
+            <motion.div
+              {...fade(0.92 + index * 0.14, 0)}
+              className="flex items-center justify-center"
+              style={{ color: T.muted, fontFamily: T.serif, fontSize: 56, fontWeight: 300 }}
+            >
               {index === 0 ? '+' : '='}
             </motion.div>
           )}
         </React.Fragment>
       ))}
     </div>
+    {slide.concrete && slide.concrete.items && slide.concrete.items.length === 3 && (
+      <motion.div
+        {...fade(1.18)}
+        className="absolute left-[5.5vw] right-[5.5vw] top-[68vh] grid grid-cols-[1fr_72px_1fr_72px_1fr] items-center"
+      >
+        {slide.concrete.items.map((label, index) => (
+          <React.Fragment key={`${label}-${index}`}>
+            <div className="flex items-center justify-center gap-2">
+              {index === 0 && slide.concrete.label && (
+                <span
+                  className="text-[10px] uppercase"
+                  style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 700 }}
+                >
+                  {slide.concrete.label}
+                </span>
+              )}
+              <span
+                className="rounded-[6px] border px-3 py-2 text-[13px]"
+                style={{
+                  borderColor: index === 2 ? T.coralPale : '#d6d0c2',
+                  background: index === 2 ? '#fff8f2' : '#fff',
+                  color: index === 2 ? T.coralDark : T.ink,
+                  fontFamily: T.mono,
+                  fontWeight: 700
+                }}
+              >
+                {label}
+              </span>
+            </div>
+            {index < 2 && (
+              <div
+                className="flex items-center justify-center"
+                style={{ color: T.muted, fontFamily: T.serif, fontSize: 28, fontWeight: 300 }}
+              >
+                {index === 0 ? '+' : '='}
+              </div>
+            )}
+          </React.Fragment>
+        ))}
+      </motion.div>
+    )}
+    {slide.bottomLine && (
+      <motion.div
+        {...fade(1.38)}
+        className="absolute left-[4.8vw] right-[4.8vw] top-[70vh] flex items-center gap-5"
+      >
+        {slide.bottomLineLabel && (
+          <span
+            className="rounded-[5px] px-3 py-2 text-[12px]"
+            style={{
+              background: T.coral,
+              color: '#fff',
+              fontFamily: T.mono,
+              fontWeight: 800,
+              letterSpacing: '0.22em',
+              whiteSpace: 'nowrap'
+            }}
+          >
+            {slide.bottomLineLabel}
+          </span>
+        )}
+        <div style={{ fontSize: 'clamp(20px, 1.7vw, 28px)', fontWeight: 560, lineHeight: 1.2 }}>
+          {slide.bottomLine}
+        </div>
+      </motion.div>
+    )}
   </Shell>
 );
 
@@ -614,63 +800,106 @@ const HarnessWorkProductVariant = ({ slide }) => (
 const HarnessToolboxVariant = ({ slide }) => (
   <Shell>
     <Header slide={slide} maxWidth="92vw" titleFontSize="clamp(38px, 3.95vw, 64px)" subheadFontSize="clamp(17px, 1.22vw, 21px)" />
-    <Content className="grid grid-rows-[1fr_auto] gap-4" style={{ top: '31vh', bottom: '17vh' }}>
-      <div className="grid grid-cols-4 gap-4">
+    <div className="absolute left-[4.8vw] right-[4.8vw] top-[23vh]">
+      <div className="grid grid-cols-4 gap-5">
         {(slide.vendors || []).map((vendor, index) => (
-          <Card key={`${vendor.name}-${index}`} delay={0.42 + index * 0.09} className="flex min-h-[218px] flex-col p-5">
-            <div className="flex h-14 items-center justify-center">
+          <Card
+            key={`${vendor.name}-${index}`}
+            delay={0.42 + index * 0.09}
+            className="relative flex min-h-[540px] flex-col p-6"
+            style={vendor.highlight ? { background: '#fff8f2', borderColor: T.coralPale } : undefined}
+          >
+            {vendor.powersBadge && (
+              <div
+                className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full px-3 py-1 text-[10.5px]"
+                style={{
+                  background: T.coral,
+                  color: '#fff',
+                  fontFamily: T.mono,
+                  fontWeight: 800,
+                  letterSpacing: '0.18em',
+                  whiteSpace: 'nowrap',
+                  boxShadow: '0 4px 10px rgba(212,122,95,0.28)'
+                }}
+              >
+                ★ {vendor.powersBadge}
+              </div>
+            )}
+            <div className="flex h-16 items-center justify-center">
               {vendor.logoUrl ? (
-                <img src={vendor.logoUrl} alt={`${vendor.name} logo`} className="max-h-11 max-w-[140px] object-contain" />
+                <img src={vendor.logoUrl} alt={`${vendor.name} logo`} className="max-h-12 max-w-[150px] object-contain" />
               ) : (
                 <div style={{ color: vendor.color || T.ink, fontSize: 28, fontWeight: 620 }}>{vendor.name}</div>
               )}
             </div>
-            <div className="mt-4 text-center" style={{ color: T.ink, fontSize: 27, lineHeight: 1, fontWeight: 620 }}>{vendor.name}</div>
-            <div className="mt-2 text-center text-[11px] uppercase" style={{ color: vendor.color || T.coralDark, fontFamily: T.mono, letterSpacing: '0.13em', fontWeight: 700 }}>
-              {vendor.surface || `agent · ${vendor.year}`}
+            <div className="mt-5 text-center" style={{ color: T.ink, fontSize: 28, lineHeight: 1, fontWeight: 620 }}>{vendor.name}</div>
+            <div className="mt-2.5 text-center text-[11.5px] uppercase" style={{ color: vendor.color || T.coralDark, fontFamily: T.mono, letterSpacing: '0.13em', fontWeight: 700 }}>
+              {vendor.surface}
             </div>
-            <div className="mt-3 text-center" style={{ color: T.muted, fontSize: 14.5, lineHeight: 1.28 }}>
-              {vendor.capability}
-            </div>
+
+            {vendor.origin && (
+              <div className="mt-5">
+                <div className="text-[11.5px] uppercase" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 700 }}>
+                  Origin
+                </div>
+                <div className="mt-1.5" style={{ color: T.ink, fontSize: 18.5, lineHeight: 1.32 }}>
+                  {vendor.origin}
+                </div>
+              </div>
+            )}
+
+            {vendor.now && (
+              <div className="mt-4">
+                <div className="text-[11.5px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 700 }}>
+                  Today
+                </div>
+                <div className="mt-1.5" style={{ color: T.ink, fontSize: 18.5, lineHeight: 1.32 }}>
+                  {vendor.now}
+                </div>
+              </div>
+            )}
+
+            {vendor.highlight && (
+              <div className="mt-auto pt-4">
+                <div className="rounded-[6px] border px-3 py-2.5" style={{ borderColor: T.coral, background: T.coral }}>
+                  <div className="text-[11px] uppercase" style={{ color: '#fff', fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
+                    UCSD angle
+                  </div>
+                  <div className="mt-1" style={{ color: '#fff', fontSize: 15.5, lineHeight: 1.32, fontWeight: 500 }}>
+                    {vendor.highlight}
+                  </div>
+                </div>
+              </div>
+            )}
           </Card>
         ))}
       </div>
-      <Card delay={0.95} className="p-4">
-        <div className="grid grid-cols-[32%_1fr] items-center gap-5">
-          <div>
-            <Kicker>Where the harness lives</Kicker>
-            <div className="mt-1" style={{ fontSize: 25, lineHeight: 1.05, fontWeight: 560 }}>
-              It runs where the work already is.
-            </div>
-            <div className="mt-1.5" style={{ color: T.muted, fontSize: 15.5, lineHeight: 1.25 }}>
-              The shift is local agency: reading files, editing work, running commands, and calling approved tools.
-            </div>
-            {slide.toolboxTakeaway ? (
-              <div className="mt-3 rounded-[6px] border px-3 py-2.5" style={{ borderColor: T.coralPale, background: '#fff8f2' }}>
-                <div style={{ color: T.ink, fontSize: 20, lineHeight: 1.05, fontWeight: 560 }}>
-                  {slide.toolboxTakeaway.title}
-                </div>
-                <div className="mt-1.5" style={{ color: T.muted, fontSize: 13.5, lineHeight: 1.22 }}>
-                  {slide.toolboxTakeaway.body}
-                </div>
-              </div>
-            ) : null}
-          </div>
-          <div className="grid grid-cols-3 gap-3">
-            {(slide.localSurfaces || []).map((surface, index) => (
-              <div key={`${surface.label}-${index}`} className="rounded-[6px] border px-4 py-3" style={{ borderColor: T.coralPale, background: '#fff8f2' }}>
-                <div style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 11.5, letterSpacing: '0.14em', fontWeight: 700, textTransform: 'uppercase' }}>
-                  {surface.label}
-                </div>
-                <div className="mt-1.5" style={{ color: T.ink, fontSize: 21, lineHeight: 1.04, fontWeight: 560 }}>
-                  {surface.note}
-                </div>
-              </div>
-            ))}
-          </div>
+    </div>
+    {slide.bottomLine && (
+      <motion.div
+        {...fade(1.0)}
+        className="absolute left-[4.8vw] right-[4.8vw] top-[80vh] flex items-start gap-5"
+      >
+        {slide.bottomLineLabel && (
+          <span
+            className="shrink-0 rounded-[5px] px-3 py-2 text-[12px]"
+            style={{
+              background: T.coral,
+              color: '#fff',
+              fontFamily: T.mono,
+              fontWeight: 800,
+              letterSpacing: '0.22em',
+              whiteSpace: 'nowrap'
+            }}
+          >
+            {slide.bottomLineLabel}
+          </span>
+        )}
+        <div style={{ fontSize: 'clamp(18px, 1.45vw, 24px)', fontWeight: 560, lineHeight: 1.25 }}>
+          {slide.bottomLine}
         </div>
-      </Card>
-    </Content>
+      </motion.div>
+    )}
   </Shell>
 );
 
@@ -840,48 +1069,164 @@ const HarnessAnatomyIndexVariant = ({ slide }) => {
   );
 };
 
+const ComponentVisual = ({ type, color = T.coralDark }) => {
+  const stroke = { fill: 'none', stroke: color, strokeWidth: 1.6, strokeLinecap: 'round', strokeLinejoin: 'round' };
+  const tint = `${color}14`; // ~8% opacity tint
+  const tintStrong = `${color}22`;
+
+  if (type === 'loop') {
+    return (
+      <svg viewBox="0 0 360 140" className="h-full w-full">
+        {['act', 'observe', 'adjust'].map((label, i) => {
+          const x = 30 + i * 122;
+          return (
+            <g key={label}>
+              <rect x={x} y={38} width={100} height={56} rx={11} fill={tint} stroke={color} strokeWidth="1.6" />
+              <text x={x + 50} y={72} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 16, fontWeight: 800 }} fill={color}>{label}</text>
+              {i < 2 && (
+                <g>
+                  <line x1={x + 100} y1={66} x2={x + 122} y2={66} {...stroke} />
+                  <polygon points={`${x + 122},66 ${x + 113},61 ${x + 113},71`} fill={color} />
+                </g>
+              )}
+            </g>
+          );
+        })}
+        {/* loop-back arrow */}
+        <path d="M 304 94 C 304 116, 56 116, 56 94" {...stroke} strokeDasharray="4 4" />
+        <polygon points="56,94 51,103 61,103" fill={color} />
+        <text x="180" y="132" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 12, letterSpacing: '0.18em', fontWeight: 800 }} fill={color}>REPEAT UNTIL DONE</text>
+      </svg>
+    );
+  }
+
+  if (type === 'context') {
+    return (
+      <svg viewBox="0 0 360 140" className="h-full w-full">
+        {[
+          { label: 'system prompt', y: 14 },
+          { label: 'files & memory', y: 44 },
+          { label: 'prior results', y: 74 }
+        ].map((row, i) => (
+          <g key={row.label}>
+            <rect x={36 + i * 10} y={row.y} width={236} height={30} rx={5} fill={i === 0 ? tintStrong : tint} stroke={color} strokeWidth="1.5" />
+            <text x={48 + i * 10} y={row.y + 20} style={{ fontFamily: T.mono, fontSize: 14, fontWeight: 800 }} fill={color}>{row.label}</text>
+          </g>
+        ))}
+        {/* arrow into model */}
+        <line x1="296" y1="60" x2="316" y2="60" {...stroke} />
+        <polygon points="316,60 309,55 309,65" fill={color} />
+        <circle cx="332" cy="60" r="14" fill="none" stroke={color} strokeWidth="1.6" />
+        <text x="332" y="65" textAnchor="middle" style={{ fontFamily: T.serif, fontStyle: 'italic', fontSize: 16, fontWeight: 520 }} fill={color}>M</text>
+        <text x="180" y="132" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 12, letterSpacing: '0.18em', fontWeight: 800 }} fill={color}>WHAT'S IN VIEW</text>
+      </svg>
+    );
+  }
+
+  if (type === 'action') {
+    return (
+      <svg viewBox="0 0 360 140" className="h-full w-full">
+        {/* center hub */}
+        <circle cx="180" cy="64" r="28" fill={tintStrong} stroke={color} strokeWidth="1.7" />
+        <text x="180" y="72" textAnchor="middle" style={{ fontFamily: T.serif, fontStyle: 'italic', fontSize: 22, fontWeight: 520 }} fill={color}>M</text>
+        {/* tools fanning out */}
+        {[
+          { label: 'files', x: 36, y: 18 },
+          { label: 'web', x: 296, y: 18 },
+          { label: 'API', x: 36, y: 100 },
+          { label: 'tools', x: 296, y: 100 }
+        ].map((tool) => (
+          <g key={tool.label}>
+            <line x1={tool.x < 180 ? tool.x + 36 : tool.x - 4} y1={tool.y + 13} x2={180 + (tool.x < 180 ? -28 : 28)} y2={64 + (tool.y < 64 ? -10 : 10)} {...stroke} strokeDasharray="3 4" />
+            <rect x={tool.x} y={tool.y} width="64" height="26" rx="5" fill={tint} stroke={color} strokeWidth="1.5" />
+            <text x={tool.x + 32} y={tool.y + 18} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 13, fontWeight: 800 }} fill={color}>{tool.label}</text>
+          </g>
+        ))}
+        <text x="180" y="132" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 12, letterSpacing: '0.18em', fontWeight: 800 }} fill={color}>WHAT IT CAN REACH</text>
+      </svg>
+    );
+  }
+
+  if (type === 'scale') {
+    return (
+      <svg viewBox="0 0 360 140" className="h-full w-full">
+        {/* parent */}
+        <rect x="138" y="10" width="84" height="32" rx="6" fill={tintStrong} stroke={color} strokeWidth="1.7" />
+        <text x="180" y="32" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 14, fontWeight: 800 }} fill={color}>main</text>
+        {/* connecting lines */}
+        {[64, 180, 296].map((cx, i) => (
+          <line key={i} x1="180" y1="42" x2={cx} y2="74" {...stroke} strokeDasharray="3 4" />
+        ))}
+        {/* children */}
+        {[
+          { label: 'plan', x: 32 },
+          { label: 'build', x: 148 },
+          { label: 'verify', x: 264 }
+        ].map((child) => (
+          <g key={child.label}>
+            <rect x={child.x} y={74} width="64" height="30" rx="5" fill={tint} stroke={color} strokeWidth="1.5" />
+            <text x={child.x + 32} y={94} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 13, fontWeight: 800 }} fill={color}>{child.label}</text>
+          </g>
+        ))}
+        <text x="180" y="132" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 12, letterSpacing: '0.18em', fontWeight: 800 }} fill={color}>SUB-AGENTS</text>
+      </svg>
+    );
+  }
+
+  return null;
+};
+
 const HarnessComponentsFrameworkVariant = ({ slide }) => (
   <Shell>
-    <Header slide={slide} maxWidth="86vw" />
-    <Content className="grid grid-cols-[29%_1fr] gap-8 items-center" style={{ top: '28vh', bottom: '13vh' }}>
-      <Card delay={0.42} className="p-6">
-        <Kicker>{slide.leftKicker || 'Framework'}</Kicker>
-        <div className="mt-4" style={{ fontSize: 39, lineHeight: 1.04, fontWeight: 560 }}>
-          {slide.leftTitle || 'The harness is the working environment around the model.'}
-        </div>
-        <div className="mt-5" style={{ color: T.muted, fontSize: 19, lineHeight: 1.35 }}>
-          {slide.leftBody}
-        </div>
-      </Card>
-      <div className="grid grid-cols-2 gap-4">
+    <Marker>{slide.marker}</Marker>
+
+    <div className="absolute left-[4.8vw] right-[4.8vw] top-[10vh]" style={{ maxWidth: '88vw' }}>
+      <h1 className="leading-[0.98]" style={{ fontSize: 'clamp(40px, 4vw, 64px)', fontWeight: 520 }}>
+        <PartText parts={slide.parts} />
+      </h1>
+      {slide.subhead && (
+        <motion.div {...fade(0.34)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(17px, 1.3vw, 22px)' }}>
+          {slide.subhead}
+        </motion.div>
+      )}
+    </div>
+
+    <div className="absolute left-[4.8vw] right-[4.8vw] top-[24vh]">
+      <div className="grid grid-cols-2 gap-5">
         {(slide.components || []).map((component, index) => (
           <Card
             key={`${component.title}-${index}`}
-            delay={0.56 + index * 0.045}
-            className="min-h-[205px] p-5"
+            delay={0.5 + index * 0.08}
+            className="p-7"
             style={component.highlight ? { background: '#fff8f2', borderColor: T.coral } : undefined}
           >
-            <div className="flex items-start justify-between gap-4">
-              <div className="text-[11px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.16em' }}>
-                {String(index + 1).padStart(2, '0')} · {component.kicker}
+            <div className="grid grid-cols-[1fr_360px] items-center gap-6">
+              <div>
+                <div className="text-[13px] uppercase" style={{ color: component.color || T.coralDark, fontFamily: T.mono, letterSpacing: '0.18em', fontWeight: 700 }}>
+                  {String(index + 1).padStart(2, '0')} · {component.kicker}
+                </div>
+                <div className="mt-2.5" style={{ fontSize: 32, lineHeight: 1.04, fontWeight: 620, color: T.ink }}>
+                  {component.title}
+                </div>
               </div>
-              {component.icon && (
-                <div className="rounded-[6px] border bg-white p-1.5" style={{ borderColor: component.color || T.coralPale }}>
-                  <MiniIcon type={component.icon} color={component.color || T.coralDark} />
+              {component.visual && (
+                <div className="h-[130px] w-full">
+                  <ComponentVisual type={component.visual} color={component.color || T.coralDark} />
                 </div>
               )}
             </div>
-            <div className="mt-2" style={{ fontSize: 30, lineHeight: 1.03, fontWeight: 610 }}>{component.title}</div>
-            <div className="mt-3" style={{ color: T.muted, fontSize: 16, lineHeight: 1.28 }}>{component.body}</div>
+            <div className="mt-4" style={{ color: T.ink, fontSize: 18.5, lineHeight: 1.34, fontWeight: 500 }}>
+              {component.body}
+            </div>
             {component.question && (
-              <div className="mt-3 rounded-[5px] border px-3 py-2" style={{ borderColor: T.rule, background: 'rgba(255,255,255,0.46)', color: T.ink, fontSize: 15, lineHeight: 1.2 }}>
+              <div className="mt-3 rounded-[5px] border-l-2 pl-3 py-1.5" style={{ borderColor: component.color || T.coralDark, color: T.muted, fontSize: 16, lineHeight: 1.3, fontStyle: 'italic' }}>
                 {component.question}
               </div>
             )}
             {component.examples && (
-              <div className="mt-3 flex flex-wrap gap-1.5">
+              <div className="mt-3 flex flex-wrap gap-2">
                 {component.examples.map((example) => (
-                  <span key={example} className="rounded-[4px] border px-2 py-1 text-[10px] uppercase" style={{ borderColor: T.coralPale, color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.08em', fontWeight: 700 }}>
+                  <span key={example} className="rounded-[4px] border px-2.5 py-1 text-[12px] uppercase" style={{ borderColor: component.color || T.coralPale, color: component.color || T.coralDark, fontFamily: T.mono, letterSpacing: '0.08em', fontWeight: 700 }}>
                     {example}
                   </span>
                 ))}
@@ -890,60 +1235,173 @@ const HarnessComponentsFrameworkVariant = ({ slide }) => (
           </Card>
         ))}
       </div>
-    </Content>
+    </div>
   </Shell>
 );
 
-const HarnessWhileLoopVariant = ({ slide }) => (
-  <Shell>
-    <Header slide={slide} />
-    <Content className="grid grid-cols-[52%_1fr] gap-9 items-center">
-      <svg viewBox="0 0 620 410" className="h-full w-full">
-        <Model x={310} y={210} r={58} blue delay={0.45} />
-        {[
-          ['read', 112, 95],
-          ['run', 418, 95],
-          ['edit', 112, 300],
-          ['check', 418, 300]
-        ].map(([label, x, y], index) => (
-          <g key={`${label}-${index}`}>
-            <motion.line {...lineDraw(0.62 + index * 0.08)} x1="310" y1="210" x2={x + 75} y2={y + 24} stroke={T.faint} strokeWidth="1.3" strokeDasharray="5 7" />
-            <motion.g {...fade(0.8 + index * 0.08)}>
-              <rect x={x} y={y} width="150" height="48" rx="6" fill="#fff" stroke={T.faint} />
-              <text x={x + 75} y={y + 30} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 16, fontWeight: 600 }} fill={T.ink}>{label}</text>
-            </motion.g>
-          </g>
-        ))}
-        <motion.g {...fade(1.15)}>
-          <rect x="232" y="356" width="198" height="32" rx="16" fill={T.blue} />
-          <text x="331" y="377" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 13, fontWeight: 700 }} fill="#fff">task complete</text>
-        </motion.g>
-      </svg>
-      <Card delay={0.72} className="p-5">
-        <Kicker>Bounded loop</Kicker>
-        <div className="mt-1 mb-4" style={{ color: T.coralDark, fontSize: 34, lineHeight: 1.05, fontWeight: 600 }}>
-          repeat
-          <span className="ml-3" style={{ color: T.muted, fontSize: 18, fontWeight: 400 }}>
-            until done or a control stops the run
-          </span>
-        </div>
-        <div className="rounded-[5px] p-5" style={{ background: T.black, color: '#f4eee2', fontFamily: T.mono, fontSize: 15, lineHeight: 1.55 }}>
-          {[
-            'while task_not_done:',
-            '  decide_next_step()',
-            '  take_action_or_call_tool()',
-            '  inspect_the_result()',
-            '  update_context()',
-            '  if control_requires_stop: break',
-            'return completed_work'
-          ].map((line, index) => (
-            <motion.div key={`${line}-${index}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.95 + index * 0.05 }}>{line}</motion.div>
-          ))}
-        </div>
-      </Card>
-    </Content>
-  </Shell>
-);
+const HarnessWhileLoopVariant = ({ slide }) => {
+  const iterations = slide.iterations || [
+    { act: 'read state', observe: 'something missing', adjust: 'plan a fix' },
+    { act: 'apply the fix', observe: 'something else broke', adjust: 'patch the side-effect' },
+    { act: 'run a check', observe: 'everything passes', adjust: 'work is done' }
+  ];
+  const goalText = slide.scenarioGoal || 'Finish a piece of real work.';
+
+  // Three labeled stops at 12, 4, 8 o'clock
+  const stops = [
+    { label: 'ACT', sub: 'do something', angle: -90, color: T.coral },
+    { label: 'OBSERVE', sub: 'see the result', angle: 30, color: T.coralDark },
+    { label: 'ADJUST', sub: 'pick next step', angle: 150, color: T.blue }
+  ];
+
+  return (
+    <Shell>
+      <Marker>{slide.marker}</Marker>
+      <JobSpine activeKey={slide.spineActive} />
+
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[10vh]" style={{ maxWidth: '78vw' }}>
+        <h1 className="leading-[0.98]" style={{ fontSize: 'clamp(40px, 4vw, 64px)', fontWeight: 520 }}>
+          <PartText parts={slide.parts} />
+        </h1>
+        {slide.subhead && (
+          <motion.div {...fade(0.38)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(17px, 1.3vw, 22px)' }}>
+            {slide.subhead}
+          </motion.div>
+        )}
+      </div>
+
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[24vh] bottom-[12vh] grid grid-cols-[40%_1fr] gap-7 items-stretch">
+        {/* Left: Animated loop diagram */}
+        <Card delay={0.5} className="flex flex-col p-5">
+          <div className="self-start text-[12px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
+            The mechanic
+          </div>
+
+          <div className="flex-1 flex items-center justify-center" style={{ minHeight: 0 }}>
+            <svg viewBox="0 0 340 340" className="w-full h-full" preserveAspectRatio="xMidYMid meet" style={{ maxHeight: '100%' }}>
+              {/* Outer dashed orbit ring */}
+              <circle cx="170" cy="170" r="120" fill="none" stroke={T.coralPale} strokeWidth={1.8} strokeDasharray="3 5" />
+
+              {/* Three labeled stops */}
+              {stops.map((stop) => {
+                const rad = (stop.angle * Math.PI) / 180;
+                const x = 170 + 120 * Math.cos(rad);
+                const y = 170 + 120 * Math.sin(rad);
+                // Position the sub-label outside the circle, away from center
+                const subDistance = 64; // distance from center for sub-label
+                const subX = 170 + (120 + subDistance - 120) * Math.cos(rad);
+                const subY = 170 + (120 + subDistance - 120) * Math.sin(rad);
+                // Calculate offset from circle edge for sub-label
+                const offsetRad = rad;
+                const subOffsetX = x + 56 * Math.cos(offsetRad);
+                const subOffsetY = y + 56 * Math.sin(offsetRad);
+                return (
+                  <g key={stop.label}>
+                    <circle cx={x} cy={y} r="44" fill="#fff" stroke={stop.color} strokeWidth={1.8} />
+                    <text x={x} y={y + 6} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 15, fontWeight: 800, letterSpacing: '0.08em' }} fill={stop.color}>{stop.label}</text>
+                  </g>
+                );
+              })}
+
+              {/* Direction arrows along the orbit */}
+              {[-30, 90, 210].map((angle) => {
+                const rad = (angle * Math.PI) / 180;
+                const x = 170 + 120 * Math.cos(rad);
+                const y = 170 + 120 * Math.sin(rad);
+                const tan = rad + Math.PI / 2;
+                const ax = Math.cos(tan);
+                const ay = Math.sin(tan);
+                const tip = `${x + 6 * ax},${y + 6 * ay}`;
+                const base1 = `${x - 6 * ax + 4 * ay},${y - 6 * ay - 4 * ax}`;
+                const base2 = `${x - 6 * ax - 4 * ay},${y - 6 * ay + 4 * ax}`;
+                return <polygon key={angle} points={`${tip} ${base1} ${base2}`} fill={T.coral} fillOpacity="0.45" />;
+              })}
+
+              {/* Orbiting glow + dot (slower, more subtle) */}
+              <g>
+                <circle cx="290" cy="170" r="13" fill={T.coral} fillOpacity="0.18">
+                  <animateTransform attributeName="transform" type="rotate" from="0 170 170" to="360 170 170" dur="11s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="290" cy="170" r="8" fill={T.coral} fillOpacity="0.85">
+                  <animateTransform attributeName="transform" type="rotate" from="0 170 170" to="360 170 170" dur="11s" repeatCount="indefinite" />
+                </circle>
+              </g>
+
+              {/* Center model with subtle, slow pulse */}
+              <circle cx="170" cy="170" r="46" fill={T.bg} stroke={T.ink} strokeWidth={1.8}>
+                <animate attributeName="r" values="46;48;46" dur="5s" repeatCount="indefinite" />
+              </circle>
+              <text x="170" y="184" textAnchor="middle" style={{ fontFamily: T.serif, fontStyle: 'italic', fontSize: 42, fontWeight: 520 }} fill={T.ink}>M</text>
+            </svg>
+          </div>
+
+          <div className="text-center" style={{ color: T.muted, fontSize: 19, lineHeight: 1.4, fontStyle: 'italic', fontWeight: 500 }}>
+            One model. Many turns. Until done.
+          </div>
+        </Card>
+
+        {/* Right: Live trace */}
+        <Card delay={0.7} className="p-7">
+          <div className="flex items-baseline gap-3">
+            <span className="text-[11px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 700 }}>
+              Live trace
+            </span>
+            <span style={{ color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 14 }}>
+              what one run actually looks like
+            </span>
+          </div>
+
+          <motion.div
+            {...fade(0.85)}
+            className="mt-3 rounded-[7px] border-l-[3px] px-4 py-3"
+            style={{ borderColor: T.blue, background: T.bluePale }}
+          >
+            <div className="text-[13px] uppercase" style={{ color: T.blue, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>Goal</div>
+            <div className="mt-1.5" style={{ color: T.blue, fontSize: 21, fontWeight: 600, lineHeight: 1.28 }}>{goalText}</div>
+          </motion.div>
+
+          <div className="mt-3.5 space-y-2.5">
+            {iterations.map((it, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45, delay: 1.15 + i * 0.55, ease }}
+                className="rounded-[6px] border px-4 py-2.5"
+                style={{ borderColor: T.coralPale, background: '#fff8f2' }}
+              >
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="rounded-full px-3 py-0.5 text-[12px]" style={{ background: T.coral, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.14em' }}>
+                    iter {i + 1}
+                  </span>
+                </div>
+                <div className="grid grid-cols-[88px_1fr] gap-x-3 gap-y-1.5" style={{ fontSize: 17, lineHeight: 1.34 }}>
+                  <span style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 13.5, fontWeight: 800, letterSpacing: '0.04em' }}>act</span>
+                  <span style={{ color: T.ink }}>{it.act}</span>
+                  <span style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 13.5, fontWeight: 800, letterSpacing: '0.04em' }}>observe</span>
+                  <span style={{ color: T.ink }}>{it.observe}</span>
+                  <span style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 13.5, fontWeight: 800, letterSpacing: '0.04em' }}>adjust</span>
+                  <span style={{ color: T.ink }}>{it.adjust}</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 1.15 + iterations.length * 0.55 + 0.3, ease }}
+            className="mt-3.5 inline-flex items-center gap-2.5 rounded-full px-4 py-2"
+            style={{ background: T.blue, color: '#fff', fontFamily: T.mono, fontSize: 14, fontWeight: 800, letterSpacing: '0.12em' }}
+          >
+            <span>✓ TASK COMPLETE</span>
+            <span style={{ opacity: 0.65 }}>· {iterations.length} ITERATIONS</span>
+          </motion.div>
+        </Card>
+      </div>
+    </Shell>
+  );
+};
 
 const HarnessContextVariant = ({ slide }) => (
   <Shell>
@@ -1070,30 +1528,59 @@ const HarnessContextVariant = ({ slide }) => (
 
 const HarnessFrameworkCardsVariant = ({ slide }) => (
   <Shell>
-    <Header slide={slide} maxWidth="86vw" />
-    <Content className="grid grid-rows-[1fr_auto] gap-6" style={{ top: '30vh', bottom: '12vh' }}>
+    <Marker>{slide.marker}</Marker>
+    <JobSpine activeKey={slide.spineActive} />
+
+    <div className="absolute left-[4.8vw] right-[4.8vw] top-[10vh]" style={{ maxWidth: '88vw' }}>
+      <h1 className="leading-[0.98]" style={{ fontSize: 'clamp(40px, 4vw, 64px)', fontWeight: 520 }}>
+        <PartText parts={slide.parts} />
+      </h1>
+      {slide.subhead && (
+        <motion.div {...fade(0.34)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(17px, 1.3vw, 22px)' }}>
+          {slide.subhead}
+        </motion.div>
+      )}
+    </div>
+
+    <div className="absolute left-[4.8vw] right-[4.8vw] top-[24vh] bottom-[12vh] flex flex-col gap-4">
       <div
-        className="grid gap-4"
+        className="grid gap-5 flex-1"
         style={{ gridTemplateColumns: `repeat(${slide.gridColumns || (slide.connected ? 4 : slide.columns?.length > 4 ? 3 : 4)}, minmax(0, 1fr))` }}
       >
         {(slide.columns || []).map((item, index) => (
-          <div key={`${item.title}-${index}`} className="relative">
+          <div key={`${item.title}-${index}`} className="relative h-full">
             {slide.connected && index > 0 && (
-              <motion.div {...fade(0.7 + index * 0.08, 0)} className="absolute left-[-22px] top-1/2 z-10 -translate-y-1/2" style={{ color: T.coralDark, fontSize: 28 }}>
+              <motion.div {...fade(0.7 + index * 0.08, 0)} className="absolute left-[-26px] top-1/2 z-10 -translate-y-1/2" style={{ color: T.coralDark, fontSize: 30 }}>
                 →
               </motion.div>
             )}
-            <Card delay={0.42 + index * 0.065} className={`p-5 ${slide.connected ? 'min-h-[270px]' : ''}`} style={{ borderColor: item.color || T.faint, background: item.fill || 'rgba(255,255,255,0.65)' }}>
-              <div className="flex items-start justify-between gap-4">
-                <Kicker>{item.kicker}</Kicker>
-                {item.icon && (
-                  <div className="rounded-[6px] border p-2" style={{ borderColor: item.color || T.coralPale, background: '#fff' }}>
-                    <MiniIcon type={item.icon} color={item.color || T.coralDark} />
+            <Card
+              delay={0.42 + index * 0.08}
+              className="flex h-full flex-col p-6"
+              style={{ borderColor: item.color || T.faint, background: item.fill || 'rgba(255,255,255,0.65)', borderTopWidth: 4, borderTopColor: item.color || T.coralDark }}
+            >
+              {/* Top: large central icon */}
+              {item.icon && (
+                <div className="flex justify-center mb-3">
+                  <div className="rounded-[10px] border-2 p-3" style={{ borderColor: item.color || T.coralPale, background: '#fff' }}>
+                    <div style={{ width: 56, height: 56 }}>
+                      <MiniIcon type={item.icon} color={item.color || T.coralDark} />
+                    </div>
                   </div>
-                )}
+                </div>
+              )}
+              {/* Kicker */}
+              <div className="text-[12.5px] uppercase text-center" style={{ color: item.color || T.coralDark, fontFamily: T.mono, letterSpacing: '0.18em', fontWeight: 800 }}>
+                {item.kicker}
               </div>
-              <div className="mt-3" style={{ fontSize: slide.connected ? 27 : 29, lineHeight: 1.05, fontWeight: 610 }}>{item.title}</div>
-            <div className="mt-3" style={{ color: T.muted, fontSize: 17, lineHeight: 1.35 }}>{item.body}</div>
+              {/* Title */}
+              <div className="mt-2 text-center" style={{ fontSize: 26, lineHeight: 1.06, fontWeight: 650, color: T.ink }}>
+                {item.title}
+              </div>
+              {/* Body */}
+              <div className="mt-3 text-center" style={{ color: T.ink, fontSize: 16.5, lineHeight: 1.36 }}>
+                {item.body}
+              </div>
             </Card>
           </div>
         ))}
@@ -1103,15 +1590,15 @@ const HarnessFrameworkCardsVariant = ({ slide }) => (
           <div className="grid gap-3" style={{ gridTemplateColumns: `repeat(${slide.steps.length}, minmax(0, 1fr))` }}>
             {slide.steps.map((step, index) => (
               <motion.div key={`${step.title}-${index}`} {...fade(1.02 + index * 0.045)} className="rounded-[5px] border px-3 py-3 text-center" style={{ borderColor: T.coralPale, background: '#fff8f2' }}>
-                <div style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 12, fontWeight: 700 }}>{String(index + 1).padStart(2, '0')}</div>
+                <div style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 12, fontWeight: 800 }}>{String(index + 1).padStart(2, '0')}</div>
                 <div className="mt-1" style={{ fontSize: 21, lineHeight: 1.05, fontWeight: 620 }}>{step.title}</div>
-                <div className="mt-1" style={{ color: T.muted, fontSize: 13, lineHeight: 1.25 }}>{step.body}</div>
+                <div className="mt-1" style={{ color: T.muted, fontSize: 14, lineHeight: 1.28 }}>{step.body}</div>
               </motion.div>
             ))}
           </div>
         </Card>
       )}
-    </Content>
+    </div>
   </Shell>
 );
 
@@ -1243,39 +1730,41 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
         </div>
       </div>
 
-      <Card delay={1.08} className="absolute left-[5.8vw] right-[5.8vw] top-[47.8vh] p-3.5">
-        <div className="mb-2 text-center text-[12px] uppercase" style={{ color: T.muted, fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.18em' }}>How to get access</div>
-        <div className="grid grid-cols-4 gap-4">
+      <Card delay={1.08} className="absolute left-[5.8vw] right-[5.8vw] top-[42vh] p-4">
+        <div className="mb-3 text-center text-[15px] uppercase" style={{ color: T.muted, fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.18em' }}>How to get access</div>
+        <div className="grid grid-cols-4 gap-5">
           {accessSteps.map((step, index) => (
-            <motion.div key={step.title} {...fade(1.2 + index * 0.06, 0)} className="grid grid-cols-[42px_1fr] gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full" style={{ background: step.color || T.blue, color: '#fff', fontFamily: T.mono, fontSize: 17, fontWeight: 800 }}>{index + 1}</div>
+            <motion.div key={step.title} {...fade(1.2 + index * 0.06, 0)} className="grid grid-cols-[46px_1fr] gap-3 items-start">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full shrink-0" style={{ background: step.color || T.blue, color: '#fff', fontFamily: T.mono, fontSize: 21, fontWeight: 800 }}>{index + 1}</div>
               <div>
-                <div style={{ color: T.ink, fontFamily: T.serif, fontSize: 25, lineHeight: 0.9, fontWeight: 650 }}>{step.title}</div>
-                <div className="mt-1" style={{ color: '#5f6f82', fontFamily: T.serif, fontSize: 15, lineHeight: 1.08 }}>{step.body}</div>
+                <div style={{ color: T.ink, fontFamily: T.serif, fontSize: 28, lineHeight: 0.95, fontWeight: 650 }}>{step.title}</div>
+                <div className="mt-1.5" style={{ color: '#5f6f82', fontFamily: T.serif, fontSize: 18, lineHeight: 1.2 }}>{step.body}</div>
               </div>
             </motion.div>
           ))}
         </div>
       </Card>
 
-      <div className="absolute left-[5.8vw] right-[5.8vw] top-[63.8vh] grid grid-cols-2 gap-4">
+      <div className="absolute left-[5.8vw] right-[5.8vw] top-[62vh] grid grid-cols-2 gap-5">
         {ownership.map((owner, index) => (
-          <Card key={owner.title} delay={1.35 + index * 0.08} className="p-3">
-            <Kicker>{owner.title}</Kicker>
-            <div className="mt-2 grid grid-cols-2 gap-1.5">
+          <Card key={owner.title} delay={1.35 + index * 0.08} className="p-4">
+            <div className="text-[14px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.18em', fontWeight: 800 }}>
+              {owner.title}
+            </div>
+            <div className="mt-3 grid grid-cols-2 gap-2.5">
               {owner.items.map((item) => (
-                <span key={item} className="rounded-full px-3 py-1 text-center text-[10.5px]" style={{ background: '#edf1f5', color: '#5f6f82', fontFamily: T.mono, fontWeight: 700, letterSpacing: '0' }}>{item}</span>
+                <span key={item} className="rounded-full px-3 py-2 text-center text-[15px]" style={{ background: '#edf1f5', color: T.ink, fontFamily: T.mono, fontWeight: 700, letterSpacing: '0' }}>{item}</span>
               ))}
             </div>
           </Card>
         ))}
       </div>
 
-      <div className="absolute left-[5.8vw] right-[5.8vw] top-[75.6vh] grid grid-cols-[1fr_290px_1fr] items-center gap-4">
+      <div className="absolute left-[5.8vw] right-[5.8vw] top-[80vh] grid grid-cols-[1fr_320px_1fr] items-center gap-4">
         {[footerBadges.slice(0, 3), footerBadges.slice(3)].map((group, groupIndex) => (
           <div key={`footer-group-${groupIndex}`} className={`flex items-center gap-4 ${groupIndex === 0 ? 'justify-end' : 'col-start-3 justify-start'}`}>
             {group.map((badge, index) => (
-              <motion.div key={badge} {...fade(1.52 + (groupIndex * 3 + index) * 0.04, 0)} className="text-[11px] uppercase" style={{ color: '#6f7b8b', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.06em' }}>
+              <motion.div key={badge} {...fade(1.52 + (groupIndex * 3 + index) * 0.04, 0)} className="text-[15px] uppercase" style={{ color: '#6f7b8b', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.06em' }}>
                 {badge}
                 {index < group.length - 1 && <span className="ml-4" style={{ color: '#f0b400' }}>|</span>}
               </motion.div>
@@ -1308,83 +1797,172 @@ const HostingDiamond = ({ label, color, delay = 0.4 }) => (
   </motion.div>
 );
 
+const TierUserIcon = ({ tier, color }) => {
+  if (tier === 0) {
+    return (
+      <svg viewBox="0 0 32 32" className="h-7 w-7">
+        <circle cx="16" cy="11" r="5" fill={color} />
+        <path d="M 6 28 C 8 20, 24 20, 26 28 Z" fill={color} />
+      </svg>
+    );
+  }
+  if (tier === 1) {
+    return (
+      <svg viewBox="0 0 48 32" className="h-7 w-12">
+        {[10, 24, 38].map((cx, i) => (
+          <g key={i}>
+            <circle cx={cx} cy="11" r="4" fill={color} />
+            <path d={`M ${cx - 7} 28 C ${cx - 5} 22, ${cx + 5} 22, ${cx + 7} 28 Z`} fill={color} />
+          </g>
+        ))}
+      </svg>
+    );
+  }
+  if (tier === 2) {
+    return (
+      <svg viewBox="0 0 64 32" className="h-7 w-16">
+        {[8, 20, 32, 44, 56].map((cx, i) => (
+          <g key={i}>
+            <circle cx={cx} cy="11" r="3.5" fill={color} />
+            <path d={`M ${cx - 6} 28 C ${cx - 4} 22, ${cx + 4} 22, ${cx + 6} 28 Z`} fill={color} />
+          </g>
+        ))}
+      </svg>
+    );
+  }
+  // Tier 3 — building
+  return (
+    <svg viewBox="0 0 32 32" className="h-7 w-7">
+      <path d="M 4 28 V 12 L 16 5 L 28 12 V 28 Z" fill="none" stroke={color} strokeWidth="2" strokeLinejoin="round" />
+      <rect x="10" y="18" width="3.5" height="6" fill={color} />
+      <rect x="14.5" y="14" width="3" height="3" fill={color} />
+      <rect x="18.5" y="18" width="3.5" height="6" fill={color} />
+    </svg>
+  );
+};
+
 const HarnessCampusHostingVariant = ({ slide }) => {
-  const steps = slide.hostingSteps || slide.steps || [];
-  const lanes = slide.hostingLanes || [];
+  const tiers = slide.hostingTiers || [];
 
   return (
     <Shell>
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[4.6vh]">
-        <motion.h1 {...fade(0.12)} style={{ color: T.ink, fontFamily: T.serif, fontSize: 'clamp(42px, 4.4vw, 68px)', lineHeight: 0.9, fontWeight: 560 }}>
-          {slide.hostingTitle || 'Campus App Hosting'}
-        </motion.h1>
-        <motion.div {...fade(0.26)} className="mt-2" style={{ color: '#00629b', fontFamily: T.serif, fontSize: 21, lineHeight: 1.02, fontWeight: 650 }}>
-          {slide.hostingSubtitle || slide.subhead}
-        </motion.div>
+      <Marker>{slide.marker}</Marker>
+
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[10vh]" style={{ maxWidth: '88vw' }}>
+        <h1 className="leading-[0.98]" style={{ fontSize: 'clamp(38px, 3.8vw, 60px)', fontWeight: 520 }}>
+          <PartText parts={slide.parts} />
+        </h1>
+        {slide.subhead && (
+          <motion.div {...fade(0.34)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(16px, 1.2vw, 21px)' }}>
+            {slide.subhead}
+          </motion.div>
+        )}
       </div>
 
-      <Card delay={0.38} className="absolute left-[4.8vw] right-[4.8vw] top-[18vh] rounded-[14px] p-3">
-        <div className="grid grid-cols-6 gap-2.5">
-          {steps.map((step, index) => {
-            const color = step.color || ['#0076a8', '#0076a8', '#11c5d6', '#ffc928', '#ff8500', '#6f9363'][index] || T.blue;
-            return (
-              <motion.div key={step.title} {...fade(0.5 + index * 0.055)} className="relative rounded-[8px] border bg-[#fbfcfd] px-3 py-3" style={{ borderColor: '#d9e4eb', minHeight: 118 }}>
-                {index < steps.length - 1 && (
-                  <div className="absolute right-[-13px] top-1/2 z-10 -translate-y-1/2" style={{ color: '#b5c5d0', fontSize: 20 }}>→</div>
-                )}
-                <div className="flex items-center justify-between gap-2">
-                  <div className="flex h-7 w-7 items-center justify-center rounded-full" style={{ background: color, color: '#fff', fontFamily: T.mono, fontSize: 13, fontWeight: 800 }}>{index + 1}</div>
-                  <MiniIcon type={step.icon || 'template'} color={color} />
-                </div>
-                <div className="mt-2" style={{ color: T.ink, fontFamily: T.serif, fontSize: 25, lineHeight: 0.9, fontWeight: 650 }}>{step.title}</div>
-                <div className="mt-1.5" style={{ color: '#627089', fontFamily: T.serif, fontSize: 15.2, lineHeight: 1.05 }}>{step.body}</div>
-              </motion.div>
-            );
-          })}
-        </div>
-      </Card>
-
-      <Card delay={0.7} className="absolute left-[4.8vw] right-[4.8vw] top-[40.6vh] bottom-[8.5vh] rounded-[14px] p-5">
-        <div className="grid h-full grid-rows-3 gap-3">
-          {lanes.map((lane, index) => (
-            <motion.div key={lane.title} {...fade(0.82 + index * 0.08)} className="grid grid-cols-[14%_16%_1fr_16%] items-center gap-4">
-              <div className="flex h-full items-center gap-4 border-l-[5px] pl-5" style={{ borderColor: lane.color }}>
+      {/* 4 tier rows */}
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[22vh] bottom-[2vh] flex flex-col gap-12">
+        {tiers.map((tier, index) => {
+          const tierNum = index;
+          return (
+            <motion.div
+              key={tier.tierLabel}
+              {...fade(0.46 + index * 0.1)}
+              className="relative grid grid-cols-[17%_24%_1fr_22%] items-center gap-4 rounded-[10px] border-2 px-6 py-5"
+              style={{ borderColor: tier.color, background: tier.fill, borderLeftWidth: 9, boxShadow: `0 4px 14px ${tier.color}22` }}
+            >
+              {/* Col 1: Tier label + users + volume */}
+              <div className="flex items-center gap-3.5">
+                <TierUserIcon tier={tierNum} color={tier.color} />
                 <div>
-                  <div style={{ color: lane.color, fontFamily: T.serif, fontSize: 29, lineHeight: 0.94, fontWeight: 650 }}>{lane.title}</div>
-                  <div className="mt-1.5 text-[12px]" style={{ color: '#7a8596', fontFamily: T.mono, fontWeight: 700 }}>{lane.volume}</div>
+                  <div style={{ color: tier.color, fontFamily: T.mono, fontSize: 14, fontWeight: 800, letterSpacing: '0.18em' }}>{tier.tierLabel.toUpperCase()}</div>
+                  <div className="mt-1" style={{ color: T.ink, fontFamily: T.serif, fontSize: 24, fontWeight: 650, lineHeight: 1.05 }}>{tier.users}</div>
+                  <div className="mt-1" style={{ color: T.muted, fontFamily: T.mono, fontSize: 14, fontWeight: 700 }}>{tier.volume}</div>
                 </div>
               </div>
 
-              <div className="flex items-center justify-center gap-3">
-                <div className="hidden xl:block" style={{ color: lane.color, fontSize: 23 }}>→</div>
-                <HostingDiamond label={lane.review} color={lane.color} delay={0.95 + index * 0.08} />
+              {/* Col 2: Process step or review diamond */}
+              <div className="flex items-center justify-center">
+                {tier.review ? (
+                  <div className="flex items-center gap-3">
+                    <div className="rounded-full" style={{ background: tier.color, color: '#fff', fontFamily: T.mono, fontSize: 13, fontWeight: 800, padding: '8px 14px', whiteSpace: 'nowrap', letterSpacing: '0.1em' }}>
+                      REVIEW
+                    </div>
+                    <div className="rounded-[8px] border-2 px-4 py-3 bg-white" style={{ borderColor: tier.color, color: tier.color, fontFamily: T.serif, fontSize: 17.5, lineHeight: 1.2, fontWeight: 650, maxWidth: 220 }}>
+                      {tier.review}
+                    </div>
+                  </div>
+                ) : tier.process ? (
+                  <div className="rounded-[8px] border-2 bg-white px-4 py-3.5" style={{ borderColor: tier.color, color: tier.color, fontFamily: T.serif, fontSize: 18.5, lineHeight: 1.2, fontWeight: 650, maxWidth: 260 }}>
+                    {tier.process}
+                  </div>
+                ) : null}
               </div>
 
-              <div className="relative">
-                <div className="absolute left-[-22px] top-1/2 -translate-y-1/2 text-[10px] uppercase" style={{ color: lane.color, fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.12em' }}>Approved →</div>
-                <div className="rounded-[9px] border-2 bg-white px-5 py-3" style={{ borderColor: lane.softColor || lane.color }}>
-                  <div style={{ color: T.ink, fontFamily: T.serif, fontSize: 29, lineHeight: 0.94, fontWeight: 650 }}>{lane.deployment}</div>
-                  <div className="mt-2 inline-flex rounded-full px-3 py-1 text-[12px]" style={{ background: lane.fill, color: lane.color, fontFamily: T.mono, fontWeight: 800 }}>{lane.domain}</div>
-                </div>
-                {index < lanes.length - 1 && (
-                  <div className="absolute left-1/2 top-[calc(100%+2px)] -translate-x-1/2 text-[11px] uppercase" style={{ color: lane.color, fontFamily: T.mono, letterSpacing: '0.16em', fontWeight: 800 }}>
-                    escalate / migrate ↓
+              {/* Col 3: Deployment(s) */}
+              <div className="flex flex-wrap items-center gap-3">
+                {tier.deploymentLabel && (
+                  <div className="flex flex-col">
+                    <div className="rounded-[8px] border-2 bg-white px-4 py-3" style={{ borderColor: tier.softColor, color: T.ink, fontFamily: T.serif, fontSize: 18.5, fontWeight: 650 }}>
+                      {tier.deploymentLabel}
+                    </div>
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      {(tier.tools || []).map((tool) => (
+                        <span key={tool} className="rounded-[4px] border px-3 py-1 text-[14px]" style={{ borderColor: tier.softColor, color: tier.color, fontFamily: T.mono, fontWeight: 700, background: '#fff' }}>
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {tier.deployments &&
+                  tier.deployments.map((dep) => (
+                    <div key={dep.name} className="rounded-[8px] border-2 bg-white px-4 py-3" style={{ borderColor: tier.softColor, color: T.ink, fontFamily: T.serif, fontSize: 18.5, fontWeight: 650 }}>
+                      <div>{dep.name}</div>
+                      <div style={{ color: tier.color, fontFamily: T.mono, fontSize: 13.5, fontWeight: 700, marginTop: 4 }}>{dep.domain}</div>
+                    </div>
+                  ))}
+                {tier.deployment && !tier.deployments && (
+                  <div className="rounded-[8px] border-2 bg-white px-4 py-3" style={{ borderColor: tier.softColor, color: T.ink, fontFamily: T.serif, fontSize: 18.5, fontWeight: 650 }}>
+                    <div>{tier.deployment}</div>
+                    {tier.domain && <div style={{ color: tier.color, fontFamily: T.mono, fontSize: 13.5, fontWeight: 700, marginTop: 4 }}>{tier.domain}</div>}
                   </div>
                 )}
               </div>
 
-              <div className="flex items-center justify-center gap-3">
-                {lane.recurring && (
-                  <>
-                    <div style={{ color: lane.color, fontSize: 23 }}>→</div>
-                    <HostingDiamond label={lane.recurring} color={lane.color} delay={1.08 + index * 0.08} />
-                  </>
+              {/* Col 4: Recurring review */}
+              <div className="flex items-center justify-center">
+                {tier.recurring && (
+                  <div className="flex items-center gap-2.5">
+                    <span style={{ color: tier.color, fontSize: 24, fontWeight: 600 }}>→</span>
+                    <div className="rounded-[8px] border-2 px-4 py-3 bg-white" style={{ borderColor: tier.color, color: tier.color, fontFamily: T.serif, fontSize: 17.5, lineHeight: 1.2, fontWeight: 650, maxWidth: 200 }}>
+                      {tier.recurring}
+                    </div>
+                  </div>
                 )}
               </div>
+
+              {/* Escalation badge (between tiers) — centered vertically in the gap */}
+              {index < tiers.length - 1 && (
+                <motion.div
+                  {...fade(0.62 + index * 0.1, 0)}
+                  className="absolute left-1/2 top-full z-10 -translate-x-1/2 translate-y-[14px] flex items-center gap-2 rounded-full px-4 py-1.5"
+                  style={{
+                    background: '#fff',
+                    border: `2px solid ${T.coral}`,
+                    boxShadow: '0 4px 10px rgba(212,122,95,0.18)'
+                  }}
+                >
+                  <span style={{ color: T.coral, fontSize: 18, lineHeight: 1, fontWeight: 800 }}>↓</span>
+                  <span style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 12, letterSpacing: '0.16em', fontWeight: 800, textTransform: 'uppercase' }}>
+                    escalate / migrate
+                  </span>
+                  <span style={{ color: T.coral, fontSize: 18, lineHeight: 1, fontWeight: 800 }}>↓</span>
+                </motion.div>
+              )}
             </motion.div>
-          ))}
-        </div>
-      </Card>
+          );
+        })}
+      </div>
     </Shell>
   );
 };
@@ -1432,57 +2010,182 @@ const HarnessSkillsVariant = ({ slide }) => (
   </Shell>
 );
 
-const HarnessSubagentsVariant = ({ slide }) => (
-  <Shell>
-    <Header slide={slide} />
-    <Content style={{ top: '30vh', bottom: '15vh' }}>
-      <div className="mx-auto flex h-16 w-56 items-center justify-center rounded-[6px] text-center" style={{ background: T.black, color: '#fff', fontFamily: T.mono, fontSize: 16 }}>
-        PARENT<br />main thread
+const HarnessSubagentsVariant = ({ slide }) => {
+  const agents = slide.agents || [];
+
+  return (
+    <Shell>
+      <Marker>{slide.marker}</Marker>
+      <JobSpine activeKey={slide.spineActive} />
+
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[10vh]" style={{ maxWidth: '88vw' }}>
+        <h1 className="leading-[0.98]" style={{ fontSize: 'clamp(40px, 4vw, 64px)', fontWeight: 520 }}>
+          <PartText parts={slide.parts} />
+        </h1>
+        {slide.subhead && (
+          <motion.div {...fade(0.34)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(17px, 1.3vw, 22px)' }}>
+            {slide.subhead}
+          </motion.div>
+        )}
       </div>
-      <svg viewBox="0 0 1180 335" className="mt-3 h-[41vh] w-full overflow-visible">
-        {[190, 590, 990].map((x, index) => (
-          <g key={`branch-${index}`}>
-            <motion.line {...lineDraw(0.62 + index * 0.08)} x1="590" y1="0" x2={x} y2="95" stroke={T.faint} strokeWidth="1.4" strokeDasharray="4 6" />
-            <motion.text {...fade(0.76 + index * 0.08, 0)} x={(590 + x) / 2 + (index - 1) * 12} y={index === 1 ? 62 : 54} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 10, letterSpacing: '0.18em', fontWeight: 700 }} fill={T.muted}>SPAWN</motion.text>
-          </g>
-        ))}
-        {(slide.agents || []).map((agent, index) => {
-          const x = [50, 430, 810][index];
-          return (
-            <motion.g key={`${agent.name}-${index}`} {...fade(0.85 + index * 0.12)}>
-              <rect x={x} y="95" width="320" height="150" rx="8" fill={agent.fill} stroke={agent.stroke} strokeWidth="1.5" />
-              <text x={x + 28} y="132" style={{ fontFamily: T.mono, fontSize: 12, letterSpacing: '0.16em', fontWeight: 700 }} fill={agent.stroke}>{agent.kicker || 'ISOLATED SESSION'}</text>
-              <circle cx={x + 78} cy="178" r="38" fill={T.bg} stroke={agent.stroke} strokeWidth="1.4" />
-              <text x={x + 78} y="188" textAnchor="middle" style={{ fontFamily: T.serif, fontStyle: 'italic', fontSize: 42 }} fill={agent.stroke}>{agent.letter}</text>
-              <text x={x + 142} y="158" style={{ fontFamily: T.mono, fontSize: 10, letterSpacing: '0.12em', fontWeight: 700 }} fill={T.muted}>{agent.mode || 'scoped work'}</text>
-              {(agent.tools || ['tool', 'state']).map((tool, toolIndex) => {
-                const tx = x + 142 + (toolIndex % 2) * 86;
-                const ty = 169 + Math.floor(toolIndex / 2) * 31;
-                return (
-                  <g key={`${agent.name}-${tool}`}>
-                    <rect x={tx} y={ty} width="76" height="23" rx="3" fill="#fff" stroke={T.faint} />
-                    <text x={tx + 38} y={ty + 15} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 10, fontWeight: 700 }} fill={T.muted}>{tool}</text>
-                  </g>
-                );
-              })}
-              {agent.locked && (
-                <g>
-                  <rect x={x + 42} y="224" width="236" height="18" rx="3" fill="#f4ded4" stroke={T.coralPale} />
-                  <text x={x + 160} y="237" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 9, letterSpacing: '0.12em', fontWeight: 700 }} fill={T.coralDark}>NO NESTED DELEGATION</text>
-                </g>
-              )}
-              <text x={x + 160} y="274" textAnchor="middle" style={{ fontFamily: T.serif, fontSize: 24, fontStyle: 'italic' }} fill={T.ink}>{agent.name}</text>
-            </motion.g>
-          );
-        })}
-        <motion.path {...lineDraw(1.25)} d="M90 292 C330 340, 850 340, 1090 292" fill="none" stroke={T.coralDark} strokeWidth="1.5" />
-      </svg>
-      <motion.div {...fade(1.35)} className="text-center" style={{ color: T.coralDark, fontSize: 45, fontStyle: 'italic' }}>
-        divide · bound · reassemble
+
+      {/* Parent main-thread box, pulled up under the subhead */}
+      <motion.div
+        {...fade(0.45)}
+        className="absolute top-[20vh] left-1/2 -translate-x-1/2 flex h-[58px] w-[280px] items-center justify-center rounded-[8px]"
+        style={{
+          background: T.black,
+          color: '#fff',
+          fontFamily: T.mono,
+          fontSize: 14,
+          fontWeight: 700,
+          letterSpacing: '0.18em',
+          boxShadow: '0 6px 18px rgba(0,0,0,0.18)'
+        }}
+      >
+        <div className="text-center">
+          <div style={{ color: '#f0c14d', fontSize: 11, letterSpacing: '0.22em' }}>PARENT</div>
+          <div className="mt-0.5" style={{ fontSize: 14, letterSpacing: '0.06em' }}>main thread</div>
+        </div>
       </motion.div>
-    </Content>
-  </Shell>
-);
+
+      {/* Simplified sub-agents diagram — clean tree, no overlapping lines */}
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[29vh] bottom-[18vh]">
+        <svg viewBox="0 0 1240 460" preserveAspectRatio="xMidYMid meet" className="h-full w-full overflow-visible">
+          {/* Top connector: parent → 3 sub-agents (single horizontal bus + 3 verticals) */}
+          <motion.line
+            {...lineDraw(0.55)}
+            x1="180"
+            y1="30"
+            x2="1060"
+            y2="30"
+            stroke={T.muted}
+            strokeWidth="1.4"
+            strokeDasharray="4 5"
+          />
+          {[180, 620, 1060].map((x, i) => (
+            <motion.line
+              key={`down-${i}`}
+              {...lineDraw(0.65 + i * 0.05)}
+              x1={x}
+              y1="30"
+              x2={x}
+              y2="80"
+              stroke={T.muted}
+              strokeWidth="1.4"
+              strokeDasharray="4 5"
+            />
+          ))}
+
+          {/* Three sub-agent boxes */}
+          {agents.map((agent, index) => {
+            const x = [40, 480, 920][index];
+            return (
+              <motion.g key={`${agent.name}-${index}`} {...fade(0.85 + index * 0.14)}>
+                <rect x={x} y="80" width="280" height="200" rx="10" fill={agent.fill} stroke={agent.stroke} strokeWidth="2" />
+                <text x={x + 24} y="110" style={{ fontFamily: T.mono, fontSize: 12, letterSpacing: '0.16em', fontWeight: 800 }} fill={agent.stroke}>
+                  {agent.kicker || 'ISOLATED SESSION'}
+                </text>
+
+                {/* Big italic letter on the left */}
+                <circle cx={x + 60} cy="168" r="36" fill={T.bg} stroke={agent.stroke} strokeWidth="1.6" />
+                <text x={x + 60} y="178" textAnchor="middle" style={{ fontFamily: T.serif, fontStyle: 'italic', fontSize: 40, fontWeight: 520 }} fill={agent.stroke}>
+                  {agent.letter}
+                </text>
+
+                {/* Mode + tools on the right */}
+                <text x={x + 110} y="144" style={{ fontFamily: T.mono, fontSize: 10.5, letterSpacing: '0.12em', fontWeight: 700 }} fill={T.muted}>
+                  {agent.mode || 'scoped work'}
+                </text>
+                {(agent.tools || ['tool', 'state']).map((tool, toolIndex) => {
+                  const tx = x + 110 + (toolIndex % 2) * 80;
+                  const ty = 158 + Math.floor(toolIndex / 2) * 28;
+                  return (
+                    <g key={`${agent.name}-${tool}-${toolIndex}`}>
+                      <rect x={tx} y={ty} width="74" height="22" rx="4" fill="#fff" stroke={T.faint} />
+                      <text x={tx + 37} y={ty + 15} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 11, fontWeight: 700 }} fill={T.ink}>
+                        {tool}
+                      </text>
+                    </g>
+                  );
+                })}
+
+                {/* Bottom name */}
+                <text x={x + 140} y="260" textAnchor="middle" style={{ fontFamily: T.serif, fontStyle: 'italic', fontSize: 22, fontWeight: 520 }} fill={T.ink}>
+                  {agent.name}
+                </text>
+              </motion.g>
+            );
+          })}
+
+          {/* Bottom connector: 3 sub-agents → single merge point (mirrored tree) */}
+          {[180, 620, 1060].map((x, i) => (
+            <motion.line
+              key={`up-${i}`}
+              {...lineDraw(1.55 + i * 0.05)}
+              x1={x}
+              y1="280"
+              x2={x}
+              y2="330"
+              stroke={T.blue}
+              strokeWidth="1.4"
+              strokeDasharray="4 5"
+            />
+          ))}
+          <motion.line
+            {...lineDraw(1.7)}
+            x1="180"
+            y1="330"
+            x2="1060"
+            y2="330"
+            stroke={T.blue}
+            strokeWidth="1.4"
+            strokeDasharray="4 5"
+          />
+          <motion.line
+            {...lineDraw(1.85)}
+            x1="620"
+            y1="330"
+            x2="620"
+            y2="378"
+            stroke={T.blue}
+            strokeWidth="1.4"
+            strokeDasharray="4 5"
+          />
+
+          {/* Result badge at the merge point */}
+          <motion.rect
+            {...fade(2.0, 0)}
+            x="500"
+            y="378"
+            width="240"
+            height="44"
+            rx="8"
+            fill={T.blue}
+          />
+          <motion.text
+            {...fade(2.1, 0)}
+            x="620"
+            y="406"
+            textAnchor="middle"
+            style={{ fontFamily: T.mono, fontSize: 14, letterSpacing: '0.18em', fontWeight: 800 }}
+            fill="#fff"
+          >
+            ASSEMBLED RESULT
+          </motion.text>
+        </svg>
+      </div>
+
+      <motion.div
+        {...fade(2.3)}
+        className="absolute left-[4.8vw] right-[4.8vw] top-[88vh] text-center italic"
+        style={{ color: T.coralDark, fontSize: 'clamp(20px, 2vw, 32px)', fontWeight: 500 }}
+      >
+        divide &middot; bound &middot; reassemble
+      </motion.div>
+    </Shell>
+  );
+};
 
 const HarnessBuiltinsVariant = ({ slide }) => (
   <Shell>
@@ -1723,61 +2426,770 @@ const HarnessActionPlanVariant = ({ slide }) => (
 );
 
 const HarnessRecapVariant = ({ slide }) => {
-  const summaryCards = slide.summaryCards || slide.rubric || [];
-  const summaryColumns = Math.max(1, Math.min(slide.summaryColumns || summaryCards.length || 5, 5));
-  const usesWideCards = summaryColumns <= 4;
+  const rubric = slide.rubric || slide.summaryCards || [];
+  const dimensions = slide.dimensions || [];
 
   return (
     <Shell>
       <Marker>{slide.marker}</Marker>
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[9.5vh] bottom-[10.5vh]">
-        <div className="max-w-[88vw]">
-          <h1 className="leading-[0.98]" style={{ fontSize: 'clamp(42px, 4.2vw, 68px)', fontWeight: 520 }}>
-            <PartText parts={slide.parts || [{ text: 'Recap: rubric, harness, expectations.' }]} />
-          </h1>
-          {slide.subhead && (
-            <motion.div {...fade(0.34)} className="mt-2 max-w-[82vw] italic" style={{ color: T.muted, fontSize: 'clamp(18px, 1.28vw, 22px)' }}>
-              {slide.subhead}
-            </motion.div>
+
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[8vh]" style={{ maxWidth: '92vw' }}>
+        <h1 className="leading-[0.98]" style={{ fontSize: 'clamp(38px, 3.8vw, 60px)', fontWeight: 520 }}>
+          <PartText parts={slide.parts || [{ text: 'Recap: rubric, harness, expectations.' }]} />
+        </h1>
+        {slide.subhead && (
+          <motion.div {...fade(0.34)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(16px, 1.2vw, 20px)' }}>
+            {slide.subhead}
+          </motion.div>
+        )}
+      </div>
+
+      {/* 5-level rubric — main visual */}
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[19vh] grid grid-cols-5 gap-3">
+        {rubric.map((level, index) => {
+          const accentColor = level.color || T.coralDark;
+          const fillColor = level.fill || '#fff8f2';
+          const isHighlight = level.highlight;
+          // Visual lift: cards higher on the scale appear visually elevated
+          const lift = index * 4; // 0, 4, 8, 12, 16 px
+          // Render anchor text with **bold** markers
+          const renderAnchor = (text) => {
+            if (!text) return null;
+            const parts = text.split(/(\*\*[^*]+\*\*)/g).filter(Boolean);
+            return parts.map((p, i) => {
+              if (p.startsWith('**') && p.endsWith('**')) {
+                return <strong key={i} style={{ color: accentColor, fontWeight: 700 }}>{p.slice(2, -2)}</strong>;
+              }
+              return <span key={i}>{p}</span>;
+            });
+          };
+          return (
+            <Card
+              key={`${level.label}-${index}`}
+              delay={0.5 + index * 0.08}
+              className="flex min-h-[420px] flex-col p-5"
+              style={{
+                borderColor: accentColor,
+                background: fillColor,
+                borderTopWidth: 8,
+                borderTopColor: accentColor,
+                boxShadow: isHighlight
+                  ? `0 10px 26px ${accentColor}3a`
+                  : `0 ${4 + index}px ${10 + index * 2}px ${accentColor}22`,
+                transform: `translateY(${-lift}px)`
+              }}
+            >
+              <div className="flex items-baseline gap-3">
+                <span
+                  className="rounded-[6px] px-3 py-1.5"
+                  style={{ background: accentColor, color: '#fff', fontFamily: T.mono, fontSize: 22, fontWeight: 800 }}
+                >
+                  {level.score}
+                </span>
+                {isHighlight && (
+                  <span className="text-[11px] uppercase" style={{ color: accentColor, fontFamily: T.mono, letterSpacing: '0.18em', fontWeight: 800 }}>
+                    {level.kicker || 'Baseline'}
+                  </span>
+                )}
+                {index === rubric.length - 1 && (
+                  <span className="ml-auto text-[14px]" style={{ color: accentColor }}>★</span>
+                )}
+              </div>
+              <div className="mt-4" style={{ fontSize: 26, lineHeight: 1.06, fontWeight: 700, color: accentColor }}>
+                {level.label}
+              </div>
+              <div className="mt-4 flex-1" style={{ color: T.ink, fontSize: 17.5, lineHeight: 1.42 }}>
+                {renderAnchor(level.anchor || level.body)}
+              </div>
+            </Card>
+          );
+        })}
+      </div>
+
+      {/* Movement indicator — gradient arrow tight under the rubric */}
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[68vh] flex items-center gap-3">
+        <span className="text-[11px] uppercase shrink-0" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
+          Direction of growth
+        </span>
+        <svg className="flex-1" height="20" preserveAspectRatio="none" viewBox="0 0 1000 20">
+          <defs>
+            <linearGradient id="growth-grad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stopColor="#a04848" />
+              <stop offset="25%" stopColor="#b48058" />
+              <stop offset="50%" stopColor="#d47a5f" />
+              <stop offset="72%" stopColor="#a8b070" />
+              <stop offset="100%" stopColor="#5d8350" />
+            </linearGradient>
+          </defs>
+          {/* Bar ends precisely where the arrowhead's flat edge begins */}
+          <rect x="0" y="6" width="982" height="8" rx="4" fill="url(#growth-grad)" />
+          {/* Arrowhead: triangle whose flat edge sits flush at x=982, tip at x=1000 */}
+          <polygon points="982,0 982,20 1000,10" fill="#5d8350" />
+        </svg>
+        <span className="text-[11px] uppercase shrink-0" style={{ color: '#5d8350', fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
+          Force multiplier →
+        </span>
+      </div>
+
+      {/* Tagline — sits below the gradient arrow */}
+      {slide.bottomLine && (
+        <motion.div
+          {...fade(1.0)}
+          className="absolute left-[4.8vw] right-[4.8vw] top-[76vh] flex items-start gap-5"
+        >
+          {slide.bottomLineLabel && (
+            <span
+              className="shrink-0 rounded-[5px] px-3 py-2 text-[12.5px]"
+              style={{
+                background: T.coral,
+                color: '#fff',
+                fontFamily: T.mono,
+                fontWeight: 800,
+                letterSpacing: '0.22em',
+                whiteSpace: 'nowrap'
+              }}
+            >
+              {slide.bottomLineLabel}
+            </span>
           )}
-        </div>
-        <div className="mt-5 grid items-start gap-6" style={{ gridTemplateColumns: usesWideCards ? 'minmax(0, 1fr) minmax(360px, 36%)' : 'minmax(0, 1fr) minmax(320px, 34%)' }}>
-          <div className="grid gap-3" style={{ gridTemplateColumns: `repeat(${summaryColumns}, minmax(0, 1fr))` }}>
-            {summaryCards.map((level, index) => (
-              <Card key={`${level.title}-${index}`} delay={0.48 + index * 0.055} className={usesWideCards ? 'flex min-h-[312px] flex-col p-5' : 'flex min-h-[285px] flex-col p-4'} style={{ borderColor: level.highlight || level.chipDark ? T.coral : T.faint }}>
-                <div className="text-[12px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.16em' }}>{level.label || `Level ${index + 1}`}</div>
-                <div className="mt-3" style={{ fontSize: usesWideCards ? 25 : 23, lineHeight: 1.04, fontWeight: 650 }}>{level.title}</div>
-                <div className="mt-3 flex-1" style={{ color: T.muted, fontSize: usesWideCards ? 15.3 : 14.2, lineHeight: usesWideCards ? 1.28 : 1.24 }}>{level.body}</div>
-                <div className="mt-auto rounded-[5px] px-3 py-2" style={{ background: level.highlight || level.chipDark ? T.coral : '#fff8f2', color: level.highlight || level.chipDark ? '#fff' : T.coralDark, fontFamily: T.mono, fontSize: usesWideCards ? 12.2 : 11.5, fontWeight: 700 }}>
-                  {level.expectation}
-                </div>
-              </Card>
+          <div style={{ fontSize: 'clamp(17px, 1.4vw, 22px)', fontWeight: 560, lineHeight: 1.3 }}>
+            {slide.bottomLine}
+          </div>
+        </motion.div>
+      )}
+
+      {/* Visual connection — what's behind the rubric */}
+      {slide.poweredBy && (
+        <motion.div
+          {...fade(1.2)}
+          className="absolute left-[4.8vw] right-[4.8vw] top-[86vh] flex items-center gap-4 flex-wrap"
+        >
+          <span className="text-[11px] uppercase shrink-0" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
+            {slide.poweredByLabel || 'Powered by the program'}
+          </span>
+          <div className="flex flex-wrap items-center gap-2">
+            {slide.poweredBy.map((item) => (
+              <span
+                key={item}
+                className="rounded-full border px-3 py-1 text-[12.5px]"
+                style={{
+                  borderColor: T.faint,
+                  background: '#fff',
+                  color: T.ink,
+                  fontFamily: T.mono,
+                  fontWeight: 700
+                }}
+              >
+                {item}
+              </span>
             ))}
           </div>
-          <Card delay={0.82} className={usesWideCards ? 'p-5' : 'p-4'}>
-            <Kicker>{slide.expectationKicker || 'Staff expectation'}</Kicker>
-            <div className="mt-2" style={{ fontSize: usesWideCards ? 30 : 27, lineHeight: 1.02, fontWeight: 560 }}>{slide.expectationTitle}</div>
-            {slide.practice && (
-              <div className="mt-3 grid grid-cols-3 gap-2">
-                {slide.practice.map((item, index) => (
-                  <motion.div key={item.title} {...fade(0.92 + index * 0.06, 0)} className="rounded-[5px] border px-2 py-1.5 text-center" style={{ borderColor: T.coralPale, background: '#fff8f2' }}>
-                    <div style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 9, letterSpacing: '0.1em', fontWeight: 700 }}>{item.kicker}</div>
-                    <div className="mt-0.5" style={{ fontSize: usesWideCards ? 17 : 16, lineHeight: 1.05, fontWeight: 650 }}>{item.title}</div>
-                  </motion.div>
-                ))}
-              </div>
-            )}
-            <div className="mt-3 space-y-0">
-              {(slide.expectations || []).map((item, index) => (
-                <motion.div key={`${item}-${index}`} {...fade(1 + index * 0.055)} className="grid grid-cols-[38px_1fr] border-b py-2" style={{ borderColor: T.rule }}>
-                  <span style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 12, fontWeight: 700 }}>{String(index + 1).padStart(2, '0')}</span>
-                  <span style={{ fontSize: usesWideCards ? 17 : 16.2, lineHeight: usesWideCards ? 1.18 : 1.16 }}>{item}</span>
-                </motion.div>
+        </motion.div>
+      )}
+    </Shell>
+  );
+};
+
+const HarnessConvergenceVariant = ({ slide }) => {
+  const streams = slide.streams || [];
+  const left = streams[0] || {};
+  const right = streams[1] || {};
+
+  return (
+    <Shell>
+      <Marker>{slide.marker}</Marker>
+      {slide.kicker && (
+        <motion.div
+          {...fade(0.18)}
+          className="absolute left-[4.8vw] top-[10vh] text-[13px] uppercase"
+          style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em' }}
+        >
+          {slide.kicker}
+        </motion.div>
+      )}
+      <h1
+        className="absolute left-[4.8vw] right-[4.8vw] top-[15vh] leading-[0.96]"
+        style={{ fontSize: 'clamp(48px, 5.4vw, 86px)', fontWeight: 520 }}
+      >
+        <PartText parts={slide.parts} delay={0.25} />
+      </h1>
+      {slide.subhead && (
+        <motion.div
+          {...fade(0.5)}
+          className="absolute left-[4.8vw] top-[33vh] italic"
+          style={{
+            color: T.muted,
+            fontSize: 'clamp(18px, 1.4vw, 24px)',
+            maxWidth: '74vw',
+            lineHeight: 1.32
+          }}
+        >
+          {slide.subhead}
+        </motion.div>
+      )}
+
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[42vh] grid grid-cols-[1fr_120px_1fr] items-stretch gap-0">
+        <Card delay={0.65} className="p-8">
+          <div className="flex items-center gap-3">
+            <span
+              className="rounded-full px-3 py-1.5 text-[12px]"
+              style={{
+                background: T.bluePale,
+                color: T.blue,
+                fontFamily: T.mono,
+                fontWeight: 800,
+                letterSpacing: '0.2em'
+              }}
+            >
+              {left.kicker || 'STREAM 1'}
+            </span>
+          </div>
+          <div
+            className="mt-5"
+            style={{ fontSize: 36, lineHeight: 1.05, fontWeight: 620, color: T.blue }}
+          >
+            {left.title}
+          </div>
+          <div className="mt-4" style={{ color: T.muted, fontSize: 20, lineHeight: 1.34 }}>
+            {left.body}
+          </div>
+          {left.examples && (
+            <div className="mt-5 flex flex-wrap gap-2.5">
+              {left.examples.map((ex) => (
+                <span
+                  key={ex}
+                  className="rounded-[6px] border px-3 py-1.5 text-[14px]"
+                  style={{
+                    borderColor: '#b9d3dc',
+                    background: '#fff',
+                    color: T.blue,
+                    fontFamily: T.mono,
+                    fontWeight: 700
+                  }}
+                >
+                  {ex}
+                </span>
+              ))}
+            </div>
+          )}
+        </Card>
+
+        <div className="relative flex h-full items-center justify-center">
+          <svg viewBox="0 0 120 220" className="h-full w-full overflow-visible">
+            <motion.path
+              {...lineDraw(0.95)}
+              d="M 0 60 C 40 60, 50 110, 60 110"
+              fill="none"
+              stroke={T.blue}
+              strokeWidth="1.6"
+            />
+            <motion.path
+              {...lineDraw(1.05)}
+              d="M 0 160 C 40 160, 50 110, 60 110"
+              fill="none"
+              stroke={T.coralDark}
+              strokeWidth="1.6"
+            />
+            <motion.path
+              {...lineDraw(1.18)}
+              d="M 60 110 L 116 110"
+              fill="none"
+              stroke={T.ink}
+              strokeWidth="1.8"
+            />
+            <motion.polygon
+              {...fade(1.32, 0)}
+              points="116,110 104,104 104,116"
+              fill={T.ink}
+            />
+            <motion.circle
+              {...fade(1.2, 0)}
+              cx="60"
+              cy="110"
+              r="14"
+              fill={T.coral}
+            />
+            <motion.text
+              {...fade(1.32, 0)}
+              x="60"
+              y="115"
+              textAnchor="middle"
+              style={{ fontFamily: T.mono, fontSize: 14, fontWeight: 800 }}
+              fill="#fff"
+            >
+              ×
+            </motion.text>
+          </svg>
+        </div>
+
+        <Card
+          delay={0.78}
+          className="p-8"
+          style={{ background: '#fff8f2', borderColor: T.coralPale }}
+        >
+          <div className="flex items-center gap-3">
+            <span
+              className="rounded-full px-3 py-1.5 text-[12px]"
+              style={{
+                background: T.coralPale,
+                color: T.coralDark,
+                fontFamily: T.mono,
+                fontWeight: 800,
+                letterSpacing: '0.2em'
+              }}
+            >
+              {right.kicker || 'STREAM 2'}
+            </span>
+          </div>
+          <div
+            className="mt-5"
+            style={{ fontSize: 36, lineHeight: 1.05, fontWeight: 620, color: T.coralDark }}
+          >
+            {right.title}
+          </div>
+          <div className="mt-4" style={{ color: T.muted, fontSize: 20, lineHeight: 1.34 }}>
+            {right.body}
+          </div>
+          {right.examples && (
+            <div className="mt-5 flex flex-wrap gap-2.5">
+              {right.examples.map((ex) => (
+                <span
+                  key={ex}
+                  className="rounded-[6px] border px-3 py-1.5 text-[14px]"
+                  style={{
+                    borderColor: T.coralPale,
+                    background: '#fff',
+                    color: T.coralDark,
+                    fontFamily: T.mono,
+                    fontWeight: 700
+                  }}
+                >
+                  {ex}
+                </span>
+              ))}
+            </div>
+          )}
+        </Card>
+      </div>
+
+      {slide.outcome && (
+        <motion.div
+          {...fade(1.4)}
+          className="absolute left-[4.8vw] right-[4.8vw] top-[70vh] flex items-center gap-5"
+        >
+          <span
+            className="rounded-[5px] px-3 py-2 text-[12px]"
+            style={{
+              background: T.coral,
+              color: '#fff',
+              fontFamily: T.mono,
+              fontWeight: 800,
+              letterSpacing: '0.22em',
+              whiteSpace: 'nowrap'
+            }}
+          >
+            {slide.outcome.label || 'PARADIGM SHIFT'}
+          </span>
+          <div style={{ fontSize: 'clamp(20px, 1.7vw, 28px)', fontWeight: 560, lineHeight: 1.2 }}>
+            {slide.outcome.headline}
+          </div>
+        </motion.div>
+      )}
+    </Shell>
+  );
+};
+
+const HarnessDataUnlockVariant = ({ slide }) => {
+  const harnesses = slide.harnesses || ['Claude Code', 'Codex', 'Cursor', 'OpenCode'];
+  const prioritySystems = slide.prioritySystems || [];
+  const alsoSystems = slide.alsoSystems || [];
+  const governance = slide.governance || [];
+
+  return (
+    <Shell>
+      <Marker>{slide.marker}</Marker>
+
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[7vh]" style={{ maxWidth: '88vw' }}>
+        <h1 className="leading-[0.98]" style={{ fontSize: 'clamp(38px, 3.8vw, 60px)', fontWeight: 520 }}>
+          <PartText parts={slide.parts} />
+        </h1>
+        {slide.subhead && (
+          <motion.div {...fade(0.38)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(16px, 1.25vw, 21px)' }}>
+            {slide.subhead}
+          </motion.div>
+        )}
+      </div>
+
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[20vh] grid grid-cols-[1fr_330px] gap-6 items-stretch">
+        {/* Center: stack of harnesses → MCP → data ecosystem */}
+        <div className="flex flex-col gap-2.5">
+          {/* Top: Harnesses row */}
+          <Card delay={0.5} className="p-5">
+            <div className="flex items-baseline gap-3">
+              <span className="text-[12.5px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
+                Harnesses
+              </span>
+              <span style={{ color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 16 }}>
+                what teams actually use
+              </span>
+            </div>
+            <div className="mt-3 flex flex-wrap gap-2.5">
+              {harnesses.map((h, i) => (
+                <motion.span
+                  key={h}
+                  {...fade(0.62 + i * 0.06)}
+                  className="rounded-[5px] border px-3.5 py-2 text-[16px]"
+                  style={{ borderColor: T.faint, background: '#fff', color: T.ink, fontFamily: T.mono, fontWeight: 700 }}
+                >
+                  {h}
+                </motion.span>
               ))}
             </div>
           </Card>
+
+          {/* MCP connector */}
+          <motion.div {...fade(0.92)} className="flex items-center gap-3 px-2 py-1">
+            <div className="h-px flex-1" style={{ background: T.blue, opacity: 0.5 }} />
+            <div
+              className="rounded-full border px-5 py-2 text-[14px]"
+              style={{ borderColor: T.blue, background: T.bluePale, color: T.blue, fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.18em' }}
+            >
+              MCP
+            </div>
+            <div className="h-px flex-1" style={{ background: T.blue, opacity: 0.5 }} />
+          </motion.div>
+
+          {/* Priority systems (highlighted) */}
+          <Card delay={1.05} className="p-5" style={{ background: '#fff8f2', borderColor: T.coralPale }}>
+            <div className="flex items-baseline gap-3">
+              <span
+                className="rounded-[5px] px-2.5 py-1 text-[12px] uppercase"
+                style={{ background: T.coral, color: '#fff', fontFamily: T.mono, letterSpacing: '0.18em', fontWeight: 800 }}
+              >
+                ★ {slide.priorityHeading || 'Agentic-priority'}
+              </span>
+              <span style={{ color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 15 }}>
+                where harnesses unlock the most value first
+              </span>
+            </div>
+            <div className="mt-3 flex flex-wrap gap-2.5">
+              {prioritySystems.map((sys, i) => {
+                const item = typeof sys === 'string' ? { name: sys } : sys;
+                return (
+                  <motion.span
+                    key={item.name}
+                    {...fade(1.18 + i * 0.06)}
+                    className="rounded-[5px] border-2 px-4 py-2 text-[17px]"
+                    style={{
+                      borderColor: T.coral,
+                      background: '#fff',
+                      color: T.coralDark,
+                      fontFamily: T.mono,
+                      fontWeight: 800
+                    }}
+                  >
+                    {item.name}
+                  </motion.span>
+                );
+              })}
+            </div>
+          </Card>
+
+          {/* Also-connected systems */}
+          {alsoSystems.length > 0 && (
+            <Card delay={1.5} className="flex-1 p-4">
+              <div className="flex items-baseline gap-3">
+                <span className="text-[12px] uppercase" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.2em', fontWeight: 700 }}>
+                  {slide.alsoHeading || 'Plus the rest'}
+                </span>
+              </div>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {alsoSystems.map((sys, i) => {
+                  const isOverflow = sys.startsWith('+');
+                  return (
+                    <motion.span
+                      key={sys}
+                      {...fade(1.6 + i * 0.04)}
+                      className="rounded-[4px] border px-3 py-1.5 text-[14.5px]"
+                      style={{
+                        borderColor: isOverflow ? T.coral : T.faint,
+                        background: isOverflow ? '#fff8f2' : '#fff',
+                        color: isOverflow ? T.coralDark : T.muted,
+                        fontFamily: T.mono,
+                        fontWeight: isOverflow ? 800 : 700,
+                        fontStyle: isOverflow ? 'italic' : 'normal'
+                      }}
+                    >
+                      {sys}
+                    </motion.span>
+                  );
+                })}
+              </div>
+            </Card>
+          )}
         </div>
+
+        {/* Right rail: governance */}
+        <Card delay={0.7} className="p-5">
+          <div className="text-[12.5px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
+            Governance rail
+          </div>
+          <div className="mt-2" style={{ color: T.muted, fontSize: 14.5, lineHeight: 1.35, fontStyle: 'italic' }}>
+            What we wrap around every connection.
+          </div>
+          <div className="mt-4 space-y-3">
+            {governance.map((g, i) => {
+              const item = typeof g === 'string' ? { label: g, note: '' } : g;
+              return (
+                <motion.div
+                  key={item.label}
+                  {...fade(0.82 + i * 0.08)}
+                  className="rounded-[6px] border-l-[3px] px-3.5 py-2.5"
+                  style={{ borderColor: T.coral, background: '#fff8f2' }}
+                >
+                  <div style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 14.5, fontWeight: 800, letterSpacing: '0.04em' }}>
+                    {item.label}
+                  </div>
+                  {item.note && (
+                    <div className="mt-1" style={{ color: T.muted, fontSize: 13.5, lineHeight: 1.32 }}>
+                      {item.note}
+                    </div>
+                  )}
+                </motion.div>
+              );
+            })}
+          </div>
+        </Card>
       </div>
+
+      {slide.bottomLine && (
+        <motion.div
+          {...fade(2.05)}
+          className="absolute left-[4.8vw] right-[4.8vw] top-[83vh] flex items-start gap-5"
+        >
+          {slide.bottomLineLabel && (
+            <span
+              className="shrink-0 rounded-[5px] px-3 py-2.5 text-[12.5px]"
+              style={{ background: T.coral, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.22em', whiteSpace: 'nowrap' }}
+            >
+              {slide.bottomLineLabel}
+            </span>
+          )}
+          <div style={{ fontSize: 'clamp(19px, 1.55vw, 26px)', fontWeight: 560, lineHeight: 1.28 }}>
+            {slide.bottomLine}
+          </div>
+        </motion.div>
+      )}
+    </Shell>
+  );
+};
+
+const HarnessActionVariant = ({ slide }) => {
+  const pipeline = slide.pipeline || [];
+  const toolTiers = slide.toolTiers || [];
+  const traceGoal = slide.traceGoal || '';
+  const traceSteps = slide.traceSteps || [];
+
+  return (
+    <Shell>
+      <Marker>{slide.marker}</Marker>
+      <JobSpine activeKey={slide.spineActive} />
+
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[10vh]" style={{ maxWidth: '88vw' }}>
+        <h1 className="leading-[0.98]" style={{ fontSize: 'clamp(40px, 4vw, 64px)', fontWeight: 520 }}>
+          <PartText parts={slide.parts} />
+        </h1>
+        {slide.subhead && (
+          <motion.div {...fade(0.34)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(17px, 1.3vw, 22px)' }}>
+            {slide.subhead}
+          </motion.div>
+        )}
+      </div>
+
+      {/* Two-column: mechanic (pipeline) on left, live trace on right — mirrors LOOP slide */}
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[26vh] bottom-[14vh] grid grid-cols-[42%_1fr] gap-7 items-stretch">
+        {/* Left: The action pipeline (vertical flow) */}
+        <Card delay={0.5} className="flex flex-col p-6">
+          <div className="self-start text-[12px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
+            The mechanic
+          </div>
+
+          <div className="flex-1 flex flex-col justify-center gap-2.5 mt-4" style={{ minHeight: 0 }}>
+            {pipeline.map((step, i) => (
+              <React.Fragment key={step.label}>
+                <motion.div
+                  {...fade(0.6 + i * 0.12)}
+                  className="rounded-[8px] border-2 bg-white px-4 py-3"
+                  style={{
+                    borderColor: step.color,
+                    borderLeftWidth: 6,
+                    boxShadow: `0 3px 10px ${step.color}1f`
+                  }}
+                >
+                  <div className="flex items-baseline gap-2.5">
+                    <span
+                      className="rounded-[4px] px-2 py-0.5 text-[11px]"
+                      style={{ background: step.color, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.14em' }}
+                    >
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                    <span style={{ color: T.ink, fontFamily: T.serif, fontSize: 22, lineHeight: 1.1, fontWeight: 650 }}>
+                      {step.label}
+                    </span>
+                  </div>
+                  <div className="mt-1" style={{ color: T.muted, fontFamily: T.mono, fontSize: 13, lineHeight: 1.3 }}>
+                    {step.sub}
+                  </div>
+                </motion.div>
+                {i < pipeline.length - 1 && (
+                  <motion.div
+                    {...fade(0.7 + i * 0.12)}
+                    className="flex items-center justify-center"
+                    style={{ color: pipeline[i + 1].color, fontSize: 22, fontWeight: 700, height: 8, lineHeight: 1 }}
+                  >
+                    ↓
+                  </motion.div>
+                )}
+              </React.Fragment>
+            ))}
+          </div>
+
+          <div className="text-center mt-4" style={{ color: T.muted, fontSize: 17, lineHeight: 1.4, fontStyle: 'italic', fontWeight: 500 }}>
+            Every tool call. Every time.
+          </div>
+        </Card>
+
+        {/* Right: Live trace + tool registry */}
+        <Card delay={0.7} className="p-6 flex flex-col">
+          <div className="flex items-baseline gap-3">
+            <span className="text-[11px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 700 }}>
+              Live trace
+            </span>
+            <span style={{ color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 14 }}>
+              one action through the gates
+            </span>
+          </div>
+
+          {traceGoal && (
+            <motion.div
+              {...fade(0.85)}
+              className="mt-3 rounded-[7px] border-l-[3px] px-4 py-3"
+              style={{ borderColor: T.blue, background: T.bluePale }}
+            >
+              <div className="text-[13px] uppercase" style={{ color: T.blue, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>Action</div>
+              <div className="mt-1.5" style={{ color: T.blue, fontSize: 19, fontWeight: 600, lineHeight: 1.28 }}>{traceGoal}</div>
+            </motion.div>
+          )}
+
+          <div className="mt-3 space-y-2">
+            {traceSteps.map((step, i) => {
+              const matchedColor = (pipeline[i] && pipeline[i].color) || T.coral;
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 1.05 + i * 0.18, ease }}
+                  className="rounded-[6px] border-l-[3px] px-3 py-2.5"
+                  style={{ borderColor: matchedColor, background: '#fcfaf3' }}
+                >
+                  <div className="flex items-baseline gap-2.5">
+                    <span style={{ color: matchedColor, fontFamily: T.mono, fontSize: 12.5, fontWeight: 800, letterSpacing: '0.12em', textTransform: 'uppercase', minWidth: 92 }}>
+                      {step.stage}
+                    </span>
+                    <span style={{ color: T.ink, fontFamily: T.mono, fontSize: 15, lineHeight: 1.38 }}>
+                      {step.detail}
+                    </span>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 1.05 + traceSteps.length * 0.18 + 0.25, ease }}
+            className="mt-3 self-start inline-flex items-center gap-2.5 rounded-full px-4 py-1.5"
+            style={{ background: T.coralDark, color: '#fff', fontFamily: T.mono, fontSize: 13, fontWeight: 800, letterSpacing: '0.12em' }}
+          >
+            <span>✓ APPROVED · SCOPED · AUDITED</span>
+          </motion.div>
+
+          {/* Tool registry strip */}
+          <div className="mt-4 pt-3 border-t" style={{ borderColor: T.rule }}>
+            <div className="text-[11px] uppercase mb-2" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
+              Tool registry · gated by what they can do
+            </div>
+            <div className="grid grid-cols-3 gap-2">
+              {toolTiers.map((tier, i) => (
+                <motion.div
+                  key={tier.label}
+                  {...fade(1.6 + i * 0.08)}
+                  className="rounded-[7px] border-l-[5px] px-3 py-2"
+                  style={{ borderColor: tier.color, background: tier.fill }}
+                >
+                  <div className="flex items-baseline gap-2">
+                    <span
+                      className="rounded-[4px] px-1.5 py-0.5 text-[11px]"
+                      style={{ background: tier.color, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.12em' }}
+                    >
+                      {tier.label}
+                    </span>
+                    <span style={{ color: tier.color, fontFamily: T.serif, fontStyle: 'italic', fontSize: 13, fontWeight: 500 }}>
+                      {tier.tagline}
+                    </span>
+                  </div>
+                  <div className="mt-1.5 flex flex-wrap gap-1">
+                    {tier.tools.map((tool) => (
+                      <span
+                        key={tool}
+                        className="rounded-[3px] border px-1.5 py-0.5 text-[11px]"
+                        style={{
+                          borderColor: tier.color,
+                          background: '#fff',
+                          color: tier.color,
+                          fontFamily: T.mono,
+                          fontWeight: 700
+                        }}
+                      >
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </Card>
+      </div>
+
+      {/* Bottom callout */}
+      {slide.bottomLine && (
+        <motion.div
+          {...fade(1.9)}
+          className="absolute left-[4.8vw] right-[4.8vw] top-[88vh] flex items-start gap-5"
+        >
+          {slide.bottomLineLabel && (
+            <span
+              className="shrink-0 rounded-[5px] px-3 py-2 text-[12px]"
+              style={{
+                background: T.coral,
+                color: '#fff',
+                fontFamily: T.mono,
+                fontWeight: 800,
+                letterSpacing: '0.22em',
+                whiteSpace: 'nowrap'
+              }}
+            >
+              {slide.bottomLineLabel}
+            </span>
+          )}
+          <div style={{ fontSize: 'clamp(15px, 1.2vw, 19px)', fontWeight: 560, lineHeight: 1.3 }}>
+            {slide.bottomLine}
+          </div>
+        </motion.div>
+      )}
     </Shell>
   );
 };
@@ -1786,6 +3198,7 @@ export const harnessVariantMap = {
   'harness-pressure': HarnessPressureVariant,
   'harness-rubric': HarnessRubricVariant,
   'harness-question': HarnessQuestionVariant,
+  'harness-convergence': HarnessConvergenceVariant,
   'harness-definition-core': HarnessDefinitionCoreVariant,
   'harness-definition-equation': HarnessDefinitionEquationVariant,
   'harness-work-product': HarnessWorkProductVariant,
@@ -1807,6 +3220,8 @@ export const harnessVariantMap = {
   'harness-lifecycle': HarnessLifecycleVariant,
   'harness-permissions': HarnessPermissionsVariant,
   'harness-ucsd': HarnessUcsdVariant,
+  'harness-data-unlock': HarnessDataUnlockVariant,
+  'harness-action': HarnessActionVariant,
   'harness-action-plan': HarnessActionPlanVariant,
   'harness-recap': HarnessRecapVariant
 };
