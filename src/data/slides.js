@@ -3423,7 +3423,7 @@ export const slides = [
     "subtitle": "The technology is the same for everyone. The lead is human.",
     "attribution": "Brett Pollak · Executive Director, IT Services",
     "audiences": [
-      "cabinet-may-2026"
+      "citizen"
     ]
   },
   {
@@ -3439,7 +3439,7 @@ export const slides = [
     "visual": "kit-to-shelf",
     "bottomCallout": "Three off-the-shelf harnesses shipped this month: Cursor SDK · Anthropic Managed Agents · Microsoft Foundry.",
     "audiences": [
-      "cabinet-may-2026"
+      "citizen"
     ]
   },
   {
@@ -3455,7 +3455,7 @@ export const slides = [
     "visual": "desk-duo",
     "afterText": "A brilliant new hire with no desk, no files, no manager — fails. Same person with all three — thrives.",
     "audiences": [
-      "cabinet-may-2026"
+      "citizen"
     ]
   },
   {
@@ -3470,7 +3470,7 @@ export const slides = [
     "visual": "four-affordances",
     "afterText": "Memory across sessions · the right tools at hand · a safe space to try things · a human review loop.",
     "audiences": [
-      "cabinet-may-2026"
+      "citizen"
     ]
   },
   {
@@ -3493,7 +3493,7 @@ export const slides = [
     "quote": "150 PRs in a day. Most of my work I do from my phone.",
     "quoteSize": "clamp(36px, 4.2vw, 72px)",
     "audiences": [
-      "cabinet-may-2026"
+      "citizen"
     ]
   },
   {
@@ -3521,7 +3521,7 @@ export const slides = [
       { "name": "User Researcher", "color": "#FF8FA3" }
     ],
     "audiences": [
-      "cabinet-may-2026"
+      "citizen"
     ]
   },
   {
@@ -3536,7 +3536,7 @@ export const slides = [
     "visual": "anchor-flow",
     "bottomCallout": "The roles your unit needs most become more valuable, not less.",
     "audiences": [
-      "cabinet-may-2026"
+      "citizen"
     ]
   },
   {
@@ -3562,7 +3562,7 @@ export const slides = [
       }
     ],
     "audiences": [
-      "cabinet-may-2026"
+      "citizen"
     ]
   },
   {
@@ -3583,7 +3583,7 @@ export const slides = [
     "quoteSize": "clamp(30px, 3.6vw, 56px)",
     "quoteEmphasis": "You can't out-procure Anthropic. You can out-adapt them.",
     "audiences": [
-      "cabinet-may-2026"
+      "citizen"
     ]
   },
   {
@@ -3599,7 +3599,7 @@ export const slides = [
     "visual": "printing-press",
     "bottomCallout": "Not displacement — transition into work that didn't exist before. That's the precedent your staff should expect.",
     "audiences": [
-      "cabinet-may-2026"
+      "citizen"
     ]
   },
   {
@@ -3615,7 +3615,7 @@ export const slides = [
     "visual": "domain-expert",
     "afterText": "\"The best person to write accounting software is a really good accountant. Coding is the easy part. Knowing the domain is the hard part.\" — Boris Cherny",
     "audiences": [
-      "cabinet-may-2026"
+      "citizen"
     ]
   },
   {
@@ -3634,7 +3634,7 @@ export const slides = [
       { "heading": "Are we changing how the work is done — or just adding tools to it?" }
     ],
     "audiences": [
-      "cabinet-may-2026"
+      "citizen"
     ]
   },
   {
@@ -3652,7 +3652,7 @@ export const slides = [
     ],
     "attribution": "Bring me the unit. I'll bring the harness.",
     "audiences": [
-      "cabinet-may-2026"
+      "citizen"
     ]
   },
   {
@@ -3666,7 +3666,7 @@ export const slides = [
     "kicker": "One question. This week.",
     "title": "Who in your unit has been waiting for a tool like this?",
     "audiences": [
-      "cabinet-may-2026"
+      "citizen"
     ]
   },
   {
@@ -3703,7 +3703,7 @@ export const slides = [
       }
     ],
     "audiences": [
-      "cabinet-may-2026"
+      "citizen"
     ]
   },
   {
@@ -3736,7 +3736,7 @@ export const slides = [
       }
     ],
     "audiences": [
-      "cabinet-may-2026"
+      "citizen"
     ]
   },
   {
@@ -3791,7 +3791,7 @@ export const slides = [
     "bottomLineLabel": "THE EQUATION",
     "bottomLine": "Set the goal once. The agent runs the loop until the work is done.",
     "audiences": [
-      "cabinet-may-2026"
+      "citizen"
     ]
   },
   {
@@ -3848,7 +3848,7 @@ export const slides = [
       }
     ],
     "audiences": [
-      "cabinet-may-2026"
+      "citizen"
     ]
   },
   {
@@ -3905,7 +3905,7 @@ export const slides = [
       }
     ],
     "audiences": [
-      "cabinet-may-2026"
+      "citizen"
     ]
   },
   {
@@ -3942,7 +3942,7 @@ export const slides = [
       }
     ],
     "audiences": [
-      "cabinet-may-2026"
+      "citizen"
     ]
   },
   {
@@ -3980,7 +3980,7 @@ export const slides = [
       { "value": "∞", "label": "older · compressed" }
     ],
     "audiences": [
-      "cabinet-may-2026"
+      "citizen"
     ]
   },
   {
@@ -4017,7 +4017,7 @@ export const slides = [
       "actions": ["allow", "deny", "always allow"]
     },
     "audiences": [
-      "cabinet-may-2026"
+      "citizen"
     ]
   },
   {
@@ -4072,7 +4072,7 @@ export const slides = [
       }
     ],
     "audiences": [
-      "cabinet-may-2026"
+      "citizen"
     ]
   },
   {
@@ -4128,7 +4128,7 @@ export const slides = [
     ],
     "tiersFooter": "Personal first. Team next. Department and campus aggregations follow — each tier wrapped in its own governance layer.",
     "audiences": [
-      "cabinet-may-2026"
+      "citizen"
     ]
   },
   {
@@ -4198,7 +4198,7 @@ export const slides = [
       "Starter credits"
     ],
     "audiences": [
-      "cabinet-may-2026"
+      "citizen"
     ]
   },
   {
@@ -4269,7 +4269,7 @@ export const slides = [
       }
     ],
     "audiences": [
-      "cabinet-may-2026"
+      "citizen"
     ]
   },
   {
@@ -4339,7 +4339,7 @@ export const slides = [
     "poweredByLabel": "Backed by the program we just walked through",
     "poweredBy": ["Claude Code", "Codex", "Cursor", "OpenCode", "TritonAI", "MCP gateway", "Activity Hubs", "Campus App Hosting"],
     "audiences": [
-      "cabinet-may-2026"
+      "citizen"
     ]
   }
 ];

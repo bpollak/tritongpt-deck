@@ -4,7 +4,7 @@ import harnessVariantMap from './HarnessDefinitionVariants';
 
 /**
  * CabinetSlide — self-contained editorial design system for the
- * cabinet-may-2026 sub-presentation. Visual-first; text-light.
+ * citizen sub-presentation. Visual-first; text-light.
  *
  * Architecture:
  *   - Shell: consistent header bar, dark backdrop, bottom safe-zone for slide controls
@@ -1279,7 +1279,7 @@ const variantMap = {
   hero: HeroVisualVariant,
   roles: RolesVariant,
   // Editorial harness-definition variants (light cream palette, Fraunces serif).
-  // Scoped to a subset of cabinet-may-2026 slides; do not affect the rest of the deck.
+  // Scoped to a subset of citizen slides; do not affect the rest of the deck.
   ...harnessVariantMap
 };
 
