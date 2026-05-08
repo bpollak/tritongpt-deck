@@ -3000,19 +3000,19 @@ const HarnessActionVariant = ({ slide }) => {
       <Marker>{slide.marker}</Marker>
       <JobSpine activeKey={slide.spineActive} />
 
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[10vh]" style={{ maxWidth: '88vw' }}>
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[8vh]" style={{ maxWidth: '88vw' }}>
         <h1 className="leading-[0.98]" style={{ fontSize: 'clamp(40px, 4vw, 64px)', fontWeight: 520 }}>
           <PartText parts={slide.parts} />
         </h1>
         {slide.subhead && (
-          <motion.div {...fade(0.34)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(17px, 1.3vw, 22px)' }}>
+          <motion.div {...fade(0.34)} className="mt-1.5 italic" style={{ color: T.muted, fontSize: 'clamp(17px, 1.3vw, 22px)' }}>
             {slide.subhead}
           </motion.div>
         )}
       </div>
 
       {/* Two-column: mechanic (pipeline) on left, live trace on right — mirrors LOOP slide */}
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[26vh] bottom-[14vh] grid grid-cols-[42%_1fr] gap-7 items-stretch">
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[21vh] bottom-[14vh] grid grid-cols-[42%_1fr] gap-7 items-stretch">
         {/* Left: The action pipeline (vertical flow) */}
         <Card delay={0.5} className="flex flex-col p-6">
           <div className="self-start text-[14px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
