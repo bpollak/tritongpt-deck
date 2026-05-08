@@ -1127,22 +1127,29 @@ const ComponentVisual = ({ type, color = T.coralDark }) => {
     return (
       <svg viewBox="0 0 360 140" className="h-full w-full">
         {/* center hub */}
-        <circle cx="180" cy="64" r="28" fill={tintStrong} stroke={color} strokeWidth="1.7" />
-        <text x="180" y="72" textAnchor="middle" style={{ fontFamily: T.serif, fontStyle: 'italic', fontSize: 22, fontWeight: 520 }} fill={color}>M</text>
-        {/* tools fanning out */}
+        <circle cx="180" cy="64" r="26" fill={tintStrong} stroke={color} strokeWidth="1.7" />
+        <text x="180" y="71" textAnchor="middle" style={{ fontFamily: T.serif, fontStyle: 'italic', fontSize: 22, fontWeight: 520 }} fill={color}>M</text>
+        {/* tools fanning out — boxes pulled in, lines start exactly at box edges */}
         {[
-          { label: 'files', x: 36, y: 18 },
-          { label: 'web', x: 296, y: 18 },
-          { label: 'API', x: 36, y: 100 },
-          { label: 'tools', x: 296, y: 100 }
+          { label: 'files', x: 60, y: 24 },
+          { label: 'web', x: 244, y: 24 },
+          { label: 'API', x: 60, y: 92 },
+          { label: 'tools', x: 244, y: 92 }
         ].map((tool) => (
           <g key={tool.label}>
-            <line x1={tool.x < 180 ? tool.x + 36 : tool.x - 4} y1={tool.y + 13} x2={180 + (tool.x < 180 ? -28 : 28)} y2={64 + (tool.y < 64 ? -10 : 10)} {...stroke} strokeDasharray="3 4" />
-            <rect x={tool.x} y={tool.y} width="64" height="26" rx="5" fill={tint} stroke={color} strokeWidth="1.5" />
-            <text x={tool.x + 32} y={tool.y + 18} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 13, fontWeight: 800 }} fill={color}>{tool.label}</text>
+            <line
+              x1={tool.x < 180 ? tool.x + 56 : tool.x}
+              y1={tool.y + 12}
+              x2={180 + (tool.x < 180 ? -22 : 22)}
+              y2={64 + (tool.y < 64 ? -14 : 14)}
+              {...stroke}
+              strokeDasharray="3 4"
+            />
+            <rect x={tool.x} y={tool.y} width="56" height="24" rx="5" fill={tint} stroke={color} strokeWidth="1.5" />
+            <text x={tool.x + 28} y={tool.y + 17} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 13, fontWeight: 800 }} fill={color}>{tool.label}</text>
           </g>
         ))}
-        <text x="180" y="132" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 12, letterSpacing: '0.18em', fontWeight: 800 }} fill={color}>WHAT IT CAN REACH</text>
+        <text x="180" y="130" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 12, letterSpacing: '0.18em', fontWeight: 800 }} fill={color}>WHAT IT CAN REACH</text>
       </svg>
     );
   }
