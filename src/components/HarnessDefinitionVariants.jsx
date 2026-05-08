@@ -2612,7 +2612,7 @@ const HarnessRecapVariant = ({ slide }) => {
       {slide.poweredBy && (
         <motion.div
           {...fade(1.2)}
-          className="absolute left-[4.8vw] right-[4.8vw] top-[80vh] flex items-center gap-4 flex-wrap"
+          className="absolute left-[4.8vw] right-[4.8vw] top-[67vh] flex items-center gap-4 flex-wrap"
         >
           <span className="text-[11px] uppercase shrink-0" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
             {slide.poweredByLabel || 'Powered by the program'}
