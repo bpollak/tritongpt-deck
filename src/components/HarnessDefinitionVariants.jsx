@@ -3116,8 +3116,10 @@ const HarnessActionVariant = ({ slide }) => {
             <span>✓ APPROVED · SCOPED · AUDITED</span>
           </motion.div>
 
-          {/* Tool registry strip */}
-          <div className="mt-4 pt-3 border-t" style={{ borderColor: T.rule }}>
+          <div className="flex-1" />
+
+          {/* Tool registry strip — pinned to card bottom */}
+          <div className="pt-3 border-t" style={{ borderColor: T.rule }}>
             <div className="text-[11px] uppercase mb-2" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
               Tool registry · gated by what they can do
             </div>
