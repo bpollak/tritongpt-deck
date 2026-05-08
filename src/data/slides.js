@@ -4300,7 +4300,7 @@ export const slides = [
     "rubric": [
       {
         "score": 1,
-        "label": "Action required",
+        "label": "Below baseline",
         "color": "#a04848",
         "fill": "#fbeded",
         "anchor": "**Avoids the harnesses** (browser chat doesn't count), **pattern of refusal**, or has shipped automations that created **reliability or compliance issues**."
