@@ -3199,11 +3199,18 @@ const HarnessActionVariant = ({ slide }) => {
             })}
           </div>
 
-          {/* Interactive approval — the human-in-the-loop moment */}
+          {/* Interactive approval — set apart from the trace with a visible break */}
+          {slide.approvalPrompt && (
+            <motion.div
+              {...fade(1.05 + traceSteps.length * 0.18 + 0.05, 0)}
+              className="mt-5 pt-4 border-t border-dashed"
+              style={{ borderColor: T.rule }}
+            />
+          )}
           {slide.approvalPrompt && (
             <motion.div
               {...fade(1.05 + traceSteps.length * 0.18 + 0.15)}
-              className="mt-2.5 rounded-[8px] border-2 px-3.5 py-2.5"
+              className="mt-3 rounded-[8px] border-2 px-3.5 py-2.5"
               style={{ borderColor: T.coral, background: '#fffaf5' }}
             >
               <div className="flex items-baseline gap-3">
