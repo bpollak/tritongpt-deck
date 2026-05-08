@@ -4336,8 +4336,6 @@ export const slides = [
         "anchor": "**Builds harness-produced workflows or tools that other teams adopt.** Demonstrably reliable, monitored, documented. **Mentors others** on harness selection and agent patterns."
       }
     ],
-    "bottomLineLabel": "WHAT THIS MEANS",
-    "bottomLine": "These five levels show up in every IT Services performance conversation. UCSD provides the platform; staff are expected to use it on real work.",
     "poweredByLabel": "Backed by the program we just walked through",
     "poweredBy": ["Claude Code", "Codex", "Cursor", "OpenCode", "TritonAI", "MCP gateway", "Activity Hubs", "Campus App Hosting"],
     "audiences": [
