@@ -2123,10 +2123,10 @@ const HarnessSubagentsVariant = ({ slide }) => {
                 >
                   <animate attributeName="stroke-dashoffset" from="0" to="-9" dur="1.4s" repeatCount="indefinite" />
                 </motion.path>
-                {/* Goal chip mid-line */}
+                {/* Goal chip mid-line — width sized to fit 'GOAL · VERIFY' */}
                 <motion.g {...fade(0.78 + index * 0.06, 0)}>
-                  <rect x={midX - 32} y={29} width={64} height={20} rx={5} fill="#fff" stroke={agent.stroke} strokeWidth={1.3} />
-                  <text x={midX} y={43} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 11, letterSpacing: '0.18em', fontWeight: 800, textTransform: 'uppercase' }} fill={agent.stroke}>
+                  <rect x={midX - 60} y={28} width={120} height={22} rx={5} fill="#fff" stroke={agent.stroke} strokeWidth={1.3} />
+                  <text x={midX} y={43} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 11, letterSpacing: '0.12em', fontWeight: 800, textTransform: 'uppercase' }} fill={agent.stroke}>
                     goal · {goal}
                   </text>
                 </motion.g>
