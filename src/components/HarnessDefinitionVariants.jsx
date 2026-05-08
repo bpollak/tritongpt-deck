@@ -2079,10 +2079,10 @@ const HarnessSubagentsVariant = ({ slide }) => {
         )}
       </div>
 
-      {/* Parent main-thread box, pulled up under the subhead */}
+      {/* Parent main-thread box, with breathing room under the subhead */}
       <motion.div
         {...fade(0.45)}
-        className="absolute top-[20vh] left-1/2 -translate-x-1/2 flex h-[58px] w-[280px] items-center justify-center rounded-[8px]"
+        className="absolute top-[24vh] left-1/2 -translate-x-1/2 flex h-[58px] w-[280px] items-center justify-center rounded-[8px]"
         style={{
           background: T.black,
           color: '#fff',
@@ -2100,7 +2100,7 @@ const HarnessSubagentsVariant = ({ slide }) => {
       </motion.div>
 
       {/* Sub-agents diagram — orchestrator tree with animated dispatch + return */}
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[26vh] bottom-[18vh]">
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[30vh] bottom-[10vh]">
         <svg viewBox="0 0 1240 460" preserveAspectRatio="xMidYMid meet" className="h-full w-full overflow-visible">
           {/* Top dispatch — colored paths from parent (above SVG) down to each sub-agent, with goal chips and marching-ants flow */}
           {agents.map((agent, index) => {
@@ -2233,13 +2233,6 @@ const HarnessSubagentsVariant = ({ slide }) => {
         </svg>
       </div>
 
-      <motion.div
-        {...fade(2.3)}
-        className="absolute left-[4.8vw] right-[4.8vw] top-[82vh] text-center italic"
-        style={{ color: T.coralDark, fontSize: 'clamp(20px, 2vw, 32px)', fontWeight: 500 }}
-      >
-        divide &middot; bound &middot; reassemble
-      </motion.div>
     </Shell>
   );
 };
