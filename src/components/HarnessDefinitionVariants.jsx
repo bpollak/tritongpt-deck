@@ -323,23 +323,20 @@ const HarnessQuestionVariant = ({ slide }) => (
     <h1 className="absolute left-[4.8vw] right-[4.8vw] top-[13vh] leading-[0.95]" style={{ fontSize: 'clamp(54px, 6.2vw, 100px)', fontWeight: 520 }}>
       <PartText parts={slide.parts} delay={0.25} />
     </h1>
-    {(slide.contextCards || []).length > 0 && (
+    {slide.topTagline && (
       <motion.div
         {...fade(0.62)}
-        className="absolute left-[4.8vw] top-[26vh] flex items-center gap-3"
+        className="absolute left-[4.8vw] right-[4.8vw] top-[24vh] italic"
+        style={{
+          color: T.coralDark,
+          fontFamily: T.serif,
+          fontSize: 'clamp(26px, 2.4vw, 40px)',
+          lineHeight: 1.18,
+          fontWeight: 480,
+          maxWidth: '88vw'
+        }}
       >
-        <span
-          className="flex h-[26px] w-[26px] items-center justify-center rounded-full border"
-          style={{ borderColor: T.muted, color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 17, fontWeight: 520 }}
-        >
-          M
-        </span>
-        <span
-          className="text-[11px] uppercase"
-          style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 700 }}
-        >
-          = the LLM &middot; the same model sits inside both
-        </span>
+        {slide.topTagline}
       </motion.div>
     )}
     {(slide.contextCards || []).length > 0 && (

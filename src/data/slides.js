@@ -3722,6 +3722,7 @@ export const slides = [
       { "text": "harness", "accent": true },
       { "text": "?" }
     ],
+    "topTagline": "Same model inside both. The harness is everything around it.",
     "contextCards": [
       {
         "kicker": "Chat app",
@@ -3734,8 +3735,6 @@ export const slides = [
         "body": "A harness wraps models with context, tools, permissions, memory, and a loop so it can act on real work."
       }
     ],
-    "bottomLineLabel": "THE ANSWER",
-    "bottomLine": "Same model inside both. The harness is everything around it.",
     "audiences": [
       "cabinet-may-2026"
     ]
