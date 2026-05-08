@@ -4011,31 +4011,14 @@ export const slides = [
       { "stage": "Tool call", "detail": "M365 send · attaches PDF · returns delivery receipt" },
       { "stage": "Post-hook", "detail": "audit log entry · receipt filed · weekly compliance report" }
     ],
-    "toolTiers": [
-      {
-        "label": "READ",
-        "tagline": "Auto-allow",
-        "color": "#6f9363",
-        "fill": "#f6f8ee",
-        "tools": ["read_file", "search", "browse"]
-      },
-      {
-        "label": "WRITE",
-        "tagline": "Approval required",
-        "color": "#d47a5f",
-        "fill": "#fff8f2",
-        "tools": ["edit_file", "commit", "send_email"]
-      },
-      {
-        "label": "EXTERNAL",
-        "tagline": "P3 approval",
-        "color": "#be634d",
-        "fill": "#fff5ee",
-        "tools": ["api_call", "deploy", "wire_money"]
-      }
-    ],
+    "approvalPrompt": {
+      "kicker": "the agent stops and asks before any write",
+      "question": "Should I run",
+      "code": "send_email(to=cabinet@ucsd.edu, attach=briefing.pdf)",
+      "actions": ["allow", "deny", "always allow"]
+    },
     "bottomLineLabel": "WHY THIS MATTERS",
-    "bottomLine": "Without ACTION guardrails, an agent can talk about the work but not produce a deliverable. With them, every step the loop takes is approved, scoped, and audited before it touches real systems.",
+    "bottomLine": "Static rules screen every call; humans approve writes in the loop. Together they make sure no real-world action happens without policy and consent.",
     "audiences": [
       "cabinet-may-2026"
     ]

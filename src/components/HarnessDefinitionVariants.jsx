@@ -3168,63 +3168,70 @@ const HarnessActionVariant = ({ slide }) => {
             })}
           </div>
 
+          <div className="flex-1" />
+
+          {/* Interactive approval — the human-in-the-loop moment, pinned near the bottom */}
+          {slide.approvalPrompt && (
+            <motion.div
+              {...fade(1.05 + traceSteps.length * 0.18 + 0.15)}
+              className="mt-4 rounded-[8px] border-2 px-4 py-3.5"
+              style={{ borderColor: T.coral, background: '#fffaf5' }}
+            >
+              <div className="flex items-baseline gap-3">
+                <span className="text-[12.5px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
+                  Human in the loop
+                </span>
+                <span style={{ color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 14 }}>
+                  {slide.approvalPrompt.kicker || 'interactive approval before any write'}
+                </span>
+              </div>
+              <div className="mt-2.5 flex items-center flex-wrap gap-x-2 gap-y-1.5" style={{ color: T.ink, fontSize: 17, lineHeight: 1.3 }}>
+                <span style={{ fontFamily: T.serif, fontWeight: 600 }}>
+                  {slide.approvalPrompt.question || 'Should I run'}
+                </span>
+                {slide.approvalPrompt.code && (
+                  <span
+                    className="rounded-[4px] px-2 py-0.5"
+                    style={{ background: T.ink, color: '#fff', fontFamily: T.mono, fontSize: 14.5, fontWeight: 700 }}
+                  >
+                    {slide.approvalPrompt.code}
+                  </span>
+                )}
+                <span style={{ fontFamily: T.serif, fontWeight: 600 }}>?</span>
+              </div>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {(slide.approvalPrompt.actions || ['allow', 'deny', 'always allow']).map((action, i) => {
+                  const primary = i === 0;
+                  return (
+                    <span
+                      key={action}
+                      className="rounded-[5px] border px-3 py-1.5 text-[13.5px]"
+                      style={{
+                        borderColor: T.coral,
+                        background: primary ? T.coral : '#fff',
+                        color: primary ? '#fff' : T.coralDark,
+                        fontFamily: T.mono,
+                        fontWeight: 800,
+                        letterSpacing: '0.04em'
+                      }}
+                    >
+                      {action}
+                    </span>
+                  );
+                })}
+              </div>
+            </motion.div>
+          )}
+
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 1.05 + traceSteps.length * 0.18 + 0.25, ease }}
+            transition={{ duration: 0.5, delay: 1.05 + traceSteps.length * 0.18 + 0.55, ease }}
             className="mt-3 self-start inline-flex items-center gap-2.5 rounded-full px-4 py-2"
-            style={{ background: T.coralDark, color: '#fff', fontFamily: T.mono, fontSize: 15, fontWeight: 800, letterSpacing: '0.12em' }}
+            style={{ background: T.coralDark, color: '#fff', fontFamily: T.mono, fontSize: 14, fontWeight: 800, letterSpacing: '0.12em' }}
           >
             <span>✓ APPROVED · SCOPED · AUDITED</span>
           </motion.div>
-
-          <div className="flex-1" />
-
-          {/* Tool registry strip — pinned to card bottom */}
-          <div className="pt-3 border-t" style={{ borderColor: T.rule }}>
-            <div className="text-[13px] uppercase mb-2.5" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
-              Tool registry · gated by what they can do
-            </div>
-            <div className="grid grid-cols-3 gap-2">
-              {toolTiers.map((tier, i) => (
-                <motion.div
-                  key={tier.label}
-                  {...fade(1.6 + i * 0.08)}
-                  className="rounded-[7px] border-l-[5px] px-3 py-2.5"
-                  style={{ borderColor: tier.color, background: tier.fill }}
-                >
-                  <div className="flex items-baseline gap-2">
-                    <span
-                      className="rounded-[4px] px-2 py-0.5 text-[13px]"
-                      style={{ background: tier.color, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.12em' }}
-                    >
-                      {tier.label}
-                    </span>
-                    <span style={{ color: tier.color, fontFamily: T.serif, fontStyle: 'italic', fontSize: 15, fontWeight: 500 }}>
-                      {tier.tagline}
-                    </span>
-                  </div>
-                  <div className="mt-1.5 flex flex-wrap gap-1">
-                    {tier.tools.map((tool) => (
-                      <span
-                        key={tool}
-                        className="rounded-[3px] border px-2 py-0.5 text-[13px]"
-                        style={{
-                          borderColor: tier.color,
-                          background: '#fff',
-                          color: tier.color,
-                          fontFamily: T.mono,
-                          fontWeight: 700
-                        }}
-                      >
-                        {tool}
-                      </span>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
         </Card>
       </div>
 
