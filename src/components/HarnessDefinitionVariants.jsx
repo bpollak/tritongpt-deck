@@ -2014,8 +2014,54 @@ const HarnessSkillsVariant = ({ slide }) => (
   </Shell>
 );
 
+const SubagentOutputGlyph = ({ type, cx, cy, color }) => {
+  if (type === 'deck') {
+    return (
+      <g>
+        <rect x={cx - 7} y={cy - 6} width={14} height={12} rx={1.5} fill="none" stroke={color} strokeWidth={1.4} />
+        <line x1={cx - 5} y1={cy - 2} x2={cx + 5} y2={cy - 2} stroke={color} strokeWidth={1.3} />
+        <line x1={cx - 5} y1={cy + 1} x2={cx + 2} y2={cy + 1} stroke={color} strokeWidth={1.1} />
+        <line x1={cx - 5} y1={cy + 4} x2={cx + 4} y2={cy + 4} stroke={color} strokeWidth={1.1} />
+      </g>
+    );
+  }
+  if (type === 'doc') {
+    return (
+      <g>
+        <path d={`M ${cx - 5} ${cy - 7} L ${cx + 3} ${cy - 7} L ${cx + 6} ${cy - 4} L ${cx + 6} ${cy + 6} L ${cx - 5} ${cy + 6} Z`} fill="none" stroke={color} strokeWidth={1.4} />
+        <line x1={cx - 3} y1={cy - 1} x2={cx + 4} y2={cy - 1} stroke={color} strokeWidth={1.1} />
+        <line x1={cx - 3} y1={cy + 2} x2={cx + 4} y2={cy + 2} stroke={color} strokeWidth={1.1} />
+      </g>
+    );
+  }
+  if (type === 'app') {
+    return (
+      <text x={cx} y={cy + 4} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 11, fontWeight: 800, letterSpacing: '0.02em' }} fill={color}>
+        {'</>'}
+      </text>
+    );
+  }
+  if (type === 'flow') {
+    return (
+      <g>
+        <path d={`M ${cx + 4} ${cy - 4} A 6 6 0 1 1 ${cx - 4} ${cy + 4}`} fill="none" stroke={color} strokeWidth={1.4} strokeLinecap="round" />
+        <polygon points={`${cx + 6.5},${cy - 4} ${cx + 1.5},${cy - 4} ${cx + 4},${cy - 7.5}`} fill={color} />
+      </g>
+    );
+  }
+  return null;
+};
+
 const HarnessSubagentsVariant = ({ slide }) => {
   const agents = slide.agents || [];
+  const outputs = slide.outputs || [
+    { type: 'deck', label: 'deck' },
+    { type: 'doc', label: 'doc' },
+    { type: 'app', label: 'app' },
+    { type: 'flow', label: 'flow' }
+  ];
+  const targetXs = [180, 620, 1060];
+  const mergeX = 522;
 
   return (
     <Shell>
@@ -2053,33 +2099,40 @@ const HarnessSubagentsVariant = ({ slide }) => {
         </div>
       </motion.div>
 
-      {/* Simplified sub-agents diagram — clean tree, no overlapping lines */}
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[29vh] bottom-[18vh]">
+      {/* Sub-agents diagram — orchestrator tree with animated dispatch + return */}
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[26vh] bottom-[18vh]">
         <svg viewBox="0 0 1240 460" preserveAspectRatio="xMidYMid meet" className="h-full w-full overflow-visible">
-          {/* Top connector: parent → 3 sub-agents (single horizontal bus + 3 verticals) */}
-          <motion.line
-            {...lineDraw(0.55)}
-            x1="180"
-            y1="30"
-            x2="1060"
-            y2="30"
-            stroke={T.muted}
-            strokeWidth="1.4"
-            strokeDasharray="4 5"
-          />
-          {[180, 620, 1060].map((x, i) => (
-            <motion.line
-              key={`down-${i}`}
-              {...lineDraw(0.65 + i * 0.05)}
-              x1={x}
-              y1="30"
-              x2={x}
-              y2="80"
-              stroke={T.muted}
-              strokeWidth="1.4"
-              strokeDasharray="4 5"
-            />
-          ))}
+          {/* Top dispatch — colored paths from parent (above SVG) down to each sub-agent, with goal chips and marching-ants flow */}
+          {agents.map((agent, index) => {
+            const targetX = targetXs[index];
+            const sourceX = 620;
+            const pathD = index === 1
+              ? `M ${sourceX} 0 L ${targetX} 80`
+              : `M ${sourceX} 0 C ${sourceX} 38, ${targetX} 38, ${targetX} 80`;
+            const goal = (agent.kicker || '').split(' ')[0].toLowerCase() || 'task';
+            const midX = (sourceX + targetX) / 2;
+            return (
+              <g key={`dispatch-${index}`}>
+                <motion.path
+                  {...fade(0.5 + index * 0.06, 0)}
+                  d={pathD}
+                  fill="none"
+                  stroke={agent.stroke}
+                  strokeWidth="2"
+                  strokeDasharray="4 5"
+                >
+                  <animate attributeName="stroke-dashoffset" from="0" to="-9" dur="1.4s" repeatCount="indefinite" />
+                </motion.path>
+                {/* Goal chip mid-line */}
+                <motion.g {...fade(0.78 + index * 0.06, 0)}>
+                  <rect x={midX - 32} y={29} width={64} height={20} rx={5} fill="#fff" stroke={agent.stroke} strokeWidth={1.3} />
+                  <text x={midX} y={43} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 11, letterSpacing: '0.18em', fontWeight: 800, textTransform: 'uppercase' }} fill={agent.stroke}>
+                    goal · {goal}
+                  </text>
+                </motion.g>
+              </g>
+            );
+          })}
 
           {/* Three sub-agent boxes */}
           {agents.map((agent, index) => {
@@ -2122,45 +2175,31 @@ const HarnessSubagentsVariant = ({ slide }) => {
             );
           })}
 
-          {/* Bottom connector: 3 sub-agents → single merge point (mirrored tree) */}
-          {[180, 620, 1060].map((x, i) => (
-            <motion.line
-              key={`up-${i}`}
-              {...lineDraw(1.55 + i * 0.05)}
-              x1={x}
-              y1="280"
-              x2={x}
-              y2="330"
-              stroke={T.blue}
-              strokeWidth="1.4"
-              strokeDasharray="4 5"
-            />
-          ))}
-          <motion.line
-            {...lineDraw(1.7)}
-            x1="180"
-            y1="330"
-            x2="1060"
-            y2="330"
-            stroke={T.blue}
-            strokeWidth="1.4"
-            strokeDasharray="4 5"
-          />
-          <motion.line
-            {...lineDraw(1.85)}
-            x1="620"
-            y1="330"
-            x2="620"
-            y2="378"
-            stroke={T.blue}
-            strokeWidth="1.4"
-            strokeDasharray="4 5"
-          />
+          {/* Bottom return — colored paths from each sub-agent merging into the result badge, with marching-ants reversed */}
+          {agents.map((agent, index) => {
+            const sourceX = targetXs[index];
+            const pathD = index === 1
+              ? `M ${sourceX} 280 L ${mergeX} 378`
+              : `M ${sourceX} 280 C ${sourceX} 332, ${mergeX} 332, ${mergeX} 378`;
+            return (
+              <motion.path
+                key={`return-${index}`}
+                {...fade(1.55 + index * 0.06, 0)}
+                d={pathD}
+                fill="none"
+                stroke={agent.stroke}
+                strokeWidth="2"
+                strokeDasharray="4 5"
+              >
+                <animate attributeName="stroke-dashoffset" from="0" to="9" dur="1.4s" repeatCount="indefinite" />
+              </motion.path>
+            );
+          })}
 
-          {/* Result badge at the merge point */}
+          {/* Result badge — moved left so the output icons can sit beside it */}
           <motion.rect
             {...fade(2.0, 0)}
-            x="500"
+            x="402"
             y="378"
             width="240"
             height="44"
@@ -2169,7 +2208,7 @@ const HarnessSubagentsVariant = ({ slide }) => {
           />
           <motion.text
             {...fade(2.1, 0)}
-            x="620"
+            x="522"
             y="406"
             textAnchor="middle"
             style={{ fontFamily: T.mono, fontSize: 14, letterSpacing: '0.18em', fontWeight: 800 }}
@@ -2177,6 +2216,20 @@ const HarnessSubagentsVariant = ({ slide }) => {
           >
             ASSEMBLED RESULT
           </motion.text>
+
+          {/* Output icons next to the badge — what the orchestrator actually produces */}
+          {outputs.map((out, i) => {
+            const x = 666 + i * 46;
+            return (
+              <motion.g key={out.type} {...fade(2.25 + i * 0.08, 0)}>
+                <rect x={x} y={378} width={38} height={44} rx={6} fill="#fff" stroke={T.blue} strokeWidth={1.5} />
+                <SubagentOutputGlyph cx={x + 19} cy={394} type={out.type} color={T.blue} />
+                <text x={x + 19} y={416} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 8.5, letterSpacing: '0.12em', fontWeight: 800, textTransform: 'uppercase' }} fill={T.blue}>
+                  {out.label}
+                </text>
+              </motion.g>
+            );
+          })}
         </svg>
       </div>
 
