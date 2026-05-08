@@ -635,7 +635,7 @@ const HarnessDefinitionEquationVariant = ({ slide }) => (
         <PartText parts={slide.parts} />
       </h1>
     </div>
-    <div className="absolute left-[5.5vw] right-[5.5vw] top-[34vh] bottom-[20vh] grid grid-cols-[1fr_72px_1fr_72px_1fr] items-stretch">
+    <div className="absolute left-[5.5vw] right-[5.5vw] top-[30vh] bottom-[20vh] grid grid-cols-[1fr_72px_1fr_72px_1fr] items-stretch">
       {(slide.equation || []).map((item, index) => (
         <React.Fragment key={`${item.title}-${index}`}>
           <Card
@@ -806,7 +806,7 @@ const HarnessToolboxVariant = ({ slide }) => (
           <Card
             key={`${vendor.name}-${index}`}
             delay={0.42 + index * 0.09}
-            className="relative flex min-h-[540px] flex-col p-6"
+            className="relative flex min-h-[505px] flex-col p-6"
             style={vendor.highlight ? { background: '#fff8f2', borderColor: T.coralPale } : undefined}
           >
             {vendor.powersBadge && (
@@ -878,7 +878,7 @@ const HarnessToolboxVariant = ({ slide }) => (
     {slide.bottomLine && (
       <motion.div
         {...fade(1.0)}
-        className="absolute left-[4.8vw] right-[4.8vw] top-[80vh] flex items-start gap-5"
+        className="absolute left-[4.8vw] right-[4.8vw] top-[78vh] flex items-start gap-5"
       >
         {slide.bottomLineLabel && (
           <span
@@ -2178,7 +2178,7 @@ const HarnessSubagentsVariant = ({ slide }) => {
 
       <motion.div
         {...fade(2.3)}
-        className="absolute left-[4.8vw] right-[4.8vw] top-[88vh] text-center italic"
+        className="absolute left-[4.8vw] right-[4.8vw] top-[82vh] text-center italic"
         style={{ color: T.coralDark, fontSize: 'clamp(20px, 2vw, 32px)', fontWeight: 500 }}
       >
         divide &middot; bound &middot; reassemble
@@ -2628,7 +2628,7 @@ const HarnessConvergenceVariant = ({ slide }) => {
         </motion.div>
       )}
 
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[42vh] bottom-[20vh] grid grid-cols-[1fr_120px_1fr] items-stretch gap-0">
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[38vh] bottom-[20vh] grid grid-cols-[1fr_120px_1fr] items-stretch gap-0">
         <Card delay={0.65} className="p-9">
           <div className="flex items-center gap-3">
             <span
@@ -2820,7 +2820,7 @@ const HarnessDataUnlockVariant = ({ slide }) => {
         )}
       </div>
 
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[20vh] grid grid-cols-[1fr_330px] gap-6 items-stretch">
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[20vh] bottom-[20vh] grid grid-cols-[1fr_330px] gap-6 items-stretch">
         {/* Center: stack of harnesses → MCP → data ecosystem */}
         <div className="flex flex-col gap-2.5">
           {/* Top: Harnesses row */}
