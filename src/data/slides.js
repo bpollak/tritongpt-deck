@@ -3698,14 +3698,10 @@ export const slides = [
       {
         "kicker": "STREAM 2 · ARCHITECTURE",
         "title": "Harnesses arrived off the shelf.",
-        "body": "Production scaffolding now ships from the major vendors — loop, tools, memory, permissions — ready to point at real work.",
+        "body": "Production scaffolding now ships from the major vendors — loop, tools, memory, permissions — ready to accomplish real work.",
         "examples": ["Claude Code", "OpenAI Codex", "OpenCode"]
       }
     ],
-    "outcome": {
-      "label": "PARADIGM SHIFT",
-      "headline": "AI moves from answering questions to doing the work."
-    },
     "audiences": [
       "cabinet-may-2026"
     ]
