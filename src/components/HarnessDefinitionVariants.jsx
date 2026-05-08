@@ -2930,12 +2930,17 @@ const HarnessDataUnlockVariant = ({ slide }) => {
         </div>
 
         {/* Right rail: governance */}
-        <Card delay={0.7} className="p-5">
-          <div className="text-[12.5px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
-            Governance rail
+        <Card delay={0.7} className="p-5" style={{ borderColor: T.coral, borderWidth: 2 }}>
+          <div className="flex items-center gap-2">
+            <span className="rounded-[4px] px-2 py-0.5 text-[10.5px] uppercase" style={{ background: T.coral, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.18em' }}>
+              Proposed
+            </span>
+            <div className="text-[12.5px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
+              Governance rail
+            </div>
           </div>
           <div className="mt-2" style={{ color: T.muted, fontSize: 14.5, lineHeight: 1.35, fontStyle: 'italic' }}>
-            What we wrap around every connection.
+            What we propose to wrap around every connection. Each row is open for Cabinet review.
           </div>
           <div className="mt-4 space-y-3">
             {governance.map((g, i) => {
