@@ -3423,7 +3423,7 @@ export const slides = [
     "subtitle": "The technology is the same for everyone. The lead is human.",
     "attribution": "Brett Pollak · Executive Director, IT Services",
     "audiences": [
-      "citizen"
+      "all"
     ]
   },
   {
@@ -3439,7 +3439,7 @@ export const slides = [
     "visual": "kit-to-shelf",
     "bottomCallout": "Three off-the-shelf harnesses shipped this month: Cursor SDK · Anthropic Managed Agents · Microsoft Foundry.",
     "audiences": [
-      "citizen"
+      "all"
     ]
   },
   {
@@ -3455,7 +3455,7 @@ export const slides = [
     "visual": "desk-duo",
     "afterText": "A brilliant new hire with no desk, no files, no manager — fails. Same person with all three — thrives.",
     "audiences": [
-      "citizen"
+      "all"
     ]
   },
   {
@@ -3470,7 +3470,7 @@ export const slides = [
     "visual": "four-affordances",
     "afterText": "Memory across sessions · the right tools at hand · a safe space to try things · a human review loop.",
     "audiences": [
-      "citizen"
+      "all"
     ]
   },
   {
@@ -3493,7 +3493,7 @@ export const slides = [
     "quote": "150 PRs in a day. Most of my work I do from my phone.",
     "quoteSize": "clamp(36px, 4.2vw, 72px)",
     "audiences": [
-      "citizen"
+      "all"
     ]
   },
   {
@@ -3513,15 +3513,33 @@ export const slides = [
     },
     "quote": "Every single person on our team writes code.",
     "roles": [
-      { "name": "Engineering Manager", "color": "#F3D54E" },
-      { "name": "Product Manager", "color": "#5BB4D4" },
-      { "name": "Designer", "color": "#F4A088" },
-      { "name": "Data Scientist", "color": "#FFCD00" },
-      { "name": "Finance", "color": "#6E963B" },
-      { "name": "User Researcher", "color": "#FF8FA3" }
+      {
+        "name": "Engineering Manager",
+        "color": "#F3D54E"
+      },
+      {
+        "name": "Product Manager",
+        "color": "#5BB4D4"
+      },
+      {
+        "name": "Designer",
+        "color": "#F4A088"
+      },
+      {
+        "name": "Data Scientist",
+        "color": "#FFCD00"
+      },
+      {
+        "name": "Finance",
+        "color": "#6E963B"
+      },
+      {
+        "name": "User Researcher",
+        "color": "#FF8FA3"
+      }
     ],
     "audiences": [
-      "citizen"
+      "all"
     ]
   },
   {
@@ -3536,7 +3554,7 @@ export const slides = [
     "visual": "anchor-flow",
     "bottomCallout": "The roles your unit needs most become more valuable, not less.",
     "audiences": [
-      "citizen"
+      "all"
     ]
   },
   {
@@ -3562,7 +3580,7 @@ export const slides = [
       }
     ],
     "audiences": [
-      "citizen"
+      "all"
     ]
   },
   {
@@ -3583,7 +3601,7 @@ export const slides = [
     "quoteSize": "clamp(30px, 3.6vw, 56px)",
     "quoteEmphasis": "You can't out-procure Anthropic. You can out-adapt them.",
     "audiences": [
-      "citizen"
+      "all"
     ]
   },
   {
@@ -3599,7 +3617,7 @@ export const slides = [
     "visual": "printing-press",
     "bottomCallout": "Not displacement — transition into work that didn't exist before. That's the precedent your staff should expect.",
     "audiences": [
-      "citizen"
+      "all"
     ]
   },
   {
@@ -3615,7 +3633,7 @@ export const slides = [
     "visual": "domain-expert",
     "afterText": "\"The best person to write accounting software is a really good accountant. Coding is the easy part. Knowing the domain is the hard part.\" — Boris Cherny",
     "audiences": [
-      "citizen"
+      "all"
     ]
   },
   {
@@ -3629,12 +3647,18 @@ export const slides = [
     "title": "Three questions to bring back.",
     "subtitle": "Not for the IT shop, not for a vendor. For the person on your team who has been doing the work the longest.",
     "items": [
-      { "heading": "Which parts of your job have a clear right-or-wrong answer?" },
-      { "heading": "What part of your job do you wish you didn't have to do?" },
-      { "heading": "Are we changing how the work is done — or just adding tools to it?" }
+      {
+        "heading": "Which parts of your job have a clear right-or-wrong answer?"
+      },
+      {
+        "heading": "What part of your job do you wish you didn't have to do?"
+      },
+      {
+        "heading": "Are we changing how the work is done — or just adding tools to it?"
+      }
     ],
     "audiences": [
-      "citizen"
+      "all"
     ]
   },
   {
@@ -3646,13 +3670,24 @@ export const slides = [
     "eyebrow": "The Ask",
     "kicker": "What I'm asking the cabinet to do",
     "headlineParts": [
-      { "text": "Authorize one unit.", "weight": 500 },
-      { "text": "Trust your people.", "italic": true, "weight": 400 },
-      { "text": "Bring them the harness.", "accent": true, "weight": 500 }
+      {
+        "text": "Authorize one unit.",
+        "weight": 500
+      },
+      {
+        "text": "Trust your people.",
+        "italic": true,
+        "weight": 400
+      },
+      {
+        "text": "Bring them the harness.",
+        "accent": true,
+        "weight": 500
+      }
     ],
     "attribution": "Bring me the unit. I'll bring the harness.",
     "audiences": [
-      "citizen"
+      "all"
     ]
   },
   {
@@ -3666,7 +3701,7 @@ export const slides = [
     "kicker": "One question. This week.",
     "title": "Who in your unit has been waiting for a tool like this?",
     "audiences": [
-      "citizen"
+      "all"
     ]
   },
   {
@@ -3679,13 +3714,30 @@ export const slides = [
     "marker": "WHY NOW",
     "kicker": "Two trends, one moment",
     "parts": [
-      { "text": "In " },
-      { "text": "2026", "accent": true },
-      { "text": ", the model got " },
-      { "text": "smart enough", "accent": "blue" },
-      { "text": ".\nThe " },
-      { "text": "harness", "accent": true },
-      { "text": " arrived to put it to work." }
+      {
+        "text": "In "
+      },
+      {
+        "text": "2026",
+        "accent": true
+      },
+      {
+        "text": ", the model got "
+      },
+      {
+        "text": "smart enough",
+        "accent": "blue"
+      },
+      {
+        "text": ".\nThe "
+      },
+      {
+        "text": "harness",
+        "accent": true
+      },
+      {
+        "text": " arrived to put it to work."
+      }
     ],
     "subhead": "Two parallel breakthroughs converged this year — and together they reshape how AI gets leveraged.",
     "streams": [
@@ -3693,17 +3745,24 @@ export const slides = [
         "kicker": "STREAM 1 · CAPABILITY",
         "title": "Models that reason, plan, and use tools.",
         "body": "Frontier models crossed a threshold: they sustain multi-step work, hold long context, and call tools natively — not just chat.",
-        "examples": ["Claude Opus", "GPT-5 series"]
+        "examples": [
+          "Claude Opus",
+          "GPT-5 series"
+        ]
       },
       {
         "kicker": "STREAM 2 · ARCHITECTURE",
         "title": "Harnesses arrived off the shelf.",
         "body": "Production scaffolding now ships from the major vendors — loop, tools, memory, permissions — ready to accomplish real work.",
-        "examples": ["Claude Code", "OpenAI Codex", "OpenCode"]
+        "examples": [
+          "Claude Code",
+          "OpenAI Codex",
+          "OpenCode"
+        ]
       }
     ],
     "audiences": [
-      "citizen"
+      "all"
     ]
   },
   {
@@ -3716,11 +3775,23 @@ export const slides = [
     "marker": "DEFINITION",
     "kicker": "A simple question",
     "parts": [
-      { "text": "What exactly " },
-      { "text": "is", "muted": true },
-      { "text": " a " },
-      { "text": "harness", "accent": true },
-      { "text": "?" }
+      {
+        "text": "What exactly "
+      },
+      {
+        "text": "is",
+        "muted": true
+      },
+      {
+        "text": " a "
+      },
+      {
+        "text": "harness",
+        "accent": true
+      },
+      {
+        "text": "?"
+      }
     ],
     "topTagline": "Same model inside both. The harness is everything around it.",
     "contextCards": [
@@ -3749,14 +3820,33 @@ export const slides = [
     "marker": "DEFINITION",
     "kicker": "Three pieces, one outcome",
     "parts": [
-      { "text": "A harness is the " },
-      { "text": "fixed architecture", "accent": true },
-      { "text": " that turns\n" },
-      { "text": "a " },
-      { "text": "model", "muted": true },
-      { "text": " into an " },
-      { "text": "agent", "accent": "blue" },
-      { "text": "." }
+      {
+        "text": "A harness is the "
+      },
+      {
+        "text": "fixed architecture",
+        "accent": true
+      },
+      {
+        "text": " that turns\n"
+      },
+      {
+        "text": "a "
+      },
+      {
+        "text": "model",
+        "muted": true
+      },
+      {
+        "text": " into an "
+      },
+      {
+        "text": "agent",
+        "accent": "blue"
+      },
+      {
+        "text": "."
+      }
     ],
     "equation": [
       {
@@ -3766,7 +3856,12 @@ export const slides = [
         "icon": "model",
         "color": "#3f4139",
         "wordColor": "#be634d",
-        "chips": ["reasons", "plans", "long context", "calls tools"]
+        "chips": [
+          "reasons",
+          "plans",
+          "long context",
+          "calls tools"
+        ]
       },
       {
         "title": "Harness",
@@ -3775,7 +3870,12 @@ export const slides = [
         "icon": "harness",
         "color": "#d47a5f",
         "wordColor": "#be634d",
-        "chips": ["loop", "tools", "memory", "permissions"]
+        "chips": [
+          "loop",
+          "tools",
+          "memory",
+          "permissions"
+        ]
       },
       {
         "title": "Together",
@@ -3785,7 +3885,12 @@ export const slides = [
         "result": true,
         "color": "#d47a5f",
         "wordColor": "#0d5f93",
-        "chips": ["a slide deck", "an n8n workflow", "a small app", "an automation"]
+        "chips": [
+          "a slide deck",
+          "an n8n workflow",
+          "a small app",
+          "an automation"
+        ]
       }
     ],
     "bottomLineLabel": "THE EQUATION",
@@ -3806,9 +3911,16 @@ export const slides = [
       "cabinet-harness-05-work-product-example"
     ],
     "parts": [
-      { "text": "This is not future-state. " },
-      { "text": "harnesses", "accent": true },
-      { "text": " are already here." }
+      {
+        "text": "This is not future-state. "
+      },
+      {
+        "text": "harnesses",
+        "accent": true
+      },
+      {
+        "text": " are already here."
+      }
     ],
     "subhead": "They show up as command-line tools, desktop apps, and editor surfaces that can work with files, commands, and systems on your computer.",
     "vendors": [
@@ -3860,9 +3972,16 @@ export const slides = [
     "variant": "harness-components-framework",
     "marker": "ARCHITECTURE",
     "parts": [
-      { "text": "Inside the harness: " },
-      { "text": "four jobs", "accent": true },
-      { "text": "." }
+      {
+        "text": "Inside the harness: "
+      },
+      {
+        "text": "four jobs",
+        "accent": true
+      },
+      {
+        "text": "."
+      }
     ],
     "subhead": "Each piece does work the model alone cannot. The next four slides go deeper on each.",
     "components": [
@@ -3873,7 +3992,11 @@ export const slides = [
         "color": "#d47a5f",
         "body": "Act → observe → adjust → repeat. Until the work is done or a control stops it.",
         "question": "Without it: the model gives one answer and stops — it cannot do real work.",
-        "examples": ["while loop", "observe", "adjust"]
+        "examples": [
+          "while loop",
+          "observe",
+          "adjust"
+        ]
       },
       {
         "kicker": "Context",
@@ -3882,7 +4005,11 @@ export const slides = [
         "color": "#0d5f93",
         "body": "The harness decides which files, instructions, memory, and prior results stay in view while the work happens.",
         "question": "Without it: the model forgets what it's working on as soon as the page turns.",
-        "examples": ["context window", "system prompt", "session persistence"]
+        "examples": [
+          "context window",
+          "system prompt",
+          "session persistence"
+        ]
       },
       {
         "kicker": "Action",
@@ -3892,7 +4019,11 @@ export const slides = [
         "body": "Tools, skills, hooks, and permission boundaries — the only things the agent can actually reach into.",
         "highlight": true,
         "question": "Without it: the model can only talk about the work, not produce a deliverable.",
-        "examples": ["skills & tools", "lifecycle hooks", "permissions"]
+        "examples": [
+          "skills & tools",
+          "lifecycle hooks",
+          "permissions"
+        ]
       },
       {
         "kicker": "Scale",
@@ -3901,7 +4032,11 @@ export const slides = [
         "color": "#6f9363",
         "body": "For bigger jobs, planning, building, and verification can run as separate focused sub-agents.",
         "question": "Without it: big jobs collapse under their own weight in one long run.",
-        "examples": ["sub-agents", "planning", "verification"]
+        "examples": [
+          "sub-agents",
+          "planning",
+          "verification"
+        ]
       }
     ],
     "audiences": [
@@ -3918,9 +4053,16 @@ export const slides = [
     "marker": "LOOP · keep going",
     "spineActive": "loop",
     "parts": [
-      { "text": "The loop is what makes the model " },
-      { "text": "agentic", "accent": true },
-      { "text": "." }
+      {
+        "text": "The loop is what makes the model "
+      },
+      {
+        "text": "agentic",
+        "accent": true
+      },
+      {
+        "text": "."
+      }
     ],
     "subhead": "A chat app answers once. A harness keeps acting, observing, and adjusting until the work is done.",
     "scenarioGoal": "Draft this week's Cabinet briefing on system status.",
@@ -3973,11 +4115,26 @@ export const slides = [
       "reasoning"
     ],
     "stats": [
-      { "value": "200k", "label": "budget · then" },
-      { "value": "→ 1M", "label": "tokens · opus today" },
-      { "value": "80%", "label": "trigger compaction" },
-      { "value": "4", "label": "summaries · retained" },
-      { "value": "∞", "label": "older · compressed" }
+      {
+        "value": "200k",
+        "label": "budget · then"
+      },
+      {
+        "value": "→ 1M",
+        "label": "tokens · opus today"
+      },
+      {
+        "value": "80%",
+        "label": "trigger compaction"
+      },
+      {
+        "value": "4",
+        "label": "summaries · retained"
+      },
+      {
+        "value": "∞",
+        "label": "older · compressed"
+      }
     ],
     "audiences": [
       "citizen"
@@ -3993,28 +4150,67 @@ export const slides = [
     "marker": "ACTION · touch real systems",
     "spineActive": "action",
     "parts": [
-      { "text": "Every tool call passes through " },
-      { "text": "guardrails", "accent": true },
-      { "text": "." }
+      {
+        "text": "Every tool call passes through "
+      },
+      {
+        "text": "guardrails",
+        "accent": true
+      },
+      {
+        "text": "."
+      }
     ],
     "pipeline": [
-      { "label": "Agent intent", "sub": "what it wants to do", "color": "#0d5f93" },
-      { "label": "Pre-hook", "sub": "identity · scope · policy", "color": "#d47a5f" },
-      { "label": "Tool call", "sub": "the actual work", "color": "#6f9363" },
-      { "label": "Post-hook", "sub": "log · audit · verify", "color": "#be634d" }
+      {
+        "label": "Agent intent",
+        "sub": "what it wants to do",
+        "color": "#0d5f93"
+      },
+      {
+        "label": "Pre-hook",
+        "sub": "identity · scope · policy",
+        "color": "#d47a5f"
+      },
+      {
+        "label": "Tool call",
+        "sub": "the actual work",
+        "color": "#6f9363"
+      },
+      {
+        "label": "Post-hook",
+        "sub": "log · audit · verify",
+        "color": "#be634d"
+      }
     ],
     "traceGoal": "Send this week's Cabinet briefing to the Cabinet distribution list.",
     "traceSteps": [
-      { "stage": "Agent intent", "detail": "send_email(to=cabinet@ucsd.edu, attach=briefing.pdf)" },
-      { "stage": "Pre-hook", "detail": "OCC sender? · list approved? · Chancellor signed off?" },
-      { "stage": "Tool call", "detail": "M365 send · attaches PDF · returns delivery receipt" },
-      { "stage": "Post-hook", "detail": "audit log entry · receipt filed · weekly compliance report" }
+      {
+        "stage": "Agent intent",
+        "detail": "send_email(to=cabinet@ucsd.edu, attach=briefing.pdf)"
+      },
+      {
+        "stage": "Pre-hook",
+        "detail": "OCC sender? · list approved? · Chancellor signed off?"
+      },
+      {
+        "stage": "Tool call",
+        "detail": "M365 send · attaches PDF · returns delivery receipt"
+      },
+      {
+        "stage": "Post-hook",
+        "detail": "audit log entry · receipt filed · weekly compliance report"
+      }
     ],
     "approvalPrompt": {
       "kicker": "the agent stops and asks before any write",
       "question": "Should I run",
       "code": "send_email(to=cabinet@ucsd.edu, attach=briefing.pdf)",
-      "actions": ["allow", "deny", "always allow"]
+      "actions": [
+        "allow",
+        "deny",
+        "always allow"
+      ]
     },
     "audiences": [
       "citizen"
@@ -4033,9 +4229,16 @@ export const slides = [
       "cabinet-harness-05-04-sub-agents"
     ],
     "parts": [
-      { "text": "Bigger tasks can be " },
-      { "text": "split", "accent": true },
-      { "text": " across sub-agents." }
+      {
+        "text": "Bigger tasks can be "
+      },
+      {
+        "text": "split",
+        "accent": true
+      },
+      {
+        "text": " across sub-agents."
+      }
     ],
     "subhead": "Planning, drafting, and verification can run separately, then roll back up into one coherent result.",
     "agents": [
@@ -4044,7 +4247,12 @@ export const slides = [
         "letter": "P",
         "name": "planning · recon",
         "mode": "restricted tools",
-        "tools": ["read", "grep", "glob", "web"],
+        "tools": [
+          "read",
+          "grep",
+          "glob",
+          "web"
+        ],
         "purpose": "explore without changing work",
         "fill": "#eef6f8",
         "stroke": "#83a9bc"
@@ -4054,7 +4262,12 @@ export const slides = [
         "letter": "B",
         "name": "everyday worker",
         "mode": "bounded execution",
-        "tools": ["bash", "read", "edit", "+more"],
+        "tools": [
+          "bash",
+          "read",
+          "edit",
+          "+more"
+        ],
         "purpose": "produce the artifact",
         "locked": true,
         "fill": "#f8eee6",
@@ -4065,7 +4278,12 @@ export const slides = [
         "letter": "V",
         "name": "testing · confirmation",
         "mode": "check the result",
-        "tools": ["bash", "read", "grep", "todo"],
+        "tools": [
+          "bash",
+          "read",
+          "grep",
+          "todo"
+        ],
         "purpose": "confirm before collecting",
         "fill": "#f6f8ee",
         "stroke": "#8aa67a"
@@ -4084,18 +4302,40 @@ export const slides = [
     "variant": "harness-data-unlock",
     "marker": "DATA GOVERNANCE · ACCESS",
     "parts": [
-      { "text": "How agents reach campus data — " },
-      { "text": "safely", "accent": true },
-      { "text": "." }
+      {
+        "text": "How agents reach campus data — "
+      },
+      {
+        "text": "safely",
+        "accent": true
+      },
+      {
+        "text": "."
+      }
     ],
-    "harnesses": ["Claude Code", "Codex", "Cursor", "OpenCode"],
+    "harnesses": [
+      "Claude Code",
+      "Codex",
+      "Cursor",
+      "OpenCode"
+    ],
     "priorityHeading": "Your personal context",
     "prioritySystems": [
-      { "name": "Microsoft Graph" },
-      { "name": "Google Workspace" },
-      { "name": "Confluence" },
-      { "name": "Campus Resources" },
-      { "name": "Zoom meeting transcripts / AI summaries" }
+      {
+        "name": "Microsoft Graph"
+      },
+      {
+        "name": "Google Workspace"
+      },
+      {
+        "name": "Confluence"
+      },
+      {
+        "name": "Campus Resources"
+      },
+      {
+        "name": "Zoom meeting transcripts / AI summaries"
+      }
     ],
     "alsoHeading": "Plus the campus enterprise data sources you have access to",
     "alsoSystems": [
@@ -4120,11 +4360,26 @@ export const slides = [
       "+ 150 more across the campus catalog"
     ],
     "governance": [
-      { "label": "SSO + MFA", "note": "Campus IdP via SAML / OIDC + Duo" },
-      { "label": "Delegated OAuth 2.1", "note": "Agent acts on the user's behalf — never as itself" },
-      { "label": "Scoped tokens", "note": "Per-system, least-privilege, short-lived" },
-      { "label": "Audit log", "note": "Every tool call: user · agent · scope · timestamp" },
-      { "label": "Approval gates", "note": "Human-in-the-loop on writes & P1 data" }
+      {
+        "label": "SSO + MFA",
+        "note": "Campus IdP via SAML / OIDC + Duo"
+      },
+      {
+        "label": "Delegated OAuth 2.1",
+        "note": "Agent acts on the user's behalf — never as itself"
+      },
+      {
+        "label": "Scoped tokens",
+        "note": "Per-system, least-privilege, short-lived"
+      },
+      {
+        "label": "Audit log",
+        "note": "Every tool call: user · agent · scope · timestamp"
+      },
+      {
+        "label": "Approval gates",
+        "note": "Human-in-the-loop on writes & P1 data"
+      }
     ],
     "tiersFooter": "Personal first. Team next. Department and campus aggregations follow — each tier wrapped in its own governance layer.",
     "audiences": [
@@ -4144,25 +4399,76 @@ export const slides = [
     ],
     "programTitle": "TritonAI Developer API Program",
     "parts": [
-      { "text": "The Developer API is the " },
-      { "text": "paved path", "accent": true },
-      { "text": " for builders." }
+      {
+        "text": "The Developer API is the "
+      },
+      {
+        "text": "paved path",
+        "accent": true
+      },
+      {
+        "text": " for builders."
+      }
     ],
     "users": [
-      { "title": "Dept. Staff", "icon": "people" },
-      { "title": "Research Labs", "icon": "builder" },
-      { "title": "Admin Analysts", "icon": "lane" },
-      { "title": "Faculty Teams", "icon": "library" }
+      {
+        "title": "Dept. Staff",
+        "icon": "people"
+      },
+      {
+        "title": "Research Labs",
+        "icon": "builder"
+      },
+      {
+        "title": "Admin Analysts",
+        "icon": "lane"
+      },
+      {
+        "title": "Faculty Teams",
+        "icon": "library"
+      }
     ],
     "harnesses": [
-      { "title": "Claude Code", "subtitle": "Anthropic", "icon": "mcp", "color": "#d47a5f", "fill": "#fff5ee" },
-      { "title": "Codex", "subtitle": "OpenAI", "icon": "builder", "color": "#10b981", "fill": "#ecfdf5" }
+      {
+        "title": "Claude Code",
+        "subtitle": "Anthropic",
+        "icon": "mcp",
+        "color": "#d47a5f",
+        "fill": "#fff5ee"
+      },
+      {
+        "title": "Codex",
+        "subtitle": "OpenAI",
+        "icon": "builder",
+        "color": "#10b981",
+        "fill": "#ecfdf5"
+      }
     ],
     "providers": [
-      { "title": "Azure OpenAI", "icon": "gateway", "color": "#1f78d1", "fill": "#e8f2ff" },
-      { "title": "Google Cloud", "icon": "gateway", "color": "#4b82f6", "fill": "#eef4ff" },
-      { "title": "AWS Bedrock", "icon": "pipeline", "color": "#f28c00", "fill": "#fff5e6" },
-      { "title": "SDSC Self-Hosted", "icon": "lane", "color": "#15243d", "fill": "#eef1f5" }
+      {
+        "title": "Azure OpenAI",
+        "icon": "gateway",
+        "color": "#1f78d1",
+        "fill": "#e8f2ff"
+      },
+      {
+        "title": "Google Cloud",
+        "icon": "gateway",
+        "color": "#4b82f6",
+        "fill": "#eef4ff"
+      },
+      {
+        "title": "AWS Bedrock",
+        "icon": "pipeline",
+        "color": "#f28c00",
+        "fill": "#fff5e6"
+      },
+      {
+        "title": "SDSC Self-Hosted",
+        "icon": "lane",
+        "color": "#15243d",
+        "fill": "#eef1f5"
+      }
     ],
     "capabilities": [
       "CHAT",
@@ -4173,19 +4479,45 @@ export const slides = [
       "CODING"
     ],
     "accessSteps": [
-      { "title": "Request", "body": "Describe the use case, audience, and campus data involved", "color": "#15243d" },
-      { "title": "Receive", "body": "Get API key, starter credits, template repo, and agent instructions", "color": "#0d5f93" },
-      { "title": "Build", "body": "Use approved stacks, campus auth patterns, and curated integrations", "color": "#11c5d6" },
-      { "title": "Host", "body": "Apply for Campus App Hosting or graduate to enterprise delivery", "color": "#ffc928" }
+      {
+        "title": "Request",
+        "body": "Describe the use case, audience, and campus data involved",
+        "color": "#15243d"
+      },
+      {
+        "title": "Receive",
+        "body": "Get API key, starter credits, template repo, and agent instructions",
+        "color": "#0d5f93"
+      },
+      {
+        "title": "Build",
+        "body": "Use approved stacks, campus auth patterns, and curated integrations",
+        "color": "#11c5d6"
+      },
+      {
+        "title": "Host",
+        "body": "Apply for Campus App Hosting or graduate to enterprise delivery",
+        "color": "#ffc928"
+      }
     ],
     "ownership": [
       {
         "title": "ITS owns",
-        "items": ["Templates & Standards", "Hosting, SSO & Logs", "Baseline Risk Review", "Right to Remove Apps"]
+        "items": [
+          "Templates & Standards",
+          "Hosting, SSO & Logs",
+          "Baseline Risk Review",
+          "Right to Remove Apps"
+        ]
       },
       {
         "title": "Department owns",
-        "items": ["App Logic & Dependencies", "Accessibility & Testing", "End-User Support", "Named Technical POC"]
+        "items": [
+          "App Logic & Dependencies",
+          "Accessibility & Testing",
+          "End-User Support",
+          "Named Technical POC"
+        ]
       }
     ],
     "footerBadges": [
@@ -4213,9 +4545,16 @@ export const slides = [
       "campus-app-hosting-intake"
     ],
     "parts": [
-      { "text": "Built artifacts need a " },
-      { "text": "hosting lane", "accent": true },
-      { "text": "." }
+      {
+        "text": "Built artifacts need a "
+      },
+      {
+        "text": "hosting lane",
+        "accent": true
+      },
+      {
+        "text": "."
+      }
     ],
     "subhead": "Tiered intake for agentic builds — from individual desktops to enterprise. Volume drops as governance increases.",
     "hostingTiers": [
@@ -4228,7 +4567,12 @@ export const slides = [
         "fill": "#eef6ea",
         "process": "Citizen-Initiated Development",
         "deploymentLabel": "User Desktop / Laptop",
-        "tools": ["Claude Code", "Codex", "Onyx Craft + OpenCode", "Campus Jupyter + OpenCode"]
+        "tools": [
+          "Claude Code",
+          "Codex",
+          "Onyx Craft + OpenCode",
+          "Campus Jupyter + OpenCode"
+        ]
       },
       {
         "tierLabel": "Tier 1",
@@ -4251,8 +4595,14 @@ export const slides = [
         "fill": "#e6f6f8",
         "review": "TritonAI Tools & Rapid Dev",
         "deployments": [
-          { "name": "TritonAI Dev", "domain": "*.tritonai.ucsd.edu" },
-          { "name": "Rapid ITS Dev", "domain": "*.ucsd.edu" }
+          {
+            "name": "TritonAI Dev",
+            "domain": "*.tritonai.ucsd.edu"
+          },
+          {
+            "name": "Rapid ITS Dev",
+            "domain": "*.ucsd.edu"
+          }
         ],
         "recurring": "Recurring Risk / Scope Review"
       },
@@ -4285,17 +4635,40 @@ export const slides = [
       "cabinet-harness-12-action-plan"
     ],
     "parts": [
-      { "text": "ITS now evaluates staff on " },
-      { "text": "agentic AI adoption", "accent": true },
-      { "text": "." }
+      {
+        "text": "ITS now evaluates staff on "
+      },
+      {
+        "text": "agentic AI adoption",
+        "accent": true
+      },
+      {
+        "text": "."
+      }
     ],
     "subhead": "A single 5-point scale. Reliability and stewardship are folded into the anchors — to score above a 3, work must be operationally sound and respect P1–P3 controls.",
     "dimensionsHeading": "Four dimensions inside every score",
     "dimensions": [
-      { "label": "Scope", "expectation": "one real workflow", "color": "#0d5f93" },
-      { "label": "Path", "expectation": "use the program", "color": "#d47a5f" },
-      { "label": "Delivery", "expectation": "make it supportable", "color": "#be634d" },
-      { "label": "Scale", "expectation": "raise the bar", "color": "#6f9363" }
+      {
+        "label": "Scope",
+        "expectation": "one real workflow",
+        "color": "#0d5f93"
+      },
+      {
+        "label": "Path",
+        "expectation": "use the program",
+        "color": "#d47a5f"
+      },
+      {
+        "label": "Delivery",
+        "expectation": "make it supportable",
+        "color": "#be634d"
+      },
+      {
+        "label": "Scale",
+        "expectation": "raise the bar",
+        "color": "#6f9363"
+      }
     ],
     "rubric": [
       {
@@ -4337,7 +4710,16 @@ export const slides = [
       }
     ],
     "poweredByLabel": "Backed by the program we just walked through",
-    "poweredBy": ["Claude Code", "Codex", "Cursor", "OpenCode", "TritonAI", "MCP gateway", "Activity Hubs", "Campus App Hosting"],
+    "poweredBy": [
+      "Claude Code",
+      "Codex",
+      "Cursor",
+      "OpenCode",
+      "TritonAI",
+      "MCP gateway",
+      "Activity Hubs",
+      "Campus App Hosting"
+    ],
     "audiences": [
       "citizen"
     ]
