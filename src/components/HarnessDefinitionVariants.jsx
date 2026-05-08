@@ -3068,12 +3068,17 @@ const HarnessActionVariant = ({ slide }) => {
         )}
       </div>
 
-      {/* Two-column: mechanic (pipeline) on left, live trace on right — mirrors LOOP slide */}
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[21vh] bottom-[14vh] grid grid-cols-[42%_1fr] gap-7 items-stretch">
+      {/* Two-column: left = mechanics (the flow), right = a worked example */}
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[19vh] bottom-[6vh] grid grid-cols-[42%_1fr] gap-7 items-stretch">
         {/* Left: The action pipeline (vertical flow) */}
         <Card delay={0.5} className="flex flex-col p-6">
-          <div className="self-start text-[14px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
-            The mechanic
+          <div className="flex items-baseline gap-3">
+            <span className="text-[13px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
+              Mechanics
+            </span>
+            <span style={{ color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 16 }}>
+              every tool call follows this path
+            </span>
           </div>
 
           <div className="flex-1 flex flex-col justify-center gap-2.5 mt-4" style={{ minHeight: 0 }}>
@@ -3121,14 +3126,14 @@ const HarnessActionVariant = ({ slide }) => {
           </div>
         </Card>
 
-        {/* Right: Live trace + tool registry */}
+        {/* Right: A worked example — the same pipeline, applied to a real Cabinet action */}
         <Card delay={0.7} className="p-6 flex flex-col">
           <div className="flex items-baseline gap-3">
-            <span className="text-[13px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 700 }}>
-              Live trace
+            <span className="text-[13px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
+              Example
             </span>
             <span style={{ color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 16 }}>
-              one action through the gates
+              one Cabinet action through the gates
             </span>
           </div>
 

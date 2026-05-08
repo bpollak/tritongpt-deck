@@ -3997,7 +3997,6 @@ export const slides = [
       { "text": "guardrails", "accent": true },
       { "text": "." }
     ],
-    "subhead": "Every step the loop takes has to touch a real system. ACTION is the gate that approves it, scopes it, and writes it to the audit trail before anything happens.",
     "pipeline": [
       { "label": "Agent intent", "sub": "what it wants to do", "color": "#0d5f93" },
       { "label": "Pre-hook", "sub": "identity · scope · policy", "color": "#d47a5f" },
@@ -4017,8 +4016,6 @@ export const slides = [
       "code": "send_email(to=cabinet@ucsd.edu, attach=briefing.pdf)",
       "actions": ["allow", "deny", "always allow"]
     },
-    "bottomLineLabel": "WHY THIS MATTERS",
-    "bottomLine": "Static rules screen every call; humans approve writes in the loop. Together they make sure no real-world action happens without policy and consent.",
     "audiences": [
       "cabinet-may-2026"
     ]
