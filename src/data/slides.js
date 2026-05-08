@@ -3845,7 +3845,7 @@ export const slides = [
         "powersBadge": "POWERS ONYX CRAFT",
         "origin": "Open-source, community-built. Privacy-first — no code or context stored.",
         "now": "150K GitHub stars, 6.5M monthly developers, 75+ supported models (Claude, GPT, Gemini, local).",
-        "highlight": "Open source — UCSD can shape the scaffolding ourselves. It's also the engine inside Onyx Craft (onyx.app), which lets non-developers build apps, docs, and decks from campus knowledge."
+        "highlight": "Open source — UCSD can shape the scaffolding. Powers Onyx Craft (onyx.app), so non-developers can build apps, docs, and decks from campus knowledge."
       }
     ],
     "audiences": [
