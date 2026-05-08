@@ -635,7 +635,7 @@ const HarnessDefinitionEquationVariant = ({ slide }) => (
         <PartText parts={slide.parts} />
       </h1>
     </div>
-    <div className="absolute left-[5.5vw] right-[5.5vw] top-[34vh] grid grid-cols-[1fr_72px_1fr_72px_1fr] items-stretch">
+    <div className="absolute left-[5.5vw] right-[5.5vw] top-[34vh] bottom-[20vh] grid grid-cols-[1fr_72px_1fr_72px_1fr] items-stretch">
       {(slide.equation || []).map((item, index) => (
         <React.Fragment key={`${item.title}-${index}`}>
           <Card
@@ -735,7 +735,7 @@ const HarnessDefinitionEquationVariant = ({ slide }) => (
     {slide.bottomLine && (
       <motion.div
         {...fade(1.38)}
-        className="absolute left-[4.8vw] right-[4.8vw] top-[70vh] flex items-center gap-5"
+        className="absolute left-[4.8vw] right-[4.8vw] top-[86vh] flex items-center gap-5"
       >
         {slide.bottomLineLabel && (
           <span
@@ -2628,7 +2628,7 @@ const HarnessConvergenceVariant = ({ slide }) => {
         </motion.div>
       )}
 
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[42vh] grid grid-cols-[1fr_120px_1fr] items-stretch gap-0">
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[42vh] bottom-[20vh] grid grid-cols-[1fr_120px_1fr] items-stretch gap-0">
         <Card delay={0.65} className="p-8">
           <div className="flex items-center gap-3">
             <span
@@ -2775,7 +2775,7 @@ const HarnessConvergenceVariant = ({ slide }) => {
       {slide.outcome && (
         <motion.div
           {...fade(1.4)}
-          className="absolute left-[4.8vw] right-[4.8vw] top-[70vh] flex items-center gap-5"
+          className="absolute left-[4.8vw] right-[4.8vw] top-[86vh] flex items-center gap-5"
         >
           <span
             className="rounded-[5px] px-3 py-2 text-[12px]"
