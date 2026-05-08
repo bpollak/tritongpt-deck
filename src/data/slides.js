@@ -4082,13 +4082,12 @@ export const slides = [
     "content": [],
     "layout": "harness-definition",
     "variant": "harness-data-unlock",
-    "marker": "PROPOSAL · FOR CABINET DISCUSSION",
+    "marker": "DATA GOVERNANCE · ACCESS",
     "parts": [
-      { "text": "Before agents reach campus data, we need a " },
-      { "text": "governance rail", "accent": true },
+      { "text": "How agents reach campus data — " },
+      { "text": "safely", "accent": true },
       { "text": "." }
     ],
-    "subhead": "This is the rail we're proposing. Cabinet alignment on access expectations, approval rights, and data-class boundaries is the gate before harnesses move from sandbox to operational.",
     "harnesses": ["Claude Code", "Codex", "Cursor", "OpenCode"],
     "priorityHeading": "Your personal context",
     "prioritySystems": [
@@ -4128,8 +4127,6 @@ export const slides = [
       { "label": "Approval gates", "note": "Human-in-the-loop on writes & P1 data" }
     ],
     "tiersFooter": "Personal first. Team next. Department and campus aggregations follow — each tier wrapped in its own governance layer.",
-    "bottomLineLabel": "DECISION REQUEST · CABINET",
-    "bottomLine": "We need to align on who can grant access, where humans must stay in the loop, and how P1/P2 data is treated. Until that's settled, agents stay in sandbox.",
     "audiences": [
       "cabinet-may-2026"
     ]

@@ -2870,7 +2870,7 @@ const HarnessDataUnlockVariant = ({ slide }) => {
         )}
       </div>
 
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[20vh] bottom-[20vh] grid grid-cols-[1fr_330px] gap-6 items-stretch">
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[19vh] bottom-[10vh] grid grid-cols-[1fr_330px] gap-6 items-stretch">
         {/* Center: stack of harnesses → MCP → data ecosystem */}
         <div className="flex flex-col gap-2.5">
           {/* Top: Harnesses row */}
