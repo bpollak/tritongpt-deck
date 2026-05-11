@@ -2950,7 +2950,11 @@ const HarnessConvergenceVariant = ({ slide }) => {
 };
 
 const HarnessDataUnlockVariant = ({ slide }) => {
-  const harnesses = slide.harnesses || ['Claude Code', 'Codex', 'Cursor', 'OpenCode'];
+  const harnesses = slide.harnesses || [
+    { name: 'Claude Code', logoUrl: 'https://cdn.simpleicons.org/anthropic/171814' },
+    { name: 'Codex', logoUrl: 'https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg' },
+    { name: 'OpenCode', logoUrl: 'https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/opencode.svg' }
+  ];
   const prioritySystems = slide.prioritySystems || [];
   const alsoSystems = slide.alsoSystems || [];
   const governance = slide.governance || [];
@@ -2984,16 +2988,37 @@ const HarnessDataUnlockVariant = ({ slide }) => {
               </span>
             </div>
             <div className="mt-3 flex flex-wrap gap-2.5">
-              {harnesses.map((h, i) => (
-                <motion.span
-                  key={h}
-                  {...fade(0.62 + i * 0.06)}
-                  className="rounded-[5px] border px-3.5 py-2 text-[16px]"
-                  style={{ borderColor: T.faint, background: '#fff', color: T.ink, fontFamily: T.mono, fontWeight: 700 }}
-                >
-                  {h}
-                </motion.span>
-              ))}
+              {harnesses.map((entry, i) => {
+                const item = typeof entry === 'string' ? { name: entry } : entry;
+                return (
+                  <motion.span
+                    key={item.name}
+                    {...fade(0.62 + i * 0.06)}
+                    className="inline-flex items-center gap-2 rounded-[5px] border px-3.5 py-2 text-[16px]"
+                    style={{ borderColor: T.faint, background: '#fff', color: T.ink, fontFamily: T.mono, fontWeight: 700 }}
+                  >
+                    {item.logoUrl ? (
+                      <img
+                        src={item.logoUrl}
+                        alt=""
+                        aria-hidden="true"
+                        className="h-[18px] w-[18px] shrink-0"
+                        style={{ objectFit: 'contain' }}
+                      />
+                    ) : (
+                      <svg
+                        viewBox="0 0 24 24"
+                        className="h-[18px] w-[18px] shrink-0"
+                        aria-hidden="true"
+                      >
+                        <path d="M9 7 L4 12 L9 17" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M15 7 L20 12 L15 17" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    )}
+                    {item.name}
+                  </motion.span>
+                );
+              })}
             </div>
           </Card>
 

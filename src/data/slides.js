@@ -4312,10 +4312,9 @@ export const slides = [
       }
     ],
     "harnesses": [
-      "Claude Code",
-      "Codex",
-      "Cursor",
-      "OpenCode"
+      { "name": "Claude Code", "logoUrl": "https://cdn.simpleicons.org/anthropic/171814" },
+      { "name": "Codex", "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg" },
+      { "name": "OpenCode", "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/opencode.svg" }
     ],
     "priorityHeading": "Your personal context",
     "prioritySystems": [
