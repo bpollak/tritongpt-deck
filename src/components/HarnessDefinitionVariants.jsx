@@ -387,14 +387,26 @@ const HarnessQuestionVariant = ({ slide }) => (
             </div>
             <div className="mt-6">
               {index === 0 ? (
-                <div className="grid grid-cols-[1fr_104px_1fr] items-center gap-4">
-                  <div className="rounded-[7px] border px-5 py-3.5 text-center" style={{ borderColor: '#b9d3dc', background: T.bluePale, color: T.blue, fontFamily: T.mono, fontSize: 14, fontWeight: 800 }}>
-                    user asks
+                <div>
+                  <div className="grid grid-cols-[1fr_104px_1fr] items-center gap-4">
+                    <div className="rounded-[7px] border px-5 py-3.5 text-center" style={{ borderColor: '#b9d3dc', background: T.bluePale, color: T.blue, fontFamily: T.mono, fontSize: 14, fontWeight: 800 }}>
+                      user asks
+                    </div>
+                    <div className="flex h-[76px] w-[76px] items-center justify-center rounded-full border mx-auto" style={{ borderColor: T.blue, color: T.blue, fontFamily: T.serif, fontStyle: 'italic', fontSize: 44 }}>M</div>
+                    <div className="rounded-[7px] border px-5 py-3.5 text-center" style={{ borderColor: '#b9d3dc', background: '#fff', color: T.blue, fontFamily: T.mono, fontSize: 14, fontWeight: 800 }}>
+                      answer returns
+                    </div>
                   </div>
-                  <div className="flex h-[76px] w-[76px] items-center justify-center rounded-full border mx-auto" style={{ borderColor: T.blue, color: T.blue, fontFamily: T.serif, fontStyle: 'italic', fontSize: 44 }}>M</div>
-                  <div className="rounded-[7px] border px-5 py-3.5 text-center" style={{ borderColor: '#b9d3dc', background: '#fff', color: T.blue, fontFamily: T.mono, fontSize: 14, fontWeight: 800 }}>
-                    answer returns
-                  </div>
+                  {/* Linear flow: a packet travels left → right once, then resets — emphasizes one-shot */}
+                  <svg className="mt-3 w-full" height="18" viewBox="0 0 400 18" preserveAspectRatio="none" aria-hidden="true">
+                    <line x1="6" y1="9" x2="388" y2="9" stroke="#b9d3dc" strokeWidth="1.4" strokeDasharray="4 5" />
+                    <polygon points="388,9 380,4 380,14" fill="#b9d3dc" />
+                    <circle r="4.5" fill={T.blue}>
+                      <animate attributeName="cx" values="6;388;388" keyTimes="0;0.78;1" dur="3.4s" repeatCount="indefinite" />
+                      <animate attributeName="cy" values="9;9;9" keyTimes="0;0.78;1" dur="3.4s" repeatCount="indefinite" />
+                      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.78;0.82;0.97;1" dur="3.4s" repeatCount="indefinite" />
+                    </circle>
+                  </svg>
                 </div>
               ) : (
                 <div className="rounded-[9px] border px-5 py-4" style={{ borderColor: T.coralPale, background: '#fff' }}>
@@ -404,9 +416,21 @@ const HarnessQuestionVariant = ({ slide }) => (
                         <div key={label} className="rounded-[5px] border px-3 py-2 text-center text-[12px]" style={{ borderColor: T.faint, color: T.muted, fontFamily: T.mono, fontWeight: 800 }}>{label}</div>
                       ))}
                     </div>
-                    <div className="relative flex h-[88px] w-[88px] items-center justify-center rounded-full border mx-auto" style={{ borderColor: T.coral, color: T.coralDark, fontFamily: T.serif, fontStyle: 'italic', fontSize: 52 }}>
-                      M
-                      <span className="absolute bottom-[-8px] right-[-8px] rounded-full px-2 py-0.5 text-[11px]" style={{ background: T.coral, color: '#fff', fontFamily: T.mono, fontStyle: 'normal' }}>↺</span>
+                    {/* Cyclic loop: dashed ring rotates continuously around the M */}
+                    <div className="relative flex h-[120px] w-[120px] items-center justify-center mx-auto">
+                      <svg className="absolute inset-0 h-full w-full" viewBox="0 0 120 120" aria-hidden="true">
+                        <circle cx="60" cy="60" r="55" fill="none" stroke={T.coralPale} strokeWidth="1.2" strokeDasharray="3 4" />
+                        <circle cx="60" cy="60" r="55" fill="none" stroke={T.coral} strokeWidth="1.6" strokeDasharray="9 80" strokeLinecap="round">
+                          <animate attributeName="stroke-dashoffset" from="0" to="-89" dur="3.2s" repeatCount="indefinite" />
+                        </circle>
+                        <circle r="4" fill={T.coral}>
+                          <animateMotion dur="3.2s" repeatCount="indefinite" path="M 60 5 A 55 55 0 1 1 60 115 A 55 55 0 1 1 60 5" />
+                        </circle>
+                      </svg>
+                      <div className="relative flex h-[88px] w-[88px] items-center justify-center rounded-full border" style={{ borderColor: T.coral, background: '#fff', color: T.coralDark, fontFamily: T.serif, fontStyle: 'italic', fontSize: 52 }}>
+                        M
+                        <span className="absolute bottom-[-8px] right-[-8px] rounded-full px-2 py-0.5 text-[11px]" style={{ background: T.coral, color: '#fff', fontFamily: T.mono, fontStyle: 'normal' }}>↺</span>
+                      </div>
                     </div>
                     <div className="space-y-2.5">
                       {['read', 'edit', 'verify'].map((label) => (
