@@ -3894,8 +3894,6 @@ export const slides = [
         ]
       }
     ],
-    "bottomLineLabel": "THE EQUATION",
-    "bottomLine": "Set the goal once. The agent runs the loop until the work is done.",
     "audiences": [
       "citizen"
     ]
