@@ -2196,9 +2196,12 @@ const HarnessSubagentsVariant = ({ slide }) => {
         </div>
       </motion.div>
 
-      {/* Sub-agents diagram — orchestrator tree with animated dispatch + return */}
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[25vh] bottom-[10vh]">
-        <svg viewBox="0 0 1240 460" preserveAspectRatio="xMidYMid meet" className="h-full w-full overflow-visible">
+      {/* Sub-agents diagram — orchestrator tree with animated dispatch + return.
+          The container top is anchored to the bottom of the parent main-thread box
+          (19vh + 58px) and the SVG itself is yMin-aligned so the dispatch paths
+          emerge directly from the parent rather than from a floating gap below it. */}
+      <div className="absolute left-[4.8vw] right-[4.8vw] bottom-[10vh]" style={{ top: 'calc(19vh + 58px)' }}>
+        <svg viewBox="0 0 1240 460" preserveAspectRatio="xMidYMin meet" className="h-full w-full overflow-visible">
           {/* Top dispatch — colored paths from parent (above SVG) down to each sub-agent, with goal chips and marching-ants flow */}
           {agents.map((agent, index) => {
             const targetX = targetXs[index];
