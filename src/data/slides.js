@@ -3739,7 +3739,6 @@ export const slides = [
         "text": " arrived to put it to work."
       }
     ],
-    "subhead": "Two parallel breakthroughs converged this year — and together they reshape how AI gets leveraged.",
     "streams": [
       {
         "kicker": "STREAM 1 · CAPABILITY",
