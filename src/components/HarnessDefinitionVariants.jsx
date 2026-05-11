@@ -79,15 +79,21 @@ const Shell = ({ children }) => (
   </div>
 );
 
-const Marker = ({ children }) => (
-  <motion.div
-    {...fade(0.05, -4)}
-    className="absolute left-[4.8vw] top-[4.2vh] text-[13px] uppercase"
-    style={{ color: T.coral, fontFamily: T.mono, fontWeight: 600, letterSpacing: '0.26em' }}
-  >
-    {children}
-  </motion.div>
-);
+const isCitizenAudience = (slide) =>
+  Array.isArray(slide?.audiences) && slide.audiences.includes('citizen');
+
+const Marker = ({ children, slide }) => {
+  if (isCitizenAudience(slide)) return null;
+  return (
+    <motion.div
+      {...fade(0.05, -4)}
+      className="absolute left-[4.8vw] top-[4.2vh] text-[13px] uppercase"
+      style={{ color: T.coral, fontFamily: T.mono, fontWeight: 600, letterSpacing: '0.26em' }}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
 const PartText = ({ parts = [], delay = 0.16, stagger = 0.045 }) => (
   <>
@@ -149,9 +155,9 @@ const JobSpine = ({ activeKey }) => {
 
 const Header = ({ slide, maxWidth = '74vw', titleFontSize = 'clamp(44px, 4.4vw, 70px)', subheadFontSize = 'clamp(18px, 1.35vw, 23px)' }) => (
   <>
-    <Marker>{slide.marker}</Marker>
+    <Marker slide={slide}>{slide.marker}</Marker>
     <JobSpine activeKey={slide.spineActive} />
-    <div className="absolute left-[4.8vw] right-[4.8vw] top-[8.3vh]" style={{ maxWidth }}>
+    <div className={`absolute left-[4.8vw] right-[4.8vw] ${isCitizenAudience(slide) ? 'top-[4vh]' : 'top-[8.3vh]'}`} style={{ maxWidth }}>
       <h1 className="leading-[0.98]" style={{ fontSize: titleFontSize, fontWeight: 520 }}>
         <PartText parts={slide.parts} />
       </h1>
@@ -316,17 +322,17 @@ const Pill = ({ children, delay = 0.4, tone = 'coral' }) => (
 
 const HarnessQuestionVariant = ({ slide }) => (
   <Shell>
-    <Marker>{slide.marker}</Marker>
-    <motion.div {...fade(0.18)} className="absolute left-[4.8vw] top-[8vh] text-[13px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em' }}>
+    <Marker slide={slide}>{slide.marker}</Marker>
+    <motion.div {...fade(0.18)} className="absolute left-[4.8vw] top-[4vh] text-[13px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em' }}>
       {slide.kicker}
     </motion.div>
-    <h1 className="absolute left-[4.8vw] right-[4.8vw] top-[13vh] leading-[0.95]" style={{ fontSize: 'clamp(54px, 6.2vw, 100px)', fontWeight: 520 }}>
+    <h1 className="absolute left-[4.8vw] right-[4.8vw] top-[9vh] leading-[0.95]" style={{ fontSize: 'clamp(54px, 6.2vw, 100px)', fontWeight: 520 }}>
       <PartText parts={slide.parts} delay={0.25} />
     </h1>
     {slide.topTagline && (
       <motion.div
         {...fade(0.62)}
-        className="absolute left-[4.8vw] right-[4.8vw] top-[24vh] italic"
+        className="absolute left-[4.8vw] right-[4.8vw] top-[20vh] italic"
         style={{
           color: T.coralDark,
           fontFamily: T.serif,
@@ -340,7 +346,7 @@ const HarnessQuestionVariant = ({ slide }) => (
       </motion.div>
     )}
     {(slide.contextCards || []).length > 0 && (
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[31vh] grid grid-cols-2 gap-8">
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[27vh] grid grid-cols-2 gap-8">
         {slide.contextCards.map((card, index) => (
           <Card key={card.title} delay={0.74 + index * 0.1} className="p-7" style={index === 1 ? { background: '#fff8f2', borderColor: T.coralPale } : undefined}>
             <div className="flex items-start justify-between gap-4">
@@ -617,22 +623,22 @@ const EquationIcon = ({ type, color = T.ink }) => {
 
 const HarnessDefinitionEquationVariant = ({ slide }) => (
   <Shell>
-    <Marker>{slide.marker}</Marker>
+    <Marker slide={slide}>{slide.marker}</Marker>
     {slide.kicker && (
       <motion.div
         {...fade(0.18)}
-        className="absolute left-[4.8vw] top-[8vh] text-[13px] uppercase"
+        className="absolute left-[4.8vw] top-[4vh] text-[13px] uppercase"
         style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em' }}
       >
         {slide.kicker}
       </motion.div>
     )}
-    <div className="absolute left-[4.8vw] right-[4.8vw] top-[13vh]">
+    <div className="absolute left-[4.8vw] right-[4.8vw] top-[9vh]">
       <h1 className="leading-[1.02]" style={{ fontSize: 'clamp(44px, 4.35vw, 74px)', fontWeight: 520 }}>
         <PartText parts={slide.parts} />
       </h1>
     </div>
-    <div className="absolute left-[5.5vw] right-[5.5vw] top-[30vh] bottom-[20vh] grid grid-cols-[1fr_72px_1fr_72px_1fr] items-stretch">
+    <div className="absolute left-[5.5vw] right-[5.5vw] top-[25vh] bottom-[20vh] grid grid-cols-[1fr_72px_1fr_72px_1fr] items-stretch">
       {(slide.equation || []).map((item, index) => (
         <React.Fragment key={`${item.title}-${index}`}>
           <Card
@@ -797,7 +803,7 @@ const HarnessWorkProductVariant = ({ slide }) => (
 const HarnessToolboxVariant = ({ slide }) => (
   <Shell>
     <Header slide={slide} maxWidth="92vw" titleFontSize="clamp(38px, 3.95vw, 64px)" subheadFontSize="clamp(17px, 1.22vw, 21px)" />
-    <div className="absolute left-[4.8vw] right-[4.8vw] top-[23vh]">
+    <div className="absolute left-[4.8vw] right-[4.8vw] top-[18vh]">
       <div className="grid grid-cols-4 gap-5">
         {(slide.vendors || []).map((vendor, index) => (
           <Card
@@ -935,7 +941,7 @@ const HarnessWiredVariant = ({ slide }) => (
 
 const HarnessManifestoVariant = ({ slide }) => (
   <Shell>
-    {slide.marker && <Marker>{slide.marker}</Marker>}
+    {slide.marker && !isCitizenAudience(slide) && <Marker slide={slide}>{slide.marker}</Marker>}
     <div className="absolute inset-x-[14vw] top-[30vh] text-center">
       <h1 className="leading-[1.04]" style={{ fontSize: 'clamp(58px, 6.3vw, 98px)', fontWeight: 520 }}>
         <PartText parts={slide.parts} delay={0.2} />
@@ -1182,9 +1188,9 @@ const ComponentVisual = ({ type, color = T.coralDark }) => {
 
 const HarnessComponentsFrameworkVariant = ({ slide }) => (
   <Shell>
-    <Marker>{slide.marker}</Marker>
+    <Marker slide={slide}>{slide.marker}</Marker>
 
-    <div className="absolute left-[4.8vw] right-[4.8vw] top-[10vh]" style={{ maxWidth: '88vw' }}>
+    <div className="absolute left-[4.8vw] right-[4.8vw] top-[5vh]" style={{ maxWidth: '88vw' }}>
       <h1 className="leading-[0.98]" style={{ fontSize: 'clamp(40px, 4vw, 64px)', fontWeight: 520 }}>
         <PartText parts={slide.parts} />
       </h1>
@@ -1195,7 +1201,7 @@ const HarnessComponentsFrameworkVariant = ({ slide }) => (
       )}
     </div>
 
-    <div className="absolute left-[4.8vw] right-[4.8vw] top-[24vh]">
+    <div className="absolute left-[4.8vw] right-[4.8vw] top-[19vh]">
       <div className="grid grid-cols-2 gap-5">
         {(slide.components || []).map((component, index) => (
           <Card
@@ -1260,10 +1266,10 @@ const HarnessWhileLoopVariant = ({ slide }) => {
 
   return (
     <Shell>
-      <Marker>{slide.marker}</Marker>
+      <Marker slide={slide}>{slide.marker}</Marker>
       <JobSpine activeKey={slide.spineActive} />
 
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[10vh]" style={{ maxWidth: '78vw' }}>
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[5vh]" style={{ maxWidth: '78vw' }}>
         <h1 className="leading-[0.98]" style={{ fontSize: 'clamp(40px, 4vw, 64px)', fontWeight: 520 }}>
           <PartText parts={slide.parts} />
         </h1>
@@ -1274,7 +1280,7 @@ const HarnessWhileLoopVariant = ({ slide }) => {
         )}
       </div>
 
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[24vh] bottom-[12vh] grid grid-cols-[40%_1fr] gap-7 items-stretch">
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[19vh] bottom-[12vh] grid grid-cols-[40%_1fr] gap-7 items-stretch">
         {/* Left: Animated loop diagram */}
         <Card delay={0.5} className="flex flex-col p-5">
           <div className="self-start text-[12px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
@@ -1409,9 +1415,9 @@ const HarnessWhileLoopVariant = ({ slide }) => {
 
 const HarnessContextVariant = ({ slide }) => (
   <Shell>
-    <Marker>{slide.marker}</Marker>
+    <Marker slide={slide}>{slide.marker}</Marker>
     <JobSpine activeKey={slide.spineActive} />
-    <div className="absolute left-[4.8vw] right-[4.8vw] top-[9vh]">
+    <div className="absolute left-[4.8vw] right-[4.8vw] top-[4vh]">
       <div className="flex items-baseline gap-7">
         {slide.number ? (
           <motion.div {...fade(0.16)} style={{ color: T.coral, fontSize: 'clamp(70px, 6.4vw, 108px)', fontStyle: 'italic', lineHeight: 0.9 }}>
@@ -1426,7 +1432,7 @@ const HarnessContextVariant = ({ slide }) => (
         {slide.subtitle || 'what to keep · what to summarize · what to drop'}
       </motion.div>
     </div>
-    <div className="absolute left-[4.8vw] right-[4.8vw] top-[30vh]">
+    <div className="absolute left-[4.8vw] right-[4.8vw] top-[25vh]">
       <Card delay={0.48} className="p-7">
         <div className="grid grid-cols-[auto_1fr_auto] items-center gap-5">
           <Kicker>Context budget</Kicker>
@@ -1532,7 +1538,7 @@ const HarnessContextVariant = ({ slide }) => (
 
 const HarnessFrameworkCardsVariant = ({ slide }) => (
   <Shell>
-    <Marker>{slide.marker}</Marker>
+    <Marker slide={slide}>{slide.marker}</Marker>
     <JobSpine activeKey={slide.spineActive} />
 
     <div className="absolute left-[4.8vw] right-[4.8vw] top-[10vh]" style={{ maxWidth: '88vw' }}>
@@ -1850,9 +1856,9 @@ const HarnessCampusHostingVariant = ({ slide }) => {
 
   return (
     <Shell>
-      <Marker>{slide.marker}</Marker>
+      <Marker slide={slide}>{slide.marker}</Marker>
 
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[10vh]" style={{ maxWidth: '88vw' }}>
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[5vh]" style={{ maxWidth: '88vw' }}>
         <h1 className="leading-[0.98]" style={{ fontSize: 'clamp(38px, 3.8vw, 60px)', fontWeight: 520 }}>
           <PartText parts={slide.parts} />
         </h1>
@@ -1864,7 +1870,7 @@ const HarnessCampusHostingVariant = ({ slide }) => {
       </div>
 
       {/* 4 tier rows */}
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[22vh] bottom-[2vh] flex flex-col gap-12">
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[17vh] bottom-[2vh] flex flex-col gap-12">
         {tiers.map((tier, index) => {
           const tierNum = index;
           return (
@@ -2065,10 +2071,10 @@ const HarnessSubagentsVariant = ({ slide }) => {
 
   return (
     <Shell>
-      <Marker>{slide.marker}</Marker>
+      <Marker slide={slide}>{slide.marker}</Marker>
       <JobSpine activeKey={slide.spineActive} />
 
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[10vh]" style={{ maxWidth: '88vw' }}>
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[5vh]" style={{ maxWidth: '88vw' }}>
         <h1 className="leading-[0.98]" style={{ fontSize: 'clamp(40px, 4vw, 64px)', fontWeight: 520 }}>
           <PartText parts={slide.parts} />
         </h1>
@@ -2082,7 +2088,7 @@ const HarnessSubagentsVariant = ({ slide }) => {
       {/* Parent main-thread box, with breathing room under the subhead */}
       <motion.div
         {...fade(0.45)}
-        className="absolute top-[24vh] left-1/2 -translate-x-1/2 flex h-[58px] w-[280px] items-center justify-center rounded-[8px]"
+        className="absolute top-[19vh] left-1/2 -translate-x-1/2 flex h-[58px] w-[280px] items-center justify-center rounded-[8px]"
         style={{
           background: T.black,
           color: '#fff',
@@ -2100,7 +2106,7 @@ const HarnessSubagentsVariant = ({ slide }) => {
       </motion.div>
 
       {/* Sub-agents diagram — orchestrator tree with animated dispatch + return */}
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[30vh] bottom-[10vh]">
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[25vh] bottom-[10vh]">
         <svg viewBox="0 0 1240 460" preserveAspectRatio="xMidYMid meet" className="h-full w-full overflow-visible">
           {/* Top dispatch — colored paths from parent (above SVG) down to each sub-agent, with goal chips and marching-ants flow */}
           {agents.map((agent, index) => {
@@ -2481,9 +2487,9 @@ const HarnessRecapVariant = ({ slide }) => {
 
   return (
     <Shell>
-      <Marker>{slide.marker}</Marker>
+      <Marker slide={slide}>{slide.marker}</Marker>
 
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[8vh]" style={{ maxWidth: '92vw' }}>
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[3vh]" style={{ maxWidth: '92vw' }}>
         <h1 className="leading-[0.98]" style={{ fontSize: 'clamp(38px, 3.8vw, 60px)', fontWeight: 520 }}>
           <PartText parts={slide.parts || [{ text: 'Recap: rubric, harness, expectations.' }]} />
         </h1>
@@ -2495,7 +2501,7 @@ const HarnessRecapVariant = ({ slide }) => {
       </div>
 
       {/* 5-level rubric — main visual */}
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[19vh] grid grid-cols-5 gap-3">
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[14vh] grid grid-cols-5 gap-3">
         {rubric.map((level, index) => {
           const accentColor = level.color || T.coralDark;
           const fillColor = level.fill || '#fff8f2';
@@ -2557,7 +2563,7 @@ const HarnessRecapVariant = ({ slide }) => {
       </div>
 
       {/* Movement indicator — gradient arrow tight under the rubric */}
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[62vh] flex items-center gap-3">
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[57vh] flex items-center gap-3">
         <span className="text-[11px] uppercase shrink-0" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
           Direction of growth
         </span>
@@ -2585,7 +2591,7 @@ const HarnessRecapVariant = ({ slide }) => {
       {slide.bottomLine && (
         <motion.div
           {...fade(1.0)}
-          className="absolute left-[4.8vw] right-[4.8vw] top-[70vh] flex items-start gap-5"
+          className="absolute left-[4.8vw] right-[4.8vw] top-[65vh] flex items-start gap-5"
         >
           {slide.bottomLineLabel && (
             <span
@@ -2647,18 +2653,18 @@ const HarnessConvergenceVariant = ({ slide }) => {
 
   return (
     <Shell>
-      <Marker>{slide.marker}</Marker>
+      <Marker slide={slide}>{slide.marker}</Marker>
       {slide.kicker && (
         <motion.div
           {...fade(0.18)}
-          className="absolute left-[4.8vw] top-[10vh] text-[13px] uppercase"
+          className="absolute left-[4.8vw] top-[5vh] text-[13px] uppercase"
           style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em' }}
         >
           {slide.kicker}
         </motion.div>
       )}
       <h1
-        className="absolute left-[4.8vw] right-[4.8vw] top-[15vh] leading-[0.96]"
+        className="absolute left-[4.8vw] right-[4.8vw] top-[10vh] leading-[0.96]"
         style={{ fontSize: 'clamp(48px, 5.4vw, 86px)', fontWeight: 520 }}
       >
         <PartText parts={slide.parts} delay={0.25} />
@@ -2666,7 +2672,7 @@ const HarnessConvergenceVariant = ({ slide }) => {
       {slide.subhead && (
         <motion.div
           {...fade(0.5)}
-          className="absolute left-[4.8vw] top-[33vh] italic"
+          className="absolute left-[4.8vw] top-[28vh] italic"
           style={{
             color: T.muted,
             fontSize: 'clamp(18px, 1.4vw, 24px)',
@@ -2678,7 +2684,7 @@ const HarnessConvergenceVariant = ({ slide }) => {
         </motion.div>
       )}
 
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[38vh] bottom-[20vh] grid grid-cols-[1fr_120px_1fr] items-stretch gap-0">
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[33vh] bottom-[20vh] grid grid-cols-[1fr_120px_1fr] items-stretch gap-0">
         <Card delay={0.65} className="p-9">
           <div className="flex items-center gap-3">
             <span
@@ -2857,9 +2863,9 @@ const HarnessDataUnlockVariant = ({ slide }) => {
 
   return (
     <Shell>
-      <Marker>{slide.marker}</Marker>
+      <Marker slide={slide}>{slide.marker}</Marker>
 
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[7vh]" style={{ maxWidth: '88vw' }}>
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[3vh]" style={{ maxWidth: '88vw' }}>
         <h1 className="leading-[0.98]" style={{ fontSize: 'clamp(38px, 3.8vw, 60px)', fontWeight: 520 }}>
           <PartText parts={slide.parts} />
         </h1>
@@ -2870,7 +2876,7 @@ const HarnessDataUnlockVariant = ({ slide }) => {
         )}
       </div>
 
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[19vh] bottom-[10vh] grid grid-cols-[1fr_330px] gap-6 items-stretch">
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[14vh] bottom-[10vh] grid grid-cols-[1fr_330px] gap-6 items-stretch">
         {/* Center: stack of harnesses → MCP → data ecosystem */}
         <div className="flex flex-col gap-2.5">
           {/* Top: Harnesses row */}
@@ -3084,10 +3090,10 @@ const HarnessActionVariant = ({ slide }) => {
 
   return (
     <Shell>
-      <Marker>{slide.marker}</Marker>
+      <Marker slide={slide}>{slide.marker}</Marker>
       <JobSpine activeKey={slide.spineActive} />
 
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[8vh]" style={{ maxWidth: '88vw' }}>
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[4vh]" style={{ maxWidth: '88vw' }}>
         <h1 className="leading-[0.98]" style={{ fontSize: 'clamp(40px, 4vw, 64px)', fontWeight: 520 }}>
           <PartText parts={slide.parts} />
         </h1>
@@ -3099,7 +3105,7 @@ const HarnessActionVariant = ({ slide }) => {
       </div>
 
       {/* Two-column: left = mechanics (the flow), right = a worked example */}
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[19vh] bottom-[10vh] grid grid-cols-[42%_1fr] gap-7 items-stretch">
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[14vh] bottom-[10vh] grid grid-cols-[42%_1fr] gap-7 items-stretch">
         {/* Left: The action pipeline (vertical flow) — top-aligned */}
         <Card delay={0.5} className="flex flex-col p-6">
           <div className="flex items-baseline gap-3">
