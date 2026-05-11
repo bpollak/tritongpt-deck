@@ -3304,57 +3304,74 @@ const HarnessActionVariant = ({ slide }) => {
               style={{ borderColor: T.rule }}
             />
           )}
-          {slide.approvalPrompt && (
-            <motion.div
-              {...fade(1.05 + traceSteps.length * 0.18 + 0.15)}
-              className="mt-3 rounded-[8px] border-2 px-3.5 py-2.5"
-              style={{ borderColor: T.coral, background: '#fffaf5' }}
-            >
-              <div className="flex items-baseline gap-3">
-                <span className="text-[12px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
-                  Human in the loop
-                </span>
-                <span style={{ color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 13.5 }}>
-                  {slide.approvalPrompt.kicker || 'interactive approval before any write'}
-                </span>
-              </div>
-              <div className="mt-1.5 flex items-center flex-wrap gap-x-2 gap-y-1" style={{ color: T.ink, fontSize: 16, lineHeight: 1.28 }}>
-                <span style={{ fontFamily: T.serif, fontWeight: 600 }}>
-                  {slide.approvalPrompt.question || 'Should I run'}
-                </span>
-                {slide.approvalPrompt.code && (
-                  <span
-                    className="rounded-[4px] px-2 py-0.5"
-                    style={{ background: T.ink, color: '#fff', fontFamily: T.mono, fontSize: 14, fontWeight: 700 }}
-                  >
-                    {slide.approvalPrompt.code}
+          {slide.approvalPrompt && (() => {
+            const rawActions = slide.approvalPrompt.actions || ['allow', 'deny', 'always allow'];
+            const ccLabel = (action) => {
+              const a = String(action).toLowerCase();
+              if (a === 'allow') return 'Yes';
+              if (a === 'always allow') return "Yes, and don't ask again this session";
+              if (a === 'deny') return 'No, and tell Claude what to do differently';
+              return action;
+            };
+            const code = slide.approvalPrompt.code || '';
+            const toolHeader = (() => {
+              const m = code.match(/^([a-zA-Z_][\w.]*)\s*\(/);
+              return m ? m[1] : 'Tool call';
+            })();
+            return (
+              <motion.div
+                {...fade(1.05 + traceSteps.length * 0.18 + 0.15)}
+                className="mt-3"
+                style={{ fontFamily: T.mono, color: T.ink }}
+              >
+                <div className="flex items-center gap-2 mb-1.5">
+                  <span className="text-[11px] uppercase" style={{ color: T.coral, letterSpacing: '0.22em', fontWeight: 800 }}>
+                    Human in the loop
                   </span>
-                )}
-                <span style={{ fontFamily: T.serif, fontWeight: 600 }}>?</span>
-              </div>
-              <div className="mt-2 flex flex-wrap gap-2">
-                {(slide.approvalPrompt.actions || ['allow', 'deny', 'always allow']).map((action, i) => {
-                  const primary = i === 0;
-                  return (
-                    <span
-                      key={action}
-                      className="rounded-[5px] border px-3 py-1 text-[13px]"
-                      style={{
-                        borderColor: T.coral,
-                        background: primary ? T.coral : '#fff',
-                        color: primary ? '#fff' : T.coralDark,
-                        fontFamily: T.mono,
-                        fontWeight: 800,
-                        letterSpacing: '0.04em'
-                      }}
-                    >
-                      {action}
-                    </span>
-                  );
-                })}
-              </div>
-            </motion.div>
-          )}
+                  <span style={{ color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 12.5 }}>
+                    {slide.approvalPrompt.kicker || 'the agent stops and asks before any write'}
+                  </span>
+                </div>
+                {/* Claude-Code-style boxed tool call */}
+                <div className="rounded-[6px] border" style={{ borderColor: T.coral, background: '#fffaf5' }}>
+                  <div className="border-l-[3px] pl-3 pr-3 py-2.5" style={{ borderColor: T.coral }}>
+                    <div className="text-[10.5px] uppercase mb-1" style={{ color: T.coralDark, fontWeight: 800, letterSpacing: '0.2em' }}>
+                      Tool call · {toolHeader}
+                    </div>
+                    <div style={{ color: T.ink, fontSize: 13.5, fontWeight: 700, lineHeight: 1.4, wordBreak: 'break-word' }}>
+                      {code}
+                    </div>
+                  </div>
+                </div>
+                {/* Prompt + numbered options */}
+                <div className="mt-2">
+                  <div className="mb-1" style={{ color: T.ink, fontSize: 13, fontWeight: 700 }}>
+                    Do you want to proceed?
+                  </div>
+                  <div className="flex flex-col gap-[1px]">
+                    {rawActions.map((action, i) => {
+                      const selected = i === 0;
+                      return (
+                        <div
+                          key={i}
+                          className="flex items-baseline gap-1.5 rounded-[3px] px-1.5 py-[2px]"
+                          style={{ background: selected ? '#ffe7d4' : 'transparent', fontSize: 12.5, lineHeight: 1.45 }}
+                        >
+                          <span style={{ width: 10, display: 'inline-block', color: selected ? T.coral : 'transparent', fontWeight: 800 }}>
+                            ❯
+                          </span>
+                          <span style={{ color: T.muted, fontWeight: 700 }}>{i + 1}.</span>
+                          <span style={{ color: selected ? T.coralDark : T.ink, fontWeight: selected ? 700 : 500 }}>
+                            {ccLabel(action)}
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })()}
 
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
