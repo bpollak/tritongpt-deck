@@ -4063,22 +4063,22 @@ export const slides = [
       }
     ],
     "subhead": "A chat app answers once. A harness keeps acting, observing, and adjusting until the work is done.",
-    "scenarioGoal": "Draft this week's Cabinet briefing on system status.",
+    "scenarioGoal": "Compile this quarter's student-success picture for the Provost.",
     "iterations": [
       {
-        "act": "pull this week's ServiceNow major incidents",
-        "observe": "4 P1 events — one with campus-wide impact",
-        "adjust": "lead the briefing with the campus-wide event"
+        "act": "pull this quarter's retention numbers from the data warehouse",
+        "observe": "94.1% overall — flat versus last quarter",
+        "adjust": "break it out by first-generation status"
       },
       {
-        "act": "add the ESR program update from Activity Hubs",
-        "observe": "2 milestones hit; 1 slipping its target",
-        "adjust": "include the slip and the recovery plan"
+        "act": "re-pull the data split by first-gen status",
+        "observe": "first-gen retention 89.3%; the gap widened 1.4 pts",
+        "adjust": "cross-reference with advising touch-points"
       },
       {
-        "act": "format as a 1-page Cabinet packet",
-        "observe": "concise; action items are visible",
-        "adjust": "ready for distribution"
+        "act": "pull advising contacts for first-gen students this quarter",
+        "observe": "41% had fewer than 2 advising contacts",
+        "adjust": "surface this gap as the headline for the review"
       }
     ],
     "audiences": [
