@@ -3117,7 +3117,7 @@ const HarnessActionVariant = ({ slide }) => {
       </div>
 
       {/* Two-column: left = mechanics (the flow), right = a worked example */}
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[14vh] bottom-[10vh] grid grid-cols-[42%_1fr] gap-7 items-stretch">
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[14vh] bottom-[22vh] grid grid-cols-[42%_1fr] gap-7 items-stretch">
         {/* Left: The action pipeline (vertical flow) — top-aligned */}
         <Card delay={0.5} className="flex flex-col p-6">
           <div className="flex items-baseline gap-3">
