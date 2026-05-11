@@ -2640,11 +2640,11 @@ const HarnessRecapVariant = ({ slide }) => {
           <span className="text-[11px] uppercase shrink-0" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
             {slide.poweredByLabel || 'Powered by the program'}
           </span>
-          <div className="flex flex-wrap items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2.5">
             {slide.poweredBy.map((item) => (
               <span
                 key={item}
-                className="rounded-full border px-3 py-1 text-[12.5px]"
+                className="rounded-full border px-4 py-1.5 text-[15.5px]"
                 style={{
                   borderColor: T.faint,
                   background: '#fff',

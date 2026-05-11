@@ -4712,7 +4712,6 @@ export const slides = [
     "poweredBy": [
       "Claude Code",
       "Codex",
-      "Cursor",
       "OpenCode",
       "TritonAI",
       "MCP gateway",
