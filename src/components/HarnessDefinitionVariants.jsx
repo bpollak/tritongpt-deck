@@ -17,7 +17,8 @@ const T = {
   green: '#6f9363',
   black: '#151a1a',
   serif: "'Fraunces','Iowan Old Style','Charter',Georgia,serif",
-  mono: "'JetBrains Mono','SF Mono',Menlo,monospace"
+  mono: "'JetBrains Mono','SF Mono',Menlo,monospace",
+  sans: "'Inter','-apple-system','BlinkMacSystemFont','Segoe UI',system-ui,sans-serif"
 };
 
 const defaultArchitectureItems = [
@@ -1662,8 +1663,9 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
 
   return (
     <Shell>
+     <div className="absolute inset-0" style={{ fontFamily: T.sans }}>
       <div className="absolute left-[4.8vw] right-[4.8vw] top-[4.8vh] text-center">
-        <motion.h1 {...fade(0.12)} style={{ color: T.ink, fontFamily: T.serif, fontSize: 'clamp(40px, 3.8vw, 62px)', lineHeight: 0.92, fontWeight: 560, letterSpacing: '0' }}>
+        <motion.h1 {...fade(0.12)} style={{ color: T.ink, fontFamily: T.sans, fontSize: 'clamp(40px, 3.8vw, 62px)', lineHeight: 0.92, fontWeight: 700, letterSpacing: '-0.01em' }}>
           {slide.programTitle || 'TritonAI Developer API Program'}
         </motion.h1>
       </div>
@@ -1677,7 +1679,7 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
                 <div className="flex h-8 w-8 items-center justify-center rounded-full" style={{ background: T.bluePale }}>
                   <MiniIcon type={user.icon || 'people'} color={T.blue} />
                 </div>
-                <div style={{ color: T.ink, fontFamily: T.serif, fontSize: 20, lineHeight: 1, fontWeight: 620 }}>{user.title}</div>
+                <div style={{ color: T.ink, fontFamily: T.sans, fontSize: 18, lineHeight: 1, fontWeight: 600 }}>{user.title}</div>
               </ApiProgramCard>
             ))}
           </div>
@@ -1693,8 +1695,8 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
                     <MiniIcon type={harness.icon || 'code'} color={harness.color || T.coralDark} />
                   </div>
                   <div>
-                    <div style={{ color: T.ink, fontFamily: T.serif, fontSize: 21, lineHeight: 0.95, fontWeight: 650 }}>{harness.title}</div>
-                    <div className="mt-0.5" style={{ color: T.muted, fontFamily: T.serif, fontSize: 13 }}>{harness.subtitle}</div>
+                    <div style={{ color: T.ink, fontFamily: T.sans, fontSize: 19, lineHeight: 0.95, fontWeight: 650 }}>{harness.title}</div>
+                    <div className="mt-0.5" style={{ color: T.muted, fontFamily: T.sans, fontSize: 12.5 }}>{harness.subtitle}</div>
                   </div>
                 </ApiProgramCard>
               ))}
@@ -1704,11 +1706,11 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
 
         <div className="flex items-center justify-center">
           <motion.div {...fade(0.74)} className="relative flex h-[168px] w-[168px] items-center justify-center rounded-full" style={{ background: 'radial-gradient(circle at 35% 28%, #1c5c91, #153457 72%)', boxShadow: '0 0 0 6px rgba(21,36,61,0.18), 0 12px 24px rgba(23,24,20,0.2)' }}>
-            <div className="text-center" style={{ color: '#fff', fontFamily: T.serif }}>
+            <div className="text-center" style={{ color: '#fff', fontFamily: T.sans }}>
               <div className="flex justify-center">
                 <MiniIcon type="gateway" color="#ffc928" />
               </div>
-              <div className="mt-1" style={{ fontSize: 30, lineHeight: 0.93, fontWeight: 620 }}>LLM<br />Gateway</div>
+              <div className="mt-1" style={{ fontSize: 28, lineHeight: 0.95, fontWeight: 700, letterSpacing: '-0.01em' }}>LLM<br />Gateway</div>
               <div className="mt-2 text-[10px] uppercase" style={{ color: '#14b8d4', fontFamily: T.mono, letterSpacing: '0.16em', fontWeight: 800 }}>templates +<br />guardrails</div>
             </div>
           </motion.div>
@@ -1723,7 +1725,7 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
                   <div className="flex h-8 w-8 items-center justify-center rounded-full" style={{ background: provider.fill || T.bluePale }}>
                     <MiniIcon type={provider.icon || 'gateway'} color={provider.color || T.blue} />
                   </div>
-                  <div style={{ color: T.ink, fontFamily: T.serif, fontSize: 19, lineHeight: 0.95, fontWeight: 650 }}>{provider.title}</div>
+                  <div style={{ color: T.ink, fontFamily: T.sans, fontSize: 17, lineHeight: 0.95, fontWeight: 650 }}>{provider.title}</div>
                 </ApiProgramCard>
               ))}
             </div>
@@ -1759,8 +1761,8 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
             <motion.div key={step.title} {...fade(1.2 + index * 0.06, 0)} className="grid grid-cols-[46px_1fr] gap-3 items-start">
               <div className="flex h-12 w-12 items-center justify-center rounded-full shrink-0" style={{ background: step.color || T.blue, color: '#fff', fontFamily: T.mono, fontSize: 21, fontWeight: 800 }}>{index + 1}</div>
               <div>
-                <div style={{ color: T.ink, fontFamily: T.serif, fontSize: 28, lineHeight: 0.95, fontWeight: 650 }}>{step.title}</div>
-                <div className="mt-1.5" style={{ color: '#5f6f82', fontFamily: T.serif, fontSize: 18, lineHeight: 1.2 }}>{step.body}</div>
+                <div style={{ color: T.ink, fontFamily: T.sans, fontSize: 26, lineHeight: 1, fontWeight: 700, letterSpacing: '-0.01em' }}>{step.title}</div>
+                <div className="mt-1.5" style={{ color: '#5f6f82', fontFamily: T.sans, fontSize: 16, lineHeight: 1.25 }}>{step.body}</div>
               </div>
             </motion.div>
           ))}
@@ -1794,6 +1796,7 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
           </React.Fragment>
         ))}
       </div>
+     </div>
     </Shell>
   );
 };
@@ -1869,13 +1872,14 @@ const HarnessCampusHostingVariant = ({ slide }) => {
   return (
     <Shell>
       <Marker slide={slide}>{slide.marker}</Marker>
+     <div className="absolute inset-0" style={{ fontFamily: T.sans }}>
 
       <div className="absolute left-[4.8vw] right-[4.8vw] top-[5vh]" style={{ maxWidth: '88vw' }}>
-        <h1 className="leading-[0.98]" style={{ fontSize: 'clamp(38px, 3.8vw, 60px)', fontWeight: 520 }}>
+        <h1 className="leading-[0.98]" style={{ fontFamily: T.sans, fontSize: 'clamp(38px, 3.8vw, 60px)', fontWeight: 700, letterSpacing: '-0.01em' }}>
           <PartText parts={slide.parts} />
         </h1>
         {slide.subhead && (
-          <motion.div {...fade(0.34)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(16px, 1.2vw, 21px)' }}>
+          <motion.div {...fade(0.34)} className="mt-2" style={{ color: T.muted, fontFamily: T.sans, fontSize: 'clamp(16px, 1.2vw, 21px)' }}>
             {slide.subhead}
           </motion.div>
         )}
@@ -1897,7 +1901,7 @@ const HarnessCampusHostingVariant = ({ slide }) => {
                 <TierUserIcon tier={tierNum} color={tier.color} />
                 <div>
                   <div style={{ color: tier.color, fontFamily: T.mono, fontSize: 14, fontWeight: 800, letterSpacing: '0.18em' }}>{tier.tierLabel.toUpperCase()}</div>
-                  <div className="mt-1" style={{ color: T.ink, fontFamily: T.serif, fontSize: 24, fontWeight: 650, lineHeight: 1.05 }}>{tier.users}</div>
+                  <div className="mt-1" style={{ color: T.ink, fontFamily: T.sans, fontSize: 22, fontWeight: 700, lineHeight: 1.05, letterSpacing: '-0.01em' }}>{tier.users}</div>
                   <div className="mt-1" style={{ color: T.muted, fontFamily: T.mono, fontSize: 14, fontWeight: 700 }}>{tier.volume}</div>
                 </div>
               </div>
@@ -1909,12 +1913,12 @@ const HarnessCampusHostingVariant = ({ slide }) => {
                     <div className="rounded-full" style={{ background: tier.color, color: '#fff', fontFamily: T.mono, fontSize: 13, fontWeight: 800, padding: '8px 14px', whiteSpace: 'nowrap', letterSpacing: '0.1em' }}>
                       REVIEW
                     </div>
-                    <div className="rounded-[8px] border-2 px-4 py-3 bg-white" style={{ borderColor: tier.color, color: tier.color, fontFamily: T.serif, fontSize: 17.5, lineHeight: 1.2, fontWeight: 650, maxWidth: 220 }}>
+                    <div className="rounded-[8px] border-2 px-4 py-3 bg-white" style={{ borderColor: tier.color, color: tier.color, fontFamily: T.sans, fontSize: 16.5, lineHeight: 1.2, fontWeight: 650, maxWidth: 220 }}>
                       {tier.review}
                     </div>
                   </div>
                 ) : tier.process ? (
-                  <div className="rounded-[8px] border-2 bg-white px-4 py-3.5" style={{ borderColor: tier.color, color: tier.color, fontFamily: T.serif, fontSize: 18.5, lineHeight: 1.2, fontWeight: 650, maxWidth: 260 }}>
+                  <div className="rounded-[8px] border-2 bg-white px-4 py-3.5" style={{ borderColor: tier.color, color: tier.color, fontFamily: T.sans, fontSize: 17.5, lineHeight: 1.2, fontWeight: 650, maxWidth: 260 }}>
                     {tier.process}
                   </div>
                 ) : null}
@@ -1924,7 +1928,7 @@ const HarnessCampusHostingVariant = ({ slide }) => {
               <div className="flex flex-wrap items-center gap-3">
                 {tier.deploymentLabel && (
                   <div className="flex flex-col">
-                    <div className="rounded-[8px] border-2 bg-white px-4 py-3" style={{ borderColor: tier.softColor, color: T.ink, fontFamily: T.serif, fontSize: 18.5, fontWeight: 650 }}>
+                    <div className="rounded-[8px] border-2 bg-white px-4 py-3" style={{ borderColor: tier.softColor, color: T.ink, fontFamily: T.sans, fontSize: 17.5, fontWeight: 650 }}>
                       {tier.deploymentLabel}
                     </div>
                     <div className="mt-2 flex flex-wrap gap-2">
@@ -1938,13 +1942,13 @@ const HarnessCampusHostingVariant = ({ slide }) => {
                 )}
                 {tier.deployments &&
                   tier.deployments.map((dep) => (
-                    <div key={dep.name} className="rounded-[8px] border-2 bg-white px-4 py-3" style={{ borderColor: tier.softColor, color: T.ink, fontFamily: T.serif, fontSize: 18.5, fontWeight: 650 }}>
+                    <div key={dep.name} className="rounded-[8px] border-2 bg-white px-4 py-3" style={{ borderColor: tier.softColor, color: T.ink, fontFamily: T.sans, fontSize: 17.5, fontWeight: 650 }}>
                       <div>{dep.name}</div>
                       <div style={{ color: tier.color, fontFamily: T.mono, fontSize: 13.5, fontWeight: 700, marginTop: 4 }}>{dep.domain}</div>
                     </div>
                   ))}
                 {tier.deployment && !tier.deployments && (
-                  <div className="rounded-[8px] border-2 bg-white px-4 py-3" style={{ borderColor: tier.softColor, color: T.ink, fontFamily: T.serif, fontSize: 18.5, fontWeight: 650 }}>
+                  <div className="rounded-[8px] border-2 bg-white px-4 py-3" style={{ borderColor: tier.softColor, color: T.ink, fontFamily: T.sans, fontSize: 17.5, fontWeight: 650 }}>
                     <div>{tier.deployment}</div>
                     {tier.domain && <div style={{ color: tier.color, fontFamily: T.mono, fontSize: 13.5, fontWeight: 700, marginTop: 4 }}>{tier.domain}</div>}
                   </div>
@@ -1956,7 +1960,7 @@ const HarnessCampusHostingVariant = ({ slide }) => {
                 {tier.recurring && (
                   <div className="flex items-center gap-2.5">
                     <span style={{ color: tier.color, fontSize: 24, fontWeight: 600 }}>→</span>
-                    <div className="rounded-[8px] border-2 px-4 py-3 bg-white" style={{ borderColor: tier.color, color: tier.color, fontFamily: T.serif, fontSize: 17.5, lineHeight: 1.2, fontWeight: 650, maxWidth: 200 }}>
+                    <div className="rounded-[8px] border-2 px-4 py-3 bg-white" style={{ borderColor: tier.color, color: tier.color, fontFamily: T.sans, fontSize: 16.5, lineHeight: 1.2, fontWeight: 650, maxWidth: 200 }}>
                       {tier.recurring}
                     </div>
                   </div>
@@ -1985,6 +1989,7 @@ const HarnessCampusHostingVariant = ({ slide }) => {
           );
         })}
       </div>
+     </div>
     </Shell>
   );
 };
