@@ -1689,7 +1689,7 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
     <Shell>
      <div className="absolute inset-0" style={{ fontFamily: T.sans }}>
       <div className="absolute left-[4.8vw] right-[4.8vw] top-[4.8vh] text-center">
-        <motion.h1 {...fade(0.12)} style={{ color: T.ink, fontFamily: T.sans, fontSize: 'clamp(40px, 3.8vw, 62px)', lineHeight: 0.92, fontWeight: 700, letterSpacing: '-0.01em' }}>
+        <motion.h1 {...fade(0.12)} style={{ color: T.ink, fontFamily: T.serif, fontSize: 'clamp(40px, 3.8vw, 62px)', lineHeight: 0.92, fontWeight: 560, letterSpacing: '0' }}>
           {slide.programTitle || 'TritonAI Developer API Program'}
         </motion.h1>
       </div>
@@ -1899,7 +1899,7 @@ const HarnessCampusHostingVariant = ({ slide }) => {
      <div className="absolute inset-0" style={{ fontFamily: T.sans }}>
 
       <div className="absolute left-[4.8vw] right-[4.8vw] top-[5vh]" style={{ maxWidth: '88vw' }}>
-        <h1 className="leading-[0.98]" style={{ fontFamily: T.sans, fontSize: 'clamp(38px, 3.8vw, 60px)', fontWeight: 700, letterSpacing: '-0.01em' }}>
+        <h1 className="leading-[0.98]" style={{ fontFamily: T.serif, fontSize: 'clamp(38px, 3.8vw, 60px)', fontWeight: 520 }}>
           <PartText parts={slide.parts} />
         </h1>
         {slide.subhead && (
