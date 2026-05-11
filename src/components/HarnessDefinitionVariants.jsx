@@ -321,6 +321,49 @@ const Pill = ({ children, delay = 0.4, tone = 'coral' }) => (
   </motion.div>
 );
 
+// Inline M-circle that ties the word "model" in the tagline to the M circles in the diagram below
+const InlineMCircle = () => (
+  <span
+    className="inline-flex items-center justify-center align-middle rounded-full border"
+    style={{
+      width: '1.15em',
+      height: '1.15em',
+      borderColor: 'currentColor',
+      color: 'inherit',
+      fontFamily: T.serif,
+      fontStyle: 'italic',
+      fontSize: '0.78em',
+      fontWeight: 520,
+      lineHeight: 1,
+      background: '#fff',
+      verticalAlign: '-0.12em',
+      marginRight: '0.02em'
+    }}
+  >
+    M
+  </span>
+);
+
+const renderTaglineWithMCircle = (text) => {
+  if (typeof text !== 'string') return text;
+  const re = /model/i;
+  const match = text.match(re);
+  if (!match) return text;
+  const idx = match.index;
+  const matched = match[0]; // "model" / "Model"
+  const before = text.slice(0, idx);
+  const rest = matched.slice(1); // "odel"
+  const after = text.slice(idx + matched.length);
+  return (
+    <>
+      {before}
+      <InlineMCircle />
+      {rest}
+      {after}
+    </>
+  );
+};
+
 const HarnessQuestionVariant = ({ slide }) => (
   <Shell>
     <Marker slide={slide}>{slide.marker}</Marker>
@@ -343,7 +386,7 @@ const HarnessQuestionVariant = ({ slide }) => (
           maxWidth: '88vw'
         }}
       >
-        {slide.topTagline}
+        {renderTaglineWithMCircle(slide.topTagline)}
       </motion.div>
     )}
     {(slide.contextCards || []).length > 0 && (
