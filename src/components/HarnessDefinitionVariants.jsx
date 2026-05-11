@@ -348,11 +348,23 @@ const HarnessQuestionVariant = ({ slide }) => (
     {(slide.contextCards || []).length > 0 && (
       <div className="absolute left-[4.8vw] right-[4.8vw] top-[27vh] grid grid-cols-2 gap-8">
         {slide.contextCards.map((card, index) => (
-          <Card key={card.title} delay={0.74 + index * 0.1} className="p-7" style={index === 1 ? { background: '#fff8f2', borderColor: T.coralPale } : undefined}>
+          <Card key={card.title} delay={0.74 + index * 0.1} className="p-7" style={index === 1 ? { background: '#fff8f2', borderColor: T.coralPale } : { background: '#f3f8fa', borderColor: '#cfdde2' }}>
             <div className="flex items-start justify-between gap-4">
               <div>
-                <Kicker className="text-[14px]">{card.kicker}</Kicker>
-                <div className="mt-3" style={{ fontSize: 36, lineHeight: 1.04, fontWeight: 620 }}>
+                <div
+                  className="uppercase"
+                  style={{
+                    color: index === 0 ? T.blue : T.coralDark,
+                    fontFamily: T.mono,
+                    fontSize: 'clamp(28px, 2.7vw, 44px)',
+                    lineHeight: 1,
+                    fontWeight: 800,
+                    letterSpacing: '0.04em'
+                  }}
+                >
+                  {card.kicker}
+                </div>
+                <div className="mt-3 italic" style={{ fontSize: 22, lineHeight: 1.15, color: T.muted, maxWidth: '24ch' }}>
                   {card.title}
                 </div>
               </div>
