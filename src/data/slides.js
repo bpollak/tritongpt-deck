@@ -4063,22 +4063,22 @@ export const slides = [
       }
     ],
     "subhead": "A chat app answers once. A harness keeps acting, observing, and adjusting until the work is done.",
-    "scenarioGoal": "Compile this quarter's student-success picture for the Provost.",
+    "scenarioGoal": "Reconcile this month's P-card transactions.",
     "iterations": [
       {
-        "act": "pull this quarter's retention numbers from the data warehouse",
-        "observe": "94.1% overall — flat versus last quarter",
-        "adjust": "break it out by first-generation status"
+        "act": "pull the statement and match to purchase orders",
+        "observe": "23 transactions, 4 without matching POs",
+        "adjust": "flag the 4 unmatched for review"
       },
       {
-        "act": "re-pull the data split by first-gen status",
-        "observe": "first-gen retention 89.3%; the gap widened 1.4 pts",
-        "adjust": "cross-reference with advising touch-points"
+        "act": "check the 4 against email receipts and approvals",
+        "observe": "3 have email trails, 1 is a duplicate charge",
+        "adjust": "initiate dispute for the duplicate"
       },
       {
-        "act": "pull advising contacts for first-gen students this quarter",
-        "observe": "41% had fewer than 2 advising contacts",
-        "adjust": "surface this gap as the headline for the review"
+        "act": "generate the reconciliation report with attachments",
+        "observe": "complete, all documentation linked",
+        "adjust": "ready for supervisor signature"
       }
     ],
     "audiences": [
