@@ -3303,8 +3303,8 @@ const HarnessActionVariant = ({ slide }) => {
           {slide.approvalPrompt && (
             <motion.div
               {...fade(1.05 + traceSteps.length * 0.18 + 0.05, 0)}
-              className="mt-5 pt-4 border-t border-dashed"
-              style={{ borderColor: T.rule }}
+              className="mt-5 pt-4 border-t-[3px] border-dashed"
+              style={{ borderColor: T.coralPale }}
             />
           )}
           {slide.approvalPrompt && (() => {
