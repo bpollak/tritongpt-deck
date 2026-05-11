@@ -402,9 +402,9 @@ const HarnessQuestionVariant = ({ slide }) => (
                     <line x1="6" y1="9" x2="388" y2="9" stroke="#b9d3dc" strokeWidth="1.4" strokeDasharray="4 5" />
                     <polygon points="388,9 380,4 380,14" fill="#b9d3dc" />
                     <circle r="4.5" fill={T.blue}>
-                      <animate attributeName="cx" values="6;388;388" keyTimes="0;0.78;1" dur="3.4s" repeatCount="indefinite" />
-                      <animate attributeName="cy" values="9;9;9" keyTimes="0;0.78;1" dur="3.4s" repeatCount="indefinite" />
-                      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.78;0.82;0.97;1" dur="3.4s" repeatCount="indefinite" />
+                      <animate attributeName="cx" values="6;388;388" keyTimes="0;0.78;1" dur="8s" repeatCount="indefinite" />
+                      <animate attributeName="cy" values="9;9;9" keyTimes="0;0.78;1" dur="8s" repeatCount="indefinite" />
+                      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.78;0.82;0.97;1" dur="8s" repeatCount="indefinite" />
                     </circle>
                   </svg>
                 </div>
@@ -421,10 +421,10 @@ const HarnessQuestionVariant = ({ slide }) => (
                       <svg className="absolute inset-0 h-full w-full" viewBox="0 0 120 120" aria-hidden="true">
                         <circle cx="60" cy="60" r="55" fill="none" stroke={T.coralPale} strokeWidth="1.2" strokeDasharray="3 4" />
                         <circle cx="60" cy="60" r="55" fill="none" stroke={T.coral} strokeWidth="1.6" strokeDasharray="9 80" strokeLinecap="round">
-                          <animate attributeName="stroke-dashoffset" from="0" to="-89" dur="3.2s" repeatCount="indefinite" />
+                          <animate attributeName="stroke-dashoffset" from="0" to="-89" dur="8s" repeatCount="indefinite" />
                         </circle>
                         <circle r="4" fill={T.coral}>
-                          <animateMotion dur="3.2s" repeatCount="indefinite" path="M 60 5 A 55 55 0 1 1 60 115 A 55 55 0 1 1 60 5" />
+                          <animateMotion dur="8s" repeatCount="indefinite" path="M 60 5 A 55 55 0 1 1 60 115 A 55 55 0 1 1 60 5" />
                         </circle>
                       </svg>
                       <div className="relative flex h-[88px] w-[88px] items-center justify-center rounded-full border" style={{ borderColor: T.coral, background: '#fff', color: T.coralDark, fontFamily: T.serif, fontStyle: 'italic', fontSize: 52 }}>
