@@ -690,11 +690,11 @@ const EquationIcon = ({ type, color = T.ink }) => {
         className="relative flex h-12 w-[112px] items-center justify-center rounded-[6px] px-2"
         style={{ background: color, color: '#fff', fontFamily: T.serif, letterSpacing: '0.01em' }}
       >
-        <span style={{ fontSize: 22, fontStyle: 'italic', fontWeight: 620 }}>m</span>
+        <span style={{ fontSize: 22, fontStyle: 'italic', fontWeight: 620 }}>M</span>
         <span className="mx-1.5" style={{ fontSize: 18, fontStyle: 'normal', fontWeight: 500, opacity: 0.85 }}>+</span>
-        <span style={{ fontSize: 22, fontStyle: 'italic', fontWeight: 620 }}>h</span>
+        <span style={{ fontSize: 22, fontStyle: 'italic', fontWeight: 620 }}>H</span>
         <span className="mx-1.5" style={{ fontSize: 18, fontStyle: 'normal', fontWeight: 500, opacity: 0.85 }}>=</span>
-        <span style={{ fontSize: 22, fontStyle: 'italic', fontWeight: 620 }}>a</span>
+        <span style={{ fontSize: 22, fontStyle: 'italic', fontWeight: 620 }}>A</span>
         <span className="absolute bottom-[-5px] left-5 h-2 w-2 rounded-full" style={{ background: color }} />
         <span className="absolute bottom-[-5px] right-5 h-2 w-2 rounded-full" style={{ background: color }} />
       </div>
