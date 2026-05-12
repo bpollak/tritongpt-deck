@@ -3940,14 +3940,6 @@ export const slides = [
         "now": "3M+ weekly developers, GPT-5.4 family, parallel-agent desktop app, expanding into general enterprise work."
       },
       {
-        "name": "Cursor",
-        "color": "#111111",
-        "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/42/Cursor_logo.svg",
-        "surface": "editor · CLI · background agents",
-        "origin": "March 2023 — VS Code fork with AI autocomplete, built by MIT students.",
-        "now": "$29B valuation, $2B+ ARR. Market-leading agentic IDE with composer mode and background agents."
-      },
-      {
         "name": "OpenCode",
         "color": "#111111",
         "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/opencode-wordmark-light.svg",
