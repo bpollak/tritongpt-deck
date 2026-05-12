@@ -46,10 +46,13 @@ const Presentation = () => {
   const [direction, setDirection] = useState(0);
   const [slidesData, setSlidesData] = useState(() => readLocalSlidePreview(defaultSlides) || defaultSlides);
 
-  // Get audience type from URL parameter
+  // Get audience type from URL parameter.
+  // Returns null if no audience is specified — used as a guardrail so visiting
+  // the root URL does not display the entire deck unfiltered.
   const audienceType = useMemo(() => {
     const params = new URLSearchParams(window.location.search);
-    return params.get('audience') || 'all';
+    const raw = (params.get('audience') || '').trim();
+    return raw || null;
   }, []);
 
   useEffect(() => {
@@ -272,6 +275,66 @@ const Presentation = () => {
   };
   const progressValue = currentIndex >= 0 ? currentIndex + 1 : 0;
   const progressPercent = filteredSlides.length > 0 ? (progressValue / filteredSlides.length) * 100 : 0;
+
+  // Guardrail: no audience param → don't render the deck.
+  // Visiting the root URL should not display all slides unfiltered.
+  if (!audienceType) {
+    return (
+      <div
+        className="w-screen h-screen flex items-center justify-center overflow-hidden relative"
+        role="application"
+        aria-label="Presentation gate"
+        style={{
+          background: '#f2f0e7',
+          color: '#171814',
+          fontFamily: "'Fraunces','Iowan Old Style','Charter',Georgia,serif"
+        }}
+      >
+        <div className="absolute inset-x-0 top-0 h-1" style={{ background: '#f1c232' }} />
+        <div className="max-w-[640px] px-10 text-center">
+          <div
+            className="uppercase mb-5"
+            style={{
+              color: '#d47a5f',
+              fontFamily: "'JetBrains Mono','SF Mono',Menlo,monospace",
+              fontSize: 13,
+              fontWeight: 800,
+              letterSpacing: '0.26em'
+            }}
+          >
+            Access required
+          </div>
+          <h1
+            className="leading-[1.05]"
+            style={{ fontSize: 'clamp(36px, 4vw, 60px)', fontWeight: 520 }}
+          >
+            This presentation is filtered by audience.
+          </h1>
+          <p
+            className="mt-6 italic"
+            style={{ color: '#6e685f', fontSize: 'clamp(16px, 1.25vw, 20px)', lineHeight: 1.4 }}
+          >
+            Open the link you were sent — it includes the right audience tag.
+            The root URL doesn&rsquo;t expose the full deck.
+          </p>
+          <div
+            className="mt-8 inline-flex items-center gap-2 rounded-[6px] border px-4 py-2"
+            style={{
+              borderColor: 'rgba(23,24,20,0.16)',
+              background: '#fff',
+              color: '#6e685f',
+              fontFamily: "'JetBrains Mono','SF Mono',Menlo,monospace",
+              fontSize: 13,
+              fontWeight: 600
+            }}
+          >
+            <span>tritongpt-deck.vercel.app/?audience=</span>
+            <span style={{ color: '#171814', fontWeight: 800 }}>YOUR-TAG</span>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="w-screen h-screen bg-gray-50 flex flex-col overflow-hidden relative font-sans" role="application" aria-label="Presentation viewer">
