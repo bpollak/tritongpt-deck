@@ -3265,53 +3265,60 @@ const HarnessDataUnlockVariant = ({ slide }) => {
   );
 };
 
+// Split a long label across two lines at the last word boundary that keeps line 1 ≤ maxLineChars
+const wrapLabel = (label, maxLineChars = 16) => {
+  if (!label || label.length <= maxLineChars) return [label];
+  const words = label.split(' ');
+  let line1 = '';
+  let i = 0;
+  while (i < words.length && (line1 ? line1 + ' ' + words[i] : words[i]).length <= maxLineChars) {
+    line1 = line1 ? line1 + ' ' + words[i] : words[i];
+    i++;
+  }
+  if (!line1) {
+    // First word already too long — just return as-is
+    return [label];
+  }
+  const line2 = words.slice(i).join(' ');
+  return line2 ? [line1, line2] : [line1];
+};
+
 const EnvironmentSceneSvg = ({ env, tone, baseDelay }) => {
   const reachable = env.reachable || [];
   const blocked = env.blocked || [];
-  const cx = 180;
-  const cy = 150;
-  const reachRadius = 116;
-  const itemRadius = reachable.length <= 5 ? 78 : 82;
-  const n = reachable.length;
-  // Distribute items radially starting from the top, going clockwise
-  const angleAt = (i) => (-90 + (i * 360) / Math.max(n, 1)) * (Math.PI / 180);
+
+  // Reach zone rectangle dimensions
+  const rectX = 14;
+  const rectY = 32;
+  const rectW = 332;
+  const rectH = 230;
+  // Agent sits at the top center of the rect
+  const agentCx = rectX + rectW / 2;
+  const agentCy = rectY + 38;
+  // Items grid below the agent (2 columns × up to 3 rows)
+  // Pushed down to give breathing space under the "AGENT + HARNESS" label
+  const gridTopY = rectY + 118;
+  const rowHeight = 38;
+  const colXs = [rectX + 18, rectX + rectW / 2 + 4]; // icon left edge per col
 
   return (
     <svg
-      viewBox="0 0 360 310"
+      viewBox="0 0 360 370"
       preserveAspectRatio="xMidYMid meet"
       className="h-full w-full"
       aria-hidden="true"
     >
-      {/* Soft fill behind the reach circle, then the dashed boundary */}
-      <motion.circle
-        {...fade(baseDelay + 0.05, 0)}
-        cx={cx}
-        cy={cy}
-        r={reachRadius + 4}
-        fill={tone.fill}
-        opacity={0.55}
-      />
-      <motion.circle
-        {...lineDraw(baseDelay + 0.1)}
-        cx={cx}
-        cy={cy}
-        r={reachRadius}
-        fill="none"
-        stroke={tone.ink}
-        strokeWidth="1.6"
-        strokeDasharray="5 6"
-      />
+      {/* REACH header above the zone */}
       <motion.text
         {...fade(baseDelay + 0.2, 0)}
-        x={cx}
-        y={cy - reachRadius - 6}
+        x={180}
+        y={22}
         textAnchor="middle"
         style={{
           fontFamily: T.mono,
-          fontSize: 9,
+          fontSize: 10,
           fontWeight: 800,
-          letterSpacing: '0.22em',
+          letterSpacing: '0.24em',
           textTransform: 'uppercase'
         }}
         fill={tone.ink}
@@ -3319,83 +3326,120 @@ const EnvironmentSceneSvg = ({ env, tone, baseDelay }) => {
         reach
       </motion.text>
 
-      {/* Agent at the center */}
-      <motion.g {...fade(baseDelay + 0.18, 0)}>
-        <circle cx={cx} cy={cy} r={26} fill="#fff" stroke={tone.ink} strokeWidth="1.8" />
+      {/* Rounded-rect reach zone with dashed border + tinted fill */}
+      <motion.rect
+        {...fade(baseDelay + 0.05, 0)}
+        x={rectX}
+        y={rectY}
+        width={rectW}
+        height={rectH}
+        rx={14}
+        ry={14}
+        fill={tone.fill}
+        opacity={0.55}
+      />
+      <motion.rect
+        {...lineDraw(baseDelay + 0.1)}
+        x={rectX}
+        y={rectY}
+        width={rectW}
+        height={rectH}
+        rx={14}
+        ry={14}
+        fill="none"
+        stroke={tone.ink}
+        strokeWidth="1.6"
+        strokeDasharray="5 6"
+      />
+
+      {/* Agent at the top of the zone */}
+      <motion.g {...fade(baseDelay + 0.22, 0)}>
+        <circle cx={agentCx} cy={agentCy} r={22} fill="#fff" stroke={tone.ink} strokeWidth="1.8" />
         <text
-          x={cx}
-          y={cy + 8}
+          x={agentCx}
+          y={agentCy + 7}
           textAnchor="middle"
-          style={{ fontFamily: T.serif, fontStyle: 'italic', fontSize: 26, fontWeight: 520 }}
+          style={{ fontFamily: T.serif, fontStyle: 'italic', fontSize: 22, fontWeight: 520 }}
           fill={tone.ink}
         >
           M
         </text>
-        {/* Small ↺ harness badge — echoes the M-circle on slide 3 */}
-        <circle cx={cx + 19} cy={cy + 19} r={7} fill={tone.ink} />
+        <circle cx={agentCx + 16} cy={agentCy + 16} r={6.5} fill={tone.ink} />
         <text
-          x={cx + 19}
-          y={cy + 22.5}
+          x={agentCx + 16}
+          y={agentCy + 19}
           textAnchor="middle"
-          style={{ fontFamily: T.mono, fontSize: 9, fontWeight: 800 }}
+          style={{ fontFamily: T.mono, fontSize: 8.5, fontWeight: 800 }}
           fill="#fff"
         >
           ↺
         </text>
+        <text
+          x={agentCx}
+          y={agentCy + 38}
+          textAnchor="middle"
+          style={{
+            fontFamily: T.mono,
+            fontSize: 9,
+            fontWeight: 800,
+            letterSpacing: '0.16em',
+            textTransform: 'uppercase'
+          }}
+          fill={tone.ink}
+        >
+          agent + harness
+        </text>
       </motion.g>
 
-      {/* Reachable icons positioned around the agent inside the radius */}
+      {/* Reachable items — 2-column grid, side-by-side icon + label */}
       {reachable.map((item, i) => {
-        const a = angleAt(i);
-        const ix = cx + Math.cos(a) * itemRadius;
-        const iy = cy + Math.sin(a) * itemRadius;
+        const row = Math.floor(i / 2);
+        const col = i % 2;
+        const iconLeft = colXs[col];
+        const rowY = gridTopY + row * rowHeight;
+        const lines = wrapLabel(item.label, 16);
+        const isLastAlone = i === reachable.length - 1 && reachable.length % 2 === 1;
         return (
           <motion.g
             key={`reach-${item.label}-${i}`}
-            {...fade(baseDelay + 0.32 + i * 0.06, 0)}
+            {...fade(baseDelay + 0.32 + i * 0.05, 0)}
           >
-            {/* Subtle spoke from agent toward icon — visual cue that this is in scope */}
-            <line
-              x1={cx + Math.cos(a) * 28}
-              y1={cy + Math.sin(a) * 28}
-              x2={cx + Math.cos(a) * (itemRadius - 16)}
-              y2={cy + Math.sin(a) * (itemRadius - 16)}
-              stroke={tone.ink}
-              strokeWidth="0.9"
-              strokeDasharray="2 2"
-              opacity={0.45}
-            />
-            <g transform={`translate(${ix - 14}, ${iy - 14})`}>
-              <rect width="28" height="28" rx="6" fill="#fff" stroke={tone.ink} strokeWidth="1.2" />
-              <MiniIcon type={item.icon} color={tone.ink} x={3} y={3} width={22} height={22} className="" />
-            </g>
-            <text
-              x={ix}
-              y={iy + 26}
-              textAnchor="middle"
-              style={{
-                fontFamily: T.mono,
-                fontSize: 10,
-                fontWeight: 700
-              }}
-              fill={T.ink}
-            >
-              {item.label}
-            </text>
+            <rect x={iconLeft} y={rowY - 14} width={28} height={28} rx={6} fill="#fff" stroke={tone.ink} strokeWidth="1.2" />
+            <MiniIcon type={item.icon} color={tone.ink} x={iconLeft + 3} y={rowY - 11} width={22} height={22} className="" />
+            {lines.length === 1 ? (
+              <text
+                x={iconLeft + 36}
+                y={rowY + 5}
+                style={{ fontFamily: T.mono, fontSize: 11, fontWeight: 700 }}
+                fill={T.ink}
+              >
+                {lines[0]}
+              </text>
+            ) : (
+              <text
+                x={iconLeft + 36}
+                y={rowY}
+                style={{ fontFamily: T.mono, fontSize: 11, fontWeight: 700 }}
+                fill={T.ink}
+              >
+                <tspan x={iconLeft + 36} dy={0}>{lines[0]}</tspan>
+                <tspan x={iconLeft + 36} dy={13}>{lines[1]}</tspan>
+              </text>
+            )}
           </motion.g>
         );
       })}
 
-      {/* Blocked items below the reach circle — faded, struck through */}
+      {/* OUT OF REACH section below the rect */}
       {blocked.length > 0 && (
         <motion.g {...fade(baseDelay + 0.7, 0)}>
           <text
-            x={cx}
-            y={cy + reachRadius + 28}
+            x={180}
+            y={284}
             textAnchor="middle"
             style={{
               fontFamily: T.mono,
-              fontSize: 9,
+              fontSize: 10,
               fontWeight: 800,
               letterSpacing: '0.22em',
               textTransform: 'uppercase'
@@ -3405,29 +3449,44 @@ const EnvironmentSceneSvg = ({ env, tone, baseDelay }) => {
             out of reach
           </text>
           {blocked.map((item, i) => {
-            const colCount = blocked.length;
-            const colWidth = 96;
-            const totalWidth = colCount * colWidth;
-            const startX = cx - totalWidth / 2 + colWidth / 2;
-            const ix = startX + i * colWidth;
-            const iy = cy + reachRadius + 48;
+            // 1 item: single centered cell. >1 items: 2-column grid.
+            const colCount = blocked.length === 1 ? 1 : 2;
+            const cellWidth = colCount === 1 ? 260 : 156;
+            const rowHeightBlocked = 34;
+            const row = Math.floor(i / colCount);
+            const col = i % colCount;
+            const totalWidth = colCount * cellWidth;
+            const startX = 180 - totalWidth / 2;
+            const cellX = startX + col * cellWidth;
+            const iconX = cellX + 8; // icon left edge
+            const rowY = 308 + row * rowHeightBlocked;
+            const lines = wrapLabel(item.label, 16);
             return (
-              <g key={`block-${item.label}-${i}`} opacity={0.55}>
-                <g transform={`translate(${ix - 12}, ${iy - 12})`}>
-                  <rect width="24" height="24" rx="5" fill="#fff" stroke={T.muted} strokeWidth="1.1" />
-                  <MiniIcon type={item.icon} color={T.muted} x={3} y={3} width={18} height={18} className="" />
-                  {/* diagonal strike */}
-                  <line x1="3" y1="3" x2="21" y2="21" stroke={T.coral} strokeWidth="1.6" strokeLinecap="round" />
-                </g>
-                <text
-                  x={ix}
-                  y={iy + 22}
-                  textAnchor="middle"
-                  style={{ fontFamily: T.mono, fontSize: 10, fontWeight: 700 }}
-                  fill={T.muted}
-                >
-                  {item.label}
-                </text>
+              <g key={`block-${item.label}-${i}`} opacity={0.6}>
+                <rect x={iconX} y={rowY - 12} width={24} height={24} rx={5} fill="#fff" stroke={T.muted} strokeWidth="1.1" />
+                <MiniIcon type={item.icon} color={T.muted} x={iconX + 3} y={rowY - 9} width={18} height={18} className="" />
+                {/* diagonal strike */}
+                <line x1={iconX + 3} y1={rowY - 9} x2={iconX + 21} y2={rowY + 9} stroke={T.coral} strokeWidth="1.6" strokeLinecap="round" />
+                {lines.length === 1 ? (
+                  <text
+                    x={iconX + 32}
+                    y={rowY + 5}
+                    style={{ fontFamily: T.mono, fontSize: 10.5, fontWeight: 700 }}
+                    fill={T.muted}
+                  >
+                    {lines[0]}
+                  </text>
+                ) : (
+                  <text
+                    x={iconX + 32}
+                    y={rowY}
+                    style={{ fontFamily: T.mono, fontSize: 10.5, fontWeight: 700 }}
+                    fill={T.muted}
+                  >
+                    <tspan x={iconX + 32} dy={0}>{lines[0]}</tspan>
+                    <tspan x={iconX + 32} dy={12}>{lines[1]}</tspan>
+                  </text>
+                )}
               </g>
             );
           })}
@@ -3477,7 +3536,7 @@ const HarnessTwoEnvironmentsVariant = ({ slide }) => {
                 >
                   <MiniIcon type={env.chassis || 'laptop'} color={tone.ink} />
                 </div>
-                <div>
+                <div className="flex-1">
                   <div
                     className="uppercase"
                     style={{
@@ -3494,6 +3553,14 @@ const HarnessTwoEnvironmentsVariant = ({ slide }) => {
                   <div className="mt-1" style={{ color: T.ink, fontSize: 17, lineHeight: 1.15, fontWeight: 620 }}>
                     {env.title}
                   </div>
+                  {env.caveat && (
+                    <div
+                      className="mt-1 italic"
+                      style={{ color: T.muted, fontFamily: T.serif, fontSize: 12.5, lineHeight: 1.3 }}
+                    >
+                      {env.caveat}
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -3538,14 +3605,59 @@ const HarnessTwoEnvironmentsVariant = ({ slide }) => {
         </motion.div>
       )}
 
-      {/* Bottom line */}
-      {slide.bottomLine && (
+      {/* Bottom line (legacy single-line footer — only rendered if no configRepo) */}
+      {slide.bottomLine && !slide.configRepo && (
         <motion.div
           {...fade(1.1)}
           className="absolute left-[4.8vw] right-[4.8vw] top-[87vh] italic"
           style={{ color: T.muted, fontFamily: T.serif, fontSize: 'clamp(15px, 1.15vw, 19px)' }}
         >
           {slide.bottomLine}
+        </motion.div>
+      )}
+
+      {/* Config-repo + distribution strip (folds in the old slide 11b concepts) */}
+      {slide.configRepo && (
+        <motion.div
+          {...fade(1.05)}
+          className="absolute left-[4.8vw] right-[4.8vw] top-[82vh] rounded-[8px] border-2 border-dashed px-5 py-2.5"
+          style={{ borderColor: T.blue, background: T.bluePale }}
+        >
+          <div className="flex items-baseline gap-3 flex-wrap">
+            <span
+              className="rounded-full px-3 py-1 text-[11px] uppercase whitespace-nowrap"
+              style={{ background: T.blue, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.18em' }}
+            >
+              {slide.configRepo.kicker || 'One config repo'}
+            </span>
+            <span className="text-[13.5px]" style={{ color: T.blue, fontFamily: T.mono, fontWeight: 700 }}>
+              {slide.configRepo.name}
+            </span>
+            {slide.configRepo.files && (
+              <span style={{ color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 13 }}>
+                {slide.configRepo.files}
+              </span>
+            )}
+          </div>
+          {Array.isArray(slide.configRepo.lanes) && slide.configRepo.lanes.length > 0 && (
+            <div className="mt-2 flex items-center gap-2 flex-wrap">
+              <span
+                className="text-[10.5px] uppercase whitespace-nowrap"
+                style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.18em', fontWeight: 800 }}
+              >
+                Shipped via
+              </span>
+              {slide.configRepo.lanes.map((lane) => (
+                <span
+                  key={lane}
+                  className="rounded-[5px] border px-2.5 py-0.5 text-[11.5px] whitespace-nowrap"
+                  style={{ borderColor: T.blue, color: T.blue, background: '#fff', fontFamily: T.mono, fontWeight: 700 }}
+                >
+                  {lane}
+                </span>
+              ))}
+            </div>
+          )}
         </motion.div>
       )}
     </Shell>

@@ -4393,15 +4393,18 @@ export const slides = [
     "variant": "harness-two-environments",
     "marker": "ENVIRONMENTS",
     "parts": [
-      { "text": "Same " },
-      { "text": "harness", "accent": true },
-      { "text": ", two blast radii." }
+      { "text": "Where the agent " },
+      { "text": "runs", "accent": true },
+      { "text": " decides what it can " },
+      { "text": "reach", "accent": true },
+      { "text": "." }
     ],
     "subhead": "Desktop for personal work. DSMLP sandbox for anything that touches enterprise data or other people.",
     "environments": [
       {
         "kicker": "DESKTOP",
         "title": "Personal productivity",
+        "caveat": "Personal context only via ITS-vetted MCP connectors — no P3 data, no writes to shared systems",
         "tone": "blue",
         "chassis": "laptop",
         "reachable": [
@@ -4412,27 +4415,28 @@ export const slides = [
           { "icon": "folder",    "label": "Local files" }
         ],
         "blocked": [
-          { "icon": "enterprise", "label": "ServiceNow" },
-          { "icon": "enterprise", "label": "UCPath" },
-          { "icon": "enterprise", "label": "Activity Hubs" }
+          { "icon": "enterprise", "label": "Research Data" },
+          { "icon": "enterprise", "label": "Employee Data" },
+          { "icon": "enterprise", "label": "Finance Data" },
+          { "icon": "enterprise", "label": "Other Enterprise Systems" }
         ],
-        "footnote": "supported — at your own risk"
+        "footnote": "supported by local computer security mechanisms"
       },
       {
         "kicker": "DSMLP SANDBOX",
         "title": "Tools that touch real systems",
+        "caveat": "Credentials injected at container runtime — never on the laptop",
         "tone": "coral",
         "chassis": "container",
         "reachable": [
           { "icon": "gateway",    "label": "TritonAI gateway" },
-          { "icon": "enterprise", "label": "ServiceNow" },
-          { "icon": "enterprise", "label": "UCPath" },
-          { "icon": "enterprise", "label": "Activity Hubs" },
-          { "icon": "lock",       "label": "Credentials at runtime" },
-          { "icon": "docker",     "label": "Docker · ports" }
+          { "icon": "enterprise", "label": "Research Data" },
+          { "icon": "enterprise", "label": "Employee Data" },
+          { "icon": "enterprise", "label": "Finance Data" },
+          { "icon": "enterprise", "label": "Other Enterprise Systems" }
         ],
         "blocked": [
-          { "icon": "folder", "label": "Your local FS" }
+          { "icon": "folder", "label": "Your laptop's filesystem (isolated)" }
         ],
         "footnote": "supported path for shared, real-data work"
       }
@@ -4443,57 +4447,16 @@ export const slides = [
       "to": "Sandbox",
       "rule": "The moment a developer tries to connect enterprise data — or share their build — the harness surfaces the sandbox request."
     },
-    "bottomLine": "Same CLAUDE.md and .codex/config.json in both. Only the credentials and the blast radius change.",
-    "audiences": [
-      "citizen"
-    ]
-  },
-  {
-    "id": 124.35,
-    "slug": "cabinet-harness-11b-config-repo",
-    "type": "content",
-    "content": [],
-    "layout": "harness-definition",
-    "variant": "harness-config-repo",
-    "marker": "DISTRIBUTION",
-    "parts": [
-      { "text": "One " },
-      { "text": "config repo", "accent": true },
-      { "text": ", three distribution lanes." }
-    ],
-    "subhead": "The harness lives as a single ITS-owned GitHub repo. Everyone gets it the way that fits their setup.",
-    "repo": {
+    "configRepo": {
+      "kicker": "ONE CONFIG REPO",
       "name": "github.com/ucsd-its/tritonai-dev-config",
-      "files": [
-        { "name": "CLAUDE.md", "note": "Claude Code harness" },
-        { "name": ".codex/config.json", "note": "Codex harness · network policy" },
-        { "name": "mcp-connectors/", "note": "ITS-vetted personal context" },
-        { "name": "network-policy.json", "note": "approved destinations" },
-        { "name": "install.sh", "note": "one-line setup" },
-        { "name": "CHANGELOG.md", "note": "what changed and why" }
+      "files": "CLAUDE.md · .codex/config.json + network policy",
+      "lanes": [
+        "MDM push (managed staff)",
+        "Install script (Kuali Build)",
+        "git clone (researchers)"
       ]
     },
-    "lanes": [
-      {
-        "label": "MDM push",
-        "audience": "Managed staff machines",
-        "detail": "Intune / JAMF — admin-enforced",
-        "color": "blue"
-      },
-      {
-        "label": "Install script",
-        "audience": "Campus Developer API participants",
-        "detail": "Kuali Build email · curl | bash · under 15 min",
-        "color": "coral"
-      },
-      {
-        "label": "Self-serve",
-        "audience": "Researchers / faculty",
-        "detail": "git clone · git pull keeps you in sync",
-        "color": "green"
-      }
-    ],
-    "principle": "IT chooses safe tools and configures them safely. Departments own business risk. The harness encodes both.",
     "audiences": [
       "citizen"
     ]
