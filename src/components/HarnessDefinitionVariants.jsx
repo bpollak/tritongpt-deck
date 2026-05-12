@@ -3449,16 +3449,6 @@ const EnvironmentSceneSvg = ({ env, tone, baseDelay }) => {
                 fill={T.ink}
               >
                 {lines[0]}
-                {proposed && (
-                  <tspan
-                    dx={6}
-                    style={{ fontFamily: T.mono, fontSize: 8.5, fontWeight: 700, letterSpacing: '0.16em' }}
-                    fill={tone.ink}
-                    opacity={0.85}
-                  >
-                    PROPOSED
-                  </tspan>
-                )}
               </text>
             ) : (
               <text
@@ -3469,17 +3459,6 @@ const EnvironmentSceneSvg = ({ env, tone, baseDelay }) => {
               >
                 <tspan x={iconLeft + 36} dy={0}>{lines[0]}</tspan>
                 <tspan x={iconLeft + 36} dy={13}>{lines[1]}</tspan>
-                {proposed && (
-                  <tspan
-                    x={iconLeft + 36}
-                    dy={12}
-                    style={{ fontFamily: T.mono, fontSize: 8.5, fontWeight: 700, letterSpacing: '0.16em' }}
-                    fill={tone.ink}
-                    opacity={0.85}
-                  >
-                    PROPOSED
-                  </tspan>
-                )}
               </text>
             )}
           </motion.g>
@@ -3545,8 +3524,24 @@ const HarnessTwoEnvironmentsVariant = ({ slide }) => {
                   >
                     {env.kicker}
                   </div>
-                  <div className="mt-1" style={{ color: T.ink, fontSize: 17, lineHeight: 1.15, fontWeight: 620 }}>
-                    {env.title}
+                  <div className="mt-1 flex items-baseline gap-2.5 flex-wrap">
+                    <span style={{ color: T.ink, fontSize: 17, lineHeight: 1.15, fontWeight: 620 }}>
+                      {env.title}
+                    </span>
+                    {env.titleBadge && (
+                      <span
+                        className="rounded-[4px] px-2 py-0.5 text-[10px] uppercase whitespace-nowrap"
+                        style={{
+                          background: tone.ink,
+                          color: '#fff',
+                          fontFamily: T.mono,
+                          letterSpacing: '0.18em',
+                          fontWeight: 800
+                        }}
+                      >
+                        {env.titleBadge}
+                      </span>
+                    )}
                   </div>
                   {env.caveat && (
                     <div

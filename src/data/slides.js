@@ -4403,7 +4403,8 @@ export const slides = [
       {
         "kicker": "DESKTOP",
         "title": "Personal productivity",
-        "caveat": "Proposed: personal context via ITS-vetted MCP connectors — connector list pending review, no P3 data, no writes to shared systems",
+        "titleBadge": "Proposed",
+        "caveat": "Personal context via ITS-vetted MCP connectors — connector list pending review, no P3 data, no writes to shared systems",
         "tone": "blue",
         "chassis": "laptop",
         "reachable": [
