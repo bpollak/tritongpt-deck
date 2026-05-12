@@ -3422,13 +3422,24 @@ const EnvironmentSceneSvg = ({ env, tone, baseDelay }) => {
         const iconLeft = colXs[col];
         const rowY = gridTopY + row * rowHeight;
         const lines = wrapLabel(item.label, 16);
-        const isLastAlone = i === reachable.length - 1 && reachable.length % 2 === 1;
+        const proposed = !!item.proposed;
         return (
           <motion.g
             key={`reach-${item.label}-${i}`}
             {...fade(baseDelay + 0.32 + i * 0.05, 0)}
+            opacity={proposed ? 0.78 : 1}
           >
-            <rect x={iconLeft} y={rowY - 14} width={28} height={28} rx={6} fill="#fff" stroke={tone.ink} strokeWidth="1.2" />
+            <rect
+              x={iconLeft}
+              y={rowY - 14}
+              width={28}
+              height={28}
+              rx={6}
+              fill="#fff"
+              stroke={tone.ink}
+              strokeWidth="1.2"
+              strokeDasharray={proposed ? '3 2.5' : undefined}
+            />
             <MiniIcon type={item.icon} color={tone.ink} x={iconLeft + 3} y={rowY - 11} width={22} height={22} className="" />
             {lines.length === 1 ? (
               <text
@@ -3438,6 +3449,16 @@ const EnvironmentSceneSvg = ({ env, tone, baseDelay }) => {
                 fill={T.ink}
               >
                 {lines[0]}
+                {proposed && (
+                  <tspan
+                    dx={6}
+                    style={{ fontFamily: T.mono, fontSize: 8.5, fontWeight: 700, letterSpacing: '0.16em' }}
+                    fill={tone.ink}
+                    opacity={0.85}
+                  >
+                    PROPOSED
+                  </tspan>
+                )}
               </text>
             ) : (
               <text
@@ -3448,6 +3469,17 @@ const EnvironmentSceneSvg = ({ env, tone, baseDelay }) => {
               >
                 <tspan x={iconLeft + 36} dy={0}>{lines[0]}</tspan>
                 <tspan x={iconLeft + 36} dy={13}>{lines[1]}</tspan>
+                {proposed && (
+                  <tspan
+                    x={iconLeft + 36}
+                    dy={12}
+                    style={{ fontFamily: T.mono, fontSize: 8.5, fontWeight: 700, letterSpacing: '0.16em' }}
+                    fill={tone.ink}
+                    opacity={0.85}
+                  >
+                    PROPOSED
+                  </tspan>
+                )}
               </text>
             )}
           </motion.g>

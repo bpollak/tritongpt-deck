@@ -4403,14 +4403,14 @@ export const slides = [
       {
         "kicker": "DESKTOP",
         "title": "Personal productivity",
-        "caveat": "Personal context only via ITS-vetted MCP connectors — no P3 data, no writes to shared systems",
+        "caveat": "Proposed: personal context via ITS-vetted MCP connectors — connector list pending review, no P3 data, no writes to shared systems",
         "tone": "blue",
         "chassis": "laptop",
         "reachable": [
           { "icon": "gateway",   "label": "TritonAI gateway" },
-          { "icon": "calendar",  "label": "Microsoft Graph" },
-          { "icon": "people",    "label": "Google Workspace" },
-          { "icon": "library",   "label": "Confluence" },
+          { "icon": "calendar",  "label": "Microsoft Graph", "proposed": true },
+          { "icon": "people",    "label": "Google Workspace", "proposed": true },
+          { "icon": "library",   "label": "Confluence", "proposed": true },
           { "icon": "folder",    "label": "Local files" }
         ],
         "footnote": "supported by local computer security mechanisms"
