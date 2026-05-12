@@ -268,6 +268,65 @@ const MiniIcon = ({ type = 'dot', color = T.coralDark }) => {
           <path d="M17 29h18" {...common} />
         </>
       )}
+      {type === 'laptop' && (
+        <>
+          <rect x="10" y="13" width="32" height="20" rx="2.5" {...common} />
+          <path d="M6 38h40" {...common} />
+          <path d="M22 38h8" {...common} />
+        </>
+      )}
+      {type === 'container' && (
+        <>
+          <rect x="8" y="12" width="36" height="9" rx="1.6" {...common} />
+          <rect x="8" y="22" width="36" height="9" rx="1.6" {...common} />
+          <rect x="8" y="32" width="36" height="9" rx="1.6" {...common} />
+          <circle cx="13" cy="16.5" r="0.9" fill={color} stroke="none" />
+          <circle cx="13" cy="26.5" r="0.9" fill={color} stroke="none" />
+          <circle cx="13" cy="36.5" r="0.9" fill={color} stroke="none" />
+        </>
+      )}
+      {type === 'lock' && (
+        <>
+          <rect x="12" y="22" width="28" height="20" rx="3" {...common} />
+          <path d="M18 22v-5a8 8 0 0 1 16 0v5" {...common} />
+          <circle cx="26" cy="32" r="2.5" {...common} />
+        </>
+      )}
+      {type === 'folder' && (
+        <>
+          <path d="M8 16h12l4 4h20v20H8V16z" {...common} />
+        </>
+      )}
+      {type === 'calendar' && (
+        <>
+          <rect x="9" y="14" width="34" height="28" rx="3" {...common} />
+          <path d="M9 22h34M18 10v8M34 10v8" {...common} />
+        </>
+      )}
+      {type === 'enterprise' && (
+        <>
+          <path d="M10 42V18l16-8 16 8v24" {...common} />
+          <path d="M10 42h32" {...common} />
+          <rect x="18" y="24" width="5" height="5" {...common} />
+          <rect x="29" y="24" width="5" height="5" {...common} />
+          <rect x="22" y="33" width="8" height="9" {...common} />
+        </>
+      )}
+      {type === 'docker' && (
+        <>
+          <rect x="10" y="22" width="6" height="6" {...common} />
+          <rect x="18" y="22" width="6" height="6" {...common} />
+          <rect x="26" y="22" width="6" height="6" {...common} />
+          <rect x="18" y="14" width="6" height="6" {...common} />
+          <path d="M8 30c2 6 8 8 14 8s12-2 14-8" {...common} />
+          <path d="M34 22c-1-2-3-3-5-3" {...common} />
+        </>
+      )}
+      {type === 'github' && (
+        <>
+          <path d="M26 8a18 18 0 0 0-6 35c1 0 1.4-0.4 1.4-1v-3.5c-5 1-6-2.4-6-2.4-0.8-2-2-2.6-2-2.6-1.6-1.1 0.1-1.1 0.1-1.1 1.8 0.1 2.7 1.8 2.7 1.8 1.6 2.8 4.2 2 5.2 1.5 0.2-1.2 0.6-2 1.2-2.5-4-0.4-8.2-2-8.2-8.8 0-2 0.7-3.6 1.8-4.8-0.2-0.5-0.8-2.3 0.2-4.8 0 0 1.5-0.5 5 1.8a17 17 0 0 1 9 0c3.4-2.3 5-1.8 5-1.8 1 2.5 0.4 4.3 0.2 4.8 1.1 1.2 1.8 2.8 1.8 4.8 0 6.8-4.2 8.4-8.2 8.8 0.6 0.6 1.2 1.6 1.2 3.4v5c0 0.6 0.4 1 1.4 1A18 18 0 0 0 26 8z" fill={color} stroke="none" />
+        </>
+      )}
       {type === 'dot' && <circle cx="26" cy="26" r="13" {...common} />}
     </svg>
   );
@@ -3201,6 +3260,182 @@ const HarnessDataUnlockVariant = ({ slide }) => {
   );
 };
 
+const EnvironmentSceneSvg = ({ env, tone, baseDelay }) => {
+  const reachable = env.reachable || [];
+  const blocked = env.blocked || [];
+  const cx = 180;
+  const cy = 150;
+  const reachRadius = 116;
+  const itemRadius = reachable.length <= 5 ? 78 : 82;
+  const n = reachable.length;
+  // Distribute items radially starting from the top, going clockwise
+  const angleAt = (i) => (-90 + (i * 360) / Math.max(n, 1)) * (Math.PI / 180);
+
+  return (
+    <svg
+      viewBox="0 0 360 310"
+      preserveAspectRatio="xMidYMid meet"
+      className="h-full w-full"
+      aria-hidden="true"
+    >
+      {/* Soft fill behind the reach circle, then the dashed boundary */}
+      <motion.circle
+        {...fade(baseDelay + 0.05, 0)}
+        cx={cx}
+        cy={cy}
+        r={reachRadius + 4}
+        fill={tone.fill}
+        opacity={0.55}
+      />
+      <motion.circle
+        {...lineDraw(baseDelay + 0.1)}
+        cx={cx}
+        cy={cy}
+        r={reachRadius}
+        fill="none"
+        stroke={tone.ink}
+        strokeWidth="1.6"
+        strokeDasharray="5 6"
+      />
+      <motion.text
+        {...fade(baseDelay + 0.2, 0)}
+        x={cx}
+        y={cy - reachRadius - 6}
+        textAnchor="middle"
+        style={{
+          fontFamily: T.mono,
+          fontSize: 9,
+          fontWeight: 800,
+          letterSpacing: '0.22em',
+          textTransform: 'uppercase'
+        }}
+        fill={tone.ink}
+      >
+        reach
+      </motion.text>
+
+      {/* Agent at the center */}
+      <motion.g {...fade(baseDelay + 0.18, 0)}>
+        <circle cx={cx} cy={cy} r={26} fill="#fff" stroke={tone.ink} strokeWidth="1.8" />
+        <text
+          x={cx}
+          y={cy + 8}
+          textAnchor="middle"
+          style={{ fontFamily: T.serif, fontStyle: 'italic', fontSize: 26, fontWeight: 520 }}
+          fill={tone.ink}
+        >
+          M
+        </text>
+        {/* Small ↺ harness badge — echoes the M-circle on slide 3 */}
+        <circle cx={cx + 19} cy={cy + 19} r={7} fill={tone.ink} />
+        <text
+          x={cx + 19}
+          y={cy + 22.5}
+          textAnchor="middle"
+          style={{ fontFamily: T.mono, fontSize: 9, fontWeight: 800 }}
+          fill="#fff"
+        >
+          ↺
+        </text>
+      </motion.g>
+
+      {/* Reachable icons positioned around the agent inside the radius */}
+      {reachable.map((item, i) => {
+        const a = angleAt(i);
+        const ix = cx + Math.cos(a) * itemRadius;
+        const iy = cy + Math.sin(a) * itemRadius;
+        return (
+          <motion.g
+            key={`reach-${item.label}-${i}`}
+            {...fade(baseDelay + 0.32 + i * 0.06, 0)}
+          >
+            {/* Subtle spoke from agent toward icon — visual cue that this is in scope */}
+            <line
+              x1={cx + Math.cos(a) * 28}
+              y1={cy + Math.sin(a) * 28}
+              x2={cx + Math.cos(a) * (itemRadius - 16)}
+              y2={cy + Math.sin(a) * (itemRadius - 16)}
+              stroke={tone.ink}
+              strokeWidth="0.9"
+              strokeDasharray="2 2"
+              opacity={0.45}
+            />
+            <g transform={`translate(${ix - 14}, ${iy - 14})`}>
+              <rect width="28" height="28" rx="6" fill="#fff" stroke={tone.ink} strokeWidth="1.2" />
+              <g transform="translate(2 2) scale(0.46)">
+                <MiniIcon type={item.icon} color={tone.ink} />
+              </g>
+            </g>
+            <text
+              x={ix}
+              y={iy + 26}
+              textAnchor="middle"
+              style={{
+                fontFamily: T.mono,
+                fontSize: 10,
+                fontWeight: 700
+              }}
+              fill={T.ink}
+            >
+              {item.label}
+            </text>
+          </motion.g>
+        );
+      })}
+
+      {/* Blocked items below the reach circle — faded, struck through */}
+      {blocked.length > 0 && (
+        <motion.g {...fade(baseDelay + 0.7, 0)}>
+          <text
+            x={cx}
+            y={cy + reachRadius + 28}
+            textAnchor="middle"
+            style={{
+              fontFamily: T.mono,
+              fontSize: 9,
+              fontWeight: 800,
+              letterSpacing: '0.22em',
+              textTransform: 'uppercase'
+            }}
+            fill={T.muted}
+          >
+            out of reach
+          </text>
+          {blocked.map((item, i) => {
+            const colCount = blocked.length;
+            const colWidth = 96;
+            const totalWidth = colCount * colWidth;
+            const startX = cx - totalWidth / 2 + colWidth / 2;
+            const ix = startX + i * colWidth;
+            const iy = cy + reachRadius + 48;
+            return (
+              <g key={`block-${item.label}-${i}`} opacity={0.55}>
+                <g transform={`translate(${ix - 12}, ${iy - 12})`}>
+                  <rect width="24" height="24" rx="5" fill="#fff" stroke={T.muted} strokeWidth="1.1" />
+                  <g transform="translate(1.5 1.5) scale(0.4)">
+                    <MiniIcon type={item.icon} color={T.muted} />
+                  </g>
+                  {/* diagonal strike */}
+                  <line x1="3" y1="3" x2="21" y2="21" stroke={T.coral} strokeWidth="1.6" strokeLinecap="round" />
+                </g>
+                <text
+                  x={ix}
+                  y={iy + 22}
+                  textAnchor="middle"
+                  style={{ fontFamily: T.mono, fontSize: 10, fontWeight: 700 }}
+                  fill={T.muted}
+                >
+                  {item.label}
+                </text>
+              </g>
+            );
+          })}
+        </motion.g>
+      )}
+    </svg>
+  );
+};
+
 const HarnessTwoEnvironmentsVariant = ({ slide }) => {
   const envs = slide.environments || [];
   const tones = {
@@ -3222,46 +3457,54 @@ const HarnessTwoEnvironmentsVariant = ({ slide }) => {
         )}
       </div>
 
-      {/* Two environment cards */}
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[15vh] bottom-[28vh] grid grid-cols-2 gap-6 items-stretch">
+      {/* Two environment scenes */}
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[15vh] bottom-[28vh] grid grid-cols-2 grid-rows-[1fr] gap-6 items-stretch">
         {envs.map((env, i) => {
           const tone = tones[env.tone] || tones.blue;
           return (
             <Card
               key={env.kicker}
-              delay={0.5 + i * 0.1}
-              className="flex flex-col p-6"
+              delay={0.4 + i * 0.1}
+              className="flex flex-col p-5 min-h-0 overflow-hidden"
               style={{ background: tone.fill, borderColor: tone.soft }}
             >
-              <div
-                className="uppercase"
-                style={{
-                  color: tone.ink,
-                  fontFamily: T.mono,
-                  fontSize: 'clamp(22px, 2.1vw, 32px)',
-                  fontWeight: 800,
-                  letterSpacing: '0.04em',
-                  lineHeight: 1
-                }}
-              >
-                {env.kicker}
-              </div>
-              <div className="mt-2" style={{ color: T.ink, fontSize: 22, lineHeight: 1.15, fontWeight: 620 }}>
-                {env.title}
-              </div>
-              <ul className="mt-4 space-y-2">
-                {(env.bullets || []).map((b, bi) => (
-                  <li key={bi} className="flex gap-2.5" style={{ color: T.ink, fontSize: 15.5, lineHeight: 1.35 }}>
-                    <span style={{ color: tone.ink, fontFamily: T.mono, fontWeight: 800, lineHeight: 1.35 }}>·</span>
-                    <span>{b}</span>
-                  </li>
-                ))}
-              </ul>
-              {env.footnote && (
-                <div className="mt-auto pt-4">
-                  <div className="border-t pt-3 text-[11.5px] uppercase" style={{ borderColor: tone.soft, color: tone.ink, fontFamily: T.mono, letterSpacing: '0.2em', fontWeight: 800 }}>
-                    {env.footnote}
+              {/* Chassis header */}
+              <div className="flex items-center gap-3.5">
+                <div
+                  className="flex h-12 w-12 items-center justify-center rounded-[7px] border bg-white"
+                  style={{ borderColor: tone.soft }}
+                >
+                  <MiniIcon type={env.chassis || 'laptop'} color={tone.ink} />
+                </div>
+                <div>
+                  <div
+                    className="uppercase"
+                    style={{
+                      color: tone.ink,
+                      fontFamily: T.mono,
+                      fontSize: 'clamp(18px, 1.6vw, 24px)',
+                      fontWeight: 800,
+                      letterSpacing: '0.16em',
+                      lineHeight: 1
+                    }}
+                  >
+                    {env.kicker}
                   </div>
+                  <div className="mt-1" style={{ color: T.ink, fontSize: 17, lineHeight: 1.15, fontWeight: 620 }}>
+                    {env.title}
+                  </div>
+                </div>
+              </div>
+
+              {/* SVG scene */}
+              <div className="flex-1 min-h-0 mt-2">
+                <EnvironmentSceneSvg env={env} tone={tone} baseDelay={0.5 + i * 0.1} />
+              </div>
+
+              {/* Footnote */}
+              {env.footnote && (
+                <div className="mt-2 pt-3 border-t text-[11.5px] uppercase" style={{ borderColor: tone.soft, color: tone.ink, fontFamily: T.mono, letterSpacing: '0.2em', fontWeight: 800 }}>
+                  {env.footnote}
                 </div>
               )}
             </Card>

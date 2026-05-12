@@ -4403,11 +4403,18 @@ export const slides = [
         "kicker": "DESKTOP",
         "title": "Personal productivity",
         "tone": "blue",
-        "bullets": [
-          "All AI calls route through the TritonAI gateway — no direct Anthropic or OpenAI keys",
-          "Harness auto-approves safe actions and prompts on risky ones",
-          "Personal context via ITS-vetted MCP connectors only",
-          "No enterprise data, no writes to shared systems"
+        "chassis": "laptop",
+        "reachable": [
+          { "icon": "gateway",   "label": "TritonAI gateway" },
+          { "icon": "calendar",  "label": "Microsoft Graph" },
+          { "icon": "people",    "label": "Google Workspace" },
+          { "icon": "library",   "label": "Confluence" },
+          { "icon": "folder",    "label": "Local files" }
+        ],
+        "blocked": [
+          { "icon": "enterprise", "label": "ServiceNow" },
+          { "icon": "enterprise", "label": "UCPath" },
+          { "icon": "enterprise", "label": "Activity Hubs" }
         ],
         "footnote": "supported — at your own risk"
       },
@@ -4415,11 +4422,17 @@ export const slides = [
         "kicker": "DSMLP SANDBOX",
         "title": "Tools that touch real systems",
         "tone": "coral",
-        "bullets": [
-          "Enterprise credentials injected at container runtime — never on the laptop",
-          "Isolated Linux env: agents can't reach your filesystem or production",
-          "Agents run overnight without permission dialogs",
-          "Port forwarding · SSH · Docker · GitHub configured on day one"
+        "chassis": "container",
+        "reachable": [
+          { "icon": "gateway",    "label": "TritonAI gateway" },
+          { "icon": "enterprise", "label": "ServiceNow" },
+          { "icon": "enterprise", "label": "UCPath" },
+          { "icon": "enterprise", "label": "Activity Hubs" },
+          { "icon": "lock",       "label": "Credentials at runtime" },
+          { "icon": "docker",     "label": "Docker · ports" }
+        ],
+        "blocked": [
+          { "icon": "folder", "label": "Your local FS" }
         ],
         "footnote": "supported path for shared, real-data work"
       }
