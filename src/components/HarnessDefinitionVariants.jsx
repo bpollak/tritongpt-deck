@@ -3327,7 +3327,7 @@ const EnvironmentSceneSvg = ({ env, tone, baseDelay }) => {
 
   return (
     <svg
-      viewBox="0 0 360 370"
+      viewBox="0 0 360 280"
       preserveAspectRatio="xMidYMid meet"
       className="h-full w-full"
       aria-hidden="true"
@@ -3454,68 +3454,7 @@ const EnvironmentSceneSvg = ({ env, tone, baseDelay }) => {
         );
       })}
 
-      {/* OUT OF REACH section below the rect */}
-      {blocked.length > 0 && (
-        <motion.g {...fade(baseDelay + 0.7, 0)}>
-          <text
-            x={180}
-            y={284}
-            textAnchor="middle"
-            style={{
-              fontFamily: T.mono,
-              fontSize: 10,
-              fontWeight: 800,
-              letterSpacing: '0.22em',
-              textTransform: 'uppercase'
-            }}
-            fill={T.muted}
-          >
-            out of reach
-          </text>
-          {blocked.map((item, i) => {
-            // 1 item: single centered cell. >1 items: 2-column grid.
-            const colCount = blocked.length === 1 ? 1 : 2;
-            const cellWidth = colCount === 1 ? 260 : 156;
-            const rowHeightBlocked = 34;
-            const row = Math.floor(i / colCount);
-            const col = i % colCount;
-            const totalWidth = colCount * cellWidth;
-            const startX = 180 - totalWidth / 2;
-            const cellX = startX + col * cellWidth;
-            const iconX = cellX + 8; // icon left edge
-            const rowY = 308 + row * rowHeightBlocked;
-            const lines = wrapLabel(item.label, 16);
-            return (
-              <g key={`block-${item.label}-${i}`} opacity={0.6}>
-                <rect x={iconX} y={rowY - 12} width={24} height={24} rx={5} fill="#fff" stroke={T.muted} strokeWidth="1.1" />
-                <MiniIcon type={item.icon} color={T.muted} x={iconX + 3} y={rowY - 9} width={18} height={18} className="" />
-                {/* diagonal strike */}
-                <line x1={iconX + 3} y1={rowY - 9} x2={iconX + 21} y2={rowY + 9} stroke={T.coral} strokeWidth="1.6" strokeLinecap="round" />
-                {lines.length === 1 ? (
-                  <text
-                    x={iconX + 32}
-                    y={rowY + 5}
-                    style={{ fontFamily: T.mono, fontSize: 10.5, fontWeight: 700 }}
-                    fill={T.muted}
-                  >
-                    {lines[0]}
-                  </text>
-                ) : (
-                  <text
-                    x={iconX + 32}
-                    y={rowY}
-                    style={{ fontFamily: T.mono, fontSize: 10.5, fontWeight: 700 }}
-                    fill={T.muted}
-                  >
-                    <tspan x={iconX + 32} dy={0}>{lines[0]}</tspan>
-                    <tspan x={iconX + 32} dy={12}>{lines[1]}</tspan>
-                  </text>
-                )}
-              </g>
-            );
-          })}
-        </motion.g>
-      )}
+      {/* "OUT OF REACH" section removed by request — the reach zone now stands on its own. */}
     </svg>
   );
 };

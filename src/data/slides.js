@@ -4414,12 +4414,6 @@ export const slides = [
           { "icon": "library",   "label": "Confluence" },
           { "icon": "folder",    "label": "Local files" }
         ],
-        "blocked": [
-          { "icon": "enterprise", "label": "Research Data" },
-          { "icon": "enterprise", "label": "Employee Data" },
-          { "icon": "enterprise", "label": "Finance Data" },
-          { "icon": "enterprise", "label": "Other Enterprise Systems" }
-        ],
         "footnote": "supported by local computer security mechanisms"
       },
       {
@@ -4434,9 +4428,6 @@ export const slides = [
           { "icon": "enterprise", "label": "Employee Data" },
           { "icon": "enterprise", "label": "Finance Data" },
           { "icon": "enterprise", "label": "Other Enterprise Systems" }
-        ],
-        "blocked": [
-          { "icon": "folder", "label": "Your laptop's filesystem (isolated)" }
         ],
         "footnote": "supported path for shared, real-data work"
       }
