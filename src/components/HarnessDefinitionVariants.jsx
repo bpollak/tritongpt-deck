@@ -193,10 +193,15 @@ const Kicker = ({ children, className = '' }) => (
   </div>
 );
 
-const MiniIcon = ({ type = 'dot', color = T.coralDark }) => {
+const MiniIcon = ({ type = 'dot', color = T.coralDark, width, height, x, y, className }) => {
   const common = { fill: 'none', stroke: color, strokeWidth: 2.2, strokeLinecap: 'round', strokeLinejoin: 'round' };
+  const extraProps = {};
+  if (width != null) extraProps.width = width;
+  if (height != null) extraProps.height = height;
+  if (x != null) extraProps.x = x;
+  if (y != null) extraProps.y = y;
   return (
-    <svg viewBox="0 0 52 52" className="h-10 w-10" aria-hidden="true">
+    <svg viewBox="0 0 52 52" className={className ?? 'h-10 w-10'} aria-hidden="true" {...extraProps}>
       {type === 'builder' && (
         <>
           <rect x="12" y="12" width="28" height="28" rx="6" {...common} />
@@ -3362,9 +3367,7 @@ const EnvironmentSceneSvg = ({ env, tone, baseDelay }) => {
             />
             <g transform={`translate(${ix - 14}, ${iy - 14})`}>
               <rect width="28" height="28" rx="6" fill="#fff" stroke={tone.ink} strokeWidth="1.2" />
-              <g transform="translate(2 2) scale(0.46)">
-                <MiniIcon type={item.icon} color={tone.ink} />
-              </g>
+              <MiniIcon type={item.icon} color={tone.ink} x={3} y={3} width={22} height={22} className="" />
             </g>
             <text
               x={ix}
@@ -3412,9 +3415,7 @@ const EnvironmentSceneSvg = ({ env, tone, baseDelay }) => {
               <g key={`block-${item.label}-${i}`} opacity={0.55}>
                 <g transform={`translate(${ix - 12}, ${iy - 12})`}>
                   <rect width="24" height="24" rx="5" fill="#fff" stroke={T.muted} strokeWidth="1.1" />
-                  <g transform="translate(1.5 1.5) scale(0.4)">
-                    <MiniIcon type={item.icon} color={T.muted} />
-                  </g>
+                  <MiniIcon type={item.icon} color={T.muted} x={3} y={3} width={18} height={18} className="" />
                   {/* diagonal strike */}
                   <line x1="3" y1="3" x2="21" y2="21" stroke={T.coral} strokeWidth="1.6" strokeLinecap="round" />
                 </g>
