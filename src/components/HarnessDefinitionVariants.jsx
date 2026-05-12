@@ -3481,7 +3481,7 @@ const HarnessTwoEnvironmentsVariant = ({ slide }) => {
       </div>
 
       {/* Two environment scenes */}
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[15vh] bottom-[28vh] grid grid-cols-2 grid-rows-[1fr] gap-6 items-stretch">
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[11vh] bottom-[37vh] grid grid-cols-2 grid-rows-[1fr] gap-6 items-stretch">
         {envs.map((env, i) => {
           const tone = tones[env.tone] || tones.blue;
           return (
@@ -3547,7 +3547,7 @@ const HarnessTwoEnvironmentsVariant = ({ slide }) => {
       {slide.transition && (
         <motion.div
           {...fade(0.92)}
-          className="absolute left-[4.8vw] right-[4.8vw] top-[74vh] flex items-center gap-4 rounded-[8px] border-2 border-dashed px-5 py-3"
+          className="absolute left-[4.8vw] right-[4.8vw] top-[65vh] flex items-center gap-4 rounded-[8px] border-2 border-dashed px-5 py-2.5"
           style={{ borderColor: T.coral, background: '#fffaf5' }}
         >
           <span
@@ -3583,7 +3583,7 @@ const HarnessTwoEnvironmentsVariant = ({ slide }) => {
       {slide.configRepo && (
         <motion.div
           {...fade(1.05)}
-          className="absolute left-[4.8vw] right-[4.8vw] top-[82vh] rounded-[8px] border-2 border-dashed px-5 py-2.5"
+          className="absolute left-[4.8vw] right-[4.8vw] top-[74vh] rounded-[8px] border-2 border-dashed px-5 py-2.5"
           style={{ borderColor: T.blue, background: T.bluePale }}
         >
           <div className="flex items-baseline gap-3 flex-wrap">
