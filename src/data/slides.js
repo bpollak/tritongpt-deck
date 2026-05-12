@@ -3746,8 +3746,8 @@ export const slides = [
         "title": "Models that reason, plan, and use tools.",
         "body": "Frontier models crossed a threshold: they sustain multi-step work, hold long context, and call tools natively — not just chat.",
         "examples": [
-          "Claude Opus",
-          "GPT-5 series"
+          { "name": "Claude Opus", "logoUrl": "https://cdn.simpleicons.org/anthropic/0d5f93" },
+          { "name": "GPT-5 series", "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg" }
         ]
       },
       {
@@ -3755,9 +3755,9 @@ export const slides = [
         "title": "Harnesses arrived off the shelf.",
         "body": "Production scaffolding now ships from the major vendors — loop, tools, memory, permissions — ready to accomplish real work.",
         "examples": [
-          "Claude Code",
-          "OpenAI Codex",
-          "OpenCode"
+          { "name": "Claude Code", "logoUrl": "https://cdn.simpleicons.org/anthropic/be634d" },
+          { "name": "OpenAI Codex", "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg" },
+          { "name": "OpenCode", "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/opencode.svg" }
         ]
       }
     ],

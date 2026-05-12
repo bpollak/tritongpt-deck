@@ -2869,21 +2869,33 @@ const HarnessConvergenceVariant = ({ slide }) => {
           </div>
           {left.examples && (
             <div className="mt-6 flex flex-wrap gap-3">
-              {left.examples.map((ex) => (
-                <span
-                  key={ex}
-                  className="rounded-[6px] border px-3.5 py-2 text-[17px]"
-                  style={{
-                    borderColor: '#b9d3dc',
-                    background: '#fff',
-                    color: T.blue,
-                    fontFamily: T.mono,
-                    fontWeight: 700
-                  }}
-                >
-                  {ex}
-                </span>
-              ))}
+              {left.examples.map((ex) => {
+                const item = typeof ex === 'string' ? { name: ex } : ex;
+                return (
+                  <span
+                    key={item.name}
+                    className="inline-flex items-center gap-3 rounded-[8px] border-2 px-5 py-3 text-[20px]"
+                    style={{
+                      borderColor: '#b9d3dc',
+                      background: '#fff',
+                      color: T.blue,
+                      fontFamily: T.mono,
+                      fontWeight: 700
+                    }}
+                  >
+                    {item.logoUrl && (
+                      <img
+                        src={item.logoUrl}
+                        alt=""
+                        aria-hidden="true"
+                        className="h-7 w-7 shrink-0"
+                        style={{ objectFit: 'contain' }}
+                      />
+                    )}
+                    {item.name}
+                  </span>
+                );
+              })}
             </div>
           )}
         </Card>
@@ -2966,21 +2978,33 @@ const HarnessConvergenceVariant = ({ slide }) => {
           </div>
           {right.examples && (
             <div className="mt-6 flex flex-wrap gap-3">
-              {right.examples.map((ex) => (
-                <span
-                  key={ex}
-                  className="rounded-[6px] border px-3.5 py-2 text-[17px]"
-                  style={{
-                    borderColor: T.coralPale,
-                    background: '#fff',
-                    color: T.coralDark,
-                    fontFamily: T.mono,
-                    fontWeight: 700
-                  }}
-                >
-                  {ex}
-                </span>
-              ))}
+              {right.examples.map((ex) => {
+                const item = typeof ex === 'string' ? { name: ex } : ex;
+                return (
+                  <span
+                    key={item.name}
+                    className="inline-flex items-center gap-3 rounded-[8px] border-2 px-5 py-3 text-[20px]"
+                    style={{
+                      borderColor: T.coralPale,
+                      background: '#fff',
+                      color: T.coralDark,
+                      fontFamily: T.mono,
+                      fontWeight: 700
+                    }}
+                  >
+                    {item.logoUrl && (
+                      <img
+                        src={item.logoUrl}
+                        alt=""
+                        aria-hidden="true"
+                        className="h-7 w-7 shrink-0"
+                        style={{ objectFit: 'contain' }}
+                      />
+                    )}
+                    {item.name}
+                  </span>
+                );
+              })}
             </div>
           )}
         </Card>
