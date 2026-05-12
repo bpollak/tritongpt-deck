@@ -4399,7 +4399,6 @@ export const slides = [
       { "text": "reach", "accent": true },
       { "text": "." }
     ],
-    "subhead": "Desktop for personal work. DSMLP sandbox for anything that touches enterprise data or other people.",
     "environments": [
       {
         "kicker": "DESKTOP",
