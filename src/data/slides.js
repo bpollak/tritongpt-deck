@@ -723,7 +723,8 @@ export const slides = [
           "TritonGPT (UCSD)",
           "BearGPT (Berkeley)",
           "BobcatGPT (Merced)",
-          "AggieGPT (ANR)"
+          "AggieGPT (ANR)",
+          "Fairleigh Dickinson University"
         ]
       },
       {
