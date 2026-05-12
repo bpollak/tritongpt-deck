@@ -4385,6 +4385,107 @@ export const slides = [
     ]
   },
   {
+    "id": 124.3,
+    "slug": "cabinet-harness-11a-two-environments",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-two-environments",
+    "marker": "ENVIRONMENTS",
+    "parts": [
+      { "text": "Same " },
+      { "text": "harness", "accent": true },
+      { "text": ", two blast radii." }
+    ],
+    "subhead": "Desktop for personal work. DSMLP sandbox for anything that touches enterprise data or other people.",
+    "environments": [
+      {
+        "kicker": "DESKTOP",
+        "title": "Personal productivity",
+        "tone": "blue",
+        "bullets": [
+          "All AI calls route through the TritonAI gateway — no direct Anthropic or OpenAI keys",
+          "Harness auto-approves safe actions and prompts on risky ones",
+          "Personal context via ITS-vetted MCP connectors only",
+          "No enterprise data, no writes to shared systems"
+        ],
+        "footnote": "supported — at your own risk"
+      },
+      {
+        "kicker": "DSMLP SANDBOX",
+        "title": "Tools that touch real systems",
+        "tone": "coral",
+        "bullets": [
+          "Enterprise credentials injected at container runtime — never on the laptop",
+          "Isolated Linux env: agents can't reach your filesystem or production",
+          "Agents run overnight without permission dialogs",
+          "Port forwarding · SSH · Docker · GitHub configured on day one"
+        ],
+        "footnote": "supported path for shared, real-data work"
+      }
+    ],
+    "transition": {
+      "kicker": "TRANSITION TRIGGER",
+      "from": "Desktop",
+      "to": "Sandbox",
+      "rule": "The moment a developer tries to connect enterprise data — or share their build — the harness surfaces the sandbox request."
+    },
+    "bottomLine": "Same CLAUDE.md and .codex/config.json in both. Only the credentials and the blast radius change.",
+    "audiences": [
+      "citizen"
+    ]
+  },
+  {
+    "id": 124.35,
+    "slug": "cabinet-harness-11b-config-repo",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-config-repo",
+    "marker": "DISTRIBUTION",
+    "parts": [
+      { "text": "One " },
+      { "text": "config repo", "accent": true },
+      { "text": ", three distribution lanes." }
+    ],
+    "subhead": "The harness lives as a single ITS-owned GitHub repo. Everyone gets it the way that fits their setup.",
+    "repo": {
+      "name": "github.com/ucsd-its/tritonai-dev-config",
+      "files": [
+        { "name": "CLAUDE.md", "note": "Claude Code harness" },
+        { "name": ".codex/config.json", "note": "Codex harness · network policy" },
+        { "name": "mcp-connectors/", "note": "ITS-vetted personal context" },
+        { "name": "network-policy.json", "note": "approved destinations" },
+        { "name": "install.sh", "note": "one-line setup" },
+        { "name": "CHANGELOG.md", "note": "what changed and why" }
+      ]
+    },
+    "lanes": [
+      {
+        "label": "MDM push",
+        "audience": "Managed staff machines",
+        "detail": "Intune / JAMF — admin-enforced",
+        "color": "blue"
+      },
+      {
+        "label": "Install script",
+        "audience": "Campus Developer API participants",
+        "detail": "Kuali Build email · curl | bash · under 15 min",
+        "color": "coral"
+      },
+      {
+        "label": "Self-serve",
+        "audience": "Researchers / faculty",
+        "detail": "git clone · git pull keeps you in sync",
+        "color": "green"
+      }
+    ],
+    "principle": "IT chooses safe tools and configures them safely. Departments own business risk. The harness encodes both.",
+    "audiences": [
+      "citizen"
+    ]
+  },
+  {
     "id": 124.4,
     "slug": "cabinet-harness-11c-developer-api-program",
     "type": "content",

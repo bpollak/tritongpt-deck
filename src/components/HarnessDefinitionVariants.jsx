@@ -3201,6 +3201,223 @@ const HarnessDataUnlockVariant = ({ slide }) => {
   );
 };
 
+const HarnessTwoEnvironmentsVariant = ({ slide }) => {
+  const envs = slide.environments || [];
+  const tones = {
+    blue: { ink: T.blue, fill: T.bluePale, soft: '#cfdde2' },
+    coral: { ink: T.coralDark, fill: '#fff8f2', soft: T.coralPale }
+  };
+  return (
+    <Shell>
+      <Marker slide={slide}>{slide.marker}</Marker>
+
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[3vh]" style={{ maxWidth: '88vw' }}>
+        <h1 className="leading-[0.98]" style={{ fontSize: 'clamp(38px, 3.8vw, 60px)', fontWeight: 520 }}>
+          <PartText parts={slide.parts} />
+        </h1>
+        {slide.subhead && (
+          <motion.div {...fade(0.38)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(16px, 1.25vw, 21px)' }}>
+            {slide.subhead}
+          </motion.div>
+        )}
+      </div>
+
+      {/* Two environment cards */}
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[15vh] bottom-[28vh] grid grid-cols-2 gap-6 items-stretch">
+        {envs.map((env, i) => {
+          const tone = tones[env.tone] || tones.blue;
+          return (
+            <Card
+              key={env.kicker}
+              delay={0.5 + i * 0.1}
+              className="flex flex-col p-6"
+              style={{ background: tone.fill, borderColor: tone.soft }}
+            >
+              <div
+                className="uppercase"
+                style={{
+                  color: tone.ink,
+                  fontFamily: T.mono,
+                  fontSize: 'clamp(22px, 2.1vw, 32px)',
+                  fontWeight: 800,
+                  letterSpacing: '0.04em',
+                  lineHeight: 1
+                }}
+              >
+                {env.kicker}
+              </div>
+              <div className="mt-2" style={{ color: T.ink, fontSize: 22, lineHeight: 1.15, fontWeight: 620 }}>
+                {env.title}
+              </div>
+              <ul className="mt-4 space-y-2">
+                {(env.bullets || []).map((b, bi) => (
+                  <li key={bi} className="flex gap-2.5" style={{ color: T.ink, fontSize: 15.5, lineHeight: 1.35 }}>
+                    <span style={{ color: tone.ink, fontFamily: T.mono, fontWeight: 800, lineHeight: 1.35 }}>·</span>
+                    <span>{b}</span>
+                  </li>
+                ))}
+              </ul>
+              {env.footnote && (
+                <div className="mt-auto pt-4">
+                  <div className="border-t pt-3 text-[11.5px] uppercase" style={{ borderColor: tone.soft, color: tone.ink, fontFamily: T.mono, letterSpacing: '0.2em', fontWeight: 800 }}>
+                    {env.footnote}
+                  </div>
+                </div>
+              )}
+            </Card>
+          );
+        })}
+      </div>
+
+      {/* Transition trigger */}
+      {slide.transition && (
+        <motion.div
+          {...fade(0.92)}
+          className="absolute left-[4.8vw] right-[4.8vw] top-[74vh] flex items-center gap-4 rounded-[8px] border-2 border-dashed px-5 py-3"
+          style={{ borderColor: T.coral, background: '#fffaf5' }}
+        >
+          <span
+            className="rounded-full px-3 py-1 text-[11px] uppercase whitespace-nowrap"
+            style={{ background: T.coral, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.18em' }}
+          >
+            {slide.transition.kicker}
+          </span>
+          <span
+            className="text-[14px] uppercase whitespace-nowrap"
+            style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.16em', fontWeight: 800 }}
+          >
+            {slide.transition.from} → {slide.transition.to}
+          </span>
+          <span style={{ color: T.ink, fontSize: 15.5, lineHeight: 1.32 }}>
+            {slide.transition.rule}
+          </span>
+        </motion.div>
+      )}
+
+      {/* Bottom line */}
+      {slide.bottomLine && (
+        <motion.div
+          {...fade(1.1)}
+          className="absolute left-[4.8vw] right-[4.8vw] top-[87vh] italic"
+          style={{ color: T.muted, fontFamily: T.serif, fontSize: 'clamp(15px, 1.15vw, 19px)' }}
+        >
+          {slide.bottomLine}
+        </motion.div>
+      )}
+    </Shell>
+  );
+};
+
+const HarnessConfigRepoVariant = ({ slide }) => {
+  const repo = slide.repo || {};
+  const lanes = slide.lanes || [];
+  const toneByColor = {
+    blue: { ink: T.blue, fill: T.bluePale, soft: '#cfdde2' },
+    coral: { ink: T.coralDark, fill: '#fff8f2', soft: T.coralPale },
+    green: { ink: T.green, fill: '#f4f6ea', soft: '#d6dec4' }
+  };
+  return (
+    <Shell>
+      <Marker slide={slide}>{slide.marker}</Marker>
+
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[3vh]" style={{ maxWidth: '88vw' }}>
+        <h1 className="leading-[0.98]" style={{ fontSize: 'clamp(38px, 3.8vw, 60px)', fontWeight: 520 }}>
+          <PartText parts={slide.parts} />
+        </h1>
+        {slide.subhead && (
+          <motion.div {...fade(0.38)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(16px, 1.25vw, 21px)' }}>
+            {slide.subhead}
+          </motion.div>
+        )}
+      </div>
+
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[15vh] bottom-[14vh] grid grid-cols-[42%_1fr] gap-8 items-stretch">
+        {/* Repo box */}
+        <Card delay={0.5} className="flex flex-col p-6">
+          <div
+            className="text-[12px] uppercase"
+            style={{ color: T.coralDark, fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.22em' }}
+          >
+            ITS-owned config repo
+          </div>
+          <div
+            className="mt-2 break-all"
+            style={{ color: T.ink, fontFamily: T.mono, fontSize: 16.5, fontWeight: 700 }}
+          >
+            {repo.name}
+          </div>
+          <div className="mt-5 space-y-2">
+            {(repo.files || []).map((f, i) => (
+              <motion.div
+                key={f.name}
+                {...fade(0.65 + i * 0.05, 0)}
+                className="flex items-baseline gap-3 rounded-[5px] border bg-white px-3 py-2"
+                style={{ borderColor: T.faint }}
+              >
+                <span
+                  className="shrink-0"
+                  style={{ color: T.coralDark, fontFamily: T.mono, fontWeight: 700, fontSize: 14 }}
+                >
+                  {f.name}
+                </span>
+                <span
+                  style={{ color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 13 }}
+                >
+                  {f.note}
+                </span>
+              </motion.div>
+            ))}
+          </div>
+        </Card>
+
+        {/* Three lanes */}
+        <div className="flex flex-col gap-3.5">
+          {lanes.map((lane, i) => {
+            const tone = toneByColor[lane.color] || toneByColor.blue;
+            return (
+              <motion.div
+                key={lane.label}
+                {...fade(0.85 + i * 0.1)}
+                className="rounded-[8px] border-2 px-5 py-4"
+                style={{ borderColor: tone.soft, background: tone.fill, borderLeftWidth: 9, borderLeftColor: tone.ink }}
+              >
+                <div className="flex items-baseline gap-3 flex-wrap">
+                  <span
+                    className="rounded-full px-3 py-1 text-[11px] uppercase whitespace-nowrap"
+                    style={{ background: tone.ink, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.18em' }}
+                  >
+                    {lane.label}
+                  </span>
+                  <span style={{ color: T.ink, fontSize: 19, fontWeight: 620 }}>
+                    {lane.audience}
+                  </span>
+                </div>
+                <div
+                  className="mt-1.5"
+                  style={{ color: tone.ink, fontFamily: T.mono, fontSize: 13, fontWeight: 700 }}
+                >
+                  {lane.detail}
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Principle */}
+      {slide.principle && (
+        <motion.div
+          {...fade(1.2)}
+          className="absolute left-[4.8vw] right-[4.8vw] top-[87vh] italic"
+          style={{ color: T.muted, fontFamily: T.serif, fontSize: 'clamp(15px, 1.15vw, 19px)' }}
+        >
+          {slide.principle}
+        </motion.div>
+      )}
+    </Shell>
+  );
+};
+
 const HarnessActionVariant = ({ slide }) => {
   const pipeline = slide.pipeline || [];
   const toolTiers = slide.toolTiers || [];
@@ -3470,6 +3687,8 @@ export const harnessVariantMap = {
   'harness-permissions': HarnessPermissionsVariant,
   'harness-ucsd': HarnessUcsdVariant,
   'harness-data-unlock': HarnessDataUnlockVariant,
+  'harness-two-environments': HarnessTwoEnvironmentsVariant,
+  'harness-config-repo': HarnessConfigRepoVariant,
   'harness-action': HarnessActionVariant,
   'harness-action-plan': HarnessActionPlanVariant,
   'harness-recap': HarnessRecapVariant
