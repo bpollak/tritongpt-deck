@@ -4411,6 +4411,7 @@ export const slides = [
       {
         "kicker": "DSMLP SANDBOX",
         "title": "Tools that touch real systems",
+        "titleBadge": "Proposed",
         "caveat": "Credentials injected at container runtime — never on the laptop",
         "tone": "coral",
         "chassis": "container",
