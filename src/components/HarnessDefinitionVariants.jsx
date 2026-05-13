@@ -955,7 +955,7 @@ const HarnessToolboxVariant = ({ slide }) => (
   <Shell>
     <Header slide={slide} maxWidth="92vw" titleFontSize="clamp(38px, 3.95vw, 64px)" subheadFontSize="clamp(17px, 1.22vw, 21px)" />
     <div className="absolute left-[4.8vw] right-[4.8vw] top-[18vh]">
-      <div className="grid grid-cols-4 gap-5">
+      <div className="grid gap-5" style={{ gridTemplateColumns: `repeat(${(slide.vendors || []).length || 1}, minmax(0, 1fr))` }}>
         {(slide.vendors || []).map((vendor, index) => (
           <Card
             key={`${vendor.name}-${index}`}
