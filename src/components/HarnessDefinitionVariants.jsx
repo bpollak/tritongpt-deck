@@ -3840,14 +3840,14 @@ const HarnessActionVariant = ({ slide }) => {
           </div>
         </Card>
 
-        {/* Right: A worked example — the same pipeline, applied to a real Cabinet action */}
+        {/* Right: A worked example — the same pipeline, applied to a real staff action */}
         <Card delay={0.7} className="p-6 flex flex-col">
           <div className="flex items-baseline gap-3">
             <span className="text-[13px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
               Example
             </span>
             <span style={{ color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 16 }}>
-              one Cabinet action through the gates
+              one staff action through the gates
             </span>
           </div>
 

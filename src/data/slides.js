@@ -4174,29 +4174,29 @@ export const slides = [
         "color": "#be634d"
       }
     ],
-    "traceGoal": "Send this week's Cabinet briefing to the Cabinet distribution list.",
+    "traceGoal": "Submit a purchase requisition for $420 in office supplies.",
     "traceSteps": [
       {
         "stage": "Agent intent",
-        "detail": "send_email(to=cabinet@ucsd.edu, attach=briefing.pdf)"
+        "detail": "create_requisition(vendor=Staples, amount=420, fund=DEPT-OPS-24)"
       },
       {
         "stage": "Pre-hook",
-        "detail": "OCC sender? · list approved? · Chancellor signed off?"
+        "detail": "vendor approved? · under cardholder limit? · fund has balance?"
       },
       {
         "stage": "Tool call",
-        "detail": "M365 send · attaches PDF · returns delivery receipt"
+        "detail": "Oracle Procurement · creates req · returns PO number"
       },
       {
         "stage": "Post-hook",
-        "detail": "audit log entry · receipt filed · weekly compliance report"
+        "detail": "audit log entry · receipt attached · monthly recon queue"
       }
     ],
     "approvalPrompt": {
       "kicker": "the agent stops and asks before any write",
       "question": "Should I run",
-      "code": "send_email(to=cabinet@ucsd.edu, attach=briefing.pdf)",
+      "code": "create_requisition(vendor=Staples, amount=420, fund=DEPT-OPS-24)",
       "actions": [
         "allow",
         "deny",
