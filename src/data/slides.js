@@ -4429,7 +4429,11 @@ export const slides = [
       "kicker": "TRANSITION TRIGGER",
       "from": "Desktop",
       "to": "Sandbox",
-      "rule": "The moment a developer tries to connect enterprise data — or share their build — the harness surfaces the sandbox request."
+      "rule": "The moment a developer tries to connect enterprise data — or share their build — the harness surfaces the sandbox request.",
+      "optIn": {
+        "kicker": "OR BY CHOICE",
+        "rule": "Users, departments, and orgs may also opt into the sandbox for non-enterprise work — to cleanly separate desktop activity from agentic work."
+      }
     },
     "configRepo": {
       "kicker": "ONE CONFIG REPO",

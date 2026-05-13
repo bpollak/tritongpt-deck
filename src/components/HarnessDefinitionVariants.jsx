@@ -3574,24 +3574,42 @@ const HarnessTwoEnvironmentsVariant = ({ slide }) => {
       {slide.transition && (
         <motion.div
           {...fade(0.92)}
-          className="absolute left-[4.8vw] right-[4.8vw] top-[65vh] flex items-center gap-4 rounded-[8px] border-2 border-dashed px-5 py-2.5"
+          className="absolute left-[4.8vw] right-[4.8vw] top-[65vh] rounded-[8px] border-2 border-dashed px-5 py-2.5"
           style={{ borderColor: T.coral, background: '#fffaf5' }}
         >
-          <span
-            className="rounded-full px-3 py-1 text-[11px] uppercase whitespace-nowrap"
-            style={{ background: T.coral, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.18em' }}
-          >
-            {slide.transition.kicker}
-          </span>
-          <span
-            className="text-[14px] uppercase whitespace-nowrap"
-            style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.16em', fontWeight: 800 }}
-          >
-            {slide.transition.from} → {slide.transition.to}
-          </span>
-          <span style={{ color: T.ink, fontSize: 15.5, lineHeight: 1.32 }}>
-            {slide.transition.rule}
-          </span>
+          <div className="flex items-center gap-4">
+            <span
+              className="rounded-full px-3 py-1 text-[11px] uppercase whitespace-nowrap"
+              style={{ background: T.coral, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.18em' }}
+            >
+              {slide.transition.kicker}
+            </span>
+            <span
+              className="text-[14px] uppercase whitespace-nowrap"
+              style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.16em', fontWeight: 800 }}
+            >
+              {slide.transition.from} → {slide.transition.to}
+            </span>
+            <span style={{ color: T.ink, fontSize: 15.5, lineHeight: 1.32 }}>
+              {slide.transition.rule}
+            </span>
+          </div>
+          {slide.transition.optIn && (
+            <div
+              className="mt-2 pt-2 flex items-center gap-4 border-t"
+              style={{ borderColor: T.coralPale }}
+            >
+              <span
+                className="rounded-full px-3 py-1 text-[11px] uppercase whitespace-nowrap"
+                style={{ background: '#fff', color: T.coralDark, border: `1px solid ${T.coral}`, fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.18em' }}
+              >
+                {slide.transition.optIn.kicker}
+              </span>
+              <span style={{ color: T.ink, fontSize: 15.5, lineHeight: 1.32, fontStyle: 'italic' }}>
+                {slide.transition.optIn.rule}
+              </span>
+            </div>
+          )}
         </motion.div>
       )}
 
