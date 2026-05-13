@@ -2062,8 +2062,31 @@ const HarnessCampusHostingVariant = ({ slide }) => {
                 ) : null}
               </div>
 
-              {/* Col 3: Deployment(s) */}
-              <div className="flex flex-wrap items-center gap-3">
+              {/* Col 3: Deployment(s) — span Col 4 too when userDeployments is set, since Tier 0 has no recurring-review */}
+              <div className="flex flex-wrap items-center gap-3" style={{ gridColumn: tier.userDeployments ? 'span 2' : 'auto' }}>
+                {tier.userDeployments && tier.userDeployments.length > 0 && (
+                  <div className="flex w-full flex-wrap items-stretch gap-3">
+                    {tier.userDeployments.map((dep) => (
+                      <div key={dep.label} className="flex flex-1 flex-col" style={{ minWidth: 240 }}>
+                        <div className="rounded-[8px] border-2 bg-white px-4 py-3" style={{ borderColor: tier.softColor, color: T.ink, fontFamily: T.sans, fontSize: 17.5, fontWeight: 650 }}>
+                          {dep.label}
+                        </div>
+                        <div className="mt-2 flex flex-wrap gap-2">
+                          {(dep.tools || []).map((tool) => (
+                            <span key={tool} className="rounded-[4px] border px-3 py-1 text-[14px]" style={{ borderColor: tier.softColor, color: tier.color, fontFamily: T.mono, fontWeight: 700, background: '#fff' }}>
+                              {tool}
+                            </span>
+                          ))}
+                        </div>
+                        {dep.note && (
+                          <div className="mt-1.5 italic" style={{ color: T.muted, fontFamily: T.serif, fontSize: 12.5, lineHeight: 1.3 }}>
+                            {dep.note}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
                 {tier.deploymentLabel && (
                   <div className="flex flex-col">
                     <div className="rounded-[8px] border-2 bg-white px-4 py-3" style={{ borderColor: tier.softColor, color: T.ink, fontFamily: T.sans, fontSize: 17.5, fontWeight: 650 }}>

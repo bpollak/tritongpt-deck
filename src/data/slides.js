@@ -4629,12 +4629,25 @@ export const slides = [
         "softColor": "#c8dac1",
         "fill": "#eef6ea",
         "process": "Citizen-Initiated Development",
-        "deploymentLabel": "User Desktop / Laptop",
-        "tools": [
-          "Claude Code",
-          "Codex",
-          "Onyx Craft + OpenCode",
-          "Campus Jupyter + OpenCode"
+        "userDeployments": [
+          {
+            "label": "User Desktop / Laptop",
+            "tools": [
+              "Claude Code",
+              "Codex",
+              "Onyx Craft + OpenCode",
+              "Campus Jupyter + OpenCode"
+            ]
+          },
+          {
+            "label": "User Sandbox",
+            "tools": [
+              "Claude Code",
+              "Codex",
+              "OpenCode"
+            ],
+            "note": "May be required for some API/MCP tooling"
+          }
         ]
       },
       {
