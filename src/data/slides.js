@@ -3944,10 +3944,10 @@ export const slides = [
         "color": "#111111",
         "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/opencode-wordmark-light.svg",
         "surface": "terminal · IDE · desktop",
-        "powersBadge": "POWERS ONYX CRAFT",
+        "powersBadge": "POWERS UCSD HARNESS",
         "origin": "Open-source, community-built. Privacy-first — no code or context stored.",
         "now": "150K GitHub stars, 6.5M monthly developers, 75+ supported models (Claude, GPT, Gemini, local).",
-        "highlight": "Open source — UCSD can shape the scaffolding. Powers Onyx Craft (onyx.app), so non-developers can build apps, docs, and decks from campus knowledge."
+        "highlight": "Open source — UC San Diego can build stronger campus-specific scaffolding on top of OpenCode: MCP data integrations, UCSD skills, permissions, templates, and harness hooks that connect models to campus systems, workflows, and knowledge."
       }
     ],
     "audiences": [
