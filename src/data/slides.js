@@ -3867,7 +3867,7 @@ export const slides = [
       {
         "title": "Harness",
         "kicker": "is the",
-        "word": "car",
+        "word": "chassis",
         "icon": "harness",
         "color": "#d47a5f",
         "wordColor": "#be634d",
@@ -3881,15 +3881,14 @@ export const slides = [
       {
         "title": "Together",
         "kicker": "they make",
-        "word": "a product",
+        "word": "an agent",
         "icon": "agent",
         "result": true,
         "color": "#d47a5f",
         "wordColor": "#0d5f93",
         "chips": [
+          "a product",
           "a slide deck",
-          "an n8n workflow",
-          "a small app",
           "an automation"
         ]
       }
