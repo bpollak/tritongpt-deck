@@ -3881,7 +3881,7 @@ export const slides = [
       {
         "title": "Together",
         "kicker": "they make",
-        "word": "an agent",
+        "word": "a car",
         "icon": "agent",
         "result": true,
         "color": "#d47a5f",
