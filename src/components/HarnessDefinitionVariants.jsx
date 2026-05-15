@@ -758,7 +758,7 @@ const EquationIcon = ({ type, color = T.ink }) => {
         <span className="mx-1.5" style={{ fontSize: 18, fontStyle: 'normal', fontWeight: 500, opacity: 0.85 }}>+</span>
         <span style={{ fontSize: 22, fontStyle: 'italic', fontWeight: 620 }}>H</span>
         <span className="mx-1.5" style={{ fontSize: 18, fontStyle: 'normal', fontWeight: 500, opacity: 0.85 }}>=</span>
-        <span style={{ fontSize: 22, fontStyle: 'italic', fontWeight: 620 }}>A</span>
+        <span style={{ fontSize: 22, fontStyle: 'italic', fontWeight: 620 }}>C</span>
         <span className="absolute bottom-[-5px] left-5 h-2 w-2 rounded-full" style={{ background: color }} />
         <span className="absolute bottom-[-5px] right-5 h-2 w-2 rounded-full" style={{ background: color }} />
       </div>
