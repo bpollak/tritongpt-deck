@@ -1919,9 +1919,9 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
           </div>
         </div>
         <div className="pointer-events-none absolute inset-0">
-          <div className="absolute left-[21.5%] top-[34px] flex items-center gap-2">
+          <div className="absolute left-[18%] top-[139px] flex items-center gap-2">
             <ApiProgramPill delay={0.72}>Use</ApiProgramPill>
-            <ApiConnectorArrow width={28} />
+            <ApiConnectorArrow width={42} />
           </div>
           <div className="absolute left-[43.2%] top-[139px] flex items-center gap-2">
             <ApiProgramPill delay={0.78}>Connect to</ApiProgramPill>
