@@ -267,6 +267,33 @@ const MiniIcon = ({ type = 'dot', color = T.coralDark, width, height, x, y, clas
           <path d="M17 24l-5 4 5 4M35 24l5 4-5 4M29 20l-6 16" {...common} />
         </>
       )}
+      {type === 'chat' && (
+        <>
+          <path d="M10 15h32v20H23l-9 7v-7h-4V15z" {...common} />
+          <path d="M18 23h16M18 29h11" {...common} />
+        </>
+      )}
+      {type === 'reasoning' && (
+        <>
+          <circle cx="16" cy="18" r="5" {...common} />
+          <circle cx="36" cy="18" r="5" {...common} />
+          <circle cx="26" cy="36" r="5" {...common} />
+          <path d="M20 20h12M18 22l5 10M34 22l-5 10" {...common} />
+        </>
+      )}
+      {type === 'image' && (
+        <>
+          <rect x="10" y="13" width="32" height="26" rx="4" {...common} />
+          <circle cx="34" cy="21" r="3" {...common} />
+          <path d="M14 35l9-10 7 7 4-5 8 8" {...common} />
+        </>
+      )}
+      {type === 'ocr' && (
+        <>
+          <path d="M12 20v-7h7M33 13h7v7M40 32v7h-7M19 39h-7v-7" {...common} />
+          <path d="M17 24h18M17 30h14" {...common} />
+        </>
+      )}
       {type === 'lane' && (
         <>
           <path d="M10 14h18l6 6h8v20H10V14z" {...common} />
@@ -1798,6 +1825,14 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
   const accessSteps = slide.accessSteps || [];
   const ownership = slide.ownership || [];
   const footerBadges = slide.footerBadges || [];
+  const capabilityIcons = {
+    CHAT: 'chat',
+    REASONING: 'reasoning',
+    VISION: 'observe',
+    'IMAGE GEN': 'image',
+    OCR: 'ocr',
+    CODING: 'code'
+  };
 
   return (
     <Shell>
@@ -1868,11 +1903,18 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
               ))}
             </div>
             <div className="space-y-2">
-              {capabilities.map((capability, index) => (
-                <motion.div key={capability} {...fade(1.02 + index * 0.04, 0)} className="rounded-full border bg-white px-4 py-1.5 text-center" style={{ borderColor: '#c9d7df', color: T.ink, boxShadow: '0 2px 8px rgba(23,24,20,0.07)', fontFamily: T.mono, fontSize: 12, fontWeight: 800, letterSpacing: '0.08em' }}>
-                  {capability}
-                </motion.div>
-              ))}
+              {capabilities.map((capability, index) => {
+                const label = typeof capability === 'string' ? capability : capability.label;
+                const icon = typeof capability === 'string' ? capabilityIcons[capability] : capability.icon;
+                return (
+                  <motion.div key={label} {...fade(1.02 + index * 0.04, 0)} className="flex items-center justify-start gap-2 rounded-full border bg-white px-4 py-1.5 text-left" style={{ borderColor: '#c9d7df', color: T.ink, boxShadow: '0 2px 8px rgba(23,24,20,0.07)', fontFamily: T.mono, fontSize: 12, fontWeight: 800, letterSpacing: '0.08em' }}>
+                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full" style={{ background: T.bluePale }}>
+                      <MiniIcon type={icon || 'dot'} color={T.blue} className="h-3.5 w-3.5" />
+                    </span>
+                    <span>{label}</span>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </div>
