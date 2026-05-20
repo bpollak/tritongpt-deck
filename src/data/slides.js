@@ -884,6 +884,24 @@ export const slides = [
         "icon": "Calendar"
       }
     ],
+    "impactSpotlights": [
+      {
+        "name": "AI Contract Reviewer",
+        "metric": "91%",
+        "metricLabel": "Time Reduction",
+        "detail": "120 min → 11 min per contract  ·  50+ risk categories",
+        "icon": "FileCheck",
+        "color": "#00629B"
+      },
+      {
+        "name": "AI Transcript Matching",
+        "metric": "3,700+",
+        "metricLabel": "Hours Saved Annually",
+        "detail": "60K transcripts  ·  98%+ accuracy  ·  225/hr",
+        "icon": "FileText",
+        "color": "#00C6D7"
+      }
+    ],
     "audiences": [
       "all",
       "public",

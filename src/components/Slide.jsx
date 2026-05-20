@@ -2416,6 +2416,44 @@ const Slide = ({ slide }) => {
                 })}
               </div>
 
+              {/* Impact Spotlights */}
+              {slide.impactSpotlights && slide.impactSpotlights.length > 0 && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1.2, duration: 0.6 }}
+                  className="mt-3 sm:mt-5 grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4"
+                >
+                  {slide.impactSpotlights.map((spotlight, idx) => {
+                    const SpotlightIcon = spotlight.icon ? iconMap[spotlight.icon] : null;
+                    return (
+                      <motion.div
+                        key={idx}
+                        initial={{ opacity: 0, x: idx === 0 ? -20 : 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 1.4 + idx * 0.15 }}
+                        className="flex items-center gap-2 sm:gap-4 p-2 sm:p-4 rounded-lg sm:rounded-2xl border-2 shadow-lg"
+                        style={{ borderColor: spotlight.color, backgroundColor: `${spotlight.color}08` }}
+                      >
+                        {SpotlightIcon && (
+                          <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-full flex items-center justify-center flex-shrink-0 shadow-md" style={{ backgroundColor: spotlight.color }}>
+                            <SpotlightIcon size={16} className="text-white sm:w-6 sm:h-6" />
+                          </div>
+                        )}
+                        <div className="flex-1 min-w-0">
+                          <div className="text-[10px] sm:text-sm font-bold uppercase tracking-wide" style={{ color: spotlight.color }}>{spotlight.name}</div>
+                          <div className="flex items-baseline gap-1 sm:gap-2">
+                            <span className="text-lg sm:text-3xl font-black text-ucsd-navy">{spotlight.metric}</span>
+                            <span className="text-[10px] sm:text-base font-bold text-ucsd-navy/70">{spotlight.metricLabel}</span>
+                          </div>
+                          <div className="text-[9px] sm:text-sm text-slate-600 font-medium">{spotlight.detail}</div>
+                        </div>
+                      </motion.div>
+                    );
+                  })}
+                </motion.div>
+              )}
+
               {/* Platform info at bottom */}
               <motion.div
                 initial={{ opacity: 0 }}
