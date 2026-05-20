@@ -4478,6 +4478,7 @@ export const slides = [
       "tritonai-developer-api-program"
     ],
     "programTitle": "TritonAI Developer API Program",
+    "harnessLabel": "AI harnesses",
     "parts": [
       {
         "text": "The Developer API is the "
@@ -4522,6 +4523,13 @@ export const slides = [
         "icon": "builder",
         "color": "#10b981",
         "fill": "#ecfdf5"
+      },
+      {
+        "title": "OpenCode",
+        "subtitle": "Open source",
+        "icon": "code",
+        "color": "#15243d",
+        "fill": "#eef1f5"
       }
     ],
     "providers": [
