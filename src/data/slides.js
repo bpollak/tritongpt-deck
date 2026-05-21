@@ -550,7 +550,8 @@ export const slides = [
       "technical",
       "ASU-GSV",
       "executive",
-      "regent"
+      "regent",
+      "citizen"
     ]
   },
   {
@@ -3270,7 +3271,8 @@ export const slides = [
       "all",
       "internal",
       "executive",
-      "regent"
+      "regent",
+      "citizen"
     ]
   },
   {
@@ -3303,7 +3305,6 @@ export const slides = [
     ],
     "audiences": [
       "all",
-      "cabinet",
       "regent"
     ]
   },
