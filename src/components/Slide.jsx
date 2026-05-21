@@ -1585,37 +1585,41 @@ const Slide = ({ slide }) => {
             <div className={clsx("flex flex-col", isSolutionVideo ? "justify-start gap-3 sm:gap-4" : "justify-start gap-4 sm:gap-6", slide.statsPosition === 'bottom' && "flex-col")}>
               {/* Horizontal Stats Bar (top position, default) */}
               {slide.stats?.length > 0 && slide.statsPosition !== 'bottom' && <div className={clsx("flex flex-wrap sm:flex-nowrap", isSolutionVideo ? "gap-1.5 sm:gap-2.5" : "gap-2 sm:gap-4")}>
-                {slide.stats?.map((stat, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3 + index * 0.1 }}
-                    className={clsx(
-                      "flex-1 min-w-[45%] sm:min-w-0 bg-white rounded-lg sm:rounded-xl shadow-md border-t-4 border-ucsd-navy text-center",
-                      isSolutionVideo ? "p-2 sm:p-2.5" : "p-3 sm:p-5"
-                    )}
-                  >
-                    <div className={clsx(
-                      "font-bold text-ucsd-blue uppercase tracking-wide opacity-80 mb-0.5",
-                      isSolutionVideo ? "text-[9px] sm:text-xs" : "text-[10px] sm:text-xs"
-                    )}>
-                      {stat.label}
-                    </div>
-                    <div className={clsx(
-                      "font-black text-ucsd-navy leading-none mb-0.5",
-                      isSolutionVideo ? "text-2xl sm:text-4xl" : "text-2xl sm:text-4xl"
-                    )}>
-                      {stat.value}
-                    </div>
-                    <div className={clsx(
-                      "text-slate-600 font-bold uppercase tracking-wide",
-                      isSolutionVideo ? "text-[10px] sm:text-xs" : "text-xs"
-                    )}>
-                      {stat.sub}
-                    </div>
-                  </motion.div>
-                ))}
+                {slide.stats?.map((stat, index) => {
+                  const statValue = String(stat.value ?? '');
+                  const compactTextValue = /[A-Za-z]/.test(statValue) && statValue.length > 6;
+                  return (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.3 + index * 0.1 }}
+                      className={clsx(
+                        "flex-1 min-w-[45%] sm:min-w-0 bg-white rounded-lg sm:rounded-xl shadow-md border-t-4 border-ucsd-navy text-center",
+                        isSolutionVideo ? "p-2 sm:p-2.5" : "p-3 sm:p-5"
+                      )}
+                    >
+                      <div className={clsx(
+                        "font-bold text-ucsd-blue uppercase tracking-wide opacity-80 mb-0.5",
+                        isSolutionVideo ? "text-[9px] sm:text-xs" : "text-[10px] sm:text-xs"
+                      )}>
+                        {stat.label}
+                      </div>
+                      <div className={clsx(
+                        "font-black text-ucsd-navy leading-none mb-0.5",
+                        compactTextValue ? "text-lg sm:text-xl md:text-2xl whitespace-nowrap tracking-tight" : "text-2xl sm:text-4xl"
+                      )}>
+                        {stat.value}
+                      </div>
+                      <div className={clsx(
+                        "text-slate-600 font-bold uppercase tracking-wide",
+                        isSolutionVideo ? "text-[10px] sm:text-xs" : "text-xs"
+                      )}>
+                        {stat.sub}
+                      </div>
+                    </motion.div>
+                  );
+                })}
               </div>}
 
               {/* Feature List */}
@@ -1657,37 +1661,41 @@ const Slide = ({ slide }) => {
 
               {/* Horizontal Stats Bar (bottom position) */}
               {slide.stats?.length > 0 && slide.statsPosition === 'bottom' && <div className={clsx("flex flex-wrap sm:flex-nowrap", isSolutionVideo ? "gap-1.5 sm:gap-2.5" : "gap-2 sm:gap-4")}>
-                {slide.stats?.map((stat, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.7 + index * 0.1 }}
-                    className={clsx(
-                      "flex-1 min-w-[45%] sm:min-w-0 bg-white rounded-lg sm:rounded-xl shadow-md border-t-4 border-ucsd-navy text-center",
-                      isSolutionVideo ? "p-2 sm:p-2.5" : "p-3 sm:p-5"
-                    )}
-                  >
-                    <div className={clsx(
-                      "font-bold text-ucsd-blue uppercase tracking-wide opacity-80 mb-0.5",
-                      isSolutionVideo ? "text-[9px] sm:text-xs" : "text-[10px] sm:text-xs"
-                    )}>
-                      {stat.label}
-                    </div>
-                    <div className={clsx(
-                      "font-black text-ucsd-navy leading-none mb-0.5",
-                      isSolutionVideo ? "text-2xl sm:text-4xl" : "text-2xl sm:text-4xl"
-                    )}>
-                      {stat.value}
-                    </div>
-                    <div className={clsx(
-                      "text-slate-600 font-bold uppercase tracking-wide",
-                      isSolutionVideo ? "text-[10px] sm:text-xs" : "text-xs"
-                    )}>
-                      {stat.sub}
-                    </div>
-                  </motion.div>
-                ))}
+                {slide.stats?.map((stat, index) => {
+                  const statValue = String(stat.value ?? '');
+                  const compactTextValue = /[A-Za-z]/.test(statValue) && statValue.length > 6;
+                  return (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.7 + index * 0.1 }}
+                      className={clsx(
+                        "flex-1 min-w-[45%] sm:min-w-0 bg-white rounded-lg sm:rounded-xl shadow-md border-t-4 border-ucsd-navy text-center",
+                        isSolutionVideo ? "p-2 sm:p-2.5" : "p-3 sm:p-5"
+                      )}
+                    >
+                      <div className={clsx(
+                        "font-bold text-ucsd-blue uppercase tracking-wide opacity-80 mb-0.5",
+                        isSolutionVideo ? "text-[9px] sm:text-xs" : "text-[10px] sm:text-xs"
+                      )}>
+                        {stat.label}
+                      </div>
+                      <div className={clsx(
+                        "font-black text-ucsd-navy leading-none mb-0.5",
+                        compactTextValue ? "text-lg sm:text-xl md:text-2xl whitespace-nowrap tracking-tight" : "text-2xl sm:text-4xl"
+                      )}>
+                        {stat.value}
+                      </div>
+                      <div className={clsx(
+                        "text-slate-600 font-bold uppercase tracking-wide",
+                        isSolutionVideo ? "text-[10px] sm:text-xs" : "text-xs"
+                      )}>
+                        {stat.sub}
+                      </div>
+                    </motion.div>
+                  );
+                })}
               </div>}
             </div>
           </div>
