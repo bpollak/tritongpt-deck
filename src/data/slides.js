@@ -159,8 +159,7 @@ export const slides = [
       "all",
       "public",
       "internal",
-      "technical",
-      "cabinet"
+      "technical"
     ]
   },
   {
@@ -274,8 +273,7 @@ export const slides = [
       "all",
       "public",
       "internal",
-      "executive",
-      "cabinet"
+      "executive"
     ]
   },
   {
