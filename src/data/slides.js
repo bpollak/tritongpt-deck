@@ -902,6 +902,20 @@ export const slides = [
         "color": "#00C6D7"
       }
     ],
+    "platformSaasFooter": {
+      "label": "SDSC-hosted SaaS for UC San Diego and partners",
+      "partners": [
+        "UC Berkeley",
+        "UC Merced",
+        "UC ANR",
+        "Fairleigh Dickinson"
+      ],
+      "badges": [
+        "Open source foundation",
+        "Model agnostic",
+        "Dedicated institutional environments"
+      ]
+    },
     "audiences": [
       "all",
       "public",

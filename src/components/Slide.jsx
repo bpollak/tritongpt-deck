@@ -2459,14 +2459,42 @@ const Slide = ({ slide }) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.5 }}
-                className="mt-3 sm:mt-4 pt-2 sm:pt-3 border-t-2 border-ucsd-gold/30 text-center text-xs sm:text-base md:text-lg font-semibold flex items-center justify-center gap-2 sm:gap-4 text-black"
+                className={clsx(
+                  "mt-2 sm:mt-3 pt-2 border-t-2 border-ucsd-gold/30 text-center font-semibold text-black",
+                  slide.platformSaasFooter
+                    ? "flex flex-col items-center gap-1.5 text-[9px] sm:text-xs md:text-[13px]"
+                    : "flex items-center justify-center gap-2 text-xs sm:gap-4 sm:text-base md:text-lg"
+                )}
               >
-                <span className="hidden sm:inline">Hosted at San Diego Supercomputer Center</span>
-                <span className="sm:hidden">Hosted at SDSC</span>
-                <span className="text-ucsd-gold text-lg sm:text-xl">◆</span>
-                <span>Low Cost & Open Source</span>
-                <span className="text-ucsd-gold text-lg sm:text-xl">◆</span>
-                <span>Model Agnostic</span>
+                {slide.platformSaasFooter ? (
+                  <>
+                    <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
+                      <span className="font-black text-ucsd-navy">{slide.platformSaasFooter.label}</span>
+                      {(slide.platformSaasFooter.partners || []).map((partner) => (
+                        <span key={partner} className="rounded-full border border-ucsd-blue/25 bg-white/80 px-2 py-0.5 text-ucsd-navy shadow-sm">
+                          {partner}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 text-[8px] uppercase tracking-[0.08em] text-ucsd-navy/70 sm:text-[10px]">
+                      {(slide.platformSaasFooter.badges || []).map((badge, index) => (
+                        <span key={badge} className="flex items-center gap-1">
+                          {index > 0 && <span className="text-ucsd-gold">◆</span>}
+                          <span>{badge}</span>
+                        </span>
+                      ))}
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <span className="hidden sm:inline">Hosted at San Diego Supercomputer Center</span>
+                    <span className="sm:hidden">Hosted at SDSC</span>
+                    <span className="text-ucsd-gold text-lg sm:text-xl">◆</span>
+                    <span>Low Cost & Open Source</span>
+                    <span className="text-ucsd-gold text-lg sm:text-xl">◆</span>
+                    <span>Model Agnostic</span>
+                  </>
+                )}
               </motion.div>
             </motion.div>
           </div>
