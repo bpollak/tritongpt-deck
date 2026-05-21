@@ -906,15 +906,35 @@ export const slides = [
       "label": "SDSC-hosted SaaS",
       "context": "for UC San Diego and partner institutions",
       "partners": [
-        "UC Berkeley",
-        "UC Merced",
-        "UC ANR",
-        "Fairleigh Dickinson"
+        {
+          "short": "UCB",
+          "name": "UC Berkeley",
+          "color": "#003262",
+          "accent": "#FDB515"
+        },
+        {
+          "short": "UCM",
+          "name": "UC Merced",
+          "color": "#002856",
+          "accent": "#DAA900"
+        },
+        {
+          "short": "ANR",
+          "name": "UC ANR",
+          "color": "#4F7F38",
+          "accent": "#B3C100"
+        },
+        {
+          "short": "FDU",
+          "name": "Fairleigh Dickinson",
+          "color": "#7A0019",
+          "accent": "#C6A76D"
+        }
       ],
       "badges": [
-        "Open source foundation",
+        "Trusted institutional environments",
         "Model agnostic",
-        "Dedicated institutional environments"
+        "Dedicated tenancy"
       ]
     },
     "audiences": [

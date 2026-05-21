@@ -2362,7 +2362,7 @@ const Slide = ({ slide }) => {
               </motion.div>
 
               {/* Grid of assistants */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1.5 sm:gap-3.5 mt-1 sm:mt-0">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1.5 sm:gap-2.5 mt-1 sm:mt-0">
                 {slide.assistants?.map((assistant, index) => {
                   const IconComponent = assistant.icon ? iconMap[assistant.icon] : null;
 
@@ -2391,7 +2391,7 @@ const Slide = ({ slide }) => {
                         stiffness: 150
                       }}
                       whileHover={{ scale: 1.05, y: -2 }}
-                      className="bg-white rounded-md sm:rounded-xl px-1.5 sm:px-4 py-1.5 sm:py-3 shadow-md border-l-2 sm:border-l-8 hover:shadow-lg transition-shadow cursor-pointer"
+                      className="bg-white rounded-md sm:rounded-xl px-1.5 sm:px-4 py-1.5 sm:py-2.5 shadow-md border-l-2 sm:border-l-8 hover:shadow-lg transition-shadow cursor-pointer"
                       style={{ borderLeftColor: borderColor }}
                     >
                       <div className="flex items-center gap-1 sm:gap-4">
@@ -2417,14 +2417,17 @@ const Slide = ({ slide }) => {
               </div>
 
               {/* Impact Spotlights */}
-              {slide.impactSpotlights && slide.impactSpotlights.length > 0 && (
+              {(slide.impactSpotlights && slide.impactSpotlights.length > 0) || slide.platformSaasFooter ? (
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1.2, duration: 0.6 }}
-                  className="mt-3 sm:mt-5 grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4"
+                  className={clsx(
+                    "mt-2.5 sm:mt-4 grid grid-cols-1 gap-2 sm:gap-3",
+                    slide.platformSaasFooter ? "lg:grid-cols-3" : "sm:grid-cols-2"
+                  )}
                 >
-                  {slide.impactSpotlights.map((spotlight, idx) => {
+                  {(slide.impactSpotlights || []).map((spotlight, idx) => {
                     const SpotlightIcon = spotlight.icon ? iconMap[spotlight.icon] : null;
                     return (
                       <motion.div
@@ -2432,76 +2435,84 @@ const Slide = ({ slide }) => {
                         initial={{ opacity: 0, x: idx === 0 ? -20 : 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 1.4 + idx * 0.15 }}
-                        className="flex items-center gap-2 sm:gap-4 p-2 sm:p-4 rounded-lg sm:rounded-2xl border-2 shadow-lg"
+                        className="flex items-center gap-2 sm:gap-3 p-2 sm:p-3 rounded-lg sm:rounded-2xl border-2 shadow-lg"
                         style={{ borderColor: spotlight.color, backgroundColor: `${spotlight.color}08` }}
                       >
                         {SpotlightIcon && (
-                          <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-full flex items-center justify-center flex-shrink-0 shadow-md" style={{ backgroundColor: spotlight.color }}>
-                            <SpotlightIcon size={16} className="text-white sm:w-6 sm:h-6" />
+                          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center flex-shrink-0 shadow-md" style={{ backgroundColor: spotlight.color }}>
+                            <SpotlightIcon size={16} className="text-white sm:w-5 sm:h-5" />
                           </div>
                         )}
                         <div className="flex-1 min-w-0">
-                          <div className="text-[10px] sm:text-sm font-bold uppercase tracking-wide" style={{ color: spotlight.color }}>{spotlight.name}</div>
+                          <div className="text-[10px] sm:text-xs font-bold uppercase tracking-wide" style={{ color: spotlight.color }}>{spotlight.name}</div>
                           <div className="flex items-baseline gap-1 sm:gap-2">
-                            <span className="text-lg sm:text-3xl font-black text-ucsd-navy">{spotlight.metric}</span>
-                            <span className="text-[10px] sm:text-base font-bold text-ucsd-navy/70">{spotlight.metricLabel}</span>
+                            <span className="text-lg sm:text-2xl font-black text-ucsd-navy">{spotlight.metric}</span>
+                            <span className="text-[10px] sm:text-sm font-bold text-ucsd-navy/70">{spotlight.metricLabel}</span>
                           </div>
-                          <div className="text-[9px] sm:text-sm text-slate-600 font-medium">{spotlight.detail}</div>
+                          <div className="text-[9px] sm:text-xs text-slate-600 font-medium">{spotlight.detail}</div>
                         </div>
                       </motion.div>
                     );
                   })}
+                  {slide.platformSaasFooter && (
+                    <motion.div
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 1.7 }}
+                      className="rounded-lg border-2 p-2 shadow-lg sm:rounded-2xl sm:p-3"
+                      style={{ borderColor: '#182B49', background: 'linear-gradient(135deg, rgba(24,43,73,0.06), rgba(0,198,215,0.08))' }}
+                    >
+                      <div className="flex items-center gap-2">
+                        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-ucsd-navy shadow-md sm:h-10 sm:w-10">
+                          <Server size={16} className="text-ucsd-gold sm:h-5 sm:w-5" />
+                        </div>
+                        <div className="min-w-0 text-left">
+                          <div className="text-[10px] font-bold uppercase tracking-wide text-ucsd-blue sm:text-xs">{slide.platformSaasFooter.label}</div>
+                          <div className="text-xs font-black leading-tight text-ucsd-navy sm:text-base">{slide.platformSaasFooter.context}</div>
+                        </div>
+                      </div>
+                      <div className="mt-2 grid grid-cols-2 gap-1.5">
+                        {(slide.platformSaasFooter.partners || []).map((partner) => {
+                          const partnerName = typeof partner === 'string' ? partner : partner.name;
+                          const partnerShort = typeof partner === 'string' ? partner.slice(0, 3).toUpperCase() : partner.short;
+                          const partnerColor = typeof partner === 'string' ? '#182B49' : partner.color;
+                          const partnerAccent = typeof partner === 'string' ? '#FFCD00' : partner.accent;
+                          return (
+                            <div key={partnerName} className="flex min-h-[32px] items-center gap-1.5 rounded-lg border bg-white px-1.5 py-1 text-left shadow-sm" style={{ borderColor: `${partnerColor}40` }}>
+                              <span className="flex h-7 w-8 shrink-0 items-center justify-center rounded-md text-[10px] font-black text-white" style={{ background: partnerColor, boxShadow: `inset 0 -3px 0 ${partnerAccent}` }}>
+                                {partnerShort}
+                              </span>
+                              <span className="text-[10px] font-bold leading-tight text-ucsd-navy sm:text-[11px]">{partnerName}</span>
+                            </div>
+                          );
+                        })}
+                      </div>
+                      <div className="mt-2 flex flex-wrap items-center justify-center gap-1 text-[7px] uppercase tracking-[0.08em] text-ucsd-navy/70 sm:text-[8px]">
+                        {(slide.platformSaasFooter.badges || []).map((badge) => (
+                          <span key={badge} className="rounded-full bg-white/80 px-1.5 py-0.5 font-bold shadow-sm">{badge}</span>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
                 </motion.div>
-              )}
+              ) : null}
 
               {/* Platform info at bottom */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.5 }}
-                className={clsx(
-                  "mt-2 sm:mt-3 pt-2 border-t-2 border-ucsd-gold/30 text-center font-semibold text-black",
-                  slide.platformSaasFooter
-                    ? "flex flex-col items-center gap-1.5 rounded-xl border border-ucsd-blue/20 bg-gradient-to-r from-white/90 via-ucsd-blue/5 to-white/90 px-2.5 py-2 text-[9px] shadow-sm sm:text-xs md:text-[13px]"
-                    : "flex items-center justify-center gap-2 text-xs sm:gap-4 sm:text-base md:text-lg"
-                )}
-              >
-                {slide.platformSaasFooter ? (
-                  <>
-                    <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2.5">
-                      <span className="inline-flex items-center gap-1.5 rounded-full bg-ucsd-navy px-3 py-1 text-[10px] font-black text-white shadow-sm sm:text-sm md:text-base">
-                        <Server size={13} className="text-ucsd-gold sm:h-4 sm:w-4" />
-                        {slide.platformSaasFooter.label}
-                      </span>
-                      {slide.platformSaasFooter.context && (
-                        <span className="font-black text-ucsd-navy sm:text-sm md:text-base">{slide.platformSaasFooter.context}</span>
-                      )}
-                      {(slide.platformSaasFooter.partners || []).map((partner) => (
-                        <span key={partner} className="rounded-full border border-ucsd-blue/30 bg-white px-2.5 py-0.5 font-bold text-ucsd-navy shadow-sm sm:px-3">
-                          {partner}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 text-[8px] uppercase tracking-[0.08em] text-ucsd-navy/70 sm:text-[10px]">
-                      {(slide.platformSaasFooter.badges || []).map((badge, index) => (
-                        <span key={badge} className="flex items-center gap-1">
-                          {index > 0 && <span className="text-ucsd-gold">◆</span>}
-                          <span>{badge}</span>
-                        </span>
-                      ))}
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <span className="hidden sm:inline">Hosted at San Diego Supercomputer Center</span>
-                    <span className="sm:hidden">Hosted at SDSC</span>
-                    <span className="text-ucsd-gold text-lg sm:text-xl">◆</span>
-                    <span>Low Cost & Open Source</span>
-                    <span className="text-ucsd-gold text-lg sm:text-xl">◆</span>
-                    <span>Model Agnostic</span>
-                  </>
-                )}
-              </motion.div>
+              {!slide.platformSaasFooter && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 1.5 }}
+                  className="mt-2 sm:mt-3 pt-2 border-t-2 border-ucsd-gold/30 text-center font-semibold text-black flex items-center justify-center gap-2 text-xs sm:gap-4 sm:text-base md:text-lg"
+                >
+                  <span className="hidden sm:inline">Hosted at San Diego Supercomputer Center</span>
+                  <span className="sm:hidden">Hosted at SDSC</span>
+                  <span className="text-ucsd-gold text-lg sm:text-xl">◆</span>
+                  <span>Low Cost & Open Source</span>
+                  <span className="text-ucsd-gold text-lg sm:text-xl">◆</span>
+                  <span>Model Agnostic</span>
+                </motion.div>
+              )}
             </motion.div>
           </div>
         </div>
