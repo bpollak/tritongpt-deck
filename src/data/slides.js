@@ -903,7 +903,8 @@ export const slides = [
       }
     ],
     "platformSaasFooter": {
-      "label": "SDSC-hosted SaaS for UC San Diego and partners",
+      "label": "SDSC-hosted SaaS",
+      "context": "for UC San Diego and partner institutions",
       "partners": [
         "UC Berkeley",
         "UC Merced",

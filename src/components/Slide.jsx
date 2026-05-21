@@ -2462,16 +2462,22 @@ const Slide = ({ slide }) => {
                 className={clsx(
                   "mt-2 sm:mt-3 pt-2 border-t-2 border-ucsd-gold/30 text-center font-semibold text-black",
                   slide.platformSaasFooter
-                    ? "flex flex-col items-center gap-1.5 text-[9px] sm:text-xs md:text-[13px]"
+                    ? "flex flex-col items-center gap-1.5 rounded-xl border border-ucsd-blue/20 bg-gradient-to-r from-white/90 via-ucsd-blue/5 to-white/90 px-2.5 py-2 text-[9px] shadow-sm sm:text-xs md:text-[13px]"
                     : "flex items-center justify-center gap-2 text-xs sm:gap-4 sm:text-base md:text-lg"
                 )}
               >
                 {slide.platformSaasFooter ? (
                   <>
-                    <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
-                      <span className="font-black text-ucsd-navy">{slide.platformSaasFooter.label}</span>
+                    <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2.5">
+                      <span className="inline-flex items-center gap-1.5 rounded-full bg-ucsd-navy px-3 py-1 text-[10px] font-black text-white shadow-sm sm:text-sm md:text-base">
+                        <Server size={13} className="text-ucsd-gold sm:h-4 sm:w-4" />
+                        {slide.platformSaasFooter.label}
+                      </span>
+                      {slide.platformSaasFooter.context && (
+                        <span className="font-black text-ucsd-navy sm:text-sm md:text-base">{slide.platformSaasFooter.context}</span>
+                      )}
                       {(slide.platformSaasFooter.partners || []).map((partner) => (
-                        <span key={partner} className="rounded-full border border-ucsd-blue/25 bg-white/80 px-2 py-0.5 text-ucsd-navy shadow-sm">
+                        <span key={partner} className="rounded-full border border-ucsd-blue/30 bg-white px-2.5 py-0.5 font-bold text-ucsd-navy shadow-sm sm:px-3">
                           {partner}
                         </span>
                       ))}
