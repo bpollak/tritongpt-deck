@@ -122,8 +122,7 @@ export const slides = [
       "public",
       "internal",
       "technical",
-      "cabinet",
-      "regent"
+      "cabinet"
     ]
   },
   {
@@ -161,8 +160,7 @@ export const slides = [
       "public",
       "internal",
       "technical",
-      "cabinet",
-      "regent"
+      "cabinet"
     ]
   },
   {
@@ -246,8 +244,7 @@ export const slides = [
       "public",
       "internal",
       "technical",
-      "ASU-GSV",
-      "regent"
+      "ASU-GSV"
     ]
   },
   {
@@ -3799,8 +3796,14 @@ export const slides = [
         "title": "Models that reason, plan, and use tools.",
         "body": "Frontier models crossed a threshold: they sustain multi-step work, hold long context, and call tools natively — not just chat.",
         "examples": [
-          { "name": "Claude Opus", "logoUrl": "https://cdn.simpleicons.org/anthropic/0d5f93" },
-          { "name": "GPT-5 series", "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg" }
+          {
+            "name": "Claude Opus",
+            "logoUrl": "https://cdn.simpleicons.org/anthropic/0d5f93"
+          },
+          {
+            "name": "GPT-5 series",
+            "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg"
+          }
         ]
       },
       {
@@ -3808,15 +3811,25 @@ export const slides = [
         "title": "Harnesses arrived off the shelf.",
         "body": "Production scaffolding now ships from the major vendors — loop, tools, memory, permissions — ready to accomplish real work.",
         "examples": [
-          { "name": "Claude Code", "logoUrl": "https://cdn.simpleicons.org/anthropic/be634d" },
-          { "name": "OpenAI Codex", "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg" },
-          { "name": "OpenCode", "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/opencode.svg" }
+          {
+            "name": "Claude Code",
+            "logoUrl": "https://cdn.simpleicons.org/anthropic/be634d"
+          },
+          {
+            "name": "OpenAI Codex",
+            "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg"
+          },
+          {
+            "name": "OpenCode",
+            "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/opencode.svg"
+          }
         ]
       }
     ],
     "audiences": [
       "all",
-      "citizen"
+      "citizen",
+      "regent"
     ]
   },
   {
@@ -3861,7 +3874,8 @@ export const slides = [
       }
     ],
     "audiences": [
-      "citizen"
+      "citizen",
+      "regent"
     ]
   },
   {
@@ -3947,7 +3961,8 @@ export const slides = [
       }
     ],
     "audiences": [
-      "citizen"
+      "citizen",
+      "regent"
     ]
   },
   {
@@ -4003,7 +4018,8 @@ export const slides = [
       }
     ],
     "audiences": [
-      "citizen"
+      "citizen",
+      "regent"
     ]
   },
   {
@@ -4083,7 +4099,8 @@ export const slides = [
       }
     ],
     "audiences": [
-      "citizen"
+      "citizen",
+      "regent"
     ]
   },
   {
@@ -4127,7 +4144,8 @@ export const slides = [
       }
     ],
     "audiences": [
-      "citizen"
+      "citizen",
+      "regent"
     ]
   },
   {
@@ -4180,7 +4198,8 @@ export const slides = [
       }
     ],
     "audiences": [
-      "citizen"
+      "citizen",
+      "regent"
     ]
   },
   {
@@ -4256,7 +4275,8 @@ export const slides = [
       ]
     },
     "audiences": [
-      "citizen"
+      "citizen",
+      "regent"
     ]
   },
   {
@@ -4333,7 +4353,8 @@ export const slides = [
       }
     ],
     "audiences": [
-      "citizen"
+      "citizen",
+      "regent"
     ]
   },
   {
@@ -4357,9 +4378,18 @@ export const slides = [
       }
     ],
     "harnesses": [
-      { "name": "Claude Code", "logoUrl": "https://cdn.simpleicons.org/anthropic/171814" },
-      { "name": "Codex", "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg" },
-      { "name": "OpenCode", "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/opencode.svg" }
+      {
+        "name": "Claude Code",
+        "logoUrl": "https://cdn.simpleicons.org/anthropic/171814"
+      },
+      {
+        "name": "Codex",
+        "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg"
+      },
+      {
+        "name": "OpenCode",
+        "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/opencode.svg"
+      }
     ],
     "priorityHeading": "Your personal context",
     "prioritySystems": [
@@ -4425,7 +4455,8 @@ export const slides = [
     ],
     "tiersFooter": "Personal first. Team next. Department and campus aggregations follow — each tier wrapped in its own governance layer.",
     "audiences": [
-      "citizen"
+      "citizen",
+      "regent"
     ]
   },
   {
@@ -4437,11 +4468,23 @@ export const slides = [
     "variant": "harness-two-environments",
     "marker": "ENVIRONMENTS",
     "parts": [
-      { "text": "Where the agent " },
-      { "text": "runs", "accent": true },
-      { "text": " decides what it can " },
-      { "text": "reach", "accent": true },
-      { "text": "." }
+      {
+        "text": "Where the agent "
+      },
+      {
+        "text": "runs",
+        "accent": true
+      },
+      {
+        "text": " decides what it can "
+      },
+      {
+        "text": "reach",
+        "accent": true
+      },
+      {
+        "text": "."
+      }
     ],
     "environments": [
       {
@@ -4452,11 +4495,29 @@ export const slides = [
         "tone": "blue",
         "chassis": "laptop",
         "reachable": [
-          { "icon": "gateway",   "label": "TritonAI gateway" },
-          { "icon": "calendar",  "label": "Microsoft Graph", "proposed": true },
-          { "icon": "people",    "label": "Google Workspace", "proposed": true },
-          { "icon": "library",   "label": "Confluence", "proposed": true },
-          { "icon": "folder",    "label": "Local files" }
+          {
+            "icon": "gateway",
+            "label": "TritonAI gateway"
+          },
+          {
+            "icon": "calendar",
+            "label": "Microsoft Graph",
+            "proposed": true
+          },
+          {
+            "icon": "people",
+            "label": "Google Workspace",
+            "proposed": true
+          },
+          {
+            "icon": "library",
+            "label": "Confluence",
+            "proposed": true
+          },
+          {
+            "icon": "folder",
+            "label": "Local files"
+          }
         ],
         "footnote": "supported by local computer security mechanisms"
       },
@@ -4468,11 +4529,26 @@ export const slides = [
         "tone": "coral",
         "chassis": "container",
         "reachable": [
-          { "icon": "gateway",    "label": "TritonAI gateway" },
-          { "icon": "enterprise", "label": "Research Data" },
-          { "icon": "enterprise", "label": "Employee Data" },
-          { "icon": "enterprise", "label": "Finance Data" },
-          { "icon": "enterprise", "label": "Other Enterprise Systems" }
+          {
+            "icon": "gateway",
+            "label": "TritonAI gateway"
+          },
+          {
+            "icon": "enterprise",
+            "label": "Research Data"
+          },
+          {
+            "icon": "enterprise",
+            "label": "Employee Data"
+          },
+          {
+            "icon": "enterprise",
+            "label": "Finance Data"
+          },
+          {
+            "icon": "enterprise",
+            "label": "Other Enterprise Systems"
+          }
         ],
         "footnote": "supported path for shared, real-data work"
       }
@@ -4498,7 +4574,8 @@ export const slides = [
       ]
     },
     "audiences": [
-      "citizen"
+      "citizen",
+      "regent"
     ]
   },
   {
@@ -4653,7 +4730,8 @@ export const slides = [
       "Starter credits"
     ],
     "audiences": [
-      "citizen"
+      "citizen",
+      "regent"
     ]
   },
   {
@@ -4755,7 +4833,8 @@ export const slides = [
       }
     ],
     "audiences": [
-      "citizen"
+      "citizen",
+      "regent"
     ]
   },
   {
@@ -4856,7 +4935,8 @@ export const slides = [
       "Campus App Hosting"
     ],
     "audiences": [
-      "citizen"
+      "citizen",
+      "regent"
     ]
   }
 ];
