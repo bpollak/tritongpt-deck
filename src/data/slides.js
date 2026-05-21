@@ -273,7 +273,8 @@ export const slides = [
       "all",
       "public",
       "internal",
-      "executive"
+      "executive",
+      "cabinet"
     ]
   },
   {
@@ -1596,153 +1597,159 @@ export const slides = [
     "id": 23,
     "slug": "tritonai-developer-api-program",
     "type": "content",
-    "content": [],
-    "layout": "harness-definition",
-    "variant": "harness-developer-api-program",
-    "marker": "API PATH",
-    "aliases": [
-      "cabinet-harness-11c-developer-api-program"
-    ],
-    "programTitle": "TritonAI Developer API Program",
-    "harnessLabel": "AI harnesses",
-    "parts": [
-      {
-        "text": "The Developer API is the "
-      },
-      {
-        "text": "paved path",
-        "accent": true
-      },
-      {
-        "text": " for builders."
-      }
-    ],
-    "users": [
-      {
-        "title": "Dept. Staff",
-        "icon": "people"
-      },
-      {
-        "title": "Research Labs",
-        "icon": "builder"
-      },
-      {
-        "title": "Admin Analysts",
-        "icon": "lane"
-      },
-      {
-        "title": "Faculty Teams",
-        "icon": "library"
-      }
-    ],
-    "harnesses": [
-      {
-        "title": "Claude Code",
-        "subtitle": "Anthropic",
-        "icon": "mcp",
-        "color": "#d47a5f",
-        "fill": "#fff5ee"
-      },
-      {
-        "title": "Codex",
-        "subtitle": "OpenAI",
-        "icon": "builder",
-        "color": "#10b981",
-        "fill": "#ecfdf5"
-      },
-      {
-        "title": "OpenCode",
-        "subtitle": "Open source",
-        "icon": "code",
-        "color": "#15243d",
-        "fill": "#eef1f5"
-      }
-    ],
+    "layout": "api-gateway",
+    "title": "TritonAI Developer API Program",
+    "subtitle": "A governed starting point for AI-built departmental tools",
+    "backgroundColor": "#F5F0E6",
     "providers": [
       {
-        "title": "Azure OpenAI",
-        "icon": "gateway",
-        "color": "#1f78d1",
-        "fill": "#e8f2ff"
+        "name": "Azure OpenAI",
+        "color": "#0078D4",
+        "icon": "Server"
       },
       {
-        "title": "Google Cloud",
-        "icon": "gateway",
-        "color": "#4b82f6",
-        "fill": "#eef4ff"
+        "name": "Google Cloud",
+        "color": "#4285F4",
+        "icon": "Server"
       },
       {
-        "title": "AWS Bedrock",
-        "icon": "pipeline",
-        "color": "#f28c00",
-        "fill": "#fff5e6"
+        "name": "AWS Bedrock",
+        "color": "#FF9900",
+        "icon": "Server"
       },
       {
-        "title": "SDSC Self-Hosted",
-        "icon": "lane",
-        "color": "#15243d",
-        "fill": "#eef1f5"
+        "name": "SDSC Self-Hosted",
+        "color": "#182B49",
+        "icon": "Database"
       }
     ],
-    "capabilities": [
-      "CHAT",
-      "REASONING",
-      "VISION",
-      "IMAGE GEN",
-      "OCR",
-      "CODING"
+    "gateway": {
+      "name": "LLM Gateway",
+      "subtitle": "Templates + Guardrails"
+    },
+    "consumersHeading": "Builder Personas",
+    "consumers": [
+      {
+        "name": "Dept. Staff",
+        "icon": "Users"
+      },
+      {
+        "name": "Research Labs",
+        "icon": "FlaskConical"
+      },
+      {
+        "name": "Admin Analysts",
+        "icon": "Wallet"
+      },
+      {
+        "name": "Faculty Teams",
+        "icon": "BookOpen"
+      }
     ],
+    "devToolsHeading": "AI Coding Agents",
+    "devTools": [
+      {
+        "name": "Claude Code",
+        "vendor": "Anthropic",
+        "icon": "Brain",
+        "color": "#D97757"
+      },
+      {
+        "name": "Codex",
+        "vendor": "OpenAI",
+        "icon": "CheckCircle",
+        "color": "#10A37F"
+      }
+    ],
+    "devToolsAnnotation": "Builders use Claude Code or Codex with ITS templates, identity patterns, and curated integrations to create internal apps safely.",
+    "modelTypes": [
+      {
+        "name": "Chat",
+        "icon": "Brain"
+      },
+      {
+        "name": "Reasoning",
+        "icon": "Cpu"
+      },
+      {
+        "name": "Vision",
+        "icon": "Monitor"
+      },
+      {
+        "name": "Image Gen",
+        "icon": "Presentation"
+      },
+      {
+        "name": "OCR",
+        "icon": "FileCheck"
+      },
+      {
+        "name": "Coding",
+        "icon": "Code"
+      }
+    ],
+    "accessHeading": "Paved Path",
     "accessSteps": [
       {
+        "number": "1",
         "title": "Request",
-        "body": "Describe the use case, audience, and campus data involved",
-        "color": "#15243d"
+        "description": "Describe the use case, audience, and campus data involved",
+        "icon": "FileText",
+        "color": "#182B49"
       },
       {
+        "number": "2",
         "title": "Receive",
-        "body": "Get API key, starter credits, template repo, and agent instructions",
-        "color": "#0d5f93"
+        "description": "Get API key, starter credits, template repo, and agent instructions",
+        "icon": "CheckCircle",
+        "color": "#00629B"
       },
       {
+        "number": "3",
         "title": "Build",
-        "body": "Use approved stacks, campus auth patterns, and curated integrations",
-        "color": "#11c5d6"
+        "description": "Use approved stacks, campus auth patterns, and curated integrations",
+        "icon": "Code",
+        "color": "#00C6D7"
       },
       {
+        "number": "4",
         "title": "Host",
-        "body": "Apply for Campus App Hosting or graduate to enterprise delivery",
-        "color": "#ffc928"
+        "description": "Apply for Campus App Hosting or graduate to enterprise delivery",
+        "icon": "TrendingUp",
+        "color": "#FFCD00"
       }
     ],
-    "ownership": [
-      {
-        "title": "ITS owns",
+    "guardrails": [
+      "P1-P3 Data Only",
+      "Approved Stacks",
+      "Curated Integrations",
+      "Campus Auth Pattern",
+      "Usage Tracking",
+      "No Model Training",
+      "Starter Credits"
+    ],
+    "ownership": {
+      "its": {
+        "title": "ITS Owns",
         "items": [
           "Templates & Standards",
           "Hosting, SSO & Logs",
           "Baseline Risk Review",
           "Right to Remove Apps"
-        ]
+        ],
+        "color": "#00629B"
       },
-      {
-        "title": "Department owns",
+      "builder": {
+        "title": "Department Owns",
         "items": [
           "App Logic & Dependencies",
           "Accessibility & Testing",
           "End-User Support",
           "Named Technical POC"
-        ]
+        ],
+        "color": "#FFCD00"
       }
-    ],
-    "footerBadges": [
-      "P1-P3 data only",
-      "Approved stacks",
-      "Curated integrations",
-      "Campus auth pattern",
-      "Usage tracking",
-      "No model training",
-      "Starter credits"
-    ],
+    },
     "audiences": [
       "all",
       "internal",
@@ -1855,98 +1862,93 @@ export const slides = [
     "id": 25,
     "slug": "campus-app-hosting-intake",
     "type": "content",
-    "content": [],
-    "layout": "harness-definition",
-    "variant": "harness-campus-hosting",
-    "marker": "HOSTING",
-    "aliases": [
-      "cabinet-harness-11d-campus-app-hosting-intake"
-    ],
-    "parts": [
+    "layout": "intake-funnel",
+    "title": "Campus App Hosting",
+    "subtitle": "Tiered intake from citizen apps to enterprise — with governance gates at every level",
+    "backgroundColor": "#F5F0E6",
+    "pipelineSteps": [
       {
-        "text": "Built artifacts need a "
+        "number": "1",
+        "name": "Apply",
+        "description": "Submit department sponsor, technical POC, audience, and data classification",
+        "icon": "FileText",
+        "color": "#006A96"
       },
       {
-        "text": "hosting lane",
-        "accent": true
+        "number": "2",
+        "name": "Prototype",
+        "description": "Build locally with Claude Code, Codex, or curated ITS templates via the TritonAI Developer API",
+        "icon": "Code",
+        "color": "#00629B"
       },
       {
-        "text": "."
+        "number": "3",
+        "name": "Review",
+        "description": "Automated checks plus guided ITS review of data sensitivity, restricted APIs, and stack fit",
+        "icon": "ClipboardCheck",
+        "color": "#00C6D7"
+      },
+      {
+        "number": "4",
+        "name": "Deploy",
+        "description": "Campus-only hosting with SSO, logging, and network controls — available on campus or VPN",
+        "icon": "Globe",
+        "color": "#FFCD00"
+      },
+      {
+        "number": "5",
+        "name": "Operate",
+        "description": "Department supports the app; ITS manages platform health and may remove non-compliant apps",
+        "icon": "RefreshCw",
+        "color": "#FC8900"
+      },
+      {
+        "number": "6",
+        "name": "Promote",
+        "description": "High-value apps graduate to enterprise support; unsupported apps are retired",
+        "icon": "TrendingUp",
+        "color": "#6E963B"
       }
     ],
-    "subhead": "Tiered intake for agentic builds — from individual desktops to enterprise. Volume drops as governance increases.",
-    "hostingTiers": [
+    "lanes": [
       {
-        "tierLabel": "Tier 0",
-        "users": "Individual Users",
-        "volume": "~1000+/y",
-        "color": "#4f7f38",
-        "softColor": "#c8dac1",
-        "fill": "#eef6ea",
-        "process": "Citizen-Initiated Development",
-        "userDeployments": [
-          {
-            "label": "User Desktop / Laptop",
-            "tools": [
-              "Claude Code",
-              "Codex",
-              "Onyx Craft + OpenCode",
-              "Campus Jupyter + OpenCode"
-            ]
-          },
-          {
-            "label": "User Sandbox",
-            "tools": [
-              "Claude Code",
-              "Codex",
-              "OpenCode"
-            ],
-            "note": "May be required for some API/MCP tooling"
-          }
-        ]
-      },
-      {
-        "tierLabel": "Tier 1",
-        "users": "Scattered Users",
-        "volume": "~200/y",
-        "color": "#0076a8",
-        "softColor": "#b9d4e6",
-        "fill": "#e7f0f7",
-        "review": "Citizen App Risk / Scope Review",
+        "id": "citizen",
+        "label": "Citizen Apps",
+        "volume": "~200/yr",
+        "teamSize": 1,
+        "teamLabel": "Individual developers",
+        "color": "#4A7A2E",
+        "gate": "Citizen App Risk / Scope Review",
         "deployment": "Citizen-Curated Deployment",
         "domain": "*.apps.ucsd.edu",
-        "recurring": "Recurring Risk / Scope Review"
+        "recurringReview": true,
+        "escalatesTo": "tritonai"
       },
       {
-        "tierLabel": "Tier 2",
-        "users": "Many Users",
-        "volume": "~20/y",
-        "color": "#009cad",
-        "softColor": "#b9e0e5",
-        "fill": "#e6f6f8",
-        "review": "TritonAI Tools & Rapid Dev",
-        "deployments": [
-          {
-            "name": "TritonAI Dev",
-            "domain": "*.tritonai.ucsd.edu"
-          },
-          {
-            "name": "Rapid ITS Dev",
-            "domain": "*.ucsd.edu"
-          }
-        ],
-        "recurring": "Recurring Risk / Scope Review"
+        "id": "tritonai",
+        "label": "TritonAI Rapid Dev",
+        "volume": "~20/yr",
+        "teamSize": 3,
+        "teamLabel": "Small teams",
+        "color": "#0097A7",
+        "gate": "TritonAI Tools & Rapid Dev",
+        "deployment": "TritonAI Dev",
+        "domain": "*.tritonai.ucsd.edu",
+        "recurringReview": true,
+        "escalatesTo": "enterprise"
       },
       {
-        "tierLabel": "Tier 3",
-        "users": "Campus-Wide Usage",
-        "volume": "~1-5/y",
-        "color": "#00629b",
-        "softColor": "#9eb9d6",
-        "fill": "#dfeaf3",
-        "review": "Enterprise Architecture / Dev",
+        "id": "enterprise",
+        "label": "Enterprise",
+        "volume": "~1-5/yr",
+        "teamSize": 6,
+        "teamLabel": "Large cross-functional teams",
+        "color": "#00629B",
+        "gate": "Enterprise Architecture / Dev",
         "deployment": "Traditional Enterprise Dev / Deployment",
-        "domain": "iPaaS Patterns"
+        "domain": "iPaaS Patterns",
+        "recurringReview": false,
+        "escalatesTo": null
       }
     ],
     "audiences": [
