@@ -1605,7 +1605,7 @@ export const slides = [
     "aliases": [
       "cabinet-harness-11c-developer-api-program"
     ],
-    "programTitle": "TritonAI Build API Program",
+    "programTitle": "TritonAI API Program",
     "harnessLabel": "AI harnesses",
     "parts": [
       {
@@ -4593,7 +4593,7 @@ export const slides = [
     "aliases": [
       "tritonai-developer-api-program"
     ],
-    "programTitle": "TritonAI Build API Program",
+    "programTitle": "TritonAI API Program",
     "harnessLabel": "AI harnesses",
     "parts": [
       {

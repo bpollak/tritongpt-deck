@@ -1841,7 +1841,7 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
 
       <div className="absolute left-[4.8vw] right-[4.8vw] top-[2.5vh] text-center">
         <motion.h1 {...fade(0.12)} style={{ color: T.ink, fontFamily: titleFont, fontSize: 'clamp(32px, 3vw, 50px)', lineHeight: 0.92, fontWeight: isCitizenAudience(slide) ? 560 : 800, letterSpacing: '0' }}>
-          {slide.programTitle || 'TritonAI Build API Program'}
+          {slide.programTitle || 'TritonAI API Program'}
         </motion.h1>
       </div>
 
