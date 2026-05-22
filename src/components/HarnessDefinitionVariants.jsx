@@ -1838,13 +1838,14 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
   return (
     <Shell>
      <div className="absolute inset-0" style={{ fontFamily: T.sans }}>
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[4.8vh] text-center">
-        <motion.h1 {...fade(0.12)} style={{ color: T.ink, fontFamily: titleFont, fontSize: 'clamp(40px, 3.8vw, 62px)', lineHeight: 0.92, fontWeight: isCitizenAudience(slide) ? 560 : 800, letterSpacing: '0' }}>
-          {slide.programTitle || 'TritonAI Developer API Program'}
+
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[2.5vh] text-center">
+        <motion.h1 {...fade(0.12)} style={{ color: T.ink, fontFamily: titleFont, fontSize: 'clamp(32px, 3vw, 50px)', lineHeight: 0.92, fontWeight: isCitizenAudience(slide) ? 560 : 800, letterSpacing: '0' }}>
+          {slide.programTitle || 'TritonAI Build API Program'}
         </motion.h1>
       </div>
 
-      <div className="absolute left-[5.8vw] right-[5.8vw] top-[13.2vh] grid grid-cols-[22%_18.5%_1fr_26%] items-center gap-4">
+      <div className="absolute left-[5.8vw] right-[5.8vw] top-[10vh] grid grid-cols-[20%_18.5%_1fr_26%] items-center gap-6">
         <div>
           <Kicker className="mb-2" style={{ color: T.muted }}>Campus users</Kicker>
           <div className="space-y-2">
@@ -1920,13 +1921,13 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
           </div>
         </div>
         <div className="pointer-events-none absolute inset-0">
-          <div className="absolute left-[18%] top-[139px] flex items-center gap-2">
+          <div className="absolute left-[17.5%] top-[139px] flex items-center gap-2">
             <ApiProgramPill delay={0.72}>Use</ApiProgramPill>
-            <ApiConnectorArrow width={42} />
+            <ApiConnectorArrow width={20} />
           </div>
-          <div className="absolute left-[43.2%] top-[139px] flex items-center gap-2">
+          <div className="absolute left-[42%] top-[139px] flex items-center gap-2">
             <ApiProgramPill delay={0.78}>Connect to</ApiProgramPill>
-            <ApiConnectorArrow width={18} />
+            <ApiConnectorArrow width={8} />
           </div>
           <div className="absolute left-[64.5%] top-[139px] flex items-center gap-2">
             <ApiProgramPill delay={0.95}>Accesses</ApiProgramPill>
@@ -1935,7 +1936,7 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
         </div>
       </div>
 
-      <Card delay={1.08} className="absolute left-[5.8vw] right-[5.8vw] top-[40vh] p-4">
+      <div className="absolute left-[5.8vw] right-[5.8vw] top-[42vh]">
         <div className="mb-3 text-center text-[15px] uppercase" style={{ color: T.muted, fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.18em' }}>How to get access</div>
         <div className="grid grid-cols-4 gap-5">
           {accessSteps.map((step, index) => (
@@ -1948,15 +1949,15 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
             </motion.div>
           ))}
         </div>
-      </Card>
+      </div>
 
-      <div className="absolute left-[5.8vw] right-[5.8vw] top-[58vh] grid grid-cols-2 gap-5">
+      <div className="absolute left-[5.8vw] right-[5.8vw] top-[60vh] grid grid-cols-2 gap-4">
         {ownership.map((owner, index) => (
-          <Card key={owner.title} delay={1.35 + index * 0.08} className="p-4">
+          <Card key={owner.title} delay={1.35 + index * 0.08} className="p-3">
             <div className="text-[14px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.18em', fontWeight: 800 }}>
               {owner.title}
             </div>
-            <div className="mt-3 grid grid-cols-2 gap-2.5">
+            <div className="mt-2 grid grid-cols-2 gap-2">
               {owner.items.map((item) => (
                 <span key={item} className="rounded-full px-3 py-2 text-center text-[15px]" style={{ background: '#edf1f5', color: T.ink, fontFamily: T.mono, fontWeight: 700, letterSpacing: '0' }}>{item}</span>
               ))}
@@ -1965,7 +1966,7 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
         ))}
       </div>
 
-      <div className="absolute left-[5.8vw] right-[5.8vw] top-[78vh] flex items-center justify-between gap-3 flex-wrap">
+      <div className="absolute left-[5.8vw] right-[5.8vw] top-[76vh] flex items-center justify-between gap-3 flex-wrap">
         {footerBadges.map((badge, index) => (
           <React.Fragment key={badge}>
             <motion.div {...fade(1.52 + index * 0.04, 0)} className="whitespace-nowrap text-[14px] uppercase" style={{ color: '#6f7b8b', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.06em' }}>
