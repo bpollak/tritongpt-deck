@@ -273,8 +273,7 @@ export const slides = [
       "all",
       "public",
       "internal",
-      "executive",
-      "cabinet"
+      "executive"
     ]
   },
   {
@@ -987,8 +986,7 @@ export const slides = [
       "all",
       "public",
       "internal",
-      "technical",
-      "cabinet"
+      "technical"
     ]
   },
   {
@@ -1180,8 +1178,7 @@ export const slides = [
     "audiences": [
       "all",
       "public",
-      "internal",
-      "cabinet"
+      "internal"
     ]
   },
   {
@@ -1293,9 +1290,9 @@ export const slides = [
       "public",
       "internal",
       "ASU-GSV",
-      "cabinet",
       "executive",
-      "regent"
+      "regent",
+      "cabinet"
     ]
   },
   {
@@ -1767,7 +1764,6 @@ export const slides = [
       "public",
       "ASU-GSV",
       "executive",
-      "cabinet",
       "regent"
     ]
   },
@@ -1973,7 +1969,6 @@ export const slides = [
       "public",
       "ASU-GSV",
       "executive",
-      "cabinet",
       "regent"
     ]
   },
@@ -2125,7 +2120,6 @@ export const slides = [
       "all",
       "internal",
       "ASU-GSV",
-      "cabinet",
       "regent"
     ]
   },
@@ -2262,7 +2256,6 @@ export const slides = [
       "public",
       "ASU-GSV",
       "executive",
-      "cabinet",
       "regent"
     ]
   },
@@ -3849,7 +3842,8 @@ export const slides = [
     "audiences": [
       "all",
       "citizen",
-      "regent"
+      "regent",
+      "cabinet"
     ]
   },
   {
@@ -4120,7 +4114,8 @@ export const slides = [
     ],
     "audiences": [
       "citizen",
-      "regent"
+      "regent",
+      "cabinet"
     ]
   },
   {
@@ -4476,7 +4471,8 @@ export const slides = [
     "tiersFooter": "Personal first. Team next. Department and campus aggregations follow — each tier wrapped in its own governance layer.",
     "audiences": [
       "citizen",
-      "regent"
+      "regent",
+      "cabinet"
     ]
   },
   {
@@ -4751,7 +4747,8 @@ export const slides = [
     ],
     "audiences": [
       "citizen",
-      "regent"
+      "regent",
+      "cabinet"
     ]
   },
   {
@@ -4854,7 +4851,8 @@ export const slides = [
     ],
     "audiences": [
       "citizen",
-      "regent"
+      "regent",
+      "cabinet"
     ]
   },
   {
@@ -4956,7 +4954,8 @@ export const slides = [
     ],
     "audiences": [
       "citizen",
-      "regent"
+      "regent",
+      "cabinet"
     ]
   }
 ];
