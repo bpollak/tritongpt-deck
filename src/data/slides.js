@@ -3373,7 +3373,6 @@ export const slides = [
     ],
     "audiences": [
       "all",
-      "cabinet",
       "regent"
     ]
   },
