@@ -37,10 +37,11 @@ const runGit = async (args) => {
   return runExecFile('git', args, { cwd: rootDir })
 }
 
-// Fields the admin panel is allowed to write. Everything else on each slide
-// is preserved from the on-disk source so concurrent code edits to unrelated
-// fields (title, content, stats, etc.) are never clobbered by a stale panel
-// snapshot.
+// Fields the admin panel is allowed to write inside a slide object. Slide
+// ordering and removal are represented by the incoming array itself.
+// Everything else on each slide is preserved from the on-disk source so
+// concurrent code edits to unrelated fields (title, content, stats, etc.) are
+// not clobbered by a stale panel snapshot.
 const PANEL_OWNED_FIELDS = ['audiences']
 
 const readSlidesFromDisk = async (slidesSourcePath) => {
@@ -53,13 +54,13 @@ const readSlidesFromDisk = async (slidesSourcePath) => {
 }
 
 const mergePanelFields = (diskSlides, incomingSlides) => {
-  const incomingById = new Map(
-    incomingSlides.map((slide) => [String(slide.id), slide])
+  const diskById = new Map(
+    diskSlides.map((slide) => [String(slide.id), slide])
   )
 
-  return diskSlides.map((diskSlide) => {
-    const incoming = incomingById.get(String(diskSlide.id))
-    if (!incoming) return diskSlide
+  return incomingSlides.map((incoming) => {
+    const diskSlide = diskById.get(String(incoming.id))
+    if (!diskSlide) return incoming
 
     const merged = { ...diskSlide }
     for (const field of PANEL_OWNED_FIELDS) {
@@ -106,7 +107,7 @@ const commitAndPushSlides = async () => {
   }
 
   await runGit(['add', trackedFile])
-  await runGit(['commit', '-m', 'Update slide audiences via local admin panel', '--', trackedFile])
+  await runGit(['commit', '-m', 'Update slide deck via local admin panel', '--', trackedFile])
 
   const { stdout: commitOutput } = await runGit(['rev-parse', '--short', 'HEAD'])
   const { stdout: branchOutput } = await runGit(['branch', '--show-current'])

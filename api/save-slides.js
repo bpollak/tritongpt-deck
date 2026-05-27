@@ -1,4 +1,4 @@
-// Vercel Serverless Function to save slide audience tags
+// Vercel Serverless Function to save slide audience tags, order, and removals.
 export default async function handler(req, res) {
   // Only allow POST requests
   if (req.method !== 'POST') {
@@ -72,7 +72,7 @@ export default async function handler(req, res) {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          message: 'Update slide audience tags via admin panel',
+          message: 'Update slide deck via admin panel',
           content: Buffer.from(fileContent).toString('base64'),
           sha: currentSha,
           branch: BRANCH
