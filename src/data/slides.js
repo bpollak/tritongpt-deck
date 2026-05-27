@@ -962,6 +962,22 @@ export const slides = [
     ]
   },
   {
+    "id": 7.1,
+    "slug": "video-screen-recording-2026-05-27",
+    "type": "video",
+    "content": [],
+    "managerLabel": "Video: Screen Recording 2026-05-27 (1.8x)",
+    "managerSummary": "New screen capture at 1.8x speed, inserted between the previous order 16 and 17 video slides.",
+    "videoSrc": "/media/screen-recording-2026-05-27-1.8x.mov",
+    "audiences": [
+      "all",
+      "public",
+      "internal",
+      "technical",
+      "cabinet"
+    ]
+  },
+  {
     "id": 39,
     "slug": "video-screen-recording-1",
     "type": "video",
