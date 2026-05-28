@@ -559,8 +559,8 @@ export const slides = [
     "slug": "tritongpt-initiative",
     "type": "content",
     "layout": "timeline-evolution",
-    "title": "TritonGPT Initiative",
-    "subtitle": "From Development to Campus-Wide Deployment",
+    "title": "TritonAI Ecosystem Timeline",
+    "subtitle": "From chatbot launch to governed campus AI platform",
     "backgroundColor": "#182B49",
     "dark": true,
     "years": [
@@ -624,7 +624,7 @@ export const slides = [
             "title": "Platform Prep",
             "items": [
               "Platform architecture upgraded for scale",
-              "Multi-LLM backend integration prepared"
+              "Model gateway prepared for commercial and local LLMs"
             ]
           },
           {
@@ -652,7 +652,7 @@ export const slides = [
             "title": "Advanced Tools",
             "items": [
               "AI-powered search and Blink AI overview launch",
-              "GPT-5.1 and Gemini 3 Pro added",
+              "Expanded model choice for higher-value use cases",
               "Deep Research and chat UI refresh underway"
             ]
           }
@@ -660,7 +660,7 @@ export const slides = [
       },
       {
         "rowLabel": "2026",
-        "rowTitle": "Agents & Automation",
+        "rowTitle": "Agents & Ecosystem",
         "quarters": [
           {
             "quarter": "Q1 '26",
@@ -669,7 +669,7 @@ export const slides = [
             "items": [
               "Transcript OCR and student record matching launch",
               "Instructional AI expands to 8 courses; scheduling assistant pilots begin",
-              "Triton AI site opens with API access and early N8N workflows"
+              "TritonAI site opens with API access and early N8N workflows"
             ]
           },
           {
@@ -680,6 +680,16 @@ export const slides = [
               "Contract review refinements with adjustable redlining",
               "Academic Advising Agent proof of concept",
               "AI IT observability pilot"
+            ]
+          },
+          {
+            "quarter": "Q3 '26",
+            "phase": "Ecosystem",
+            "title": "Governed Builder Path",
+            "items": [
+              "Developer APIs, Agent Builder, and skills library connect teams to reusable capabilities",
+              "MCP connectors and observability govern data access, tool calls, and reliability",
+              "Campus App Hosting turns successful prototypes into supported campus tools"
             ]
           }
         ]
