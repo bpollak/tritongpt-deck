@@ -1,4 +1,21 @@
 // Vercel Serverless Function to save slide audience tags, order, and removals.
+import { AUDIENCE_TYPES } from '../src/data/audiences.js';
+import {
+  buildSlideManagerStateFromSlides,
+  createSlideManagerStateModuleContent,
+  validateSlideManagerState
+} from '../src/data/slideManagerStateUtils.js';
+
+const decodeGitHubFile = (fileData) => Buffer.from(fileData.content || '', 'base64').toString('utf8');
+
+const parseSlidesModule = (source) => {
+  const match = source.match(/export const slides\s*=\s*(\[[\s\S]*\]);?\s*$/);
+  if (!match) {
+    throw new Error('Could not parse src/data/slides.js');
+  }
+  return JSON.parse(match[1]);
+};
+
 export default async function handler(req, res) {
   // Only allow POST requests
   if (req.method !== 'POST') {
@@ -29,41 +46,64 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Invalid slides data' });
     }
 
-    // Format the slides data as a JS file
-    const fileContent = `export const slides = ${JSON.stringify(slides, null, 2)};`;
-
     // GitHub API setup
     const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
     const REPO_OWNER = process.env.REPO_OWNER || 'bpollak';
     const REPO_NAME = process.env.REPO_NAME || 'tritongpt-deck';
-    const FILE_PATH = 'src/data/slides.js';
+    const SLIDES_FILE_PATH = 'src/data/slides.js';
+    const STATE_FILE_PATH = 'src/data/slideManagerState.js';
     const BRANCH = 'main';
 
     if (!GITHUB_TOKEN) {
       return res.status(500).json({ error: 'GITHUB_TOKEN is not configured on the server' });
     }
 
-    // Get current file SHA (required for updates)
-    const getFileResponse = await fetch(
-      `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}?ref=${BRANCH}`,
-      {
-        headers: {
-          'Authorization': `Bearer ${GITHUB_TOKEN}`,
-          'Accept': 'application/vnd.github.v3+json'
+    const getRepoFile = async (filePath, { required = true } = {}) => {
+      const response = await fetch(
+        `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${filePath}?ref=${BRANCH}`,
+        {
+          headers: {
+            'Authorization': `Bearer ${GITHUB_TOKEN}`,
+            'Accept': 'application/vnd.github.v3+json'
+          }
         }
-      }
-    );
+      );
 
-    if (!getFileResponse.ok) {
-      return res.status(500).json({ error: 'Failed to fetch current file' });
+      if (!response.ok) {
+        if (!required && response.status === 404) return null;
+        throw new Error(`Failed to fetch ${filePath}`);
+      }
+
+      return response.json();
+    };
+
+    const slidesFileData = await getRepoFile(SLIDES_FILE_PATH);
+    const stateFileData = await getRepoFile(STATE_FILE_PATH, { required: false });
+    const baseSlides = parseSlidesModule(decodeGitHubFile(slidesFileData));
+    const nextState = buildSlideManagerStateFromSlides(baseSlides, slides);
+    const validationErrors = validateSlideManagerState(baseSlides, nextState, { allowedAudiences: AUDIENCE_TYPES });
+
+    if (validationErrors.length > 0) {
+      return res.status(400).json({
+        error: 'Slide manager state validation failed',
+        details: validationErrors
+      });
     }
 
-    const fileData = await getFileResponse.json();
-    const currentSha = fileData.sha;
+    const fileContent = createSlideManagerStateModuleContent(nextState);
+    const body = {
+      message: 'Update slide manager state via admin panel',
+      content: Buffer.from(fileContent).toString('base64'),
+      branch: BRANCH
+    };
 
-    // Update the file
+    if (stateFileData?.sha) {
+      body.sha = stateFileData.sha;
+    }
+
+    // Update the manager-owned state file. Slide content stays in src/data/slides.js.
     const updateResponse = await fetch(
-      `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}`,
+      `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${STATE_FILE_PATH}`,
       {
         method: 'PUT',
         headers: {
@@ -71,12 +111,7 @@ export default async function handler(req, res) {
           'Accept': 'application/vnd.github.v3+json',
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({
-          message: 'Update slide deck via admin panel',
-          content: Buffer.from(fileContent).toString('base64'),
-          sha: currentSha,
-          branch: BRANCH
-        })
+        body: JSON.stringify(body)
       }
     );
 

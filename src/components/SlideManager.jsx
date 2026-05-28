@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { slides } from '../data/slides';
+import { slides } from '../data/slideDeck';
+import { buildSlideManagerStateFromSlides, createSlideManagerStateModuleContent } from '../data/slideManagerStateUtils';
 import { AUDIENCE_COLORS, AUDIENCE_TYPES, isSlideVisibleForAudience } from '../data/audiences';
 import { buildSlideManagerRegistry } from '../data/slideRegistry';
 import { clearLocalSlidePreview, isLocalPreviewHost, readLocalSlidePreview, writeLocalSlidePreview } from '../utils/localSlidePreview';
@@ -172,21 +173,21 @@ const SlideManager = ({ onClose, standalone = false }) => {
   }, [filterAudience, updatedSlides]);
 
   const exportConfig = () => {
-    const output = `export const slides = ${JSON.stringify(updatedSlides, null, 2)};`;
+    const output = createSlideManagerStateModuleContent(buildSlideManagerStateFromSlides(sourceSlidesSnapshot, updatedSlides));
 
     // Copy to clipboard
     navigator.clipboard.writeText(output).then(() => {
-      alert('Slide configuration copied to clipboard! Paste this into src/data/slides.js');
+      alert('Slide manager state copied to clipboard! Paste this into src/data/slideManagerState.js');
     });
   };
 
   const downloadConfig = () => {
-    const output = `export const slides = ${JSON.stringify(updatedSlides, null, 2)};`;
+    const output = createSlideManagerStateModuleContent(buildSlideManagerStateFromSlides(sourceSlidesSnapshot, updatedSlides));
     const blob = new Blob([output], { type: 'text/javascript' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'slides.js';
+    a.download = 'slideManagerState.js';
     a.click();
     URL.revokeObjectURL(url);
   };
@@ -240,8 +241,8 @@ const SlideManager = ({ onClose, standalone = false }) => {
     setSaveStatus('saving');
     setSaveMessage(
       pushToGitHub
-        ? 'Saving locally, committing src/data/slides.js, and pushing to GitHub...'
-        : 'Saving changes to src/data/slides.js on localhost...'
+        ? 'Saving locally, committing src/data/slideManagerState.js, and pushing to GitHub...'
+        : 'Saving changes to src/data/slideManagerState.js on localhost...'
     );
 
     try {
@@ -683,7 +684,7 @@ const SlideManager = ({ onClose, standalone = false }) => {
                 onClick={downloadConfig}
                 className="px-4 py-2 bg-gray-200 text-gray-700 font-medium rounded-lg hover:bg-gray-300 transition-colors text-sm"
               >
-                Download slides.js
+                Download State
               </button>
               <button
                 onClick={handleExport}
@@ -715,7 +716,7 @@ const SlideManager = ({ onClose, standalone = false }) => {
           </div>
           {localPreviewEnabled && (
             <div className="mt-3 text-xs text-gray-500">
-              Localhost changes are applied automatically in this browser. "Save to Repo" writes `src/data/slides.js`; "Push to GitHub" also commits and pushes that file after confirmation.
+              Localhost changes are applied automatically in this browser. "Save to Repo" writes `src/data/slideManagerState.js`; "Push to GitHub" commits and pushes only manager-owned order, removals, and audience settings.
             </div>
           )}
         </div>

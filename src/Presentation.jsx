@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'; // eslint-disable-line 
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Slide from './components/Slide';
 import TranscriptionOverlay from './components/TranscriptionOverlay';
-import { slides as defaultSlides } from './data/slides';
+import { slides as defaultSlides } from './data/slideDeck';
 import { isSlideVisibleForAudience } from './data/audiences';
 import { findSlideIndexByPermalink, getSlidePermalinkValue } from './data/slidePermalinks';
 import { LOCAL_SLIDE_PREVIEW_EVENT, LOCAL_SLIDE_PREVIEW_KEY, isLocalPreviewHost, readLocalSlidePreview } from './utils/localSlidePreview';

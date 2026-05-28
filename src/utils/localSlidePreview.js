@@ -1,4 +1,4 @@
-import { slides as defaultSlides } from '../data/slides';
+import { slides as defaultSlides } from '../data/slideDeck';
 
 export const LOCAL_SLIDE_PREVIEW_KEY = 'ucsd-presentation.local-slide-preview';
 export const LOCAL_SLIDE_PREVIEW_EVENT = 'ucsd-presentation:local-slide-preview-updated';

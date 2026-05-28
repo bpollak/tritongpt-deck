@@ -1,5 +1,5 @@
 import { DEFAULT_AUDIENCE } from './audiences.js';
-import { slides } from './slides.js';
+import { slides } from './slideDeck.js';
 
 const toTitleCase = (value) =>
   value.replace(/\w\S*/g, (word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());

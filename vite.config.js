@@ -4,7 +4,14 @@ import { execFile } from 'node:child_process'
 import { promisify } from 'node:util'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { createSlidesModuleContent, validateSlides, writeSlideArtifacts } from './scripts/lib/slideArtifacts.mjs'
+import { AUDIENCE_TYPES } from './src/data/audiences.js'
+import {
+  applySlideManagerState,
+  buildSlideManagerStateFromSlides,
+  createSlideManagerStateModuleContent,
+  validateSlideManagerState
+} from './src/data/slideManagerStateUtils.js'
+import { validateSlides, writeSlideArtifacts } from './scripts/lib/slideArtifacts.mjs'
 
 const runExecFile = promisify(execFile)
 const rootDir = process.cwd()
@@ -37,13 +44,6 @@ const runGit = async (args) => {
   return runExecFile('git', args, { cwd: rootDir })
 }
 
-// Fields the admin panel is allowed to write inside a slide object. Slide
-// ordering and removal are represented by the incoming array itself.
-// Everything else on each slide is preserved from the on-disk source so
-// concurrent code edits to unrelated fields (title, content, stats, etc.) are
-// not clobbered by a stale panel snapshot.
-const PANEL_OWNED_FIELDS = ['audiences']
-
 const readSlidesFromDisk = async (slidesSourcePath) => {
   const source = await fs.readFile(slidesSourcePath, 'utf8')
   const match = source.match(/export const slides\s*=\s*(\[[\s\S]*\]);?\s*$/)
@@ -53,34 +53,23 @@ const readSlidesFromDisk = async (slidesSourcePath) => {
   return JSON.parse(match[1])
 }
 
-const mergePanelFields = (diskSlides, incomingSlides) => {
-  const diskById = new Map(
-    diskSlides.map((slide) => [String(slide.id), slide])
-  )
-
-  return incomingSlides.map((incoming) => {
-    const diskSlide = diskById.get(String(incoming.id))
-    if (!diskSlide) return incoming
-
-    const merged = { ...diskSlide }
-    for (const field of PANEL_OWNED_FIELDS) {
-      if (Object.prototype.hasOwnProperty.call(incoming, field)) {
-        merged[field] = incoming[field]
-      }
-    }
-    return merged
-  })
-}
-
 const saveSlidesLocally = async (incomingSlides) => {
   const slidesSourcePath = path.join(rootDir, 'src/data/slides.js')
+  const slideManagerStatePath = path.join(rootDir, 'src/data/slideManagerState.js')
 
-  // Re-read the current source from disk and merge only panel-owned fields.
-  // This prevents a stale in-memory snapshot from the admin panel from
-  // reverting code-side edits to text/content/stats.
+  // Re-read slide content from disk and persist only manager-owned state. This
+  // prevents a stale panel snapshot from reverting code-side slide edits.
   const diskSlides = await readSlidesFromDisk(slidesSourcePath)
-  const mergedSlides = mergePanelFields(diskSlides, incomingSlides)
+  const nextState = buildSlideManagerStateFromSlides(diskSlides, incomingSlides)
+  const stateErrors = validateSlideManagerState(diskSlides, nextState, { allowedAudiences: AUDIENCE_TYPES })
 
+  if (stateErrors.length > 0) {
+    const error = new Error('Slide manager state validation failed')
+    error.validationErrors = stateErrors
+    throw error
+  }
+
+  const mergedSlides = applySlideManagerState(diskSlides, nextState)
   const errors = await validateSlides(mergedSlides, { rootDir })
 
   if (errors.length > 0) {
@@ -89,12 +78,12 @@ const saveSlidesLocally = async (incomingSlides) => {
     throw error
   }
 
-  await fs.writeFile(slidesSourcePath, createSlidesModuleContent(mergedSlides), 'utf8')
+  await fs.writeFile(slideManagerStatePath, createSlideManagerStateModuleContent(nextState), 'utf8')
   await writeSlideArtifacts(rootDir, mergedSlides)
 }
 
 const commitAndPushSlides = async () => {
-  const trackedFile = 'src/data/slides.js'
+  const trackedFile = 'src/data/slideManagerState.js'
   const { stdout: statusOutput } = await runGit(['status', '--short', '--', trackedFile])
 
   if (!statusOutput.trim()) {
@@ -147,7 +136,7 @@ const localSlideApiPlugin = () => ({
             success: true,
             savedLocally: true,
             pushed: false,
-            message: 'Saved to src/data/slides.js and refreshed the local deployment artifacts.'
+            message: 'Saved to src/data/slideManagerState.js and refreshed the local deployment artifacts.'
           })
           return
         }

@@ -1,13 +1,18 @@
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { slides } from '../src/data/slides.js';
+import { AUDIENCE_TYPES } from '../src/data/audiences.js';
+import { baseSlides, slideManagerState, slides } from '../src/data/slideDeck.js';
+import { validateSlideManagerState } from '../src/data/slideManagerStateUtils.js';
 import { validateSlides, writeSlideArtifacts } from './lib/slideArtifacts.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
-const errors = await validateSlides(slides, { rootDir });
+const errors = [
+  ...validateSlideManagerState(baseSlides, slideManagerState, { allowedAudiences: AUDIENCE_TYPES }),
+  ...(await validateSlides(slides, { rootDir }))
+];
 
 if (errors.length > 0) {
   console.error('Slide sync failed:\n');

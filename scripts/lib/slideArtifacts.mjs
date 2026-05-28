@@ -55,7 +55,7 @@ export const validateSlides = async (slides, { rootDir }) => {
   const errors = [];
 
   if (!Array.isArray(slides) || slides.length === 0) {
-    return ['`src/data/slides.js` must export a non-empty `slides` array.'];
+    return ['The merged slide deck must contain a non-empty `slides` array.'];
   }
 
   const seenSlideIds = new Set();

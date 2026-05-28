@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "sync:slides": "node scripts/sync-slide-artifacts.mjs",
+    "check:deck": "npm run sync:slides",
     "predev": "npm run sync:slides",
     "dev": "vite",
     "prebuild": "npm run sync:slides",
