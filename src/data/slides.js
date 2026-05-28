@@ -243,7 +243,8 @@ export const slides = [
       "public",
       "internal",
       "technical",
-      "ASU-GSV"
+      "ASU-GSV",
+      "executive"
     ]
   },
   {
@@ -777,7 +778,8 @@ export const slides = [
       "public",
       "internal",
       "technical",
-      "regent"
+      "regent",
+      "executive"
     ]
   },
   {
@@ -957,7 +959,8 @@ export const slides = [
       "internal",
       "technical",
       "regent",
-      "cabinet"
+      "cabinet",
+      "executive"
     ]
   },
   {
@@ -973,7 +976,8 @@ export const slides = [
       "public",
       "internal",
       "technical",
-      "cabinet"
+      "cabinet",
+      "executive"
     ]
   },
   {
@@ -999,7 +1003,8 @@ export const slides = [
       "all",
       "public",
       "internal",
-      "technical"
+      "technical",
+      "executive"
     ]
   },
   {
@@ -1027,7 +1032,8 @@ export const slides = [
       "internal",
       "public",
       "technical",
-      "regent"
+      "regent",
+      "executive"
     ]
   },
   {
@@ -1042,7 +1048,8 @@ export const slides = [
       "internal",
       "public",
       "technical",
-      "regent"
+      "regent",
+      "executive"
     ]
   },
   {
@@ -1178,7 +1185,8 @@ export const slides = [
     "audiences": [
       "all",
       "public",
-      "internal"
+      "internal",
+      "executive"
     ]
   },
   {
@@ -1440,7 +1448,8 @@ export const slides = [
       "technical",
       "ASU-GSV",
       "cabinet",
-      "regent"
+      "regent",
+      "executive"
     ]
   },
   {
@@ -3841,7 +3850,8 @@ export const slides = [
       "all",
       "citizen",
       "regent",
-      "cabinet"
+      "cabinet",
+      "executive"
     ]
   },
   {
@@ -3887,7 +3897,8 @@ export const slides = [
     ],
     "audiences": [
       "citizen",
-      "regent"
+      "regent",
+      "executive"
     ]
   },
   {
@@ -3974,7 +3985,8 @@ export const slides = [
     ],
     "audiences": [
       "citizen",
-      "regent"
+      "regent",
+      "executive"
     ]
   },
   {
@@ -4031,7 +4043,8 @@ export const slides = [
     ],
     "audiences": [
       "citizen",
-      "regent"
+      "regent",
+      "executive"
     ]
   },
   {
@@ -4113,7 +4126,8 @@ export const slides = [
     "audiences": [
       "citizen",
       "regent",
-      "cabinet"
+      "cabinet",
+      "executive"
     ]
   },
   {
@@ -4524,7 +4538,8 @@ export const slides = [
     "audiences": [
       "citizen",
       "regent",
-      "cabinet"
+      "cabinet",
+      "executive"
     ]
   },
   {
@@ -4627,7 +4642,8 @@ export const slides = [
     "audiences": [
       "citizen",
       "regent",
-      "cabinet"
+      "cabinet",
+      "executive"
     ]
   },
   {
@@ -4746,7 +4762,8 @@ export const slides = [
     },
     "audiences": [
       "citizen",
-      "regent"
+      "regent",
+      "executive"
     ]
   },
   {
@@ -4850,7 +4867,8 @@ export const slides = [
     "audiences": [
       "citizen",
       "regent",
-      "cabinet"
+      "cabinet",
+      "executive"
     ]
   },
   {
@@ -4953,7 +4971,8 @@ export const slides = [
     "audiences": [
       "citizen",
       "regent",
-      "cabinet"
+      "cabinet",
+      "executive"
     ]
   }
 ];
