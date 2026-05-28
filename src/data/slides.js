@@ -1500,8 +1500,7 @@ export const slides = [
       "all",
       "public",
       "internal",
-      "technical",
-      "executive"
+      "technical"
     ]
   },
   {
