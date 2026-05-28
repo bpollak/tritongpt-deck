@@ -4371,109 +4371,6 @@ export const slides = [
     ]
   },
   {
-    "id": 124,
-    "slug": "cabinet-harness-11-ucsd-safe-path",
-    "type": "content",
-    "content": [],
-    "layout": "harness-definition",
-    "variant": "harness-data-unlock",
-    "marker": "DATA GOVERNANCE · ACCESS",
-    "parts": [
-      {
-        "text": "How agents reach campus data — "
-      },
-      {
-        "text": "safely",
-        "accent": true
-      },
-      {
-        "text": "."
-      }
-    ],
-    "harnesses": [
-      {
-        "name": "Claude Code",
-        "logoUrl": "https://cdn.simpleicons.org/anthropic/171814"
-      },
-      {
-        "name": "Codex",
-        "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg"
-      },
-      {
-        "name": "TritonBuild",
-        "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/opencode.svg"
-      }
-    ],
-    "priorityHeading": "Your personal context",
-    "prioritySystems": [
-      {
-        "name": "Microsoft Graph"
-      },
-      {
-        "name": "Google Workspace"
-      },
-      {
-        "name": "Confluence"
-      },
-      {
-        "name": "Campus Resources"
-      },
-      {
-        "name": "Zoom meeting transcripts / AI summaries"
-      }
-    ],
-    "alsoHeading": "Plus the campus enterprise data sources you have access to",
-    "alsoSystems": [
-      "ServiceNow",
-      "Activity Hubs",
-      "Kuali Research",
-      "Kuali Build",
-      "Oracle FIS",
-      "UCPath",
-      "Concur",
-      "DocuSign",
-      "OnBase",
-      "Canvas",
-      "Slate",
-      "Interfolio",
-      "Kaltura",
-      "Splunk",
-      "Blackbaud CRM",
-      "Tririga",
-      "EcoTime",
-      "Library Apps",
-      "+ 150 more across the campus catalog"
-    ],
-    "governance": [
-      {
-        "label": "SSO + MFA",
-        "note": "Campus IdP via SAML / OIDC + Duo"
-      },
-      {
-        "label": "Delegated OAuth 2.1",
-        "note": "Agent acts on the user's behalf — never as itself"
-      },
-      {
-        "label": "Scoped tokens",
-        "note": "Per-system, least-privilege, short-lived"
-      },
-      {
-        "label": "Audit log",
-        "note": "Every tool call: user · agent · scope · timestamp"
-      },
-      {
-        "label": "Approval gates",
-        "note": "Human-in-the-loop on writes & P1 data"
-      }
-    ],
-    "tiersFooter": "Personal first. Team next. Department and campus aggregations follow — each tier wrapped in its own governance layer.",
-    "audiences": [
-      "citizen",
-      "regent",
-      "cabinet"
-    ]
-  },
-  {
     "id": 124.4,
     "slug": "cabinet-harness-11c-developer-api-program",
     "type": "content",
@@ -4624,6 +4521,109 @@ export const slides = [
       "No model training",
       "Starter credits"
     ],
+    "audiences": [
+      "citizen",
+      "regent",
+      "cabinet"
+    ]
+  },
+  {
+    "id": 124,
+    "slug": "cabinet-harness-11-ucsd-safe-path",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-data-unlock",
+    "marker": "DATA GOVERNANCE · ACCESS",
+    "parts": [
+      {
+        "text": "How agents reach campus data — "
+      },
+      {
+        "text": "safely",
+        "accent": true
+      },
+      {
+        "text": "."
+      }
+    ],
+    "harnesses": [
+      {
+        "name": "Claude Code",
+        "logoUrl": "https://cdn.simpleicons.org/anthropic/171814"
+      },
+      {
+        "name": "Codex",
+        "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg"
+      },
+      {
+        "name": "TritonBuild",
+        "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/opencode.svg"
+      }
+    ],
+    "priorityHeading": "Your personal context",
+    "prioritySystems": [
+      {
+        "name": "Microsoft Graph"
+      },
+      {
+        "name": "Google Workspace"
+      },
+      {
+        "name": "Confluence"
+      },
+      {
+        "name": "Campus Resources"
+      },
+      {
+        "name": "Zoom meeting transcripts / AI summaries"
+      }
+    ],
+    "alsoHeading": "Plus the campus enterprise data sources you have access to",
+    "alsoSystems": [
+      "ServiceNow",
+      "Activity Hubs",
+      "Kuali Research",
+      "Kuali Build",
+      "Oracle FIS",
+      "UCPath",
+      "Concur",
+      "DocuSign",
+      "OnBase",
+      "Canvas",
+      "Slate",
+      "Interfolio",
+      "Kaltura",
+      "Splunk",
+      "Blackbaud CRM",
+      "Tririga",
+      "EcoTime",
+      "Library Apps",
+      "+ 150 more across the campus catalog"
+    ],
+    "governance": [
+      {
+        "label": "SSO + MFA",
+        "note": "Campus IdP via SAML / OIDC + Duo"
+      },
+      {
+        "label": "Delegated OAuth 2.1",
+        "note": "Agent acts on the user's behalf — never as itself"
+      },
+      {
+        "label": "Scoped tokens",
+        "note": "Per-system, least-privilege, short-lived"
+      },
+      {
+        "label": "Audit log",
+        "note": "Every tool call: user · agent · scope · timestamp"
+      },
+      {
+        "label": "Approval gates",
+        "note": "Human-in-the-loop on writes & P1 data"
+      }
+    ],
+    "tiersFooter": "Personal first. Team next. Department and campus aggregations follow — each tier wrapped in its own governance layer.",
     "audiences": [
       "citizen",
       "regent",
