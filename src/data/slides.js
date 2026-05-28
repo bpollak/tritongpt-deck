@@ -4474,125 +4474,6 @@ export const slides = [
     ]
   },
   {
-    "id": 124.3,
-    "slug": "cabinet-harness-11a-two-environments",
-    "type": "content",
-    "content": [],
-    "layout": "harness-definition",
-    "variant": "harness-two-environments",
-    "marker": "ENVIRONMENTS",
-    "parts": [
-      {
-        "text": "Where the agent "
-      },
-      {
-        "text": "runs",
-        "accent": true
-      },
-      {
-        "text": " decides what it can "
-      },
-      {
-        "text": "reach",
-        "accent": true
-      },
-      {
-        "text": "."
-      }
-    ],
-    "environments": [
-      {
-        "kicker": "DESKTOP",
-        "title": "Personal productivity",
-        "titleBadge": "Proposed",
-        "caveat": "Personal context via ITS-vetted MCP connectors — connector list pending review, no P3 data, no writes to shared systems",
-        "tone": "blue",
-        "chassis": "laptop",
-        "reachable": [
-          {
-            "icon": "gateway",
-            "label": "TritonAI gateway"
-          },
-          {
-            "icon": "calendar",
-            "label": "Microsoft Graph",
-            "proposed": true
-          },
-          {
-            "icon": "people",
-            "label": "Google Workspace",
-            "proposed": true
-          },
-          {
-            "icon": "library",
-            "label": "Confluence",
-            "proposed": true
-          },
-          {
-            "icon": "folder",
-            "label": "Local files"
-          }
-        ],
-        "footnote": "supported by local computer security mechanisms"
-      },
-      {
-        "kicker": "DSMLP SANDBOX",
-        "title": "Tools that touch real systems",
-        "titleBadge": "Proposed",
-        "caveat": "Credentials injected at container runtime — never on the laptop",
-        "tone": "coral",
-        "chassis": "container",
-        "reachable": [
-          {
-            "icon": "gateway",
-            "label": "TritonAI gateway"
-          },
-          {
-            "icon": "enterprise",
-            "label": "Research Data"
-          },
-          {
-            "icon": "enterprise",
-            "label": "Employee Data"
-          },
-          {
-            "icon": "enterprise",
-            "label": "Finance Data"
-          },
-          {
-            "icon": "enterprise",
-            "label": "Other Enterprise Systems"
-          }
-        ],
-        "footnote": "supported path for shared, real-data work"
-      }
-    ],
-    "transition": {
-      "kicker": "TRANSITION TRIGGER",
-      "from": "Desktop",
-      "to": "Sandbox",
-      "rule": "The moment a developer tries to connect enterprise data — or share their build — the harness surfaces the sandbox request.",
-      "optIn": {
-        "kicker": "OR BY CHOICE",
-        "rule": "Users, departments, and orgs may also opt into the sandbox for non-enterprise work — to cleanly separate desktop activity from agentic work."
-      }
-    },
-    "configRepo": {
-      "kicker": "ONE CONFIG REPO",
-      "name": "github.com/ucsd-its/tritonai-dev-config",
-      "files": "CLAUDE.md · .codex/config.json + network policy",
-      "lanes": [
-        "MDM push (managed staff)",
-        "Install script (Kuali Build)",
-        "git clone (researchers)"
-      ]
-    },
-    "audiences": [
-      "citizen",
-      "regent"
-    ]
-  },
-  {
     "id": 124.4,
     "slug": "cabinet-harness-11c-developer-api-program",
     "type": "content",
@@ -4747,6 +4628,125 @@ export const slides = [
       "citizen",
       "regent",
       "cabinet"
+    ]
+  },
+  {
+    "id": 124.3,
+    "slug": "cabinet-harness-11a-two-environments",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-two-environments",
+    "marker": "ENVIRONMENTS",
+    "parts": [
+      {
+        "text": "Where the agent "
+      },
+      {
+        "text": "runs",
+        "accent": true
+      },
+      {
+        "text": " decides what it can "
+      },
+      {
+        "text": "reach",
+        "accent": true
+      },
+      {
+        "text": "."
+      }
+    ],
+    "environments": [
+      {
+        "kicker": "DESKTOP",
+        "title": "Personal productivity",
+        "titleBadge": "Proposed",
+        "caveat": "Personal context via ITS-vetted MCP connectors — connector list pending review, no P3 data, no writes to shared systems",
+        "tone": "blue",
+        "chassis": "laptop",
+        "reachable": [
+          {
+            "icon": "gateway",
+            "label": "TritonAI gateway"
+          },
+          {
+            "icon": "calendar",
+            "label": "Microsoft Graph",
+            "proposed": true
+          },
+          {
+            "icon": "people",
+            "label": "Google Workspace",
+            "proposed": true
+          },
+          {
+            "icon": "library",
+            "label": "Confluence",
+            "proposed": true
+          },
+          {
+            "icon": "folder",
+            "label": "Local files"
+          }
+        ],
+        "footnote": "supported by local computer security mechanisms"
+      },
+      {
+        "kicker": "DSMLP SANDBOX",
+        "title": "Tools that touch real systems",
+        "titleBadge": "Proposed",
+        "caveat": "Credentials injected at container runtime — never on the laptop",
+        "tone": "coral",
+        "chassis": "container",
+        "reachable": [
+          {
+            "icon": "gateway",
+            "label": "TritonAI gateway"
+          },
+          {
+            "icon": "enterprise",
+            "label": "Research Data"
+          },
+          {
+            "icon": "enterprise",
+            "label": "Employee Data"
+          },
+          {
+            "icon": "enterprise",
+            "label": "Finance Data"
+          },
+          {
+            "icon": "enterprise",
+            "label": "Other Enterprise Systems"
+          }
+        ],
+        "footnote": "supported path for shared, real-data work"
+      }
+    ],
+    "transition": {
+      "kicker": "TRANSITION TRIGGER",
+      "from": "Desktop",
+      "to": "Sandbox",
+      "rule": "The moment a developer tries to connect enterprise data — or share their build — the harness surfaces the sandbox request.",
+      "optIn": {
+        "kicker": "OR BY CHOICE",
+        "rule": "Users, departments, and orgs may also opt into the sandbox for non-enterprise work — to cleanly separate desktop activity from agentic work."
+      }
+    },
+    "configRepo": {
+      "kicker": "ONE CONFIG REPO",
+      "name": "github.com/ucsd-its/tritonai-dev-config",
+      "files": "CLAUDE.md · .codex/config.json + network policy",
+      "lanes": [
+        "MDM push (managed staff)",
+        "Install script (Kuali Build)",
+        "git clone (researchers)"
+      ]
+    },
+    "audiences": [
+      "citizen",
+      "regent"
     ]
   },
   {
