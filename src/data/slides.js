@@ -3469,8 +3469,7 @@ export const slides = [
     "audiences": [
       "all",
       "public",
-      "technical",
-      "cabinet"
+      "technical"
     ]
   },
   {
