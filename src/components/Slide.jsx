@@ -128,6 +128,7 @@ const Slide = ({ slide }) => {
   const isTitle = slide.type === 'title';
   const isSolution = slide.layout === 'solution-showcase';
   const isSolutionVideo = slide.layout === 'solution-showcase-video';
+  const isBlinkSearchIntegration = slide.slug === 'ai-driven-search-blink-integration';
   const hasImage = !!slide.imageSrc && !isSolution && !isSolutionVideo;
   const isDark = slide.dark;
   const itemCount = slide.content ? slide.content.length : 0;
@@ -1596,24 +1597,26 @@ const Slide = ({ slide }) => {
                       transition={{ delay: 0.3 + index * 0.1 }}
                       className={clsx(
                         "flex-1 min-w-[45%] sm:min-w-0 bg-white rounded-lg sm:rounded-xl shadow-md border-t-4 border-ucsd-navy text-center",
-                        isSolutionVideo ? "p-2 sm:p-2.5" : "p-3 sm:p-5"
+                        isSolutionVideo || isBlinkSearchIntegration ? "p-2 sm:p-2.5" : "p-3 sm:p-5"
                       )}
                     >
                       <div className={clsx(
                         "font-bold text-ucsd-blue uppercase tracking-wide opacity-80 mb-0.5",
-                        isSolutionVideo ? "text-[9px] sm:text-xs" : "text-[10px] sm:text-xs"
+                        isSolutionVideo || isBlinkSearchIntegration ? "text-[9px] sm:text-xs" : "text-[10px] sm:text-xs"
                       )}>
                         {stat.label}
                       </div>
                       <div className={clsx(
                         "font-black text-ucsd-navy leading-none mb-0.5",
-                        compactTextValue ? "text-lg sm:text-xl md:text-2xl whitespace-nowrap tracking-tight" : "text-2xl sm:text-4xl"
+                        isBlinkSearchIntegration
+                          ? compactTextValue ? "text-base sm:text-lg md:text-xl whitespace-nowrap tracking-tight" : "text-xl sm:text-2xl md:text-3xl whitespace-nowrap"
+                          : compactTextValue ? "text-lg sm:text-xl md:text-2xl whitespace-nowrap tracking-tight" : "text-2xl sm:text-4xl"
                       )}>
                         {stat.value}
                       </div>
                       <div className={clsx(
                         "text-slate-600 font-bold uppercase tracking-wide",
-                        isSolutionVideo ? "text-[10px] sm:text-xs" : "text-xs"
+                        isSolutionVideo || isBlinkSearchIntegration ? "text-[10px] sm:text-xs" : "text-xs"
                       )}>
                         {stat.sub}
                       </div>
@@ -1672,24 +1675,26 @@ const Slide = ({ slide }) => {
                       transition={{ delay: 0.7 + index * 0.1 }}
                       className={clsx(
                         "flex-1 min-w-[45%] sm:min-w-0 bg-white rounded-lg sm:rounded-xl shadow-md border-t-4 border-ucsd-navy text-center",
-                        isSolutionVideo ? "p-2 sm:p-2.5" : "p-3 sm:p-5"
+                        isSolutionVideo || isBlinkSearchIntegration ? "p-2 sm:p-2.5" : "p-3 sm:p-5"
                       )}
                     >
                       <div className={clsx(
                         "font-bold text-ucsd-blue uppercase tracking-wide opacity-80 mb-0.5",
-                        isSolutionVideo ? "text-[9px] sm:text-xs" : "text-[10px] sm:text-xs"
+                        isSolutionVideo || isBlinkSearchIntegration ? "text-[9px] sm:text-xs" : "text-[10px] sm:text-xs"
                       )}>
                         {stat.label}
                       </div>
                       <div className={clsx(
                         "font-black text-ucsd-navy leading-none mb-0.5",
-                        compactTextValue ? "text-lg sm:text-xl md:text-2xl whitespace-nowrap tracking-tight" : "text-2xl sm:text-4xl"
+                        isBlinkSearchIntegration
+                          ? compactTextValue ? "text-base sm:text-lg md:text-xl whitespace-nowrap tracking-tight" : "text-xl sm:text-2xl md:text-3xl whitespace-nowrap"
+                          : compactTextValue ? "text-lg sm:text-xl md:text-2xl whitespace-nowrap tracking-tight" : "text-2xl sm:text-4xl"
                       )}>
                         {stat.value}
                       </div>
                       <div className={clsx(
                         "text-slate-600 font-bold uppercase tracking-wide",
-                        isSolutionVideo ? "text-[10px] sm:text-xs" : "text-xs"
+                        isSolutionVideo || isBlinkSearchIntegration ? "text-[10px] sm:text-xs" : "text-xs"
                       )}>
                         {stat.sub}
                       </div>
@@ -2344,9 +2349,9 @@ const Slide = ({ slide }) => {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-center mb-0.5 sm:mb-5"
+              className="text-center mb-0.5 sm:mb-3"
             >
-              <div className="text-lg sm:text-4xl md:text-5xl font-black text-ucsd-navy">TritonAI Platform</div>
+              <div className="text-lg sm:text-4xl md:text-4xl xl:text-5xl font-black text-ucsd-navy">TritonAI Platform</div>
             </motion.div>
 
             {/* Big platform box containing all assistants */}
@@ -2354,7 +2359,7 @@ const Slide = ({ slide }) => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="relative bg-gradient-to-br from-white to-ucsd-blue/5 rounded-xl sm:rounded-3xl p-2 sm:p-4 md:p-7 shadow-2xl border-2 sm:border-4 border-ucsd-navy/20 mt-4 sm:mt-5"
+              className="relative bg-gradient-to-br from-white to-ucsd-blue/5 rounded-xl sm:rounded-3xl p-2 sm:p-3 md:p-5 shadow-2xl border-2 sm:border-4 border-ucsd-navy/20 mt-3 sm:mt-4"
             >
               {/* Platform label */}
               <motion.div
@@ -2370,7 +2375,7 @@ const Slide = ({ slide }) => {
               </motion.div>
 
               {/* Grid of assistants */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1.5 sm:gap-2.5 mt-1 sm:mt-0">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1.5 sm:gap-2 mt-1 sm:mt-0">
                 {slide.assistants?.map((assistant, index) => {
                   const IconComponent = assistant.icon ? iconMap[assistant.icon] : null;
 
@@ -2399,21 +2404,21 @@ const Slide = ({ slide }) => {
                         stiffness: 150
                       }}
                       whileHover={{ scale: 1.05, y: -2 }}
-                      className="bg-white rounded-md sm:rounded-xl px-1.5 sm:px-4 py-1.5 sm:py-2.5 shadow-md border-l-2 sm:border-l-8 hover:shadow-lg transition-shadow cursor-pointer"
+                      className="bg-white rounded-md sm:rounded-xl px-1.5 sm:px-3 py-1.5 sm:py-2 shadow-md border-l-2 sm:border-l-4 hover:shadow-lg transition-shadow cursor-pointer"
                       style={{ borderLeftColor: borderColor }}
                     >
-                      <div className="flex items-center gap-1 sm:gap-4">
+                      <div className="flex items-center gap-1 sm:gap-2.5">
                         {IconComponent && (
                           <div className="flex-shrink-0">
-                            <IconComponent size={14} className="text-ucsd-blue sm:w-6 sm:h-6" style={{ color: borderColor }} />
+                            <IconComponent size={14} className="text-ucsd-blue sm:w-5 sm:h-5" style={{ color: borderColor }} />
                           </div>
                         )}
                         <div className="flex-1 min-w-0">
-                          <div className="text-[11px] sm:text-xl font-bold text-ucsd-navy leading-none">
+                          <div className="text-[11px] sm:text-base xl:text-lg font-bold text-ucsd-navy leading-tight">
                             {typeof assistant === 'string' ? assistant : assistant.name}
                           </div>
                           {assistant.description && (
-                            <div className="text-[9px] sm:text-base text-ucsd-navy/60 font-semibold leading-tight">
+                            <div className="text-[9px] sm:text-xs xl:text-sm text-ucsd-navy/60 font-semibold leading-tight">
                               {assistant.description}
                             </div>
                           )}
@@ -2430,10 +2435,10 @@ const Slide = ({ slide }) => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1.2, duration: 0.6 }}
-                  className="mt-3 flex flex-col gap-2.5 sm:mt-4 sm:gap-3.5"
+                  className="mt-2 flex flex-col gap-2 sm:mt-3 sm:gap-2.5"
                 >
                   {slide.impactSpotlights && slide.impactSpotlights.length > 0 && (
-                    <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-3">
+                    <div className="grid grid-cols-1 gap-1.5 sm:grid-cols-2 sm:gap-2">
                       {slide.impactSpotlights.map((spotlight, idx) => {
                         const SpotlightIcon = spotlight.icon ? iconMap[spotlight.icon] : null;
                         return (
@@ -2442,21 +2447,21 @@ const Slide = ({ slide }) => {
                             initial={{ opacity: 0, x: idx === 0 ? -20 : 20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 1.4 + idx * 0.15 }}
-                            className="flex min-h-[88px] items-center gap-2.5 rounded-lg border-2 p-2.5 shadow-lg sm:min-h-[112px] sm:gap-4 sm:rounded-2xl sm:p-4"
+                            className="flex min-h-[68px] items-center gap-2 rounded-lg border-2 p-2 shadow-md sm:min-h-[82px] sm:gap-3 sm:rounded-xl sm:p-3"
                             style={{ borderColor: spotlight.color, backgroundColor: `${spotlight.color}08` }}
                           >
                             {SpotlightIcon && (
-                              <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-full flex items-center justify-center flex-shrink-0 shadow-md" style={{ backgroundColor: spotlight.color }}>
-                                <SpotlightIcon size={17} className="text-white sm:w-6 sm:h-6" />
+                              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center flex-shrink-0 shadow-md" style={{ backgroundColor: spotlight.color }}>
+                                <SpotlightIcon size={15} className="text-white sm:w-5 sm:h-5" />
                               </div>
                             )}
                             <div className="flex-1 min-w-0">
-                              <div className="text-[11px] sm:text-sm font-bold uppercase tracking-wide" style={{ color: spotlight.color }}>{spotlight.name}</div>
-                              <div className="flex items-baseline gap-1 sm:gap-2">
-                                <span className="text-2xl sm:text-4xl font-black text-ucsd-navy">{spotlight.metric}</span>
-                                <span className="text-[11px] sm:text-base font-bold text-ucsd-navy/70">{spotlight.metricLabel}</span>
+                              <div className="text-[10px] sm:text-xs font-bold uppercase tracking-wide" style={{ color: spotlight.color }}>{spotlight.name}</div>
+                              <div className="flex items-baseline gap-1 sm:gap-1.5">
+                                <span className="text-xl sm:text-3xl font-black text-ucsd-navy">{spotlight.metric}</span>
+                                <span className="text-[10px] sm:text-sm font-bold text-ucsd-navy/70">{spotlight.metricLabel}</span>
                               </div>
-                              <div className="text-[10px] sm:text-sm text-slate-600 font-medium">{spotlight.detail}</div>
+                              <div className="text-[9px] sm:text-xs text-slate-600 font-medium">{spotlight.detail}</div>
                             </div>
                           </motion.div>
                         );
@@ -2468,36 +2473,36 @@ const Slide = ({ slide }) => {
                       initial={{ opacity: 0, y: 12 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 1.7 }}
-                      className="rounded-lg border-2 p-2.5 shadow-lg sm:rounded-2xl sm:p-4"
+                      className="rounded-lg border-2 p-2 shadow-md sm:rounded-xl sm:p-3"
                       style={{ borderColor: '#182B49', background: 'linear-gradient(135deg, rgba(24,43,73,0.06), rgba(0,198,215,0.08))' }}
                     >
-                      <div className="grid grid-cols-1 items-center gap-2.5 lg:grid-cols-[31%_1fr] lg:gap-5">
-                        <div className="flex items-center gap-2.5 sm:gap-3">
-                          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-ucsd-navy shadow-md sm:h-14 sm:w-14">
-                            <Server size={18} className="text-ucsd-gold sm:h-7 sm:w-7" />
+                      <div className="grid grid-cols-1 items-center gap-2 lg:grid-cols-[29%_1fr] lg:gap-4">
+                        <div className="flex items-center gap-2 sm:gap-2.5">
+                          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-ucsd-navy shadow-md sm:h-12 sm:w-12">
+                            <Server size={16} className="text-ucsd-gold sm:h-6 sm:w-6" />
                           </div>
                           <div className="min-w-0 text-left">
-                            <div className="text-[11px] font-bold uppercase tracking-wide text-ucsd-blue sm:text-sm">{slide.platformSaasFooter.label}</div>
-                            <div className="text-base font-black leading-tight text-ucsd-navy sm:text-2xl">{slide.platformSaasFooter.context}</div>
-                            <div className="mt-1.5 flex flex-wrap gap-1 text-[8px] uppercase tracking-[0.08em] text-ucsd-navy/70 sm:text-[9px]">
+                            <div className="text-[10px] font-bold uppercase tracking-wide text-ucsd-blue sm:text-xs">{slide.platformSaasFooter.label}</div>
+                            <div className="text-sm font-black leading-tight text-ucsd-navy sm:text-xl">{slide.platformSaasFooter.context}</div>
+                            <div className="mt-1 flex flex-wrap gap-1 text-[7px] uppercase tracking-[0.08em] text-ucsd-navy/70 sm:text-[8px]">
                               {(slide.platformSaasFooter.badges || []).map((badge) => (
                                 <span key={badge} className="rounded-full bg-white/85 px-2 py-0.5 font-bold shadow-sm">{badge}</span>
                               ))}
                             </div>
                           </div>
                         </div>
-                        <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-2.5">
+                        <div className="grid grid-cols-2 gap-1.5 sm:grid-cols-4 sm:gap-2">
                           {(slide.platformSaasFooter.partners || []).map((partner) => {
                             const partnerName = typeof partner === 'string' ? partner : partner.name;
                             const partnerShort = typeof partner === 'string' ? partner.slice(0, 3).toUpperCase() : partner.short;
                             const partnerColor = typeof partner === 'string' ? '#182B49' : partner.color;
                             const partnerAccent = typeof partner === 'string' ? '#FFCD00' : partner.accent;
                             return (
-                              <div key={partnerName} className="flex min-h-[52px] items-center gap-2 rounded-lg border bg-white px-2 py-2 text-left shadow-sm" style={{ borderColor: `${partnerColor}40` }}>
-                                <span className="flex h-9 w-11 shrink-0 items-center justify-center rounded-md text-xs font-black text-white sm:h-11 sm:w-14 sm:text-sm" style={{ background: partnerColor, boxShadow: `inset 0 -4px 0 ${partnerAccent}` }}>
+                              <div key={partnerName} className="flex min-h-[44px] items-center gap-1.5 rounded-md border bg-white px-1.5 py-1.5 text-left shadow-sm sm:min-h-[48px] sm:gap-2 sm:px-2" style={{ borderColor: `${partnerColor}40` }}>
+                                <span className="flex h-8 w-10 shrink-0 items-center justify-center rounded text-[11px] font-black text-white sm:h-9 sm:w-12 sm:text-xs" style={{ background: partnerColor, boxShadow: `inset 0 -3px 0 ${partnerAccent}` }}>
                                   {partnerShort}
                                 </span>
-                                <span className="text-xs font-bold leading-tight text-ucsd-navy sm:text-sm">{partnerName}</span>
+                                <span className="text-[11px] font-bold leading-tight text-ucsd-navy sm:text-xs">{partnerName}</span>
                               </div>
                             );
                           })}

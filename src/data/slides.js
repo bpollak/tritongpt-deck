@@ -897,7 +897,7 @@ export const slides = [
         "name": "AI Contract Reviewer",
         "metric": "91%",
         "metricLabel": "Time Reduction",
-        "detail": "120 min → 11 min per contract  ·  50+ risk categories",
+        "detail": "120 → 11 min/contract  ·  50+ risk categories",
         "icon": "FileCheck",
         "color": "#00629B"
       },
@@ -912,7 +912,7 @@ export const slides = [
     ],
     "platformSaasFooter": {
       "label": "SDSC-hosted SaaS",
-      "context": "for UC San Diego and partner institutions",
+      "context": "UC San Diego + partner institutions",
       "partners": [
         {
           "short": "UCB",
@@ -978,9 +978,9 @@ export const slides = [
     "slug": "video-screen-recording-2026-05-27",
     "type": "video",
     "content": [],
-    "managerLabel": "Video: Screen Recording 2026-05-27 (2x)",
-    "managerSummary": "New screen capture at 2x speed, inserted between the previous order 16 and 17 video slides.",
-    "videoSrc": "/media/screen-recording-2026-05-27-2x.mov",
+    "managerLabel": "Video: Screen Recording 2026-05-27 (2.2x)",
+    "managerSummary": "New screen capture at 2.2x speed, inserted between the previous order 16 and 17 video slides.",
+    "videoSrc": "/media/screen-recording-2026-05-27-2.2x.mov",
     "audiences": [
       "all",
       "public",
