@@ -135,8 +135,7 @@ export const slideManagerState = {
     "triton-ai-website": [
       "all",
       "public",
-      "internal",
-      "executive"
+      "internal"
     ],
     "the-workforce-our-graduates-enter": [
       "all"
