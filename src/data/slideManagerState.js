@@ -13,8 +13,8 @@ export const slideManagerState = {
     "higher-ed-reskilling-gap",
     "tritongpt-origin",
     "tritongpt-platform",
-    "tritongpt-initiative",
     "tritongpt-secure-scalable-ai-platform",
+    "tritongpt-initiative",
     "video-media1",
     "video-screen-recording-2026-05-27",
     "video-screen-recording-1",
@@ -169,14 +169,6 @@ export const slideManagerState = {
       "cabinet",
       "regent"
     ],
-    "tritongpt-initiative": [
-      "all",
-      "public",
-      "internal",
-      "technical",
-      "executive",
-      "regent"
-    ],
     "tritongpt-secure-scalable-ai-platform": [
       "all",
       "public",
@@ -184,6 +176,14 @@ export const slideManagerState = {
       "technical",
       "regent",
       "executive"
+    ],
+    "tritongpt-initiative": [
+      "all",
+      "public",
+      "internal",
+      "technical",
+      "executive",
+      "regent"
     ],
     "video-media1": [
       "all",
