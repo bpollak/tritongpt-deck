@@ -128,10 +128,18 @@ const Slide = ({ slide }) => {
   const isTitle = slide.type === 'title';
   const isSolution = slide.layout === 'solution-showcase';
   const isSolutionVideo = slide.layout === 'solution-showcase-video';
+  const isIphoneFramed = slide.deviceFrame === 'iphone';
   const isBlinkSearchIntegration = slide.slug === 'ai-driven-search-blink-integration';
   const hasImage = !!slide.imageSrc && !isSolution && !isSolutionVideo;
   const isDark = slide.dark;
   const itemCount = slide.content ? slide.content.length : 0;
+  const setupShowcaseVideo = (el) => {
+    if (!el) return;
+    el.playbackRate = slide.videoPlaybackRate || 1;
+    if (slide.videoStartTime && el.currentTime < slide.videoStartTime) {
+      el.currentTime = slide.videoStartTime;
+    }
+  };
 
   const isDense = itemCount > 6;
   const isVeryDense = itemCount > 12;
@@ -1544,7 +1552,12 @@ const Slide = ({ slide }) => {
         <div className="w-full max-w-[1760px] mx-auto h-full overflow-hidden">
           <div className={clsx(
             "grid gap-4 sm:gap-8 md:gap-12 h-full pt-2 sm:pt-4",
-            isSolutionVideo ? "grid-cols-1 md:grid-cols-[1.12fr_0.88fr] gap-3 sm:gap-5 md:gap-7 pt-0 sm:pt-0 items-start" : "grid-cols-1 md:grid-cols-[1.3fr_0.7fr] items-start"
+            isSolutionVideo
+              ? clsx(
+                  "grid-cols-1 gap-3 sm:gap-5 pt-0 sm:pt-0 items-start",
+                  isIphoneFramed ? "md:grid-cols-[0.54fr_1.46fr] md:gap-3" : "md:grid-cols-[1.12fr_0.88fr] md:gap-7"
+                )
+              : "grid-cols-1 md:grid-cols-[1.3fr_0.7fr] items-start"
           )}>
             {/* Left: Media (Image or Video) */}
             {(slide.imageSrc || slide.videoSrc) && (
@@ -1557,17 +1570,38 @@ const Slide = ({ slide }) => {
                 <div className="relative inline-block">
                   <div className="absolute -inset-1 bg-gradient-to-br from-ucsd-navy/5 to-ucsd-blue/5 rounded-2xl blur-sm" />
                   {slide.videoSrc ? (
-                    <video
-                      ref={el => { if (el) { el.playbackRate = slide.videoPlaybackRate || 1; if (slide.videoStartTime && el.currentTime < slide.videoStartTime) el.currentTime = slide.videoStartTime; } }}
-                      src={slide.videoSrc}
-                      poster={slide.poster}
-                      className="relative w-full h-auto max-h-[56vh] rounded-2xl shadow-lg ring-1 ring-black/5 object-contain"
-                      preload="auto"
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                    />
+                    isIphoneFramed ? (
+                      <div className="relative mx-auto h-[min(54vh,540px)] aspect-[1206/2622] rounded-[2rem] bg-slate-950 px-[6px] py-[7px] shadow-[0_24px_46px_rgba(15,23,42,0.22),inset_0_0_0_1px_rgba(255,255,255,0.18)] ring-1 ring-slate-950/20">
+                        <div className="absolute -left-[4px] top-[17%] h-10 w-[4px] rounded-l-full bg-slate-800 shadow-sm" />
+                        <div className="absolute -left-[4px] top-[27%] h-14 w-[4px] rounded-l-full bg-slate-800 shadow-sm" />
+                        <div className="absolute -right-[4px] top-[23%] h-20 w-[4px] rounded-r-full bg-slate-800 shadow-sm" />
+                        <div className="relative h-full w-full overflow-hidden rounded-[1.62rem] bg-black">
+                          <video
+                            ref={setupShowcaseVideo}
+                            src={slide.videoSrc}
+                            poster={slide.poster}
+                            className="absolute inset-0 h-full w-full object-cover"
+                            preload="auto"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                          />
+                        </div>
+                      </div>
+                    ) : (
+                      <video
+                        ref={setupShowcaseVideo}
+                        src={slide.videoSrc}
+                        poster={slide.poster}
+                        className="relative w-full h-auto max-h-[56vh] rounded-2xl shadow-lg ring-1 ring-black/5 object-contain"
+                        preload="auto"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                      />
+                    )
                   ) : (
                     <img
                       src={slide.imageSrc}
@@ -1588,7 +1622,7 @@ const Slide = ({ slide }) => {
               {slide.stats?.length > 0 && slide.statsPosition !== 'bottom' && <div className={clsx("flex flex-wrap sm:flex-nowrap", isSolutionVideo ? "gap-1.5 sm:gap-2.5" : "gap-2 sm:gap-4")}>
                 {slide.stats?.map((stat, index) => {
                   const statValue = String(stat.value ?? '');
-                  const compactTextValue = /[A-Za-z]/.test(statValue) && statValue.length > 6;
+                  const compactTextValue = stat.compact === true || (/[A-Za-z]/.test(statValue) && statValue.length > 6);
                   return (
                     <motion.div
                       key={index}
@@ -1666,7 +1700,7 @@ const Slide = ({ slide }) => {
               {slide.stats?.length > 0 && slide.statsPosition === 'bottom' && <div className={clsx("flex flex-wrap sm:flex-nowrap", isSolutionVideo ? "gap-1.5 sm:gap-2.5" : "gap-2 sm:gap-4")}>
                 {slide.stats?.map((stat, index) => {
                   const statValue = String(stat.value ?? '');
-                  const compactTextValue = /[A-Za-z]/.test(statValue) && statValue.length > 6;
+                  const compactTextValue = stat.compact === true || (/[A-Za-z]/.test(statValue) && statValue.length > 6);
                   return (
                     <motion.div
                       key={index}

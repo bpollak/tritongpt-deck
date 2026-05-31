@@ -1140,6 +1140,64 @@ export const slides = [
     ]
   },
   {
+    "id": 13.5,
+    "slug": "video-tritongpt-mobile-app",
+    "type": "content",
+    "content": [
+      {
+        "heading": "Native Campus App Channel",
+        "text": "TritonGPT is embedded directly inside the UC San Diego mobile app, extending the same API that powers the web widget into the campus app experience."
+      },
+      {
+        "heading": "Mobile-Aware Context",
+        "text": "Voice, location, and app-native signals can shape answers around where the user is, what they are trying to do, and how they prefer to interact."
+      },
+      {
+        "heading": "Real-Time Campus Data",
+        "text": "Parking availability, busyness, transit, events, and other live data sources can make responses more useful in the moment."
+      }
+    ],
+    "videoSrc": "/media/tgpt-iphone-demo.mp4",
+    "deviceFrame": "iphone",
+    "videoPlaybackRate": 1.3,
+    "title": "TritonGPT in the UC San Diego Mobile App",
+    "layout": "solution-showcase-video",
+    "subtitle": "Same Campus AI API, Now Native to Mobile",
+    "backgroundColor": "#F5F0E6",
+    "managerLabel": "TritonGPT Mobile App Demo",
+    "managerSection": "Demo Video",
+    "stats": [
+      {
+        "label": "Channel",
+        "value": "Mobile",
+        "sub": "Native UC San Diego App",
+        "compact": true
+      },
+      {
+        "label": "Interface",
+        "value": "Voice",
+        "sub": "Hands-Free Interaction",
+        "compact": true
+      },
+      {
+        "label": "Context",
+        "value": "Live",
+        "sub": "Location + Campus Data",
+        "compact": true
+      }
+    ],
+    "audiences": [
+      "all",
+      "public",
+      "internal",
+      "technical",
+      "ASU-GSV",
+      "executive",
+      "regent",
+      "cabinet"
+    ]
+  },
+  {
     "id": 14,
     "slug": "video-media9",
     "type": "video",

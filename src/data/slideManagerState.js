@@ -25,6 +25,7 @@ export const slideManagerState = {
     "video-media5",
     "video-media6",
     "scaling-engagement-the-tritongpt-widget",
+    "video-tritongpt-mobile-app",
     "video-media9",
     "ai-driven-search-blink-integration",
     "instructional-ai-socratic-tutor-faculty-assistant",
@@ -248,6 +249,16 @@ export const slideManagerState = {
       "public"
     ],
     "scaling-engagement-the-tritongpt-widget": [
+      "all",
+      "public",
+      "internal",
+      "technical",
+      "ASU-GSV",
+      "executive",
+      "regent",
+      "cabinet"
+    ],
+    "video-tritongpt-mobile-app": [
       "all",
       "public",
       "internal",
