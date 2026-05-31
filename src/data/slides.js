@@ -1690,12 +1690,13 @@ export const slides = [
     "content": [],
     "layout": "harness-definition",
     "variant": "harness-developer-api-program",
-    "marker": "API PATH",
+    "marker": "CITIZEN DEVELOPER PROGRAM · API PATH",
     "aliases": [
       "cabinet-harness-11c-developer-api-program"
     ],
-    "programTitle": "TritonAI API Program",
-    "harnessLabel": "AI harnesses",
+    "programTitle": "Citizen Developer Program: API Path",
+    "usersLabel": "Citizen developers",
+    "harnessLabel": "Approved AI harnesses",
     "parts": [
       {
         "text": "The Developer API is the "
@@ -1705,7 +1706,7 @@ export const slides = [
         "accent": true
       },
       {
-        "text": " for builders."
+        "text": " for citizen developers."
       }
     ],
     "users": [
@@ -1786,7 +1787,7 @@ export const slides = [
     "accessSteps": [
       {
         "title": "Request",
-        "body": "Describe the use case, audience, and campus data involved",
+        "body": "Start with Citizen Developer Program intake: use case, audience, and campus data",
         "color": "#15243d"
       },
       {
@@ -1801,7 +1802,7 @@ export const slides = [
       },
       {
         "title": "Host",
-        "body": "Apply for Campus App Hosting or graduate to enterprise delivery",
+        "body": "Move through Campus App Hosting or graduate to enterprise delivery",
         "color": "#ffc928"
       }
     ],
@@ -1832,7 +1833,7 @@ export const slides = [
       "Campus auth pattern",
       "Usage tracking",
       "No model training",
-      "Starter credits"
+      "Citizen developer intake"
     ],
     "audiences": [
       "all",
@@ -1850,13 +1851,13 @@ export const slides = [
     "layout": "hosting-pipeline",
     "title": "Campus App Hosting",
     "subtitle": "What happens after you build — the hosting path for campus apps",
-    "contextNote": "Step 4 of the TritonAI Developer API paved path",
+    "contextNote": "Step 4 of the Citizen Developer Program API path",
     "backgroundColor": "#F5F0E6",
     "pipelineSteps": [
       {
         "number": "1",
         "name": "Prototype",
-        "description": "Build locally with Claude Code, Codex, or curated ITS templates via the TritonAI Developer API",
+        "description": "Build locally with Claude Code, Codex, TritonCraft, or curated ITS templates through the Citizen Developer Program API path",
         "icon": "Code",
         "color": "#00629B"
       },
@@ -2147,7 +2148,7 @@ export const slides = [
       {
         "name": "Build with AI",
         "shortLabel": "Build",
-        "description": "A staff member used Claude Code and Codex through the TritonAI Developer API to build the solution — no engineering background required.",
+        "description": "A staff member used Claude Code and Codex through the Citizen Developer Program API path to build the solution — no engineering background required.",
         "icon": "Code",
         "color": "#00C6D7"
       },
@@ -4473,12 +4474,13 @@ export const slides = [
     "content": [],
     "layout": "harness-definition",
     "variant": "harness-developer-api-program",
-    "marker": "API PATH",
+    "marker": "CITIZEN DEVELOPER PROGRAM · API PATH",
     "aliases": [
       "tritonai-developer-api-program"
     ],
-    "programTitle": "TritonAI API Program",
-    "harnessLabel": "AI harnesses",
+    "programTitle": "Citizen Developer Program: API Path",
+    "usersLabel": "Citizen developers",
+    "harnessLabel": "Approved AI harnesses",
     "parts": [
       {
         "text": "The Developer API is the "
@@ -4488,7 +4490,7 @@ export const slides = [
         "accent": true
       },
       {
-        "text": " for builders."
+        "text": " for citizen developers."
       }
     ],
     "users": [
@@ -4569,7 +4571,7 @@ export const slides = [
     "accessSteps": [
       {
         "title": "Request",
-        "body": "Describe the use case, audience, and campus data involved",
+        "body": "Start with Citizen Developer Program intake: use case, audience, and campus data",
         "color": "#15243d"
       },
       {
@@ -4584,7 +4586,7 @@ export const slides = [
       },
       {
         "title": "Host",
-        "body": "Apply for Campus App Hosting or graduate to enterprise delivery",
+        "body": "Move through Campus App Hosting or graduate to enterprise delivery",
         "color": "#ffc928"
       }
     ],
@@ -4615,7 +4617,7 @@ export const slides = [
       "Campus auth pattern",
       "Usage tracking",
       "No model training",
-      "Starter credits"
+      "Citizen developer intake"
     ],
     "audiences": [
       "citizen",

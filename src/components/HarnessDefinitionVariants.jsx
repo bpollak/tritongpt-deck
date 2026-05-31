@@ -1885,7 +1885,7 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
 
       <div className="absolute left-[5.8vw] right-[5.8vw] top-[10vh] grid grid-cols-[20%_18.5%_1fr_26%] items-center gap-6">
         <div>
-          <Kicker className="mb-2" style={{ color: T.muted }}>Campus users</Kicker>
+          <Kicker className="mb-2" style={{ color: T.muted }}>{slide.usersLabel || 'Campus users'}</Kicker>
           <div className="space-y-2">
             {users.map((user, index) => (
               <ApiProgramCard key={user.title} delay={0.28 + index * 0.06} color={T.blue} className="flex h-[54px] items-center gap-3 px-4">
