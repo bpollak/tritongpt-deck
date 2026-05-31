@@ -45,7 +45,6 @@ export const slideManagerState = {
     "the-flywheel-in-action-pdf-remediator",
     "the-new-workforce-competency",
     "preparing-the-ai-ready-graduate",
-    "from-tritongpt-to-tritonai",
     "the-agentic-ai-stack",
     "multi-agent-incident-response-orchestration",
     "efficiency-ai-vs-opportunity-ai",
@@ -87,6 +86,7 @@ export const slideManagerState = {
     "cabinet-harness-08e-tools-hooks-safety",
     "cabinet-harness-10-subagents",
     "cabinet-harness-11c-developer-api-program",
+    "from-tritongpt-to-tritonai",
     "cabinet-harness-11-ucsd-safe-path",
     "cabinet-harness-11a-two-environments",
     "cabinet-harness-11d-campus-app-hosting-intake",
@@ -389,14 +389,6 @@ export const slideManagerState = {
     "preparing-the-ai-ready-graduate": [
       "all"
     ],
-    "from-tritongpt-to-tritonai": [
-      "all",
-      "internal",
-      "public",
-      "ASU-GSV",
-      "executive",
-      "regent"
-    ],
     "the-agentic-ai-stack": [
       "all",
       "internal",
@@ -572,6 +564,14 @@ export const slideManagerState = {
       "regent",
       "cabinet",
       "executive"
+    ],
+    "from-tritongpt-to-tritonai": [
+      "all",
+      "internal",
+      "public",
+      "ASU-GSV",
+      "executive",
+      "regent"
     ],
     "cabinet-harness-11-ucsd-safe-path": [
       "citizen",
