@@ -58,10 +58,8 @@ export const slideManagerState = {
     "tritongpt-usage-analytics",
     "tritongpt-widget-analytics",
     "tritongpt-user-growth",
-    "the-team-behind-tritonai",
     "research-alignment-poc",
     "ai-engagement-at-scale",
-    "thank-you",
     "thank-you-duo",
     "thank-you-cabinet",
     "thank-you-questions",
@@ -92,7 +90,9 @@ export const slideManagerState = {
     "cabinet-harness-11-ucsd-safe-path",
     "cabinet-harness-11a-two-environments",
     "cabinet-harness-11d-campus-app-hosting-intake",
-    "cabinet-harness-13-recap"
+    "cabinet-harness-13-recap",
+    "the-team-behind-tritonai",
+    "thank-you"
   ],
   "removed": [],
   "audiences": {
@@ -358,7 +358,6 @@ export const slideManagerState = {
       "internal",
       "public",
       "ASU-GSV",
-      "executive",
       "regent"
     ],
     "campus-app-hosting": [
@@ -371,7 +370,6 @@ export const slideManagerState = {
       "internal",
       "public",
       "ASU-GSV",
-      "executive",
       "regent"
     ],
     "agent-engineering-strategy": [
@@ -461,26 +459,12 @@ export const slideManagerState = {
       "PK",
       "regent"
     ],
-    "the-team-behind-tritonai": [
-      "all",
-      "internal",
-      "executive",
-      "regent",
-      "citizen"
-    ],
     "research-alignment-poc": [
       "all",
       "regent"
     ],
     "ai-engagement-at-scale": [
       "all",
-      "regent"
-    ],
-    "thank-you": [
-      "all",
-      "internal",
-      "public",
-      "executive",
       "regent"
     ],
     "thank-you-duo": [
@@ -611,6 +595,20 @@ export const slideManagerState = {
       "regent",
       "cabinet",
       "executive"
+    ],
+    "the-team-behind-tritonai": [
+      "all",
+      "internal",
+      "executive",
+      "regent",
+      "citizen"
+    ],
+    "thank-you": [
+      "all",
+      "internal",
+      "public",
+      "executive",
+      "regent"
     ]
   }
 };
