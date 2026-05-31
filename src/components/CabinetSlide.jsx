@@ -623,6 +623,14 @@ const Shell = ({ children, eyebrow, accent = T.accent }) => (
       className="pointer-events-none absolute -top-32 -left-32 h-[420px] w-[420px] rounded-full opacity-30 blur-3xl"
       style={{ background: `radial-gradient(circle, ${accent}33 0%, transparent 60%)` }}
     />
+    <div
+      className="pointer-events-none absolute right-0 top-0 h-64 w-64 rounded-bl-full opacity-10"
+      style={{ backgroundColor: accent }}
+    />
+    <div
+      className="pointer-events-none absolute bottom-0 left-0 h-[500px] w-[500px] rounded-tr-full opacity-[0.08]"
+      style={{ backgroundColor: T.pacific }}
+    />
     <div className={`relative flex items-center justify-between ${SHELL_PAD_X} pt-7 z-10`}>
       <div
         className="text-[11px] font-semibold uppercase tracking-[0.32em]"

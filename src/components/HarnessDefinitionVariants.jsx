@@ -73,8 +73,32 @@ const lineDraw = (delay = 0) => ({
   transition: { duration: 0.65, delay, ease }
 });
 
+const BackgroundCornerOrbs = () => (
+  <>
+    <motion.div
+      animate={{
+        scale: [1, 1.05, 1],
+        opacity: [0.88, 1, 0.88],
+        x: [0, 20, 0],
+        y: [0, -20, 0]
+      }}
+      transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+      className="pointer-events-none absolute right-0 top-0 h-64 w-64 rounded-bl-full"
+      style={{ backgroundColor: 'rgba(110, 150, 59, 0.12)' }}
+    />
+    <motion.div
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.8, delay: 0.2 }}
+      className="pointer-events-none absolute bottom-0 left-0 h-[500px] w-[500px] rounded-tr-full"
+      style={{ backgroundColor: 'rgba(110, 150, 59, 0.15)' }}
+    />
+  </>
+);
+
 const Shell = ({ children }) => (
   <div className="absolute inset-0 overflow-hidden" style={{ background: T.bg, color: T.ink, fontFamily: T.serif }}>
+    <BackgroundCornerOrbs />
     <div className="absolute inset-x-0 top-0 h-1" style={{ background: '#f1c232' }} />
     {children}
   </div>

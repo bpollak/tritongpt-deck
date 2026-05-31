@@ -6043,29 +6043,24 @@ const Slide = ({ slide }) => {
       )}
       style={slide.backgroundColor ? { backgroundColor: slide.backgroundColor } : {}}
     >
-      {/* Hide orbs on ecosystem and platform architecture slides to avoid visual clutter */}
-      {!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && (
-        <>
-          <motion.div
-            animate={{
-              scale: [1, 1.05, 1],
-              opacity: isDark ? [0.3, 0.4, 0.3] : [0.9, 1, 0.9],
-              x: [0, 20, 0],
-              y: [0, -20, 0]
-            }}
-            transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-0 right-0 w-64 h-64 rounded-bl-full pointer-events-none z-1"
-            style={{ backgroundColor: upperRightOrbColor, mixBlendMode: isDark ? 'overlay' : 'normal' }}
-          />
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-tr-full pointer-events-none z-1"
-            style={{ backgroundColor: quarterCircleColor }}
-          />
-        </>
-      )}
+      <motion.div
+        animate={{
+          scale: [1, 1.05, 1],
+          opacity: isDark ? [0.3, 0.4, 0.3] : [0.9, 1, 0.9],
+          x: [0, 20, 0],
+          y: [0, -20, 0]
+        }}
+        transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-0 right-0 w-64 h-64 rounded-bl-full pointer-events-none z-1"
+        style={{ backgroundColor: upperRightOrbColor, mixBlendMode: isDark ? 'overlay' : 'normal' }}
+      />
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-tr-full pointer-events-none z-1"
+        style={{ backgroundColor: quarterCircleColor }}
+      />
       {slide.backgroundImage && (
         <>
           <div className="absolute inset-0 bg-cover bg-center z-0" style={{ backgroundImage: `url(${slide.backgroundImage})` }} />
