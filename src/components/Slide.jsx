@@ -224,7 +224,7 @@ const Slide = ({ slide }) => {
         .filter(Boolean)
     }))
     : [];
-  const isTritonAIEvolutionSlide = slide.title === 'From TritonGPT to TritonAI';
+  const isTritonAIEvolutionSlide = slide.slug === 'from-tritongpt-to-tritonai';
   const tritonAICapabilityItems = isTritonAIEvolutionSlide ? (slide.content?.slice(1) || []) : [];
   const tritonAICapabilityBadgeLabels = {
     'Agent Builder': 'Build Agents',
@@ -3107,7 +3107,7 @@ const Slide = ({ slide }) => {
                 <div className="relative p-2.5 sm:p-4 lg:p-4">
                   <div className="inline-flex items-center gap-2 rounded-full bg-white/75 px-2.5 py-1 text-[10px] sm:text-[11px] font-bold tracking-[0.16em] uppercase text-[#184aa3] mb-1.5 sm:mb-2">
                     <Layers size={14} className="sm:w-4 sm:h-4" />
-                    Overarching Platform Layer
+                    Program Support Components
                   </div>
                   <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-1.5 sm:gap-2.5">
                     <div>

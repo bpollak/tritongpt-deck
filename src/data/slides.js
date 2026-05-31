@@ -2286,14 +2286,14 @@ export const slides = [
     "id": 22,
     "slug": "from-tritongpt-to-tritonai",
     "type": "content",
-    "title": "From TritonGPT to TritonAI",
-    "subtitle": "Evolving from chat into an AI Tools Hub that unifies campus-ready capabilities",
+    "title": "Components for the Citizen Developer Program",
+    "subtitle": "TritonAI provides the shared building blocks that help campus teams create safe, governed AI solutions",
     "layout": "feature-grid",
     "backgroundColor": "#F5F0E6",
     "content": [
       {
-        "heading": "AI Tools Hub",
-        "text": "The overarching TritonAI layer: a centralized hub that brings together Agent Builder for low-code automation, Agent Skills Library for reusable workflows, MCP Server Hub for secure connectors, Developer APIs for custom integrations, Agent Observability for run monitoring, and a Pre-Packaged Tools Pipeline for turnkey AI services."
+        "heading": "Citizen Developer Support Layer",
+        "text": "The TritonAI harness gives builders a governed set of reusable components: Agent Builder for low-code automation, Agent Skills Library for shared workflows, MCP Server Hub for secure connectors, Developer APIs for custom integrations, Agent Observability for run monitoring, and a Pre-Packaged Tools Pipeline for turnkey AI services."
       },
       {
         "heading": "Agent Builder",
