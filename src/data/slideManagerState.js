@@ -12,9 +12,9 @@ export const slideManagerState = {
     "ai-workforce-landscape",
     "higher-ed-reskilling-gap",
     "tritongpt-origin",
-    "tritongpt-initiative",
-    "tritongpt-secure-scalable-ai-platform",
     "tritongpt-platform",
+    "tritongpt-secure-scalable-ai-platform",
+    "tritongpt-initiative",
     "video-media1",
     "video-screen-recording-2026-05-27",
     "video-screen-recording-1",
@@ -136,8 +136,7 @@ export const slideManagerState = {
     "triton-ai-website": [
       "all",
       "public",
-      "internal",
-      "executive"
+      "internal"
     ],
     "the-workforce-our-graduates-enter": [
       "all"
@@ -161,12 +160,14 @@ export const slideManagerState = {
       "regent",
       "citizen"
     ],
-    "tritongpt-initiative": [
+    "tritongpt-platform": [
       "all",
       "public",
       "internal",
       "technical",
+      "ASU-GSV",
       "executive",
+      "cabinet",
       "regent"
     ],
     "tritongpt-secure-scalable-ai-platform": [
@@ -177,14 +178,12 @@ export const slideManagerState = {
       "regent",
       "executive"
     ],
-    "tritongpt-platform": [
+    "tritongpt-initiative": [
       "all",
       "public",
       "internal",
       "technical",
-      "ASU-GSV",
       "executive",
-      "cabinet",
       "regent"
     ],
     "video-media1": [
