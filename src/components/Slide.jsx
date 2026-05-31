@@ -5568,8 +5568,8 @@ const Slide = ({ slide }) => {
             </motion.div>
           )}
 
-          {/* Stats footer - highlighted banner style */}
-          {slide.teamStats && (
+          {/* Breadth footer - highlighted banner style */}
+          {(slide.teamSupportAreas || slide.teamStats) && (
             <motion.div
               initial={{ opacity: 0, y: 20, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -5588,22 +5588,43 @@ const Slide = ({ slide }) => {
                 <div className="absolute left-12 top-3 w-2 h-2 bg-ucsd-gold/60 rounded-full" />
                 <div className="absolute right-16 bottom-3 w-2 h-2 bg-ucsd-sky/80 rounded-full" />
 
-                <div className="flex items-center justify-center gap-10 lg:gap-16">
-                  {slide.teamStats.map((stat, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 1.4 + index * 0.1 }}
-                      className="text-center relative"
-                    >
-                      <div className="text-4xl lg:text-5xl font-black text-ucsd-navy leading-none">
-                        {stat.value}
-                      </div>
-                      <div className="text-sm lg:text-base font-bold text-ucsd-navy/80 uppercase tracking-wider mt-0.5">{stat.label}</div>
-                    </motion.div>
-                  ))}
-                </div>
+                {slide.teamSupportAreas ? (
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-5">
+                    {slide.teamSupportAreas.map((area, index) => (
+                      <motion.div
+                        key={area.title}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1.4 + index * 0.1 }}
+                        className="relative rounded-xl border border-white/70 bg-white/75 px-4 py-3 shadow-sm"
+                      >
+                        <div className="text-[12px] lg:text-[13px] font-black uppercase tracking-[0.16em] text-ucsd-blue">
+                          {area.title}
+                        </div>
+                        <div className="mt-1 text-sm lg:text-[15px] font-semibold leading-snug text-ucsd-navy/85">
+                          {area.text}
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="flex items-center justify-center gap-10 lg:gap-16">
+                    {slide.teamStats.map((stat, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1.4 + index * 0.1 }}
+                        className="text-center relative"
+                      >
+                        <div className="text-4xl lg:text-5xl font-black text-ucsd-navy leading-none">
+                          {stat.value}
+                        </div>
+                        <div className="text-sm lg:text-base font-bold text-ucsd-navy/80 uppercase tracking-wider mt-0.5">{stat.label}</div>
+                      </motion.div>
+                    ))}
+                  </div>
+                )}
               </div>
             </motion.div>
           )}

@@ -3351,6 +3351,20 @@ export const slides = [
         "label": "Users Served"
       }
     ],
+    "teamSupportAreas": [
+      {
+        "title": "Campus AI Platform",
+        "text": "TritonGPT, embedded app experiences, web widgets, shared APIs, and reusable AI services."
+      },
+      {
+        "title": "Citizen Developer Program",
+        "text": "Agent Builder, skills library, MCP connectors, templates, training, and intake for unit-built solutions."
+      },
+      {
+        "title": "Governed AI Operations",
+        "text": "Gateway routing, LLM hosting, Onyx/RAG, observability, security controls, and production support."
+      }
+    ],
     "audiences": [
       "all",
       "internal",
