@@ -1555,7 +1555,7 @@ const Slide = ({ slide }) => {
             isSolutionVideo
               ? clsx(
                   "grid-cols-1 gap-3 sm:gap-5 pt-0 sm:pt-0 items-start",
-                  isIphoneFramed ? "md:grid-cols-[0.7fr_1.3fr] md:gap-4" : "md:grid-cols-[1.12fr_0.88fr] md:gap-7"
+                  isIphoneFramed ? "md:grid-cols-[320px_minmax(0,1fr)] md:gap-5" : "md:grid-cols-[1.12fr_0.88fr] md:gap-7"
                 )
               : "grid-cols-1 md:grid-cols-[1.3fr_0.7fr] items-start"
           )}>
