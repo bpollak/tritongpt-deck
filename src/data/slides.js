@@ -1742,7 +1742,7 @@ export const slides = [
         "fill": "#ecfdf5"
       },
       {
-        "title": "TritonBuild",
+        "title": "TritonCraft",
         "subtitle": "Campus solution",
         "icon": "code",
         "color": "#15243d",
@@ -1989,7 +1989,7 @@ export const slides = [
             "tools": [
               "Claude Code",
               "Codex",
-              "TritonBuild"
+              "TritonCraft"
             ],
             "note": "May be required for some API/MCP tooling"
           }
@@ -3907,8 +3907,7 @@ export const slides = [
             "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg"
           },
           {
-            "name": "TritonBuild",
-            "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/opencode.svg"
+            "name": "TritonCraft"
           }
         ]
       }
@@ -4098,14 +4097,14 @@ export const slides = [
         "now": "3M+ weekly developers, GPT-5.4 family, parallel-agent desktop app, expanding into general enterprise work."
       },
       {
-        "name": "TritonBuild",
+        "name": "TritonCraft",
         "color": "#111111",
-        "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/opencode-wordmark-light.svg",
+        "logoText": "T3 Code",
         "surface": "terminal · IDE · desktop",
         "powersBadge": "POWERS UCSD HARNESS",
-        "origin": "Open-source, community-built. Privacy-first — no code or context stored.",
-        "now": "150K GitHub stars, 6.5M monthly developers, 75+ supported models (Claude, GPT, Gemini, local).",
-        "highlight": "Open source — UC San Diego can build stronger campus-specific scaffolding on top of OpenCode: MCP data integrations, UCSD skills, permissions, templates, and harness hooks that connect models to campus systems, workflows, and knowledge."
+        "origin": "Built on T3 Code, a multi-agent desktop client for AI agents.",
+        "now": "Connects agents to large language models through the TritonAI gateway, keeping model access centralized and governed.",
+        "highlight": "UC San Diego can build campus-specific scaffolding on T3 Code: MCP integrations, UCSD skills, permissions, templates, gateway routing, and harness hooks that connect agents to campus systems and workflows."
       }
     ],
     "audiences": [
@@ -4510,7 +4509,7 @@ export const slides = [
         "fill": "#ecfdf5"
       },
       {
-        "title": "TritonBuild",
+        "title": "TritonCraft",
         "subtitle": "Campus solution",
         "icon": "code",
         "color": "#15243d",
@@ -4639,8 +4638,7 @@ export const slides = [
         "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg"
       },
       {
-        "name": "TritonBuild",
-        "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/opencode.svg"
+        "name": "TritonCraft"
       }
     ],
     "priorityHeading": "Your personal context",
@@ -4881,7 +4879,7 @@ export const slides = [
             "tools": [
               "Claude Code",
               "Codex",
-              "TritonBuild"
+              "TritonCraft"
             ],
             "note": "May be required for some API/MCP tooling"
           }
@@ -5029,7 +5027,7 @@ export const slides = [
     "poweredBy": [
       "Claude Code",
       "Codex",
-      "TritonBuild",
+      "TritonCraft",
       "TritonAI",
       "MCP gateway",
       "Activity Hubs",

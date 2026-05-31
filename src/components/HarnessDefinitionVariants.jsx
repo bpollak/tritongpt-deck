@@ -1010,7 +1010,7 @@ const HarnessToolboxVariant = ({ slide }) => (
               {vendor.logoUrl ? (
                 <img src={vendor.logoUrl} alt={`${vendor.name} logo`} className="max-h-12 max-w-[150px] object-contain" />
               ) : (
-                <div style={{ color: vendor.color || T.ink, fontSize: 28, fontWeight: 620 }}>{vendor.name}</div>
+                <div style={{ color: vendor.color || T.ink, fontSize: 28, fontWeight: 620 }}>{vendor.logoText || vendor.name}</div>
               )}
             </div>
             <div className="mt-5 text-center" style={{ color: T.ink, fontSize: 28, lineHeight: 1, fontWeight: 620 }}>{vendor.name}</div>
