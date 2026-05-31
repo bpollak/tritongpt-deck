@@ -2201,6 +2201,225 @@ export const slides = [
     ]
   },
   {
+    "id": 27.02,
+    "slug": "the-flywheel-in-action-biobib-formatter",
+    "type": "content",
+    "layout": "flywheel-case-study",
+    "title": "The Flywheel in Action: BioBib Formatter",
+    "subtitle": "Turning a faculty CV into a UCSD Academic Biography and Bibliography draft with AI-routed review",
+    "backgroundColor": "#F5F0E6",
+    "flywheelStages": [
+      {
+        "name": "Identify Problem",
+        "shortLabel": "Identify",
+        "description": "Academic personnel workflows depend on detailed BioBib formatting, but source CVs vary widely and require time-consuming translation into UCSD format.",
+        "icon": "Target",
+        "color": "#00629B"
+      },
+      {
+        "name": "Build with AI",
+        "shortLabel": "Build",
+        "description": "The app splits a Word CV into review parts, routes section work through TritonAI, and keeps notes for items that still need human confirmation.",
+        "icon": "Code",
+        "color": "#00C6D7"
+      },
+      {
+        "name": "Host on Campus",
+        "shortLabel": "Host",
+        "description": "A browser-first UC San Diego interface gives faculty and academic personnel teams a lightweight path from upload to downloadable Word output.",
+        "icon": "Globe",
+        "color": "#FC8900"
+      },
+      {
+        "name": "Solve & Promote",
+        "shortLabel": "Scale",
+        "description": "Standardized drafts reduce manual reformatting and create a repeatable pattern for document-heavy academic workflows.",
+        "icon": "TrendingUp",
+        "color": "#6E963B"
+      }
+    ],
+    "impactMetrics": [
+      {
+        "value": "20",
+        "label": "Review Parts",
+        "sub": "Section-level routing"
+      },
+      {
+        "value": ".docx",
+        "label": "Output",
+        "sub": "BioBib draft"
+      },
+      {
+        "value": "UCSD",
+        "label": "Workflow",
+        "sub": "Academic personnel"
+      }
+    ],
+    "videoSrc": "/media/product-previews/biobib-formatter-preview.mp4",
+    "poster": "/media/product-previews/biobib-formatter-poster.png",
+    "demoLabel": "BioBib Formatter Preview",
+    "toolHighlights": [
+      "Word CV Input",
+      "Section Review",
+      "TritonAI Routing"
+    ],
+    "keyMessage": "Another document-heavy campus workflow becomes a focused AI-assisted tool instead of a one-off manual process",
+    "audiences": [
+      "all",
+      "public",
+      "internal",
+      "executive",
+      "regent",
+      "citizen"
+    ]
+  },
+  {
+    "id": 27.04,
+    "slug": "the-flywheel-in-action-ai-use-case-meeting",
+    "type": "content",
+    "layout": "flywheel-case-study",
+    "title": "The Flywheel in Action: AI Use Case Meeting",
+    "subtitle": "A full-stack platform for collecting, scheduling, and archiving campus AI knowledge-sharing sessions",
+    "backgroundColor": "#F5F0E6",
+    "flywheelStages": [
+      {
+        "name": "Identify Problem",
+        "shortLabel": "Identify",
+        "description": "AI practices were spreading across campus faster than centralized teams could manually collect, schedule, and redistribute examples.",
+        "icon": "Target",
+        "color": "#00629B"
+      },
+      {
+        "name": "Build with AI",
+        "shortLabel": "Build",
+        "description": "A session management app captures presenter submissions, meeting length, topic context, upcoming sessions, and archive metadata.",
+        "icon": "Code",
+        "color": "#00C6D7"
+      },
+      {
+        "name": "Host on Campus",
+        "shortLabel": "Host",
+        "description": "The public UC San Diego front end gives staff, faculty, and researchers a simple way to participate without requiring a separate event system.",
+        "icon": "Globe",
+        "color": "#FC8900"
+      },
+      {
+        "name": "Solve & Promote",
+        "shortLabel": "Scale",
+        "description": "A repeatable forum turns individual experiments into shared institutional learning, with agendas and recordings becoming reusable assets.",
+        "icon": "TrendingUp",
+        "color": "#6E963B"
+      }
+    ],
+    "impactMetrics": [
+      {
+        "value": "Biweekly",
+        "label": "Cadence",
+        "sub": "Every other Friday"
+      },
+      {
+        "value": "5-60",
+        "label": "Minutes",
+        "sub": "Presenter-selected"
+      },
+      {
+        "value": "All",
+        "label": "Audience",
+        "sub": "Staff, faculty, researchers"
+      }
+    ],
+    "videoSrc": "/media/product-previews/ai-use-case-meeting-preview.mp4",
+    "poster": "/media/product-previews/ai-use-case-meeting-poster.png",
+    "demoLabel": "AI Use Case Meeting Preview",
+    "toolHighlights": [
+      "Presenter Intake",
+      "Agenda Generation",
+      "Recording Archive"
+    ],
+    "keyMessage": "The same product pattern can support community learning, not just individual automation",
+    "audiences": [
+      "all",
+      "public",
+      "internal",
+      "executive",
+      "regent",
+      "citizen"
+    ]
+  },
+  {
+    "id": 27.06,
+    "slug": "the-flywheel-in-action-dissertation-formatter",
+    "type": "content",
+    "layout": "flywheel-case-study",
+    "title": "The Flywheel in Action: Dissertation Formatter",
+    "subtitle": "Checking UCSD GEPA dissertation and thesis formatting rules before students reach a manual review bottleneck",
+    "backgroundColor": "#F5F0E6",
+    "flywheelStages": [
+      {
+        "name": "Identify Problem",
+        "shortLabel": "Identify",
+        "description": "Dissertation and thesis formatting issues create avoidable back-and-forth for students and graduate education reviewers near filing deadlines.",
+        "icon": "Target",
+        "color": "#00629B"
+      },
+      {
+        "name": "Build with AI",
+        "shortLabel": "Build",
+        "description": "The agent validates Word documents against UCSD GEPA rules, auto-corrects common issues, and separates results by what was fixed versus what needs review.",
+        "icon": "Code",
+        "color": "#00C6D7"
+      },
+      {
+        "name": "Host on Campus",
+        "shortLabel": "Host",
+        "description": "A UC San Diego-branded upload workflow keeps the experience simple: choose document type, upload a .docx, run checks, and download the result.",
+        "icon": "Globe",
+        "color": "#FC8900"
+      },
+      {
+        "name": "Solve & Promote",
+        "shortLabel": "Scale",
+        "description": "Students get earlier feedback and GEPA can reserve expert review time for exceptions, policy judgment, and edge cases.",
+        "icon": "TrendingUp",
+        "color": "#6E963B"
+      }
+    ],
+    "impactMetrics": [
+      {
+        "value": "84",
+        "label": "Rules Checked",
+        "sub": "13 categories"
+      },
+      {
+        "value": "17+",
+        "label": "Auto-Fixes",
+        "sub": "Common issues"
+      },
+      {
+        "value": "3",
+        "label": "Result Buckets",
+        "sub": "Fixed, action, verify"
+      }
+    ],
+    "videoSrc": "/media/product-previews/dissertation-formatter-preview.mp4",
+    "poster": "/media/product-previews/dissertation-formatter-poster.png",
+    "demoLabel": "Dissertation Formatter Preview",
+    "toolHighlights": [
+      "GEPA Rules",
+      "Auto-Corrections",
+      "Compliance Report"
+    ],
+    "keyMessage": "Policy-heavy review becomes a guided self-service workflow, while expert review remains focused where it matters",
+    "audiences": [
+      "all",
+      "public",
+      "internal",
+      "executive",
+      "regent",
+      "citizen"
+    ]
+  },
+  {
     "id": 27.1,
     "slug": "the-new-workforce-competency",
     "type": "content",

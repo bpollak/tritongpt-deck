@@ -43,6 +43,9 @@ export const slideManagerState = {
     "campus-app-hosting-intake",
     "agent-engineering-strategy",
     "the-flywheel-in-action-pdf-remediator",
+    "the-flywheel-in-action-biobib-formatter",
+    "the-flywheel-in-action-ai-use-case-meeting",
+    "the-flywheel-in-action-dissertation-formatter",
     "the-new-workforce-competency",
     "preparing-the-ai-ready-graduate",
     "the-agentic-ai-stack",
@@ -382,6 +385,30 @@ export const slideManagerState = {
       "internal",
       "ASU-GSV",
       "regent"
+    ],
+    "the-flywheel-in-action-biobib-formatter": [
+      "all",
+      "public",
+      "internal",
+      "executive",
+      "regent",
+      "citizen"
+    ],
+    "the-flywheel-in-action-ai-use-case-meeting": [
+      "all",
+      "public",
+      "internal",
+      "executive",
+      "regent",
+      "citizen"
+    ],
+    "the-flywheel-in-action-dissertation-formatter": [
+      "all",
+      "public",
+      "internal",
+      "executive",
+      "regent",
+      "citizen"
     ],
     "the-new-workforce-competency": [
       "all"
