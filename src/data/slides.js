@@ -2287,46 +2287,97 @@ export const slides = [
     "id": 22,
     "slug": "from-tritongpt-to-tritonai",
     "type": "content",
-    "title": "Components for the Citizen Developer Program",
-    "subtitle": "TritonAI provides the shared building blocks that help campus teams create safe, governed AI solutions",
-    "layout": "feature-grid",
-    "backgroundColor": "#F5F0E6",
-    "content": [
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-citizen-ecosystem",
+    "marker": "CITIZEN DEVELOPER PROGRAM",
+    "spineActive": "action",
+    "parts": [
       {
-        "heading": "Citizen Developer Support Layer",
-        "text": "The TritonAI harness gives builders a governed set of reusable components: Agent Builder for low-code automation, Agent Skills Library for shared workflows, MCP Server Hub for secure connectors, Developer APIs for custom integrations, Agent Observability for run monitoring, and a Pre-Packaged Tools Pipeline for turnkey AI services."
+        "text": "The harness is surrounded by a "
       },
       {
-        "heading": "Agent Builder",
-        "text": "Low-code workflow automation lets units design and launch AI agents with drag-and-drop tooling, reducing dependency on central development queues.",
-        "icon": "Blocks"
+        "text": "campus builder ecosystem",
+        "accent": true
       },
       {
-        "heading": "Developer APIs",
-        "text": "Getting-started API documentation, integration guides, and reference patterns help technical teams build campus-ready AI services quickly.",
-        "icon": "Code"
-      },
-      {
-        "heading": "Agent Skills Library",
-        "text": "Reusable skill packages provide pre-built instructions and workflows for common campus tasks, accelerating delivery with consistent quality.",
-        "icon": "BookOpen"
-      },
-      {
-        "heading": "MCP Server Hub",
-        "text": "Shared connectors let assistants securely access enterprise data sources and services, enabling reusable integrations instead of one-off builds.",
-        "icon": "Database"
-      },
-      {
-        "heading": "Pre-Packaged Tools Pipeline",
-        "text": "A 2026 roadmap for transcription, captioning, summarization, accessibility, and OCR brings high-impact self-service AI capabilities into everyday operations.",
-        "icon": "Cpu"
-      },
-      {
-        "heading": "Agent Observability",
-        "text": "Provides real-time visibility into agent runs, tool calls, latency, and errors so teams can trace behavior, debug failures, and continuously improve reliability.",
-        "icon": "Monitor"
+        "text": "."
       }
     ],
+    "subhead": "TritonAI provides the reusable components, specialized models, and observability that let citizen developers build safely inside the campus environment.",
+    "backgroundColor": "#F5F0E6",
+    "center": {
+      "kicker": "CORE HARNESS",
+      "title": "Citizen Developer Harness",
+      "body": "Agent Builder, Developer APIs, and TritonCraft give units a governed way to turn local use cases into working AI workflows."
+    },
+    "ecosystem": [
+      {
+        "title": "Agent Builder",
+        "label": "low-code workflows",
+        "body": "Guided construction for repeatable automations and agent-backed services.",
+        "icon": "builder",
+        "tone": "blue"
+      },
+      {
+        "title": "Developer APIs",
+        "label": "custom integrations",
+        "body": "A paved path for technical teams to build with campus-authenticated models and gateway patterns.",
+        "icon": "api",
+        "tone": "blue"
+      },
+      {
+        "title": "Skills Library",
+        "label": "reusable workflows",
+        "body": "Shared instructions, templates, and task playbooks that teams can adapt instead of starting from scratch.",
+        "icon": "library",
+        "tone": "coral"
+      },
+      {
+        "title": "MCP Server Hub",
+        "label": "secure connectors",
+        "body": "Reusable bridges to campus systems and enterprise data with auth, scope, and audit built in.",
+        "icon": "mcp",
+        "tone": "coral"
+      },
+      {
+        "title": "Pre-Packaged Tools Pipeline",
+        "label": "ready capabilities",
+        "body": "Turnkey services for transcription, captioning, summarization, accessibility, OCR, and other repeatable needs.",
+        "icon": "pipeline",
+        "tone": "green"
+      },
+      {
+        "title": "Campus App Hosting",
+        "label": "production path",
+        "body": "A route from prototype to SSO, logging, network controls, and shared support responsibilities.",
+        "icon": "container",
+        "tone": "green"
+      }
+    ],
+    "gateway": {
+      "title": "Gateway models and capabilities",
+      "body": "The pre-packaged pipeline is backed by language models plus specialized capabilities available through the gateway.",
+      "items": [
+        "language models",
+        "OCR and document models",
+        "research-tuned models",
+        "vision and image generation",
+        "accessibility services",
+        "summarization and extraction"
+      ]
+    },
+    "observability": {
+      "title": "Observability wraps the workflow",
+      "items": [
+        "costing",
+        "chargeback",
+        "metering",
+        "agent behavior",
+        "tool calls",
+        "reliability"
+      ]
+    },
     "audiences": [
       "all",
       "internal",

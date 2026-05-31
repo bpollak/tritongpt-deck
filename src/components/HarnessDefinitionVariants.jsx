@@ -223,8 +223,8 @@ const Card = ({ children, delay = 0.35, className = '', style }) => (
   </motion.div>
 );
 
-const Kicker = ({ children, className = '' }) => (
-  <div className={`text-[12px] uppercase ${className}`} style={{ color: T.coralDark, fontFamily: T.mono, fontWeight: 600, letterSpacing: '0.22em' }}>
+const Kicker = ({ children, className = '', style }) => (
+  <div className={`text-[12px] uppercase ${className}`} style={{ color: T.coralDark, fontFamily: T.mono, fontWeight: 600, letterSpacing: '0.22em', ...style }}>
     {children}
   </div>
 );
@@ -1854,6 +1854,140 @@ const ApiConnectorArrow = ({ width = 32 }) => (
     <path d={`M ${width - 8} 3 L ${width} 8 L ${width - 8} 13 Z`} fill="#9ab4c1" />
   </svg>
 );
+
+const HarnessCitizenEcosystemVariant = ({ slide }) => {
+  const ecosystem = slide.ecosystem || [];
+  const gateway = slide.gateway || {};
+  const observability = slide.observability || {};
+  const toneStyles = {
+    blue: { ink: T.blue, fill: T.bluePale, border: '#b9d3dc' },
+    coral: { ink: T.coralDark, fill: '#fff5ee', border: T.coralPale },
+    green: { ink: T.green, fill: '#f6f8ee', border: '#cddbbf' }
+  };
+
+  return (
+    <Shell>
+      <Header slide={slide} maxWidth="88vw" titleFontSize="clamp(36px, 3.7vw, 58px)" subheadFontSize="clamp(16px, 1.12vw, 20px)" />
+
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[24vh] bottom-[5.5vh]">
+        <div className="grid h-full grid-cols-[31%_1fr_31%] grid-rows-[minmax(0,1fr)_142px] gap-x-5 gap-y-3">
+          <div className="grid min-h-0 grid-rows-3 gap-3">
+            {ecosystem.slice(0, 3).map((item, index) => {
+              const tone = toneStyles[item.tone] || toneStyles.blue;
+              return (
+                <Card key={item.title} delay={0.42 + index * 0.08} className="flex min-h-0 items-start gap-3 overflow-hidden p-3" style={{ background: tone.fill, borderColor: tone.border }}>
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/85" style={{ color: tone.ink }}>
+                    <MiniIcon type={item.icon || 'dot'} color={tone.ink} className="h-7 w-7" />
+                  </div>
+                  <div>
+                    <Kicker className="mb-1" style={{ color: tone.ink }}>{item.label}</Kicker>
+                    <div style={{ color: T.ink, fontFamily: T.sans, fontSize: 21.5, lineHeight: 1, fontWeight: 760 }}>{item.title}</div>
+                    <div className="mt-1.5" style={{ color: T.muted, fontFamily: T.sans, fontSize: 14, lineHeight: 1.18, fontWeight: 520 }}>{item.body}</div>
+                  </div>
+                </Card>
+              );
+            })}
+          </div>
+
+          <div className="relative">
+            <motion.svg {...fade(0.7, 0)} className="absolute inset-0 h-full w-full overflow-visible" viewBox="0 0 500 570" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M 26 115 C 115 115, 116 156, 194 174" fill="none" stroke="#9ab4c1" strokeWidth="1.4" strokeDasharray="6 8" />
+              <path d="M 26 225 C 112 225, 122 205, 194 198" fill="none" stroke="#9ab4c1" strokeWidth="1.4" strokeDasharray="6 8" />
+              <path d="M 26 334 C 118 334, 126 254, 194 222" fill="none" stroke="#9ab4c1" strokeWidth="1.4" strokeDasharray="6 8" />
+              <path d="M 474 115 C 384 115, 384 156, 306 174" fill="none" stroke="#9ab4c1" strokeWidth="1.4" strokeDasharray="6 8" />
+              <path d="M 474 225 C 386 225, 376 205, 306 198" fill="none" stroke="#9ab4c1" strokeWidth="1.4" strokeDasharray="6 8" />
+              <path d="M 474 334 C 380 334, 374 254, 306 222" fill="none" stroke="#9ab4c1" strokeWidth="1.4" strokeDasharray="6 8" />
+              <path d="M 250 286 V 390" fill="none" stroke={T.coralDark} strokeWidth="2" />
+              <polygon points="250,402 242,388 258,388" fill={T.coralDark} />
+            </motion.svg>
+
+            <motion.div {...fade(0.55)} className="absolute left-1/2 top-[3%] flex h-[220px] w-[220px] -translate-x-1/2 flex-col items-center justify-center rounded-full border bg-white text-center" style={{ borderColor: '#d8c6b9', boxShadow: '0 18px 40px rgba(23,24,20,0.12)' }}>
+              <div className="mb-3">
+                <UCSDLogoMark className="h-10 w-[136px]" />
+              </div>
+              <Kicker>{slide.center?.kicker || 'CORE HARNESS'}</Kicker>
+              <div className="mt-2 px-8" style={{ color: T.ink, fontFamily: T.serif, fontSize: 29, lineHeight: 0.96, fontWeight: 560 }}>
+                {slide.center?.title || 'Citizen Developer Harness'}
+              </div>
+              <div className="mt-2 px-7" style={{ color: T.muted, fontFamily: T.sans, fontSize: 13.5, lineHeight: 1.16, fontWeight: 560 }}>
+                {slide.center?.body}
+              </div>
+            </motion.div>
+
+            <motion.div {...fade(1.05)} className="absolute left-1/2 top-[54%] w-[92%] -translate-x-1/2 rounded-[8px] border bg-white/75 p-2.5" style={{ borderColor: '#b9d3dc', boxShadow: '0 10px 26px rgba(23,24,20,0.08)' }}>
+              <div className="flex items-start gap-3">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full" style={{ background: T.bluePale }}>
+                  <MiniIcon type="gateway" color={T.blue} className="h-8 w-8" />
+                </div>
+                <div>
+                  <Kicker className="mb-1" style={{ color: T.blue }}>{gateway.title || 'Gateway models and capabilities'}</Kicker>
+                  <div style={{ color: T.muted, fontFamily: T.sans, fontSize: 13.5, lineHeight: 1.15, fontWeight: 560 }}>{gateway.body}</div>
+                </div>
+              </div>
+              <div className="mt-2 grid grid-cols-3 gap-1.5">
+                {(gateway.items || []).map((item, index) => (
+                  <motion.div key={item} {...fade(1.18 + index * 0.04, 0)} className="rounded-full border bg-white px-2 py-1 text-center text-[10px] uppercase" style={{ borderColor: '#c9d7df', color: T.ink, fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.05em' }}>
+                    {item}
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+
+          <div className="grid min-h-0 grid-rows-3 gap-3">
+            {ecosystem.slice(3, 6).map((item, index) => {
+              const tone = toneStyles[item.tone] || toneStyles.coral;
+              return (
+                <Card key={item.title} delay={0.54 + index * 0.08} className="flex min-h-0 items-start gap-3 overflow-hidden p-3" style={{ background: tone.fill, borderColor: tone.border }}>
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/85" style={{ color: tone.ink }}>
+                    <MiniIcon type={item.icon || 'dot'} color={tone.ink} className="h-7 w-7" />
+                  </div>
+                  <div>
+                    <Kicker className="mb-1" style={{ color: tone.ink }}>{item.label}</Kicker>
+                    <div style={{ color: T.ink, fontFamily: T.sans, fontSize: 21.5, lineHeight: 1, fontWeight: 760 }}>{item.title}</div>
+                    <div className="mt-1.5" style={{ color: T.muted, fontFamily: T.sans, fontSize: 14, lineHeight: 1.18, fontWeight: 520 }}>{item.body}</div>
+                  </div>
+                </Card>
+              );
+            })}
+          </div>
+
+          <motion.div {...fade(1.22)} className="col-span-3 rounded-[8px] border bg-white/70 p-3" style={{ borderColor: T.coralPale, boxShadow: '0 10px 26px rgba(23,24,20,0.08)' }}>
+            <div className="flex items-start gap-4">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full" style={{ background: '#fff5ee' }}>
+                <MiniIcon type="observe" color={T.coralDark} className="h-8 w-8" />
+              </div>
+              <div className="min-w-[245px]">
+                <Kicker>{observability.title || 'Observability wraps the workflow'}</Kicker>
+                <div className="mt-1.5" style={{ color: T.ink, fontFamily: T.serif, fontSize: 25, lineHeight: 1, fontWeight: 560 }}>
+                  monitor cost, behavior, and reliability
+                </div>
+              </div>
+              <div className="grid flex-1 grid-cols-6 gap-2">
+                {(observability.items || []).map((item, index) => (
+                  <motion.div key={item} {...fade(1.36 + index * 0.04, 0)} className="rounded-[5px] px-2 py-2.5 text-center text-[12px] uppercase" style={{ background: '#fff8f2', color: T.coralDark, fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.06em' }}>
+                    {item}
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {slide.bottomLine && (
+        <motion.div {...fade(1.55)} className="absolute left-[4.8vw] right-[4.8vw] top-[90vh] flex items-start gap-5">
+          <span className="shrink-0 rounded-[5px] px-3 py-2 text-[12px]" style={{ background: T.coral, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.22em', whiteSpace: 'nowrap' }}>
+            {slide.bottomLineLabel || 'PROGRAM MODEL'}
+          </span>
+          <div style={{ color: T.ink, fontSize: 'clamp(15px, 1.12vw, 18px)', fontWeight: 560, lineHeight: 1.3 }}>
+            {slide.bottomLine}
+          </div>
+        </motion.div>
+      )}
+    </Shell>
+  );
+};
 
 const HarnessDeveloperApiProgramVariant = ({ slide }) => {
   const users = slide.users || [];
@@ -4152,6 +4286,7 @@ export const harnessVariantMap = {
   'harness-while-loop': HarnessWhileLoopVariant,
   'harness-context': HarnessContextVariant,
   'harness-framework-cards': HarnessFrameworkCardsVariant,
+  'harness-citizen-ecosystem': HarnessCitizenEcosystemVariant,
   'harness-developer-api-program': HarnessDeveloperApiProgramVariant,
   'harness-campus-hosting': HarnessCampusHostingVariant,
   'harness-skills-tools': HarnessSkillsVariant,
