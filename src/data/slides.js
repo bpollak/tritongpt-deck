@@ -3907,7 +3907,8 @@ export const slides = [
             "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg"
           },
           {
-            "name": "TritonCraft"
+            "name": "TritonCraft",
+            "logoType": "ucsd"
           }
         ]
       }
@@ -4099,6 +4100,7 @@ export const slides = [
       {
         "name": "TritonCraft",
         "color": "#111111",
+        "logoType": "ucsd",
         "logoText": "T3 Code",
         "surface": "terminal · IDE · desktop",
         "powersBadge": "POWERS UCSD HARNESS",
@@ -4638,7 +4640,8 @@ export const slides = [
         "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg"
       },
       {
-        "name": "TritonCraft"
+        "name": "TritonCraft",
+        "logoType": "ucsd"
       }
     ],
     "priorityHeading": "Your personal context",

@@ -80,6 +80,42 @@ const Shell = ({ children }) => (
   </div>
 );
 
+const UCSDLogoMark = ({ className = 'h-10 w-32', compact = false }) => (
+  <svg
+    viewBox={compact ? '0 0 88 32' : '0 0 190 50'}
+    className={className}
+    role="img"
+    aria-label="UC San Diego"
+  >
+    <rect width="100%" height="100%" rx="4" fill="#ffffff" />
+    {compact ? (
+      <>
+        <text
+          x="6"
+          y="20"
+          fill="#182B49"
+          style={{ fontFamily: T.sans, fontSize: 18, fontWeight: 800, letterSpacing: '0.02em' }}
+        >
+          UCSD
+        </text>
+        <rect x="6" y="24" width="58" height="3" fill="#FFCD00" />
+      </>
+    ) : (
+      <>
+        <text
+          x="10"
+          y="30"
+          fill="#182B49"
+          style={{ fontFamily: T.sans, fontSize: 23, fontWeight: 800, letterSpacing: '0.01em' }}
+        >
+          UC San Diego
+        </text>
+        <rect x="10" y="36" width="146" height="4" fill="#FFCD00" />
+      </>
+    )}
+  </svg>
+);
+
 const isCitizenAudience = (slide) =>
   Array.isArray(slide?.audiences) && slide.audiences.includes('citizen');
 
@@ -1007,7 +1043,9 @@ const HarnessToolboxVariant = ({ slide }) => (
               </div>
             )}
             <div className="flex h-16 items-center justify-center">
-              {vendor.logoUrl ? (
+              {vendor.logoType === 'ucsd' ? (
+                <UCSDLogoMark className="h-12 w-[150px]" />
+              ) : vendor.logoUrl ? (
                 <img src={vendor.logoUrl} alt={`${vendor.name} logo`} className="max-h-12 max-w-[150px] object-contain" />
               ) : (
                 <div style={{ color: vendor.color || T.ink, fontSize: 28, fontWeight: 620 }}>{vendor.logoText || vendor.name}</div>
@@ -2951,7 +2989,9 @@ const HarnessConvergenceVariant = ({ slide }) => {
                       fontWeight: 700
                     }}
                   >
-                    {item.logoUrl && (
+                    {item.logoType === 'ucsd' ? (
+                      <UCSDLogoMark className="h-7 w-[104px] shrink-0" />
+                    ) : item.logoUrl && (
                       <img
                         src={item.logoUrl}
                         alt=""
@@ -3060,7 +3100,9 @@ const HarnessConvergenceVariant = ({ slide }) => {
                       fontWeight: 700
                     }}
                   >
-                    {item.logoUrl && (
+                    {item.logoType === 'ucsd' ? (
+                      <UCSDLogoMark className="h-7 w-[104px] shrink-0" />
+                    ) : item.logoUrl && (
                       <img
                         src={item.logoUrl}
                         alt=""
@@ -3153,7 +3195,9 @@ const HarnessDataUnlockVariant = ({ slide }) => {
                     className="inline-flex items-center gap-2 rounded-[5px] border px-3.5 py-2 text-[16px]"
                     style={{ borderColor: T.faint, background: '#fff', color: T.ink, fontFamily: T.mono, fontWeight: 700 }}
                   >
-                    {item.logoUrl ? (
+                    {item.logoType === 'ucsd' ? (
+                      <UCSDLogoMark className="h-[18px] w-[50px] shrink-0" compact />
+                    ) : item.logoUrl ? (
                       <img
                         src={item.logoUrl}
                         alt=""
