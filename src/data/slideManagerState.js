@@ -16,12 +16,12 @@ export const slideManagerState = {
     "tritongpt-secure-scalable-ai-platform",
     "tritongpt-initiative",
     "video-media1",
-    "video-screen-recording-2026-05-27",
     "video-screen-recording-1",
     "video-screen-recording-2",
     "video-media2",
     "video-media4",
     "video-media3",
+    "video-screen-recording-2026-05-27",
     "video-media5",
     "video-media6",
     "scaling-engagement-the-tritongpt-widget",
@@ -195,14 +195,6 @@ export const slideManagerState = {
       "cabinet",
       "executive"
     ],
-    "video-screen-recording-2026-05-27": [
-      "all",
-      "public",
-      "internal",
-      "technical",
-      "cabinet",
-      "executive"
-    ],
     "video-screen-recording-1": [
       "all",
       "public",
@@ -235,6 +227,14 @@ export const slideManagerState = {
       "public",
       "technical",
       "regent",
+      "executive"
+    ],
+    "video-screen-recording-2026-05-27": [
+      "all",
+      "public",
+      "internal",
+      "technical",
+      "cabinet",
       "executive"
     ],
     "video-media5": [
