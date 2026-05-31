@@ -1555,7 +1555,7 @@ const Slide = ({ slide }) => {
             isSolutionVideo
               ? clsx(
                   "grid-cols-1 gap-3 sm:gap-5 pt-0 sm:pt-0 items-start",
-                  isIphoneFramed ? "md:grid-cols-[0.54fr_1.46fr] md:gap-3" : "md:grid-cols-[1.12fr_0.88fr] md:gap-7"
+                  isIphoneFramed ? "md:grid-cols-[0.7fr_1.3fr] md:gap-4" : "md:grid-cols-[1.12fr_0.88fr] md:gap-7"
                 )
               : "grid-cols-1 md:grid-cols-[1.3fr_0.7fr] items-start"
           )}>
@@ -1571,7 +1571,7 @@ const Slide = ({ slide }) => {
                   <div className="absolute -inset-1 bg-gradient-to-br from-ucsd-navy/5 to-ucsd-blue/5 rounded-2xl blur-sm" />
                   {slide.videoSrc ? (
                     isIphoneFramed ? (
-                      <div className="relative mx-auto h-[min(54vh,540px)] aspect-[1206/2622] rounded-[2rem] bg-slate-950 px-[6px] py-[7px] shadow-[0_24px_46px_rgba(15,23,42,0.22),inset_0_0_0_1px_rgba(255,255,255,0.18)] ring-1 ring-slate-950/20">
+                      <div className="relative mx-auto h-[min(70vh,700px)] aspect-[1206/2622] rounded-[2rem] bg-slate-950 px-[6px] py-[7px] shadow-[0_24px_46px_rgba(15,23,42,0.22),inset_0_0_0_1px_rgba(255,255,255,0.18)] ring-1 ring-slate-950/20">
                         <div className="absolute -left-[4px] top-[17%] h-10 w-[4px] rounded-l-full bg-slate-800 shadow-sm" />
                         <div className="absolute -left-[4px] top-[27%] h-14 w-[4px] rounded-l-full bg-slate-800 shadow-sm" />
                         <div className="absolute -right-[4px] top-[23%] h-20 w-[4px] rounded-r-full bg-slate-800 shadow-sm" />
