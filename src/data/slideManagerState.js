@@ -1,6 +1,7 @@
 export const slideManagerState = {
   "order": [
     "the-ai-enabled-university",
+    "where-will-ai-place-us-in-2031",
     "the-ai-enabled-university-duo",
     "the-ai-enabled-university-cabinet",
     "the-ai-enabled-university-generic",
@@ -106,6 +107,9 @@ export const slideManagerState = {
       "technical",
       "executive",
       "cabinet"
+    ],
+    "where-will-ai-place-us-in-2031": [
+      "executive"
     ],
     "the-ai-enabled-university-duo": [
       "all",

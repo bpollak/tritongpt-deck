@@ -149,6 +149,7 @@ const Slide = ({ slide }) => {
   const useDenseList = slide.layout === 'dense-list';
   const isGraphicHeavy = slide.layout === 'graphic-heavy';
   const isFeatureGrid = slide.layout === 'feature-grid';
+  const isAI2031Prompt = slide.slug === 'where-will-ai-place-us-in-2031';
   const isHeroList = slide.layout === 'hero-list';
   const isTitleHero = slide.layout === 'title-hero';
   const isEcosystem = slide.layout === 'ecosystem-visual';
@@ -1262,6 +1263,7 @@ const Slide = ({ slide }) => {
           (isVeryDense || useThreeColumns) && !isTitle && "text-2xl md:text-3xl mb-4",
           isGraphicHeavy && "text-2xl md:text-4xl",
           isFeatureGrid && "w-full text-center border-b-0 border-none mb-4 sm:mb-12",
+          isAI2031Prompt && "text-3xl sm:text-5xl md:text-6xl mb-3 sm:mb-8",
           isSolutionVideo && "mb-0.5 sm:mb-1 leading-tight",
           isTritonAIEvolutionSlide && "text-lg sm:text-2xl md:text-4xl mb-1 sm:mb-2 leading-tight",
           isHeroList && "mb-0 sm:mb-1",
@@ -1286,6 +1288,7 @@ const Slide = ({ slide }) => {
             isContractReviewChallenge && "text-base sm:text-xl md:text-2xl mb-2 sm:mb-2.5 font-semibold text-ucsd-blue",
             isAgentWorkflow && "text-lg sm:text-2xl font-semibold",
             isAgentDevStrategy && "text-sm sm:text-lg md:text-xl mb-2 sm:mb-3 font-semibold text-ucsd-blue",
+            isAI2031Prompt && "text-xl sm:text-2xl md:text-3xl mb-6 sm:mb-8 text-center w-full",
             isDark ? "text-ucsd-sky" : "text-ucsd-blue"
           )}
         >
@@ -3149,11 +3152,35 @@ const Slide = ({ slide }) => {
             </>
           )}
 
-          <div className={clsx('grid grid-cols-1 gap-2.5 sm:gap-3', isTritonAIEvolutionSlide && tritonAICapabilityGridClass, slide.gridColumns === 2 ? 'sm:grid-cols-2 lg:grid-cols-2' : 'sm:grid-cols-2 lg:grid-cols-3')}>
+          <div className={clsx('grid grid-cols-1 gap-2.5 sm:gap-3', isAI2031Prompt && 'gap-4 sm:gap-5 2xl:gap-8', isTritonAIEvolutionSlide && tritonAICapabilityGridClass, slide.gridColumns === 2 ? 'sm:grid-cols-2 lg:grid-cols-2' : 'sm:grid-cols-2 lg:grid-cols-3')}>
             {(isTritonAIEvolutionSlide ? tritonAICapabilityItems : slide.content).map((item, index) => {
               const displayIndex = isTritonAIEvolutionSlide ? index + 1 : index;
               const topBarColors = ['#182B49', '#00C6D7', '#00629B', '#FFCD00', '#FC8900', '#6E963B'];
-              const topBarColor = topBarColors[displayIndex % topBarColors.length];
+              const promptCampStyles = [
+                {
+                  cardClass: 'bg-gradient-to-br from-[#fff1e8] via-white to-[#fff8f3] border-[#d47a5f]/70 shadow-[0_18px_36px_rgba(212,122,95,0.20)]',
+                  topBar: '#d47a5f',
+                  textClass: 'text-[#8f3f2c]',
+                  iconClass: 'text-[#d47a5f]',
+                  numberClass: 'text-[#d47a5f]'
+                },
+                {
+                  cardClass: 'bg-gradient-to-br from-[#e7fbff] via-white to-[#f3fdff] border-[#00a6b6]/70 shadow-[0_18px_36px_rgba(0,166,182,0.18)]',
+                  topBar: '#00a6b6',
+                  textClass: 'text-[#006a78]',
+                  iconClass: 'text-[#00a6b6]',
+                  numberClass: 'text-[#00a6b6]'
+                },
+                {
+                  cardClass: 'bg-gradient-to-br from-[#f1f7ea] via-white to-[#f8fbf4] border-[#6f9363]/70 shadow-[0_18px_36px_rgba(111,147,99,0.20)]',
+                  topBar: '#6f9363',
+                  textClass: 'text-[#45653b]',
+                  iconClass: 'text-[#6f9363]',
+                  numberClass: 'text-[#6f9363]'
+                }
+              ];
+              const promptStyle = promptCampStyles[index % promptCampStyles.length];
+              const topBarColor = isAI2031Prompt ? promptStyle.topBar : topBarColors[displayIndex % topBarColors.length];
               const evolutionCardStyles = [
                 {
                   cardClass: 'bg-gradient-to-br from-[#f9fbff] to-[#eef4ff] border-[#7aa7ff]',
@@ -3206,14 +3233,15 @@ const Slide = ({ slide }) => {
                   transition={{ delay: 0.2 + index * 0.1, type: "spring", stiffness: 100 }}
                   className={clsx(
                     'relative flex flex-col rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all overflow-hidden border',
-                    isTritonAIEvolutionSlide ? evolutionStyle.cardClass : 'bg-white border-transparent'
+                    isAI2031Prompt && 'min-h-[240px] sm:min-h-[260px] lg:min-h-[275px] 2xl:min-h-[340px] border-2',
+                    isAI2031Prompt ? promptStyle.cardClass : isTritonAIEvolutionSlide ? evolutionStyle.cardClass : 'bg-white border-transparent'
                   )}
                 >
                   {/* Colored top bar */}
-                  <div className="h-1.5 sm:h-2 w-full" style={{ backgroundColor: topBarColor }} />
+                  <div className={clsx('w-full', isAI2031Prompt ? 'h-3 sm:h-4' : 'h-1.5 sm:h-2')} style={{ backgroundColor: topBarColor }} />
 
                   {/* Content */}
-                  <div className="p-2.5 sm:p-3.5 lg:p-4">
+                  <div className={clsx(isAI2031Prompt ? 'p-4 sm:p-5 2xl:p-7' : 'p-2.5 sm:p-3.5 lg:p-4')}>
                     {isTritonAIEvolutionSlide && (
                       <div className="mb-1.5 sm:mb-2 inline-flex items-center gap-2">
                         <div className={clsx('rounded-full px-2 py-0.5 text-[10px] sm:text-[11px] font-bold tracking-wider uppercase', evolutionStyle.iconBadgeClass)}>
@@ -3222,13 +3250,18 @@ const Slide = ({ slide }) => {
                       </div>
                     )}
                     {/* Icon watermark */}
-                    <div className="absolute top-3 sm:top-4 right-3 sm:right-4 pointer-events-none select-none" style={{ color: topBarColor, opacity: 0.15 }}>
-                      <IconComponent size={34} strokeWidth={1.5} className="sm:w-12 sm:h-12 md:w-14 md:h-14" />
+                    <div className={clsx('absolute pointer-events-none select-none', isAI2031Prompt ? 'top-6 right-6 opacity-20' : 'top-3 sm:top-4 right-3 sm:right-4')} style={{ color: topBarColor, opacity: isAI2031Prompt ? undefined : 0.15 }}>
+                      <IconComponent size={isAI2031Prompt ? 82 : 34} strokeWidth={1.5} className={clsx(isAI2031Prompt ? 'w-20 h-20 md:w-24 md:h-24' : 'sm:w-12 sm:h-12 md:w-14 md:h-14', isAI2031Prompt && promptStyle.iconClass)} />
                     </div>
 
                     {/* Heading */}
-                    <div className="flex flex-wrap items-center gap-2 mb-1 sm:mb-1.5 pr-8 sm:pr-14">
-                      <h3 className="text-sm sm:text-lg md:text-xl font-bold text-ucsd-navy tracking-tight leading-tight">
+                    {isAI2031Prompt && (
+                      <div className={clsx('mb-2.5 2xl:mb-4 text-[11px] sm:text-xs font-black uppercase tracking-[0.22em]', promptStyle.numberClass)}>
+                        Choose one
+                      </div>
+                    )}
+                    <div className={clsx('flex flex-wrap items-center gap-2 mb-1 sm:mb-1.5', isAI2031Prompt ? 'pr-20 sm:pr-24' : 'pr-8 sm:pr-14')}>
+                      <h3 className={clsx('font-bold text-ucsd-navy tracking-tight leading-tight', isAI2031Prompt ? 'text-xl sm:text-2xl lg:text-[1.8rem] 2xl:text-[2.1rem]' : 'text-sm sm:text-lg md:text-xl')}>
                         {item.heading}
                       </h3>
                       {item.status && (
@@ -3256,7 +3289,7 @@ const Slide = ({ slide }) => {
                         ))}
                       </ul>
                     ) : (
-                      <p className="text-xs sm:text-sm md:text-base text-slate-800 font-medium leading-snug sm:leading-relaxed">
+                      <p className={clsx('font-medium leading-snug sm:leading-relaxed', isAI2031Prompt ? ['mt-3 2xl:mt-5 text-base sm:text-lg lg:text-xl 2xl:text-2xl leading-relaxed sm:leading-relaxed', promptStyle.textClass] : 'text-xs sm:text-sm md:text-base text-slate-800')}>
                         {item.text}
                       </p>
                     )}

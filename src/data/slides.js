@@ -19,6 +19,35 @@ export const slides = [
     ]
   },
   {
+    "id": 1.1,
+    "slug": "where-will-ai-place-us-in-2031",
+    "type": "content",
+    "layout": "feature-grid",
+    "title": "2031: Which AI Future Are We In?",
+    "subtitle": "Pick the camp closest to your view of where society is heading.",
+    "backgroundColor": "#F5F0E6",
+    "content": [
+      {
+        "heading": "Camp 1: Transformational Break",
+        "text": "AI massively subsumes white-collar work, accelerates drug discovery, extends healthspan, cures diseases, and forces society to rethink what human contribution means.",
+        "icon": "Rocket"
+      },
+      {
+        "heading": "Camp 2: Accelerated Infusion",
+        "text": "AI steadily amplifies people and organizations, but adoption follows a recognizable technology curve. The internet and existing computing base make it faster; research labs are still over-promising.",
+        "icon": "Zap"
+      },
+      {
+        "heading": "Camp 3: Slow Diffusion",
+        "text": "AI joins computers, mobile, and the internet as another important technology, but meaningful societal change takes longer than five years and may arrive unevenly.",
+        "icon": "RefreshCw"
+      }
+    ],
+    "audiences": [
+      "executive"
+    ]
+  },
+  {
     "id": 1.3,
     "slug": "the-ai-enabled-university-duo",
     "type": "title",
