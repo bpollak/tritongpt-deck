@@ -588,8 +588,7 @@ export const slideManagerState = {
     ],
     "cabinet-harness-11a-two-environments": [
       "citizen",
-      "regent",
-      "executive"
+      "regent"
     ],
     "cabinet-harness-11d-campus-app-hosting-intake": [
       "citizen",
