@@ -2513,23 +2513,63 @@ export const slides = [
     "spineActive": "action",
     "parts": [
       {
-        "text": "The harness is surrounded by a "
+        "text": "TritonAI supports the "
       },
       {
-        "text": "campus builder ecosystem",
+        "text": "Citizen Developer Program",
         "accent": true
       },
       {
         "text": "."
       }
     ],
-    "subhead": "TritonAI provides the reusable components, specialized models, and observability that let citizen developers build safely inside the campus environment.",
+    "subhead": "A focused campus kit for building, reusing, and operating AI workflows safely.",
     "backgroundColor": "#F5F0E6",
     "center": {
-      "kicker": "CORE HARNESS",
-      "title": "Citizen Developer Harness",
-      "body": "Agent Builder, Developer APIs, and TritonCraft give units a governed way to turn local use cases into working AI workflows."
+      "kicker": "PROGRAM FOUNDATION",
+      "title": "Citizen Developer Program",
+      "body": "Units get a governed path from local problem to supported AI workflow without rebuilding model access, security, or operations."
     },
+    "pillars": [
+      {
+        "title": "Build workflows",
+        "label": "create",
+        "body": "Agent Builder, TritonCraft, and Developer APIs help teams turn use cases into working campus tools.",
+        "items": [
+          "Agent Builder",
+          "TritonCraft",
+          "Developer APIs"
+        ],
+        "icon": "builder",
+        "tone": "blue"
+      },
+      {
+        "title": "Reuse campus components",
+        "label": "share",
+        "body": "Skills and MCP connectors let teams start from trusted patterns instead of one-off integrations.",
+        "items": [
+          "Skills Library",
+          "MCP Server Hub",
+          "Templates"
+        ],
+        "icon": "library",
+        "tone": "coral"
+      },
+      {
+        "title": "Operate safely",
+        "label": "govern",
+        "body": "The gateway, pre-packaged tools, and observability provide model routing, specialized capabilities, cost tracking, and reliability signals.",
+        "items": [
+          "Gateway models",
+          "Ready tools",
+          "Observability"
+        ],
+        "icon": "observe",
+        "tone": "green"
+      }
+    ],
+    "bottomLine": "The goal is simple: make campus AI development easier to start, easier to reuse, and easier to govern.",
+    "bottomLineLabel": "PROGRAM MODEL",
     "ecosystem": [
       {
         "title": "Agent Builder",
