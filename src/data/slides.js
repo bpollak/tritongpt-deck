@@ -34,7 +34,7 @@ export const slides = [
       },
       {
         "heading": "Camp 2: Accelerated Infusion",
-        "text": "AI steadily amplifies people and organizations, but adoption follows a recognizable technology curve. The internet and existing computing base make it faster; research labs are still over-promising.",
+        "text": "AI steadily amplifies people and organizations, but adoption follows a recognizable technology curve. The internet and existing computing base make it faster; research labs like OpenAI and Anthropic are still over-promising.",
         "icon": "Zap"
       },
       {
