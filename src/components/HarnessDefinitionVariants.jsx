@@ -1423,42 +1423,47 @@ const HarnessComponentsFrameworkVariant = ({ slide }) => (
       )}
     </div>
 
-    <div className="absolute left-[4.8vw] right-[4.8vw] top-[19vh]">
-      <div className="grid grid-cols-2 gap-5">
+    <div className="absolute left-[4.8vw] right-[4.8vw] top-[18vh]">
+      <div className="grid grid-cols-2 gap-4">
         {(slide.components || []).map((component, index) => (
           <Card
             key={`${component.title}-${index}`}
             delay={0.5 + index * 0.08}
-            className="p-7"
+            className="p-4"
             style={component.highlight ? { background: '#fff8f2', borderColor: T.coral } : undefined}
           >
-            <div className="grid grid-cols-[1fr_360px] items-center gap-6">
+            <div className="grid grid-cols-[1fr_320px] items-start gap-3">
               <div>
-                <div className="text-[13px] uppercase" style={{ color: component.color || T.coralDark, fontFamily: T.mono, letterSpacing: '0.18em', fontWeight: 700 }}>
-                  {String(index + 1).padStart(2, '0')} · {component.kicker}
+                <div className="flex items-center gap-3">
+                  <span className="text-[13px] uppercase" style={{ color: component.color || T.coralDark, fontFamily: T.mono, letterSpacing: '0.16em', fontWeight: 800 }}>
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <span className="uppercase" style={{ color: component.color || T.coralDark, fontFamily: T.mono, fontSize: 'clamp(20px, 1.65vw, 32px)', letterSpacing: '0.1em', fontWeight: 900, lineHeight: 0.92 }}>
+                    {component.kicker}
+                  </span>
                 </div>
-                <div className="mt-2.5" style={{ fontSize: 32, lineHeight: 1.04, fontWeight: 620, color: T.ink }}>
+                <div className="mt-1.5" style={{ fontSize: 'clamp(23px, 1.62vw, 29px)', lineHeight: 1.02, fontWeight: 620, color: T.ink }}>
                   {component.title}
                 </div>
               </div>
               {component.visual && (
-                <div className="h-[130px] w-full">
+                <div className="h-[104px] w-full">
                   <ComponentVisual type={component.visual} color={component.color || T.coralDark} />
                 </div>
               )}
             </div>
-            <div className="mt-4" style={{ color: T.ink, fontSize: 18.5, lineHeight: 1.34, fontWeight: 500 }}>
+            <div className="mt-2.5" style={{ color: T.ink, fontSize: 17.5, lineHeight: 1.24, fontWeight: 500 }}>
               {component.body}
             </div>
             {component.question && (
-              <div className="mt-3 rounded-[5px] border-l-2 pl-3 py-1.5" style={{ borderColor: component.color || T.coralDark, color: T.muted, fontSize: 16, lineHeight: 1.3, fontStyle: 'italic' }}>
+              <div className="mt-2 rounded-[5px] border-l-2 pl-3 py-1" style={{ borderColor: component.color || T.coralDark, color: T.muted, fontSize: 15, lineHeight: 1.22, fontStyle: 'italic' }}>
                 {component.question}
               </div>
             )}
             {component.examples && (
-              <div className="mt-3 flex flex-wrap gap-2">
+              <div className="mt-2 flex flex-wrap gap-2">
                 {component.examples.map((example) => (
-                  <span key={example} className="rounded-[4px] border px-2.5 py-1 text-[12px] uppercase" style={{ borderColor: component.color || T.coralPale, color: component.color || T.coralDark, fontFamily: T.mono, letterSpacing: '0.08em', fontWeight: 700 }}>
+                  <span key={example} className="rounded-[4px] border px-2.5 py-1 text-[11px] uppercase" style={{ borderColor: component.color || T.coralPale, color: component.color || T.coralDark, fontFamily: T.mono, letterSpacing: '0.08em', fontWeight: 700 }}>
                     {example}
                   </span>
                 ))}
