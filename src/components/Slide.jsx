@@ -164,6 +164,7 @@ const Slide = ({ slide }) => {
   const isRoadmap = slide.layout === 'roadmap';
   const isProblemStatement = slide.layout === 'problem-statement';
   const isComparisonTable = slide.layout === 'comparison-table';
+  const isTritonGPTToTritonAIComparison = slide.slug === 'tritongpt-to-tritonai-comparison';
   const isCompoundArchitecture = slide.layout === 'compound-architecture';
   const isInfrastructureStack = slide.layout === 'infrastructure-stack';
   const isAgentWorkflow = slide.layout === 'agent-workflow';
@@ -1265,6 +1266,7 @@ const Slide = ({ slide }) => {
           isFeatureGrid && "w-full text-center border-b-0 border-none mb-4 sm:mb-12",
           isAI2031Prompt && "text-3xl sm:text-5xl md:text-6xl mb-3 sm:mb-8",
           isSolutionVideo && "mb-0.5 sm:mb-1 leading-tight",
+          isTritonGPTToTritonAIComparison && "mb-1 sm:mb-1.5",
           isTritonAIEvolutionSlide && "text-lg sm:text-2xl md:text-4xl mb-1 sm:mb-2 leading-tight",
           isHeroList && "mb-0 sm:mb-1",
           isTimelineEvolution && "mb-0.5 sm:mb-1 leading-none",
@@ -1283,6 +1285,7 @@ const Slide = ({ slide }) => {
             "text-base sm:text-xl md:text-2xl font-bold mt-1 sm:mt-2 mb-3 sm:mb-6",
             (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isSolution || isSolutionVideo || isAssistantCategories || isKeyTakeaways || isAgentDevStrategy || isRoadmap || isProblemStatement || isContractReviewChallenge || isComparisonTable || isAgentWorkflow || isTimelineEvolution || isCampusMetrics) && "text-center w-full mb-4 sm:mb-8",
             isSolutionVideo && "mt-0 sm:mt-0 mb-0 sm:mb-0.5",
+            isTritonGPTToTritonAIComparison && "mt-0 mb-2 sm:mb-3 max-w-5xl text-sm sm:text-base md:text-xl",
             isHeroList && "mt-0 mb-1.5 sm:mb-2",
             isProblemStatement && "text-lg sm:text-2xl md:text-3xl mb-4 sm:mb-10 font-medium text-red-600",
             isContractReviewChallenge && "text-base sm:text-xl md:text-2xl mb-2 sm:mb-2.5 font-semibold text-ucsd-blue",
@@ -3301,7 +3304,112 @@ const Slide = ({ slide }) => {
         </div>
       )}
 
-      {isComparisonTable && (
+      {isComparisonTable && isTritonGPTToTritonAIComparison && (
+        <div className="w-full max-w-[1680px] mx-auto flex flex-col gap-3 sm:gap-4 px-2 sm:px-3">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_180px_1fr] gap-3 sm:gap-4 items-stretch">
+            <motion.div
+              initial={{ opacity: 0, x: -18 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white/90 p-4 sm:p-5 shadow-lg"
+            >
+              <div className="absolute inset-x-0 top-0 h-1.5 bg-slate-300" />
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <div className="text-[11px] sm:text-xs font-black uppercase tracking-[0.22em] text-slate-400">Access layer</div>
+                  <div className="mt-1 text-2xl sm:text-4xl font-black leading-none text-slate-600">TritonGPT</div>
+                </div>
+                <div className="rounded-full bg-slate-100 p-2.5 text-slate-500">
+                  <Brain size={26} />
+                </div>
+              </div>
+              <p className="mt-3 text-base sm:text-xl font-semibold leading-snug text-slate-700">
+                One governed way for campus users and products to reach frontier models.
+              </p>
+              <div className="mt-4 grid grid-cols-2 gap-2">
+                {['chat', 'widget', 'mobile app', 'shared API'].map((item) => (
+                  <div key={item} className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-center text-[11px] sm:text-xs font-black uppercase tracking-[0.16em] text-slate-500">
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.94 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.12, duration: 0.45 }}
+              className="relative flex min-h-[120px] flex-col items-center justify-center rounded-2xl border border-ucsd-blue/20 bg-gradient-to-b from-white to-[#eaf7fb] px-4 py-4 text-center shadow-lg"
+            >
+              <div className="hidden lg:block absolute left-[-18px] top-1/2 h-1 w-9 -translate-y-1/2 bg-ucsd-blue/45" />
+              <div className="hidden lg:block absolute right-[-18px] top-1/2 h-1 w-9 -translate-y-1/2 bg-ucsd-blue/45" />
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-ucsd-navy text-white shadow-md">
+                <ArrowRightLeft size={24} />
+              </div>
+              <div className="mt-3 text-[11px] font-black uppercase tracking-[0.24em] text-ucsd-blue">Same Core</div>
+              <div className="mt-1 text-lg sm:text-xl font-black leading-tight text-ucsd-navy">Governed Gateway</div>
+              <div className="mt-2 text-xs sm:text-sm font-semibold leading-snug text-slate-600">
+                APIs, policies, models, data boundaries, and observability.
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 18 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.08, duration: 0.5 }}
+              className="relative overflow-hidden rounded-2xl border-2 border-ucsd-gold/50 bg-white p-4 sm:p-5 shadow-xl"
+            >
+              <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-ucsd-gold via-[#FC8900] to-ucsd-blue" />
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <div className="text-[11px] sm:text-xs font-black uppercase tracking-[0.22em] text-ucsd-blue">Operating layer</div>
+                  <div className="mt-1 text-2xl sm:text-4xl font-black leading-none text-ucsd-navy">TritonAI</div>
+                </div>
+                <div className="rounded-full bg-ucsd-gold/25 p-2.5 text-ucsd-navy">
+                  <Network size={26} />
+                </div>
+              </div>
+              <p className="mt-3 text-base sm:text-xl font-bold leading-snug text-ucsd-navy">
+                Campus-ready workflows that package the harness for repeatable delivery.
+              </p>
+              <div className="mt-4 grid grid-cols-2 gap-2">
+                {['agents', 'skills', 'MCP hub', 'observability'].map((item) => (
+                  <div key={item} className="rounded-lg border border-ucsd-blue/25 bg-ucsd-blue/5 px-3 py-2 text-center text-[11px] sm:text-xs font-black uppercase tracking-[0.16em] text-ucsd-blue">
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3">
+            {slide.tableData.map((row, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.18 + index * 0.06 }}
+                className="relative overflow-hidden rounded-xl border border-ucsd-blue/15 bg-white/90 p-3.5 sm:p-4 shadow-md"
+              >
+                <div className="text-[11px] sm:text-xs font-black uppercase tracking-[0.18em] text-ucsd-blue">{row.feature}</div>
+                <div className="mt-2 rounded-lg bg-slate-50 px-3 py-2 text-sm sm:text-base font-semibold leading-snug text-slate-600">
+                  {row.genAI}
+                </div>
+                <div className="my-2 flex items-center gap-2 text-ucsd-gold">
+                  <div className="h-px flex-1 bg-ucsd-gold/40" />
+                  <ArrowRight size={18} strokeWidth={3} />
+                  <div className="h-px flex-1 bg-ucsd-gold/40" />
+                </div>
+                <div className="rounded-lg bg-ucsd-blue/5 px-3 py-2 text-sm sm:text-base font-black leading-snug text-ucsd-navy">
+                  {row.agenticAI}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {isComparisonTable && !isTritonGPTToTritonAIComparison && (
         <div className="w-full max-w-6xl mx-auto flex flex-col gap-2 sm:gap-3">
           {/* Header - Hidden on mobile, shown on larger screens */}
           <div className="hidden md:grid grid-cols-[0.8fr_2.1fr_2.1fr] gap-6 px-7 mb-1.5">

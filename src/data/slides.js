@@ -1359,38 +1359,33 @@ export const slides = [
     "slug": "tritongpt-to-tritonai-comparison",
     "type": "content",
     "layout": "comparison-table",
-    "title": "From TritonGPT to TritonAI",
-    "subtitle": "From campus chatbot to vertical AI solutions that take real work off people's plates",
+    "title": "From Access Layer to Operating Layer",
+    "subtitle": "TritonGPT opened the front door; TritonAI turns the same governed gateway into apps, agents, APIs, and citizen-developer workflows.",
     "backgroundColor": "#F5F0E6",
     "columnHeaders": {
-      "left": "TritonGPT (2024-25)",
-      "right": "TritonAI (2026+)"
+      "left": "TritonGPT",
+      "right": "TritonAI"
     },
     "tableData": [
       {
-        "feature": "Primary Interaction",
-        "genAI": "Chat/Prompt: You ask, it answers.",
-        "agenticAI": "Goal-Driven: You define a problem; it handles the workflow."
+        "feature": "User experience",
+        "genAI": "Ask a question in chat, widget, or mobile app.",
+        "agenticAI": "Launch a governed workflow in the place the work happens."
       },
       {
-        "feature": "Scope of Work",
-        "genAI": "Horizontal: drafting, summarizing, Q&A.",
-        "agenticAI": "Vertical: purpose-built solutions for contracts, scheduling, onboarding."
+        "feature": "Developer path",
+        "genAI": "Shared API access for prototypes and embedded experiences.",
+        "agenticAI": "Citizen Developer Program patterns for reusable campus tools."
       },
       {
-        "feature": "Impact",
-        "genAI": "Saves minutes on individual tasks.",
-        "agenticAI": "Takes entire workflows off people's plates."
+        "feature": "Harness",
+        "genAI": "Model access is centralized and campus-approved.",
+        "agenticAI": "Loop, context, action, and scale are packaged into supported workflows."
       },
       {
-        "feature": "Data Access",
-        "genAI": "Self-contained within the chat interface.",
-        "agenticAI": "Securely accesses campus data via governed protocols like MCP, APIs, and institutional connectors."
-      },
-      {
-        "feature": "Human Role",
-        "genAI": "Prompt engineer / Editor.",
-        "agenticAI": "Supervisor who reviews outcomes, not steps."
+        "feature": "Operating model",
+        "genAI": "Individual productivity gains across broad use cases.",
+        "agenticAI": "Workflow outcomes with observability, cost tracking, and reusable components."
       }
     ],
     "audiences": [
