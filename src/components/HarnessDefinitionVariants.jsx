@@ -186,12 +186,22 @@ const JobSpine = ({ activeKey }) => {
   );
 };
 
-const Header = ({ slide, maxWidth = '74vw', titleFontSize = 'clamp(44px, 4.4vw, 70px)', subheadFontSize = 'clamp(18px, 1.35vw, 23px)' }) => (
+const Header = ({
+  slide,
+  maxWidth = '74vw',
+  titleFontSize = 'clamp(44px, 4.4vw, 70px)',
+  subheadFontSize = 'clamp(18px, 1.35vw, 23px)',
+  top,
+  noWrap = false
+}) => (
   <>
     <Marker slide={slide}>{slide.marker}</Marker>
-    <JobSpine activeKey={slide.spineActive} />
-    <div className={`absolute left-[4.8vw] right-[4.8vw] ${isCitizenAudience(slide) ? 'top-[4vh]' : 'top-[8.3vh]'}`} style={{ maxWidth }}>
-      <h1 className="leading-[0.98]" style={{ fontSize: titleFontSize, fontWeight: 520 }}>
+    <JobSpine activeKey={slide.hideSpine ? null : slide.spineActive} />
+    <div
+      className={`absolute left-[4.8vw] right-[4.8vw] ${top ? '' : isCitizenAudience(slide) ? 'top-[4vh]' : 'top-[8.3vh]'}`}
+      style={{ maxWidth, top }}
+    >
+      <h1 className="leading-[0.98]" style={{ fontSize: titleFontSize, fontWeight: 520, whiteSpace: noWrap ? 'nowrap' : 'normal' }}>
         <PartText parts={slide.parts} />
       </h1>
       {slide.subhead && (
@@ -1889,54 +1899,62 @@ const HarnessCitizenEcosystemVariant = ({ slide }) => {
     coral: { ink: T.coralDark, fill: '#fff5ee', border: T.coralPale },
     green: { ink: T.green, fill: '#f6f8ee', border: '#cddbbf' }
   };
+  const isCompactProgramSlide = slide.compactProgramLayout;
 
   return (
     <Shell>
-      <Header slide={slide} maxWidth="86vw" titleFontSize="clamp(40px, 4.2vw, 66px)" subheadFontSize="clamp(17px, 1.22vw, 22px)" />
+      <Header
+        slide={slide}
+        maxWidth={isCompactProgramSlide ? '92vw' : '86vw'}
+        titleFontSize={isCompactProgramSlide ? 'clamp(31px, 3.25vw, 56px)' : 'clamp(40px, 4.2vw, 66px)'}
+        subheadFontSize={isCompactProgramSlide ? 'clamp(15px, 1.02vw, 19px)' : 'clamp(17px, 1.22vw, 22px)'}
+        top={isCompactProgramSlide ? '5.2vh' : undefined}
+        noWrap={isCompactProgramSlide}
+      />
 
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[28vh] bottom-[12vh]">
-        <div className="grid h-full grid-cols-[34%_1fr] gap-6">
-          <motion.div {...fade(0.42)} className="flex min-h-0 flex-col justify-between rounded-[9px] border bg-white/78 p-6" style={{ borderColor: '#d8c6b9', boxShadow: '0 18px 38px rgba(23,24,20,0.10)' }}>
+      <div className={`absolute left-[4.8vw] right-[4.8vw] ${isCompactProgramSlide ? 'top-[19.5vh] bottom-[15.5vh]' : 'top-[28vh] bottom-[12vh]'}`}>
+        <div className={`grid h-full grid-cols-[34%_1fr] ${isCompactProgramSlide ? 'gap-5' : 'gap-6'}`}>
+          <motion.div {...fade(0.42)} className={`flex min-h-0 flex-col justify-between rounded-[9px] border bg-white/78 ${isCompactProgramSlide ? 'p-5' : 'p-6'}`} style={{ borderColor: '#d8c6b9', boxShadow: '0 18px 38px rgba(23,24,20,0.10)' }}>
             <div>
-              <UCSDLogoMark className="h-12 w-[168px]" />
-              <Kicker className="mt-7">{slide.center?.kicker || 'PROGRAM FOUNDATION'}</Kicker>
-              <div className="mt-3" style={{ color: T.ink, fontFamily: T.serif, fontSize: 'clamp(34px, 3.25vw, 54px)', lineHeight: 0.96, fontWeight: 560 }}>
+              <UCSDLogoMark className={isCompactProgramSlide ? 'h-10 w-[148px]' : 'h-12 w-[168px]'} />
+              <Kicker className={isCompactProgramSlide ? 'mt-5' : 'mt-7'}>{slide.center?.kicker || 'PROGRAM FOUNDATION'}</Kicker>
+              <div className={isCompactProgramSlide ? 'mt-2' : 'mt-3'} style={{ color: T.ink, fontFamily: T.serif, fontSize: isCompactProgramSlide ? 'clamp(28px, 2.8vw, 46px)' : 'clamp(34px, 3.25vw, 54px)', lineHeight: 0.96, fontWeight: 560 }}>
                 {slide.center?.title || 'Citizen Developer Program'}
               </div>
-              <div className="mt-5 max-w-[34rem]" style={{ color: T.muted, fontFamily: T.sans, fontSize: 'clamp(16px, 1.05vw, 19px)', lineHeight: 1.38, fontWeight: 560 }}>
+              <div className={isCompactProgramSlide ? 'mt-4 max-w-[34rem]' : 'mt-5 max-w-[34rem]'} style={{ color: T.muted, fontFamily: T.sans, fontSize: isCompactProgramSlide ? 'clamp(14px, 0.95vw, 17px)' : 'clamp(16px, 1.05vw, 19px)', lineHeight: 1.38, fontWeight: 560 }}>
                 {slide.center?.body}
               </div>
             </div>
-            <div className="mt-7 rounded-[7px] border px-4 py-3" style={{ borderColor: '#c9d7df', background: T.bluePale }}>
+            <div className={`${isCompactProgramSlide ? 'mt-5 px-3 py-2.5' : 'mt-7 px-4 py-3'} rounded-[7px] border`} style={{ borderColor: '#c9d7df', background: T.bluePale }}>
               <div style={{ color: T.blue, fontFamily: T.mono, fontSize: 12, fontWeight: 800, letterSpacing: '0.18em', textTransform: 'uppercase' }}>
                 Powered by TritonAI
               </div>
-              <div className="mt-2" style={{ color: T.ink, fontFamily: T.sans, fontSize: 17, lineHeight: 1.25, fontWeight: 700 }}>
+              <div className="mt-2" style={{ color: T.ink, fontFamily: T.sans, fontSize: isCompactProgramSlide ? 15 : 17, lineHeight: 1.25, fontWeight: 700 }}>
                 Gateway access, shared patterns, and run visibility stay centralized.
               </div>
             </div>
           </motion.div>
 
-          <div className="grid min-h-0 grid-rows-3 gap-4">
+          <div className={`grid min-h-0 grid-rows-3 ${isCompactProgramSlide ? 'gap-3' : 'gap-4'}`}>
             {pillars.map((pillar, index) => {
               const tone = toneStyles[pillar.tone] || toneStyles.blue;
               return (
-                <Card key={pillar.title} delay={0.54 + index * 0.1} className="grid min-h-0 grid-cols-[72px_1fr_210px] items-center gap-4 overflow-hidden p-5" style={{ background: tone.fill, borderColor: tone.border, boxShadow: '0 10px 24px rgba(23,24,20,0.08)' }}>
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/85" style={{ color: tone.ink }}>
-                    <MiniIcon type={pillar.icon || 'dot'} color={tone.ink} className="h-10 w-10" />
+                <Card key={pillar.title} delay={0.54 + index * 0.1} className={`${isCompactProgramSlide ? 'grid-cols-[58px_1fr_190px] gap-3 p-4' : 'grid-cols-[72px_1fr_210px] gap-4 p-5'} grid min-h-0 items-center overflow-hidden`} style={{ background: tone.fill, borderColor: tone.border, boxShadow: '0 10px 24px rgba(23,24,20,0.08)' }}>
+                  <div className={`${isCompactProgramSlide ? 'h-14 w-14' : 'h-16 w-16'} flex items-center justify-center rounded-full bg-white/85`} style={{ color: tone.ink }}>
+                    <MiniIcon type={pillar.icon || 'dot'} color={tone.ink} className={isCompactProgramSlide ? 'h-8 w-8' : 'h-10 w-10'} />
                   </div>
                   <div>
-                    <Kicker className="mb-1.5" style={{ color: tone.ink }}>{pillar.label}</Kicker>
-                    <div style={{ color: T.ink, fontFamily: T.sans, fontSize: 'clamp(24px, 1.95vw, 34px)', lineHeight: 0.98, fontWeight: 780 }}>
+                    <Kicker className={isCompactProgramSlide ? 'mb-1' : 'mb-1.5'} style={{ color: tone.ink }}>{pillar.label}</Kicker>
+                    <div style={{ color: T.ink, fontFamily: T.sans, fontSize: isCompactProgramSlide ? 'clamp(22px, 1.7vw, 30px)' : 'clamp(24px, 1.95vw, 34px)', lineHeight: 0.98, fontWeight: 780 }}>
                       {pillar.title}
                     </div>
-                    <div className="mt-2" style={{ color: T.muted, fontFamily: T.sans, fontSize: 'clamp(15px, 1vw, 18px)', lineHeight: 1.3, fontWeight: 540 }}>
+                    <div className="mt-2" style={{ color: T.muted, fontFamily: T.sans, fontSize: isCompactProgramSlide ? 'clamp(14px, 0.9vw, 16.5px)' : 'clamp(15px, 1vw, 18px)', lineHeight: 1.3, fontWeight: 540 }}>
                       {pillar.body}
                     </div>
                   </div>
-                  <div className="flex flex-col gap-2">
+                  <div className={`flex flex-col ${isCompactProgramSlide ? 'gap-1.5' : 'gap-2'}`}>
                     {(pillar.items || []).slice(0, 3).map((item, itemIndex) => (
-                      <motion.div key={item} {...fade(0.74 + index * 0.1 + itemIndex * 0.035, 0)} className="rounded-full border bg-white/78 px-3 py-1.5 text-center" style={{ borderColor: tone.border, color: tone.ink, fontFamily: T.mono, fontSize: 11, fontWeight: 800, letterSpacing: '0.09em', textTransform: 'uppercase' }}>
+                      <motion.div key={item} {...fade(0.74 + index * 0.1 + itemIndex * 0.035, 0)} className={`rounded-full border bg-white/78 px-3 text-center ${isCompactProgramSlide ? 'py-1' : 'py-1.5'}`} style={{ borderColor: tone.border, color: tone.ink, fontFamily: T.mono, fontSize: isCompactProgramSlide ? 10 : 11, fontWeight: 800, letterSpacing: '0.09em', textTransform: 'uppercase' }}>
                         {item}
                       </motion.div>
                     ))}
@@ -1949,7 +1967,7 @@ const HarnessCitizenEcosystemVariant = ({ slide }) => {
       </div>
 
       {slide.bottomLine && (
-        <motion.div {...fade(1.1)} className="absolute left-[4.8vw] right-[4.8vw] top-[90vh] flex items-start gap-5">
+        <motion.div {...fade(1.1)} className={`absolute left-[4.8vw] right-[4.8vw] ${isCompactProgramSlide ? 'top-[85.5vh]' : 'top-[90vh]'} flex items-start gap-5`}>
           <span className="shrink-0 rounded-[5px] px-3 py-2 text-[12px]" style={{ background: T.coral, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.22em', whiteSpace: 'nowrap' }}>
             {slide.bottomLineLabel || 'PROGRAM MODEL'}
           </span>

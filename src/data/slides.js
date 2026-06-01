@@ -2511,6 +2511,8 @@ export const slides = [
     "layout": "harness-definition",
     "variant": "harness-citizen-ecosystem",
     "marker": "CITIZEN DEVELOPER PROGRAM",
+    "hideSpine": true,
+    "compactProgramLayout": true,
     "spineActive": "action",
     "parts": [
       {
