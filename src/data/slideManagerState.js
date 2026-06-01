@@ -137,8 +137,7 @@ export const slideManagerState = {
       "public",
       "internal",
       "technical",
-      "ASU-GSV",
-      "executive"
+      "ASU-GSV"
     ],
     "triton-ai-website": [
       "all",
@@ -212,8 +211,7 @@ export const slideManagerState = {
       "all",
       "public",
       "internal",
-      "technical",
-      "executive"
+      "technical"
     ],
     "video-media2": [
       "all",
@@ -384,30 +382,7 @@ export const slideManagerState = {
       "public",
       "internal"
     ],
-    "the-flywheel-in-action-pdf-remediator": [
-      "all",
-      "internal",
-      "ASU-GSV",
-      "executive",
-      "regent"
-    ],
-    "the-flywheel-in-action-biobib-formatter": [
-      "all",
-      "public",
-      "internal",
-      "executive",
-      "regent",
-      "citizen"
-    ],
     "the-flywheel-in-action-ai-use-case-meeting": [
-      "all",
-      "public",
-      "internal",
-      "executive",
-      "regent",
-      "citizen"
-    ],
-    "the-flywheel-in-action-dissertation-formatter": [
       "all",
       "public",
       "internal",
@@ -621,6 +596,29 @@ export const slideManagerState = {
       "regent",
       "cabinet",
       "executive"
+    ],
+    "the-flywheel-in-action-pdf-remediator": [
+      "all",
+      "internal",
+      "ASU-GSV",
+      "executive",
+      "regent"
+    ],
+    "the-flywheel-in-action-biobib-formatter": [
+      "all",
+      "public",
+      "internal",
+      "executive",
+      "regent",
+      "citizen"
+    ],
+    "the-flywheel-in-action-dissertation-formatter": [
+      "all",
+      "public",
+      "internal",
+      "executive",
+      "regent",
+      "citizen"
     ],
     "cabinet-harness-13-recap": [
       "citizen",
