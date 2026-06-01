@@ -1368,26 +1368,41 @@ export const slides = [
     },
     "tableData": [
       {
+        "icon": "Brain",
+        "iconColor": "#0d5f93",
+        "iconBg": "#EAF7FB",
         "feature": "Primary Interaction",
         "genAI": "Chat and prompt: users ask questions and receive answers.",
         "agenticAI": "Goal-driven execution: users define an outcome and the system advances the workflow."
       },
       {
+        "icon": "Layers",
+        "iconColor": "#6f9363",
+        "iconBg": "#EEF6EA",
         "feature": "Scope of Work",
         "genAI": "Horizontal assistance for drafting, summarizing, Q&A, and embedded support.",
         "agenticAI": "Vertical workflows for contracts, scheduling, onboarding, remediation, and research support."
       },
       {
+        "icon": "Zap",
+        "iconColor": "#be634d",
+        "iconBg": "#FFF0E8",
         "feature": "Action",
         "genAI": "Model output stays mostly inside the chat or embedded interface.",
         "agenticAI": "Agents use tools, skills, APIs, and MCP connectors to touch approved systems."
       },
       {
+        "icon": "Users",
+        "iconColor": "#182B49",
+        "iconBg": "#EEF2F7",
         "feature": "Human Role",
         "genAI": "Prompt engineer, editor, and reviewer of individual outputs.",
         "agenticAI": "Supervisor who reviews outcomes, exceptions, and operational traces."
       },
       {
+        "icon": "TrendingUp",
+        "iconColor": "#C69214",
+        "iconBg": "#FFF7D6",
         "feature": "Impact",
         "genAI": "Saves minutes on individual tasks.",
         "agenticAI": "Takes repeatable workflows off people's plates through governed automation."

@@ -3327,8 +3327,20 @@ const Slide = ({ slide }) => {
               <div className="hidden md:block absolute right-0 top-0 bottom-0 w-[44%] bg-ucsd-blue/[0.04] pointer-events-none group-hover:bg-ucsd-blue/[0.07] transition-colors duration-300" />
 
               {/* Feature Name */}
-              <div className="font-bold text-ucsd-navy text-base sm:text-lg relative z-10 tracking-tight leading-tight md:pr-6 md:border-r-2 md:border-slate-200 md:h-full flex items-center pb-2 md:pb-0 border-b md:border-b-0 border-slate-200">
-                {row.feature}
+              <div className="font-bold text-ucsd-navy text-base sm:text-lg relative z-10 tracking-tight leading-tight md:pr-6 md:border-r-2 md:border-slate-200 md:h-full flex items-center gap-3 pb-2 md:pb-0 border-b md:border-b-0 border-slate-200">
+                {row.icon && iconMap[row.icon] && (
+                  <div
+                    className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl border shadow-sm"
+                    style={{
+                      backgroundColor: row.iconBg || '#EAF7FB',
+                      borderColor: row.iconColor ? `${row.iconColor}33` : 'rgba(0, 198, 215, 0.22)',
+                      color: row.iconColor || '#006A96'
+                    }}
+                  >
+                    {React.createElement(iconMap[row.icon], { size: 21, strokeWidth: 2.5 })}
+                  </div>
+                )}
+                <span>{row.feature}</span>
               </div>
 
               {/* Gen AI / Left column - with label on mobile */}
