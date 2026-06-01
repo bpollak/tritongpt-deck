@@ -1360,7 +1360,7 @@ export const slides = [
     "type": "content",
     "layout": "comparison-table",
     "title": "From TritonGPT to Agentic AI",
-    "subtitle": "The shift from broad AI access to governed agentic capabilities that can complete campus workflows.",
+    "subtitle": "Broad AI access is evolving into governed agentic workflows for campus operations.",
     "backgroundColor": "#F5F0E6",
     "columnHeaders": {
       "left": "Capabilities up to 2025",
