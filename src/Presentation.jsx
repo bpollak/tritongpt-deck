@@ -40,6 +40,45 @@ const getSlideVideoInfo = (slide) => {
   };
 };
 
+const NEXT_SLIDE_KEYS = new Set([
+  'ArrowRight',
+  'ArrowDown',
+  'PageDown',
+  ' ',
+  'Spacebar',
+  'Enter',
+  'N',
+  'n',
+  'j',
+  'J',
+  'MediaTrackNext',
+  'BrowserForward'
+]);
+
+const PREVIOUS_SLIDE_KEYS = new Set([
+  'ArrowLeft',
+  'ArrowUp',
+  'PageUp',
+  'Backspace',
+  'P',
+  'p',
+  'k',
+  'K',
+  'MediaTrackPrevious',
+  'BrowserBack'
+]);
+
+const isTextEntryTarget = (target) => {
+  if (!(target instanceof HTMLElement)) return false;
+  const tagName = target.tagName.toLowerCase();
+  return (
+    target.isContentEditable ||
+    tagName === 'input' ||
+    tagName === 'textarea' ||
+    tagName === 'select'
+  );
+};
+
 const Presentation = () => {
   const [currentSlideRef, setCurrentSlideRef] = useState(() => getSlideRefFromHash());
   const isPopstateNav = useRef(false);
@@ -228,14 +267,15 @@ const Presentation = () => {
 
   useEffect(() => {
     const handleKeyDown = (e) => {
-      // Prevent default for space key to avoid page scroll
-      if (e.key === ' ') {
-        e.preventDefault();
+      if (isTextEntryTarget(e.target) || e.altKey || e.ctrlKey || e.metaKey) {
+        return;
       }
 
-      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter' || e.key === 'PageDown') {
+      if (NEXT_SLIDE_KEYS.has(e.key)) {
+        e.preventDefault();
         nextSlide();
-      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+      } else if (PREVIOUS_SLIDE_KEYS.has(e.key)) {
+        e.preventDefault();
         prevSlide();
       } else if (e.key === 'Home') {
         e.preventDefault();
@@ -248,8 +288,8 @@ const Presentation = () => {
       }
     };
 
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    window.addEventListener('keydown', handleKeyDown, true);
+    return () => window.removeEventListener('keydown', handleKeyDown, true);
   }, [nextSlide, prevSlide, goToFirstSlide, goToLastSlide]);
 
   const slideVariants = {
