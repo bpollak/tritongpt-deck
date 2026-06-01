@@ -104,40 +104,12 @@ const Shell = ({ children }) => (
   </div>
 );
 
-const UCSDLogoMark = ({ className = 'h-10 w-32', compact = false }) => (
-  <svg
-    viewBox={compact ? '0 0 88 32' : '0 0 190 50'}
-    className={className}
-    role="img"
-    aria-label="UC San Diego"
-  >
-    <rect width="100%" height="100%" rx="4" fill="#ffffff" />
-    {compact ? (
-      <>
-        <text
-          x="6"
-          y="20"
-          fill="#182B49"
-          style={{ fontFamily: T.sans, fontSize: 18, fontWeight: 800, letterSpacing: '0.02em' }}
-        >
-          UCSD
-        </text>
-        <rect x="6" y="24" width="58" height="3" fill="#FFCD00" />
-      </>
-    ) : (
-      <>
-        <text
-          x="10"
-          y="30"
-          fill="#182B49"
-          style={{ fontFamily: T.sans, fontSize: 23, fontWeight: 800, letterSpacing: '0.01em' }}
-        >
-          UC San Diego
-        </text>
-        <rect x="10" y="36" width="146" height="4" fill="#FFCD00" />
-      </>
-    )}
-  </svg>
+const UCSDLogoMark = ({ className = 'h-10 w-32' }) => (
+  <img
+    src="/media/uc-san-diego-primary-logo.svg"
+    alt="UC San Diego"
+    className={`${className} object-contain`}
+  />
 );
 
 const isCitizenAudience = (slide) =>
