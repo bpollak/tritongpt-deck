@@ -1359,33 +1359,38 @@ export const slides = [
     "slug": "tritongpt-to-tritonai-comparison",
     "type": "content",
     "layout": "comparison-table",
-    "title": "From Access Layer to Operating Layer",
-    "subtitle": "TritonGPT opened the front door; TritonAI turns the same governed gateway into apps, agents, APIs, and citizen-developer workflows.",
+    "title": "From TritonGPT to Agentic AI",
+    "subtitle": "The shift from broad AI access to governed agentic capabilities that can complete campus workflows.",
     "backgroundColor": "#F5F0E6",
     "columnHeaders": {
-      "left": "TritonGPT",
-      "right": "TritonAI"
+      "left": "Capabilities up to 2025",
+      "right": "Agentic capabilities in 2026"
     },
     "tableData": [
       {
-        "feature": "User experience",
-        "genAI": "Ask a question in chat, widget, or mobile app.",
-        "agenticAI": "Launch a governed workflow in the place the work happens."
+        "feature": "Primary Interaction",
+        "genAI": "Chat and prompt: users ask questions and receive answers.",
+        "agenticAI": "Goal-driven execution: users define an outcome and the system advances the workflow."
       },
       {
-        "feature": "Developer path",
-        "genAI": "Shared API access for prototypes and embedded experiences.",
-        "agenticAI": "Citizen Developer Program patterns for reusable campus tools."
+        "feature": "Scope of Work",
+        "genAI": "Horizontal assistance for drafting, summarizing, Q&A, and embedded support.",
+        "agenticAI": "Vertical workflows for contracts, scheduling, onboarding, remediation, and research support."
       },
       {
-        "feature": "Harness",
-        "genAI": "Model access is centralized and campus-approved.",
-        "agenticAI": "Loop, context, action, and scale are packaged into supported workflows."
+        "feature": "Action",
+        "genAI": "Model output stays mostly inside the chat or embedded interface.",
+        "agenticAI": "Agents use tools, skills, APIs, and MCP connectors to touch approved systems."
       },
       {
-        "feature": "Operating model",
-        "genAI": "Individual productivity gains across broad use cases.",
-        "agenticAI": "Workflow outcomes with observability, cost tracking, and reusable components."
+        "feature": "Human Role",
+        "genAI": "Prompt engineer, editor, and reviewer of individual outputs.",
+        "agenticAI": "Supervisor who reviews outcomes, exceptions, and operational traces."
+      },
+      {
+        "feature": "Impact",
+        "genAI": "Saves minutes on individual tasks.",
+        "agenticAI": "Takes repeatable workflows off people's plates through governed automation."
       }
     ],
     "audiences": [
