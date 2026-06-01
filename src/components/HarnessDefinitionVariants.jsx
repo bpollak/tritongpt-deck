@@ -3287,7 +3287,7 @@ const HarnessDataUnlockVariant = ({ slide }) => {
       <Marker slide={slide}>{slide.marker}</Marker>
 
       <div className="absolute left-[4.8vw] right-[4.8vw] top-[3vh]" style={{ maxWidth: '88vw' }}>
-        <h1 className="leading-[0.98]" style={{ fontSize: 'clamp(38px, 3.8vw, 60px)', fontWeight: 520 }}>
+        <h1 className="leading-[0.98]" style={{ fontSize: 'clamp(34px, 3.5vw, 56px)', fontWeight: 520 }}>
           <PartText parts={slide.parts} />
         </h1>
         {slide.subhead && (
@@ -3297,11 +3297,11 @@ const HarnessDataUnlockVariant = ({ slide }) => {
         )}
       </div>
 
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[14vh] bottom-[10vh] grid grid-cols-[1fr_330px] gap-6 items-stretch">
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[12.5vh] grid grid-cols-[1fr_300px] gap-4 items-start">
         {/* Center: stack of harnesses → MCP → data ecosystem */}
-        <div className="flex flex-col gap-2.5">
+        <div className="flex flex-col gap-1.5">
           {/* Top: Harnesses row */}
-          <Card delay={0.5} className="p-5">
+          <Card delay={0.5} className="p-3">
             <div className="flex items-baseline gap-3">
               <span className="text-[12.5px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
                 Harnesses
@@ -3310,14 +3310,14 @@ const HarnessDataUnlockVariant = ({ slide }) => {
                 what teams actually use
               </span>
             </div>
-            <div className="mt-3 flex flex-wrap gap-2.5">
+            <div className="mt-2.5 flex flex-wrap gap-2.5">
               {harnesses.map((entry, i) => {
                 const item = typeof entry === 'string' ? { name: entry } : entry;
                 return (
                   <motion.span
                     key={item.name}
                     {...fade(0.62 + i * 0.06)}
-                    className="inline-flex items-center gap-2 rounded-[5px] border px-3.5 py-2 text-[16px]"
+                    className="inline-flex items-center gap-2 rounded-[5px] border px-3 py-1.5 text-[15px]"
                     style={{ borderColor: T.faint, background: '#fff', color: T.ink, fontFamily: T.mono, fontWeight: 700 }}
                   >
                     {item.logoType === 'ucsd' ? (
@@ -3352,7 +3352,7 @@ const HarnessDataUnlockVariant = ({ slide }) => {
             <div className="h-px w-6" style={{ background: T.blue, opacity: 0.45 }} />
             <Card
               delay={0.95}
-              className="flex-1 p-3.5"
+              className="flex-1 p-2.5"
               style={{ background: T.bluePale, borderColor: T.blue }}
             >
               <div className="flex items-baseline flex-wrap gap-x-3 gap-y-1">
@@ -3369,10 +3369,10 @@ const HarnessDataUnlockVariant = ({ slide }) => {
                   model context protocol
                 </span>
               </div>
-              <div className="mt-2" style={{ color: T.ink, fontSize: 14.5, lineHeight: 1.32 }}>
+              <div className="mt-1" style={{ color: T.ink, fontSize: 13.5, lineHeight: 1.22 }}>
                 One standardized bridge between agents and enterprise systems — so any harness can call any system through the same auth-aware, audited interface.
               </div>
-              <div className="mt-2.5 flex flex-wrap gap-2">
+              <div className="mt-1.5 flex flex-wrap gap-1.5">
                 {[
                   ['auth-aware', 'agent acts as the user, not as itself'],
                   ['typed schemas', 'tools describe what they can do'],
@@ -3380,13 +3380,13 @@ const HarnessDataUnlockVariant = ({ slide }) => {
                 ].map(([label, sub]) => (
                   <div
                     key={label}
-                    className="rounded-[5px] border px-2.5 py-1"
+                    className="rounded-[5px] border px-2 py-0.5"
                     style={{ borderColor: '#b9d3dc', background: '#fff', color: T.blue }}
                   >
-                    <span style={{ fontFamily: T.mono, fontSize: 12.5, fontWeight: 800, letterSpacing: '0.04em' }}>
+                    <span style={{ fontFamily: T.mono, fontSize: 11.5, fontWeight: 800, letterSpacing: '0.04em' }}>
                       {label}
                     </span>
-                    <span className="ml-2" style={{ color: T.muted, fontFamily: T.serif, fontSize: 12.5, fontStyle: 'italic' }}>
+                    <span className="ml-1.5" style={{ color: T.muted, fontFamily: T.serif, fontSize: 11.5, fontStyle: 'italic' }}>
                       {sub}
                     </span>
                   </div>
@@ -3397,7 +3397,7 @@ const HarnessDataUnlockVariant = ({ slide }) => {
           </motion.div>
 
           {/* Priority systems (highlighted) */}
-          <Card delay={1.05} className="p-5" style={{ background: '#fff8f2', borderColor: T.coralPale }}>
+          <Card delay={1.05} className="p-3" style={{ background: '#fff8f2', borderColor: T.coralPale }}>
             <div className="flex items-baseline gap-3">
               <span
                 className="rounded-[5px] px-2.5 py-1 text-[12px] uppercase"
@@ -3409,14 +3409,14 @@ const HarnessDataUnlockVariant = ({ slide }) => {
                 where harnesses unlock the most value first
               </span>
             </div>
-            <div className="mt-3 flex flex-wrap gap-2.5">
+            <div className="mt-2 flex flex-wrap gap-2">
               {prioritySystems.map((sys, i) => {
                 const item = typeof sys === 'string' ? { name: sys } : sys;
                 return (
                   <motion.span
                     key={item.name}
                     {...fade(1.18 + i * 0.06)}
-                    className="rounded-[5px] border-2 px-4 py-2 text-[17px]"
+                    className="rounded-[5px] border-2 px-3 py-1.5 text-[15.5px]"
                     style={{
                       borderColor: T.coral,
                       background: '#fff',
@@ -3434,20 +3434,20 @@ const HarnessDataUnlockVariant = ({ slide }) => {
 
           {/* Also-connected systems */}
           {alsoSystems.length > 0 && (
-            <Card delay={1.5} className="flex-1 p-4">
+            <Card delay={1.5} className="p-3">
               <div className="flex items-baseline gap-3">
                 <span className="text-[12px] uppercase" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.2em', fontWeight: 700 }}>
                   {slide.alsoHeading || 'Plus the rest'}
                 </span>
               </div>
-              <div className="mt-3 flex flex-wrap gap-2">
+              <div className="mt-2 flex flex-wrap gap-1.5">
                 {alsoSystems.map((sys, i) => {
                   const isOverflow = sys.startsWith('+');
                   return (
                     <motion.span
                       key={sys}
                       {...fade(1.6 + i * 0.04)}
-                      className="rounded-[4px] border px-3 py-1.5 text-[14.5px]"
+                      className="rounded-[4px] border px-2.5 py-1 text-[12.5px]"
                       style={{
                         borderColor: isOverflow ? T.coral : T.faint,
                         background: isOverflow ? '#fff8f2' : '#fff',
@@ -3467,7 +3467,7 @@ const HarnessDataUnlockVariant = ({ slide }) => {
         </div>
 
         {/* Right rail: governance */}
-        <Card delay={0.7} className="p-5" style={{ borderColor: T.coral, borderWidth: 2 }}>
+        <Card delay={0.7} className="p-3" style={{ borderColor: T.coral, borderWidth: 2 }}>
           <div className="flex items-center gap-2">
             <span className="rounded-[4px] px-2 py-0.5 text-[10.5px] uppercase" style={{ background: T.coral, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.18em' }}>
               Proposed
@@ -3476,24 +3476,24 @@ const HarnessDataUnlockVariant = ({ slide }) => {
               Governance rail
             </div>
           </div>
-          <div className="mt-2" style={{ color: T.muted, fontSize: 14.5, lineHeight: 1.35, fontStyle: 'italic' }}>
+          <div className="mt-1" style={{ color: T.muted, fontSize: 13.2, lineHeight: 1.22, fontStyle: 'italic' }}>
             What we propose to wrap around every connection. Each row is open for Cabinet review.
           </div>
-          <div className="mt-4 space-y-3">
+          <div className="mt-2.5 space-y-1.5">
             {governance.map((g, i) => {
               const item = typeof g === 'string' ? { label: g, note: '' } : g;
               return (
                 <motion.div
                   key={item.label}
                   {...fade(0.82 + i * 0.08)}
-                  className="rounded-[6px] border-l-[3px] px-3.5 py-2.5"
+                  className="rounded-[6px] border-l-[3px] px-2.5 py-1.5"
                   style={{ borderColor: T.coral, background: '#fff8f2' }}
                 >
-                  <div style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 14.5, fontWeight: 800, letterSpacing: '0.04em' }}>
+                  <div style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 13.5, fontWeight: 800, letterSpacing: '0.04em' }}>
                     {item.label}
                   </div>
                   {item.note && (
-                    <div className="mt-1" style={{ color: T.muted, fontSize: 13.5, lineHeight: 1.32 }}>
+                    <div className="mt-0.5" style={{ color: T.muted, fontSize: 12.5, lineHeight: 1.2 }}>
                       {item.note}
                     </div>
                   )}
