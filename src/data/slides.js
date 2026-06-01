@@ -1144,17 +1144,20 @@ export const slides = [
       {
         "label": "Cost Avoidance",
         "value": "$300K",
-        "sub": "Recurring Annual Savings"
+        "sub": "Recurring Annual Savings",
+        "compact": true
       },
       {
         "label": "Deployment",
         "value": "16",
-        "sub": "Campus Websites Live"
+        "sub": "Campus Websites Live",
+        "compact": true
       },
       {
         "label": "Access",
         "value": "Public",
-        "sub": "No Login Required"
+        "sub": "No Login Required",
+        "compact": true
       }
     ],
     "audiences": [
