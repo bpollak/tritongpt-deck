@@ -1914,22 +1914,22 @@ const HarnessCitizenEcosystemVariant = ({ slide }) => {
 
       <div className={`absolute left-[4.8vw] right-[4.8vw] ${isCompactProgramSlide ? 'top-[18vh] bottom-[22vh]' : 'top-[28vh] bottom-[12vh]'}`}>
         <div className={`grid h-full grid-cols-[34%_1fr] ${isCompactProgramSlide ? 'gap-4' : 'gap-6'}`}>
-          <motion.div {...fade(0.42)} className={`flex min-h-0 flex-col justify-between rounded-[9px] border bg-white/78 ${isCompactProgramSlide ? 'p-4' : 'p-6'}`} style={{ borderColor: '#d8c6b9', boxShadow: '0 18px 38px rgba(23,24,20,0.10)' }}>
+          <motion.div {...fade(0.42)} className={`flex min-h-0 flex-col rounded-[9px] border bg-white/78 ${isCompactProgramSlide ? 'self-start gap-4 p-3.5' : 'justify-between p-6'}`} style={{ borderColor: '#d8c6b9', boxShadow: '0 18px 38px rgba(23,24,20,0.10)' }}>
             <div>
               <UCSDLogoMark className={isCompactProgramSlide ? 'h-9 w-[136px]' : 'h-12 w-[168px]'} />
-              <Kicker className={isCompactProgramSlide ? 'mt-4' : 'mt-7'}>{slide.center?.kicker || 'PROGRAM FOUNDATION'}</Kicker>
-              <div className={isCompactProgramSlide ? 'mt-1.5' : 'mt-3'} style={{ color: T.ink, fontFamily: T.serif, fontSize: isCompactProgramSlide ? 'clamp(26px, 2.6vw, 42px)' : 'clamp(34px, 3.25vw, 54px)', lineHeight: 0.96, fontWeight: 560 }}>
+              <Kicker className={isCompactProgramSlide ? 'mt-3' : 'mt-7'}>{slide.center?.kicker || 'PROGRAM FOUNDATION'}</Kicker>
+              <div className={isCompactProgramSlide ? 'mt-1' : 'mt-3'} style={{ color: T.ink, fontFamily: T.serif, fontSize: isCompactProgramSlide ? 'clamp(30px, 3vw, 50px)' : 'clamp(34px, 3.25vw, 54px)', lineHeight: 0.92, fontWeight: 560 }}>
                 {slide.center?.title || 'Citizen Developer Program'}
               </div>
-              <div className={isCompactProgramSlide ? 'mt-3 max-w-[34rem]' : 'mt-5 max-w-[34rem]'} style={{ color: T.muted, fontFamily: T.sans, fontSize: isCompactProgramSlide ? 'clamp(13.5px, 0.9vw, 16px)' : 'clamp(16px, 1.05vw, 19px)', lineHeight: 1.32, fontWeight: 560 }}>
+              <div className={isCompactProgramSlide ? 'mt-2.5 max-w-[34rem]' : 'mt-5 max-w-[34rem]'} style={{ color: T.muted, fontFamily: T.sans, fontSize: isCompactProgramSlide ? 'clamp(15px, 1vw, 18px)' : 'clamp(16px, 1.05vw, 19px)', lineHeight: 1.24, fontWeight: 560 }}>
                 {slide.center?.body}
               </div>
             </div>
-            <div className={`${isCompactProgramSlide ? 'mt-4 px-3 py-2' : 'mt-7 px-4 py-3'} rounded-[7px] border`} style={{ borderColor: '#c9d7df', background: T.bluePale }}>
+            <div className={`${isCompactProgramSlide ? 'px-2.5 py-2' : 'mt-7 px-4 py-3'} rounded-[7px] border`} style={{ borderColor: '#c9d7df', background: T.bluePale }}>
               <div style={{ color: T.blue, fontFamily: T.mono, fontSize: 12, fontWeight: 800, letterSpacing: '0.18em', textTransform: 'uppercase' }}>
                 Powered by TritonAI
               </div>
-              <div className={isCompactProgramSlide ? 'mt-1.5' : 'mt-2'} style={{ color: T.ink, fontFamily: T.sans, fontSize: isCompactProgramSlide ? 14 : 17, lineHeight: 1.22, fontWeight: 700 }}>
+              <div className={isCompactProgramSlide ? 'mt-1' : 'mt-2'} style={{ color: T.ink, fontFamily: T.sans, fontSize: isCompactProgramSlide ? 15 : 17, lineHeight: 1.18, fontWeight: 700 }}>
                 Gateway access, shared patterns, and run visibility stay centralized.
               </div>
             </div>
