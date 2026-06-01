@@ -42,10 +42,7 @@ export const slideManagerState = {
     "campus-app-hosting",
     "campus-app-hosting-intake",
     "agent-engineering-strategy",
-    "the-flywheel-in-action-pdf-remediator",
-    "the-flywheel-in-action-biobib-formatter",
     "the-flywheel-in-action-ai-use-case-meeting",
-    "the-flywheel-in-action-dissertation-formatter",
     "the-new-workforce-competency",
     "preparing-the-ai-ready-graduate",
     "the-agentic-ai-stack",
@@ -93,6 +90,9 @@ export const slideManagerState = {
     "cabinet-harness-11-ucsd-safe-path",
     "cabinet-harness-11a-two-environments",
     "cabinet-harness-11d-campus-app-hosting-intake",
+    "the-flywheel-in-action-pdf-remediator",
+    "the-flywheel-in-action-biobib-formatter",
+    "the-flywheel-in-action-dissertation-formatter",
     "cabinet-harness-13-recap",
     "the-team-behind-tritonai",
     "thank-you"
@@ -384,6 +384,7 @@ export const slideManagerState = {
       "all",
       "internal",
       "ASU-GSV",
+      "executive",
       "regent"
     ],
     "the-flywheel-in-action-biobib-formatter": [

@@ -2197,6 +2197,7 @@ export const slides = [
       "all",
       "internal",
       "ASU-GSV",
+      "executive",
       "regent"
     ]
   },
