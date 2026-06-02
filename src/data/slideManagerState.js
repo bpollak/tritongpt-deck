@@ -41,6 +41,8 @@ export const slideManagerState = {
     "transcript-matching-validation",
     "tritonai-developer-api-program",
     "campus-app-hosting",
+    "harness-memory-architecture",
+    "harness-perf-review-demo",
     "campus-app-hosting-intake",
     "agent-engineering-strategy",
     "the-new-workforce-competency",
@@ -369,6 +371,18 @@ export const slideManagerState = {
       "all",
       "internal",
       "public"
+    ],
+    "harness-memory-architecture": [
+      "all",
+      "internal",
+      "cabinet",
+      "citizen"
+    ],
+    "harness-perf-review-demo": [
+      "all",
+      "internal",
+      "cabinet",
+      "citizen"
     ],
     "campus-app-hosting-intake": [
       "all",

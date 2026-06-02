@@ -1990,6 +1990,111 @@ export const slides = [
     ]
   },
   {
+    "id": 24.3,
+    "slug": "harness-memory-architecture",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-memory-architecture",
+    "marker": "MEMORY",
+    "parts": [
+      { "text": "Durable memory makes the agent " },
+      { "text": "remember", "accent": true },
+      { "text": "." }
+    ],
+    "subhead": "Personal, team, and campus knowledge layers that persist across sessions and compound over time.",
+    "sources": [
+      { "label": "Calendar", "icon": "calendar", "color": "#0d5f93" },
+      { "label": "Email", "icon": "chat", "color": "#0d5f93" },
+      { "label": "Meetings", "icon": "people", "color": "#0d5f93" },
+      { "label": "Web", "icon": "observe", "color": "#0d5f93" },
+      { "label": "Conversations", "icon": "reasoning", "color": "#0d5f93" },
+      { "label": "Documents", "icon": "folder", "color": "#0d5f93" }
+    ],
+    "knowledgeLayers": [
+      { "label": "Knowledge Graph", "icon": "mcp", "color": "#6f9363" },
+      { "label": "Wiki / Memory", "icon": "library", "color": "#6f9363" },
+      { "label": "Long-term Patterns", "icon": "pipeline", "color": "#6f9363" },
+      { "label": "Team Knowledge Base", "icon": "enterprise", "color": "#6f9363" }
+    ],
+    "actions": [
+      { "label": "Briefings", "icon": "template", "color": "#d47a5f" },
+      { "label": "Meeting Intel", "icon": "observe", "color": "#d47a5f" },
+      { "label": "Answers", "icon": "chat", "color": "#d47a5f" },
+      { "label": "Artifacts", "icon": "code", "color": "#d47a5f" },
+      { "label": "Nudges", "icon": "reasoning", "color": "#d47a5f" }
+    ],
+    "tiers": [
+      { "label": "Personal", "scope": "Individual memory, preferences, patterns", "color": "#0d5f93", "fill": "#e5f0f2", "icon": "laptop" },
+      { "label": "Team", "scope": "Shared knowledge bases, team norms", "color": "#6f9363", "fill": "#f0f5ea", "icon": "people" },
+      { "label": "Department", "scope": "Institutional policies, process memory", "color": "#d47a5f", "fill": "#fff8f2", "icon": "enterprise" },
+      { "label": "Campus", "scope": "Cross-unit knowledge, governance", "color": "#be634d", "fill": "#fff5ee", "icon": "lock" }
+    ],
+    "bottomLine": "Memory turns a single-session assistant into a compounding institutional asset.",
+    "bottomLineLabel": "WHY IT MATTERS",
+    "audiences": [
+      "all",
+      "internal",
+      "cabinet",
+      "citizen"
+    ]
+  },
+  {
+    "id": 24.6,
+    "slug": "harness-perf-review-demo",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-perf-review",
+    "marker": "USE CASE",
+    "parts": [
+      { "text": "Performance reviews: " },
+      { "text": "memory in action", "accent": true },
+      { "text": "." }
+    ],
+    "subhead": "Harness + durable memory, from accomplishments to calibrated review language.",
+    "videoSrc": "/media/perf-review-demo.mp4",
+    "videoPlaybackRate": 1,
+    "steps": [
+      {
+        "number": "01",
+        "label": "Capture",
+        "detail": "Employee logs accomplishments throughout the year. Memory captures, tags, and organizes them automatically.",
+        "color": "#0d5f93",
+        "icon": "library"
+      },
+      {
+        "number": "02",
+        "label": "Recall",
+        "detail": "Self-assessment pulls from personal memory — surfacing forgotten wins, patterns, and impact.",
+        "color": "#6f9363",
+        "icon": "reasoning"
+      },
+      {
+        "number": "03",
+        "label": "Share",
+        "detail": "Manager accesses the employee's self-assessment knowledge, contextualized with team and department norms.",
+        "color": "#d47a5f",
+        "icon": "people"
+      },
+      {
+        "number": "04",
+        "label": "Generate",
+        "detail": "AI generates review language calibrated to the score, grounded in actual accomplishments and institutional expectations.",
+        "color": "#be634d",
+        "icon": "template"
+      }
+    ],
+    "bottomLine": "Harness + memory replaces the blank page with evidence-backed, calibrated review narratives.",
+    "bottomLineLabel": "OUTCOME",
+    "audiences": [
+      "all",
+      "internal",
+      "cabinet",
+      "citizen"
+    ]
+  },
+  {
     "id": 25,
     "slug": "campus-app-hosting-intake",
     "type": "content",

@@ -4266,6 +4266,208 @@ const HarnessActionVariant = ({ slide }) => {
   );
 };
 
+/* ───────────────────── Memory Architecture ───────────────────── */
+
+const FlowArrow = ({ delay = 0.6 }) => (
+  <motion.div {...fade(delay, 0)} className="flex items-center justify-center h-full">
+    <svg viewBox="0 0 48 80" className="w-8 h-16" fill="none">
+      <motion.path
+        d="M4 40h32M30 30l10 10-10 10"
+        stroke={T.muted}
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        {...lineDraw(delay + 0.15)}
+      />
+    </svg>
+  </motion.div>
+);
+
+const FlowColumn = ({ kicker, items, delay = 0.3, accentColor }) => (
+  <Card delay={delay} className="p-3 h-full" style={{ borderLeftWidth: 3, borderLeftColor: accentColor }}>
+    <Kicker className="mb-2" style={{ color: accentColor }}>{kicker}</Kicker>
+    <div className="space-y-1.5">
+      {items.map((item, index) => (
+        <motion.div
+          key={item.label}
+          {...fade(delay + 0.08 + index * 0.05, 0)}
+          className="flex items-center gap-2 rounded-md px-2 py-1.5"
+          style={{ background: `${item.color}08` }}
+        >
+          <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full" style={{ background: `${item.color}18` }}>
+            <MiniIcon type={item.icon} color={item.color} className="h-5 w-5" />
+          </div>
+          <span style={{ color: T.ink, fontFamily: T.sans, fontSize: 14, fontWeight: 600, lineHeight: 1.15 }}>
+            {item.label}
+          </span>
+        </motion.div>
+      ))}
+    </div>
+  </Card>
+);
+
+const HarnessMemoryArchitectureVariant = ({ slide }) => {
+  const sources = slide.sources || [];
+  const knowledgeLayers = slide.knowledgeLayers || [];
+  const actions = slide.actions || [];
+  const tiers = slide.tiers || [];
+  const titleFont = isCitizenAudience(slide) ? T.serif : T.sans;
+
+  return (
+    <Shell>
+      <Marker slide={slide}>{slide.marker}</Marker>
+      <JobSpine activeKey={slide.hideSpine ? null : slide.spineActive} />
+      <div className="absolute inset-0" style={{ fontFamily: T.serif }}>
+        {/* Title */}
+        <div className={`absolute left-[4.8vw] right-[4.8vw] ${isCitizenAudience(slide) ? 'top-[4vh]' : 'top-[8.3vh]'}`} style={{ maxWidth: '74vw' }}>
+          <h1 className="leading-[0.98]" style={{ fontSize: 'clamp(38px, 3.6vw, 58px)', fontWeight: 520 }}>
+            <PartText parts={slide.parts} />
+          </h1>
+          {slide.subhead && (
+            <motion.div {...fade(0.38)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(16px, 1.2vw, 21px)' }}>
+              {slide.subhead}
+            </motion.div>
+          )}
+        </div>
+
+        {/* Three-column flow */}
+        <div className="absolute left-[4.8vw] right-[4.8vw] top-[22vh] bottom-[34vh] grid grid-cols-[1fr_48px_1fr_48px_1fr] gap-1 items-stretch">
+          <FlowColumn kicker="Data Sources" items={sources} delay={0.35} accentColor={T.blue} />
+          <FlowArrow delay={0.55} />
+          <FlowColumn kicker="Durable Knowledge" items={knowledgeLayers} delay={0.5} accentColor={T.green} />
+          <FlowArrow delay={0.7} />
+          <FlowColumn kicker="Agent Actions" items={actions} delay={0.65} accentColor={T.coral} />
+        </div>
+
+        {/* Four-tier scaling strip */}
+        <div className="absolute left-[4.8vw] right-[4.8vw] bottom-[14vh] grid grid-cols-4 gap-3">
+          {tiers.map((tier, index) => (
+            <Card key={tier.label} delay={0.85 + index * 0.08} className="p-3" style={{ borderLeftWidth: 4, borderLeftColor: tier.color }}>
+              <div className="flex items-center gap-2 mb-1.5">
+                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full" style={{ background: tier.fill }}>
+                  <MiniIcon type={tier.icon} color={tier.color} className="h-5 w-5" />
+                </div>
+                <span style={{ color: tier.color, fontFamily: T.mono, fontSize: 13, fontWeight: 800, letterSpacing: '0.1em' }}>
+                  {tier.label.toUpperCase()}
+                </span>
+              </div>
+              <div style={{ color: T.muted, fontFamily: T.sans, fontSize: 13, lineHeight: 1.3 }}>
+                {tier.scope}
+              </div>
+            </Card>
+          ))}
+        </div>
+
+        {/* Bottom line */}
+        {slide.bottomLine && (
+          <motion.div {...fade(1.2)} className="absolute left-[4.8vw] right-[4.8vw] bottom-[4vh] flex items-center gap-3" style={{ color: T.ink, fontFamily: T.serif }}>
+            {slide.bottomLineLabel && (
+              <span className="shrink-0 rounded-full px-3 py-1" style={{ background: T.coralDark, fontSize: 11, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.22em', whiteSpace: 'nowrap' }}>
+                {slide.bottomLineLabel}
+              </span>
+            )}
+            <div style={{ fontSize: 'clamp(14px, 1.1vw, 18px)', fontWeight: 520, lineHeight: 1.3 }}>
+              {slide.bottomLine}
+            </div>
+          </motion.div>
+        )}
+      </div>
+    </Shell>
+  );
+};
+
+/* ───────────────────── Performance Review PoC ───────────────────── */
+
+const HarnessPerformanceReviewVariant = ({ slide }) => {
+  const steps = slide.steps || [];
+  const setupVideo = (el) => {
+    if (el) el.playbackRate = slide.videoPlaybackRate || 1;
+  };
+
+  return (
+    <Shell>
+      <Marker slide={slide}>{slide.marker}</Marker>
+      <JobSpine activeKey={slide.hideSpine ? null : slide.spineActive} />
+      <div className="absolute inset-0" style={{ fontFamily: T.serif }}>
+        {/* Title */}
+        <div className={`absolute left-[4.8vw] right-[4.8vw] ${isCitizenAudience(slide) ? 'top-[4vh]' : 'top-[8.3vh]'}`} style={{ maxWidth: '74vw' }}>
+          <h1 className="leading-[0.98]" style={{ fontSize: 'clamp(38px, 3.6vw, 58px)', fontWeight: 520 }}>
+            <PartText parts={slide.parts} />
+          </h1>
+          {slide.subhead && (
+            <motion.div {...fade(0.38)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(16px, 1.2vw, 21px)' }}>
+              {slide.subhead}
+            </motion.div>
+          )}
+        </div>
+
+        {/* Two-column: video + steps */}
+        <div className="absolute left-[4.8vw] right-[4.8vw] top-[22vh] bottom-[14vh] grid grid-cols-[1.15fr_0.85fr] gap-5 items-stretch">
+          {/* Video */}
+          <Card delay={0.45} className="overflow-hidden p-0 flex items-center justify-center" style={{ background: '#0a0a0a' }}>
+            {slide.videoSrc ? (
+              <video
+                ref={setupVideo}
+                src={slide.videoSrc}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-contain rounded-[7px]"
+              />
+            ) : (
+              <div className="flex items-center justify-center w-full h-full" style={{ color: T.muted, fontFamily: T.mono, fontSize: 14 }}>
+                Video placeholder
+              </div>
+            )}
+          </Card>
+
+          {/* Step pipeline */}
+          <Card delay={0.55} className="p-4 flex flex-col justify-center">
+            <Kicker className="mb-4">How it works</Kicker>
+            <div className="space-y-3">
+              {steps.map((step, index) => (
+                <motion.div
+                  key={step.label}
+                  {...fade(0.65 + index * 0.1, 0)}
+                  className="grid grid-cols-[42px_1fr] gap-3 items-start"
+                >
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full shrink-0" style={{ background: step.color, color: '#fff', fontFamily: T.mono, fontSize: 15, fontWeight: 800 }}>
+                    {step.number}
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <MiniIcon type={step.icon} color={step.color} className="h-5 w-5" />
+                      <span style={{ color: T.ink, fontFamily: T.sans, fontSize: 18, fontWeight: 700, lineHeight: 1 }}>{step.label}</span>
+                    </div>
+                    <div className="mt-1" style={{ color: T.muted, fontFamily: T.sans, fontSize: 13.5, lineHeight: 1.35 }}>
+                      {step.detail}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </Card>
+        </div>
+
+        {/* Bottom line */}
+        {slide.bottomLine && (
+          <motion.div {...fade(1.1)} className="absolute left-[4.8vw] right-[4.8vw] bottom-[4vh] flex items-center gap-3" style={{ color: T.ink, fontFamily: T.serif }}>
+            {slide.bottomLineLabel && (
+              <span className="shrink-0 rounded-full px-3 py-1" style={{ background: T.coralDark, fontSize: 11, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.22em', whiteSpace: 'nowrap' }}>
+                {slide.bottomLineLabel}
+              </span>
+            )}
+            <div style={{ fontSize: 'clamp(14px, 1.1vw, 18px)', fontWeight: 520, lineHeight: 1.3 }}>
+              {slide.bottomLine}
+            </div>
+          </motion.div>
+        )}
+      </div>
+    </Shell>
+  );
+};
+
 export const harnessVariantMap = {
   'harness-pressure': HarnessPressureVariant,
   'harness-rubric': HarnessRubricVariant,
@@ -4298,7 +4500,9 @@ export const harnessVariantMap = {
   'harness-config-repo': HarnessConfigRepoVariant,
   'harness-action': HarnessActionVariant,
   'harness-action-plan': HarnessActionPlanVariant,
-  'harness-recap': HarnessRecapVariant
+  'harness-recap': HarnessRecapVariant,
+  'harness-memory-architecture': HarnessMemoryArchitectureVariant,
+  'harness-perf-review': HarnessPerformanceReviewVariant
 };
 
 export default harnessVariantMap;
