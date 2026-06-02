@@ -3395,9 +3395,19 @@ export const slides = [
             "icon": "FileCheck"
           },
           {
+            "heading": "TGPT Widget — Live Campus Data",
+            "text": "Live parking availability and Geisel Library busyness levels. Redesigned interface for AI response traceability.",
+            "icon": "Monitor"
+          },
+          {
             "heading": "UCSD Mobile Integration",
-            "text": "TritonGPT enabled within the campus flagship mobile app.",
+            "text": "TritonGPT enabled within the campus flagship mobile app. UC San Diego Assistant now live on iOS and Android.",
             "icon": "Cpu"
+          },
+          {
+            "heading": "Onyx 3.3 Platform Upgrade",
+            "text": "Significant improvements to document search and retrieval. Behind-the-scenes hardening and observability improvements.",
+            "icon": "Server"
           }
         ]
       },
@@ -3429,6 +3439,11 @@ export const slides = [
             "heading": "Onyx Instructional Assistant — Canvas Integration",
             "text": "First delivery of a collaborative instructional assistant with Onyx, fully integrated into the Canvas LMS.",
             "icon": "GraduationCap"
+          },
+          {
+            "heading": "BioBib Formatter POC",
+            "text": "Academic personnel BioBib formatting automation. CV translation into UCSD format. Part of the AI flywheel — use case meeting → prototype.",
+            "icon": "FileText"
           },
           {
             "heading": "AI IT Observability Pilot",
