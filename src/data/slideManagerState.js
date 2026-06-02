@@ -56,6 +56,7 @@ export const slideManagerState = {
     "cost-of-inaction",
     "ai-roadmap-2026",
     "ai-roadmap-2026-q2",
+    "ai-roadmap-2026-q3",
     "tritongpt-usage-analytics",
     "tritongpt-widget-analytics",
     "tritongpt-user-growth",
@@ -447,6 +448,12 @@ export const slideManagerState = {
       "regent"
     ],
     "ai-roadmap-2026-q2": [
+      "internal",
+      "all",
+      "PK",
+      "regent"
+    ],
+    "ai-roadmap-2026-q3": [
       "internal",
       "all",
       "PK",
