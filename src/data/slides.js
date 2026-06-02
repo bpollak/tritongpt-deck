@@ -3507,11 +3507,6 @@ export const slides = [
         "color": "#00629B",
         "assistants": [
           {
-            "heading": "Hermes Agent Scaling — Phase 1",
-            "text": "DSMLP sandbox expands to a dozen+ concurrent users. Timeout resolution and CPU resource allocation finalized.",
-            "icon": "Share2"
-          },
-          {
             "heading": "Citizen Developer Skills Library Expansion",
             "text": "Branding, accessibility, CMS documentation skills added. MCP integration for skill-based tool calling. 8+ skills available.",
             "icon": "FileText"
@@ -3551,11 +3546,6 @@ export const slides = [
             "heading": "Citizen Developer Program — Broad Access",
             "text": "SSO-gated Confluence documentation. Self-guided walkthrough. Public TritonAI site page.",
             "icon": "Code"
-          },
-          {
-            "heading": "Hermes Agent Scaling — Phase 2",
-            "text": "Architecture evaluated for 60-600 concurrent users. Enterprise agent orchestration patterns.",
-            "icon": "Share2"
           },
           {
             "heading": "AI Governance Framework — Operationalized",
