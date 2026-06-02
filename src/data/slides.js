@@ -4683,6 +4683,81 @@ export const slides = [
     ]
   },
   {
+    "id": 122.18,
+    "slug": "cabinet-harness-09c-memory-performance-review",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-memory-performance",
+    "marker": "CONTEXT · memory system",
+    "spineActive": "context",
+    "parts": [
+      {
+        "text": "Memory turns context into "
+      },
+      {
+        "text": "institutional recall",
+        "accent": "blue"
+      },
+      {
+        "text": "."
+      }
+    ],
+    "subhead": "The harness can retrieve the right history at the right boundary: personal, team, department, and campus.",
+    "memoryLayers": [
+      {
+        "scope": "Personal memory",
+        "title": "My work, my goals, my evidence",
+        "body": "Private accomplishments, preferences, artifacts, recurring goals, and working context the employee can reuse.",
+        "icon": "folder",
+        "color": "#0d5f93",
+        "fill": "#e5f0f2"
+      },
+      {
+        "scope": "Team memory",
+        "title": "Shared project history",
+        "body": "Decisions, handoffs, templates, operating norms, and project outcomes available to the right group.",
+        "icon": "people",
+        "color": "#6f9363",
+        "fill": "#f4f7ef"
+      },
+      {
+        "scope": "Beyond the team",
+        "title": "Governed campus knowledge",
+        "body": "Department and campus sources with permissions, provenance, retention, and auditability.",
+        "icon": "enterprise",
+        "color": "#be634d",
+        "fill": "#fff5ee"
+      }
+    ],
+    "governanceNote": "Private by default, shared by permission, auditable when memory informs a review.",
+    "useCaseTitle": "Performance review assistant",
+    "reviewSteps": [
+      {
+        "kicker": "Employee self-assessment",
+        "body": "Retrieve accomplishments, outcomes, examples, and evidence aligned to the review criteria."
+      },
+      {
+        "kicker": "Manager review",
+        "body": "Use the same knowledge base plus the self-assessment to evaluate performance with fuller context."
+      },
+      {
+        "kicker": "Rating-language alignment",
+        "body": "Generate review language that matches the selected score, evidence, and HR writing standards."
+      }
+    ],
+    "video": {
+      "title": "Performance management proof of concept",
+      "body": "Video panel reserved for the POC demo recording."
+    },
+    "audiences": [
+      "citizen",
+      "regent",
+      "cabinet",
+      "executive"
+    ]
+  },
+  {
     "id": 122.2,
     "slug": "cabinet-harness-08e-tools-hooks-safety",
     "type": "content",

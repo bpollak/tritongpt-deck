@@ -83,6 +83,7 @@ export const slideManagerState = {
     "cabinet-harness-06-already-in-toolbox",
     "cabinet-harness-08c-while-loop",
     "cabinet-harness-09b-context-management",
+    "cabinet-harness-09c-memory-performance-review",
     "cabinet-harness-08e-tools-hooks-safety",
     "cabinet-harness-10-subagents",
     "cabinet-harness-11c-developer-api-program",
@@ -557,6 +558,12 @@ export const slideManagerState = {
     "cabinet-harness-09b-context-management": [
       "citizen",
       "regent"
+    ],
+    "cabinet-harness-09c-memory-performance-review": [
+      "citizen",
+      "regent",
+      "cabinet",
+      "executive"
     ],
     "cabinet-harness-08e-tools-hooks-safety": [
       "citizen",
