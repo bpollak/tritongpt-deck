@@ -3512,11 +3512,6 @@ export const slides = [
             "icon": "FileText"
           },
           {
-            "heading": "AI Accessibility Compliance — Pilot",
-            "text": "PDF remediator tool for compliance staff. Automated accessibility remediation for campus documents. Target: 3x throughput over manual process.",
-            "icon": "FileEdit"
-          },
-          {
             "heading": "Academic Advising Agent POC — Build",
             "text": "Development sprint. Integration with SAH, TSS, and ServiceNow data sources.",
             "icon": "GraduationCap"
