@@ -3395,21 +3395,6 @@ export const slides = [
             "icon": "FileCheck"
           },
           {
-            "heading": "Academic Advising Agent POC",
-            "text": "Proof of concept for AI-assisted academic advising support.",
-            "icon": "GraduationCap"
-          },
-          {
-            "heading": "Risk-Based Review Partnership",
-            "text": "Collaboration with Onyx to triage sponsor proposals by risk before submission.",
-            "icon": "Shield"
-          },
-          {
-            "heading": "App Hosting Early Prototype & AI Tools Hub",
-            "text": "Initial campus hosting environment and centralized AI Tools Hub. Equips citizen developers with an agent builder, skills library, secure MCP connectors, APIs, observability, and turnkey AI services.",
-            "icon": "Globe"
-          },
-          {
             "heading": "UCSD Mobile Integration",
             "text": "TritonGPT enabled within the campus flagship mobile app.",
             "icon": "Cpu"
@@ -3426,8 +3411,13 @@ export const slides = [
             "icon": "FileCheck"
           },
           {
-            "heading": "Campus App Hosting Rollout",
-            "text": "Full rollout of the app hosting environment for citizen developers.",
+            "heading": "Risk-Based Review Partnership",
+            "text": "Collaboration with Onyx to triage sponsor proposals by risk before submission.",
+            "icon": "Shield"
+          },
+          {
+            "heading": "UC San Diego Harness Prototype",
+            "text": "Three-tier campus app hosting model, governance framework for agent runtime, and MCP server hub architecture decision.",
             "icon": "Globe"
           },
           {
@@ -3451,6 +3441,140 @@ export const slides = [
     "saasOnboarding": {
       "text": "Onboard new institutions adopting TritonGPT as a Software-as-a-Service AI platform"
     },
+    "audiences": [
+      "internal",
+      "all",
+      "PK",
+      "regent"
+    ]
+  },
+  {
+    "id": "32c",
+    "slug": "ai-roadmap-2026-q3",
+    "type": "content",
+    "layout": "assistant-categories",
+    "title": "AI Roadmap 2026 — Quarter 3",
+    "backgroundColor": "#F5F0E6",
+    "categories": [
+      {
+        "name": "July",
+        "color": "#182B49",
+        "assistants": [
+          {
+            "heading": "Student Scheduling Assistant Launch",
+            "text": "20K-40K student rollout in waves based on registration priority. API chain: Student Tool → WSO2 → Academic Applications → TSS. FMEA complete.",
+            "icon": "GraduationCap"
+          },
+          {
+            "heading": "Citizen Developer Program — Pilot Launch",
+            "text": "Tiered access: $15/mo DeepSeek free tier + commercial tier with project billing. Auto-approval via Quali Build. First cohort onboarded.",
+            "icon": "Code"
+          },
+          {
+            "heading": "Academic Advising Agent POC",
+            "text": "Requirements complete, agent design begins. Sequential dependency on TSS go-live + Steven availability.",
+            "icon": "GraduationCap"
+          },
+          {
+            "heading": "UC San Diego Harness Prototype — MVP",
+            "text": "Three-tier campus app hosting model. Governance framework for agent runtime. MCP server hub architecture decision.",
+            "icon": "Globe"
+          },
+          {
+            "heading": "Procurement Compliance Agent — Kickoff",
+            "text": "Automated sponsor proposal compliance routing for contract review. Selina Martin partnership. Target: 60% reduction in manual triage.",
+            "icon": "Scale"
+          },
+          {
+            "heading": "NACUBO Annual Meeting",
+            "text": "\"The AI Investment Decision: Building, Buy, or Shared Services?\" panel. July 20, Anaheim.",
+            "icon": "Users"
+          }
+        ]
+      },
+      {
+        "name": "August",
+        "color": "#00629B",
+        "assistants": [
+          {
+            "heading": "Hermes Agent Scaling — Phase 1",
+            "text": "DSMLP sandbox expands to a dozen+ concurrent users. Timeout resolution and CPU resource allocation finalized.",
+            "icon": "Share2"
+          },
+          {
+            "heading": "Citizen Developer Skills Library Expansion",
+            "text": "Branding, accessibility, CMS documentation skills added. MCP integration for skill-based tool calling. 8+ skills available.",
+            "icon": "FileText"
+          },
+          {
+            "heading": "AI Accessibility Compliance — Pilot",
+            "text": "PDF remediator tool for compliance staff. Automated accessibility remediation for campus documents. Target: 3x throughput over manual process.",
+            "icon": "FileEdit"
+          },
+          {
+            "heading": "Academic Advising Agent POC — Build",
+            "text": "Development sprint. Integration with SAH, TSS, and ServiceNow data sources.",
+            "icon": "GraduationCap"
+          },
+          {
+            "heading": "Knowledge Management System — V2",
+            "text": "Vector database decision: RAG vs. Markdown/wiki approach at scale. Semantic search across shared vault, Confluence, and transcripts.",
+            "icon": "Database"
+          },
+          {
+            "heading": "Enterprise Data Agent — NL Enhancement",
+            "text": "Improved natural language to structured query accuracy. Broader data domain coverage.",
+            "icon": "Target"
+          },
+          {
+            "heading": "Enrollment & Cash Applications — Agent Design",
+            "text": "Automated payment posting to SIS. Reduce manual cash application effort. Partnership with Student Financial Solutions.",
+            "icon": "DollarSign"
+          }
+        ]
+      },
+      {
+        "name": "September",
+        "color": "#00C6D7",
+        "assistants": [
+          {
+            "heading": "Citizen Developer Program — Broad Access",
+            "text": "SSO-gated Confluence documentation. Self-guided walkthrough. Public TritonAI site page.",
+            "icon": "Code"
+          },
+          {
+            "heading": "Hermes Agent Scaling — Phase 2",
+            "text": "Architecture evaluated for 60-600 concurrent users. Enterprise agent orchestration patterns.",
+            "icon": "Share2"
+          },
+          {
+            "heading": "AI Governance Framework — Operationalized",
+            "text": "Data usage/security requirements documented. Vendor contract AI addendum standards. Policy refresh vs AI-specific policy decision.",
+            "icon": "Shield"
+          },
+          {
+            "heading": "Agent Observability & Evaluation Pilot",
+            "text": "AI-assisted alert filtering for enterprise monitoring. Self-healing patterns. Dedicated monitoring practice.",
+            "icon": "Target"
+          },
+          {
+            "heading": "AI Audit Wizard — Rollout",
+            "text": "Automated compliance checklist generation from policy documents. Reduce audit prep time by 40%+ for administrative units.",
+            "icon": "ClipboardCheck"
+          },
+          {
+            "heading": "Procurement Compliance Agent — Pilot",
+            "text": "Phase 1 pilot live with 3 departments. Automated sponsor risk triage for contract review. Baseline data collection for ROI analysis.",
+            "icon": "Scale"
+          },
+          {
+            "heading": "Harness Prototype — Pilot Expansion",
+            "text": "Campus app hosting model tier validation. MCP hub for UCSD-specific tools. 3+ campus use cases live.",
+            "icon": "Globe"
+          }
+        ]
+      }
+    ],
     "audiences": [
       "internal",
       "all",
