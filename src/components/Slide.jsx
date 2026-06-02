@@ -5233,7 +5233,7 @@ const Slide = ({ slide }) => {
         const maxValue = slide.chartData.maxValue;
         const dataPoints = slide.chartData.xAxis.length;
         const labelFontSize = dataPoints >= 14 ? 18 : dataPoints >= 12 ? 20 : 22;
-        const xAxisLabelFontSize = dataPoints >= 14 ? 16 : dataPoints >= 12 ? 18 : 20;
+        const xAxisLabelFontSize = dataPoints >= 16 ? 13 : dataPoints >= 14 ? 15 : dataPoints >= 12 ? 18 : 20;
         const pointRadius = dataPoints >= 14 ? 7 : 8;
         const getDataLabelPlacement = (idx, seriesIdx) => {
           const baseYOffset = seriesIdx === 0 ? 18 : 16;
