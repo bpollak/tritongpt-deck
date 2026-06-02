@@ -3500,11 +3500,6 @@ export const slides = [
             "text": "Automated sponsor proposal compliance routing for contract review. Selina Martin partnership. Target: 60% reduction in manual triage.",
             "icon": "Scale"
           },
-          {
-            "heading": "NACUBO Annual Meeting",
-            "text": "\"The AI Investment Decision: Building, Buy, or Shared Services?\" panel. July 20, Anaheim.",
-            "icon": "Users"
-          }
         ]
       },
       {
