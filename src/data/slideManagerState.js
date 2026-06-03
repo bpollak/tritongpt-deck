@@ -134,7 +134,6 @@ export const slideManagerState = {
     ],
     "ai-strategy-and-engagement": [
       "all",
-      "conference",
       "public",
       "internal",
       "technical"
@@ -160,8 +159,7 @@ export const slideManagerState = {
       "all"
     ],
     "higher-ed-reskilling-gap": [
-      "all",
-      "conference"
+      "all"
     ],
     "tritongpt-origin": [
       "all",
@@ -418,14 +416,6 @@ export const slideManagerState = {
       "public",
       "internal"
     ],
-    "the-flywheel-in-action-ai-use-case-meeting": [
-      "all",
-      "public",
-      "internal",
-      "executive",
-      "regent",
-      "citizen"
-    ],
     "the-new-workforce-competency": [
       "all"
     ],
@@ -577,6 +567,13 @@ export const slideManagerState = {
       "regent",
       "executive"
     ],
+    "cabinet-harness-08b-component-framework": [
+      "all",
+      "citizen",
+      "regent",
+      "cabinet",
+      "executive"
+    ],
     "cabinet-harness-04b-fixed-architecture": [
       "all",
       "citizen",
@@ -588,13 +585,6 @@ export const slideManagerState = {
       "conference",
       "citizen",
       "regent",
-      "executive"
-    ],
-    "cabinet-harness-08b-component-framework": [
-      "all",
-      "citizen",
-      "regent",
-      "cabinet",
       "executive"
     ],
     "cabinet-harness-08c-while-loop": [
@@ -657,6 +647,14 @@ export const slideManagerState = {
       "regent"
     ],
     "the-flywheel-in-action-biobib-formatter": [
+      "all",
+      "public",
+      "internal",
+      "executive",
+      "regent",
+      "citizen"
+    ],
+    "the-flywheel-in-action-ai-use-case-meeting": [
       "all",
       "public",
       "internal",
