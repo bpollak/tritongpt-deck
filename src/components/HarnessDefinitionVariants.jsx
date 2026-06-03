@@ -497,23 +497,35 @@ const renderTaglineWithMCircle = (text) => {
   );
 };
 
-const HarnessQuestionVariant = ({ slide }) => (
+const HarnessQuestionVariant = ({ slide }) => {
+  const headlineText = (slide.parts || []).map((part) => part.text || '').join('');
+  const hasLongHeadline = headlineText.length > 36;
+
+  return (
   <Shell>
     <Marker slide={slide}>{slide.marker}</Marker>
     <motion.div {...fade(0.18)} className="absolute left-[4.8vw] top-[4vh] text-[13px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em' }}>
       {slide.kicker}
     </motion.div>
-    <h1 className="absolute left-[4.8vw] right-[4.8vw] top-[9vh] leading-[0.95]" style={{ fontSize: 'clamp(54px, 6.2vw, 100px)', fontWeight: 520 }}>
+    <h1
+      className="absolute left-[4.8vw] right-[4.8vw] top-[9vh]"
+      style={{
+        fontSize: hasLongHeadline ? 'clamp(46px, 5vw, 78px)' : 'clamp(54px, 6.2vw, 100px)',
+        fontWeight: 520,
+        lineHeight: hasLongHeadline ? 0.98 : 0.95
+      }}
+    >
       <PartText parts={slide.parts} delay={0.25} />
     </h1>
     {slide.topTagline && (
       <motion.div
         {...fade(0.62)}
-        className="absolute left-[4.8vw] right-[4.8vw] top-[20vh] italic"
+        className="absolute left-[4.8vw] right-[4.8vw] italic"
         style={{
+          top: hasLongHeadline ? '24vh' : '20vh',
           color: T.coralDark,
           fontFamily: T.serif,
-          fontSize: 'clamp(26px, 2.4vw, 40px)',
+          fontSize: hasLongHeadline ? 'clamp(22px, 1.9vw, 32px)' : 'clamp(26px, 2.4vw, 40px)',
           lineHeight: 1.18,
           fontWeight: 480,
           maxWidth: '88vw'
@@ -523,7 +535,7 @@ const HarnessQuestionVariant = ({ slide }) => (
       </motion.div>
     )}
     {(slide.contextCards || []).length > 0 && (
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[27vh] grid grid-cols-2 gap-8">
+      <div className="absolute left-[4.8vw] right-[4.8vw] grid grid-cols-2 gap-8" style={{ top: hasLongHeadline ? '32vh' : '27vh' }}>
         {slide.contextCards.map((card, index) => (
           <Card key={card.title} delay={0.74 + index * 0.1} className="p-7" style={index === 1 ? { background: '#fff8f2', borderColor: T.coralPale } : { background: '#f3f8fa', borderColor: '#cfdde2' }}>
             <div className="flex items-start justify-between gap-4">
@@ -681,7 +693,8 @@ const HarnessQuestionVariant = ({ slide }) => (
       </motion.div>
     )}
   </Shell>
-);
+  );
+};
 
 const HarnessPressureVariant = ({ slide }) => (
   <Shell>

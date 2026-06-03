@@ -4606,24 +4606,17 @@ export const slides = [
     "layout": "harness-definition",
     "variant": "harness-question",
     "marker": "DEFINITION",
-    "kicker": "A simple question",
+    "kicker": "2026 inflection point",
     "parts": [
       {
-        "text": "What exactly "
+        "text": "2026 is the year of the "
       },
       {
-        "text": "is",
-        "muted": true
-      },
-      {
-        "text": " a "
-      },
-      {
-        "text": "harness",
+        "text": "agent harness",
         "accent": true
       },
       {
-        "text": "?"
+        "text": "."
       }
     ],
     "topTagline": "Same model inside both. The harness is everything around it.",
