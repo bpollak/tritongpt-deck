@@ -366,7 +366,8 @@ export const slideManagerState = {
       "all",
       "internal",
       "public",
-      "regent"
+      "regent",
+      "conference"
     ],
     "llm-api-usage-attribution": [
       "internal",
@@ -384,7 +385,8 @@ export const slideManagerState = {
       "all",
       "internal",
       "cabinet",
-      "citizen"
+      "citizen",
+      "conference"
     ],
     "harness-memory-scale-ucsd": [
       "all",
