@@ -43,6 +43,7 @@ export const slideManagerState = {
     "llm-api-usage-attribution",
     "campus-app-hosting",
     "campus-app-hosting-intake",
+    "cabinet-harness-03-question",
     "harness-memory-architecture",
     "harness-memory-scale-ucsd",
     "harness-perf-review-demo",
@@ -82,7 +83,6 @@ export const slideManagerState = {
     "cabinet-people-12-the-ask",
     "cabinet-people-13-closing",
     "cabinet-harness-02-convergence",
-    "cabinet-harness-03-question",
     "cabinet-harness-08b-component-framework",
     "cabinet-harness-04b-fixed-architecture",
     "cabinet-harness-06-already-in-toolbox",
@@ -389,6 +389,13 @@ export const slideManagerState = {
       "public",
       "regent"
     ],
+    "cabinet-harness-03-question": [
+      "all",
+      "conference",
+      "citizen",
+      "regent",
+      "executive"
+    ],
     "harness-memory-architecture": [
       "all",
       "internal",
@@ -556,13 +563,6 @@ export const slideManagerState = {
       "citizen",
       "regent",
       "cabinet",
-      "executive"
-    ],
-    "cabinet-harness-03-question": [
-      "all",
-      "conference",
-      "citizen",
-      "regent",
       "executive"
     ],
     "cabinet-harness-08b-component-framework": [
