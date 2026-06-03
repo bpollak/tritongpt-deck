@@ -4362,7 +4362,7 @@ const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
       };
     };
     const curvedPath = (start, end) => {
-      const bend = Math.max(72, Math.abs(end.x - start.x) * 0.42);
+      const bend = Math.min(96, Math.max(36, Math.abs(end.x - start.x) * 0.42));
       return `M${start.x.toFixed(1)} ${start.y.toFixed(1)} C${(start.x + bend).toFixed(1)} ${start.y.toFixed(1)} ${(end.x - bend).toFixed(1)} ${end.y.toFixed(1)} ${end.x.toFixed(1)} ${end.y.toFixed(1)}`;
     };
     const measure = () => {
@@ -4372,9 +4372,9 @@ const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
         .filter(Boolean)
         .map((node) => {
           const rect = relativeRect(node, parentRect);
-          const start = { x: rect.right - 8, y: rect.top + rect.height / 2 };
+          const start = { x: rect.right - 1, y: rect.top + rect.height / 2 };
           const end = {
-            x: coreRect.left + 4,
+            x: coreRect.left - 1,
             y: clamp(start.y, coreRect.top + 72, coreRect.bottom - 14)
           };
           return curvedPath(start, end);
@@ -4383,9 +4383,9 @@ const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
         .filter(Boolean)
         .map((node) => {
           const rect = relativeRect(node, parentRect);
-          const end = { x: rect.left + 8, y: rect.top + rect.height / 2 };
+          const end = { x: rect.left + 1, y: rect.top + rect.height / 2 };
           const start = {
-            x: coreRect.right - 4,
+            x: coreRect.right + 1,
             y: clamp(end.y, coreRect.top + 72, coreRect.bottom - 14)
           };
           return curvedPath(start, end);
@@ -4422,13 +4422,18 @@ const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
 
   return (
     <div ref={fieldRef} className="relative h-full min-h-0">
-      <svg viewBox={`0 0 ${flow.width || 1} ${flow.height || 1}`} className="absolute inset-0 h-full w-full" preserveAspectRatio="none" aria-hidden="true">
+      <svg
+        viewBox={`0 0 ${flow.width || 1} ${flow.height || 1}`}
+        className="pointer-events-none absolute inset-0 z-20 h-full w-full"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
         <defs>
-          <linearGradient id="deck-memory-source-flow" x1="0%" y1="0%" x2="100%" y2="0%">
+          <linearGradient id="deck-memory-source-flow" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2={flow.width || 1} y2="0">
             <stop offset="0%" stopColor={T.blue} stopOpacity="0.78" />
             <stop offset="100%" stopColor={T.green} stopOpacity="0.9" />
           </linearGradient>
-          <linearGradient id="deck-memory-action-flow" x1="0%" y1="0%" x2="100%" y2="0%">
+          <linearGradient id="deck-memory-action-flow" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2={flow.width || 1} y2="0">
             <stop offset="0%" stopColor={T.green} stopOpacity="0.9" />
             <stop offset="100%" stopColor={T.coralDark} stopOpacity="0.78" />
           </linearGradient>
@@ -4439,9 +4444,9 @@ const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
             d={d}
             fill="none"
             stroke="url(#deck-memory-source-flow)"
-            strokeWidth={i % 2 === 0 ? 2.2 : 1.5}
+            strokeWidth={2.2}
             strokeLinecap="round"
-            opacity={i % 2 === 0 ? 0.82 : 0.48}
+            opacity={0.76}
             {...lineDraw(0.65 + i * 0.04)}
           />
         ))}
@@ -4451,9 +4456,9 @@ const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
             d={d}
             fill="none"
             stroke="url(#deck-memory-action-flow)"
-            strokeWidth={i % 2 === 0 ? 2.2 : 1.5}
+            strokeWidth={2.2}
             strokeLinecap="round"
-            opacity={i % 2 === 0 ? 0.82 : 0.52}
+            opacity={0.76}
             {...lineDraw(0.9 + i * 0.05)}
           />
         ))}
