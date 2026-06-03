@@ -549,8 +549,7 @@ export const slideManagerState = {
       "all"
     ],
     "cabinet-people-13-closing": [
-      "all",
-      "conference"
+      "all"
     ],
     "cabinet-harness-02-convergence": [
       "all",
