@@ -190,7 +190,6 @@ export const slideManagerState = {
     ],
     "tritongpt-initiative": [
       "all",
-      "conference",
       "public",
       "internal",
       "technical",
@@ -204,7 +203,8 @@ export const slideManagerState = {
       "technical",
       "regent",
       "cabinet",
-      "executive"
+      "executive",
+      "conference"
     ],
     "video-screen-recording-1": [
       "all",
@@ -220,13 +220,11 @@ export const slideManagerState = {
     ],
     "video-media2": [
       "all",
-      "conference",
       "public",
       "internal"
     ],
     "video-media4": [
       "all",
-      "conference",
       "internal",
       "public",
       "technical",
