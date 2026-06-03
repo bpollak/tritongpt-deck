@@ -2130,10 +2130,10 @@ export const slides = [
       { "label": "Proactive nudges", "sub": "patterns the agent notices first", "icon": "reasoning", "color": "#d47a5f" }
     ],
     "jobs": [
-      { "time": "DAILY BRIEFING", "fires": "6-9 AM", "label": "Morning plan", "detail": "calendar, news, wiki context, and commitments become a prioritized brief", "color": "#d47a5f" },
-      { "time": "MEETING INTELLIGENCE", "fires": "5:30-7:35 PM", "label": "Prep and follow-through", "detail": "transcripts, decisions, relationships, and work patterns generate next steps", "color": "#d47a5f" },
-      { "time": "WORK ARTIFACT", "fires": "3 AM", "label": "Self-assessment draft", "detail": "durable memory turns period evidence into a review narrative and examples", "color": "#d47a5f" },
-      { "time": "PROACTIVE NUDGE", "fires": "weekly", "label": "Pattern-aware prompt", "detail": "cross-day trends surface risks, opportunities, and useful next actions", "color": "#be634d" }
+      { "time": "DAILY BRIEFING", "fires": "6-9 AM", "label": "Prioritized morning brief", "detail": "agent turns calendar, news, wiki context, and commitments into what to do first", "color": "#d47a5f" },
+      { "time": "MEETING INTELLIGENCE", "fires": "5:30-7:35 PM", "label": "Prep and next steps", "detail": "agent converts transcripts, decisions, relationships, and work patterns into follow-through", "color": "#d47a5f" },
+      { "time": "WORK ARTIFACT", "fires": "3 AM", "label": "Review-ready evidence draft", "detail": "agent turns durable memory into a self-assessment narrative with examples", "color": "#d47a5f" },
+      { "time": "PROACTIVE NUDGE", "fires": "weekly", "label": "Risk and opportunity prompts", "detail": "agent surfaces cross-day patterns as useful next actions before being asked", "color": "#be634d" }
     ],
     "audiences": [
       "all",

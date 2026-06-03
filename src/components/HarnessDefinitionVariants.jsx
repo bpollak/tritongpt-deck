@@ -4528,11 +4528,11 @@ const JobRhythmStrip = ({ jobs = [] }) => (
   <div className="h-full">
     <motion.div {...fade(0.92, 6)} className="mb-2 flex items-center gap-3">
       <div style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 11, fontWeight: 850, letterSpacing: '0.18em', textTransform: 'uppercase' }}>
-        Example agent actions
+        Agent action outcomes
       </div>
       <div className="h-px flex-1" style={{ background: `linear-gradient(90deg, ${T.coralDark}66, transparent)` }} />
       <div style={{ color: T.muted, fontFamily: T.sans, fontSize: 12, fontWeight: 650 }}>
-        memory is retrieved at the moment of work
+        memory is retrieved when the agent acts
       </div>
     </motion.div>
     <div className="grid h-[calc(100%-26px)] grid-cols-4 gap-3">
