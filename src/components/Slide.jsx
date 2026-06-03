@@ -2626,9 +2626,9 @@ const Slide = ({ slide }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="mt-1.5 sm:mt-2.5 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl sm:rounded-2xl shadow-lg p-3 sm:p-4 border-2 border-green-600"
+              className="mt-1.5 sm:mt-2.5 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl sm:rounded-2xl shadow-lg p-2.5 sm:p-3 border-2 border-green-600"
             >
-              <div className="text-center text-sm sm:text-lg md:text-xl font-bold text-green-900">
+              <div className="text-center text-xs sm:text-sm md:text-lg font-bold text-green-900 whitespace-nowrap leading-tight">
                 {slide.saasOnboarding.text}
               </div>
             </motion.div>
