@@ -260,7 +260,6 @@ export const slideManagerState = {
     ],
     "scaling-engagement-the-tritongpt-widget": [
       "all",
-      "conference",
       "public",
       "internal",
       "technical",
@@ -275,7 +274,8 @@ export const slideManagerState = {
       "technical",
       "executive",
       "regent",
-      "cabinet"
+      "cabinet",
+      "conference"
     ],
     "video-media9": [
       "all",
@@ -321,8 +321,7 @@ export const slideManagerState = {
       "regent"
     ],
     "administrative-ai-the-efficiency-imperative": [
-      "all",
-      "conference"
+      "all"
     ],
     "contract-reviewer-consolidated": [
       "all",
@@ -365,7 +364,6 @@ export const slideManagerState = {
     ],
     "tritonai-developer-api-program": [
       "all",
-      "conference",
       "internal",
       "public",
       "regent"
