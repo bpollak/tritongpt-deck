@@ -114,6 +114,7 @@ export const slideManagerState = {
       "cabinet"
     ],
     "where-will-ai-place-us-in-2031": [
+      "all",
       "executive"
     ],
     "the-ai-enabled-university-duo": [
@@ -566,43 +567,52 @@ export const slideManagerState = {
       "executive"
     ],
     "cabinet-harness-03-question": [
+      "all",
       "citizen",
       "regent",
       "executive"
     ],
     "cabinet-harness-04b-fixed-architecture": [
+      "all",
       "citizen",
       "regent",
       "executive"
     ],
     "cabinet-harness-06-already-in-toolbox": [
+      "all",
       "citizen",
       "regent",
       "executive"
     ],
     "cabinet-harness-08b-component-framework": [
+      "all",
       "citizen",
       "regent",
       "cabinet",
       "executive"
     ],
     "cabinet-harness-08c-while-loop": [
+      "all",
       "citizen",
       "regent"
     ],
     "cabinet-harness-09b-context-management": [
+      "all",
       "citizen",
       "regent"
     ],
     "cabinet-harness-08e-tools-hooks-safety": [
+      "all",
       "citizen",
       "regent"
     ],
     "cabinet-harness-10-subagents": [
+      "all",
       "citizen",
       "regent"
     ],
     "cabinet-harness-11c-developer-api-program": [
+      "all",
       "citizen",
       "regent",
       "cabinet",
@@ -617,16 +627,19 @@ export const slideManagerState = {
       "regent"
     ],
     "cabinet-harness-11-ucsd-safe-path": [
+      "all",
       "citizen",
       "regent",
       "cabinet",
       "executive"
     ],
     "cabinet-harness-11a-two-environments": [
+      "all",
       "citizen",
       "regent"
     ],
     "cabinet-harness-11d-campus-app-hosting-intake": [
+      "all",
       "citizen",
       "regent",
       "cabinet",
@@ -656,6 +669,7 @@ export const slideManagerState = {
       "citizen"
     ],
     "cabinet-harness-13-recap": [
+      "all",
       "citizen",
       "regent",
       "cabinet",
