@@ -40,8 +40,10 @@ export const slideManagerState = {
     "ai-contract-reviewer",
     "transcript-matching-validation",
     "tritonai-developer-api-program",
+    "llm-api-usage-attribution",
     "campus-app-hosting",
     "harness-memory-architecture",
+    "harness-memory-scale-ucsd",
     "harness-perf-review-demo",
     "campus-app-hosting-intake",
     "agent-engineering-strategy",
@@ -368,12 +370,25 @@ export const slideManagerState = {
       "ASU-GSV",
       "regent"
     ],
+    "llm-api-usage-attribution": [
+      "internal",
+      "technical",
+      "all",
+      "PK",
+      "regent"
+    ],
     "campus-app-hosting": [
       "all",
       "internal",
       "public"
     ],
     "harness-memory-architecture": [
+      "all",
+      "internal",
+      "cabinet",
+      "citizen"
+    ],
+    "harness-memory-scale-ucsd": [
       "all",
       "internal",
       "cabinet",

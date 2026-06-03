@@ -1894,6 +1894,109 @@ export const slides = [
     ]
   },
   {
+    "id": 23.5,
+    "slug": "llm-api-usage-attribution",
+    "type": "content",
+    "layout": "data-dashboard",
+    "title": "LLM API Usage Attribution",
+    "subtitle": "Map API usage to users in confidence tiers; the workbook is aggregated, so row types are views, not additive totals.",
+    "backgroundColor": "#F5F0E6",
+    "dashboardSections": [
+      {
+        "type": "metric-grid",
+        "items": [
+          {
+            "value": "22",
+            "label": "Direct person records with email",
+            "icon": "Users",
+            "color": "#00629B"
+          },
+          {
+            "value": "111",
+            "label": "Orphaned keys with email-like aliases",
+            "icon": "Database",
+            "color": "#00C6D7"
+          },
+          {
+            "value": "26",
+            "label": "Team-level attribution records",
+            "icon": "Server",
+            "color": "#6E963B"
+          },
+          {
+            "value": "327",
+            "label": "Orphaned-key records needing owner cleanup",
+            "icon": "AlertTriangle",
+            "color": "#FC8900"
+          },
+          {
+            "value": "$404K",
+            "label": "Team-view spend in workbook",
+            "icon": "DollarSign",
+            "color": "#6E963B"
+          },
+          {
+            "value": "1.36B",
+            "label": "Team-view API requests",
+            "icon": "BarChart3",
+            "color": "#00629B"
+          }
+        ]
+      },
+      {
+        "type": "horizontal-bars",
+        "sectionTitle": "Attribution confidence by record count",
+        "items": [
+          {
+            "label": "High confidence: entity_email on person record",
+            "value": 6,
+            "displayValue": "22 records",
+            "color": "#00629B"
+          },
+          {
+            "label": "Medium confidence: email embedded in orphaned key alias",
+            "value": 30,
+            "displayValue": "111 records",
+            "color": "#00C6D7"
+          },
+          {
+            "label": "Needs mapping: service alias, team alias, or unmapped key",
+            "value": 65,
+            "displayValue": "242 records",
+            "color": "#FC8900",
+            "highlight": true
+          }
+        ],
+        "caption": "Use person rows for named-user claims; use team/service rows for API program governance and owner cleanup."
+      },
+      {
+        "type": "stat-callouts",
+        "items": [
+          {
+            "icon": "CheckCircle",
+            "stat": "How we link emails to users",
+            "detail": "Prefer entity_email on person rows. Next, normalize entity_alias when it is an email. For service aliases, join team_ids/team_aliases to the API key owner registry before naming a user.",
+            "source": "Source: final_table_clean copy.xlsx",
+            "color": "#00629B"
+          },
+          {
+            "icon": "AlertTriangle",
+            "stat": "What not to claim yet",
+            "detail": "Do not add person, team, and orphaned-key totals together. They are overlapping attribution views from an aggregated table, not independent usage events.",
+            "color": "#FC8900"
+          }
+        ]
+      }
+    ],
+    "audiences": [
+      "internal",
+      "technical",
+      "all",
+      "PK",
+      "regent"
+    ]
+  },
+  {
     "id": 24,
     "slug": "campus-app-hosting",
     "type": "content",
@@ -2000,40 +2103,65 @@ export const slides = [
     "variant": "harness-memory-architecture",
     "marker": "MEMORY",
     "parts": [
-      { "text": "Durable memory makes the agent " },
-      { "text": "remember", "accent": true },
+      { "text": "Vast personal context powers " },
+      { "text": "agent action", "accent": true },
       { "text": "." }
     ],
-    "subhead": "Personal, team, and campus knowledge layers that persist across sessions and compound over time.",
+    "subhead": "",
     "sources": [
-      { "label": "Calendar", "icon": "calendar", "color": "#0d5f93" },
-      { "label": "Email", "icon": "chat", "color": "#0d5f93" },
-      { "label": "Meetings", "icon": "people", "color": "#0d5f93" },
-      { "label": "Web", "icon": "observe", "color": "#0d5f93" },
-      { "label": "Conversations", "icon": "reasoning", "color": "#0d5f93" },
-      { "label": "Documents", "icon": "folder", "color": "#0d5f93" }
+      { "label": "Calendar and email", "sub": "daily commitments, asks, follow-ups", "icon": "calendar", "color": "#0d5f93" },
+      { "label": "Meeting transcripts", "sub": "Granola debriefs, decisions, sentiment", "icon": "people", "color": "#0d5f93" },
+      { "label": "Curated feeds", "sub": "AI news, vendor shifts, campus signals", "icon": "observe", "color": "#0d5f93" },
+      { "label": "Team conversations", "sub": "Telegram, Teams, working threads", "icon": "chat", "color": "#0d5f93" },
+      { "label": "Docs and wikis", "sub": "Confluence, Obsidian, project notes", "icon": "folder", "color": "#0d5f93" },
+      { "label": "Manual reflection", "sub": "what mattered, what changed, why", "icon": "reasoning", "color": "#0d5f93" }
     ],
     "knowledgeLayers": [
-      { "label": "Knowledge Graph", "icon": "mcp", "color": "#6f9363" },
-      { "label": "Wiki / Memory", "icon": "library", "color": "#6f9363" },
-      { "label": "Long-term Patterns", "icon": "pipeline", "color": "#6f9363" },
-      { "label": "Team Knowledge Base", "icon": "enterprise", "color": "#6f9363" }
+      { "label": "Knowledge graph", "sub": "entities and relationships", "icon": "mcp", "color": "#6f9363" },
+      { "label": "Curated wiki", "sub": "project and people context", "icon": "library", "color": "#6f9363" },
+      { "label": "Long-term memory", "sub": "promoted patterns", "icon": "pipeline", "color": "#6f9363" },
+      { "label": "Work patterns", "sub": "preferences and operating model", "icon": "template", "color": "#6f9363" }
     ],
     "actions": [
-      { "label": "Briefings", "icon": "template", "color": "#d47a5f" },
-      { "label": "Meeting Intel", "icon": "observe", "color": "#d47a5f" },
-      { "label": "Answers", "icon": "chat", "color": "#d47a5f" },
-      { "label": "Artifacts", "icon": "code", "color": "#d47a5f" },
-      { "label": "Nudges", "icon": "reasoning", "color": "#d47a5f" }
+      { "label": "Daily briefings", "sub": "what matters today", "icon": "template", "color": "#d47a5f" },
+      { "label": "Meeting intelligence", "sub": "prep, context, follow-through", "icon": "observe", "color": "#d47a5f" },
+      { "label": "Grounded answers", "sub": "responses with the right context", "icon": "chat", "color": "#d47a5f" },
+      { "label": "Work artifacts", "sub": "docs, slides, code, summaries", "icon": "code", "color": "#d47a5f" },
+      { "label": "Proactive nudges", "sub": "patterns the agent notices first", "icon": "reasoning", "color": "#d47a5f" }
     ],
+    "jobs": [
+      { "time": "DAILY BRIEFING", "fires": "6-9 AM", "label": "Morning plan", "detail": "calendar, news, wiki context, and commitments become a prioritized brief", "color": "#d47a5f" },
+      { "time": "MEETING INTELLIGENCE", "fires": "5:30-7:35 PM", "label": "Prep and follow-through", "detail": "transcripts, decisions, relationships, and work patterns generate next steps", "color": "#d47a5f" },
+      { "time": "WORK ARTIFACT", "fires": "3 AM", "label": "Self-assessment draft", "detail": "durable memory turns period evidence into a review narrative and examples", "color": "#d47a5f" },
+      { "time": "PROACTIVE NUDGE", "fires": "weekly", "label": "Pattern-aware prompt", "detail": "cross-day trends surface risks, opportunities, and useful next actions", "color": "#be634d" }
+    ],
+    "audiences": [
+      "all",
+      "internal",
+      "cabinet",
+      "citizen"
+    ]
+  },
+  {
+    "id": 24.4,
+    "slug": "harness-memory-scale-ucsd",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-memory-scale",
+    "marker": "SCALE",
+    "parts": [
+      { "text": "Personal memory systems become the foundation for " },
+      { "text": "shared university memory", "accent": true },
+      { "text": "." }
+    ],
+    "subhead": "",
     "tiers": [
-      { "label": "Personal", "scope": "Individual memory, preferences, patterns", "color": "#0d5f93", "fill": "#e5f0f2", "icon": "laptop" },
-      { "label": "Team", "scope": "Shared knowledge bases, team norms", "color": "#6f9363", "fill": "#f0f5ea", "icon": "people" },
-      { "label": "Department", "scope": "Institutional policies, process memory", "color": "#d47a5f", "fill": "#fff8f2", "icon": "enterprise" },
-      { "label": "Campus", "scope": "Cross-unit knowledge, governance", "color": "#be634d", "fill": "#fff5ee", "icon": "lock" }
+      { "label": "Campus", "scope": "Institutional patterns only", "detail": "cross-unit signals, AI governance, TritonAI", "privacy": "statistical patterns only; no individual records", "status": "aspirational", "color": "#93c5fd", "textColor": "#17345f" },
+      { "label": "Department", "scope": "Anonymized aggregates only", "detail": "trending pain points, shared trainings, vendor signals", "privacy": "identity stripped before aggregation", "status": "design exercise", "color": "#60a5fa", "textColor": "#17345f" },
+      { "label": "Team", "scope": "Opt-in sharing within a team", "detail": "shared vaults, team wiki, reviewed proposals", "privacy": "members choose what to share; nothing automatic", "status": "pilot pattern", "color": "#2563eb", "textColor": "#eff6ff" },
+      { "label": "Personal", "scope": "Every staff member, isolated", "detail": "own agent, own memory, own wiki, own jobs", "privacy": "data never leaves the personal agent", "status": "working now", "color": "#0d5f93", "textColor": "#eff6ff" }
     ],
-    "bottomLine": "Memory turns a single-session assistant into a compounding institutional asset.",
-    "bottomLineLabel": "WHY IT MATTERS",
     "audiences": [
       "all",
       "internal",
@@ -2044,51 +2172,10 @@ export const slides = [
   {
     "id": 24.6,
     "slug": "harness-perf-review-demo",
-    "type": "content",
+    "type": "video",
     "content": [],
-    "layout": "harness-definition",
-    "variant": "harness-perf-review",
-    "marker": "USE CASE",
-    "parts": [
-      { "text": "Performance reviews: " },
-      { "text": "memory in action", "accent": true },
-      { "text": "." }
-    ],
-    "subhead": "Harness + durable memory, from accomplishments to calibrated review language.",
-    "videoSrc": "/media/perf-review-demo.mp4",
-    "videoPlaybackRate": 1,
-    "steps": [
-      {
-        "number": "01",
-        "label": "Capture",
-        "detail": "Employee logs accomplishments throughout the year. Memory captures, tags, and organizes them automatically.",
-        "color": "#0d5f93",
-        "icon": "library"
-      },
-      {
-        "number": "02",
-        "label": "Recall",
-        "detail": "Self-assessment pulls from personal memory — surfacing forgotten wins, patterns, and impact.",
-        "color": "#6f9363",
-        "icon": "reasoning"
-      },
-      {
-        "number": "03",
-        "label": "Share",
-        "detail": "Manager accesses the employee's self-assessment knowledge, contextualized with team and department norms.",
-        "color": "#d47a5f",
-        "icon": "people"
-      },
-      {
-        "number": "04",
-        "label": "Generate",
-        "detail": "AI generates review language calibrated to the score, grounded in actual accomplishments and institutional expectations.",
-        "color": "#be634d",
-        "icon": "template"
-      }
-    ],
-    "bottomLine": "Harness + memory replaces the blank page with evidence-backed, calibrated review narratives.",
-    "bottomLineLabel": "OUTCOME",
+    "videoSrc": "/media/screen-recording-2026-06-03-trimmed-hardcut-1m48-3m15-2.0x.mp4",
+    "videoAutoPlay": false,
     "audiences": [
       "all",
       "internal",

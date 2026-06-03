@@ -112,7 +112,7 @@ const Slide = ({ slide }) => {
           poster={slide.poster}
           className="absolute inset-0 h-full w-full object-contain"
           controls
-          autoPlay
+          autoPlay={slide.videoAutoPlay !== false}
           muted
           playsInline
         />

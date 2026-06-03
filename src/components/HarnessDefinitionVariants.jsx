@@ -4306,12 +4306,179 @@ const FlowColumn = ({ kicker, items, delay = 0.3, accentColor }) => (
   </Card>
 );
 
+const MemoryNode = ({ item, delay = 0.4, compact = false }) => (
+  <motion.div
+    {...fade(delay, 6)}
+    className="rounded-[7px] border bg-white/80 px-3 py-2"
+    style={{
+      borderColor: `${item.color}55`,
+      boxShadow: `0 4px 14px ${item.color}14`,
+      borderLeftWidth: 4,
+      borderLeftColor: item.color
+    }}
+  >
+    <div className="flex items-center gap-2">
+      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full" style={{ background: `${item.color}18` }}>
+        <MiniIcon type={item.icon} color={item.color} className="h-5 w-5" />
+      </div>
+      <div>
+        <div style={{ color: T.ink, fontFamily: T.sans, fontSize: compact ? 13 : 14.5, fontWeight: 750, lineHeight: 1.05 }}>
+          {item.label}
+        </div>
+        {item.sub && (
+          <div style={{ color: T.muted, fontFamily: T.mono, fontSize: compact ? 10.5 : 11.5, lineHeight: 1.2 }}>
+            {item.sub}
+          </div>
+        )}
+      </div>
+    </div>
+  </motion.div>
+);
+
+const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
+  const sourcePaths = [
+    'M230 62 C330 62 350 150 455 150',
+    'M230 122 C330 122 350 180 455 180',
+    'M230 182 C330 182 350 210 455 210',
+    'M230 242 C330 242 350 235 455 235',
+    'M230 302 C330 302 350 260 455 260',
+    'M230 362 C330 362 350 288 455 288'
+  ];
+  const actionPaths = [
+    'M665 145 C775 145 790 72 900 72',
+    'M665 172 C775 172 790 132 900 132',
+    'M665 205 C775 205 790 192 900 192',
+    'M665 235 C775 235 790 252 900 252',
+    'M665 272 C775 272 790 312 900 312'
+  ];
+  const coreRows = knowledgeLayers.slice(0, 4);
+
+  return (
+    <div className="relative h-full min-h-0">
+      <svg viewBox="0 0 1130 420" className="absolute inset-0 h-full w-full" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="deck-memory-source-flow" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor={T.blue} stopOpacity="0.78" />
+            <stop offset="100%" stopColor={T.green} stopOpacity="0.9" />
+          </linearGradient>
+          <linearGradient id="deck-memory-action-flow" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor={T.green} stopOpacity="0.9" />
+            <stop offset="100%" stopColor={T.coralDark} stopOpacity="0.78" />
+          </linearGradient>
+        </defs>
+        {sourcePaths.map((d, i) => (
+          <motion.path
+            key={`source-${i}`}
+            d={d}
+            fill="none"
+            stroke="url(#deck-memory-source-flow)"
+            strokeWidth={i % 2 === 0 ? 2.2 : 1.5}
+            strokeLinecap="round"
+            opacity={i % 2 === 0 ? 0.82 : 0.48}
+            {...lineDraw(0.65 + i * 0.04)}
+          />
+        ))}
+        {actionPaths.map((d, i) => (
+          <motion.path
+            key={`action-${i}`}
+            d={d}
+            fill="none"
+            stroke="url(#deck-memory-action-flow)"
+            strokeWidth={i % 2 === 0 ? 2.2 : 1.5}
+            strokeLinecap="round"
+            opacity={i % 2 === 0 ? 0.82 : 0.52}
+            {...lineDraw(0.9 + i * 0.05)}
+          />
+        ))}
+      </svg>
+
+      <div className="relative grid h-full grid-cols-[23%_1fr_23%] gap-8">
+        <div className="flex flex-col justify-start gap-2.5 pt-2">
+          <Kicker style={{ color: T.blue }}>Inputs</Kicker>
+          {sources.map((item, i) => (
+            <MemoryNode key={item.label} item={item} delay={0.4 + i * 0.05} compact />
+          ))}
+        </div>
+
+        <div className="flex items-start justify-center pt-7">
+          <motion.div
+            {...fade(0.62, 8)}
+            className="w-full max-w-[430px] rounded-[10px] border-2 bg-white/90 px-5 py-4"
+            style={{ borderColor: T.green, boxShadow: `0 18px 45px ${T.green}22` }}
+          >
+            <div className="text-center">
+              <div style={{ color: T.green, fontFamily: T.mono, fontSize: 12, fontWeight: 850, letterSpacing: '0.2em', textTransform: 'uppercase' }}>
+                Knowledge and memory ecosystem
+              </div>
+              <div className="mt-1" style={{ color: T.ink, fontFamily: T.serif, fontSize: 27, fontWeight: 620, lineHeight: 1.05 }}>
+                Inputs become structured, retrievable memory.
+              </div>
+            </div>
+            <div className="mt-4 grid grid-cols-2 gap-2">
+              {coreRows.map((item, i) => (
+                <MemoryNode key={item.label} item={item} delay={0.75 + i * 0.06} compact />
+              ))}
+            </div>
+            <div className="mt-3 rounded-[6px] border px-3 py-2 text-center" style={{ borderColor: T.faint, background: '#fcfaf3' }}>
+              <span style={{ color: T.muted, fontFamily: T.mono, fontSize: 11.2, fontWeight: 700 }}>
+                automated jobs extract patterns, update context, and make memory available for actions and use cases
+              </span>
+            </div>
+          </motion.div>
+        </div>
+
+        <div className="flex flex-col justify-start gap-2.5 pt-7">
+          <Kicker style={{ color: T.coralDark }}>Agent actions</Kicker>
+          {actions.map((item, i) => (
+            <MemoryNode key={item.label} item={item} delay={0.75 + i * 0.05} compact />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const JobRhythmStrip = ({ jobs = [] }) => (
+  <div className="h-full">
+    <motion.div {...fade(0.92, 6)} className="mb-2 flex items-center gap-3">
+      <div style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 11, fontWeight: 850, letterSpacing: '0.18em', textTransform: 'uppercase' }}>
+        Example agent actions
+      </div>
+      <div className="h-px flex-1" style={{ background: `linear-gradient(90deg, ${T.coralDark}66, transparent)` }} />
+      <div style={{ color: T.muted, fontFamily: T.sans, fontSize: 12, fontWeight: 650 }}>
+        memory is retrieved at the moment of work
+      </div>
+    </motion.div>
+    <div className="grid h-[calc(100%-26px)] grid-cols-4 gap-3">
+      {jobs.map((job, i) => (
+        <Card key={job.label} delay={1.0 + i * 0.07} className="p-3" style={{ borderTopWidth: 4, borderTopColor: job.color }}>
+          <div className="flex items-start justify-between gap-2">
+            <div style={{ color: job.color, fontFamily: T.mono, fontSize: 10.2, fontWeight: 850, letterSpacing: '0.12em', textTransform: 'uppercase', lineHeight: 1.15 }}>
+              {job.time}
+            </div>
+            {job.fires && (
+              <div className="shrink-0 rounded-full px-2 py-0.5" style={{ border: `1px solid ${job.color}33`, color: job.color, fontFamily: T.mono, fontSize: 9.5, fontWeight: 850, letterSpacing: '0.08em', textTransform: 'uppercase', lineHeight: 1.15 }}>
+                {job.fires}
+              </div>
+            )}
+          </div>
+          <div className="mt-1" style={{ color: T.ink, fontFamily: T.sans, fontSize: 15, fontWeight: 750, lineHeight: 1.08 }}>
+            {job.label}
+          </div>
+          <div className="mt-1" style={{ color: T.muted, fontFamily: T.sans, fontSize: 12.2, lineHeight: 1.22 }}>
+            {job.detail}
+          </div>
+        </Card>
+      ))}
+    </div>
+  </div>
+);
+
 const HarnessMemoryArchitectureVariant = ({ slide }) => {
   const sources = slide.sources || [];
   const knowledgeLayers = slide.knowledgeLayers || [];
   const actions = slide.actions || [];
-  const tiers = slide.tiers || [];
-  const titleFont = isCitizenAudience(slide) ? T.serif : T.sans;
+  const jobs = slide.jobs || [];
 
   return (
     <Shell>
@@ -4319,7 +4486,182 @@ const HarnessMemoryArchitectureVariant = ({ slide }) => {
       <JobSpine activeKey={slide.hideSpine ? null : slide.spineActive} />
       <div className="absolute inset-0" style={{ fontFamily: T.serif }}>
         {/* Title */}
-        <div className={`absolute left-[4.8vw] right-[4.8vw] ${isCitizenAudience(slide) ? 'top-[4vh]' : 'top-[8.3vh]'}`} style={{ maxWidth: '74vw' }}>
+        <div className={`absolute left-[4.8vw] right-[4.8vw] ${isCitizenAudience(slide) ? 'top-[3.5vh]' : 'top-[5.8vh]'}`} style={{ maxWidth: '82vw' }}>
+          <h1 className="leading-[0.98]" style={{ fontSize: 'clamp(38px, 3.6vw, 58px)', fontWeight: 520 }}>
+            <PartText parts={slide.parts} />
+          </h1>
+          {slide.subhead && (
+            <motion.div {...fade(0.38)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(16px, 1.2vw, 21px)' }}>
+              {slide.subhead}
+            </motion.div>
+          )}
+          {slide.bottomLine && (
+            <motion.div {...fade(0.46)} className="mt-3 flex items-start gap-3" style={{ color: T.ink, fontFamily: T.serif }}>
+              {slide.bottomLineLabel && (
+                <span className="shrink-0 rounded-full px-3 py-1" style={{ background: T.coralDark, fontSize: 11, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.18em', whiteSpace: 'nowrap' }}>
+                  {slide.bottomLineLabel}
+                </span>
+              )}
+              <div style={{ fontSize: 'clamp(14px, 1.05vw, 17px)', fontWeight: 520, lineHeight: 1.25, maxWidth: '66vw' }}>
+                {slide.bottomLine}
+              </div>
+            </motion.div>
+          )}
+        </div>
+
+        <div className="absolute left-[4.8vw] right-[4.8vw] top-[13.5vh] bottom-[31vh]">
+          <MemoryFlowField sources={sources} knowledgeLayers={knowledgeLayers} actions={actions} />
+        </div>
+
+        {jobs.length > 0 && (
+          <div className="absolute left-[4.8vw] right-[4.8vw] bottom-[20vh] h-[15vh]">
+            <JobRhythmStrip jobs={jobs} />
+          </div>
+        )}
+      </div>
+    </Shell>
+  );
+};
+
+const ScalingPyramidGraphic = ({ tiers = [], showTierDetails = true }) => {
+  const sorted = tiers.length ? tiers : [
+    { label: 'Campus', scope: 'Statistical patterns only', privacy: 'No individual records', status: 'Aspirational', color: '#93c5fd', textColor: '#17345f' },
+    { label: 'Department', scope: 'Anonymized aggregates', privacy: 'Identity stripped before aggregation', status: 'Design exercise', color: '#60a5fa', textColor: '#17345f' },
+    { label: 'Team', scope: 'Opt-in shared context', privacy: 'Members choose what to share', status: 'Pilot pattern', color: '#2563eb', textColor: '#eff6ff' },
+    { label: 'Personal', scope: 'One agent per person', privacy: 'Data stays private by default', status: 'Working now', color: '#0d5f93', textColor: '#eff6ff' }
+  ];
+  const cx = showTierDetails ? 270 : 405;
+  const viewBox = showTierDetails ? '0 0 880 455' : '0 0 730 455';
+  const segments = showTierDetails ? [
+    { top: 45, bottom: 135, topHalf: 55, bottomHalf: 115 },
+    { top: 135, bottom: 225, topHalf: 115, bottomHalf: 175 },
+    { top: 225, bottom: 315, topHalf: 175, bottomHalf: 235 },
+    { top: 315, bottom: 405, topHalf: 235, bottomHalf: 300 }
+  ] : [
+    { top: 30, bottom: 128, topHalf: 105, bottomHalf: 158 },
+    { top: 128, bottom: 226, topHalf: 158, bottomHalf: 211 },
+    { top: 226, bottom: 324, topHalf: 211, bottomHalf: 264 },
+    { top: 324, bottom: 422, topHalf: 264, bottomHalf: 318 }
+  ];
+
+  return (
+    <svg viewBox={viewBox} className="h-full w-full" role="img" aria-label="Privacy-preserving scaling pyramid">
+      <text x="30" y="42" style={{ fill: T.blue, fontFamily: T.mono, fontSize: 15, fontWeight: 850, letterSpacing: '0.2em' }}>PRIVACY</text>
+      <text x="30" y="64" style={{ fill: T.muted, fontFamily: T.sans, fontSize: 14, fontWeight: 650 }}>aggregate-only upward</text>
+      <line x1="82" y1="88" x2="82" y2="384" stroke={T.faint} strokeWidth="3.6" strokeDasharray="7 8" />
+      <path d="M82 81l-7 12h14z" fill={T.muted} />
+      <text x="18" y="438" style={{ fill: T.muted, fontFamily: T.sans, fontSize: 14, fontWeight: 650 }}>private by default</text>
+
+      {sorted.map((tier, i) => {
+        const s = segments[i];
+        const points = `${cx - s.topHalf},${s.top} ${cx + s.topHalf},${s.top} ${cx + s.bottomHalf},${s.bottom} ${cx - s.bottomHalf},${s.bottom}`;
+        const yMid = (s.top + s.bottom) / 2;
+        const connectorX = cx + (s.topHalf + s.bottomHalf) / 2 + 8;
+        return (
+          <motion.g key={tier.label} {...fade(0.45 + i * 0.08, 0)}>
+            <polygon points={points} fill={tier.color} stroke="#fbf8ef" strokeWidth="2" />
+            <text x={cx} y={yMid - 5} textAnchor="middle" style={{ fill: tier.textColor, fontFamily: T.sans, fontSize: 27, fontWeight: 850 }}>
+              {tier.label}
+            </text>
+            <text x={cx} y={yMid + 21} textAnchor="middle" style={{ fill: tier.textColor, fontFamily: T.sans, fontSize: 14, fontWeight: 650, opacity: 0.92 }}>
+              {tier.scope}
+            </text>
+            {showTierDetails && (
+              <>
+                <line x1={connectorX} y1={yMid} x2="590" y2={yMid} stroke={T.faint} strokeWidth="1.5" />
+                <text x="608" y={yMid - 14} style={{ fill: T.ink, fontFamily: T.sans, fontSize: 14, fontWeight: 800 }}>
+                  {tier.detail}
+                </text>
+                <text x="608" y={yMid + 5} style={{ fill: T.blue, fontFamily: T.sans, fontSize: 12.5, fontWeight: 700 }}>
+                  {tier.privacy}
+                </text>
+                <text x="608" y={yMid + 23} style={{ fill: T.muted, fontFamily: T.serif, fontSize: 12, fontStyle: 'italic' }}>
+                  {tier.status}
+                </text>
+              </>
+            )}
+          </motion.g>
+        );
+      })}
+    </svg>
+  );
+};
+
+const scaleTierCenterY = ['28.5%', '42.8%', '57.1%', '71.4%'];
+
+const TierExplanationLegend = ({ tiers = [] }) => (
+  <div className="relative h-full">
+    {tiers.map((tier, i) => (
+      <div key={tier.label} className="absolute left-0 right-0 -translate-y-1/2" style={{ top: scaleTierCenterY[i] }}>
+        <motion.div
+          {...fade(0.55 + i * 0.08, 8)}
+          className="rounded-[7px] border bg-white/70 px-4 py-3"
+          style={{ borderColor: T.faint, borderLeftWidth: 5, borderLeftColor: tier.color }}
+        >
+          <div className="flex items-baseline justify-between gap-3">
+            <div style={{ color: tier.color, fontFamily: T.mono, fontSize: 12, fontWeight: 850, letterSpacing: '0.16em', textTransform: 'uppercase' }}>
+              {tier.label}
+            </div>
+            <div
+              className="rounded-full px-2.5 py-1"
+              style={{
+                border: `1px solid ${tier.color}55`,
+                background: `${tier.color}14`,
+                color: tier.color,
+                fontFamily: T.mono,
+                fontSize: 10.5,
+                fontWeight: 850,
+                letterSpacing: '0.12em',
+                textTransform: 'uppercase',
+                whiteSpace: 'nowrap'
+              }}
+            >
+              {tier.status}
+            </div>
+          </div>
+          <div className="mt-1" style={{ color: T.ink, fontFamily: T.sans, fontSize: 14.5, fontWeight: 720, lineHeight: 1.2 }}>
+            {tier.detail}
+          </div>
+          <div className="mt-1" style={{ color: T.muted, fontFamily: T.sans, fontSize: 12.5, fontWeight: 620, lineHeight: 1.25 }}>
+            {tier.privacy}
+          </div>
+        </motion.div>
+      </div>
+    ))}
+  </div>
+);
+
+const TierConnectorLines = ({ tiers = [] }) => {
+  return (
+    <svg className="pointer-events-none absolute inset-0 h-full w-full" aria-hidden="true">
+      {tiers.map((tier, i) => (
+        <motion.g key={`${tier.label}-connector`} {...lineDraw(0.72 + i * 0.08)}>
+          <line
+            x1="47%"
+            x2="64.5%"
+            y1={scaleTierCenterY[i]}
+            y2={scaleTierCenterY[i]}
+            stroke={tier.color}
+            strokeWidth="2"
+            strokeLinecap="round"
+            opacity="0.42"
+          />
+          <circle cx="47%" cy={scaleTierCenterY[i]} r="3.5" fill={tier.color} opacity="0.62" />
+        </motion.g>
+      ))}
+    </svg>
+  );
+};
+
+const HarnessMemoryScaleVariant = ({ slide }) => {
+  const tiers = slide.tiers || [];
+
+  return (
+    <Shell>
+      <Marker slide={slide}>{slide.marker}</Marker>
+      <JobSpine activeKey={slide.hideSpine ? null : slide.spineActive} />
+      <div className="absolute inset-0" style={{ fontFamily: T.serif }}>
+        <div className={`absolute left-[4.8vw] right-[4.8vw] ${isCitizenAudience(slide) ? 'top-[4vh]' : 'top-[8.3vh]'}`} style={{ maxWidth: '80vw' }}>
           <h1 className="leading-[0.98]" style={{ fontSize: 'clamp(38px, 3.6vw, 58px)', fontWeight: 520 }}>
             <PartText parts={slide.parts} />
           </h1>
@@ -4330,47 +4672,17 @@ const HarnessMemoryArchitectureVariant = ({ slide }) => {
           )}
         </div>
 
-        {/* Three-column flow */}
-        <div className="absolute left-[4.8vw] right-[4.8vw] top-[22vh] bottom-[34vh] grid grid-cols-[1fr_48px_1fr_48px_1fr] gap-1 items-stretch">
-          <FlowColumn kicker="Data Sources" items={sources} delay={0.35} accentColor={T.blue} />
-          <FlowArrow delay={0.55} />
-          <FlowColumn kicker="Durable Knowledge" items={knowledgeLayers} delay={0.5} accentColor={T.green} />
-          <FlowArrow delay={0.7} />
-          <FlowColumn kicker="Agent Actions" items={actions} delay={0.65} accentColor={T.coral} />
-        </div>
-
-        {/* Four-tier scaling strip */}
-        <div className="absolute left-[4.8vw] right-[4.8vw] bottom-[14vh] grid grid-cols-4 gap-3">
-          {tiers.map((tier, index) => (
-            <Card key={tier.label} delay={0.85 + index * 0.08} className="p-3" style={{ borderLeftWidth: 4, borderLeftColor: tier.color }}>
-              <div className="flex items-center gap-2 mb-1.5">
-                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full" style={{ background: tier.fill }}>
-                  <MiniIcon type={tier.icon} color={tier.color} className="h-5 w-5" />
-                </div>
-                <span style={{ color: tier.color, fontFamily: T.mono, fontSize: 13, fontWeight: 800, letterSpacing: '0.1em' }}>
-                  {tier.label.toUpperCase()}
-                </span>
-              </div>
-              <div style={{ color: T.muted, fontFamily: T.sans, fontSize: 13, lineHeight: 1.3 }}>
-                {tier.scope}
-              </div>
-            </Card>
-          ))}
-        </div>
-
-        {/* Bottom line */}
-        {slide.bottomLine && (
-          <motion.div {...fade(1.2)} className="absolute left-[4.8vw] right-[4.8vw] bottom-[4vh] flex items-center gap-3" style={{ color: T.ink, fontFamily: T.serif }}>
-            {slide.bottomLineLabel && (
-              <span className="shrink-0 rounded-full px-3 py-1" style={{ background: T.coralDark, fontSize: 11, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.22em', whiteSpace: 'nowrap' }}>
-                {slide.bottomLineLabel}
-              </span>
-            )}
-            <div style={{ fontSize: 'clamp(14px, 1.1vw, 18px)', fontWeight: 520, lineHeight: 1.3 }}>
-              {slide.bottomLine}
+        <div className="absolute left-[4.8vw] right-[4.8vw] top-[10.5vh] bottom-[7vh]">
+          <motion.div {...fade(0.45)} className="relative grid h-full grid-cols-[62%_1fr] gap-5">
+            <TierConnectorLines tiers={tiers} />
+            <div className="relative z-10">
+              <ScalingPyramidGraphic tiers={tiers} showTierDetails={false} />
+            </div>
+            <div className="relative z-10">
+              <TierExplanationLegend tiers={tiers} />
             </div>
           </motion.div>
-        )}
+        </div>
       </div>
     </Shell>
   );
@@ -4502,6 +4814,7 @@ export const harnessVariantMap = {
   'harness-action-plan': HarnessActionPlanVariant,
   'harness-recap': HarnessRecapVariant,
   'harness-memory-architecture': HarnessMemoryArchitectureVariant,
+  'harness-memory-scale': HarnessMemoryScaleVariant,
   'harness-perf-review': HarnessPerformanceReviewVariant
 };
 
