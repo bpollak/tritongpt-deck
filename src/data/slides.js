@@ -2175,7 +2175,8 @@ export const slides = [
     "type": "video",
     "content": [],
     "videoSrc": "/media/screen-recording-2026-06-03-trimmed-hardcut-1m48-3m15-2.0x.mp4",
-    "videoAutoPlay": false,
+    "videoAutoPlay": true,
+    "videoLoop": false,
     "audiences": [
       "all",
       "internal",
