@@ -1586,7 +1586,7 @@ const Slide = ({ slide }) => {
                             className="absolute inset-0 h-full w-full object-cover"
                             preload="auto"
                             autoPlay
-                            loop
+                            loop={slide.videoLoop !== false}
                             muted
                             playsInline
                           />
@@ -1600,7 +1600,7 @@ const Slide = ({ slide }) => {
                         className="relative w-full h-auto max-h-[56vh] rounded-2xl shadow-lg ring-1 ring-black/5 object-contain"
                         preload="auto"
                         autoPlay
-                        loop
+                        loop={slide.videoLoop !== false}
                         muted
                         playsInline
                       />

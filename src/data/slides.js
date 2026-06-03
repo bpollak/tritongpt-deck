@@ -1136,6 +1136,7 @@ export const slides = [
       }
     ],
     "videoSrc": "/media/media8.mov",
+    "videoLoop": false,
     "title": "Scaling Engagement: The TritonGPT Widget",
     "layout": "solution-showcase",
     "subtitle": "High-Quality Public Support at Zero Variable Cost",
@@ -1190,6 +1191,7 @@ export const slides = [
       }
     ],
     "videoSrc": "/media/tgpt-iphone-demo.mp4",
+    "videoLoop": false,
     "deviceFrame": "iphone",
     "videoPlaybackRate": 1.3,
     "title": "TritonGPT in the UC San Diego Mobile App",
