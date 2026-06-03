@@ -3533,24 +3533,9 @@ export const slides = [
             "icon": "Shield"
           },
           {
-            "heading": "Agent Observability & Evaluation Pilot",
+            "heading": "Agent Observability Full Scale Deployment",
             "text": "AI-assisted alert filtering for enterprise monitoring. Self-healing patterns. Dedicated monitoring practice.",
             "icon": "Target"
-          },
-          {
-            "heading": "AI Audit Wizard — Rollout",
-            "text": "Automated compliance checklist generation from policy documents. Reduce audit prep time by 40%+ for administrative units.",
-            "icon": "ClipboardCheck"
-          },
-          {
-            "heading": "Procurement Compliance Agent — Pilot",
-            "text": "Phase 1 pilot live with 3 departments. Automated sponsor risk triage for contract review. Baseline data collection for ROI analysis.",
-            "icon": "Scale"
-          },
-          {
-            "heading": "Harness Prototype — Pilot Expansion",
-            "text": "Campus app hosting model tier validation. MCP hub for UCSD-specific tools. 3+ campus use cases live.",
-            "icon": "Globe"
           }
         ]
       }
