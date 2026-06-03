@@ -39,11 +39,11 @@ export const slideManagerState = {
     "video-media7",
     "ai-contract-reviewer",
     "transcript-matching-validation",
+    "cabinet-harness-03-question",
     "tritonai-developer-api-program",
     "llm-api-usage-attribution",
     "campus-app-hosting",
     "campus-app-hosting-intake",
-    "cabinet-harness-03-question",
     "harness-memory-architecture",
     "harness-memory-scale-ucsd",
     "harness-perf-review-demo",
@@ -363,6 +363,13 @@ export const slideManagerState = {
       "regent",
       "conference"
     ],
+    "cabinet-harness-03-question": [
+      "all",
+      "conference",
+      "citizen",
+      "regent",
+      "executive"
+    ],
     "tritonai-developer-api-program": [
       "all",
       "internal",
@@ -388,13 +395,6 @@ export const slideManagerState = {
       "internal",
       "public",
       "regent"
-    ],
-    "cabinet-harness-03-question": [
-      "all",
-      "conference",
-      "citizen",
-      "regent",
-      "executive"
     ],
     "harness-memory-architecture": [
       "all",
