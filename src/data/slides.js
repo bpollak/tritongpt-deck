@@ -3545,6 +3545,9 @@ export const slides = [
         ]
       }
     ],
+    "saasOnboarding": {
+      "text": "Onboard and support institutions adopting TritonGPT as Software-as-a-Service and using the TritonAI API program"
+    },
     "audiences": [
       "internal",
       "all",
