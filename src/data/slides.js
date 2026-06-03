@@ -3472,18 +3472,23 @@ export const slides = [
         "assistants": [
           {
             "heading": "Student Scheduling Assistant Launch",
-            "text": "20K-40K student rollout in waves based on registration priority. API chain: Student Tool → WSO2 → Academic Applications → TSS. FMEA complete.",
+            "text": "Student registration use begins July 10 after June development, testing, and UAT readiness; rollout in waves by registration priority.",
             "icon": "GraduationCap"
           },
           {
-            "heading": "Citizen Developer Program — Pilot Launch",
-            "text": "Tiered access: $15/mo DeepSeek free tier + commercial tier with project billing. Auto-approval via Quali Build. First cohort onboarded.",
+            "heading": "Citizen Developer — Pilot Launch",
+            "text": "Initial pilot group begins using the gateway-connected harness, with tiered model access and early project billing patterns.",
             "icon": "Code"
           },
           {
-            "heading": "UC San Diego Harness Prototype — MVP",
-            "text": "Three-tier campus app hosting model. Governance framework for agent runtime. MCP server hub architecture decision.",
+            "heading": "Citizen Developer Hosting — Initial Apps",
+            "text": "Initial tier 1/tier 2 POC apps deployed through the hosting model; pilot intake begins without implying full production intake.",
             "icon": "Globe"
+          },
+          {
+            "heading": "Financial Agent — POC Expansion",
+            "text": "Move and expand the proof of concept into a broader rollout, extending financial data assistance to more BFS and campus finance users.",
+            "icon": "Target"
           },
         ]
       },
@@ -3492,24 +3497,19 @@ export const slides = [
         "color": "#00629B",
         "assistants": [
           {
-            "heading": "Citizen Developer Skills Library Expansion",
-            "text": "Branding, accessibility, CMS documentation skills added. MCP integration for skill-based tool calling. 8+ skills available.",
+            "heading": "Citizen Developer — Skills Pipeline",
+            "text": "Skills pipeline and front end for creating, enhancing, and publishing reusable UCSD skills, MCP integrations, and data-source patterns.",
             "icon": "FileText"
           },
           {
-            "heading": "Academic Advising Agent POC — Build",
-            "text": "Development sprint. Integration with SAH, TSS, and ServiceNow data sources.",
-            "icon": "GraduationCap"
+            "heading": "Workforce / Employee Agent POC",
+            "text": "Proof of concept using employee activity and workforce-view data for headcount, compensation comparisons, equity, and reclassification support.",
+            "icon": "Users"
           },
           {
             "heading": "Shared Knowledge Management System",
-            "text": "Team knowledge vault for projects, decisions, runbooks, and vendor notes. Agents read shared context and draft proposed updates for human review; private notes stay private.",
+            "text": "Shared team vault pilot expands into reusable knowledge-management pattern for projects, decisions, runbooks, and agent-drafted updates.",
             "icon": "Database"
-          },
-          {
-            "heading": "Financial Agent — POC Expansion",
-            "text": "Move and expand the proof of concept into a broader rollout, extending financial data assistance to more BFS and campus finance users.",
-            "icon": "Target"
           },
           {
             "heading": "Cash Management Agent — Design",
@@ -3524,8 +3524,13 @@ export const slides = [
         "assistants": [
           {
             "heading": "Citizen Developer Program — Broad Access",
-            "text": "SSO-gated Confluence documentation. Self-guided walkthrough. Public TritonAI site page.",
+            "text": "Broader self-guided access to the harness, skills library, documentation, and pilot hosting pathway.",
             "icon": "Code"
+          },
+          {
+            "heading": "Academic Advising Agent POC — Build",
+            "text": "Development sprint for AI-assisted academic advising, including integration planning with SAH, TSS, and ServiceNow data sources.",
+            "icon": "GraduationCap"
           },
           {
             "heading": "AI Governance Framework — Operationalized",
