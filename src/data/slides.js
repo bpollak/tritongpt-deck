@@ -3369,8 +3369,8 @@ export const slides = [
             "icon": "Share2"
           },
           {
-            "heading": "Contract Review Refinements",
-            "text": "Front-end app and tunable red-lining rule sets for tailored review of supported documents.",
+            "heading": "Contract Review — Configurable Rule Sets",
+            "text": "A/B testing and adjustable red-lining rule sets allow faster tuning across contract types and future risk-based review patterns.",
             "icon": "FileText"
           },
           {
@@ -3390,13 +3390,13 @@ export const slides = [
         "color": "#00629B",
         "assistants": [
           {
-            "heading": "Transcript Validation Continued Work",
-            "text": "Further apply validation logic to admissions workflows.",
-            "icon": "FileCheck"
+            "heading": "Financial Agent POC",
+            "text": "Initial proof of concept for finance data assistance, later expanded to additional BFS and campus finance users.",
+            "icon": "DollarSign"
           },
           {
-            "heading": "TGPT Widget — Live Campus Data",
-            "text": "Live parking availability and Geisel Library busyness levels. Redesigned interface for AI response traceability.",
+            "heading": "TritonGPT Live Campus Data",
+            "text": "Live parking availability and Geisel Library busyness expanded beyond the widget into TritonGPT, with improved response traceability.",
             "icon": "Monitor"
           },
           {
@@ -3405,8 +3405,8 @@ export const slides = [
             "icon": "Cpu"
           },
           {
-            "heading": "Onyx 3.3 Platform Upgrade",
-            "text": "Significant improvements to document search and retrieval. Behind-the-scenes hardening and observability improvements.",
+            "heading": "Platform Upgrade + Guardrails Expansion",
+            "text": "Onyx 3.3 improved document search and retrieval while conversation guardrails expanded from the widget into TritonGPT.",
             "icon": "Server"
           }
         ]
@@ -3416,8 +3416,13 @@ export const slides = [
         "color": "#00C6D7",
         "assistants": [
           {
-            "heading": "Transcript Validation Continued Work",
-            "text": "Further apply validation logic to admissions workflows and continued rollout of deliverables.",
+            "heading": "Canvas Integration — Onyx Instructional Assistant",
+            "text": "First delivery of a collaborative instructional assistant with Onyx, fully integrated into the Canvas LMS.",
+            "icon": "GraduationCap"
+          },
+          {
+            "heading": "Transcript Matching Launch Readiness",
+            "text": "Late-June readiness for the July admissions influx, with production monitoring and reporting moving to metrics slides.",
             "icon": "FileCheck"
           },
           {
@@ -3426,14 +3431,9 @@ export const slides = [
             "icon": "Shield"
           },
           {
-            "heading": "UC San Diego Harness Prototype",
-            "text": "Three-tier campus app hosting model, governance framework for agent runtime, and MCP server hub architecture decision.",
+            "heading": "Citizen Developer — UCSD Harness Prototype",
+            "text": "Gateway-connected harness with UCSD-specific components, early skills and MCP patterns, data-source roadmap, and hosting-model groundwork.",
             "icon": "Globe"
-          },
-          {
-            "heading": "Onyx Instructional Assistant — Canvas Integration",
-            "text": "First delivery of a collaborative instructional assistant with Onyx, fully integrated into the Canvas LMS.",
-            "icon": "GraduationCap"
           },
           {
             "heading": "BioBib Formatter POC",
