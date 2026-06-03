@@ -310,7 +310,8 @@ export const slideManagerState = {
       "internal",
       "executive",
       "regent",
-      "cabinet"
+      "cabinet",
+      "conference"
     ],
     "uc-san-diego-ai-strategy-2026": [
       "all",
