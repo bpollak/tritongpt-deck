@@ -2,6 +2,7 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 import { execFile } from 'node:child_process'
 import { promisify } from 'node:util'
+import vm from 'node:vm'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { AUDIENCE_TYPES } from './src/data/audiences.js'
@@ -46,11 +47,23 @@ const runGit = async (args) => {
 
 const readSlidesFromDisk = async (slidesSourcePath) => {
   const source = await fs.readFile(slidesSourcePath, 'utf8')
-  const match = source.match(/export const slides\s*=\s*(\[[\s\S]*\]);?\s*$/)
-  if (!match) {
+  try {
+    const context = { globalThis: {} }
+    vm.createContext(context)
+    vm.runInContext(
+      source.replace(/export\s+const\s+slides\s*=\s*/, 'globalThis.__slides = '),
+      context,
+      { timeout: 1000 }
+    )
+
+    if (!Array.isArray(context.globalThis.__slides)) {
+      throw new Error('slides export is not an array')
+    }
+
+    return context.globalThis.__slides
+  } catch {
     throw new Error('Could not parse src/data/slides.js — expected `export const slides = [...]`')
   }
-  return JSON.parse(match[1])
 }
 
 const saveSlidesLocally = async (incomingSlides) => {

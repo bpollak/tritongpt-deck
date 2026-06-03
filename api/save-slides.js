@@ -1,4 +1,6 @@
 // Vercel Serverless Function to save slide audience tags, order, and removals.
+import vm from 'node:vm';
+
 import { AUDIENCE_TYPES } from '../src/data/audiences.js';
 import {
   buildSlideManagerStateFromSlides,
@@ -9,11 +11,23 @@ import {
 const decodeGitHubFile = (fileData) => Buffer.from(fileData.content || '', 'base64').toString('utf8');
 
 const parseSlidesModule = (source) => {
-  const match = source.match(/export const slides\s*=\s*(\[[\s\S]*\]);?\s*$/);
-  if (!match) {
+  try {
+    const context = { globalThis: {} };
+    vm.createContext(context);
+    vm.runInContext(
+      source.replace(/export\s+const\s+slides\s*=\s*/, 'globalThis.__slides = '),
+      context,
+      { timeout: 1000 }
+    );
+
+    if (!Array.isArray(context.globalThis.__slides)) {
+      throw new Error('slides export is not an array');
+    }
+
+    return context.globalThis.__slides;
+  } catch (error) {
     throw new Error('Could not parse src/data/slides.js');
   }
-  return JSON.parse(match[1]);
 };
 
 export default async function handler(req, res) {

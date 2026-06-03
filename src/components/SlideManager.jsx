@@ -322,8 +322,9 @@ const SlideManager = ({ onClose, standalone = false }) => {
         setHasPendingGitHubChanges(false);
         setTimeout(() => setSaveStatus(null), 10000);
       } else {
+        const details = Array.isArray(data.details) ? data.details.join(' ') : data.details;
         setSaveStatus('error');
-        setSaveMessage(data.error || 'Failed to save. Check your password and try again.');
+        setSaveMessage(details ? `${data.error}: ${details}` : (data.error || 'Failed to save. Check your password and try again.'));
       }
     } catch (err) {
       setSaveStatus('error');
