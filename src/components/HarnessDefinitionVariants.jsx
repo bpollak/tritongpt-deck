@@ -4323,7 +4323,7 @@ const MemoryNode = ({ item, delay = 0.4, compact = false, nodeRef }) => (
   <motion.div
     ref={nodeRef}
     {...fade(delay, 6)}
-    className="rounded-[7px] border bg-white/80 px-3 py-2"
+    className="rounded-[7px] border bg-white/80 px-3.5 py-2.5"
     style={{
       borderColor: `${item.color}55`,
       boxShadow: `0 4px 14px ${item.color}14`,
@@ -4331,16 +4331,16 @@ const MemoryNode = ({ item, delay = 0.4, compact = false, nodeRef }) => (
       borderLeftColor: item.color
     }}
   >
-    <div className="flex items-center gap-2">
-      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full" style={{ background: `${item.color}18` }}>
+    <div className="flex items-center gap-2.5">
+      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full" style={{ background: `${item.color}18` }}>
         <MiniIcon type={item.icon} color={item.color} className="h-5 w-5" />
       </div>
       <div>
-        <div style={{ color: T.ink, fontFamily: T.sans, fontSize: compact ? 13 : 14.5, fontWeight: 750, lineHeight: 1.05 }}>
+        <div style={{ color: T.ink, fontFamily: T.sans, fontSize: compact ? 14.2 : 15, fontWeight: 750, lineHeight: 1.05 }}>
           {item.label}
         </div>
         {item.sub && (
-          <div style={{ color: T.muted, fontFamily: T.mono, fontSize: compact ? 10.5 : 11.5, lineHeight: 1.2 }}>
+          <div style={{ color: T.muted, fontFamily: T.mono, fontSize: compact ? 11.2 : 11.8, lineHeight: 1.18 }}>
             {item.sub}
           </div>
         )}
@@ -4477,26 +4477,26 @@ const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
         ))}
       </svg>
 
-      <div className="relative grid h-full grid-cols-[23%_1fr_23%] gap-8">
-        <div className="flex flex-col justify-start gap-2.5 pt-2">
-          <Kicker style={{ color: T.blue }}>Inputs</Kicker>
+      <div className="relative grid h-full grid-cols-[24%_1fr_24%] gap-7">
+        <div className="flex flex-col justify-start gap-2.5 pt-1">
+          <Kicker className="text-[13px]" style={{ color: T.blue, fontWeight: 850 }}>Inputs</Kicker>
           {sources.map((item, i) => (
             <MemoryNode key={item.label} item={item} delay={0.4 + i * 0.05} compact nodeRef={(node) => { sourceRefs.current[i] = node; }} />
           ))}
         </div>
 
-        <div className="flex items-start justify-center pt-7">
+        <div className="flex items-start justify-center pt-5">
           <motion.div
             ref={coreRef}
             {...fade(0.62, 8)}
-            className="w-full max-w-[430px] rounded-[10px] border-2 bg-white/90 px-5 py-4"
+            className="w-full max-w-[490px] rounded-[10px] border-2 bg-white/90 px-6 py-5"
             style={{ borderColor: T.green, boxShadow: `0 18px 45px ${T.green}22` }}
           >
             <div className="text-center">
-              <div style={{ color: T.green, fontFamily: T.mono, fontSize: 12, fontWeight: 850, letterSpacing: '0.2em', textTransform: 'uppercase' }}>
+              <div style={{ color: T.green, fontFamily: T.mono, fontSize: 13, fontWeight: 850, letterSpacing: '0.2em', textTransform: 'uppercase' }}>
                 Knowledge and memory ecosystem
               </div>
-              <div className="mt-1" style={{ color: T.ink, fontFamily: T.serif, fontSize: 27, fontWeight: 620, lineHeight: 1.05 }}>
+              <div className="mt-1" style={{ color: T.ink, fontFamily: T.serif, fontSize: 31, fontWeight: 620, lineHeight: 1.04 }}>
                 Inputs become structured, retrievable memory.
               </div>
             </div>
@@ -4505,16 +4505,16 @@ const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
                 <MemoryNode key={item.label} item={item} delay={0.75 + i * 0.06} compact />
               ))}
             </div>
-            <div className="mt-3 rounded-[6px] border px-3 py-2 text-center" style={{ borderColor: T.faint, background: '#fcfaf3' }}>
-              <span style={{ color: T.muted, fontFamily: T.mono, fontSize: 11.2, fontWeight: 700 }}>
+            <div className="mt-3 rounded-[6px] border px-3.5 py-2.5 text-center" style={{ borderColor: T.faint, background: '#fcfaf3' }}>
+              <span style={{ color: T.muted, fontFamily: T.mono, fontSize: 11.8, fontWeight: 700 }}>
                 automated jobs extract patterns, update context, and make memory available for actions and use cases
               </span>
             </div>
           </motion.div>
         </div>
 
-        <div className="flex flex-col justify-start gap-2.5 pt-7">
-          <Kicker style={{ color: T.coralDark }}>Agent actions</Kicker>
+        <div className="flex flex-col justify-start gap-2.5 pt-5">
+          <Kicker className="text-[13px]" style={{ color: T.coralDark, fontWeight: 850 }}>Agent actions</Kicker>
           {actions.map((item, i) => (
             <MemoryNode key={item.label} item={item} delay={0.75 + i * 0.05} compact nodeRef={(node) => { actionRefs.current[i] = node; }} />
           ))}
@@ -4595,12 +4595,12 @@ const HarnessMemoryArchitectureVariant = ({ slide }) => {
           )}
         </div>
 
-        <div className="absolute left-[4.8vw] right-[4.8vw] top-[13.5vh] bottom-[31vh]">
+        <div className="absolute left-[4.8vw] right-[4.8vw] top-[13.5vh] bottom-[28vh]">
           <MemoryFlowField sources={sources} knowledgeLayers={knowledgeLayers} actions={actions} />
         </div>
 
         {jobs.length > 0 && (
-          <div className="absolute left-[4.8vw] right-[4.8vw] bottom-[20vh] h-[15vh]">
+          <div className="absolute left-[4.8vw] right-[4.8vw] bottom-[22vh] h-[15vh]">
             <JobRhythmStrip jobs={jobs} />
           </div>
         )}
