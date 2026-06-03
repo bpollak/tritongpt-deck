@@ -4306,8 +4306,9 @@ const FlowColumn = ({ kicker, items, delay = 0.3, accentColor }) => (
   </Card>
 );
 
-const MemoryNode = ({ item, delay = 0.4, compact = false }) => (
+const MemoryNode = ({ item, delay = 0.4, compact = false, nodeRef }) => (
   <motion.div
+    ref={nodeRef}
     {...fade(delay, 6)}
     className="rounded-[7px] border bg-white/80 px-3 py-2"
     style={{
@@ -4336,26 +4337,92 @@ const MemoryNode = ({ item, delay = 0.4, compact = false }) => (
 );
 
 const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
-  const sourcePaths = [
-    'M252 56 C330 56 338 78 412 78',
-    'M252 108 C330 108 338 118 412 118',
-    'M252 160 C330 160 338 158 412 158',
-    'M252 212 C330 212 338 200 412 200',
-    'M252 264 C330 264 338 240 412 240',
-    'M252 316 C330 316 338 282 412 282'
-  ];
-  const actionPaths = [
-    'M735 104 C812 104 816 72 895 72',
-    'M735 138 C812 138 816 125 895 125',
-    'M735 172 C812 172 816 178 895 178',
-    'M735 212 C812 212 816 230 895 230',
-    'M735 252 C812 252 816 282 895 282'
-  ];
+  const fieldRef = React.useRef(null);
+  const coreRef = React.useRef(null);
+  const sourceRefs = React.useRef([]);
+  const actionRefs = React.useRef([]);
+  const [flow, setFlow] = React.useState({ width: 0, height: 0, sourcePaths: [], actionPaths: [] });
   const coreRows = knowledgeLayers.slice(0, 4);
 
+  React.useLayoutEffect(() => {
+    const field = fieldRef.current;
+    const core = coreRef.current;
+    if (!field || !core) return undefined;
+
+    const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+    const relativeRect = (node, parentRect) => {
+      const rect = node.getBoundingClientRect();
+      return {
+        left: rect.left - parentRect.left,
+        right: rect.right - parentRect.left,
+        top: rect.top - parentRect.top,
+        bottom: rect.bottom - parentRect.top,
+        width: rect.width,
+        height: rect.height
+      };
+    };
+    const curvedPath = (start, end) => {
+      const bend = Math.max(72, Math.abs(end.x - start.x) * 0.42);
+      return `M${start.x.toFixed(1)} ${start.y.toFixed(1)} C${(start.x + bend).toFixed(1)} ${start.y.toFixed(1)} ${(end.x - bend).toFixed(1)} ${end.y.toFixed(1)} ${end.x.toFixed(1)} ${end.y.toFixed(1)}`;
+    };
+    const measure = () => {
+      const parentRect = field.getBoundingClientRect();
+      const coreRect = relativeRect(core, parentRect);
+      const nextSourcePaths = sourceRefs.current
+        .filter(Boolean)
+        .map((node) => {
+          const rect = relativeRect(node, parentRect);
+          const start = { x: rect.right - 8, y: rect.top + rect.height / 2 };
+          const end = {
+            x: coreRect.left + 4,
+            y: clamp(start.y, coreRect.top + 72, coreRect.bottom - 14)
+          };
+          return curvedPath(start, end);
+        });
+      const nextActionPaths = actionRefs.current
+        .filter(Boolean)
+        .map((node) => {
+          const rect = relativeRect(node, parentRect);
+          const end = { x: rect.left + 8, y: rect.top + rect.height / 2 };
+          const start = {
+            x: coreRect.right - 4,
+            y: clamp(end.y, coreRect.top + 72, coreRect.bottom - 14)
+          };
+          return curvedPath(start, end);
+        });
+      setFlow({
+        width: parentRect.width,
+        height: parentRect.height,
+        sourcePaths: nextSourcePaths,
+        actionPaths: nextActionPaths
+      });
+    };
+
+    const timers = [];
+    const scheduleMeasure = () => {
+      window.requestAnimationFrame(measure);
+      timers.push(window.setTimeout(measure, 450));
+      timers.push(window.setTimeout(measure, 1100));
+    };
+
+    scheduleMeasure();
+    const resizeObserver = new ResizeObserver(scheduleMeasure);
+    resizeObserver.observe(field);
+    resizeObserver.observe(core);
+    sourceRefs.current.filter(Boolean).forEach((node) => resizeObserver.observe(node));
+    actionRefs.current.filter(Boolean).forEach((node) => resizeObserver.observe(node));
+    window.addEventListener('resize', scheduleMeasure);
+
+    return () => {
+      timers.forEach((timer) => window.clearTimeout(timer));
+      resizeObserver.disconnect();
+      window.removeEventListener('resize', scheduleMeasure);
+    };
+  }, [sources.length, actions.length, knowledgeLayers.length]);
+
   return (
-    <div className="relative h-full min-h-0">
-      <svg viewBox="0 0 1130 420" className="absolute inset-0 h-full w-full" preserveAspectRatio="none" aria-hidden="true">
+    <div ref={fieldRef} className="relative h-full min-h-0">
+      <svg viewBox={`0 0 ${flow.width || 1} ${flow.height || 1}`} className="absolute inset-0 h-full w-full" preserveAspectRatio="none" aria-hidden="true">
         <defs>
           <linearGradient id="deck-memory-source-flow" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" stopColor={T.blue} stopOpacity="0.78" />
@@ -4366,7 +4433,7 @@ const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
             <stop offset="100%" stopColor={T.coralDark} stopOpacity="0.78" />
           </linearGradient>
         </defs>
-        {sourcePaths.map((d, i) => (
+        {flow.sourcePaths.map((d, i) => (
           <motion.path
             key={`source-${i}`}
             d={d}
@@ -4378,7 +4445,7 @@ const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
             {...lineDraw(0.65 + i * 0.04)}
           />
         ))}
-        {actionPaths.map((d, i) => (
+        {flow.actionPaths.map((d, i) => (
           <motion.path
             key={`action-${i}`}
             d={d}
@@ -4396,12 +4463,13 @@ const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
         <div className="flex flex-col justify-start gap-2.5 pt-2">
           <Kicker style={{ color: T.blue }}>Inputs</Kicker>
           {sources.map((item, i) => (
-            <MemoryNode key={item.label} item={item} delay={0.4 + i * 0.05} compact />
+            <MemoryNode key={item.label} item={item} delay={0.4 + i * 0.05} compact nodeRef={(node) => { sourceRefs.current[i] = node; }} />
           ))}
         </div>
 
         <div className="flex items-start justify-center pt-7">
           <motion.div
+            ref={coreRef}
             {...fade(0.62, 8)}
             className="w-full max-w-[430px] rounded-[10px] border-2 bg-white/90 px-5 py-4"
             style={{ borderColor: T.green, boxShadow: `0 18px 45px ${T.green}22` }}
@@ -4430,7 +4498,7 @@ const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
         <div className="flex flex-col justify-start gap-2.5 pt-7">
           <Kicker style={{ color: T.coralDark }}>Agent actions</Kicker>
           {actions.map((item, i) => (
-            <MemoryNode key={item.label} item={item} delay={0.75 + i * 0.05} compact />
+            <MemoryNode key={item.label} item={item} delay={0.75 + i * 0.05} compact nodeRef={(node) => { actionRefs.current[i] = node; }} />
           ))}
         </div>
       </div>
