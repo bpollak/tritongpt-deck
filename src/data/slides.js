@@ -3431,11 +3431,6 @@ export const slides = [
             "icon": "Globe"
           },
           {
-            "heading": "Student Scheduling Assistant",
-            "text": "Full campus release allowing students to plan their course schedule through dialogue based on courses offered that term.",
-            "icon": "GraduationCap"
-          },
-          {
             "heading": "Onyx Instructional Assistant — Canvas Integration",
             "text": "First delivery of a collaborative instructional assistant with Onyx, fully integrated into the Canvas LMS.",
             "icon": "GraduationCap"
