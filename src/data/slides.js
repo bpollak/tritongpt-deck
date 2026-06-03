@@ -2107,7 +2107,7 @@ export const slides = [
       { "text": "agent action", "accent": true },
       { "text": "." }
     ],
-    "subhead": "",
+    "subhead": "Powered by OpenClaw.",
     "sources": [
       { "label": "Calendar and email", "sub": "daily commitments, asks, follow-ups", "icon": "calendar", "color": "#0d5f93" },
       { "label": "Meeting transcripts", "sub": "Granola debriefs, decisions, sentiment", "icon": "people", "color": "#0d5f93" },
