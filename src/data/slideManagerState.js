@@ -246,7 +246,8 @@ export const slideManagerState = {
       "internal",
       "technical",
       "cabinet",
-      "executive"
+      "executive",
+      "conference"
     ],
     "video-media5": [
       "all",
