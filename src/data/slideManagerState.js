@@ -580,7 +580,6 @@ export const slideManagerState = {
     ],
     "cabinet-harness-06-already-in-toolbox": [
       "all",
-      "conference",
       "citizen",
       "regent",
       "executive"
