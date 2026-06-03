@@ -3502,8 +3502,8 @@ export const slides = [
             "icon": "GraduationCap"
           },
           {
-            "heading": "Knowledge Management System — V2",
-            "text": "Vector database decision: RAG vs. Markdown/wiki approach at scale. Semantic search across shared vault, Confluence, and transcripts.",
+            "heading": "Shared Knowledge Management System",
+            "text": "Team knowledge vault for projects, decisions, runbooks, and vendor notes. Agents read shared context and draft proposed updates for human review; private notes stay private.",
             "icon": "Database"
           },
           {
