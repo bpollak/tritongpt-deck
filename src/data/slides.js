@@ -3481,19 +3481,9 @@ export const slides = [
             "icon": "Code"
           },
           {
-            "heading": "Academic Advising Agent POC",
-            "text": "Requirements complete, agent design begins. Sequential dependency on TSS go-live + Steven availability.",
-            "icon": "GraduationCap"
-          },
-          {
             "heading": "UC San Diego Harness Prototype — MVP",
             "text": "Three-tier campus app hosting model. Governance framework for agent runtime. MCP server hub architecture decision.",
             "icon": "Globe"
-          },
-          {
-            "heading": "Procurement Compliance Agent — Kickoff",
-            "text": "Automated sponsor proposal compliance routing for contract review. Selina Martin partnership. Target: 60% reduction in manual triage.",
-            "icon": "Scale"
           },
         ]
       },
@@ -3517,13 +3507,13 @@ export const slides = [
             "icon": "Database"
           },
           {
-            "heading": "Enterprise Data Agent — NL Enhancement",
-            "text": "Improved natural language to structured query accuracy. Broader data domain coverage.",
+            "heading": "Financial Agent — POC Expansion",
+            "text": "Move and expand the proof of concept into a broader rollout, extending financial data assistance to more BFS and campus finance users.",
             "icon": "Target"
           },
           {
-            "heading": "Enrollment & Cash Applications — Agent Design",
-            "text": "Automated payment posting to SIS. Reduce manual cash application effort. Partnership with Student Financial Solutions.",
+            "heading": "Cash Management Agent — Design",
+            "text": "BFS partnership to OCR cash receipts and match them to invoices, focusing first on high-volume ACH/wire/EFT receipts to reduce manual lookup and undistributed balances.",
             "icon": "DollarSign"
           }
         ]
