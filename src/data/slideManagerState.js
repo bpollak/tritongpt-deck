@@ -107,6 +107,7 @@ export const slideManagerState = {
   "audiences": {
     "the-ai-enabled-university": [
       "all",
+      "conference",
       "public",
       "internal",
       "technical",
@@ -120,8 +121,7 @@ export const slideManagerState = {
     "the-ai-enabled-university-duo": [
       "all",
       "internal",
-      "technical",
-      "ASU-GSV"
+      "technical"
     ],
     "the-ai-enabled-university-cabinet": [
       "all"
@@ -134,6 +134,7 @@ export const slideManagerState = {
     ],
     "ai-strategy-and-engagement": [
       "all",
+      "conference",
       "public",
       "internal",
       "technical"
@@ -142,8 +143,7 @@ export const slideManagerState = {
       "all",
       "public",
       "internal",
-      "technical",
-      "ASU-GSV"
+      "technical"
     ],
     "triton-ai-website": [
       "all",
@@ -160,14 +160,15 @@ export const slideManagerState = {
       "all"
     ],
     "higher-ed-reskilling-gap": [
-      "all"
+      "all",
+      "conference"
     ],
     "tritongpt-origin": [
       "all",
+      "conference",
       "public",
       "internal",
       "technical",
-      "ASU-GSV",
       "executive",
       "regent",
       "citizen"
@@ -177,7 +178,6 @@ export const slideManagerState = {
       "public",
       "internal",
       "technical",
-      "ASU-GSV",
       "executive",
       "cabinet",
       "regent"
@@ -192,6 +192,7 @@ export const slideManagerState = {
     ],
     "tritongpt-initiative": [
       "all",
+      "conference",
       "public",
       "internal",
       "technical",
@@ -221,11 +222,13 @@ export const slideManagerState = {
     ],
     "video-media2": [
       "all",
+      "conference",
       "public",
       "internal"
     ],
     "video-media4": [
       "all",
+      "conference",
       "internal",
       "public",
       "technical",
@@ -234,6 +237,7 @@ export const slideManagerState = {
     ],
     "video-media3": [
       "all",
+      "conference",
       "internal",
       "public",
       "technical",
@@ -260,10 +264,10 @@ export const slideManagerState = {
     ],
     "scaling-engagement-the-tritongpt-widget": [
       "all",
+      "conference",
       "public",
       "internal",
       "technical",
-      "ASU-GSV",
       "executive",
       "regent",
       "cabinet"
@@ -273,7 +277,6 @@ export const slideManagerState = {
       "public",
       "internal",
       "technical",
-      "ASU-GSV",
       "executive",
       "regent",
       "cabinet"
@@ -285,6 +288,7 @@ export const slideManagerState = {
     ],
     "ai-driven-search-blink-integration": [
       "all",
+      "conference",
       "public",
       "internal",
       "executive"
@@ -294,13 +298,13 @@ export const slideManagerState = {
       "public",
       "internal",
       "technical",
-      "ASU-GSV",
       "executive",
       "regent",
       "cabinet"
     ],
     "video-media11": [
       "all",
+      "conference",
       "internal",
       "public",
       "technical"
@@ -309,7 +313,6 @@ export const slideManagerState = {
       "all",
       "public",
       "internal",
-      "ASU-GSV",
       "executive",
       "regent",
       "cabinet"
@@ -322,14 +325,14 @@ export const slideManagerState = {
       "regent"
     ],
     "administrative-ai-the-efficiency-imperative": [
-      "all"
+      "all",
+      "conference"
     ],
     "contract-reviewer-consolidated": [
       "all",
       "public",
       "internal",
       "technical",
-      "ASU-GSV",
       "cabinet",
       "regent",
       "executive"
@@ -349,6 +352,7 @@ export const slideManagerState = {
     ],
     "ai-contract-reviewer": [
       "all",
+      "conference",
       "public",
       "internal",
       "technical",
@@ -359,16 +363,15 @@ export const slideManagerState = {
       "public",
       "internal",
       "technical",
-      "ASU-GSV",
       "cabinet",
       "executive",
       "regent"
     ],
     "tritonai-developer-api-program": [
       "all",
+      "conference",
       "internal",
       "public",
-      "ASU-GSV",
       "regent"
     ],
     "llm-api-usage-attribution": [
@@ -391,21 +394,23 @@ export const slideManagerState = {
     ],
     "harness-memory-scale-ucsd": [
       "all",
+      "conference",
       "internal",
       "cabinet",
       "citizen"
     ],
     "harness-perf-review-demo": [
       "all",
+      "conference",
       "internal",
       "cabinet",
       "citizen"
     ],
     "campus-app-hosting-intake": [
       "all",
+      "conference",
       "internal",
       "public",
-      "ASU-GSV",
       "regent"
     ],
     "agent-engineering-strategy": [
@@ -451,8 +456,7 @@ export const slideManagerState = {
     "key-takeaways": [
       "all",
       "internal",
-      "public",
-      "ASU-GSV"
+      "public"
     ],
     "cost-of-inaction": [
       "all"
@@ -506,8 +510,7 @@ export const slideManagerState = {
     "thank-you-duo": [
       "all",
       "public",
-      "internal",
-      "ASU-GSV"
+      "internal"
     ],
     "thank-you-cabinet": [
       "all"
@@ -557,7 +560,8 @@ export const slideManagerState = {
       "all"
     ],
     "cabinet-people-13-closing": [
-      "all"
+      "all",
+      "conference"
     ],
     "cabinet-harness-02-convergence": [
       "all",
@@ -568,6 +572,7 @@ export const slideManagerState = {
     ],
     "cabinet-harness-03-question": [
       "all",
+      "conference",
       "citizen",
       "regent",
       "executive"
@@ -580,6 +585,7 @@ export const slideManagerState = {
     ],
     "cabinet-harness-06-already-in-toolbox": [
       "all",
+      "conference",
       "citizen",
       "regent",
       "executive"
@@ -622,7 +628,6 @@ export const slideManagerState = {
       "all",
       "internal",
       "public",
-      "ASU-GSV",
       "executive",
       "regent"
     ],
@@ -648,7 +653,6 @@ export const slideManagerState = {
     "the-flywheel-in-action-pdf-remediator": [
       "all",
       "internal",
-      "ASU-GSV",
       "executive",
       "regent"
     ],
@@ -684,6 +688,7 @@ export const slideManagerState = {
     ],
     "thank-you": [
       "all",
+      "conference",
       "internal",
       "public",
       "executive",

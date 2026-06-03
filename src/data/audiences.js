@@ -1,6 +1,6 @@
 export const DEFAULT_AUDIENCE = 'all';
 
-export const AUDIENCE_TYPES = ['all', 'technical', 'executive', 'cabinet', 'citizen', 'internal', 'public', 'ASU-GSV', 'PK', 'regent'];
+export const AUDIENCE_TYPES = ['all', 'technical', 'executive', 'cabinet', 'citizen', 'internal', 'public', 'conference', 'PK', 'regent'];
 
 export const AUDIENCE_COLORS = {
   all: 'bg-gray-500',
@@ -10,7 +10,7 @@ export const AUDIENCE_COLORS = {
   'citizen': 'bg-pink-600',
   internal: 'bg-green-500',
   public: 'bg-orange-500',
-  'ASU-GSV': 'bg-amber-500',
+  conference: 'bg-amber-500',
   'PK': 'bg-teal-500',
   'regent': 'bg-indigo-500'
 };
