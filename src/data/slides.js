@@ -2130,10 +2130,10 @@ export const slides = [
       { "label": "Proactive nudges", "sub": "patterns the agent notices first", "icon": "reasoning", "color": "#d47a5f" }
     ],
     "jobs": [
-      { "time": "DAILY BRIEFING", "fires": "6-9 AM", "label": "Prioritized morning brief", "detail": "agent turns calendar, news, wiki context, and commitments into what to do first", "color": "#d47a5f" },
-      { "time": "MEETING INTELLIGENCE", "fires": "5:30-7:35 PM", "label": "Prep and next steps", "detail": "agent converts transcripts, decisions, relationships, and work patterns into follow-through", "color": "#d47a5f" },
-      { "time": "WORK ARTIFACT", "fires": "3 AM", "label": "Review-ready evidence draft", "detail": "agent turns durable memory into a self-assessment narrative with examples", "color": "#d47a5f" },
-      { "time": "PROACTIVE NUDGE", "fires": "weekly", "label": "Risk and opportunity prompts", "detail": "agent surfaces cross-day patterns as useful next actions before being asked", "color": "#be634d" }
+      { "time": "CALENDAR BRIEFING", "fires": "06:25", "label": "Today's priority list", "detail": "calendar, email, news, and commitments become a focused plan for the day", "color": "#d47a5f" },
+      { "time": "MEETING DEBRIEF", "fires": "18:15", "label": "Follow-up task list", "detail": "transcripts and decisions become owners, next steps, and reminders", "color": "#d47a5f" },
+      { "time": "MEMORY DREAMING", "fires": "03:00", "label": "Durable memory updates", "detail": "short-term signals are promoted into reusable long-term context", "color": "#d47a5f" },
+      { "time": "PAIN SIGNAL MONITOR", "fires": "07:30", "label": "Risk alerts and nudges", "detail": "recurring friction surfaces as risks, opportunities, and suggested actions", "color": "#be634d" }
     ],
     "audiences": [
       "all",
