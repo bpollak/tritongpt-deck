@@ -4358,17 +4358,16 @@ const FlowPulsePath = ({ d, stroke, delay = 0 }) => {
       d={d}
       fill="none"
       stroke={stroke}
-      strokeWidth={3.6}
+      strokeWidth={3}
       strokeLinecap="round"
-      strokeDasharray="2 16"
-      initial={{ strokeDashoffset: 0, opacity: 0 }}
-      animate={{ strokeDashoffset: [0, -72], opacity: [0.16, 0.48, 0.16] }}
+      strokeDasharray="1 12"
+      initial={{ strokeDashoffset: 0, opacity: 0.86 }}
+      animate={{ strokeDashoffset: [0, -52], opacity: 0.86 }}
       transition={{
-        duration: 3.4,
+        duration: 2.6,
         delay,
         ease: 'linear',
-        repeat: Infinity,
-        repeatDelay: 1.1
+        repeat: Infinity
       }}
     />
   );
@@ -4482,10 +4481,10 @@ const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
             d={d}
             fill="none"
             stroke="url(#deck-memory-source-flow)"
-            strokeWidth={2.4}
+            strokeWidth={3}
             strokeLinecap="round"
-            strokeDasharray="2 9"
-            opacity={0.5}
+            strokeDasharray="1 12"
+            opacity={0.42}
           />
         ))}
         {flow.sourcePaths.map((d, i) => (
@@ -4497,10 +4496,10 @@ const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
             d={d}
             fill="none"
             stroke="url(#deck-memory-action-flow)"
-            strokeWidth={2.4}
+            strokeWidth={3}
             strokeLinecap="round"
-            strokeDasharray="2 9"
-            opacity={0.5}
+            strokeDasharray="1 12"
+            opacity={0.42}
           />
         ))}
         {flow.actionPaths.map((d, i) => (
