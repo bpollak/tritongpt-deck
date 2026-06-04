@@ -4502,7 +4502,9 @@ const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
             strokeLinecap="round"
             strokeDasharray="1 10"
             opacity={0.68}
-            {...lineDraw(0.65 + i * 0.04)}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.68 }}
+            transition={{ duration: 0.45, delay: 0.65 + i * 0.04, ease }}
           />
         ))}
         {flow.sourcePaths.map((d, i) => (
@@ -4518,7 +4520,9 @@ const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
             strokeLinecap="round"
             strokeDasharray="1 10"
             opacity={0.68}
-            {...lineDraw(0.9 + i * 0.05)}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.68 }}
+            transition={{ duration: 0.45, delay: 0.9 + i * 0.05, ease }}
           />
         ))}
         {flow.actionPaths.map((d, i) => (
