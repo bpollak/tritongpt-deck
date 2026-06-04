@@ -4357,9 +4357,10 @@ const FlowPulsePath = ({ d, stroke, delay = 0 }) => {
       d={d}
       fill="none"
       stroke={stroke}
-      strokeWidth={3.1}
+      strokeWidth={3.8}
       strokeLinecap="round"
-      opacity={0.22}
+      strokeDasharray="1 10"
+      opacity={0.44}
     />
   );
 
@@ -4372,16 +4373,17 @@ const FlowPulsePath = ({ d, stroke, delay = 0 }) => {
         d={d}
         fill="none"
         stroke={stroke}
-        strokeWidth={4.2}
+        strokeWidth={5.2}
         strokeLinecap="round"
-        initial={{ pathLength: 0, opacity: 0.12 }}
-        animate={{ pathLength: [0, 1, 1], opacity: [0.16, 0.58, 0.2] }}
+        strokeDasharray="1 13"
+        initial={{ strokeDashoffset: 0, opacity: 0.26 }}
+        animate={{ strokeDashoffset: [0, -84], opacity: [0.32, 0.72, 0.32] }}
         transition={{
-          duration: 3.4,
+          duration: 3.2,
           delay,
-          ease,
+          ease: 'linear',
           repeat: Infinity,
-          repeatDelay: 1.1
+          repeatDelay: 0.8
         }}
       />
     </g>
@@ -4496,9 +4498,10 @@ const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
             d={d}
             fill="none"
             stroke="url(#deck-memory-source-flow)"
-            strokeWidth={2.2}
+            strokeWidth={2.8}
             strokeLinecap="round"
-            opacity={0.76}
+            strokeDasharray="1 10"
+            opacity={0.68}
             {...lineDraw(0.65 + i * 0.04)}
           />
         ))}
@@ -4511,9 +4514,10 @@ const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
             d={d}
             fill="none"
             stroke="url(#deck-memory-action-flow)"
-            strokeWidth={2.2}
+            strokeWidth={2.8}
             strokeLinecap="round"
-            opacity={0.76}
+            strokeDasharray="1 10"
+            opacity={0.68}
             {...lineDraw(0.9 + i * 0.05)}
           />
         ))}
