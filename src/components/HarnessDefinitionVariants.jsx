@@ -4354,21 +4354,16 @@ const FlowPulsePath = ({ d, stroke, delay = 0 }) => {
   if (reduceMotion) return null;
 
   return (
-    <motion.path
+    <path
+      className="memory-flow-pulse"
       d={d}
       fill="none"
       stroke={stroke}
       strokeWidth={3}
       strokeLinecap="round"
       strokeDasharray="1 12"
-      initial={{ strokeDashoffset: 0, opacity: 0.86 }}
-      animate={{ strokeDashoffset: [0, -52], opacity: 0.86 }}
-      transition={{
-        duration: 2.6,
-        delay,
-        ease: 'linear',
-        repeat: Infinity
-      }}
+      opacity={0.86}
+      style={{ animationDelay: `-${(delay % 2.6).toFixed(2)}s` }}
     />
   );
 };
@@ -4465,6 +4460,24 @@ const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
         preserveAspectRatio="none"
         aria-hidden="true"
       >
+        <style>
+          {`
+            @keyframes deck-memory-flow-dots {
+              from { stroke-dashoffset: 0; }
+              to { stroke-dashoffset: -52; }
+            }
+
+            .memory-flow-pulse {
+              animation: deck-memory-flow-dots 2.6s linear infinite;
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+              .memory-flow-pulse {
+                animation: none;
+              }
+            }
+          `}
+        </style>
         <defs>
           <linearGradient id="deck-memory-source-flow" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2={flow.width || 1} y2="0">
             <stop offset="0%" stopColor={T.blue} stopOpacity="0.78" />
@@ -4488,7 +4501,7 @@ const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
           />
         ))}
         {flow.sourcePaths.map((d, i) => (
-          <FlowPulsePath key={`source-pulse-${i}`} d={d} stroke={T.blue} delay={1.25 + i * 0.16} />
+          <FlowPulsePath key={`source-pulse-${i}`} d={d} stroke={T.blue} delay={i * 0.18} />
         ))}
         {flow.actionPaths.map((d, i) => (
           <path
@@ -4503,7 +4516,7 @@ const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
           />
         ))}
         {flow.actionPaths.map((d, i) => (
-          <FlowPulsePath key={`action-pulse-${i}`} d={d} stroke={T.coralDark} delay={2.05 + i * 0.16} />
+          <FlowPulsePath key={`action-pulse-${i}`} d={d} stroke={T.coralDark} delay={0.5 + i * 0.18} />
         ))}
       </svg>
 
