@@ -4351,27 +4351,40 @@ const MemoryNode = ({ item, delay = 0.4, compact = false, nodeRef }) => (
 
 const FlowPulsePath = ({ d, stroke, delay = 0 }) => {
   const reduceMotion = useReducedMotion();
-  if (reduceMotion) return null;
 
-  return (
-    <motion.path
+  const fittedLine = (
+    <path
       d={d}
       fill="none"
       stroke={stroke}
-      strokeWidth={3.8}
+      strokeWidth={3.1}
       strokeLinecap="round"
-      strokeDasharray="18 180"
-      opacity={0.32}
-      initial={{ strokeDashoffset: 44 }}
-      animate={{ strokeDashoffset: [44, -220] }}
-      transition={{
-        duration: 3.9,
-        delay,
-        ease: 'linear',
-        repeat: Infinity,
-        repeatDelay: 1.2
-      }}
+      opacity={0.22}
     />
+  );
+
+  if (reduceMotion) return fittedLine;
+
+  return (
+    <g>
+      {fittedLine}
+      <motion.path
+        d={d}
+        fill="none"
+        stroke={stroke}
+        strokeWidth={4.2}
+        strokeLinecap="round"
+        initial={{ pathLength: 0, opacity: 0.12 }}
+        animate={{ pathLength: [0, 1, 1], opacity: [0.16, 0.58, 0.2] }}
+        transition={{
+          duration: 3.4,
+          delay,
+          ease,
+          repeat: Infinity,
+          repeatDelay: 1.1
+        }}
+      />
+    </g>
   );
 };
 
