@@ -142,7 +142,8 @@ export const slideManagerState = {
       "all",
       "public",
       "internal",
-      "technical"
+      "technical",
+      "conference"
     ],
     "triton-ai-website": [
       "all",
