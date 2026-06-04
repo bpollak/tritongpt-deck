@@ -178,7 +178,8 @@ export const slideManagerState = {
       "technical",
       "executive",
       "cabinet",
-      "regent"
+      "regent",
+      "conference"
     ],
     "tritongpt-secure-scalable-ai-platform": [
       "all",
