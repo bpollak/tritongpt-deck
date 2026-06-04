@@ -4493,7 +4493,7 @@ const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
           </linearGradient>
         </defs>
         {flow.sourcePaths.map((d, i) => (
-          <motion.path
+          <path
             key={`source-${i}`}
             d={d}
             fill="none"
@@ -4502,16 +4502,13 @@ const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
             strokeLinecap="round"
             strokeDasharray="1 10"
             opacity={0.68}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.68 }}
-            transition={{ duration: 0.45, delay: 0.65 + i * 0.04, ease }}
           />
         ))}
         {flow.sourcePaths.map((d, i) => (
           <FlowPulsePath key={`source-pulse-${i}`} d={d} stroke={T.blue} delay={1.25 + i * 0.16} />
         ))}
         {flow.actionPaths.map((d, i) => (
-          <motion.path
+          <path
             key={`action-${i}`}
             d={d}
             fill="none"
@@ -4520,9 +4517,6 @@ const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
             strokeLinecap="round"
             strokeDasharray="1 10"
             opacity={0.68}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.68 }}
-            transition={{ duration: 0.45, delay: 0.9 + i * 0.05, ease }}
           />
         ))}
         {flow.actionPaths.map((d, i) => (
