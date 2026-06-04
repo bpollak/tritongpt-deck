@@ -4351,42 +4351,26 @@ const MemoryNode = ({ item, delay = 0.4, compact = false, nodeRef }) => (
 
 const FlowPulsePath = ({ d, stroke, delay = 0 }) => {
   const reduceMotion = useReducedMotion();
+  if (reduceMotion) return null;
 
-  const fittedLine = (
-    <path
+  return (
+    <motion.path
       d={d}
       fill="none"
       stroke={stroke}
-      strokeWidth={3.8}
+      strokeWidth={3.6}
       strokeLinecap="round"
-      strokeDasharray="1 10"
-      opacity={0.44}
+      strokeDasharray="2 16"
+      initial={{ strokeDashoffset: 0, opacity: 0 }}
+      animate={{ strokeDashoffset: [0, -72], opacity: [0.16, 0.48, 0.16] }}
+      transition={{
+        duration: 3.4,
+        delay,
+        ease: 'linear',
+        repeat: Infinity,
+        repeatDelay: 1.1
+      }}
     />
-  );
-
-  if (reduceMotion) return fittedLine;
-
-  return (
-    <g>
-      {fittedLine}
-      <motion.path
-        d={d}
-        fill="none"
-        stroke={stroke}
-        strokeWidth={5.2}
-        strokeLinecap="round"
-        strokeDasharray="1 13"
-        initial={{ strokeDashoffset: 0, opacity: 0.26 }}
-        animate={{ strokeDashoffset: [0, -84], opacity: [0.32, 0.72, 0.32] }}
-        transition={{
-          duration: 3.2,
-          delay,
-          ease: 'linear',
-          repeat: Infinity,
-          repeatDelay: 0.8
-        }}
-      />
-    </g>
   );
 };
 
@@ -4498,10 +4482,10 @@ const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
             d={d}
             fill="none"
             stroke="url(#deck-memory-source-flow)"
-            strokeWidth={2.8}
+            strokeWidth={2.4}
             strokeLinecap="round"
-            strokeDasharray="1 10"
-            opacity={0.68}
+            strokeDasharray="2 9"
+            opacity={0.5}
           />
         ))}
         {flow.sourcePaths.map((d, i) => (
@@ -4513,10 +4497,10 @@ const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
             d={d}
             fill="none"
             stroke="url(#deck-memory-action-flow)"
-            strokeWidth={2.8}
+            strokeWidth={2.4}
             strokeLinecap="round"
-            strokeDasharray="1 10"
-            opacity={0.68}
+            strokeDasharray="2 9"
+            opacity={0.5}
           />
         ))}
         {flow.actionPaths.map((d, i) => (
