@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 
 const T = {
   bg: '#f2f0e7',
@@ -4349,6 +4349,32 @@ const MemoryNode = ({ item, delay = 0.4, compact = false, nodeRef }) => (
   </motion.div>
 );
 
+const FlowPulsePath = ({ d, stroke, delay = 0 }) => {
+  const reduceMotion = useReducedMotion();
+  if (reduceMotion) return null;
+
+  return (
+    <motion.path
+      d={d}
+      fill="none"
+      stroke={stroke}
+      strokeWidth={3.8}
+      strokeLinecap="round"
+      strokeDasharray="18 180"
+      opacity={0.32}
+      initial={{ strokeDashoffset: 44 }}
+      animate={{ strokeDashoffset: [44, -220] }}
+      transition={{
+        duration: 3.9,
+        delay,
+        ease: 'linear',
+        repeat: Infinity,
+        repeatDelay: 1.2
+      }}
+    />
+  );
+};
+
 const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
   const fieldRef = React.useRef(null);
   const coreRef = React.useRef(null);
@@ -4463,6 +4489,9 @@ const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
             {...lineDraw(0.65 + i * 0.04)}
           />
         ))}
+        {flow.sourcePaths.map((d, i) => (
+          <FlowPulsePath key={`source-pulse-${i}`} d={d} stroke={T.blue} delay={1.25 + i * 0.16} />
+        ))}
         {flow.actionPaths.map((d, i) => (
           <motion.path
             key={`action-${i}`}
@@ -4474,6 +4503,9 @@ const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
             opacity={0.76}
             {...lineDraw(0.9 + i * 0.05)}
           />
+        ))}
+        {flow.actionPaths.map((d, i) => (
+          <FlowPulsePath key={`action-pulse-${i}`} d={d} stroke={T.coralDark} delay={2.05 + i * 0.16} />
         ))}
       </svg>
 
