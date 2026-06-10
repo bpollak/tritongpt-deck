@@ -2135,6 +2135,15 @@ export const slides = [
       { "time": "MEMORY DREAMING", "fires": "03:00", "label": "Durable memory updates", "detail": "short-term signals are promoted into reusable long-term context", "color": "#d47a5f" },
       { "time": "PAIN SIGNAL MONITOR", "fires": "07:30", "label": "Risk alerts and nudges", "detail": "recurring friction surfaces as risks, opportunities, and suggested actions", "color": "#be634d" }
     ],
+    "models": [
+      { "label": "gpt-oss-120b", "jobs": 47, "openWeight": true },
+      { "label": "deepseek-v4", "jobs": 7, "openWeight": true },
+      { "label": "mistral-small", "jobs": 6, "openWeight": true },
+      { "label": "mistral-large-3", "jobs": 6, "openWeight": true },
+      { "label": "gemma-4", "jobs": 5, "openWeight": true },
+      { "label": "claude-sonnet", "jobs": 1, "openWeight": false }
+    ],
+    "modelsCaption": "~99% open-weight · hosted on-prem at SDSC (TritonAI)",
     "audiences": [
       "all",
       "internal",

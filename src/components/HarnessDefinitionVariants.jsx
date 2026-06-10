@@ -4603,6 +4603,37 @@ const JobRhythmStrip = ({ jobs = [] }) => (
   </div>
 );
 
+const ModelFleetStrip = ({ models = [], caption }) => (
+  <motion.div {...fade(1.3, 6)} className="flex h-full items-center gap-3">
+    <div className="shrink-0" style={{ color: T.blue, fontFamily: T.mono, fontSize: 11, fontWeight: 850, letterSpacing: '0.18em', textTransform: 'uppercase' }}>
+      Model fleet
+    </div>
+    <div className="flex min-w-0 flex-wrap items-center gap-2">
+      {models.map((m) => (
+        <div
+          key={m.label}
+          className="flex items-center gap-1.5 rounded-full px-2.5 py-1"
+          style={{ border: `1px solid ${T.faint}`, background: 'rgba(255,255,255,0.55)', whiteSpace: 'nowrap' }}
+        >
+          <span
+            className="inline-block h-2 w-2 shrink-0 rounded-full"
+            style={{ background: m.openWeight ? '#6f9363' : T.coralDark }}
+            aria-hidden="true"
+          />
+          <span style={{ color: T.ink, fontFamily: T.mono, fontSize: 11.5, fontWeight: 750 }}>{m.label}</span>
+          <span style={{ color: T.muted, fontFamily: T.mono, fontSize: 11, fontWeight: 650 }}>×{m.jobs}</span>
+        </div>
+      ))}
+    </div>
+    <div className="h-px min-w-4 flex-1" style={{ background: `linear-gradient(90deg, ${T.faint}, transparent)` }} />
+    {caption && (
+      <div className="shrink-0" style={{ color: T.muted, fontFamily: T.sans, fontSize: 12, fontWeight: 650 }}>
+        {caption}
+      </div>
+    )}
+  </motion.div>
+);
+
 const HarnessMemoryArchitectureVariant = ({ slide }) => {
   const sources = slide.sources || [];
   const knowledgeLayers = slide.knowledgeLayers || [];
@@ -4645,6 +4676,12 @@ const HarnessMemoryArchitectureVariant = ({ slide }) => {
         {jobs.length > 0 && (
           <div className="absolute left-[4.8vw] right-[4.8vw] bottom-[22vh] h-[15vh]">
             <JobRhythmStrip jobs={jobs} />
+          </div>
+        )}
+
+        {(slide.models || []).length > 0 && (
+          <div className="absolute left-[4.8vw] right-[4.8vw] bottom-[16.5vh] h-[4vh]">
+            <ModelFleetStrip models={slide.models} caption={slide.modelsCaption} />
           </div>
         )}
       </div>
