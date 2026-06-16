@@ -115,8 +115,7 @@ export const slideManagerState = {
       "cabinet"
     ],
     "where-will-ai-place-us-in-2031": [
-      "all",
-      "executive"
+      "all"
     ],
     "the-ai-enabled-university-duo": [
       "all",
@@ -143,7 +142,8 @@ export const slideManagerState = {
       "public",
       "internal",
       "technical",
-      "conference"
+      "conference",
+      "executive"
     ],
     "triton-ai-website": [
       "all",
