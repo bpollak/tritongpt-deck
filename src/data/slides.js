@@ -2777,12 +2777,58 @@ export const slides = [
         "text": "."
       }
     ],
-    "subhead": "A focused campus kit for building, reusing, and operating AI workflows safely.",
+    "subhead": "A concrete set of artifacts units can use to build, reuse, and operate AI-enabled applications safely.",
     "backgroundColor": "#F5F0E6",
     "center": {
-      "kicker": "PROGRAM FOUNDATION",
-      "title": "Citizen Developer Program",
-      "body": "Units get a governed path from local problem to supported AI workflow without rebuilding model access, security, or operations."
+      "kicker": "OVERARCHING HARNESS",
+      "title": "TritonCraft",
+      "body": "The harness solution that gives citizen developers one place to compose apps, use approved components, and route work through TritonAI."
+    },
+    "interfaceImage": "/media/tritonai-craft-interface.png",
+    "interfaceImageAlt": "TritonAI Craft interface screenshot",
+    "interfaceCaption": "TritonCraft is the working harness where the Citizen Developer Program components show up in the build surface.",
+    "kitArtifacts": [
+      {
+        "title": "Developer APIs",
+        "label": "model and tool access",
+        "body": "Program participants get governed API access for campus-authenticated model calls, app services, and automation workflows.",
+        "icon": "api",
+        "tone": "blue"
+      },
+      {
+        "title": "Embedded Skills Library",
+        "label": "inside TritonCraft",
+        "body": "Reusable UC San Diego skills, task playbooks, and workflow instructions are built into the harness instead of living off to the side.",
+        "icon": "library",
+        "tone": "coral"
+      },
+      {
+        "title": "MCP Service Hub",
+        "label": "personal + enterprise context",
+        "body": "Connectors expose approved personal and enterprise context with scoped access, identity, and audit boundaries.",
+        "icon": "mcp",
+        "tone": "green"
+      },
+      {
+        "title": "Templates & Frameworks",
+        "label": "UCSD branded front ends",
+        "body": "Supported starting points for front-end development, including UC San Diego branding and technologies such as Next.js.",
+        "icon": "template",
+        "tone": "gold"
+      }
+    ],
+    "governanceLayer": {
+      "title": "Observability Tools",
+      "label": "governance layer",
+      "body": "Monitor what citizen developers are building and running across the program.",
+      "items": [
+        "usage",
+        "tool calls",
+        "model routing",
+        "cost",
+        "reliability",
+        "policy signals"
+      ]
     },
     "pillars": [
       {
@@ -2822,8 +2868,9 @@ export const slides = [
         "tone": "green"
       }
     ],
-    "bottomLine": "The goal is simple: make campus AI development easier to start, easier to reuse, and easier to govern.",
-    "bottomLineLabel": "PROGRAM MODEL",
+    "bottomLine": "The visual center is the kit: TritonCraft plus the components, context, templates, and monitoring tools made available through the Citizen Developer Program.",
+    "bottomLineLabel": "WHAT UNITS RECEIVE",
+    "hideBottomLine": true,
     "ecosystem": [
       {
         "title": "Agent Builder",
