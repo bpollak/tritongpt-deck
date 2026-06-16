@@ -4070,6 +4070,11 @@ export const slides = [
         "label": "Users Served"
       }
     ],
+    "teamBanner": {
+      "value": "5.7",
+      "label": "FTE equivalent supporting TritonAI",
+      "text": "Supports TritonGPT, APIs, citizen developer tooling, LLM hosting, Onyx/RAG, observability, security controls, and production operations."
+    },
     "teamSupportAreas": [
       {
         "title": "Campus AI Platform",

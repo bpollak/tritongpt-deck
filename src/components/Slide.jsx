@@ -5421,7 +5421,7 @@ const Slide = ({ slide }) => {
         <div className="w-full max-w-[1800px] mx-auto h-full flex flex-col px-2 sm:px-4">
           {/* Leadership row - Service Owner & Offering Manager */}
           {slide.teamLeadership && (
-            <div className="flex justify-center gap-3 lg:gap-5 mb-1.5">
+            <div className="flex justify-center gap-2 lg:gap-4 mb-1">
               {slide.teamLeadership.map((leader, index) => {
                 const leaderAvatarSeeds = {
                   'Service Owner': 'Felix',
@@ -5438,13 +5438,13 @@ const Slide = ({ slide }) => {
                       type: "spring",
                       stiffness: 100
                     }}
-                    className="flex items-center gap-1.5 bg-white rounded-lg shadow-lg px-1.5 py-1 lg:px-2 lg:py-1 max-w-xl"
+                    className="flex items-center gap-1.5 bg-white rounded-lg shadow-lg px-1.5 py-0.5 lg:px-2 max-w-xl"
                     style={{ borderLeft: `5px solid ${leader.color}` }}
                   >
                     {/* Professional avatar */}
                     <div className="flex-shrink-0 relative">
                       <div
-                        className="w-[4.5rem] h-[4.5rem] lg:w-24 lg:h-24 rounded-full shadow-sm overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200"
+                        className="w-16 h-16 lg:w-20 lg:h-20 rounded-full shadow-sm overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200"
                         style={{ border: `3px solid ${leader.color}` }}
                       >
                         <img
@@ -5460,8 +5460,8 @@ const Slide = ({ slide }) => {
                     </div>
                     {/* Role info and responsibilities */}
                     <div className="flex-1 min-w-0">
-                      <div className="text-base lg:text-lg font-black text-ucsd-navy leading-tight">{leader.role}</div>
-                      <p className="text-sm lg:text-[15px] text-slate-600 leading-snug line-clamp-2">
+                      <div className="text-base lg:text-[1.05rem] font-black text-ucsd-navy leading-tight">{leader.role}</div>
+                      <p className="text-sm lg:text-[14px] text-slate-600 leading-snug line-clamp-2">
                         {leader.responsibilities}
                       </p>
                     </div>
@@ -5478,7 +5478,7 @@ const Slide = ({ slide }) => {
             transition={{ delay: 0.5, duration: 0.4, ease: "easeOut" }}
             className="hidden md:flex justify-center mb-0.5 origin-top"
           >
-            <div className="w-1 h-5 bg-ucsd-navy/60 rounded-full overflow-hidden">
+            <div className="w-1 h-3 bg-ucsd-navy/60 rounded-full overflow-hidden">
               <motion.div
                 initial={{ y: "-100%" }}
                 animate={{ y: "0%" }}
@@ -5491,7 +5491,7 @@ const Slide = ({ slide }) => {
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ delay: 0.7, duration: 0.5, ease: "easeOut" }}
-            className="hidden md:block w-4/5 mx-auto mb-1.5 origin-center"
+            className="hidden md:block w-4/5 mx-auto mb-1 origin-center"
           >
             <div className="h-1 bg-gradient-to-r from-ucsd-navy/20 via-ucsd-navy/60 to-ucsd-navy/20 rounded-full overflow-hidden">
               <motion.div
@@ -5504,7 +5504,7 @@ const Slide = ({ slide }) => {
           </motion.div>
 
           {/* Team members grid - 3 columns */}
-          <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 lg:gap-1.5">
+          <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0.5 lg:gap-1">
             {slide.teamMembers.map((member, index) => {
               const roleColors = {
                 'Platform': '#00629B',
@@ -5540,13 +5540,13 @@ const Slide = ({ slide }) => {
                     damping: 14
                   }}
                   whileHover={{ scale: 1.02, y: -2 }}
-                  className="flex items-center gap-2 bg-white rounded-lg shadow-md hover:shadow-lg px-1.5 py-0.5 lg:px-2 lg:py-0.5 transition-all"
+                  className="flex items-center gap-1.5 bg-white rounded-lg shadow-md hover:shadow-lg px-1.5 py-0.5 transition-all"
                   style={{ borderLeft: `4px solid ${roleColor}` }}
                 >
                   {/* Professional avatar */}
                   <div className="flex-shrink-0 relative">
                     <div
-                      className="w-14 h-14 lg:w-20 lg:h-20 rounded-full overflow-hidden shadow-sm bg-gradient-to-br from-slate-100 to-slate-200"
+                      className="w-14 h-14 lg:w-16 lg:h-16 rounded-full overflow-hidden shadow-sm bg-gradient-to-br from-slate-100 to-slate-200"
                       style={{ border: `2px solid ${roleColor}` }}
                     >
                       <img
@@ -5563,10 +5563,10 @@ const Slide = ({ slide }) => {
 
                   {/* Role info and responsibilities */}
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-lg lg:text-[1.35rem] font-bold text-ucsd-navy leading-tight">
+                    <h3 className="text-lg lg:text-xl font-bold text-ucsd-navy leading-tight">
                       {member.role}
                     </h3>
-                    <p className="text-[15px] lg:text-base text-slate-600 leading-snug line-clamp-2">
+                    <p className="text-[15px] lg:text-[15px] text-slate-600 leading-snug line-clamp-2">
                       {member.responsibilities}
                     </p>
                   </div>
@@ -5615,14 +5615,14 @@ const Slide = ({ slide }) => {
           )}
 
           {/* Breadth footer - highlighted banner style */}
-          {(slide.teamSupportAreas || slide.teamStats) && (
+          {(slide.teamBanner || slide.teamSupportAreas || slide.teamStats) && (
             <motion.div
               initial={{ opacity: 0, y: 20, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ delay: 1.2, type: "spring", stiffness: 80 }}
-              className="mt-3 sm:mt-4"
+              className="mt-2"
             >
-              <div className="relative bg-gradient-to-r from-ucsd-gold/20 via-ucsd-sky/40 to-ucsd-gold/20 rounded-2xl px-8 lg:px-12 py-3.5 lg:py-4 overflow-hidden shadow-lg border-2 border-ucsd-navy/20">
+              <div className="relative bg-gradient-to-r from-ucsd-gold/20 via-ucsd-sky/40 to-ucsd-gold/20 rounded-2xl px-6 lg:px-8 py-2.5 lg:py-3 overflow-hidden shadow-lg border-2 border-ucsd-navy/20">
                 {/* Decorative elements */}
                 <div className="absolute left-0 top-0 bottom-0 w-2 bg-gradient-to-b from-ucsd-gold via-ucsd-navy to-ucsd-gold" />
                 <div className="absolute right-0 top-0 bottom-0 w-2 bg-gradient-to-b from-ucsd-gold via-ucsd-navy to-ucsd-gold" />
@@ -5634,7 +5634,31 @@ const Slide = ({ slide }) => {
                 <div className="absolute left-12 top-3 w-2 h-2 bg-ucsd-gold/60 rounded-full" />
                 <div className="absolute right-16 bottom-3 w-2 h-2 bg-ucsd-sky/80 rounded-full" />
 
-                {slide.teamSupportAreas ? (
+                {slide.teamBanner ? (
+                  <div className="relative flex flex-col md:flex-row md:items-center md:justify-center gap-3 lg:gap-5 text-center md:text-left">
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 1.4 }}
+                      className="shrink-0 rounded-xl border border-white/80 bg-white/80 px-5 py-2.5 shadow-sm"
+                    >
+                      <div className="text-5xl lg:text-[3.25rem] font-black text-ucsd-navy leading-none">
+                        {slide.teamBanner.value}
+                      </div>
+                      <div className="mt-0.5 text-[11px] lg:text-[12px] font-black uppercase tracking-[0.14em] text-ucsd-blue">
+                        {slide.teamBanner.label}
+                      </div>
+                    </motion.div>
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 1.5 }}
+                      className="max-w-5xl text-base lg:text-lg font-semibold leading-snug text-ucsd-navy/85"
+                    >
+                      {slide.teamBanner.text}
+                    </motion.div>
+                  </div>
+                ) : slide.teamSupportAreas ? (
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-5">
                     {slide.teamSupportAreas.map((area, index) => (
                       <motion.div
