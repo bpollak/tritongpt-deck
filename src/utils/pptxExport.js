@@ -4114,7 +4114,7 @@ const renderAgentDevStrategySlide = ({ pres, slide }) => {
 
     const routingLines = routingFactors.flatMap((factor) => [
       `${normalizeWhitespace(factor.factor || "")}`,
-      `  Codex: ${normalizeWhitespace(factor.codex || "")}`,
+      `  CODEX: ${normalizeWhitespace(factor.codex || "")}`,
       `  Claude: ${normalizeWhitespace(factor.claude || "")}`,
     ]);
 

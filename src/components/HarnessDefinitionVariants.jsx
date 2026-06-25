@@ -1943,7 +1943,7 @@ const HarnessCitizenEcosystemVariant = ({ slide }) => {
             <div className="mt-4">
               <Kicker>{slide.center?.kicker || 'OVERARCHING HARNESS'}</Kicker>
               <div className="mt-1" style={{ color: T.ink, fontFamily: T.serif, fontSize: 'clamp(34px, 3vw, 52px)', lineHeight: 0.9, fontWeight: 560 }}>
-                {slide.center?.title || 'Triton AI Harness'}
+                {slide.center?.title || 'TritonAI'}
               </div>
               <div className="mt-2.5 max-w-[30rem]" style={{ color: T.muted, fontFamily: T.sans, fontSize: 'clamp(13.5px, 0.86vw, 15.5px)', lineHeight: 1.16, fontWeight: 570 }}>
                 {slide.center?.body}
@@ -1969,7 +1969,7 @@ const HarnessCitizenEcosystemVariant = ({ slide }) => {
           >
             <img
               src={slide.interfaceImage}
-              alt={slide.interfaceImageAlt || 'Triton AI Harness interface'}
+              alt={slide.interfaceImageAlt || 'TritonAI interface'}
               className="h-full w-full object-cover"
               style={{ objectPosition: 'left top' }}
             />
@@ -2077,7 +2077,7 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
         </div>
 
         <div>
-          <Kicker className="mb-2">{slide.harnessLabel || 'Claude Code / Codex'}</Kicker>
+          <Kicker className="mb-2">{slide.harnessLabel || 'Claude Code / CODEX'}</Kicker>
           <div className="relative">
             <div className="space-y-2.5">
               {harnesses.map((harness, index) => (
@@ -3328,7 +3328,7 @@ const HarnessConvergenceVariant = ({ slide }) => {
 const HarnessDataUnlockVariant = ({ slide }) => {
   const harnesses = slide.harnesses || [
     { name: 'Claude Code', logoUrl: 'https://cdn.simpleicons.org/anthropic/171814' },
-    { name: 'Codex', logoUrl: 'https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg' },
+    { name: 'CODEX', logoUrl: 'https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg' },
     { name: 'OpenCode', logoUrl: 'https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/opencode.svg' }
   ];
   const prioritySystems = slide.prioritySystems || [];

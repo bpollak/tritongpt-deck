@@ -2820,7 +2820,7 @@ const Slide = ({ slide }) => {
                   </div>
                   <div className="space-y-1.5">
                     <div className="rounded-md border border-[#10A37F]/25 bg-[#e8fbf4] p-2">
-                      <div className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.12em] text-[#0f7a5f] mb-0.5">Codex Fit</div>
+                      <div className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.12em] text-[#0f7a5f] mb-0.5">CODEX Fit</div>
                       <div className="text-[11px] sm:text-xs font-semibold text-slate-700 leading-snug">{factor.codex}</div>
                     </div>
                     <div className="rounded-md border border-[#D97757]/25 bg-[#fff2eb] p-2">
@@ -4099,7 +4099,7 @@ const Slide = ({ slide }) => {
                     transition={{ delay: 0.45, duration: 0.6 }}
                     className={stageColumnClass}
                   >
-                    <div className={stageHeaderClass}>Claude Code / Codex</div>
+                    <div className={stageHeaderClass}>Claude Code / CODEX</div>
                     <div className={centeredStageContentClass}>
                       {devTools.map((tool, i) => {
                         const IconComp = iconMap[tool.icon] || Code;

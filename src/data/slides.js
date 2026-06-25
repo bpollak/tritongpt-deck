@@ -1745,7 +1745,7 @@ export const slides = [
     ],
     "programTitle": "Citizen Developer Program: API Path",
     "usersLabel": "Citizen developers",
-    "harnessLabel": "Triton AI",
+    "harnessLabel": "Supported harnesses",
     "parts": [
       {
         "text": "The Developer API is the "
@@ -1785,14 +1785,14 @@ export const slides = [
         "fill": "#fff5ee"
       },
       {
-        "title": "Codex",
+        "title": "CODEX",
         "subtitle": "OpenAI",
         "icon": "builder",
         "color": "#10b981",
         "fill": "#ecfdf5"
       },
       {
-        "title": "Triton AI Harness",
+        "title": "TritonAI",
         "subtitle": "Campus solution",
         "icon": "code",
         "color": "#15243d",
@@ -2009,7 +2009,7 @@ export const slides = [
       {
         "number": "1",
         "name": "Prototype",
-        "description": "Build locally with Claude Code, Codex, Triton AI Harness, or curated ITS templates through the Citizen Developer Program API path",
+        "description": "Build locally with Claude Code, CODEX, TritonAI, or curated ITS templates through the Citizen Developer Program API path",
         "icon": "Code",
         "color": "#00629B"
       },
@@ -2231,7 +2231,7 @@ export const slides = [
             "label": "User Desktop / Laptop",
             "tools": [
               "Claude Code",
-              "Codex",
+              "CODEX",
               "Onyx Craft + OpenCode",
               "Campus Jupyter + OpenCode"
             ]
@@ -2240,8 +2240,8 @@ export const slides = [
             "label": "User Sandbox",
             "tools": [
               "Claude Code",
-              "Codex",
-              "Triton AI Harness"
+              "CODEX",
+              "TritonAI"
             ],
             "note": "May be required for some API/MCP tooling"
           }
@@ -2306,7 +2306,7 @@ export const slides = [
     "type": "content",
     "layout": "agent-dev-strategy",
     "title": "Agent Engineering Strategy",
-    "subtitle": "Codex and Claude Code as primary engineering interfaces — with Gemini Antigravity also supported",
+    "subtitle": "CODEX and Claude Code as primary engineering interfaces — with Gemini Antigravity also supported",
     "backgroundColor": "#F5F0E6",
     "recharge": {
       "title": "Campus Recharge + On-Prem Controls",
@@ -2319,7 +2319,7 @@ export const slides = [
     ],
     "models": [
       {
-        "name": "Codex",
+        "name": "CODEX",
         "vendor": "OpenAI",
         "icon": "CheckCircle",
         "primary": true
@@ -2339,7 +2339,7 @@ export const slides = [
     ],
     "codex": {
       "brand": "OpenAI",
-      "title": "Codex: Autonomous Delegation",
+      "title": "CODEX: Autonomous Delegation",
       "tag": "Command Center",
       "strengths": [
         "High-correctness execution for self-contained software tasks.",
@@ -2360,12 +2360,12 @@ export const slides = [
     "routingFactors": [
       {
         "factor": "Error Tolerance",
-        "codex": "Use Codex when correctness and autonomous recovery are critical.",
+        "codex": "Use CODEX when correctness and autonomous recovery are critical.",
         "claude": "Use Claude Code when iterative drafting and review are acceptable."
       },
       {
         "factor": "Environment Scope",
-        "codex": "Prefer Codex for self-contained repo or dataset execution.",
+        "codex": "Prefer CODEX for self-contained repo or dataset execution.",
         "claude": "Prefer Claude Code for workflows spanning multiple systems."
       },
       {
@@ -2399,7 +2399,7 @@ export const slides = [
       {
         "name": "Build with AI",
         "shortLabel": "Build",
-        "description": "A staff member used Claude Code and Codex through the Citizen Developer Program API path to build the solution — no engineering background required.",
+        "description": "A staff member used Claude Code and CODEX through the Citizen Developer Program API path to build the solution — no engineering background required.",
         "icon": "Code",
         "color": "#00C6D7"
       },
@@ -2781,12 +2781,12 @@ export const slides = [
     "backgroundColor": "#F5F0E6",
     "center": {
       "kicker": "OVERARCHING HARNESS",
-      "title": "Triton AI Harness",
+      "title": "TritonAI",
       "body": "The harness solution that gives citizen developers one place to compose apps, use approved components, and route work through TritonAI."
     },
     "interfaceImage": "/media/tritonai-craft-interface.png",
-    "interfaceImageAlt": "Triton AI Harness interface screenshot",
-    "interfaceCaption": "Triton AI Harness is the working harness where the Citizen Developer Program components show up in the build surface.",
+    "interfaceImageAlt": "TritonAI interface screenshot",
+    "interfaceCaption": "TritonAI is the working harness where the Citizen Developer Program components show up in the build surface.",
     "kitArtifacts": [
       {
         "title": "Developer APIs",
@@ -2797,7 +2797,7 @@ export const slides = [
       },
       {
         "title": "Embedded Skills Library",
-        "label": "inside Triton AI Harness",
+        "label": "inside TritonAI",
         "body": "Reusable UC San Diego skills, task playbooks, and workflow instructions are built into the harness instead of living off to the side.",
         "icon": "library",
         "tone": "coral"
@@ -2834,10 +2834,10 @@ export const slides = [
       {
         "title": "Build workflows",
         "label": "create",
-        "body": "Agent Builder, Triton AI Harness, and Developer APIs help teams turn use cases into working campus tools.",
+        "body": "Agent Builder, TritonAI, and Developer APIs help teams turn use cases into working campus tools.",
         "items": [
           "Agent Builder",
-          "Triton AI Harness",
+          "TritonAI",
           "Developer APIs"
         ],
         "icon": "builder",
@@ -2868,7 +2868,7 @@ export const slides = [
         "tone": "green"
       }
     ],
-    "bottomLine": "The visual center is the kit: Triton AI Harness plus the components, context, templates, and monitoring tools made available through the Citizen Developer Program.",
+    "bottomLine": "The visual center is the kit: TritonAI plus the components, context, templates, and monitoring tools made available through the Citizen Developer Program.",
     "bottomLineLabel": "WHAT UNITS RECEIVE",
     "hideBottomLine": true,
     "ecosystem": [
@@ -3449,7 +3449,7 @@ export const slides = [
             "icon": "Shield"
           },
           {
-            "heading": "Launched New Triton AI Site",
+            "heading": "Launched New TritonAI Site",
             "text": "Centralized hub for campus AI resources and documentation.",
             "icon": "Globe"
           },
@@ -3520,7 +3520,7 @@ export const slides = [
             "icon": "FileText"
           },
           {
-            "heading": "Triton AI Developer API Launch",
+            "heading": "TritonAI Developer API Launch",
             "text": "Allows campus users to build apps via the LLM gateway using local and commercial models.",
             "icon": "Code"
           },
@@ -4641,11 +4641,11 @@ export const slides = [
             "logoUrl": "https://cdn.simpleicons.org/anthropic/be634d"
           },
           {
-            "name": "OpenAI Codex",
+            "name": "OpenAI CODEX",
             "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg"
           },
           {
-            "name": "Triton AI Harness",
+            "name": "TritonAI",
             "logoType": "ucsd"
           }
         ]
@@ -4821,15 +4821,15 @@ export const slides = [
         "now": "Multi-agent platform with sub-agents, MCP servers, skills, auto-mode. 5.5× revenue growth in one year; viral with non-programmers."
       },
       {
-        "name": "Codex",
+        "name": "CODEX",
         "color": "#333333",
         "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg",
         "surface": "CLI · desktop · cloud",
-        "origin": "April 2025 — open-source Rust CLI (relaunch; original Codex API closed in 2023).",
+        "origin": "April 2025 — open-source Rust CLI (relaunch; original CODEX API closed in 2023).",
         "now": "3M+ weekly developers, GPT-5.4 family, parallel-agent desktop app, expanding into general enterprise work."
       },
       {
-        "name": "Triton AI Harness",
+        "name": "TritonAI",
         "color": "#111111",
         "logoType": "ucsd",
         "logoText": "T3 Code",
@@ -5196,7 +5196,7 @@ export const slides = [
     ],
     "programTitle": "Citizen Developer Program: API Path",
     "usersLabel": "Citizen developers",
-    "harnessLabel": "Triton AI",
+    "harnessLabel": "Supported harnesses",
     "parts": [
       {
         "text": "The Developer API is the "
@@ -5236,14 +5236,14 @@ export const slides = [
         "fill": "#fff5ee"
       },
       {
-        "title": "Codex",
+        "title": "CODEX",
         "subtitle": "OpenAI",
         "icon": "builder",
         "color": "#10b981",
         "fill": "#ecfdf5"
       },
       {
-        "title": "Triton AI Harness",
+        "title": "TritonAI",
         "subtitle": "Campus solution",
         "icon": "code",
         "color": "#15243d",
@@ -5347,7 +5347,7 @@ export const slides = [
     "slug": "video-harness-api-demo-2026-06-25-810",
     "type": "video",
     "content": [],
-    "managerLabel": "Video: Triton AI Harness API demo 8:10 AM",
+    "managerLabel": "Video: TritonAI API demo 8:10 AM",
     "managerSummary": "June 25 screen recording sped up to 1.8x, inserted after the Citizen Developer Program API path slide.",
     "videoSrc": "/media/screen-recording-2026-06-25-8.10.52-am-1.8x.mp4",
     "videoAutoPlay": true,
@@ -5364,7 +5364,7 @@ export const slides = [
     "slug": "video-harness-api-demo-2026-06-25-842",
     "type": "video",
     "content": [],
-    "managerLabel": "Video: Triton AI Harness API demo 8:42 AM",
+    "managerLabel": "Video: TritonAI API demo 8:42 AM",
     "managerSummary": "June 25 screen recording sped up to 1.8x, inserted after the Citizen Developer Program API path slide.",
     "videoSrc": "/media/screen-recording-2026-06-25-8.42.16-am-1.8x.mp4",
     "videoAutoPlay": true,
@@ -5402,11 +5402,11 @@ export const slides = [
         "logoUrl": "https://cdn.simpleicons.org/anthropic/171814"
       },
       {
-        "name": "Codex",
+        "name": "CODEX",
         "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg"
       },
       {
-        "name": "Triton AI Harness",
+        "name": "TritonAI",
         "logoType": "ucsd"
       }
     ],
@@ -5638,7 +5638,7 @@ export const slides = [
             "label": "User Desktop / Laptop",
             "tools": [
               "Claude Code",
-              "Codex",
+              "CODEX",
               "Onyx Craft + OpenCode",
               "Campus Jupyter + OpenCode"
             ]
@@ -5647,8 +5647,8 @@ export const slides = [
             "label": "User Sandbox",
             "tools": [
               "Claude Code",
-              "Codex",
-              "Triton AI Harness"
+              "CODEX",
+              "TritonAI"
             ],
             "note": "May be required for some API/MCP tooling"
           }
@@ -5795,8 +5795,7 @@ export const slides = [
     "poweredByLabel": "Backed by the program we just walked through",
     "poweredBy": [
       "Claude Code",
-      "Codex",
-      "Triton AI Harness",
+      "CODEX",
       "TritonAI",
       "MCP gateway",
       "Activity Hubs",
