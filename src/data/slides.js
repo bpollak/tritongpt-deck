@@ -1745,7 +1745,7 @@ export const slides = [
     ],
     "programTitle": "Citizen Developer Program: API Path",
     "usersLabel": "Citizen developers",
-    "harnessLabel": "Approved AI harnesses",
+    "harnessLabel": "Triton AI",
     "parts": [
       {
         "text": "The Developer API is the "
@@ -1792,7 +1792,7 @@ export const slides = [
         "fill": "#ecfdf5"
       },
       {
-        "title": "TritonCraft",
+        "title": "Triton AI Harness",
         "subtitle": "Campus solution",
         "icon": "code",
         "color": "#15243d",
@@ -2009,7 +2009,7 @@ export const slides = [
       {
         "number": "1",
         "name": "Prototype",
-        "description": "Build locally with Claude Code, Codex, TritonCraft, or curated ITS templates through the Citizen Developer Program API path",
+        "description": "Build locally with Claude Code, Codex, Triton AI Harness, or curated ITS templates through the Citizen Developer Program API path",
         "icon": "Code",
         "color": "#00629B"
       },
@@ -2241,7 +2241,7 @@ export const slides = [
             "tools": [
               "Claude Code",
               "Codex",
-              "TritonCraft"
+              "Triton AI Harness"
             ],
             "note": "May be required for some API/MCP tooling"
           }
@@ -2781,12 +2781,12 @@ export const slides = [
     "backgroundColor": "#F5F0E6",
     "center": {
       "kicker": "OVERARCHING HARNESS",
-      "title": "TritonCraft",
+      "title": "Triton AI Harness",
       "body": "The harness solution that gives citizen developers one place to compose apps, use approved components, and route work through TritonAI."
     },
     "interfaceImage": "/media/tritonai-craft-interface.png",
-    "interfaceImageAlt": "TritonAI Craft interface screenshot",
-    "interfaceCaption": "TritonCraft is the working harness where the Citizen Developer Program components show up in the build surface.",
+    "interfaceImageAlt": "Triton AI Harness interface screenshot",
+    "interfaceCaption": "Triton AI Harness is the working harness where the Citizen Developer Program components show up in the build surface.",
     "kitArtifacts": [
       {
         "title": "Developer APIs",
@@ -2797,7 +2797,7 @@ export const slides = [
       },
       {
         "title": "Embedded Skills Library",
-        "label": "inside TritonCraft",
+        "label": "inside Triton AI Harness",
         "body": "Reusable UC San Diego skills, task playbooks, and workflow instructions are built into the harness instead of living off to the side.",
         "icon": "library",
         "tone": "coral"
@@ -2834,10 +2834,10 @@ export const slides = [
       {
         "title": "Build workflows",
         "label": "create",
-        "body": "Agent Builder, TritonCraft, and Developer APIs help teams turn use cases into working campus tools.",
+        "body": "Agent Builder, Triton AI Harness, and Developer APIs help teams turn use cases into working campus tools.",
         "items": [
           "Agent Builder",
-          "TritonCraft",
+          "Triton AI Harness",
           "Developer APIs"
         ],
         "icon": "builder",
@@ -2868,7 +2868,7 @@ export const slides = [
         "tone": "green"
       }
     ],
-    "bottomLine": "The visual center is the kit: TritonCraft plus the components, context, templates, and monitoring tools made available through the Citizen Developer Program.",
+    "bottomLine": "The visual center is the kit: Triton AI Harness plus the components, context, templates, and monitoring tools made available through the Citizen Developer Program.",
     "bottomLineLabel": "WHAT UNITS RECEIVE",
     "hideBottomLine": true,
     "ecosystem": [
@@ -4645,7 +4645,7 @@ export const slides = [
             "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg"
           },
           {
-            "name": "TritonCraft",
+            "name": "Triton AI Harness",
             "logoType": "ucsd"
           }
         ]
@@ -4829,7 +4829,7 @@ export const slides = [
         "now": "3M+ weekly developers, GPT-5.4 family, parallel-agent desktop app, expanding into general enterprise work."
       },
       {
-        "name": "TritonCraft",
+        "name": "Triton AI Harness",
         "color": "#111111",
         "logoType": "ucsd",
         "logoText": "T3 Code",
@@ -5196,7 +5196,7 @@ export const slides = [
     ],
     "programTitle": "Citizen Developer Program: API Path",
     "usersLabel": "Citizen developers",
-    "harnessLabel": "Approved AI harnesses",
+    "harnessLabel": "Triton AI",
     "parts": [
       {
         "text": "The Developer API is the "
@@ -5243,7 +5243,7 @@ export const slides = [
         "fill": "#ecfdf5"
       },
       {
-        "title": "TritonCraft",
+        "title": "Triton AI Harness",
         "subtitle": "Campus solution",
         "icon": "code",
         "color": "#15243d",
@@ -5372,7 +5372,7 @@ export const slides = [
         "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg"
       },
       {
-        "name": "TritonCraft",
+        "name": "Triton AI Harness",
         "logoType": "ucsd"
       }
     ],
@@ -5614,7 +5614,7 @@ export const slides = [
             "tools": [
               "Claude Code",
               "Codex",
-              "TritonCraft"
+              "Triton AI Harness"
             ],
             "note": "May be required for some API/MCP tooling"
           }
@@ -5762,7 +5762,7 @@ export const slides = [
     "poweredBy": [
       "Claude Code",
       "Codex",
-      "TritonCraft",
+      "Triton AI Harness",
       "TritonAI",
       "MCP gateway",
       "Activity Hubs",

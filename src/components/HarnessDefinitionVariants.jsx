@@ -1943,7 +1943,7 @@ const HarnessCitizenEcosystemVariant = ({ slide }) => {
             <div className="mt-4">
               <Kicker>{slide.center?.kicker || 'OVERARCHING HARNESS'}</Kicker>
               <div className="mt-1" style={{ color: T.ink, fontFamily: T.serif, fontSize: 'clamp(34px, 3vw, 52px)', lineHeight: 0.9, fontWeight: 560 }}>
-                {slide.center?.title || 'TritonCraft'}
+                {slide.center?.title || 'Triton AI Harness'}
               </div>
               <div className="mt-2.5 max-w-[30rem]" style={{ color: T.muted, fontFamily: T.sans, fontSize: 'clamp(13.5px, 0.86vw, 15.5px)', lineHeight: 1.16, fontWeight: 570 }}>
                 {slide.center?.body}
@@ -1969,7 +1969,7 @@ const HarnessCitizenEcosystemVariant = ({ slide }) => {
           >
             <img
               src={slide.interfaceImage}
-              alt={slide.interfaceImageAlt || 'TritonCraft interface'}
+              alt={slide.interfaceImageAlt || 'Triton AI Harness interface'}
               className="h-full w-full object-cover"
               style={{ objectPosition: 'left top' }}
             />
