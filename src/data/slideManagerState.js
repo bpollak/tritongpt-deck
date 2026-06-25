@@ -91,6 +91,8 @@ export const slideManagerState = {
     "cabinet-harness-08e-tools-hooks-safety",
     "cabinet-harness-10-subagents",
     "cabinet-harness-11c-developer-api-program",
+    "video-harness-api-demo-2026-06-25-810",
+    "video-harness-api-demo-2026-06-25-842",
     "from-tritongpt-to-tritonai",
     "cabinet-harness-11-ucsd-safe-path",
     "cabinet-harness-11a-two-environments",
@@ -607,6 +609,20 @@ export const slideManagerState = {
       "regent"
     ],
     "cabinet-harness-11c-developer-api-program": [
+      "all",
+      "citizen",
+      "regent",
+      "cabinet",
+      "executive"
+    ],
+    "video-harness-api-demo-2026-06-25-810": [
+      "all",
+      "citizen",
+      "regent",
+      "cabinet",
+      "executive"
+    ],
+    "video-harness-api-demo-2026-06-25-842": [
       "all",
       "citizen",
       "regent",

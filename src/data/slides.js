@@ -5343,6 +5343,40 @@ export const slides = [
     ]
   },
   {
+    "id": 124.41,
+    "slug": "video-harness-api-demo-2026-06-25-810",
+    "type": "video",
+    "content": [],
+    "managerLabel": "Video: Triton AI Harness API demo 8:10 AM",
+    "managerSummary": "June 25 screen recording sped up to 1.8x, inserted after the Citizen Developer Program API path slide.",
+    "videoSrc": "/media/screen-recording-2026-06-25-8.10.52-am-1.8x.mp4",
+    "videoAutoPlay": true,
+    "videoLoop": false,
+    "audiences": [
+      "citizen",
+      "regent",
+      "cabinet",
+      "executive"
+    ]
+  },
+  {
+    "id": 124.42,
+    "slug": "video-harness-api-demo-2026-06-25-842",
+    "type": "video",
+    "content": [],
+    "managerLabel": "Video: Triton AI Harness API demo 8:42 AM",
+    "managerSummary": "June 25 screen recording sped up to 1.8x, inserted after the Citizen Developer Program API path slide.",
+    "videoSrc": "/media/screen-recording-2026-06-25-8.42.16-am-1.8x.mp4",
+    "videoAutoPlay": true,
+    "videoLoop": false,
+    "audiences": [
+      "citizen",
+      "regent",
+      "cabinet",
+      "executive"
+    ]
+  },
+  {
     "id": 124,
     "slug": "cabinet-harness-11-ucsd-safe-path",
     "type": "content",
