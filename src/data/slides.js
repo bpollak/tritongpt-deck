@@ -5347,9 +5347,9 @@ export const slides = [
     "slug": "video-harness-api-demo-2026-06-25-810",
     "type": "video",
     "content": [],
-    "managerLabel": "Video: TritonAI API demo 8:10 AM",
-    "managerSummary": "June 25 screen recording sped up to 1.8x, inserted after the Citizen Developer Program API path slide.",
-    "videoSrc": "/media/screen-recording-2026-06-25-8.10.52-am-1.8x.mp4",
+    "managerLabel": "Video: TritonAI API demo June 30",
+    "managerSummary": "June 30 screen recording sped up to 1.5x, inserted after the Citizen Developer Program API path slide.",
+    "videoSrc": "/media/harness-api-demo-2026-06-30-1.5x.mp4",
     "videoAutoPlay": true,
     "videoLoop": false,
     "audiences": [
