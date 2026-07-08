@@ -1,6 +1,6 @@
 export const DEFAULT_AUDIENCE = 'all';
 
-export const AUDIENCE_TYPES = ['all', 'technical', 'executive', 'cabinet', 'citizen', 'internal', 'public', 'conference', 'PK', 'regent'];
+export const AUDIENCE_TYPES = ['all', 'technical', 'executive', 'cabinet', 'citizen', 'internal', 'public', 'conference', 'PK', 'regent', 'LMU'];
 
 export const AUDIENCE_COLORS = {
   all: 'bg-gray-500',
@@ -12,7 +12,8 @@ export const AUDIENCE_COLORS = {
   public: 'bg-orange-500',
   conference: 'bg-amber-500',
   'PK': 'bg-teal-500',
-  'regent': 'bg-indigo-500'
+  'regent': 'bg-indigo-500',
+  'LMU': 'bg-red-700'
 };
 
 const findCanonicalAudience = (audienceType) => {

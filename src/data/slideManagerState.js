@@ -1,5 +1,6 @@
 export const slideManagerState = {
   "order": [
+    "lmu-title",
     "the-ai-enabled-university",
     "where-will-ai-place-us-in-2031",
     "the-ai-enabled-university-duo",
@@ -103,7 +104,8 @@ export const slideManagerState = {
     "the-flywheel-in-action-dissertation-formatter",
     "cabinet-harness-13-recap",
     "the-team-behind-tritonai",
-    "thank-you"
+    "thank-you",
+    "lmu-thank-you"
   ],
   "removed": [],
   "audiences": {
@@ -145,12 +147,14 @@ export const slideManagerState = {
       "internal",
       "technical",
       "conference",
-      "executive"
+      "executive",
+      "LMU"
     ],
     "triton-ai-website": [
       "all",
       "public",
-      "internal"
+      "internal",
+      "LMU"
     ],
     "the-workforce-our-graduates-enter": [
       "all"
@@ -172,7 +176,8 @@ export const slideManagerState = {
       "technical",
       "executive",
       "regent",
-      "citizen"
+      "citizen",
+      "LMU"
     ],
     "tritongpt-platform": [
       "all",
@@ -182,7 +187,8 @@ export const slideManagerState = {
       "executive",
       "cabinet",
       "regent",
-      "conference"
+      "conference",
+      "LMU"
     ],
     "tritongpt-secure-scalable-ai-platform": [
       "all",
@@ -190,7 +196,8 @@ export const slideManagerState = {
       "internal",
       "technical",
       "regent",
-      "executive"
+      "executive",
+      "LMU"
     ],
     "tritongpt-initiative": [
       "all",
@@ -198,7 +205,8 @@ export const slideManagerState = {
       "internal",
       "technical",
       "executive",
-      "regent"
+      "regent",
+      "LMU"
     ],
     "video-media1": [
       "all",
@@ -208,7 +216,8 @@ export const slideManagerState = {
       "regent",
       "cabinet",
       "executive",
-      "conference"
+      "conference",
+      "LMU"
     ],
     "video-screen-recording-1": [
       "all",
@@ -233,7 +242,8 @@ export const slideManagerState = {
       "public",
       "technical",
       "regent",
-      "executive"
+      "executive",
+      "LMU"
     ],
     "video-media3": [
       "all",
@@ -242,7 +252,8 @@ export const slideManagerState = {
       "public",
       "technical",
       "regent",
-      "executive"
+      "executive",
+      "LMU"
     ],
     "video-screen-recording-2026-05-27": [
       "all",
@@ -270,7 +281,8 @@ export const slideManagerState = {
       "technical",
       "executive",
       "regent",
-      "cabinet"
+      "cabinet",
+      "LMU"
     ],
     "video-tritongpt-mobile-app": [
       "all",
@@ -280,7 +292,8 @@ export const slideManagerState = {
       "executive",
       "regent",
       "cabinet",
-      "conference"
+      "conference",
+      "LMU"
     ],
     "video-media9": [
       "all",
@@ -291,7 +304,8 @@ export const slideManagerState = {
       "all",
       "public",
       "internal",
-      "executive"
+      "executive",
+      "LMU"
     ],
     "instructional-ai-socratic-tutor-faculty-assistant": [
       "all",
@@ -300,7 +314,8 @@ export const slideManagerState = {
       "technical",
       "executive",
       "regent",
-      "cabinet"
+      "cabinet",
+      "LMU"
     ],
     "video-media11": [
       "all",
@@ -315,14 +330,16 @@ export const slideManagerState = {
       "executive",
       "regent",
       "cabinet",
-      "conference"
+      "conference",
+      "LMU"
     ],
     "uc-san-diego-ai-strategy-2026": [
       "all",
       "public",
       "internal",
       "technical",
-      "regent"
+      "regent",
+      "LMU"
     ],
     "administrative-ai-the-efficiency-imperative": [
       "all"
@@ -335,13 +352,15 @@ export const slideManagerState = {
       "cabinet",
       "regent",
       "executive",
-      "conference"
+      "conference",
+      "LMU"
     ],
     "the-contract-review-challenge": [
       "all",
       "public",
       "internal",
-      "technical"
+      "technical",
+      "LMU"
     ],
     "video-media7": [
       "all",
@@ -355,7 +374,8 @@ export const slideManagerState = {
       "public",
       "internal",
       "technical",
-      "executive"
+      "executive",
+      "LMU"
     ],
     "transcript-matching-validation": [
       "all",
@@ -365,7 +385,8 @@ export const slideManagerState = {
       "cabinet",
       "executive",
       "regent",
-      "conference"
+      "conference",
+      "LMU"
     ],
     "cabinet-harness-03-question": [
       "all",
@@ -379,26 +400,30 @@ export const slideManagerState = {
       "internal",
       "public",
       "regent",
-      "conference"
+      "conference",
+      "LMU"
     ],
     "llm-api-usage-attribution": [
       "internal",
       "technical",
       "all",
       "PK",
-      "regent"
+      "regent",
+      "LMU"
     ],
     "campus-app-hosting": [
       "all",
       "internal",
-      "public"
+      "public",
+      "LMU"
     ],
     "campus-app-hosting-intake": [
       "all",
       "conference",
       "internal",
       "public",
-      "regent"
+      "regent",
+      "LMU"
     ],
     "harness-memory-architecture": [
       "all",
@@ -412,19 +437,22 @@ export const slideManagerState = {
       "conference",
       "internal",
       "cabinet",
-      "citizen"
+      "citizen",
+      "LMU"
     ],
     "harness-perf-review-demo": [
       "all",
       "conference",
       "internal",
       "cabinet",
-      "citizen"
+      "citizen",
+      "LMU"
     ],
     "agent-engineering-strategy": [
       "all",
       "public",
-      "internal"
+      "internal",
+      "LMU"
     ],
     "the-new-workforce-competency": [
       "all"
@@ -436,19 +464,22 @@ export const slideManagerState = {
       "all",
       "internal",
       "public",
-      "regent"
+      "regent",
+      "LMU"
     ],
     "multi-agent-incident-response-orchestration": [
       "all",
       "internal",
       "public",
-      "regent"
+      "regent",
+      "LMU"
     ],
     "efficiency-ai-vs-opportunity-ai": [
       "all"
     ],
     "ucsd-ai-by-the-numbers": [
-      "all"
+      "all",
+      "LMU"
     ],
     "training-and-outreach": [
       "all"
@@ -456,7 +487,8 @@ export const slideManagerState = {
     "key-takeaways": [
       "all",
       "internal",
-      "public"
+      "public",
+      "LMU"
     ],
     "cost-of-inaction": [
       "all"
@@ -484,7 +516,8 @@ export const slideManagerState = {
       "technical",
       "all",
       "PK",
-      "regent"
+      "regent",
+      "LMU"
     ],
     "tritongpt-widget-analytics": [
       "internal",
@@ -497,7 +530,8 @@ export const slideManagerState = {
       "internal",
       "all",
       "PK",
-      "regent"
+      "regent",
+      "LMU"
     ],
     "research-alignment-poc": [
       "all",
@@ -567,99 +601,115 @@ export const slideManagerState = {
       "citizen",
       "regent",
       "cabinet",
-      "executive"
+      "executive",
+      "LMU"
     ],
     "cabinet-harness-08b-component-framework": [
       "all",
       "citizen",
       "regent",
       "cabinet",
-      "executive"
+      "executive",
+      "LMU"
     ],
     "cabinet-harness-04b-fixed-architecture": [
       "all",
       "citizen",
       "regent",
-      "executive"
+      "executive",
+      "LMU"
     ],
     "cabinet-harness-06-already-in-toolbox": [
       "all",
       "citizen",
       "regent",
-      "executive"
+      "executive",
+      "LMU"
     ],
     "cabinet-harness-08c-while-loop": [
       "all",
       "citizen",
-      "regent"
+      "regent",
+      "LMU"
     ],
     "cabinet-harness-09b-context-management": [
       "all",
       "citizen",
-      "regent"
+      "regent",
+      "LMU"
     ],
     "cabinet-harness-08e-tools-hooks-safety": [
       "all",
       "citizen",
-      "regent"
+      "regent",
+      "LMU"
     ],
     "cabinet-harness-10-subagents": [
       "all",
       "citizen",
-      "regent"
+      "regent",
+      "LMU"
     ],
     "cabinet-harness-11c-developer-api-program": [
       "all",
       "citizen",
       "regent",
       "cabinet",
-      "executive"
+      "executive",
+      "LMU"
     ],
     "video-harness-api-demo-2026-06-25-810": [
       "all",
       "citizen",
       "regent",
       "cabinet",
-      "executive"
+      "executive",
+      "LMU"
     ],
     "video-harness-api-demo-2026-06-25-842": [
       "all",
       "citizen",
       "regent",
       "cabinet",
-      "executive"
+      "executive",
+      "LMU"
     ],
     "from-tritongpt-to-tritonai": [
       "all",
       "internal",
       "public",
       "executive",
-      "regent"
+      "regent",
+      "LMU"
     ],
     "cabinet-harness-11-ucsd-safe-path": [
       "all",
       "citizen",
       "regent",
       "cabinet",
-      "executive"
+      "executive",
+      "LMU"
     ],
     "cabinet-harness-11a-two-environments": [
       "all",
       "citizen",
-      "regent"
+      "regent",
+      "LMU"
     ],
     "cabinet-harness-11d-campus-app-hosting-intake": [
       "all",
       "citizen",
       "regent",
       "cabinet",
-      "executive"
+      "executive",
+      "LMU"
     ],
     "the-flywheel-in-action-pdf-remediator": [
       "all",
       "internal",
       "executive",
-      "regent"
+      "regent",
+      "LMU"
     ],
     "the-flywheel-in-action-biobib-formatter": [
       "all",
@@ -667,7 +717,8 @@ export const slideManagerState = {
       "internal",
       "executive",
       "regent",
-      "citizen"
+      "citizen",
+      "LMU"
     ],
     "the-flywheel-in-action-ai-use-case-meeting": [
       "all",
@@ -675,7 +726,8 @@ export const slideManagerState = {
       "internal",
       "executive",
       "regent",
-      "citizen"
+      "citizen",
+      "LMU"
     ],
     "the-flywheel-in-action-dissertation-formatter": [
       "all",
@@ -683,21 +735,24 @@ export const slideManagerState = {
       "internal",
       "executive",
       "regent",
-      "citizen"
+      "citizen",
+      "LMU"
     ],
     "cabinet-harness-13-recap": [
       "all",
       "citizen",
       "regent",
       "cabinet",
-      "executive"
+      "executive",
+      "LMU"
     ],
     "the-team-behind-tritonai": [
       "all",
       "internal",
       "executive",
       "regent",
-      "citizen"
+      "citizen",
+      "LMU"
     ],
     "thank-you": [
       "all",
@@ -706,6 +761,12 @@ export const slideManagerState = {
       "public",
       "executive",
       "regent"
+    ],
+    "lmu-title": [
+      "LMU"
+    ],
+    "lmu-thank-you": [
+      "LMU"
     ]
   }
 };

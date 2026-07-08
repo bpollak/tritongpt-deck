@@ -5815,5 +5815,37 @@ export const slides = [
       "cabinet",
       "executive"
     ]
+  },
+  {
+    "id": 200,
+    "slug": "lmu-title",
+    "type": "title",
+    "content": [],
+    "conference": "Loyola Marymount University",
+    "title": "The AI-Enabled University",
+    "subtitle": "From TritonGPT to Agentic AI — UC San Diego's Journey to Vertical AI at Scale",
+    "presenterName": "Brett Pollak",
+    "presenterTitle": "Executive Director, IT Services, UC San Diego",
+    "layout": "title-hero",
+    "audiences": [
+      "LMU"
+    ]
+  },
+  {
+    "id": 201,
+    "slug": "lmu-thank-you",
+    "type": "title",
+    "content": [],
+    "title": "Thank You",
+    "subtitle": "Questions?",
+    "layout": "title-hero",
+    "presenterName": "Brett Pollak",
+    "presenterTitle": "Executive Director, IT Services, UC San Diego",
+    "presenterImage": "/media/headshot.jpg",
+    "presenterWebsite": "brettcpollak.com",
+    "qrCodeUrl": "https://brettcpollak.com/tritongpt",
+    "audiences": [
+      "LMU"
+    ]
   }
 ];
