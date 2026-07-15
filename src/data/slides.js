@@ -1020,6 +1020,24 @@ export const slides = [
     ]
   },
   {
+    "id": 7.2,
+    "slug": "video-tritongpt-class-scheduling-agent",
+    "type": "video",
+    "content": [],
+    "managerLabel": "Video: TritonGPT Class Scheduling Agent",
+    "managerSummary": "LinkedIn horizontal demo video inserted after the May 27 screen recording.",
+    "videoSrc": "/media/TritonGPT Class Scheduling Agent - LinkedIn Horizontal.mp4",
+    "audiences": [
+      "all",
+      "public",
+      "internal",
+      "technical",
+      "cabinet",
+      "executive",
+      "conference"
+    ]
+  },
+  {
     "id": 39,
     "slug": "video-screen-recording-1",
     "type": "video",

@@ -24,6 +24,7 @@ export const slideManagerState = {
     "video-media4",
     "video-media3",
     "video-screen-recording-2026-05-27",
+    "video-tritongpt-class-scheduling-agent",
     "video-media5",
     "video-media6",
     "scaling-engagement-the-tritongpt-widget",
@@ -256,6 +257,15 @@ export const slideManagerState = {
       "LMU"
     ],
     "video-screen-recording-2026-05-27": [
+      "all",
+      "public",
+      "internal",
+      "technical",
+      "cabinet",
+      "executive",
+      "conference"
+    ],
+    "video-tritongpt-class-scheduling-agent": [
       "all",
       "public",
       "internal",
