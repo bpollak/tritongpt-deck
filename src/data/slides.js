@@ -281,6 +281,7 @@ export const slides = [
         "category": "people"
       }
     ],
+    "claimNote": "Source: UC San Diego Campus Profile and institutional rankings; dates vary by metric (FY 2025 / Fall 2024–25) · reviewed Jul 2026",
     "audiences": [
       "all",
       "public",
@@ -738,6 +739,7 @@ export const slides = [
         ]
       }
     ],
+    "claimNote": "Source: TritonAI program delivery log · realized milestones through Q2 2026; Q3 items are current delivery status · reviewed Jul 2026",
     "audiences": [
       "all",
       "public",
@@ -766,7 +768,7 @@ export const slides = [
       {
         "name": "Per-Institution Kubernetes Clusters",
         "description": "Software-as-a-Service Delivery",
-        "details": "Each UC institution receives its own dedicated Kubernetes cluster — isolated tenancy on shared SDSC hardware with zero variable cost to scale",
+        "details": "Each UC institution receives an isolated Kubernetes cluster on shared SDSC hardware; local inference has no per-token vendor charge, while capacity remains bounded by shared infrastructure",
         "color": "#00629B",
         "icon": "Layers",
         "tools": [
@@ -826,6 +828,7 @@ export const slides = [
         ]
       }
     ],
+    "claimNote": "Source: TritonAI platform architecture and service inventory · current-state description reviewed Jul 2026",
     "audiences": [
       "all",
       "public",
@@ -988,6 +991,7 @@ export const slides = [
         "Dedicated tenancy"
       ]
     },
+    "claimNote": "Source: TritonAI service inventory and internal pilot benchmarks · 83%, 91%, and transcript metrics reviewed Jul 2026",
     "audiences": [
       "all",
       "public",
@@ -1164,20 +1168,20 @@ export const slides = [
       },
       {
         "heading": "Operational ROI",
-        "text": "Replaces Ocelot for $300K/yr; SDSC-hosted at zero per-query cost."
+        "text": "Replaces a $300K/year vendor contract; local SDSC inference avoids per-query vendor charges within available campus capacity."
       }
     ],
     "videoSrc": "/media/media8.mov",
     "videoLoop": false,
     "title": "Scaling Engagement: The TritonGPT Widget",
     "layout": "solution-showcase",
-    "subtitle": "High-Quality Public Support at Zero Variable Cost",
+    "subtitle": "High-Quality Public Support Without Per-Query Vendor Charges",
     "backgroundColor": "#F5F0E6",
     "stats": [
       {
         "label": "Cost Avoidance",
         "value": "$300K",
-        "sub": "Recurring Annual Savings",
+        "sub": "Annual Vendor Cost Avoided",
         "compact": true
       },
       {
@@ -1193,6 +1197,7 @@ export const slides = [
         "compact": true
       }
     ],
+    "claimNote": "Classification: realized contract cost avoidance; service scale is current-state · source: TritonAI finance and deployment records · reviewed Jul 2026",
     "audiences": [
       "all",
       "public",
@@ -1363,6 +1368,7 @@ export const slides = [
         "sub": "Students want in more courses"
       }
     ],
+    "claimNote": "Source: instructional AI pilot survey · percentages are pilot results, not campus-wide outcomes · reviewed Jul 2026",
     "audiences": [
       "all",
       "public",
@@ -1464,7 +1470,7 @@ export const slides = [
       },
       {
         "heading": "Make AI a Utility (Horizontal AI)",
-        "text": "Shared campus infrastructure and zero variable cost make AI abundant instead of rationed. Broad access drives adoption, experimentation, and institution-wide scale.",
+        "text": "Shared campus infrastructure reduces marginal vendor charges and makes broader access practical within available capacity. Reach, adoption, and service levels remain measurable operating outcomes.",
         "icon": "Cpu"
       },
       {
@@ -1512,7 +1518,7 @@ export const slides = [
     "content": [
       {
         "heading": "Enrollment Operations",
-        "text": "AI-powered transcript matching, admissions processing, and credential verification. Projected $500K annual savings; 12 temporary positions eliminated, 6 FTE redirected to strategic work.",
+        "text": "AI-powered transcript matching, admissions processing, and credential verification. Planning estimate: up to $500K in annual capacity value if production quality and throughput targets are sustained.",
         "icon": "FileCheck"
       },
       {
@@ -1527,7 +1533,7 @@ export const slides = [
       },
       {
         "heading": "IT Service & Support",
-        "text": "73,000+ users served through AI-powered widget on 16 campus websites. No login required. $300K annual vendor displacement with zero variable cost per conversation.",
+        "text": "AI-powered widget live on 16 campus websites with no login required. Potential reach is campus-scale; active use is measured separately. The retired vendor contract represents $300K in annual cost avoidance.",
         "icon": "Headphones"
       },
       {
@@ -1590,6 +1596,7 @@ export const slides = [
         "text": "\"It's like having an extra attorney.\" — \"Saving us hours to days per contract.\" — \"Highlighting issues I might have overlooked... extremely thorough.\""
       }
     ],
+    "claimNote": "Source: timed internal workflow benchmark · 120→11 minutes (91%) is a pilot result, not guaranteed performance · reviewed Jul 2026",
     "audiences": [
       "all",
       "public",
@@ -1738,7 +1745,7 @@ export const slides = [
     "content": [
       {
         "heading": "The Problem",
-        "text": "Enrollment Management hires 12 temporary and student employees each peak processing period — and redirects 6 FTE — to manually match thousands of incoming transcripts."
+        "text": "Peak-season transcript matching previously required temporary hires and redirected career staff to process thousands of incoming records manually."
       },
       {
         "heading": "AI-Powered OCR",
@@ -1750,9 +1757,10 @@ export const slides = [
       },
       {
         "heading": "Validation Roadmap",
-        "text": "Subsequent sprints tackle self-reported discrepancies, admissions requirements, and course transferability — each mapped to FTE savings."
+        "text": "Subsequent sprints address self-reported discrepancies, admissions requirements, and course transferability, with each phase measured for quality, throughput, and staff capacity returned to higher-value work."
       }
     ],
+    "claimNote": "Source: Enrollment Management operating baseline and pilot benchmark · 60K annual volume; 225/hour and 98%+ are pilot results · reviewed Jul 2026",
     "audiences": [
       "all",
       "public",
@@ -1931,7 +1939,7 @@ export const slides = [
     "type": "content",
     "layout": "data-dashboard",
     "title": "LLM API Usage Attribution",
-    "subtitle": "Map API usage to users in confidence tiers; the workbook is aggregated, so row types are views, not additive totals.",
+    "subtitle": "Workbook snapshot reviewed July 2026; attribution tiers are views, not additive totals.",
     "backgroundColor": "#F5F0E6",
     "dashboardSections": [
       {
@@ -1969,7 +1977,7 @@ export const slides = [
           },
           {
             "value": "1.36B",
-            "label": "Team-view API requests",
+            "label": "Team-view API tokens",
             "icon": "BarChart3",
             "color": "#00629B"
           }
@@ -2020,6 +2028,7 @@ export const slides = [
         ]
       }
     ],
+    "claimNote": "Source: LLM gateway usage-attribution workbook · actual snapshot values; spend and token views are aggregated and non-additive · reviewed Jul 2026",
     "audiences": [
       "internal",
       "technical",
@@ -3290,7 +3299,8 @@ export const slides = [
     "slug": "multi-agent-incident-response-orchestration",
     "type": "content",
     "layout": "agent-workflow",
-    "title": "Multi-Agent Incident Response Orchestration",
+    "title": "Illustrative Target State: Multi-Agent Incident Response",
+    "subtitle": "Concept workflow for governed orchestration—not a claim of current production automation",
     "backgroundColor": "#F5F0E6",
     "workflowStages": [
       {
@@ -3381,6 +3391,7 @@ export const slides = [
         "color": "#B8D4A8"
       }
     ],
+    "claimNote": "Classification: illustrative target-state scenario · tools and actions shown are conceptual until operational validation is complete · reviewed Jul 2026",
     "audiences": [
       "all",
       "internal",
@@ -3433,14 +3444,14 @@ export const slides = [
         "type": "metric-grid",
         "items": [
           {
-            "value": "$800K+",
-            "label": "Annual Cost Avoidance",
+            "value": "$300K",
+            "label": "Realized Annual Vendor Cost Avoidance",
             "icon": "DollarSign",
             "color": "#6E963B"
           },
           {
-            "value": "73,000+",
-            "label": "Users Served",
+            "value": "Campus",
+            "label": "Potential Reach (Not Active Users)",
             "icon": "Users",
             "color": "#00629B"
           },
@@ -3457,8 +3468,8 @@ export const slides = [
             "color": "#00C6D7"
           },
           {
-            "value": "12",
-            "label": "Temp Positions Eliminated",
+            "value": "Seasonal",
+            "label": "Peak Staffing Baseline",
             "icon": "TrendingDown",
             "color": "#E85D75"
           },
@@ -3472,16 +3483,16 @@ export const slides = [
       },
       {
         "type": "horizontal-bars",
-        "sectionTitle": "Where the Savings Come From",
+        "sectionTitle": "Realized vs. Planned Value",
         "items": [
           {
-            "label": "Transcript Matching (Enrollment Mgmt)",
+            "label": "Transcript Matching (planning estimate)",
             "value": 63,
             "displayValue": "$500K",
             "color": "#00629B"
           },
           {
-            "label": "Widget Vendor Displacement (Ocelot)",
+            "label": "Widget Vendor Contract (realized)",
             "value": 38,
             "displayValue": "$300K",
             "color": "#00C6D7"
@@ -3493,7 +3504,7 @@ export const slides = [
             "color": "#FC8900"
           }
         ],
-        "caption": "Projected annual savings by initiative"
+        "caption": "Do not add realized cost avoidance to planning estimates without a shared measurement period"
       }
     ],
     "hidden": true,
@@ -3507,7 +3518,7 @@ export const slides = [
     "type": "content",
     "layout": "feature-grid",
     "title": "Training & Outreach",
-    "subtitle": "Building AI fluency across 73,000 campus users",
+    "subtitle": "Building AI fluency across a campus-scale potential audience",
     "backgroundColor": "#F5F0E6",
     "content": [
       {
@@ -3567,12 +3578,12 @@ export const slides = [
       },
       {
         "heading": "Trust is Infrastructure",
-        "text": "You can't automate HR or Finance in the public cloud. Local hosting isn't just about cost—it's the only way to get your most sensitive data into the AI loop.",
+        "text": "Sensitive HR and Finance workflows require approved hosting, contracts, data controls, and human oversight. Local infrastructure is one governed option—not a blanket requirement.",
         "icon": "Shield"
       },
       {
         "heading": "Make Intelligence a Utility",
-        "text": "If every question costs $0.03, you ration it. If it costs $0.00, you innovate. Local compute makes AI abundant and equitable for all 73,000 users.",
+        "text": "Shared local capacity can reduce marginal vendor charges and broaden potential campus reach. Capacity, service levels, and active adoption still require measurement.",
         "icon": "Cpu"
       },
       {
@@ -3665,7 +3676,7 @@ export const slides = [
     "slug": "ai-roadmap-2026",
     "type": "content",
     "layout": "assistant-categories",
-    "title": "AI Roadmap 2026 — Quarter 1",
+    "title": "AI Delivery 2026 — Quarter 1 Outcomes",
     "backgroundColor": "#F5F0E6",
     "categories": [
       {
@@ -3684,7 +3695,7 @@ export const slides = [
           },
           {
             "heading": "AI Contract Review Rollout",
-            "text": "Deployment to all 20 Procurement Buyers across campus.",
+            "text": "Pilot access delivered to the Procurement buyer group, with workflow feedback captured for refinement.",
             "icon": "FileText"
           }
         ]
@@ -3695,12 +3706,12 @@ export const slides = [
         "assistants": [
           {
             "heading": "Class Scheduling Assistant",
-            "text": "Students work with AI to build a course schedule that meets their academic and life/work schedules.",
+            "text": "Pilot scope and workflow design completed for AI-assisted course scheduling.",
             "icon": "Calendar"
           },
           {
             "heading": "Research Proposal Risk POC",
-            "text": "Assess and prioritize proposal risk for compliance workflows.",
+            "text": "Proof of concept completed for assessing and prioritizing proposal risk in compliance workflows.",
             "icon": "Shield"
           },
           {
@@ -3740,6 +3751,7 @@ export const slides = [
     "saasOnboarding": {
       "text": "Onboard new institutions adopting TritonGPT as a Software-as-a-Service AI platform"
     },
+    "claimNote": "Source: TritonAI Q1 delivery log · completed outcomes only · reviewed Jul 2026",
     "audiences": [
       "internal",
       "all",
@@ -3752,7 +3764,7 @@ export const slides = [
     "slug": "ai-roadmap-2026-q2",
     "type": "content",
     "layout": "assistant-categories",
-    "title": "AI Roadmap 2026 — Quarter 2",
+    "title": "AI Delivery 2026 — Quarter 2 Outcomes",
     "backgroundColor": "#F5F0E6",
     "categories": [
       {
@@ -3761,7 +3773,7 @@ export const slides = [
         "assistants": [
           {
             "heading": "Transcript Validation Kick-Off",
-            "text": "Building on the transcript verification POC; aligning validation workflows with the admissions timeline.",
+            "text": "Validation workflow aligned with the admissions timeline and production-readiness criteria.",
             "icon": "FileCheck"
           },
           {
@@ -3771,12 +3783,12 @@ export const slides = [
           },
           {
             "heading": "Contract Review — Configurable Rule Sets",
-            "text": "A/B testing and adjustable red-lining rule sets allow faster tuning across contract types and future risk-based review patterns.",
+            "text": "Configurable redlining rule sets and A/B testing delivered for faster tuning across contract types.",
             "icon": "FileText"
           },
           {
             "heading": "TritonAI Developer API Launch",
-            "text": "Allows campus users to build apps via the LLM gateway using local and commercial models.",
+            "text": "Developer API launched for approved campus builders using local and commercial models through the LLM gateway.",
             "icon": "Code"
           },
           {
@@ -3823,12 +3835,12 @@ export const slides = [
           },
           {
             "heading": "Transcript Matching Launch Readiness",
-            "text": "Late-June readiness for the July admissions influx, with production monitoring and reporting moving to metrics slides.",
+            "text": "Production-readiness review completed for the July admissions influx; monitoring and reporting criteria were defined.",
             "icon": "FileCheck"
           },
           {
             "heading": "Risk-Based Review Partnership",
-            "text": "Collaboration with Onyx to triage sponsor proposals by risk before submission.",
+            "text": "Proof-of-concept partnership established to triage sponsor proposals by risk before submission.",
             "icon": "Shield"
           },
           {
@@ -3843,7 +3855,7 @@ export const slides = [
           },
           {
             "heading": "AI IT Observability Pilot",
-            "text": "Automated response to system anomalies via log analysis.",
+            "text": "Pilot tested AI-assisted log analysis and anomaly triage; automated remediation remains a target state.",
             "icon": "Target"
           }
         ]
@@ -3852,6 +3864,7 @@ export const slides = [
     "saasOnboarding": {
       "text": "Onboard new institutions adopting TritonGPT as a Software-as-a-Service AI platform"
     },
+    "claimNote": "Source: TritonAI Q2 delivery log · completed outcomes only; target-state language removed · reviewed Jul 2026",
     "audiences": [
       "internal",
       "all",
@@ -3864,7 +3877,7 @@ export const slides = [
     "slug": "ai-roadmap-2026-q3",
     "type": "content",
     "layout": "assistant-categories",
-    "title": "AI Roadmap 2026 — Quarter 3",
+    "title": "AI Roadmap 2026 — Quarter 3 Status & Targets",
     "backgroundColor": "#F5F0E6",
     "categories": [
       {
@@ -3949,6 +3962,7 @@ export const slides = [
     "saasOnboarding": {
       "text": "Onboard and support institutions adopting TritonGPT as Software-as-a-Service and using the TritonAI API program"
     },
+    "claimNote": "Classification: current delivery status and targets, not completed outcomes · source: TritonAI Q3 plan · reviewed Jul 2026",
     "audiences": [
       "internal",
       "all",
@@ -4057,6 +4071,7 @@ export const slides = [
         }
       ]
     },
+    "claimNote": "Source: TritonGPT usage analytics export · actual monthly sessions and prompts through Jun 2026 · reviewed Jul 2026",
     "audiences": [
       "internal",
       "technical",
@@ -4143,6 +4158,7 @@ export const slides = [
         }
       ]
     },
+    "claimNote": "Source: TritonGPT widget analytics export · actual monthly sessions and prompts through Jun 2026 · reviewed Jul 2026",
     "audiences": [
       "internal",
       "technical",
@@ -4208,6 +4224,7 @@ export const slides = [
         }
       ]
     },
+    "claimNote": "Source: TritonGPT usage analytics export · actual monthly unique users through Jun 2026 · reviewed Jul 2026",
     "audiences": [
       "internal",
       "all",
@@ -4329,8 +4346,8 @@ export const slides = [
         "label": "FTE Equivalent"
       },
       {
-        "value": "73K+",
-        "label": "Users Served"
+        "value": "Campus",
+        "label": "Potential Reach"
       }
     ],
     "teamBanner": {
@@ -4352,6 +4369,7 @@ export const slides = [
         "text": "Gateway routing, LLM hosting, Onyx/RAG, observability, security controls, and production support."
       }
     ],
+    "claimNote": "Source: TritonAI staffing plan and usage reports · staffing allocations and 25K chats/month are current operating snapshots; reach is potential, not trained or active users · reviewed Jul 2026",
     "audiences": [
       "all",
       "internal",
@@ -5081,7 +5099,9 @@ export const slides = [
         "logoUrl": "https://cdn.simpleicons.org/anthropic/d88465",
         "surface": "terminal · IDE · desktop · web",
         "origin": "Feb 2025 — terminal-only research preview from Anthropic.",
-        "now": "Multi-agent platform with sub-agents, MCP servers, skills, auto-mode. 5.5× revenue growth in one year; viral with non-programmers."
+        "now": "Multi-agent coding and knowledge-work platform with subagents, MCP, skills, and desktop/web surfaces; enterprise adoption continues to expand.",
+        "sourceLabel": "Anthropic product update · reviewed Jul 2026",
+        "sourceUrl": "https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously"
       },
       {
         "name": "CODEX",
@@ -5089,7 +5109,9 @@ export const slides = [
         "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg",
         "surface": "CLI · desktop · cloud",
         "origin": "April 2025 — open-source Rust CLI (relaunch; original CODEX API closed in 2023).",
-        "now": "3M+ weekly developers, GPT-5.4 family, parallel-agent desktop app, expanding into general enterprise work."
+        "now": "More than 5M weekly active users; developers remain the largest group while knowledge workers are growing quickly. GPT-5.4 spans coding and professional work.",
+        "sourceLabel": "OpenAI · 2 Jun 2026",
+        "sourceUrl": "https://openai.com/index/codex-for-knowledge-work/"
       },
       {
         "name": "TritonAI",
@@ -5100,6 +5122,7 @@ export const slides = [
         "powersBadge": "POWERS UCSD HARNESS",
         "origin": "Built on T3 Code, a multi-agent desktop client for AI agents.",
         "now": "Connects agents to large language models through the TritonAI gateway, keeping model access centralized and governed.",
+        "sourceLabel": "TritonAI architecture record · reviewed Jul 2026",
         "highlight": "UC San Diego can build campus-specific scaffolding on T3 Code: MCP integrations, UCSD skills, permissions, templates, gateway routing, and harness hooks that connect agents to campus systems and workflows."
       }
     ],

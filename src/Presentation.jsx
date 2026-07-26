@@ -405,6 +405,14 @@ const Presentation = () => {
               data-slide-tone={currentSlide.dark ? 'dark' : 'light'}
             >
               <Slide slide={currentSlide} />
+              {currentSlide.claimNote && (
+                <div
+                  className="pointer-events-none absolute bottom-2 left-20 z-40 max-w-[38vw] rounded-lg border border-white/60 bg-white/88 px-2.5 py-1 text-[8px] font-semibold leading-tight text-slate-600 shadow-sm backdrop-blur-sm sm:bottom-4 sm:left-24 sm:max-w-[36vw] sm:text-[9px]"
+                  aria-label={`Claim context: ${currentSlide.claimNote}`}
+                >
+                  {currentSlide.claimNote}
+                </div>
+              )}
             </motion.div>
           </AnimatePresence>
         ) : (

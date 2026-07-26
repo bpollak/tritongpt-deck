@@ -1254,7 +1254,7 @@ const Slide = ({ slide }) => {
           (!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isAgentDevStrategy && !isRoadmap && !isProblemStatement && !isContractReviewChallenge && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isInfrastructureStack && !isTimelineEvolution && !isCampusMetrics && !isApiGateway && !isHostingPipeline && !isIntakeFunnel && !isInnovationFlywheel && !isFlywheelCaseStudy && !isOriginStory) && "border-b-4 border-ucsd-gold pb-3 inline-block self-start",
           (isSolution || isSolutionVideo || isCaseStudyHero || isAssistantCategories || isKeyTakeaways || isAgentDevStrategy || isRoadmap || isProblemStatement || isContractReviewChallenge || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isComparisonTable || isCompoundArchitecture || isTimelineEvolution || isCampusMetrics) && "text-center w-full",
           (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isCompoundArchitecture || isInfrastructureStack || isApiGateway || isHostingPipeline || isIntakeFunnel || isInnovationFlywheel || isFlywheelCaseStudy || isOriginStory) && "hidden",
-          isAgentWorkflow && "text-center text-3xl sm:text-5xl md:text-6xl mb-2 sm:mb-4 w-full",
+          isAgentWorkflow && "text-center text-2xl sm:text-3xl md:text-4xl !mb-1 w-full",
           isCaseStudyHero && "text-3xl md:text-4xl mb-2 sm:mb-3 leading-tight",
           isRoadmap && "mb-2 sm:mb-3 leading-tight",
           isTeamGrid && "mb-2 sm:mb-3",
@@ -1287,7 +1287,7 @@ const Slide = ({ slide }) => {
             isHeroList && "mt-0 mb-1.5 sm:mb-2",
             isProblemStatement && "text-lg sm:text-2xl md:text-3xl mb-4 sm:mb-10 font-medium text-red-600",
             isContractReviewChallenge && "text-base sm:text-xl md:text-2xl mb-2 sm:mb-2.5 font-semibold text-ucsd-blue",
-            isAgentWorkflow && "text-lg sm:text-2xl font-semibold",
+            isAgentWorkflow && "text-sm sm:text-base font-semibold !mt-0 !mb-2 sm:!mb-3",
             isAgentDevStrategy && "text-sm sm:text-lg md:text-xl mb-2 sm:mb-3 font-semibold text-ucsd-blue",
             isAI2031Prompt && "text-xl sm:text-2xl md:text-3xl mb-6 sm:mb-8 text-center w-full",
             isDark ? "text-ucsd-sky" : "text-ucsd-blue"
@@ -3896,7 +3896,7 @@ const Slide = ({ slide }) => {
       })()}
 
       {isAgentWorkflow && (
-        <div className="relative w-full min-h-full flex flex-col items-center justify-start px-4 sm:px-6 pt-0 pb-0 max-w-[1900px] mx-auto">
+        <div className="relative w-full h-full flex flex-col items-center justify-start px-2 sm:px-3 pt-0 pb-0 max-w-[1900px] mx-auto">
           {/* Main Layout: Stacked on mobile, 3-column grid on desktop */}
           <div className="relative w-full h-full max-w-[1700px] flex flex-col lg:grid lg:grid-cols-3 lg:items-stretch gap-2 lg:gap-5">
 
@@ -6108,7 +6108,7 @@ const Slide = ({ slide }) => {
     <div
       className={clsx(
         "tritonai-slide w-full h-full flex flex-col relative overflow-hidden transition-colors duration-500 break-words",
-        isTimelineEvolution ? "p-1.5 sm:p-3 md:p-4" : isHeroList ? "p-2 sm:p-3 md:p-4" : isContractReviewChallenge ? "p-2 sm:p-2.5 md:p-3" : isTritonAIEvolutionSlide ? "p-1.5 sm:p-2.5 md:p-3" : isPlatformSimple ? "p-2 sm:p-4 md:p-6" : isSolutionVideo ? "p-2 sm:p-3 md:p-4" : isCaseStudyHero ? "p-2 sm:p-4 md:p-6" : isRoadmap ? "p-2 sm:p-4 md:p-5" : isFlywheelCaseStudy ? "p-2 sm:p-3 md:p-4" : isAgentDevStrategy ? "p-2 sm:p-3 md:p-4" : isTeamGrid ? "p-2 sm:p-3 md:p-4" : isCompoundArchitecture ? "p-2 sm:p-3 md:p-4" : "p-2 sm:p-6 md:p-12",
+        isTimelineEvolution ? "p-1.5 sm:p-3 md:p-4" : isHeroList ? "p-2 sm:p-3 md:p-4" : isContractReviewChallenge ? "p-2 sm:p-2.5 md:p-3" : isTritonAIEvolutionSlide ? "p-1.5 sm:p-2.5 md:p-3" : isPlatformSimple ? "p-2 sm:p-4 md:p-6" : isSolutionVideo ? "p-2 sm:p-3 md:p-4" : isCaseStudyHero ? "p-2 sm:p-4 md:p-6" : isRoadmap ? "p-2 sm:p-4 md:p-5" : isFlywheelCaseStudy ? "p-2 sm:p-3 md:p-4" : isAgentDevStrategy ? "p-2 sm:p-3 md:p-4" : isTeamGrid ? "p-2 sm:p-3 md:p-4" : isCompoundArchitecture ? "p-2 sm:p-3 md:p-4" : isAgentWorkflow ? "p-2 sm:p-3 md:p-4" : "p-2 sm:p-6 md:p-12",
         !slide.backgroundColor && (isDark ? "bg-[#1a1a1a]" : "bg-gray-50")
       )}
       data-layout={slide.layout || slide.type}
@@ -6150,8 +6150,8 @@ const Slide = ({ slide }) => {
             </div>
           </div>
         ) : (
-          <div className={clsx("flex flex-col h-full w-full", isTitle ? "justify-center items-center text-center" : isCompoundArchitecture ? "justify-start overflow-hidden" : isTimelineEvolution ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isHeroList ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isContractReviewChallenge ? "justify-start pt-0 sm:pt-0.5 overflow-y-auto touch-pan-y custom-scrollbar" : isTritonAIEvolutionSlide ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isPlatformSimple ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isSolution ? "justify-start pt-4 overflow-hidden" : isSolutionVideo ? "justify-start pt-0.5 sm:pt-1 overflow-hidden" : isCaseStudyHero ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isRoadmap ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isFlywheelCaseStudy ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isAgentDevStrategy ? "justify-start pt-1 sm:pt-2 overflow-y-auto touch-pan-y custom-scrollbar" : "justify-start pt-4 overflow-y-auto touch-pan-y custom-scrollbar")}>
-            <div className={clsx("w-full mx-auto", (isTimelineEvolution || isHeroList || isCompoundArchitecture) && "h-full flex flex-col", (isSolution || isSolutionVideo || isCaseStudyHero || isProblemStatement || isContractReviewChallenge || isFeatureGrid || isCampusMetrics || isAgentDevStrategy || isFlywheelCaseStudy || isHeroList || isInfrastructureStack || isCompoundArchitecture) ? "max-w-[1800px]" : !isTimelineEvolution && "max-w-7xl")}>{renderContent()}</div>
+          <div className={clsx("flex flex-col h-full w-full", isTitle ? "justify-center items-center text-center" : (isCompoundArchitecture || isAgentWorkflow) ? "justify-start overflow-hidden" : isTimelineEvolution ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isHeroList ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isContractReviewChallenge ? "justify-start pt-0 sm:pt-0.5 overflow-y-auto touch-pan-y custom-scrollbar" : isTritonAIEvolutionSlide ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isPlatformSimple ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isSolution ? "justify-start pt-4 overflow-hidden" : isSolutionVideo ? "justify-start pt-0.5 sm:pt-1 overflow-hidden" : isCaseStudyHero ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isRoadmap ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isFlywheelCaseStudy ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isAgentDevStrategy ? "justify-start pt-1 sm:pt-2 overflow-y-auto touch-pan-y custom-scrollbar" : "justify-start pt-4 overflow-y-auto touch-pan-y custom-scrollbar")}>
+            <div className={clsx("w-full mx-auto", (isTimelineEvolution || isHeroList || isCompoundArchitecture || isAgentWorkflow) && "h-full flex flex-col", (isSolution || isSolutionVideo || isCaseStudyHero || isProblemStatement || isContractReviewChallenge || isFeatureGrid || isCampusMetrics || isAgentDevStrategy || isFlywheelCaseStudy || isHeroList || isInfrastructureStack || isCompoundArchitecture || isAgentWorkflow) ? "max-w-[1800px]" : !isTimelineEvolution && "max-w-7xl")}>{renderContent()}</div>
           </div>
         )}
       </div>

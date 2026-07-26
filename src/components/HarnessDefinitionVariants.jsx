@@ -201,7 +201,7 @@ const Header = ({
       className={`absolute left-[4.8vw] right-[4.8vw] ${top ? '' : isCitizenAudience(slide) ? 'top-[4vh]' : 'top-[8.3vh]'}`}
       style={{ maxWidth, top }}
     >
-      <h1 className="leading-[0.98]" style={{ fontSize: titleFontSize, fontWeight: 520, whiteSpace: noWrap ? 'nowrap' : 'normal' }}>
+      <h1 className="leading-[1.06]" style={{ fontSize: titleFontSize, fontWeight: 520, whiteSpace: noWrap ? 'nowrap' : 'normal' }}>
         <PartText parts={slide.parts} />
       </h1>
       {slide.subhead && (
@@ -1036,13 +1036,13 @@ const HarnessWorkProductVariant = ({ slide }) => (
 const HarnessToolboxVariant = ({ slide }) => (
   <Shell>
     <Header slide={slide} maxWidth="92vw" titleFontSize="clamp(38px, 3.95vw, 64px)" subheadFontSize="clamp(17px, 1.22vw, 21px)" />
-    <div className="absolute left-[4.8vw] right-[4.8vw] top-[18vh]">
+    <div className="absolute left-[4.8vw] right-[4.8vw] top-[21vh]">
       <div className="grid gap-5" style={{ gridTemplateColumns: `repeat(${(slide.vendors || []).length || 1}, minmax(0, 1fr))` }}>
         {(slide.vendors || []).map((vendor, index) => (
           <Card
             key={`${vendor.name}-${index}`}
             delay={0.42 + index * 0.09}
-            className="relative flex min-h-[505px] flex-col p-6"
+            className="relative flex min-h-[470px] flex-col p-5"
             style={vendor.highlight ? { background: '#fff8f2', borderColor: T.coralPale } : undefined}
           >
             {vendor.powersBadge && (
@@ -1061,7 +1061,7 @@ const HarnessToolboxVariant = ({ slide }) => (
                 ★ {vendor.powersBadge}
               </div>
             )}
-            <div className="flex h-16 items-center justify-center">
+            <div className="flex h-12 items-center justify-center">
               {vendor.logoType === 'ucsd' ? (
                 <UCSDLogoMark className="h-12 w-[150px]" />
               ) : vendor.logoUrl ? (
@@ -1070,7 +1070,7 @@ const HarnessToolboxVariant = ({ slide }) => (
                 <div style={{ color: vendor.color || T.ink, fontSize: 28, fontWeight: 620 }}>{vendor.logoText || vendor.name}</div>
               )}
             </div>
-            <div className="mt-5 text-center" style={{ color: T.ink, fontSize: 28, lineHeight: 1, fontWeight: 620 }}>{vendor.name}</div>
+            <div className="mt-4 text-center" style={{ color: T.ink, fontSize: 25, lineHeight: 1, fontWeight: 620 }}>{vendor.name}</div>
             <div className="mt-2.5 text-center text-[11.5px] uppercase" style={{ color: vendor.color || T.coralDark, fontFamily: T.mono, letterSpacing: '0.13em', fontWeight: 700 }}>
               {vendor.surface}
             </div>
@@ -1080,7 +1080,7 @@ const HarnessToolboxVariant = ({ slide }) => (
                 <div className="text-[11.5px] uppercase" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 700 }}>
                   Origin
                 </div>
-                <div className="mt-1.5" style={{ color: T.ink, fontSize: 18.5, lineHeight: 1.32 }}>
+                <div className="mt-1.5" style={{ color: T.ink, fontSize: 16.5, lineHeight: 1.27 }}>
                   {vendor.origin}
                 </div>
               </div>
@@ -1091,9 +1091,19 @@ const HarnessToolboxVariant = ({ slide }) => (
                 <div className="text-[11.5px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 700 }}>
                   Today
                 </div>
-                <div className="mt-1.5" style={{ color: T.ink, fontSize: 18.5, lineHeight: 1.32 }}>
+                <div className="mt-1.5" style={{ color: T.ink, fontSize: 16.5, lineHeight: 1.27 }}>
                   {vendor.now}
                 </div>
+              </div>
+            )}
+
+            {vendor.sourceLabel && (
+              <div className="mt-3 text-[10px] leading-tight" style={{ color: T.muted, fontFamily: T.mono }}>
+                {vendor.sourceUrl ? (
+                  <a href={vendor.sourceUrl} target="_blank" rel="noreferrer" className="underline decoration-dotted underline-offset-2">
+                    {vendor.sourceLabel}
+                  </a>
+                ) : vendor.sourceLabel}
               </div>
             )}
 
@@ -1103,7 +1113,7 @@ const HarnessToolboxVariant = ({ slide }) => (
                   <div className="text-[11px] uppercase" style={{ color: '#fff', fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
                     UCSD angle
                   </div>
-                  <div className="mt-1" style={{ color: '#fff', fontSize: 15.5, lineHeight: 1.32, fontWeight: 500 }}>
+                  <div className="mt-1" style={{ color: '#fff', fontSize: 13.5, lineHeight: 1.25, fontWeight: 500 }}>
                     {vendor.highlight}
                   </div>
                 </div>
