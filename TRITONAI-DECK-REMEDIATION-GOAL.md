@@ -53,7 +53,7 @@ Counts are guardrails, not arbitrary quotas. Narrative completeness and audience
 
 ### 1. Establish the audience contracts
 
-**Status:** Pending
+**Status:** Completed
 
 **Purpose:** Define what each audience must understand, decide, or do before changing slide assignments.
 
@@ -72,7 +72,7 @@ Counts are guardrails, not arbitrary quotas. Narrative completeness and audience
 
 ### 2. Repair routing, openings, closings, and sensitive exposure
 
-**Status:** Pending
+**Status:** Completed
 
 **Purpose:** Fix the highest-risk audience and governance defects before adding content.
 
@@ -96,7 +96,7 @@ Counts are guardrails, not arbitrary quotas. Narrative completeness and audience
 
 ### 3. Rebuild the OpenClaw memory narrative
 
-**Status:** Pending
+**Status:** Completed
 
 **Purpose:** Explain memory as a governed operational capability rather than a collection of storage layers or token-management tactics.
 
@@ -138,7 +138,7 @@ Counts are guardrails, not arbitrary quotas. Narrative completeness and audience
 
 ### 4. Source, date, qualify, or remove volatile claims
 
-**Status:** Pending
+**Status:** Completed
 
 **Purpose:** Make the deck defensible in public, executive, workforce, and governance settings.
 
@@ -162,7 +162,7 @@ Counts are guardrails, not arbitrary quotas. Narrative completeness and audience
 
 ### 5. Consolidate the remaining library and label demonstrations
 
-**Status:** Pending
+**Status:** Completed
 
 **Purpose:** Reduce repetition and make every retained slide earn its place.
 
@@ -183,7 +183,7 @@ Counts are guardrails, not arbitrary quotas. Narrative completeness and audience
 
 ### 6. Validate, publish, and verify every audience
 
-**Status:** Pending
+**Status:** Completed
 
 **Purpose:** Confirm that the edited presentations work as complete experiences, not merely as valid data.
 
@@ -210,6 +210,19 @@ Counts are guardrails, not arbitrary quotas. Narrative completeness and audience
 - Every audience has a completed QA record with no unresolved critical or high-severity issue.
 - Production JSON and live browser behavior match the approved sequences.
 - The final production links are documented by audience.
+
+## Completion evidence
+
+- Final managed library: 92 slides; `audience=all`: 87 slides.
+- Final audience counts: Technical 25, Executive 24, Cabinet 14, Citizen Developer 22, Internal 35, Public 22, Conference 19, PK 10, Regent 25, and LMU 35.
+- Structural validation: `npm run check:deck` passed.
+- Production validation: `npm run build` and `git diff --check` passed.
+- Browser validation: every slide in every audience sequence was opened on production at 1280×720 and 1024×640; counters, direct links, navigation controls, visible fit, overflow, and typography were checked.
+- Focused screenshots confirmed the responsive fixes for the transcript case study, analytics synthesis, strategy layers, closing slides, and agent-engineering comparison.
+- Console validation: a fresh production tab reported zero errors and zero warnings.
+- Published commit: `cfe7ba8` on `main`.
+- Production deployment: `dpl_CGTmDux9wCxXWjzQykTmfqtLgNY5`, status `Ready`.
+- Production alias: `https://tritongpt-deck.vercel.app/`.
 
 ## Implementation defaults
 
