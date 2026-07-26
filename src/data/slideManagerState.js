@@ -43,6 +43,8 @@ export const slideManagerState = {
     "campus-app-hosting-intake",
     "harness-memory-architecture",
     "harness-memory-scale-ucsd",
+    "a-meeting-becomes-memory-and-then-action",
+    "memory-quality-is-an-operational-service",
     "harness-perf-review-demo",
     "agent-engineering-strategy",
     "the-new-workforce-competency",
@@ -150,7 +152,6 @@ export const slideManagerState = {
     ],
     "triton-ai-website": [
       "all",
-      "internal",
       "public",
       "LMU"
     ],
@@ -282,7 +283,6 @@ export const slideManagerState = {
     ],
     "uc-san-diego-ai-strategy-2026": [
       "all",
-      "technical",
       "executive",
       "internal",
       "public",
@@ -345,7 +345,6 @@ export const slideManagerState = {
     ],
     "campus-app-hosting": [
       "all",
-      "internal",
       "LMU"
     ],
     "campus-app-hosting-intake": [
@@ -376,7 +375,6 @@ export const slideManagerState = {
     ],
     "harness-perf-review-demo": [
       "all",
-      "citizen",
       "conference"
     ],
     "agent-engineering-strategy": [
@@ -611,7 +609,6 @@ export const slideManagerState = {
     ],
     "the-team-behind-tritonai": [
       "all",
-      "technical",
       "executive",
       "citizen",
       "internal",
@@ -631,6 +628,19 @@ export const slideManagerState = {
     ],
     "lmu-thank-you": [
       "LMU"
+    ],
+    "a-meeting-becomes-memory-and-then-action": [
+      "all",
+      "technical",
+      "citizen",
+      "internal",
+      "conference"
+    ],
+    "memory-quality-is-an-operational-service": [
+      "all",
+      "technical",
+      "citizen",
+      "internal"
     ]
   }
 };

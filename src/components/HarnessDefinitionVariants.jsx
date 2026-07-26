@@ -4403,7 +4403,7 @@ const FlowPulsePath = ({ d, stroke, delay = 0 }) => {
   );
 };
 
-const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
+const MemoryFlowField = ({ slide, sources, knowledgeLayers, actions }) => {
   const fieldRef = React.useRef(null);
   const coreRef = React.useRef(null);
   const sourceRefs = React.useRef([]);
@@ -4557,7 +4557,7 @@ const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
 
       <div className="relative grid h-full grid-cols-[24%_1fr_24%] gap-7">
         <div className="flex flex-col justify-start gap-2.5 pt-1">
-          <Kicker className="text-[13px]" style={{ color: T.blue, fontWeight: 850 }}>Inputs</Kicker>
+          <Kicker className="text-[13px]" style={{ color: T.blue, fontWeight: 850 }}>{slide?.sourcesLabel || 'Inputs'}</Kicker>
           {sources.map((item, i) => (
             <MemoryNode key={item.label} item={item} delay={0.4 + i * 0.05} compact nodeRef={(node) => { sourceRefs.current[i] = node; }} />
           ))}
@@ -4572,10 +4572,10 @@ const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
           >
             <div className="text-center">
               <div style={{ color: T.green, fontFamily: T.mono, fontSize: 13, fontWeight: 850, letterSpacing: '0.2em', textTransform: 'uppercase' }}>
-                Knowledge and memory ecosystem
+                {slide?.coreKicker || 'Knowledge and memory ecosystem'}
               </div>
               <div className="mt-1" style={{ color: T.ink, fontFamily: T.serif, fontSize: 31, fontWeight: 620, lineHeight: 1.04 }}>
-                Inputs become structured, retrievable memory.
+                {slide?.coreTitle || 'Inputs become structured, retrievable memory.'}
               </div>
             </div>
             <div className="mt-4 grid grid-cols-2 gap-2">
@@ -4585,14 +4585,14 @@ const MemoryFlowField = ({ sources, knowledgeLayers, actions }) => {
             </div>
             <div className="mt-3 rounded-[6px] border px-3.5 py-2.5 text-center" style={{ borderColor: T.faint, background: '#fcfaf3' }}>
               <span style={{ color: T.muted, fontFamily: T.mono, fontSize: 11.8, fontWeight: 700 }}>
-                automated jobs extract patterns, update context, and make memory available for actions and use cases
+                {slide?.coreFootnote || 'automated jobs extract patterns, update context, and make memory available for actions and use cases'}
               </span>
             </div>
           </motion.div>
         </div>
 
         <div className="flex flex-col justify-start gap-2.5 pt-5">
-          <Kicker className="text-[13px]" style={{ color: T.coralDark, fontWeight: 850 }}>Agent actions</Kicker>
+          <Kicker className="text-[13px]" style={{ color: T.coralDark, fontWeight: 850 }}>{slide?.actionsLabel || 'Agent actions'}</Kicker>
           {actions.map((item, i) => (
             <MemoryNode key={item.label} item={item} delay={0.75 + i * 0.05} compact nodeRef={(node) => { actionRefs.current[i] = node; }} />
           ))}
@@ -4704,12 +4704,12 @@ const HarnessMemoryArchitectureVariant = ({ slide }) => {
           )}
         </div>
 
-        <div className="absolute left-[4.8vw] right-[4.8vw] top-[13.5vh] bottom-[28vh]">
-          <MemoryFlowField sources={sources} knowledgeLayers={knowledgeLayers} actions={actions} />
+        <div className="absolute left-[4.8vw] right-[4.8vw] top-[27vh] bottom-[35vh]">
+          <MemoryFlowField slide={slide} sources={sources} knowledgeLayers={knowledgeLayers} actions={actions} />
         </div>
 
         {jobs.length > 0 && (
-          <div className="absolute left-[4.8vw] right-[4.8vw] bottom-[22vh] h-[15vh]">
+          <div className="absolute left-[4.8vw] right-[4.8vw] bottom-[9vh] h-[14vh]">
             <JobRhythmStrip jobs={jobs} />
           </div>
         )}
@@ -4855,6 +4855,7 @@ const TierConnectorLines = ({ tiers = [] }) => {
 };
 
 const HarnessMemoryScaleVariant = ({ slide }) => {
+  const stages = slide.stages || [];
   const tiers = slide.tiers || [];
 
   return (
@@ -4862,7 +4863,7 @@ const HarnessMemoryScaleVariant = ({ slide }) => {
       <Marker slide={slide}>{slide.marker}</Marker>
       <JobSpine activeKey={slide.hideSpine ? null : slide.spineActive} />
       <div className="absolute inset-0" style={{ fontFamily: T.serif }}>
-        <div className={`absolute left-[4.8vw] right-[4.8vw] ${isCitizenAudience(slide) ? 'top-[4vh]' : 'top-[8.3vh]'}`} style={{ maxWidth: '80vw' }}>
+        <div className={`absolute left-[4.8vw] right-[4.8vw] ${isCitizenAudience(slide) ? 'top-[4vh]' : 'top-[7.5vh]'}`} style={{ maxWidth: '84vw' }}>
           <h1 className="leading-[0.98]" style={{ fontSize: 'clamp(38px, 3.6vw, 58px)', fontWeight: 520 }}>
             <PartText parts={slide.parts} />
           </h1>
@@ -4873,17 +4874,71 @@ const HarnessMemoryScaleVariant = ({ slide }) => {
           )}
         </div>
 
-        <div className="absolute left-[4.8vw] right-[4.8vw] top-[10.5vh] bottom-[7vh]">
-          <motion.div {...fade(0.45)} className="relative grid h-full grid-cols-[62%_1fr] gap-5">
-            <TierConnectorLines tiers={tiers} />
-            <div className="relative z-10">
-              <ScalingPyramidGraphic tiers={tiers} showTierDetails={false} />
+        {stages.length > 0 ? (
+          <div className="absolute left-[4.8vw] right-[4.8vw] top-[25vh] bottom-[11vh]">
+            <div className="grid h-[72%] grid-cols-[1fr_auto_1fr_auto_1fr] items-stretch gap-4">
+              {stages.map((stage, index) => (
+                <React.Fragment key={stage.label}>
+                  <Card
+                    delay={0.45 + index * 0.12}
+                    className="flex flex-col justify-between p-6"
+                    style={{ borderTopWidth: 6, borderTopColor: stage.color }}
+                  >
+                    <div>
+                      <div style={{ color: stage.color, fontFamily: T.mono, fontSize: 12, fontWeight: 850, letterSpacing: '0.18em', textTransform: 'uppercase' }}>
+                        {stage.kicker}
+                      </div>
+                      <div className="mt-2" style={{ color: T.ink, fontSize: 32, fontWeight: 750, lineHeight: 1.02 }}>
+                        {stage.label}
+                      </div>
+                      <div className="mt-3" style={{ color: T.muted, fontSize: 17, lineHeight: 1.34 }}>
+                        {stage.body}
+                      </div>
+                    </div>
+                    <div className="mt-5 border-t pt-4" style={{ borderColor: T.faint }}>
+                      {(stage.items || []).map((item) => (
+                        <div key={item} className="mt-1.5 flex items-start gap-2" style={{ color: T.ink, fontSize: 14.5, lineHeight: 1.25 }}>
+                          <span style={{ color: stage.color }}>●</span>
+                          <span>{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </Card>
+                  {index < stages.length - 1 && (
+                    <motion.div {...fade(0.72 + index * 0.12, 0)} className="flex items-center justify-center" style={{ color: T.coralDark, fontSize: 38, fontWeight: 800 }}>
+                      →
+                    </motion.div>
+                  )}
+                </React.Fragment>
+              ))}
             </div>
-            <div className="relative z-10">
-              <TierExplanationLegend tiers={tiers} />
-            </div>
-          </motion.div>
-        </div>
+            <motion.div {...fade(0.95, 6)} className="mt-5 grid grid-cols-[1fr_auto] items-center gap-6 rounded-[8px] border bg-white/65 px-6 py-4" style={{ borderColor: T.faint }}>
+              <div>
+                <div style={{ color: T.blue, fontFamily: T.mono, fontSize: 12, fontWeight: 850, letterSpacing: '0.18em', textTransform: 'uppercase' }}>
+                  Aggregation boundary
+                </div>
+                <div className="mt-1" style={{ color: T.ink, fontSize: 18, lineHeight: 1.28 }}>
+                  {slide.aggregationRule}
+                </div>
+              </div>
+              <div className="rounded-full px-5 py-2.5" style={{ background: T.blue, color: '#fff', fontSize: 20, fontWeight: 750, whiteSpace: 'nowrap' }}>
+                {slide.governingLine}
+              </div>
+            </motion.div>
+          </div>
+        ) : (
+          <div className="absolute left-[4.8vw] right-[4.8vw] top-[10.5vh] bottom-[7vh]">
+            <motion.div {...fade(0.45)} className="relative grid h-full grid-cols-[62%_1fr] gap-5">
+              <TierConnectorLines tiers={tiers} />
+              <div className="relative z-10">
+                <ScalingPyramidGraphic tiers={tiers} showTierDetails={false} />
+              </div>
+              <div className="relative z-10">
+                <TierExplanationLegend tiers={tiers} />
+              </div>
+            </motion.div>
+          </div>
+        )}
       </div>
     </Shell>
   );
@@ -4981,6 +5036,147 @@ const HarnessPerformanceReviewVariant = ({ slide }) => {
   );
 };
 
+const HarnessContextLayersVariant = ({ slide }) => {
+  const layers = slide.contextLayers || [];
+
+  return (
+    <Shell>
+      <Header slide={slide} maxWidth="74vw" titleFontSize="clamp(38px, 3.3vw, 54px)" />
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[25vh] bottom-[11vh]">
+        <div className="grid h-[76%] grid-cols-2 gap-4">
+          {layers.map((layer, index) => (
+            <Card key={layer.label} delay={0.42 + index * 0.1} className="grid grid-cols-[auto_1fr] gap-4 p-5" style={{ borderLeftWidth: 6, borderLeftColor: layer.color }}>
+              <div className="flex h-11 w-11 items-center justify-center rounded-full" style={{ background: `${layer.color}18`, color: layer.color, fontFamily: T.mono, fontSize: 16, fontWeight: 850 }}>
+                {String(index + 1).padStart(2, '0')}
+              </div>
+              <div>
+                <div style={{ color: layer.color, fontFamily: T.mono, fontSize: 11.5, fontWeight: 850, letterSpacing: '0.16em', textTransform: 'uppercase' }}>
+                  {layer.kicker}
+                </div>
+                <div className="mt-1" style={{ color: T.ink, fontSize: 24, fontWeight: 750, lineHeight: 1.05 }}>
+                  {layer.label}
+                </div>
+                <div className="mt-2" style={{ color: T.muted, fontSize: 15.5, lineHeight: 1.3 }}>
+                  {layer.body}
+                </div>
+              </div>
+            </Card>
+          ))}
+        </div>
+        <motion.div {...fade(0.92, 6)} className="mt-4 flex items-center justify-between gap-5 rounded-[8px] border bg-white/70 px-6 py-4" style={{ borderColor: T.faint }}>
+          <div>
+            <div style={{ color: T.blue, fontFamily: T.mono, fontSize: 11.5, fontWeight: 850, letterSpacing: '0.17em', textTransform: 'uppercase' }}>
+              Active run
+            </div>
+            <div className="mt-1" style={{ color: T.ink, fontSize: 18, lineHeight: 1.25 }}>
+              {slide.activeRun}
+            </div>
+          </div>
+          <div className="rounded-full px-5 py-2.5" style={{ background: T.coralDark, color: '#fff', fontSize: 17, fontWeight: 750, whiteSpace: 'nowrap' }}>
+            {slide.durableRule}
+          </div>
+        </motion.div>
+      </div>
+    </Shell>
+  );
+};
+
+const HarnessMemoryActionLoopVariant = ({ slide }) => {
+  const steps = slide.steps || [];
+
+  return (
+    <Shell>
+      <Header slide={slide} maxWidth="88vw" titleFontSize="clamp(40px, 3.7vw, 60px)" />
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[28vh] bottom-[12vh]">
+        <div className="grid grid-cols-7 items-stretch gap-2">
+          {steps.map((step, index) => (
+            <motion.div key={step.label} {...fade(0.42 + index * 0.09, 6)} className="relative">
+              <div className="h-full rounded-[8px] border bg-white/72 px-3 py-4" style={{ borderColor: T.faint, borderTopWidth: 5, borderTopColor: step.color }}>
+                <div style={{ color: step.color, fontFamily: T.mono, fontSize: 10.5, fontWeight: 850, letterSpacing: '0.14em' }}>
+                  {String(index + 1).padStart(2, '0')}
+                </div>
+                <div className="mt-2" style={{ color: T.ink, fontSize: 20, fontWeight: 780, lineHeight: 1.02 }}>
+                  {step.label}
+                </div>
+                <div className="mt-2" style={{ color: T.muted, fontSize: 13.5, lineHeight: 1.25 }}>
+                  {step.body}
+                </div>
+              </div>
+              {index < steps.length - 1 && (
+                <div className="absolute -right-[10px] top-1/2 z-20 -translate-y-1/2 rounded-full bg-white px-1" style={{ color: T.coralDark, fontSize: 20, fontWeight: 850 }}>
+                  →
+                </div>
+              )}
+            </motion.div>
+          ))}
+        </div>
+        <motion.div {...fade(1.15, 6)} className="mt-6 grid grid-cols-[1fr_auto] items-center gap-6 rounded-[8px] border bg-white/68 px-6 py-4" style={{ borderColor: T.faint }}>
+          <div>
+            <div style={{ color: T.green, fontFamily: T.mono, fontSize: 11.5, fontWeight: 850, letterSpacing: '0.17em', textTransform: 'uppercase' }}>
+              Review boundary
+            </div>
+            <div className="mt-1" style={{ color: T.ink, fontSize: 18, lineHeight: 1.27 }}>
+              {slide.reviewRule}
+            </div>
+          </div>
+          <div style={{ color: T.blue, fontSize: 22, fontWeight: 780, whiteSpace: 'nowrap' }}>
+            {slide.outcome}
+          </div>
+        </motion.div>
+      </div>
+    </Shell>
+  );
+};
+
+const HarnessMemoryHealthVariant = ({ slide }) => {
+  const signals = slide.signals || [];
+  const operatingLoop = slide.operatingLoop || [];
+
+  return (
+    <Shell>
+      <Header slide={slide} maxWidth="88vw" titleFontSize="clamp(40px, 3.7vw, 60px)" />
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[25vh] bottom-[10vh]">
+        <div className="grid grid-cols-3 gap-3">
+          {signals.map((signal, index) => (
+            <Card key={signal.label} delay={0.42 + index * 0.07} className="px-5 py-4" style={{ borderLeftWidth: 5, borderLeftColor: signal.color }}>
+              <div style={{ color: signal.color, fontFamily: T.mono, fontSize: 10.5, fontWeight: 850, letterSpacing: '0.15em', textTransform: 'uppercase' }}>
+                {signal.kicker}
+              </div>
+              <div className="mt-1" style={{ color: T.ink, fontSize: 21, fontWeight: 760, lineHeight: 1.05 }}>
+                {signal.label}
+              </div>
+              <div className="mt-1.5" style={{ color: T.muted, fontSize: 14, lineHeight: 1.25 }}>
+                {signal.body}
+              </div>
+            </Card>
+          ))}
+        </div>
+        <motion.div {...fade(0.98, 6)} className="mt-5 rounded-[9px] border bg-white/72 px-6 py-5" style={{ borderColor: T.faint }}>
+          <div className="flex items-center gap-4">
+            <div className="rounded-full px-4 py-2" style={{ background: T.blue, color: '#fff', fontSize: 19, fontWeight: 780 }}>
+              Mission Control
+            </div>
+            <div className="h-px flex-1" style={{ background: T.faint }} />
+            <div style={{ color: T.muted, fontSize: 15, fontWeight: 650 }}>
+              memory quality is monitored like any other production service
+            </div>
+          </div>
+          <div className="mt-4 grid grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] items-center gap-3">
+            {operatingLoop.map((item, index) => (
+              <React.Fragment key={item}>
+                <div className="rounded-[6px] px-4 py-3 text-center" style={{ background: index % 2 === 0 ? T.bluePale : '#f6f8ee', color: T.ink, fontSize: 17, fontWeight: 740 }}>
+                  {item}
+                </div>
+                {index < operatingLoop.length - 1 && <div style={{ color: T.coralDark, fontSize: 24, fontWeight: 850 }}>→</div>}
+              </React.Fragment>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+    </Shell>
+  );
+};
+
 export const harnessVariantMap = {
   'harness-pressure': HarnessPressureVariant,
   'harness-rubric': HarnessRubricVariant,
@@ -4996,6 +5192,7 @@ export const harnessVariantMap = {
   'harness-components-framework': HarnessComponentsFrameworkVariant,
   'harness-while-loop': HarnessWhileLoopVariant,
   'harness-context': HarnessContextVariant,
+  'harness-context-layers': HarnessContextLayersVariant,
   'harness-framework-cards': HarnessFrameworkCardsVariant,
   'harness-citizen-ecosystem': HarnessCitizenEcosystemVariant,
   'harness-developer-api-program': HarnessDeveloperApiProgramVariant,
@@ -5016,6 +5213,8 @@ export const harnessVariantMap = {
   'harness-recap': HarnessRecapVariant,
   'harness-memory-architecture': HarnessMemoryArchitectureVariant,
   'harness-memory-scale': HarnessMemoryScaleVariant,
+  'harness-memory-action-loop': HarnessMemoryActionLoopVariant,
+  'harness-memory-health': HarnessMemoryHealthVariant,
   'harness-perf-review': HarnessPerformanceReviewVariant
 };
 

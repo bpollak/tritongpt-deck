@@ -28,20 +28,20 @@ This file defines the editorial contract and canonical sequence for each support
 8. `video-tritongpt-mobile-app`
 9. `instructional-ai-socratic-tutor-faculty-assistant`
 10. `tritongpt-to-tritonai-comparison`
-11. `uc-san-diego-ai-strategy-2026`
-12. `contract-reviewer-consolidated`
-13. `transcript-matching-validation`
-14. `tritonai-developer-api-program`
-15. `llm-api-usage-attribution`
-16. `campus-app-hosting-intake`
-17. `harness-memory-architecture`
-18. `harness-memory-scale-ucsd`
-19. `the-agentic-ai-stack`
-20. `tritongpt-usage-analytics`
-21. `cabinet-harness-09b-context-management`
-22. `cabinet-harness-08e-tools-hooks-safety`
-23. `cabinet-harness-11-ucsd-safe-path`
-24. `the-team-behind-tritonai`
+11. `contract-reviewer-consolidated`
+12. `transcript-matching-validation`
+13. `tritonai-developer-api-program`
+14. `llm-api-usage-attribution`
+15. `campus-app-hosting-intake`
+16. `harness-memory-architecture`
+17. `harness-memory-scale-ucsd`
+18. `a-meeting-becomes-memory-and-then-action`
+19. `memory-quality-is-an-operational-service`
+20. `the-agentic-ai-stack`
+21. `tritongpt-usage-analytics`
+22. `cabinet-harness-09b-context-management`
+23. `cabinet-harness-08e-tools-hooks-safety`
+24. `cabinet-harness-11-ucsd-safe-path`
 25. `thank-you`
 
 ## executive
@@ -104,7 +104,7 @@ This file defines the editorial contract and canonical sequence for each support
 
 **Communication job:** Understand the paved path from harness to hosting so a domain expert can build, govern, and share a useful agentic solution.
 
-**Canonical count:** 21
+**Canonical count:** 22
 
 **Sequence:**
 
@@ -114,21 +114,22 @@ This file defines the editorial contract and canonical sequence for each support
 4. `campus-app-hosting-intake`
 5. `harness-memory-architecture`
 6. `harness-memory-scale-ucsd`
-7. `harness-perf-review-demo`
-8. `cabinet-harness-02-convergence`
-9. `cabinet-harness-08b-component-framework`
-10. `cabinet-harness-04b-fixed-architecture`
-11. `cabinet-harness-08c-while-loop`
-12. `cabinet-harness-09b-context-management`
-13. `cabinet-harness-08e-tools-hooks-safety`
-14. `cabinet-harness-10-subagents`
-15. `video-harness-api-demo-2026-06-25-810`
-16. `cabinet-harness-11-ucsd-safe-path`
-17. `cabinet-harness-11a-two-environments`
-18. `the-flywheel-in-action-biobib-formatter`
-19. `the-flywheel-in-action-ai-use-case-meeting`
-20. `the-team-behind-tritonai`
-21. `thank-you`
+7. `a-meeting-becomes-memory-and-then-action`
+8. `memory-quality-is-an-operational-service`
+9. `cabinet-harness-02-convergence`
+10. `cabinet-harness-08b-component-framework`
+11. `cabinet-harness-04b-fixed-architecture`
+12. `cabinet-harness-08c-while-loop`
+13. `cabinet-harness-09b-context-management`
+14. `cabinet-harness-08e-tools-hooks-safety`
+15. `cabinet-harness-10-subagents`
+16. `video-harness-api-demo-2026-06-25-810`
+17. `cabinet-harness-11-ucsd-safe-path`
+18. `cabinet-harness-11a-two-environments`
+19. `the-flywheel-in-action-biobib-formatter`
+20. `the-flywheel-in-action-ai-use-case-meeting`
+21. `the-team-behind-tritonai`
+22. `thank-you`
 
 ## internal
 
@@ -140,26 +141,26 @@ This file defines the editorial contract and canonical sequence for each support
 
 1. `the-ai-enabled-university`
 2. `ai-strategy-and-engagement`
-3. `triton-ai-website`
-4. `tritongpt-origin`
-5. `tritongpt-platform`
-6. `tritongpt-secure-scalable-ai-platform`
-7. `tritongpt-initiative`
-8. `video-media1`
-9. `scaling-engagement-the-tritongpt-widget`
-10. `video-tritongpt-mobile-app`
-11. `instructional-ai-socratic-tutor-faculty-assistant`
-12. `tritongpt-to-tritonai-comparison`
-13. `uc-san-diego-ai-strategy-2026`
-14. `administrative-ai-the-efficiency-imperative`
-15. `contract-reviewer-consolidated`
-16. `transcript-matching-validation`
-17. `tritonai-developer-api-program`
-18. `llm-api-usage-attribution`
-19. `campus-app-hosting`
-20. `campus-app-hosting-intake`
-21. `harness-memory-architecture`
-22. `harness-memory-scale-ucsd`
+3. `tritongpt-origin`
+4. `tritongpt-platform`
+5. `tritongpt-secure-scalable-ai-platform`
+6. `tritongpt-initiative`
+7. `video-media1`
+8. `scaling-engagement-the-tritongpt-widget`
+9. `video-tritongpt-mobile-app`
+10. `instructional-ai-socratic-tutor-faculty-assistant`
+11. `tritongpt-to-tritonai-comparison`
+12. `uc-san-diego-ai-strategy-2026`
+13. `administrative-ai-the-efficiency-imperative`
+14. `contract-reviewer-consolidated`
+15. `transcript-matching-validation`
+16. `tritonai-developer-api-program`
+17. `llm-api-usage-attribution`
+18. `campus-app-hosting-intake`
+19. `harness-memory-architecture`
+20. `harness-memory-scale-ucsd`
+21. `a-meeting-becomes-memory-and-then-action`
+22. `memory-quality-is-an-operational-service`
 23. `agent-engineering-strategy`
 24. `the-agentic-ai-stack`
 25. `key-takeaways`
@@ -209,7 +210,7 @@ This file defines the editorial contract and canonical sequence for each support
 
 **Communication job:** See a portable institutional AI journey from platform foundation to agentic delivery and leave with patterns another university can adapt.
 
-**Canonical count:** 18
+**Canonical count:** 19
 
 **Sequence:**
 
@@ -229,8 +230,9 @@ This file defines the editorial contract and canonical sequence for each support
 14. `campus-app-hosting-intake`
 15. `harness-memory-architecture`
 16. `harness-memory-scale-ucsd`
-17. `harness-perf-review-demo`
-18. `thank-you`
+17. `a-meeting-becomes-memory-and-then-action`
+18. `harness-perf-review-demo`
+19. `thank-you`
 
 ## PK
 

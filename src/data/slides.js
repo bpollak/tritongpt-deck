@@ -2135,53 +2135,98 @@ export const slides = [
     "variant": "harness-memory-architecture",
     "marker": "MEMORY",
     "parts": [
-      { "text": "Vast personal context powers " },
-      { "text": "agent action", "accent": true },
-      { "text": "." }
+      {
+        "text": "A governed memory pipeline turns daily evidence into "
+      },
+      {
+        "text": "durable judgment",
+        "accent": true
+      },
+      {
+        "text": "."
+      }
     ],
-    "subhead": "Powered by OpenClaw.",
+    "subhead": "Evidence is curated, retrieved selectively, and written back only after review.",
     "sources": [
-      { "label": "Calendar and email", "sub": "daily commitments, asks, follow-ups", "icon": "calendar", "color": "#0d5f93" },
-      { "label": "Meeting transcripts", "sub": "Granola debriefs, decisions, sentiment", "icon": "people", "color": "#0d5f93" },
-      { "label": "Curated feeds", "sub": "AI news, vendor shifts, campus signals", "icon": "observe", "color": "#0d5f93" },
-      { "label": "Team conversations", "sub": "Telegram, Teams, working threads", "icon": "chat", "color": "#0d5f93" },
-      { "label": "Docs and wikis", "sub": "Confluence, Obsidian, project notes", "icon": "folder", "color": "#0d5f93" },
-      { "label": "Manual reflection", "sub": "what mattered, what changed, why", "icon": "reasoning", "color": "#0d5f93" }
+      {
+        "label": "Daily evidence",
+        "sub": "email, calendar, transcripts",
+        "icon": "calendar",
+        "color": "#0d5f93"
+      },
+      {
+        "label": "Recent context",
+        "sub": "commitments, open work, decisions",
+        "icon": "observe",
+        "color": "#0d5f93"
+      },
+      {
+        "label": "Human correction",
+        "sub": "what changed, what matters, why",
+        "icon": "people",
+        "color": "#0d5f93"
+      }
     ],
     "knowledgeLayers": [
-      { "label": "Knowledge graph", "sub": "entities and relationships", "icon": "mcp", "color": "#6f9363" },
-      { "label": "Curated wiki", "sub": "project and people context", "icon": "library", "color": "#6f9363" },
-      { "label": "Long-term memory", "sub": "promoted patterns", "icon": "pipeline", "color": "#6f9363" },
-      { "label": "Work patterns", "sub": "preferences and operating model", "icon": "template", "color": "#6f9363" }
+      {
+        "label": "Curation",
+        "sub": "promote signal; reject noise",
+        "icon": "pipeline",
+        "color": "#6f9363"
+      },
+      {
+        "label": "Wiki + graph",
+        "sub": "people, projects, relationships",
+        "icon": "mcp",
+        "color": "#6f9363"
+      },
+      {
+        "label": "Provenance",
+        "sub": "source, date, owner",
+        "icon": "library",
+        "color": "#6f9363"
+      },
+      {
+        "label": "Freshness",
+        "sub": "review, reconcile, expire",
+        "icon": "template",
+        "color": "#6f9363"
+      }
     ],
     "actions": [
-      { "label": "Daily briefings", "sub": "what matters today", "icon": "template", "color": "#d47a5f" },
-      { "label": "Meeting intelligence", "sub": "prep, context, follow-through", "icon": "observe", "color": "#d47a5f" },
-      { "label": "Grounded answers", "sub": "responses with the right context", "icon": "chat", "color": "#d47a5f" },
-      { "label": "Work artifacts", "sub": "docs, slides, code, summaries", "icon": "code", "color": "#d47a5f" },
-      { "label": "Proactive nudges", "sub": "patterns the agent notices first", "icon": "reasoning", "color": "#d47a5f" }
+      {
+        "label": "Selective retrieval",
+        "sub": "load only what this task needs",
+        "icon": "reasoning",
+        "color": "#d47a5f"
+      },
+      {
+        "label": "Grounded action",
+        "sub": "brief, decide, build, remind",
+        "icon": "code",
+        "color": "#d47a5f"
+      },
+      {
+        "label": "Write-back proposal",
+        "sub": "offer updates for human review",
+        "icon": "chat",
+        "color": "#d47a5f"
+      }
     ],
-    "jobs": [
-      { "time": "CALENDAR BRIEFING", "fires": "06:25", "label": "Today's priority list", "detail": "calendar, email, news, and commitments become a focused plan for the day", "color": "#d47a5f" },
-      { "time": "MEETING DEBRIEF", "fires": "18:15", "label": "Follow-up task list", "detail": "transcripts and decisions become owners, next steps, and reminders", "color": "#d47a5f" },
-      { "time": "MEMORY DREAMING", "fires": "03:00", "label": "Durable memory updates", "detail": "short-term signals are promoted into reusable long-term context", "color": "#d47a5f" },
-      { "time": "PAIN SIGNAL MONITOR", "fires": "07:30", "label": "Risk alerts and nudges", "detail": "recurring friction surfaces as risks, opportunities, and suggested actions", "color": "#be634d" }
-    ],
-    "models": [
-      { "label": "gpt-oss-120b", "jobs": 47, "openWeight": true },
-      { "label": "deepseek-v4", "jobs": 7, "openWeight": true },
-      { "label": "mistral-small", "jobs": 6, "openWeight": true },
-      { "label": "mistral-large-3", "jobs": 6, "openWeight": true },
-      { "label": "gemma-4", "jobs": 5, "openWeight": true },
-      { "label": "claude-sonnet", "jobs": 1, "openWeight": false }
-    ],
-    "modelsCaption": "~99% open-weight · hosted on-prem at SDSC (TritonAI)",
+    "jobs": [],
     "audiences": [
       "all",
       "internal",
       "cabinet",
       "citizen"
-    ]
+    ],
+    "sourcesLabel": "Evidence + daily context",
+    "coreKicker": "Curation + durable memory",
+    "coreTitle": "Daily signals become reviewed, retrievable context.",
+    "coreFootnote": "promote signal · preserve provenance · check freshness · expire stale context",
+    "actionsLabel": "Retrieve → act → propose",
+    "bottomLineLabel": "TRUST RAIL",
+    "bottomLine": "Provenance · freshness · privacy · human correction"
   },
   {
     "id": 24.4,
@@ -2192,22 +2237,200 @@ export const slides = [
     "variant": "harness-memory-scale",
     "marker": "SCALE",
     "parts": [
-      { "text": "Personal memory systems become the foundation for " },
-      { "text": "shared university memory", "accent": true },
-      { "text": "." }
+      {
+        "text": "Memory scales through "
+      },
+      {
+        "text": "explicit promotion",
+        "accent": true
+      },
+      {
+        "text": ", not automatic copying."
+      }
     ],
-    "subhead": "",
-    "tiers": [
-      { "label": "Campus", "scope": "Institutional patterns only", "detail": "cross-unit signals, AI governance, TritonAI", "privacy": "statistical patterns only; no individual records", "status": "aspirational", "color": "#93c5fd", "textColor": "#17345f" },
-      { "label": "Department", "scope": "Anonymized aggregates only", "detail": "trending pain points, shared trainings, vendor signals", "privacy": "identity stripped before aggregation", "status": "design exercise", "color": "#60a5fa", "textColor": "#17345f" },
-      { "label": "Team", "scope": "Opt-in sharing within a team", "detail": "shared vaults, team wiki, reviewed proposals", "privacy": "members choose what to share; nothing automatic", "status": "pilot pattern", "color": "#2563eb", "textColor": "#eff6ff" },
-      { "label": "Personal", "scope": "Every staff member, isolated", "detail": "own agent, own memory, own wiki, own jobs", "privacy": "data never leaves the personal agent", "status": "working now", "color": "#0d5f93", "textColor": "#eff6ff" }
-    ],
+    "subhead": "Personal → Team Shared → Agent Integration",
     "audiences": [
       "all",
       "internal",
       "cabinet",
       "citizen"
+    ],
+    "stages": [
+      {
+        "kicker": "PRIVATE BY DEFAULT",
+        "label": "Personal",
+        "body": "Each person’s agent keeps isolated working memory and retrieves it only for that person’s tasks.",
+        "items": [
+          "own evidence and corrections",
+          "own wiki and graph context",
+          "no automatic upward sharing"
+        ],
+        "color": "#0d5f93"
+      },
+      {
+        "kicker": "REVIEWED SHARING",
+        "label": "Team Shared",
+        "body": "People choose what becomes reusable team context; reviewed proposals enter shared vaults and runbooks.",
+        "items": [
+          "opt-in contribution",
+          "named reviewer and owner",
+          "freshness and expiry checks"
+        ],
+        "color": "#2563eb"
+      },
+      {
+        "kicker": "GOVERNED USE",
+        "label": "Agent Integration",
+        "body": "Agents retrieve approved shared context and propose updates without silently rewriting institutional memory.",
+        "items": [
+          "selective retrieval",
+          "scoped permissions",
+          "auditable write-back proposals"
+        ],
+        "color": "#6E963B"
+      }
+    ],
+    "aggregationRule": "Departments and campus services receive approved aggregates and patterns—not copies of personal memory.",
+    "governingLine": "Agents propose; humans promote."
+  },
+  {
+    "id": 24.45,
+    "slug": "a-meeting-becomes-memory-and-then-action",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-memory-action-loop",
+    "marker": "MEMORY · ACTION LOOP",
+    "parts": [
+      {
+        "text": "A meeting becomes memory—"
+      },
+      {
+        "text": "and then action",
+        "accent": true
+      },
+      {
+        "text": "."
+      }
+    ],
+    "subhead": "A reviewed path from raw transcript to reusable institutional context.",
+    "steps": [
+      {
+        "label": "Transcript",
+        "body": "Raw conversation and source evidence.",
+        "color": "#0d5f93"
+      },
+      {
+        "label": "Debrief",
+        "body": "Summary, open questions, and what changed.",
+        "color": "#0076a8"
+      },
+      {
+        "label": "Decision + owner",
+        "body": "Commitment, accountable person, and due date.",
+        "color": "#009cad"
+      },
+      {
+        "label": "Reviewed proposal",
+        "body": "Draft memory update with provenance.",
+        "color": "#6E963B"
+      },
+      {
+        "label": "Wiki + graph",
+        "body": "Approved facts and relationships are promoted.",
+        "color": "#4f7f38"
+      },
+      {
+        "label": "Briefing or reminder",
+        "body": "Relevant context returns when needed.",
+        "color": "#C69214"
+      },
+      {
+        "label": "Artifact",
+        "body": "A document, slide, task, or working tool.",
+        "color": "#d47a5f"
+      }
+    ],
+    "reviewRule": "The transcript is evidence, not memory. A person reviews the proposed decision, owner, and durable update before promotion.",
+    "outcome": "Evidence → judgment → follow-through",
+    "audiences": [
+      "all",
+      "technical",
+      "citizen",
+      "internal",
+      "conference"
+    ]
+  },
+  {
+    "id": 24.5,
+    "slug": "memory-quality-is-an-operational-service",
+    "type": "content",
+    "content": [],
+    "layout": "harness-definition",
+    "variant": "harness-memory-health",
+    "marker": "MEMORY · OPERATIONS",
+    "parts": [
+      {
+        "text": "Memory quality is an "
+      },
+      {
+        "text": "operational service",
+        "accent": true
+      },
+      {
+        "text": "."
+      }
+    ],
+    "subhead": "Mission Control monitors whether trusted context is current, complete, and promotable.",
+    "signals": [
+      {
+        "kicker": "FRESHNESS",
+        "label": "Source freshness",
+        "body": "Has the source changed since the memory was last reviewed?",
+        "color": "#0d5f93"
+      },
+      {
+        "kicker": "PIPELINE",
+        "label": "Missing enrichment",
+        "body": "Did a transcript, feed, or reconciliation job fail to run?",
+        "color": "#0076a8"
+      },
+      {
+        "kicker": "CURATION",
+        "label": "Stale wiki pages",
+        "body": "Which pages are past their review date or missing an owner?",
+        "color": "#2563eb"
+      },
+      {
+        "kicker": "CONSISTENCY",
+        "label": "Graph/wiki drift",
+        "body": "Do facts and relationships disagree across durable stores?",
+        "color": "#6E963B"
+      },
+      {
+        "kicker": "PROMOTION",
+        "label": "Failed promotion",
+        "body": "Which reviewed proposals did not reach their approved destination?",
+        "color": "#C69214"
+      },
+      {
+        "kicker": "ALERTING",
+        "label": "Reconciliation + alerts",
+        "body": "Who needs to correct, approve, or retire the affected context?",
+        "color": "#d47a5f"
+      }
+    ],
+    "operatingLoop": [
+      "Observe",
+      "Detect drift",
+      "Reconcile",
+      "Alert + resolve"
+    ],
+    "audiences": [
+      "all",
+      "technical",
+      "citizen",
+      "internal"
     ]
   },
   {
@@ -3026,14 +3249,14 @@ export const slides = [
       },
       {
         "name": "Institutional Knowledge",
-        "description": "Memory + Context for Decisions",
-        "details": "University policies, historical decisions, reasoning logs that inform agent actions.",
+        "description": "Governed Memory + Context for Decisions",
+        "details": "Curated wiki and graph context with provenance, freshness, privacy controls, and human-approved promotion.",
         "color": "#B8D4A8",
         "tools": [
           "Policies",
-          "Procedures",
-          "Contracts",
-          "Decision Logs"
+          "People + Projects",
+          "Decision History",
+          "Provenance"
         ],
         "icon": "Database"
       },
@@ -3667,7 +3890,7 @@ export const slides = [
             "heading": "Financial Agent — POC Expansion",
             "text": "Move and expand the proof of concept into a broader rollout, extending financial data assistance to more BFS and campus finance users.",
             "icon": "Target"
-          },
+          }
         ]
       },
       {
@@ -3686,7 +3909,7 @@ export const slides = [
           },
           {
             "heading": "Shared Knowledge Management System",
-            "text": "Shared team vault pilot expands into reusable knowledge-management pattern for projects, decisions, runbooks, and agent-drafted updates.",
+            "text": "Team-memory pilot targets weekly freshness checks, reviewed promotion rate, faster onboarding, and self-service project-status retrieval.",
             "icon": "Database"
           },
           {
@@ -5020,53 +5243,54 @@ export const slides = [
     "type": "content",
     "content": [],
     "layout": "harness-definition",
-    "variant": "harness-context",
-    "marker": "CONTEXT · know what matters",
+    "variant": "harness-context-layers",
+    "marker": "CONTEXT · retrieve what matters",
     "spineActive": "context",
-    "title": "Context shapes the agent's judgment.",
-    "subtitle": "What enters the run · what governs it · what persists across runs.",
-    "activeBudget": "520,000",
-    "peakBudget": "780,000",
-    "budgetTotal": "1,000,000 tokens",
-    "compactLabel": "compact at ~80%",
-    "summaries": [
-      "summary 1",
-      "summary 2",
-      "summary 3",
-      "summary 4"
-    ],
-    "legend": [
-      "user messages",
-      "tool calls",
-      "tool results",
-      "reasoning"
-    ],
-    "stats": [
-      {
-        "value": "200k",
-        "label": "budget · then"
-      },
-      {
-        "value": "→ 1M",
-        "label": "tokens · opus today"
-      },
-      {
-        "value": "80%",
-        "label": "trigger compaction"
-      },
-      {
-        "value": "4",
-        "label": "summaries · retained"
-      },
-      {
-        "value": "∞",
-        "label": "older · compressed"
-      }
-    ],
     "audiences": [
       "citizen",
       "regent"
-    ]
+    ],
+    "parts": [
+      {
+        "text": "Context is not memory—and "
+      },
+      {
+        "text": "not everything should load",
+        "accent": true
+      },
+      {
+        "text": "."
+      }
+    ],
+    "subhead": "What is always present · what is retrieved · what persists · what expires with the run.",
+    "contextLayers": [
+      {
+        "kicker": "ALWAYS LOADED",
+        "label": "Instructions + recent context",
+        "body": "System rules, current goals, recent messages, and the minimum working state needed to begin.",
+        "color": "#00629B"
+      },
+      {
+        "kicker": "TRIGGERED RETRIEVAL",
+        "label": "Wiki, graph, project + people",
+        "body": "Relevant durable context is fetched only when the task, person, project, or decision calls for it.",
+        "color": "#6E963B"
+      },
+      {
+        "kicker": "ACROSS SESSIONS",
+        "label": "Durable memory",
+        "body": "Human-reviewed facts, decisions, relationships, and operating patterns remain available for later work.",
+        "color": "#2563eb"
+      },
+      {
+        "kicker": "THIS RUN ONLY",
+        "label": "Temporary working context",
+        "body": "Tool results, scratch reasoning, and transient state help finish the task but do not automatically become memory.",
+        "color": "#C69214"
+      }
+    ],
+    "activeRun": "The harness assembles the smallest trusted context set for the current job, then releases temporary state when the run ends.",
+    "durableRule": "Durable only after review"
   },
   {
     "id": 122.2,
@@ -5450,7 +5674,7 @@ export const slides = [
         "logoType": "ucsd"
       }
     ],
-    "priorityHeading": "Your personal context",
+    "priorityHeading": "Your personal context—private by default",
     "prioritySystems": [
       {
         "name": "Microsoft Graph"
@@ -5509,10 +5733,14 @@ export const slides = [
       },
       {
         "label": "Approval gates",
-        "note": "Human-in-the-loop on writes & P1 data"
+        "note": "Human review before writes, sharing, or memory promotion"
+      },
+      {
+        "label": "Proposal first",
+        "note": "Agents propose changes; people approve shared-memory promotion"
       }
     ],
-    "tiersFooter": "Personal first. Team next. Department and campus aggregations follow — each tier wrapped in its own governance layer.",
+    "tiersFooter": "Personal by default. Team sharing is opt-in. Department and campus receive reviewed aggregates, each with its own governance boundary.",
     "audiences": [
       "citizen",
       "regent",
