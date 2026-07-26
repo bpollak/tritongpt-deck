@@ -398,3 +398,20 @@
   background: rgba(24, 43, 73, 0.4);
 
 }
+
+/*
+ * Keep the authored 16:9 canvas intact on laptop-height browser windows.
+ * The stage remains full bleed while the slide's internal layout receives the
+ * same additional logical height it would have in a presentation viewport.
+ */
+@media (min-width: 900px) and (max-height: 760px) {
+  .tritonai-slide-stage > :first-child:not(.tritonai-title-slide) {
+    zoom: 0.8;
+  }
+}
+
+@media (min-width: 900px) and (max-height: 660px) {
+  .tritonai-slide-stage > :first-child:not(.tritonai-title-slide) {
+    zoom: 0.7;
+  }
+}

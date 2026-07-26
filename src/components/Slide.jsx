@@ -1559,7 +1559,11 @@ const Slide = ({ slide }) => {
       )}
 
       {(isSolution || isSolutionVideo) && (
-        <div className={clsx("w-full max-w-[1760px] mx-auto h-full overflow-hidden", isIphoneFramed && "px-8 md:px-20")}>
+        <div className={clsx(
+          "w-full max-w-[1760px] mx-auto overflow-hidden",
+          isSolutionVideo ? "flex-1 min-h-0" : "h-full",
+          isIphoneFramed && "px-8 md:px-20"
+        )}>
           <div className={clsx(
             "grid gap-4 sm:gap-8 md:gap-12 h-full pt-2 sm:pt-4",
             isSolutionVideo
@@ -1670,7 +1674,11 @@ const Slide = ({ slide }) => {
               </div>}
 
               {/* Feature List */}
-              <div className={clsx("flex flex-col", isSolutionVideo ? "gap-2.5 sm:gap-3" : "space-y-2 sm:space-y-4")}>
+              <div className={clsx(
+                isSolutionVideo
+                  ? "grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-2.5"
+                  : "flex flex-col space-y-2 sm:space-y-4"
+              )}>
                 {(() => {
                 const borderColors = ['#00C6D7', '#00629B', '#6E963B', '#FC8900', '#FFCD00'];
                 const dotColors = ['#FFCD00', '#00C6D7', '#FC8900', '#6E963B', '#00629B'];
@@ -1682,7 +1690,7 @@ const Slide = ({ slide }) => {
                     transition={{ delay: 0.5 + index * 0.1 }}
                     className={clsx(
                       "flex gap-3 sm:gap-4 items-start bg-white/60 backdrop-blur-sm rounded-lg sm:rounded-xl shadow-sm border-l-4 hover:shadow-md transition-shadow",
-                      isSolutionVideo ? "p-2.5 sm:p-3.5" : "p-3 sm:p-6"
+                      isSolutionVideo ? "p-2 sm:p-2.5" : "p-3 sm:p-6"
                     )}
                     style={{ borderLeftColor: borderColors[index % borderColors.length] }}
                   >
@@ -1690,13 +1698,13 @@ const Slide = ({ slide }) => {
                     <div className="flex-1 min-w-0">
                       <h3 className={clsx(
                         "font-bold text-ucsd-navy leading-tight mb-1",
-                        isSolutionVideo ? "text-base sm:text-xl" : "text-base sm:text-xl"
+                        isSolutionVideo ? "text-sm sm:text-base" : "text-base sm:text-xl"
                       )}>
                         {item.heading}
                       </h3>
                       <p className={clsx(
-                        "text-slate-700 leading-snug font-medium",
-                        isSolutionVideo ? "text-sm sm:text-[1.05rem]" : "text-xs sm:text-base"
+                        "text-slate-700 font-medium",
+                        isSolutionVideo ? "text-[11px] leading-tight sm:text-[13px]" : "text-xs leading-snug sm:text-base"
                       )}>
                         {item.text}
                       </p>
@@ -5383,7 +5391,7 @@ const Slide = ({ slide }) => {
                             fill={color}
                             fontSize={labelFontSize}
                             fontWeight="bold"
-                            fontFamily="system-ui, sans-serif"
+                            fontFamily="Roboto, Arial, sans-serif"
                           >
                             {value.toLocaleString()}
                           </text>
@@ -5404,7 +5412,7 @@ const Slide = ({ slide }) => {
                           fill="#64748b"
                           fontSize={xAxisLabelFontSize}
                           fontWeight="500"
-                          fontFamily="system-ui, sans-serif"
+                          fontFamily="Roboto, Arial, sans-serif"
                         >
                           {label}
                         </text>
@@ -6157,7 +6165,7 @@ const Slide = ({ slide }) => {
           </div>
         ) : (
           <div className={clsx("flex flex-col h-full w-full", isTitle ? "justify-center items-center text-center" : (isCompoundArchitecture || isAgentWorkflow) ? "justify-start overflow-hidden" : isTimelineEvolution ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isHeroList ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isContractReviewChallenge ? "justify-start pt-0 sm:pt-0.5 overflow-y-auto touch-pan-y custom-scrollbar" : isTritonAIEvolutionSlide ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isPlatformSimple ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isSolution ? "justify-start pt-4 overflow-hidden" : isSolutionVideo ? "justify-start pt-0.5 sm:pt-1 overflow-hidden" : isCaseStudyHero ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isRoadmap ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isFlywheelCaseStudy ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isAgentDevStrategy ? "justify-start pt-1 sm:pt-2 overflow-y-auto touch-pan-y custom-scrollbar" : "justify-start pt-4 overflow-y-auto touch-pan-y custom-scrollbar")}>
-            <div className={clsx("w-full mx-auto", (isTimelineEvolution || isHeroList || isCompoundArchitecture || isAgentWorkflow) && "h-full flex flex-col", (isSolution || isSolutionVideo || isCaseStudyHero || isProblemStatement || isContractReviewChallenge || isFeatureGrid || isCampusMetrics || isAgentDevStrategy || isFlywheelCaseStudy || isHeroList || isInfrastructureStack || isCompoundArchitecture || isAgentWorkflow) ? "max-w-[1800px]" : !isTimelineEvolution && "max-w-7xl")}>{renderContent()}</div>
+            <div className={clsx("w-full mx-auto", (isTimelineEvolution || isHeroList || isSolutionVideo || isCompoundArchitecture || isAgentWorkflow) && "h-full flex flex-col", (isSolution || isSolutionVideo || isCaseStudyHero || isProblemStatement || isContractReviewChallenge || isFeatureGrid || isCampusMetrics || isAgentDevStrategy || isFlywheelCaseStudy || isHeroList || isInfrastructureStack || isCompoundArchitecture || isAgentWorkflow) ? "max-w-[1800px]" : !isTimelineEvolution && "max-w-7xl")}>{renderContent()}</div>
           </div>
         )}
       </div>

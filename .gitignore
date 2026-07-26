@@ -27,3 +27,4 @@ dist-ssr
 TritonGPT-Presentation*.pptx
 public/slides.json
 public/slide-manager-registry.json
+.env*.local
