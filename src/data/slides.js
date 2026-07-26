@@ -563,7 +563,8 @@ export const slides = [
     "title": "TritonGPT: The Origin Story",
     "subtitle": "How a chancellor's vision became a campus-wide AI platform",
     "backgroundColor": "#F5F0E6",
-    "videoSrc": "/media/media1.mov",
+    "videoSrc": "/media/mobile/media1.mp4",
+    "poster": "/media/posters/tritongpt-origin.jpg",
     "stats": [],
     "content": [
       {
@@ -1181,7 +1182,8 @@ export const slides = [
         "text": "Replaces a $300K/year vendor contract; local SDSC inference avoids per-query vendor charges within available campus capacity."
       }
     ],
-    "videoSrc": "/media/media8.mov",
+    "videoSrc": "/media/mobile/media8.mp4",
+    "poster": "/media/posters/scaling-engagement.jpg",
     "videoLoop": false,
     "title": "Scaling Engagement: The TritonGPT Widget",
     "layout": "solution-showcase",
@@ -1238,6 +1240,7 @@ export const slides = [
       }
     ],
     "videoSrc": "/media/tgpt-iphone-demo.mp4",
+    "poster": "/media/posters/tritongpt-mobile-app.jpg",
     "videoLoop": false,
     "deviceFrame": "iphone",
     "videoPlaybackRate": 1.3,
@@ -1310,7 +1313,8 @@ export const slides = [
         "text": "Real-time summaries strictly grounded in campus knowledge bases."
       }
     ],
-    "videoSrc": "/media/blink-demo.mov",
+    "videoSrc": "/media/mobile/blink-demo.mp4",
+    "poster": "/media/posters/blink-integration.jpg",
     "title": "AI-Driven Search: Blink Integration",
     "layout": "solution-showcase",
     "subtitle": "Providing Answers, Not Just Links",
@@ -1358,7 +1362,8 @@ export const slides = [
       }
     ],
     "title": "Instructional AI: Socratic Tutor & Faculty Assistant",
-    "videoSrc": "/media/media10.mov",
+    "videoSrc": "/media/mobile/media10.mp4",
+    "poster": "/media/posters/instructional-ai.jpg",
     "layout": "solution-showcase-video",
     "subtitle": "Dual AI Tools for Learning & Teaching",
     "backgroundColor": "#F5F0E6",
@@ -1573,6 +1578,7 @@ export const slides = [
     "subtitle": "Turning a 2-hour manual review into an 11-minute automated workflow",
     "backgroundColor": "#F5F0E6",
     "videoSrc": "/media/media7.mp4",
+    "poster": "/media/posters/contract-reviewer.jpg",
     "stats": [
       {
         "label": "BEFORE",
@@ -1738,6 +1744,7 @@ export const slides = [
     "subtitle": "Automating Enrollment Management's most labor-intensive workflow",
     "backgroundColor": "#F5F0E6",
     "videoSrc": "/media/tms-onbase-demo.mp4",
+    "poster": "/media/posters/transcript-matching.jpg",
     "stats": [
       {
         "label": "ANNUAL VOLUME",
@@ -2727,8 +2734,8 @@ export const slides = [
         "sub": "Auditable packs"
       }
     ],
-    "videoSrc": "/media/pdf-remediator-1.6x.mov",
-    "poster": "/media/pdf-remediator-poster.png",
+    "videoSrc": "/media/mobile/pdf-remediator-1.6x.mp4",
+    "poster": "/media/posters/pdf-remediator.jpg",
     "demoLabel": "PDF Remediator Demo",
     "toolHighlights": [
       "veraPDF Validation",
@@ -4480,6 +4487,7 @@ export const slides = [
     "subtitle": "Connecting expertise with funding, collaborations, and partnerships, regardless of who knows who",
     "backgroundColor": "#F5F0E6",
     "videoSrc": "/media/Research Alignment _ UC San Diego - 27 March 2026.mp4",
+    "poster": "/media/posters/research-alignment.jpg",
     "videoPlaybackRate": 1.9,
     "content": [
       {

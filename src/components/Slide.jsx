@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion'; // eslint-disable-line no-unused-vars
 import clsx from 'clsx';
 import CabinetSlide from './CabinetSlide';
+import EmbeddedVideo from './EmbeddedVideo';
 import { Target, Database, Cpu, Blocks, GraduationCap, Building2, FileText, FileCheck, DollarSign, Shield, ShieldCheck, BookOpen, Code, Presentation, Globe, FileEdit, FolderOpen, TrendingUp, TrendingDown, ClipboardCheck, Search, Heart, Calendar, GitBranch, Network, Grid3x3, ArrowDown, ArrowRight, Brain, RefreshCw, ArrowRightLeft, CheckCircle, Monitor, User, Users, Award, Server, Layers, Wallet, Share2, Star, FlaskConical, Lightbulb, Landmark, Scale, Headphones, Hammer, Zap, Rocket, BarChart3, AlertTriangle } from 'lucide-react';
 import { QRCodeSVG } from 'qrcode.react';
 
@@ -137,14 +138,6 @@ const Slide = ({ slide }) => {
   const hasImage = !!slide.imageSrc && !isSolution && !isSolutionVideo;
   const isDark = slide.dark;
   const itemCount = slide.content ? slide.content.length : 0;
-  const setupShowcaseVideo = (el) => {
-    if (!el) return;
-    el.playbackRate = slide.videoPlaybackRate || 1;
-    if (slide.videoStartTime && el.currentTime < slide.videoStartTime) {
-      el.currentTime = slide.videoStartTime;
-    }
-  };
-
   const isDense = itemCount > 6;
   const isVeryDense = itemCount > 12;
   const isTableLike = itemCount > 20;
@@ -1643,30 +1636,26 @@ const Slide = ({ slide }) => {
                         <div className="absolute -left-[4px] top-[27%] h-14 w-[4px] rounded-l-full bg-slate-800 shadow-sm" />
                         <div className="absolute -right-[4px] top-[23%] h-20 w-[4px] rounded-r-full bg-slate-800 shadow-sm" />
                         <div className="relative h-full w-full overflow-hidden rounded-[1.62rem] bg-black">
-                          <video
-                            ref={setupShowcaseVideo}
+                          <EmbeddedVideo
                             src={slide.videoSrc}
                             poster={slide.poster}
-                            className="absolute inset-0 h-full w-full object-cover"
-                            preload="auto"
-                            autoPlay
+                            label={slide.demoLabel || slide.title || 'Slide video'}
+                            className="absolute inset-0 h-full w-full"
+                            videoClassName="absolute inset-0 h-full w-full object-cover"
                             loop={slide.videoLoop !== false}
-                            muted
-                            playsInline
+                            playbackRate={slide.videoPlaybackRate || 1}
                           />
                         </div>
                       </div>
                     ) : (
-                      <video
-                        ref={setupShowcaseVideo}
+                      <EmbeddedVideo
                         src={slide.videoSrc}
                         poster={slide.poster}
-                        className="relative w-full h-auto max-h-[56vh] rounded-2xl shadow-lg ring-1 ring-black/5 object-contain"
-                        preload="auto"
-                        autoPlay
+                        label={slide.demoLabel || slide.title || 'Slide video'}
+                        className="relative w-full rounded-2xl shadow-lg ring-1 ring-black/5"
+                        videoClassName="block w-full h-auto max-h-[56vh] object-contain"
                         loop={slide.videoLoop !== false}
-                        muted
-                        playsInline
+                        playbackRate={slide.videoPlaybackRate || 1}
                       />
                     )
                   ) : (
@@ -5043,15 +5032,13 @@ const Slide = ({ slide }) => {
                 >
                   <div className="rounded-[28px] border border-ucsd-navy/10 bg-white/88 p-2 shadow-[0_20px_44px_rgba(24,43,73,0.12)]">
                     <div className="relative aspect-[16/10] overflow-hidden rounded-[22px] bg-slate-950">
-                      <video
+                      <EmbeddedVideo
                         src={caseStudyVideoSrc}
                         poster={caseStudyPoster}
-                        className="absolute inset-0 h-full w-full object-cover"
-                        preload="auto"
-                        autoPlay
+                        label={caseStudyDemoLabel}
+                        className="absolute inset-0"
+                        videoClassName="absolute inset-0 h-full w-full object-cover"
                         loop
-                        muted
-                        playsInline
                       />
                       <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/80 via-slate-950/35 to-transparent px-3 py-1.5">
                         <div className="inline-flex items-center gap-2 rounded-full bg-white/12 px-2.5 py-1 backdrop-blur-sm">
@@ -5808,14 +5795,14 @@ const Slide = ({ slide }) => {
                 className="w-full lg:w-[48%] flex-shrink-0"
               >
                 <div className={clsx("relative rounded-2xl overflow-hidden shadow-2xl", isDarkOrigin ? "ring-1 ring-white/10" : "ring-1 ring-black/10")}>
-                  <video
+                  <EmbeddedVideo
                     src={slide.videoSrc}
-                    className="w-full h-auto object-contain bg-black"
-                    preload="auto"
-                    autoPlay
+                    poster={slide.poster}
+                    label={slide.videoLabel || slide.title || 'Slide video'}
+                    className="relative w-full"
+                    videoClassName="block w-full h-auto object-contain bg-black"
                     loop
-                    muted
-                    playsInline
+                    playbackRate={slide.videoPlaybackRate || 1}
                   />
                   {/* Video label overlay */}
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-4 py-3">
