@@ -98,21 +98,7 @@ export const slideManagerState = {
     "thank-you-questions",
     "cabinet-harness-11c-developer-api-program",
     "cabinet-harness-11d-campus-app-hosting-intake",
-    "video-harness-api-demo-2026-06-25-842",
-    "cabinet-people-00-title",
-    "cabinet-people-01-out-of-the-workshop",
-    "cabinet-people-02-brilliant-new-hire",
-    "cabinet-people-03-the-desk",
-    "cabinet-people-04-engineer-day",
-    "cabinet-people-05-roles-converged",
-    "cabinet-people-06-stays-human",
-    "cabinet-people-07-ucsd-now",
-    "cabinet-people-08-organizational-lead",
-    "cabinet-people-09-printing-press",
-    "cabinet-people-10-domain-expert",
-    "cabinet-people-11-three-questions",
-    "cabinet-people-12-the-ask",
-    "cabinet-people-13-closing"
+    "video-harness-api-demo-2026-06-25-842"
   ],
   "audiences": {
     "lmu-title": [
@@ -472,62 +458,6 @@ export const slideManagerState = {
     ],
     "thank-you-questions": [
       "all"
-    ],
-    "cabinet-people-00-title": [
-      "all",
-      "cabinet"
-    ],
-    "cabinet-people-01-out-of-the-workshop": [
-      "all",
-      "cabinet"
-    ],
-    "cabinet-people-02-brilliant-new-hire": [
-      "all",
-      "cabinet"
-    ],
-    "cabinet-people-03-the-desk": [
-      "all",
-      "cabinet"
-    ],
-    "cabinet-people-04-engineer-day": [
-      "all",
-      "cabinet"
-    ],
-    "cabinet-people-05-roles-converged": [
-      "all",
-      "cabinet"
-    ],
-    "cabinet-people-06-stays-human": [
-      "all",
-      "cabinet"
-    ],
-    "cabinet-people-07-ucsd-now": [
-      "all",
-      "cabinet"
-    ],
-    "cabinet-people-08-organizational-lead": [
-      "all",
-      "cabinet"
-    ],
-    "cabinet-people-09-printing-press": [
-      "all",
-      "cabinet"
-    ],
-    "cabinet-people-10-domain-expert": [
-      "all",
-      "cabinet"
-    ],
-    "cabinet-people-11-three-questions": [
-      "all",
-      "cabinet"
-    ],
-    "cabinet-people-12-the-ask": [
-      "all",
-      "cabinet"
-    ],
-    "cabinet-people-13-closing": [
-      "all",
-      "cabinet"
     ],
     "cabinet-harness-02-convergence": [
       "all",
