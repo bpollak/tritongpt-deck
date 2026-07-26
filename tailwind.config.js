@@ -29,7 +29,8 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['Montserrat', 'Source Sans Pro', 'sans-serif'],
+        sans: ['Roboto', 'Arial', 'sans-serif'],
+        display: ['Teko', 'Arial Narrow', 'sans-serif'],
       },
       backgroundImage: {
         'triton-pattern': "url('/triton-pattern.svg')", 

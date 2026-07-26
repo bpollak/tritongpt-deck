@@ -249,7 +249,7 @@ const Slide = ({ slide }) => {
     const hasPresenterInfo = slide.presenterName || slide.presenterTitle;
 
     return (
-      <div className="w-full h-full relative overflow-hidden bg-gradient-to-br from-[#182B49] via-[#0f1f33] to-[#182B49] flex flex-col items-center justify-center text-white break-words">
+      <div className="tritonai-title-slide w-full h-full relative overflow-hidden bg-gradient-to-br from-[#182B49] via-[#064c78] to-[#182B49] flex flex-col items-center justify-center text-white break-words">
         {/* Enhanced animated background glows */}
         <motion.div
           animate={{ scale: [1, 1.2, 1], opacity: [0.25, 0.4, 0.25], x: [0, 30, 0], y: [0, -20, 0] }}
@@ -288,7 +288,7 @@ const Slide = ({ slide }) => {
           className="hidden sm:block absolute top-0 right-0 w-32 h-32 border-t-4 border-r-4 border-ucsd-sky/40 rounded-tr-3xl"
         />
 
-        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10" />
+        <div className="tritonai-hero-grit absolute inset-0" />
 
         <div className={clsx("relative z-10 max-w-7xl w-full px-4 sm:px-8 md:px-12 flex flex-col items-center text-center", slide.presenterRows && "-mt-16 sm:-mt-20 md:-mt-24")}>
           {/* Conference badge with enhanced animation */}
@@ -4689,7 +4689,7 @@ const Slide = ({ slide }) => {
                           style={{
                             backgroundColor: `${lane.color}20`,
                             color: lane.color,
-                            fontFamily: 'monospace'
+                            fontFamily: 'Roboto, Arial, sans-serif'
                           }}
                         >
                           {lane.domain}
@@ -5566,7 +5566,7 @@ const Slide = ({ slide }) => {
                     <h3 className="text-lg lg:text-xl font-bold text-ucsd-navy leading-tight">
                       {member.role}
                     </h3>
-                    <p className="text-[15px] lg:text-[15px] text-slate-600 leading-snug line-clamp-2">
+                    <p className="text-[15px] lg:text-[15px] text-slate-600 leading-snug">
                       {member.responsibilities}
                     </p>
                   </div>
@@ -6107,10 +6107,11 @@ const Slide = ({ slide }) => {
   return (
     <div
       className={clsx(
-        "w-full h-full flex flex-col relative overflow-hidden transition-colors duration-500 break-words",
+        "tritonai-slide w-full h-full flex flex-col relative overflow-hidden transition-colors duration-500 break-words",
         isTimelineEvolution ? "p-1.5 sm:p-3 md:p-4" : isHeroList ? "p-2 sm:p-3 md:p-4" : isContractReviewChallenge ? "p-2 sm:p-2.5 md:p-3" : isTritonAIEvolutionSlide ? "p-1.5 sm:p-2.5 md:p-3" : isPlatformSimple ? "p-2 sm:p-4 md:p-6" : isSolutionVideo ? "p-2 sm:p-3 md:p-4" : isCaseStudyHero ? "p-2 sm:p-4 md:p-6" : isRoadmap ? "p-2 sm:p-4 md:p-5" : isFlywheelCaseStudy ? "p-2 sm:p-3 md:p-4" : isAgentDevStrategy ? "p-2 sm:p-3 md:p-4" : "p-2 sm:p-6 md:p-12",
         !slide.backgroundColor && (isDark ? "bg-[#1a1a1a]" : "bg-gray-50")
       )}
+      data-layout={slide.layout || slide.type}
       style={slide.backgroundColor ? { backgroundColor: slide.backgroundColor } : {}}
     >
       <motion.div

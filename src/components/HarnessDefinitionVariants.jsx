@@ -2,23 +2,23 @@ import React from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 
 const T = {
-  bg: '#f2f0e7',
-  paper: '#fbf8ef',
-  paper2: '#f7f2e8',
-  ink: '#171814',
-  muted: '#6e685f',
-  faint: '#d9d2c4',
-  rule: 'rgba(23,24,20,0.12)',
-  coral: '#d47a5f',
-  coralDark: '#be634d',
-  coralPale: '#efd8cc',
-  blue: '#0d5f93',
-  bluePale: '#e5f0f2',
-  green: '#6f9363',
+  bg: '#F5F0E6',
+  paper: '#FFFFFF',
+  paper2: '#F3F7FA',
+  ink: '#182B49',
+  muted: '#52616B',
+  faint: '#D5D9DE',
+  rule: 'rgba(24,43,73,0.12)',
+  coral: '#C69214',
+  coralDark: '#00629B',
+  coralPale: '#E7F3F8',
+  blue: '#00629B',
+  bluePale: '#E7F3F8',
+  green: '#6E963B',
   black: '#151a1a',
-  serif: "'Fraunces','Iowan Old Style','Charter',Georgia,serif",
-  mono: "'JetBrains Mono','SF Mono',Menlo,monospace",
-  sans: "'Inter','-apple-system','BlinkMacSystemFont','Segoe UI',system-ui,sans-serif"
+  serif: "'Roboto',Arial,sans-serif",
+  mono: "'Roboto',Arial,sans-serif",
+  sans: "'Roboto',Arial,sans-serif"
 };
 
 const defaultArchitectureItems = [
@@ -27,7 +27,7 @@ const defaultArchitectureItems = [
     title: 'Keep going',
     body: 'The run can act, inspect the result, and continue until the work is done.',
     icon: 'pipeline',
-    color: '#d47a5f',
+    color: '#C69214',
     fill: '#fff8f2',
     position: 'top'
   },
@@ -36,8 +36,8 @@ const defaultArchitectureItems = [
     title: 'Carry the right context',
     body: 'Instructions, files, prior results, and working state stay available while the work is happening.',
     icon: 'library',
-    color: '#0d5f93',
-    fill: '#e5f0f2',
+    color: '#00629B',
+    fill: '#E7F3F8',
     position: 'left'
   },
   {
@@ -45,7 +45,7 @@ const defaultArchitectureItems = [
     title: 'Use tools safely',
     body: 'Tools, connectors, APIs, and permissions determine what the harness can touch in real systems.',
     icon: 'mcp',
-    color: '#be634d',
+    color: '#00629B',
     fill: '#fff5ee',
     position: 'right'
   },
@@ -54,7 +54,7 @@ const defaultArchitectureItems = [
     title: 'Split work when needed',
     body: 'Larger jobs can separate planning, building, and verification without losing accountability.',
     icon: 'builder',
-    color: '#6f9363',
+    color: '#6E963B',
     fill: '#f6f8ee',
     position: 'bottom'
   }
@@ -84,14 +84,14 @@ const BackgroundCornerOrbs = () => (
       }}
       transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
       className="pointer-events-none absolute right-0 top-0 h-64 w-64 rounded-bl-full"
-      style={{ backgroundColor: 'rgba(110, 150, 59, 0.12)' }}
+      style={{ backgroundColor: 'rgba(0, 198, 215, 0.12)' }}
     />
     <motion.div
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8, delay: 0.2 }}
       className="pointer-events-none absolute bottom-0 left-0 h-[500px] w-[500px] rounded-tr-full"
-      style={{ backgroundColor: 'rgba(110, 150, 59, 0.15)' }}
+      style={{ backgroundColor: 'rgba(255, 205, 0, 0.12)' }}
     />
   </>
 );
@@ -150,10 +150,10 @@ const PartText = ({ parts = [], delay = 0.16, stagger = 0.045 }) => (
 );
 
 const jobSpineEntries = [
-  { key: 'loop', label: 'LOOP', tone: '#d47a5f' },
-  { key: 'context', label: 'CONTEXT', tone: '#0d5f93' },
-  { key: 'action', label: 'ACTION', tone: '#be634d' },
-  { key: 'scale', label: 'SCALE', tone: '#6f9363' }
+  { key: 'loop', label: 'LOOP', tone: '#C69214' },
+  { key: 'context', label: 'CONTEXT', tone: '#00629B' },
+  { key: 'action', label: 'ACTION', tone: '#00629B' },
+  { key: 'scale', label: 'SCALE', tone: '#6E963B' }
 ];
 
 const JobSpine = ({ activeKey }) => {
@@ -222,7 +222,7 @@ const Content = ({ children, className = '', style }) => (
 const Card = ({ children, delay = 0.35, className = '', style }) => (
   <motion.div
     {...fade(delay)}
-    className={`rounded-[7px] border bg-white/65 ${className}`}
+    className={`tritonai-diagram-card rounded-[7px] border bg-white/65 ${className}`}
     style={{ borderColor: T.faint, boxShadow: '0 1px 0 rgba(23,24,20,0.03)', ...style }}
   >
     {children}
@@ -1932,7 +1932,7 @@ const HarnessCitizenEcosystemVariant = ({ slide }) => {
             className="relative flex min-h-0 flex-col overflow-hidden rounded-[10px] border bg-white/86 p-5"
             style={{ borderColor: '#d8c6b9', boxShadow: '0 20px 42px rgba(23,24,20,0.13)' }}
           >
-            <div className="absolute inset-x-0 top-0 h-2" style={{ background: 'linear-gradient(90deg, #0d5f93, #d47a5f 56%, #f1c232)' }} />
+            <div className="absolute inset-x-0 top-0 h-2" style={{ background: 'linear-gradient(90deg, #00629B, #C69214 56%, #f1c232)' }} />
             <div className="flex items-start justify-between gap-4">
               <UCSDLogoMark className="h-10 w-[148px]" />
               <div className="rounded-full border px-3 py-1 text-[10px] uppercase" style={{ borderColor: '#c9d7df', color: T.blue, fontFamily: T.mono, fontWeight: 850, letterSpacing: '0.16em' }}>
@@ -3014,7 +3014,7 @@ const HarnessRecapVariant = ({ slide }) => {
             <linearGradient id="growth-grad" x1="0" y1="0" x2="1" y2="0">
               <stop offset="0%" stopColor="#a04848" />
               <stop offset="25%" stopColor="#b48058" />
-              <stop offset="50%" stopColor="#d47a5f" />
+              <stop offset="50%" stopColor="#C69214" />
               <stop offset="72%" stopColor="#a8b070" />
               <stop offset="100%" stopColor="#5d8350" />
             </linearGradient>
@@ -4652,7 +4652,7 @@ const ModelFleetStrip = ({ models = [], caption }) => (
         >
           <span
             className="inline-block h-2 w-2 shrink-0 rounded-full"
-            style={{ background: m.openWeight ? '#6f9363' : T.coralDark }}
+            style={{ background: m.openWeight ? '#6E963B' : T.coralDark }}
             aria-hidden="true"
           />
           <span style={{ color: T.ink, fontFamily: T.mono, fontSize: 11.5, fontWeight: 750 }}>{m.label}</span>
@@ -4729,7 +4729,7 @@ const ScalingPyramidGraphic = ({ tiers = [], showTierDetails = true }) => {
     { label: 'Campus', scope: 'Statistical patterns only', privacy: 'No individual records', status: 'Aspirational', color: '#93c5fd', textColor: '#17345f' },
     { label: 'Department', scope: 'Anonymized aggregates', privacy: 'Identity stripped before aggregation', status: 'Design exercise', color: '#60a5fa', textColor: '#17345f' },
     { label: 'Team', scope: 'Opt-in shared context', privacy: 'Members choose what to share', status: 'Pilot pattern', color: '#2563eb', textColor: '#eff6ff' },
-    { label: 'Personal', scope: 'One agent per person', privacy: 'Data stays private by default', status: 'Working now', color: '#0d5f93', textColor: '#eff6ff' }
+    { label: 'Personal', scope: 'One agent per person', privacy: 'Data stays private by default', status: 'Working now', color: '#00629B', textColor: '#eff6ff' }
   ];
   const cx = showTierDetails ? 270 : 405;
   const viewBox = showTierDetails ? '0 0 880 455' : '0 0 730 455';
@@ -4760,7 +4760,7 @@ const ScalingPyramidGraphic = ({ tiers = [], showTierDetails = true }) => {
         const connectorX = cx + (s.topHalf + s.bottomHalf) / 2 + 8;
         return (
           <motion.g key={tier.label} {...fade(0.45 + i * 0.08, 0)}>
-            <polygon points={points} fill={tier.color} stroke="#fbf8ef" strokeWidth="2" />
+            <polygon points={points} fill={tier.color} stroke="#FFFFFF" strokeWidth="2" />
             <text x={cx} y={yMid - 5} textAnchor="middle" style={{ fill: tier.textColor, fontFamily: T.sans, fontSize: 27, fontWeight: 850 }}>
               {tier.label}
             </text>

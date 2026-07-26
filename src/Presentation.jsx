@@ -321,55 +321,25 @@ const Presentation = () => {
   if (!audienceType) {
     return (
       <div
-        className="w-screen h-screen flex items-center justify-center overflow-hidden relative"
+        className="presentation-gate w-screen h-screen flex items-center justify-center overflow-hidden relative"
         role="application"
         aria-label="Presentation gate"
-        style={{
-          background: '#f2f0e7',
-          color: '#171814',
-          fontFamily: "'Fraunces','Iowan Old Style','Charter',Georgia,serif"
-        }}
       >
-        <div className="absolute inset-x-0 top-0 h-1" style={{ background: '#f1c232' }} />
-        <div className="max-w-[640px] px-10 text-center">
-          <div
-            className="uppercase mb-5"
-            style={{
-              color: '#d47a5f',
-              fontFamily: "'JetBrains Mono','SF Mono',Menlo,monospace",
-              fontSize: 13,
-              fontWeight: 800,
-              letterSpacing: '0.26em'
-            }}
-          >
+        <div className="presentation-gate__rule" />
+        <div className="max-w-[680px] px-10 text-center">
+          <div className="tritonai-kicker mb-5">
             Access required
           </div>
-          <h1
-            className="leading-[1.05]"
-            style={{ fontSize: 'clamp(36px, 4vw, 60px)', fontWeight: 520 }}
-          >
+          <h1 className="presentation-gate__title">
             This presentation is filtered by audience.
           </h1>
-          <p
-            className="mt-6 italic"
-            style={{ color: '#6e685f', fontSize: 'clamp(16px, 1.25vw, 20px)', lineHeight: 1.4 }}
-          >
+          <p className="presentation-gate__copy">
             Open the link you were sent — it includes the right audience tag.
             The root URL doesn&rsquo;t expose the full deck.
           </p>
-          <div
-            className="mt-8 inline-flex items-center gap-2 rounded-[6px] border px-4 py-2"
-            style={{
-              borderColor: 'rgba(23,24,20,0.16)',
-              background: '#fff',
-              color: '#6e685f',
-              fontFamily: "'JetBrains Mono','SF Mono',Menlo,monospace",
-              fontSize: 13,
-              fontWeight: 600
-            }}
-          >
+          <div className="presentation-gate__tag">
             <span>tritongpt-deck.vercel.app/?audience=</span>
-            <span style={{ color: '#171814', fontWeight: 800 }}>YOUR-TAG</span>
+            <span className="font-bold text-ucsd-navy">YOUR-TAG</span>
           </div>
         </div>
       </div>
@@ -377,7 +347,7 @@ const Presentation = () => {
   }
 
   return (
-    <div className="w-screen h-screen bg-gray-50 flex flex-col overflow-hidden relative font-sans" role="application" aria-label="Presentation viewer">
+    <div className="presentation-viewer w-screen h-screen flex flex-col overflow-hidden relative font-sans" role="application" aria-label="Presentation viewer">
       <div aria-hidden="true" className="absolute w-0 h-0 overflow-hidden opacity-0 pointer-events-none">
         {nearbyVideoAssets.map(({ src, poster }) => (
           <video
@@ -393,9 +363,9 @@ const Presentation = () => {
       </div>
 
       {/* Progress Bar */}
-      <div className="w-full h-1 bg-gray-200 z-50 shrink-0" role="progressbar" aria-valuenow={progressValue} aria-valuemin={0} aria-valuemax={Math.max(filteredSlides.length, 1)} aria-label="Presentation progress">
+      <div className="presentation-progress w-full z-50 shrink-0" role="progressbar" aria-valuenow={progressValue} aria-valuemin={0} aria-valuemax={Math.max(filteredSlides.length, 1)} aria-label="Presentation progress">
         <motion.div
-          className="h-full bg-ucsd-gold"
+          className="presentation-progress__value h-full"
           initial={{ width: "0%" }}
           animate={{ width: `${progressPercent}%` }}
           transition={{ duration: 0.3 }}
@@ -403,7 +373,7 @@ const Presentation = () => {
       </div>
 
       {/* Slide Content Area */}
-      <div className="flex-1 relative overflow-hidden">
+      <div className="presentation-stage flex-1 relative overflow-hidden">
         {currentSlide ? (
           <AnimatePresence initial={false} custom={direction} mode="popLayout">
             <motion.div
@@ -430,7 +400,9 @@ const Presentation = () => {
                   prevSlide();
                 }
               }}
-              className="absolute w-full h-full"
+              className="tritonai-slide-stage absolute w-full h-full"
+              data-slide-layout={currentSlide.layout || currentSlide.type || 'default'}
+              data-slide-tone={currentSlide.dark ? 'dark' : 'light'}
             >
               <Slide slide={currentSlide} />
             </motion.div>
@@ -443,24 +415,26 @@ const Presentation = () => {
       </div>
 
       {/* Navigation Controls - Fixed bottom bar on mobile, floating on desktop */}
-      <nav className="shrink-0 bg-white/95 backdrop-blur-sm border-t border-gray-200 px-4 py-1.5 flex items-center justify-between sm:absolute sm:bottom-6 sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:border sm:rounded-full sm:shadow-lg sm:px-2 sm:py-1 sm:bg-white/80 sm:w-auto sm:gap-4 z-50" aria-label="Slide navigation">
+        <nav className="presentation-nav z-50" aria-label="Slide navigation">
         <button
           onClick={prevSlide}
-          className="p-2.5 sm:p-2 rounded-full hover:bg-gray-100 sm:hover:bg-white/80 text-ucsd-navy transition-all active:bg-gray-200"
+          className="presentation-nav__button p-2.5 sm:p-2 transition-all"
           aria-label="Previous slide"
         >
           <ChevronLeft size={24} aria-hidden="true" />
+          <span className="presentation-nav__label">Previous</span>
         </button>
 
-        <span className="text-sm font-semibold text-ucsd-navy/70" aria-live="polite" aria-atomic="true">
+        <span className="presentation-nav__count text-sm font-semibold" aria-live="polite" aria-atomic="true">
           {progressValue} / {filteredSlides.length}
         </span>
 
         <button
           onClick={nextSlide}
-          className="p-2.5 sm:p-2 rounded-full hover:bg-gray-100 sm:hover:bg-white/80 text-ucsd-navy transition-all active:bg-gray-200"
+          className="presentation-nav__button p-2.5 sm:p-2 transition-all"
           aria-label="Next slide"
         >
+          <span className="presentation-nav__label">Next</span>
           <ChevronRight size={24} aria-hidden="true" />
         </button>
       </nav>

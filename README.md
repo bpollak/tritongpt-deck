@@ -6,7 +6,7 @@ This is a high-performance, web-based presentation platform built with React, Vi
 
 ## Features
 
-- **UCSD Branding**: Custom colors (Navy, Gold, Blue) and typography (Montserrat/Source Sans Pro).
+- **TritonAI Branding**: Shared UC San Diego navy, Connect Blue, bright blue, gold, and sand palette with Teko display headings and Roboto body copy.
 - **Smooth Animations**: Framer Motion powered transitions and staggered content entry.
 - **Responsive**: Works on desktop, tablet, and mobile.
 - **Content**: Extracted from the provided PowerPoint.
@@ -40,5 +40,5 @@ On `localhost`, slide audience edits are mirrored into browser-local preview sta
 -   **Slides**: Edit `src/data/slides.js` to update content.
 -   **Permalinks**: Each slide now needs a unique `slug`. Use that stable slug for shared links, and do not change it after sending links out.
 -   **Slide Registry**: `src/data/slideRegistry.js` derives the slide-manager inventory directly from `src/data/slides.js`, so new slides show up in the manager automatically.
--   **Styling**: Modify `tailwind.config.js` or `src/index.css`.
+-   **Styling**: Modify `tailwind.config.js` or the shared TritonAI presentation system in `src/index.css`.
 -   **Components**: Adjust `src/components/Slide.jsx` for layout changes.

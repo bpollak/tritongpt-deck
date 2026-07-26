@@ -18,9 +18,9 @@ import harnessVariantMap from './HarnessDefinitionVariants';
 // ───────────────────────────────────────────────────────────────────────────
 
 const T = {
-  bg: '#0B1626',
-  bgFrom: '#0B1626',
-  bgTo: '#142136',
+  bg: '#182B49',
+  bgFrom: '#182B49',
+  bgTo: '#0B3D5F',
   ink: '#F5F1EA',
   inkMuted: 'rgba(245,241,234,0.62)',
   inkDim: 'rgba(245,241,234,0.38)',
@@ -28,12 +28,12 @@ const T = {
   ruleStrong: 'rgba(245,241,234,0.22)',
   accent: '#F3D54E',
   accentBright: '#FFCD00',
-  coral: '#F4A088',
-  coralDeep: '#E07B5A',
-  pacific: '#5BB4D4',
-  serif: "'Fraunces','Charter','Iowan Old Style',Georgia,serif",
-  sans: "'Inter','Helvetica Neue',system-ui,-apple-system,sans-serif",
-  mono: "'JetBrains Mono','SF Mono',Menlo,monospace"
+  coral: '#FC8900',
+  coralDeep: '#C69214',
+  pacific: '#00C6D7',
+  serif: "'Roboto',Arial,sans-serif",
+  sans: "'Roboto',Arial,sans-serif",
+  mono: "'Roboto',Arial,sans-serif"
 };
 
 // Bottom safe zone — slide-control chrome from the parent Presentation overlays here.
@@ -1286,7 +1286,7 @@ const variantMap = {
   analogy: AnalogyVariant,
   hero: HeroVisualVariant,
   roles: RolesVariant,
-  // Editorial harness-definition variants (light cream palette, Fraunces serif).
+  // Editorial harness-definition variants (light cream palette, TritonAI typography).
   // Scoped to a subset of citizen slides; do not affect the rest of the deck.
   ...harnessVariantMap
 };

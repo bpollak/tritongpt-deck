@@ -14,17 +14,20 @@ This project is a **React-based single-page application (SPA)** designed to serv
 ## Project Structure
 -   **`src/data/slides.js`**: **CRITICAL**. This file is the specific single source of truth for all presentation content. It exports a `slides` array containing objects with properties like `id`, stable `slug`, `type`, `layout`, `title`, `content`, `imageSrc`, etc.
 -   **`src/components/Slide.jsx`**: The main rendering component. It acts as a factory, rendering different layouts based on the `slide.layout` prop (e.g., `title-hero`, `solution-showcase`, `ecosystem-visual`).
--   **`src/App.jsx`**: Handles the slide navigation state (`currentSlide`), keyboard event listeners (ArrowRight, ArrowLeft), and mounts the `Slide` component.
+-   **`src/Presentation.jsx`**: Handles slide navigation, audience filtering, keyboard event listeners, and the shared TritonAI progress/navigation shell.
+-   **`src/index.css`**: Defines the presentation-wide TritonAI visual system and responsive viewer chrome.
 -   **`public/media/`**: Stores static assets like images (`headshot.jpg`) and videos. Referenced as absolute paths (e.g., `/media/file.jpg`).
 
 ## Key Design Concepts
 1.  **Layout-Driven Rendering**: The application does not have unique routes for slides. It iterates through the `slides` array. To change a slide's look, you verify the `layout` property in `slides.js` and modify the corresponding conditional block in `Slide.jsx`.
-2.  **Aesthetics**: The design prioritizes a "premium," modern look using UCSD brand colors:
+2.  **Aesthetics**: The shared presentation shell follows the public TritonAI site:
     -   **Navy**: `#182B49`
     -   **Blue**: `#00629B`
-    -   **Gold**: `#FFCD00` (often used with heavy glows/shadows)
+    -   **Gold**: `#FFCD00` (used for emphasis, rules, and key metrics)
     -   **Sky**: Light blue accents (e.g. text-ucsd-sky)
-    -   **Effects**: Heavy use of glassmorphism (`backdrop-blur`), gradient borders, and entering animations (`motion.div`).
+    -   **Sand**: `#F5F0E6`
+    -   **Typography**: Teko for display headings; Roboto for body copy and controls.
+    -   **Effects**: Restrained shadows, bright-blue/gold rules, sand content surfaces, and navy-to-Connect-Blue hero treatments. Existing slide-specific motion remains available.
 3.  **Responsive Design**: The deck must function on desktop (presentation mode) and mobile devices. `Slide.jsx` uses standard Tailwind responsive prefixes (`sm:`, `md:`) to adjust font sizes and layouts (e.g., switching from flex-col to flex-row).
 
 ## Critical Workflows
