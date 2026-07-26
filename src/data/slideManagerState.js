@@ -3,9 +3,6 @@ export const slideManagerState = {
     "lmu-title",
     "ai-operating-review-title",
     "the-ai-enabled-university",
-    "the-ai-enabled-university-duo",
-    "the-ai-enabled-university-cabinet",
-    "the-ai-enabled-university-generic",
     "ai-strategy-and-engagement",
     "uc-san-diego",
     "triton-ai-website",
@@ -33,8 +30,6 @@ export const slideManagerState = {
     "uc-san-diego-ai-strategy-2026",
     "administrative-ai-the-efficiency-imperative",
     "contract-reviewer-consolidated",
-    "the-contract-review-challenge",
-    "video-media7",
     "transcript-matching-validation",
     "cabinet-harness-03-question",
     "tritonai-developer-api-program",
@@ -47,7 +42,6 @@ export const slideManagerState = {
     "memory-quality-is-an-operational-service",
     "harness-perf-review-demo",
     "agent-engineering-strategy",
-    "the-new-workforce-competency",
     "preparing-the-ai-ready-graduate",
     "the-agentic-ai-stack",
     "multi-agent-incident-response-orchestration",
@@ -58,14 +52,12 @@ export const slideManagerState = {
     "ai-roadmap-2026",
     "ai-roadmap-2026-q2",
     "ai-roadmap-2026-q3",
+    "tritongpt-adoption-synthesis",
     "tritongpt-usage-analytics",
     "tritongpt-widget-analytics",
     "tritongpt-user-growth",
     "research-alignment-poc",
     "ai-engagement-at-scale",
-    "thank-you-duo",
-    "thank-you-cabinet",
-    "thank-you-questions",
     "cabinet-people-00-title",
     "cabinet-people-01-out-of-the-workshop",
     "cabinet-people-02-brilliant-new-hire",
@@ -89,7 +81,6 @@ export const slideManagerState = {
     "cabinet-harness-08e-tools-hooks-safety",
     "cabinet-harness-10-subagents",
     "video-harness-api-demo-2026-06-25-810",
-    "video-harness-api-demo-2026-06-25-842",
     "from-tritongpt-to-tritonai",
     "cabinet-harness-11-ucsd-safe-path",
     "cabinet-harness-11a-two-environments",
@@ -104,14 +95,24 @@ export const slideManagerState = {
   ],
   "removed": [
     "where-will-ai-place-us-in-2031",
+    "the-ai-enabled-university-duo",
+    "the-ai-enabled-university-cabinet",
+    "the-ai-enabled-university-generic",
     "the-workforce-our-graduates-enter",
     "the-real-disruption-tasks-not-jobs",
     "ai-workforce-landscape",
     "higher-ed-reskilling-gap",
+    "the-new-workforce-competency",
     "ai-contract-reviewer",
+    "the-contract-review-challenge",
+    "video-media7",
     "cost-of-inaction",
+    "thank-you-duo",
+    "thank-you-cabinet",
+    "thank-you-questions",
     "cabinet-harness-11c-developer-api-program",
-    "cabinet-harness-11d-campus-app-hosting-intake"
+    "cabinet-harness-11d-campus-app-hosting-intake",
+    "video-harness-api-demo-2026-06-25-842"
   ],
   "audiences": {
     "lmu-title": [
@@ -363,7 +364,8 @@ export const slideManagerState = {
       "technical",
       "citizen",
       "internal",
-      "conference"
+      "conference",
+      "LMU"
     ],
     "harness-memory-scale-ucsd": [
       "all",
@@ -433,7 +435,7 @@ export const slideManagerState = {
       "internal",
       "PK"
     ],
-    "tritongpt-usage-analytics": [
+    "tritongpt-adoption-synthesis": [
       "all",
       "technical",
       "executive",
@@ -442,14 +444,17 @@ export const slideManagerState = {
       "regent",
       "LMU"
     ],
+    "tritongpt-usage-analytics": [
+      "all",
+      "PK"
+    ],
     "tritongpt-widget-analytics": [
       "all",
       "PK"
     ],
     "tritongpt-user-growth": [
       "all",
-      "PK",
-      "LMU"
+      "PK"
     ],
     "research-alignment-poc": [
       "all"

@@ -38,7 +38,7 @@ This file defines the editorial contract and canonical sequence for each support
 18. `a-meeting-becomes-memory-and-then-action`
 19. `memory-quality-is-an-operational-service`
 20. `the-agentic-ai-stack`
-21. `tritongpt-usage-analytics`
+21. `tritongpt-adoption-synthesis`
 22. `cabinet-harness-09b-context-management`
 23. `cabinet-harness-08e-tools-hooks-safety`
 24. `cabinet-harness-11-ucsd-safe-path`
@@ -70,7 +70,7 @@ This file defines the editorial contract and canonical sequence for each support
 16. `campus-app-hosting-intake`
 17. `ucsd-ai-by-the-numbers`
 18. `ai-roadmap-2026-q3`
-19. `tritongpt-usage-analytics`
+19. `tritongpt-adoption-synthesis`
 20. `ai-engagement-at-scale`
 21. `from-tritongpt-to-tritonai`
 22. `the-flywheel-in-action-pdf-remediator`
@@ -167,7 +167,7 @@ This file defines the editorial contract and canonical sequence for each support
 26. `ai-roadmap-2026`
 27. `ai-roadmap-2026-q2`
 28. `ai-roadmap-2026-q3`
-29. `tritongpt-usage-analytics`
+29. `tritongpt-adoption-synthesis`
 30. `from-tritongpt-to-tritonai`
 31. `the-flywheel-in-action-pdf-remediator`
 32. `the-flywheel-in-action-ai-use-case-meeting`
@@ -238,7 +238,7 @@ This file defines the editorial contract and canonical sequence for each support
 
 **Communication job:** Review adoption, delivery, and roadmap evidence and leave with explicit operating decisions and follow-up questions.
 
-**Canonical count:** 9
+**Canonical count:** 10
 
 **Sequence:**
 
@@ -247,10 +247,11 @@ This file defines the editorial contract and canonical sequence for each support
 3. `ai-roadmap-2026`
 4. `ai-roadmap-2026-q2`
 5. `ai-roadmap-2026-q3`
-6. `tritongpt-usage-analytics`
-7. `tritongpt-widget-analytics`
-8. `tritongpt-user-growth`
-9. `thank-you`
+6. `tritongpt-adoption-synthesis`
+7. `tritongpt-usage-analytics`
+8. `tritongpt-widget-analytics`
+9. `tritongpt-user-growth`
+10. `thank-you`
 
 ## regent
 
@@ -279,7 +280,7 @@ This file defines the editorial contract and canonical sequence for each support
 17. `campus-app-hosting-intake`
 18. `the-agentic-ai-stack`
 19. `key-takeaways`
-20. `tritongpt-usage-analytics`
+20. `tritongpt-adoption-synthesis`
 21. `ai-engagement-at-scale`
 22. `from-tritongpt-to-tritonai`
 23. `cabinet-harness-11-ucsd-safe-path`
@@ -316,12 +317,12 @@ This file defines the editorial contract and canonical sequence for each support
 20. `llm-api-usage-attribution`
 21. `campus-app-hosting`
 22. `campus-app-hosting-intake`
-23. `harness-memory-scale-ucsd`
-24. `agent-engineering-strategy`
-25. `the-agentic-ai-stack`
-26. `key-takeaways`
-27. `tritongpt-usage-analytics`
-28. `tritongpt-user-growth`
+23. `harness-memory-architecture`
+24. `harness-memory-scale-ucsd`
+25. `agent-engineering-strategy`
+26. `the-agentic-ai-stack`
+27. `key-takeaways`
+28. `tritongpt-adoption-synthesis`
 29. `cabinet-harness-02-convergence`
 30. `cabinet-harness-08b-component-framework`
 31. `cabinet-harness-04b-fixed-architecture`

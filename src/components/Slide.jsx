@@ -117,9 +117,12 @@ const Slide = ({ slide }) => {
           muted
           playsInline
         />
-        {slide.title && (
-          <div className="absolute left-6 top-6 rounded-full bg-black/55 px-4 py-2 text-sm font-black uppercase tracking-[0.18em] text-white backdrop-blur-sm">
-            {slide.title}
+        {(slide.demoLabel || slide.title || slide.managerLabel) && (
+          <div className="absolute left-5 top-5 max-w-[78vw] rounded-lg border border-white/15 bg-black/55 px-4 py-2.5 text-white shadow-lg backdrop-blur-sm">
+            <div className="text-[10px] font-black uppercase tracking-[0.2em] text-white/65">Demo</div>
+            <div className="mt-0.5 text-sm font-black tracking-wide sm:text-base">
+              {slide.demoLabel || slide.title || slide.managerLabel}
+            </div>
           </div>
         )}
       </div>
@@ -1190,7 +1193,10 @@ const Slide = ({ slide }) => {
       const items = section.items || [];
       return (
         <motion.div key={sIdx} initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 + sIdx * 0.15, duration: 0.5 }}
-          className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 max-w-4xl mx-auto">
+          className={clsx(
+            "grid grid-cols-2 gap-3 sm:gap-4 mx-auto",
+            items.length === 4 ? "sm:grid-cols-4 max-w-6xl" : "sm:grid-cols-3 max-w-4xl"
+          )}>
           {items.map((item, i) => {
             const IconComp = iconMap[item.icon] || BarChart3;
             return (

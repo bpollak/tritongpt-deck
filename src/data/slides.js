@@ -1010,6 +1010,7 @@ export const slides = [
     "content": [],
     "videoSrc": "/media/media1.mov",
     "poster": "/media/image36.png",
+    "demoLabel": "UC San Diego Assistant — Campus Knowledge",
     "audiences": [
       "all",
       "public",
@@ -1028,6 +1029,7 @@ export const slides = [
     "managerLabel": "Video: Screen Recording 2026-05-27 (2.2x)",
     "managerSummary": "New screen capture at 2.2x speed, inserted between the previous order 16 and 17 video slides.",
     "videoSrc": "/media/screen-recording-2026-05-27-2.2x.mov",
+    "demoLabel": "UC San Diego Assistant — Grounded Follow-Up",
     "audiences": [
       "all",
       "public",
@@ -1045,6 +1047,7 @@ export const slides = [
     "managerLabel": "Video: TritonGPT Class Scheduling Agent",
     "managerSummary": "LinkedIn horizontal demo video inserted after the May 27 screen recording.",
     "videoSrc": "/media/TritonGPT Class Scheduling Agent - LinkedIn Horizontal.mp4",
+    "demoLabel": "Class Scheduling Agent — Plan a Quarter",
     "audiences": [
       "all",
       "public",
@@ -1061,6 +1064,7 @@ export const slides = [
     "type": "video",
     "content": [],
     "videoSrc": "/media/screen-recording-1.mov",
+    "demoLabel": "UC San Diego Assistant — Policy Q&A",
     "audiences": [
       "all",
       "public",
@@ -1074,6 +1078,7 @@ export const slides = [
     "type": "video",
     "content": [],
     "videoSrc": "/media/screen-recording-2.mov",
+    "demoLabel": "UC San Diego Assistant — Guided Conversation",
     "audiences": [
       "all",
       "public",
@@ -1089,6 +1094,7 @@ export const slides = [
     "content": [],
     "videoSrc": "/media/media2.mov",
     "poster": "/media/image37.png",
+    "demoLabel": "UC San Diego Assistant — Campus Answer",
     "audiences": [
       "all",
       "public",
@@ -1102,6 +1108,7 @@ export const slides = [
     "content": [],
     "videoSrc": "/media/media4.mov",
     "poster": "/media/image39.png",
+    "demoLabel": "UC San Diego Assistant — Detailed Guidance",
     "audiences": [
       "all",
       "internal",
@@ -1118,6 +1125,7 @@ export const slides = [
     "content": [],
     "videoSrc": "/media/media3.mov",
     "poster": "/media/image38.png",
+    "demoLabel": "Fund Manager Coach — Grant Guidance",
     "audiences": [
       "all",
       "internal",
@@ -1134,6 +1142,7 @@ export const slides = [
     "content": [],
     "videoSrc": "/media/media5.mov",
     "poster": "/media/image40.png",
+    "demoLabel": "Data Dictionary Assistant — Find the Right Data",
     "audiences": [
       "all",
       "internal",
@@ -1147,6 +1156,7 @@ export const slides = [
     "content": [],
     "videoSrc": "/media/media6.mov",
     "poster": "/media/image41.png",
+    "demoLabel": "Expert Notetaker — Structure Decisions and Actions",
     "audiences": [
       "all",
       "internal",
@@ -1275,6 +1285,7 @@ export const slides = [
     "content": [],
     "videoSrc": "/media/media9.mov",
     "poster": "/media/image50.png",
+    "demoLabel": "Blink AI Overview — Search with Context",
     "audiences": [
       "all",
       "internal",
@@ -1387,6 +1398,7 @@ export const slides = [
     "content": [],
     "videoSrc": "/media/media11.mov",
     "poster": "/media/image53.png",
+    "demoLabel": "Student Assistant — Guided Campus Support",
     "audiences": [
       "all",
       "internal",
@@ -1656,6 +1668,7 @@ export const slides = [
     "content": [],
     "videoSrc": "/media/media7.mp4",
     "poster": "/media/image47.png",
+    "demoLabel": "AI Contract Reviewer — Policy-Grounded Redlining",
     "audiences": [
       "all",
       "internal",
@@ -2227,7 +2240,8 @@ export const slides = [
       "all",
       "internal",
       "cabinet",
-      "citizen"
+      "citizen",
+      "LMU"
     ],
     "sourcesLabel": "Evidence + daily context",
     "coreKicker": "Curation + durable memory",
@@ -2448,6 +2462,7 @@ export const slides = [
     "type": "video",
     "content": [],
     "videoSrc": "/media/screen-recording-2026-06-03-trimmed-hardcut-1m48-3m15-2.0x.mp4",
+    "demoLabel": "Performance Review Evaluator — Evidence to Feedback",
     "videoAutoPlay": true,
     "videoLoop": false,
     "audiences": [
@@ -3971,6 +3986,79 @@ export const slides = [
     ]
   },
   {
+    "id": 32.8,
+    "slug": "tritongpt-adoption-synthesis",
+    "type": "content",
+    "layout": "data-dashboard",
+    "title": "TritonGPT Adoption: The Baseline Stepped Up",
+    "subtitle": "One synthesis of prompts, embedded-widget use, and unique users · Jan 2025–Jun 2026",
+    "backgroundColor": "#F5F0E6",
+    "dashboardSections": [
+      {
+        "type": "metric-grid",
+        "items": [
+          {
+            "value": "+90%",
+            "label": "H1 2026 average monthly prompts vs. H1 2025",
+            "icon": "TrendingUp",
+            "color": "#00629B"
+          },
+          {
+            "value": "57,964",
+            "label": "Peak monthly prompts · May 2026",
+            "icon": "BarChart3",
+            "color": "#00C6D7"
+          },
+          {
+            "value": "25%",
+            "label": "Widget share of June prompts",
+            "icon": "Globe",
+            "color": "#6E963B"
+          },
+          {
+            "value": "2,516",
+            "label": "Unique users · June 2026",
+            "icon": "Users",
+            "color": "#FC8900"
+          }
+        ]
+      },
+      {
+        "type": "stat-callouts",
+        "items": [
+          {
+            "icon": "TrendingUp",
+            "stat": "What changed",
+            "detail": "Average monthly prompts rose from 21,950 in H1 2025 to 41,716 in H1 2026. The service is operating from a meaningfully higher usage baseline.",
+            "color": "#00629B"
+          },
+          {
+            "icon": "Globe",
+            "stat": "Why it likely changed",
+            "detail": "The pattern is consistent with more embedded channels, live campus data, mobile access, and course integrations. Attribution is not yet sufficient to claim one cause.",
+            "color": "#6E963B"
+          },
+          {
+            "icon": "TrendingDown",
+            "stat": "What to watch",
+            "detail": "June declined from May: prompts −21%, sessions −14%, and unique users −20%. The quarter close may contribute, but cohort and channel analysis is needed.",
+            "color": "#FC8900"
+          }
+        ]
+      }
+    ],
+    "claimNote": "Source: TritonGPT and widget analytics exports through Jun 2026 · actuals; causal explanation is explicitly an inference · reviewed Jul 2026",
+    "audiences": [
+      "all",
+      "technical",
+      "executive",
+      "internal",
+      "PK",
+      "regent",
+      "LMU"
+    ]
+  },
+  {
     "id": 33,
     "slug": "tritongpt-usage-analytics",
     "type": "content",
@@ -4073,11 +4161,8 @@ export const slides = [
     },
     "claimNote": "Source: TritonGPT usage analytics export · actual monthly sessions and prompts through Jun 2026 · reviewed Jul 2026",
     "audiences": [
-      "internal",
-      "technical",
       "all",
-      "PK",
-      "regent"
+      "PK"
     ]
   },
   {
@@ -4160,11 +4245,8 @@ export const slides = [
     },
     "claimNote": "Source: TritonGPT widget analytics export · actual monthly sessions and prompts through Jun 2026 · reviewed Jul 2026",
     "audiences": [
-      "internal",
-      "technical",
       "all",
-      "PK",
-      "regent"
+      "PK"
     ]
   },
   {
@@ -4226,10 +4308,8 @@ export const slides = [
     },
     "claimNote": "Source: TritonGPT usage analytics export · actual monthly unique users through Jun 2026 · reviewed Jul 2026",
     "audiences": [
-      "internal",
       "all",
-      "PK",
-      "regent"
+      "PK"
     ]
   },
   {
@@ -5637,6 +5717,7 @@ export const slides = [
     "managerLabel": "Video: TritonAI API demo June 30",
     "managerSummary": "June 30 screen recording sped up to 1.5x, inserted after the Citizen Developer Program API path slide.",
     "videoSrc": "/media/harness-api-demo-2026-06-30-1.5x.mp4",
+    "demoLabel": "Harness + TritonAI API — Build a Campus App",
     "videoAutoPlay": true,
     "videoLoop": false,
     "audiences": [
@@ -5654,6 +5735,7 @@ export const slides = [
     "managerLabel": "Video: TritonAI API demo 8:42 AM",
     "managerSummary": "June 25 screen recording sped up to 1.8x, inserted after the Citizen Developer Program API path slide.",
     "videoSrc": "/media/screen-recording-2026-06-25-8.42.16-am-1.8x.mp4",
+    "demoLabel": "Harness + TritonAI API — Connect Campus Context",
     "videoAutoPlay": true,
     "videoLoop": false,
     "audiences": [
