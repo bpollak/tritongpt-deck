@@ -1,5 +1,19 @@
 export const slides = [
   {
+    "id": 0.5,
+    "slug": "ai-operating-review-title",
+    "type": "title",
+    "content": [],
+    "title": "TritonAI Operating Review",
+    "subtitle": "Adoption, delivery, and the next decisions",
+    "presenterName": "Brett Pollak",
+    "presenterTitle": "Executive Director, IT Services",
+    "layout": "title-hero",
+    "audiences": [
+      "PK"
+    ]
+  },
+  {
     "id": 1,
     "slug": "the-ai-enabled-university",
     "type": "title",
@@ -4221,8 +4235,8 @@ export const slides = [
     "slug": "thank-you",
     "type": "title",
     "content": [],
-    "title": "Thank You",
-    "subtitle": "Questions?",
+    "title": "Questions—and the Next Decision",
+    "subtitle": "Where should TritonAI create the next measurable outcome?",
     "layout": "title-hero",
     "presenterName": "Brett Pollak",
     "presenterTitle": "Executive Director, IT Services",

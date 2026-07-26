@@ -1,6 +1,7 @@
 export const slideManagerState = {
   "order": [
     "lmu-title",
+    "ai-operating-review-title",
     "the-ai-enabled-university",
     "the-ai-enabled-university-duo",
     "the-ai-enabled-university-cabinet",
@@ -111,293 +112,233 @@ export const slideManagerState = {
     "cabinet-harness-11d-campus-app-hosting-intake"
   ],
   "audiences": {
+    "lmu-title": [
+      "LMU"
+    ],
+    "ai-operating-review-title": [
+      "PK"
+    ],
     "the-ai-enabled-university": [
       "all",
-      "conference",
-      "public",
-      "internal",
       "technical",
       "executive",
-      "cabinet"
+      "citizen",
+      "internal",
+      "public",
+      "conference",
+      "regent"
     ],
     "the-ai-enabled-university-duo": [
-      "all",
-      "internal",
-      "technical"
+      "all"
     ],
     "the-ai-enabled-university-cabinet": [
       "all"
     ],
     "the-ai-enabled-university-generic": [
-      "all",
-      "public",
-      "internal",
-      "technical"
+      "all"
     ],
     "ai-strategy-and-engagement": [
       "all",
-      "public",
-      "internal",
-      "technical"
+      "internal"
     ],
     "uc-san-diego": [
       "all",
-      "public",
-      "internal",
-      "technical",
-      "conference",
       "executive",
+      "conference",
+      "regent",
       "LMU"
     ],
     "triton-ai-website": [
       "all",
-      "public",
       "internal",
+      "public",
       "LMU"
     ],
     "tritongpt-origin": [
       "all",
-      "conference",
-      "public",
-      "internal",
       "technical",
       "executive",
+      "internal",
+      "public",
+      "conference",
       "regent",
-      "citizen",
       "LMU"
     ],
     "tritongpt-platform": [
       "all",
-      "public",
-      "internal",
       "technical",
       "executive",
-      "cabinet",
-      "regent",
+      "internal",
+      "public",
       "conference",
+      "regent",
       "LMU"
     ],
     "tritongpt-secure-scalable-ai-platform": [
       "all",
-      "public",
-      "internal",
       "technical",
-      "regent",
       "executive",
+      "internal",
+      "regent",
       "LMU"
     ],
     "tritongpt-initiative": [
       "all",
-      "public",
-      "internal",
       "technical",
       "executive",
+      "internal",
+      "public",
       "regent",
       "LMU"
     ],
     "video-media1": [
       "all",
-      "public",
-      "internal",
       "technical",
-      "regent",
-      "cabinet",
       "executive",
+      "internal",
+      "public",
       "conference",
+      "regent",
       "LMU"
     ],
     "video-screen-recording-1": [
-      "all",
-      "public",
-      "internal",
-      "technical"
+      "all"
     ],
     "video-screen-recording-2": [
-      "all",
-      "public",
-      "internal",
-      "technical"
+      "all"
     ],
     "video-media2": [
-      "all",
-      "public",
-      "internal"
+      "all"
     ],
     "video-media4": [
       "all",
-      "internal",
-      "public",
-      "technical",
-      "regent",
-      "executive",
       "LMU"
     ],
     "video-media3": [
       "all",
-      "conference",
-      "internal",
-      "public",
-      "technical",
-      "regent",
-      "executive",
       "LMU"
     ],
     "video-screen-recording-2026-05-27": [
       "all",
-      "public",
-      "internal",
-      "technical",
-      "cabinet",
-      "executive",
       "conference"
     ],
     "video-tritongpt-class-scheduling-agent": [
       "all",
-      "public",
-      "internal",
-      "technical",
-      "cabinet",
-      "executive",
       "conference"
     ],
     "video-media5": [
-      "all",
-      "internal",
-      "public"
+      "all"
     ],
     "video-media6": [
-      "all",
-      "internal",
-      "public"
+      "all"
     ],
     "scaling-engagement-the-tritongpt-widget": [
       "all",
-      "public",
-      "internal",
       "technical",
       "executive",
-      "regent",
-      "cabinet",
+      "internal",
+      "public",
       "LMU"
     ],
     "video-tritongpt-mobile-app": [
       "all",
-      "public",
-      "internal",
       "technical",
       "executive",
-      "regent",
-      "cabinet",
+      "internal",
+      "public",
       "conference",
+      "regent",
       "LMU"
     ],
     "video-media9": [
-      "all",
-      "internal",
-      "technical"
+      "all"
     ],
     "ai-driven-search-blink-integration": [
       "all",
       "public",
-      "internal",
-      "executive",
       "LMU"
     ],
     "instructional-ai-socratic-tutor-faculty-assistant": [
       "all",
-      "public",
-      "internal",
       "technical",
       "executive",
+      "internal",
+      "public",
       "regent",
-      "cabinet",
       "LMU"
     ],
     "video-media11": [
-      "all",
-      "internal",
-      "public",
-      "technical"
+      "all"
     ],
     "tritongpt-to-tritonai-comparison": [
       "all",
-      "public",
-      "internal",
+      "technical",
       "executive",
-      "regent",
-      "cabinet",
+      "internal",
+      "public",
       "conference",
+      "regent",
       "LMU"
     ],
     "uc-san-diego-ai-strategy-2026": [
       "all",
-      "public",
-      "internal",
       "technical",
+      "executive",
+      "internal",
+      "public",
       "regent",
       "LMU"
     ],
     "administrative-ai-the-efficiency-imperative": [
-      "all"
+      "internal"
     ],
     "contract-reviewer-consolidated": [
       "all",
-      "public",
-      "internal",
       "technical",
-      "cabinet",
-      "regent",
       "executive",
+      "internal",
+      "public",
       "conference",
+      "regent",
       "LMU"
     ],
     "the-contract-review-challenge": [
-      "all",
-      "public",
-      "internal",
-      "technical",
-      "LMU"
+      "all"
     ],
     "video-media7": [
-      "all",
-      "internal",
-      "public",
-      "technical",
-      "executive"
+      "all"
     ],
     "transcript-matching-validation": [
       "all",
-      "public",
-      "internal",
       "technical",
-      "cabinet",
       "executive",
-      "regent",
+      "internal",
+      "public",
       "conference",
+      "regent",
       "LMU"
     ],
     "cabinet-harness-03-question": [
       "all",
-      "conference",
       "citizen",
-      "regent",
-      "executive"
+      "conference",
+      "regent"
     ],
     "tritonai-developer-api-program": [
       "all",
+      "technical",
+      "executive",
+      "citizen",
       "internal",
       "public",
-      "regent",
       "conference",
-      "LMU",
-      "citizen",
-      "cabinet",
-      "executive"
+      "regent",
+      "LMU"
     ],
     "llm-api-usage-attribution": [
-      "internal",
-      "technical",
       "all",
+      "technical",
+      "internal",
       "PK",
       "regent",
       "LMU"
@@ -405,47 +346,43 @@ export const slideManagerState = {
     "campus-app-hosting": [
       "all",
       "internal",
-      "public",
       "LMU"
     ],
     "campus-app-hosting-intake": [
       "all",
-      "conference",
+      "technical",
+      "executive",
+      "citizen",
       "internal",
       "public",
+      "conference",
       "regent",
-      "LMU",
-      "citizen",
-      "cabinet",
-      "executive"
+      "LMU"
     ],
     "harness-memory-architecture": [
       "all",
-      "internal",
-      "cabinet",
+      "technical",
       "citizen",
+      "internal",
       "conference"
     ],
     "harness-memory-scale-ucsd": [
       "all",
-      "conference",
-      "internal",
-      "cabinet",
+      "technical",
       "citizen",
+      "internal",
+      "conference",
       "LMU"
     ],
     "harness-perf-review-demo": [
       "all",
-      "conference",
-      "internal",
-      "cabinet",
       "citizen",
-      "LMU"
+      "conference"
     ],
     "agent-engineering-strategy": [
       "all",
-      "public",
       "internal",
+      "public",
       "LMU"
     ],
     "the-new-workforce-competency": [
@@ -456,24 +393,21 @@ export const slideManagerState = {
     ],
     "the-agentic-ai-stack": [
       "all",
+      "technical",
       "internal",
       "public",
       "regent",
       "LMU"
     ],
     "multi-agent-incident-response-orchestration": [
-      "all",
-      "internal",
-      "public",
-      "regent",
-      "LMU"
+      "all"
     ],
     "efficiency-ai-vs-opportunity-ai": [
       "all"
     ],
     "ucsd-ai-by-the-numbers": [
       "all",
-      "LMU"
+      "executive"
     ],
     "training-and-outreach": [
       "all"
@@ -482,268 +416,221 @@ export const slideManagerState = {
       "all",
       "internal",
       "public",
+      "regent",
       "LMU"
     ],
     "ai-roadmap-2026": [
-      "internal",
       "all",
-      "PK",
-      "regent"
+      "internal",
+      "PK"
     ],
     "ai-roadmap-2026-q2": [
-      "internal",
       "all",
-      "PK",
-      "regent"
+      "internal",
+      "PK"
     ],
     "ai-roadmap-2026-q3": [
-      "internal",
       "all",
-      "PK",
-      "regent"
+      "executive",
+      "internal",
+      "PK"
     ],
     "tritongpt-usage-analytics": [
-      "internal",
-      "technical",
       "all",
+      "technical",
+      "executive",
+      "internal",
       "PK",
       "regent",
       "LMU"
     ],
     "tritongpt-widget-analytics": [
-      "internal",
-      "technical",
       "all",
-      "PK",
-      "regent"
+      "PK"
     ],
     "tritongpt-user-growth": [
-      "internal",
       "all",
       "PK",
-      "regent",
       "LMU"
     ],
     "research-alignment-poc": [
-      "all",
-      "regent"
+      "all"
     ],
     "ai-engagement-at-scale": [
       "all",
+      "executive",
       "regent"
     ],
     "thank-you-duo": [
-      "all",
-      "public",
-      "internal"
+      "all"
     ],
     "thank-you-cabinet": [
       "all"
     ],
     "thank-you-questions": [
-      "all",
-      "public",
-      "technical"
+      "all"
     ],
     "cabinet-people-00-title": [
-      "all"
+      "all",
+      "cabinet"
     ],
     "cabinet-people-01-out-of-the-workshop": [
-      "all"
+      "all",
+      "cabinet"
     ],
     "cabinet-people-02-brilliant-new-hire": [
-      "all"
+      "all",
+      "cabinet"
     ],
     "cabinet-people-03-the-desk": [
-      "all"
+      "all",
+      "cabinet"
     ],
     "cabinet-people-04-engineer-day": [
-      "all"
+      "all",
+      "cabinet"
     ],
     "cabinet-people-05-roles-converged": [
-      "all"
+      "all",
+      "cabinet"
     ],
     "cabinet-people-06-stays-human": [
-      "all"
+      "all",
+      "cabinet"
     ],
     "cabinet-people-07-ucsd-now": [
-      "all"
+      "all",
+      "cabinet"
     ],
     "cabinet-people-08-organizational-lead": [
-      "all"
+      "all",
+      "cabinet"
     ],
     "cabinet-people-09-printing-press": [
-      "all"
+      "all",
+      "cabinet"
     ],
     "cabinet-people-10-domain-expert": [
-      "all"
+      "all",
+      "cabinet"
     ],
     "cabinet-people-11-three-questions": [
-      "all"
+      "all",
+      "cabinet"
     ],
     "cabinet-people-12-the-ask": [
-      "all"
+      "all",
+      "cabinet"
     ],
     "cabinet-people-13-closing": [
-      "all"
+      "all",
+      "cabinet"
     ],
     "cabinet-harness-02-convergence": [
       "all",
       "citizen",
-      "regent",
-      "cabinet",
-      "executive",
       "LMU"
     ],
     "cabinet-harness-08b-component-framework": [
       "all",
       "citizen",
-      "regent",
-      "cabinet",
-      "executive",
       "LMU"
     ],
     "cabinet-harness-04b-fixed-architecture": [
       "all",
       "citizen",
-      "regent",
-      "executive",
       "LMU"
     ],
     "cabinet-harness-06-already-in-toolbox": [
-      "all",
-      "citizen",
-      "regent",
-      "executive",
-      "LMU"
+      "all"
     ],
     "cabinet-harness-08c-while-loop": [
       "all",
-      "citizen",
-      "regent",
-      "LMU"
+      "citizen"
     ],
     "cabinet-harness-09b-context-management": [
       "all",
-      "citizen",
-      "regent",
-      "LMU"
+      "technical",
+      "citizen"
     ],
     "cabinet-harness-08e-tools-hooks-safety": [
       "all",
-      "citizen",
-      "regent",
-      "LMU"
+      "technical",
+      "citizen"
     ],
     "cabinet-harness-10-subagents": [
       "all",
-      "citizen",
-      "regent",
-      "LMU"
+      "citizen"
     ],
     "video-harness-api-demo-2026-06-25-810": [
       "all",
-      "citizen",
-      "regent",
-      "cabinet",
-      "executive",
-      "LMU"
+      "citizen"
     ],
     "video-harness-api-demo-2026-06-25-842": [
-      "all",
-      "citizen",
-      "regent",
-      "cabinet",
-      "executive",
-      "LMU"
+      "all"
     ],
     "from-tritongpt-to-tritonai": [
       "all",
+      "executive",
       "internal",
       "public",
-      "executive",
-      "regent",
-      "LMU"
+      "regent"
     ],
     "cabinet-harness-11-ucsd-safe-path": [
       "all",
+      "technical",
       "citizen",
       "regent",
-      "cabinet",
-      "executive",
       "LMU"
     ],
     "cabinet-harness-11a-two-environments": [
       "all",
-      "citizen",
-      "regent",
-      "LMU"
+      "citizen"
     ],
     "the-flywheel-in-action-pdf-remediator": [
       "all",
-      "internal",
       "executive",
-      "regent",
+      "internal",
       "LMU"
     ],
     "the-flywheel-in-action-biobib-formatter": [
       "all",
-      "public",
-      "internal",
-      "executive",
-      "regent",
-      "citizen",
-      "LMU"
+      "citizen"
     ],
     "the-flywheel-in-action-ai-use-case-meeting": [
       "all",
-      "public",
-      "internal",
-      "executive",
-      "regent",
       "citizen",
-      "LMU"
+      "internal",
+      "public"
     ],
     "the-flywheel-in-action-dissertation-formatter": [
-      "all",
-      "public",
-      "internal",
-      "executive",
-      "regent",
-      "citizen",
-      "LMU"
+      "all"
     ],
     "cabinet-harness-13-recap": [
-      "all",
-      "citizen",
-      "regent",
-      "cabinet",
-      "executive",
-      "LMU"
+      "internal"
     ],
     "the-team-behind-tritonai": [
       "all",
-      "internal",
+      "technical",
       "executive",
-      "regent",
       "citizen",
+      "internal",
+      "regent",
       "LMU"
     ],
     "thank-you": [
       "all",
-      "conference",
+      "technical",
+      "executive",
+      "citizen",
       "internal",
       "public",
-      "executive",
+      "conference",
+      "PK",
       "regent"
-    ],
-    "lmu-title": [
-      "LMU"
     ],
     "lmu-thank-you": [
       "LMU"
     ]
   }
 };
-
-export default slideManagerState;
