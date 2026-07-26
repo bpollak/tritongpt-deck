@@ -79,26 +79,13 @@ This file defines the editorial contract and canonical sequence for each support
 
 ## cabinet
 
-**Communication job:** Recognize how agentic AI changes roles and organizational design, then identify where a domain expert should lead the next build.
+**Status:** Retired by editorial decision on July 26, 2026.
 
-**Canonical count:** 14
+**Communication job:** None. The May 2026 Chancellor's Cabinet briefing is no longer part of the active slide library.
 
-**Sequence:**
+**Canonical count:** 0
 
-1. `cabinet-people-00-title`
-2. `cabinet-people-01-out-of-the-workshop`
-3. `cabinet-people-02-brilliant-new-hire`
-4. `cabinet-people-03-the-desk`
-5. `cabinet-people-04-engineer-day`
-6. `cabinet-people-05-roles-converged`
-7. `cabinet-people-06-stays-human`
-8. `cabinet-people-07-ucsd-now`
-9. `cabinet-people-08-organizational-lead`
-10. `cabinet-people-09-printing-press`
-11. `cabinet-people-10-domain-expert`
-12. `cabinet-people-11-three-questions`
-13. `cabinet-people-12-the-ask`
-14. `cabinet-people-13-closing`
+**Sequence:** None. Keep the `cabinet` audience key reserved so existing links fail closed with an empty-view message rather than exposing the full library.
 
 ## citizen
 

@@ -23,7 +23,7 @@ The goal is complete only when all of the following are true:
 
 1. Every supported audience has one deliberate opening, a cumulative narrative, and one purposeful closing.
 2. Audience sequences meet the recommended size ranges below, or an exception is documented with a clear reason.
-3. The Cabinet audience contains the intended Cabinet briefing and a decision-oriented close.
+3. The Cabinet audience contains the intended Cabinet briefing and a decision-oriented close unless a later editorial decision explicitly retires that briefing.
 4. Sensitive performance and workforce material is restricted to explicitly approved audiences.
 5. The OpenClaw memory story covers evidence, curation, retrieval, action, write-back, provenance, freshness, privacy, correction, and operational health.
 6. Volatile or non-obvious claims are sourced, dated, qualified, or removed.
@@ -213,8 +213,8 @@ Counts are guardrails, not arbitrary quotas. Narrative completeness and audience
 
 ## Completion evidence
 
-- Final managed library: 92 slides; `audience=all`: 87 slides.
-- Final audience counts: Technical 25, Executive 24, Cabinet 14, Citizen Developer 22, Internal 35, Public 22, Conference 19, PK 10, Regent 25, and LMU 35.
+- Current managed library: 78 slides; `audience=all`: 73 slides.
+- Current audience counts: Technical 25, Executive 24, Cabinet 0 (May 2026 briefing retired), Citizen Developer 22, Internal 35, Public 22, Conference 19, PK 10, Regent 25, and LMU 35.
 - Structural validation: `npm run check:deck` passed.
 - Production validation: `npm run build` and `git diff --check` passed.
 - Browser validation: every slide in every audience sequence was opened on production at 1280×720 and 1024×640; counters, direct links, navigation controls, visible fit, overflow, and typography were checked.
