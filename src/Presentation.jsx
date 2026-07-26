@@ -347,7 +347,12 @@ const Presentation = () => {
   }
 
   return (
-    <div className="presentation-viewer w-screen h-screen flex flex-col overflow-hidden relative font-sans" role="application" aria-label="Presentation viewer">
+    <div
+      className="presentation-viewer w-screen h-screen flex flex-col overflow-hidden relative font-sans"
+      role="application"
+      aria-label="Presentation viewer"
+      style={{ backgroundColor: currentSlide?.backgroundColor || (currentSlide?.dark ? '#1a1a1a' : '#F5F0E6') }}
+    >
       <div aria-hidden="true" className="absolute w-0 h-0 overflow-hidden opacity-0 pointer-events-none">
         {nearbyVideoAssets.map(({ src, poster }) => (
           <video
@@ -408,7 +413,7 @@ const Presentation = () => {
               <Slide slide={currentSlide} />
               {currentSlide.claimNote && (
                 <div
-                  className="pointer-events-none absolute bottom-2 left-20 z-40 max-w-[38vw] rounded-lg border border-white/60 bg-white/88 px-2.5 py-1 text-[8px] font-semibold leading-tight text-slate-600 shadow-sm backdrop-blur-sm sm:bottom-4 sm:left-24 sm:max-w-[30vw] sm:text-[9px]"
+                  className="pointer-events-none absolute bottom-2 left-2 z-40 max-w-[72vw] rounded-lg border border-white/60 bg-white/88 px-2.5 py-1 text-[10.5px] font-semibold leading-tight text-slate-600 shadow-sm backdrop-blur-sm sm:bottom-4 sm:left-24 sm:max-w-[30vw] sm:text-[11.5px]"
                   aria-label={`Claim context: ${currentSlide.claimNote}`}
                 >
                   {currentSlide.claimNote}

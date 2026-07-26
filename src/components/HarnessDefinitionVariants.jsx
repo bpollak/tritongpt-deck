@@ -120,7 +120,7 @@ const Marker = ({ children, slide }) => {
   return (
     <motion.div
       {...fade(0.05, -4)}
-      className="absolute left-[4.8vw] top-[4.2vh] text-[13px] uppercase"
+      className="absolute left-[4.8vw] top-[4.2vh] text-[15px] uppercase"
       style={{ color: T.coral, fontFamily: T.mono, fontWeight: 600, letterSpacing: '0.26em' }}
     >
       {children}
@@ -162,7 +162,7 @@ const JobSpine = ({ activeKey }) => {
     <motion.div
       {...fade(0.1, -4)}
       className="absolute right-[4.8vw] top-[4.0vh] flex items-center gap-2"
-      style={{ fontFamily: T.mono, fontSize: 11, letterSpacing: '0.2em', fontWeight: 700 }}
+      style={{ fontFamily: T.mono, fontSize: 13, letterSpacing: '0.2em', fontWeight: 700 }}
     >
       {jobSpineEntries.map((entry, index) => {
         const isActive = entry.key === activeKey;
@@ -230,7 +230,7 @@ const Card = ({ children, delay = 0.35, className = '', style }) => (
 );
 
 const Kicker = ({ children, className = '', style }) => (
-  <div className={`text-[12px] uppercase ${className}`} style={{ color: T.coralDark, fontFamily: T.mono, fontWeight: 600, letterSpacing: '0.22em', ...style }}>
+  <div className={`text-[14px] uppercase ${className}`} style={{ color: T.coralDark, fontFamily: T.mono, fontWeight: 600, letterSpacing: '0.22em', ...style }}>
     {children}
   </div>
 );
@@ -446,7 +446,7 @@ const Pill = ({ children, delay = 0.4, tone = 'coral' }) => (
       background: tone === 'blue' ? T.bluePale : '#fff8f2',
       color: tone === 'blue' ? T.blue : T.coralDark,
       fontFamily: T.mono,
-      fontSize: 15,
+      fontSize: 17,
       fontWeight: 600
     }}
   >
@@ -504,7 +504,7 @@ const HarnessQuestionVariant = ({ slide }) => {
   return (
   <Shell>
     <Marker slide={slide}>{slide.marker}</Marker>
-    <motion.div {...fade(0.18)} className="absolute left-[4.8vw] top-[4vh] text-[13px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em' }}>
+    <motion.div {...fade(0.18)} className="absolute left-[4.8vw] top-[4vh] text-[15px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em' }}>
       {slide.kicker}
     </motion.div>
     <h1
@@ -559,14 +559,14 @@ const HarnessQuestionVariant = ({ slide }) => {
               </div>
               {index === 0 ? (
                 <div className="flex items-center gap-2 pt-1.5" style={{ color: T.blue }}>
-                  <div className="rounded-[5px] border px-3 py-2 text-[12px]" style={{ borderColor: '#b9d3dc', background: T.bluePale, fontFamily: T.mono, fontWeight: 800 }}>PROMPT</div>
+                  <div className="rounded-[5px] border px-3 py-2 text-[14px]" style={{ borderColor: '#b9d3dc', background: T.bluePale, fontFamily: T.mono, fontWeight: 800 }}>PROMPT</div>
                   <span style={{ color: '#9ab4c1' }}>→</span>
-                  <div className="rounded-full border px-3 py-2 text-[12px]" style={{ borderColor: '#b9d3dc', background: '#fff', fontFamily: T.mono, fontWeight: 800 }}>ANSWER</div>
+                  <div className="rounded-full border px-3 py-2 text-[14px]" style={{ borderColor: '#b9d3dc', background: '#fff', fontFamily: T.mono, fontWeight: 800 }}>ANSWER</div>
                 </div>
               ) : (
                 <div className="flex items-center gap-1.5 pt-1.5" style={{ color: T.coralDark, fontFamily: T.mono }}>
                   {['context', 'tools', 'loop'].map((label) => (
-                    <span key={label} className="rounded-full border px-3 py-1.5 text-[11px] uppercase" style={{ borderColor: T.coralPale, background: '#fff' }}>
+                    <span key={label} className="rounded-full border px-3 py-1.5 text-[13px] uppercase" style={{ borderColor: T.coralPale, background: '#fff' }}>
                       {label}
                     </span>
                   ))}
@@ -577,11 +577,11 @@ const HarnessQuestionVariant = ({ slide }) => {
               {index === 0 ? (
                 <div>
                   <div className="grid grid-cols-[1fr_104px_1fr] items-center gap-4">
-                    <div className="rounded-[7px] border px-5 py-3.5 text-center" style={{ borderColor: '#b9d3dc', background: T.bluePale, color: T.blue, fontFamily: T.mono, fontSize: 14, fontWeight: 800 }}>
+                    <div className="rounded-[7px] border px-5 py-3.5 text-center" style={{ borderColor: '#b9d3dc', background: T.bluePale, color: T.blue, fontFamily: T.mono, fontSize: 16, fontWeight: 800 }}>
                       user asks
                     </div>
                     <div className="flex h-[76px] w-[76px] items-center justify-center rounded-full border mx-auto" style={{ borderColor: T.blue, color: T.blue, fontFamily: T.serif, fontStyle: 'italic', fontSize: 44 }}>M</div>
-                    <div className="rounded-[7px] border px-5 py-3.5 text-center" style={{ borderColor: '#b9d3dc', background: '#fff', color: T.blue, fontFamily: T.mono, fontSize: 14, fontWeight: 800 }}>
+                    <div className="rounded-[7px] border px-5 py-3.5 text-center" style={{ borderColor: '#b9d3dc', background: '#fff', color: T.blue, fontFamily: T.mono, fontSize: 16, fontWeight: 800 }}>
                       answer returns
                     </div>
                   </div>
@@ -601,7 +601,7 @@ const HarnessQuestionVariant = ({ slide }) => {
                   <div className="grid grid-cols-[1fr_104px_1fr] items-center gap-4">
                     <div className="space-y-2.5">
                       {['files', 'rules', 'memory'].map((label) => (
-                        <div key={label} className="rounded-[5px] border px-3 py-2 text-center text-[12px]" style={{ borderColor: T.faint, color: T.muted, fontFamily: T.mono, fontWeight: 800 }}>{label}</div>
+                        <div key={label} className="rounded-[5px] border px-3 py-2 text-center text-[14px]" style={{ borderColor: T.faint, color: T.muted, fontFamily: T.mono, fontWeight: 800 }}>{label}</div>
                       ))}
                     </div>
                     {/* Cyclic loop: dashed ring rotates continuously around the M */}
@@ -617,12 +617,12 @@ const HarnessQuestionVariant = ({ slide }) => {
                       </svg>
                       <div className="relative flex h-[88px] w-[88px] items-center justify-center rounded-full border" style={{ borderColor: T.coral, background: '#fff', color: T.coralDark, fontFamily: T.serif, fontStyle: 'italic', fontSize: 52 }}>
                         M
-                        <span className="absolute bottom-[-8px] right-[-8px] rounded-full px-2 py-0.5 text-[11px]" style={{ background: T.coral, color: '#fff', fontFamily: T.mono, fontStyle: 'normal' }}>↺</span>
+                        <span className="absolute bottom-[-8px] right-[-8px] rounded-full px-2 py-0.5 text-[13px]" style={{ background: T.coral, color: '#fff', fontFamily: T.mono, fontStyle: 'normal' }}>↺</span>
                       </div>
                     </div>
                     <div className="space-y-2.5">
                       {['read', 'edit', 'verify'].map((label) => (
-                        <div key={label} className="rounded-[5px] border px-3 py-2 text-center text-[12px]" style={{ borderColor: T.coralPale, color: T.coralDark, fontFamily: T.mono, fontWeight: 800 }}>{label}</div>
+                        <div key={label} className="rounded-[5px] border px-3 py-2 text-center text-[14px]" style={{ borderColor: T.coralPale, color: T.coralDark, fontFamily: T.mono, fontWeight: 800 }}>{label}</div>
                       ))}
                     </div>
                   </div>
@@ -633,34 +633,34 @@ const HarnessQuestionVariant = ({ slide }) => {
             <div className="mt-6 rounded-[7px] border-t pt-4" style={{ borderColor: index === 1 ? T.coralPale : '#d9e2e6' }}>
               {index === 0 ? (
                 <div className="flex items-center gap-3">
-                  <span className="text-[10px] uppercase" style={{ color: '#7a96a4', fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 700 }}>You get</span>
+                  <span className="text-[12px] uppercase" style={{ color: '#7a96a4', fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 700 }}>You get</span>
                   <div className="flex items-center gap-2 flex-wrap">
-                    <span className="rounded-[14px] border px-3 py-1.5 text-[13px]" style={{ borderColor: '#b9d3dc', background: '#fff', color: T.blue, fontFamily: T.serif }}>
+                    <span className="rounded-[14px] border px-3 py-1.5 text-[15px]" style={{ borderColor: '#b9d3dc', background: '#fff', color: T.blue, fontFamily: T.serif }}>
                       &ldquo;Here&rsquo;s a summary&hellip;&rdquo;
                     </span>
-                    <span className="text-[11px]" style={{ color: '#9ab4c1', fontFamily: T.mono, fontWeight: 700, letterSpacing: '0.18em' }}>
+                    <span className="text-[13px]" style={{ color: '#9ab4c1', fontFamily: T.mono, fontWeight: 700, letterSpacing: '0.18em' }}>
                       ▣ END OF TURN
                     </span>
                   </div>
                 </div>
               ) : (
                 <div className="flex items-center gap-3">
-                  <span className="text-[10px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 700 }}>You get</span>
+                  <span className="text-[12px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 700 }}>You get</span>
                   <div className="flex items-center gap-2 flex-wrap">
-                    <span className="rounded-[5px] border px-2.5 py-1.5 text-[12px]" style={{ borderColor: T.coralPale, background: '#fff', color: T.coralDark, fontFamily: T.mono, fontWeight: 700 }}>
+                    <span className="rounded-[5px] border px-2.5 py-1.5 text-[14px]" style={{ borderColor: T.coralPale, background: '#fff', color: T.coralDark, fontFamily: T.mono, fontWeight: 700 }}>
                       📄 contract.docx
                     </span>
-                    <span className="rounded-[5px] border px-2.5 py-1.5 text-[12px]" style={{ borderColor: T.coralPale, background: '#fff', color: T.coralDark, fontFamily: T.mono, fontWeight: 700 }}>
+                    <span className="rounded-[5px] border px-2.5 py-1.5 text-[14px]" style={{ borderColor: T.coralPale, background: '#fff', color: T.coralDark, fontFamily: T.mono, fontWeight: 700 }}>
                       ✓ routed for sign-off
                     </span>
-                    <span className="rounded-[5px] border px-2.5 py-1.5 text-[12px]" style={{ borderColor: T.coralPale, background: '#fff', color: T.coralDark, fontFamily: T.mono, fontWeight: 700 }}>
+                    <span className="rounded-[5px] border px-2.5 py-1.5 text-[14px]" style={{ borderColor: T.coralPale, background: '#fff', color: T.coralDark, fontFamily: T.mono, fontWeight: 700 }}>
                       🗒 logged
                     </span>
                   </div>
                 </div>
               )}
             </div>
-            <div className="mt-5" style={{ color: T.muted, fontSize: 19.5, lineHeight: 1.28 }}>
+            <div className="mt-5" style={{ color: T.muted, fontSize: 21.5, lineHeight: 1.28 }}>
               {card.body}
             </div>
           </Card>
@@ -674,7 +674,7 @@ const HarnessQuestionVariant = ({ slide }) => {
       >
         {slide.bottomLineLabel && (
           <span
-            className="rounded-[5px] px-3 py-2 text-[12px]"
+            className="rounded-[5px] px-3 py-2 text-[14px]"
             style={{
               background: T.coral,
               color: '#fff',
@@ -687,7 +687,7 @@ const HarnessQuestionVariant = ({ slide }) => {
             {slide.bottomLineLabel}
           </span>
         )}
-        <div style={{ fontSize: 'clamp(20px, 1.7vw, 28px)', fontWeight: 560, lineHeight: 1.2 }}>
+        <div style={{ fontSize: 'clamp(22px, 1.7vw, 28px)', fontWeight: 560, lineHeight: 1.2 }}>
           {slide.bottomLine}
         </div>
       </motion.div>
@@ -706,7 +706,7 @@ const HarnessPressureVariant = ({ slide }) => (
           {(slide.signals || []).map((signal, index) => (
             <motion.div key={`${signal.label}-${index}`} {...fade(0.62 + index * 0.09)} className="border-b pb-4" style={{ borderColor: T.rule }}>
               <div style={{ color: signal.accent ? T.coralDark : T.ink, fontSize: 30, fontWeight: 560 }}>{signal.label}</div>
-              <div className="mt-1" style={{ color: T.muted, fontSize: 18 }}>{signal.note}</div>
+              <div className="mt-1" style={{ color: T.muted, fontSize: 20 }}>{signal.note}</div>
             </motion.div>
           ))}
         </div>
@@ -715,14 +715,14 @@ const HarnessPressureVariant = ({ slide }) => (
         <div className="grid grid-cols-3 gap-5">
           {(slide.flow || []).map((item, index) => (
             <Card key={`${item.title}-${index}`} delay={0.55 + index * 0.11} className="min-h-[210px] p-6">
-              <div className="text-[13px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.18em' }}>{item.kicker}</div>
+              <div className="text-[15px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.18em' }}>{item.kicker}</div>
               <div className="mt-5" style={{ fontSize: 34, lineHeight: 1.05, fontWeight: 560 }}>{item.title}</div>
-              <div className="mt-4" style={{ color: T.muted, fontSize: 18, lineHeight: 1.35 }}>{item.body}</div>
+              <div className="mt-4" style={{ color: T.muted, fontSize: 20, lineHeight: 1.35 }}>{item.body}</div>
             </Card>
           ))}
         </div>
         <motion.div {...fade(1.05)} className="mt-8 rounded-[7px] border p-5" style={{ borderColor: T.coralPale, background: '#fff5ee', fontSize: 23 }}>
-          <span className="text-[12px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.2em' }}>Manager implication</span>
+          <span className="text-[14px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.2em' }}>Manager implication</span>
           <span className="ml-4">Evaluate depth, judgment, and artifacts — not polished text alone.</span>
         </motion.div>
       </div>
@@ -742,11 +742,11 @@ const HarnessRubricVariant = ({ slide }) => (
             className="flex flex-col justify-end rounded-[8px] border bg-white/60 p-5"
             style={{ borderColor: level.highlight ? T.coral : T.faint }}
           >
-            <div className="text-[13px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.18em' }}>Level {index + 1}</div>
+            <div className="text-[15px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.18em' }}>Level {index + 1}</div>
             <div className="mt-3" style={{ fontSize: 30, lineHeight: 1.05, fontWeight: 600 }}>{level.title}</div>
-            <div className="mt-4" style={{ color: T.muted, fontSize: 17, lineHeight: 1.35 }}>{level.body}</div>
+            <div className="mt-4" style={{ color: T.muted, fontSize: 19, lineHeight: 1.35 }}>{level.body}</div>
             {level.highlight && (
-              <div className="mt-5 rounded-[5px] px-3 py-2 text-center" style={{ background: T.coral, color: '#fff', fontFamily: T.mono, fontSize: 13, fontWeight: 700 }}>
+              <div className="mt-5 rounded-[5px] px-3 py-2 text-center" style={{ background: T.coral, color: '#fff', fontFamily: T.mono, fontSize: 15, fontWeight: 700 }}>
                 SHIPPED WORK
               </div>
             )}
@@ -772,7 +772,7 @@ const HarnessDefinitionCoreVariant = ({ slide }) => {
               <Arrow x1={625} y1={202} x2={805} y2={202} delay={1.0} />
               <motion.g {...fade(1.14)}>
                 <rect x="810" y="178" width="90" height="48" rx="6" fill={T.coralDark} />
-                <text x="855" y="208" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 15, fontWeight: 700 }} fill="#fff">STOP</text>
+                <text x="855" y="208" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 17, fontWeight: 700 }} fill="#fff">STOP</text>
               </motion.g>
               <motion.text {...fade(1.28)} x="555" y="325" textAnchor="middle" style={{ fontFamily: T.serif, fontSize: 24, fontStyle: 'italic' }} fill={T.muted}>
                 no memory · no follow-through · no recovery
@@ -781,20 +781,20 @@ const HarnessDefinitionCoreVariant = ({ slide }) => {
           )}
           {wrapped && (
             <>
-              <motion.text {...fade(0.48)} x="655" y="55" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 16, letterSpacing: '0.26em', fontWeight: 700 }} fill={T.coralDark}>
+              <motion.text {...fade(0.48)} x="655" y="55" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 18, letterSpacing: '0.26em', fontWeight: 700 }} fill={T.coralDark}>
                 ACT · OBSERVE · ADJUST
               </motion.text>
               {/* User figure — the human who hands a goal to the harness */}
               <motion.g {...fade(0.42)}>
                 <circle cx="80" cy="178" r="14" fill="none" stroke={T.blue} strokeWidth="1.8" />
                 <path d="M 56 230 C 60 206, 100 206, 104 230" fill="none" stroke={T.blue} strokeWidth="1.8" strokeLinecap="round" />
-                <text x="80" y="260" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 11, letterSpacing: '0.22em', fontWeight: 700 }} fill={T.blue}>YOU</text>
+                <text x="80" y="260" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 13, letterSpacing: '0.22em', fontWeight: 700 }} fill={T.blue}>YOU</text>
               </motion.g>
               <motion.text {...fade(0.6)} x="200" y="195" textAnchor="middle" style={{ fontFamily: T.serif, fontSize: 24, fontStyle: 'italic' }} fill={T.blue}>"do this"</motion.text>
-              <motion.text {...fade(0.6)} x="200" y="222" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 11, letterSpacing: '0.2em', fontWeight: 700 }} fill={T.muted}>THE GOAL</motion.text>
+              <motion.text {...fade(0.6)} x="200" y="222" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 13, letterSpacing: '0.2em', fontWeight: 700 }} fill={T.muted}>THE GOAL</motion.text>
               <Arrow x1={108} y1={205} x2={260} y2={205} delay={0.7} color={T.blue} />
               <motion.rect {...lineDraw(0.78)} x="270" y="80" width="770" height="250" rx="14" fill="none" stroke={T.coral} strokeWidth="1.6" />
-              <motion.text {...fade(0.92)} x="300" y="116" style={{ fontFamily: T.mono, fontSize: 14, letterSpacing: '0.22em', fontWeight: 600 }} fill={T.coralDark}>HARNESS</motion.text>
+              <motion.text {...fade(0.92)} x="300" y="116" style={{ fontFamily: T.mono, fontSize: 16, letterSpacing: '0.22em', fontWeight: 600 }} fill={T.coralDark}>HARNESS</motion.text>
               <Model x={595} y={205} r={58} delay={1.05} loop />
               {['take action', 'observe', 'adjust'].map((label, index) => {
                 const y = 135 + index * 70;
@@ -803,7 +803,7 @@ const HarnessDefinitionCoreVariant = ({ slide }) => {
                     <Arrow x1={660} y1={205} x2={800} y2={y} color={T.coralDark} delay={1.15 + index * 0.09} dashed />
                     <motion.g {...fade(1.28 + index * 0.09)}>
                       <rect x="812" y={y - 22} width="150" height="44" rx="18" fill="#fff8f2" stroke={T.coralPale} />
-                      <text x="887" y={y + 6} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 14, fontWeight: 600 }} fill={T.coralDark}>{label}</text>
+                      <text x="887" y={y + 6} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 16, fontWeight: 600 }} fill={T.coralDark}>{label}</text>
                     </motion.g>
                   </g>
                 );
@@ -837,9 +837,9 @@ const EquationIcon = ({ type, color = T.ink }) => {
         style={{ background: color, color: '#fff', fontFamily: T.serif, letterSpacing: '0.01em' }}
       >
         <span style={{ fontSize: 22, fontStyle: 'italic', fontWeight: 620 }}>M</span>
-        <span className="mx-1.5" style={{ fontSize: 18, fontStyle: 'normal', fontWeight: 500, opacity: 0.85 }}>+</span>
+        <span className="mx-1.5" style={{ fontSize: 20, fontStyle: 'normal', fontWeight: 500, opacity: 0.85 }}>+</span>
         <span style={{ fontSize: 22, fontStyle: 'italic', fontWeight: 620 }}>H</span>
-        <span className="mx-1.5" style={{ fontSize: 18, fontStyle: 'normal', fontWeight: 500, opacity: 0.85 }}>=</span>
+        <span className="mx-1.5" style={{ fontSize: 20, fontStyle: 'normal', fontWeight: 500, opacity: 0.85 }}>=</span>
         <span style={{ fontSize: 22, fontStyle: 'italic', fontWeight: 620 }}>C</span>
         <span className="absolute bottom-[-5px] left-5 h-2 w-2 rounded-full" style={{ background: color }} />
         <span className="absolute bottom-[-5px] right-5 h-2 w-2 rounded-full" style={{ background: color }} />
@@ -860,7 +860,7 @@ const HarnessDefinitionEquationVariant = ({ slide }) => (
     {slide.kicker && (
       <motion.div
         {...fade(0.18)}
-        className="absolute left-[4.8vw] top-[4vh] text-[13px] uppercase"
+        className="absolute left-[4.8vw] top-[4vh] text-[15px] uppercase"
         style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em' }}
       >
         {slide.kicker}
@@ -884,7 +884,7 @@ const HarnessDefinitionEquationVariant = ({ slide }) => (
           >
             <EquationIcon type={item.icon} color={item.color || T.ink} />
             <div className="mt-6" style={{ fontSize: 40, lineHeight: 1, fontWeight: 560 }}>{item.title}</div>
-            <div className="mt-3 text-[13px] uppercase" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.2em', fontWeight: 700 }}>
+            <div className="mt-3 text-[15px] uppercase" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.2em', fontWeight: 700 }}>
               {item.kicker}
             </div>
             <div className="mt-2.5" style={{ color: item.wordColor || T.coralDark, fontSize: 52, lineHeight: 1, fontStyle: 'italic', fontWeight: 430 }}>
@@ -900,7 +900,7 @@ const HarnessDefinitionEquationVariant = ({ slide }) => (
                   return (
                     <span
                       key={chip}
-                      className="rounded-[5px] border px-3 py-1.5 text-[14px]"
+                      className="rounded-[5px] border px-3 py-1.5 text-[16px]"
                       style={{
                         ...palette,
                         fontFamily: T.mono,
@@ -937,14 +937,14 @@ const HarnessDefinitionEquationVariant = ({ slide }) => (
             <div className="flex items-center justify-center gap-2">
               {index === 0 && slide.concrete.label && (
                 <span
-                  className="text-[10px] uppercase"
+                  className="text-[12px] uppercase"
                   style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 700 }}
                 >
                   {slide.concrete.label}
                 </span>
               )}
               <span
-                className="rounded-[6px] border px-3 py-2 text-[13px]"
+                className="rounded-[6px] border px-3 py-2 text-[15px]"
                 style={{
                   borderColor: index === 2 ? T.coralPale : '#d6d0c2',
                   background: index === 2 ? '#fff8f2' : '#fff',
@@ -975,7 +975,7 @@ const HarnessDefinitionEquationVariant = ({ slide }) => (
       >
         {slide.bottomLineLabel && (
           <span
-            className="rounded-[5px] px-3 py-2 text-[12px]"
+            className="rounded-[5px] px-3 py-2 text-[14px]"
             style={{
               background: T.coral,
               color: '#fff',
@@ -988,7 +988,7 @@ const HarnessDefinitionEquationVariant = ({ slide }) => (
             {slide.bottomLineLabel}
           </span>
         )}
-        <div style={{ fontSize: 'clamp(20px, 1.7vw, 28px)', fontWeight: 560, lineHeight: 1.2 }}>
+        <div style={{ fontSize: 'clamp(22px, 1.7vw, 28px)', fontWeight: 560, lineHeight: 1.2 }}>
           {slide.bottomLine}
         </div>
       </motion.div>
@@ -1005,16 +1005,16 @@ const HarnessWorkProductVariant = ({ slide }) => (
           {(slide.pipeline || []).map((step, index) => (
             <React.Fragment key={`${step.title}-${index}`}>
               <Card delay={0.42 + index * 0.11} className="min-h-[185px] p-5">
-                <div className="text-[12px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.18em' }}>{step.kicker}</div>
+                <div className="text-[14px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.18em' }}>{step.kicker}</div>
                 <div className="mt-5" style={{ fontSize: 29, lineHeight: 1.04, fontWeight: 600 }}>{step.title}</div>
-                <div className="mt-3" style={{ color: T.muted, fontSize: 16, lineHeight: 1.35 }}>{step.body}</div>
+                <div className="mt-3" style={{ color: T.muted, fontSize: 18, lineHeight: 1.35 }}>{step.body}</div>
               </Card>
             </React.Fragment>
           ))}
         </div>
         <motion.div {...fade(1.02)} className="mt-8 grid grid-cols-3 gap-4">
           {(slide.outcomes || []).map((outcome, index) => (
-            <div key={`${outcome}-${index}`} className="rounded-[6px] border px-4 py-3 text-center" style={{ borderColor: T.coralPale, background: '#fff8f2', color: T.coralDark, fontFamily: T.mono, fontSize: 15, fontWeight: 700 }}>
+            <div key={`${outcome}-${index}`} className="rounded-[6px] border px-4 py-3 text-center" style={{ borderColor: T.coralPale, background: '#fff8f2', color: T.coralDark, fontFamily: T.mono, fontSize: 17, fontWeight: 700 }}>
               {outcome}
             </div>
           ))}
@@ -1047,7 +1047,7 @@ const HarnessToolboxVariant = ({ slide }) => (
           >
             {vendor.powersBadge && (
               <div
-                className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full px-3 py-1 text-[10.5px]"
+                className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full px-3 py-1 text-[12.5px]"
                 style={{
                   background: T.coral,
                   color: '#fff',
@@ -1071,16 +1071,16 @@ const HarnessToolboxVariant = ({ slide }) => (
               )}
             </div>
             <div className="mt-4 text-center" style={{ color: T.ink, fontSize: 25, lineHeight: 1, fontWeight: 620 }}>{vendor.name}</div>
-            <div className="mt-2.5 text-center text-[11.5px] uppercase" style={{ color: vendor.color || T.coralDark, fontFamily: T.mono, letterSpacing: '0.13em', fontWeight: 700 }}>
+            <div className="mt-2.5 text-center text-[13.5px] uppercase" style={{ color: vendor.color || T.coralDark, fontFamily: T.mono, letterSpacing: '0.13em', fontWeight: 700 }}>
               {vendor.surface}
             </div>
 
             {vendor.origin && (
               <div className="mt-5">
-                <div className="text-[11.5px] uppercase" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 700 }}>
+                <div className="text-[13.5px] uppercase" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 700 }}>
                   Origin
                 </div>
-                <div className="mt-1.5" style={{ color: T.ink, fontSize: 16.5, lineHeight: 1.27 }}>
+                <div className="mt-1.5" style={{ color: T.ink, fontSize: 18.5, lineHeight: 1.27 }}>
                   {vendor.origin}
                 </div>
               </div>
@@ -1088,17 +1088,17 @@ const HarnessToolboxVariant = ({ slide }) => (
 
             {vendor.now && (
               <div className="mt-4">
-                <div className="text-[11.5px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 700 }}>
+                <div className="text-[13.5px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 700 }}>
                   Today
                 </div>
-                <div className="mt-1.5" style={{ color: T.ink, fontSize: 16.5, lineHeight: 1.27 }}>
+                <div className="mt-1.5" style={{ color: T.ink, fontSize: 18.5, lineHeight: 1.27 }}>
                   {vendor.now}
                 </div>
               </div>
             )}
 
             {vendor.sourceLabel && (
-              <div className="mt-3 text-[10px] leading-tight" style={{ color: T.muted, fontFamily: T.mono }}>
+              <div className="mt-3 text-[12px] leading-tight" style={{ color: T.muted, fontFamily: T.mono }}>
                 {vendor.sourceUrl ? (
                   <a href={vendor.sourceUrl} target="_blank" rel="noreferrer" className="underline decoration-dotted underline-offset-2">
                     {vendor.sourceLabel}
@@ -1110,10 +1110,10 @@ const HarnessToolboxVariant = ({ slide }) => (
             {vendor.highlight && (
               <div className="mt-auto pt-4">
                 <div className="rounded-[6px] border px-3 py-2.5" style={{ borderColor: T.coral, background: T.coral }}>
-                  <div className="text-[11px] uppercase" style={{ color: '#fff', fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
+                  <div className="text-[13px] uppercase" style={{ color: '#fff', fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
                     UCSD angle
                   </div>
-                  <div className="mt-1" style={{ color: '#fff', fontSize: 13.5, lineHeight: 1.25, fontWeight: 500 }}>
+                  <div className="mt-1" style={{ color: '#fff', fontSize: 15.5, lineHeight: 1.25, fontWeight: 500 }}>
                     {vendor.highlight}
                   </div>
                 </div>
@@ -1130,7 +1130,7 @@ const HarnessToolboxVariant = ({ slide }) => (
       >
         {slide.bottomLineLabel && (
           <span
-            className="shrink-0 rounded-[5px] px-3 py-2 text-[12px]"
+            className="shrink-0 rounded-[5px] px-3 py-2 text-[14px]"
             style={{
               background: T.coral,
               color: '#fff',
@@ -1143,7 +1143,7 @@ const HarnessToolboxVariant = ({ slide }) => (
             {slide.bottomLineLabel}
           </span>
         )}
-        <div style={{ fontSize: 'clamp(18px, 1.45vw, 24px)', fontWeight: 560, lineHeight: 1.25 }}>
+        <div style={{ fontSize: 'clamp(20px, 1.45vw, 24px)', fontWeight: 560, lineHeight: 1.25 }}>
           {slide.bottomLine}
         </div>
       </motion.div>
@@ -1160,7 +1160,7 @@ const HarnessWiredVariant = ({ slide }) => (
         <motion.circle {...fade(0.52)} cx="140" cy="210" r="13" fill={T.blue} />
         <Arrow x1={160} y1={210} x2={270} y2={210} color={T.blue} delay={0.65} />
         <motion.rect {...lineDraw(0.75)} x="295" y="92" width="710" height="235" rx="14" fill="none" stroke={T.coral} strokeWidth="1.6" />
-        <motion.text {...fade(0.92)} x="325" y="128" style={{ fontFamily: T.mono, fontSize: 14, letterSpacing: '0.22em', fontWeight: 600 }} fill={T.coralDark}>HARNESS · STATIC BY DEFAULT</motion.text>
+        <motion.text {...fade(0.92)} x="325" y="128" style={{ fontFamily: T.mono, fontSize: 16, letterSpacing: '0.22em', fontWeight: 600 }} fill={T.coralDark}>HARNESS · STATIC BY DEFAULT</motion.text>
         <Model x={650} y={215} r={58} delay={1.05} />
         {[
           ['tool registry', 390, 166],
@@ -1172,11 +1172,11 @@ const HarnessWiredVariant = ({ slide }) => (
             <Arrow x1={index < 2 ? 592 : 708} y1={215} x2={index < 2 ? x + 146 : x} y2={y} color={T.coralDark} delay={1.18 + index * 0.08} dashed />
             <motion.g {...fade(1.3 + index * 0.08)}>
               <rect x={x} y={y - 24} width="146" height="48" rx="6" fill="#fff8f2" stroke={T.coralPale} />
-              <text x={x + 73} y={y + 6} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 14, fontWeight: 600 }} fill={T.coralDark}>{label}</text>
+              <text x={x + 73} y={y + 6} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 16, fontWeight: 600 }} fill={T.coralDark}>{label}</text>
             </motion.g>
           </g>
         ))}
-        <motion.text {...fade(1.66)} x="650" y="392" textAnchor="middle" style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 14, letterSpacing: '0.24em', fontWeight: 600 }}>
+        <motion.text {...fade(1.66)} x="650" y="392" textAnchor="middle" style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 16, letterSpacing: '0.24em', fontWeight: 600 }}>
           NO ASSEMBLY · NO WIRING · IT JUST RUNS
         </motion.text>
       </svg>
@@ -1193,7 +1193,7 @@ const HarnessManifestoVariant = ({ slide }) => (
       </h1>
       <motion.div {...fade(0.7, 0)} className="mx-auto mt-9 h-px w-[28vw]" style={{ background: T.rule }} />
       {slide.subhead && (
-        <motion.div {...fade(0.86, 0)} className="mx-auto mt-7 max-w-[62vw] italic" style={{ color: T.muted, fontSize: 'clamp(19px, 1.5vw, 26px)', lineHeight: 1.35 }}>
+        <motion.div {...fade(0.86, 0)} className="mx-auto mt-7 max-w-[62vw] italic" style={{ color: T.muted, fontSize: 'clamp(21px, 1.5vw, 26px)', lineHeight: 1.35 }}>
           {slide.subhead}
         </motion.div>
       )}
@@ -1234,10 +1234,10 @@ const HarnessArchitectureDiagram = ({ items }) => (
       <motion.text {...fade(0.8, 0)} x="390" y="246" textAnchor="middle" style={{ fontFamily: T.serif, fontSize: 34, fontWeight: 620 }} fill={T.ink}>
         HARNESS
       </motion.text>
-      <motion.text {...fade(0.9, 0)} x="390" y="272" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 10, letterSpacing: '0.18em', fontWeight: 700 }} fill={T.muted}>
+      <motion.text {...fade(0.9, 0)} x="390" y="272" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 12, letterSpacing: '0.18em', fontWeight: 700 }} fill={T.muted}>
         WORKING ENVIRONMENT
       </motion.text>
-      <motion.text {...fade(0.98, 0)} x="390" y="292" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 10, letterSpacing: '0.18em', fontWeight: 700 }} fill={T.muted}>
+      <motion.text {...fade(0.98, 0)} x="390" y="292" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 12, letterSpacing: '0.18em', fontWeight: 700 }} fill={T.muted}>
         AROUND THE MODEL
       </motion.text>
     </svg>
@@ -1249,7 +1249,7 @@ const HarnessArchitectureDiagram = ({ items }) => (
         style={{ borderColor: item.color || T.faint, background: item.fill || '#fff' }}
       >
         <div className="flex items-start justify-between gap-3">
-          <div className="text-[11px] uppercase" style={{ color: item.color || T.coralDark, fontFamily: T.mono, letterSpacing: '0.15em', fontWeight: 700 }}>
+          <div className="text-[13px] uppercase" style={{ color: item.color || T.coralDark, fontFamily: T.mono, letterSpacing: '0.15em', fontWeight: 700 }}>
             {item.kicker}
           </div>
           <div className="rounded-[6px] border bg-white p-1.5" style={{ borderColor: item.color || T.faint }}>
@@ -1259,7 +1259,7 @@ const HarnessArchitectureDiagram = ({ items }) => (
         <div className="mt-3" style={{ color: T.ink, fontSize: 28, lineHeight: 1.02, fontWeight: 620 }}>
           {item.title}
         </div>
-        <div className="mt-2" style={{ color: T.muted, fontSize: 15.2, lineHeight: 1.28 }}>
+        <div className="mt-2" style={{ color: T.muted, fontSize: 17, lineHeight: 1.28 }}>
           {item.body}
         </div>
       </motion.div>
@@ -1281,7 +1281,7 @@ const HarnessAnatomyIndexVariant = ({ slide }) => {
             <div className="mt-3" style={{ fontSize: 38, lineHeight: 1.03, fontWeight: 560 }}>
               {slide.architectureTitle || 'Four management questions, not nine technical parts.'}
             </div>
-            <div className="mt-4" style={{ color: T.muted, fontSize: 18.5, lineHeight: 1.34 }}>
+            <div className="mt-4" style={{ color: T.muted, fontSize: 20.5, lineHeight: 1.34 }}>
               {slide.architectureBody || 'Different tools surface these patterns differently, but managers are still governing the same core architecture around the model.'}
             </div>
           </Card>
@@ -1294,8 +1294,8 @@ const HarnessAnatomyIndexVariant = ({ slide }) => {
                 'The next slides unpack each part in operating terms, not vendor jargon.'
               ]).map((item, index) => (
                 <motion.div key={`${item}-${index}`} {...fade(0.9 + index * 0.06)} className="grid grid-cols-[34px_1fr] border-b py-2" style={{ borderColor: T.rule }}>
-                  <span style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 12, fontWeight: 700 }}>{String(index + 1).padStart(2, '0')}</span>
-                  <span style={{ fontSize: 17, lineHeight: 1.18 }}>{item}</span>
+                  <span style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 14, fontWeight: 700 }}>{String(index + 1).padStart(2, '0')}</span>
+                  <span style={{ fontSize: 19, lineHeight: 1.18 }}>{item}</span>
                 </motion.div>
               ))}
             </div>
@@ -1303,7 +1303,7 @@ const HarnessAnatomyIndexVariant = ({ slide }) => {
         </div>
       </Content>
       <motion.div {...fade(1.12, 0)} className="absolute left-[4.8vw] right-[4.8vw] bottom-[8.8vh] flex items-baseline gap-5">
-        <span className="text-[12px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, fontWeight: 700, letterSpacing: '0.22em' }}>
+        <span className="text-[14px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, fontWeight: 700, letterSpacing: '0.22em' }}>
           {slide.architectureFooterLabel || 'Across tools'}
         </span>
         <span style={{ color: T.ink, fontSize: 28, lineHeight: 1, fontWeight: 520 }}>
@@ -1330,7 +1330,7 @@ const ComponentVisual = ({ type, color = T.coralDark }) => {
           return (
             <g key={label}>
               <rect x={x} y={38} width={100} height={56} rx={11} fill={tint} stroke={color} strokeWidth="1.6" />
-              <text x={x + 50} y={72} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 16, fontWeight: 800 }} fill={color}>{label}</text>
+              <text x={x + 50} y={72} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 18, fontWeight: 800 }} fill={color}>{label}</text>
               {i < 2 && (
                 <g>
                   <line x1={x + 100} y1={66} x2={x + 122} y2={66} {...stroke} />
@@ -1343,7 +1343,7 @@ const ComponentVisual = ({ type, color = T.coralDark }) => {
         {/* loop-back arrow */}
         <path d="M 304 94 C 304 116, 56 116, 56 94" {...stroke} strokeDasharray="4 4" />
         <polygon points="56,94 51,103 61,103" fill={color} />
-        <text x="180" y="132" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 12, letterSpacing: '0.18em', fontWeight: 800 }} fill={color}>REPEAT UNTIL DONE</text>
+        <text x="180" y="132" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 14, letterSpacing: '0.18em', fontWeight: 800 }} fill={color}>REPEAT UNTIL DONE</text>
       </svg>
     );
   }
@@ -1358,15 +1358,15 @@ const ComponentVisual = ({ type, color = T.coralDark }) => {
         ].map((row, i) => (
           <g key={row.label}>
             <rect x={36 + i * 10} y={row.y} width={236} height={30} rx={5} fill={i === 0 ? tintStrong : tint} stroke={color} strokeWidth="1.5" />
-            <text x={48 + i * 10} y={row.y + 20} style={{ fontFamily: T.mono, fontSize: 14, fontWeight: 800 }} fill={color}>{row.label}</text>
+            <text x={48 + i * 10} y={row.y + 20} style={{ fontFamily: T.mono, fontSize: 16, fontWeight: 800 }} fill={color}>{row.label}</text>
           </g>
         ))}
         {/* arrow into model */}
         <line x1="296" y1="60" x2="316" y2="60" {...stroke} />
         <polygon points="316,60 309,55 309,65" fill={color} />
         <circle cx="332" cy="60" r="14" fill="none" stroke={color} strokeWidth="1.6" />
-        <text x="332" y="65" textAnchor="middle" style={{ fontFamily: T.serif, fontStyle: 'italic', fontSize: 16, fontWeight: 520 }} fill={color}>M</text>
-        <text x="180" y="132" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 12, letterSpacing: '0.18em', fontWeight: 800 }} fill={color}>WHAT'S IN VIEW</text>
+        <text x="332" y="65" textAnchor="middle" style={{ fontFamily: T.serif, fontStyle: 'italic', fontSize: 18, fontWeight: 520 }} fill={color}>M</text>
+        <text x="180" y="132" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 14, letterSpacing: '0.18em', fontWeight: 800 }} fill={color}>WHAT'S IN VIEW</text>
       </svg>
     );
   }
@@ -1394,10 +1394,10 @@ const ComponentVisual = ({ type, color = T.coralDark }) => {
               strokeDasharray="3 4"
             />
             <rect x={tool.x} y={tool.y} width="56" height="24" rx="5" fill={tint} stroke={color} strokeWidth="1.5" />
-            <text x={tool.x + 28} y={tool.y + 17} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 13, fontWeight: 800 }} fill={color}>{tool.label}</text>
+            <text x={tool.x + 28} y={tool.y + 17} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 15, fontWeight: 800 }} fill={color}>{tool.label}</text>
           </g>
         ))}
-        <text x="180" y="130" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 12, letterSpacing: '0.18em', fontWeight: 800 }} fill={color}>WHAT IT CAN REACH</text>
+        <text x="180" y="130" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 14, letterSpacing: '0.18em', fontWeight: 800 }} fill={color}>WHAT IT CAN REACH</text>
       </svg>
     );
   }
@@ -1407,7 +1407,7 @@ const ComponentVisual = ({ type, color = T.coralDark }) => {
       <svg viewBox="0 0 360 140" className="h-full w-full">
         {/* parent */}
         <rect x="138" y="10" width="84" height="32" rx="6" fill={tintStrong} stroke={color} strokeWidth="1.7" />
-        <text x="180" y="32" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 14, fontWeight: 800 }} fill={color}>main</text>
+        <text x="180" y="32" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 16, fontWeight: 800 }} fill={color}>main</text>
         {/* connecting lines */}
         {[64, 180, 296].map((cx, i) => (
           <line key={i} x1="180" y1="42" x2={cx} y2="74" {...stroke} strokeDasharray="3 4" />
@@ -1420,10 +1420,10 @@ const ComponentVisual = ({ type, color = T.coralDark }) => {
         ].map((child) => (
           <g key={child.label}>
             <rect x={child.x} y={74} width="64" height="30" rx="5" fill={tint} stroke={color} strokeWidth="1.5" />
-            <text x={child.x + 32} y={94} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 13, fontWeight: 800 }} fill={color}>{child.label}</text>
+            <text x={child.x + 32} y={94} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 15, fontWeight: 800 }} fill={color}>{child.label}</text>
           </g>
         ))}
-        <text x="180" y="132" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 12, letterSpacing: '0.18em', fontWeight: 800 }} fill={color}>SUB-AGENTS</text>
+        <text x="180" y="132" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 14, letterSpacing: '0.18em', fontWeight: 800 }} fill={color}>SUB-AGENTS</text>
       </svg>
     );
   }
@@ -1440,7 +1440,7 @@ const HarnessComponentsFrameworkVariant = ({ slide }) => (
         <PartText parts={slide.parts} />
       </h1>
       {slide.subhead && (
-        <motion.div {...fade(0.34)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(17px, 1.3vw, 22px)' }}>
+        <motion.div {...fade(0.34)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(19px, 1.3vw, 22px)' }}>
           {slide.subhead}
         </motion.div>
       )}
@@ -1458,10 +1458,10 @@ const HarnessComponentsFrameworkVariant = ({ slide }) => (
             <div className="grid grid-cols-[1fr_320px] items-start gap-3">
               <div>
                 <div className="flex items-center gap-3">
-                  <span className="text-[13px] uppercase" style={{ color: component.color || T.coralDark, fontFamily: T.mono, letterSpacing: '0.16em', fontWeight: 800 }}>
+                  <span className="text-[15px] uppercase" style={{ color: component.color || T.coralDark, fontFamily: T.mono, letterSpacing: '0.16em', fontWeight: 800 }}>
                     {String(index + 1).padStart(2, '0')}
                   </span>
-                  <span className="uppercase" style={{ color: component.color || T.coralDark, fontFamily: T.mono, fontSize: 'clamp(20px, 1.65vw, 32px)', letterSpacing: '0.1em', fontWeight: 900, lineHeight: 0.92 }}>
+                  <span className="uppercase" style={{ color: component.color || T.coralDark, fontFamily: T.mono, fontSize: 'clamp(22px, 1.65vw, 32px)', letterSpacing: '0.1em', fontWeight: 900, lineHeight: 0.92 }}>
                     {component.kicker}
                   </span>
                 </div>
@@ -1475,18 +1475,18 @@ const HarnessComponentsFrameworkVariant = ({ slide }) => (
                 </div>
               )}
             </div>
-            <div className="mt-2.5" style={{ color: T.ink, fontSize: 17.5, lineHeight: 1.24, fontWeight: 500 }}>
+            <div className="mt-2.5" style={{ color: T.ink, fontSize: 19.5, lineHeight: 1.24, fontWeight: 500 }}>
               {component.body}
             </div>
             {component.question && (
-              <div className="mt-2 rounded-[5px] border-l-2 pl-3 py-1" style={{ borderColor: component.color || T.coralDark, color: T.muted, fontSize: 15, lineHeight: 1.22, fontStyle: 'italic' }}>
+              <div className="mt-2 rounded-[5px] border-l-2 pl-3 py-1" style={{ borderColor: component.color || T.coralDark, color: T.muted, fontSize: 17, lineHeight: 1.22, fontStyle: 'italic' }}>
                 {component.question}
               </div>
             )}
             {component.examples && (
               <div className="mt-2 flex flex-wrap gap-2">
                 {component.examples.map((example) => (
-                  <span key={example} className="rounded-[4px] border px-2.5 py-1 text-[11px] uppercase" style={{ borderColor: component.color || T.coralPale, color: component.color || T.coralDark, fontFamily: T.mono, letterSpacing: '0.08em', fontWeight: 700 }}>
+                  <span key={example} className="rounded-[4px] border px-2.5 py-1 text-[13px] uppercase" style={{ borderColor: component.color || T.coralPale, color: component.color || T.coralDark, fontFamily: T.mono, letterSpacing: '0.08em', fontWeight: 700 }}>
                     {example}
                   </span>
                 ))}
@@ -1524,7 +1524,7 @@ const HarnessWhileLoopVariant = ({ slide }) => {
           <PartText parts={slide.parts} />
         </h1>
         {slide.subhead && (
-          <motion.div {...fade(0.38)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(17px, 1.3vw, 22px)' }}>
+          <motion.div {...fade(0.38)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(19px, 1.3vw, 22px)' }}>
             {slide.subhead}
           </motion.div>
         )}
@@ -1533,7 +1533,7 @@ const HarnessWhileLoopVariant = ({ slide }) => {
       <div className="absolute left-[4.8vw] right-[4.8vw] top-[19vh] bottom-[12vh] grid grid-cols-[40%_1fr] gap-7 items-stretch">
         {/* Left: Animated loop diagram */}
         <Card delay={0.5} className="flex flex-col p-5">
-          <div className="self-start text-[12px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
+          <div className="self-start text-[14px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
             The mechanic
           </div>
 
@@ -1558,7 +1558,7 @@ const HarnessWhileLoopVariant = ({ slide }) => {
                 return (
                   <g key={stop.label}>
                     <circle cx={x} cy={y} r="44" fill="#fff" stroke={stop.color} strokeWidth={1.8} />
-                    <text x={x} y={y + 6} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 15, fontWeight: 800, letterSpacing: '0.08em' }} fill={stop.color}>{stop.label}</text>
+                    <text x={x} y={y + 6} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 17, fontWeight: 800, letterSpacing: '0.08em' }} fill={stop.color}>{stop.label}</text>
                   </g>
                 );
               })}
@@ -1595,7 +1595,7 @@ const HarnessWhileLoopVariant = ({ slide }) => {
             </svg>
           </div>
 
-          <div className="text-center" style={{ color: T.muted, fontSize: 19, lineHeight: 1.4, fontStyle: 'italic', fontWeight: 500 }}>
+          <div className="text-center" style={{ color: T.muted, fontSize: 21, lineHeight: 1.4, fontStyle: 'italic', fontWeight: 500 }}>
             One model. Many turns. Until done.
           </div>
         </Card>
@@ -1603,10 +1603,10 @@ const HarnessWhileLoopVariant = ({ slide }) => {
         {/* Right: Live trace */}
         <Card delay={0.7} className="p-7">
           <div className="flex items-baseline gap-3">
-            <span className="text-[11px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 700 }}>
+            <span className="text-[13px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 700 }}>
               Live trace
             </span>
-            <span style={{ color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 14 }}>
+            <span style={{ color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 16 }}>
               what one run actually looks like
             </span>
           </div>
@@ -1616,7 +1616,7 @@ const HarnessWhileLoopVariant = ({ slide }) => {
             className="mt-3 rounded-[7px] border-l-[3px] px-4 py-3"
             style={{ borderColor: T.blue, background: T.bluePale }}
           >
-            <div className="text-[13px] uppercase" style={{ color: T.blue, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>Goal</div>
+            <div className="text-[15px] uppercase" style={{ color: T.blue, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>Goal</div>
             <div className="mt-1.5" style={{ color: T.blue, fontSize: 21, fontWeight: 600, lineHeight: 1.28 }}>{goalText}</div>
           </motion.div>
 
@@ -1631,16 +1631,16 @@ const HarnessWhileLoopVariant = ({ slide }) => {
                 style={{ borderColor: T.coralPale, background: '#fff8f2' }}
               >
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="rounded-full px-3 py-0.5 text-[12px]" style={{ background: T.coral, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.14em' }}>
+                  <span className="rounded-full px-3 py-0.5 text-[14px]" style={{ background: T.coral, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.14em' }}>
                     iter {i + 1}
                   </span>
                 </div>
-                <div className="grid grid-cols-[88px_1fr] gap-x-3 gap-y-1.5" style={{ fontSize: 17, lineHeight: 1.34 }}>
-                  <span style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 13.5, fontWeight: 800, letterSpacing: '0.04em' }}>act</span>
+                <div className="grid grid-cols-[88px_1fr] gap-x-3 gap-y-1.5" style={{ fontSize: 19, lineHeight: 1.34 }}>
+                  <span style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 15.5, fontWeight: 800, letterSpacing: '0.04em' }}>act</span>
                   <span style={{ color: T.ink }}>{it.act}</span>
-                  <span style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 13.5, fontWeight: 800, letterSpacing: '0.04em' }}>observe</span>
+                  <span style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 15.5, fontWeight: 800, letterSpacing: '0.04em' }}>observe</span>
                   <span style={{ color: T.ink }}>{it.observe}</span>
-                  <span style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 13.5, fontWeight: 800, letterSpacing: '0.04em' }}>adjust</span>
+                  <span style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 15.5, fontWeight: 800, letterSpacing: '0.04em' }}>adjust</span>
                   <span style={{ color: T.ink }}>{it.adjust}</span>
                 </div>
               </motion.div>
@@ -1652,7 +1652,7 @@ const HarnessWhileLoopVariant = ({ slide }) => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 1.15 + iterations.length * 0.55 + 0.3, ease }}
             className="mt-3.5 inline-flex items-center gap-2.5 rounded-full px-4 py-2"
-            style={{ background: T.blue, color: '#fff', fontFamily: T.mono, fontSize: 14, fontWeight: 800, letterSpacing: '0.12em' }}
+            style={{ background: T.blue, color: '#fff', fontFamily: T.mono, fontSize: 16, fontWeight: 800, letterSpacing: '0.12em' }}
           >
             <span>✓ TASK COMPLETE</span>
             <span style={{ opacity: 0.65 }}>· {iterations.length} ITERATIONS</span>
@@ -1689,7 +1689,7 @@ const HarnessContextVariant = ({ slide }) => (
           <div className="h-px" style={{ background: T.rule }} />
           <div style={{ color: T.coralDark, fontSize: 34, lineHeight: 1 }}>
             {slide.activeBudget || '520,000'}
-            <span className="ml-4" style={{ color: T.muted, fontFamily: T.mono, fontSize: 14, letterSpacing: '0.12em' }}>
+            <span className="ml-4" style={{ color: T.muted, fontFamily: T.mono, fontSize: 16, letterSpacing: '0.12em' }}>
               active · {slide.peakBudget || '780,000'} peak · {slide.budgetTotal || '1,000,000 tokens'}
             </span>
           </div>
@@ -1736,13 +1736,13 @@ const HarnessContextVariant = ({ slide }) => (
             initial={{ opacity: 0, y: 6 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, delay: 2.65, ease }}
-            className="absolute left-[54%] top-[43px] rounded-[3px] bg-white/70 px-3 py-2 text-[11px] uppercase"
+            className="absolute left-[54%] top-[43px] rounded-[3px] bg-white/70 px-3 py-2 text-[13px] uppercase"
             style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.12em', fontWeight: 700 }}
           >
             space recovered after compaction
           </motion.div>
           <div className="absolute inset-y-0 right-0 w-[20%] border-l border-dashed px-5 pt-4" style={{ borderColor: T.coralPale }}>
-            <span className="rounded-[3px] bg-white/55 px-2 py-1 text-[11px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.12em', fontWeight: 700 }}>
+            <span className="rounded-[3px] bg-white/55 px-2 py-1 text-[13px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.12em', fontWeight: 700 }}>
               {slide.compactLabel || 'compact at ~80%'}
             </span>
           </div>
@@ -1751,7 +1751,7 @@ const HarnessContextVariant = ({ slide }) => (
               <motion.div
                 key={`${summary}-${index}`}
                 {...fade(2.18 + index * 0.1, 0)}
-                className="rounded-[5px] border bg-white/80 px-4 py-2 text-[12px]"
+                className="rounded-[5px] border bg-white/80 px-4 py-2 text-[14px]"
                 style={{ borderColor: T.coralPale, color: T.coralDark, fontFamily: T.mono, fontWeight: 700, letterSpacing: '0.06em' }}
               >
                 {summary}
@@ -1760,7 +1760,7 @@ const HarnessContextVariant = ({ slide }) => (
           </div>
           <motion.div
             {...fade(2.92, 0)}
-            className="absolute left-[5%] bottom-[13px] text-[11px] uppercase"
+            className="absolute left-[5%] bottom-[13px] text-[13px] uppercase"
             style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.14em', fontWeight: 700 }}
           >
             older context compressed into retained reference
@@ -1778,7 +1778,7 @@ const HarnessContextVariant = ({ slide }) => (
         {(slide.stats || []).map((stat, index) => (
           <motion.div key={`${stat.value}-${index}`} {...fade(2.92 + index * 0.08)}>
             <div style={{ color: T.coralDark, fontSize: 54, lineHeight: 1, fontWeight: 520 }}>{stat.value}</div>
-            <div className="mt-2 text-[12px] uppercase" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.18em', fontWeight: 700 }}>{stat.label}</div>
+            <div className="mt-2 text-[14px] uppercase" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.18em', fontWeight: 700 }}>{stat.label}</div>
           </motion.div>
         ))}
       </div>
@@ -1796,7 +1796,7 @@ const HarnessFrameworkCardsVariant = ({ slide }) => (
         <PartText parts={slide.parts} />
       </h1>
       {slide.subhead && (
-        <motion.div {...fade(0.34)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(17px, 1.3vw, 22px)' }}>
+        <motion.div {...fade(0.34)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(19px, 1.3vw, 22px)' }}>
           {slide.subhead}
         </motion.div>
       )}
@@ -1830,7 +1830,7 @@ const HarnessFrameworkCardsVariant = ({ slide }) => (
                 </div>
               )}
               {/* Kicker */}
-              <div className="text-[12.5px] uppercase text-center" style={{ color: item.color || T.coralDark, fontFamily: T.mono, letterSpacing: '0.18em', fontWeight: 800 }}>
+              <div className="text-[14.5px] uppercase text-center" style={{ color: item.color || T.coralDark, fontFamily: T.mono, letterSpacing: '0.18em', fontWeight: 800 }}>
                 {item.kicker}
               </div>
               {/* Title */}
@@ -1838,7 +1838,7 @@ const HarnessFrameworkCardsVariant = ({ slide }) => (
                 {item.title}
               </div>
               {/* Body */}
-              <div className="mt-3 text-center" style={{ color: T.ink, fontSize: 16.5, lineHeight: 1.36 }}>
+              <div className="mt-3 text-center" style={{ color: T.ink, fontSize: 18.5, lineHeight: 1.36 }}>
                 {item.body}
               </div>
             </Card>
@@ -1850,9 +1850,9 @@ const HarnessFrameworkCardsVariant = ({ slide }) => (
           <div className="grid gap-3" style={{ gridTemplateColumns: `repeat(${slide.steps.length}, minmax(0, 1fr))` }}>
             {slide.steps.map((step, index) => (
               <motion.div key={`${step.title}-${index}`} {...fade(1.02 + index * 0.045)} className="rounded-[5px] border px-3 py-3 text-center" style={{ borderColor: T.coralPale, background: '#fff8f2' }}>
-                <div style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 12, fontWeight: 800 }}>{String(index + 1).padStart(2, '0')}</div>
+                <div style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 14, fontWeight: 800 }}>{String(index + 1).padStart(2, '0')}</div>
                 <div className="mt-1" style={{ fontSize: 21, lineHeight: 1.05, fontWeight: 620 }}>{step.title}</div>
-                <div className="mt-1" style={{ color: T.muted, fontSize: 14, lineHeight: 1.28 }}>{step.body}</div>
+                <div className="mt-1" style={{ color: T.muted, fontSize: 16, lineHeight: 1.28 }}>{step.body}</div>
               </motion.div>
             ))}
           </div>
@@ -1865,7 +1865,7 @@ const HarnessFrameworkCardsVariant = ({ slide }) => (
 const ApiProgramPill = ({ children, delay = 0.4, color = T.blue }) => (
   <motion.div
     {...fade(delay, 0)}
-    className="rounded-full border bg-white px-3 py-1 text-center text-[11px] uppercase"
+    className="rounded-full border bg-white px-3 py-1 text-center text-[13px] uppercase"
     style={{ borderColor: '#c9d7df', color: T.black, fontFamily: T.mono, letterSpacing: '0.12em', fontWeight: 800, boxShadow: '0 2px 8px rgba(23,24,20,0.08)' }}
   >
     {children}
@@ -1913,10 +1913,10 @@ const HarnessCitizenEcosystemVariant = ({ slide }) => {
           <MiniIcon type={artifact.icon || 'dot'} color={tone.ink} className="h-6 w-6" />
         </div>
         <div className="min-w-0">
-          <div style={{ color: T.ink, fontFamily: T.sans, fontSize: 'clamp(15.5px, 1vw, 20px)', lineHeight: 0.94, fontWeight: 820, letterSpacing: '-0.01em' }}>
+          <div style={{ color: T.ink, fontFamily: T.sans, fontSize: 'clamp(17.5px, 1vw, 22px)', lineHeight: 0.94, fontWeight: 820, letterSpacing: '-0.01em' }}>
             {artifact.title}
           </div>
-          <div className="mt-1 uppercase" style={{ color: tone.ink, fontFamily: T.mono, fontSize: 8.6, lineHeight: 1.1, fontWeight: 850, letterSpacing: '0.08em' }}>
+          <div className="mt-1 uppercase" style={{ color: tone.ink, fontFamily: T.mono, fontSize: 11, lineHeight: 1.1, fontWeight: 850, letterSpacing: '0.08em' }}>
             {artifact.label}
           </div>
         </div>
@@ -1945,7 +1945,7 @@ const HarnessCitizenEcosystemVariant = ({ slide }) => {
             <div className="absolute inset-x-0 top-0 h-2" style={{ background: 'linear-gradient(90deg, #00629B, #C69214 56%, #f1c232)' }} />
             <div className="flex items-start justify-between gap-4">
               <UCSDLogoMark className="h-10 w-[148px]" />
-              <div className="rounded-full border px-3 py-1 text-[10px] uppercase" style={{ borderColor: '#c9d7df', color: T.blue, fontFamily: T.mono, fontWeight: 850, letterSpacing: '0.16em' }}>
+              <div className="rounded-full border px-3 py-1 text-[12px] uppercase" style={{ borderColor: '#c9d7df', color: T.blue, fontFamily: T.mono, fontWeight: 850, letterSpacing: '0.16em' }}>
                 Harness
               </div>
             </div>
@@ -1955,13 +1955,13 @@ const HarnessCitizenEcosystemVariant = ({ slide }) => {
               <div className="mt-1" style={{ color: T.ink, fontFamily: T.serif, fontSize: 'clamp(34px, 3vw, 52px)', lineHeight: 0.9, fontWeight: 560 }}>
                 {slide.center?.title || 'TritonAI'}
               </div>
-              <div className="mt-2.5 max-w-[30rem]" style={{ color: T.muted, fontFamily: T.sans, fontSize: 'clamp(13.5px, 0.86vw, 15.5px)', lineHeight: 1.16, fontWeight: 570 }}>
+              <div className="mt-2.5 max-w-[30rem]" style={{ color: T.muted, fontFamily: T.sans, fontSize: 'clamp(15.5px, 0.86vw, 17.5px)', lineHeight: 1.16, fontWeight: 570 }}>
                 {slide.center?.body}
               </div>
             </div>
 
             <div className="mt-4 flex min-h-0 flex-1 flex-col">
-              <div className="mb-2 text-[10px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, fontWeight: 850, letterSpacing: '0.18em' }}>
+              <div className="mb-2 text-[12px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, fontWeight: 850, letterSpacing: '0.18em' }}>
                 Component kit
               </div>
               <div className="grid min-h-0 flex-1 grid-cols-2 grid-rows-2 gap-3">
@@ -1984,7 +1984,7 @@ const HarnessCitizenEcosystemVariant = ({ slide }) => {
               style={{ objectPosition: 'left top' }}
             />
             <div className="absolute inset-x-0 bottom-0 z-10 border-t bg-white/92 px-4 py-2.5 backdrop-blur-sm" style={{ borderColor: '#e8e0d2' }}>
-              <div style={{ color: T.ink, fontFamily: T.sans, fontSize: 'clamp(13px, 0.86vw, 15.5px)', lineHeight: 1.15, fontWeight: 650 }}>
+              <div style={{ color: T.ink, fontFamily: T.sans, fontSize: 'clamp(15px, 0.86vw, 17.5px)', lineHeight: 1.15, fontWeight: 650 }}>
                 {slide.interfaceCaption}
               </div>
             </div>
@@ -2003,14 +2003,14 @@ const HarnessCitizenEcosystemVariant = ({ slide }) => {
               <MiniIcon type="observe" color={T.green} className="h-8 w-8" />
             </div>
             <div>
-              <Kicker style={{ color: T.green, fontSize: 10.5 }}>{governance.label || 'governance layer'}</Kicker>
-              <div style={{ color: T.ink, fontFamily: T.sans, fontSize: 'clamp(20px, 1.45vw, 27px)', lineHeight: 1, fontWeight: 790 }}>
+              <Kicker style={{ color: T.green, fontSize: 12.5 }}>{governance.label || 'governance layer'}</Kicker>
+              <div style={{ color: T.ink, fontFamily: T.sans, fontSize: 'clamp(22px, 1.45vw, 27px)', lineHeight: 1, fontWeight: 790 }}>
                 {governance.title}
               </div>
             </div>
           </div>
           <div className="flex min-w-0 items-center gap-3">
-            <div className="min-w-[20rem] flex-1" style={{ color: T.muted, fontFamily: T.sans, fontSize: 'clamp(14px, 0.9vw, 16px)', lineHeight: 1.22, fontWeight: 560 }}>
+            <div className="min-w-[20rem] flex-1" style={{ color: T.muted, fontFamily: T.sans, fontSize: 'clamp(16px, 0.9vw, 18px)', lineHeight: 1.22, fontWeight: 560 }}>
               {governance.body}
             </div>
             <div className="flex flex-wrap justify-end gap-2">
@@ -2018,7 +2018,7 @@ const HarnessCitizenEcosystemVariant = ({ slide }) => {
                 <motion.span
                   key={item}
                   {...fade(1.08 + index * 0.035, 0)}
-                  className="rounded-full border bg-white px-3 py-1 text-[10px] uppercase"
+                  className="rounded-full border bg-white px-3 py-1 text-[12px] uppercase"
                   style={{ borderColor: '#cddbbf', color: T.green, fontFamily: T.mono, fontWeight: 850, letterSpacing: '0.1em' }}
                 >
                   {item}
@@ -2031,10 +2031,10 @@ const HarnessCitizenEcosystemVariant = ({ slide }) => {
 
       {slide.bottomLine && !slide.hideBottomLine && (
         <motion.div {...fade(1.22)} className="absolute left-[4.8vw] right-[4.8vw] top-[89vh] flex items-start gap-5">
-          <span className="shrink-0 rounded-[5px] px-3 py-2 text-[12px]" style={{ background: T.coral, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.22em', whiteSpace: 'nowrap' }}>
+          <span className="shrink-0 rounded-[5px] px-3 py-2 text-[14px]" style={{ background: T.coral, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.22em', whiteSpace: 'nowrap' }}>
             {slide.bottomLineLabel || 'PROGRAM MODEL'}
           </span>
-          <div style={{ color: T.ink, fontSize: 'clamp(13.5px, 0.95vw, 16px)', fontWeight: 560, lineHeight: 1.24 }}>
+          <div style={{ color: T.ink, fontSize: 'clamp(15.5px, 0.95vw, 18px)', fontWeight: 560, lineHeight: 1.24 }}>
             {slide.bottomLine}
           </div>
         </motion.div>
@@ -2080,7 +2080,7 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
                 <div className="flex h-8 w-8 items-center justify-center rounded-full" style={{ background: T.bluePale }}>
                   <MiniIcon type={user.icon || 'people'} color={T.blue} />
                 </div>
-                <div style={{ color: T.ink, fontFamily: T.sans, fontSize: 18, lineHeight: 1, fontWeight: 600 }}>{user.title}</div>
+                <div style={{ color: T.ink, fontFamily: T.sans, fontSize: 20, lineHeight: 1, fontWeight: 600 }}>{user.title}</div>
               </ApiProgramCard>
             ))}
           </div>
@@ -2096,8 +2096,8 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
                     <MiniIcon type={harness.icon || 'code'} color={harness.color || T.coralDark} />
                   </div>
                   <div>
-                    <div style={{ color: T.ink, fontFamily: T.sans, fontSize: 19, lineHeight: 0.95, fontWeight: 650 }}>{harness.title}</div>
-                    <div className="mt-0.5" style={{ color: T.muted, fontFamily: T.sans, fontSize: 12.5 }}>{harness.subtitle}</div>
+                    <div style={{ color: T.ink, fontFamily: T.sans, fontSize: 21, lineHeight: 0.95, fontWeight: 650 }}>{harness.title}</div>
+                    <div className="mt-0.5" style={{ color: T.muted, fontFamily: T.sans, fontSize: 14.5 }}>{harness.subtitle}</div>
                   </div>
                 </ApiProgramCard>
               ))}
@@ -2112,7 +2112,7 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
                 <MiniIcon type="gateway" color="#ffc928" />
               </div>
               <div className="mt-1" style={{ fontSize: 28, lineHeight: 0.95, fontWeight: 700, letterSpacing: '-0.01em' }}>LLM<br />Gateway</div>
-              <div className="mt-2 text-[10px] uppercase" style={{ color: '#14b8d4', fontFamily: T.mono, letterSpacing: '0.16em', fontWeight: 800 }}>templates +<br />guardrails</div>
+              <div className="mt-2 text-[12px] uppercase" style={{ color: '#14b8d4', fontFamily: T.mono, letterSpacing: '0.16em', fontWeight: 800 }}>templates +<br />guardrails</div>
             </div>
           </motion.div>
         </div>
@@ -2126,7 +2126,7 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
                   <div className="flex h-8 w-8 items-center justify-center rounded-full" style={{ background: provider.fill || T.bluePale }}>
                     <MiniIcon type={provider.icon || 'gateway'} color={provider.color || T.blue} />
                   </div>
-                  <div style={{ color: T.ink, fontFamily: T.sans, fontSize: 17, lineHeight: 0.95, fontWeight: 650 }}>{provider.title}</div>
+                  <div style={{ color: T.ink, fontFamily: T.sans, fontSize: 19, lineHeight: 0.95, fontWeight: 650 }}>{provider.title}</div>
                 </ApiProgramCard>
               ))}
             </div>
@@ -2135,7 +2135,7 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
                 const label = typeof capability === 'string' ? capability : capability.label;
                 const icon = typeof capability === 'string' ? capabilityIcons[capability] : capability.icon;
                 return (
-                  <motion.div key={label} {...fade(1.02 + index * 0.04, 0)} className="flex items-center justify-start gap-2 rounded-full border bg-white px-4 py-1.5 text-left" style={{ borderColor: '#c9d7df', color: T.ink, boxShadow: '0 2px 8px rgba(23,24,20,0.07)', fontFamily: T.mono, fontSize: 12, fontWeight: 800, letterSpacing: '0.08em' }}>
+                  <motion.div key={label} {...fade(1.02 + index * 0.04, 0)} className="flex items-center justify-start gap-2 rounded-full border bg-white px-4 py-1.5 text-left" style={{ borderColor: '#c9d7df', color: T.ink, boxShadow: '0 2px 8px rgba(23,24,20,0.07)', fontFamily: T.mono, fontSize: 14, fontWeight: 800, letterSpacing: '0.08em' }}>
                     <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full" style={{ background: T.bluePale }}>
                       <MiniIcon type={icon || 'dot'} color={T.blue} className="h-3.5 w-3.5" />
                     </span>
@@ -2163,14 +2163,14 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
       </div>
 
       <div className="absolute left-[5.8vw] right-[5.8vw] top-[42vh]">
-        <div className="mb-3 text-center text-[15px] uppercase" style={{ color: T.muted, fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.18em' }}>How to get access</div>
+        <div className="mb-3 text-center text-[17px] uppercase" style={{ color: T.muted, fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.18em' }}>How to get access</div>
         <div className="grid grid-cols-4 gap-5">
           {accessSteps.map((step, index) => (
             <motion.div key={step.title} {...fade(1.2 + index * 0.06, 0)} className="grid grid-cols-[46px_1fr] gap-3 items-start">
               <div className="flex h-12 w-12 items-center justify-center rounded-full shrink-0" style={{ background: step.color || T.blue, color: '#fff', fontFamily: T.mono, fontSize: 21, fontWeight: 800 }}>{index + 1}</div>
               <div>
                 <div style={{ color: T.ink, fontFamily: T.sans, fontSize: 26, lineHeight: 1, fontWeight: 700, letterSpacing: '-0.01em' }}>{step.title}</div>
-                <div className="mt-1.5" style={{ color: '#5f6f82', fontFamily: T.sans, fontSize: 16, lineHeight: 1.25 }}>{step.body}</div>
+                <div className="mt-1.5" style={{ color: '#5f6f82', fontFamily: T.sans, fontSize: 18, lineHeight: 1.25 }}>{step.body}</div>
               </div>
             </motion.div>
           ))}
@@ -2180,12 +2180,12 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
       <div className="absolute left-[5.8vw] right-[5.8vw] top-[60vh] grid grid-cols-2 gap-4">
         {ownership.map((owner, index) => (
           <Card key={owner.title} delay={1.35 + index * 0.08} className="p-3">
-            <div className="text-[14px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.18em', fontWeight: 800 }}>
+            <div className="text-[16px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.18em', fontWeight: 800 }}>
               {owner.title}
             </div>
             <div className="mt-2 grid grid-cols-2 gap-2">
               {owner.items.map((item) => (
-                <span key={item} className="rounded-full px-3 py-2 text-center text-[15px]" style={{ background: '#edf1f5', color: T.ink, fontFamily: T.mono, fontWeight: 700, letterSpacing: '0' }}>{item}</span>
+                <span key={item} className="rounded-full px-3 py-2 text-center text-[17px]" style={{ background: '#edf1f5', color: T.ink, fontFamily: T.mono, fontWeight: 700, letterSpacing: '0' }}>{item}</span>
               ))}
             </div>
           </Card>
@@ -2195,11 +2195,11 @@ const HarnessDeveloperApiProgramVariant = ({ slide }) => {
       <div className="absolute left-[5.8vw] right-[5.8vw] top-[76vh] flex items-center justify-between gap-3 flex-wrap">
         {footerBadges.map((badge, index) => (
           <React.Fragment key={badge}>
-            <motion.div {...fade(1.52 + index * 0.04, 0)} className="whitespace-nowrap text-[14px] uppercase" style={{ color: '#6f7b8b', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.06em' }}>
+            <motion.div {...fade(1.52 + index * 0.04, 0)} className="whitespace-nowrap text-[16px] uppercase" style={{ color: '#6f7b8b', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.06em' }}>
               {badge}
             </motion.div>
             {index < footerBadges.length - 1 && (
-              <span className="text-[14px]" style={{ color: '#f0b400' }}>|</span>
+              <span className="text-[16px]" style={{ color: '#f0b400' }}>|</span>
             )}
           </React.Fragment>
         ))}
@@ -2220,7 +2220,7 @@ const hostingDiamondLines = (label = '') => {
 const HostingDiamond = ({ label, color, delay = 0.4 }) => (
   <motion.div {...fade(delay)} className="relative flex h-[88px] w-[88px] items-center justify-center">
     <div className="absolute inset-2 rotate-45 rounded-[7px] border-2 bg-white" style={{ borderColor: color, boxShadow: '0 4px 10px rgba(23,24,20,0.07)' }} />
-    <div className="relative flex max-w-[74px] flex-col items-center text-center" style={{ color, fontFamily: T.mono, fontSize: 10, lineHeight: 1.05, fontWeight: 800, letterSpacing: '0' }}>
+    <div className="relative flex max-w-[74px] flex-col items-center text-center" style={{ color, fontFamily: T.mono, fontSize: 12, lineHeight: 1.05, fontWeight: 800, letterSpacing: '0' }}>
       {hostingDiamondLines(label).map((line, index) => (
         <span key={`${label}-${index}`} className="block">
           {line}
@@ -2288,30 +2288,30 @@ const HarnessCampusHostingVariant = ({ slide }) => {
           <PartText parts={slide.parts} />
         </h1>
         {slide.subhead && (
-          <motion.div {...fade(0.34)} className="mt-2" style={{ color: T.muted, fontFamily: T.sans, fontSize: 'clamp(16px, 1.2vw, 21px)' }}>
+          <motion.div {...fade(0.34)} className="mt-2" style={{ color: T.muted, fontFamily: T.sans, fontSize: 'clamp(18px, 1.2vw, 21px)' }}>
             {slide.subhead}
           </motion.div>
         )}
       </div>
 
       {/* 4 tier rows */}
-      <div className="absolute left-[4.8vw] right-[4.8vw] top-[17vh] bottom-[2vh] flex flex-col gap-12">
+      <div className="absolute left-[4.8vw] right-[4.8vw] top-[16vh] bottom-[8vh] flex flex-col gap-8">
         {tiers.map((tier, index) => {
           const tierNum = index;
           return (
             <motion.div
               key={tier.tierLabel}
               {...fade(0.46 + index * 0.1)}
-              className="relative grid grid-cols-[17%_24%_1fr_22%] items-center gap-4 rounded-[10px] border-2 px-6 py-5"
+              className="relative grid grid-cols-[17%_24%_1fr_22%] items-center gap-3 rounded-[10px] border-2 px-5 py-3"
               style={{ borderColor: tier.color, background: tier.fill, borderLeftWidth: 9, boxShadow: `0 4px 14px ${tier.color}22` }}
             >
               {/* Col 1: Tier label + users + volume */}
               <div className="flex items-center gap-3.5">
                 <TierUserIcon tier={tierNum} color={tier.color} />
                 <div>
-                  <div style={{ color: tier.color, fontFamily: T.mono, fontSize: 14, fontWeight: 800, letterSpacing: '0.18em' }}>{tier.tierLabel.toUpperCase()}</div>
+                  <div style={{ color: tier.color, fontFamily: T.mono, fontSize: 16, fontWeight: 800, letterSpacing: '0.18em' }}>{tier.tierLabel.toUpperCase()}</div>
                   <div className="mt-1" style={{ color: T.ink, fontFamily: T.sans, fontSize: 22, fontWeight: 700, lineHeight: 1.05, letterSpacing: '-0.01em' }}>{tier.users}</div>
-                  <div className="mt-1" style={{ color: T.muted, fontFamily: T.mono, fontSize: 14, fontWeight: 700 }}>{tier.volume}</div>
+                  <div className="mt-1" style={{ color: T.muted, fontFamily: T.mono, fontSize: 16, fontWeight: 700 }}>{tier.volume}</div>
                 </div>
               </div>
 
@@ -2319,15 +2319,15 @@ const HarnessCampusHostingVariant = ({ slide }) => {
               <div className="flex items-center justify-center">
                 {tier.review ? (
                   <div className="flex items-center gap-3">
-                    <div className="rounded-full" style={{ background: tier.color, color: '#fff', fontFamily: T.mono, fontSize: 13, fontWeight: 800, padding: '8px 14px', whiteSpace: 'nowrap', letterSpacing: '0.1em' }}>
+                    <div className="rounded-full" style={{ background: tier.color, color: '#fff', fontFamily: T.mono, fontSize: 15, fontWeight: 800, padding: '8px 14px', whiteSpace: 'nowrap', letterSpacing: '0.1em' }}>
                       REVIEW
                     </div>
-                    <div className="rounded-[8px] border-2 px-4 py-3 bg-white" style={{ borderColor: tier.color, color: tier.color, fontFamily: T.sans, fontSize: 16.5, lineHeight: 1.2, fontWeight: 650, maxWidth: 220 }}>
+                    <div className="rounded-[8px] border-2 px-3 py-2 bg-white" style={{ borderColor: tier.color, color: tier.color, fontFamily: T.sans, fontSize: 18.5, lineHeight: 1.2, fontWeight: 650, maxWidth: 220 }}>
                       {tier.review}
                     </div>
                   </div>
                 ) : tier.process ? (
-                  <div className="rounded-[8px] border-2 bg-white px-4 py-3.5" style={{ borderColor: tier.color, color: tier.color, fontFamily: T.sans, fontSize: 17.5, lineHeight: 1.2, fontWeight: 650, maxWidth: 260 }}>
+                  <div className="rounded-[8px] border-2 bg-white px-3 py-2" style={{ borderColor: tier.color, color: tier.color, fontFamily: T.sans, fontSize: 19.5, lineHeight: 1.2, fontWeight: 650, maxWidth: 260 }}>
                     {tier.process}
                   </div>
                 ) : null}
@@ -2339,18 +2339,18 @@ const HarnessCampusHostingVariant = ({ slide }) => {
                   <div className="flex w-full flex-wrap items-stretch gap-3">
                     {tier.userDeployments.map((dep) => (
                       <div key={dep.label} className="flex flex-1 flex-col" style={{ minWidth: 240 }}>
-                        <div className="rounded-[8px] border-2 bg-white px-4 py-3" style={{ borderColor: tier.softColor, color: T.ink, fontFamily: T.sans, fontSize: 17.5, fontWeight: 650 }}>
+                        <div className="rounded-[8px] border-2 bg-white px-3 py-2" style={{ borderColor: tier.softColor, color: T.ink, fontFamily: T.sans, fontSize: 19.5, fontWeight: 650 }}>
                           {dep.label}
                         </div>
                         <div className="mt-2 flex flex-wrap gap-2">
                           {(dep.tools || []).map((tool) => (
-                            <span key={tool} className="rounded-[4px] border px-3 py-1 text-[14px]" style={{ borderColor: tier.softColor, color: tier.color, fontFamily: T.mono, fontWeight: 700, background: '#fff' }}>
+                            <span key={tool} className="rounded-[4px] border px-2 py-0.5 text-[16px]" style={{ borderColor: tier.softColor, color: tier.color, fontFamily: T.mono, fontWeight: 700, background: '#fff' }}>
                               {tool}
                             </span>
                           ))}
                         </div>
                         {dep.note && (
-                          <div className="mt-1.5 italic" style={{ color: T.muted, fontFamily: T.serif, fontSize: 12.5, lineHeight: 1.3 }}>
+                          <div className="mt-1.5 italic" style={{ color: T.muted, fontFamily: T.serif, fontSize: 14.5, lineHeight: 1.3 }}>
                             {dep.note}
                           </div>
                         )}
@@ -2360,12 +2360,12 @@ const HarnessCampusHostingVariant = ({ slide }) => {
                 )}
                 {tier.deploymentLabel && (
                   <div className="flex flex-col">
-                    <div className="rounded-[8px] border-2 bg-white px-4 py-3" style={{ borderColor: tier.softColor, color: T.ink, fontFamily: T.sans, fontSize: 17.5, fontWeight: 650 }}>
+                    <div className="rounded-[8px] border-2 bg-white px-3 py-2" style={{ borderColor: tier.softColor, color: T.ink, fontFamily: T.sans, fontSize: 19.5, fontWeight: 650 }}>
                       {tier.deploymentLabel}
                     </div>
                     <div className="mt-2 flex flex-wrap gap-2">
                       {(tier.tools || []).map((tool) => (
-                        <span key={tool} className="rounded-[4px] border px-3 py-1 text-[14px]" style={{ borderColor: tier.softColor, color: tier.color, fontFamily: T.mono, fontWeight: 700, background: '#fff' }}>
+                        <span key={tool} className="rounded-[4px] border px-2 py-0.5 text-[16px]" style={{ borderColor: tier.softColor, color: tier.color, fontFamily: T.mono, fontWeight: 700, background: '#fff' }}>
                           {tool}
                         </span>
                       ))}
@@ -2374,15 +2374,15 @@ const HarnessCampusHostingVariant = ({ slide }) => {
                 )}
                 {tier.deployments &&
                   tier.deployments.map((dep) => (
-                    <div key={dep.name} className="rounded-[8px] border-2 bg-white px-4 py-3" style={{ borderColor: tier.softColor, color: T.ink, fontFamily: T.sans, fontSize: 17.5, fontWeight: 650 }}>
+                    <div key={dep.name} className="rounded-[8px] border-2 bg-white px-3 py-2" style={{ borderColor: tier.softColor, color: T.ink, fontFamily: T.sans, fontSize: 19.5, fontWeight: 650 }}>
                       <div>{dep.name}</div>
-                      <div style={{ color: tier.color, fontFamily: T.mono, fontSize: 13.5, fontWeight: 700, marginTop: 4 }}>{dep.domain}</div>
+                      <div style={{ color: tier.color, fontFamily: T.mono, fontSize: 15.5, fontWeight: 700, marginTop: 4 }}>{dep.domain}</div>
                     </div>
                   ))}
                 {tier.deployment && !tier.deployments && (
-                  <div className="rounded-[8px] border-2 bg-white px-4 py-3" style={{ borderColor: tier.softColor, color: T.ink, fontFamily: T.sans, fontSize: 17.5, fontWeight: 650 }}>
+                  <div className="rounded-[8px] border-2 bg-white px-3 py-2" style={{ borderColor: tier.softColor, color: T.ink, fontFamily: T.sans, fontSize: 19.5, fontWeight: 650 }}>
                     <div>{tier.deployment}</div>
-                    {tier.domain && <div style={{ color: tier.color, fontFamily: T.mono, fontSize: 13.5, fontWeight: 700, marginTop: 4 }}>{tier.domain}</div>}
+                    {tier.domain && <div style={{ color: tier.color, fontFamily: T.mono, fontSize: 15.5, fontWeight: 700, marginTop: 4 }}>{tier.domain}</div>}
                   </div>
                 )}
               </div>
@@ -2392,7 +2392,7 @@ const HarnessCampusHostingVariant = ({ slide }) => {
                 {tier.recurring && (
                   <div className="flex items-center gap-2.5">
                     <span style={{ color: tier.color, fontSize: 24, fontWeight: 600 }}>→</span>
-                    <div className="rounded-[8px] border-2 px-4 py-3 bg-white" style={{ borderColor: tier.color, color: tier.color, fontFamily: T.sans, fontSize: 16.5, lineHeight: 1.2, fontWeight: 650, maxWidth: 200 }}>
+                    <div className="rounded-[8px] border-2 px-3 py-2 bg-white" style={{ borderColor: tier.color, color: tier.color, fontFamily: T.sans, fontSize: 18.5, lineHeight: 1.2, fontWeight: 650, maxWidth: 200 }}>
                       {tier.recurring}
                     </div>
                   </div>
@@ -2403,18 +2403,18 @@ const HarnessCampusHostingVariant = ({ slide }) => {
               {index < tiers.length - 1 && (
                 <motion.div
                   {...fade(0.62 + index * 0.1, 0)}
-                  className="absolute left-1/2 top-full z-10 -translate-x-1/2 translate-y-[14px] flex items-center gap-2 rounded-full px-4 py-1.5"
+                  className="absolute left-1/2 top-full z-10 -translate-x-1/2 translate-y-[1px] flex items-center gap-2 rounded-full px-4 py-1"
                   style={{
                     background: '#fff',
                     border: `2px solid ${T.coral}`,
                     boxShadow: '0 4px 10px rgba(212,122,95,0.18)'
                   }}
                 >
-                  <span style={{ color: T.coral, fontSize: 18, lineHeight: 1, fontWeight: 800 }}>↓</span>
-                  <span style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 12, letterSpacing: '0.16em', fontWeight: 800, textTransform: 'uppercase' }}>
+                  <span style={{ color: T.coral, fontSize: 20, lineHeight: 1, fontWeight: 800 }}>↓</span>
+                  <span style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 14, letterSpacing: '0.16em', fontWeight: 800, textTransform: 'uppercase' }}>
                     escalate / migrate
                   </span>
-                  <span style={{ color: T.coral, fontSize: 18, lineHeight: 1, fontWeight: 800 }}>↓</span>
+                  <span style={{ color: T.coral, fontSize: 20, lineHeight: 1, fontWeight: 800 }}>↓</span>
                 </motion.div>
               )}
             </motion.div>
@@ -2441,7 +2441,7 @@ const HarnessSkillsVariant = ({ slide }) => (
               {(items || []).map((item, index) => (
                 <Pill key={`${item.name}-${index}`} delay={0.7 + row * 0.18 + index * 0.05}>
                   <span className="block">{item.name}</span>
-                  <span className="mt-1 block text-[11px]" style={{ color: T.muted }}>{item.note}</span>
+                  <span className="mt-1 block text-[13px]" style={{ color: T.muted }}>{item.note}</span>
                 </Pill>
               ))}
             </div>
@@ -2459,7 +2459,7 @@ const HarnessSkillsVariant = ({ slide }) => (
             { name: 'api_request', mode: 'allow' },
             { name: 'open_url', mode: 'allow' }
           ]).map((item, index) => (
-            <motion.div key={`${item.name}-${index}`} {...fade(0.96 + index * 0.045)} className="grid grid-cols-[1fr_62px] border-b py-3" style={{ borderColor: T.rule, fontFamily: T.mono, fontSize: 14 }}>
+            <motion.div key={`${item.name}-${index}`} {...fade(0.96 + index * 0.045)} className="grid grid-cols-[1fr_62px] border-b py-3" style={{ borderColor: T.rule, fontFamily: T.mono, fontSize: 16 }}>
               <span>{item.name}</span><span style={{ color: T.coralDark }}>{item.mode || 'allow'}</span>
             </motion.div>
           ))}
@@ -2491,7 +2491,7 @@ const SubagentOutputGlyph = ({ type, cx, cy, color }) => {
   }
   if (type === 'app') {
     return (
-      <text x={cx} y={cy + 4} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 11, fontWeight: 800, letterSpacing: '0.02em' }} fill={color}>
+      <text x={cx} y={cy + 4} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 13, fontWeight: 800, letterSpacing: '0.02em' }} fill={color}>
         {'</>'}
       </text>
     );
@@ -2528,7 +2528,7 @@ const HarnessSubagentsVariant = ({ slide }) => {
           <PartText parts={slide.parts} />
         </h1>
         {slide.subhead && (
-          <motion.div {...fade(0.34)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(17px, 1.3vw, 22px)' }}>
+          <motion.div {...fade(0.34)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(19px, 1.3vw, 22px)' }}>
             {slide.subhead}
           </motion.div>
         )}
@@ -2542,15 +2542,15 @@ const HarnessSubagentsVariant = ({ slide }) => {
           background: T.black,
           color: '#fff',
           fontFamily: T.mono,
-          fontSize: 14,
+          fontSize: 16,
           fontWeight: 700,
           letterSpacing: '0.18em',
           boxShadow: '0 6px 18px rgba(0,0,0,0.18)'
         }}
       >
         <div className="text-center">
-          <div style={{ color: '#f0c14d', fontSize: 11, letterSpacing: '0.22em' }}>PARENT</div>
-          <div className="mt-0.5" style={{ fontSize: 14, letterSpacing: '0.06em' }}>main thread</div>
+          <div style={{ color: '#f0c14d', fontSize: 13, letterSpacing: '0.22em' }}>PARENT</div>
+          <div className="mt-0.5" style={{ fontSize: 16, letterSpacing: '0.06em' }}>main thread</div>
         </div>
       </motion.div>
 
@@ -2584,7 +2584,7 @@ const HarnessSubagentsVariant = ({ slide }) => {
                 {/* Goal chip mid-line — width sized to fit 'GOAL · VERIFY' */}
                 <motion.g {...fade(0.78 + index * 0.06, 0)}>
                   <rect x={midX - 60} y={28} width={120} height={22} rx={5} fill="#fff" stroke={agent.stroke} strokeWidth={1.3} />
-                  <text x={midX} y={43} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 11, letterSpacing: '0.12em', fontWeight: 800, textTransform: 'uppercase' }} fill={agent.stroke}>
+                  <text x={midX} y={43} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 13, letterSpacing: '0.12em', fontWeight: 800, textTransform: 'uppercase' }} fill={agent.stroke}>
                     goal · {goal}
                   </text>
                 </motion.g>
@@ -2598,7 +2598,7 @@ const HarnessSubagentsVariant = ({ slide }) => {
             return (
               <motion.g key={`${agent.name}-${index}`} {...fade(0.85 + index * 0.14)}>
                 <rect x={x} y="80" width="280" height="200" rx="10" fill={agent.fill} stroke={agent.stroke} strokeWidth="2" />
-                <text x={x + 24} y="110" style={{ fontFamily: T.mono, fontSize: 12, letterSpacing: '0.16em', fontWeight: 800 }} fill={agent.stroke}>
+                <text x={x + 24} y="110" style={{ fontFamily: T.mono, fontSize: 14, letterSpacing: '0.16em', fontWeight: 800 }} fill={agent.stroke}>
                   {agent.kicker || 'ISOLATED SESSION'}
                 </text>
 
@@ -2609,7 +2609,7 @@ const HarnessSubagentsVariant = ({ slide }) => {
                 </text>
 
                 {/* Mode + tools on the right */}
-                <text x={x + 110} y="144" style={{ fontFamily: T.mono, fontSize: 10.5, letterSpacing: '0.12em', fontWeight: 700 }} fill={T.muted}>
+                <text x={x + 110} y="144" style={{ fontFamily: T.mono, fontSize: 12.5, letterSpacing: '0.12em', fontWeight: 700 }} fill={T.muted}>
                   {agent.mode || 'scoped work'}
                 </text>
                 {(agent.tools || ['tool', 'state']).map((tool, toolIndex) => {
@@ -2618,7 +2618,7 @@ const HarnessSubagentsVariant = ({ slide }) => {
                   return (
                     <g key={`${agent.name}-${tool}-${toolIndex}`}>
                       <rect x={tx} y={ty} width="74" height="22" rx="4" fill="#fff" stroke={T.faint} />
-                      <text x={tx + 37} y={ty + 15} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 11, fontWeight: 700 }} fill={T.ink}>
+                      <text x={tx + 37} y={ty + 15} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 13, fontWeight: 700 }} fill={T.ink}>
                         {tool}
                       </text>
                     </g>
@@ -2669,7 +2669,7 @@ const HarnessSubagentsVariant = ({ slide }) => {
             x="522"
             y="406"
             textAnchor="middle"
-            style={{ fontFamily: T.mono, fontSize: 14, letterSpacing: '0.18em', fontWeight: 800 }}
+            style={{ fontFamily: T.mono, fontSize: 16, letterSpacing: '0.18em', fontWeight: 800 }}
             fill="#fff"
           >
             ASSEMBLED RESULT
@@ -2682,7 +2682,7 @@ const HarnessSubagentsVariant = ({ slide }) => {
               <motion.g key={out.type} {...fade(2.25 + i * 0.08, 0)}>
                 <rect x={x} y={378} width={38} height={44} rx={6} fill="#fff" stroke={T.blue} strokeWidth={1.5} />
                 <SubagentOutputGlyph cx={x + 19} cy={394} type={out.type} color={T.blue} />
-                <text x={x + 19} y={416} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 8.5, letterSpacing: '0.12em', fontWeight: 800, textTransform: 'uppercase' }} fill={T.blue}>
+                <text x={x + 19} y={416} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 11, letterSpacing: '0.12em', fontWeight: 800, textTransform: 'uppercase' }} fill={T.blue}>
                   {out.label}
                 </text>
               </motion.g>
@@ -2706,7 +2706,7 @@ const HarnessBuiltinsVariant = ({ slide }) => (
         <Card key={`${label}-${row}`} delay={0.45 + row * 0.2} className="p-6">
           <div className="flex items-center justify-between">
             <Kicker>{label}</Kicker>
-            <div className="text-[12px] uppercase" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.18em' }}>
+            <div className="text-[14px] uppercase" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.18em' }}>
               {row === 0 ? 'where harness vendors compete' : 'no agent works without these'}
             </div>
           </div>
@@ -2714,7 +2714,7 @@ const HarnessBuiltinsVariant = ({ slide }) => (
             {(items || []).map((item, index) => (
               <Pill key={`${item.name}-${index}`} delay={0.7 + row * 0.18 + index * 0.05}>
                 <span className="block">{item.name}</span>
-                <span className="mt-1 block text-[11px]" style={{ color: T.muted }}>{item.note}</span>
+                <span className="mt-1 block text-[13px]" style={{ color: T.muted }}>{item.note}</span>
               </Pill>
             ))}
           </div>
@@ -2729,10 +2729,10 @@ const HarnessSessionVariant = ({ slide }) => (
     <Header slide={slide} />
     <Content className="grid grid-cols-[60%_1fr] gap-8">
       <Card delay={0.45} className="p-0" style={{ background: T.black, borderColor: T.black }}>
-        <div className="p-5 text-[13px]" style={{ color: '#a99f91', fontFamily: T.mono }}>
+        <div className="p-5 text-[15px]" style={{ color: '#a99f91', fontFamily: T.mono }}>
           ~/codex/projects/harness/session.jsonl <span style={{ color: T.coral }}>ACTIVE NOW</span>
         </div>
-        <div className="px-6 pb-6" style={{ color: '#eee7db', fontFamily: T.mono, fontSize: 14, lineHeight: 1.65 }}>
+        <div className="px-6 pb-6" style={{ color: '#eee7db', fontFamily: T.mono, fontSize: 16, lineHeight: 1.65 }}>
           {(slide.logLines || []).slice(0, 11).map((line, index) => (
             <motion.div key={`${line}-${index}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.68 + index * 0.04 }}>{line}</motion.div>
           ))}
@@ -2742,7 +2742,7 @@ const HarnessSessionVariant = ({ slide }) => (
         {(slide.cards || []).map((card, index) => (
           <Card key={`${card.title}-${index}`} delay={0.7 + index * 0.1} className="p-5">
             <div style={{ color: card.accent ? T.coralDark : T.ink, fontSize: 31 }}>{card.title}</div>
-            <div className="mt-1 text-[13px]" style={{ color: T.muted, fontFamily: T.mono }}>{card.note}</div>
+            <div className="mt-1 text-[15px]" style={{ color: T.muted, fontFamily: T.mono }}>{card.note}</div>
           </Card>
         ))}
       </div>
@@ -2756,7 +2756,7 @@ const HarnessSystemPromptVariant = ({ slide }) => (
     <Content className="grid grid-cols-[38%_1fr] gap-8">
       <Card delay={0.45} className="p-6">
         <Kicker>Directory walk</Kicker>
-        <div className="mt-5" style={{ fontFamily: T.mono, fontSize: 15, lineHeight: 2 }}>
+        <div className="mt-5" style={{ fontFamily: T.mono, fontSize: 17, lineHeight: 2 }}>
           {['./', '  AGENTS.md', '  .codex/instructions.md', '  .github/rules.md'].map((line, index) => (
             <motion.div key={`${line}-${index}`} {...fade(0.7 + index * 0.07)}>
               {line}<span className="float-right" style={{ color: T.coralDark }}>{['3.2k', '2.8k', '1.4k', '0.9k'][index]}</span>
@@ -2766,7 +2766,7 @@ const HarnessSystemPromptVariant = ({ slide }) => (
       </Card>
       <Card delay={0.55} className="p-6">
         <Kicker>System prompt · sent to LLM</Kicker>
-        <div className="mt-5" style={{ fontFamily: T.mono, fontSize: 15 }}>
+        <div className="mt-5" style={{ fontFamily: T.mono, fontSize: 17 }}>
           {['You are an autonomous agent...', '# Environment', '# Project', '# Agent instructions', '# Runtime config'].map((line, index) => (
             <motion.div key={`${line}-${index}`} {...fade(0.78 + index * 0.08)} className="mb-6 grid grid-cols-[64px_1fr]">
               <span style={{ color: T.coralDark }}>{String(8 + index * 11).padStart(3, '0')}</span>
@@ -2775,8 +2775,8 @@ const HarnessSystemPromptVariant = ({ slide }) => (
           ))}
         </div>
       </Card>
-      <motion.div {...fade(1.28)} className="absolute bottom-0 left-0 right-0 rounded-[5px] border p-4" style={{ borderColor: T.coralPale, background: '#f8ebe2', fontSize: 18 }}>
-        <span className="text-[12px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.2em' }}>Cache break</span>
+      <motion.div {...fade(1.28)} className="absolute bottom-0 left-0 right-0 rounded-[5px] border p-4" style={{ borderColor: T.coralPale, background: '#f8ebe2', fontSize: 20 }}>
+        <span className="text-[14px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.2em' }}>Cache break</span>
         <span className="ml-4">Dynamic above static breaks prefix caching. Order matters.</span>
       </motion.div>
     </Content>
@@ -2792,7 +2792,7 @@ const HarnessLifecycleVariant = ({ slide }) => (
           <React.Fragment key={`${step.label}-${index}`}>
             <Card delay={0.45 + index * 0.08} className="min-w-[150px] px-5 py-4 text-center">
               <div style={{ color: step.dark ? T.ink : T.coralDark, fontSize: 25, fontStyle: 'italic' }}>{step.label}</div>
-              <div className="text-[11px] uppercase" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.15em' }}>{step.note}</div>
+              <div className="text-[13px] uppercase" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.15em' }}>{step.note}</div>
             </Card>
             {index < slide.steps.length - 1 && (
               <motion.div {...fade(0.5 + index * 0.08)} style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 22 }}>→</motion.div>
@@ -2803,7 +2803,7 @@ const HarnessLifecycleVariant = ({ slide }) => (
       <div className="mt-10 grid grid-cols-[34%_1fr] gap-8">
         <Card delay={0.9} className="p-6">
           <Kicker>Protocol</Kicker>
-          <div className="mt-5 space-y-4" style={{ fontFamily: T.mono, fontSize: 15 }}>
+          <div className="mt-5 space-y-4" style={{ fontFamily: T.mono, fontSize: 17 }}>
             <div>JSON on stdin</div>
             <div>exit code: 0 = allow</div>
             <div>exit code: 2 = deny</div>
@@ -2811,7 +2811,7 @@ const HarnessLifecycleVariant = ({ slide }) => (
         </Card>
         <Card delay={1.0} className="p-6">
           {['ls', 'cat /tmp/', 'rm -rf /'].map((cmd, index) => (
-            <motion.div key={`${cmd}-${index}`} {...fade(1.12 + index * 0.1)} className="grid grid-cols-[1fr_110px] border-b py-4" style={{ borderColor: T.rule, fontFamily: T.mono, fontSize: 16 }}>
+            <motion.div key={`${cmd}-${index}`} {...fade(1.12 + index * 0.1)} className="grid grid-cols-[1fr_110px] border-b py-4" style={{ borderColor: T.rule, fontFamily: T.mono, fontSize: 18 }}>
               <span>{cmd}</span>
               <span style={{ color: [T.green, T.coralDark, '#b7473d'][index], textAlign: 'right' }}>{['ALLOW', 'CONFIRM', 'DENY'][index]}</span>
             </motion.div>
@@ -2831,7 +2831,7 @@ const HarnessPermissionsVariant = ({ slide }) => (
         <div className="mt-4" style={{ fontSize: 31 }}>Should I run <code style={{ fontFamily: T.mono }}>rm output.txt</code>?</div>
         <div className="mt-5 flex gap-3">
           {['allow', 'deny', 'always allow'].map((label, index) => (
-            <span key={`${label}-${index}`} className="rounded-[4px] border px-4 py-2 text-[13px]" style={{ borderColor: index === 0 ? T.coral : T.faint, color: index === 0 ? '#fff' : T.muted, background: index === 0 ? T.coral : '#fff', fontFamily: T.mono }}>
+            <span key={`${label}-${index}`} className="rounded-[4px] border px-4 py-2 text-[15px]" style={{ borderColor: index === 0 ? T.coral : T.faint, color: index === 0 ? '#fff' : T.muted, background: index === 0 ? T.coral : '#fff', fontFamily: T.mono }}>
               {label}
             </span>
           ))}
@@ -2852,7 +2852,7 @@ const HarnessPermissionsVariant = ({ slide }) => (
         ].map(([label, x, y], index) => (
           <motion.g key={`${label}-${index}`} {...fade(1 + index * 0.06)}>
             <rect x={x - 55} y={y - 16} width="110" height="32" rx="16" fill="#fff8f2" stroke={index > 3 ? T.coral : T.blue} />
-            <text x={x} y={y + 5} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 13, fontWeight: 600 }} fill={index > 3 ? T.coralDark : T.blue}>{label}</text>
+            <text x={x} y={y + 5} textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 15, fontWeight: 600 }} fill={index > 3 ? T.coralDark : T.blue}>{label}</text>
           </motion.g>
         ))}
       </svg>
@@ -2869,7 +2869,7 @@ const HarnessUcsdVariant = ({ slide }) => (
           <Card key={`${item.title}-${index}`} delay={0.42 + index * 0.1} className="p-5">
             <Kicker>{item.kicker}</Kicker>
             <div className="mt-3" style={{ fontSize: 28, lineHeight: 1.05, fontWeight: 600 }}>{item.title}</div>
-            <div className="mt-2" style={{ color: T.muted, fontSize: 17, lineHeight: 1.35 }}>{item.body}</div>
+            <div className="mt-2" style={{ color: T.muted, fontSize: 19, lineHeight: 1.35 }}>{item.body}</div>
           </Card>
         ))}
       </div>
@@ -2879,7 +2879,7 @@ const HarnessUcsdVariant = ({ slide }) => (
           <div className="absolute inset-[22%] rounded-full" style={{ background: T.bluePale }} />
           <div className="relative text-center">
             <div style={{ color: T.blue, fontSize: 38, lineHeight: 1.02, fontWeight: 620 }}>{slide.centerTitle || 'TritonAI'}</div>
-            <div className="mt-2 text-[11px] uppercase" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.18em' }}>{slide.centerSubtitle || 'UCSD harness path'}</div>
+            <div className="mt-2 text-[13px] uppercase" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.18em' }}>{slide.centerSubtitle || 'UCSD harness path'}</div>
           </div>
         </motion.div>
         <Card delay={0.82} className="mx-auto mt-5 max-w-[430px] p-4">
@@ -2887,8 +2887,8 @@ const HarnessUcsdVariant = ({ slide }) => (
           <div className="mt-3 grid grid-cols-2 gap-2">
             {(slide.harnesses || []).map((harness, index) => (
               <motion.div key={harness.name} {...fade(0.98 + index * 0.055, 0)} className="rounded-[5px] border px-3 py-2 text-center" style={{ borderColor: harness.highlight ? T.coral : T.faint, background: harness.highlight ? '#fff8f2' : '#fff', color: harness.highlight ? T.coralDark : T.ink }}>
-                <div style={{ fontSize: 17, lineHeight: 1, fontWeight: 650 }}>{harness.name}</div>
-                <div className="mt-1 text-[9px] uppercase" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.1em', fontWeight: 700 }}>{harness.note}</div>
+                <div style={{ fontSize: 19, lineHeight: 1, fontWeight: 650 }}>{harness.name}</div>
+                <div className="mt-1 text-[11.5px] uppercase" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.1em', fontWeight: 700 }}>{harness.note}</div>
               </motion.div>
             ))}
           </div>
@@ -2899,7 +2899,7 @@ const HarnessUcsdVariant = ({ slide }) => (
           <Card key={`${item.title}-${index}`} delay={0.62 + index * 0.1} className="p-5" style={item.highlight ? { background: '#fff8f2', borderColor: T.coral } : undefined}>
             <Kicker>{item.kicker}</Kicker>
             <div className="mt-3" style={{ fontSize: 28, lineHeight: 1.05, fontWeight: 600 }}>{item.title}</div>
-            <div className="mt-2" style={{ color: T.muted, fontSize: 17, lineHeight: 1.35 }}>{item.body}</div>
+            <div className="mt-2" style={{ color: T.muted, fontSize: 19, lineHeight: 1.35 }}>{item.body}</div>
           </Card>
         ))}
       </div>
@@ -2916,7 +2916,7 @@ const HarnessActionPlanVariant = ({ slide }) => (
           <Card key={`${action.title}-${index}`} delay={0.42 + index * 0.12} className="min-h-[310px] p-7">
             <div style={{ color: T.coralDark, fontSize: 58, fontStyle: 'italic' }}>{String(index + 1).padStart(2, '0')}</div>
             <div className="mt-4" style={{ fontSize: 34, lineHeight: 1.04, fontWeight: 600 }}>{action.title}</div>
-            <div className="mt-5" style={{ color: T.muted, fontSize: 19, lineHeight: 1.35 }}>{action.body}</div>
+            <div className="mt-5" style={{ color: T.muted, fontSize: 21, lineHeight: 1.35 }}>{action.body}</div>
           </Card>
         ))}
       </div>
@@ -2946,7 +2946,7 @@ const HarnessRecapVariant = ({ slide }) => {
           <PartText parts={slide.parts || [{ text: 'Recap: rubric, harness, expectations.' }]} />
         </h1>
         {slide.subhead && (
-          <motion.div {...fade(0.34)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(16px, 1.2vw, 20px)' }}>
+          <motion.div {...fade(0.34)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(18px, 1.2vw, 22px)' }}>
             {slide.subhead}
           </motion.div>
         )}
@@ -2995,18 +2995,18 @@ const HarnessRecapVariant = ({ slide }) => {
                   {level.score}
                 </span>
                 {isHighlight && (
-                  <span className="text-[11px] uppercase" style={{ color: accentColor, fontFamily: T.mono, letterSpacing: '0.18em', fontWeight: 800 }}>
+                  <span className="text-[13px] uppercase" style={{ color: accentColor, fontFamily: T.mono, letterSpacing: '0.18em', fontWeight: 800 }}>
                     {level.kicker || 'Baseline'}
                   </span>
                 )}
                 {index === rubric.length - 1 && (
-                  <span className="ml-auto text-[14px]" style={{ color: accentColor }}>★</span>
+                  <span className="ml-auto text-[16px]" style={{ color: accentColor }}>★</span>
                 )}
               </div>
               <div className="mt-4" style={{ fontSize: 26, lineHeight: 1.06, fontWeight: 700, color: accentColor }}>
                 {level.label}
               </div>
-              <div className="mt-4 flex-1" style={{ color: T.ink, fontSize: 17.5, lineHeight: 1.42 }}>
+              <div className="mt-4 flex-1" style={{ color: T.ink, fontSize: 19.5, lineHeight: 1.42 }}>
                 {renderAnchor(level.anchor || level.body)}
               </div>
             </Card>
@@ -3016,7 +3016,7 @@ const HarnessRecapVariant = ({ slide }) => {
 
       {/* Movement indicator — gradient arrow tight under the rubric */}
       <div className="absolute left-[4.8vw] right-[4.8vw] top-[57vh] flex items-center gap-3">
-        <span className="text-[11px] uppercase shrink-0" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
+        <span className="text-[13px] uppercase shrink-0" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
           Direction of growth
         </span>
         <svg className="flex-1" height="20" preserveAspectRatio="none" viewBox="0 0 1000 20">
@@ -3034,7 +3034,7 @@ const HarnessRecapVariant = ({ slide }) => {
           {/* Arrowhead: triangle whose flat edge sits flush at x=982, tip at x=1000 */}
           <polygon points="982,0 982,20 1000,10" fill="#5d8350" />
         </svg>
-        <span className="text-[11px] uppercase shrink-0" style={{ color: '#5d8350', fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
+        <span className="text-[13px] uppercase shrink-0" style={{ color: '#5d8350', fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
           Force multiplier →
         </span>
       </div>
@@ -3047,7 +3047,7 @@ const HarnessRecapVariant = ({ slide }) => {
         >
           {slide.bottomLineLabel && (
             <span
-              className="shrink-0 rounded-[5px] px-3 py-2 text-[12.5px]"
+              className="shrink-0 rounded-[5px] px-3 py-2 text-[14.5px]"
               style={{
                 background: T.coral,
                 color: '#fff',
@@ -3060,7 +3060,7 @@ const HarnessRecapVariant = ({ slide }) => {
               {slide.bottomLineLabel}
             </span>
           )}
-          <div style={{ fontSize: 'clamp(17px, 1.4vw, 22px)', fontWeight: 560, lineHeight: 1.3 }}>
+          <div style={{ fontSize: 'clamp(19px, 1.4vw, 22px)', fontWeight: 560, lineHeight: 1.3 }}>
             {slide.bottomLine}
           </div>
         </motion.div>
@@ -3072,14 +3072,14 @@ const HarnessRecapVariant = ({ slide }) => {
           {...fade(1.2)}
           className="absolute left-[4.8vw] right-[4.8vw] top-[67vh] flex items-center gap-4 flex-wrap"
         >
-          <span className="text-[11px] uppercase shrink-0" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
+          <span className="text-[13px] uppercase shrink-0" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
             {slide.poweredByLabel || 'Powered by the program'}
           </span>
           <div className="flex flex-wrap items-center gap-2.5">
             {slide.poweredBy.map((item) => (
               <span
                 key={item}
-                className="rounded-full border px-4 py-1.5 text-[15.5px]"
+                className="rounded-full border px-4 py-1.5 text-[17.5px]"
                 style={{
                   borderColor: T.faint,
                   background: '#fff',
@@ -3109,7 +3109,7 @@ const HarnessConvergenceVariant = ({ slide }) => {
       {slide.kicker && (
         <motion.div
           {...fade(0.18)}
-          className="absolute left-[4.8vw] top-[5vh] text-[13px] uppercase"
+          className="absolute left-[4.8vw] top-[5vh] text-[15px] uppercase"
           style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em' }}
         >
           {slide.kicker}
@@ -3127,7 +3127,7 @@ const HarnessConvergenceVariant = ({ slide }) => {
           className="absolute left-[4.8vw] top-[28vh] italic"
           style={{
             color: T.muted,
-            fontSize: 'clamp(18px, 1.4vw, 24px)',
+            fontSize: 'clamp(20px, 1.4vw, 24px)',
             maxWidth: '74vw',
             lineHeight: 1.32
           }}
@@ -3140,7 +3140,7 @@ const HarnessConvergenceVariant = ({ slide }) => {
         <Card delay={0.65} className="p-9">
           <div className="flex items-center gap-3">
             <span
-              className="rounded-full px-3.5 py-2 text-[14px]"
+              className="rounded-full px-3.5 py-2 text-[16px]"
               style={{
                 background: T.bluePale,
                 color: T.blue,
@@ -3168,7 +3168,7 @@ const HarnessConvergenceVariant = ({ slide }) => {
                 return (
                   <span
                     key={item.name}
-                    className="inline-flex items-center gap-3 rounded-[8px] border-2 px-5 py-3 text-[20px]"
+                    className="inline-flex items-center gap-3 rounded-[8px] border-2 px-5 py-3 text-[22px]"
                     style={{
                       borderColor: '#b9d3dc',
                       background: '#fff',
@@ -3236,7 +3236,7 @@ const HarnessConvergenceVariant = ({ slide }) => {
               x="60"
               y="115"
               textAnchor="middle"
-              style={{ fontFamily: T.mono, fontSize: 14, fontWeight: 800 }}
+              style={{ fontFamily: T.mono, fontSize: 16, fontWeight: 800 }}
               fill="#fff"
             >
               ×
@@ -3251,7 +3251,7 @@ const HarnessConvergenceVariant = ({ slide }) => {
         >
           <div className="flex items-center gap-3">
             <span
-              className="rounded-full px-3.5 py-2 text-[14px]"
+              className="rounded-full px-3.5 py-2 text-[16px]"
               style={{
                 background: T.coralPale,
                 color: T.coralDark,
@@ -3279,7 +3279,7 @@ const HarnessConvergenceVariant = ({ slide }) => {
                 return (
                   <span
                     key={item.name}
-                    className="inline-flex items-center gap-3 rounded-[8px] border-2 px-5 py-3 text-[20px]"
+                    className="inline-flex items-center gap-3 rounded-[8px] border-2 px-5 py-3 text-[22px]"
                     style={{
                       borderColor: T.coralPale,
                       background: '#fff',
@@ -3314,7 +3314,7 @@ const HarnessConvergenceVariant = ({ slide }) => {
           className="absolute left-[4.8vw] right-[4.8vw] top-[86vh] flex items-center gap-5"
         >
           <span
-            className="rounded-[5px] px-3 py-2 text-[12px]"
+            className="rounded-[5px] px-3 py-2 text-[14px]"
             style={{
               background: T.coral,
               color: '#fff',
@@ -3326,7 +3326,7 @@ const HarnessConvergenceVariant = ({ slide }) => {
           >
             {slide.outcome.label || 'PARADIGM SHIFT'}
           </span>
-          <div style={{ fontSize: 'clamp(20px, 1.7vw, 28px)', fontWeight: 560, lineHeight: 1.2 }}>
+          <div style={{ fontSize: 'clamp(22px, 1.7vw, 28px)', fontWeight: 560, lineHeight: 1.2 }}>
             {slide.outcome.headline}
           </div>
         </motion.div>
@@ -3354,7 +3354,7 @@ const HarnessDataUnlockVariant = ({ slide }) => {
           <PartText parts={slide.parts} />
         </h1>
         {slide.subhead && (
-          <motion.div {...fade(0.38)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(16px, 1.25vw, 21px)' }}>
+          <motion.div {...fade(0.38)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(18px, 1.25vw, 21px)' }}>
             {slide.subhead}
           </motion.div>
         )}
@@ -3366,10 +3366,10 @@ const HarnessDataUnlockVariant = ({ slide }) => {
           {/* Top: Harnesses row */}
           <Card delay={0.5} className="p-3">
             <div className="flex items-baseline gap-3">
-              <span className="text-[12.5px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
+              <span className="text-[14.5px] uppercase" style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
                 Harnesses
               </span>
-              <span style={{ color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 16 }}>
+              <span style={{ color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 18 }}>
                 what teams actually use
               </span>
             </div>
@@ -3380,7 +3380,7 @@ const HarnessDataUnlockVariant = ({ slide }) => {
                   <motion.span
                     key={item.name}
                     {...fade(0.62 + i * 0.06)}
-                    className="inline-flex items-center gap-2 rounded-[5px] border px-3 py-1.5 text-[15px]"
+                    className="inline-flex items-center gap-2 rounded-[5px] border px-3 py-1.5 text-[17px]"
                     style={{ borderColor: T.faint, background: '#fff', color: T.ink, fontFamily: T.mono, fontWeight: 700 }}
                   >
                     {item.logoType === 'ucsd' ? (
@@ -3420,19 +3420,19 @@ const HarnessDataUnlockVariant = ({ slide }) => {
             >
               <div className="flex items-baseline flex-wrap gap-x-3 gap-y-1">
                 <span
-                  className="rounded-full px-2.5 py-1 text-[11px]"
+                  className="rounded-full px-2.5 py-1 text-[13px]"
                   style={{ background: T.blue, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.22em' }}
                 >
                   MCP
                 </span>
-                <span className="text-[13px] uppercase" style={{ color: T.blue, fontFamily: T.mono, letterSpacing: '0.2em', fontWeight: 800 }}>
+                <span className="text-[15px] uppercase" style={{ color: T.blue, fontFamily: T.mono, letterSpacing: '0.2em', fontWeight: 800 }}>
                   API layer
                 </span>
-                <span style={{ color: T.blue, fontFamily: T.serif, fontStyle: 'italic', fontSize: 14, opacity: 0.85 }}>
+                <span style={{ color: T.blue, fontFamily: T.serif, fontStyle: 'italic', fontSize: 16, opacity: 0.85 }}>
                   model context protocol
                 </span>
               </div>
-              <div className="mt-1" style={{ color: T.ink, fontSize: 13.5, lineHeight: 1.22 }}>
+              <div className="mt-1" style={{ color: T.ink, fontSize: 15.5, lineHeight: 1.22 }}>
                 One standardized bridge between agents and enterprise systems — so any harness can call any system through the same auth-aware, audited interface.
               </div>
               <div className="mt-1.5 flex flex-wrap gap-1.5">
@@ -3446,10 +3446,10 @@ const HarnessDataUnlockVariant = ({ slide }) => {
                     className="rounded-[5px] border px-2 py-0.5"
                     style={{ borderColor: '#b9d3dc', background: '#fff', color: T.blue }}
                   >
-                    <span style={{ fontFamily: T.mono, fontSize: 11.5, fontWeight: 800, letterSpacing: '0.04em' }}>
+                    <span style={{ fontFamily: T.mono, fontSize: 13.5, fontWeight: 800, letterSpacing: '0.04em' }}>
                       {label}
                     </span>
-                    <span className="ml-1.5" style={{ color: T.muted, fontFamily: T.serif, fontSize: 11.5, fontStyle: 'italic' }}>
+                    <span className="ml-1.5" style={{ color: T.muted, fontFamily: T.serif, fontSize: 13.5, fontStyle: 'italic' }}>
                       {sub}
                     </span>
                   </div>
@@ -3463,12 +3463,12 @@ const HarnessDataUnlockVariant = ({ slide }) => {
           <Card delay={1.05} className="p-3" style={{ background: '#fff8f2', borderColor: T.coralPale }}>
             <div className="flex items-baseline gap-3">
               <span
-                className="rounded-[5px] px-2.5 py-1 text-[12px] uppercase"
+                className="rounded-[5px] px-2.5 py-1 text-[14px] uppercase"
                 style={{ background: T.coral, color: '#fff', fontFamily: T.mono, letterSpacing: '0.18em', fontWeight: 800 }}
               >
                 ★ {slide.priorityHeading || 'Agentic-priority'}
               </span>
-              <span style={{ color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 15 }}>
+              <span style={{ color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 17 }}>
                 where harnesses unlock the most value first
               </span>
             </div>
@@ -3479,7 +3479,7 @@ const HarnessDataUnlockVariant = ({ slide }) => {
                   <motion.span
                     key={item.name}
                     {...fade(1.18 + i * 0.06)}
-                    className="rounded-[5px] border-2 px-3 py-1.5 text-[15.5px]"
+                    className="rounded-[5px] border-2 px-3 py-1.5 text-[17.5px]"
                     style={{
                       borderColor: T.coral,
                       background: '#fff',
@@ -3499,7 +3499,7 @@ const HarnessDataUnlockVariant = ({ slide }) => {
           {alsoSystems.length > 0 && (
             <Card delay={1.5} className="p-3">
               <div className="flex items-baseline gap-3">
-                <span className="text-[12px] uppercase" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.2em', fontWeight: 700 }}>
+                <span className="text-[14px] uppercase" style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.2em', fontWeight: 700 }}>
                   {slide.alsoHeading || 'Plus the rest'}
                 </span>
               </div>
@@ -3510,7 +3510,7 @@ const HarnessDataUnlockVariant = ({ slide }) => {
                     <motion.span
                       key={sys}
                       {...fade(1.6 + i * 0.04)}
-                      className="rounded-[4px] border px-2.5 py-1 text-[12.5px]"
+                      className="rounded-[4px] border px-2.5 py-1 text-[14.5px]"
                       style={{
                         borderColor: isOverflow ? T.coral : T.faint,
                         background: isOverflow ? '#fff8f2' : '#fff',
@@ -3532,14 +3532,14 @@ const HarnessDataUnlockVariant = ({ slide }) => {
         {/* Right rail: governance */}
         <Card delay={0.7} className="p-3" style={{ borderColor: T.coral, borderWidth: 2 }}>
           <div className="flex items-center gap-2">
-            <span className="rounded-[4px] px-2 py-0.5 text-[10.5px] uppercase" style={{ background: T.coral, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.18em' }}>
+            <span className="rounded-[4px] px-2 py-0.5 text-[12.5px] uppercase" style={{ background: T.coral, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.18em' }}>
               Proposed
             </span>
-            <div className="text-[12.5px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
+            <div className="text-[14.5px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
               Governance rail
             </div>
           </div>
-          <div className="mt-1" style={{ color: T.muted, fontSize: 13.2, lineHeight: 1.22, fontStyle: 'italic' }}>
+          <div className="mt-1" style={{ color: T.muted, fontSize: 15, lineHeight: 1.22, fontStyle: 'italic' }}>
             What we propose to wrap around every connection. Each row is open for Cabinet review.
           </div>
           <div className="mt-2.5 space-y-1.5">
@@ -3552,11 +3552,11 @@ const HarnessDataUnlockVariant = ({ slide }) => {
                   className="rounded-[6px] border-l-[3px] px-2.5 py-1.5"
                   style={{ borderColor: T.coral, background: '#fff8f2' }}
                 >
-                  <div style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 13.5, fontWeight: 800, letterSpacing: '0.04em' }}>
+                  <div style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 15.5, fontWeight: 800, letterSpacing: '0.04em' }}>
                     {item.label}
                   </div>
                   {item.note && (
-                    <div className="mt-0.5" style={{ color: T.muted, fontSize: 12.5, lineHeight: 1.2 }}>
+                    <div className="mt-0.5" style={{ color: T.muted, fontSize: 14.5, lineHeight: 1.2 }}>
                       {item.note}
                     </div>
                   )}
@@ -3574,13 +3574,13 @@ const HarnessDataUnlockVariant = ({ slide }) => {
         >
           {slide.bottomLineLabel && (
             <span
-              className="shrink-0 rounded-[5px] px-3 py-2.5 text-[12.5px]"
+              className="shrink-0 rounded-[5px] px-3 py-2.5 text-[14.5px]"
               style={{ background: T.coral, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.22em', whiteSpace: 'nowrap' }}
             >
               {slide.bottomLineLabel}
             </span>
           )}
-          <div style={{ fontSize: 'clamp(19px, 1.55vw, 26px)', fontWeight: 560, lineHeight: 1.28 }}>
+          <div style={{ fontSize: 'clamp(21px, 1.55vw, 26px)', fontWeight: 560, lineHeight: 1.28 }}>
             {slide.bottomLine}
           </div>
         </motion.div>
@@ -3640,7 +3640,7 @@ const EnvironmentSceneSvg = ({ env, tone, baseDelay }) => {
         textAnchor="middle"
         style={{
           fontFamily: T.mono,
-          fontSize: 10,
+          fontSize: 12,
           fontWeight: 800,
           letterSpacing: '0.24em',
           textTransform: 'uppercase'
@@ -3693,7 +3693,7 @@ const EnvironmentSceneSvg = ({ env, tone, baseDelay }) => {
           x={agentCx + 16}
           y={agentCy + 19}
           textAnchor="middle"
-          style={{ fontFamily: T.mono, fontSize: 8.5, fontWeight: 800 }}
+          style={{ fontFamily: T.mono, fontSize: 11, fontWeight: 800 }}
           fill="#fff"
         >
           ↺
@@ -3704,7 +3704,7 @@ const EnvironmentSceneSvg = ({ env, tone, baseDelay }) => {
           textAnchor="middle"
           style={{
             fontFamily: T.mono,
-            fontSize: 9,
+            fontSize: 11.5,
             fontWeight: 800,
             letterSpacing: '0.16em',
             textTransform: 'uppercase'
@@ -3745,7 +3745,7 @@ const EnvironmentSceneSvg = ({ env, tone, baseDelay }) => {
               <text
                 x={iconLeft + 36}
                 y={rowY + 5}
-                style={{ fontFamily: T.mono, fontSize: 11, fontWeight: 700 }}
+                style={{ fontFamily: T.mono, fontSize: 13, fontWeight: 700 }}
                 fill={T.ink}
               >
                 {lines[0]}
@@ -3754,7 +3754,7 @@ const EnvironmentSceneSvg = ({ env, tone, baseDelay }) => {
               <text
                 x={iconLeft + 36}
                 y={rowY}
-                style={{ fontFamily: T.mono, fontSize: 11, fontWeight: 700 }}
+                style={{ fontFamily: T.mono, fontSize: 13, fontWeight: 700 }}
                 fill={T.ink}
               >
                 <tspan x={iconLeft + 36} dy={0}>{lines[0]}</tspan>
@@ -3785,7 +3785,7 @@ const HarnessTwoEnvironmentsVariant = ({ slide }) => {
           <PartText parts={slide.parts} />
         </h1>
         {slide.subhead && (
-          <motion.div {...fade(0.38)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(16px, 1.25vw, 21px)' }}>
+          <motion.div {...fade(0.38)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(18px, 1.25vw, 21px)' }}>
             {slide.subhead}
           </motion.div>
         )}
@@ -3816,7 +3816,7 @@ const HarnessTwoEnvironmentsVariant = ({ slide }) => {
                     style={{
                       color: tone.ink,
                       fontFamily: T.mono,
-                      fontSize: 'clamp(18px, 1.6vw, 24px)',
+                      fontSize: 'clamp(20px, 1.6vw, 24px)',
                       fontWeight: 800,
                       letterSpacing: '0.16em',
                       lineHeight: 1
@@ -3825,12 +3825,12 @@ const HarnessTwoEnvironmentsVariant = ({ slide }) => {
                     {env.kicker}
                   </div>
                   <div className="mt-1 flex items-baseline gap-2.5 flex-wrap">
-                    <span style={{ color: T.ink, fontSize: 17, lineHeight: 1.15, fontWeight: 620 }}>
+                    <span style={{ color: T.ink, fontSize: 19, lineHeight: 1.15, fontWeight: 620 }}>
                       {env.title}
                     </span>
                     {env.titleBadge && (
                       <span
-                        className="rounded-[4px] px-2 py-0.5 text-[10px] uppercase whitespace-nowrap"
+                        className="rounded-[4px] px-2 py-0.5 text-[12px] uppercase whitespace-nowrap"
                         style={{
                           background: tone.ink,
                           color: '#fff',
@@ -3846,7 +3846,7 @@ const HarnessTwoEnvironmentsVariant = ({ slide }) => {
                   {env.caveat && (
                     <div
                       className="mt-1 italic"
-                      style={{ color: T.muted, fontFamily: T.serif, fontSize: 12.5, lineHeight: 1.3 }}
+                      style={{ color: T.muted, fontFamily: T.serif, fontSize: 14.5, lineHeight: 1.3 }}
                     >
                       {env.caveat}
                     </div>
@@ -3861,7 +3861,7 @@ const HarnessTwoEnvironmentsVariant = ({ slide }) => {
 
               {/* Footnote */}
               {env.footnote && (
-                <div className="mt-2 pt-3 border-t text-[11.5px] uppercase" style={{ borderColor: tone.soft, color: tone.ink, fontFamily: T.mono, letterSpacing: '0.2em', fontWeight: 800 }}>
+                <div className="mt-2 pt-3 border-t text-[13.5px] uppercase" style={{ borderColor: tone.soft, color: tone.ink, fontFamily: T.mono, letterSpacing: '0.2em', fontWeight: 800 }}>
                   {env.footnote}
                 </div>
               )}
@@ -3879,18 +3879,18 @@ const HarnessTwoEnvironmentsVariant = ({ slide }) => {
         >
           <div className="flex items-center gap-4">
             <span
-              className="rounded-full px-3 py-1 text-[11px] uppercase whitespace-nowrap"
+              className="rounded-full px-3 py-1 text-[13px] uppercase whitespace-nowrap"
               style={{ background: T.coral, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.18em' }}
             >
               {slide.transition.kicker}
             </span>
             <span
-              className="text-[14px] uppercase whitespace-nowrap"
+              className="text-[16px] uppercase whitespace-nowrap"
               style={{ color: T.coralDark, fontFamily: T.mono, letterSpacing: '0.16em', fontWeight: 800 }}
             >
               {slide.transition.from} → {slide.transition.to}
             </span>
-            <span style={{ color: T.ink, fontSize: 15.5, lineHeight: 1.32 }}>
+            <span style={{ color: T.ink, fontSize: 17.5, lineHeight: 1.32 }}>
               {slide.transition.rule}
             </span>
           </div>
@@ -3900,12 +3900,12 @@ const HarnessTwoEnvironmentsVariant = ({ slide }) => {
               style={{ borderColor: T.coralPale }}
             >
               <span
-                className="rounded-full px-3 py-1 text-[11px] uppercase whitespace-nowrap"
+                className="rounded-full px-3 py-1 text-[13px] uppercase whitespace-nowrap"
                 style={{ background: '#fff', color: T.coralDark, border: `1px solid ${T.coral}`, fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.18em' }}
               >
                 {slide.transition.optIn.kicker}
               </span>
-              <span style={{ color: T.ink, fontSize: 15.5, lineHeight: 1.32, fontStyle: 'italic' }}>
+              <span style={{ color: T.ink, fontSize: 17.5, lineHeight: 1.32, fontStyle: 'italic' }}>
                 {slide.transition.optIn.rule}
               </span>
             </div>
@@ -3918,7 +3918,7 @@ const HarnessTwoEnvironmentsVariant = ({ slide }) => {
         <motion.div
           {...fade(1.1)}
           className="absolute left-[4.8vw] right-[4.8vw] top-[87vh] italic"
-          style={{ color: T.muted, fontFamily: T.serif, fontSize: 'clamp(15px, 1.15vw, 19px)' }}
+          style={{ color: T.muted, fontFamily: T.serif, fontSize: 'clamp(17px, 1.15vw, 21px)' }}
         >
           {slide.bottomLine}
         </motion.div>
@@ -3933,16 +3933,16 @@ const HarnessTwoEnvironmentsVariant = ({ slide }) => {
         >
           <div className="flex items-baseline gap-3 flex-wrap">
             <span
-              className="rounded-full px-3 py-1 text-[11px] uppercase whitespace-nowrap"
+              className="rounded-full px-3 py-1 text-[13px] uppercase whitespace-nowrap"
               style={{ background: T.blue, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.18em' }}
             >
               {slide.configRepo.kicker || 'One config repo'}
             </span>
-            <span className="text-[13.5px]" style={{ color: T.blue, fontFamily: T.mono, fontWeight: 700 }}>
+            <span className="text-[15.5px]" style={{ color: T.blue, fontFamily: T.mono, fontWeight: 700 }}>
               {slide.configRepo.name}
             </span>
             {slide.configRepo.files && (
-              <span style={{ color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 13 }}>
+              <span style={{ color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 15 }}>
                 {slide.configRepo.files}
               </span>
             )}
@@ -3950,7 +3950,7 @@ const HarnessTwoEnvironmentsVariant = ({ slide }) => {
           {Array.isArray(slide.configRepo.lanes) && slide.configRepo.lanes.length > 0 && (
             <div className="mt-2 flex items-center gap-2 flex-wrap">
               <span
-                className="text-[10.5px] uppercase whitespace-nowrap"
+                className="text-[12.5px] uppercase whitespace-nowrap"
                 style={{ color: T.muted, fontFamily: T.mono, letterSpacing: '0.18em', fontWeight: 800 }}
               >
                 Shipped via
@@ -3958,7 +3958,7 @@ const HarnessTwoEnvironmentsVariant = ({ slide }) => {
               {slide.configRepo.lanes.map((lane) => (
                 <span
                   key={lane}
-                  className="rounded-[5px] border px-2.5 py-0.5 text-[11.5px] whitespace-nowrap"
+                  className="rounded-[5px] border px-2.5 py-0.5 text-[13.5px] whitespace-nowrap"
                   style={{ borderColor: T.blue, color: T.blue, background: '#fff', fontFamily: T.mono, fontWeight: 700 }}
                 >
                   {lane}
@@ -3989,7 +3989,7 @@ const HarnessConfigRepoVariant = ({ slide }) => {
           <PartText parts={slide.parts} />
         </h1>
         {slide.subhead && (
-          <motion.div {...fade(0.38)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(16px, 1.25vw, 21px)' }}>
+          <motion.div {...fade(0.38)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(18px, 1.25vw, 21px)' }}>
             {slide.subhead}
           </motion.div>
         )}
@@ -3999,14 +3999,14 @@ const HarnessConfigRepoVariant = ({ slide }) => {
         {/* Repo box */}
         <Card delay={0.5} className="flex flex-col p-6">
           <div
-            className="text-[12px] uppercase"
+            className="text-[14px] uppercase"
             style={{ color: T.coralDark, fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.22em' }}
           >
             ITS-owned config repo
           </div>
           <div
             className="mt-2 break-all"
-            style={{ color: T.ink, fontFamily: T.mono, fontSize: 16.5, fontWeight: 700 }}
+            style={{ color: T.ink, fontFamily: T.mono, fontSize: 18.5, fontWeight: 700 }}
           >
             {repo.name}
           </div>
@@ -4020,12 +4020,12 @@ const HarnessConfigRepoVariant = ({ slide }) => {
               >
                 <span
                   className="shrink-0"
-                  style={{ color: T.coralDark, fontFamily: T.mono, fontWeight: 700, fontSize: 14 }}
+                  style={{ color: T.coralDark, fontFamily: T.mono, fontWeight: 700, fontSize: 16 }}
                 >
                   {f.name}
                 </span>
                 <span
-                  style={{ color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 13 }}
+                  style={{ color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 15 }}
                 >
                   {f.note}
                 </span>
@@ -4047,18 +4047,18 @@ const HarnessConfigRepoVariant = ({ slide }) => {
               >
                 <div className="flex items-baseline gap-3 flex-wrap">
                   <span
-                    className="rounded-full px-3 py-1 text-[11px] uppercase whitespace-nowrap"
+                    className="rounded-full px-3 py-1 text-[13px] uppercase whitespace-nowrap"
                     style={{ background: tone.ink, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.18em' }}
                   >
                     {lane.label}
                   </span>
-                  <span style={{ color: T.ink, fontSize: 19, fontWeight: 620 }}>
+                  <span style={{ color: T.ink, fontSize: 21, fontWeight: 620 }}>
                     {lane.audience}
                   </span>
                 </div>
                 <div
                   className="mt-1.5"
-                  style={{ color: tone.ink, fontFamily: T.mono, fontSize: 13, fontWeight: 700 }}
+                  style={{ color: tone.ink, fontFamily: T.mono, fontSize: 15, fontWeight: 700 }}
                 >
                   {lane.detail}
                 </div>
@@ -4073,7 +4073,7 @@ const HarnessConfigRepoVariant = ({ slide }) => {
         <motion.div
           {...fade(1.2)}
           className="absolute left-[4.8vw] right-[4.8vw] top-[87vh] italic"
-          style={{ color: T.muted, fontFamily: T.serif, fontSize: 'clamp(15px, 1.15vw, 19px)' }}
+          style={{ color: T.muted, fontFamily: T.serif, fontSize: 'clamp(17px, 1.15vw, 21px)' }}
         >
           {slide.principle}
         </motion.div>
@@ -4098,7 +4098,7 @@ const HarnessActionVariant = ({ slide }) => {
           <PartText parts={slide.parts} />
         </h1>
         {slide.subhead && (
-          <motion.div {...fade(0.34)} className="mt-1.5 italic" style={{ color: T.muted, fontSize: 'clamp(17px, 1.3vw, 22px)' }}>
+          <motion.div {...fade(0.34)} className="mt-1.5 italic" style={{ color: T.muted, fontSize: 'clamp(19px, 1.3vw, 22px)' }}>
             {slide.subhead}
           </motion.div>
         )}
@@ -4109,10 +4109,10 @@ const HarnessActionVariant = ({ slide }) => {
         {/* Left: The action pipeline (vertical flow) — top-aligned */}
         <Card delay={0.5} className="flex flex-col p-6">
           <div className="flex items-baseline gap-3">
-            <span className="text-[13px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
+            <span className="text-[15px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
               Mechanics
             </span>
-            <span style={{ color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 16 }}>
+            <span style={{ color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 18 }}>
               every tool call follows this path
             </span>
           </div>
@@ -4131,7 +4131,7 @@ const HarnessActionVariant = ({ slide }) => {
                 >
                   <div className="flex items-baseline gap-2.5">
                     <span
-                      className="rounded-[4px] px-2 py-0.5 text-[13px]"
+                      className="rounded-[4px] px-2 py-0.5 text-[15px]"
                       style={{ background: step.color, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.14em' }}
                     >
                       {String(i + 1).padStart(2, '0')}
@@ -4140,7 +4140,7 @@ const HarnessActionVariant = ({ slide }) => {
                       {step.label}
                     </span>
                   </div>
-                  <div className="mt-1" style={{ color: T.muted, fontFamily: T.mono, fontSize: 15, lineHeight: 1.3 }}>
+                  <div className="mt-1" style={{ color: T.muted, fontFamily: T.mono, fontSize: 17, lineHeight: 1.3 }}>
                     {step.sub}
                   </div>
                 </motion.div>
@@ -4161,10 +4161,10 @@ const HarnessActionVariant = ({ slide }) => {
         {/* Right: A worked example — the same pipeline, applied to a real staff action */}
         <Card delay={0.7} className="p-6 flex flex-col">
           <div className="flex items-baseline gap-3">
-            <span className="text-[13px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
+            <span className="text-[15px] uppercase" style={{ color: T.coral, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>
               Example
             </span>
-            <span style={{ color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 16 }}>
+            <span style={{ color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 18 }}>
               one staff action through the gates
             </span>
           </div>
@@ -4175,7 +4175,7 @@ const HarnessActionVariant = ({ slide }) => {
               className="mt-2.5 rounded-[7px] border-l-[3px] px-3.5 py-2.5"
               style={{ borderColor: T.blue, background: T.bluePale }}
             >
-              <div className="text-[14px] uppercase" style={{ color: T.blue, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>Action</div>
+              <div className="text-[16px] uppercase" style={{ color: T.blue, fontFamily: T.mono, letterSpacing: '0.22em', fontWeight: 800 }}>Action</div>
               <div className="mt-1" style={{ color: T.blue, fontSize: 21, fontWeight: 600, lineHeight: 1.25 }}>{traceGoal}</div>
             </motion.div>
           )}
@@ -4193,10 +4193,10 @@ const HarnessActionVariant = ({ slide }) => {
                   style={{ borderColor: matchedColor, background: '#fcfaf3' }}
                 >
                   <div className="flex items-baseline gap-2.5">
-                    <span style={{ color: matchedColor, fontFamily: T.mono, fontSize: 14, fontWeight: 800, letterSpacing: '0.12em', textTransform: 'uppercase', minWidth: 108 }}>
+                    <span style={{ color: matchedColor, fontFamily: T.mono, fontSize: 16, fontWeight: 800, letterSpacing: '0.12em', textTransform: 'uppercase', minWidth: 108 }}>
                       {step.stage}
                     </span>
-                    <span style={{ color: T.ink, fontFamily: T.mono, fontSize: 16, lineHeight: 1.32 }}>
+                    <span style={{ color: T.ink, fontFamily: T.mono, fontSize: 18, lineHeight: 1.32 }}>
                       {step.detail}
                     </span>
                   </div>
@@ -4234,27 +4234,27 @@ const HarnessActionVariant = ({ slide }) => {
                 style={{ fontFamily: T.mono, color: T.ink }}
               >
                 <div className="flex items-center gap-2 mb-1.5">
-                  <span className="text-[11px] uppercase" style={{ color: T.coral, letterSpacing: '0.22em', fontWeight: 800 }}>
+                  <span className="text-[13px] uppercase" style={{ color: T.coral, letterSpacing: '0.22em', fontWeight: 800 }}>
                     Human in the loop
                   </span>
-                  <span style={{ color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 12.5 }}>
+                  <span style={{ color: T.muted, fontFamily: T.serif, fontStyle: 'italic', fontSize: 14.5 }}>
                     {slide.approvalPrompt.kicker || 'the agent stops and asks before any write'}
                   </span>
                 </div>
                 {/* Claude-Code-style boxed tool call */}
                 <div className="rounded-[6px] border" style={{ borderColor: T.coral, background: '#fffaf5' }}>
                   <div className="border-l-[3px] pl-3 pr-3 py-2.5" style={{ borderColor: T.coral }}>
-                    <div className="text-[10.5px] uppercase mb-1" style={{ color: T.coralDark, fontWeight: 800, letterSpacing: '0.2em' }}>
+                    <div className="text-[12.5px] uppercase mb-1" style={{ color: T.coralDark, fontWeight: 800, letterSpacing: '0.2em' }}>
                       Tool call · {toolHeader}
                     </div>
-                    <div style={{ color: T.ink, fontSize: 13.5, fontWeight: 700, lineHeight: 1.4, wordBreak: 'break-word' }}>
+                    <div style={{ color: T.ink, fontSize: 15.5, fontWeight: 700, lineHeight: 1.4, wordBreak: 'break-word' }}>
                       {code}
                     </div>
                   </div>
                 </div>
                 {/* Prompt + numbered options */}
                 <div className="mt-2">
-                  <div className="mb-1" style={{ color: T.ink, fontSize: 13, fontWeight: 700 }}>
+                  <div className="mb-1" style={{ color: T.ink, fontSize: 15, fontWeight: 700 }}>
                     Do you want to proceed?
                   </div>
                   <div className="flex flex-col gap-[1px]">
@@ -4264,7 +4264,7 @@ const HarnessActionVariant = ({ slide }) => {
                         <div
                           key={i}
                           className="flex items-baseline gap-1.5 rounded-[3px] px-1.5 py-[2px]"
-                          style={{ background: selected ? '#ffe7d4' : 'transparent', fontSize: 12.5, lineHeight: 1.45 }}
+                          style={{ background: selected ? '#ffe7d4' : 'transparent', fontSize: 14.5, lineHeight: 1.45 }}
                         >
                           <span style={{ width: 10, display: 'inline-block', color: selected ? T.coral : 'transparent', fontWeight: 800 }}>
                             ❯
@@ -4287,7 +4287,7 @@ const HarnessActionVariant = ({ slide }) => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 1.05 + traceSteps.length * 0.18 + 0.55, ease }}
             className="mt-2.5 self-start inline-flex items-center gap-2.5 rounded-full px-4 py-1.5"
-            style={{ background: T.coralDark, color: '#fff', fontFamily: T.mono, fontSize: 13, fontWeight: 800, letterSpacing: '0.12em' }}
+            style={{ background: T.coralDark, color: '#fff', fontFamily: T.mono, fontSize: 15, fontWeight: 800, letterSpacing: '0.12em' }}
           >
             <span>✓ APPROVED · SCOPED · AUDITED</span>
           </motion.div>
@@ -4302,7 +4302,7 @@ const HarnessActionVariant = ({ slide }) => {
         >
           {slide.bottomLineLabel && (
             <span
-              className="shrink-0 rounded-[5px] px-3 py-2 text-[12px]"
+              className="shrink-0 rounded-[5px] px-3 py-2 text-[14px]"
               style={{
                 background: T.coral,
                 color: '#fff',
@@ -4315,7 +4315,7 @@ const HarnessActionVariant = ({ slide }) => {
               {slide.bottomLineLabel}
             </span>
           )}
-          <div style={{ fontSize: 'clamp(15px, 1.2vw, 19px)', fontWeight: 560, lineHeight: 1.3 }}>
+          <div style={{ fontSize: 'clamp(17px, 1.2vw, 21px)', fontWeight: 560, lineHeight: 1.3 }}>
             {slide.bottomLine}
           </div>
         </motion.div>
@@ -4355,7 +4355,7 @@ const FlowColumn = ({ kicker, items, delay = 0.3, accentColor }) => (
           <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full" style={{ background: `${item.color}18` }}>
             <MiniIcon type={item.icon} color={item.color} className="h-5 w-5" />
           </div>
-          <span style={{ color: T.ink, fontFamily: T.sans, fontSize: 14, fontWeight: 600, lineHeight: 1.15 }}>
+          <span style={{ color: T.ink, fontFamily: T.sans, fontSize: 16, fontWeight: 600, lineHeight: 1.15 }}>
             {item.label}
           </span>
         </motion.div>
@@ -4381,11 +4381,11 @@ const MemoryNode = ({ item, delay = 0.4, compact = false, nodeRef }) => (
         <MiniIcon type={item.icon} color={item.color} className="h-5 w-5" />
       </div>
       <div>
-        <div style={{ color: T.ink, fontFamily: T.sans, fontSize: compact ? 14.2 : 15, fontWeight: 750, lineHeight: 1.05 }}>
+        <div style={{ color: T.ink, fontFamily: T.sans, fontSize: compact ? 16 : 17, fontWeight: 750, lineHeight: 1.05 }}>
           {item.label}
         </div>
         {item.sub && (
-          <div style={{ color: T.muted, fontFamily: T.mono, fontSize: compact ? 11.2 : 11.8, lineHeight: 1.18 }}>
+          <div style={{ color: T.muted, fontFamily: T.mono, fontSize: compact ? 13 : 13.5, lineHeight: 1.18 }}>
             {item.sub}
           </div>
         )}
@@ -4567,7 +4567,7 @@ const MemoryFlowField = ({ slide, sources, knowledgeLayers, actions }) => {
 
       <div className="relative grid h-full grid-cols-[24%_1fr_24%] gap-7">
         <div className="flex flex-col justify-start gap-2.5 pt-1">
-          <Kicker className="text-[13px]" style={{ color: T.blue, fontWeight: 850 }}>{slide?.sourcesLabel || 'Inputs'}</Kicker>
+          <Kicker className="text-[15px]" style={{ color: T.blue, fontWeight: 850 }}>{slide?.sourcesLabel || 'Inputs'}</Kicker>
           {sources.map((item, i) => (
             <MemoryNode key={item.label} item={item} delay={0.4 + i * 0.05} compact nodeRef={(node) => { sourceRefs.current[i] = node; }} />
           ))}
@@ -4581,7 +4581,7 @@ const MemoryFlowField = ({ slide, sources, knowledgeLayers, actions }) => {
             style={{ borderColor: T.green, boxShadow: `0 18px 45px ${T.green}22` }}
           >
             <div className="text-center">
-              <div style={{ color: T.green, fontFamily: T.mono, fontSize: 13, fontWeight: 850, letterSpacing: '0.2em', textTransform: 'uppercase' }}>
+              <div style={{ color: T.green, fontFamily: T.mono, fontSize: 15, fontWeight: 850, letterSpacing: '0.2em', textTransform: 'uppercase' }}>
                 {slide?.coreKicker || 'Knowledge and memory ecosystem'}
               </div>
               <div className="mt-1" style={{ color: T.ink, fontFamily: T.serif, fontSize: 31, fontWeight: 620, lineHeight: 1.04 }}>
@@ -4594,7 +4594,7 @@ const MemoryFlowField = ({ slide, sources, knowledgeLayers, actions }) => {
               ))}
             </div>
             <div className="mt-3 rounded-[6px] border px-3.5 py-2.5 text-center" style={{ borderColor: T.faint, background: '#fcfaf3' }}>
-              <span style={{ color: T.muted, fontFamily: T.mono, fontSize: 11.8, fontWeight: 700 }}>
+              <span style={{ color: T.muted, fontFamily: T.mono, fontSize: 13.5, fontWeight: 700 }}>
                 {slide?.coreFootnote || 'automated jobs extract patterns, update context, and make memory available for actions and use cases'}
               </span>
             </div>
@@ -4602,7 +4602,7 @@ const MemoryFlowField = ({ slide, sources, knowledgeLayers, actions }) => {
         </div>
 
         <div className="flex flex-col justify-start gap-2.5 pt-5">
-          <Kicker className="text-[13px]" style={{ color: T.coralDark, fontWeight: 850 }}>{slide?.actionsLabel || 'Agent actions'}</Kicker>
+          <Kicker className="text-[15px]" style={{ color: T.coralDark, fontWeight: 850 }}>{slide?.actionsLabel || 'Agent actions'}</Kicker>
           {actions.map((item, i) => (
             <MemoryNode key={item.label} item={item} delay={0.75 + i * 0.05} compact nodeRef={(node) => { actionRefs.current[i] = node; }} />
           ))}
@@ -4615,11 +4615,11 @@ const MemoryFlowField = ({ slide, sources, knowledgeLayers, actions }) => {
 const JobRhythmStrip = ({ jobs = [] }) => (
   <div className="h-full">
     <motion.div {...fade(0.92, 6)} className="mb-2 flex items-center gap-3">
-      <div style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 11, fontWeight: 850, letterSpacing: '0.18em', textTransform: 'uppercase' }}>
+      <div style={{ color: T.coralDark, fontFamily: T.mono, fontSize: 13, fontWeight: 850, letterSpacing: '0.18em', textTransform: 'uppercase' }}>
         Agent action outcomes
       </div>
       <div className="h-px flex-1" style={{ background: `linear-gradient(90deg, ${T.coralDark}66, transparent)` }} />
-      <div style={{ color: T.muted, fontFamily: T.sans, fontSize: 12, fontWeight: 650 }}>
+      <div style={{ color: T.muted, fontFamily: T.sans, fontSize: 14, fontWeight: 650 }}>
         memory is retrieved when the agent acts
       </div>
     </motion.div>
@@ -4627,19 +4627,19 @@ const JobRhythmStrip = ({ jobs = [] }) => (
       {jobs.map((job, i) => (
         <Card key={job.label} delay={1.0 + i * 0.07} className="p-3" style={{ borderTopWidth: 4, borderTopColor: job.color }}>
           <div className="flex items-start justify-between gap-2">
-            <div style={{ color: job.color, fontFamily: T.mono, fontSize: 10.2, fontWeight: 850, letterSpacing: '0.12em', textTransform: 'uppercase', lineHeight: 1.15 }}>
+            <div style={{ color: job.color, fontFamily: T.mono, fontSize: 12.5, fontWeight: 850, letterSpacing: '0.12em', textTransform: 'uppercase', lineHeight: 1.15 }}>
               {job.time}
             </div>
             {job.fires && (
-              <div className="shrink-0 rounded-full px-2 py-0.5" style={{ border: `1px solid ${job.color}33`, color: job.color, fontFamily: T.mono, fontSize: 9.5, fontWeight: 850, letterSpacing: '0.08em', textTransform: 'uppercase', lineHeight: 1.15 }}>
+              <div className="shrink-0 rounded-full px-2 py-0.5" style={{ border: `1px solid ${job.color}33`, color: job.color, fontFamily: T.mono, fontSize: 12, fontWeight: 850, letterSpacing: '0.08em', textTransform: 'uppercase', lineHeight: 1.15 }}>
                 {job.fires}
               </div>
             )}
           </div>
-          <div className="mt-1" style={{ color: T.ink, fontFamily: T.sans, fontSize: 15, fontWeight: 750, lineHeight: 1.08 }}>
+          <div className="mt-1" style={{ color: T.ink, fontFamily: T.sans, fontSize: 17, fontWeight: 750, lineHeight: 1.08 }}>
             {job.label}
           </div>
-          <div className="mt-1" style={{ color: T.muted, fontFamily: T.sans, fontSize: 12.2, lineHeight: 1.22 }}>
+          <div className="mt-1" style={{ color: T.muted, fontFamily: T.sans, fontSize: 14, lineHeight: 1.22 }}>
             {job.detail}
           </div>
         </Card>
@@ -4650,7 +4650,7 @@ const JobRhythmStrip = ({ jobs = [] }) => (
 
 const ModelFleetStrip = ({ models = [], caption }) => (
   <motion.div {...fade(1.3, 6)} className="flex h-full items-center gap-3">
-    <div className="shrink-0" style={{ color: T.blue, fontFamily: T.mono, fontSize: 11, fontWeight: 850, letterSpacing: '0.18em', textTransform: 'uppercase' }}>
+    <div className="shrink-0" style={{ color: T.blue, fontFamily: T.mono, fontSize: 13, fontWeight: 850, letterSpacing: '0.18em', textTransform: 'uppercase' }}>
       Model fleet
     </div>
     <div className="flex min-w-0 flex-wrap items-center gap-2">
@@ -4665,14 +4665,14 @@ const ModelFleetStrip = ({ models = [], caption }) => (
             style={{ background: m.openWeight ? '#6E963B' : T.coralDark }}
             aria-hidden="true"
           />
-          <span style={{ color: T.ink, fontFamily: T.mono, fontSize: 11.5, fontWeight: 750 }}>{m.label}</span>
-          <span style={{ color: T.muted, fontFamily: T.mono, fontSize: 11, fontWeight: 650 }}>×{m.jobs}</span>
+          <span style={{ color: T.ink, fontFamily: T.mono, fontSize: 13.5, fontWeight: 750 }}>{m.label}</span>
+          <span style={{ color: T.muted, fontFamily: T.mono, fontSize: 13, fontWeight: 650 }}>×{m.jobs}</span>
         </div>
       ))}
     </div>
     <div className="h-px min-w-4 flex-1" style={{ background: `linear-gradient(90deg, ${T.faint}, transparent)` }} />
     {caption && (
-      <div className="shrink-0" style={{ color: T.muted, fontFamily: T.sans, fontSize: 12, fontWeight: 650 }}>
+      <div className="shrink-0" style={{ color: T.muted, fontFamily: T.sans, fontSize: 14, fontWeight: 650 }}>
         {caption}
       </div>
     )}
@@ -4696,18 +4696,18 @@ const HarnessMemoryArchitectureVariant = ({ slide }) => {
             <PartText parts={slide.parts} />
           </h1>
           {slide.subhead && (
-            <motion.div {...fade(0.38)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(16px, 1.2vw, 21px)' }}>
+            <motion.div {...fade(0.38)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(18px, 1.2vw, 21px)' }}>
               {slide.subhead}
             </motion.div>
           )}
           {slide.bottomLine && (
             <motion.div {...fade(0.46)} className="mt-3 flex items-start gap-3" style={{ color: T.ink, fontFamily: T.serif }}>
               {slide.bottomLineLabel && (
-                <span className="shrink-0 rounded-full px-3 py-1" style={{ background: T.coralDark, fontSize: 11, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.18em', whiteSpace: 'nowrap' }}>
+                <span className="shrink-0 rounded-full px-3 py-1" style={{ background: T.coralDark, fontSize: 13, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.18em', whiteSpace: 'nowrap' }}>
                   {slide.bottomLineLabel}
                 </span>
               )}
-              <div style={{ fontSize: 'clamp(14px, 1.05vw, 17px)', fontWeight: 520, lineHeight: 1.25, maxWidth: '66vw' }}>
+              <div style={{ fontSize: 'clamp(16px, 1.05vw, 19px)', fontWeight: 520, lineHeight: 1.25, maxWidth: '66vw' }}>
                 {slide.bottomLine}
               </div>
             </motion.div>
@@ -4757,11 +4757,11 @@ const ScalingPyramidGraphic = ({ tiers = [], showTierDetails = true }) => {
 
   return (
     <svg viewBox={viewBox} className="h-full w-full" role="img" aria-label="Privacy-preserving scaling pyramid">
-      <text x="30" y="42" style={{ fill: T.blue, fontFamily: T.mono, fontSize: 15, fontWeight: 850, letterSpacing: '0.2em' }}>PRIVACY</text>
-      <text x="30" y="64" style={{ fill: T.muted, fontFamily: T.sans, fontSize: 14, fontWeight: 650 }}>aggregate-only upward</text>
+      <text x="30" y="42" style={{ fill: T.blue, fontFamily: T.mono, fontSize: 17, fontWeight: 850, letterSpacing: '0.2em' }}>PRIVACY</text>
+      <text x="30" y="64" style={{ fill: T.muted, fontFamily: T.sans, fontSize: 16, fontWeight: 650 }}>aggregate-only upward</text>
       <line x1="82" y1="88" x2="82" y2="384" stroke={T.faint} strokeWidth="3.6" strokeDasharray="7 8" />
       <path d="M82 81l-7 12h14z" fill={T.muted} />
-      <text x="18" y="438" style={{ fill: T.muted, fontFamily: T.sans, fontSize: 14, fontWeight: 650 }}>private by default</text>
+      <text x="18" y="438" style={{ fill: T.muted, fontFamily: T.sans, fontSize: 16, fontWeight: 650 }}>private by default</text>
 
       {sorted.map((tier, i) => {
         const s = segments[i];
@@ -4774,19 +4774,19 @@ const ScalingPyramidGraphic = ({ tiers = [], showTierDetails = true }) => {
             <text x={cx} y={yMid - 5} textAnchor="middle" style={{ fill: tier.textColor, fontFamily: T.sans, fontSize: 27, fontWeight: 850 }}>
               {tier.label}
             </text>
-            <text x={cx} y={yMid + 21} textAnchor="middle" style={{ fill: tier.textColor, fontFamily: T.sans, fontSize: 14, fontWeight: 650, opacity: 0.92 }}>
+            <text x={cx} y={yMid + 21} textAnchor="middle" style={{ fill: tier.textColor, fontFamily: T.sans, fontSize: 16, fontWeight: 650, opacity: 0.92 }}>
               {tier.scope}
             </text>
             {showTierDetails && (
               <>
                 <line x1={connectorX} y1={yMid} x2="590" y2={yMid} stroke={T.faint} strokeWidth="1.5" />
-                <text x="608" y={yMid - 14} style={{ fill: T.ink, fontFamily: T.sans, fontSize: 14, fontWeight: 800 }}>
+                <text x="608" y={yMid - 14} style={{ fill: T.ink, fontFamily: T.sans, fontSize: 16, fontWeight: 800 }}>
                   {tier.detail}
                 </text>
-                <text x="608" y={yMid + 5} style={{ fill: T.blue, fontFamily: T.sans, fontSize: 12.5, fontWeight: 700 }}>
+                <text x="608" y={yMid + 5} style={{ fill: T.blue, fontFamily: T.sans, fontSize: 14.5, fontWeight: 700 }}>
                   {tier.privacy}
                 </text>
-                <text x="608" y={yMid + 23} style={{ fill: T.muted, fontFamily: T.serif, fontSize: 12, fontStyle: 'italic' }}>
+                <text x="608" y={yMid + 23} style={{ fill: T.muted, fontFamily: T.serif, fontSize: 14, fontStyle: 'italic' }}>
                   {tier.status}
                 </text>
               </>
@@ -4810,7 +4810,7 @@ const TierExplanationLegend = ({ tiers = [] }) => (
           style={{ borderColor: T.faint, borderLeftWidth: 5, borderLeftColor: tier.color }}
         >
           <div className="flex items-baseline justify-between gap-3">
-            <div style={{ color: tier.color, fontFamily: T.mono, fontSize: 12, fontWeight: 850, letterSpacing: '0.16em', textTransform: 'uppercase' }}>
+            <div style={{ color: tier.color, fontFamily: T.mono, fontSize: 14, fontWeight: 850, letterSpacing: '0.16em', textTransform: 'uppercase' }}>
               {tier.label}
             </div>
             <div
@@ -4820,7 +4820,7 @@ const TierExplanationLegend = ({ tiers = [] }) => (
                 background: `${tier.color}14`,
                 color: tier.color,
                 fontFamily: T.mono,
-                fontSize: 10.5,
+                fontSize: 12.5,
                 fontWeight: 850,
                 letterSpacing: '0.12em',
                 textTransform: 'uppercase',
@@ -4830,10 +4830,10 @@ const TierExplanationLegend = ({ tiers = [] }) => (
               {tier.status}
             </div>
           </div>
-          <div className="mt-1" style={{ color: T.ink, fontFamily: T.sans, fontSize: 14.5, fontWeight: 720, lineHeight: 1.2 }}>
+          <div className="mt-1" style={{ color: T.ink, fontFamily: T.sans, fontSize: 16.5, fontWeight: 720, lineHeight: 1.2 }}>
             {tier.detail}
           </div>
-          <div className="mt-1" style={{ color: T.muted, fontFamily: T.sans, fontSize: 12.5, fontWeight: 620, lineHeight: 1.25 }}>
+          <div className="mt-1" style={{ color: T.muted, fontFamily: T.sans, fontSize: 14.5, fontWeight: 620, lineHeight: 1.25 }}>
             {tier.privacy}
           </div>
         </motion.div>
@@ -4878,7 +4878,7 @@ const HarnessMemoryScaleVariant = ({ slide }) => {
             <PartText parts={slide.parts} />
           </h1>
           {slide.subhead && (
-            <motion.div {...fade(0.38)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(16px, 1.2vw, 21px)' }}>
+            <motion.div {...fade(0.38)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(18px, 1.2vw, 21px)' }}>
               {slide.subhead}
             </motion.div>
           )}
@@ -4895,19 +4895,19 @@ const HarnessMemoryScaleVariant = ({ slide }) => {
                     style={{ borderTopWidth: 6, borderTopColor: stage.color }}
                   >
                     <div>
-                      <div style={{ color: stage.color, fontFamily: T.mono, fontSize: 12, fontWeight: 850, letterSpacing: '0.18em', textTransform: 'uppercase' }}>
+                      <div style={{ color: stage.color, fontFamily: T.mono, fontSize: 14, fontWeight: 850, letterSpacing: '0.18em', textTransform: 'uppercase' }}>
                         {stage.kicker}
                       </div>
                       <div className="mt-2" style={{ color: T.ink, fontSize: 32, fontWeight: 750, lineHeight: 1.02 }}>
                         {stage.label}
                       </div>
-                      <div className="mt-3" style={{ color: T.muted, fontSize: 17, lineHeight: 1.34 }}>
+                      <div className="mt-3" style={{ color: T.muted, fontSize: 19, lineHeight: 1.34 }}>
                         {stage.body}
                       </div>
                     </div>
                     <div className="mt-5 border-t pt-4" style={{ borderColor: T.faint }}>
                       {(stage.items || []).map((item) => (
-                        <div key={item} className="mt-1.5 flex items-start gap-2" style={{ color: T.ink, fontSize: 14.5, lineHeight: 1.25 }}>
+                        <div key={item} className="mt-1.5 flex items-start gap-2" style={{ color: T.ink, fontSize: 16.5, lineHeight: 1.25 }}>
                           <span style={{ color: stage.color }}>●</span>
                           <span>{item}</span>
                         </div>
@@ -4924,14 +4924,14 @@ const HarnessMemoryScaleVariant = ({ slide }) => {
             </div>
             <motion.div {...fade(0.95, 6)} className="mt-5 grid grid-cols-[1fr_auto] items-center gap-6 rounded-[8px] border bg-white/65 px-6 py-4" style={{ borderColor: T.faint }}>
               <div>
-                <div style={{ color: T.blue, fontFamily: T.mono, fontSize: 12, fontWeight: 850, letterSpacing: '0.18em', textTransform: 'uppercase' }}>
+                <div style={{ color: T.blue, fontFamily: T.mono, fontSize: 14, fontWeight: 850, letterSpacing: '0.18em', textTransform: 'uppercase' }}>
                   Aggregation boundary
                 </div>
-                <div className="mt-1" style={{ color: T.ink, fontSize: 18, lineHeight: 1.28 }}>
+                <div className="mt-1" style={{ color: T.ink, fontSize: 20, lineHeight: 1.28 }}>
                   {slide.aggregationRule}
                 </div>
               </div>
-              <div className="rounded-full px-5 py-2.5" style={{ background: T.blue, color: '#fff', fontSize: 20, fontWeight: 750, whiteSpace: 'nowrap' }}>
+              <div className="rounded-full px-5 py-2.5" style={{ background: T.blue, color: '#fff', fontSize: 22, fontWeight: 750, whiteSpace: 'nowrap' }}>
                 {slide.governingLine}
               </div>
             </motion.div>
@@ -4973,7 +4973,7 @@ const HarnessPerformanceReviewVariant = ({ slide }) => {
             <PartText parts={slide.parts} />
           </h1>
           {slide.subhead && (
-            <motion.div {...fade(0.38)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(16px, 1.2vw, 21px)' }}>
+            <motion.div {...fade(0.38)} className="mt-2 italic" style={{ color: T.muted, fontSize: 'clamp(18px, 1.2vw, 21px)' }}>
               {slide.subhead}
             </motion.div>
           )}
@@ -4994,7 +4994,7 @@ const HarnessPerformanceReviewVariant = ({ slide }) => {
                 className="w-full h-full object-contain rounded-[7px]"
               />
             ) : (
-              <div className="flex items-center justify-center w-full h-full" style={{ color: T.muted, fontFamily: T.mono, fontSize: 14 }}>
+              <div className="flex items-center justify-center w-full h-full" style={{ color: T.muted, fontFamily: T.mono, fontSize: 16 }}>
                 Video placeholder
               </div>
             )}
@@ -5010,15 +5010,15 @@ const HarnessPerformanceReviewVariant = ({ slide }) => {
                   {...fade(0.65 + index * 0.1, 0)}
                   className="grid grid-cols-[42px_1fr] gap-3 items-start"
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full shrink-0" style={{ background: step.color, color: '#fff', fontFamily: T.mono, fontSize: 15, fontWeight: 800 }}>
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full shrink-0" style={{ background: step.color, color: '#fff', fontFamily: T.mono, fontSize: 17, fontWeight: 800 }}>
                     {step.number}
                   </div>
                   <div>
                     <div className="flex items-center gap-2">
                       <MiniIcon type={step.icon} color={step.color} className="h-5 w-5" />
-                      <span style={{ color: T.ink, fontFamily: T.sans, fontSize: 18, fontWeight: 700, lineHeight: 1 }}>{step.label}</span>
+                      <span style={{ color: T.ink, fontFamily: T.sans, fontSize: 20, fontWeight: 700, lineHeight: 1 }}>{step.label}</span>
                     </div>
-                    <div className="mt-1" style={{ color: T.muted, fontFamily: T.sans, fontSize: 13.5, lineHeight: 1.35 }}>
+                    <div className="mt-1" style={{ color: T.muted, fontFamily: T.sans, fontSize: 15.5, lineHeight: 1.35 }}>
                       {step.detail}
                     </div>
                   </div>
@@ -5032,11 +5032,11 @@ const HarnessPerformanceReviewVariant = ({ slide }) => {
         {slide.bottomLine && (
           <motion.div {...fade(1.1)} className="absolute left-[4.8vw] right-[4.8vw] bottom-[4vh] flex items-center gap-3" style={{ color: T.ink, fontFamily: T.serif }}>
             {slide.bottomLineLabel && (
-              <span className="shrink-0 rounded-full px-3 py-1" style={{ background: T.coralDark, fontSize: 11, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.22em', whiteSpace: 'nowrap' }}>
+              <span className="shrink-0 rounded-full px-3 py-1" style={{ background: T.coralDark, fontSize: 13, color: '#fff', fontFamily: T.mono, fontWeight: 800, letterSpacing: '0.22em', whiteSpace: 'nowrap' }}>
                 {slide.bottomLineLabel}
               </span>
             )}
-            <div style={{ fontSize: 'clamp(14px, 1.1vw, 18px)', fontWeight: 520, lineHeight: 1.3 }}>
+            <div style={{ fontSize: 'clamp(16px, 1.1vw, 20px)', fontWeight: 520, lineHeight: 1.3 }}>
               {slide.bottomLine}
             </div>
           </motion.div>
@@ -5056,17 +5056,17 @@ const HarnessContextLayersVariant = ({ slide }) => {
         <div className="grid h-[76%] grid-cols-2 gap-4">
           {layers.map((layer, index) => (
             <Card key={layer.label} delay={0.42 + index * 0.1} className="grid grid-cols-[auto_1fr] gap-4 p-5" style={{ borderLeftWidth: 6, borderLeftColor: layer.color }}>
-              <div className="flex h-11 w-11 items-center justify-center rounded-full" style={{ background: `${layer.color}18`, color: layer.color, fontFamily: T.mono, fontSize: 16, fontWeight: 850 }}>
+              <div className="flex h-11 w-11 items-center justify-center rounded-full" style={{ background: `${layer.color}18`, color: layer.color, fontFamily: T.mono, fontSize: 18, fontWeight: 850 }}>
                 {String(index + 1).padStart(2, '0')}
               </div>
               <div>
-                <div style={{ color: layer.color, fontFamily: T.mono, fontSize: 11.5, fontWeight: 850, letterSpacing: '0.16em', textTransform: 'uppercase' }}>
+                <div style={{ color: layer.color, fontFamily: T.mono, fontSize: 13.5, fontWeight: 850, letterSpacing: '0.16em', textTransform: 'uppercase' }}>
                   {layer.kicker}
                 </div>
                 <div className="mt-1" style={{ color: T.ink, fontSize: 24, fontWeight: 750, lineHeight: 1.05 }}>
                   {layer.label}
                 </div>
-                <div className="mt-2" style={{ color: T.muted, fontSize: 15.5, lineHeight: 1.3 }}>
+                <div className="mt-2" style={{ color: T.muted, fontSize: 17.5, lineHeight: 1.3 }}>
                   {layer.body}
                 </div>
               </div>
@@ -5075,14 +5075,14 @@ const HarnessContextLayersVariant = ({ slide }) => {
         </div>
         <motion.div {...fade(0.92, 6)} className="mt-4 flex items-center justify-between gap-5 rounded-[8px] border bg-white/70 px-6 py-4" style={{ borderColor: T.faint }}>
           <div>
-            <div style={{ color: T.blue, fontFamily: T.mono, fontSize: 11.5, fontWeight: 850, letterSpacing: '0.17em', textTransform: 'uppercase' }}>
+            <div style={{ color: T.blue, fontFamily: T.mono, fontSize: 13.5, fontWeight: 850, letterSpacing: '0.17em', textTransform: 'uppercase' }}>
               Active run
             </div>
-            <div className="mt-1" style={{ color: T.ink, fontSize: 18, lineHeight: 1.25 }}>
+            <div className="mt-1" style={{ color: T.ink, fontSize: 20, lineHeight: 1.25 }}>
               {slide.activeRun}
             </div>
           </div>
-          <div className="rounded-full px-5 py-2.5" style={{ background: T.coralDark, color: '#fff', fontSize: 17, fontWeight: 750, whiteSpace: 'nowrap' }}>
+          <div className="rounded-full px-5 py-2.5" style={{ background: T.coralDark, color: '#fff', fontSize: 19, fontWeight: 750, whiteSpace: 'nowrap' }}>
             {slide.durableRule}
           </div>
         </motion.div>
@@ -5102,18 +5102,18 @@ const HarnessMemoryActionLoopVariant = ({ slide }) => {
           {steps.map((step, index) => (
             <motion.div key={step.label} {...fade(0.42 + index * 0.09, 6)} className="relative">
               <div className="h-full rounded-[8px] border bg-white/72 px-3 py-4" style={{ borderColor: T.faint, borderTopWidth: 5, borderTopColor: step.color }}>
-                <div style={{ color: step.color, fontFamily: T.mono, fontSize: 10.5, fontWeight: 850, letterSpacing: '0.14em' }}>
+                <div style={{ color: step.color, fontFamily: T.mono, fontSize: 12.5, fontWeight: 850, letterSpacing: '0.14em' }}>
                   {String(index + 1).padStart(2, '0')}
                 </div>
-                <div className="mt-2" style={{ color: T.ink, fontSize: 20, fontWeight: 780, lineHeight: 1.02 }}>
+                <div className="mt-2" style={{ color: T.ink, fontSize: 22, fontWeight: 780, lineHeight: 1.02 }}>
                   {step.label}
                 </div>
-                <div className="mt-2" style={{ color: T.muted, fontSize: 13.5, lineHeight: 1.25 }}>
+                <div className="mt-2" style={{ color: T.muted, fontSize: 15.5, lineHeight: 1.25 }}>
                   {step.body}
                 </div>
               </div>
               {index < steps.length - 1 && (
-                <div className="absolute -right-[10px] top-1/2 z-20 -translate-y-1/2 rounded-full bg-white px-1" style={{ color: T.coralDark, fontSize: 20, fontWeight: 850 }}>
+                <div className="absolute -right-[10px] top-1/2 z-20 -translate-y-1/2 rounded-full bg-white px-1" style={{ color: T.coralDark, fontSize: 22, fontWeight: 850 }}>
                   →
                 </div>
               )}
@@ -5122,10 +5122,10 @@ const HarnessMemoryActionLoopVariant = ({ slide }) => {
         </div>
         <motion.div {...fade(1.15, 6)} className="mt-6 grid grid-cols-[1fr_auto] items-center gap-6 rounded-[8px] border bg-white/68 px-6 py-4" style={{ borderColor: T.faint }}>
           <div>
-            <div style={{ color: T.green, fontFamily: T.mono, fontSize: 11.5, fontWeight: 850, letterSpacing: '0.17em', textTransform: 'uppercase' }}>
+            <div style={{ color: T.green, fontFamily: T.mono, fontSize: 13.5, fontWeight: 850, letterSpacing: '0.17em', textTransform: 'uppercase' }}>
               Review boundary
             </div>
-            <div className="mt-1" style={{ color: T.ink, fontSize: 18, lineHeight: 1.27 }}>
+            <div className="mt-1" style={{ color: T.ink, fontSize: 20, lineHeight: 1.27 }}>
               {slide.reviewRule}
             </div>
           </div>
@@ -5149,13 +5149,13 @@ const HarnessMemoryHealthVariant = ({ slide }) => {
         <div className="grid grid-cols-3 gap-3">
           {signals.map((signal, index) => (
             <Card key={signal.label} delay={0.42 + index * 0.07} className="px-5 py-4" style={{ borderLeftWidth: 5, borderLeftColor: signal.color }}>
-              <div style={{ color: signal.color, fontFamily: T.mono, fontSize: 10.5, fontWeight: 850, letterSpacing: '0.15em', textTransform: 'uppercase' }}>
+              <div style={{ color: signal.color, fontFamily: T.mono, fontSize: 12.5, fontWeight: 850, letterSpacing: '0.15em', textTransform: 'uppercase' }}>
                 {signal.kicker}
               </div>
               <div className="mt-1" style={{ color: T.ink, fontSize: 21, fontWeight: 760, lineHeight: 1.05 }}>
                 {signal.label}
               </div>
-              <div className="mt-1.5" style={{ color: T.muted, fontSize: 14, lineHeight: 1.25 }}>
+              <div className="mt-1.5" style={{ color: T.muted, fontSize: 16, lineHeight: 1.25 }}>
                 {signal.body}
               </div>
             </Card>
@@ -5163,18 +5163,18 @@ const HarnessMemoryHealthVariant = ({ slide }) => {
         </div>
         <motion.div {...fade(0.98, 6)} className="mt-5 rounded-[9px] border bg-white/72 px-6 py-5" style={{ borderColor: T.faint }}>
           <div className="flex items-center gap-4">
-            <div className="rounded-full px-4 py-2" style={{ background: T.blue, color: '#fff', fontSize: 19, fontWeight: 780 }}>
+            <div className="rounded-full px-4 py-2" style={{ background: T.blue, color: '#fff', fontSize: 21, fontWeight: 780 }}>
               Mission Control
             </div>
             <div className="h-px flex-1" style={{ background: T.faint }} />
-            <div style={{ color: T.muted, fontSize: 15, fontWeight: 650 }}>
+            <div style={{ color: T.muted, fontSize: 17, fontWeight: 650 }}>
               memory quality is monitored like any other production service
             </div>
           </div>
           <div className="mt-4 grid grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] items-center gap-3">
             {operatingLoop.map((item, index) => (
               <React.Fragment key={item}>
-                <div className="rounded-[6px] px-4 py-3 text-center" style={{ background: index % 2 === 0 ? T.bluePale : '#f6f8ee', color: T.ink, fontSize: 17, fontWeight: 740 }}>
+                <div className="rounded-[6px] px-4 py-3 text-center" style={{ background: index % 2 === 0 ? T.bluePale : '#f6f8ee', color: T.ink, fontSize: 19, fontWeight: 740 }}>
                   {item}
                 </div>
                 {index < operatingLoop.length - 1 && <div style={{ color: T.coralDark, fontSize: 24, fontWeight: 850 }}>→</div>}

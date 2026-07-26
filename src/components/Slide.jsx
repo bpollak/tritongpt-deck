@@ -120,7 +120,7 @@ const Slide = ({ slide }) => {
         />
         {(slide.demoLabel || slide.title || slide.managerLabel) && (
           <div className="absolute left-5 top-5 max-w-[78vw] rounded-lg border border-white/15 bg-black/55 px-4 py-2.5 text-white shadow-lg backdrop-blur-sm">
-            <div className="text-[10px] font-black uppercase tracking-[0.2em] text-white/65">Demo</div>
+            <div className="text-[12px] font-black uppercase tracking-[0.2em] text-white/65">Demo</div>
             <div className="mt-0.5 text-sm font-black tracking-wide sm:text-base">
               {slide.demoLabel || slide.title || slide.managerLabel}
             </div>
@@ -754,7 +754,7 @@ const Slide = ({ slide }) => {
           </motion.div>
         )}
 
-        <div className="absolute bottom-1 right-2 sm:bottom-6 sm:right-8 text-ucsd-navy/20 text-[10px] sm:text-xs font-bold tracking-widest z-20">UC SAN DIEGO | {slide.id}</div>
+        <div className="absolute bottom-1 right-2 sm:bottom-6 sm:right-8 text-ucsd-navy/20 text-[12px] sm:text-xs font-bold tracking-widest z-20">UC SAN DIEGO | {slide.id}</div>
       </div>
     );
   }
@@ -823,7 +823,7 @@ const Slide = ({ slide }) => {
           </div>
         </div>
 
-        <div className="absolute bottom-1 right-2 sm:bottom-6 sm:right-8 text-ucsd-navy/20 text-[10px] sm:text-xs font-bold tracking-widest z-20">UC SAN DIEGO | {slide.id}</div>
+        <div className="absolute bottom-1 right-2 sm:bottom-6 sm:right-8 text-ucsd-navy/20 text-[12px] sm:text-xs font-bold tracking-widest z-20">UC SAN DIEGO | {slide.id}</div>
       </div>
     );
   }
@@ -935,7 +935,7 @@ const Slide = ({ slide }) => {
           </div>
         </div>
 
-        <div className="absolute bottom-1 right-2 sm:bottom-6 sm:right-8 text-ucsd-navy/20 text-[10px] sm:text-xs font-bold tracking-widest z-40">UC SAN DIEGO | {slide.id}</div>
+        <div className="absolute bottom-1 right-2 sm:bottom-6 sm:right-8 text-ucsd-navy/20 text-[12px] sm:text-xs font-bold tracking-widest z-40">UC SAN DIEGO | {slide.id}</div>
       </div>
     );
   }
@@ -1045,7 +1045,7 @@ const Slide = ({ slide }) => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.6 }}
-            className="absolute bottom-0 left-0 right-0 bg-ucsd-navy px-6 sm:px-12 py-3 sm:py-4 z-30"
+            className="absolute bottom-0 left-0 right-0 bg-ucsd-navy px-6 sm:px-12 py-3 sm:pt-3 sm:pb-14 z-30"
           >
             <div className="max-w-5xl mx-auto text-center">
               <div className="text-white/80 text-xs sm:text-base md:text-lg italic font-medium leading-relaxed">"{slide.quote.text}"</div>
@@ -1054,7 +1054,7 @@ const Slide = ({ slide }) => {
           </motion.div>
         )}
 
-        <div className="absolute bottom-1 right-2 sm:bottom-6 sm:right-8 text-ucsd-navy/20 text-[10px] sm:text-xs font-bold tracking-widest z-40">UC SAN DIEGO | {slide.id}</div>
+        <div className="absolute bottom-1 right-2 sm:bottom-6 sm:right-8 text-ucsd-navy/20 text-[12px] sm:text-xs font-bold tracking-widest z-40">UC SAN DIEGO | {slide.id}</div>
       </div>
     );
   }
@@ -1087,9 +1087,9 @@ const Slide = ({ slide }) => {
                   <text x={cx} y={cy - 8} textAnchor="middle" className="text-[22px] sm:text-[26px] font-black" fill="#182B49">{item.value}</text>
                 </svg>
                 <div className="text-center mt-1">
-                  <div className="text-ucsd-navy text-[11px] sm:text-xs font-bold leading-tight">{item.label}</div>
-                  <div className="text-slate-400 text-[9px] sm:text-[10px] mt-0.5">{item.source}</div>
-                  {item.detail && <div className="text-slate-500 text-[9px] sm:text-[10px] mt-1 leading-snug max-w-[180px] sm:max-w-[220px]">{item.detail}</div>}
+                  <div className="text-ucsd-navy text-[13px] sm:text-xs font-bold leading-tight">{item.label}</div>
+                  <div className="text-slate-400 text-[11.5px] sm:text-[12px] mt-0.5">{item.source}</div>
+                  {item.detail && <div className="text-slate-500 text-[11.5px] sm:text-[12px] mt-1 leading-snug max-w-[180px] sm:max-w-[220px]">{item.detail}</div>}
                 </div>
               </motion.div>
             );
@@ -1118,11 +1118,11 @@ const Slide = ({ slide }) => {
                     initial={{ strokeDasharray: circumference, strokeDashoffset: circumference }}
                     animate={{ strokeDashoffset: offset }}
                     transition={{ delay: 0.5 + i * 0.15, duration: 1.2, ease: 'easeOut' }} />
-                  <text x={cx} y={cy + 6} textAnchor="middle" className="text-[18px] sm:text-[20px] font-black" fill="#182B49">{item.innerLabel || item.value}</text>
+                  <text x={cx} y={cy + 6} textAnchor="middle" className="text-[20px] sm:text-[22px] font-black" fill="#182B49">{item.innerLabel || item.value}</text>
                 </svg>
                 <div className="text-center mt-1">
-                  <div className="text-ucsd-navy text-[11px] sm:text-xs font-bold leading-tight">{item.label}</div>
-                  <div className="text-slate-400 text-[9px] sm:text-[10px] mt-0.5">{item.source}</div>
+                  <div className="text-ucsd-navy text-[13px] sm:text-xs font-bold leading-tight">{item.label}</div>
+                  <div className="text-slate-400 text-[11.5px] sm:text-[12px] mt-0.5">{item.source}</div>
                 </div>
               </motion.div>
             );
@@ -1140,9 +1140,9 @@ const Slide = ({ slide }) => {
           {items.map((item, i) => (
             <div key={i} className="space-y-0.5">
               <div className="flex justify-between items-baseline">
-                <span className="text-ucsd-navy text-[11px] sm:text-xs font-semibold">{item.label}</span>
-                {item.displayValue && <span className="text-ucsd-navy text-[11px] sm:text-xs font-black">{item.displayValue}</span>}
-                {item.annotation && <span className="text-slate-400 text-[9px] sm:text-[10px] italic">{item.annotation}</span>}
+                <span className="text-ucsd-navy text-[13px] sm:text-xs font-semibold">{item.label}</span>
+                {item.displayValue && <span className="text-ucsd-navy text-[13px] sm:text-xs font-black">{item.displayValue}</span>}
+                {item.annotation && <span className="text-slate-400 text-[11.5px] sm:text-[12px] italic">{item.annotation}</span>}
               </div>
               <div className="h-5 sm:h-6 bg-gray-100 rounded-full overflow-hidden relative">
                 <motion.div className="h-full rounded-full" style={{ backgroundColor: item.color || '#00629B' }}
@@ -1152,7 +1152,7 @@ const Slide = ({ slide }) => {
               </div>
             </div>
           ))}
-          {section.caption && <div className="text-slate-400 text-[9px] sm:text-[10px] italic text-center mt-1">{section.caption}</div>}
+          {section.caption && <div className="text-slate-400 text-[11.5px] sm:text-[12px] italic text-center mt-1">{section.caption}</div>}
         </motion.div>
       );
     };
@@ -1172,8 +1172,8 @@ const Slide = ({ slide }) => {
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="text-ucsd-navy text-xs sm:text-sm font-black">{item.stat}</div>
-                  <div className="text-slate-500 text-[10px] sm:text-xs leading-snug mt-0.5">{item.detail}</div>
-                  {item.source && <div className="text-slate-400 text-[9px] mt-0.5">{item.source}</div>}
+                  <div className="text-slate-500 text-[12px] sm:text-xs leading-snug mt-0.5">{item.detail}</div>
+                  {item.source && <div className="text-slate-400 text-[11.5px] mt-0.5">{item.source}</div>}
                 </div>
               </motion.div>
             );
@@ -1199,7 +1199,7 @@ const Slide = ({ slide }) => {
                   <IconComp size={16} style={{ color: item.color || '#00629B' }} />
                 </div>
                 <div className="text-xl sm:text-2xl md:text-3xl font-black text-ucsd-navy leading-none">{item.value}</div>
-                <div className="text-slate-500 text-[10px] sm:text-xs font-semibold mt-1 leading-tight">{item.label}</div>
+                <div className="text-slate-500 text-[12px] sm:text-xs font-semibold mt-1 leading-tight">{item.label}</div>
               </motion.div>
             );
           })}
@@ -1221,9 +1221,9 @@ const Slide = ({ slide }) => {
           <div className="flex flex-wrap items-end justify-between gap-2 mb-2 sm:mb-3">
             <div>
               {section.sectionTitle && <div className="text-ucsd-navy text-xs sm:text-sm font-black">{section.sectionTitle}</div>}
-              {section.sectionSubtitle && <div className="text-slate-500 text-[9px] sm:text-[11px] mt-0.5">{section.sectionSubtitle}</div>}
+              {section.sectionSubtitle && <div className="text-slate-500 text-[11.5px] sm:text-[13px] mt-0.5">{section.sectionSubtitle}</div>}
             </div>
-            <div className="flex items-center gap-3 text-[9px] sm:text-[10px] font-bold text-slate-500">
+            <div className="flex items-center gap-3 text-[11.5px] sm:text-[12px] font-bold text-slate-500">
               <span className="inline-flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-sm bg-ucsd-blue" />Self-hosted</span>
               <span className="inline-flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-sm bg-ucsd-gold" />Cloud</span>
             </div>
@@ -1236,7 +1236,7 @@ const Slide = ({ slide }) => {
               const totalPct = total > 0 ? (total / maxValue) * 100 : 0;
               return (
                 <div key={i} className="grid grid-cols-[2rem_minmax(0,1fr)_3.5rem] sm:grid-cols-[2.5rem_minmax(0,1fr)_4rem] items-center gap-2 sm:gap-3">
-                  <span className="text-[10px] sm:text-xs font-black text-ucsd-navy">{item.label}</span>
+                  <span className="text-[12px] sm:text-xs font-black text-ucsd-navy">{item.label}</span>
                   <div className={clsx("h-4 sm:h-5 rounded-full bg-slate-100 overflow-hidden", item.highlight && "ring-2 ring-ucsd-gold/60 ring-offset-1")}>
                     <motion.div
                       className="h-full flex overflow-hidden rounded-full"
@@ -1249,12 +1249,12 @@ const Slide = ({ slide }) => {
                       <span className="h-full bg-ucsd-gold" style={{ width: `${cloudPct}%` }} />
                     </motion.div>
                   </div>
-                  <span className="text-right text-[10px] sm:text-xs font-black text-ucsd-navy">{item.displayValue}</span>
+                  <span className="text-right text-[12px] sm:text-xs font-black text-ucsd-navy">{item.displayValue}</span>
                 </div>
               );
             })}
           </div>
-          {section.caption && <div className="text-slate-400 text-[8px] sm:text-[9px] italic text-center mt-2">{section.caption}</div>}
+          {section.caption && <div className="text-slate-400 text-[10.5px] sm:text-[11.5px] italic text-center mt-2">{section.caption}</div>}
         </motion.div>
       );
     };
@@ -1278,7 +1278,7 @@ const Slide = ({ slide }) => {
         <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
           className="text-center pt-5 sm:pt-8 pb-3 sm:pb-5 px-4 z-10">
           <h1 className="text-xl sm:text-3xl md:text-4xl font-black text-ucsd-navy leading-tight">{slide.title}</h1>
-          {slide.subtitle && <div className="text-ucsd-blue text-[11px] sm:text-sm md:text-base font-bold mt-1 max-w-3xl mx-auto">{slide.subtitle}</div>}
+          {slide.subtitle && <div className="text-ucsd-blue text-[13px] sm:text-sm md:text-base font-bold mt-1 max-w-3xl mx-auto">{slide.subtitle}</div>}
         </motion.div>
 
         {/* Dashboard sections */}
@@ -1289,7 +1289,7 @@ const Slide = ({ slide }) => {
           })}
         </div>
 
-        <div className="absolute bottom-1 right-2 sm:bottom-6 sm:right-8 text-ucsd-navy/20 text-[10px] sm:text-xs font-bold tracking-widest z-40">UC SAN DIEGO | {slide.id}</div>
+        <div className="absolute bottom-1 right-2 sm:bottom-6 sm:right-8 text-ucsd-navy/20 text-[12px] sm:text-xs font-bold tracking-widest z-40">UC SAN DIEGO | {slide.id}</div>
       </div>
     );
   }
@@ -1370,7 +1370,7 @@ const Slide = ({ slide }) => {
               >
                 <div className="flex flex-col gap-2 sm:gap-2.5 border-b xl:border-b-0 xl:border-r border-white/10 pb-2.5 xl:pb-0 xl:pr-3">
                   <div>
-                    <div className="text-[10px] sm:text-xs font-black uppercase tracking-[0.22em] text-white/55 mb-2">
+                    <div className="text-[12px] sm:text-xs font-black uppercase tracking-[0.22em] text-white/55 mb-2">
                       Strategic Layer {sectionIndex + 1}
                     </div>
                     <div className="text-2xl sm:text-3xl lg:text-[2rem] font-black leading-none" style={{ color: section.accent }}>
@@ -1384,7 +1384,7 @@ const Slide = ({ slide }) => {
                     <div className="mt-0.5 h-7 w-7 rounded-full border border-white/15 bg-white/10 flex items-center justify-center text-white/70 flex-shrink-0">
                       <ArrowRight size={15} />
                     </div>
-                    <p className="text-[11px] sm:text-[13px] lg:text-sm leading-snug text-white/68 font-medium max-w-[18rem]">
+                    <p className="text-[13px] sm:text-[15px] lg:text-sm leading-snug text-white/68 font-medium max-w-[18rem]">
                       {section.summary}
                     </p>
                   </div>
@@ -1420,14 +1420,14 @@ const Slide = ({ slide }) => {
                                 </h3>
                                 {item.badge && (
                                   <span
-                                    className="inline-flex items-center rounded-full px-2.5 py-1 text-[10px] sm:text-[11px] font-black uppercase tracking-[0.16em]"
+                                    className="inline-flex items-center rounded-full px-2.5 py-1 text-[12px] sm:text-[13px] font-black uppercase tracking-[0.16em]"
                                     style={{ backgroundColor: `${section.accent}20`, color: section.accent }}
                                   >
                                     {item.badge}
                                   </span>
                                 )}
                               </div>
-                              <p className="text-[12px] sm:text-[13.5px] lg:text-[15px] leading-snug text-slate-700 font-medium">
+                              <p className="text-[14px] sm:text-[15.5px] lg:text-[17px] leading-snug text-slate-700 font-medium">
                                 {item.text}
                               </p>
                             </div>
@@ -1606,8 +1606,10 @@ const Slide = ({ slide }) => {
 
       {(isSolution || isSolutionVideo) && (
         <div className={clsx(
-          "w-full max-w-[1760px] mx-auto overflow-hidden",
-          isSolutionVideo ? "flex-1 min-h-0" : "h-full",
+          "w-full max-w-[1760px] mx-auto",
+          isSolutionVideo
+            ? "flex-1 min-h-0 overflow-hidden"
+            : "flex-1 min-h-0 overflow-y-auto touch-pan-y custom-scrollbar pb-2 md:overflow-hidden",
           isIphoneFramed && "px-8 md:px-20"
         )}>
           <div className={clsx(
@@ -1692,7 +1694,7 @@ const Slide = ({ slide }) => {
                     >
                       <div className={clsx(
                         "font-bold text-ucsd-blue uppercase tracking-wide opacity-80 mb-0.5",
-                        isSolutionVideo || isBlinkSearchIntegration ? "text-[9px] sm:text-xs" : "text-[10px] sm:text-xs"
+                        isSolutionVideo || isBlinkSearchIntegration ? "text-[11.5px] sm:text-xs" : "text-[12px] sm:text-xs"
                       )}>
                         {stat.label}
                       </div>
@@ -1706,7 +1708,7 @@ const Slide = ({ slide }) => {
                       </div>
                       <div className={clsx(
                         "text-slate-600 font-bold uppercase tracking-wide",
-                        isSolutionVideo || isBlinkSearchIntegration ? "text-[10px] sm:text-xs" : "text-xs"
+                        isSolutionVideo || isBlinkSearchIntegration ? "text-[12px] sm:text-xs" : "text-xs"
                       )}>
                         {stat.sub}
                       </div>
@@ -1746,7 +1748,7 @@ const Slide = ({ slide }) => {
                       </h3>
                       <p className={clsx(
                         "text-slate-700 font-medium",
-                        isSolutionVideo ? "text-[11px] leading-tight sm:text-[13px]" : "text-xs leading-snug sm:text-base"
+                        isSolutionVideo ? "text-[13px] leading-tight sm:text-[15px]" : "text-xs leading-snug sm:text-base"
                       )}>
                         {item.text}
                       </p>
@@ -1774,7 +1776,7 @@ const Slide = ({ slide }) => {
                     >
                       <div className={clsx(
                         "font-bold text-ucsd-blue uppercase tracking-wide opacity-80 mb-0.5",
-                        isSolutionVideo || isBlinkSearchIntegration ? "text-[9px] sm:text-xs" : "text-[10px] sm:text-xs"
+                        isSolutionVideo || isBlinkSearchIntegration ? "text-[11.5px] sm:text-xs" : "text-[12px] sm:text-xs"
                       )}>
                         {stat.label}
                       </div>
@@ -1788,7 +1790,7 @@ const Slide = ({ slide }) => {
                       </div>
                       <div className={clsx(
                         "text-slate-600 font-bold uppercase tracking-wide",
-                        isSolutionVideo || isBlinkSearchIntegration ? "text-[10px] sm:text-xs" : "text-xs"
+                        isSolutionVideo || isBlinkSearchIntegration ? "text-[12px] sm:text-xs" : "text-xs"
                       )}>
                         {stat.sub}
                       </div>
@@ -2215,7 +2217,7 @@ const Slide = ({ slide }) => {
                         repeat: Infinity,
                         delay: groupIndex * 0.3
                       }}
-                      className="px-2.5 py-1 rounded-full text-white text-[10px] font-bold uppercase tracking-wider shadow-md"
+                      className="px-2.5 py-1 rounded-full text-white text-[12px] font-bold uppercase tracking-wider shadow-md"
                       style={{ backgroundColor: group.color }}
                     >
                       {group.assistants.length} Assistant{group.assistants.length !== 1 ? 's' : ''}
@@ -2372,7 +2374,7 @@ const Slide = ({ slide }) => {
                       <div className="text-base font-black text-ucsd-navy uppercase tracking-wide">
                         {category.name}
                       </div>
-                      <div className="text-[10px] text-ucsd-navy/60 font-bold">
+                      <div className="text-[12px] text-ucsd-navy/60 font-bold">
                         {category.count} Assistants
                       </div>
                     </div>
@@ -2464,7 +2466,7 @@ const Slide = ({ slide }) => {
               >
                 <div className="flex items-center gap-1 sm:gap-3">
                   <Database size={12} className="text-ucsd-gold sm:w-6 sm:h-6" />
-                  <span className="font-black text-[9px] sm:text-lg tracking-wide uppercase whitespace-nowrap">AI Assistants and Agents</span>
+                  <span className="font-black text-[11.5px] sm:text-lg tracking-wide uppercase whitespace-nowrap">AI Assistants and Agents</span>
                 </div>
               </motion.div>
 
@@ -2508,11 +2510,11 @@ const Slide = ({ slide }) => {
                           </div>
                         )}
                         <div className="flex-1 min-w-0">
-                          <div className="text-[11px] sm:text-base xl:text-lg font-bold text-ucsd-navy leading-tight">
+                          <div className="text-[13px] sm:text-base xl:text-lg font-bold text-ucsd-navy leading-tight">
                             {typeof assistant === 'string' ? assistant : assistant.name}
                           </div>
                           {assistant.description && (
-                            <div className="text-[9px] sm:text-xs xl:text-sm text-ucsd-navy/60 font-semibold leading-tight">
+                            <div className="text-[11.5px] sm:text-xs xl:text-sm text-ucsd-navy/60 font-semibold leading-tight">
                               {assistant.description}
                             </div>
                           )}
@@ -2550,12 +2552,12 @@ const Slide = ({ slide }) => {
                               </div>
                             )}
                             <div className="flex-1 min-w-0">
-                              <div className="text-[10px] sm:text-xs font-bold uppercase tracking-wide" style={{ color: spotlight.color }}>{spotlight.name}</div>
+                              <div className="text-[12px] sm:text-xs font-bold uppercase tracking-wide" style={{ color: spotlight.color }}>{spotlight.name}</div>
                               <div className="flex items-baseline gap-1 sm:gap-1.5">
                                 <span className="text-xl sm:text-3xl font-black text-ucsd-navy">{spotlight.metric}</span>
-                                <span className="text-[10px] sm:text-sm font-bold text-ucsd-navy/70">{spotlight.metricLabel}</span>
+                                <span className="text-[12px] sm:text-sm font-bold text-ucsd-navy/70">{spotlight.metricLabel}</span>
                               </div>
-                              <div className="text-[9px] sm:text-xs text-slate-600 font-medium">{spotlight.detail}</div>
+                              <div className="text-[11.5px] sm:text-xs text-slate-600 font-medium">{spotlight.detail}</div>
                             </div>
                           </motion.div>
                         );
@@ -2576,9 +2578,9 @@ const Slide = ({ slide }) => {
                             <Server size={16} className="text-ucsd-gold sm:h-6 sm:w-6" />
                           </div>
                           <div className="min-w-0 text-left">
-                            <div className="text-[10px] font-bold uppercase tracking-wide text-ucsd-blue sm:text-xs">{slide.platformSaasFooter.label}</div>
+                            <div className="text-[12px] font-bold uppercase tracking-wide text-ucsd-blue sm:text-xs">{slide.platformSaasFooter.label}</div>
                             <div className="text-sm font-black leading-tight text-ucsd-navy sm:text-xl">{slide.platformSaasFooter.context}</div>
-                            <div className="mt-1 flex flex-wrap gap-1 text-[7px] uppercase tracking-[0.08em] text-ucsd-navy/70 sm:text-[8px]">
+                            <div className="mt-1 flex flex-wrap gap-1 text-[10px] uppercase tracking-[0.08em] text-ucsd-navy/70 sm:text-[10.5px]">
                               {(slide.platformSaasFooter.badges || []).map((badge) => (
                                 <span key={badge} className="rounded-full bg-white/85 px-2 py-0.5 font-bold shadow-sm">{badge}</span>
                               ))}
@@ -2593,10 +2595,10 @@ const Slide = ({ slide }) => {
                             const partnerAccent = typeof partner === 'string' ? '#FFCD00' : partner.accent;
                             return (
                               <div key={partnerName} className="flex min-h-[44px] items-center gap-1.5 rounded-md border bg-white px-1.5 py-1.5 text-left shadow-sm sm:min-h-[48px] sm:gap-2 sm:px-2" style={{ borderColor: `${partnerColor}40` }}>
-                                <span className="flex h-8 w-10 shrink-0 items-center justify-center rounded text-[11px] font-black text-white sm:h-9 sm:w-12 sm:text-xs" style={{ background: partnerColor, boxShadow: `inset 0 -3px 0 ${partnerAccent}` }}>
+                                <span className="flex h-8 w-10 shrink-0 items-center justify-center rounded text-[13px] font-black text-white sm:h-9 sm:w-12 sm:text-xs" style={{ background: partnerColor, boxShadow: `inset 0 -3px 0 ${partnerAccent}` }}>
                                   {partnerShort}
                                 </span>
-                                <span className="text-[11px] font-bold leading-tight text-ucsd-navy sm:text-xs">{partnerName}</span>
+                                <span className="text-[13px] font-bold leading-tight text-ucsd-navy sm:text-xs">{partnerName}</span>
                               </div>
                             );
                           })}
@@ -2648,7 +2650,7 @@ const Slide = ({ slide }) => {
                   <div className="w-2 h-5 sm:w-2.5 sm:h-6 rounded-full" style={{ backgroundColor: category.color }} />
                   {category.name}
                 </h3>
-                <div className="flex flex-col gap-1 sm:gap-1.5">
+                <div className="flex flex-col gap-0.5 sm:gap-1">
                   {category.assistants.map((assistant, idx) => {
                     const IconComponent = assistant.icon ? iconMap[assistant.icon] : null;
                     return (
@@ -2657,7 +2659,7 @@ const Slide = ({ slide }) => {
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.4 + catIndex * 0.1 + idx * 0.05 }}
-                        className="flex items-start gap-2 sm:gap-2.5 p-1 sm:p-1.5 rounded-lg sm:rounded-xl hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-100"
+                        className="flex items-start gap-2 p-1 rounded-lg sm:rounded-xl hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-100"
                       >
                         {IconComponent ? (
                           <div className="w-7 h-7 sm:w-7 sm:h-7 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: category.color }}>
@@ -2667,8 +2669,8 @@ const Slide = ({ slide }) => {
                           <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full mt-1.5 flex-shrink-0" style={{ backgroundColor: category.color }} />
                         )}
                         <div>
-                          <div className="font-bold text-ucsd-navy text-sm sm:text-base md:text-lg leading-tight">{assistant.heading}</div>
-                          <div className="text-xs sm:text-sm text-slate-600 font-medium leading-snug mt-0.5">{assistant.text}</div>
+                          <div className="font-bold text-ucsd-navy text-sm sm:text-base leading-tight">{assistant.heading}</div>
+                          <div className="text-xs sm:text-sm text-slate-600 font-medium leading-tight mt-0.5">{assistant.text}</div>
                         </div>
                       </motion.div>
                     );
@@ -2678,7 +2680,7 @@ const Slide = ({ slide }) => {
             ))}
           </div>
 
-          {slide.saasOnboarding && (
+          {slide.saasOnboarding && slide.categories.reduce((total, category) => total + category.assistants.length, 0) <= 12 && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -2748,7 +2750,7 @@ const Slide = ({ slide }) => {
               <div className="absolute -bottom-8 -right-8 h-32 w-32 rounded-full bg-[#00c6d7]/15 blur-2xl pointer-events-none" />
               <div className="relative grid grid-cols-1 lg:grid-cols-[1.35fr_1fr] gap-3 sm:gap-4">
                 <div className="rounded-lg sm:rounded-xl bg-white/85 backdrop-blur-sm border border-white/80 p-3 sm:p-4">
-                  <div className="inline-flex items-center gap-2 rounded-full bg-ucsd-navy text-white px-2.5 py-1 text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] mb-2">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-ucsd-navy text-white px-2.5 py-1 text-[12px] sm:text-xs font-bold uppercase tracking-[0.18em] mb-2">
                     <Wallet size={13} />
                     {slide.recharge?.title || "Recharge Service"}
                   </div>
@@ -2759,12 +2761,12 @@ const Slide = ({ slide }) => {
 
                 <div className="grid grid-cols-1 gap-2">
                   <div className="rounded-lg sm:rounded-xl bg-white/85 border border-white/80 p-2.5 sm:p-3">
-                    <div className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.16em] text-ucsd-navy/70 mb-2">
+                    <div className="text-[12px] sm:text-[13px] font-black uppercase tracking-[0.16em] text-ucsd-navy/70 mb-2">
                       Institutional Cloud Agreements
                     </div>
                     <div className="flex flex-wrap gap-1.5 sm:gap-2">
                       {platforms.map((platform, index) => (
-                        <div key={index} className="px-2.5 py-1 rounded-full border text-[10px] sm:text-xs font-bold uppercase tracking-wide bg-white text-ucsd-navy border-ucsd-navy/20">
+                        <div key={index} className="px-2.5 py-1 rounded-full border text-[12px] sm:text-xs font-bold uppercase tracking-wide bg-white text-ucsd-navy border-ucsd-navy/20">
                           {platform}
                         </div>
                       ))}
@@ -2772,14 +2774,14 @@ const Slide = ({ slide }) => {
                   </div>
 
                   <div className="rounded-lg sm:rounded-xl bg-white/85 border border-white/80 p-2.5 sm:p-3">
-                    <div className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.16em] text-ucsd-navy/70 mb-2">
+                    <div className="text-[12px] sm:text-[13px] font-black uppercase tracking-[0.16em] text-ucsd-navy/70 mb-2">
                       Supported Engineering Interfaces
                     </div>
                     <div className="flex flex-wrap gap-1.5 sm:gap-2 items-center">
                       {models.filter(m => m.primary).map((model, index) => {
                         const IconComponent = model.icon ? iconMap[model.icon] : Cpu;
                         return (
-                          <div key={index} className="inline-flex items-center gap-1.5 rounded-full border-2 px-2.5 py-1 bg-ucsd-navy text-white border-ucsd-navy text-[10px] sm:text-xs font-bold shadow-sm">
+                          <div key={index} className="inline-flex items-center gap-1.5 rounded-full border-2 px-2.5 py-1 bg-ucsd-navy text-white border-ucsd-navy text-[12px] sm:text-xs font-bold shadow-sm">
                             <IconComponent size={12} />
                             <span>{model.name}</span>
                           </div>
@@ -2788,7 +2790,7 @@ const Slide = ({ slide }) => {
                       {models.filter(m => !m.primary).map((model, index) => {
                         const IconComponent = model.icon ? iconMap[model.icon] : Cpu;
                         return (
-                          <div key={index} className="inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 bg-white text-ucsd-navy/70 border-ucsd-navy/15 text-[10px] sm:text-xs font-medium">
+                          <div key={index} className="inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 bg-white text-ucsd-navy/70 border-ucsd-navy/15 text-[12px] sm:text-xs font-medium">
                             <IconComponent size={12} />
                             <span>{model.name}</span>
                           </div>
@@ -2809,14 +2811,14 @@ const Slide = ({ slide }) => {
               >
                 <div className="absolute -right-10 -top-8 h-24 w-24 rounded-full bg-[#10A37F]/15 blur-2xl pointer-events-none" />
                 <div className="flex items-center justify-between mb-2 sm:mb-3">
-                  <div className="inline-flex items-center gap-2 rounded-full bg-[#10A37F]/15 text-[#0f7a5f] px-2.5 py-1 text-[10px] sm:text-xs font-black uppercase tracking-[0.16em]">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-[#10A37F]/15 text-[#0f7a5f] px-2.5 py-1 text-[12px] sm:text-xs font-black uppercase tracking-[0.16em]">
                     <CheckCircle size={13} />
                     {slide.codex?.brand || "OpenAI"}
                   </div>
                   <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#10A37F] text-white text-xs font-black flex items-center justify-center shadow-md">CX</div>
                 </div>
                 <div className="text-lg sm:text-2xl font-black text-[#0b5a47] leading-tight">{slide.codex?.title}</div>
-                <div className="mt-1 text-[10px] sm:text-xs font-bold uppercase tracking-[0.16em] text-[#0f7a5f]/80">{slide.codex?.tag}</div>
+                <div className="mt-1 text-[12px] sm:text-xs font-bold uppercase tracking-[0.16em] text-[#0f7a5f]/80">{slide.codex?.tag}</div>
                 <ul className="mt-2 sm:mt-3 space-y-1.5 sm:space-y-2">
                   {codexStrengths.map((item, index) => (
                     <li key={index} className="flex items-start gap-2 text-xs sm:text-sm text-slate-700 font-semibold leading-snug">
@@ -2828,11 +2830,11 @@ const Slide = ({ slide }) => {
               </motion.div>
 
               <div className="hidden xl:flex flex-col items-center justify-center gap-1 text-ucsd-navy/70 text-center">
-                <div className="text-[10px] font-black uppercase tracking-[0.16em]">Task Router</div>
+                <div className="text-[12px] font-black uppercase tracking-[0.16em]">Task Router</div>
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-ucsd-blue to-ucsd-navy text-white flex items-center justify-center shadow-lg">
                   <ArrowRightLeft size={18} />
                 </div>
-                <div className="text-[10px] font-bold uppercase tracking-[0.12em] text-center">Choose by work pattern</div>
+                <div className="text-[12px] font-bold uppercase tracking-[0.12em] text-center">Choose by work pattern</div>
               </div>
 
               <motion.div
@@ -2843,14 +2845,14 @@ const Slide = ({ slide }) => {
               >
                 <div className="absolute -left-10 -top-8 h-24 w-24 rounded-full bg-[#D97757]/15 blur-2xl pointer-events-none" />
                 <div className="flex items-center justify-between mb-2 sm:mb-3">
-                  <div className="inline-flex items-center gap-2 rounded-full bg-[#D97757]/15 text-[#b65a3e] px-2.5 py-1 text-[10px] sm:text-xs font-black uppercase tracking-[0.16em]">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-[#D97757]/15 text-[#b65a3e] px-2.5 py-1 text-[12px] sm:text-xs font-black uppercase tracking-[0.16em]">
                     <Brain size={13} />
                     {slide.claude?.brand || "Anthropic"}
                   </div>
                   <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#D97757] text-white text-xs font-black flex items-center justify-center shadow-md">CL</div>
                 </div>
                 <div className="text-lg sm:text-2xl font-black text-[#95452f] leading-tight">{slide.claude?.title}</div>
-                <div className="mt-1 text-[10px] sm:text-xs font-bold uppercase tracking-[0.16em] text-[#b65a3e]/80">{slide.claude?.tag}</div>
+                <div className="mt-1 text-[12px] sm:text-xs font-bold uppercase tracking-[0.16em] text-[#b65a3e]/80">{slide.claude?.tag}</div>
                 <ul className="mt-2 sm:mt-3 space-y-1.5 sm:space-y-2">
                   {claudeStrengths.map((item, index) => (
                     <li key={index} className="flex items-start gap-2 text-xs sm:text-sm text-slate-700 font-semibold leading-snug">
@@ -2871,17 +2873,17 @@ const Slide = ({ slide }) => {
                   transition={{ delay: 0.35 + index * 0.08 }}
                   className="rounded-lg sm:rounded-xl bg-white/95 border border-ucsd-navy/10 shadow-md p-2.5 sm:p-3"
                 >
-                  <div className="text-[10px] sm:text-xs font-black uppercase tracking-[0.16em] text-ucsd-navy mb-2">
+                  <div className="text-[12px] sm:text-xs font-black uppercase tracking-[0.16em] text-ucsd-navy mb-2">
                     {factor.factor}
                   </div>
                   <div className="space-y-1.5">
                     <div className="rounded-md border border-[#10A37F]/25 bg-[#e8fbf4] p-2">
-                      <div className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.12em] text-[#0f7a5f] mb-0.5">CODEX Fit</div>
-                      <div className="text-[11px] sm:text-xs font-semibold text-slate-700 leading-snug">{factor.codex}</div>
+                      <div className="text-[11.5px] sm:text-[12px] font-black uppercase tracking-[0.12em] text-[#0f7a5f] mb-0.5">CODEX Fit</div>
+                      <div className="text-[13px] sm:text-xs font-semibold text-slate-700 leading-snug">{factor.codex}</div>
                     </div>
                     <div className="rounded-md border border-[#D97757]/25 bg-[#fff2eb] p-2">
-                      <div className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.12em] text-[#b65a3e] mb-0.5">Claude Fit</div>
-                      <div className="text-[11px] sm:text-xs font-semibold text-slate-700 leading-snug">{factor.claude}</div>
+                      <div className="text-[11.5px] sm:text-[12px] font-black uppercase tracking-[0.12em] text-[#b65a3e] mb-0.5">Claude Fit</div>
+                      <div className="text-[13px] sm:text-xs font-semibold text-slate-700 leading-snug">{factor.claude}</div>
                     </div>
                   </div>
                 </motion.div>
@@ -2924,7 +2926,7 @@ const Slide = ({ slide }) => {
                   >
                     {row.rowLabel}
                   </motion.div>
-                  <div className="text-[10px] sm:text-xs lg:text-sm font-bold text-ucsd-navy/80 uppercase tracking-widest bg-white/60 px-2 sm:px-3 py-0.5 rounded-full whitespace-nowrap border border-white/50 leading-none">
+                  <div className="text-[12px] sm:text-xs lg:text-sm font-bold text-ucsd-navy/80 uppercase tracking-widest bg-white/60 px-2 sm:px-3 py-0.5 rounded-full whitespace-nowrap border border-white/50 leading-none">
                     {row.rowTitle}
                   </div>
                   <div className="flex-1 h-0.5 bg-gradient-to-r from-ucsd-gold/40 via-ucsd-sky/30 to-transparent rounded-full hidden sm:block" />
@@ -2962,10 +2964,10 @@ const Slide = ({ slide }) => {
                           <div className="w-full flex-1 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 overflow-hidden border border-gray-100 flex flex-col">
                             {/* Header bar */}
                             <div className="px-1.5 py-0.5 sm:px-2 sm:py-1 flex justify-between items-center" style={{ backgroundColor: color }}>
-                              <div className="text-[9px] sm:text-[11px] lg:text-xs font-extrabold uppercase tracking-widest text-white/95 truncate">
+                              <div className="text-[11.5px] sm:text-[13px] lg:text-xs font-extrabold uppercase tracking-widest text-white/95 truncate">
                                 {quarterData.phase}
                               </div>
-                              <div className="text-[9px] lg:text-[10px] font-bold bg-white/20 text-white px-1 leading-tight rounded">
+                              <div className="text-[11.5px] lg:text-[12px] font-bold bg-white/20 text-white px-1 leading-tight rounded">
                                 {quarterData.quarter}
                               </div>
                             </div>
@@ -2973,13 +2975,13 @@ const Slide = ({ slide }) => {
                             {/* Content */}
                             <div className="p-1.5 sm:p-2 lg:p-2 flex flex-col justify-start min-h-0">
                               <div className="min-h-[1.55rem] sm:min-h-[1.9rem] lg:min-h-[2rem]">
-                                <h3 className="text-sm sm:text-[15px] lg:text-[17px] font-bold text-ucsd-navy leading-tight">
+                                <h3 className="text-sm sm:text-[17px] lg:text-[19px] font-bold text-ucsd-navy leading-tight">
                                   {quarterData.title}
                                 </h3>
                               </div>
                               <ul className="mt-0.5 flex flex-col gap-0.5 sm:gap-0.5">
                                 {quarterData.items?.map((item, itemIndex) => (
-                                  <li key={itemIndex} className="flex items-start gap-1 sm:gap-1.5 text-[11px] sm:text-[12.5px] lg:text-[13px] font-medium text-slate-700 leading-snug">
+                                  <li key={itemIndex} className="flex items-start gap-1 sm:gap-1.5 text-[13px] sm:text-[14.5px] lg:text-[15px] font-medium text-slate-700 leading-snug">
                                     <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full flex-shrink-0 mt-1" style={{ backgroundColor: color }} />
                                     <span>{item}</span>
                                   </li>
@@ -3071,7 +3073,7 @@ const Slide = ({ slide }) => {
                       style={{ borderLeftWidth: '5px', borderLeftColor: challengeTheme.accent, borderColor: challengeTheme.border, backgroundColor: challengeTheme.light }}
                     >
                       <div
-                        className="absolute top-2.5 right-2.5 rounded-full px-2.5 py-0.5 text-[10px] sm:text-xs font-black uppercase tracking-[0.12em]"
+                        className="absolute top-2.5 right-2.5 rounded-full px-2.5 py-0.5 text-[12px] sm:text-xs font-black uppercase tracking-[0.12em]"
                         style={{ backgroundColor: signalStyle.bg, color: signalStyle.text }}
                       >
                         {challengeSignals[index] || 'Issue'}
@@ -3082,7 +3084,7 @@ const Slide = ({ slide }) => {
                         </div>
                         <div className="flex-1 min-w-0">
                           <div
-                            className="inline-flex items-center gap-2 rounded-full px-2.5 py-0.5 text-[10px] sm:text-xs font-bold uppercase tracking-[0.12em] mb-2"
+                            className="inline-flex items-center gap-2 rounded-full px-2.5 py-0.5 text-[12px] sm:text-xs font-bold uppercase tracking-[0.12em] mb-2"
                             style={{ backgroundColor: challengeTheme.border, color: challengeTheme.text }}
                           >
                             <span>{item.stat}</span>
@@ -3130,7 +3132,7 @@ const Slide = ({ slide }) => {
                   <div className="inline-flex items-center gap-2 sm:gap-3 mb-3 sm:mb-5 px-3 sm:px-5 py-1.5 sm:py-2.5 bg-gradient-to-r from-red-500 to-red-600 rounded-full shadow-lg w-fit">
                     <div className="text-xl sm:text-3xl font-black text-white">{item.stat}</div>
                     <div className="h-4 sm:h-6 w-px bg-white/30" />
-                    <div className="text-[10px] sm:text-xs font-bold text-white uppercase tracking-widest">{item.statLabel}</div>
+                    <div className="text-[12px] sm:text-xs font-bold text-white uppercase tracking-widest">{item.statLabel}</div>
                   </div>
 
                   {/* Heading */}
@@ -3165,7 +3167,7 @@ const Slide = ({ slide }) => {
                 <div className="absolute -right-10 -top-10 h-36 w-36 rounded-full bg-[#184aa3]/10 blur-2xl pointer-events-none" />
                 <div className="absolute -left-10 -bottom-10 h-36 w-36 rounded-full bg-[#00a6b6]/10 blur-2xl pointer-events-none" />
                 <div className="relative p-2.5 sm:p-4 lg:p-4">
-                  <div className="inline-flex items-center gap-2 rounded-full bg-white/75 px-2.5 py-1 text-[10px] sm:text-[11px] font-bold tracking-[0.16em] uppercase text-[#184aa3] mb-1.5 sm:mb-2">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-white/75 px-2.5 py-1 text-[12px] sm:text-[13px] font-bold tracking-[0.16em] uppercase text-[#184aa3] mb-1.5 sm:mb-2">
                     <Layers size={14} className="sm:w-4 sm:h-4" />
                     Program Support Components
                   </div>
@@ -3178,7 +3180,7 @@ const Slide = ({ slide }) => {
                         {slide.content[0].text}
                       </p>
                     </div>
-                    <div className="hidden md:flex items-center gap-2 text-[#184aa3] font-extrabold uppercase tracking-[0.14em] text-[10px] lg:text-xs whitespace-nowrap">
+                    <div className="hidden md:flex items-center gap-2 text-[#184aa3] font-extrabold uppercase tracking-[0.14em] text-[12px] lg:text-xs whitespace-nowrap">
                       Powers every capability <ArrowRight size={18} />
                     </div>
                   </div>
@@ -3301,7 +3303,7 @@ const Slide = ({ slide }) => {
                   <div className={clsx(isAI2031Prompt ? 'p-4 sm:p-5 2xl:p-7' : 'p-2.5 sm:p-3.5 lg:p-4')}>
                     {isTritonAIEvolutionSlide && (
                       <div className="mb-1.5 sm:mb-2 inline-flex items-center gap-2">
-                        <div className={clsx('rounded-full px-2 py-0.5 text-[10px] sm:text-[11px] font-bold tracking-wider uppercase', evolutionStyle.iconBadgeClass)}>
+                        <div className={clsx('rounded-full px-2 py-0.5 text-[12px] sm:text-[13px] font-bold tracking-wider uppercase', evolutionStyle.iconBadgeClass)}>
                           {tritonAICapabilityBadgeLabels[item.heading] || 'Core Capability'}
                         </div>
                       </div>
@@ -3313,7 +3315,7 @@ const Slide = ({ slide }) => {
 
                     {/* Heading */}
                     {isAI2031Prompt && (
-                      <div className={clsx('mb-2.5 2xl:mb-4 text-[11px] sm:text-xs font-black uppercase tracking-[0.22em]', promptStyle.numberClass)}>
+                      <div className={clsx('mb-2.5 2xl:mb-4 text-[13px] sm:text-xs font-black uppercase tracking-[0.22em]', promptStyle.numberClass)}>
                         Choose one
                       </div>
                     )}
@@ -3323,7 +3325,7 @@ const Slide = ({ slide }) => {
                       </h3>
                       {item.status && (
                         <span className={clsx(
-                          "inline-flex items-center px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider whitespace-nowrap",
+                          "inline-flex items-center px-2 py-0.5 rounded-full text-[12px] sm:text-xs font-bold uppercase tracking-wider whitespace-nowrap",
                           item.statusType === 'confirmed' && "bg-emerald-100 text-emerald-700",
                           item.statusType === 'in-development' && "bg-blue-100 text-blue-700",
                           item.statusType === 'exploring' && "bg-amber-100 text-amber-700",
@@ -3481,7 +3483,7 @@ const Slide = ({ slide }) => {
                 <div className="flex items-start gap-2">
                   <div className="flex-1">
                     <div className="text-sm sm:text-lg font-black text-ucsd-navy uppercase tracking-wide leading-none mb-1">{slide.architectureLayers[0].name}</div>
-                    <div className="text-[11px] sm:text-sm font-bold text-ucsd-blue mb-1">{slide.architectureLayers[0].description}</div>
+                    <div className="text-[13px] sm:text-sm font-bold text-ucsd-blue mb-1">{slide.architectureLayers[0].description}</div>
                     <div className="text-xs sm:text-sm text-ucsd-navy/70 leading-tight">{slide.architectureLayers[0].details}</div>
                   </div>
                 </div>
@@ -3559,15 +3561,15 @@ const Slide = ({ slide }) => {
                 <div className="flex items-start gap-2 mb-1">
                   <div className="flex-1">
                     <div className="text-sm sm:text-lg font-black text-ucsd-navy uppercase leading-none mb-1">{slide.architectureLayers[4].name}</div>
-                    <div className="text-[11px] sm:text-sm font-bold text-ucsd-blue">{slide.architectureLayers[4].description}</div>
+                    <div className="text-[13px] sm:text-sm font-bold text-ucsd-blue">{slide.architectureLayers[4].description}</div>
                   </div>
                 </div>
                 <div className="text-xs sm:text-sm text-ucsd-navy/70 mb-1 leading-tight">{slide.architectureLayers[4].details}</div>
                 <div className="grid grid-cols-2 gap-1">
                   {slide.architectureLayers[4].structures.map((struct, idx) => (
                     <div key={idx} className="bg-gray-50 rounded-md p-1 sm:p-1.5 border border-gray-200">
-                      <div className="text-[11px] sm:text-xs font-bold text-ucsd-navy leading-none">{struct.type}</div>
-                      <div className="text-[10px] sm:text-xs text-ucsd-navy/60 leading-tight mt-0.5">{struct.description}</div>
+                      <div className="text-[13px] sm:text-xs font-bold text-ucsd-navy leading-none">{struct.type}</div>
+                      <div className="text-[12px] sm:text-xs text-ucsd-navy/60 leading-tight mt-0.5">{struct.description}</div>
                     </div>
                   ))}
                 </div>
@@ -3642,14 +3644,14 @@ const Slide = ({ slide }) => {
               <div className="flex items-start gap-2 mb-1 sm:mb-2">
                 <div className="flex-1">
                   <div className="text-sm sm:text-lg font-black text-ucsd-navy uppercase tracking-wide leading-none mb-1">{slide.architectureLayers[1].name}</div>
-                  <div className="text-[11px] sm:text-sm font-bold text-ucsd-blue">{slide.architectureLayers[1].description}</div>
+                  <div className="text-[13px] sm:text-sm font-bold text-ucsd-blue">{slide.architectureLayers[1].description}</div>
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-1.5 sm:gap-2">
                 {slide.architectureLayers[1].details.map((detail, idx) => (
                   <div key={idx} className="bg-gray-50 rounded-md p-1.5 border border-gray-200">
-                    <div className="text-[11px] sm:text-xs font-black text-ucsd-navy leading-none mb-0.5">{detail.label}:</div>
-                    <div className="text-[10px] sm:text-xs text-ucsd-navy/70 leading-tight">{detail.text}</div>
+                    <div className="text-[13px] sm:text-xs font-black text-ucsd-navy leading-none mb-0.5">{detail.label}:</div>
+                    <div className="text-[12px] sm:text-xs text-ucsd-navy/70 leading-tight">{detail.text}</div>
                   </div>
                 ))}
               </div>
@@ -3738,13 +3740,13 @@ const Slide = ({ slide }) => {
                 <div className="flex items-start gap-2 mb-1 sm:mb-1.5">
                   <div className="flex-1">
                     <div className="text-sm sm:text-base font-black text-ucsd-navy uppercase tracking-wide leading-none mb-1">{slide.architectureLayers[2].name}</div>
-                    <div className="text-[11px] sm:text-xs font-bold text-ucsd-blue mb-0.5">{slide.architectureLayers[2].description}</div>
-                    <div className="text-[10px] sm:text-xs text-ucsd-navy/70 leading-tight mb-1">{slide.architectureLayers[2].details}</div>
+                    <div className="text-[13px] sm:text-xs font-bold text-ucsd-blue mb-0.5">{slide.architectureLayers[2].description}</div>
+                    <div className="text-[12px] sm:text-xs text-ucsd-navy/70 leading-tight mb-1">{slide.architectureLayers[2].details}</div>
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-1 sm:gap-1.5">
                   {slide.architectureLayers[2].tools.map((tool, idx) => (
-                    <div key={idx} className="bg-gradient-to-br from-[#00629B] to-[#004471] text-white rounded-md p-1 sm:p-1.5 text-center text-[10px] sm:text-xs font-bold shadow-md">
+                    <div key={idx} className="bg-gradient-to-br from-[#00629B] to-[#004471] text-white rounded-md p-1 sm:p-1.5 text-center text-[12px] sm:text-xs font-bold shadow-md">
                       {tool}
                     </div>
                   ))}
@@ -3779,14 +3781,14 @@ const Slide = ({ slide }) => {
                 <div className="flex items-start gap-2">
                   <div className="flex-1">
                     <div className="text-sm sm:text-base font-black text-ucsd-navy uppercase tracking-wide leading-none mb-1">{slide.architectureLayers[3].name}</div>
-                    <div className="text-[11px] sm:text-xs font-bold text-ucsd-blue mb-0.5">{slide.architectureLayers[3].description}</div>
-                    <div className="text-[10px] sm:text-xs text-ucsd-navy/70 leading-tight mb-1">{slide.architectureLayers[3].details}</div>
+                    <div className="text-[13px] sm:text-xs font-bold text-ucsd-blue mb-0.5">{slide.architectureLayers[3].description}</div>
+                    <div className="text-[12px] sm:text-xs text-ucsd-navy/70 leading-tight mb-1">{slide.architectureLayers[3].details}</div>
                   </div>
                 </div>
                 {slide.architectureLayers[3].tools && (
                   <div className="grid grid-cols-2 gap-1 sm:gap-1.5">
                     {slide.architectureLayers[3].tools.map((tool, idx) => (
-                      <div key={idx} className="bg-gradient-to-br from-[#6E963B] to-[#556F2F] text-white rounded-md p-1 sm:p-1.5 text-center text-[10px] sm:text-xs font-bold shadow-md">
+                      <div key={idx} className="bg-gradient-to-br from-[#6E963B] to-[#556F2F] text-white rounded-md p-1 sm:p-1.5 text-center text-[12px] sm:text-xs font-bold shadow-md">
                         {tool}
                       </div>
                     ))}
@@ -3808,8 +3810,8 @@ const Slide = ({ slide }) => {
         const assistants = layers[5];
 
         const FlowArrow = () => (
-          <div className="flex justify-center my-1 sm:my-1.5" aria-hidden="true">
-            <div className="w-0.5 h-3 sm:h-5 bg-gradient-to-t from-ucsd-navy/40 to-ucsd-navy/10" />
+          <div className="flex justify-center my-0.5 sm:my-1" aria-hidden="true">
+            <div className="w-0.5 h-2.5 sm:h-3 bg-gradient-to-t from-ucsd-navy/40 to-ucsd-navy/10" />
           </div>
         );
 
@@ -3840,12 +3842,12 @@ const Slide = ({ slide }) => {
               <div className="flex-1 min-w-0">
                 <div className="flex flex-wrap items-baseline gap-x-2">
                   <div className="text-base sm:text-lg md:text-xl font-black text-ucsd-navy uppercase tracking-wide leading-tight">{layer.name}</div>
-                  <div className="text-[11px] sm:text-sm font-bold text-ucsd-blue uppercase tracking-wider">{layer.description}</div>
+                  <div className="text-[13px] sm:text-sm font-bold text-ucsd-blue uppercase tracking-wider">{layer.description}</div>
                 </div>
                 <div className="text-xs sm:text-sm md:text-base text-ucsd-navy/75 leading-snug mt-0.5">{layer.details}</div>
               </div>
               {layer.badge && (
-                <div className="hidden md:flex flex-shrink-0 items-center gap-1.5 bg-ucsd-gold text-ucsd-navy font-black text-[10px] sm:text-xs uppercase tracking-wide px-2.5 py-1 rounded-full shadow">
+                <div className="hidden md:flex flex-shrink-0 items-center gap-1.5 bg-ucsd-gold text-ucsd-navy font-black text-[12px] sm:text-xs uppercase tracking-wide px-2.5 py-1 rounded-full shadow">
                   <Star className="w-3 h-3" />
                   {layer.badge}
                 </div>
@@ -3855,7 +3857,7 @@ const Slide = ({ slide }) => {
                   {layer.tools.map((tool, idx) => (
                     <span
                       key={idx}
-                      className={clsx("text-[11px] sm:text-sm font-bold px-2.5 py-1 rounded-full shadow-sm", pillText)}
+                      className={clsx("text-[13px] sm:text-sm font-bold px-2.5 py-1 rounded-full shadow-sm", pillText)}
                       style={{ backgroundColor: layer.color }}
                     >
                       {tool}
@@ -3868,13 +3870,13 @@ const Slide = ({ slide }) => {
         };
 
         return (
-          <div className="relative w-full flex flex-col items-center justify-start px-3 sm:px-6 pt-1 sm:pt-2 pb-2 max-w-[1600px] mx-auto">
+          <div className="relative w-full flex flex-col items-center justify-start px-3 sm:px-4 pt-1 pb-14 max-w-[1600px] mx-auto">
             {/* Title */}
             <motion.div
               initial={{ opacity: 0, y: -15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-center mb-2 sm:mb-3"
+              className="text-center mb-1.5 sm:mb-2"
             >
               <div className="text-2xl sm:text-4xl md:text-5xl font-black text-ucsd-navy leading-none">{slide.title}</div>
               {slide.subtitle && (
@@ -3942,7 +3944,7 @@ const Slide = ({ slide }) => {
 
             {/* Mobile fallback badge for Onyx (since it's hidden on small screens) */}
             {onyx?.badge && (
-              <div className="md:hidden mt-2 flex items-center gap-1.5 bg-ucsd-gold text-ucsd-navy font-black text-[10px] uppercase tracking-wide px-2.5 py-1 rounded-full shadow">
+              <div className="md:hidden mt-2 flex items-center gap-1.5 bg-ucsd-gold text-ucsd-navy font-black text-[12px] uppercase tracking-wide px-2.5 py-1 rounded-full shadow">
                 <Star className="w-3 h-3" />
                 {onyx.badge}
               </div>
@@ -3979,7 +3981,7 @@ const Slide = ({ slide }) => {
                           <div className="text-sm lg:text-lg font-black text-ucsd-navy uppercase leading-none">{stage.name}</div>
                         </div>
                         <div className="text-xs lg:text-base font-bold text-ucsd-navy/70 mb-0.5 lg:mb-1 leading-snug">{stage.description}</div>
-                        <div className="text-[11px] lg:text-sm text-ucsd-navy/60 italic bg-gray-50 rounded px-1.5 lg:px-2 py-0.5 lg:py-1 border-l-2 leading-snug" style={{ borderLeftColor: `${stage.color}40` }}>
+                        <div className="text-[13px] lg:text-sm text-ucsd-navy/60 italic bg-gray-50 rounded px-1.5 lg:px-2 py-0.5 lg:py-1 border-l-2 leading-snug" style={{ borderLeftColor: `${stage.color}40` }}>
                           {stage.example}
                         </div>
                       </div>
@@ -4023,7 +4025,7 @@ const Slide = ({ slide }) => {
                     <div className="text-sm lg:text-base font-black text-ucsd-navy mb-1 lg:mb-1.5">{layer.name}</div>
                     <div className="flex flex-wrap gap-0.5 lg:gap-1">
                       {layer.items.map((item, i) => (
-                        <div key={i} className="text-[11px] lg:text-sm font-semibold text-white rounded px-1.5 lg:px-2 py-0.5" style={{ backgroundColor: layer.color }}>
+                        <div key={i} className="text-[13px] lg:text-sm font-semibold text-white rounded px-1.5 lg:px-2 py-0.5" style={{ backgroundColor: layer.color }}>
                           {item}
                         </div>
                       ))}
@@ -4056,7 +4058,7 @@ const Slide = ({ slide }) => {
                           <div className="text-sm lg:text-lg font-black text-ucsd-navy uppercase leading-none">{stage.name}</div>
                         </div>
                         <div className="text-xs lg:text-base font-bold text-ucsd-navy/70 mb-0.5 lg:mb-1 leading-snug">{stage.description}</div>
-                        <div className="text-[11px] lg:text-sm text-ucsd-navy/60 italic bg-gray-50 rounded px-1.5 lg:px-2 py-0.5 lg:py-1 border-l-2 leading-snug" style={{ borderLeftColor: `${stage.color}40` }}>
+                        <div className="text-[13px] lg:text-sm text-ucsd-navy/60 italic bg-gray-50 rounded px-1.5 lg:px-2 py-0.5 lg:py-1 border-l-2 leading-snug" style={{ borderLeftColor: `${stage.color}40` }}>
                           {stage.example}
                         </div>
                       </div>
@@ -4091,7 +4093,7 @@ const Slide = ({ slide }) => {
           >
             <div className="hidden md:block" aria-hidden />
             <div className="flex flex-row md:flex-col items-center justify-center gap-1 text-ucsd-blue/70 md:min-h-[320px]">
-              <span className="rounded-full border border-ucsd-blue/20 bg-white/75 px-2 py-0.5 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.18em] text-ucsd-navy/70 shadow-sm">
+              <span className="rounded-full border border-ucsd-blue/20 bg-white/75 px-2 py-0.5 text-[11.5px] sm:text-[12px] font-black uppercase tracking-[0.18em] text-ucsd-navy/70 shadow-sm">
                 {label}
               </span>
               <ArrowRight size={18} className="hidden md:block text-ucsd-blue/45" />
@@ -4173,7 +4175,7 @@ const Slide = ({ slide }) => {
                             </div>
                             <div className="flex flex-col min-w-0">
                               <span className="text-sm sm:text-base font-black text-ucsd-navy leading-tight">{tool.name}</span>
-                              <span className="text-[9px] sm:text-[10px] font-medium text-slate-500">{tool.vendor}</span>
+                              <span className="text-[11.5px] sm:text-[12px] font-medium text-slate-500">{tool.vendor}</span>
                             </div>
                           </motion.div>
                         );
@@ -4207,7 +4209,7 @@ const Slide = ({ slide }) => {
                       <Server size={24} className="mb-1 text-ucsd-gold sm:w-8 sm:h-8" />
                       <span className="px-2 text-center text-base sm:text-lg font-black tracking-wider leading-tight">{slide.gateway?.name}</span>
                       {slide.gateway?.subtitle && (
-                        <span className="px-2 text-center text-[9px] sm:text-[10px] font-medium text-ucsd-sky uppercase tracking-[0.15em] mt-0.5 leading-tight">
+                        <span className="px-2 text-center text-[11.5px] sm:text-[12px] font-medium text-ucsd-sky uppercase tracking-[0.15em] mt-0.5 leading-tight">
                           {slide.gateway.subtitle}
                         </span>
                       )}
@@ -4260,7 +4262,7 @@ const Slide = ({ slide }) => {
                               className="flex items-center justify-center gap-1.5 bg-white/80 backdrop-blur-sm rounded-full px-2.5 py-1 sm:px-3 sm:py-1.5 border border-ucsd-blue/20 shadow-sm md:w-full"
                             >
                               <IconComp size={12} className="text-ucsd-blue sm:w-3.5 sm:h-3.5 flex-shrink-0" />
-                              <span className="text-[10px] sm:text-xs font-bold text-ucsd-navy uppercase tracking-wide whitespace-nowrap">{m.name}</span>
+                              <span className="text-[12px] sm:text-xs font-bold text-ucsd-navy uppercase tracking-wide whitespace-nowrap">{m.name}</span>
                             </motion.div>
                           );
                         })}
@@ -4278,7 +4280,7 @@ const Slide = ({ slide }) => {
               transition={{ delay: 1.2, duration: 0.6 }}
               className="bg-white/90 backdrop-blur-sm rounded-xl sm:rounded-2xl border border-white/60 shadow-lg p-3 sm:px-4 sm:py-3.5"
             >
-              <div className="text-[11px] sm:text-[13px] font-black uppercase tracking-[0.16em] text-ucsd-navy/60 mb-1.5 sm:mb-2.5 text-center">How to Get Access</div>
+              <div className="text-[13px] sm:text-[15px] font-black uppercase tracking-[0.16em] text-ucsd-navy/60 mb-1.5 sm:mb-2.5 text-center">How to Get Access</div>
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-0">
                 {accessSteps.map((step, i) => {
                   const IconComp = iconMap[step.icon] || CheckCircle;
@@ -4294,8 +4296,8 @@ const Slide = ({ slide }) => {
                           <span className="text-sm sm:text-lg font-black">{step.number}</span>
                         </div>
                         <div className="flex-1 min-w-0">
-                          <div className="text-[15px] sm:text-[20px] font-black text-ucsd-navy leading-none">{step.title}</div>
-                          <div className="text-[13px] sm:text-[15px] text-slate-600 font-medium leading-[1.15] sm:leading-[1.2] mt-0.5">{step.description}</div>
+                          <div className="text-[17px] sm:text-[22px] font-black text-ucsd-navy leading-none">{step.title}</div>
+                          <div className="text-[15px] sm:text-[17px] text-slate-600 font-medium leading-[1.15] sm:leading-[1.2] mt-0.5">{step.description}</div>
                         </div>
                       </motion.div>
                       {i < accessSteps.length - 1 && (
@@ -4322,11 +4324,11 @@ const Slide = ({ slide }) => {
                   <div className="flex-1 rounded-xl border border-white/75 bg-white/90 px-4 py-2.5 shadow-sm">
                     <div className="flex items-center gap-1.5 mb-1.5">
                       <Server size={14} style={{ color: slide.ownership.its.color }} />
-                      <span className="text-[12px] sm:text-[13px] font-black uppercase tracking-[0.08em]" style={{ color: slide.ownership.its.color }}>{slide.ownership.its.title}</span>
+                      <span className="text-[14px] sm:text-[15px] font-black uppercase tracking-[0.08em]" style={{ color: slide.ownership.its.color }}>{slide.ownership.its.title}</span>
                     </div>
                     <div className="flex flex-wrap gap-1">
                       {slide.ownership.its.items.map((item, i) => (
-                        <span key={i} className="rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] sm:text-[11px] font-semibold text-ucsd-navy/75">{item}</span>
+                        <span key={i} className="rounded-full bg-slate-100 px-2.5 py-0.5 text-[12px] sm:text-[13px] font-semibold text-ucsd-navy/75">{item}</span>
                       ))}
                     </div>
                   </div>
@@ -4336,11 +4338,11 @@ const Slide = ({ slide }) => {
                   <div className="flex-1 rounded-xl border border-white/75 bg-white/90 px-4 py-2.5 shadow-sm">
                     <div className="flex items-center gap-1.5 mb-1.5">
                       <Code size={14} className="text-ucsd-navy/50" />
-                      <span className="text-[12px] sm:text-[13px] font-black uppercase tracking-[0.08em] text-ucsd-navy/65">{slide.ownership.builder.title}</span>
+                      <span className="text-[14px] sm:text-[15px] font-black uppercase tracking-[0.08em] text-ucsd-navy/65">{slide.ownership.builder.title}</span>
                     </div>
                     <div className="flex flex-wrap gap-1">
                       {slide.ownership.builder.items.map((item, i) => (
-                        <span key={i} className="rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] sm:text-[11px] font-semibold text-ucsd-navy/75">{item}</span>
+                        <span key={i} className="rounded-full bg-slate-100 px-2.5 py-0.5 text-[12px] sm:text-[13px] font-semibold text-ucsd-navy/75">{item}</span>
                       ))}
                     </div>
                   </div>
@@ -4356,7 +4358,7 @@ const Slide = ({ slide }) => {
               className="flex flex-wrap justify-center gap-2 sm:gap-3"
             >
               {guardrails.map((g, i) => (
-                <div key={i} className="flex items-center gap-1.5 text-[10px] sm:text-xs font-bold text-ucsd-navy/70 uppercase tracking-wide">
+                <div key={i} className="flex items-center gap-1.5 text-[12px] sm:text-xs font-bold text-ucsd-navy/70 uppercase tracking-wide">
                   <Shield size={12} className="text-ucsd-blue/60" />
                   <span>{g}</span>
                   {i < guardrails.length - 1 && <span className="text-ucsd-gold ml-1">|</span>}
@@ -4392,7 +4394,7 @@ const Slide = ({ slide }) => {
                 {contextNote && (
                   <div className="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-ucsd-blue/8 border border-ucsd-blue/15 px-3 py-1.5 mb-1">
                     <ArrowRight size={12} className="text-ucsd-blue/60" />
-                    <span className="text-[11px] sm:text-[12px] font-bold text-ucsd-blue/80 whitespace-nowrap">{contextNote}</span>
+                    <span className="text-[13px] sm:text-[14px] font-bold text-ucsd-blue/80 whitespace-nowrap">{contextNote}</span>
                   </div>
                 )}
               </div>
@@ -4428,7 +4430,7 @@ const Slide = ({ slide }) => {
                       {/* Step number + icon */}
                       <div className="flex items-center justify-between mb-2">
                         <div
-                          className="w-8 h-8 rounded-full flex items-center justify-center text-[13px] font-black text-white"
+                          className="w-8 h-8 rounded-full flex items-center justify-center text-[15px] font-black text-white"
                           style={{ backgroundColor: step.color }}
                         >
                           {step.number}
@@ -4437,12 +4439,12 @@ const Slide = ({ slide }) => {
                       </div>
 
                       {/* Step name */}
-                      <div className="text-[16px] sm:text-[18px] font-black text-ucsd-navy leading-tight mb-1.5">
+                      <div className="text-[18px] sm:text-[20px] font-black text-ucsd-navy leading-tight mb-1.5">
                         {step.name}
                       </div>
 
                       {/* Step description */}
-                      <div className="text-[12px] sm:text-[13px] font-medium leading-[1.35] text-slate-600 flex-1">
+                      <div className="text-[14px] sm:text-[15px] font-medium leading-[1.35] text-slate-600 flex-1">
                         {step.description}
                       </div>
 
@@ -4467,20 +4469,20 @@ const Slide = ({ slide }) => {
                 className="relative overflow-hidden rounded-[22px] border border-white/75 bg-white/90 p-3 sm:p-3.5 shadow-[0_10px_20px_rgba(24,43,73,0.06)]"
               >
                 <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-ucsd-blue/25 via-ucsd-sky/20 to-ucsd-blue/12" />
-                <div className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.18em] text-ucsd-navy/40 mb-2">Responsibility</div>
+                <div className="text-[12px] sm:text-[13px] font-black uppercase tracking-[0.18em] text-ucsd-navy/40 mb-2">Responsibility</div>
                 <div className="grid grid-cols-2 gap-0 rounded-[18px] overflow-hidden border border-slate-200/75 bg-slate-50/55">
                   <div className="p-2.5 border-r border-slate-200/75">
                     <div className="flex items-center gap-2 mb-1.5">
                       <div className="w-7 h-7 rounded-full flex items-center justify-center" style={{ backgroundColor: `${ownership.its?.color}10` }}>
                         <Server size={14} style={{ color: ownership.its?.color }} />
                       </div>
-                      <span className="text-[13px] sm:text-[14px] font-black uppercase tracking-[0.06em] leading-none" style={{ color: ownership.its?.color }}>
+                      <span className="text-[15px] sm:text-[16px] font-black uppercase tracking-[0.06em] leading-none" style={{ color: ownership.its?.color }}>
                         {ownership.its?.title}
                       </span>
                     </div>
                     <div className="space-y-1">
                       {ownership.its?.items?.map((item, i) => (
-                        <div key={i} className="flex items-start gap-2 text-[12px] sm:text-[13px] font-semibold text-ucsd-navy leading-tight">
+                        <div key={i} className="flex items-start gap-2 text-[14px] sm:text-[15px] font-semibold text-ucsd-navy leading-tight">
                           <div className="mt-[6px] h-1.5 w-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: ownership.its?.color }} />
                           <span>{item}</span>
                         </div>
@@ -4492,13 +4494,13 @@ const Slide = ({ slide }) => {
                       <div className="w-7 h-7 rounded-full flex items-center justify-center" style={{ backgroundColor: `${ownership.builder?.color}10` }}>
                         <Code size={14} style={{ color: ownership.builder?.color }} />
                       </div>
-                      <span className="text-[13px] sm:text-[14px] font-black uppercase tracking-[0.06em] leading-none text-ucsd-navy">
+                      <span className="text-[15px] sm:text-[16px] font-black uppercase tracking-[0.06em] leading-none text-ucsd-navy">
                         {ownership.builder?.title}
                       </span>
                     </div>
                     <div className="space-y-1">
                       {ownership.builder?.items?.map((item, i) => (
-                        <div key={i} className="flex items-start gap-2 text-[12px] sm:text-[13px] font-semibold text-ucsd-navy leading-tight">
+                        <div key={i} className="flex items-start gap-2 text-[14px] sm:text-[15px] font-semibold text-ucsd-navy leading-tight">
                           <div className="mt-[6px] h-1.5 w-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: ownership.builder?.color }} />
                           <span>{item}</span>
                         </div>
@@ -4516,24 +4518,24 @@ const Slide = ({ slide }) => {
                   className="relative overflow-hidden rounded-[22px] border border-white/75 bg-white/90 p-3 sm:p-3.5 shadow-[0_10px_20px_rgba(24,43,73,0.06)]"
                 >
                   <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-ucsd-blue/25 via-ucsd-sky/20 to-ucsd-blue/12" />
-                  <div className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.18em] text-ucsd-navy/40 mb-2">Scope</div>
+                  <div className="text-[12px] sm:text-[13px] font-black uppercase tracking-[0.18em] text-ucsd-navy/40 mb-2">Scope</div>
                   <div className="flex flex-col gap-2">
                     <div className="rounded-[16px] border border-ucsd-blue/14 bg-ucsd-blue/4 px-3 py-2">
                       <div className="flex items-center gap-2.5">
-                        <div className="shrink-0 text-[10px] sm:text-[11px] font-black uppercase tracking-[0.12em] text-ucsd-blue">In Scope:</div>
+                        <div className="shrink-0 text-[12px] sm:text-[13px] font-black uppercase tracking-[0.12em] text-ucsd-blue">In Scope:</div>
                         <div className="flex flex-wrap items-center gap-1.5">
                           {boundaries.whatItIs?.items?.map((item, i) => (
-                            <span key={i} className="rounded-full bg-white/90 px-2.5 py-1 text-[12px] sm:text-[13px] font-semibold text-ucsd-navy/88">{item}</span>
+                            <span key={i} className="rounded-full bg-white/90 px-2.5 py-1 text-[14px] sm:text-[15px] font-semibold text-ucsd-navy/88">{item}</span>
                           ))}
                         </div>
                       </div>
                     </div>
                     <div className="rounded-[16px] border border-[#B56200]/14 bg-[#B56200]/4 px-3 py-2">
                       <div className="flex items-center gap-2.5">
-                        <div className="shrink-0 text-[10px] sm:text-[11px] font-black uppercase tracking-[0.12em] text-[#B56200]">Not For:</div>
+                        <div className="shrink-0 text-[12px] sm:text-[13px] font-black uppercase tracking-[0.12em] text-[#B56200]">Not For:</div>
                         <div className="flex flex-wrap items-center gap-1.5">
                           {boundaries.whatItIsNot?.items?.map((item, i) => (
-                            <span key={i} className="rounded-full bg-white/90 px-2.5 py-1 text-[12px] sm:text-[13px] font-semibold text-[#8A5600]">{item}</span>
+                            <span key={i} className="rounded-full bg-white/90 px-2.5 py-1 text-[14px] sm:text-[15px] font-semibold text-[#8A5600]">{item}</span>
                           ))}
                         </div>
                       </div>
@@ -4579,7 +4581,7 @@ const Slide = ({ slide }) => {
         const HorizontalArrow = ({ label, color, dashed = false, grow = false }) => (
           <div className={`flex flex-col items-center justify-center flex-shrink-0 ${grow ? 'flex-1 min-w-[30px]' : ''}`} style={grow ? undefined : { width: 55 }}>
             {label && (
-              <div className="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.1em] mb-0.5 whitespace-nowrap" style={{ color }}>
+              <div className="text-[12px] sm:text-[13px] font-extrabold uppercase tracking-[0.1em] mb-0.5 whitespace-nowrap" style={{ color }}>
                 {label}
               </div>
             )}
@@ -4611,7 +4613,7 @@ const Slide = ({ slide }) => {
           return (
             <div className="flex items-center gap-1">
               <Users size={20} style={{ color }} />
-              <span className="text-[12px] font-bold" style={{ color }}>{count}</span>
+              <span className="text-[14px] font-bold" style={{ color }}>{count}</span>
             </div>
           );
         };
@@ -4652,16 +4654,16 @@ const Slide = ({ slide }) => {
                           <div className="flex items-center justify-between">
                             <div className="flex items-center gap-2">
                               <div
-                                className="w-7 h-7 rounded-full flex items-center justify-center text-[12px] font-black text-white"
+                                className="w-7 h-7 rounded-full flex items-center justify-center text-[14px] font-black text-white"
                                 style={{ backgroundColor: step.color }}
                               >
                                 {step.number}
                               </div>
-                              <div className="text-[15px] sm:text-[17px] font-black text-ucsd-navy">{step.name}</div>
+                              <div className="text-[17px] sm:text-[19px] font-black text-ucsd-navy">{step.name}</div>
                             </div>
                             {IconComponent && <IconComponent size={17} style={{ color: step.color }} className="opacity-50" />}
                           </div>
-                          <div className="text-[10px] sm:text-[12px] text-slate-500 leading-snug">{step.description}</div>
+                          <div className="text-[12px] sm:text-[14px] text-slate-500 leading-snug">{step.description}</div>
                         </motion.div>
                         {i < pipelineSteps.length - 1 && (
                           <div className="flex items-center flex-shrink-0 text-slate-300">
@@ -4698,14 +4700,14 @@ const Slide = ({ slide }) => {
                       {/* Lane Label + Volume */}
                       <div className="flex flex-col items-center gap-1 flex-shrink-0" style={{ width: 120 }}>
                         <div
-                          className="text-[16px] sm:text-[20px] font-black leading-tight text-center"
+                          className="text-[18px] sm:text-[22px] font-black leading-tight text-center"
                           style={{ color: lane.color }}
                         >
                           {lane.label}
                         </div>
                         <div className="flex items-center gap-1.5">
                           <TeamIcons count={lane.teamSize} color={lane.color} />
-                          <div className="text-[11px] sm:text-[12px] font-bold text-ucsd-navy/50 leading-none">
+                          <div className="text-[13px] sm:text-[14px] font-bold text-ucsd-navy/50 leading-none">
                             {lane.volume}
                           </div>
                         </div>
@@ -4737,11 +4739,11 @@ const Slide = ({ slide }) => {
                           boxShadow: `inset 0 2px 0 ${lane.color}45`
                         }}
                       >
-                        <div className="text-[14px] sm:text-[16px] font-black text-ucsd-navy leading-tight">
+                        <div className="text-[16px] sm:text-[18px] font-black text-ucsd-navy leading-tight">
                           {lane.deployment}
                         </div>
                         <div
-                          className="mt-1.5 inline-block rounded-full px-2.5 py-0.5 text-[11px] sm:text-[12px] font-extrabold"
+                          className="mt-1.5 inline-block rounded-full px-2.5 py-0.5 text-[13px] sm:text-[14px] font-extrabold"
                           style={{
                             backgroundColor: `${lane.color}20`,
                             color: lane.color,
@@ -4778,7 +4780,7 @@ const Slide = ({ slide }) => {
                       >
                         {/* Escalate/migrate arrow under deployment area */}
                         <div className="absolute right-[25%] top-0 bottom-0 flex items-center gap-2">
-                          <span className="text-[11px] sm:text-[13px] font-black uppercase tracking-[0.12em] whitespace-nowrap" style={{ color: lane.color }}>
+                          <span className="text-[13px] sm:text-[15px] font-black uppercase tracking-[0.12em] whitespace-nowrap" style={{ color: lane.color }}>
                             Escalate / Migrate
                           </span>
                           <div className="flex flex-col items-center h-full justify-between">
@@ -4909,7 +4911,7 @@ const Slide = ({ slide }) => {
                             <IconComp size={14} style={{ color: stage.color }} />
                           </div>
                         </foreignObject>
-                        <text x={nx} y={ny + 34} textAnchor="middle" className="text-[10px] sm:text-xs font-bold fill-ucsd-navy">{stage.shortLabel}</text>
+                        <text x={nx} y={ny + 34} textAnchor="middle" className="text-[12px] sm:text-xs font-bold fill-ucsd-navy">{stage.shortLabel}</text>
                       </g>
                     );
                   })}
@@ -4923,7 +4925,7 @@ const Slide = ({ slide }) => {
                   >
                     <circle cx={centerX} cy={centerY} r="38" fill="white" stroke="#E5E7EB" strokeWidth="2" />
                     <text x={centerX} y={centerY - 4} textAnchor="middle" className="text-sm font-black fill-ucsd-navy">TritonAI</text>
-                    <text x={centerX} y={centerY + 10} textAnchor="middle" className="text-[8px] font-bold fill-ucsd-blue uppercase tracking-wider">Flywheel</text>
+                    <text x={centerX} y={centerY + 10} textAnchor="middle" className="text-[10.5px] font-bold fill-ucsd-blue uppercase tracking-wider">Flywheel</text>
                   </motion.g>
 
                   {/* Animated flowing dot */}
@@ -5015,7 +5017,7 @@ const Slide = ({ slide }) => {
             >
               <div className="inline-flex items-center gap-2 rounded-full bg-ucsd-navy/8 px-3 py-1 mb-1">
                 <RefreshCw size={12} className="text-ucsd-blue" />
-                <span className="text-[10px] sm:text-xs font-black text-ucsd-navy uppercase tracking-[0.2em]">Use Case</span>
+                <span className="text-[12px] sm:text-xs font-black text-ucsd-navy uppercase tracking-[0.2em]">Use Case</span>
               </div>
               <div className="text-2xl sm:text-4xl md:text-5xl font-black text-ucsd-navy leading-none pb-1 md:pb-2">{slide.title}</div>
               <div className="text-sm sm:text-lg text-ucsd-blue font-bold mt-1 max-w-4xl mx-auto leading-snug">{slide.subtitle}</div>
@@ -5043,13 +5045,13 @@ const Slide = ({ slide }) => {
                       <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/80 via-slate-950/35 to-transparent px-3 py-1.5">
                         <div className="inline-flex items-center gap-2 rounded-full bg-white/12 px-2.5 py-1 backdrop-blur-sm">
                           <div className="w-2 h-2 rounded-full bg-emerald-400" />
-                          <span className="text-[10px] font-black uppercase tracking-[0.18em] text-white">{caseStudyDemoLabel}</span>
+                          <span className="text-[12px] font-black uppercase tracking-[0.18em] text-white">{caseStudyDemoLabel}</span>
                         </div>
                       </div>
                     </div>
                     <div className="flex items-center justify-between gap-2 px-1.5 pt-2">
-                      <div className="text-[11px] sm:text-xs font-black uppercase tracking-[0.16em] text-ucsd-navy/55">Live Product Preview</div>
-                      <div className="text-[11px] sm:text-xs font-semibold text-ucsd-blue">Browser-first, campus-hosted</div>
+                      <div className="text-[13px] sm:text-xs font-black uppercase tracking-[0.16em] text-ucsd-navy/55">Live Product Preview</div>
+                      <div className="text-[13px] sm:text-xs font-semibold text-ucsd-blue">Browser-first, campus-hosted</div>
                     </div>
                   </div>
                 </motion.div>
@@ -5142,7 +5144,7 @@ const Slide = ({ slide }) => {
                               <IconComp size={13} style={{ color: stage.color }} />
                             </div>
                           </foreignObject>
-                          <text x={nx} y={ny + 32} textAnchor="middle" className="text-[11px] sm:text-[13px] font-black fill-ucsd-navy">{stage.shortLabel}</text>
+                          <text x={nx} y={ny + 32} textAnchor="middle" className="text-[13px] sm:text-[15px] font-black fill-ucsd-navy">{stage.shortLabel}</text>
                         </g>
                       );
                     })}
@@ -5155,8 +5157,8 @@ const Slide = ({ slide }) => {
                       style={{ transformOrigin: `${centerX}px ${centerY}px` }}
                     >
                       <circle cx={centerX} cy={centerY} r="36" fill="white" stroke="#E5E7EB" strokeWidth="2" />
-                      <text x={centerX} y={centerY - 7} textAnchor="middle" className="text-[13px] font-black fill-ucsd-navy">PDF</text>
-                      <text x={centerX} y={centerY + 9} textAnchor="middle" className="text-[9px] font-bold fill-ucsd-blue uppercase tracking-wider">Remediator</text>
+                      <text x={centerX} y={centerY - 7} textAnchor="middle" className="text-[15px] font-black fill-ucsd-navy">PDF</text>
+                      <text x={centerX} y={centerY + 9} textAnchor="middle" className="text-[11.5px] font-bold fill-ucsd-blue uppercase tracking-wider">Remediator</text>
                     </motion.g>
 
                     {/* Animated flowing dot */}
@@ -5240,9 +5242,9 @@ const Slide = ({ slide }) => {
                 >
                   <div className="absolute top-0 right-0 w-12 h-12 sm:w-14 sm:h-14 bg-ucsd-gold/10 rounded-full blur-2xl group-hover:bg-ucsd-gold/20 transition-colors" />
                   <div className="relative z-10">
-                    <div className="text-[8px] sm:text-[10px] font-bold text-ucsd-sky uppercase tracking-[0.12em] mb-0.5">{metric.label}</div>
+                    <div className="text-[10.5px] sm:text-[12px] font-bold text-ucsd-sky uppercase tracking-[0.12em] mb-0.5">{metric.label}</div>
                     <div className="text-lg sm:text-[2rem] font-black bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80 leading-none">{metric.value}</div>
-                    <div className="text-[8px] sm:text-[10px] font-medium text-white/70 uppercase tracking-wide mt-0.5">{metric.sub}</div>
+                    <div className="text-[10.5px] sm:text-[12px] font-medium text-white/70 uppercase tracking-wide mt-0.5">{metric.sub}</div>
                   </div>
                 </motion.div>
               ))}
@@ -5253,7 +5255,7 @@ const Slide = ({ slide }) => {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 2.2 }}
-              className="flex flex-col items-center gap-1 px-4"
+              className="flex flex-col items-center gap-1 px-4 -translate-y-3"
             >
               {/* Tool pills */}
               <div className="flex flex-wrap justify-center gap-1">
@@ -5263,7 +5265,7 @@ const Slide = ({ slide }) => {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 2.3 + i * 0.1 }}
-                    className="px-2.5 py-0.5 rounded-full border border-ucsd-navy/15 bg-white/80 backdrop-blur-sm text-[9px] sm:text-[11px] font-bold text-ucsd-navy uppercase tracking-wide shadow-sm"
+                    className="px-2.5 py-0.5 rounded-full border border-ucsd-navy/15 bg-white/80 backdrop-blur-sm text-[11.5px] sm:text-[13px] font-bold text-ucsd-navy uppercase tracking-wide shadow-sm"
                   >
                     {h}
                   </motion.span>
@@ -5274,7 +5276,7 @@ const Slide = ({ slide }) => {
               {slide.keyMessage && (
                 <div className="inline-flex items-center gap-2 bg-ucsd-navy/5 rounded-full px-3 py-1 sm:px-5 sm:py-1.5 border border-ucsd-navy/10">
                   <Star size={12} className="text-ucsd-gold flex-shrink-0" />
-                  <span className="text-[11px] sm:text-xs font-bold text-ucsd-navy italic">{slide.keyMessage}</span>
+                  <span className="text-[13px] sm:text-xs font-bold text-ucsd-navy italic">{slide.keyMessage}</span>
                 </div>
               )}
             </motion.div>
@@ -5508,14 +5510,14 @@ const Slide = ({ slide }) => {
                         />
                       </div>
                       {/* Allocation badge */}
-                      <span className="absolute -bottom-0.5 -right-0.5 text-[11px] font-bold text-ucsd-navy bg-ucsd-gold px-1.5 py-0.5 rounded-full shadow">
+                      <span className="absolute -bottom-0.5 -right-0.5 text-[13px] font-bold text-ucsd-navy bg-ucsd-gold px-1.5 py-0.5 rounded-full shadow">
                         {leader.allocation}
                       </span>
                     </div>
                     {/* Role info and responsibilities */}
                     <div className="flex-1 min-w-0">
                       <div className="text-base lg:text-[1.05rem] font-black text-ucsd-navy leading-tight">{leader.role}</div>
-                      <p className="text-sm lg:text-[14px] text-slate-600 leading-snug line-clamp-2">
+                      <p className="text-sm lg:text-[16px] text-slate-600 leading-snug line-clamp-2">
                         {leader.responsibilities}
                       </p>
                     </div>
@@ -5610,7 +5612,7 @@ const Slide = ({ slide }) => {
                       />
                     </div>
                     {/* Allocation badge */}
-                    <span className="absolute -bottom-0.5 -right-0.5 text-[11px] font-bold text-ucsd-navy bg-ucsd-gold px-1.5 py-0.5 rounded-full shadow">
+                    <span className="absolute -bottom-0.5 -right-0.5 text-[13px] font-bold text-ucsd-navy bg-ucsd-gold px-1.5 py-0.5 rounded-full shadow">
                       {member.allocation}
                     </span>
                   </div>
@@ -5620,7 +5622,7 @@ const Slide = ({ slide }) => {
                     <h3 className="text-lg lg:text-xl font-bold text-ucsd-navy leading-tight">
                       {member.role}
                     </h3>
-                    <p className="text-[15px] lg:text-[15px] text-slate-600 leading-snug">
+                    <p className="text-[17px] lg:text-[17px] text-slate-600 leading-snug">
                       {member.responsibilities}
                     </p>
                   </div>
@@ -5657,7 +5659,7 @@ const Slide = ({ slide }) => {
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <span className="absolute -bottom-1 -right-1 text-[10px] font-bold text-ucsd-navy bg-ucsd-gold px-1.5 py-0.5 rounded-full shadow">
+                      <span className="absolute -bottom-1 -right-1 text-[12px] font-bold text-ucsd-navy bg-ucsd-gold px-1.5 py-0.5 rounded-full shadow">
                         {student.allocation}
                       </span>
                     </motion.div>
@@ -5699,7 +5701,7 @@ const Slide = ({ slide }) => {
                       <div className="text-5xl lg:text-[3.25rem] font-black text-ucsd-navy leading-none">
                         {slide.teamBanner.value}
                       </div>
-                      <div className="mt-0.5 text-[11px] lg:text-[12px] font-black uppercase tracking-[0.14em] text-ucsd-blue">
+                      <div className="mt-0.5 text-[13px] lg:text-[14px] font-black uppercase tracking-[0.14em] text-ucsd-blue">
                         {slide.teamBanner.label}
                       </div>
                     </motion.div>
@@ -5722,10 +5724,10 @@ const Slide = ({ slide }) => {
                         transition={{ delay: 1.4 + index * 0.1 }}
                         className="relative rounded-xl border border-white/70 bg-white/75 px-4 py-3 shadow-sm"
                       >
-                        <div className="text-[12px] lg:text-[13px] font-black uppercase tracking-[0.16em] text-ucsd-blue">
+                        <div className="text-[14px] lg:text-[15px] font-black uppercase tracking-[0.16em] text-ucsd-blue">
                           {area.title}
                         </div>
-                        <div className="mt-1 text-sm lg:text-[15px] font-semibold leading-snug text-ucsd-navy/85">
+                        <div className="mt-1 text-sm lg:text-[17px] font-semibold leading-snug text-ucsd-navy/85">
                           {area.text}
                         </div>
                       </motion.div>
@@ -5930,7 +5932,7 @@ const Slide = ({ slide }) => {
                     <span className={clsx(
                       "leading-relaxed",
                       isFeatureGrid && "text-lg md:text-xl text-slate-800 font-semibold",
-                      isHeroList && "text-[10px] sm:text-base text-slate-700 font-medium leading-snug",
+                      isHeroList && "text-[12px] sm:text-base text-slate-700 font-medium leading-snug",
                       !isFeatureGrid && !isHeroList && isDark ? "text-white/80" : ""
                     )}>{item.text}</span>
                   )}
@@ -6055,7 +6057,7 @@ const Slide = ({ slide }) => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.8 + index * 0.12 }}
-                  className="text-[10px] sm:text-xs md:text-sm lg:text-base font-bold uppercase tracking-[0.15em] text-white/70"
+                  className="text-[12px] sm:text-xs md:text-sm lg:text-base font-bold uppercase tracking-[0.15em] text-white/70"
                 >
                   {metric.label}
                 </motion.div>
@@ -6102,7 +6104,7 @@ const Slide = ({ slide }) => {
                         <div className="text-2xl sm:text-3xl md:text-5xl font-black text-white leading-none">
                           {metric.value}
                         </div>
-                        <div className="text-[9px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-white/50 mt-0.5 leading-tight">
+                        <div className="text-[11.5px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-white/50 mt-0.5 leading-tight">
                           {metric.label}
                         </div>
                       </div>
@@ -6140,7 +6142,7 @@ const Slide = ({ slide }) => {
                         <div className="text-2xl sm:text-3xl md:text-5xl font-black text-white leading-none">
                           {metric.value}
                         </div>
-                        <div className="text-[9px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-white/50 mt-0.5 leading-tight">
+                        <div className="text-[11.5px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-white/50 mt-0.5 leading-tight">
                           {metric.label}
                         </div>
                       </div>
@@ -6162,7 +6164,7 @@ const Slide = ({ slide }) => {
     <div
       className={clsx(
         "tritonai-slide w-full h-full flex flex-col relative overflow-hidden transition-colors duration-500 break-words",
-        isTimelineEvolution ? "p-1.5 sm:p-3 md:p-4" : isHeroList ? "p-2 sm:p-3 md:p-4" : isContractReviewChallenge ? "p-2 sm:p-2.5 md:p-3" : isTritonAIEvolutionSlide ? "p-1.5 sm:p-2.5 md:p-3" : isPlatformSimple ? "p-2 sm:p-4 md:p-6" : isSolutionVideo ? "p-2 sm:p-3 md:p-4" : isCaseStudyHero ? "p-2 sm:p-4 md:p-6" : isRoadmap ? "p-2 sm:p-4 md:p-5" : isFlywheelCaseStudy ? "p-2 sm:p-3 md:p-4" : isAgentDevStrategy ? "p-2 sm:p-3 md:p-4" : isTeamGrid ? "p-2 sm:p-3 md:p-4" : isCompoundArchitecture ? "p-2 sm:p-3 md:p-4" : isAgentWorkflow ? "p-2 sm:p-3 md:p-4" : "p-2 sm:p-6 md:p-12",
+        isTimelineEvolution ? "p-1.5 sm:p-3 md:p-4" : isHeroList ? "p-2 sm:p-3 md:p-4" : isContractReviewChallenge ? "p-2 sm:p-2.5 md:p-3" : isTritonAIEvolutionSlide ? "p-1.5 sm:p-2.5 md:p-3" : isPlatformSimple ? "p-2 sm:p-4 md:p-6" : isSolutionVideo ? "p-2 sm:p-3 md:p-4" : isCaseStudyHero ? "p-2 sm:p-4 md:p-6" : isRoadmap ? "p-2 sm:p-4 md:p-5" : isAssistantCategories ? "p-2 sm:p-3 md:p-4" : isInfrastructureStack ? "p-2 sm:p-3 md:p-4" : isFlywheelCaseStudy ? "p-2 sm:p-3 md:p-4" : isAgentDevStrategy ? "p-2 sm:p-3 md:p-4" : isTeamGrid ? "p-2 sm:p-3 md:p-4" : isCompoundArchitecture ? "p-2 sm:p-3 md:p-4" : isAgentWorkflow ? "p-2 sm:p-3 md:p-4" : "p-2 sm:p-6 md:p-12",
         !slide.backgroundColor && (isDark ? "bg-[#1a1a1a]" : "bg-gray-50")
       )}
       data-layout={slide.layout || slide.type}
@@ -6204,12 +6206,12 @@ const Slide = ({ slide }) => {
             </div>
           </div>
         ) : (
-          <div className={clsx("flex flex-col h-full w-full", isTitle ? "justify-center items-center text-center" : (isCompoundArchitecture || isAgentWorkflow) ? "justify-start overflow-hidden" : isTimelineEvolution ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isHeroList ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isContractReviewChallenge ? "justify-start pt-0 sm:pt-0.5 overflow-y-auto touch-pan-y custom-scrollbar" : isTritonAIEvolutionSlide ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isPlatformSimple ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isSolution ? "justify-start pt-4 overflow-hidden" : isSolutionVideo ? "justify-start pt-0.5 sm:pt-1 overflow-hidden" : isCaseStudyHero ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isRoadmap ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isFlywheelCaseStudy ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isAgentDevStrategy ? "justify-start pt-1 sm:pt-2 overflow-y-auto touch-pan-y custom-scrollbar" : "justify-start pt-4 overflow-y-auto touch-pan-y custom-scrollbar")}>
-            <div className={clsx("w-full mx-auto", (isTimelineEvolution || isHeroList || isSolutionVideo || isCompoundArchitecture || isAgentWorkflow) && "h-full flex flex-col", (isSolution || isSolutionVideo || isCaseStudyHero || isProblemStatement || isContractReviewChallenge || isFeatureGrid || isCampusMetrics || isAgentDevStrategy || isFlywheelCaseStudy || isHeroList || isInfrastructureStack || isCompoundArchitecture || isAgentWorkflow) ? "max-w-[1800px]" : !isTimelineEvolution && "max-w-7xl")}>{renderContent()}</div>
+          <div className={clsx("flex flex-col h-full w-full overflow-x-hidden", isTitle ? "justify-center items-center text-center" : (isCompoundArchitecture || isAgentWorkflow) ? "justify-start overflow-hidden" : isTimelineEvolution ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isHeroList ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isContractReviewChallenge ? "justify-start pt-0 sm:pt-0.5 overflow-y-auto touch-pan-y custom-scrollbar" : isTritonAIEvolutionSlide ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isPlatformSimple ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isSolution ? "justify-start pt-4 overflow-hidden" : isSolutionVideo ? "justify-start pt-0.5 sm:pt-1 overflow-hidden" : isCaseStudyHero ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isRoadmap ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isAssistantCategories ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isFlywheelCaseStudy ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isAgentDevStrategy ? "justify-start pt-1 sm:pt-2 overflow-y-auto touch-pan-y custom-scrollbar" : "justify-start pt-4 overflow-y-auto touch-pan-y custom-scrollbar")}>
+            <div className={clsx("w-full mx-auto", (isTimelineEvolution || isHeroList || isSolution || isSolutionVideo || isCompoundArchitecture || isAgentWorkflow) && "h-full flex flex-col", (isSolution || isSolutionVideo || isCaseStudyHero || isProblemStatement || isContractReviewChallenge || isFeatureGrid || isCampusMetrics || isAgentDevStrategy || isFlywheelCaseStudy || isHeroList || isInfrastructureStack || isCompoundArchitecture || isAgentWorkflow) ? "max-w-[1800px]" : !isTimelineEvolution && "max-w-7xl")}>{renderContent()}</div>
           </div>
         )}
       </div>
-      <div className="absolute bottom-1 right-2 sm:bottom-6 sm:right-8 text-ucsd-navy/20 sm:text-ucsd-navy/30 text-[10px] sm:text-xs font-bold tracking-widest z-20">UC SAN DIEGO | {slide.id}</div>
+      <div className="absolute bottom-1 right-2 hidden sm:block sm:bottom-6 sm:right-8 text-ucsd-navy/20 sm:text-ucsd-navy/30 text-[12px] sm:text-xs font-bold tracking-widest z-20">UC SAN DIEGO | {slide.id}</div>
     </div>
   );
 };

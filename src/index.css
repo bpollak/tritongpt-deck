@@ -57,6 +57,12 @@
   background: var(--triton-sand);
 }
 
+@media (max-width: 639px) {
+  .presentation-stage {
+    margin-bottom: 56px;
+  }
+}
+
 .tritonai-slide-stage {
   background: var(--triton-sand);
   font-family: Roboto, Arial, sans-serif;

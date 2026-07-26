@@ -117,12 +117,12 @@ const Portrait = ({ name, image, role, org, accent = T.accent, size = 120 }) => 
           {name}
         </div>
         {role && (
-          <div className="mt-0.5 text-[12px] uppercase tracking-[0.2em]" style={{ color: T.inkMuted }}>
+          <div className="mt-0.5 text-[14px] uppercase tracking-[0.2em]" style={{ color: T.inkMuted }}>
             {role}
           </div>
         )}
         {org && (
-          <div className="mt-0.5 text-[12px] uppercase tracking-[0.2em]" style={{ color: T.inkDim }}>
+          <div className="mt-0.5 text-[14px] uppercase tracking-[0.2em]" style={{ color: T.inkDim }}>
             {org}
           </div>
         )}
@@ -171,7 +171,7 @@ const VisualKitToShelf = () => (
         <rect x="0" y="0" width="40" height="10" rx="2" fill={T.inkMuted} />
         <rect x="-25" y="2" width="25" height="6" fill={T.coralDeep} />
       </g>
-      <text x="140" y="280" textAnchor="middle" style={{ fontFamily: T.sans, fontSize: 12, letterSpacing: '0.32em', textTransform: 'uppercase' }} fill={T.inkMuted}>
+      <text x="140" y="280" textAnchor="middle" style={{ fontFamily: T.sans, fontSize: 14, letterSpacing: '0.32em', textTransform: 'uppercase' }} fill={T.inkMuted}>
         Assembly required
       </text>
     </g>
@@ -197,7 +197,7 @@ const VisualKitToShelf = () => (
       <rect x="100" y="186" width="100" height="6" rx="2" fill={T.inkMuted} />
       {/* keyboard */}
       <rect x="60" y="206" width="180" height="20" rx="3" fill={T.bg} stroke={T.accent} strokeOpacity="0.6" strokeWidth="1" />
-      <text x="150" y="280" textAnchor="middle" style={{ fontFamily: T.sans, fontSize: 12, letterSpacing: '0.32em', textTransform: 'uppercase' }} fill={T.accent}>
+      <text x="150" y="280" textAnchor="middle" style={{ fontFamily: T.sans, fontSize: 14, letterSpacing: '0.32em', textTransform: 'uppercase' }} fill={T.accent}>
         Plug & play
       </text>
     </g>
@@ -217,7 +217,7 @@ const VisualDeskDuo = () => (
         <line x1="40" y1="100" x2="40" y2="160" stroke={T.inkDim} strokeWidth="1.5" strokeDasharray="4 4" />
         <line x1="20" y1="160" x2="60" y2="160" stroke={T.inkDim} strokeWidth="1.5" strokeDasharray="4 4" />
       </g>
-      <text x="180" y="290" textAnchor="middle" style={{ fontFamily: T.sans, fontSize: 12, letterSpacing: '0.3em', textTransform: 'uppercase' }} fill={T.inkDim}>
+      <text x="180" y="290" textAnchor="middle" style={{ fontFamily: T.sans, fontSize: 14, letterSpacing: '0.3em', textTransform: 'uppercase' }} fill={T.inkDim}>
         Brilliant. Stranded.
       </text>
     </g>
@@ -251,7 +251,7 @@ const VisualDeskDuo = () => (
         <circle cx="20" cy="20" r="14" fill={T.accent} />
         <rect x="0" y="36" width="40" height="50" rx="4" fill={T.accent} opacity="0.85" />
       </g>
-      <text x="180" y="290" textAnchor="middle" style={{ fontFamily: T.sans, fontSize: 12, letterSpacing: '0.3em', textTransform: 'uppercase' }} fill={T.accent}>
+      <text x="180" y="290" textAnchor="middle" style={{ fontFamily: T.sans, fontSize: 14, letterSpacing: '0.3em', textTransform: 'uppercase' }} fill={T.accent}>
         Brilliant. Equipped.
       </text>
     </g>
@@ -320,7 +320,7 @@ const VisualFourAffordances = () => {
             <text x="0" y="98" textAnchor="middle" style={{ fontFamily: T.serif, fontSize: 22, fontWeight: 500 }} fill={T.ink}>
               {c.label}
             </text>
-            <text x="0" y="118" textAnchor="middle" style={{ fontFamily: T.sans, fontSize: 12, letterSpacing: '0.24em', textTransform: 'uppercase' }} fill={T.inkMuted}>
+            <text x="0" y="118" textAnchor="middle" style={{ fontFamily: T.sans, fontSize: 14, letterSpacing: '0.24em', textTransform: 'uppercase' }} fill={T.inkMuted}>
               {c.sub}
             </text>
           </g>
@@ -344,7 +344,7 @@ const VisualPhonePRs = () => (
       <rect x="10" y="14" width="160" height="252" rx="14" fill="url(#phoneGrad)" />
       <circle cx="90" cy="6" r="3" fill={T.accent} />
       {/* status bar */}
-      <text x="90" y="42" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 10, letterSpacing: '0.2em' }} fill={T.accent}>
+      <text x="90" y="42" textAnchor="middle" style={{ fontFamily: T.mono, fontSize: 12, letterSpacing: '0.2em' }} fill={T.accent}>
         CLAUDE CODE
       </text>
       {/* PR list inside phone */}
@@ -391,7 +391,7 @@ const VisualAnchorFlow = () => (
       <text x="0" y="115" textAnchor="middle" style={{ fontFamily: T.serif, fontSize: 22, fontWeight: 500 }} fill={T.ink}>
         Stays
       </text>
-      <text x="0" y="135" textAnchor="middle" style={{ fontFamily: T.sans, fontSize: 12, letterSpacing: '0.28em', textTransform: 'uppercase' }} fill={T.inkMuted}>
+      <text x="0" y="135" textAnchor="middle" style={{ fontFamily: T.sans, fontSize: 14, letterSpacing: '0.28em', textTransform: 'uppercase' }} fill={T.inkMuted}>
         Judgment · Trust · Accountability
       </text>
     </g>
@@ -407,7 +407,7 @@ const VisualAnchorFlow = () => (
       <text x="100" y="115" textAnchor="middle" style={{ fontFamily: T.serif, fontSize: 22, fontWeight: 500 }} fill={T.ink}>
         Changes
       </text>
-      <text x="100" y="135" textAnchor="middle" style={{ fontFamily: T.sans, fontSize: 12, letterSpacing: '0.28em', textTransform: 'uppercase' }} fill={T.inkMuted}>
+      <text x="100" y="135" textAnchor="middle" style={{ fontFamily: T.sans, fontSize: 14, letterSpacing: '0.28em', textTransform: 'uppercase' }} fill={T.inkMuted}>
         Tools · Tasks · Workflows
       </text>
     </g>
@@ -426,13 +426,13 @@ const VisualPrintingPress = () => (
         <path d="M -10 20 L 10 -10" strokeWidth="3" />
         <path d="M 18 -28 L 30 -32 L 24 -20 Z" fill={T.inkMuted} />
       </g>
-      <text x="0" y="60" textAnchor="middle" style={{ fontFamily: T.sans, fontSize: 11, letterSpacing: '0.28em', textTransform: 'uppercase' }} fill={T.inkMuted}>
+      <text x="0" y="60" textAnchor="middle" style={{ fontFamily: T.sans, fontSize: 13, letterSpacing: '0.28em', textTransform: 'uppercase' }} fill={T.inkMuted}>
         Pre-1450
       </text>
-      <text x="0" y="80" textAnchor="middle" style={{ fontFamily: T.serif, fontSize: 16, fontWeight: 500 }} fill={T.ink}>
+      <text x="0" y="80" textAnchor="middle" style={{ fontFamily: T.serif, fontSize: 18, fontWeight: 500 }} fill={T.ink}>
         Scribes
       </text>
-      <text x="0" y="100" textAnchor="middle" style={{ fontFamily: T.serif, fontSize: 13, fontStyle: 'italic' }} fill={T.inkMuted}>
+      <text x="0" y="100" textAnchor="middle" style={{ fontFamily: T.serif, fontSize: 15, fontStyle: 'italic' }} fill={T.inkMuted}>
         10% literacy
       </text>
     </g>
@@ -454,13 +454,13 @@ const VisualPrintingPress = () => (
         <line x1="25" y1="20" x2="25" y2="40" />
         <rect x="-32" y="40" width="64" height="6" fill={T.accent} />
       </g>
-      <text x="0" y="65" textAnchor="middle" style={{ fontFamily: T.sans, fontSize: 11, letterSpacing: '0.28em', textTransform: 'uppercase' }} fill={T.accent}>
+      <text x="0" y="65" textAnchor="middle" style={{ fontFamily: T.sans, fontSize: 13, letterSpacing: '0.28em', textTransform: 'uppercase' }} fill={T.accent}>
         1450 + 50 yrs
       </text>
-      <text x="0" y="85" textAnchor="middle" style={{ fontFamily: T.serif, fontSize: 16, fontWeight: 500 }} fill={T.ink}>
+      <text x="0" y="85" textAnchor="middle" style={{ fontFamily: T.serif, fontSize: 18, fontWeight: 500 }} fill={T.ink}>
         Printing press
       </text>
-      <text x="0" y="105" textAnchor="middle" style={{ fontFamily: T.serif, fontSize: 13, fontStyle: 'italic' }} fill={T.inkMuted}>
+      <text x="0" y="105" textAnchor="middle" style={{ fontFamily: T.serif, fontSize: 15, fontStyle: 'italic' }} fill={T.inkMuted}>
         Books cost 100× less
       </text>
     </g>
@@ -483,13 +483,13 @@ const VisualPrintingPress = () => (
         ))}
         <line x1="-25" y1="15" x2="25" y2="15" strokeWidth="3" />
       </g>
-      <text x="0" y="55" textAnchor="middle" style={{ fontFamily: T.sans, fontSize: 11, letterSpacing: '0.28em', textTransform: 'uppercase' }} fill={T.coral}>
+      <text x="0" y="55" textAnchor="middle" style={{ fontFamily: T.sans, fontSize: 13, letterSpacing: '0.28em', textTransform: 'uppercase' }} fill={T.coral}>
         Today
       </text>
-      <text x="0" y="75" textAnchor="middle" style={{ fontFamily: T.serif, fontSize: 16, fontWeight: 500 }} fill={T.ink}>
+      <text x="0" y="75" textAnchor="middle" style={{ fontFamily: T.serif, fontSize: 18, fontWeight: 500 }} fill={T.ink}>
         Software
       </text>
-      <text x="0" y="95" textAnchor="middle" style={{ fontFamily: T.serif, fontSize: 13, fontStyle: 'italic' }} fill={T.inkMuted}>
+      <text x="0" y="95" textAnchor="middle" style={{ fontFamily: T.serif, fontSize: 15, fontStyle: 'italic' }} fill={T.inkMuted}>
         Anyone can do it
       </text>
     </g>
@@ -538,7 +538,7 @@ const VisualQuestionMarks = () => (
         <text x="0" y="40" textAnchor="middle" style={{ fontFamily: T.serif, fontSize: 200, fontWeight: 500, letterSpacing: '-0.04em' }} fill={q.color} opacity="0.85">
           ?
         </text>
-        <text x="0" y="100" textAnchor="middle" style={{ fontFamily: T.sans, fontSize: 12, letterSpacing: '0.28em', textTransform: 'uppercase' }} fill={T.inkMuted}>
+        <text x="0" y="100" textAnchor="middle" style={{ fontFamily: T.sans, fontSize: 14, letterSpacing: '0.28em', textTransform: 'uppercase' }} fill={T.inkMuted}>
           {q.label}
         </text>
       </g>
@@ -560,10 +560,10 @@ const VisualThreeBoxes = () => (
         <text x="20" y="48" style={{ fontFamily: T.serif, fontSize: 24, fontWeight: 500 }} fill={T.ink}>
           {b.label}
         </text>
-        <text x="20" y="76" style={{ fontFamily: T.sans, fontSize: 13, letterSpacing: '0.16em', textTransform: 'uppercase' }} fill={T.inkMuted}>
+        <text x="20" y="76" style={{ fontFamily: T.sans, fontSize: 15, letterSpacing: '0.16em', textTransform: 'uppercase' }} fill={T.inkMuted}>
           {b.sub}
         </text>
-        <text x="20" y="102" style={{ fontFamily: T.mono, fontSize: 11 }} fill={b.color}>
+        <text x="20" y="102" style={{ fontFamily: T.mono, fontSize: 13 }} fill={b.color}>
           ▸ shipped
         </text>
       </g>
@@ -633,13 +633,13 @@ const Shell = ({ children, eyebrow, accent = T.accent }) => (
     />
     <div className={`relative flex items-center justify-between ${SHELL_PAD_X} pt-7 z-10`}>
       <div
-        className="text-[11px] font-semibold uppercase tracking-[0.32em]"
+        className="text-[13px] font-semibold uppercase tracking-[0.32em]"
         style={{ color: accent }}
       >
         {eyebrow || 'A Cabinet Briefing'}
       </div>
       <div
-        className="text-[11px] uppercase tracking-[0.28em]"
+        className="text-[13px] uppercase tracking-[0.28em]"
         style={{ color: T.inkDim }}
       >
         UC San Diego · May 2026
@@ -687,7 +687,7 @@ const TitleVariant = ({ slide }) => (
             className="mt-8 max-w-3xl"
             style={{
               fontFamily: T.serif,
-              fontSize: 'clamp(20px, 2vw, 28px)',
+              fontSize: 'clamp(22px, 2vw, 28px)',
               fontWeight: 300,
               fontStyle: 'italic',
               color: T.inkMuted,
@@ -749,7 +749,7 @@ const ManifestoVariant = ({ slide }) => (
             className="mt-8 max-w-4xl"
             style={{
               fontFamily: T.serif,
-              fontSize: 'clamp(20px, 1.8vw, 26px)',
+              fontSize: 'clamp(22px, 1.8vw, 26px)',
               fontWeight: 300,
               fontStyle: 'italic',
               color: T.inkMuted,
@@ -800,7 +800,7 @@ const QuoteVariant = ({ slide }) => (
               {slide.contextStat.value}
             </div>
             <div
-              className="text-[11px] uppercase tracking-[0.22em] max-w-[220px]"
+              className="text-[13px] uppercase tracking-[0.22em] max-w-[220px]"
               style={{ color: T.inkMuted, lineHeight: 1.4 }}
             >
               {slide.contextStat.label}
@@ -841,7 +841,7 @@ const QuoteVariant = ({ slide }) => (
             style={{
               fontFamily: T.serif,
               fontStyle: 'italic',
-              fontSize: 'clamp(20px, 1.8vw, 30px)',
+              fontSize: 'clamp(22px, 1.8vw, 30px)',
               color: slide.accent || T.coral,
               fontWeight: 400
             }}
@@ -861,7 +861,7 @@ const ListVariant = ({ slide }) => {
       <div className={`flex-1 grid grid-cols-12 gap-8 ${SHELL_PAD_X} pt-4 ${BOTTOM_SAFE}`}>
         <div className="col-span-5 pr-4 border-r flex flex-col justify-center" style={{ borderColor: T.rule }}>
           {slide.kicker && (
-            <div className="text-[11px] uppercase tracking-[0.32em] mb-4" style={{ color: T.accent }}>
+            <div className="text-[13px] uppercase tracking-[0.32em] mb-4" style={{ color: T.accent }}>
               {slide.kicker}
             </div>
           )}
@@ -883,7 +883,7 @@ const ListVariant = ({ slide }) => {
               style={{
                 fontFamily: T.serif,
                 fontStyle: 'italic',
-                fontSize: 'clamp(15px, 1.3vw, 20px)',
+                fontSize: 'clamp(17px, 1.3vw, 22px)',
                 color: T.inkMuted,
                 lineHeight: 1.4
               }}
@@ -922,7 +922,7 @@ const ListVariant = ({ slide }) => {
                 <div
                   style={{
                     fontFamily: T.serif,
-                    fontSize: 'clamp(18px, 1.7vw, 26px)',
+                    fontSize: 'clamp(20px, 1.7vw, 26px)',
                     fontWeight: 500,
                     color: T.ink,
                     lineHeight: 1.3,
@@ -945,7 +945,7 @@ const VersusVariant = ({ slide }) => (
     <div className={`flex-1 ${SHELL_PAD_X} pt-4 ${BOTTOM_SAFE} flex flex-col`}>
       <div className="max-w-4xl mb-2">
         {slide.kicker && (
-          <div className="text-[11px] uppercase tracking-[0.32em] mb-3" style={{ color: T.accent }}>
+          <div className="text-[13px] uppercase tracking-[0.32em] mb-3" style={{ color: T.accent }}>
             {slide.kicker}
           </div>
         )}
@@ -973,7 +973,7 @@ const VersusVariant = ({ slide }) => (
           style={{
             fontFamily: T.serif,
             fontStyle: 'italic',
-            fontSize: 'clamp(16px, 1.4vw, 22px)',
+            fontSize: 'clamp(18px, 1.4vw, 22px)',
             lineHeight: 1.5,
             color: T.inkMuted
           }}
@@ -992,7 +992,7 @@ const StatsVariant = ({ slide }) => {
       <div className={`flex-1 ${SHELL_PAD_X} pt-4 ${BOTTOM_SAFE} flex flex-col`}>
         <div className="max-w-4xl">
           {slide.kicker && (
-            <div className="text-[11px] uppercase tracking-[0.32em] mb-3" style={{ color: T.accent }}>
+            <div className="text-[13px] uppercase tracking-[0.32em] mb-3" style={{ color: T.accent }}>
               {slide.kicker}
             </div>
           )}
@@ -1035,7 +1035,7 @@ const StatsVariant = ({ slide }) => {
                 className="max-w-xs"
                 style={{
                   fontFamily: T.serif,
-                  fontSize: 'clamp(15px, 1.3vw, 19px)',
+                  fontSize: 'clamp(17px, 1.3vw, 21px)',
                   fontWeight: 500,
                   color: T.ink,
                   lineHeight: 1.3
@@ -1056,7 +1056,7 @@ const AnalogyVariant = ({ slide }) => (
     <div className={`flex-1 ${SHELL_PAD_X} pt-4 ${BOTTOM_SAFE} flex flex-col`}>
       <div className="max-w-4xl mb-3">
         {slide.kicker && (
-          <div className="text-[11px] uppercase tracking-[0.32em] mb-3" style={{ color: T.accent }}>
+          <div className="text-[13px] uppercase tracking-[0.32em] mb-3" style={{ color: T.accent }}>
             {slide.kicker}
           </div>
         )}
@@ -1084,7 +1084,7 @@ const AnalogyVariant = ({ slide }) => (
           style={{
             fontFamily: T.serif,
             fontStyle: 'italic',
-            fontSize: 'clamp(17px, 1.5vw, 24px)',
+            fontSize: 'clamp(19px, 1.5vw, 24px)',
             lineHeight: 1.45,
             color: T.inkMuted
           }}
@@ -1102,7 +1102,7 @@ const HeroVisualVariant = ({ slide }) => (
     <div className={`flex-1 ${SHELL_PAD_X} pt-4 ${BOTTOM_SAFE} flex flex-col items-center justify-center`}>
       <div className="w-full max-w-5xl">
         {slide.kicker && (
-          <div className="text-[11px] uppercase tracking-[0.32em] mb-2 text-center" style={{ color: T.accent }}>
+          <div className="text-[13px] uppercase tracking-[0.32em] mb-2 text-center" style={{ color: T.accent }}>
             {slide.kicker}
           </div>
         )}
@@ -1127,7 +1127,7 @@ const HeroVisualVariant = ({ slide }) => (
             style={{
               fontFamily: T.serif,
               fontStyle: 'italic',
-              fontSize: 'clamp(17px, 1.4vw, 22px)',
+              fontSize: 'clamp(19px, 1.4vw, 22px)',
               lineHeight: 1.5,
               color: T.inkMuted
             }}
@@ -1152,7 +1152,7 @@ const RolesVariant = ({ slide }) => {
       <div className={`flex-1 grid grid-cols-12 gap-8 ${SHELL_PAD_X} pt-4 ${BOTTOM_SAFE}`}>
         <div className="col-span-5 flex flex-col justify-center pr-6 border-r" style={{ borderColor: T.rule }}>
           {slide.kicker && (
-            <div className="text-[11px] uppercase tracking-[0.32em] mb-4" style={{ color: T.accent }}>
+            <div className="text-[13px] uppercase tracking-[0.32em] mb-4" style={{ color: T.accent }}>
               {slide.kicker}
             </div>
           )}
@@ -1187,7 +1187,7 @@ const RolesVariant = ({ slide }) => {
                 borderColor: T.accent,
                 fontFamily: T.serif,
                 fontStyle: 'italic',
-                fontSize: 'clamp(15px, 1.3vw, 19px)',
+                fontSize: 'clamp(17px, 1.3vw, 21px)',
                 lineHeight: 1.45,
                 color: T.inkMuted
               }}
@@ -1211,13 +1211,13 @@ const RolesVariant = ({ slide }) => {
               />
             ))}
             <circle cx={cx} cy={cy} r={78} fill={`${T.accent}14`} stroke={T.accent} strokeWidth="1.5" />
-            <text x={cx} y={cy - 6} textAnchor="middle" fill={T.accentBright} style={{ fontFamily: T.serif, fontSize: 16, fontWeight: 600, letterSpacing: '0.04em' }}>
+            <text x={cx} y={cy - 6} textAnchor="middle" fill={T.accentBright} style={{ fontFamily: T.serif, fontSize: 18, fontWeight: 600, letterSpacing: '0.04em' }}>
               EVERY
             </text>
-            <text x={cx} y={cy + 14} textAnchor="middle" fill={T.accentBright} style={{ fontFamily: T.serif, fontSize: 16, fontWeight: 600, letterSpacing: '0.04em' }}>
+            <text x={cx} y={cy + 14} textAnchor="middle" fill={T.accentBright} style={{ fontFamily: T.serif, fontSize: 18, fontWeight: 600, letterSpacing: '0.04em' }}>
               ROLE
             </text>
-            <text x={cx} y={cy + 36} textAnchor="middle" fill={T.accent} style={{ fontFamily: T.sans, fontSize: 10, letterSpacing: '0.32em', textTransform: 'uppercase' }}>
+            <text x={cx} y={cy + 36} textAnchor="middle" fill={T.accent} style={{ fontFamily: T.sans, fontSize: 12, letterSpacing: '0.32em', textTransform: 'uppercase' }}>
               ships software
             </text>
             {roles.map((role, i) => {
@@ -1258,7 +1258,7 @@ const RolesVariant = ({ slide }) => {
                       stroke={role.color || T.accent}
                       strokeWidth="1.5"
                     />
-                    <text x={px} y={py + 5} textAnchor="middle" fill={T.ink} style={{ fontFamily: T.sans, fontSize: 14, fontWeight: 500 }}>
+                    <text x={px} y={py + 5} textAnchor="middle" fill={T.ink} style={{ fontFamily: T.sans, fontSize: 16, fontWeight: 500 }}>
                       {role.name}
                     </text>
                   </motion.g>
