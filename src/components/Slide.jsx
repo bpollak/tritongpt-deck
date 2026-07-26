@@ -6108,7 +6108,7 @@ const Slide = ({ slide }) => {
     <div
       className={clsx(
         "tritonai-slide w-full h-full flex flex-col relative overflow-hidden transition-colors duration-500 break-words",
-        isTimelineEvolution ? "p-1.5 sm:p-3 md:p-4" : isHeroList ? "p-2 sm:p-3 md:p-4" : isContractReviewChallenge ? "p-2 sm:p-2.5 md:p-3" : isTritonAIEvolutionSlide ? "p-1.5 sm:p-2.5 md:p-3" : isPlatformSimple ? "p-2 sm:p-4 md:p-6" : isSolutionVideo ? "p-2 sm:p-3 md:p-4" : isCaseStudyHero ? "p-2 sm:p-4 md:p-6" : isRoadmap ? "p-2 sm:p-4 md:p-5" : isFlywheelCaseStudy ? "p-2 sm:p-3 md:p-4" : isAgentDevStrategy ? "p-2 sm:p-3 md:p-4" : "p-2 sm:p-6 md:p-12",
+        isTimelineEvolution ? "p-1.5 sm:p-3 md:p-4" : isHeroList ? "p-2 sm:p-3 md:p-4" : isContractReviewChallenge ? "p-2 sm:p-2.5 md:p-3" : isTritonAIEvolutionSlide ? "p-1.5 sm:p-2.5 md:p-3" : isPlatformSimple ? "p-2 sm:p-4 md:p-6" : isSolutionVideo ? "p-2 sm:p-3 md:p-4" : isCaseStudyHero ? "p-2 sm:p-4 md:p-6" : isRoadmap ? "p-2 sm:p-4 md:p-5" : isFlywheelCaseStudy ? "p-2 sm:p-3 md:p-4" : isAgentDevStrategy ? "p-2 sm:p-3 md:p-4" : isTeamGrid ? "p-2 sm:p-3 md:p-4" : "p-2 sm:p-6 md:p-12",
         !slide.backgroundColor && (isDark ? "bg-[#1a1a1a]" : "bg-gray-50")
       )}
       data-layout={slide.layout || slide.type}
