@@ -414,4 +414,16 @@
   .tritonai-slide-stage > :first-child:not(.tritonai-title-slide) {
     zoom: 0.65;
   }
+
+  .tritonai-slide-stage > .tritonai-title-slide {
+    zoom: 0.72;
+  }
+
+  .tritonai-slide-stage[data-slide-slug="uc-san-diego-ai-strategy-2026"] > :first-child {
+    zoom: 0.53;
+  }
+
+  .tritonai-slide-stage[data-slide-slug="agent-engineering-strategy"] > :first-child {
+    zoom: 0.62;
+  }
 }

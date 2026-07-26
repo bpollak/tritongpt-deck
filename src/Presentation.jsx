@@ -402,6 +402,7 @@ const Presentation = () => {
               }}
               className="tritonai-slide-stage absolute w-full h-full"
               data-slide-layout={currentSlide.layout || currentSlide.type || 'default'}
+              data-slide-slug={currentSlide.slug}
               data-slide-tone={currentSlide.dark ? 'dark' : 'light'}
             >
               <Slide slide={currentSlide} />
