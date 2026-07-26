@@ -1951,97 +1951,110 @@ export const slides = [
     "slug": "llm-api-usage-attribution",
     "type": "content",
     "layout": "data-dashboard",
-    "title": "LLM API Usage Attribution",
-    "subtitle": "Workbook snapshot reviewed July 2026; attribution tiers are views, not additive totals.",
+    "title": "Shared Model Access Reached 309.4B Tokens in Six Months",
+    "subtitle": "TritonAI LLM Gateway activity · January 1–June 30, 2026",
     "backgroundColor": "#F5F0E6",
     "dashboardSections": [
       {
         "type": "metric-grid",
         "items": [
           {
-            "value": "22",
-            "label": "Direct person records with email",
-            "icon": "Users",
+            "value": "309.4B",
+            "label": "Tokens processed",
+            "icon": "BarChart3",
             "color": "#00629B"
           },
           {
-            "value": "111",
-            "label": "Orphaned keys with email-like aliases",
-            "icon": "Database",
+            "value": "105.1M",
+            "label": "Completed API requests",
+            "icon": "Zap",
             "color": "#00C6D7"
           },
           {
-            "value": "26",
-            "label": "Team-level attribution records",
+            "value": "95.3%",
+            "label": "Tokens served by self-hosted models",
             "icon": "Server",
             "color": "#6E963B"
           },
           {
-            "value": "327",
-            "label": "Orphaned-key records needing owner cleanup",
-            "icon": "AlertTriangle",
+            "value": "73.2B",
+            "label": "June tokens · six-month high",
+            "icon": "TrendingUp",
             "color": "#FC8900"
-          },
-          {
-            "value": "$404K",
-            "label": "Team-view spend in workbook",
-            "icon": "DollarSign",
-            "color": "#6E963B"
-          },
-          {
-            "value": "1.36B",
-            "label": "Team-view API tokens",
-            "icon": "BarChart3",
-            "color": "#00629B"
           }
         ]
       },
       {
-        "type": "horizontal-bars",
-        "sectionTitle": "Attribution confidence by record count",
+        "type": "stacked-route-bars",
+        "sectionTitle": "Monthly token volume",
+        "sectionSubtitle": "Self-hosted models carried most gateway traffic while total usage reached a new high in June.",
+        "maxValue": 73.2,
         "items": [
           {
-            "label": "High confidence: entity_email on person record",
-            "value": 6,
-            "displayValue": "22 records",
-            "color": "#00629B"
+            "label": "Jan",
+            "selfHosted": 43.8,
+            "cloud": 0.5,
+            "total": 44.3,
+            "displayValue": "44.3B"
           },
           {
-            "label": "Medium confidence: email embedded in orphaned key alias",
-            "value": 30,
-            "displayValue": "111 records",
-            "color": "#00C6D7"
+            "label": "Feb",
+            "selfHosted": 48.3,
+            "cloud": 0.7,
+            "total": 49.0,
+            "displayValue": "49.0B"
           },
           {
-            "label": "Needs mapping: service alias, team alias, or unmapped key",
-            "value": 65,
-            "displayValue": "242 records",
-            "color": "#FC8900",
+            "label": "Mar",
+            "selfHosted": 43.7,
+            "cloud": 1.0,
+            "total": 44.8,
+            "displayValue": "44.8B"
+          },
+          {
+            "label": "Apr",
+            "selfHosted": 48.5,
+            "cloud": 1.5,
+            "total": 50.1,
+            "displayValue": "50.1B"
+          },
+          {
+            "label": "May",
+            "selfHosted": 42.5,
+            "cloud": 5.6,
+            "total": 48.1,
+            "displayValue": "48.1B"
+          },
+          {
+            "label": "Jun",
+            "selfHosted": 67.8,
+            "cloud": 5.4,
+            "total": 73.2,
+            "displayValue": "73.2B",
             "highlight": true
           }
         ],
-        "caption": "Use person rows for named-user claims; use team/service rows for API program governance and owner cleanup."
+        "caption": "Commercial API model families are classified as cloud; open-weight models running on UC-controlled infrastructure are classified as self-hosted."
       },
       {
         "type": "stat-callouts",
         "items": [
           {
-            "icon": "CheckCircle",
-            "stat": "How we link emails to users",
-            "detail": "Prefer entity_email on person rows. Next, normalize entity_alias when it is an email. For service aliases, join team_ids/team_aliases to the API key owner registry before naming a user.",
-            "source": "Source: final_table_clean copy.xlsx",
+            "icon": "TrendingUp",
+            "stat": "Usage accelerated",
+            "detail": "June volume was 65% higher than January and established the six-month high.",
             "color": "#00629B"
           },
           {
-            "icon": "AlertTriangle",
-            "stat": "What not to claim yet",
-            "detail": "Do not add person, team, and orphaned-key totals together. They are overlapping attribution views from an aggregated table, not independent usage events.",
-            "color": "#FC8900"
+            "icon": "ShieldCheck",
+            "stat": "UC-controlled infrastructure carried the load",
+            "detail": "Self-hosted models served 95.3% of recorded tokens across the measurement period.",
+            "color": "#6E963B"
           }
         ]
       }
     ],
-    "claimNote": "Source: LLM gateway usage-attribution workbook · actual snapshot values; spend and token views are aggregated and non-additive · reviewed Jul 2026",
+    "claimNote": "Source: TritonAI Developer APIs gateway usage report · public aggregate, no user-level records · reviewed Jul 25, 2026 · includes ~0.15B unattributed probe/test tokens",
     "audiences": [
       "internal",
       "technical",

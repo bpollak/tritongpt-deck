@@ -1214,10 +1214,63 @@ const Slide = ({ slide }) => {
       );
     };
 
+    const renderStackedRouteBars = (section, sIdx) => {
+      const items = section.items || [];
+      const maxValue = section.maxValue || Math.max(...items.map((item) => item.total || 0), 1);
+      return (
+        <motion.div
+          key={sIdx}
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 + sIdx * 0.15, duration: 0.5 }}
+          className="w-full max-w-5xl mx-auto"
+        >
+          <div className="flex flex-wrap items-end justify-between gap-2 mb-2 sm:mb-3">
+            <div>
+              {section.sectionTitle && <div className="text-ucsd-navy text-xs sm:text-sm font-black">{section.sectionTitle}</div>}
+              {section.sectionSubtitle && <div className="text-slate-500 text-[9px] sm:text-[11px] mt-0.5">{section.sectionSubtitle}</div>}
+            </div>
+            <div className="flex items-center gap-3 text-[9px] sm:text-[10px] font-bold text-slate-500">
+              <span className="inline-flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-sm bg-ucsd-blue" />Self-hosted</span>
+              <span className="inline-flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-sm bg-ucsd-gold" />Cloud</span>
+            </div>
+          </div>
+          <div className="space-y-1.5 sm:space-y-2">
+            {items.map((item, i) => {
+              const total = item.total || 0;
+              const selfHostedPct = total > 0 ? (item.selfHosted / total) * 100 : 0;
+              const cloudPct = Math.max(0, 100 - selfHostedPct);
+              const totalPct = total > 0 ? (total / maxValue) * 100 : 0;
+              return (
+                <div key={i} className="grid grid-cols-[2rem_minmax(0,1fr)_3.5rem] sm:grid-cols-[2.5rem_minmax(0,1fr)_4rem] items-center gap-2 sm:gap-3">
+                  <span className="text-[10px] sm:text-xs font-black text-ucsd-navy">{item.label}</span>
+                  <div className={clsx("h-4 sm:h-5 rounded-full bg-slate-100 overflow-hidden", item.highlight && "ring-2 ring-ucsd-gold/60 ring-offset-1")}>
+                    <motion.div
+                      className="h-full flex overflow-hidden rounded-full"
+                      initial={{ width: 0 }}
+                      animate={{ width: `${totalPct}%` }}
+                      transition={{ delay: 0.45 + i * 0.1, duration: 0.8, ease: 'easeOut' }}
+                      aria-label={`${item.label}: ${item.displayValue} total tokens; ${item.selfHosted} billion self-hosted and ${item.cloud} billion cloud`}
+                    >
+                      <span className="h-full bg-ucsd-blue" style={{ width: `${selfHostedPct}%` }} />
+                      <span className="h-full bg-ucsd-gold" style={{ width: `${cloudPct}%` }} />
+                    </motion.div>
+                  </div>
+                  <span className="text-right text-[10px] sm:text-xs font-black text-ucsd-navy">{item.displayValue}</span>
+                </div>
+              );
+            })}
+          </div>
+          {section.caption && <div className="text-slate-400 text-[8px] sm:text-[9px] italic text-center mt-2">{section.caption}</div>}
+        </motion.div>
+      );
+    };
+
     const sectionRenderers = {
       'gauge-row': renderGaugeRow,
       'donut-row': renderDonutRow,
       'horizontal-bars': renderHorizontalBars,
+      'stacked-route-bars': renderStackedRouteBars,
       'stat-callouts': renderStatCallouts,
       'metric-grid': renderMetricGrid,
     };
