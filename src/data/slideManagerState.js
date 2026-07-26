@@ -2,17 +2,12 @@ export const slideManagerState = {
   "order": [
     "lmu-title",
     "the-ai-enabled-university",
-    "where-will-ai-place-us-in-2031",
     "the-ai-enabled-university-duo",
     "the-ai-enabled-university-cabinet",
     "the-ai-enabled-university-generic",
     "ai-strategy-and-engagement",
     "uc-san-diego",
     "triton-ai-website",
-    "the-workforce-our-graduates-enter",
-    "the-real-disruption-tasks-not-jobs",
-    "ai-workforce-landscape",
-    "higher-ed-reskilling-gap",
     "tritongpt-origin",
     "tritongpt-platform",
     "tritongpt-secure-scalable-ai-platform",
@@ -39,7 +34,6 @@ export const slideManagerState = {
     "contract-reviewer-consolidated",
     "the-contract-review-challenge",
     "video-media7",
-    "ai-contract-reviewer",
     "transcript-matching-validation",
     "cabinet-harness-03-question",
     "tritonai-developer-api-program",
@@ -58,7 +52,6 @@ export const slideManagerState = {
     "ucsd-ai-by-the-numbers",
     "training-and-outreach",
     "key-takeaways",
-    "cost-of-inaction",
     "ai-roadmap-2026",
     "ai-roadmap-2026-q2",
     "ai-roadmap-2026-q3",
@@ -92,13 +85,11 @@ export const slideManagerState = {
     "cabinet-harness-09b-context-management",
     "cabinet-harness-08e-tools-hooks-safety",
     "cabinet-harness-10-subagents",
-    "cabinet-harness-11c-developer-api-program",
     "video-harness-api-demo-2026-06-25-810",
     "video-harness-api-demo-2026-06-25-842",
     "from-tritongpt-to-tritonai",
     "cabinet-harness-11-ucsd-safe-path",
     "cabinet-harness-11a-two-environments",
-    "cabinet-harness-11d-campus-app-hosting-intake",
     "the-flywheel-in-action-pdf-remediator",
     "the-flywheel-in-action-biobib-formatter",
     "the-flywheel-in-action-ai-use-case-meeting",
@@ -108,7 +99,17 @@ export const slideManagerState = {
     "thank-you",
     "lmu-thank-you"
   ],
-  "removed": [],
+  "removed": [
+    "where-will-ai-place-us-in-2031",
+    "the-workforce-our-graduates-enter",
+    "the-real-disruption-tasks-not-jobs",
+    "ai-workforce-landscape",
+    "higher-ed-reskilling-gap",
+    "ai-contract-reviewer",
+    "cost-of-inaction",
+    "cabinet-harness-11c-developer-api-program",
+    "cabinet-harness-11d-campus-app-hosting-intake"
+  ],
   "audiences": {
     "the-ai-enabled-university": [
       "all",
@@ -118,9 +119,6 @@ export const slideManagerState = {
       "technical",
       "executive",
       "cabinet"
-    ],
-    "where-will-ai-place-us-in-2031": [
-      "all"
     ],
     "the-ai-enabled-university-duo": [
       "all",
@@ -156,18 +154,6 @@ export const slideManagerState = {
       "public",
       "internal",
       "LMU"
-    ],
-    "the-workforce-our-graduates-enter": [
-      "all"
-    ],
-    "the-real-disruption-tasks-not-jobs": [
-      "all"
-    ],
-    "ai-workforce-landscape": [
-      "all"
-    ],
-    "higher-ed-reskilling-gap": [
-      "all"
     ],
     "tritongpt-origin": [
       "all",
@@ -379,14 +365,6 @@ export const slideManagerState = {
       "technical",
       "executive"
     ],
-    "ai-contract-reviewer": [
-      "all",
-      "public",
-      "internal",
-      "technical",
-      "executive",
-      "LMU"
-    ],
     "transcript-matching-validation": [
       "all",
       "public",
@@ -411,7 +389,10 @@ export const slideManagerState = {
       "public",
       "regent",
       "conference",
-      "LMU"
+      "LMU",
+      "citizen",
+      "cabinet",
+      "executive"
     ],
     "llm-api-usage-attribution": [
       "internal",
@@ -433,7 +414,10 @@ export const slideManagerState = {
       "internal",
       "public",
       "regent",
-      "LMU"
+      "LMU",
+      "citizen",
+      "cabinet",
+      "executive"
     ],
     "harness-memory-architecture": [
       "all",
@@ -499,9 +483,6 @@ export const slideManagerState = {
       "internal",
       "public",
       "LMU"
-    ],
-    "cost-of-inaction": [
-      "all"
     ],
     "ai-roadmap-2026": [
       "internal",
@@ -660,14 +641,6 @@ export const slideManagerState = {
       "regent",
       "LMU"
     ],
-    "cabinet-harness-11c-developer-api-program": [
-      "all",
-      "citizen",
-      "regent",
-      "cabinet",
-      "executive",
-      "LMU"
-    ],
     "video-harness-api-demo-2026-06-25-810": [
       "all",
       "citizen",
@@ -704,14 +677,6 @@ export const slideManagerState = {
       "all",
       "citizen",
       "regent",
-      "LMU"
-    ],
-    "cabinet-harness-11d-campus-app-hosting-intake": [
-      "all",
-      "citizen",
-      "regent",
-      "cabinet",
-      "executive",
       "LMU"
     ],
     "the-flywheel-in-action-pdf-remediator": [
