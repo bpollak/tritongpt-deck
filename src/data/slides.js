@@ -1954,6 +1954,126 @@ export const slides = [
     ]
   },
   {
+    "id": 23.2,
+    "slug": "dsmlp-datahub-shared-compute",
+    "type": "content",
+    "layout": "dsmlp-foundation",
+    "backgroundColor": "#F5F0E6",
+    "kicker": "SHARED CAMPUS INFRASTRUCTURE",
+    "title": "One platform, two ways in",
+    "subtitle": "DataHub and command-line tools open different doors to the same Data Science and Machine Learning Platform.",
+    "entryPaths": [
+      {
+        "name": "DataHub",
+        "label": "Browser-based",
+        "description": "Jupyter, RStudio, terminals, and curated course environments",
+        "icon": "Monitor",
+        "color": "#00C6D7"
+      },
+      {
+        "name": "Command line",
+        "label": "Advanced workflows",
+        "description": "Interactive, batch, and custom-container workloads through DSMLP launch tools",
+        "icon": "Code",
+        "color": "#FFCD00"
+      }
+    ],
+    "platform": {
+      "name": "DSMLP",
+      "label": "Shared computing platform",
+      "description": "Managed, isolated workspaces with the computing resources each workload needs",
+      "capabilities": [
+        {
+          "name": "Containers",
+          "icon": "Blocks"
+        },
+        {
+          "name": "CPU and GPU",
+          "icon": "Cpu"
+        },
+        {
+          "name": "Storage",
+          "icon": "Database"
+        },
+        {
+          "name": "Datasets",
+          "icon": "FolderOpen"
+        }
+      ]
+    },
+    "outcomes": [
+      {
+        "name": "Coursework and student projects",
+        "icon": "GraduationCap",
+        "color": "#00629B"
+      },
+      {
+        "name": "Selected TritonAI workloads",
+        "icon": "Brain",
+        "color": "#00C6D7"
+      }
+    ],
+    "sourceLabel": "TritonAI: DSMLP and DataHub",
+    "sourceUrl": "https://tritonai.ucsd.edu/developer-apis/dsmlp-datahub.html",
+    "audiences": [
+      "all",
+      "public",
+      "internal",
+      "technical",
+      "conference",
+      "executive",
+      "regent",
+      "LMU"
+    ]
+  },
+  {
+    "id": 23.3,
+    "slug": "dsmlp-tritonai-complementary-layers",
+    "type": "content",
+    "layout": "dsmlp-tritonai-boundary",
+    "backgroundColor": "#F5F0E6",
+    "kicker": "WHERE TRITONAI FITS",
+    "title": "Compute and model access are complementary layers",
+    "subtitle": "DSMLP can run selected TritonAI workloads, while approved model requests continue through the TritonAI LLM Gateway.",
+    "layers": [
+      {
+        "label": "Shared compute",
+        "name": "DSMLP",
+        "description": "Containerized CPU/GPU capacity, storage, and platform operations",
+        "icon": "Server",
+        "color": "#00629B"
+      },
+      {
+        "label": "Selected workloads",
+        "name": "TritonAI services",
+        "description": "Applications, evaluation, automation, and supporting processes",
+        "icon": "Layers",
+        "color": "#FFCD00"
+      },
+      {
+        "label": "Approved model access",
+        "name": "TritonAI LLM Gateway",
+        "description": "Managed routes to enterprise cloud and SDSC-hosted models",
+        "icon": "GitBranch",
+        "color": "#00C6D7"
+      }
+    ],
+    "boundaryTitle": "Related, but not the same service",
+    "boundaryNote": "DataHub is the web interface for authorized notebook and computational work. TritonAI users work through TritonGPT, the TritonAI Harness, APIs, or department applications.",
+    "sourceLabel": "TritonAI: DSMLP and DataHub",
+    "sourceUrl": "https://tritonai.ucsd.edu/developer-apis/dsmlp-datahub.html",
+    "audiences": [
+      "all",
+      "public",
+      "internal",
+      "technical",
+      "conference",
+      "executive",
+      "regent",
+      "LMU"
+    ]
+  },
+  {
     "id": 23.5,
     "slug": "llm-api-usage-attribution",
     "type": "content",

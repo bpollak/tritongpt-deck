@@ -169,6 +169,8 @@ const Slide = ({ slide }) => {
   const isTimelineEvolution = slide.layout === 'timeline-evolution';
   const isCampusMetrics = slide.layout === 'campus-metrics';
   const isApiGateway = slide.layout === 'api-gateway';
+  const isDsmlpFoundation = slide.layout === 'dsmlp-foundation';
+  const isDsmlpTritonAIBoundary = slide.layout === 'dsmlp-tritonai-boundary';
   const isHostingPipeline = slide.layout === 'hosting-pipeline';
   const isIntakeFunnel = slide.layout === 'intake-funnel';
   const isInnovationFlywheel = slide.layout === 'innovation-flywheel';
@@ -1305,7 +1307,7 @@ const Slide = ({ slide }) => {
           isTitle ? "text-2xl sm:text-4xl md:text-6xl" : "text-xl sm:text-3xl md:text-5xl",
           (!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isAgentDevStrategy && !isRoadmap && !isProblemStatement && !isContractReviewChallenge && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isInfrastructureStack && !isTimelineEvolution && !isCampusMetrics && !isApiGateway && !isHostingPipeline && !isIntakeFunnel && !isInnovationFlywheel && !isFlywheelCaseStudy && !isOriginStory) && "border-b-4 border-ucsd-gold pb-3 inline-block self-start",
           (isSolution || isSolutionVideo || isCaseStudyHero || isAssistantCategories || isKeyTakeaways || isAgentDevStrategy || isRoadmap || isProblemStatement || isContractReviewChallenge || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isComparisonTable || isCompoundArchitecture || isTimelineEvolution || isCampusMetrics) && "text-center w-full",
-          (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isCompoundArchitecture || isInfrastructureStack || isApiGateway || isHostingPipeline || isIntakeFunnel || isInnovationFlywheel || isFlywheelCaseStudy || isOriginStory) && "hidden",
+          (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isCompoundArchitecture || isInfrastructureStack || isApiGateway || isDsmlpFoundation || isDsmlpTritonAIBoundary || isHostingPipeline || isIntakeFunnel || isInnovationFlywheel || isFlywheelCaseStudy || isOriginStory) && "hidden",
           isAgentWorkflow && "text-center text-2xl sm:text-3xl md:text-4xl !mb-1 w-full",
           isCaseStudyHero && "text-3xl md:text-4xl mb-2 sm:mb-3 leading-tight",
           isRoadmap && "mb-2 sm:mb-3 leading-tight",
@@ -1327,7 +1329,7 @@ const Slide = ({ slide }) => {
         {slide.title}
       </motion.h1>
 
-      {slide.subtitle && !isCaseStudyHero && !isCompoundArchitecture && !isInfrastructureStack && !isAnalyticsChart && !isTimelineEvolution && !isTritonAIEvolutionSlide && !isApiGateway && !isHostingPipeline && !isIntakeFunnel && !isInnovationFlywheel && !isFlywheelCaseStudy && !isOriginStory && (
+      {slide.subtitle && !isCaseStudyHero && !isCompoundArchitecture && !isInfrastructureStack && !isAnalyticsChart && !isTimelineEvolution && !isTritonAIEvolutionSlide && !isApiGateway && !isDsmlpFoundation && !isDsmlpTritonAIBoundary && !isHostingPipeline && !isIntakeFunnel && !isInnovationFlywheel && !isFlywheelCaseStudy && !isOriginStory && (
         <motion.h2
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -4071,6 +4073,198 @@ const Slide = ({ slide }) => {
         </div>
       )}
 
+      {/* DSMLP shared-compute foundation */}
+      {isDsmlpFoundation && (() => {
+        const entryPaths = slide.entryPaths || [];
+        const capabilities = slide.platform?.capabilities || [];
+        const outcomes = slide.outcomes || [];
+
+        return (
+          <div className="w-full max-w-[1800px] mx-auto flex flex-col gap-2.5 sm:gap-3">
+            <motion.div
+              initial={{ opacity: 0, y: -16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-left"
+            >
+              <div className="text-[10px] sm:text-xs font-black uppercase tracking-[0.2em] text-ucsd-blue mb-1">{slide.kicker}</div>
+              <h1 className="text-[30px] sm:text-[42px] md:text-[50px] font-black text-ucsd-navy leading-[0.95]">{slide.title}</h1>
+              <div className="mt-1.5 max-w-5xl text-[12px] sm:text-[16px] md:text-[18px] font-medium leading-snug text-slate-600">{slide.subtitle}</div>
+            </motion.div>
+
+            <div className="relative overflow-hidden rounded-[18px] sm:rounded-[24px] border border-white/80 bg-gradient-to-br from-[#182B49] via-[#143f65] to-[#00629B] p-3 sm:p-4 md:p-5 shadow-xl">
+              <div className="absolute inset-x-0 top-0 h-[4px] bg-gradient-to-r from-ucsd-gold via-ucsd-sky to-ucsd-gold" />
+              <div className="absolute inset-0 opacity-[0.08] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.9) 1px, transparent 0)', backgroundSize: '24px 24px' }} />
+
+              <div className="relative grid grid-cols-1 md:grid-cols-[1fr_42px_1.25fr_42px_1fr] items-center gap-2 sm:gap-3">
+                <div className="grid grid-cols-2 md:grid-cols-1 gap-2.5">
+                  {entryPaths.map((entry, index) => {
+                    const EntryIcon = iconMap[entry.icon] || Monitor;
+                    return (
+                      <motion.div
+                        key={entry.name}
+                        initial={{ opacity: 0, x: -18 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.15 + index * 0.1, duration: 0.4 }}
+                        className="relative overflow-hidden border border-white/25 bg-white/10 p-3 sm:p-4 text-white backdrop-blur-sm"
+                      >
+                        <div className="absolute inset-x-0 top-0 h-[3px]" style={{ backgroundColor: entry.color }} />
+                        <EntryIcon size={24} style={{ color: entry.color }} className="mb-2 sm:w-7 sm:h-7" />
+                        <div className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.18em] text-white/60">{entry.label}</div>
+                        <div className="text-lg sm:text-2xl font-black leading-none mt-0.5">{entry.name}</div>
+                        <div className="mt-1.5 text-[10px] sm:text-[12px] leading-snug text-white/78">{entry.description}</div>
+                      </motion.div>
+                    );
+                  })}
+                </div>
+
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.45 }} className="flex flex-col items-center justify-center text-white/70">
+                  <span className="hidden md:block text-[9px] font-black uppercase tracking-[0.16em] text-center mb-1">Launch a workspace</span>
+                  <ArrowRight size={26} className="hidden md:block text-ucsd-sky" />
+                  <ArrowDown size={22} className="md:hidden text-ucsd-sky" />
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.94 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.35, duration: 0.45 }}
+                  className="relative overflow-hidden bg-white p-3 sm:p-4 shadow-xl"
+                >
+                  <div className="absolute left-0 inset-y-0 w-[6px] bg-ucsd-gold" />
+                  <div className="pl-2">
+                    <div className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.18em] text-ucsd-blue">{slide.platform?.label}</div>
+                    <div className="flex items-center gap-2 mt-0.5">
+                      <Server size={26} className="text-ucsd-blue sm:w-8 sm:h-8" />
+                      <div className="text-3xl sm:text-5xl font-black leading-none text-ucsd-navy">{slide.platform?.name}</div>
+                    </div>
+                    <div className="mt-1 text-[10px] sm:text-[12px] leading-snug text-slate-600">{slide.platform?.description}</div>
+                    <div className="grid grid-cols-2 gap-1.5 sm:gap-2 mt-3">
+                      {capabilities.map((capability, index) => {
+                        const CapabilityIcon = iconMap[capability.icon] || Cpu;
+                        return (
+                          <motion.div
+                            key={capability.name}
+                            initial={{ opacity: 0, y: 8 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.55 + index * 0.07 }}
+                            className="flex items-center gap-1.5 border border-slate-200 bg-[#F5F0E6] px-2 py-1.5"
+                          >
+                            <CapabilityIcon size={13} className="text-ucsd-blue" />
+                            <span className="text-[10px] sm:text-[11px] font-bold text-ucsd-navy">{capability.name}</span>
+                          </motion.div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </motion.div>
+
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.65 }} className="flex flex-col items-center justify-center text-white/70">
+                  <span className="hidden md:block text-[9px] font-black uppercase tracking-[0.16em] text-center mb-1">Supports</span>
+                  <ArrowRight size={26} className="hidden md:block text-ucsd-sky" />
+                  <ArrowDown size={22} className="md:hidden text-ucsd-sky" />
+                </motion.div>
+
+                <div className="grid grid-cols-2 md:grid-cols-1 gap-2.5">
+                  {outcomes.map((outcome, index) => {
+                    const OutcomeIcon = iconMap[outcome.icon] || GraduationCap;
+                    return (
+                      <motion.div
+                        key={outcome.name}
+                        initial={{ opacity: 0, x: 18 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.6 + index * 0.1, duration: 0.4 }}
+                        className="relative overflow-hidden border border-white/25 bg-white/10 p-3 sm:p-4 text-white backdrop-blur-sm"
+                      >
+                        <div className="absolute inset-x-0 bottom-0 h-[4px]" style={{ backgroundColor: outcome.color }} />
+                        <OutcomeIcon size={24} style={{ color: outcome.color }} className="mb-2 sm:w-7 sm:h-7" />
+                        <div className="text-[12px] sm:text-[16px] font-black leading-tight">{outcome.name}</div>
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+
+            <div className="self-start text-[9px] sm:text-[10px] font-bold text-ucsd-blue underline decoration-ucsd-gold decoration-2 underline-offset-2">
+              Source: {slide.sourceLabel}
+            </div>
+          </div>
+        );
+      })()}
+
+      {/* DSMLP and TritonAI service boundary */}
+      {isDsmlpTritonAIBoundary && (() => {
+        const layers = slide.layers || [];
+
+        return (
+          <div className="w-full max-w-[1800px] mx-auto flex flex-col gap-3 sm:gap-4">
+            <motion.div initial={{ opacity: 0, y: -16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="text-left">
+              <div className="text-[10px] sm:text-xs font-black uppercase tracking-[0.2em] text-ucsd-blue mb-1">{slide.kicker}</div>
+              <h1 className="text-[28px] sm:text-[40px] md:text-[48px] font-black text-ucsd-navy leading-[0.98]">{slide.title}</h1>
+              <div className="mt-1.5 max-w-5xl text-[12px] sm:text-[16px] md:text-[18px] font-medium leading-snug text-slate-600">{slide.subtitle}</div>
+            </motion.div>
+
+            <div className="relative overflow-hidden bg-gradient-to-br from-[#ece8df] via-[#F5F0E6] to-[#e6f3f2] border border-white/80 p-3 sm:p-5 md:p-6 shadow-lg">
+              <div className="absolute inset-x-0 top-0 h-[4px] bg-gradient-to-r from-ucsd-blue via-ucsd-gold to-ucsd-sky" />
+              <div className="relative grid grid-cols-1 md:grid-cols-[1fr_54px_1fr_54px_1fr] items-stretch gap-2.5 sm:gap-3">
+                {layers.map((layer, index) => {
+                  const LayerIcon = iconMap[layer.icon] || Server;
+                  return (
+                    <React.Fragment key={layer.name}>
+                      <motion.div
+                        initial={{ opacity: 0, y: 16 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.15 + index * 0.16, duration: 0.45 }}
+                        className={clsx("relative overflow-hidden bg-white px-3.5 py-4 sm:p-5 shadow-md border border-slate-200", index === 1 && "bg-[#182B49] text-white border-[#182B49]")}
+                      >
+                        <div className="absolute inset-x-0 top-0 h-[5px]" style={{ backgroundColor: layer.color }} />
+                        <div className="flex items-center gap-3">
+                          <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center shrink-0" style={{ backgroundColor: `${layer.color}20` }}>
+                            <LayerIcon size={22} style={{ color: layer.color }} className="sm:w-7 sm:h-7" />
+                          </div>
+                          <div>
+                            <div className={clsx("text-[9px] sm:text-[10px] font-black uppercase tracking-[0.18em]", index === 1 ? "text-white/55" : "text-ucsd-blue")}>{layer.label}</div>
+                            <div className={clsx("text-lg sm:text-2xl font-black leading-none mt-0.5", index === 1 ? "text-white" : "text-ucsd-navy")}>{layer.name}</div>
+                          </div>
+                        </div>
+                        <div className={clsx("mt-3 text-[11px] sm:text-[14px] leading-snug", index === 1 ? "text-white/75" : "text-slate-600")}>{layer.description}</div>
+                      </motion.div>
+
+                      {index < layers.length - 1 && (
+                        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.35 + index * 0.18 }} className="flex items-center justify-center">
+                          <ArrowRight size={28} className="hidden md:block text-ucsd-sky" />
+                          <ArrowDown size={22} className="md:hidden text-ucsd-sky" />
+                        </motion.div>
+                      )}
+                    </React.Fragment>
+                  );
+                })}
+              </div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7, duration: 0.4 }}
+              className="grid grid-cols-[5px_1fr] overflow-hidden bg-white shadow-md border border-slate-200"
+            >
+              <div className="bg-ucsd-gold" />
+              <div className="flex items-start gap-3 p-3 sm:p-4">
+                <ShieldCheck size={22} className="text-ucsd-blue shrink-0 mt-0.5" />
+                <div>
+                  <div className="text-[12px] sm:text-[15px] font-black text-ucsd-navy">{slide.boundaryTitle}</div>
+                  <div className="mt-0.5 text-[10px] sm:text-[13px] leading-snug text-slate-600">{slide.boundaryNote}</div>
+                </div>
+              </div>
+            </motion.div>
+
+            <div className="self-start text-[9px] sm:text-[10px] font-bold text-ucsd-blue underline decoration-ucsd-gold decoration-2 underline-offset-2">
+              Source: {slide.sourceLabel}
+            </div>
+          </div>
+        );
+      })()}
+
       {/* API Gateway Layout */}
       {isApiGateway && (() => {
         const providers = slide.providers || [];
@@ -6164,7 +6358,7 @@ const Slide = ({ slide }) => {
     <div
       className={clsx(
         "tritonai-slide w-full h-full flex flex-col relative overflow-hidden transition-colors duration-500 break-words",
-        isTimelineEvolution ? "p-1.5 sm:p-3 md:p-4" : isHeroList ? "p-2 sm:p-3 md:p-4" : isContractReviewChallenge ? "p-2 sm:p-2.5 md:p-3" : isTritonAIEvolutionSlide ? "p-1.5 sm:p-2.5 md:p-3" : isPlatformSimple ? "p-2 sm:p-4 md:p-6" : isSolutionVideo ? "p-2 sm:p-3 md:p-4" : isCaseStudyHero ? "p-2 sm:p-4 md:p-6" : isRoadmap ? "p-2 sm:p-4 md:p-5" : isAssistantCategories ? "p-2 sm:p-3 md:p-4" : isInfrastructureStack ? "p-2 sm:p-3 md:p-4" : isFlywheelCaseStudy ? "p-2 sm:p-3 md:p-4" : isAgentDevStrategy ? "p-2 sm:p-3 md:p-4" : isTeamGrid ? "p-2 sm:p-3 md:p-4" : isCompoundArchitecture ? "p-2 sm:p-3 md:p-4" : isAgentWorkflow ? "p-2 sm:p-3 md:p-4" : "p-2 sm:p-6 md:p-12",
+        isTimelineEvolution ? "p-1.5 sm:p-3 md:p-4" : isHeroList ? "p-2 sm:p-3 md:p-4" : isContractReviewChallenge ? "p-2 sm:p-2.5 md:p-3" : isTritonAIEvolutionSlide ? "p-1.5 sm:p-2.5 md:p-3" : isPlatformSimple ? "p-2 sm:p-4 md:p-6" : (isDsmlpFoundation || isDsmlpTritonAIBoundary) ? "p-2.5 sm:p-4 md:p-6" : isSolutionVideo ? "p-2 sm:p-3 md:p-4" : isCaseStudyHero ? "p-2 sm:p-4 md:p-6" : isRoadmap ? "p-2 sm:p-4 md:p-5" : isAssistantCategories ? "p-2 sm:p-3 md:p-4" : isInfrastructureStack ? "p-2 sm:p-3 md:p-4" : isFlywheelCaseStudy ? "p-2 sm:p-3 md:p-4" : isAgentDevStrategy ? "p-2 sm:p-3 md:p-4" : isTeamGrid ? "p-2 sm:p-3 md:p-4" : isCompoundArchitecture ? "p-2 sm:p-3 md:p-4" : isAgentWorkflow ? "p-2 sm:p-3 md:p-4" : "p-2 sm:p-6 md:p-12",
         !slide.backgroundColor && (isDark ? "bg-[#1a1a1a]" : "bg-gray-50")
       )}
       data-layout={slide.layout || slide.type}
@@ -6206,8 +6400,8 @@ const Slide = ({ slide }) => {
             </div>
           </div>
         ) : (
-          <div className={clsx("flex flex-col h-full w-full overflow-x-hidden", isTitle ? "justify-center items-center text-center" : (isCompoundArchitecture || isAgentWorkflow) ? "justify-start overflow-hidden" : isTimelineEvolution ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isHeroList ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isContractReviewChallenge ? "justify-start pt-0 sm:pt-0.5 overflow-y-auto touch-pan-y custom-scrollbar" : isTritonAIEvolutionSlide ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isPlatformSimple ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isSolution ? "justify-start pt-4 overflow-hidden" : isSolutionVideo ? "justify-start pt-0.5 sm:pt-1 overflow-hidden" : isCaseStudyHero ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isRoadmap ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isAssistantCategories ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isFlywheelCaseStudy ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isAgentDevStrategy ? "justify-start pt-1 sm:pt-2 overflow-y-auto touch-pan-y custom-scrollbar" : "justify-start pt-4 overflow-y-auto touch-pan-y custom-scrollbar")}>
-            <div className={clsx("w-full mx-auto", (isTimelineEvolution || isHeroList || isSolution || isSolutionVideo || isCompoundArchitecture || isAgentWorkflow) && "h-full flex flex-col", (isSolution || isSolutionVideo || isCaseStudyHero || isProblemStatement || isContractReviewChallenge || isFeatureGrid || isCampusMetrics || isAgentDevStrategy || isFlywheelCaseStudy || isHeroList || isInfrastructureStack || isCompoundArchitecture || isAgentWorkflow) ? "max-w-[1800px]" : !isTimelineEvolution && "max-w-7xl")}>{renderContent()}</div>
+          <div className={clsx("flex flex-col h-full w-full overflow-x-hidden", isTitle ? "justify-center items-center text-center" : (isCompoundArchitecture || isAgentWorkflow) ? "justify-start overflow-hidden" : isTimelineEvolution ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isHeroList ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isContractReviewChallenge ? "justify-start pt-0 sm:pt-0.5 overflow-y-auto touch-pan-y custom-scrollbar" : isTritonAIEvolutionSlide ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isPlatformSimple ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isDsmlpFoundation ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isDsmlpTritonAIBoundary ? "justify-center overflow-y-auto touch-pan-y custom-scrollbar" : isSolution ? "justify-start pt-4 overflow-hidden" : isSolutionVideo ? "justify-start pt-0.5 sm:pt-1 overflow-hidden" : isCaseStudyHero ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isRoadmap ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isAssistantCategories ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isFlywheelCaseStudy ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isAgentDevStrategy ? "justify-start pt-1 sm:pt-2 overflow-y-auto touch-pan-y custom-scrollbar" : "justify-start pt-4 overflow-y-auto touch-pan-y custom-scrollbar")}>
+            <div className={clsx("w-full mx-auto", (isTimelineEvolution || isHeroList || isSolution || isSolutionVideo || isCompoundArchitecture || isAgentWorkflow) && "h-full flex flex-col", (isSolution || isSolutionVideo || isCaseStudyHero || isProblemStatement || isContractReviewChallenge || isFeatureGrid || isCampusMetrics || isAgentDevStrategy || isFlywheelCaseStudy || isHeroList || isInfrastructureStack || isCompoundArchitecture || isAgentWorkflow || isDsmlpFoundation || isDsmlpTritonAIBoundary) ? "max-w-[1800px]" : !isTimelineEvolution && "max-w-7xl")}>{renderContent()}</div>
           </div>
         )}
       </div>

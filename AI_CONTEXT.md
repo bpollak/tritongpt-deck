@@ -45,6 +45,7 @@ This project is a **React-based single-page application (SPA)** designed to serv
 ## Adding New Slides
 1.  Add a new object to the `slides` array in `src/data/slides.js`.
 2.  Choose an existing `layout` (e.g., `dense-list`, `graphic-heavy`) OR define a new one.
+3.  DSMLP platform slides use the `dsmlp-foundation` and `dsmlp-tritonai-boundary` layouts in `Slide.jsx`, which mirror the TritonAI site's Teko, navy, gold, cyan, and white-card visual language.
 
 ## AI Maintenance Instructions
 **CRITICAL**: As an AI agent working on this project, you are responsible for maintaining this document.

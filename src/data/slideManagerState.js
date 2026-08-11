@@ -33,6 +33,8 @@ export const slideManagerState = {
     "transcript-matching-validation",
     "cabinet-harness-03-question",
     "tritonai-developer-api-program",
+    "dsmlp-datahub-shared-compute",
+    "dsmlp-tritonai-complementary-layers",
     "llm-api-usage-attribution",
     "campus-app-hosting",
     "campus-app-hosting-intake",
@@ -319,6 +321,26 @@ export const slideManagerState = {
       "internal",
       "public",
       "conference",
+      "regent",
+      "LMU"
+    ],
+    "dsmlp-datahub-shared-compute": [
+      "all",
+      "public",
+      "internal",
+      "technical",
+      "conference",
+      "executive",
+      "regent",
+      "LMU"
+    ],
+    "dsmlp-tritonai-complementary-layers": [
+      "all",
+      "public",
+      "internal",
+      "technical",
+      "conference",
+      "executive",
       "regent",
       "LMU"
     ],
