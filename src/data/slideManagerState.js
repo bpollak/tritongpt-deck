@@ -90,17 +90,17 @@ export const slideManagerState = {
     "the-real-disruption-tasks-not-jobs",
     "ai-workforce-landscape",
     "higher-ed-reskilling-gap",
-    "the-new-workforce-competency",
-    "ai-contract-reviewer",
     "the-contract-review-challenge",
     "video-media7",
+    "ai-contract-reviewer",
+    "the-new-workforce-competency",
     "cost-of-inaction",
     "thank-you-duo",
     "thank-you-cabinet",
     "thank-you-questions",
     "cabinet-harness-11c-developer-api-program",
-    "cabinet-harness-11d-campus-app-hosting-intake",
-    "video-harness-api-demo-2026-06-25-842"
+    "video-harness-api-demo-2026-06-25-842",
+    "cabinet-harness-11d-campus-app-hosting-intake"
   ],
   "audiences": {
     "lmu-title": [
@@ -118,15 +118,6 @@ export const slideManagerState = {
       "public",
       "conference",
       "regent"
-    ],
-    "the-ai-enabled-university-duo": [
-      "all"
-    ],
-    "the-ai-enabled-university-cabinet": [
-      "all"
-    ],
-    "the-ai-enabled-university-generic": [
-      "all"
     ],
     "ai-strategy-and-engagement": [
       "all",
@@ -291,12 +282,6 @@ export const slideManagerState = {
       "regent",
       "LMU"
     ],
-    "the-contract-review-challenge": [
-      "all"
-    ],
-    "video-media7": [
-      "all"
-    ],
     "transcript-matching-validation": [
       "all",
       "technical",
@@ -328,7 +313,6 @@ export const slideManagerState = {
       "all",
       "public",
       "internal",
-      "technical",
       "conference",
       "executive",
       "regent",
@@ -338,7 +322,6 @@ export const slideManagerState = {
       "all",
       "public",
       "internal",
-      "technical",
       "conference",
       "executive",
       "regent",
@@ -383,6 +366,19 @@ export const slideManagerState = {
       "conference",
       "LMU"
     ],
+    "a-meeting-becomes-memory-and-then-action": [
+      "all",
+      "technical",
+      "citizen",
+      "internal",
+      "conference"
+    ],
+    "memory-quality-is-an-operational-service": [
+      "all",
+      "technical",
+      "citizen",
+      "internal"
+    ],
     "harness-perf-review-demo": [
       "all",
       "conference"
@@ -392,9 +388,6 @@ export const slideManagerState = {
       "internal",
       "public",
       "LMU"
-    ],
-    "the-new-workforce-competency": [
-      "all"
     ],
     "preparing-the-ai-ready-graduate": [
       "all"
@@ -472,15 +465,6 @@ export const slideManagerState = {
       "executive",
       "regent"
     ],
-    "thank-you-duo": [
-      "all"
-    ],
-    "thank-you-cabinet": [
-      "all"
-    ],
-    "thank-you-questions": [
-      "all"
-    ],
     "cabinet-harness-02-convergence": [
       "all",
       "citizen",
@@ -520,9 +504,6 @@ export const slideManagerState = {
     "video-harness-api-demo-2026-06-25-810": [
       "all",
       "citizen"
-    ],
-    "video-harness-api-demo-2026-06-25-842": [
-      "all"
     ],
     "from-tritongpt-to-tritonai": [
       "all",
@@ -585,19 +566,8 @@ export const slideManagerState = {
     ],
     "lmu-thank-you": [
       "LMU"
-    ],
-    "a-meeting-becomes-memory-and-then-action": [
-      "all",
-      "technical",
-      "citizen",
-      "internal",
-      "conference"
-    ],
-    "memory-quality-is-an-operational-service": [
-      "all",
-      "technical",
-      "citizen",
-      "internal"
     ]
   }
 };
+
+export default slideManagerState;
