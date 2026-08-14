@@ -360,7 +360,6 @@ export const slideManagerState = {
       "technical",
       "citizen",
       "internal",
-      "conference",
       "LMU"
     ],
     "harness-memory-scale-ucsd": [
@@ -368,15 +367,13 @@ export const slideManagerState = {
       "technical",
       "citizen",
       "internal",
-      "conference",
       "LMU"
     ],
     "a-meeting-becomes-memory-and-then-action": [
       "all",
       "technical",
       "citizen",
-      "internal",
-      "conference"
+      "internal"
     ],
     "memory-quality-is-an-operational-service": [
       "all",
