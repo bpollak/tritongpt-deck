@@ -162,7 +162,8 @@ export const slideManagerState = {
       "executive",
       "internal",
       "regent",
-      "LMU"
+      "LMU",
+      "conference"
     ],
     "tritongpt-initiative": [
       "all",
@@ -224,7 +225,8 @@ export const slideManagerState = {
       "executive",
       "internal",
       "public",
-      "LMU"
+      "LMU",
+      "conference"
     ],
     "video-tritongpt-mobile-app": [
       "all",
@@ -251,7 +253,8 @@ export const slideManagerState = {
       "internal",
       "public",
       "regent",
-      "LMU"
+      "LMU",
+      "conference"
     ],
     "video-media11": [
       "all"
@@ -318,6 +321,7 @@ export const slideManagerState = {
       "all",
       "public",
       "internal",
+      "conference",
       "executive",
       "regent",
       "LMU"
@@ -326,6 +330,7 @@ export const slideManagerState = {
       "all",
       "public",
       "internal",
+      "conference",
       "executive",
       "regent",
       "LMU"
@@ -336,7 +341,8 @@ export const slideManagerState = {
       "internal",
       "PK",
       "regent",
-      "LMU"
+      "LMU",
+      "conference"
     ],
     "campus-app-hosting": [
       "all",
@@ -513,7 +519,8 @@ export const slideManagerState = {
       "executive",
       "internal",
       "public",
-      "regent"
+      "regent",
+      "conference"
     ],
     "cabinet-harness-11-ucsd-safe-path": [
       "all",
@@ -530,11 +537,13 @@ export const slideManagerState = {
       "all",
       "executive",
       "internal",
-      "LMU"
+      "LMU",
+      "conference"
     ],
     "the-flywheel-in-action-biobib-formatter": [
       "all",
-      "citizen"
+      "citizen",
+      "conference"
     ],
     "the-flywheel-in-action-ai-use-case-meeting": [
       "all",
@@ -543,7 +552,8 @@ export const slideManagerState = {
       "public"
     ],
     "the-flywheel-in-action-dissertation-formatter": [
-      "all"
+      "all",
+      "conference"
     ],
     "cabinet-harness-13-recap": [
       "internal"
