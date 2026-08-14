@@ -1049,6 +1049,16 @@ export const slides = [
     "managerSummary": "LinkedIn horizontal demo video inserted after the May 27 screen recording.",
     "videoSrc": "/media/TritonGPT Class Scheduling Agent - LinkedIn Horizontal.mp4",
     "demoLabel": "Class Scheduling Agent — Plan a Quarter",
+    "stats": [
+      {
+        "label": "Chat Sessions",
+        "value": "20K"
+      },
+      {
+        "label": "Messages",
+        "value": "117K"
+      }
+    ],
     "audiences": [
       "all",
       "public",
@@ -1071,6 +1081,16 @@ export const slides = [
     "poster": "/media/class-planner-tss-handoff-poster.jpg",
     "demoLabel": "Class Planner — Continue to TSS",
     "videoLoop": true,
+    "stats": [
+      {
+        "label": "Site Visits",
+        "value": "52K"
+      },
+      {
+        "label": "Schedules Planned",
+        "value": "~14K"
+      }
+    ],
     "content": [
       {
         "heading": "Plan Around Real Constraints",

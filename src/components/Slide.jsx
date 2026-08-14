@@ -126,6 +126,26 @@ const Slide = ({ slide }) => {
             </div>
           </div>
         )}
+        {slide.stats?.length > 0 && (
+          <div className="absolute bottom-7 right-7 flex gap-3">
+            {slide.stats.map((stat, index) => (
+              <motion.div
+                key={`${stat.label}-${index}`}
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.25 + index * 0.12 }}
+                className="min-w-[180px] rounded-xl border border-white/20 bg-black/70 px-5 py-4 text-center text-white shadow-xl backdrop-blur-md"
+              >
+                <div className="text-sm font-black uppercase tracking-[0.14em] text-ucsd-sky">
+                  {stat.label}
+                </div>
+                <div className="mt-1 text-4xl font-black leading-none sm:text-5xl">
+                  {stat.value}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        )}
       </div>
     );
   }
@@ -1696,7 +1716,7 @@ const Slide = ({ slide }) => {
                     >
                       <div className={clsx(
                         "font-bold text-ucsd-blue uppercase tracking-wide opacity-80 mb-0.5",
-                        isSolutionVideo || isBlinkSearchIntegration ? "text-[11.5px] sm:text-xs" : "text-[12px] sm:text-xs"
+                        isSolutionVideo ? "text-[15px] sm:text-base" : isBlinkSearchIntegration ? "text-[11.5px] sm:text-xs" : "text-[12px] sm:text-xs"
                       )}>
                         {stat.label}
                       </div>
@@ -1704,13 +1724,15 @@ const Slide = ({ slide }) => {
                         "font-black text-ucsd-navy leading-none mb-0.5",
                         isBlinkSearchIntegration
                           ? compactTextValue ? "text-base sm:text-lg md:text-xl whitespace-nowrap tracking-tight" : "text-xl sm:text-2xl md:text-3xl whitespace-nowrap"
-                          : compactTextValue ? "text-lg sm:text-xl md:text-2xl whitespace-nowrap tracking-tight" : "text-2xl sm:text-4xl"
+                          : isSolutionVideo
+                            ? compactTextValue ? "text-2xl sm:text-[2rem] md:text-[2.5rem] whitespace-nowrap tracking-tight" : "text-[2rem] sm:text-5xl"
+                            : compactTextValue ? "text-lg sm:text-xl md:text-2xl whitespace-nowrap tracking-tight" : "text-2xl sm:text-4xl"
                       )}>
                         {stat.value}
                       </div>
                       <div className={clsx(
                         "text-slate-600 font-bold uppercase tracking-wide",
-                        isSolutionVideo || isBlinkSearchIntegration ? "text-[12px] sm:text-xs" : "text-xs"
+                        isSolutionVideo ? "text-[15px] sm:text-base" : isBlinkSearchIntegration ? "text-[12px] sm:text-xs" : "text-xs"
                       )}>
                         {stat.sub}
                       </div>
@@ -1744,13 +1766,13 @@ const Slide = ({ slide }) => {
                     <div className="flex-1 min-w-0">
                       <h3 className={clsx(
                         "font-bold text-ucsd-navy leading-tight mb-1",
-                        isSolutionVideo ? "text-sm sm:text-base" : "text-base sm:text-xl"
+                        isSolutionVideo ? "text-lg sm:text-[22px]" : "text-base sm:text-xl"
                       )}>
                         {item.heading}
                       </h3>
                       <p className={clsx(
                         "text-slate-700 font-medium",
-                        isSolutionVideo ? "text-[13px] leading-tight sm:text-[15px]" : "text-xs leading-snug sm:text-base"
+                        isSolutionVideo ? "text-[17px] leading-tight sm:text-xl" : "text-xs leading-snug sm:text-base"
                       )}>
                         {item.text}
                       </p>
@@ -1778,7 +1800,7 @@ const Slide = ({ slide }) => {
                     >
                       <div className={clsx(
                         "font-bold text-ucsd-blue uppercase tracking-wide opacity-80 mb-0.5",
-                        isSolutionVideo || isBlinkSearchIntegration ? "text-[11.5px] sm:text-xs" : "text-[12px] sm:text-xs"
+                        isSolutionVideo ? "text-[15px] sm:text-base" : isBlinkSearchIntegration ? "text-[11.5px] sm:text-xs" : "text-[12px] sm:text-xs"
                       )}>
                         {stat.label}
                       </div>
@@ -1786,13 +1808,15 @@ const Slide = ({ slide }) => {
                         "font-black text-ucsd-navy leading-none mb-0.5",
                         isBlinkSearchIntegration
                           ? compactTextValue ? "text-base sm:text-lg md:text-xl whitespace-nowrap tracking-tight" : "text-xl sm:text-2xl md:text-3xl whitespace-nowrap"
-                          : compactTextValue ? "text-lg sm:text-xl md:text-2xl whitespace-nowrap tracking-tight" : "text-2xl sm:text-4xl"
+                          : isSolutionVideo
+                            ? compactTextValue ? "text-2xl sm:text-[2rem] md:text-[2.5rem] whitespace-nowrap tracking-tight" : "text-[2rem] sm:text-5xl"
+                            : compactTextValue ? "text-lg sm:text-xl md:text-2xl whitespace-nowrap tracking-tight" : "text-2xl sm:text-4xl"
                       )}>
                         {stat.value}
                       </div>
                       <div className={clsx(
                         "text-slate-600 font-bold uppercase tracking-wide",
-                        isSolutionVideo || isBlinkSearchIntegration ? "text-[12px] sm:text-xs" : "text-xs"
+                        isSolutionVideo ? "text-[15px] sm:text-base" : isBlinkSearchIntegration ? "text-[12px] sm:text-xs" : "text-xs"
                       )}>
                         {stat.sub}
                       </div>
