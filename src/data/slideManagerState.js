@@ -321,7 +321,6 @@ export const slideManagerState = {
       "all",
       "public",
       "internal",
-      "conference",
       "executive",
       "regent",
       "LMU"
@@ -330,7 +329,6 @@ export const slideManagerState = {
       "all",
       "public",
       "internal",
-      "conference",
       "executive",
       "regent",
       "LMU"
