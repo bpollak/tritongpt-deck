@@ -1060,6 +1060,42 @@ export const slides = [
     ]
   },
   {
+    "id": 7.25,
+    "slug": "class-planner-student-schedule",
+    "type": "content",
+    "layout": "solution-showcase-video",
+    "title": "Class Planner Turns Preferences into an Actionable Schedule",
+    "subtitle": "Students compare alternatives, review tradeoffs, and continue to TSS to complete booking",
+    "backgroundColor": "#F5F0E6",
+    "videoSrc": "/media/class-planner-tss-handoff.mp4",
+    "poster": "/media/class-planner-tss-handoff-poster.jpg",
+    "demoLabel": "Class Planner — Continue to TSS",
+    "videoLoop": true,
+    "content": [
+      {
+        "heading": "Plan Around Real Constraints",
+        "text": "Students combine course choices with preferred times, schedule goals, and personal commitments."
+      },
+      {
+        "heading": "Compare Viable Schedules",
+        "text": "Auto planning creates compatible options; manual planning supports exact lecture, discussion, and lab choices."
+      },
+      {
+        "heading": "Review Before Committing",
+        "text": "Calendar, Details, and Map views expose time conflicts, availability, locations, and walking tradeoffs."
+      },
+      {
+        "heading": "Continue to TSS",
+        "text": "A saved plan opens matching course pages in TSS. Students still confirm sections and complete booking there."
+      }
+    ],
+    "claimNote": "Source: UC San Diego Class Planner Student Guide and its current embedded TSS handoff video · reviewed Aug 14, 2026",
+    "audiences": [
+      "all",
+      "conference"
+    ]
+  },
+  {
     "id": 39,
     "slug": "video-screen-recording-1",
     "type": "video",

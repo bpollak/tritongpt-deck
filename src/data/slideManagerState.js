@@ -18,6 +18,7 @@ export const slideManagerState = {
     "video-media3",
     "video-screen-recording-2026-05-27",
     "video-tritongpt-class-scheduling-agent",
+    "class-planner-student-schedule",
     "video-media5",
     "video-media6",
     "scaling-engagement-the-tritongpt-widget",
@@ -204,6 +205,10 @@ export const slideManagerState = {
       "conference"
     ],
     "video-tritongpt-class-scheduling-agent": [
+      "all",
+      "conference"
+    ],
+    "class-planner-student-schedule": [
       "all",
       "conference"
     ],
