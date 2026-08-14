@@ -382,8 +382,7 @@ export const slideManagerState = {
       "internal"
     ],
     "harness-perf-review-demo": [
-      "all",
-      "conference"
+      "all"
     ],
     "agent-engineering-strategy": [
       "all",
