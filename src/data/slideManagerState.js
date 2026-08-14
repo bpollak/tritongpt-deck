@@ -127,7 +127,6 @@ export const slideManagerState = {
     "uc-san-diego": [
       "all",
       "executive",
-      "conference",
       "regent",
       "LMU"
     ],
@@ -162,8 +161,7 @@ export const slideManagerState = {
       "executive",
       "internal",
       "regent",
-      "LMU",
-      "conference"
+      "LMU"
     ],
     "tritongpt-initiative": [
       "all",
