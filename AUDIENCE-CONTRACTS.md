@@ -1,6 +1,6 @@
 # TritonAI Audience Contracts
 
-This file defines the editorial contract and canonical sequence for each supported audience. The `all` view remains the complete editorial library and is not a recommended presentation.
+This file defines the editorial contract and canonical sequence for each supported audience. The manager’s **Entire library** view contains every managed slide. The `audience=all` URL selects the separate **Default presentation**, containing only slides explicitly tagged `all`. Neither is a recommended substitute for an audience-specific presentation.
 
 ## Routing principles
 

@@ -96,7 +96,7 @@ const pulseAnimation = {
   }
 };
 
-const Slide = ({ slide }) => {
+const Slide = ({ slide, staticPreview = false }) => {
   if (!slide) return <div className="text-red-500 p-10">Slide Error: No data provided</div>;
 
   // Cabinet sub-presentation has its own self-contained design system.
@@ -113,7 +113,8 @@ const Slide = ({ slide }) => {
           poster={slide.poster}
           className="absolute inset-0 h-full w-full object-contain"
           controls
-          autoPlay={slide.videoAutoPlay !== false}
+          autoPlay={!staticPreview && slide.videoAutoPlay !== false}
+          preload={staticPreview ? 'metadata' : undefined}
           loop={slide.videoLoop === true}
           muted
           playsInline
@@ -1291,7 +1292,7 @@ const Slide = ({ slide }) => {
     };
 
     return (
-      <div className="w-full h-full relative overflow-hidden flex flex-col" style={{ backgroundColor: slide.backgroundColor || '#F5F0E6' }}>
+      <div className="slide-dashboard w-full h-full relative overflow-hidden flex flex-col" style={{ backgroundColor: slide.backgroundColor || '#F5F0E6' }}>
         {/* Decorative blurs */}
         <div className="absolute top-[-8%] right-[-5%] w-[20vw] h-[20vw] rounded-full bg-ucsd-blue/5 blur-[60px]" />
         <div className="absolute bottom-[-5%] left-[-3%] w-[15vw] h-[15vw] rounded-full bg-ucsd-gold/8 blur-[50px]" />
@@ -1304,7 +1305,7 @@ const Slide = ({ slide }) => {
         </motion.div>
 
         {/* Dashboard sections */}
-        <div className="flex-1 flex flex-col justify-evenly gap-3 sm:gap-4 px-4 sm:px-8 md:px-12 pb-16 sm:pb-20 z-10 overflow-hidden">
+        <div className="slide-dashboard-sections flex-1 flex flex-col justify-evenly gap-3 sm:gap-4 px-4 sm:px-8 md:px-12 pb-16 sm:pb-20 z-10 overflow-hidden">
           {sections.map((section, sIdx) => {
             const renderer = sectionRenderers[section.type];
             return renderer ? renderer(section, sIdx) : null;
@@ -1628,14 +1629,14 @@ const Slide = ({ slide }) => {
 
       {(isSolution || isSolutionVideo) && (
         <div className={clsx(
-          "w-full max-w-[1760px] mx-auto",
+          "slide-solution w-full max-w-[1760px] mx-auto",
           isSolutionVideo
             ? "flex-1 min-h-0 overflow-hidden"
             : "flex-1 min-h-0 overflow-y-auto touch-pan-y custom-scrollbar pb-2 md:overflow-hidden",
           isIphoneFramed && "px-8 md:px-20"
         )}>
           <div className={clsx(
-            "grid gap-4 sm:gap-8 md:gap-12 h-full pt-2 sm:pt-4",
+            "slide-solution-grid grid gap-4 sm:gap-8 md:gap-12 h-full pt-2 sm:pt-4",
             isSolutionVideo
               ? clsx(
                   "grid-cols-1 gap-3 sm:gap-5 pt-0 sm:pt-0 items-start",
@@ -1661,6 +1662,7 @@ const Slide = ({ slide }) => {
                         <div className="absolute -right-[4px] top-[23%] h-20 w-[4px] rounded-r-full bg-slate-800 shadow-sm" />
                         <div className="relative h-full w-full overflow-hidden rounded-[1.62rem] bg-black">
                           <EmbeddedVideo
+                            staticPreview={staticPreview}
                             src={slide.videoSrc}
                             poster={slide.poster}
                             label={slide.demoLabel || slide.title || 'Slide video'}
@@ -1673,6 +1675,7 @@ const Slide = ({ slide }) => {
                       </div>
                     ) : (
                       <EmbeddedVideo
+                        staticPreview={staticPreview}
                         src={slide.videoSrc}
                         poster={slide.poster}
                         label={slide.demoLabel || slide.title || 'Slide video'}
@@ -5253,6 +5256,7 @@ const Slide = ({ slide }) => {
                   <div className="rounded-[28px] border border-ucsd-navy/10 bg-white/88 p-2 shadow-[0_20px_44px_rgba(24,43,73,0.12)]">
                     <div className="relative aspect-[16/10] overflow-hidden rounded-[22px] bg-slate-950">
                       <EmbeddedVideo
+                        staticPreview={staticPreview}
                         src={caseStudyVideoSrc}
                         poster={caseStudyPoster}
                         label={caseStudyDemoLabel}
@@ -6016,6 +6020,7 @@ const Slide = ({ slide }) => {
               >
                 <div className={clsx("relative rounded-2xl overflow-hidden shadow-2xl", isDarkOrigin ? "ring-1 ring-white/10" : "ring-1 ring-black/10")}>
                   <EmbeddedVideo
+                    staticPreview={staticPreview}
                     src={slide.videoSrc}
                     poster={slide.poster}
                     label={slide.videoLabel || slide.title || 'Slide video'}
@@ -6413,7 +6418,7 @@ const Slide = ({ slide }) => {
         </>
       )}
       {isDark && <div className="absolute top-0 right-0 w-[40vw] h-[40vw] bg-ucsd-blue/10 rounded-full blur-[100px] -mr-[10vw] -mt-[10vw] pointer-events-none" />}
-      <div className={clsx("flex-1 w-full h-full z-10 flex flex-col", isTimelineEvolution ? "justify-start" : "justify-center")}>
+      <div className={clsx("slide-content-frame flex-1 w-full h-full z-10 flex flex-col", isTimelineEvolution ? "justify-start" : "justify-center")}>
         {hasImage ? (
           <div className={clsx("h-full items-center gap-8", isGraphicHeavy ? "grid grid-cols-1 lg:grid-cols-12" : "flex flex-col md:flex-row")}>
             <div className={clsx("flex flex-col h-full overflow-y-auto touch-pan-y pr-4 custom-scrollbar", isGraphicHeavy ? "lg:col-span-4 order-2 lg:order-1 pt-4" : "flex-1", isDense ? "justify-start pt-4" : "justify-center")}>
@@ -6424,8 +6429,8 @@ const Slide = ({ slide }) => {
             </div>
           </div>
         ) : (
-          <div className={clsx("flex flex-col h-full w-full overflow-x-hidden", isTitle ? "justify-center items-center text-center" : (isCompoundArchitecture || isAgentWorkflow) ? "justify-start overflow-hidden" : isTimelineEvolution ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isHeroList ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isContractReviewChallenge ? "justify-start pt-0 sm:pt-0.5 overflow-y-auto touch-pan-y custom-scrollbar" : isTritonAIEvolutionSlide ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isPlatformSimple ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isDsmlpFoundation ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isDsmlpTritonAIBoundary ? "justify-center overflow-y-auto touch-pan-y custom-scrollbar" : isSolution ? "justify-start pt-4 overflow-hidden" : isSolutionVideo ? "justify-start pt-0.5 sm:pt-1 overflow-hidden" : isCaseStudyHero ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isRoadmap ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isAssistantCategories ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isFlywheelCaseStudy ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isAgentDevStrategy ? "justify-start pt-1 sm:pt-2 overflow-y-auto touch-pan-y custom-scrollbar" : "justify-start pt-4 overflow-y-auto touch-pan-y custom-scrollbar")}>
-            <div className={clsx("w-full mx-auto", (isTimelineEvolution || isHeroList || isSolution || isSolutionVideo || isCompoundArchitecture || isAgentWorkflow) && "h-full flex flex-col", (isSolution || isSolutionVideo || isCaseStudyHero || isProblemStatement || isContractReviewChallenge || isFeatureGrid || isCampusMetrics || isAgentDevStrategy || isFlywheelCaseStudy || isHeroList || isInfrastructureStack || isCompoundArchitecture || isAgentWorkflow || isDsmlpFoundation || isDsmlpTritonAIBoundary) ? "max-w-[1800px]" : !isTimelineEvolution && "max-w-7xl")}>{renderContent()}</div>
+          <div className={clsx("slide-content-viewport flex flex-col h-full w-full overflow-x-hidden", isTitle ? "justify-center items-center text-center" : (isCompoundArchitecture || isAgentWorkflow) ? "justify-start overflow-hidden" : isTimelineEvolution ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isHeroList ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isContractReviewChallenge ? "justify-start pt-0 sm:pt-0.5 overflow-y-auto touch-pan-y custom-scrollbar" : isTritonAIEvolutionSlide ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isPlatformSimple ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isDsmlpFoundation ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isDsmlpTritonAIBoundary ? "justify-center overflow-y-auto touch-pan-y custom-scrollbar" : isSolution ? "justify-start pt-4 overflow-hidden" : isSolutionVideo ? "justify-start pt-0.5 sm:pt-1 overflow-hidden" : isCaseStudyHero ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isRoadmap ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isAssistantCategories ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isFlywheelCaseStudy ? "justify-start pt-0.5 sm:pt-1 overflow-y-auto touch-pan-y custom-scrollbar" : isAgentDevStrategy ? "justify-start pt-1 sm:pt-2 overflow-y-auto touch-pan-y custom-scrollbar" : "justify-start pt-4 overflow-y-auto touch-pan-y custom-scrollbar")}>
+            <div className={clsx("slide-content-flow w-full mx-auto", (isTimelineEvolution || isHeroList || isSolution || isSolutionVideo || isCompoundArchitecture || isAgentWorkflow) && "h-full flex flex-col", (isSolution || isSolutionVideo || isCaseStudyHero || isProblemStatement || isContractReviewChallenge || isFeatureGrid || isCampusMetrics || isAgentDevStrategy || isFlywheelCaseStudy || isHeroList || isInfrastructureStack || isCompoundArchitecture || isAgentWorkflow || isDsmlpFoundation || isDsmlpTritonAIBoundary) ? "max-w-[1800px]" : !isTimelineEvolution && "max-w-7xl")}>{renderContent()}</div>
           </div>
         )}
       </div>

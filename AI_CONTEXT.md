@@ -9,6 +9,7 @@ This project is a **React-based single-page application (SPA)** designed to serv
 -   **Styling**: [Tailwind CSS](https://tailwindcss.com/) (v4), `clsx` for conditional classes.
 -   **Animation**: [Framer Motion](https://www.framer.com/motion/) for slide transitions and element animations.
 -   **Icons**: [Lucide React](https://lucide.dev/).
+-   **Browser verification**: `@playwright/test` provides focused navigation, audience, mobile, library, and download regression checks. It also generates committed static thumbnails.
 -   **Utilities**: `qrcode.react` for client-side QR code generation.
 
 ## Project Structure
@@ -58,3 +59,12 @@ This project is a **React-based single-page application (SPA)** designed to serv
     -   Read this file first to understand the existing context.
     -   Append or modify the relevant sections above to reflect your changes.
     -   Ensure the "Technology Stack" and "Project Structure" sections remain accurate.
+
+## Slide library and reading improvements
+
+- `src/data/slideLibrary.js` supplies one ordered selection for the manager rows and both document exports. Text search is combined with the chosen presentation. `library` is a manager-only selector and is never a valid audience URL tag.
+- `src/components/SlideThumbnail.jsx`, `src/data/slideThumbnailKey.js`, and `src/data/slideThumbnails.json` display lazy static content previews. `scripts/generate-slide-thumbnails.mjs` refreshes these via a development-only capture route. `scripts/check-slide-thumbnails.mjs` checks their content, renderer fingerprints, and files.
+- `src/components/SlideManager.css` owns responsive manager styling. The source content, ordering, removal, and audience assignment model is unchanged.
+- `src/Presentation.jsx` marks supported mobile reading layouts with `data-mobile-reading`; viewer-scoped CSS below 768px restores natural content height and places claim notes after the content. The component framework stacks its four cards on phones. These rules do not affect exports or other authored layouts.
+- Unknown or missing URL audiences fail closed. Existing valid audience tags remain case-insensitive and stable slide hashes remain intact.
+- `npm test` runs data behavior checks. `npm run test:browser` starts a dedicated local server. `npm run thumbnails` regenerates committed previews; run it after slide content or renderer changes, then `npm run check:thumbnails`. Normal deployment builds do not install or launch a browser.

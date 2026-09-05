@@ -12,6 +12,7 @@ const EmbeddedVideo = ({
   loop = true,
   muted = true,
   playbackRate = 1,
+  staticPreview = false,
 }) => {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -27,7 +28,7 @@ const EmbeddedVideo = ({
     video.playbackRate = playbackRate;
 
     const tryAutoPlay = async () => {
-      if (!autoPlay || cancelled) return;
+      if (staticPreview || !autoPlay || cancelled) return;
       try {
         await video.play();
         if (!cancelled) setIsPlaying(true);
@@ -48,7 +49,7 @@ const EmbeddedVideo = ({
       cancelled = true;
       video.removeEventListener('canplay', tryAutoPlay);
     };
-  }, [autoPlay, muted, playbackRate, src]);
+  }, [autoPlay, muted, playbackRate, src, staticPreview]);
 
   const playVideo = async () => {
     const video = videoRef.current;
@@ -74,9 +75,9 @@ const EmbeddedVideo = ({
         poster={poster}
         aria-label={label}
         className={videoClassName}
-        preload="auto"
+        preload={staticPreview ? 'metadata' : 'auto'}
         controls
-        autoPlay={autoPlay}
+        autoPlay={!staticPreview && autoPlay}
         loop={loop}
         muted={muted}
         playsInline
@@ -96,7 +97,7 @@ const EmbeddedVideo = ({
         }}
       />
 
-      {!isPlaying && (
+      {!staticPreview && !isPlaying && (
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-slate-950/20">
           <button
             type="button"

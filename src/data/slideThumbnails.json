@@ -1,0 +1,329 @@
+{
+  "rendererKey": "7bb00eff0a50f0b35b18f4dc3a0f19ed0342211b9ba261c2683f67cac293f8f7",
+  "slides": {
+    "lmu-title": {
+      "contentKey": "9a077d6c21e79ac0",
+      "src": "/slide-thumbnails/lmu-title-9a077d6c21e79ac0-7bb00eff.jpg"
+    },
+    "ai-operating-review-title": {
+      "contentKey": "ee643550f588ba85",
+      "src": "/slide-thumbnails/ai-operating-review-title-ee643550f588ba85-7bb00eff.jpg"
+    },
+    "the-ai-enabled-university": {
+      "contentKey": "5f53cb711bd707f5",
+      "src": "/slide-thumbnails/the-ai-enabled-university-5f53cb711bd707f5-7bb00eff.jpg"
+    },
+    "ai-strategy-and-engagement": {
+      "contentKey": "228aa1fc2e3b4c06",
+      "src": "/slide-thumbnails/ai-strategy-and-engagement-228aa1fc2e3b4c06-7bb00eff.jpg"
+    },
+    "uc-san-diego": {
+      "contentKey": "25d2b64bbd084c9a",
+      "src": "/slide-thumbnails/uc-san-diego-25d2b64bbd084c9a-7bb00eff.jpg"
+    },
+    "triton-ai-website": {
+      "contentKey": "24f387b77954ee2c",
+      "src": "/slide-thumbnails/triton-ai-website-24f387b77954ee2c-7bb00eff.jpg"
+    },
+    "tritongpt-origin": {
+      "contentKey": "853297ea3eea3e9a",
+      "src": "/slide-thumbnails/tritongpt-origin-853297ea3eea3e9a-7bb00eff.jpg"
+    },
+    "tritongpt-platform": {
+      "contentKey": "fb6f720770ed5c29",
+      "src": "/slide-thumbnails/tritongpt-platform-fb6f720770ed5c29-7bb00eff.jpg"
+    },
+    "tritongpt-secure-scalable-ai-platform": {
+      "contentKey": "04f884aef786b429",
+      "src": "/slide-thumbnails/tritongpt-secure-scalable-ai-platform-04f884aef786b429-7bb00eff.jpg"
+    },
+    "tritongpt-initiative": {
+      "contentKey": "822da254ba3f5554",
+      "src": "/slide-thumbnails/tritongpt-initiative-822da254ba3f5554-7bb00eff.jpg"
+    },
+    "video-media1": {
+      "contentKey": "34601c93b106f6ef",
+      "src": "/slide-thumbnails/video-media1-34601c93b106f6ef-7bb00eff.jpg"
+    },
+    "video-screen-recording-1": {
+      "contentKey": "e5ff282fe93951ed",
+      "src": "/slide-thumbnails/video-screen-recording-1-e5ff282fe93951ed-7bb00eff.jpg"
+    },
+    "video-screen-recording-2": {
+      "contentKey": "9dda74d6c328850a",
+      "src": "/slide-thumbnails/video-screen-recording-2-9dda74d6c328850a-7bb00eff.jpg"
+    },
+    "video-media2": {
+      "contentKey": "e8dbba73bcb563b7",
+      "src": "/slide-thumbnails/video-media2-e8dbba73bcb563b7-7bb00eff.jpg"
+    },
+    "video-media4": {
+      "contentKey": "d36a02fd0a3c0921",
+      "src": "/slide-thumbnails/video-media4-d36a02fd0a3c0921-7bb00eff.jpg"
+    },
+    "video-media3": {
+      "contentKey": "62a09a662e22c090",
+      "src": "/slide-thumbnails/video-media3-62a09a662e22c090-7bb00eff.jpg"
+    },
+    "video-screen-recording-2026-05-27": {
+      "contentKey": "33d72d23efc2a4ab",
+      "src": "/slide-thumbnails/video-screen-recording-2026-05-27-33d72d23efc2a4ab-7bb00eff.jpg"
+    },
+    "video-tritongpt-class-scheduling-agent": {
+      "contentKey": "07f8abba6952c0ba",
+      "src": "/slide-thumbnails/video-tritongpt-class-scheduling-agent-07f8abba6952c0ba-7bb00eff.jpg"
+    },
+    "class-planner-student-schedule": {
+      "contentKey": "4f2d333aeef4c828",
+      "src": "/slide-thumbnails/class-planner-student-schedule-4f2d333aeef4c828-7bb00eff.jpg"
+    },
+    "video-media5": {
+      "contentKey": "6bbf42aa7373cba2",
+      "src": "/slide-thumbnails/video-media5-6bbf42aa7373cba2-7bb00eff.jpg"
+    },
+    "video-media6": {
+      "contentKey": "91aeedd82e47e7e7",
+      "src": "/slide-thumbnails/video-media6-91aeedd82e47e7e7-7bb00eff.jpg"
+    },
+    "scaling-engagement-the-tritongpt-widget": {
+      "contentKey": "4e801211b979edd2",
+      "src": "/slide-thumbnails/scaling-engagement-the-tritongpt-widget-4e801211b979edd2-7bb00eff.jpg"
+    },
+    "video-tritongpt-mobile-app": {
+      "contentKey": "8751cef4352dfa13",
+      "src": "/slide-thumbnails/video-tritongpt-mobile-app-8751cef4352dfa13-7bb00eff.jpg"
+    },
+    "video-media9": {
+      "contentKey": "a038e258f8704aa4",
+      "src": "/slide-thumbnails/video-media9-a038e258f8704aa4-7bb00eff.jpg"
+    },
+    "ai-driven-search-blink-integration": {
+      "contentKey": "8ea6d099feecf443",
+      "src": "/slide-thumbnails/ai-driven-search-blink-integration-8ea6d099feecf443-7bb00eff.jpg"
+    },
+    "instructional-ai-socratic-tutor-faculty-assistant": {
+      "contentKey": "e745516d250d5e8d",
+      "src": "/slide-thumbnails/instructional-ai-socratic-tutor-faculty-assistant-e745516d250d5e8d-7bb00eff.jpg"
+    },
+    "video-media11": {
+      "contentKey": "9772dde2ee7dc35b",
+      "src": "/slide-thumbnails/video-media11-9772dde2ee7dc35b-7bb00eff.jpg"
+    },
+    "tritongpt-to-tritonai-comparison": {
+      "contentKey": "e79e4740b0bb4303",
+      "src": "/slide-thumbnails/tritongpt-to-tritonai-comparison-e79e4740b0bb4303-7bb00eff.jpg"
+    },
+    "uc-san-diego-ai-strategy-2026": {
+      "contentKey": "f5dae0d8dfe83c66",
+      "src": "/slide-thumbnails/uc-san-diego-ai-strategy-2026-f5dae0d8dfe83c66-7bb00eff.jpg"
+    },
+    "administrative-ai-the-efficiency-imperative": {
+      "contentKey": "b05850ae258acc14",
+      "src": "/slide-thumbnails/administrative-ai-the-efficiency-imperative-b05850ae258acc14-7bb00eff.jpg"
+    },
+    "contract-reviewer-consolidated": {
+      "contentKey": "940d3875ee1a17d1",
+      "src": "/slide-thumbnails/contract-reviewer-consolidated-940d3875ee1a17d1-7bb00eff.jpg"
+    },
+    "transcript-matching-validation": {
+      "contentKey": "348685ee7e98aafe",
+      "src": "/slide-thumbnails/transcript-matching-validation-348685ee7e98aafe-7bb00eff.jpg"
+    },
+    "cabinet-harness-03-question": {
+      "contentKey": "13695da50ee3baa3",
+      "src": "/slide-thumbnails/cabinet-harness-03-question-13695da50ee3baa3-7bb00eff.jpg"
+    },
+    "tritonai-developer-api-program": {
+      "contentKey": "184232a099e0a117",
+      "src": "/slide-thumbnails/tritonai-developer-api-program-184232a099e0a117-7bb00eff.jpg"
+    },
+    "dsmlp-datahub-shared-compute": {
+      "contentKey": "f84fb2c356719ca8",
+      "src": "/slide-thumbnails/dsmlp-datahub-shared-compute-f84fb2c356719ca8-7bb00eff.jpg"
+    },
+    "dsmlp-tritonai-complementary-layers": {
+      "contentKey": "86114b221d0a7ffe",
+      "src": "/slide-thumbnails/dsmlp-tritonai-complementary-layers-86114b221d0a7ffe-7bb00eff.jpg"
+    },
+    "llm-api-usage-attribution": {
+      "contentKey": "cea93b8c82864faf",
+      "src": "/slide-thumbnails/llm-api-usage-attribution-cea93b8c82864faf-7bb00eff.jpg"
+    },
+    "campus-app-hosting": {
+      "contentKey": "b4be6d52fe93397a",
+      "src": "/slide-thumbnails/campus-app-hosting-b4be6d52fe93397a-7bb00eff.jpg"
+    },
+    "campus-app-hosting-intake": {
+      "contentKey": "7176e114e7ea1ea0",
+      "src": "/slide-thumbnails/campus-app-hosting-intake-7176e114e7ea1ea0-7bb00eff.jpg"
+    },
+    "harness-memory-architecture": {
+      "contentKey": "59366abaea4ee56d",
+      "src": "/slide-thumbnails/harness-memory-architecture-59366abaea4ee56d-7bb00eff.jpg"
+    },
+    "harness-memory-scale-ucsd": {
+      "contentKey": "dcc90c67262c81ba",
+      "src": "/slide-thumbnails/harness-memory-scale-ucsd-dcc90c67262c81ba-7bb00eff.jpg"
+    },
+    "a-meeting-becomes-memory-and-then-action": {
+      "contentKey": "6593e88415b7e581",
+      "src": "/slide-thumbnails/a-meeting-becomes-memory-and-then-action-6593e88415b7e581-7bb00eff.jpg"
+    },
+    "memory-quality-is-an-operational-service": {
+      "contentKey": "def1955e8520c752",
+      "src": "/slide-thumbnails/memory-quality-is-an-operational-service-def1955e8520c752-7bb00eff.jpg"
+    },
+    "harness-perf-review-demo": {
+      "contentKey": "15c55c70072b5b75",
+      "src": "/slide-thumbnails/harness-perf-review-demo-15c55c70072b5b75-7bb00eff.jpg"
+    },
+    "agent-engineering-strategy": {
+      "contentKey": "f982f91d5115443b",
+      "src": "/slide-thumbnails/agent-engineering-strategy-f982f91d5115443b-7bb00eff.jpg"
+    },
+    "preparing-the-ai-ready-graduate": {
+      "contentKey": "f53a675b3775a81a",
+      "src": "/slide-thumbnails/preparing-the-ai-ready-graduate-f53a675b3775a81a-7bb00eff.jpg"
+    },
+    "the-agentic-ai-stack": {
+      "contentKey": "7dd6bde8b7689a16",
+      "src": "/slide-thumbnails/the-agentic-ai-stack-7dd6bde8b7689a16-7bb00eff.jpg"
+    },
+    "multi-agent-incident-response-orchestration": {
+      "contentKey": "771c47e2558b0a32",
+      "src": "/slide-thumbnails/multi-agent-incident-response-orchestration-771c47e2558b0a32-7bb00eff.jpg"
+    },
+    "efficiency-ai-vs-opportunity-ai": {
+      "contentKey": "fcacfe31d3ccc524",
+      "src": "/slide-thumbnails/efficiency-ai-vs-opportunity-ai-fcacfe31d3ccc524-7bb00eff.jpg"
+    },
+    "ucsd-ai-by-the-numbers": {
+      "contentKey": "2c7e8c7a513a5c71",
+      "src": "/slide-thumbnails/ucsd-ai-by-the-numbers-2c7e8c7a513a5c71-7bb00eff.jpg"
+    },
+    "training-and-outreach": {
+      "contentKey": "67be114baa6767c3",
+      "src": "/slide-thumbnails/training-and-outreach-67be114baa6767c3-7bb00eff.jpg"
+    },
+    "key-takeaways": {
+      "contentKey": "30595a09f74684c4",
+      "src": "/slide-thumbnails/key-takeaways-30595a09f74684c4-7bb00eff.jpg"
+    },
+    "ai-roadmap-2026": {
+      "contentKey": "44aa1a7bc93eb67a",
+      "src": "/slide-thumbnails/ai-roadmap-2026-44aa1a7bc93eb67a-7bb00eff.jpg"
+    },
+    "ai-roadmap-2026-q2": {
+      "contentKey": "0bb3352142620a95",
+      "src": "/slide-thumbnails/ai-roadmap-2026-q2-0bb3352142620a95-7bb00eff.jpg"
+    },
+    "ai-roadmap-2026-q3": {
+      "contentKey": "09d3a3e8ab49b977",
+      "src": "/slide-thumbnails/ai-roadmap-2026-q3-09d3a3e8ab49b977-7bb00eff.jpg"
+    },
+    "tritongpt-adoption-synthesis": {
+      "contentKey": "146187da2ffb8c50",
+      "src": "/slide-thumbnails/tritongpt-adoption-synthesis-146187da2ffb8c50-7bb00eff.jpg"
+    },
+    "tritongpt-usage-analytics": {
+      "contentKey": "535e1e997c1dd073",
+      "src": "/slide-thumbnails/tritongpt-usage-analytics-535e1e997c1dd073-7bb00eff.jpg"
+    },
+    "tritongpt-widget-analytics": {
+      "contentKey": "2ec43e6acadf2a29",
+      "src": "/slide-thumbnails/tritongpt-widget-analytics-2ec43e6acadf2a29-7bb00eff.jpg"
+    },
+    "tritongpt-user-growth": {
+      "contentKey": "8ad2f187521ea750",
+      "src": "/slide-thumbnails/tritongpt-user-growth-8ad2f187521ea750-7bb00eff.jpg"
+    },
+    "research-alignment-poc": {
+      "contentKey": "923229df73b43685",
+      "src": "/slide-thumbnails/research-alignment-poc-923229df73b43685-7bb00eff.jpg"
+    },
+    "ai-engagement-at-scale": {
+      "contentKey": "bf1b6a4865f2e2db",
+      "src": "/slide-thumbnails/ai-engagement-at-scale-bf1b6a4865f2e2db-7bb00eff.jpg"
+    },
+    "cabinet-harness-02-convergence": {
+      "contentKey": "9eb9b4bb3d7cb1cc",
+      "src": "/slide-thumbnails/cabinet-harness-02-convergence-9eb9b4bb3d7cb1cc-7bb00eff.jpg"
+    },
+    "cabinet-harness-08b-component-framework": {
+      "contentKey": "4909f2e812aef3cc",
+      "src": "/slide-thumbnails/cabinet-harness-08b-component-framework-4909f2e812aef3cc-7bb00eff.jpg"
+    },
+    "cabinet-harness-04b-fixed-architecture": {
+      "contentKey": "ac912950766420b6",
+      "src": "/slide-thumbnails/cabinet-harness-04b-fixed-architecture-ac912950766420b6-7bb00eff.jpg"
+    },
+    "cabinet-harness-06-already-in-toolbox": {
+      "contentKey": "9256c75816bc7b04",
+      "src": "/slide-thumbnails/cabinet-harness-06-already-in-toolbox-9256c75816bc7b04-7bb00eff.jpg"
+    },
+    "cabinet-harness-08c-while-loop": {
+      "contentKey": "3ee0596c14100f7c",
+      "src": "/slide-thumbnails/cabinet-harness-08c-while-loop-3ee0596c14100f7c-7bb00eff.jpg"
+    },
+    "cabinet-harness-09b-context-management": {
+      "contentKey": "77a4886fa336cdbb",
+      "src": "/slide-thumbnails/cabinet-harness-09b-context-management-77a4886fa336cdbb-7bb00eff.jpg"
+    },
+    "cabinet-harness-08e-tools-hooks-safety": {
+      "contentKey": "4dd756350a505bba",
+      "src": "/slide-thumbnails/cabinet-harness-08e-tools-hooks-safety-4dd756350a505bba-7bb00eff.jpg"
+    },
+    "cabinet-harness-10-subagents": {
+      "contentKey": "17d0b68f5e5dbaad",
+      "src": "/slide-thumbnails/cabinet-harness-10-subagents-17d0b68f5e5dbaad-7bb00eff.jpg"
+    },
+    "video-harness-api-demo-2026-06-25-810": {
+      "contentKey": "a96b7bc432d58aeb",
+      "src": "/slide-thumbnails/video-harness-api-demo-2026-06-25-810-a96b7bc432d58aeb-7bb00eff.jpg"
+    },
+    "from-tritongpt-to-tritonai": {
+      "contentKey": "df83d9809dbae37c",
+      "src": "/slide-thumbnails/from-tritongpt-to-tritonai-df83d9809dbae37c-7bb00eff.jpg"
+    },
+    "cabinet-harness-11-ucsd-safe-path": {
+      "contentKey": "bf040077bc0c5c45",
+      "src": "/slide-thumbnails/cabinet-harness-11-ucsd-safe-path-bf040077bc0c5c45-7bb00eff.jpg"
+    },
+    "cabinet-harness-11a-two-environments": {
+      "contentKey": "bd145086e86b82d1",
+      "src": "/slide-thumbnails/cabinet-harness-11a-two-environments-bd145086e86b82d1-7bb00eff.jpg"
+    },
+    "the-flywheel-in-action-pdf-remediator": {
+      "contentKey": "84ddd256498f5956",
+      "src": "/slide-thumbnails/the-flywheel-in-action-pdf-remediator-84ddd256498f5956-7bb00eff.jpg"
+    },
+    "the-flywheel-in-action-biobib-formatter": {
+      "contentKey": "ec40e4f928e768e9",
+      "src": "/slide-thumbnails/the-flywheel-in-action-biobib-formatter-ec40e4f928e768e9-7bb00eff.jpg"
+    },
+    "the-flywheel-in-action-ai-use-case-meeting": {
+      "contentKey": "de98e0a60bd2b4ed",
+      "src": "/slide-thumbnails/the-flywheel-in-action-ai-use-case-meeting-de98e0a60bd2b4ed-7bb00eff.jpg"
+    },
+    "the-flywheel-in-action-dissertation-formatter": {
+      "contentKey": "1c1e1d2cb6d587f0",
+      "src": "/slide-thumbnails/the-flywheel-in-action-dissertation-formatter-1c1e1d2cb6d587f0-7bb00eff.jpg"
+    },
+    "cabinet-harness-13-recap": {
+      "contentKey": "5fa692e97d8e89dc",
+      "src": "/slide-thumbnails/cabinet-harness-13-recap-5fa692e97d8e89dc-7bb00eff.jpg"
+    },
+    "the-team-behind-tritonai": {
+      "contentKey": "ee4a9b731a1e3d73",
+      "src": "/slide-thumbnails/the-team-behind-tritonai-ee4a9b731a1e3d73-7bb00eff.jpg"
+    },
+    "thank-you": {
+      "contentKey": "d0b027a59ca4db0a",
+      "src": "/slide-thumbnails/thank-you-d0b027a59ca4db0a-7bb00eff.jpg"
+    },
+    "lmu-thank-you": {
+      "contentKey": "5d5506df18411d1b",
+      "src": "/slide-thumbnails/lmu-thank-you-5d5506df18411d1b-7bb00eff.jpg"
+    }
+  }
+}

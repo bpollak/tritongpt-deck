@@ -96,8 +96,8 @@ const BackgroundCornerOrbs = () => (
   </>
 );
 
-const Shell = ({ children }) => (
-  <div className="absolute inset-0 overflow-hidden" style={{ background: T.bg, color: T.ink, fontFamily: T.serif }}>
+const Shell = ({ children, className = '' }) => (
+  <div className={`absolute inset-0 overflow-hidden ${className}`} style={{ background: T.bg, color: T.ink, fontFamily: T.serif }}>
     <BackgroundCornerOrbs />
     <div className="absolute inset-x-0 top-0 h-1" style={{ background: '#f1c232' }} />
     {children}
@@ -1432,10 +1432,10 @@ const ComponentVisual = ({ type, color = T.coralDark }) => {
 };
 
 const HarnessComponentsFrameworkVariant = ({ slide }) => (
-  <Shell>
+  <Shell className="harness-components-slide">
     <Marker slide={slide}>{slide.marker}</Marker>
 
-    <div className="absolute left-[4.8vw] right-[4.8vw] top-[5vh]" style={{ maxWidth: '88vw' }}>
+    <div className="harness-components-heading absolute left-[4.8vw] right-[4.8vw] top-[5vh]" style={{ maxWidth: '88vw' }}>
       <h1 className="leading-[0.98]" style={{ fontSize: 'clamp(40px, 4vw, 64px)', fontWeight: 520 }}>
         <PartText parts={slide.parts} />
       </h1>
@@ -1446,8 +1446,8 @@ const HarnessComponentsFrameworkVariant = ({ slide }) => (
       )}
     </div>
 
-    <div className="absolute left-[4.8vw] right-[4.8vw] top-[18vh]">
-      <div className="grid grid-cols-2 gap-4">
+    <div className="harness-components-body absolute left-[4.8vw] right-[4.8vw] top-[18vh]">
+      <div className="harness-components-grid grid grid-cols-2 gap-4">
         {(slide.components || []).map((component, index) => (
           <Card
             key={`${component.title}-${index}`}
@@ -1455,7 +1455,7 @@ const HarnessComponentsFrameworkVariant = ({ slide }) => (
             className="p-4"
             style={component.highlight ? { background: '#fff8f2', borderColor: T.coral } : undefined}
           >
-            <div className="grid grid-cols-[1fr_320px] items-start gap-3">
+            <div className="harness-component-heading grid grid-cols-[1fr_320px] items-start gap-3">
               <div>
                 <div className="flex items-center gap-3">
                   <span className="text-[15px] uppercase" style={{ color: component.color || T.coralDark, fontFamily: T.mono, letterSpacing: '0.16em', fontWeight: 800 }}>

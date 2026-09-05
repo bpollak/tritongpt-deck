@@ -1,48 +1,11 @@
-# Audience-Based Slide Filtering
+# Audience-based presentations
 
-This presentation supports filtering slides based on different audience types using URL parameters.
+Open the deck with a complete link such as `https://tritongpt-deck.vercel.app/?audience=technical#slide=tritongpt-platform`.
 
-## Usage
+A missing or unknown audience tag shows a link-help message. Valid tags are case-insensitive: `all`, `technical`, `executive`, `cabinet`, `citizen`, `internal`, `public`, `conference`, `PK`, `regent`, and `LMU`. Cabinet is reserved and currently contains no slides.
 
-Add the `?audience=<type>` parameter to the URL to filter slides:
+`all` means **Default presentation**. It includes only slides explicitly assigned that tag. It does not automatically include every slide, and slides tagged `all` are not automatically included in other presentations.
 
-### Available Audience Types
+The manager at `/manage` also offers **Entire library**, containing every managed slide. This is a management and export selection, not a shareable audience URL. Choose a named presentation to preview its full audience link. The preview link states its full slide count even when text search narrows the manager’s rows.
 
-- **all** (default) - Shows slides tagged for the default deck
-- **technical** - Shows slides tagged for technical audiences
-- **executive** - Shows slides tagged for executive audiences
-- **internal** - Shows slides tagged for internal UC San Diego audiences
-- **public** - Shows slides tagged for public/external audiences
-- **CCW** - Shows slides tagged for the CCW audience
-
-### Examples
-
-- All slides (default): `https://tritongpt-deck.vercel.app/`
-- Technical audience: `https://tritongpt-deck.vercel.app/?audience=technical`
-- Executive audience: `https://tritongpt-deck.vercel.app/?audience=executive`
-- Internal audience: `https://tritongpt-deck.vercel.app/?audience=internal`
-- CCW audience: `https://tritongpt-deck.vercel.app/?audience=CCW`
-
-## How It Works
-
-Each slide in `src/data/slides.js` has an `audiences` array that defines which audience types can view it:
-
-```javascript
-{
-  "id": 1,
-  "title": "My Slide",
-  "audiences": ["all", "technical", "internal"]
-}
-```
-
-When a URL parameter is provided, only slides that include that audience type in their `audiences` array will be shown.
-Slides tagged with `"all"` appear in the default deck at `/`; they are not automatically included in every audience-filtered view.
-
-## Modifying Slide Visibility
-
-To change which slides appear for different audiences:
-
-1. Open `src/data/slides.js`
-2. Find the slide you want to modify
-3. Update the `audiences` array with the appropriate audience types
-4. Add `"all"` only when the slide should appear in the default deck
+Slide content lives in `src/data/slides.js`. Canonical order, removal, and audience assignments live in `src/data/slideManagerState.js`. Preserve the audience contracts and stable slugs when editing these files. Audience tags organize presentations; they are not authentication or a substitute for protected hosting.

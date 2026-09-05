@@ -1,13 +1,16 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { slides } from '../data/slideDeck';
 import { buildSlideManagerStateFromSlides, createSlideManagerStateModuleContent } from '../data/slideManagerStateUtils';
-import { AUDIENCE_COLORS, AUDIENCE_TYPES, isSlideVisibleForAudience } from '../data/audiences';
+import { AUDIENCE_COLORS, AUDIENCE_TYPES, getAudienceLabel, isSlideVisibleForAudience } from '../data/audiences';
 import { buildSlideManagerRegistry } from '../data/slideRegistry';
+import { ENTIRE_LIBRARY, selectLibrarySlides } from '../data/slideLibrary';
+import SlideThumbnail from './SlideThumbnail';
+import './SlideManager.css';
 import { clearLocalSlidePreview, isLocalPreviewHost, readLocalSlidePreview, writeLocalSlidePreview } from '../utils/localSlidePreview';
 import { captureSlideSnapshots } from '../utils/slideSnapshots';
 import { generatePPTX } from '../utils/pptxExport';
 import { exportSlidesToPdf } from '../utils/pdfExport';
-import { Eye, EyeOff, ChevronDown, ChevronUp, ExternalLink, Save, Loader2, CheckCircle, AlertCircle, Download, FileText, ArrowUp, ArrowDown, Trash2 } from 'lucide-react';
+import { Eye, EyeOff, ChevronDown, ChevronUp, ExternalLink, Save, Loader2, CheckCircle, AlertCircle, Download, FileText, ArrowUp, ArrowDown, Trash2, Search, X } from 'lucide-react';
 
 const buildSlideAudienceMap = (sourceSlides) => {
   return sourceSlides.reduce((acc, slide) => {
@@ -30,7 +33,7 @@ const hasSlideConfigChanges = (candidateSlides, sourceSlides) => {
 
 const getPreviewAudience = (slide, selectedAudience, audiences) => {
   if (
-    selectedAudience !== 'all'
+    selectedAudience !== ENTIRE_LIBRARY
     && isSlideVisibleForAudience({ ...slide, audiences }, selectedAudience)
   ) {
     return selectedAudience;
@@ -57,7 +60,8 @@ const SlideManager = ({ onClose, standalone = false }) => {
   const [managedSlideIds, setManagedSlideIds] = useState(() => initialSlides.map((slide) => slide.id));
   const [slideAudiences, setSlideAudiences] = useState(() => buildSlideAudienceMap(initialSlides));
   const [expandedSlide, setExpandedSlide] = useState(null);
-  const [filterAudience, setFilterAudience] = useState('all');
+  const [filterAudience, setFilterAudience] = useState(ENTIRE_LIBRARY);
+  const [searchQuery, setSearchQuery] = useState('');
   const [saveStatus, setSaveStatus] = useState(null); // null | 'local' | 'saving' | 'success' | 'error' | 'password'
   const [saveMessage, setSaveMessage] = useState('');
   const [adminPassword, setAdminPassword] = useState('');
@@ -160,17 +164,14 @@ const SlideManager = ({ onClose, standalone = false }) => {
     markSlideStructureChanged('Slide removed from localhost preview. Save to the repo or push to GitHub when ready.');
   };
 
-  const filteredSlides = slideManagerRegistry.filter(slide => {
-    if (filterAudience === 'all') return true;
-    return isSlideVisibleForAudience(
-      { ...slide, audiences: slideAudiences[slide.id] || slide.audiences },
-      filterAudience
-    );
-  });
-
-  const exportSlides = useMemo(() => {
-    return updatedSlides.filter((slide) => isSlideVisibleForAudience(slide, filterAudience));
-  }, [filterAudience, updatedSlides]);
+  // The rows and both export formats share this exact ordered selection.
+  const exportSlides = useMemo(() => selectLibrarySlides(updatedSlides, {
+    audience: filterAudience, query: searchQuery
+  }), [filterAudience, searchQuery, updatedSlides]);
+  const filteredSlides = useMemo(() => buildSlideManagerRegistry(exportSlides), [exportSlides]);
+  const audienceSlideCount = selectLibrarySlides(updatedSlides, { audience: filterAudience }).length;
+  const filterLabel = filterAudience === ENTIRE_LIBRARY ? 'Entire library' : getAudienceLabel(filterAudience);
+  const orderById = new Map(slideManagerRegistry.map((slide) => [String(slide.id), slide.orderLabel]));
 
   const exportConfig = () => {
     const output = createSlideManagerStateModuleContent(buildSlideManagerStateFromSlides(sourceSlidesSnapshot, updatedSlides));
@@ -219,7 +220,7 @@ const SlideManager = ({ onClose, standalone = false }) => {
 
     try {
       await exportSlidesToPdf(exportSlides, {
-        audienceLabel: filterAudience,
+        audienceLabel: filterAudience === ENTIRE_LIBRARY ? 'entire-library' : filterAudience,
         onProgress: ({ current, total }) => setPdfProgress({ current, total })
       });
     } catch (error) {
@@ -346,7 +347,7 @@ const SlideManager = ({ onClose, standalone = false }) => {
         {/* Header */}
         <div className="p-6 border-b border-gray-200">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-2xl font-bold text-ucsd-navy">Manage Slide Audiences</h2>
+            <h2 className="text-2xl font-bold text-ucsd-navy">Slide library</h2>
             {!standalone && (
               <button
                 onClick={onClose}
@@ -357,81 +358,76 @@ const SlideManager = ({ onClose, standalone = false }) => {
             )}
           </div>
 
-          {/* Filter */}
-          <div className="flex items-center gap-2 flex-wrap">
-            <span className="text-sm font-medium text-gray-600">Filter by:</span>
-            {AUDIENCE_TYPES.map(audience => (
-              <button
-                key={audience}
-                onClick={() => setFilterAudience(audience)}
-                className={`px-3 py-1 rounded-full text-xs font-medium transition-all ${
-                  filterAudience === audience
-                    ? `${AUDIENCE_COLORS[audience]} text-white`
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                }`}
-              >
-                {audience}
-              </button>
-            ))}
-            <div className="ml-auto flex items-center gap-2">
-              <button
-                onClick={handleExportPdf}
-                disabled={isExportingPdf || exportSlides.length === 0}
-                title={exportSlides.length === 0
-                  ? 'No slides visible for this filter'
-                  : `Export ${exportSlides.length} slide${exportSlides.length === 1 ? '' : 's'} to PDF`}
-                className={`px-3 py-1 rounded-full text-xs font-semibold transition-all flex items-center gap-1.5 ${
-                  isExportingPdf || exportSlides.length === 0
-                    ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                    : 'bg-ucsd-navy text-white hover:bg-opacity-90'
-                }`}
-              >
-                {isExportingPdf
-                  ? <Loader2 size={12} className="animate-spin" />
-                  : <FileText size={12} />}
-                {isExportingPdf && pdfProgress
-                  ? `Rendering ${pdfProgress.current} / ${pdfProgress.total}…`
-                  : `Export PDF (${exportSlides.length})`}
-              </button>
+          <div className="slide-library-filters">
+            <div className="slide-library-search">
+              <label htmlFor="slide-search">Search slides</label>
+              <div className="slide-library-search__field">
+                <Search size={18} aria-hidden="true" />
+                <input
+                  id="slide-search"
+                  type="search"
+                  value={searchQuery}
+                  onChange={(event) => setSearchQuery(event.target.value)}
+                  placeholder="Search titles, topics, or slide content"
+                  autoComplete="off"
+                />
+                {searchQuery && (
+                  <button type="button" onClick={() => setSearchQuery('')} aria-label="Clear search">
+                    <X size={18} aria-hidden="true" />
+                  </button>
+                )}
+              </div>
             </div>
+            <div className="slide-library-audience">
+              <label htmlFor="slide-audience">Presentation</label>
+              <select id="slide-audience" value={filterAudience} onChange={(event) => setFilterAudience(event.target.value)}>
+                <option value={ENTIRE_LIBRARY}>Entire library ({updatedSlides.length})</option>
+                {AUDIENCE_TYPES.map((audience) => (
+                  <option key={audience} value={audience}>
+                    {getAudienceLabel(audience)} ({selectLibrarySlides(updatedSlides, { audience }).length})
+                  </option>
+                ))}
+              </select>
+            </div>
+            <button
+              type="button"
+              onClick={handleExportPdf}
+              disabled={isExportingPdf || exportSlides.length === 0}
+              aria-describedby="slide-export-scope"
+              className="slide-library-export"
+            >
+              {isExportingPdf ? <Loader2 size={16} className="animate-spin" /> : <FileText size={16} />}
+              {isExportingPdf && pdfProgress
+                ? `Rendering ${pdfProgress.current} / ${pdfProgress.total}…`
+                : `Export PDF (${exportSlides.length})`}
+            </button>
           </div>
-
-          <div className="mt-4 flex items-center justify-between">
-            <div className="text-sm text-gray-600">
-              Showing {filteredSlides.length} of {slideManagerRegistry.length} slides in deck order
-              {removedSlideCount > 0 && (
-                <span className="ml-2 text-amber-700 font-medium">
-                  {removedSlideCount} removed in preview
-                </span>
-              )}
+          <div className="slide-library-summary">
+            <div>
+              <p role="status" aria-live="polite" aria-atomic="true">
+                Showing {filteredSlides.length} of {audienceSlideCount} slides in {filterLabel.toLowerCase()}.
+                {removedSlideCount > 0 && ` ${removedSlideCount} removed in preview.`}
+              </p>
+              <p id="slide-export-scope">PDF and PowerPoint exports include these {filteredSlides.length} {searchQuery.trim() ? 'matching ' : ''}slides in deck order.</p>
             </div>
-
-            {/* Preview Links */}
-            <div className="flex items-center gap-2">
-              <span className="text-xs font-medium text-gray-500">Preview:</span>
-              {AUDIENCE_TYPES.map(audience => {
-                const baseUrl = window.location.origin;
-                const url = `${baseUrl}/?audience=${encodeURIComponent(audience)}`;
-
-                return (
-                  <a
-                    key={audience}
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`px-2 py-1 rounded text-xs font-medium transition-all flex items-center gap-1 ${AUDIENCE_COLORS[audience]} text-white hover:opacity-80`}
-                  >
-                    {audience}
-                    <ExternalLink size={12} />
-                  </a>
-                );
-              })}
-            </div>
+            {filterAudience !== ENTIRE_LIBRARY && audienceSlideCount > 0 && (
+              <a href={`/?audience=${encodeURIComponent(filterAudience)}`} target="_blank" rel="noopener noreferrer">
+                Preview full {getAudienceLabel(filterAudience).toLowerCase()} ({audienceSlideCount})
+                <ExternalLink size={14} aria-hidden="true" />
+              </a>
+            )}
           </div>
         </div>
 
         {/* Slide List */}
-        <div className="flex-1 overflow-y-auto p-6 space-y-3">
+        <div className="slide-library-list flex-1 overflow-y-auto p-6 space-y-3">
+          {filteredSlides.length === 0 && (
+            <div className="slide-library-empty">
+              <h3>No slides match this selection</h3>
+              <p>{searchQuery ? 'Try a different search or choose another presentation.' : 'This presentation currently has no slides. Choose another presentation to continue.'}</p>
+              {searchQuery && <button type="button" onClick={() => setSearchQuery('')}>Clear search</button>}
+            </div>
+          )}
           {filteredSlides.map(slide => {
             const isExpanded = expandedSlide === slide.id;
             const audiences = slideAudiences[slide.id] || ['all'];
@@ -444,129 +440,46 @@ const SlideManager = ({ onClose, standalone = false }) => {
             return (
               <div
                 key={slide.id}
-                className="border border-gray-200 rounded-lg overflow-hidden hover:border-ucsd-gold transition-colors"
+                className="slide-library-row border border-gray-200 rounded-lg overflow-hidden hover:border-ucsd-gold transition-colors"
+                data-slide-id={slide.id}
+                data-slide-slug={slide.slug}
               >
-                {/* Slide Header */}
-                <div
-                  onClick={() => setExpandedSlide(isExpanded ? null : slide.id)}
-                  className="p-4 bg-gray-50 cursor-pointer flex items-center justify-between hover:bg-gray-100 transition-colors"
-                >
-                  <div className="flex items-start gap-4 flex-1 min-w-0">
-                    <div className="w-24 shrink-0">
-                      <div className="text-[10px] font-bold uppercase tracking-wide text-gray-500">
-                        Order
-                      </div>
-                      <div className="text-lg font-black text-ucsd-navy leading-tight">
-                        {slide.orderLabel || String(slide.order).padStart(2, '0')}
-                      </div>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <span className="px-2 py-0.5 rounded-full bg-white border border-gray-200 text-[11px] font-bold uppercase tracking-wide text-gray-600">
-                          {slide.section || 'Core Deck'}
-                        </span>
-                        {slide.type && (
-                          <span className="text-[11px] font-semibold uppercase tracking-wide text-gray-400">
-                            {slide.type}
-                          </span>
-                        )}
-                      </div>
-                      <div className="mt-1 font-semibold text-ucsd-navy leading-snug break-words">
-                        {slide.title}
-                      </div>
-                      {slide.summary && (
-                        <div className="text-sm text-gray-600 mt-1 leading-snug break-words">
-                          {slide.summary}
-                        </div>
-                      )}
-                      <div className="mt-2 flex items-center gap-2 flex-wrap">
-                        <span
-                          className="text-[11px] font-medium text-gray-500 break-all"
-                          title={`Stable slide reference${slide.slug ? `; legacy ID ${slide.id}` : ''}`}
-                        >
-                          Ref /{getSlideReferenceLabel(slide)}
-                        </span>
-                        {slide.slug && (
-                          <span className="text-[11px] font-medium text-gray-400">
-                            legacy ID {slide.id}
-                          </span>
-                        )}
-                        {Array.isArray(slide.tags) && slide.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="px-2 py-0.5 rounded-full bg-gray-200 text-[11px] font-medium text-gray-700"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="flex gap-1 flex-wrap justify-end max-w-xs">
-                      {audiences.map(audience => (
-                        <span
-                          key={audience}
-                          className={`px-2 py-1 rounded-full text-xs font-medium text-white ${AUDIENCE_COLORS[audience]}`}
-                        >
-                          {audience}
-                        </span>
+                <div className="slide-library-row__header">
+                  <a href={previewHref} target="_blank" rel="noopener noreferrer" className="slide-library-thumbnail-link" aria-label={`Preview ${slide.title}`}>
+                    <SlideThumbnail slide={sourceSlidesById.get(String(slide.id))} />
+                    <span className="slide-library-order">{orderById.get(String(slide.id))}</span>
+                  </a>
+                  <button
+                    type="button"
+                    className="slide-library-row__summary"
+                    onClick={() => setExpandedSlide(isExpanded ? null : slide.id)}
+                    aria-expanded={isExpanded}
+                    aria-controls={`slide-details-${slide.slug || slide.id}`}
+                  >
+                    <span className="slide-library-section">{slide.section || 'Core Deck'}</span>
+                    <span className="slide-library-title">{slide.title}</span>
+                    {slide.summary && <span className="slide-library-description">{slide.summary}</span>}
+                    <span className="slide-library-tags">
+                      {audiences.slice(0, 3).map((audience) => (
+                        <span key={audience}>{getAudienceLabel(audience)}</span>
                       ))}
-                    </div>
-                    <div className="flex items-center gap-1 ml-1">
-                      <button
-                        type="button"
-                        onClick={(e) => { e.stopPropagation(); moveSlide(slide.id, -1); }}
-                        disabled={isFirstSlide}
-                        className={`p-1.5 rounded-md transition-colors ${
-                          isFirstSlide
-                            ? 'text-gray-300 cursor-not-allowed'
-                            : 'text-gray-500 hover:text-ucsd-blue hover:bg-blue-50'
-                        }`}
-                        title="Move slide earlier in deck"
-                        aria-label="Move slide earlier in deck"
-                      >
-                        <ArrowUp size={16} />
-                      </button>
-                      <button
-                        type="button"
-                        onClick={(e) => { e.stopPropagation(); moveSlide(slide.id, 1); }}
-                        disabled={isLastSlide}
-                        className={`p-1.5 rounded-md transition-colors ${
-                          isLastSlide
-                            ? 'text-gray-300 cursor-not-allowed'
-                            : 'text-gray-500 hover:text-ucsd-blue hover:bg-blue-50'
-                        }`}
-                        title="Move slide later in deck"
-                        aria-label="Move slide later in deck"
-                      >
-                        <ArrowDown size={16} />
-                      </button>
-                      <button
-                        type="button"
-                        onClick={(e) => { e.stopPropagation(); removeSlide(slide); }}
-                        className="p-1.5 rounded-md text-gray-400 hover:text-red-600 hover:bg-red-50 transition-colors"
-                        title="Remove slide from deck"
-                        aria-label="Remove slide from deck"
-                      >
-                        <Trash2 size={16} />
-                      </button>
-                    </div>
-                    <a
-                      href={previewHref}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={(e) => e.stopPropagation()}
-                      className="ml-1 p-1.5 rounded-md text-gray-400 hover:text-ucsd-blue hover:bg-blue-50 transition-colors"
-                      title={`Open slide for ${previewAudience} audience: ${slide.title}`}
-                    >
-                      <ExternalLink size={16} />
-                    </a>
+                      {audiences.length > 3 && <span>+{audiences.length - 3} audiences</span>}
+                    </span>
+                    <span className="slide-library-details-label">
+                      {isExpanded ? 'Hide details' : 'Details & audiences'}
+                      {isExpanded ? <ChevronUp size={15} /> : <ChevronDown size={15} />}
+                    </span>
+                  </button>
+                  <div className="slide-library-actions">
+                    <button type="button" onClick={() => moveSlide(slide.id, -1)} disabled={isFirstSlide} aria-label={`Move ${slide.title} earlier`} title="Move earlier in entire library"><ArrowUp size={17} /></button>
+                    <button type="button" onClick={() => moveSlide(slide.id, 1)} disabled={isLastSlide} aria-label={`Move ${slide.title} later`} title="Move later in entire library"><ArrowDown size={17} /></button>
+                    <button type="button" onClick={() => removeSlide(slide)} aria-label={`Remove ${slide.title}`} title="Remove from entire library"><Trash2 size={17} /></button>
                   </div>
-                  {isExpanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
                 </div>
 
                 {/* Expanded Controls */}
                 {isExpanded && (
-                  <div className="p-4 bg-white border-t border-gray-200">
+                  <div id={`slide-details-${slide.slug || slide.id}`} className="p-4 bg-white border-t border-gray-200">
                     <div className="mb-4 pb-4 border-b border-gray-100">
                       <div className="flex items-start justify-between gap-4 flex-wrap">
                         <div className="min-w-0 flex-1">
@@ -577,7 +490,7 @@ const SlideManager = ({ onClose, standalone = false }) => {
                             {slide.summary || slide.title}
                           </div>
                           <div className="mt-2 text-xs text-gray-500 break-words">
-                            Opens as <span className="font-semibold text-gray-700">{previewAudience}</span>
+                            Opens as <span className="font-semibold text-gray-700">{getAudienceLabel(previewAudience)}</span>
                             {slide.slug ? ` using #slide=${slide.slug}` : ` using slide id ${slide.id}`}
                           </div>
                         </div>
@@ -592,8 +505,13 @@ const SlideManager = ({ onClose, standalone = false }) => {
                         </a>
                       </div>
                     </div>
+                    <details className="slide-library-technical-details">
+                      <summary>Slide reference and layout</summary>
+                      <p>Reference: {getSlideReferenceLabel(slide)} · Legacy ID: {slide.id}</p>
+                      <p>{slide.tags.join(' · ')}</p>
+                    </details>
                     <div className="text-sm font-medium text-gray-700 mb-3">
-                      Select audiences who can see this slide:
+                      Include this slide in these presentations:
                     </div>
                     <div className="flex gap-2 flex-wrap">
                       {AUDIENCE_TYPES.map(audience => {
@@ -602,6 +520,7 @@ const SlideManager = ({ onClose, standalone = false }) => {
                           <button
                             key={audience}
                             onClick={() => toggleAudience(slide.id, audience)}
+                            aria-pressed={isActive}
                             className={`px-4 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-2 ${
                               isActive
                                 ? `${AUDIENCE_COLORS[audience]} text-white`
@@ -609,7 +528,7 @@ const SlideManager = ({ onClose, standalone = false }) => {
                             }`}
                           >
                             {isActive ? <Eye size={16} /> : <EyeOff size={16} />}
-                            {audience}
+                            {getAudienceLabel(audience)}
                           </button>
                         );
                       })}
@@ -642,7 +561,7 @@ const SlideManager = ({ onClose, standalone = false }) => {
             </div>
           )}
 
-          <div className="flex items-center justify-between gap-4">
+          <div className="slide-library-footer flex items-center justify-between gap-4">
             <div className="text-sm text-gray-600">
               {localPreviewEnabled && hasPendingGitHubChanges
                 ? <span className="text-amber-700 font-medium">Changes are visible on localhost. Save them into the repo locally, then push to GitHub when ready.</span>
@@ -689,6 +608,7 @@ const SlideManager = ({ onClose, standalone = false }) => {
               </button>
               <button
                 onClick={handleExport}
+                aria-describedby="slide-export-scope"
                 disabled={isExporting || exportSlides.length === 0}
                 className={`px-4 py-2 font-medium rounded-lg transition-colors text-sm flex items-center gap-2 ${
                   isExporting || exportSlides.length === 0
@@ -697,7 +617,7 @@ const SlideManager = ({ onClose, standalone = false }) => {
                 }`}
               >
                 {isExporting ? <Loader2 size={16} className="animate-spin" /> : <Download size={16} />}
-                {isExporting ? 'Exporting...' : `Download ${filterAudience === 'all' ? 'PPTX' : `${filterAudience} PPTX`}`}
+                {isExporting ? 'Exporting...' : `Download PowerPoint (${exportSlides.length})`}
               </button>
               <button
                 onClick={handlePushRequest}

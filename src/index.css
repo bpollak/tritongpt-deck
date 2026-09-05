@@ -55,6 +55,91 @@
 
 .presentation-stage {
   background: var(--triton-sand);
+  min-height: 0;
+}
+
+.presentation-viewer {
+  height: 100dvh;
+}
+
+/* Reading on a phone needs a natural document height, not a clipped canvas.
+ * Scope these overrides to the viewer so desktop slides and exports stay intact. */
+@media (max-width: 767px) {
+  .presentation-viewer .tritonai-slide-stage[data-mobile-reading] {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    touch-action: pan-y;
+  }
+
+  .presentation-viewer .tritonai-slide-stage[data-mobile-reading] > .tritonai-slide,
+  .presentation-viewer [data-mobile-reading] .slide-dashboard {
+    height: auto;
+    min-height: 100%;
+    flex-shrink: 0;
+  }
+
+  .presentation-viewer [data-mobile-reading] :is(.slide-content-frame, .slide-content-viewport, .slide-content-flow, .slide-solution, .slide-solution-grid) {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+    flex: none;
+    justify-content: flex-start;
+  }
+
+  .presentation-viewer [data-mobile-reading] .slide-content-flow {
+    padding-bottom: 20px;
+  }
+
+  .presentation-viewer [data-mobile-reading] .slide-dashboard-sections {
+    flex: none;
+    overflow: visible;
+    justify-content: flex-start;
+    padding-bottom: 24px;
+  }
+
+  .presentation-viewer [data-mobile-reading] .presentation-claim-note {
+    position: relative;
+    inset: auto;
+    flex-shrink: 0;
+    max-width: none;
+    margin: 8px 16px 20px;
+    padding: 10px 12px;
+    font-size: 12px;
+    line-height: 1.4;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+
+  .presentation-viewer [data-mobile-reading] .harness-components-slide {
+    position: relative;
+    inset: auto;
+    min-height: 100%;
+    flex-shrink: 0;
+    overflow: hidden;
+    padding: 24px 16px;
+  }
+
+  .presentation-viewer [data-mobile-reading] :is(.harness-components-heading, .harness-components-body) {
+    position: relative;
+    inset: auto;
+    max-width: none !important;
+  }
+
+  .presentation-viewer [data-mobile-reading] .harness-components-body {
+    margin-top: 24px;
+  }
+
+  .presentation-viewer [data-mobile-reading] :is(.harness-components-grid, .harness-component-heading) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .presentation-viewer [data-mobile-reading] .harness-components-heading h1 {
+    font-size: 36px !important;
+    line-height: 1.08;
+  }
 }
 
 @media (max-width: 639px) {

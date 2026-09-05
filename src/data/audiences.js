@@ -24,9 +24,13 @@ const findCanonicalAudience = (audienceType) => {
   )) || null;
 };
 
-export const normalizeAudienceType = (audienceType) => (
-  findCanonicalAudience(audienceType) || DEFAULT_AUDIENCE
-);
+// Unknown or missing tags must never select a different presentation.
+export const normalizeAudienceType = (audienceType) => findCanonicalAudience(audienceType);
+
+export const getAudienceLabel = (audienceType) => {
+  if (audienceType === DEFAULT_AUDIENCE) return 'Default presentation';
+  return audienceType.charAt(0).toUpperCase() + audienceType.slice(1);
+};
 
 export const getEffectiveAudiences = (slide) => (
   Array.isArray(slide?.audiences) && slide.audiences.length > 0
@@ -36,6 +40,7 @@ export const getEffectiveAudiences = (slide) => (
 
 export const isSlideVisibleForAudience = (slide, audienceType) => {
   const targetAudience = normalizeAudienceType(audienceType);
+  if (!targetAudience) return false;
   const audiences = getEffectiveAudiences(slide);
 
   return audiences.some((audience) => findCanonicalAudience(audience) === targetAudience);

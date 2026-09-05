@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Slide from './components/Slide';
 import TranscriptionOverlay from './components/TranscriptionOverlay';
 import { slides as defaultSlides } from './data/slideDeck';
-import { isSlideVisibleForAudience } from './data/audiences';
+import { isSlideVisibleForAudience, normalizeAudienceType } from './data/audiences';
 import { findSlideIndexByPermalink, getSlidePermalinkValue } from './data/slidePermalinks';
 import { LOCAL_SLIDE_PREVIEW_EVENT, LOCAL_SLIDE_PREVIEW_KEY, isLocalPreviewHost, readLocalSlidePreview } from './utils/localSlidePreview';
 
@@ -68,14 +68,11 @@ const PREVIOUS_SLIDE_KEYS = new Set([
   'BrowserBack'
 ]);
 
-const isTextEntryTarget = (target) => {
+const isInteractiveTarget = (target) => {
   if (!(target instanceof HTMLElement)) return false;
-  const tagName = target.tagName.toLowerCase();
   return (
     target.isContentEditable ||
-    tagName === 'input' ||
-    tagName === 'textarea' ||
-    tagName === 'select'
+    !!target.closest('button, a[href], input, textarea, select, summary, video, audio, [role="button"], [role="slider"], [role="textbox"]')
   );
 };
 
@@ -93,6 +90,7 @@ const Presentation = () => {
     const raw = (params.get('audience') || '').trim();
     return raw || null;
   }, []);
+  const validAudience = normalizeAudienceType(audienceType);
 
   useEffect(() => {
     const previousBodyOverflow = document.body.style.overflow;
@@ -176,6 +174,7 @@ const Presentation = () => {
 
   // Keep the selected slide anchored to a visible slide in the filtered set.
   useEffect(() => {
+    if (!validAudience) return;
     if (filteredSlides.length === 0) {
       if (currentSlideRef !== null) {
         setCurrentSlideRef(null);
@@ -186,7 +185,7 @@ const Presentation = () => {
     if (findSlideIndexByPermalink(filteredSlides, currentSlideRef) === -1) {
       setCurrentSlideRef(getSlidePermalinkValue(filteredSlides[0]));
     }
-  }, [filteredSlides, currentSlideRef]);
+  }, [filteredSlides, currentSlideRef, validAudience]);
 
   useEffect(() => {
     nearbyVideoAssets.forEach(({ poster }) => {
@@ -198,6 +197,7 @@ const Presentation = () => {
 
   // Sync URL hash with current slide
   useEffect(() => {
+    if (!validAudience) return;
     const newHash = buildSlideHash(currentSlide ? getSlidePermalinkValue(currentSlide) : null);
 
     if (window.location.hash !== newHash) {
@@ -212,7 +212,7 @@ const Presentation = () => {
     if (isPopstateNav.current) {
       isPopstateNav.current = false;
     }
-  }, [currentSlide, currentSlideRef]);
+  }, [currentSlide, currentSlideRef, validAudience]);
 
   // Handle browser back/forward and direct hash changes.
   useEffect(() => {
@@ -267,9 +267,15 @@ const Presentation = () => {
 
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (isTextEntryTarget(e.target) || e.altKey || e.ctrlKey || e.metaKey) {
+      if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey) {
         return;
       }
+      // Buttons own Enter/Space. Navigation arrows still work after a mouse
+      // click focuses one of our previous/next buttons; media and form controls
+      // keep all their native keyboard behavior.
+      const navigationButton = e.target instanceof HTMLElement && e.target.closest('.presentation-nav__button');
+      const activationKey = e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar';
+      if (isInteractiveTarget(e.target) && (!navigationButton || activationKey)) return;
 
       if (NEXT_SLIDE_KEYS.has(e.key)) {
         e.preventDefault();
@@ -288,8 +294,8 @@ const Presentation = () => {
       }
     };
 
-    window.addEventListener('keydown', handleKeyDown, true);
-    return () => window.removeEventListener('keydown', handleKeyDown, true);
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
   }, [nextSlide, prevSlide, goToFirstSlide, goToLastSlide]);
 
   const slideVariants = {
@@ -318,24 +324,24 @@ const Presentation = () => {
 
   // Guardrail: no audience param → don't render the deck.
   // Visiting the root URL should not display all slides unfiltered.
-  if (!audienceType) {
+  if (!validAudience) {
     return (
       <div
         className="presentation-gate w-screen h-screen flex items-center justify-center overflow-hidden relative"
-        role="application"
         aria-label="Presentation gate"
       >
         <div className="presentation-gate__rule" />
         <div className="max-w-[680px] px-10 text-center">
           <div className="tritonai-kicker mb-5">
-            Access required
+            Presentation link required
           </div>
           <h1 className="presentation-gate__title">
-            This presentation is filtered by audience.
+            {audienceType ? 'This audience link is not recognized.' : 'Open your audience presentation link.'}
           </h1>
           <p className="presentation-gate__copy">
-            Open the link you were sent — it includes the right audience tag.
-            The root URL doesn&rsquo;t expose the full deck.
+            {audienceType
+              ? 'Check that you copied the complete link, or ask the presenter for an updated one.'
+              : 'Use the complete link you were sent. It includes the audience tag for your presentation.'}
           </p>
           <div className="presentation-gate__tag">
             <span>tritongpt-deck.vercel.app/?audience=</span>
@@ -409,11 +415,13 @@ const Presentation = () => {
               data-slide-layout={currentSlide.layout || currentSlide.type || 'default'}
               data-slide-slug={currentSlide.slug}
               data-slide-tone={currentSlide.dark ? 'dark' : 'light'}
+              data-slide-variant={currentSlide.variant}
+              data-mobile-reading={(['solution-showcase', 'solution-showcase-video', 'data-dashboard'].includes(currentSlide.layout) || currentSlide.variant === 'harness-components-framework') || undefined}
             >
               <Slide slide={currentSlide} />
               {currentSlide.claimNote && (
                 <div
-                  className="pointer-events-none absolute bottom-2 left-2 z-40 max-w-[72vw] rounded-lg border border-white/60 bg-white/88 px-2.5 py-1 text-[10.5px] font-semibold leading-tight text-slate-600 shadow-sm backdrop-blur-sm sm:bottom-4 sm:left-24 sm:max-w-[30vw] sm:text-[11.5px]"
+                  className="presentation-claim-note pointer-events-none absolute bottom-2 left-2 z-40 max-w-[72vw] rounded-lg border border-white/60 bg-white/88 px-2.5 py-1 text-[10.5px] font-semibold leading-tight text-slate-600 shadow-sm backdrop-blur-sm sm:bottom-4 sm:left-24 sm:max-w-[30vw] sm:text-[11.5px]"
                   aria-label={`Claim context: ${currentSlide.claimNote}`}
                 >
                   {currentSlide.claimNote}
