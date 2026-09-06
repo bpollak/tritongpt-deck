@@ -4,6 +4,7 @@ Open `/manage` on the local or published application.
 
 ## Find and preview
 
+- Use **Deck views** at the top of the manager to open any audience's complete presentation in a new tab. Each quick link shows its full slide count, independently of the search and presentation filters below. A zero count indicates an empty view.
 - Search titles, topics, references, or text within a slide. Multiple search words must all match.
 - Choose **Entire library** to see every managed slide, or choose **Default presentation** or another audience to see its assigned slides.
 - The list stays in shared deck order. The number on each thumbnail is its position in the entire library.

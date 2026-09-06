@@ -1,3 +1,11 @@
+.slide-library-views { margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid #e2e8ee; }
+.slide-library-views h3 { color: #182b49; font-size: 16px; font-weight: 700; }
+.slide-library-views p { margin-top: 4px; color: #52616b; font-size: 13px; }
+.slide-library-views__links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.slide-library-views__links a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; max-width: 100%; padding: 8px 12px; border: 1px solid #b7cbd8; border-radius: 6px; color: #00629b; background: #f5f9fc; font-size: 13px; font-weight: 700; }
+.slide-library-views__links a:hover { background: #e7f3f8; border-color: #00629b; }
+.slide-library-views__links a:focus-visible { outline: 3px solid #00629b; outline-offset: 3px; }
+.slide-library-views__count { color: #52616b; font-size: 12px; font-weight: 400; }
 .slide-library-filters { display: flex; align-items: end; flex-wrap: wrap; gap: 16px; }
 .slide-library-search { flex: 1 1 300px; min-width: 0; }
 .slide-library-filters label { display: block; margin-bottom: 6px; color: #37474f; font-size: 13px; font-weight: 700; }

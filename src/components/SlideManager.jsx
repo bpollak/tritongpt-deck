@@ -358,6 +358,30 @@ const SlideManager = ({ onClose, standalone = false }) => {
             )}
           </div>
 
+          <nav className="slide-library-views" aria-label="Deck views">
+            <h3>Deck views</h3>
+            <p>Quick links to full presentations. Opens in a new tab.</p>
+            <div className="slide-library-views__links">
+              {AUDIENCE_TYPES.map((audience) => {
+                const count = selectLibrarySlides(updatedSlides, { audience }).length;
+                const label = getAudienceLabel(audience);
+                return (
+                  <a
+                    key={audience}
+                    href={`/?audience=${encodeURIComponent(audience)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${label}, ${count} slides (opens in a new tab)`}
+                  >
+                    <span>{label}</span>
+                    <span className="slide-library-views__count">{count}</span>
+                    <ExternalLink size={14} aria-hidden="true" />
+                  </a>
+                );
+              })}
+            </div>
+          </nav>
+
           <div className="slide-library-filters">
             <div className="slide-library-search">
               <label htmlFor="slide-search">Search slides</label>
