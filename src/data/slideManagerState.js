@@ -40,6 +40,8 @@ export const slideManagerState = {
     "video-tritonai-harness-walkthrough",
     "tritonai-harness-sessions",
     "tritonai-harness-prompts",
+    "instructional-ai-tutor",
+    "instructional-ai-tutor-demo",
     "campus-app-hosting",
     "campus-app-hosting-intake",
     "harness-memory-architecture",
@@ -353,6 +355,12 @@ export const slideManagerState = {
       "all",
       "PK",
       "regent"
+    ],
+    "instructional-ai-tutor": [
+      "PK"
+    ],
+    "instructional-ai-tutor-demo": [
+      "PK"
     ],
     "tritonai-harness-prompts": [
       "internal",

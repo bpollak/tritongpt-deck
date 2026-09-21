@@ -2289,6 +2289,92 @@ export const slides = [
     ]
   },
   {
+    "id": 202.7,
+    "slug": "instructional-ai-tutor",
+    "type": "content",
+    "layout": "solution-showcase",
+    "title": "Instructional AI: The AI Tutor in Canvas",
+    "subtitle": "TritonGPT-powered tutors, configured and controlled by the instructor",
+    "backgroundColor": "#F5F0E6",
+    "imageSrc": "/media/instructional-ai-page.png",
+    "managerLabel": "Instructional AI: AI Tutor in Canvas",
+    "managerSummary": "Overview of the Canvas-native TritonGPT AI Tutor from tritonai.ucsd.edu/tritongpt/instruction.html: instructor-selected sources, Socratic or directive mode, and 2025-2026 pilot survey results.",
+    "content": [
+      {
+        "heading": "Native to Canvas",
+        "text": "Students open the tutor one click from their course material. Each course gets a tutor grounded in instructor-selected Canvas pages and files, Google Drive folders, and approved websites."
+      },
+      {
+        "heading": "Instructor-Controlled Knowledge",
+        "text": "Leave out anything students should not see early, such as assignments or study guides. As content is added or removed during the term, the tutor learns and unlearns to match."
+      },
+      {
+        "heading": "Socratic or Directive",
+        "text": "Choose a Socratic mode that guides students to explain their reasoning, or a directive mode with straightforward explanations. Create separate tutors for units, lab sections, or study groups."
+      }
+    ],
+    "stats": [
+      {
+        "label": "Understood Concepts",
+        "value": "81%",
+        "sub": "Said the tutor helped them understand concepts",
+        "compact": true
+      },
+      {
+        "label": "Easy to Use",
+        "value": "86%",
+        "sub": "Found the assistant easy to use",
+        "compact": true
+      },
+      {
+        "label": "Want It Again",
+        "value": "67%",
+        "sub": "Want it available in future courses",
+        "compact": true
+      }
+    ],
+    "claimNote": "Source: tritonai.ucsd.edu/tritongpt/instruction.html · 2025-2026 pilot, 68 student survey responses · reviewed Sep 21, 2026",
+    "audiences": [
+      "PK"
+    ]
+  },
+  {
+    "id": 202.8,
+    "slug": "instructional-ai-tutor-demo",
+    "type": "content",
+    "layout": "feature-grid",
+    "title": "Demo: Setting Up an AI Tutor in Canvas",
+    "subtitle": "Placeholder: a live demo or recording follows this script",
+    "backgroundColor": "#F5F0E6",
+    "managerLabel": "Demo placeholder: AI Tutor in Canvas",
+    "managerSummary": "Placeholder for the Instructional AI tutor demo. The four panels follow the demo script: pilot origins in TritonGPT, Canvas integration, minutes-long setup with content controls, and Socratic versus directive teaching styles.",
+    "content": [
+      {
+        "heading": "1. From TritonGPT to Canvas",
+        "text": "For over a year the pilot ran inside TritonGPT: two agents per course, one for students and one for the instructor, each grounded in a Google Drive folder the instructor controlled. The next step brought the tutor into Canvas, one click from the rest of the course.",
+        "icon": "GraduationCap"
+      },
+      {
+        "heading": "2. Set Up in Minutes",
+        "text": "The instructor creates an agent, gives it a name and a purpose, and chooses exactly what it can draw from: Canvas pages and files, Google Drive folders, and approved websites.",
+        "icon": "Blocks"
+      },
+      {
+        "heading": "3. Control What It Knows",
+        "text": "Leave out upcoming assignments and exam study guides, or let Canvas release dates hold content back from ingestion. As material is added or removed during the term, the tutor's knowledge updates to match.",
+        "icon": "ShieldCheck"
+      },
+      {
+        "heading": "4. Choose the Teaching Style",
+        "text": "Socratic mode preserves the productive struggle of working through a problem; directive mode gives straightforward explanations. Start from preset behaviors or edit the tutor's instructions directly.",
+        "icon": "BookOpen"
+      }
+    ],
+    "audiences": [
+      "PK"
+    ]
+  },
+  {
     "id": 202,
     "slug": "tritonai-harness-sessions",
     "type": "content",
