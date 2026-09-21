@@ -1184,12 +1184,12 @@ const Slide = ({ slide, staticPreview = false }) => {
       const items = section.items || [];
       return (
         <motion.div key={sIdx} initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 + sIdx * 0.15, duration: 0.5 }}
-          className="flex flex-wrap justify-center gap-4 sm:gap-6 max-w-4xl mx-auto">
+          className={`flex flex-wrap justify-center ${section.compact ? 'gap-2 sm:gap-3 max-w-6xl w-full' : 'gap-4 sm:gap-6 max-w-4xl'} mx-auto`}>
           {items.map((item, i) => {
             const IconComp = iconMap[item.icon] || AlertTriangle;
             return (
               <motion.div key={i} initial={{ opacity: 0, x: i === 0 ? -20 : 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.6 + i * 0.1, duration: 0.5 }}
-                className="flex-1 min-w-[200px] max-w-[360px] bg-white/70 rounded-xl p-3 sm:p-4 border border-gray-100 shadow-sm flex items-start gap-3">
+                className={`flex-1 min-w-[200px] bg-white/70 rounded-xl border border-gray-100 shadow-sm flex items-start gap-3 ${section.compact ? 'max-w-[600px] p-2 sm:p-2.5' : 'max-w-[360px] p-3 sm:p-4'}`}>
                 <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: (item.color || '#00629B') + '18' }}>
                   <IconComp size={18} style={{ color: item.color || '#00629B' }} />
                 </div>
@@ -1207,14 +1207,30 @@ const Slide = ({ slide, staticPreview = false }) => {
 
     const renderMetricGrid = (section, sIdx) => {
       const items = section.items || [];
+      const strip = section.variant === 'strip';
       return (
         <motion.div key={sIdx} initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 + sIdx * 0.15, duration: 0.5 }}
           className={clsx(
-            "grid grid-cols-2 gap-3 sm:gap-4 mx-auto",
+            "grid grid-cols-2 mx-auto",
+            strip ? "gap-2 sm:gap-3 w-full" : "gap-3 sm:gap-4",
             items.length === 4 ? "sm:grid-cols-4 max-w-6xl" : "sm:grid-cols-3 max-w-4xl"
           )}>
           {items.map((item, i) => {
             const IconComp = iconMap[item.icon] || BarChart3;
+            if (strip) {
+              return (
+                <motion.div key={i} initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.3 + i * 0.08, type: 'spring', stiffness: 200 }}
+                  className="bg-white/80 rounded-xl px-3 py-2 sm:px-4 sm:py-2.5 border border-gray-100 shadow-sm flex items-center gap-2.5 sm:gap-3 text-left">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg flex-shrink-0 flex items-center justify-center" style={{ backgroundColor: (item.color || '#00629B') + '18' }}>
+                    <IconComp size={18} style={{ color: item.color || '#00629B' }} />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="text-xl sm:text-2xl md:text-3xl font-black text-ucsd-navy leading-none">{item.value}</div>
+                    <div className="text-slate-500 text-[12px] sm:text-xs md:text-sm font-semibold mt-0.5 leading-tight">{item.label}</div>
+                  </div>
+                </motion.div>
+              );
+            }
             return (
               <motion.div key={i} initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.3 + i * 0.08, type: 'spring', stiffness: 200 }}
                 className="bg-white/80 rounded-xl p-3 sm:p-4 border border-gray-100 shadow-sm text-center">
@@ -1282,7 +1298,67 @@ const Slide = ({ slide, staticPreview = false }) => {
       );
     };
 
+    const renderStackedColumns = (section, sIdx) => {
+      const items = section.items || [];
+      const series = section.series || [];
+      const totalOf = (it) => series.reduce((sum, sr) => sum + (Number(it[sr.key]) || 0), 0);
+      const max = section.maxValue || Math.max(...items.map(totalOf), 1);
+      const barCeiling = 82; // percent of chart height used by the tallest column, leaving room for the value label
+      return (
+        <motion.div key={sIdx} initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 + sIdx * 0.1, duration: 0.5 }}
+          className="w-full max-w-6xl mx-auto flex-1 min-h-0 flex flex-col">
+          <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-1 sm:mb-2">
+            {section.sectionTitle && <div className="text-ucsd-navy text-sm sm:text-base md:text-lg font-black">{section.sectionTitle}</div>}
+            {series.length > 0 && (
+              <div className="flex items-center gap-3 sm:gap-5">
+                {series.map((sr) => (
+                  <div key={sr.key} className="flex items-center gap-1.5">
+                    <span className="inline-block w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-sm" style={{ backgroundColor: sr.color || '#00629B' }} />
+                    <span className="text-ucsd-navy text-[11px] sm:text-xs md:text-sm font-semibold">{sr.label}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+          <div className="flex-1 min-h-0 flex items-end gap-2 sm:gap-3 md:gap-5 px-1 sm:px-2 border-b-2 border-ucsd-navy/15">
+            {items.map((item, i) => {
+              const total = totalOf(item);
+              const pct = (total / max) * barCeiling;
+              return (
+                <div key={i} className="flex-1 h-full flex items-end justify-center">
+                  <div className="relative w-full" style={{ height: `${pct}%` }}>
+                    <motion.div initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 + i * 0.08, duration: 0.4 }}
+                      className="absolute left-0 right-0 -top-5 sm:-top-7 md:-top-9 text-center text-ucsd-navy font-black text-xs sm:text-lg md:text-2xl leading-none whitespace-nowrap">
+                      {item.displayValue}
+                    </motion.div>
+                    <motion.div className="absolute inset-0 rounded-t-md sm:rounded-t-lg overflow-hidden flex flex-col-reverse origin-bottom"
+                      style={{ boxShadow: item.highlight ? '0 0 0 2px #FC8900' : 'none' }}
+                      initial={{ scaleY: 0 }} animate={{ scaleY: 1 }} transition={{ delay: 0.5 + i * 0.08, duration: 0.7, ease: 'easeOut' }}>
+                      {series.map((sr) => {
+                        const v = Number(item[sr.key]) || 0;
+                        return <div key={sr.key} style={{ height: `${(v / total) * 100}%`, backgroundColor: sr.color || '#00629B' }} />;
+                      })}
+                    </motion.div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          <div className="flex gap-2 sm:gap-3 md:gap-5 px-1 sm:px-2 mt-1 sm:mt-1.5">
+            {items.map((item, i) => (
+              <div key={i} className="flex-1 text-center">
+                <div className={`text-[11px] sm:text-sm md:text-base font-bold leading-tight ${item.highlight ? 'text-ucsd-orange' : 'text-ucsd-navy'}`}>{item.label}</div>
+                {item.annotation && <div className="text-slate-500 text-[9px] sm:text-[11px] md:text-xs leading-tight mt-0.5">{item.annotation}</div>}
+              </div>
+            ))}
+          </div>
+          {section.caption && <div className="text-slate-500 text-[10px] sm:text-xs italic text-center mt-1 sm:mt-1.5">{section.caption}</div>}
+        </motion.div>
+      );
+    };
+
     const sectionRenderers = {
+      'stacked-columns': renderStackedColumns,
       'gauge-row': renderGaugeRow,
       'donut-row': renderDonutRow,
       'horizontal-bars': renderHorizontalBars,
@@ -1299,13 +1375,13 @@ const Slide = ({ slide, staticPreview = false }) => {
 
         {/* Title */}
         <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-          className="text-center pt-5 sm:pt-8 pb-3 sm:pb-5 px-4 z-10">
+          className={`text-center px-4 z-10 ${slide.compact ? 'pt-3 sm:pt-4 pb-1.5 sm:pb-2' : 'pt-5 sm:pt-8 pb-3 sm:pb-5'}`}>
           <h1 className="text-xl sm:text-3xl md:text-4xl font-black text-ucsd-navy leading-tight">{slide.title}</h1>
-          {slide.subtitle && <div className="text-ucsd-blue text-[13px] sm:text-sm md:text-base font-bold mt-1 max-w-3xl mx-auto">{slide.subtitle}</div>}
+          {slide.subtitle && <div className={`text-ucsd-blue text-[13px] sm:text-sm md:text-base font-bold mt-1 mx-auto ${slide.compact ? 'max-w-5xl' : 'max-w-3xl'}`}>{slide.subtitle}</div>}
         </motion.div>
 
         {/* Dashboard sections */}
-        <div className="slide-dashboard-sections flex-1 flex flex-col justify-evenly gap-3 sm:gap-4 px-4 sm:px-8 md:px-12 pb-16 sm:pb-20 z-10 overflow-hidden">
+        <div className={`slide-dashboard-sections flex-1 flex flex-col z-10 overflow-hidden px-4 sm:px-8 md:px-12 ${slide.compact ? 'justify-start gap-2 sm:gap-3 pb-10 sm:pb-12' : 'justify-evenly gap-3 sm:gap-4 pb-16 sm:pb-20'}`}>
           {sections.map((section, sIdx) => {
             const renderer = sectionRenderers[section.type];
             return renderer ? renderer(section, sIdx) : null;

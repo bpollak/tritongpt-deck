@@ -2134,110 +2134,137 @@ export const slides = [
     "slug": "llm-api-usage-attribution",
     "type": "content",
     "layout": "data-dashboard",
-    "title": "Shared Model Access Reached 309.4B Tokens in Six Months",
-    "subtitle": "TritonAI LLM Gateway activity · January 1–June 30, 2026",
+    "compact": true,
+    "title": "TritonAI LLM Gateway Usage",
+    "subtitle": "Aggregate API activity across UC San Diego, January 1 to August 31, 2026. Public aggregate, no user-level records.",
     "backgroundColor": "#F5F0E6",
     "dashboardSections": [
       {
         "type": "metric-grid",
+        "variant": "strip",
         "items": [
           {
-            "value": "309.4B",
-            "label": "Tokens processed",
-            "icon": "BarChart3",
+            "value": "455.3B",
+            "label": "Tokens processed, input plus output",
+            "icon": "Database",
             "color": "#00629B"
           },
           {
-            "value": "105.1M",
-            "label": "Completed API requests",
-            "icon": "Zap",
+            "value": "143.9M",
+            "label": "API requests, successful and failed",
+            "icon": "BarChart3",
             "color": "#00C6D7"
           },
           {
-            "value": "95.3%",
-            "label": "Tokens served by self-hosted models",
+            "value": "92.6%",
+            "label": "Tokens on self-hosted and internal routes",
             "icon": "Server",
             "color": "#6E963B"
           },
           {
-            "value": "73.2B",
-            "label": "June tokens · six-month high",
+            "value": "78.9B",
+            "label": "Tokens in August, highest month to date",
             "icon": "TrendingUp",
             "color": "#FC8900"
           }
         ]
       },
       {
-        "type": "stacked-route-bars",
-        "sectionTitle": "Monthly token volume",
-        "sectionSubtitle": "Self-hosted models carried most gateway traffic while total usage reached a new high in June.",
-        "maxValue": 73.2,
-        "items": [
+        "type": "stacked-columns",
+        "sectionTitle": "Monthly token volume, 2026",
+        "series": [
           {
-            "label": "Jan",
-            "selfHosted": 43.8,
-            "cloud": 0.5,
-            "total": 44.3,
-            "displayValue": "44.3B"
-          },
-          {
-            "label": "Feb",
-            "selfHosted": 48.3,
-            "cloud": 0.7,
-            "total": 49.0,
-            "displayValue": "49.0B"
-          },
-          {
-            "label": "Mar",
-            "selfHosted": 43.7,
-            "cloud": 1.0,
-            "total": 44.8,
-            "displayValue": "44.8B"
-          },
-          {
-            "label": "Apr",
-            "selfHosted": 48.5,
-            "cloud": 1.5,
-            "total": 50.1,
-            "displayValue": "50.1B"
-          },
-          {
-            "label": "May",
-            "selfHosted": 42.5,
-            "cloud": 5.6,
-            "total": 48.1,
-            "displayValue": "48.1B"
-          },
-          {
-            "label": "Jun",
-            "selfHosted": 67.8,
-            "cloud": 5.4,
-            "total": 73.2,
-            "displayValue": "73.2B",
-            "highlight": true
-          }
-        ],
-        "caption": "Commercial API model families are classified as cloud; open-weight models running on UC-controlled infrastructure are classified as self-hosted."
-      },
-      {
-        "type": "stat-callouts",
-        "items": [
-          {
-            "icon": "TrendingUp",
-            "stat": "Usage accelerated",
-            "detail": "June volume was 65% higher than January and established the six-month high.",
+            "key": "selfHosted",
+            "label": "Self-hosted and internal",
             "color": "#00629B"
           },
           {
-            "icon": "ShieldCheck",
-            "stat": "UC-controlled infrastructure carried the load",
-            "detail": "Self-hosted models served 95.3% of recorded tokens across the measurement period.",
+            "key": "cloud",
+            "label": "Cloud",
+            "color": "#FFCD00"
+          }
+        ],
+        "items": [
+          {
+            "label": "Jan 2026",
+            "selfHosted": 43.8,
+            "cloud": 0.5,
+            "displayValue": "44.3B",
+            "annotation": "43.8B / 0.5B cloud"
+          },
+          {
+            "label": "Feb 2026",
+            "selfHosted": 48.3,
+            "cloud": 0.7,
+            "displayValue": "49.0B",
+            "annotation": "48.3B / 0.7B cloud"
+          },
+          {
+            "label": "Mar 2026",
+            "selfHosted": 43.7,
+            "cloud": 1.0,
+            "displayValue": "44.8B",
+            "annotation": "43.7B / 1.0B cloud"
+          },
+          {
+            "label": "Apr 2026",
+            "selfHosted": 48.7,
+            "cloud": 1.4,
+            "displayValue": "50.1B",
+            "annotation": "48.7B / 1.4B cloud"
+          },
+          {
+            "label": "May 2026",
+            "selfHosted": 42.8,
+            "cloud": 5.3,
+            "displayValue": "48.1B",
+            "annotation": "42.8B / 5.3B cloud"
+          },
+          {
+            "label": "Jun 2026",
+            "selfHosted": 68.3,
+            "cloud": 4.9,
+            "displayValue": "73.2B",
+            "annotation": "68.3B / 4.9B cloud"
+          },
+          {
+            "label": "Jul 2026",
+            "selfHosted": 61.5,
+            "cloud": 5.6,
+            "displayValue": "67.1B",
+            "annotation": "61.5B / 5.6B cloud"
+          },
+          {
+            "label": "Aug 2026",
+            "selfHosted": 64.5,
+            "cloud": 14.3,
+            "displayValue": "78.9B",
+            "annotation": "64.5B / 14.3B cloud · +17.6%",
+            "highlight": true
+          }
+        ],
+        "caption": "Cloud tokens grew from 0.5B in January to 14.3B in August as more workloads moved to cloud routes. Self-hosted and internal includes internal TritonAI routes."
+      },
+      {
+        "type": "stat-callouts",
+        "compact": true,
+        "items": [
+          {
+            "icon": "TrendingUp",
+            "stat": "What is driving growth",
+            "detail": "Production applications, embeddings, and automated background services. June and August were the two largest months; August cloud usage more than doubled July's.",
+            "color": "#00629B"
+          },
+          {
+            "icon": "CheckCircle",
+            "stat": "How to read these numbers",
+            "detail": "Gateway-recorded input plus output tokens, reconciled to 455,295,685,475 tokens and 143,909,714 request records. August includes all 31 days and the September 2 hosting-audit correction.",
             "color": "#6E963B"
           }
         ]
       }
     ],
-    "claimNote": "Source: TritonAI Developer APIs gateway usage report · public aggregate, no user-level records · reviewed Jul 25, 2026 · includes ~0.15B unattributed probe/test tokens",
+    "claimNote": "Source: TritonAI Developer APIs gateway usage report (tritonai.ucsd.edu/developer-apis) · public aggregate, no user-level records · reviewed Sep 3, 2026 · August includes the Sep 2 hosting-audit correction",
     "audiences": [
       "internal",
       "technical",

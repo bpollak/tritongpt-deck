@@ -3,6 +3,9 @@
 ## Project Overview
 This project is a **React-based single-page application (SPA)** designed to serve as a dynamic, interactive presentation deck for **UC San Diego's TritonAI** initiatives. It replaces traditional PowerPoint slides with a web-native experience featuring rich animations, responsive layouts, and embedded media.
 
+## HARD RULE: run nothing inside this iCloud directory
+This repo is under `~/Documents` (iCloud Drive). Evicted "dataless" files hang any process that reads them, so never run `vite`, `npm`, `node`, builds, or tests here. Edit here; run via `scripts/run-outside-icloud.sh [command]`, which mirrors the repo to `~/dev/tritongpt-deck-run` and runs there. See `CLAUDE.md` / `AGENTS.md`.
+
 ## Technology Stack
 -   **Build Tool**: [Vite](https://vitejs.dev/).
 -   **Framework**: [React](https://react.dev/) (v19).
