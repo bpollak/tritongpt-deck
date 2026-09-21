@@ -2283,6 +2283,7 @@ export const slides = [
     "videoSrc": "/media/tritonai-harness-walkthrough-2026-09-07.mp4",
     "poster": "/media/tritonai-harness-walkthrough-2026-09-07-poster.jpg",
     "videoLoop": false,
+    "videoClearNav": true,
     "audiences": [
       "PK"
     ]

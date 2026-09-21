@@ -111,7 +111,9 @@ const Slide = ({ slide, staticPreview = false }) => {
         <video
           src={slide.videoSrc}
           poster={slide.poster}
-          className="absolute inset-0 h-full w-full object-contain"
+          className={`absolute inset-x-0 top-0 w-full object-contain ${
+            slide.videoClearNav ? 'bottom-16 h-[calc(100%-4rem)]' : 'bottom-0 h-full'
+          }`}
           controls
           autoPlay={!staticPreview && slide.videoAutoPlay !== false}
           preload={staticPreview ? 'metadata' : undefined}
