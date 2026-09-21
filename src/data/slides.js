@@ -2293,10 +2293,9 @@ export const slides = [
         "28 Aug",
         "4 Sep",
         "11 Sep",
-        "18 Sep",
-        "21 Sep*"
+        "18 Sep"
       ],
-      "xAxisTitle": "Week (approximate counts; * = partial week through Sep 21, 2026)",
+      "xAxisTitle": "Week (approximate counts)",
       "yAxis": [
         "800",
         "700",
@@ -2323,8 +2322,7 @@ export const slides = [
             590,
             410,
             355,
-            640,
-            50
+            640
           ],
           "areaFill": true
         }
@@ -2359,10 +2357,9 @@ export const slides = [
         "28 Aug",
         "4 Sep",
         "11 Sep",
-        "18 Sep",
-        "21 Sep*"
+        "18 Sep"
       ],
-      "xAxisTitle": "Week (approximate counts; * = partial week through Sep 21, 2026)",
+      "xAxisTitle": "Week (approximate counts)",
       "yAxis": [
         "2,000",
         "1,750",
@@ -2389,8 +2386,7 @@ export const slides = [
             1600,
             1180,
             950,
-            1800,
-            100
+            1800
           ],
           "areaFill": true
         }
