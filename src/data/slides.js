@@ -2284,6 +2284,7 @@ export const slides = [
     "poster": "/media/tritonai-harness-walkthrough-2026-09-07-poster.jpg",
     "videoLoop": false,
     "videoClearNav": true,
+    "hideDemoBadge": true,
     "audiences": [
       "PK"
     ]
