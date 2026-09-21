@@ -443,26 +443,22 @@ export const slideManagerState = {
     ],
     "ai-roadmap-2026": [
       "all",
-      "internal",
-      "PK"
+      "internal"
     ],
     "ai-roadmap-2026-q2": [
       "all",
-      "internal",
-      "PK"
+      "internal"
     ],
     "ai-roadmap-2026-q3": [
       "all",
       "executive",
-      "internal",
-      "PK"
+      "internal"
     ],
     "tritongpt-adoption-synthesis": [
       "all",
       "technical",
       "executive",
       "internal",
-      "PK",
       "regent",
       "LMU"
     ],

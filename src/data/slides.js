@@ -6,8 +6,6 @@ export const slides = [
     "content": [],
     "title": "TritonAI Operating Review",
     "subtitle": "Adoption, delivery, and the next decisions",
-    "presenterName": "Brett Pollak",
-    "presenterTitle": "Executive Director, IT Services",
     "layout": "title-hero",
     "audiences": [
       "PK"
@@ -4181,7 +4179,6 @@ export const slides = [
     "audiences": [
       "internal",
       "all",
-      "PK",
       "regent"
     ]
   },
@@ -4294,7 +4291,6 @@ export const slides = [
     "audiences": [
       "internal",
       "all",
-      "PK",
       "regent"
     ]
   },
@@ -4392,7 +4388,6 @@ export const slides = [
     "audiences": [
       "internal",
       "all",
-      "PK",
       "regent"
     ]
   },
@@ -4464,7 +4459,6 @@ export const slides = [
       "technical",
       "executive",
       "internal",
-      "PK",
       "regent",
       "LMU"
     ]
