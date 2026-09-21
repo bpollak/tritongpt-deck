@@ -2302,35 +2302,29 @@ export const slides = [
     "content": [
       {
         "heading": "Native to Canvas",
-        "text": "Students open the tutor one click from their course material. Each course gets a tutor grounded in instructor-selected Canvas pages and files, Google Drive folders, and approved websites."
+        "text": "One click from the course material, grounded in instructor-selected Canvas pages and files, Google Drive folders, and approved websites."
       },
       {
         "heading": "Instructor-Controlled Knowledge",
-        "text": "Leave out anything students should not see early, such as assignments or study guides. As content is added or removed during the term, the tutor learns and unlearns to match."
+        "text": "Hold back assignments and study guides. As content is added or removed during the term, the tutor learns and unlearns to match."
       },
       {
         "heading": "Socratic or Directive",
-        "text": "Choose a Socratic mode that guides students to explain their reasoning, or a directive mode with straightforward explanations. Create separate tutors for units, lab sections, or study groups."
+        "text": "Guide students to explain their reasoning, or give direct explanations. Separate tutors per unit, lab section, or study purpose."
       }
     ],
     "stats": [
       {
-        "label": "Understood Concepts",
-        "value": "81%",
-        "sub": "Said the tutor helped them understand concepts",
-        "compact": true
+        "label": "Helped understanding",
+        "value": "81%"
       },
       {
-        "label": "Easy to Use",
-        "value": "86%",
-        "sub": "Found the assistant easy to use",
-        "compact": true
+        "label": "Easy to use",
+        "value": "86%"
       },
       {
-        "label": "Want It Again",
-        "value": "67%",
-        "sub": "Want it available in future courses",
-        "compact": true
+        "label": "Want it again",
+        "value": "67%"
       }
     ],
     "claimNote": "Source: tritonai.ucsd.edu/tritongpt/instruction.html · 2025-2026 pilot, 68 student survey responses · reviewed Sep 21, 2026",
@@ -2347,7 +2341,7 @@ export const slides = [
     "subtitle": "Placeholder: a live demo or recording follows this script",
     "backgroundColor": "#F5F0E6",
     "managerLabel": "Demo placeholder: AI Tutor in Canvas",
-    "managerSummary": "Placeholder for the Instructional AI tutor demo. The four panels follow the demo script: pilot origins in TritonGPT, Canvas integration, minutes-long setup with content controls, and Socratic versus directive teaching styles.",
+    "managerSummary": "Placeholder for the Instructional AI tutor demo. The three panels follow the demo script: pilot origins in TritonGPT and the move into Canvas, minutes-long setup with content controls, and Socratic versus directive teaching styles.",
     "content": [
       {
         "heading": "1. From TritonGPT to Canvas",
@@ -2356,16 +2350,11 @@ export const slides = [
       },
       {
         "heading": "2. Set Up in Minutes",
-        "text": "The instructor creates an agent, gives it a name and a purpose, and chooses exactly what it can draw from: Canvas pages and files, Google Drive folders, and approved websites.",
+        "text": "Create an agent, give it a name and a purpose, and choose what it can draw from: Canvas pages and files, Google Drive folders, and approved websites. Leave out assignments and exam study guides, or let Canvas release dates hold content back. As material changes, the tutor's knowledge updates to match.",
         "icon": "Blocks"
       },
       {
-        "heading": "3. Control What It Knows",
-        "text": "Leave out upcoming assignments and exam study guides, or let Canvas release dates hold content back from ingestion. As material is added or removed during the term, the tutor's knowledge updates to match.",
-        "icon": "ShieldCheck"
-      },
-      {
-        "heading": "4. Choose the Teaching Style",
+        "heading": "3. Choose the Teaching Style",
         "text": "Socratic mode preserves the productive struggle of working through a problem; directive mode gives straightforward explanations. Start from preset behaviors or edit the tutor's instructions directly.",
         "icon": "BookOpen"
       }
