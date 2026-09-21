@@ -2319,9 +2319,9 @@ export const slides = [
             "color": "#00629B"
           },
           {
-            "icon": "Users",
-            "stat": "~1K people",
-            "label": "Unique users who have started at least one session",
+            "icon": "BarChart3",
+            "stat": "~390 / week",
+            "label": "Average weekly sessions across the nine full weeks since launch",
             "color": "#6E963B"
           },
           {
