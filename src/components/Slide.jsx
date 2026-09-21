@@ -1420,6 +1420,7 @@ const Slide = ({ slide, staticPreview = false }) => {
           isTritonAIEvolutionSlide && "text-lg sm:text-2xl md:text-4xl mb-1 sm:mb-2 leading-tight",
           isHeroList && "mb-0 sm:mb-1",
           isTimelineEvolution && "mb-0.5 sm:mb-1 leading-none",
+          isAnalyticsChart && slide.chartData?.insights && "!mb-2 sm:!mb-3",
           isDark ? "text-white" : "text-ucsd-navy"
         )}
       >
@@ -5605,21 +5606,28 @@ const Slide = ({ slide, staticPreview = false }) => {
 
         // Fixed viewBox dimensions - this ensures consistent scaling
         const vbWidth = 1000;
-        const vbHeight = 450;
+        const vbHeight = slide.chartData.insights ? 300 : 450;
         const margin = { top: 50, right: 30, bottom: denseChart ? 74 : 50, left: 92 };
         const plotWidth = vbWidth - margin.left - margin.right;
         const plotHeight = vbHeight - margin.top - margin.bottom;
 
         return (
           <div className="w-full h-full flex flex-col items-center justify-start pt-2 px-2 sm:px-4">
-            <div className="w-full max-w-7xl bg-white rounded-xl shadow-lg p-4 sm:p-6">
+            <div className={clsx("w-full max-w-7xl bg-white rounded-xl shadow-lg", slide.chartData.insights ? "p-3 sm:p-4" : "p-4 sm:p-6")}>
               {/* Title */}
-              <h3 className="text-xl sm:text-3xl font-bold text-ucsd-navy text-center mb-2">
+              <h3 className={clsx("font-bold text-ucsd-navy text-center", slide.chartData.insights ? "text-lg sm:text-2xl mb-1" : "text-xl sm:text-3xl mb-2")}>
                 {slide.chartData.title}
               </h3>
 
+              {/* Headline takeaway */}
+              {slide.chartData.headline && (
+                <p className="text-center text-ucsd-blue font-semibold text-sm sm:text-base md:text-lg leading-snug max-w-5xl mx-auto mb-1">
+                  {slide.chartData.headline}
+                </p>
+              )}
+
               {/* Legend */}
-              <div className="flex justify-center gap-8 mb-3">
+              <div className={clsx("flex justify-center gap-8", slide.chartData.insights ? "mb-1" : "mb-3")}>
                 {slide.chartData.series.map((series, idx) => (
                   <div key={idx} className="flex items-center gap-2">
                     <svg width="24" height="24">
@@ -5633,7 +5641,7 @@ const Slide = ({ slide, staticPreview = false }) => {
               {/* Chart with Y-axis */}
               <div className="flex">
                 {/* Chart SVG (y-axis labels are drawn inside so they always line up with the grid) */}
-                <div className="flex-1" style={{ height: '450px' }}>
+                <div className="flex-1" style={{ height: slide.chartData.insights ? '250px' : '450px' }}>
                   <svg
                     viewBox={`0 0 ${vbWidth} ${vbHeight}`}
                     preserveAspectRatio="xMidYMid meet"
@@ -5779,9 +5787,33 @@ const Slide = ({ slide, staticPreview = false }) => {
               </div>
 
               {/* X-Axis Title */}
-              <div className="text-center mt-3">
+              <div className={clsx("text-center", slide.chartData.insights ? "mt-1" : "mt-3")}>
                 <span className="text-sm text-slate-400">{slide.chartData.xAxisTitle || 'Month'}</span>
               </div>
+
+              {/* What the numbers mean */}
+              {slide.chartData.insights && (
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3 mt-2">
+                  {slide.chartData.insights.map((item, i) => {
+                    const IconComp = iconMap[item.icon] || BarChart3;
+                    return (
+                      <motion.div key={i} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 + i * 0.1, duration: 0.4 }}
+                        className="flex items-center gap-3 rounded-xl border border-gray-100 bg-[#F5F0E6]/70 px-3 py-2 sm:px-4 sm:py-2.5">
+                        <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex-shrink-0 flex items-center justify-center" style={{ backgroundColor: (item.color || '#00629B') + '18' }}>
+                          <IconComp size={18} style={{ color: item.color || '#00629B' }} />
+                        </div>
+                        <div className="min-w-0">
+                          <div className="text-lg sm:text-xl md:text-2xl font-black text-ucsd-navy leading-none">{item.stat}</div>
+                          <div className="text-slate-600 text-[11px] sm:text-xs md:text-sm font-medium leading-tight mt-1">{item.label}</div>
+                        </div>
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              )}
+              {slide.chartData.footnote && (
+                <div className="text-center text-slate-400 text-[10px] sm:text-xs italic mt-1.5 sm:mt-2">{slide.chartData.footnote}</div>
+              )}
             </div>
           </div>
         );

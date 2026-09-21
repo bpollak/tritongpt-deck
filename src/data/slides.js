@@ -2297,7 +2297,7 @@ export const slides = [
     "layout": "analytics-chart",
     "backgroundColor": "#F5F0E6",
     "chartData": {
-      "title": "TritonAI Harness - Weekly Sessions (Jul-Sep 2026)",
+      "title": "How often people use the Harness: weekly sessions since launch",
       "xAxis": [
         "17 Jul",
         "24 Jul",
@@ -2310,6 +2310,28 @@ export const slides = [
         "11 Sep",
         "18 Sep"
       ],
+      "headline": "Weekly sessions more than tripled from the first full week to a record 640 the week of September 18, with adoption stepping up rather than plateauing.",
+      "insights": [
+          {
+            "icon": "Layers",
+            "stat": "3.5K sessions",
+            "label": "Total sessions since the July launch",
+            "color": "#00629B"
+          },
+          {
+            "icon": "Users",
+            "stat": "~1K people",
+            "label": "Unique users who have started at least one session",
+            "color": "#6E963B"
+          },
+          {
+            "icon": "TrendingUp",
+            "stat": "3.2x growth",
+            "label": "Weekly sessions, first full week (200) to latest full week (640)",
+            "color": "#FC8900"
+          }
+        ],
+      "footnote": "A session is counted each time the Harness starts a model session on a user's computer. Approximate weekly counts through September 18, 2026, from Harness usage telemetry.",
       "xAxisTitle": "Week (approximate counts)",
       "yAxis": [
         "800",
@@ -2361,7 +2383,7 @@ export const slides = [
     "layout": "analytics-chart",
     "backgroundColor": "#F5F0E6",
     "chartData": {
-      "title": "TritonAI Harness - Weekly Prompts (Jul-Sep 2026)",
+      "title": "How much work runs through the Harness: weekly prompts since launch",
       "xAxis": [
         "17 Jul",
         "24 Jul",
@@ -2374,6 +2396,28 @@ export const slides = [
         "11 Sep",
         "18 Sep"
       ],
+      "headline": "Prompts tripled alongside sessions while depth of use held at about 3 prompts per session, so new users are doing real work, not just trying the app once.",
+      "insights": [
+          {
+            "icon": "Zap",
+            "stat": "9.7K prompts",
+            "label": "Total prompts sent to models since the July launch",
+            "color": "#00A99D"
+          },
+          {
+            "icon": "RefreshCw",
+            "stat": "~2.8 per session",
+            "label": "Prompts per session, steady from July through September",
+            "color": "#00629B"
+          },
+          {
+            "icon": "TrendingUp",
+            "stat": "1,800 in a week",
+            "label": "Record week of September 18, 3.2x the first full week (570)",
+            "color": "#FC8900"
+          }
+        ],
+      "footnote": "A prompt is counted each time a user sends a turn to a model through the Harness. Approximate weekly counts through September 18, 2026, from Harness usage telemetry.",
       "xAxisTitle": "Week (approximate counts)",
       "yAxis": [
         "2,000",
