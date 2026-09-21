@@ -37,6 +37,8 @@ export const slideManagerState = {
     "dsmlp-datahub-shared-compute",
     "dsmlp-tritonai-complementary-layers",
     "llm-api-usage-attribution",
+    "tritonai-harness-sessions",
+    "tritonai-harness-prompts",
     "campus-app-hosting",
     "campus-app-hosting-intake",
     "harness-memory-architecture",
@@ -339,6 +341,20 @@ export const slideManagerState = {
       "regent",
       "LMU",
       "conference"
+    ],
+    "tritonai-harness-sessions": [
+      "internal",
+      "technical",
+      "all",
+      "PK",
+      "regent"
+    ],
+    "tritonai-harness-prompts": [
+      "internal",
+      "technical",
+      "all",
+      "PK",
+      "regent"
     ],
     "campus-app-hosting": [
       "all",
