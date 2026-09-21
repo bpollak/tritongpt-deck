@@ -4187,33 +4187,33 @@ export const slides = [
     "type": "content",
     "layout": "data-dashboard",
     "title": "TritonGPT Adoption: The Baseline Stepped Up",
-    "subtitle": "One synthesis of prompts, embedded-widget use, and unique users · Jan 2025–Jun 2026",
+    "subtitle": "One synthesis of prompts, embedded-widget use, and unique users · Jan 2025–Aug 2026",
     "backgroundColor": "#F5F0E6",
     "dashboardSections": [
       {
         "type": "metric-grid",
         "items": [
           {
-            "value": "+90%",
-            "label": "H1 2026 average monthly prompts vs. H1 2025",
+            "value": "3.7×",
+            "label": "Monthly prompts · Aug 2026 vs. Jun 2026",
             "icon": "TrendingUp",
             "color": "#00629B"
           },
           {
-            "value": "57,964",
-            "label": "Peak monthly prompts · May 2026",
+            "value": "170,939",
+            "label": "Peak monthly prompts · Aug 2026",
             "icon": "BarChart3",
             "color": "#00C6D7"
           },
           {
-            "value": "25%",
-            "label": "Widget share of June prompts",
+            "value": "6%",
+            "label": "Widget share of August prompts",
             "icon": "Globe",
             "color": "#6E963B"
           },
           {
-            "value": "2,516",
-            "label": "Unique users · June 2026",
+            "value": "16,996",
+            "label": "Unique users · Aug 2026",
             "icon": "Users",
             "color": "#FC8900"
           }
@@ -4225,25 +4225,25 @@ export const slides = [
           {
             "icon": "TrendingUp",
             "stat": "What changed",
-            "detail": "Average monthly prompts rose from 21,950 in H1 2025 to 41,716 in H1 2026. The service is operating from a meaningfully higher usage baseline.",
+            "detail": "Average monthly prompts rose from 21,950 in H1 2025 to 41,716 in H1 2026, then stepped up again to 154,902 in July and 170,939 in August 2026. Unique users went from 2,516 in June to 16,996 in August.",
             "color": "#00629B"
           },
           {
             "icon": "Globe",
             "stat": "Why it likely changed",
-            "detail": "The pattern is consistent with more embedded channels, live campus data, mobile access, and course integrations. Attribution is not yet sufficient to claim one cause.",
+            "detail": "The pattern is consistent with more embedded channels, live campus data, mobile access, course integrations, and new student-facing use cases arriving with the summer enrollment cycle. Attribution is not yet sufficient to claim one cause.",
             "color": "#6E963B"
           },
           {
             "icon": "TrendingDown",
             "stat": "What to watch",
-            "detail": "June declined from May: prompts −21%, sessions −14%, and unique users −20%. The quarter close may contribute, but cohort and channel analysis is needed.",
+            "detail": "Widget traffic held flat at roughly 10,500 prompts a month while total prompts more than tripled, so the widget share fell from 25% in June to 6% in August. Whether the July–August level holds through fall is the open question.",
             "color": "#FC8900"
           }
         ]
       }
     ],
-    "claimNote": "Source: TritonGPT and widget analytics exports through Jun 2026 · actuals; causal explanation is explicitly an inference · reviewed Jul 2026",
+    "claimNote": "Source: TritonGPT and widget analytics exports through Aug 2026 · actuals; causal explanation is explicitly an inference · reviewed Sep 2026",
     "audiences": [
       "all",
       "technical",
@@ -4260,11 +4260,11 @@ export const slides = [
     "type": "content",
     "content": [],
     "title": "TritonGPT Usage Analytics",
-    "subtitle": "Sessions and Prompts (Jan 2025-Jun 2026)",
+    "subtitle": "Sessions and Prompts (Jan 2025-Aug 2026)",
     "layout": "analytics-chart",
     "backgroundColor": "#F5F0E6",
     "chartData": {
-      "title": "TritonGPT Sessions vs. Prompts (Jan 2025-Jun 2026)",
+      "title": "TritonGPT Sessions vs. Prompts (Jan 2025-Aug 2026)",
       "xAxis": [
         "Jan",
         "Feb",
@@ -4283,25 +4283,24 @@ export const slides = [
         "Mar '26",
         "Apr '26",
         "May '26",
-        "Jun '26"
+        "Jun '26",
+        "Jul '26",
+        "Aug '26"
       ],
       "xAxisTitle": "Month",
       "yAxis": [
+        "180,000",
+        "160,000",
+        "140,000",
+        "120,000",
+        "100,000",
+        "80,000",
         "60,000",
-        "55,000",
-        "50,000",
-        "45,000",
         "40,000",
-        "35,000",
-        "30,000",
-        "25,000",
         "20,000",
-        "15,000",
-        "10,000",
-        "5,000",
         "0"
       ],
-      "maxValue": 60000,
+      "maxValue": 180000,
       "series": [
         {
           "name": "Prompts (Total)",
@@ -4324,7 +4323,9 @@ export const slides = [
             39436,
             43494,
             57964,
-            45821
+            45821,
+            154902,
+            170939
           ],
           "areaFill": true
         },
@@ -4349,13 +4350,15 @@ export const slides = [
             12544,
             14098,
             15676,
-            13513
+            13513,
+            44413,
+            49820
           ],
           "areaFill": false
         }
       ]
     },
-    "claimNote": "Source: TritonGPT usage analytics export · actual monthly sessions and prompts through Jun 2026 · reviewed Jul 2026",
+    "claimNote": "Source: TritonGPT usage analytics export · actual monthly sessions and prompts through Aug 2026 · reviewed Sep 2026",
     "audiences": [
       "all",
       "PK"
@@ -4367,11 +4370,11 @@ export const slides = [
     "type": "content",
     "content": [],
     "title": "TritonGPT Widget Analytics",
-    "subtitle": "Widget Sessions and Prompts (Jul 2025-Jun 2026)",
+    "subtitle": "Widget Sessions and Prompts (Jul 2025-Aug 2026)",
     "layout": "analytics-chart",
     "backgroundColor": "#F5F0E6",
     "chartData": {
-      "title": "TritonGPT Widget - Sessions vs. Prompts (Jul 2025-Jun 2026)",
+      "title": "TritonGPT Widget - Sessions vs. Prompts (Jul 2025-Aug 2026)",
       "xAxis": [
         "Jul",
         "Aug",
@@ -4384,7 +4387,9 @@ export const slides = [
         "Mar '26",
         "Apr '26",
         "May '26",
-        "Jun '26"
+        "Jun '26",
+        "Jul '26",
+        "Aug '26"
       ],
       "xAxisTitle": "Month",
       "yAxis": [
@@ -4397,7 +4402,7 @@ export const slides = [
         "2,000",
         "0"
       ],
-      "maxValue": 16000,
+      "maxValue": 14000,
       "series": [
         {
           "name": "Widget Prompts",
@@ -4414,7 +4419,9 @@ export const slides = [
             13945,
             12124,
             10296,
-            11590
+            11590,
+            10532,
+            10527
           ],
           "areaFill": true
         },
@@ -4433,13 +4440,15 @@ export const slides = [
             6788,
             5742,
             5531,
-            6010
+            6010,
+            5597,
+            5562
           ],
           "areaFill": false
         }
       ]
     },
-    "claimNote": "Source: TritonGPT widget analytics export · actual monthly sessions and prompts through Jun 2026 · reviewed Jul 2026",
+    "claimNote": "Source: TritonGPT widget analytics export · actual monthly sessions and prompts through Aug 2026 · reviewed Sep 2026",
     "audiences": [
       "all",
       "PK"
@@ -4451,11 +4460,11 @@ export const slides = [
     "type": "content",
     "content": [],
     "title": "TritonGPT User Growth",
-    "subtitle": "Unique Users (Aug 2025-Jun 2026)",
+    "subtitle": "Unique Users (Aug 2025-Aug 2026)",
     "layout": "analytics-chart",
     "backgroundColor": "#F5F0E6",
     "chartData": {
-      "title": "TritonGPT Unique Users (Aug 2025-Jun 2026)",
+      "title": "TritonGPT Unique Users (Aug 2025-Aug 2026)",
       "xAxis": [
         "Aug",
         "Sep",
@@ -4467,20 +4476,21 @@ export const slides = [
         "Mar '26",
         "Apr '26",
         "May '26",
-        "Jun '26"
+        "Jun '26",
+        "Jul '26",
+        "Aug '26"
       ],
       "xAxisTitle": "Month",
       "yAxis": [
-        "3,500",
+        "18,000",
+        "15,000",
+        "12,000",
+        "9,000",
+        "6,000",
         "3,000",
-        "2,500",
-        "2,000",
-        "1,500",
-        "1,000",
-        "500",
         "0"
       ],
-      "maxValue": 3500,
+      "maxValue": 18000,
       "series": [
         {
           "name": "Unique Users",
@@ -4496,13 +4506,15 @@ export const slides = [
             2453,
             3033,
             3161,
-            2516
+            2516,
+            16396,
+            16996
           ],
           "areaFill": true
         }
       ]
     },
-    "claimNote": "Source: TritonGPT usage analytics export · actual monthly unique users through Jun 2026 · reviewed Jul 2026",
+    "claimNote": "Source: TritonGPT usage analytics export · actual monthly unique users through Aug 2026 · reviewed Sep 2026",
     "audiences": [
       "all",
       "PK"
