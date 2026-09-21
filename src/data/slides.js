@@ -2311,7 +2311,7 @@ export const slides = [
     ],
     "stats": [
       {
-        "label": "Understanding",
+        "label": "Helped learning",
         "value": "81%"
       },
       {
