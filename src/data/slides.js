@@ -2136,7 +2136,7 @@ export const slides = [
     "layout": "data-dashboard",
     "compact": true,
     "title": "TritonAI LLM Gateway Usage",
-    "subtitle": "Aggregate API activity across UC San Diego, January 1 to August 31, 2026. Public aggregate, no user-level records.",
+    "subtitle": "Aggregate API activity across UC San Diego, January 1 to August 31, 2026. No user-level records.",
     "backgroundColor": "#F5F0E6",
     "dashboardSections": [
       {

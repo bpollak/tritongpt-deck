@@ -1381,7 +1381,7 @@ const Slide = ({ slide, staticPreview = false }) => {
         </motion.div>
 
         {/* Dashboard sections */}
-        <div className={`slide-dashboard-sections flex-1 flex flex-col z-10 overflow-hidden px-4 sm:px-8 md:px-12 ${slide.compact ? 'justify-start gap-1.5 sm:gap-2 pb-12 sm:pb-16' : 'justify-evenly gap-3 sm:gap-4 pb-16 sm:pb-20'}`}>
+        <div className={`slide-dashboard-sections flex-1 flex flex-col z-10 overflow-hidden px-4 sm:px-8 md:px-12 ${slide.compact ? 'justify-start gap-1.5 sm:gap-2 pb-16 sm:pb-24' : 'justify-evenly gap-3 sm:gap-4 pb-16 sm:pb-20'}`}>
           {sections.map((section, sIdx) => {
             const renderer = sectionRenderers[section.type];
             return renderer ? renderer(section, sIdx) : null;
