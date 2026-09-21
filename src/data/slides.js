@@ -2273,6 +2273,21 @@ export const slides = [
     ]
   },
   {
+    "id": 201.9,
+    "slug": "video-tritonai-harness-walkthrough",
+    "type": "video",
+    "content": [],
+    "title": "TritonAI Harness Walkthrough",
+    "managerLabel": "Video: TritonAI Harness walkthrough (Sep 2026)",
+    "managerSummary": "Harness walkthrough video from tritonai.ucsd.edu/developer-apis/harness.html: workspace, settings, plugins, skills, a request tracker built with the UC San Diego Decorator skill, a daily briefing, and meeting follow-up.",
+    "videoSrc": "/media/tritonai-harness-walkthrough-2026-09-07.mp4",
+    "poster": "/media/tritonai-harness-walkthrough-2026-09-07-poster.jpg",
+    "videoLoop": false,
+    "audiences": [
+      "PK"
+    ]
+  },
+  {
     "id": 202,
     "slug": "tritonai-harness-sessions",
     "type": "content",
