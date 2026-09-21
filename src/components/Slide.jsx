@@ -5614,10 +5614,10 @@ const Slide = ({ slide, staticPreview = false }) => {
         const plotHeight = vbHeight - margin.top - margin.bottom;
 
         return (
-          <div className={clsx("w-full h-full flex flex-col items-center justify-start pt-2 px-2 sm:px-4", slide.chartData.insights && "flex-1 min-h-0 pb-12")}>
-            <div className={clsx("w-full max-w-7xl bg-white rounded-xl shadow-lg", slide.chartData.insights ? "p-4 sm:p-6 flex-1 flex flex-col" : "p-4 sm:p-6")}>
+          <div className={clsx("w-full h-full flex flex-col items-center justify-start pt-2 px-2 sm:px-4", slide.chartData.insights && "flex-1 min-h-0 !pt-0 pb-12")}>
+            <div className={clsx("w-full max-w-7xl bg-white rounded-xl shadow-lg", slide.chartData.insights ? "p-4 sm:p-5 flex-1 min-h-0 flex flex-col" : "p-4 sm:p-6")}>
               {/* Title */}
-              <h3 className={clsx("shrink-0 font-bold text-ucsd-navy text-center", slide.chartData.insights ? "text-lg sm:text-2xl mb-2" : "text-xl sm:text-3xl mb-2")}>
+              <h3 className={clsx("shrink-0 font-bold text-ucsd-navy text-center", slide.chartData.insights ? "text-lg sm:text-2xl mb-1.5" : "text-xl sm:text-3xl mb-2")}>
                 {slide.chartData.title}
               </h3>
 
@@ -5629,7 +5629,7 @@ const Slide = ({ slide, staticPreview = false }) => {
               )}
 
               {/* Legend */}
-              <div className={clsx("shrink-0 flex justify-center gap-8", slide.chartData.insights ? "mb-2" : "mb-3")}>
+              <div className={clsx("shrink-0 flex justify-center gap-8", slide.chartData.insights ? "mb-1.5" : "mb-3")}>
                 {slide.chartData.series.map((series, idx) => (
                   <div key={idx} className="flex items-center gap-2">
                     <svg width="24" height="24">
@@ -5643,10 +5643,11 @@ const Slide = ({ slide, staticPreview = false }) => {
               {/* Chart with Y-axis */}
               <div className={clsx("flex", slide.chartData.insights && "flex-1 min-h-0")}>
                 {/* Chart SVG (y-axis labels are drawn inside so they always line up with the grid) */}
-                <div className={clsx("flex-1", slide.chartData.insights && "min-h-[250px]")} style={slide.chartData.insights ? undefined : { height: '450px' }}>
+                <div className={clsx("flex-1", slide.chartData.insights && "relative min-h-[250px]")} style={slide.chartData.insights ? undefined : { height: '450px' }}>
                   <svg
                     viewBox={`0 0 ${vbWidth} ${vbHeight}`}
                     preserveAspectRatio="xMidYMid meet"
+                    className={clsx(slide.chartData.insights && "absolute inset-0")}
                     style={{ width: '100%', height: '100%' }}
                   >
                     {/* Grid lines */}
@@ -5789,18 +5790,18 @@ const Slide = ({ slide, staticPreview = false }) => {
               </div>
 
               {/* X-Axis Title */}
-              <div className={clsx("shrink-0 text-center", slide.chartData.insights ? "mt-2" : "mt-3")}>
+              <div className={clsx("shrink-0 text-center", slide.chartData.insights ? "mt-1.5" : "mt-3")}>
                 <span className="text-sm text-slate-400">{slide.chartData.xAxisTitle || 'Month'}</span>
               </div>
 
               {/* What the numbers mean */}
               {slide.chartData.insights && (
-                <div className="shrink-0 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mt-3">
+                <div className="shrink-0 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mt-2.5">
                   {slide.chartData.insights.map((item, i) => {
                     const IconComp = iconMap[item.icon] || BarChart3;
                     return (
                       <motion.div key={i} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 + i * 0.1, duration: 0.4 }}
-                        className="flex items-center gap-3 rounded-xl border border-gray-100 bg-[#F5F0E6]/70 px-4 py-3 sm:px-5 sm:py-3.5">
+                        className="flex items-center gap-3 rounded-xl border border-gray-100 bg-[#F5F0E6]/70 px-4 py-3 sm:px-5 sm:py-3">
                         <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex-shrink-0 flex items-center justify-center" style={{ backgroundColor: (item.color || '#00629B') + '18' }}>
                           <IconComp size={18} style={{ color: item.color || '#00629B' }} />
                         </div>
@@ -5814,7 +5815,7 @@ const Slide = ({ slide, staticPreview = false }) => {
                 </div>
               )}
               {slide.chartData.footnote && (
-                <div className="shrink-0 text-center text-slate-400 text-[10px] sm:text-xs italic mt-2 sm:mt-3">{slide.chartData.footnote}</div>
+                <div className="shrink-0 text-center text-slate-400 text-[10px] sm:text-xs italic mt-2 sm:mt-2.5">{slide.chartData.footnote}</div>
               )}
             </div>
           </div>
