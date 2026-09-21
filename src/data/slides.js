@@ -2331,30 +2331,16 @@ export const slides = [
   {
     "id": 202.8,
     "slug": "instructional-ai-tutor-demo",
-    "type": "content",
-    "layout": "feature-grid",
+    "type": "video",
+    "content": [],
     "title": "Demo: Setting Up an AI Tutor in Canvas",
-    "subtitle": "Placeholder: a live demo or recording follows this script",
-    "backgroundColor": "#F5F0E6",
-    "managerLabel": "Demo placeholder: AI Tutor in Canvas",
-    "managerSummary": "Placeholder for the Instructional AI tutor demo. The three panels follow the demo script: pilot origins in TritonGPT and the move into Canvas, minutes-long setup with content controls, and Socratic versus directive teaching styles.",
-    "content": [
-      {
-        "heading": "1. From TritonGPT to Canvas",
-        "text": "For over a year the pilot ran inside TritonGPT: two agents per course, one for students and one for the instructor, each grounded in a Google Drive folder the instructor controlled. The next step brought the tutor into Canvas, one click from the rest of the course.",
-        "icon": "GraduationCap"
-      },
-      {
-        "heading": "2. Set Up in Minutes",
-        "text": "Create an agent, give it a name and a purpose, and choose what it can draw from: Canvas pages and files, Google Drive folders, and approved websites. Leave out assignments and exam study guides, or let Canvas release dates hold content back. As material changes, the tutor's knowledge updates to match.",
-        "icon": "Blocks"
-      },
-      {
-        "heading": "3. Choose the Teaching Style",
-        "text": "Socratic mode preserves the productive struggle of working through a problem; directive mode gives straightforward explanations. Start from preset behaviors or edit the tutor's instructions directly.",
-        "icon": "BookOpen"
-      }
-    ],
+    "managerLabel": "Video: AI Tutor setup in Canvas (Sep 2026)",
+    "managerSummary": "Screen capture of the TritonGPT AI Tutor being set up inside a Canvas course: connecting course content, choosing sources, and configuring the tutor. Replaces the earlier demo placeholder.",
+    "videoSrc": "/media/instructional-ai-tutor-demo.mp4",
+    "poster": "/media/instructional-ai-tutor-demo-poster.jpg",
+    "videoLoop": false,
+    "videoClearNav": true,
+    "hideDemoBadge": true,
     "audiences": [
       "PK"
     ]
