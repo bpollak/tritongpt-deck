@@ -2264,7 +2264,138 @@ export const slides = [
         ]
       }
     ],
-    "claimNote": "Source: TritonAI Developer APIs gateway usage report (tritonai.ucsd.edu/developer-apis) · public aggregate, no user-level records · reviewed Sep 3, 2026 · August includes the Sep 2 hosting-audit correction",
+    "audiences": [
+      "internal",
+      "technical",
+      "all",
+      "PK",
+      "regent"
+    ]
+  },
+  {
+    "id": 202,
+    "slug": "tritonai-harness-sessions",
+    "type": "content",
+    "content": [],
+    "title": "TritonAI Harness Adoption: Sessions",
+    "subtitle": "Weekly sessions since launch (Jul-Sep 2026)",
+    "layout": "analytics-chart",
+    "backgroundColor": "#F5F0E6",
+    "chartData": {
+      "title": "TritonAI Harness - Weekly Sessions (Jul-Sep 2026)",
+      "xAxis": [
+        "17 Jul",
+        "24 Jul",
+        "31 Jul",
+        "7 Aug",
+        "14 Aug",
+        "21 Aug",
+        "28 Aug",
+        "4 Sep",
+        "11 Sep",
+        "18 Sep",
+        "21 Sep*"
+      ],
+      "xAxisTitle": "Week (approximate counts; * = partial week through Sep 21, 2026)",
+      "yAxis": [
+        "800",
+        "700",
+        "600",
+        "500",
+        "400",
+        "300",
+        "200",
+        "100",
+        "0"
+      ],
+      "maxValue": 800,
+      "series": [
+        {
+          "name": "Sessions (Weekly)",
+          "color": "#00629B",
+          "data": [
+            0,
+            200,
+            310,
+            280,
+            390,
+            350,
+            590,
+            410,
+            355,
+            640,
+            50
+          ],
+          "areaFill": true
+        }
+      ]
+    },
+    "audiences": [
+      "internal",
+      "technical",
+      "all",
+      "PK",
+      "regent"
+    ]
+  },
+  {
+    "id": 203,
+    "slug": "tritonai-harness-prompts",
+    "type": "content",
+    "content": [],
+    "title": "TritonAI Harness Adoption: Prompts",
+    "subtitle": "Weekly prompts since launch (Jul-Sep 2026)",
+    "layout": "analytics-chart",
+    "backgroundColor": "#F5F0E6",
+    "chartData": {
+      "title": "TritonAI Harness - Weekly Prompts (Jul-Sep 2026)",
+      "xAxis": [
+        "17 Jul",
+        "24 Jul",
+        "31 Jul",
+        "7 Aug",
+        "14 Aug",
+        "21 Aug",
+        "28 Aug",
+        "4 Sep",
+        "11 Sep",
+        "18 Sep",
+        "21 Sep*"
+      ],
+      "xAxisTitle": "Week (approximate counts; * = partial week through Sep 21, 2026)",
+      "yAxis": [
+        "2,000",
+        "1,750",
+        "1,500",
+        "1,250",
+        "1,000",
+        "750",
+        "500",
+        "250",
+        "0"
+      ],
+      "maxValue": 2000,
+      "series": [
+        {
+          "name": "Prompts (Weekly)",
+          "color": "#00A99D",
+          "data": [
+            0,
+            570,
+            800,
+            830,
+            830,
+            960,
+            1600,
+            1180,
+            950,
+            1800,
+            100
+          ],
+          "areaFill": true
+        }
+      ]
+    },
     "audiences": [
       "internal",
       "technical",
