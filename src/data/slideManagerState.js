@@ -33,10 +33,10 @@ export const slideManagerState = {
     "contract-reviewer-consolidated",
     "transcript-matching-validation",
     "cabinet-harness-03-question",
-    "tritonai-developer-api-program",
     "dsmlp-datahub-shared-compute",
     "dsmlp-tritonai-complementary-layers",
     "llm-api-usage-attribution",
+    "tritonai-developer-api-program",
     "video-tritonai-harness-walkthrough",
     "tritonai-harness-sessions",
     "tritonai-harness-prompts",
@@ -316,7 +316,8 @@ export const slideManagerState = {
       "public",
       "conference",
       "regent",
-      "LMU"
+      "LMU",
+      "PK"
     ],
     "dsmlp-datahub-shared-compute": [
       "all",
