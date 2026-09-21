@@ -5608,7 +5608,7 @@ const Slide = ({ slide, staticPreview = false }) => {
 
         // Fixed viewBox dimensions - this ensures consistent scaling
         const vbWidth = 1000;
-        const vbHeight = slide.chartData.insights ? 340 : 450;
+        const vbHeight = slide.chartData.insights ? 320 : 450;
         const margin = { top: 50, right: 30, bottom: denseChart ? 74 : 50, left: 92 };
         const plotWidth = vbWidth - margin.left - margin.right;
         const plotHeight = vbHeight - margin.top - margin.bottom;
