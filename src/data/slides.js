@@ -2301,12 +2301,8 @@ export const slides = [
     "managerSummary": "Overview of the Canvas-native TritonGPT AI Tutor from tritonai.ucsd.edu/tritongpt/instruction.html: instructor-selected sources, Socratic or directive mode, and 2025-2026 pilot survey results.",
     "content": [
       {
-        "heading": "Native to Canvas",
-        "text": "One click from the course material, grounded in instructor-selected Canvas pages and files, Google Drive folders, and approved websites."
-      },
-      {
-        "heading": "Instructor-Controlled Knowledge",
-        "text": "Hold back assignments and study guides. As content is added or removed during the term, the tutor learns and unlearns to match."
+        "heading": "Native to Canvas, Instructor-Controlled",
+        "text": "One click from the course material, grounded only in instructor-selected Canvas pages and files, Google Drive folders, and approved websites. Hold back assignments and study guides; the tutor learns and unlearns as content changes."
       },
       {
         "heading": "Socratic or Directive",
@@ -2315,7 +2311,7 @@ export const slides = [
     ],
     "stats": [
       {
-        "label": "Helped understanding",
+        "label": "Understanding",
         "value": "81%"
       },
       {
