@@ -591,7 +591,6 @@ export const slideManagerState = {
       "internal",
       "public",
       "conference",
-      "PK",
       "regent"
     ],
     "lmu-thank-you": [
