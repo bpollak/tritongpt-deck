@@ -4802,6 +4802,166 @@ export const slides = [
     ]
   },
   {
+    "id": 35.1,
+    "slug": "class-planner-ai-weekly-users",
+    "type": "content",
+    "content": [],
+    "title": "TritonGPT Class Planner Adoption: Weekly Active Users",
+    "subtitle": "The AI-assisted planner in TritonGPT, full Monday-Sunday weeks (Jul 20-Sep 14, 2026)",
+    "layout": "analytics-chart",
+    "backgroundColor": "#F5F0E6",
+    "managerLabel": "Class Planner metrics: TritonGPT Class Planner weekly active users",
+    "managerSummary": "Weekly active users (distinct account IDs) of the TritonGPT Class Planner across the summer 2026 enrollment passes. Companion to the standalone Class Planner website slide; the two tools are measured in different units.",
+    "chartData": {
+      "title": "TritonGPT Class Planner: weekly active users, summer 2026 enrollment",
+      "headline": "Weekly active users peaked at 9,030 in the week of the July 22 priority first pass, held near 3,000-4,000 through the continuing-student and incoming-student passes, then tapered as booking windows closed.",
+      "xAxis": [
+        "Jul 20",
+        "Jul 27",
+        "Aug 3",
+        "Aug 10",
+        "Aug 17",
+        "Aug 24",
+        "Aug 31",
+        "Sep 7",
+        "Sep 14"
+      ],
+      "xAxisTitle": "Week starting (2026)",
+      "yAxis": [
+        "10,000",
+        "8,000",
+        "6,000",
+        "4,000",
+        "2,000",
+        "0"
+      ],
+      "maxValue": 10000,
+      "series": [
+        {
+          "name": "Weekly active users (account IDs)",
+          "color": "#00629B",
+          "data": [
+            9030,
+            3940,
+            3370,
+            3030,
+            4040,
+            3180,
+            3410,
+            1530,
+            1120
+          ],
+          "areaFill": true
+        }
+      ],
+      "insights": [
+        {
+          "icon": "Users",
+          "stat": "9,030 users",
+          "label": "Peak week (Jul 20), ahead of the Jul 22 priority first pass",
+          "color": "#00629B"
+        },
+        {
+          "icon": "Calendar",
+          "stat": "~3,500 / week",
+          "label": "Average weekly active users across the six enrollment-pass weeks (Jul 27-Aug 31)",
+          "color": "#6E963B"
+        },
+        {
+          "icon": "TrendingDown",
+          "stat": "1,120 users",
+          "label": "Latest full week (Sep 14) after the first-pass windows closed",
+          "color": "#FC8900"
+        }
+      ],
+      "footnote": "Weekly active users are distinct account IDs per full Monday-Sunday week, from the Class Planner usage workbook. Neither planner books courses; enrollment completes in TSS. Enrollment dates from the UC San Diego enrollment calendar; timing alone does not establish causation."
+    },
+    "claimNote": "Source: Class Planner usage workbook (TritonGPT Class Planner weekly active users, weeks of Jul 20-Sep 14, 2026) and UC San Diego enrollment dates · reviewed Sep 21, 2026",
+    "audiences": [
+      "all",
+      "PK"
+    ]
+  },
+  {
+    "id": 35.2,
+    "slug": "class-planner-website-weekly-pageviews",
+    "type": "content",
+    "content": [],
+    "title": "Class Planner Website Usage: Weekly Pageviews",
+    "subtitle": "The standalone schedule builder at classplanner.apps.ucsd.edu, full Monday-Sunday weeks (Jul 27-Sep 14, 2026)",
+    "layout": "analytics-chart",
+    "backgroundColor": "#F5F0E6",
+    "managerLabel": "Class Planner metrics: standalone website weekly pageviews",
+    "managerSummary": "Weekly pageviews of the standalone Class Planner website across the summer 2026 enrollment passes. Companion to the TritonGPT Class Planner slide; pageviews and active users are separate units and should not be compared directly.",
+    "chartData": {
+      "title": "Class Planner website: weekly pageviews, summer 2026 enrollment",
+      "headline": "The standalone website drew 26,000-35,000 pageviews a week through the summer passes, spiked to 42,680 in the week of the August 31 incoming first pass, and eased to 18,750 by mid-September.",
+      "xAxis": [
+        "Jul 27",
+        "Aug 3",
+        "Aug 10",
+        "Aug 17",
+        "Aug 24",
+        "Aug 31",
+        "Sep 7",
+        "Sep 14"
+      ],
+      "xAxisTitle": "Week starting (2026)",
+      "yAxis": [
+        "50,000",
+        "40,000",
+        "30,000",
+        "20,000",
+        "10,000",
+        "0"
+      ],
+      "maxValue": 50000,
+      "series": [
+        {
+          "name": "Weekly pageviews",
+          "color": "#6E963B",
+          "data": [
+            34300,
+            31700,
+            30200,
+            35300,
+            26300,
+            42680,
+            26000,
+            18750
+          ],
+          "areaFill": true
+        }
+      ],
+      "insights": [
+        {
+          "icon": "Globe",
+          "stat": "245K pageviews",
+          "label": "Total across the eight full weeks (Jul 27-Sep 14)",
+          "color": "#6E963B"
+        },
+        {
+          "icon": "TrendingUp",
+          "stat": "42,680 / week",
+          "label": "Peak week (Aug 31), coinciding with the Aug 31-Sep 1 incoming-student first pass",
+          "color": "#00629B"
+        },
+        {
+          "icon": "BarChart3",
+          "stat": "~30,700 / week",
+          "label": "Average weekly pageviews across the eight weeks",
+          "color": "#FC8900"
+        }
+      ],
+      "footnote": "Pageviews per full Monday-Sunday week use the cleaning assumptions documented in the Class Planner usage workbook; pageviews are not users and are not comparable to the TritonGPT active-user series. Enrollment dates from the UC San Diego enrollment calendar; timing alone does not establish causation."
+    },
+    "claimNote": "Source: Class Planner usage workbook (standalone website weekly pageviews, weeks of Jul 27-Sep 14, 2026) and UC San Diego enrollment dates · reviewed Sep 21, 2026",
+    "audiences": [
+      "all",
+      "PK"
+    ]
+  },
+  {
     "id": 36,
     "slug": "the-team-behind-tritonai",
     "type": "content",

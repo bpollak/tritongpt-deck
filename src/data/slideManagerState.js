@@ -64,6 +64,8 @@ export const slideManagerState = {
     "tritongpt-usage-analytics",
     "tritongpt-widget-analytics",
     "tritongpt-user-growth",
+    "class-planner-ai-weekly-users",
+    "class-planner-website-weekly-pageviews",
     "research-alignment-poc",
     "ai-engagement-at-scale",
     "cabinet-harness-02-convergence",
@@ -480,6 +482,14 @@ export const slideManagerState = {
       "PK"
     ],
     "tritongpt-user-growth": [
+      "all",
+      "PK"
+    ],
+    "class-planner-ai-weekly-users": [
+      "all",
+      "PK"
+    ],
+    "class-planner-website-weekly-pageviews": [
       "all",
       "PK"
     ],
