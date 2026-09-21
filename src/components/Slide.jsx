@@ -5511,18 +5511,26 @@ const Slide = ({ slide, staticPreview = false }) => {
         const ucsdColors = ['#00629B', '#C69214', '#00C6D7', '#182B49'];
         const maxValue = slide.chartData.maxValue;
         const dataPoints = slide.chartData.xAxis.length;
-        const labelFontSize = dataPoints >= 14 ? 18 : dataPoints >= 12 ? 20 : 22;
+        const denseChart = dataPoints >= 16;
+        const labelFontSize = dataPoints >= 18 ? 14 : dataPoints >= 14 ? 18 : dataPoints >= 12 ? 20 : 22;
         const xAxisLabelFontSize = dataPoints >= 16 ? 13 : dataPoints >= 14 ? 15 : dataPoints >= 12 ? 18 : 20;
         const pointRadius = dataPoints >= 14 ? 7 : 8;
-        const getDataLabelPlacement = (idx, seriesIdx) => {
-          const baseYOffset = seriesIdx === 0 ? 18 : 16;
-          return { textAnchor: 'middle', xOffset: 0, yOffset: baseYOffset };
+        const primarySeriesData = slide.chartData.series[0]?.data ?? [];
+        // Labels for the top series sit above the line; lower series sit below theirs so the
+        // two sets never cross. Dense charts stagger neighbouring labels onto two rows.
+        const getDataLabelPlacement = (idx, seriesIdx, value) => {
+          const below = seriesIdx > 0 && value < (primarySeriesData[idx] ?? -Infinity);
+          const stagger = denseChart && idx % 2 === 1 ? labelFontSize + 2 : 0;
+          const yOffset = below ? -(labelFontSize + 8 + stagger) : 16 + stagger;
+          // The first label anchors rightward so it never spills over the y-axis
+          if (idx === 0) return { textAnchor: 'start', xOffset: -pointRadius, yOffset };
+          return { textAnchor: 'middle', xOffset: 0, yOffset };
         };
 
         // Fixed viewBox dimensions - this ensures consistent scaling
         const vbWidth = 1000;
         const vbHeight = 450;
-        const margin = { top: 50, right: 30, bottom: 50, left: 30 };
+        const margin = { top: 50, right: 30, bottom: denseChart ? 74 : 50, left: 92 };
         const plotWidth = vbWidth - margin.left - margin.right;
         const plotHeight = vbHeight - margin.top - margin.bottom;
 
@@ -5548,14 +5556,7 @@ const Slide = ({ slide, staticPreview = false }) => {
 
               {/* Chart with Y-axis */}
               <div className="flex">
-                {/* Y-Axis Labels - height matches SVG, with padding to align with plot area */}
-                <div className="flex flex-col justify-between pr-3 shrink-0" style={{ height: '450px', paddingTop: '50px', paddingBottom: '60px' }}>
-                  {slide.chartData.yAxis.map((label, idx) => (
-                    <span key={idx} className="text-sm sm:text-base text-slate-400 text-right w-16 leading-none">{label}</span>
-                  ))}
-                </div>
-
-                {/* Chart SVG */}
+                {/* Chart SVG (y-axis labels are drawn inside so they always line up with the grid) */}
                 <div className="flex-1" style={{ height: '450px' }}>
                   <svg
                     viewBox={`0 0 ${vbWidth} ${vbHeight}`}
@@ -5566,15 +5567,26 @@ const Slide = ({ slide, staticPreview = false }) => {
                     {slide.chartData.yAxis.map((_, idx) => {
                       const y = margin.top + (idx / (slide.chartData.yAxis.length - 1)) * plotHeight;
                       return (
-                        <line
-                          key={idx}
-                          x1={margin.left}
-                          y1={y}
-                          x2={vbWidth - margin.right}
-                          y2={y}
-                          stroke="#e5e7eb"
-                          strokeWidth="1"
-                        />
+                        <g key={idx}>
+                          <line
+                            x1={margin.left}
+                            y1={y}
+                            x2={vbWidth - margin.right}
+                            y2={y}
+                            stroke="#e5e7eb"
+                            strokeWidth="1"
+                          />
+                          <text
+                            x={margin.left - 14}
+                            y={y + 5}
+                            textAnchor="end"
+                            fill="#94a3b8"
+                            fontSize="15"
+                            fontFamily="Roboto, Arial, sans-serif"
+                          >
+                            {slide.chartData.yAxis[idx]}
+                          </text>
+                        </g>
                       );
                     })}
 
@@ -5645,7 +5657,7 @@ const Slide = ({ slide, staticPreview = false }) => {
                       return series.data.map((value, idx) => {
                         const x = margin.left + (idx / (dataPoints - 1)) * plotWidth;
                         const y = margin.top + plotHeight - (value / maxValue) * plotHeight;
-                        const placement = getDataLabelPlacement(idx, seriesIdx);
+                        const placement = getDataLabelPlacement(idx, seriesIdx, value);
                         return (
                           <text
                             key={`label-${seriesIdx}-${idx}`}
@@ -5653,6 +5665,10 @@ const Slide = ({ slide, staticPreview = false }) => {
                             y={y - placement.yOffset}
                             textAnchor={placement.textAnchor}
                             fill={color}
+                            stroke="white"
+                            strokeWidth="4"
+                            strokeLinejoin="round"
+                            paintOrder="stroke"
                             fontSize={labelFontSize}
                             fontWeight="bold"
                             fontFamily="Roboto, Arial, sans-serif"
@@ -5666,7 +5682,7 @@ const Slide = ({ slide, staticPreview = false }) => {
                     {/* X-Axis Labels - inside SVG for perfect alignment */}
                     {slide.chartData.xAxis.map((label, idx) => {
                       const x = margin.left + (idx / (dataPoints - 1)) * plotWidth;
-                      const y = margin.top + plotHeight + 30;
+                      const y = margin.top + plotHeight + (denseChart ? 54 : 30);
                       return (
                         <text
                           key={`xaxis-${idx}`}
