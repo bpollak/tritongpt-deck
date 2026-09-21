@@ -2145,13 +2145,13 @@ export const slides = [
         "items": [
           {
             "value": "455.3B",
-            "label": "Tokens processed, input plus output",
+            "label": "Tokens processed",
             "icon": "Database",
             "color": "#00629B"
           },
           {
             "value": "143.9M",
-            "label": "API requests, successful and failed",
+            "label": "API requests",
             "icon": "BarChart3",
             "color": "#00C6D7"
           },
@@ -2163,7 +2163,7 @@ export const slides = [
           },
           {
             "value": "78.9B",
-            "label": "Tokens in August, highest month to date",
+            "label": "Tokens in August, up 17.6% from July",
             "icon": "TrendingUp",
             "color": "#FC8900"
           }
@@ -2239,11 +2239,11 @@ export const slides = [
             "selfHosted": 64.5,
             "cloud": 14.3,
             "displayValue": "78.9B",
-            "annotation": "64.5B / 14.3B cloud · +17.6%",
+            "annotation": "64.5B / 14.3B cloud",
             "highlight": true
           }
         ],
-        "caption": "Cloud tokens grew from 0.5B in January to 14.3B in August as more workloads moved to cloud routes. Self-hosted and internal includes internal TritonAI routes."
+        "caption": "Cloud tokens grew from 0.5B in January to 14.3B in August as more workloads moved to cloud routes."
       },
       {
         "type": "stat-callouts",
@@ -2252,13 +2252,13 @@ export const slides = [
           {
             "icon": "TrendingUp",
             "stat": "What is driving growth",
-            "detail": "Production applications, embeddings, and automated background services. June and August were the two largest months; August cloud usage more than doubled July's.",
+            "detail": "Production applications, embeddings, and automated background services. August cloud usage more than doubled July's.",
             "color": "#00629B"
           },
           {
             "icon": "CheckCircle",
             "stat": "How to read these numbers",
-            "detail": "Gateway-recorded input plus output tokens, reconciled to 455,295,685,475 tokens and 143,909,714 request records. August includes all 31 days and the September 2 hosting-audit correction.",
+            "detail": "Gateway-recorded input plus output tokens, reconciled to 455,295,685,475 tokens and 143,909,714 request records.",
             "color": "#6E963B"
           }
         ]

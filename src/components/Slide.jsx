@@ -1184,12 +1184,12 @@ const Slide = ({ slide, staticPreview = false }) => {
       const items = section.items || [];
       return (
         <motion.div key={sIdx} initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 + sIdx * 0.15, duration: 0.5 }}
-          className={`flex flex-wrap justify-center ${section.compact ? 'gap-2 sm:gap-3 max-w-6xl w-full' : 'gap-4 sm:gap-6 max-w-4xl'} mx-auto`}>
+          className={`flex flex-wrap justify-center ${section.compact ? 'gap-2 sm:gap-3 max-w-6xl w-full flex-shrink-0' : 'gap-4 sm:gap-6 max-w-4xl'} mx-auto`}>
           {items.map((item, i) => {
             const IconComp = iconMap[item.icon] || AlertTriangle;
             return (
               <motion.div key={i} initial={{ opacity: 0, x: i === 0 ? -20 : 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.6 + i * 0.1, duration: 0.5 }}
-                className={`flex-1 min-w-[200px] bg-white/70 rounded-xl border border-gray-100 shadow-sm flex items-start gap-3 ${section.compact ? 'max-w-[600px] p-2 sm:p-2.5' : 'max-w-[360px] p-3 sm:p-4'}`}>
+                className={`flex-1 min-w-[200px] bg-white/70 rounded-xl border border-gray-100 shadow-sm flex items-start gap-3 ${section.compact ? 'max-w-[620px] px-2.5 py-1.5 sm:px-3 sm:py-2' : 'max-w-[360px] p-3 sm:p-4'}`}>
                 <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: (item.color || '#00629B') + '18' }}>
                   <IconComp size={18} style={{ color: item.color || '#00629B' }} />
                 </div>
@@ -1303,11 +1303,11 @@ const Slide = ({ slide, staticPreview = false }) => {
       const series = section.series || [];
       const totalOf = (it) => series.reduce((sum, sr) => sum + (Number(it[sr.key]) || 0), 0);
       const max = section.maxValue || Math.max(...items.map(totalOf), 1);
-      const barCeiling = 82; // percent of chart height used by the tallest column, leaving room for the value label
+      const barCeiling = 90; // percent of chart height used by the tallest column, leaving room for the value label
       return (
         <motion.div key={sIdx} initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 + sIdx * 0.1, duration: 0.5 }}
           className="w-full max-w-6xl mx-auto flex-1 min-h-0 flex flex-col">
-          <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-1 sm:mb-2">
+          <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-0.5 sm:mb-1">
             {section.sectionTitle && <div className="text-ucsd-navy text-sm sm:text-base md:text-lg font-black">{section.sectionTitle}</div>}
             {series.length > 0 && (
               <div className="flex items-center gap-3 sm:gap-5">
@@ -1344,7 +1344,7 @@ const Slide = ({ slide, staticPreview = false }) => {
               );
             })}
           </div>
-          <div className="flex gap-2 sm:gap-3 md:gap-5 px-1 sm:px-2 mt-1 sm:mt-1.5">
+          <div className="flex gap-2 sm:gap-3 md:gap-5 px-1 sm:px-2 mt-1">
             {items.map((item, i) => (
               <div key={i} className="flex-1 text-center">
                 <div className={`text-[11px] sm:text-sm md:text-base font-bold leading-tight ${item.highlight ? 'text-ucsd-orange' : 'text-ucsd-navy'}`}>{item.label}</div>
@@ -1352,7 +1352,7 @@ const Slide = ({ slide, staticPreview = false }) => {
               </div>
             ))}
           </div>
-          {section.caption && <div className="text-slate-500 text-[10px] sm:text-xs italic text-center mt-1 sm:mt-1.5">{section.caption}</div>}
+          {section.caption && <div className="text-slate-500 text-[10px] sm:text-xs italic text-center mt-0.5 sm:mt-1">{section.caption}</div>}
         </motion.div>
       );
     };
@@ -1381,7 +1381,7 @@ const Slide = ({ slide, staticPreview = false }) => {
         </motion.div>
 
         {/* Dashboard sections */}
-        <div className={`slide-dashboard-sections flex-1 flex flex-col z-10 overflow-hidden px-4 sm:px-8 md:px-12 ${slide.compact ? 'justify-start gap-2 sm:gap-3 pb-10 sm:pb-12' : 'justify-evenly gap-3 sm:gap-4 pb-16 sm:pb-20'}`}>
+        <div className={`slide-dashboard-sections flex-1 flex flex-col z-10 overflow-hidden px-4 sm:px-8 md:px-12 ${slide.compact ? 'justify-start gap-1.5 sm:gap-2 pb-12 sm:pb-16' : 'justify-evenly gap-3 sm:gap-4 pb-16 sm:pb-20'}`}>
           {sections.map((section, sIdx) => {
             const renderer = sectionRenderers[section.type];
             return renderer ? renderer(section, sIdx) : null;
