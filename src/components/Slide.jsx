@@ -204,6 +204,7 @@ const Slide = ({ slide, staticPreview = false }) => {
   const isInfrastructureStack = slide.layout === 'infrastructure-stack';
   const isAgentWorkflow = slide.layout === 'agent-workflow';
   const isAnalyticsChart = slide.layout === 'analytics-chart';
+  const isDailyUsageChart = slide.layout === 'daily-usage-chart';
   const isTeamGrid = slide.layout === 'team-grid';
   const isTimelineEvolution = slide.layout === 'timeline-evolution';
   const isCampusMetrics = slide.layout === 'campus-metrics';
@@ -1445,7 +1446,7 @@ const Slide = ({ slide, staticPreview = false }) => {
         {slide.title}
       </motion.h1>
 
-      {slide.subtitle && !isCaseStudyHero && !isCompoundArchitecture && !isInfrastructureStack && !isAnalyticsChart && !isTimelineEvolution && !isTritonAIEvolutionSlide && !isApiGateway && !isDsmlpFoundation && !isDsmlpTritonAIBoundary && !isHostingPipeline && !isIntakeFunnel && !isInnovationFlywheel && !isFlywheelCaseStudy && !isOriginStory && (
+      {slide.subtitle && !isCaseStudyHero && !isCompoundArchitecture && !isInfrastructureStack && !isAnalyticsChart && !isDailyUsageChart && !isTimelineEvolution && !isTritonAIEvolutionSlide && !isApiGateway && !isDsmlpFoundation && !isDsmlpTritonAIBoundary && !isHostingPipeline && !isIntakeFunnel && !isInnovationFlywheel && !isFlywheelCaseStudy && !isOriginStory && (
         <motion.h2
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -5597,6 +5598,128 @@ const Slide = ({ slide, staticPreview = false }) => {
                 </div>
               )}
             </motion.div>
+          </div>
+        );
+      })()}
+
+      {/* Daily Usage Chart Layout: square-root y-axis, smoothed daily lines, enrollment markers */}
+      {isDailyUsageChart && slide.chartData && (() => {
+        const cd = slide.chartData;
+        const dates = cd.dates;
+        const n = dates.length;
+        const vbWidth = 1240;
+        const vbHeight = 520;
+        const margin = { top: 92, right: 28, bottom: 46, left: 62 };
+        const plotWidth = vbWidth - margin.left - margin.right;
+        const plotHeight = vbHeight - margin.top - margin.bottom;
+        const yMax = cd.yMax;
+        const sy = (v) => margin.top + plotHeight - (Math.sqrt(Math.max(v, 0)) / Math.sqrt(yMax)) * plotHeight;
+        const sx = (i) => margin.left + (i / (n - 1)) * plotWidth;
+        const fmt = (v) => (v >= 1000 ? `${(v / 1000).toFixed(1)}k` : `${v}`);
+        // Monotone cubic interpolation keeps the curve through every daily observation without overshoot
+        const smoothPath = (data) => {
+          const pts = [];
+          data.forEach((v, i) => { if (Number.isFinite(v)) pts.push([sx(i), sy(v)]); });
+          if (pts.length < 2) return '';
+          const m = pts.length;
+          const dx = [], dy = [], slope = [];
+          for (let i = 0; i < m - 1; i++) { dx.push(pts[i + 1][0] - pts[i][0]); dy.push(pts[i + 1][1] - pts[i][1]); slope.push(dy[i] / dx[i]); }
+          const tang = [slope[0]];
+          for (let i = 1; i < m - 1; i++) {
+            if (slope[i - 1] * slope[i] <= 0) tang.push(0);
+            else { const w1 = 2 * dx[i] + dx[i - 1], w2 = dx[i] + 2 * dx[i - 1]; tang.push((w1 + w2) / (w1 / slope[i - 1] + w2 / slope[i])); }
+          }
+          tang.push(slope[m - 2]);
+          let d = `M ${pts[0][0].toFixed(2)} ${pts[0][1].toFixed(2)}`;
+          for (let i = 0; i < m - 1; i++) {
+            const h = dx[i] / 3;
+            d += ` C ${(pts[i][0] + h).toFixed(2)} ${(pts[i][1] + h * tang[i]).toFixed(2)}, ${(pts[i + 1][0] - h).toFixed(2)} ${(pts[i + 1][1] - h * tang[i + 1]).toFixed(2)}, ${pts[i + 1][0].toFixed(2)} ${pts[i + 1][1].toFixed(2)}`;
+          }
+          return d;
+        };
+        const dateIndex = (label) => dates.indexOf(label);
+        return (
+          <div className="w-full h-full flex flex-col items-center justify-start pt-1 px-2 sm:px-4">
+            <div className="w-full max-w-7xl bg-white rounded-xl shadow-lg p-3 sm:p-4 flex flex-col">
+              <div className="flex items-start justify-between gap-4 mb-1">
+                <div>
+                  <h3 className="font-bold text-ucsd-navy text-lg sm:text-2xl leading-tight">{cd.title}</h3>
+                  {cd.subtitle && <div className="text-slate-500 text-xs sm:text-sm mt-0.5">{cd.subtitle}</div>}
+                </div>
+                <div className="flex items-center gap-5 shrink-0 pt-1">
+                  {cd.series.map((sr) => (
+                    <div key={sr.name} className="flex items-center gap-2">
+                      <svg width="30" height="12"><line x1="1" y1="6" x2="29" y2="6" stroke={sr.color} strokeWidth="4" strokeLinecap="round" /></svg>
+                      <span className="text-sm sm:text-base text-slate-700 font-medium">{sr.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <svg viewBox={`0 0 ${vbWidth} ${vbHeight}`} className="w-full" style={{ maxHeight: '56vh' }} preserveAspectRatio="xMidYMid meet">
+                {/* Gridlines and y ticks (square-root scale, labels show actual counts) */}
+                {cd.yTicks.map((t) => (
+                  <g key={`y-${t}`}>
+                    <line x1={margin.left} x2={margin.left + plotWidth} y1={sy(t)} y2={sy(t)} stroke={t === 0 ? '#94a3b8' : '#e5e7eb'} strokeWidth={t === 0 ? 1.2 : 1} />
+                    <text x={margin.left - 8} y={sy(t) + 4} textAnchor="end" fontSize="12" fill="#475569" fontFamily="Roboto, Arial, sans-serif">{fmt(t)}</text>
+                  </g>
+                ))}
+                {/* X ticks */}
+                {cd.xTicks.map((label) => {
+                  const i = dateIndex(label);
+                  if (i < 0) return null;
+                  return (
+                    <g key={`x-${label}`}>
+                      <line x1={sx(i)} x2={sx(i)} y1={margin.top + plotHeight} y2={margin.top + plotHeight + 5} stroke="#94a3b8" strokeWidth="1" />
+                      <text x={sx(i)} y={margin.top + plotHeight + 20} textAnchor="middle" fontSize="13" fill="#334155" fontFamily="Roboto, Arial, sans-serif">{label}</text>
+                    </g>
+                  );
+                })}
+                <text x={margin.left + plotWidth / 2} y={vbHeight - 6} textAnchor="middle" fontSize="12" fill="#64748b" fontFamily="Roboto, Arial, sans-serif">{cd.xAxisTitle}</text>
+                <text transform={`translate(14 ${margin.top + plotHeight / 2}) rotate(-90)`} textAnchor="middle" fontSize="12" fill="#475569" fontWeight="600" fontFamily="Roboto, Arial, sans-serif">{cd.yAxisTitle}</text>
+                {/* Enrollment window markers */}
+                {cd.markers.map((mk) => {
+                  const i = dateIndex(mk.date);
+                  if (i < 0) return null;
+                  const x = sx(i);
+                  const lines = mk.detail.split('\n');
+                  return (
+                    <g key={`m-${mk.date}`}>
+                      <line x1={x} x2={x} y1={margin.top - 12} y2={margin.top + plotHeight} stroke="#9ca3af" strokeWidth="1" strokeDasharray="5 4" />
+                      <text x={x} y={margin.top - 56 - (lines.length - 2) * 13} textAnchor="middle" fontSize="12.5" fontWeight="700" fill="#1e293b" fontFamily="Roboto, Arial, sans-serif">{mk.label}</text>
+                      {lines.map((ln, li) => (
+                        <text key={li} x={x} y={margin.top - 40 - (lines.length - 2) * 13 + li * 13} textAnchor="middle" fontSize="11.5" fill="#475569" fontFamily="Roboto, Arial, sans-serif">{ln}</text>
+                      ))}
+                    </g>
+                  );
+                })}
+                {/* Series */}
+                {cd.series.map((sr) => (
+                  <path key={sr.name} d={smoothPath(sr.data)} fill="none" stroke={sr.color} strokeWidth="3.2" strokeLinejoin="round" strokeLinecap="round" />
+                ))}
+                {/* Peak callouts */}
+                {cd.peaks.map((pk) => {
+                  const i = dateIndex(pk.date);
+                  if (i < 0) return null;
+                  const sr = cd.series[pk.series];
+                  const v = sr.data[i];
+                  const x = sx(i), y = sy(v);
+                  const tx = x + (pk.side === 'left' ? -12 : 12);
+                  const anchor = pk.side === 'left' ? 'end' : 'start';
+                  const lines = pk.text.split('\n');
+                  return (
+                    <g key={`p-${pk.date}-${pk.series}`}>
+                      <circle cx={x} cy={y} r="5" fill={sr.color} />
+                      {lines.map((ln, li) => (
+                        <text key={li} x={tx} y={y + (pk.dy ?? 0) + li * 16} textAnchor={anchor} fontSize="13.5" fontWeight="700" fill={sr.color} stroke="white" strokeWidth="4" paintOrder="stroke" fontFamily="Roboto, Arial, sans-serif">{ln}</text>
+                      ))}
+                    </g>
+                  );
+                })}
+              </svg>
+              {cd.footnote && (
+                <div className="text-slate-500 text-[10px] sm:text-[11px] leading-snug mt-0.5 pl-24 sm:pl-72 whitespace-pre-line">{cd.footnote}</div>
+              )}
+            </div>
           </div>
         );
       })()}
