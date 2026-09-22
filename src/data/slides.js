@@ -6794,7 +6794,7 @@ export const slides = [
               "icon": "GraduationCap",
               "name": "Instructional AI Tutor",
               "text": "Course tutors inside Canvas, grounded only in the material the instructor chooses.",
-              "detail": "Faculty and students \u00b7 available to every course this fall"
+              "detail": "Faculty and students \u00b7 available to every course via Canvas this fall, opt-in"
             },
             {
               "icon": "Search",
@@ -6818,7 +6818,7 @@ export const slides = [
               "icon": "Headphones",
               "name": "Ticket Routing",
               "text": "Recommends the right team for every incoming service desk ticket.",
-              "detail": "Service desk \u00b7 trained on our own history; the agent still decides"
+              "detail": "Service desk \u00b7 trained on our own history; the human agent still decides"
             }
           ]
         }
