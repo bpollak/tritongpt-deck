@@ -6760,5 +6760,130 @@ export const slides = [
     "audiences": [
       "LMU"
     ]
+  },
+  {
+    "id": 240.1,
+    "slug": "ai-portfolio-at-scale",
+    "type": "content",
+    "content": [],
+    "title": "At Scale: AI Running Campus-Wide Today",
+    "subtitle": "Seven programs in production across students, administration, and the platform",
+    "layout": "project-roster",
+    "backgroundColor": "#F5F0E6",
+    "managerLabel": "Project portfolio: at scale",
+    "managerSummary": "First of two portfolio slides for the operating review. Lists the seven AI projects running in production, each with one sentence of plain-language context. Companion slide: ai-portfolio-next.",
+    "roster": {
+      "groups": [
+        {
+          "label": "In production",
+          "color": "#00629B",
+          "items": [
+            {
+              "name": "Class Planner",
+              "text": "Builds a student's schedule around real constraints and hands off to booking."
+            },
+            {
+              "name": "Transcript Matching",
+              "text": "Matches incoming high school transcripts to student records and carries them through admissions validation."
+            },
+            {
+              "name": "Instructional AI Tutor",
+              "text": "Course tutors inside Canvas, grounded only in what the instructor chooses. Available to every course this fall."
+            },
+            {
+              "name": "College Selection Assistant",
+              "text": "Answers students' questions as they choose their college."
+            },
+            {
+              "name": "Inference as a Service",
+              "text": "One governed door to every model, for any team building on campus. Most of it runs on our own hardware."
+            },
+            {
+              "name": "Contract Review",
+              "text": "First-pass redline of contracts, now inside Word where the work happens."
+            },
+            {
+              "name": "Ticket Routing",
+              "text": "Recommends the right team for every service desk ticket, trained on our own history. The agent still decides."
+            }
+          ]
+        }
+      ]
+    },
+    "claimNote": "Source: TritonAI program records and team knowledge vault \u00b7 reviewed Sep 22, 2026",
+    "audiences": [
+      "all",
+      "PK"
+    ]
+  },
+  {
+    "id": 240.2,
+    "slug": "ai-portfolio-next",
+    "type": "content",
+    "content": [],
+    "title": "What Comes Next: Pilots and Skunkworks",
+    "subtitle": "Five programs with real users, four proving the idea",
+    "layout": "project-roster",
+    "backgroundColor": "#F5F0E6",
+    "managerLabel": "Project portfolio: pilots and skunkworks",
+    "managerSummary": "Second of two portfolio slides. Pilots have real users but are not yet campus-wide; skunkworks are proving the idea. Companion slide: ai-portfolio-at-scale.",
+    "roster": {
+      "groups": [
+        {
+          "label": "In pilot",
+          "color": "#C69214",
+          "items": [
+            {
+              "name": "TritonAI Harness",
+              "text": "Staff and faculty build their own tools with skills, plugins, and guardrails. Campus rollout begins in October."
+            },
+            {
+              "name": "Citizen Developer Hosting",
+              "text": "The governed path from a staff prototype to a hosted campus app. Automating the review step is what lets it scale."
+            },
+            {
+              "name": "Financial Agent",
+              "text": "Ask revenues and expenses in plain language, answered from campus financial data. The template every assistant since has copied."
+            },
+            {
+              "name": "Employee Compensation Analyst",
+              "text": "The same idea for payroll and HR data, starting with ITS and HR."
+            },
+            {
+              "name": "Faculty Finder",
+              "text": "Makes principal-investigator-eligible faculty findable from authoritative data."
+            }
+          ]
+        },
+        {
+          "label": "Skunkworks",
+          "color": "#6E963B",
+          "items": [
+            {
+              "name": "Cash Application Modernization",
+              "text": "Reuses the transcript matching engine to match incoming payments to invoices, with a small human-reviewed pilot next."
+            },
+            {
+              "name": "Payment Request Review",
+              "text": "Reads a payment request and its attachments, checks policy, and drafts the decision. Humans review everything until it earns trust."
+            },
+            {
+              "name": "RFX Evaluation Agent",
+              "text": "Screens supplier proposals against minimum requirements. Built for a bid expecting seventy or more responses."
+            },
+            {
+              "name": "Security Review Agent",
+              "text": "Extends contract review into the security terms that software agreements require."
+            }
+          ]
+        }
+      ],
+      "footnote": "Every project runs on the same governed platform."
+    },
+    "claimNote": "Source: TritonAI program records and team knowledge vault \u00b7 reviewed Sep 22, 2026",
+    "audiences": [
+      "all",
+      "PK"
+    ]
   }
 ];

@@ -221,6 +221,7 @@ const Slide = ({ slide, staticPreview = false }) => {
   const isAnalyticsChart = slide.layout === 'analytics-chart';
   const isDailyUsageChart = slide.layout === 'daily-usage-chart';
   const isProgramSummary = slide.layout === 'program-summary';
+  const isProjectRoster = slide.layout === 'project-roster';
   const isNarrowViewport = useIsNarrowViewport();
   const isTeamGrid = slide.layout === 'team-grid';
   const isTimelineEvolution = slide.layout === 'timeline-evolution';
@@ -1438,8 +1439,8 @@ const Slide = ({ slide, staticPreview = false }) => {
         className={clsx(
           "font-bold mb-4 sm:mb-6",
           isTitle ? "text-2xl sm:text-4xl md:text-6xl" : "text-xl sm:text-3xl md:text-5xl",
-          (!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isProgramSummary && !isAgentDevStrategy && !isRoadmap && !isProblemStatement && !isContractReviewChallenge && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isInfrastructureStack && !isTimelineEvolution && !isCampusMetrics && !isApiGateway && !isHostingPipeline && !isIntakeFunnel && !isInnovationFlywheel && !isFlywheelCaseStudy && !isOriginStory) && "border-b-4 border-ucsd-gold pb-3 inline-block self-start",
-          (isSolution || isSolutionVideo || isCaseStudyHero || isAssistantCategories || isKeyTakeaways || isProgramSummary || isAgentDevStrategy || isRoadmap || isProblemStatement || isContractReviewChallenge || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isComparisonTable || isCompoundArchitecture || isTimelineEvolution || isCampusMetrics) && "text-center w-full",
+          (!isEcosystem && !isPlatformArchitecture && !isPlatformLayers && !isPlatformSimple && !isSolution && !isSolutionVideo && !isCaseStudyHero && !isAssistantCategories && !isKeyTakeaways && !isProgramSummary && !isProjectRoster && !isAgentDevStrategy && !isRoadmap && !isProblemStatement && !isContractReviewChallenge && !isFeatureGrid && !isComparisonTable && !isCompoundArchitecture && !isInfrastructureStack && !isTimelineEvolution && !isCampusMetrics && !isApiGateway && !isHostingPipeline && !isIntakeFunnel && !isInnovationFlywheel && !isFlywheelCaseStudy && !isOriginStory) && "border-b-4 border-ucsd-gold pb-3 inline-block self-start",
+          (isSolution || isSolutionVideo || isCaseStudyHero || isAssistantCategories || isKeyTakeaways || isProgramSummary || isProjectRoster || isAgentDevStrategy || isRoadmap || isProblemStatement || isContractReviewChallenge || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isComparisonTable || isCompoundArchitecture || isTimelineEvolution || isCampusMetrics) && "text-center w-full",
           (isEcosystem || isPlatformArchitecture || isPlatformLayers || isPlatformSimple || isCompoundArchitecture || isInfrastructureStack || isApiGateway || isDsmlpFoundation || isDsmlpTritonAIBoundary || isHostingPipeline || isIntakeFunnel || isInnovationFlywheel || isFlywheelCaseStudy || isOriginStory) && "hidden",
           isAgentWorkflow && "text-center text-2xl sm:text-3xl md:text-4xl !mb-1 w-full",
           isCaseStudyHero && "text-3xl md:text-4xl mb-2 sm:mb-3 leading-tight",
@@ -5615,6 +5616,49 @@ const Slide = ({ slide, staticPreview = false }) => {
                 </div>
               )}
             </motion.div>
+          </div>
+        );
+      })()}
+
+      {/* Project Roster Layout: phase-grouped project list, two across */}
+      {isProjectRoster && slide.roster && (() => {
+        const groups = slide.roster.groups || [];
+        // Denser slides (more rows plus group headers) tighten so everything fits one page
+        const totalItems = groups.reduce((n, g) => n + (g.items?.length || 0), 0);
+        const dense = totalItems + groups.filter((g) => g.label).length >= 10;
+        return (
+          <div className={clsx("w-full max-w-[1500px] mx-auto flex flex-col flex-1 min-h-0", dense ? "gap-2 sm:gap-2.5" : "gap-3 sm:gap-4")}>
+            {groups.map((group, gi) => (
+              <div key={group.label || gi} className={clsx("flex flex-col flex-1 min-h-0", dense ? "gap-1.5 sm:gap-2" : "gap-2 sm:gap-2.5")}>
+                {group.label && (
+                  <div className="flex items-center gap-2.5">
+                    <span className="h-3 w-3 rounded-full shrink-0" style={{ backgroundColor: group.color }} />
+                    <span className="text-xs sm:text-sm font-black uppercase tracking-[0.16em]" style={{ color: group.color }}>
+                      {group.label}
+                    </span>
+                    <span className="flex-1 h-px bg-slate-200" />
+                  </div>
+                )}
+                <div className={clsx("grid grid-cols-1 lg:grid-cols-2 flex-1 lg:auto-rows-fr", dense ? "gap-2" : "gap-2 sm:gap-3")}>
+                  {group.items.map((item, i) => (
+                    <motion.div
+                      key={item.name}
+                      initial={{ opacity: 0, y: 12 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.1 + (gi * 0.1) + i * 0.05, duration: 0.35 }}
+                      className={clsx("bg-white rounded-xl shadow-md border-l-4 flex flex-col justify-center", dense ? "px-3.5 py-2 sm:px-4 sm:py-2.5" : "px-3.5 py-2.5 sm:px-5 sm:py-4")}
+                      style={{ borderLeftColor: group.color }}
+                    >
+                      <div className={clsx("font-black text-ucsd-navy leading-tight", dense ? "text-[14px] sm:text-[17px]" : "text-[15px] sm:text-xl")}>{item.name}</div>
+                      <div className={clsx("text-slate-600 leading-snug mt-0.5", dense ? "text-[11.5px] sm:text-[14px]" : "text-[12px] sm:text-base")}>{item.text}</div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            ))}
+            {slide.roster.footnote && (
+              <div className="text-center text-slate-500 text-[11px] sm:text-sm leading-snug">{slide.roster.footnote}</div>
+            )}
           </div>
         );
       })()}
