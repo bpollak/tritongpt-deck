@@ -105,6 +105,22 @@ const Slide = ({ slide, staticPreview = false }) => {
     return <CabinetSlide slide={slide} />;
   }
 
+  if (slide.type === 'video' && slide.embedUrl) {
+    return (
+      <div className="relative w-full h-full overflow-hidden bg-black">
+        <iframe
+          src={slide.embedUrl}
+          title={slide.demoLabel || slide.title || 'Embedded video'}
+          className={`absolute inset-x-0 top-0 w-full border-0 ${
+            slide.videoClearNav ? 'bottom-16 h-[calc(100%-4rem)]' : 'bottom-0 h-full'
+          }`}
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
+    );
+  }
+
   if (slide.type === 'video') {
     return (
       <div className="relative w-full h-full overflow-hidden bg-black">

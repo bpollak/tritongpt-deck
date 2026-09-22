@@ -2336,6 +2336,7 @@ export const slides = [
     "title": "Demo: Setting Up an AI Tutor in Canvas",
     "managerLabel": "Video: AI Tutor setup in Canvas (Sep 2026)",
     "managerSummary": "Screen capture of the TritonGPT AI Tutor being set up inside a Canvas course: choosing the teaching style, connecting Canvas pages and files as knowledge sources, and deploying the tutor. The video file is a short placeholder built from the recording's first frame until the full 1m48s export replaces it at the same path.",
+    "embedUrl": "https://next.frame.io/share/61983903-d1fb-441b-a9b9-76283aaf8986/view/a0fb7638-bedb-43f6-ab29-f3b47ca74794",
     "videoSrc": "/media/instructional-ai-tutor-demo.mp4",
     "poster": "/media/instructional-ai-tutor-demo-poster.jpg",
     "videoLoop": false,
