@@ -7054,52 +7054,67 @@ export const slides = [
     "type": "content",
     "content": [],
     "title": "TritonAI Collaborations",
-    "subtitle": "Partners renewing, capacity growing, and more of higher education asking to join",
+    "subtitle": "About $630K in partner agreements so far, and more of higher education asking to join",
     "layout": "project-roster",
     "backgroundColor": "#F5F0E6",
     "managerLabel": "TritonAI collaborations: partners, campus growth, conversations",
-    "managerSummary": "Partner institutions on TritonAI with their contract year (UC Berkeley, UC ANR, and Fairleigh Dickinson in year two; UC Merced in year one), the $650K hardware expansion at the Halicioglu School of Data Science and Computing (HSDSC) and October training video rollout with the VCR, API gateway interest from Berkeley and UCLA Engineering, and OpenAI/Anthropic negotiations. Closes on whether to take these to Cabinet and the Deans.",
+    "managerSummary": "Partner institutions on TritonAI with contract year and agreement value (UC Berkeley $160K, UC ANR $117K, Fairleigh Dickinson $108K, UC Merced $48K), two that did not renew (San Diego State $170K, CSU Chancellor's Office $29K), about $630K in total; the $650K hardware expansion at the Halicioglu School of Data Science and Computing (HSDSC), the October training video rollout with the VCR, API gateway interest from Berkeley and UCLA Engineering, and OpenAI/Anthropic negotiations. Closes on whether to take these to Cabinet and the Deans.",
     "roster": {
       "groups": [
         {
-          "label": "Partner institutions running on TritonAI",
+          "label": "Partner institutions",
           "color": "#00629B",
-          "columns": 4,
+          "columns": 3,
           "items": [
             {
               "icon": "Landmark",
               "name": "UC Berkeley",
               "text": "Runs its campus assistant, BearGPT, on TritonAI.",
-              "detail": "Year two \u00b7 renewed"
+              "detail": "Year two \u00b7 renewed \u00b7 $160K to date"
             },
             {
               "icon": "Landmark",
               "name": "UC ANR",
               "text": "Runs AggieGPT for Agriculture and Natural Resources on TritonAI.",
-              "detail": "Year two \u00b7 renewed"
+              "detail": "Year two \u00b7 renewed \u00b7 $117K to date"
             },
             {
               "icon": "Landmark",
               "name": "Fairleigh Dickinson",
               "text": "A private university outside the UC system, in production on TritonAI.",
-              "detail": "Year two \u00b7 renewed"
+              "detail": "Year two \u00b7 renewing \u00b7 $108K two-year agreement"
             },
             {
               "icon": "Landmark",
               "name": "UC Merced",
               "text": "Runs its campus assistant, BobcatGPT, on TritonAI.",
-              "detail": "Year one"
+              "detail": "Year one \u00b7 $48K"
+            },
+            {
+              "icon": "Landmark",
+              "name": "San Diego State",
+              "text": "Ran SDSU-GPT on TritonAI.",
+              "detail": "Did not renew \u00b7 $170K including setup",
+              "color": "#8A97A5"
+            },
+            {
+              "icon": "Landmark",
+              "name": "CSU Chancellor's Office",
+              "text": "Ran a TritonAI pilot for the Cal State system office.",
+              "detail": "Did not renew \u00b7 $29K",
+              "color": "#8A97A5"
             }
           ]
         },
         {
-          "label": "Growing at UC San Diego",
+          "label": "Growing and in conversation",
           "color": "#C69214",
+          "columns": 4,
           "items": [
             {
               "icon": "Server",
               "name": "$650K in New Hardware",
-              "text": "Purchased to expand TritonAI at the Hal\u0131c\u0131o\u011flu School of Data Science and Computing, supporting teaching and learning with large language models.",
+              "text": "Expands TritonAI at the Hal\u0131c\u0131o\u011flu School of Data Science and Computing for teaching and learning with large language models.",
               "detail": "Teaching and learning capacity"
             },
             {
@@ -7107,17 +7122,11 @@ export const slides = [
               "name": "AI Training Video Series",
               "text": "Promotion to the research community and beyond, in partnership with the Vice Chancellor for Research.",
               "detail": "Begins the first week of October"
-            }
-          ]
-        },
-        {
-          "label": "In conversation",
-          "color": "#6E963B",
-          "items": [
+            },
             {
               "icon": "GitBranch",
               "name": "API Gateway Interest",
-              "text": "UC Berkeley is testing the TritonAI API gateway, and we just met with the UCLA Samueli School of Engineering about the same.",
+              "text": "UC Berkeley is testing our API gateway; we just met with UCLA Samueli School of Engineering about the same.",
               "detail": "Gateway access beyond a hosted assistant"
             },
             {
@@ -7131,7 +7140,7 @@ export const slides = [
       ],
       "footnote": "For discussion: do we bring these updates to Cabinet and the Deans?"
     },
-    "claimNote": "Source: TritonAI program update for the Chancellor discussion, Sep 2026 \u00b7 partner contract years confirmed by the program lead \u00b7 reviewed Sep 22, 2026",
+    "claimNote": "Source: TritonAI partner agreement records \u00b7 gross agreement values before the Onyx reseller share \u00b7 partner contract years confirmed by the program lead \u00b7 reviewed Sep 22, 2026",
     "audiences": [
       "PK"
     ]

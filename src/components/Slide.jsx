@@ -5680,12 +5680,12 @@ const Slide = ({ slide, staticPreview = false }) => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 + (gi * 0.1) + i * 0.05, duration: 0.35 }}
                         className={clsx("bg-white rounded-xl shadow-md border-l-4 flex items-start gap-3", dense ? "px-3 py-2 sm:px-3.5 sm:py-2.5" : roomy ? "px-4 py-3 sm:px-6 sm:py-5" : "px-3.5 py-2.5 sm:px-4 sm:py-3")}
-                        style={{ borderLeftColor: group.color }}
+                        style={{ borderLeftColor: item.color || group.color }}
                       >
                         {ItemIcon && (
                           <div
                             className={clsx("rounded-lg shrink-0 flex items-center justify-center text-white mt-0.5", dense ? "w-7 h-7 sm:w-8 sm:h-8" : roomy ? "w-9 h-9 sm:w-12 sm:h-12" : "w-8 h-8 sm:w-10 sm:h-10")}
-                            style={{ backgroundColor: group.color }}
+                            style={{ backgroundColor: item.color || group.color }}
                           >
                             <ItemIcon size={dense ? 15 : roomy ? 22 : 18} />
                           </div>
