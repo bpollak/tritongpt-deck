@@ -39,6 +39,7 @@ export const slideManagerState = {
     "llm-api-usage-attribution",
     "tritonai-developer-api-program",
     "video-tritonai-harness-walkthrough",
+    "tritonai-harness-capabilities",
     "tritonai-harness-sessions",
     "tritonai-harness-prompts",
     "instructional-ai-tutor",
@@ -356,6 +357,10 @@ export const slideManagerState = {
       "conference"
     ],
     "video-tritonai-harness-walkthrough": [
+      "PK"
+    ],
+    "tritonai-harness-capabilities": [
+      "all",
       "PK"
     ],
     "tritonai-harness-sessions": [

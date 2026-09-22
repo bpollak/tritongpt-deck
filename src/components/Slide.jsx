@@ -5646,9 +5646,11 @@ const Slide = ({ slide, staticPreview = false }) => {
       {/* Project Roster Layout: phase-grouped project list, two across */}
       {isProjectRoster && slide.roster && (() => {
         const groups = slide.roster.groups || [];
+        const threeUp = slide.roster.columns === 3;
         // Denser slides (more rows plus group headers) tighten so everything fits one page
         const totalItems = groups.reduce((n, g) => n + (g.items?.length || 0), 0);
-        const dense = totalItems + groups.filter((g) => g.label).length >= 10;
+        const totalRows = groups.reduce((n, g) => n + Math.ceil((g.items?.length || 0) / (threeUp ? 3 : 2)), 0);
+        const dense = (threeUp ? totalRows * 2 : totalItems) + groups.filter((g) => g.label).length >= 10;
         // Lighter slides get larger type so they still fill the page
         const roomy = !dense && totalItems <= 5;
         return (
@@ -5664,7 +5666,7 @@ const Slide = ({ slide, staticPreview = false }) => {
                     <span className="flex-1 h-px bg-slate-200" />
                   </div>
                 )}
-                <div className={clsx("grid grid-cols-1 lg:grid-cols-2 flex-1 lg:auto-rows-fr", dense ? "gap-2" : roomy ? "gap-3 sm:gap-4" : "gap-2 sm:gap-3")}>
+                <div className={clsx("grid grid-cols-1 flex-1 lg:auto-rows-fr", threeUp ? "lg:grid-cols-3" : "lg:grid-cols-2", dense ? "gap-2" : roomy ? "gap-3 sm:gap-4" : "gap-2 sm:gap-3")}>
                   {group.items.map((item, i) => {
                     const ItemIcon = item.icon ? iconMap[item.icon] : null;
                     return (

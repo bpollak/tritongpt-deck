@@ -2370,6 +2370,101 @@ export const slides = [
     ]
   },
   {
+    "id": 201.95,
+    "slug": "tritonai-harness-capabilities",
+    "type": "content",
+    "content": [],
+    "title": "TritonAI Harness: Built by the People Who Do the Work",
+    "subtitle": "A desktop AI workspace where staff turn know-how into working tools, without writing code",
+    "layout": "project-roster",
+    "backgroundColor": "#F5F0E6",
+    "managerLabel": "TritonAI Harness: capabilities, connections, safeguards",
+    "managerSummary": "Citizen-developer framing of the Harness from the nightly build installed on Brett's Mac (Sep 22, 2026): skills, projects, and computer use; Microsoft 365, Google Workspace, GitHub, Kuali Build, and n8n connectors plus campus and commercial models; approvals, protected keys, and central management.",
+    "roster": {
+      "columns": 3,
+      "groups": [
+        {
+          "label": "What it does",
+          "color": "#00629B",
+          "items": [
+            {
+              "icon": "Blocks",
+              "name": "Skills",
+              "text": "Packaged know-how, like the UC San Diego branding skill, that anyone can call on in plain language to build a tool, a report, or a page.",
+              "detail": "Describe what you need \u00b7 no programming required"
+            },
+            {
+              "icon": "FolderOpen",
+              "name": "Projects",
+              "text": "Each piece of work keeps its own files, conversations, and context, so a request tracker or a daily briefing picks up where it left off.",
+              "detail": "Plan first, then build \u00b7 by typing or by voice"
+            },
+            {
+              "icon": "Monitor",
+              "name": "Computer Use",
+              "text": "When a system has no connector, it can work a desktop app or its built-in browser the way a person would, and show what it did.",
+              "detail": "Turned on in the current build"
+            }
+          ]
+        },
+        {
+          "label": "What it connects to",
+          "color": "#C69214",
+          "items": [
+            {
+              "icon": "Calendar",
+              "name": "Microsoft 365 and Google Workspace",
+              "text": "Reads mail, calendars, Teams chats, and Drive files, manages meetings, and drafts email for review.",
+              "detail": "Email stays a draft \u00b7 a person always presses send"
+            },
+            {
+              "icon": "GitBranch",
+              "name": "Campus Systems",
+              "text": "Kuali Build forms and approvals, GitHub for code, and n8n workflows that keep running after the conversation ends.",
+              "detail": "Five connectors installed in the current build"
+            },
+            {
+              "icon": "Server",
+              "name": "Campus and Commercial Models",
+              "text": "Campus-hosted open models keep sensitive work on UC San Diego infrastructure; leading commercial models are there when a task needs them.",
+              "detail": "TritonAI On-Prem and TritonAI Cloud in one app"
+            }
+          ]
+        },
+        {
+          "label": "What keeps it safe",
+          "color": "#182B49",
+          "items": [
+            {
+              "icon": "ShieldCheck",
+              "name": "Approvals",
+              "text": "Supervised, Auto, and Full access modes set how far it goes on its own; consequential steps wait for a yes.",
+              "detail": "The person stays accountable for every action"
+            },
+            {
+              "icon": "Shield",
+              "name": "Protected Keys",
+              "text": "Sign-ins and keys sit in the computer's secure store. The AI works through them without ever seeing them.",
+              "detail": "No passwords pasted into prompts"
+            },
+            {
+              "icon": "Building2",
+              "name": "Campus-Managed",
+              "text": "Code-signed, updated with one click, and governed by a TritonAI policy, with UC San Diego branding and accessibility built in.",
+              "detail": "One supported app instead of a dozen personal tools"
+            }
+          ]
+        }
+      ],
+      "footnote": "Features from the current nightly build. A non-programmer administrator used it to build a complete desktop app, the OnBase API Explorer."
+    },
+    "claimNote": "Source: TritonAI Harness nightly build installed on a TritonAI workstation (integrations, model catalog, and settings inspected Sep 22, 2026) \u00b7 team knowledge vault \u00b7 reviewed Sep 22, 2026",
+    "audiences": [
+      "all",
+      "PK"
+    ]
+  },
+  {
     "id": 202.7,
     "slug": "instructional-ai-tutor",
     "type": "content",
