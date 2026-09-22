@@ -67,7 +67,8 @@ export const slideManagerState = {
     "tritongpt-widget-analytics",
     "tritongpt-user-growth",
     "ai-portfolio-at-scale",
-    "ai-portfolio-next",
+    "ai-portfolio-pilots",
+    "ai-portfolio-skunkworks",
     "research-alignment-poc",
     "ai-engagement-at-scale",
     "cabinet-harness-02-convergence",
@@ -494,7 +495,11 @@ export const slideManagerState = {
       "all",
       "PK"
     ],
-    "ai-portfolio-next": [
+    "ai-portfolio-pilots": [
+      "all",
+      "PK"
+    ],
+    "ai-portfolio-skunkworks": [
       "all",
       "PK"
     ],

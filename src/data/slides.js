@@ -6785,7 +6785,7 @@ export const slides = [
     "layout": "project-roster",
     "backgroundColor": "#F5F0E6",
     "managerLabel": "Recently developed solutions: at scale",
-    "managerSummary": "First of two portfolio slides. The seven recently built AI solutions now in production, each with a description and the constituency it serves. Not a complete inventory of campus AI. Companion slide: ai-portfolio-next.",
+    "managerSummary": "First of three portfolio slides. The seven recently built solutions now in production. Companions: ai-portfolio-pilots, ai-portfolio-skunkworks.",
     "roster": {
       "groups": [
         {
@@ -6795,44 +6795,44 @@ export const slides = [
             {
               "icon": "Calendar",
               "name": "Class Planner",
-              "text": "Builds a student's schedule around real constraints and hands off to booking.",
+              "text": "Students say what they need and the planner builds a schedule around real constraints: preferred times, personal commitments, and requirements. It compares viable options, then hands off to booking.",
               "detail": "Students \u00b7 carried every registration pass this enrollment season"
             },
             {
               "icon": "FileCheck",
               "name": "Transcript Matching",
-              "text": "Matches incoming high school transcripts to student records and carries them through admissions validation.",
-              "detail": "Admissions \u00b7 replaced hand entry during the fall backlog"
+              "text": "Reads incoming high school transcripts, matches each course to the student's record, and carries them through the validation admissions requires. It replaced hand entry into spreadsheets.",
+              "detail": "Admissions \u00b7 tens of thousands of coursework entries, better than 99% accurate"
             },
             {
               "icon": "GraduationCap",
               "name": "Instructional AI Tutor",
-              "text": "Course tutors inside Canvas, grounded only in the material the instructor chooses.",
-              "detail": "Faculty and students \u00b7 available to every course via Canvas this fall, opt-in"
+              "text": "Instructors turn on a tutor for their course and choose exactly what it can draw from: their Canvas pages, files, and approved sources. Socratic or direct, their choice, set up in minutes.",
+              "detail": "Faculty and students \u00b7 every course via Canvas this fall, opt-in"
             },
             {
               "icon": "Search",
               "name": "College Selection Assistant",
-              "text": "Answers prospective and incoming students' questions as they choose their college.",
+              "text": "Answers questions from prospective and incoming students as they weigh which college to join, grounded in campus sources rather than whatever they find online.",
               "detail": "Students \u00b7 rolling out across campus web pages"
             },
             {
               "icon": "Server",
               "name": "Inference as a Service",
-              "text": "One governed door to every model, for any team building on campus.",
-              "detail": "Developers and campus systems \u00b7 most of it on our own hardware"
+              "text": "One gateway gives every campus team the same governed set of models, with usage tracked and rates that reflect the market. Most requests never leave our own hardware.",
+              "detail": "Developers and campus systems \u00b7 the foundation the rest of this list runs on"
             },
             {
               "icon": "FileText",
               "name": "Contract Review",
-              "text": "First-pass redline of contracts against our own policy rules.",
-              "detail": "Procurement and legal \u00b7 now inside Word where the work happens"
+              "text": "Reads a contract clause by clause against our own policy rules and returns redlines with the reason for each one. Now built into Word, where the reviewers already work.",
+              "detail": "Procurement and legal \u00b7 took review from days to near-immediate"
             },
             {
               "icon": "Headphones",
               "name": "Ticket Routing",
-              "text": "Recommends the right team for every incoming service desk ticket.",
-              "detail": "Service desk \u00b7 trained on our own history; the human agent still decides"
+              "text": "Suggests which team should own an incoming ticket, with a confidence score, trained on our own case history. The human agent accepts or overrides it.",
+              "detail": "Service desk \u00b7 our first production machine learning inside the ticketing system"
             }
           ]
         }
@@ -6846,15 +6846,15 @@ export const slides = [
   },
   {
     "id": 240.2,
-    "slug": "ai-portfolio-next",
+    "slug": "ai-portfolio-pilots",
     "type": "content",
     "content": [],
-    "title": "Recently Developed Solutions: What Comes Next",
-    "subtitle": "Five with real users today, four proving the idea",
+    "title": "Recently Developed Solutions: In Pilot",
+    "subtitle": "Five with real users today, not yet campus-wide",
     "layout": "project-roster",
     "backgroundColor": "#F5F0E6",
-    "managerLabel": "Recently developed solutions: pilots and skunkworks",
-    "managerSummary": "Second of two portfolio slides. Pilots have real users but are not yet campus-wide; skunkworks are proving the idea. Companion slide: ai-portfolio-at-scale.",
+    "managerLabel": "Recently developed solutions: in pilot",
+    "managerSummary": "Second of three portfolio slides. Pilots have real users but are not yet campus-wide. Companions: ai-portfolio-at-scale, ai-portfolio-skunkworks.",
     "roster": {
       "groups": [
         {
@@ -6864,35 +6864,56 @@ export const slides = [
             {
               "icon": "Cpu",
               "name": "TritonAI Harness",
-              "text": "Staff and faculty build their own tools with skills, plugins, and guardrails.",
-              "detail": "Citizen developers \u00b7 campus rollout begins in October"
+              "text": "A desktop agent that lets staff and faculty build their own tools. Skills and plugins package repeatable work, sub-agents split larger jobs, and approval hooks keep every action inside policy.",
+              "detail": "Citizen developers \u00b7 weekly use more than tripled since July; campus rollout in October"
             },
             {
               "icon": "Blocks",
               "name": "Citizen Developer Hosting",
-              "text": "The governed path from a staff prototype to a hosted campus app.",
+              "text": "Takes what someone builds and puts it on campus infrastructure through a governed path: package, review, deploy. Tiers run from a laptop sandbox to full enterprise hosting.",
               "detail": "Departments \u00b7 automating the review step is what lets it scale"
             },
             {
               "icon": "DollarSign",
               "name": "Financial Agent",
-              "text": "Ask revenues and expenses in plain language, answered from campus financial data.",
-              "detail": "Finance staff \u00b7 the template every assistant since has copied"
+              "text": "Ask about revenues and expenses in plain language and get an answer drawn from campus financial data, returned as a table or chart rather than a raw query result.",
+              "detail": "Finance staff \u00b7 the pattern every assistant since has copied"
             },
             {
               "icon": "Users",
               "name": "Employee Compensation Analyst",
-              "text": "The same idea for payroll and workforce data.",
+              "text": "The same approach applied to payroll and workforce data, so compensation and staffing questions can be answered without commissioning a report first.",
               "detail": "HR and ITS \u00b7 first version scoped to a limited audience"
             },
             {
               "icon": "FlaskConical",
               "name": "Faculty Finder",
-              "text": "Makes principal-investigator-eligible faculty findable from authoritative campus data.",
+              "text": "Makes principal-investigator-eligible faculty findable from authoritative campus data instead of word of mouth, for anyone assembling a research team or routing an opportunity.",
               "detail": "Research teams \u00b7 first test of the sign-on pattern campus apps will share"
             }
           ]
-        },
+        }
+      ]
+    },
+    "claimNote": "Source: TritonAI program records and team knowledge vault \u00b7 a selection of recent work, not a full inventory \u00b7 reviewed Sep 22, 2026",
+    "audiences": [
+      "all",
+      "PK"
+    ]
+  },
+  {
+    "id": 240.3,
+    "slug": "ai-portfolio-skunkworks",
+    "type": "content",
+    "content": [],
+    "title": "Recently Developed Solutions: Skunkworks",
+    "subtitle": "Four proving the idea before they earn a wider audience",
+    "layout": "project-roster",
+    "backgroundColor": "#F5F0E6",
+    "managerLabel": "Recently developed solutions: skunkworks",
+    "managerSummary": "Third of three portfolio slides. Early efforts proving the idea. Companions: ai-portfolio-at-scale, ai-portfolio-pilots.",
+    "roster": {
+      "groups": [
         {
           "label": "Skunkworks",
           "color": "#6E963B",
@@ -6900,26 +6921,26 @@ export const slides = [
             {
               "icon": "Wallet",
               "name": "Cash Application Modernization",
-              "text": "Reuses the transcript matching engine to match incoming payments to open invoices.",
-              "detail": "Business and Financial Services \u00b7 small human-reviewed pilot next"
+              "text": "Generalizes the transcript matching engine to money: match incoming payments to open invoices, apply the clear ones automatically, research the rest, and chase what cannot be matched.",
+              "detail": "Business and Financial Services \u00b7 a small human-reviewed pilot comes next"
             },
             {
               "icon": "ClipboardCheck",
               "name": "Payment Request Review",
-              "text": "Reads a payment request and its attachments, checks policy, and drafts the decision.",
-              "detail": "Finance staff \u00b7 humans review everything until it earns trust"
+              "text": "Reads a payment request and its attachments, checks documentation and policy, confirms the amounts and suppliers match, then drafts the approval or rejection for a reviewer.",
+              "detail": "Finance staff \u00b7 humans review everything until confidence is earned"
             },
             {
               "icon": "Scale",
               "name": "RFX Evaluation Agent",
-              "text": "Screens supplier proposals against minimum requirements before people read them.",
+              "text": "Screens supplier proposals against the minimum requirements before anyone reads them, then scores the qualifying ones against the weighted criteria the buyer set.",
               "detail": "Procurement \u00b7 built for a bid expecting seventy or more responses"
             },
             {
               "icon": "ShieldCheck",
               "name": "Security Review Agent",
-              "text": "Extends contract review into the security terms software agreements require.",
-              "detail": "Information assurance \u00b7 the deeper review software contracts demand"
+              "text": "Extends contract review into security: reads a software agreement for where data goes, what the vendor commits to, and what the terms expose the campus to.",
+              "detail": "Information assurance \u00b7 the deeper review software contracts require"
             }
           ]
         }
