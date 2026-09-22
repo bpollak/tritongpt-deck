@@ -4793,14 +4793,14 @@ export const slides = [
     "type": "content",
     "content": [],
     "title": "Two Planners, One Enrollment Calendar",
-    "subtitle": "TritonGPT Class Planner and the standalone website, each indexed to its own week of Jul 27 (= 100)",
+    "subtitle": "Each week shown as a percent of that tool's own Jul 27 week",
     "layout": "analytics-chart",
     "backgroundColor": "#F5F0E6",
     "managerLabel": "Class Planner metrics: indexed comparison of both planners",
-    "managerSummary": "Unit-free comparison of the two Class Planner tools across the summer 2026 enrollment passes. Each weekly series is indexed to its own Jul 27 value (the first complete week both tools have data), so the chart compares timing and shape, not volume.",
+    "managerSummary": "Comparison of the two Class Planner tools across the summer 2026 enrollment passes. Because the tools are counted in different units, each weekly value is shown as a percent of that tool's own Jul 27 week, so the chart compares timing and direction, not size.",
     "chartData": {
-      "title": "How the two planners moved week to week, indexed to Jul 27 = 100",
-      "headline": "The two planners tracked each other through the continuing-student passes, then split: the incoming-student first pass lifted the website by a quarter while the TritonGPT planner stayed near baseline and tapered faster in September.",
+      "title": "Two planners on one enrollment calendar, each week as a percent of its own Jul 27 week (= 100)",
+      "headline": "The two planners moved together through the continuing-student passes, then split: the incoming-student first pass lifted the website by a quarter while the TritonGPT planner stayed near baseline and tapered faster in September.",
       "xAxis": [
         "Jul 27",
         "Aug 3",
@@ -4811,7 +4811,7 @@ export const slides = [
         "Sep 7",
         "Sep 14"
       ],
-      "xAxisTitle": "Week starting (2026), index of each tool's own Jul 27 value",
+      "xAxisTitle": "Week starting (2026)",
       "yAxis": [
         "140",
         "120",
@@ -4859,25 +4859,25 @@ export const slides = [
         {
           "icon": "GitBranch",
           "stat": "Within 11 points",
-          "label": "Jul 27-Aug 24: both tools rose and fell together through the continuing-student first and second passes",
+          "label": "Jul 27-Aug 24: both tools rose and fell together through the continuing-student passes",
           "color": "#00629B"
         },
         {
           "icon": "Users",
           "stat": "124 vs 86",
-          "label": "Week of Aug 31 (incoming first pass): website index vs TritonGPT planner index",
+          "label": "Week of Aug 31, the incoming first pass: website vs TritonGPT planner",
           "color": "#C69214"
         },
         {
           "icon": "TrendingDown",
           "stat": "55 vs 28",
-          "label": "Week of Sep 14: website vs TritonGPT planner, both below baseline as windows closed",
+          "label": "Week of Sep 14: website vs TritonGPT planner, both below their Jul 27 level",
           "color": "#FC8900"
         }
       ],
-      "footnote": "The tools are measured in different units (distinct account IDs vs pageviews), so each series is indexed to its own Jul 27 value; the chart compares timing and shape, not volume. The Jul 20 TritonGPT peak week is omitted because website data for that week is partial. Reading the split as incoming students favoring the website is an inference, not a measured cause. Source: Class Planner analytics workbook, report through Sep 21, 2026."
+      "footnote": "How to read it: the TritonGPT planner is counted in distinct student accounts and the website in pageviews, so the raw numbers cannot share an axis. Each week is divided by that tool's own Jul 27 week, which puts both on one scale and compares timing and direction rather than size. The Jul 20 week is left out because website data for it is partial. Source: Class Planner analytics workbook, report through Sep 21, 2026."
     },
-    "claimNote": "Source: Class Planner analytics workbook, report through Sep 21, 2026, weekly series indexed to the week of Jul 27 · inference labelled · reviewed Sep 21, 2026",
+    "claimNote": "Source: Class Planner analytics workbook, report through Sep 21, 2026 \u00b7 each series shown as a percent of its own Jul 27 week \u00b7 reviewed Sep 21, 2026",
     "audiences": [
       "all",
       "PK"
