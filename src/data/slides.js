@@ -2133,97 +2133,58 @@ export const slides = [
     "slug": "tritonai-operating-review-summary",
     "type": "content",
     "content": [],
-    "title": "Where TritonAI Stands Today",
-    "subtitle": "Four programs, moving from skunkworks to pilots to campus scale",
+    "title": "Going from Skunkworks to Pilots to Scale",
+    "subtitle": "Four programs, each now reaching its full audience",
     "layout": "program-summary",
     "backgroundColor": "#F5F0E6",
     "managerLabel": "Summary: what this review covers",
-    "managerSummary": "One-page opener for the operating review. Frames the four programs covered in the rest of the view along a skunkworks-to-pilots-to-scale arc, each with its audience and current proof point.",
+    "managerSummary": "Agenda opener for the operating review, using the skunkworks-to-pilots-to-scale framing. One row per program: what it is, who it reaches, and the single number that matters. Details follow on each program's own slides.",
     "summary": {
-      "stages": [
-        {
-          "label": "Skunkworks",
-          "note": "Built in-house, proven on real work"
-        },
-        {
-          "label": "Pilots",
-          "note": "Instructor and team adoption, measured"
-        },
-        {
-          "label": "Scale",
-          "note": "Campus-wide, governed, and funded",
-          "current": true
-        }
-      ],
       "items": [
-        {
-          "icon": "Server",
-          "title": "Inference as a Service",
-          "audience": "Developers and campus systems",
-          "text": "One governed door to every model. Self-hosted capacity at SDSC plus approved cloud routes, with rates that now reflect the market for commercially hosted open-weight models.",
-          "metric": "455.3B tokens",
-          "metricLabel": "Jan-Aug 2026, 92.6% on self-hosted and internal routes",
-          "color": "#00629B",
-          "tags": [
-            "SDSC self-hosted",
-            "Azure, Google, Bedrock",
-            "Chat, reasoning, vision, OCR"
-          ]
-        },
         {
           "icon": "Cpu",
           "title": "TritonAI Harness",
-          "audience": "Citizen developers: all staff and faculty",
-          "text": "The paved path for staff who build their own tools. Skills and plugins package repeatable work, sub-agents split big jobs, and approval hooks keep every action inside policy. ITS hosts what teams ship.",
-          "metric": "3.2x growth",
-          "metricLabel": "Weekly sessions, first full week to the week of Sep 18; training and comms roll out the first week of October",
+          "audience": "Citizen developers",
           "color": "#C69214",
-          "tags": [
-            "Skills",
-            "Plugins",
-            "Approval hooks",
-            "Sub-agents",
-            "Computer use"
-          ]
+          "text": "Staff and faculty build their own tools with skills, plugins, and guardrails. ITS hosts what they ship.",
+          "metric": "3.2x",
+          "metricLabel": "Weekly use since July"
         },
         {
           "icon": "GraduationCap",
           "title": "Instructional AI Tutor",
-          "audience": "All Canvas courses, Fall 2026",
-          "text": "Turnkey tutors inside Canvas, grounded only in the pages, files, and sources the instructor selects. Socratic or directive, set up in minutes, and updated as course content changes.",
-          "metric": "81% / 86%",
-          "metricLabel": "Pilot students who said it helped learning and was easy to use (68 responses)",
+          "audience": "Every Canvas course",
           "color": "#6E963B",
-          "tags": [
-            "Canvas-native",
-            "Instructor-controlled sources",
-            "Socratic or directive"
-          ]
+          "text": "Tutors inside Canvas, grounded in what the instructor chooses.",
+          "metric": "Fall 2026",
+          "metricLabel": "Campus-wide launch"
         },
         {
           "icon": "Users",
           "title": "TritonGPT and Class Planner",
           "audience": "All students",
-          "text": "The campus assistant plus both class planners, now carrying enrollment-season demand through every registration pass.",
-          "metric": "17.0K users",
-          "metricLabel": "Unique TritonGPT users in August 2026, on 170,939 prompts",
           "color": "#FC8900",
-          "tags": [
-            "Campus assistant",
-            "AI class planner",
-            "Standalone planner",
-            "Blink search"
-          ]
+          "text": "The campus assistant and both class planners, carrying every enrollment pass.",
+          "metric": "17,000",
+          "metricLabel": "Students and staff in August"
+        },
+        {
+          "icon": "Server",
+          "title": "Inference as a Service",
+          "audience": "Developers and systems",
+          "color": "#00629B",
+          "text": "One governed door to every model, most of it running on our own hardware.",
+          "metric": "93%",
+          "metricLabel": "Self-hosted and internal"
         }
       ],
-      "footnote": "Actuals from the TritonAI gateway, Harness telemetry, Class Planner analytics, and the instructional pilot survey. Each program has its own slides following this one."
+      "footnote": "Each program has its own slides following this one."
     },
-    "claimNote": "Source: TritonAI gateway report (Jan-Aug 2026), Harness usage telemetry through Sep 18, TritonGPT analytics through Aug 2026, and the 2025-2026 instructional AI pilot survey (68 responses) \u00b7 reviewed Sep 22, 2026",
+    "claimNote": "Source: Harness usage telemetry through Sep 18, 2026; TritonGPT analytics through Aug 2026; TritonAI gateway report Jan-Aug 2026 (92.6% self-hosted and internal) \u00b7 reviewed Sep 22, 2026",
     "audiences": [
       "all",
       "PK"
-    ],
-    "compact": true
+    ]
   },
   {
     "id": 23.5,

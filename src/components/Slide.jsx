@@ -5619,94 +5619,62 @@ const Slide = ({ slide, staticPreview = false }) => {
         );
       })()}
 
-      {/* Program Summary Layout: stage framing rail + one card per program area */}
+      {/* Program Summary Layout: agenda rows, one per program area */}
       {isProgramSummary && slide.summary && (() => {
         const sum = slide.summary;
         return (
-          <div className="w-full max-w-[1500px] mx-auto flex flex-col gap-2 sm:gap-3">
-            {/* Framing rail */}
-            {sum.stages?.length > 0 && (
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2">
-                {sum.stages.map((st, i) => (
-                  <React.Fragment key={st.label}>
-                    <div
-                      className={clsx(
-                        'flex-1 rounded-xl px-4 py-1.5 sm:px-5 sm:py-2 text-center border',
-                        st.current ? 'bg-ucsd-navy border-ucsd-navy shadow-md' : 'bg-white/70 border-slate-200'
-                      )}
-                    >
-                      <div className={clsx('text-sm sm:text-base font-black tracking-tight', st.current ? 'text-white' : 'text-slate-500')}>
-                        {st.label}
-                      </div>
-                      <div className={clsx('text-[11px] sm:text-[13px] leading-tight', st.current ? 'text-white/80' : 'text-slate-500')}>
-                        {st.note}
-                      </div>
-                    </div>
-                    {i < sum.stages.length - 1 && (
-                      <ArrowRight size={20} className="hidden sm:block shrink-0 text-slate-400" />
-                    )}
-                  </React.Fragment>
-                ))}
-              </div>
-            )}
-            {/* Program cards, two across so each has room to breathe */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2.5 sm:gap-3">
+          <div className="w-full max-w-[1400px] mx-auto flex flex-col gap-3 sm:gap-4 flex-1 min-h-0">
+            <div className="flex flex-col divide-y divide-slate-200 bg-white rounded-2xl shadow-lg overflow-hidden">
               {sum.items.map((item, index) => {
                 const IconComponent = item.icon ? iconMap[item.icon] : null;
                 const color = item.color || '#00629B';
                 return (
                   <motion.div
                     key={item.title}
-                    initial={{ opacity: 0, y: 18 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.15 + index * 0.1, duration: 0.4 }}
-                    className="flex flex-col bg-white rounded-xl sm:rounded-2xl shadow-lg border-l-4 sm:border-l-[6px] p-3 sm:p-4"
-                    style={{ borderLeftColor: color }}
+                    initial={{ opacity: 0, x: -16 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.15 + index * 0.12, duration: 0.4 }}
+                    className="flex flex-1 flex-col sm:flex-row sm:items-center gap-2 sm:gap-7 px-4 py-4 sm:px-9 sm:py-6"
                   >
-                    <div className="flex items-center gap-3">
+                    {/* Name and description */}
+                    <div className="flex items-start sm:items-center gap-3 sm:gap-7 flex-1 min-w-0">
                       {IconComponent && (
                         <div
-                          className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl shrink-0 flex items-center justify-center text-white shadow"
+                          className="w-11 h-11 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl shrink-0 flex items-center justify-center text-white shadow"
                           style={{ backgroundColor: color }}
                         >
-                          <IconComponent size={20} className="sm:w-6 sm:h-6" />
+                          <IconComponent size={24} className="sm:w-9 sm:h-9" />
                         </div>
                       )}
-                      <div className="min-w-0">
-                        <div className="text-base sm:text-xl font-black text-ucsd-navy leading-tight">{item.title}</div>
+                      <div className="min-w-0 flex-1">
+                        <div className="text-lg sm:text-3xl font-black text-ucsd-navy leading-tight">{item.title}</div>
+                        <div className="text-[13px] sm:text-xl text-slate-600 leading-snug mt-0.5 sm:mt-1">{item.text}</div>
+                      </div>
+                    </div>
+                    {/* Audience and headline number */}
+                    <div className="shrink-0 flex items-baseline gap-2 pl-14 sm:pl-0 sm:block sm:text-right sm:w-[30%] sm:max-w-[16rem]">
+                      {item.metric && (
+                        <div className="text-2xl sm:text-4xl font-black leading-none text-ucsd-navy order-2 sm:order-none sm:mt-2">
+                          {item.metric}
+                        </div>
+                      )}
+                      <div className="min-w-0 order-1 sm:order-none">
                         {item.audience && (
-                          <div className="text-[11px] sm:text-[13px] font-bold uppercase tracking-[0.12em] mt-0.5" style={{ color }}>
+                          <div className="text-[10px] sm:text-sm font-bold uppercase tracking-[0.1em] leading-tight" style={{ color }}>
                             {item.audience}
                           </div>
                         )}
+                        {item.metricLabel && (
+                          <div className="hidden sm:block text-sm text-slate-500 leading-tight mt-1">{item.metricLabel}</div>
+                        )}
                       </div>
                     </div>
-                    <div className="mt-2 text-[13px] sm:text-[15px] text-slate-700 leading-snug">{item.text}</div>
-                    {item.tags?.length > 0 && (
-                      <div className="mt-2 flex flex-wrap gap-1.5">
-                        {item.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="rounded-full px-2.5 py-0.5 text-[11px] sm:text-[12px] font-semibold"
-                            style={{ backgroundColor: `${color}14`, color }}
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-                    {item.metric && (
-                      <div className="mt-auto pt-2.5 flex items-baseline gap-2.5 flex-wrap">
-                        <div className="text-lg sm:text-2xl font-black leading-none" style={{ color }}>{item.metric}</div>
-                        <div className="text-[11px] sm:text-[13px] text-slate-500 leading-tight flex-1 min-w-[10rem]">{item.metricLabel}</div>
-                      </div>
-                    )}
                   </motion.div>
                 );
               })}
             </div>
             {sum.footnote && (
-              <div className="text-center text-slate-500 text-[10px] sm:text-xs italic leading-snug">{sum.footnote}</div>
+              <div className="text-center text-slate-500 text-[11px] sm:text-sm leading-snug">{sum.footnote}</div>
             )}
           </div>
         );
