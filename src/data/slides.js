@@ -5,10 +5,24 @@ export const slides = [
     "type": "title",
     "content": [],
     "title": "TritonAI Operating Review",
-    "subtitle": "Adoption, delivery, and the next decisions",
+    "subtitle": "How campus AI gets built, proven, and put to work",
     "layout": "title-hero",
     "audiences": [
       "PK"
+    ],
+    "arc": [
+      {
+        "label": "Skunkworks",
+        "note": "Build it, prove it works"
+      },
+      {
+        "label": "Pilots",
+        "note": "Real users, measured"
+      },
+      {
+        "label": "Scale",
+        "note": "Campus-wide and governed"
+      }
     ]
   },
   {

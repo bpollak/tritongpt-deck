@@ -411,6 +411,28 @@ const Slide = ({ slide, staticPreview = false }) => {
             {slide.subtitle}
           </motion.h2>
 
+          {/* Optional stage arc: skunkworks to pilots to scale */}
+          {!isClosingSlide && slide.arc?.length > 0 && (
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.85, duration: 0.5 }}
+              className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2 sm:gap-3 w-full max-w-4xl px-4 mb-8 sm:mb-10"
+            >
+              {slide.arc.map((stage, i) => (
+                <React.Fragment key={stage.label}>
+                  <div className="flex-1 rounded-xl border border-white/20 bg-white/10 px-4 py-2.5 sm:px-5 sm:py-3 text-center backdrop-blur-sm">
+                    <div className="text-sm sm:text-lg font-black tracking-tight text-white">{stage.label}</div>
+                    <div className="text-[11px] sm:text-sm leading-tight text-white/70 mt-0.5">{stage.note}</div>
+                  </div>
+                  {i < slide.arc.length - 1 && (
+                    <ArrowRight size={20} className="hidden sm:block shrink-0 text-ucsd-gold/70" />
+                  )}
+                </React.Fragment>
+              ))}
+            </motion.div>
+          )}
+
           {/* Opening slide: Multi-presenter with photos */}
           {!isClosingSlide && slide.presenters && (
             <motion.div
@@ -1485,6 +1507,7 @@ const Slide = ({ slide, staticPreview = false }) => {
           {slide.subtitle}
         </motion.h2>
       )}
+
 
       {isHeroList && (
         <div className="relative w-full max-w-[1800px] mx-auto mb-12 sm:mb-14">
