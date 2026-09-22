@@ -70,6 +70,7 @@ export const slideManagerState = {
     "ai-portfolio-at-scale",
     "ai-portfolio-pilots",
     "ai-portfolio-skunkworks",
+    "tritonai-collaborations",
     "research-alignment-poc",
     "ai-engagement-at-scale",
     "cabinet-harness-02-convergence",
@@ -506,6 +507,9 @@ export const slideManagerState = {
     ],
     "ai-portfolio-skunkworks": [
       "all",
+      "PK"
+    ],
+    "tritonai-collaborations": [
       "PK"
     ],
     "class-planner-indexed-comparison": [

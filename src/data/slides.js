@@ -7047,5 +7047,93 @@ export const slides = [
       "all",
       "PK"
     ]
+  },
+  {
+    "id": 240.4,
+    "slug": "tritonai-collaborations",
+    "type": "content",
+    "content": [],
+    "title": "TritonAI Collaborations",
+    "subtitle": "Partners renewing, capacity growing, and more of higher education asking to join",
+    "layout": "project-roster",
+    "backgroundColor": "#F5F0E6",
+    "managerLabel": "TritonAI collaborations: partners, campus growth, conversations",
+    "managerSummary": "Partner institutions on TritonAI with their contract year (UC Berkeley, UC ANR, and Fairleigh Dickinson in year two; UC Merced in year one), the $650K SDSC hardware expansion and October training video rollout with the VCR, API gateway interest from Berkeley and UCLA Engineering, and OpenAI/Anthropic negotiations. Closes on whether to take these to Cabinet and the Deans.",
+    "roster": {
+      "groups": [
+        {
+          "label": "Partner institutions running on TritonAI",
+          "color": "#00629B",
+          "columns": 4,
+          "items": [
+            {
+              "icon": "Landmark",
+              "name": "UC Berkeley",
+              "text": "Runs its campus assistant, BearGPT, on TritonAI.",
+              "detail": "Year two \u00b7 renewed"
+            },
+            {
+              "icon": "Landmark",
+              "name": "UC ANR",
+              "text": "Runs AggieGPT for Agriculture and Natural Resources on TritonAI.",
+              "detail": "Year two \u00b7 renewed"
+            },
+            {
+              "icon": "Landmark",
+              "name": "Fairleigh Dickinson",
+              "text": "A private university outside the UC system, in production on TritonAI.",
+              "detail": "Year two \u00b7 renewed"
+            },
+            {
+              "icon": "Landmark",
+              "name": "UC Merced",
+              "text": "Runs its campus assistant, BobcatGPT, on TritonAI.",
+              "detail": "Year one"
+            }
+          ]
+        },
+        {
+          "label": "Growing at UC San Diego",
+          "color": "#C69214",
+          "items": [
+            {
+              "icon": "Server",
+              "name": "$650K in New Hardware",
+              "text": "Purchased to expand TritonAI at SDSC so faculty and students can teach and learn with large language models.",
+              "detail": "Teaching and learning capacity"
+            },
+            {
+              "icon": "Presentation",
+              "name": "AI Training Video Series",
+              "text": "Promotion to the research community and beyond, in partnership with the Vice Chancellor for Research.",
+              "detail": "Begins the first week of October"
+            }
+          ]
+        },
+        {
+          "label": "In conversation",
+          "color": "#6E963B",
+          "items": [
+            {
+              "icon": "GitBranch",
+              "name": "API Gateway Interest",
+              "text": "UC Berkeley is testing the TritonAI API gateway, and we just met with the UCLA Samueli School of Engineering about the same.",
+              "detail": "Gateway access beyond a hosted assistant"
+            },
+            {
+              "icon": "Handshake",
+              "name": "OpenAI and Anthropic",
+              "text": "Negotiations under way with both companies.",
+              "detail": "Commercial models alongside campus-hosted ones"
+            }
+          ]
+        }
+      ],
+      "footnote": "For discussion: do we bring these updates to Cabinet and the Deans?"
+    },
+    "claimNote": "Source: TritonAI program update for the Chancellor discussion, Sep 2026 \u00b7 partner contract years confirmed by the program lead \u00b7 reviewed Sep 22, 2026",
+    "audiences": [
+      "PK"
+    ]
   }
 ];

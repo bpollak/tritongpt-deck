@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'; // eslint-disable-line no-unused-vars
 import clsx from 'clsx';
 import CabinetSlide from './CabinetSlide';
 import EmbeddedVideo from './EmbeddedVideo';
-import { Target, Database, Cpu, Blocks, GraduationCap, Building2, FileText, FileCheck, DollarSign, Shield, ShieldCheck, BookOpen, Code, Presentation, Globe, FileEdit, FolderOpen, TrendingUp, TrendingDown, ClipboardCheck, Search, Heart, Calendar, GitBranch, Network, Grid3x3, ArrowDown, ArrowRight, Brain, RefreshCw, ArrowRightLeft, CheckCircle, Monitor, User, Users, Award, Server, Layers, Wallet, Share2, Star, FlaskConical, Lightbulb, Landmark, Scale, Headphones, Hammer, Zap, Rocket, BarChart3, AlertTriangle } from 'lucide-react';
+import { Target, Database, Cpu, Blocks, GraduationCap, Building2, FileText, FileCheck, DollarSign, Shield, ShieldCheck, BookOpen, Code, Presentation, Globe, FileEdit, FolderOpen, TrendingUp, TrendingDown, ClipboardCheck, Search, Heart, Calendar, GitBranch, Network, Grid3x3, ArrowDown, ArrowRight, Brain, RefreshCw, ArrowRightLeft, CheckCircle, Monitor, User, Users, Award, Server, Layers, Wallet, Share2, Star, FlaskConical, Lightbulb, Landmark, Scale, Headphones, Hammer, Zap, Rocket, BarChart3, AlertTriangle, Handshake } from 'lucide-react';
 import { QRCodeSVG } from 'qrcode.react';
 
 // Small hook for chart layouts that need a different geometry on phones.
@@ -22,6 +22,7 @@ const useIsNarrowViewport = (maxWidth = 640) => {
 };
 
 const iconMap = {
+  'Handshake': Handshake,
   'Target': Target,
   'Database': Database,
   'Cpu': Cpu,
@@ -5646,11 +5647,14 @@ const Slide = ({ slide, staticPreview = false }) => {
       {/* Project Roster Layout: phase-grouped project list, two across */}
       {isProjectRoster && slide.roster && (() => {
         const groups = slide.roster.groups || [];
-        const threeUp = slide.roster.columns === 3;
+        // Columns can be set for the whole roster or per group; two is the default
+        const columnsFor = (g) => g.columns || slide.roster.columns || 2;
+        const customColumns = groups.some((g) => columnsFor(g) !== 2);
+        const lgColumnClass = { 2: 'lg:grid-cols-2', 3: 'lg:grid-cols-3', 4: 'lg:grid-cols-4' };
         // Denser slides (more rows plus group headers) tighten so everything fits one page
         const totalItems = groups.reduce((n, g) => n + (g.items?.length || 0), 0);
-        const totalRows = groups.reduce((n, g) => n + Math.ceil((g.items?.length || 0) / (threeUp ? 3 : 2)), 0);
-        const dense = (threeUp ? totalRows * 2 : totalItems) + groups.filter((g) => g.label).length >= 10;
+        const totalRows = groups.reduce((n, g) => n + Math.ceil((g.items?.length || 0) / columnsFor(g)), 0);
+        const dense = (customColumns ? totalRows * 2 : totalItems) + groups.filter((g) => g.label).length >= 10;
         // Lighter slides get larger type so they still fill the page
         const roomy = !dense && totalItems <= 5;
         return (
@@ -5666,7 +5670,7 @@ const Slide = ({ slide, staticPreview = false }) => {
                     <span className="flex-1 h-px bg-slate-200" />
                   </div>
                 )}
-                <div className={clsx("grid grid-cols-1 flex-1 lg:auto-rows-fr", threeUp ? "lg:grid-cols-3" : "lg:grid-cols-2", dense ? "gap-2" : roomy ? "gap-3 sm:gap-4" : "gap-2 sm:gap-3")}>
+                <div className={clsx("grid grid-cols-1 flex-1 lg:auto-rows-fr", lgColumnClass[columnsFor(group)] || "lg:grid-cols-2", dense ? "gap-2" : roomy ? "gap-3 sm:gap-4" : "gap-2 sm:gap-3")}>
                   {group.items.map((item, i) => {
                     const ItemIcon = item.icon ? iconMap[item.icon] : null;
                     return (
