@@ -66,6 +66,7 @@ export const slideManagerState = {
     "tritongpt-user-growth",
     "class-planner-ai-weekly-users",
     "class-planner-website-weekly-pageviews",
+    "class-planner-indexed-comparison",
     "research-alignment-poc",
     "ai-engagement-at-scale",
     "cabinet-harness-02-convergence",
@@ -490,6 +491,10 @@ export const slideManagerState = {
       "PK"
     ],
     "class-planner-website-weekly-pageviews": [
+      "all",
+      "PK"
+    ],
+    "class-planner-indexed-comparison": [
       "all",
       "PK"
     ],

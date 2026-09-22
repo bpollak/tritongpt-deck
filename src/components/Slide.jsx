@@ -5610,11 +5610,14 @@ const Slide = ({ slide, staticPreview = false }) => {
         const labelFontSize = dataPoints >= 18 ? 14 : dataPoints >= 14 ? 18 : dataPoints >= 12 ? 20 : 22;
         const xAxisLabelFontSize = dataPoints >= 16 ? 13 : dataPoints >= 14 ? 15 : dataPoints >= 12 ? 18 : 20;
         const pointRadius = dataPoints >= 14 ? 7 : 8;
-        const primarySeriesData = slide.chartData.series[0]?.data ?? [];
-        // Labels for the top series sit above the line; lower series sit below theirs so the
-        // two sets never cross. Dense charts stagger neighbouring labels onto two rows.
+        const allSeriesData = slide.chartData.series.map((sr) => sr.data ?? []);
+        // At each x the highest series takes the label above its point and every other series
+        // labels below its own point, so labels never collide even where lines cross or touch.
+        // Ties go to the earlier series. Dense charts stagger neighbouring labels onto two rows.
         const getDataLabelPlacement = (idx, seriesIdx, value) => {
-          const below = seriesIdx > 0 && value < (primarySeriesData[idx] ?? -Infinity);
+          const valuesAtIdx = allSeriesData.map((d) => (Number.isFinite(d[idx]) ? d[idx] : -Infinity));
+          const topSeriesIdx = valuesAtIdx.indexOf(Math.max(...valuesAtIdx));
+          const below = seriesIdx !== topSeriesIdx;
           const stagger = denseChart && idx % 2 === 1 ? labelFontSize + 2 : 0;
           const yOffset = below ? -(labelFontSize + 8 + stagger) : 16 + stagger;
           // The first label anchors rightward so it never spills over the y-axis
