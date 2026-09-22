@@ -7062,9 +7062,9 @@ export const slides = [
     "roster": {
       "groups": [
         {
-          "label": "Partner institutions",
+          "label": "Active partners \u00b7 $433K",
           "color": "#00629B",
-          "columns": 3,
+          "columns": 4,
           "items": [
             {
               "icon": "Landmark",
@@ -7082,27 +7082,32 @@ export const slides = [
               "icon": "Landmark",
               "name": "Fairleigh Dickinson",
               "text": "A private university outside the UC system, in production on TritonAI.",
-              "detail": "Year two \u00b7 renewing \u00b7 $108K two-year agreement"
+              "detail": "Year two \u00b7 renewing \u00b7 $108K to date"
             },
             {
               "icon": "Landmark",
               "name": "UC Merced",
               "text": "Runs its campus assistant, BobcatGPT, on TritonAI.",
               "detail": "Year one \u00b7 $48K"
-            },
+            }
+          ]
+        },
+        {
+          "label": "Former partners, did not renew \u00b7 $199K",
+          "color": "#8A97A5",
+          "columns": 2,
+          "items": [
             {
               "icon": "Landmark",
               "name": "San Diego State",
               "text": "Ran SDSU-GPT on TritonAI.",
-              "detail": "Did not renew \u00b7 $170K including setup",
-              "color": "#8A97A5"
+              "detail": "$170K including setup"
             },
             {
               "icon": "Landmark",
               "name": "CSU Chancellor's Office",
               "text": "Ran a TritonAI pilot for the Cal State system office.",
-              "detail": "Did not renew \u00b7 $29K",
-              "color": "#8A97A5"
+              "detail": "$29K"
             }
           ]
         },
