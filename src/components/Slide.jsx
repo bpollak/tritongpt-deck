@@ -6,6 +6,21 @@ import EmbeddedVideo from './EmbeddedVideo';
 import { Target, Database, Cpu, Blocks, GraduationCap, Building2, FileText, FileCheck, DollarSign, Shield, ShieldCheck, BookOpen, Code, Presentation, Globe, FileEdit, FolderOpen, TrendingUp, TrendingDown, ClipboardCheck, Search, Heart, Calendar, GitBranch, Network, Grid3x3, ArrowDown, ArrowRight, Brain, RefreshCw, ArrowRightLeft, CheckCircle, Monitor, User, Users, Award, Server, Layers, Wallet, Share2, Star, FlaskConical, Lightbulb, Landmark, Scale, Headphones, Hammer, Zap, Rocket, BarChart3, AlertTriangle } from 'lucide-react';
 import { QRCodeSVG } from 'qrcode.react';
 
+// Small hook for chart layouts that need a different geometry on phones.
+const useIsNarrowViewport = (maxWidth = 640) => {
+  const query = `(max-width: ${maxWidth}px)`;
+  const [narrow, setNarrow] = React.useState(() => (typeof window !== 'undefined' ? window.matchMedia(query).matches : false));
+  React.useEffect(() => {
+    if (typeof window === 'undefined') return undefined;
+    const mq = window.matchMedia(query);
+    const onChange = (e) => setNarrow(e.matches);
+    setNarrow(mq.matches);
+    mq.addEventListener('change', onChange);
+    return () => mq.removeEventListener('change', onChange);
+  }, [query]);
+  return narrow;
+};
+
 const iconMap = {
   'Target': Target,
   'Database': Database,
@@ -205,6 +220,7 @@ const Slide = ({ slide, staticPreview = false }) => {
   const isAgentWorkflow = slide.layout === 'agent-workflow';
   const isAnalyticsChart = slide.layout === 'analytics-chart';
   const isDailyUsageChart = slide.layout === 'daily-usage-chart';
+  const isNarrowViewport = useIsNarrowViewport();
   const isTeamGrid = slide.layout === 'team-grid';
   const isTimelineEvolution = slide.layout === 'timeline-evolution';
   const isCampusMetrics = slide.layout === 'campus-metrics';
@@ -5607,9 +5623,12 @@ const Slide = ({ slide, staticPreview = false }) => {
         const cd = slide.chartData;
         const dates = cd.dates;
         const n = dates.length;
-        const vbWidth = 1240;
-        const vbHeight = 520;
-        const margin = { top: 92, right: 28, bottom: 46, left: 62 };
+        const narrow = isNarrowViewport;
+        // Phones get a taller frame and larger type so the axis and marker text stay legible
+        const vbWidth = narrow ? 760 : 1240;
+        const vbHeight = narrow ? 640 : 520;
+        const fs = narrow ? 1.5 : 1;
+        const margin = { top: narrow ? 100 : 92, right: narrow ? 20 : 28, bottom: narrow ? 58 : 46, left: narrow ? 74 : 62 };
         const plotWidth = vbWidth - margin.left - margin.right;
         const plotHeight = vbHeight - margin.top - margin.bottom;
         const yMax = cd.yMax;
@@ -5641,12 +5660,12 @@ const Slide = ({ slide, staticPreview = false }) => {
         return (
           <div className="w-full h-full flex flex-col items-center justify-start pt-1 px-2 sm:px-4">
             <div className="w-full max-w-7xl bg-white rounded-xl shadow-lg p-3 sm:p-4 flex flex-col">
-              <div className="flex items-start justify-between gap-4 mb-1">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1.5 sm:gap-4 mb-1">
                 <div>
                   <h3 className="font-bold text-ucsd-navy text-lg sm:text-2xl leading-tight">{cd.title}</h3>
-                  {cd.subtitle && <div className="text-slate-500 text-xs sm:text-sm mt-0.5">{cd.subtitle}</div>}
+                  {cd.subtitle && <div className="text-slate-500 text-[11px] sm:text-sm mt-0.5 leading-snug">{cd.subtitle}</div>}
                 </div>
-                <div className="flex items-center gap-5 shrink-0 pt-1">
+                <div className="flex flex-wrap items-center gap-x-5 gap-y-1 shrink-0 sm:pt-1">
                   {cd.series.map((sr) => (
                     <div key={sr.name} className="flex items-center gap-2">
                       <svg width="30" height="12"><line x1="1" y1="6" x2="29" y2="6" stroke={sr.color} strokeWidth="4" strokeLinecap="round" /></svg>
@@ -5655,12 +5674,12 @@ const Slide = ({ slide, staticPreview = false }) => {
                   ))}
                 </div>
               </div>
-              <svg viewBox={`0 0 ${vbWidth} ${vbHeight}`} className="w-full" style={{ maxHeight: '56vh' }} preserveAspectRatio="xMidYMid meet">
+              <svg viewBox={`0 0 ${vbWidth} ${vbHeight}`} className="w-full" style={{ maxHeight: narrow ? '62vh' : '56vh' }} preserveAspectRatio="xMidYMid meet">
                 {/* Gridlines and y ticks (square-root scale, labels show actual counts) */}
                 {cd.yTicks.map((t) => (
                   <g key={`y-${t}`}>
                     <line x1={margin.left} x2={margin.left + plotWidth} y1={sy(t)} y2={sy(t)} stroke={t === 0 ? '#94a3b8' : '#e5e7eb'} strokeWidth={t === 0 ? 1.2 : 1} />
-                    <text x={margin.left - 8} y={sy(t) + 4} textAnchor="end" fontSize="12" fill="#475569" fontFamily="Roboto, Arial, sans-serif">{fmt(t)}</text>
+                    <text x={margin.left - 8} y={sy(t) + 4 * fs} textAnchor="end" fontSize={12 * fs} fill="#475569" fontFamily="Roboto, Arial, sans-serif">{fmt(t)}</text>
                   </g>
                 ))}
                 {/* X ticks */}
@@ -5670,31 +5689,41 @@ const Slide = ({ slide, staticPreview = false }) => {
                   return (
                     <g key={`x-${label}`}>
                       <line x1={sx(i)} x2={sx(i)} y1={margin.top + plotHeight} y2={margin.top + plotHeight + 5} stroke="#94a3b8" strokeWidth="1" />
-                      <text x={sx(i)} y={margin.top + plotHeight + 20} textAnchor="middle" fontSize="13" fill="#334155" fontFamily="Roboto, Arial, sans-serif">{label}</text>
+                      <text x={sx(i)} y={margin.top + plotHeight + 20 * fs} textAnchor="middle" fontSize={13 * fs} fill="#334155" fontFamily="Roboto, Arial, sans-serif">{label}</text>
                     </g>
                   );
                 })}
-                <text x={margin.left + plotWidth / 2} y={vbHeight - 6} textAnchor="middle" fontSize="12" fill="#64748b" fontFamily="Roboto, Arial, sans-serif">{cd.xAxisTitle}</text>
-                <text transform={`translate(14 ${margin.top + plotHeight / 2}) rotate(-90)`} textAnchor="middle" fontSize="12" fill="#475569" fontWeight="600" fontFamily="Roboto, Arial, sans-serif">{cd.yAxisTitle}</text>
+                <text x={margin.left + plotWidth / 2} y={vbHeight - 8} textAnchor="middle" fontSize={12 * fs} fill="#64748b" fontFamily="Roboto, Arial, sans-serif">{cd.xAxisTitle}</text>
+                <text transform={`translate(14 ${margin.top + plotHeight / 2}) rotate(-90)`} textAnchor="middle" fontSize={12 * fs} fill="#475569" fontWeight="600" fontFamily="Roboto, Arial, sans-serif">{cd.yAxisTitle}</text>
                 {/* Enrollment window markers */}
-                {cd.markers.map((mk) => {
+                {cd.markers.map((mk, mi) => {
                   const i = dateIndex(mk.date);
                   if (i < 0) return null;
                   const x = sx(i);
+                  // Phones: date label only, alternating between two rows so neighbours never collide
+                  if (narrow) {
+                    const rowY = margin.top - (mi % 2 === 0 ? 50 : 24) * fs;
+                    return (
+                      <g key={`m-${mk.date}`}>
+                        <line x1={x} x2={x} y1={rowY + 6 * fs} y2={margin.top + plotHeight} stroke="#9ca3af" strokeWidth="1" strokeDasharray="5 4" />
+                        <text x={x} y={rowY} textAnchor="middle" fontSize={12 * fs} fontWeight="700" fill="#1e293b" stroke="white" strokeWidth={4 * fs} paintOrder="stroke" fontFamily="Roboto, Arial, sans-serif">{mk.label}</text>
+                      </g>
+                    );
+                  }
                   const lines = mk.detail.split('\n');
                   return (
                     <g key={`m-${mk.date}`}>
                       <line x1={x} x2={x} y1={margin.top - 12} y2={margin.top + plotHeight} stroke="#9ca3af" strokeWidth="1" strokeDasharray="5 4" />
-                      <text x={x} y={margin.top - 56 - (lines.length - 2) * 13} textAnchor="middle" fontSize="12.5" fontWeight="700" fill="#1e293b" fontFamily="Roboto, Arial, sans-serif">{mk.label}</text>
+                      <text x={x} y={margin.top - (56 + (lines.length - 2) * 13) * fs} textAnchor="middle" fontSize={12.5 * fs} fontWeight="700" fill="#1e293b" fontFamily="Roboto, Arial, sans-serif">{mk.label}</text>
                       {lines.map((ln, li) => (
-                        <text key={li} x={x} y={margin.top - 40 - (lines.length - 2) * 13 + li * 13} textAnchor="middle" fontSize="11.5" fill="#475569" fontFamily="Roboto, Arial, sans-serif">{ln}</text>
+                        <text key={li} x={x} y={margin.top - (40 + (lines.length - 2) * 13 - li * 13) * fs} textAnchor="middle" fontSize={11.5 * fs} fill="#475569" fontFamily="Roboto, Arial, sans-serif">{ln}</text>
                       ))}
                     </g>
                   );
                 })}
                 {/* Series */}
                 {cd.series.map((sr) => (
-                  <path key={sr.name} d={smoothPath(sr.data)} fill="none" stroke={sr.color} strokeWidth="3.2" strokeLinejoin="round" strokeLinecap="round" />
+                  <path key={sr.name} d={smoothPath(sr.data)} fill="none" stroke={sr.color} strokeWidth={narrow ? 4 : 3.2} strokeLinejoin="round" strokeLinecap="round" />
                 ))}
                 {/* Peak callouts */}
                 {cd.peaks.map((pk) => {
@@ -5703,14 +5732,14 @@ const Slide = ({ slide, staticPreview = false }) => {
                   const sr = cd.series[pk.series];
                   const v = sr.data[i];
                   const x = sx(i), y = sy(v);
-                  const tx = x + (pk.side === 'left' ? -12 : 12);
+                  const tx = x + (pk.side === 'left' ? -12 : 12) * fs;
                   const anchor = pk.side === 'left' ? 'end' : 'start';
                   const lines = pk.text.split('\n');
                   return (
                     <g key={`p-${pk.date}-${pk.series}`}>
-                      <circle cx={x} cy={y} r="5" fill={sr.color} />
+                      <circle cx={x} cy={y} r={5 * fs} fill={sr.color} />
                       {lines.map((ln, li) => (
-                        <text key={li} x={tx} y={y + (pk.dy ?? 0) + li * 16} textAnchor={anchor} fontSize="13.5" fontWeight="700" fill={sr.color} stroke="white" strokeWidth="4" paintOrder="stroke" fontFamily="Roboto, Arial, sans-serif">{ln}</text>
+                        <text key={li} x={tx} y={y + (pk.dy ?? 0) * fs + li * 16 * fs} textAnchor={anchor} fontSize={13.5 * fs} fontWeight="700" fill={sr.color} stroke="white" strokeWidth="4" paintOrder="stroke" fontFamily="Roboto, Arial, sans-serif">{ln}</text>
                       ))}
                     </g>
                   );

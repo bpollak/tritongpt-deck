@@ -4800,7 +4800,7 @@ export const slides = [
     "managerSummary": "Daily users of the two Class Planner tools from launch through Sep 20, 2026 on a square-root axis, with enrollment-pass windows marked. TritonGPT counts distinct authenticated accounts per day; the standalone planner counts estimated daily visitors from Plausible.",
     "chartData": {
       "title": "Class Planner daily usage",
-      "subtitle": "Pacific-time daily counts, Jul 18-Sep 20, 2026 \u00b7 square-root y-axis, tick labels show actual daily users",
+      "subtitle": "Daily counts, Jul 18-Sep 20, 2026 \u00b7 square-root y-axis, labels show actual daily users",
       "dates": [
         "Jul 18",
         "Jul 19",
@@ -5078,8 +5078,7 @@ export const slides = [
           "dy": 6,
           "text": "8.43k peak\nSep 1"
         }
-      ],
-      "footnote": "TritonGPT Class Planner counts authenticated accounts; Standalone Class Planner counts estimated visitors, including tool traffic and other tracked hostnames. Curves are rounded between daily observations. Sources: TritonGPT and Plausible exports; UC San Diego enrollment dates."
+      ]
     },
     "claimNote": "Source: Class Planner analytics workbook (daily usage, report through Sep 20, 2026, M. Holland) from TritonGPT and Plausible exports \u00b7 UC San Diego enrollment dates \u00b7 reviewed Sep 21, 2026",
     "audiences": [
