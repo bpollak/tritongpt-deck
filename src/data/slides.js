@@ -4792,15 +4792,14 @@ export const slides = [
     "slug": "class-planner-indexed-comparison",
     "type": "content",
     "content": [],
-    "title": "Two Planners, One Enrollment Calendar",
-    "subtitle": "Each week shown as a percent of that tool's own Jul 27 week",
+    "title": "TritonGPT Class Planner and Standalone Class Planner",
+    "subtitle": "Weekly usage across the summer 2026 enrollment passes",
     "layout": "analytics-chart",
     "backgroundColor": "#F5F0E6",
-    "managerLabel": "Class Planner metrics: indexed comparison of both planners",
-    "managerSummary": "Comparison of the two Class Planner tools across the summer 2026 enrollment passes. Because the tools are counted in different units, each weekly value is shown as a percent of that tool's own Jul 27 week, so the chart compares timing and direction, not size.",
+    "managerLabel": "Class Planner metrics: TritonGPT vs standalone, weekly",
+    "managerSummary": "Weekly usage of the two Class Planner tools across the summer 2026 enrollment passes on one pageview axis. The standalone planner is its measured weekly pageviews; the TritonGPT planner is its weekly active users scaled to the standalone planner's Jul 27 pageviews.",
     "chartData": {
-      "title": "Two planners on one enrollment calendar, each week as a percent of its own Jul 27 week (= 100)",
-      "headline": "The two planners moved together through the continuing-student passes, then split: the incoming-student first pass lifted the website by a quarter while the TritonGPT planner stayed near baseline and tapered faster in September.",
+      "title": "Weekly usage, summer 2026 enrollment passes (weeks starting Jul 27-Sep 14)",
       "xAxis": [
         "Jul 27",
         "Aug 3",
@@ -4813,44 +4812,42 @@ export const slides = [
       ],
       "xAxisTitle": "Week starting (2026)",
       "yAxis": [
-        "140",
-        "120",
-        "100",
-        "80",
-        "60",
-        "40",
-        "20",
+        "50,000",
+        "40,000",
+        "30,000",
+        "20,000",
+        "10,000",
         "0"
       ],
-      "maxValue": 140,
+      "maxValue": 50000,
       "series": [
         {
-          "name": "TritonGPT Class Planner (weekly active users, index)",
+          "name": "TritonGPT Class Planner (normalized)",
           "color": "#00629B",
           "data": [
-            100,
-            85,
-            77,
-            102,
-            81,
-            86,
-            38,
-            28
+            34400,
+            29400,
+            26400,
+            35200,
+            27700,
+            29700,
+            13200,
+            9800
           ],
           "areaFill": false
         },
         {
-          "name": "Standalone website (weekly pageviews, index)",
+          "name": "Standalone Class Planner (pageviews)",
           "color": "#C69214",
           "data": [
-            100,
-            92,
-            88,
-            103,
-            77,
-            124,
-            76,
-            55
+            34382,
+            31709,
+            30262,
+            35289,
+            26389,
+            42676,
+            26027,
+            18752
           ],
           "areaFill": false
         }
@@ -4858,26 +4855,26 @@ export const slides = [
       "insights": [
         {
           "icon": "GitBranch",
-          "stat": "Within 11 points",
-          "label": "Jul 27-Aug 24: both tools rose and fell together through the continuing-student passes",
+          "stat": "Moved together",
+          "label": "Jul 27-Aug 24: both planners rose and fell with the continuing-student passes",
           "color": "#00629B"
         },
         {
-          "icon": "Users",
-          "stat": "124 vs 86",
-          "label": "Week of Aug 31, the incoming first pass: website vs TritonGPT planner",
+          "icon": "TrendingUp",
+          "stat": "42,676",
+          "label": "Standalone planner peak, week of Aug 31 (incoming first pass)",
           "color": "#C69214"
         },
         {
-          "icon": "TrendingDown",
-          "stat": "55 vs 28",
-          "label": "Week of Sep 14: website vs TritonGPT planner, both below their Jul 27 level",
+          "icon": "Users",
+          "stat": "35,200",
+          "label": "TritonGPT planner peak, week of Aug 17 (continuing second pass)",
           "color": "#FC8900"
         }
       ],
-      "footnote": "How to read it: the TritonGPT planner is counted in distinct student accounts and the website in pageviews, so the raw numbers cannot share an axis. Each week is divided by that tool's own Jul 27 week, which puts both on one scale and compares timing and direction rather than size. The Jul 20 week is left out because website data for it is partial. Source: Class Planner analytics workbook, report through Sep 21, 2026."
+      "footnote": "Source: Class Planner analytics workbook, report through Sep 21, 2026. Weeks run Monday-Sunday."
     },
-    "claimNote": "Source: Class Planner analytics workbook, report through Sep 21, 2026 \u00b7 each series shown as a percent of its own Jul 27 week \u00b7 reviewed Sep 21, 2026",
+    "claimNote": "Source: Class Planner analytics workbook, report through Sep 21, 2026 \u00b7 TritonGPT series normalized to the standalone planner's Jul 27 pageviews \u00b7 reviewed Sep 21, 2026",
     "audiences": [
       "all",
       "PK"
