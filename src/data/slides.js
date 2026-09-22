@@ -2129,6 +2129,79 @@ export const slides = [
     ]
   },
   {
+    "id": 23.4,
+    "slug": "tritonai-operating-review-summary",
+    "type": "content",
+    "content": [],
+    "title": "Where TritonAI Stands Today",
+    "subtitle": "Four programs, moving from skunkworks to pilots to campus scale",
+    "layout": "program-summary",
+    "backgroundColor": "#F5F0E6",
+    "managerLabel": "Summary: what this review covers",
+    "managerSummary": "One-page opener for the operating review. Frames the four programs covered in the rest of the view along a skunkworks-to-pilots-to-scale arc, each with its audience and current proof point.",
+    "summary": {
+      "stages": [
+        {
+          "label": "Skunkworks",
+          "note": "Built in-house, proven on real work"
+        },
+        {
+          "label": "Pilots",
+          "note": "Instructor and team adoption, measured"
+        },
+        {
+          "label": "Scale",
+          "note": "Campus-wide, governed, and funded",
+          "current": true
+        }
+      ],
+      "items": [
+        {
+          "icon": "Server",
+          "title": "Inference as a Service",
+          "audience": "Developers and campus systems",
+          "text": "A shared API gateway puts models behind one governed door, with rates that now reflect the market for commercially hosted open-weight models.",
+          "metric": "455.3B tokens",
+          "metricLabel": "Jan-Aug 2026, 92.6% on self-hosted and internal routes",
+          "color": "#00629B"
+        },
+        {
+          "icon": "Cpu",
+          "title": "TritonAI Harness",
+          "audience": "All staff and faculty",
+          "text": "A desktop agent for building and automating real work. ITS hosts what teams create; training and comms roll out the first week of October.",
+          "metric": "3.2x growth",
+          "metricLabel": "Weekly sessions, first full week to the week of Sep 18",
+          "color": "#C69214"
+        },
+        {
+          "icon": "GraduationCap",
+          "title": "Instructional AI Tutor",
+          "audience": "All Canvas courses, Fall 2026",
+          "text": "Turnkey tutors inside Canvas, grounded only in what the instructor selects. Socratic or directive, set up in minutes.",
+          "metric": "81% / 86%",
+          "metricLabel": "Pilot students who said it helped learning and was easy to use (68 responses)",
+          "color": "#6E963B"
+        },
+        {
+          "icon": "Users",
+          "title": "TritonGPT and Class Planner",
+          "audience": "All students",
+          "text": "Campus-wide assistant plus the AI and standalone class planners, now carrying enrollment-season demand through every registration pass.",
+          "metric": "17.0K users",
+          "metricLabel": "Unique TritonGPT users in August 2026, on 170,939 prompts",
+          "color": "#FC8900"
+        }
+      ],
+      "footnote": "Figures are actuals from TritonAI gateway, Harness telemetry, Class Planner analytics, and the instructional pilot survey; details follow on the slides for each program."
+    },
+    "claimNote": "Source: TritonAI gateway report (Jan-Aug 2026), Harness usage telemetry through Sep 18, TritonGPT analytics through Aug 2026, and the 2025-2026 instructional AI pilot survey (68 responses) \u00b7 reviewed Sep 22, 2026",
+    "audiences": [
+      "all",
+      "PK"
+    ]
+  },
+  {
     "id": 23.5,
     "slug": "llm-api-usage-attribution",
     "type": "content",

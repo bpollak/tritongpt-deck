@@ -35,6 +35,7 @@ export const slideManagerState = {
     "cabinet-harness-03-question",
     "dsmlp-datahub-shared-compute",
     "dsmlp-tritonai-complementary-layers",
+    "tritonai-operating-review-summary",
     "llm-api-usage-attribution",
     "tritonai-developer-api-program",
     "video-tritonai-harness-walkthrough",
@@ -337,6 +338,10 @@ export const slideManagerState = {
       "executive",
       "regent",
       "LMU"
+    ],
+    "tritonai-operating-review-summary": [
+      "all",
+      "PK"
     ],
     "llm-api-usage-attribution": [
       "all",
