@@ -5623,34 +5623,34 @@ const Slide = ({ slide, staticPreview = false }) => {
       {isProgramSummary && slide.summary && (() => {
         const sum = slide.summary;
         return (
-          <div className="w-full max-w-[1700px] mx-auto flex flex-col gap-2 sm:gap-3">
+          <div className="w-full max-w-[1500px] mx-auto flex flex-col gap-2 sm:gap-3">
             {/* Framing rail */}
             {sum.stages?.length > 0 && (
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-1.5 sm:gap-2">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2">
                 {sum.stages.map((st, i) => (
                   <React.Fragment key={st.label}>
                     <div
                       className={clsx(
-                        'flex-1 rounded-lg sm:rounded-xl px-3 py-1.5 sm:px-4 sm:py-2 text-center border',
-                        st.current ? 'bg-ucsd-navy border-ucsd-navy' : 'bg-white/70 border-slate-200'
+                        'flex-1 rounded-xl px-4 py-1.5 sm:px-5 sm:py-2 text-center border',
+                        st.current ? 'bg-ucsd-navy border-ucsd-navy shadow-md' : 'bg-white/70 border-slate-200'
                       )}
                     >
-                      <div className={clsx('text-[13px] sm:text-base font-black tracking-tight', st.current ? 'text-white' : 'text-slate-500')}>
+                      <div className={clsx('text-sm sm:text-base font-black tracking-tight', st.current ? 'text-white' : 'text-slate-500')}>
                         {st.label}
                       </div>
-                      <div className={clsx('text-[10px] sm:text-xs leading-tight', st.current ? 'text-white/80' : 'text-slate-500')}>
+                      <div className={clsx('text-[11px] sm:text-[13px] leading-tight', st.current ? 'text-white/80' : 'text-slate-500')}>
                         {st.note}
                       </div>
                     </div>
                     {i < sum.stages.length - 1 && (
-                      <ArrowRight size={18} className="hidden sm:block shrink-0 text-slate-400" />
+                      <ArrowRight size={20} className="hidden sm:block shrink-0 text-slate-400" />
                     )}
                   </React.Fragment>
                 ))}
               </div>
             )}
-            {/* Program cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-2 sm:gap-3">
+            {/* Program cards, two across so each has room to breathe */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2.5 sm:gap-3">
               {sum.items.map((item, index) => {
                 const IconComponent = item.icon ? iconMap[item.icon] : null;
                 const color = item.color || '#00629B';
@@ -5660,30 +5660,45 @@ const Slide = ({ slide, staticPreview = false }) => {
                     initial={{ opacity: 0, y: 18 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.15 + index * 0.1, duration: 0.4 }}
-                    className="flex flex-col bg-white rounded-xl shadow-lg border-t-4 p-3 sm:p-4"
-                    style={{ borderTopColor: color }}
+                    className="flex flex-col bg-white rounded-xl sm:rounded-2xl shadow-lg border-l-4 sm:border-l-[6px] p-3 sm:p-4"
+                    style={{ borderLeftColor: color }}
                   >
-                    <div className="flex items-center gap-2 sm:gap-2.5">
+                    <div className="flex items-center gap-3">
                       {IconComponent && (
                         <div
-                          className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg shrink-0 flex items-center justify-center text-white"
+                          className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl shrink-0 flex items-center justify-center text-white shadow"
                           style={{ backgroundColor: color }}
                         >
-                          <IconComponent size={18} />
+                          <IconComponent size={20} className="sm:w-6 sm:h-6" />
                         </div>
                       )}
-                      <div className="text-[15px] sm:text-lg font-black text-ucsd-navy leading-tight">{item.title}</div>
+                      <div className="min-w-0">
+                        <div className="text-base sm:text-xl font-black text-ucsd-navy leading-tight">{item.title}</div>
+                        {item.audience && (
+                          <div className="text-[11px] sm:text-[13px] font-bold uppercase tracking-[0.12em] mt-0.5" style={{ color }}>
+                            {item.audience}
+                          </div>
+                        )}
+                      </div>
                     </div>
-                    {item.audience && (
-                      <div className="mt-1.5 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.12em]" style={{ color }}>
-                        {item.audience}
+                    <div className="mt-2 text-[13px] sm:text-[15px] text-slate-700 leading-snug">{item.text}</div>
+                    {item.tags?.length > 0 && (
+                      <div className="mt-2 flex flex-wrap gap-1.5">
+                        {item.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="rounded-full px-2.5 py-0.5 text-[11px] sm:text-[12px] font-semibold"
+                            style={{ backgroundColor: `${color}14`, color }}
+                          >
+                            {tag}
+                          </span>
+                        ))}
                       </div>
                     )}
-                    <div className="mt-1 text-[12px] sm:text-sm text-slate-700 leading-snug flex-1">{item.text}</div>
                     {item.metric && (
-                      <div className="mt-2 pt-2 border-t border-slate-100">
-                        <div className="text-base sm:text-xl font-black leading-none" style={{ color }}>{item.metric}</div>
-                        <div className="text-[10px] sm:text-xs text-slate-500 leading-tight mt-0.5">{item.metricLabel}</div>
+                      <div className="mt-auto pt-2.5 flex items-baseline gap-2.5 flex-wrap">
+                        <div className="text-lg sm:text-2xl font-black leading-none" style={{ color }}>{item.metric}</div>
+                        <div className="text-[11px] sm:text-[13px] text-slate-500 leading-tight flex-1 min-w-[10rem]">{item.metricLabel}</div>
                       </div>
                     )}
                   </motion.div>

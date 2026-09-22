@@ -2160,46 +2160,70 @@ export const slides = [
           "icon": "Server",
           "title": "Inference as a Service",
           "audience": "Developers and campus systems",
-          "text": "A shared API gateway puts models behind one governed door, with rates that now reflect the market for commercially hosted open-weight models.",
+          "text": "One governed door to every model. Self-hosted capacity at SDSC plus approved cloud routes, with rates that now reflect the market for commercially hosted open-weight models.",
           "metric": "455.3B tokens",
           "metricLabel": "Jan-Aug 2026, 92.6% on self-hosted and internal routes",
-          "color": "#00629B"
+          "color": "#00629B",
+          "tags": [
+            "SDSC self-hosted",
+            "Azure, Google, Bedrock",
+            "Chat, reasoning, vision, OCR"
+          ]
         },
         {
           "icon": "Cpu",
           "title": "TritonAI Harness",
-          "audience": "All staff and faculty",
-          "text": "A desktop agent for building and automating real work. ITS hosts what teams create; training and comms roll out the first week of October.",
+          "audience": "Citizen developers: all staff and faculty",
+          "text": "The paved path for staff who build their own tools. Skills and plugins package repeatable work, sub-agents split big jobs, and approval hooks keep every action inside policy. ITS hosts what teams ship.",
           "metric": "3.2x growth",
-          "metricLabel": "Weekly sessions, first full week to the week of Sep 18",
-          "color": "#C69214"
+          "metricLabel": "Weekly sessions, first full week to the week of Sep 18; training and comms roll out the first week of October",
+          "color": "#C69214",
+          "tags": [
+            "Skills",
+            "Plugins",
+            "Approval hooks",
+            "Sub-agents",
+            "Computer use"
+          ]
         },
         {
           "icon": "GraduationCap",
           "title": "Instructional AI Tutor",
           "audience": "All Canvas courses, Fall 2026",
-          "text": "Turnkey tutors inside Canvas, grounded only in what the instructor selects. Socratic or directive, set up in minutes.",
+          "text": "Turnkey tutors inside Canvas, grounded only in the pages, files, and sources the instructor selects. Socratic or directive, set up in minutes, and updated as course content changes.",
           "metric": "81% / 86%",
           "metricLabel": "Pilot students who said it helped learning and was easy to use (68 responses)",
-          "color": "#6E963B"
+          "color": "#6E963B",
+          "tags": [
+            "Canvas-native",
+            "Instructor-controlled sources",
+            "Socratic or directive"
+          ]
         },
         {
           "icon": "Users",
           "title": "TritonGPT and Class Planner",
           "audience": "All students",
-          "text": "Campus-wide assistant plus the AI and standalone class planners, now carrying enrollment-season demand through every registration pass.",
+          "text": "The campus assistant plus both class planners, now carrying enrollment-season demand through every registration pass.",
           "metric": "17.0K users",
           "metricLabel": "Unique TritonGPT users in August 2026, on 170,939 prompts",
-          "color": "#FC8900"
+          "color": "#FC8900",
+          "tags": [
+            "Campus assistant",
+            "AI class planner",
+            "Standalone planner",
+            "Blink search"
+          ]
         }
       ],
-      "footnote": "Figures are actuals from TritonAI gateway, Harness telemetry, Class Planner analytics, and the instructional pilot survey; details follow on the slides for each program."
+      "footnote": "Actuals from the TritonAI gateway, Harness telemetry, Class Planner analytics, and the instructional pilot survey. Each program has its own slides following this one."
     },
     "claimNote": "Source: TritonAI gateway report (Jan-Aug 2026), Harness usage telemetry through Sep 18, TritonGPT analytics through Aug 2026, and the 2025-2026 instructional AI pilot survey (68 responses) \u00b7 reviewed Sep 22, 2026",
     "audiences": [
       "all",
       "PK"
-    ]
+    ],
+    "compact": true
   },
   {
     "id": 23.5,
