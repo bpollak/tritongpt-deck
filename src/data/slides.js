@@ -7058,7 +7058,7 @@ export const slides = [
     "layout": "project-roster",
     "backgroundColor": "#F5F0E6",
     "managerLabel": "TritonAI collaborations: partners, campus growth, conversations",
-    "managerSummary": "Partner institutions on TritonAI with their contract year (UC Berkeley, UC ANR, and Fairleigh Dickinson in year two; UC Merced in year one), the $650K SDSC hardware expansion and October training video rollout with the VCR, API gateway interest from Berkeley and UCLA Engineering, and OpenAI/Anthropic negotiations. Closes on whether to take these to Cabinet and the Deans.",
+    "managerSummary": "Partner institutions on TritonAI with their contract year (UC Berkeley, UC ANR, and Fairleigh Dickinson in year two; UC Merced in year one), the $650K hardware expansion at the Halicioglu School of Data Science and Computing (HSDSC) and October training video rollout with the VCR, API gateway interest from Berkeley and UCLA Engineering, and OpenAI/Anthropic negotiations. Closes on whether to take these to Cabinet and the Deans.",
     "roster": {
       "groups": [
         {
@@ -7099,7 +7099,7 @@ export const slides = [
             {
               "icon": "Server",
               "name": "$650K in New Hardware",
-              "text": "Purchased to expand TritonAI at SDSC so faculty and students can teach and learn with large language models.",
+              "text": "Purchased to expand TritonAI at the Hal\u0131c\u0131o\u011flu School of Data Science and Computing, supporting teaching and learning with large language models.",
               "detail": "Teaching and learning capacity"
             },
             {
