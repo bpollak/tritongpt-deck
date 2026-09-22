@@ -482,8 +482,7 @@ export const slideManagerState = {
       "PK"
     ],
     "tritongpt-widget-analytics": [
-      "all",
-      "PK"
+      "all"
     ],
     "tritongpt-user-growth": [
       "all",
