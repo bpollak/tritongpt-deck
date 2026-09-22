@@ -5640,19 +5640,35 @@ const Slide = ({ slide, staticPreview = false }) => {
                   </div>
                 )}
                 <div className={clsx("grid grid-cols-1 lg:grid-cols-2 flex-1 lg:auto-rows-fr", dense ? "gap-2" : "gap-2 sm:gap-3")}>
-                  {group.items.map((item, i) => (
-                    <motion.div
-                      key={item.name}
-                      initial={{ opacity: 0, y: 12 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.1 + (gi * 0.1) + i * 0.05, duration: 0.35 }}
-                      className={clsx("bg-white rounded-xl shadow-md border-l-4 flex flex-col justify-center", dense ? "px-3.5 py-2 sm:px-4 sm:py-2.5" : "px-3.5 py-2.5 sm:px-5 sm:py-4")}
-                      style={{ borderLeftColor: group.color }}
-                    >
-                      <div className={clsx("font-black text-ucsd-navy leading-tight", dense ? "text-[14px] sm:text-[17px]" : "text-[15px] sm:text-xl")}>{item.name}</div>
-                      <div className={clsx("text-slate-600 leading-snug mt-0.5", dense ? "text-[11.5px] sm:text-[14px]" : "text-[12px] sm:text-base")}>{item.text}</div>
-                    </motion.div>
-                  ))}
+                  {group.items.map((item, i) => {
+                    const ItemIcon = item.icon ? iconMap[item.icon] : null;
+                    return (
+                      <motion.div
+                        key={item.name}
+                        initial={{ opacity: 0, y: 12 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.1 + (gi * 0.1) + i * 0.05, duration: 0.35 }}
+                        className={clsx("bg-white rounded-xl shadow-md border-l-4 flex items-start gap-3", dense ? "px-3 py-2 sm:px-3.5 sm:py-2.5" : "px-3.5 py-2.5 sm:px-4 sm:py-3")}
+                        style={{ borderLeftColor: group.color }}
+                      >
+                        {ItemIcon && (
+                          <div
+                            className={clsx("rounded-lg shrink-0 flex items-center justify-center text-white mt-0.5", dense ? "w-7 h-7 sm:w-8 sm:h-8" : "w-8 h-8 sm:w-10 sm:h-10")}
+                            style={{ backgroundColor: group.color }}
+                          >
+                            <ItemIcon size={dense ? 15 : 18} />
+                          </div>
+                        )}
+                        <div className="min-w-0 flex-1">
+                          <div className={clsx("font-black text-ucsd-navy leading-tight", dense ? "text-[13.5px] sm:text-[16px]" : "text-[15px] sm:text-lg")}>{item.name}</div>
+                          <div className={clsx("text-slate-600 leading-snug mt-0.5", dense ? "text-[11px] sm:text-[13px]" : "text-[12px] sm:text-[15px]")}>{item.text}</div>
+                          {item.detail && (
+                            <div className={clsx("text-slate-500 leading-snug mt-1", dense ? "text-[10.5px] sm:text-[12px]" : "text-[11px] sm:text-[13.5px]")}>{item.detail}</div>
+                          )}
+                        </div>
+                      </motion.div>
+                    );
+                  })}
                 </div>
               </div>
             ))}
