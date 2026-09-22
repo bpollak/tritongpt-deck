@@ -2134,53 +2134,62 @@ export const slides = [
     "type": "content",
     "content": [],
     "title": "Going from Skunkworks to Pilots to Scale",
-    "subtitle": "Four programs, each now reaching its full audience",
+    "subtitle": "Where each program sits on the arc, and who it now reaches",
     "layout": "program-summary",
     "backgroundColor": "#F5F0E6",
     "managerLabel": "Summary: what this review covers",
     "managerSummary": "Agenda opener for the operating review, using the skunkworks-to-pilots-to-scale framing. One row per program: what it is, who it reaches, and the single number that matters. Details follow on each program's own slides.",
     "summary": {
+      "stages": [
+        "Skunkworks",
+        "Pilots",
+        "Scale"
+      ],
       "items": [
         {
           "icon": "Cpu",
           "title": "TritonAI Harness",
           "audience": "Citizen developers",
           "color": "#C69214",
-          "text": "Staff and faculty build their own tools with skills, plugins, and guardrails. ITS hosts what they ship.",
+          "stage": 1,
+          "text": "Staff and faculty build their own tools. ITS hosts what they ship. Campus rollout begins in October.",
           "metric": "3.2x",
-          "metricLabel": "Weekly use since July"
+          "metricLabel": "Growth in weekly use since July"
         },
         {
           "icon": "GraduationCap",
           "title": "Instructional AI Tutor",
           "audience": "Every Canvas course",
           "color": "#6E963B",
+          "stage": 2,
           "text": "Tutors inside Canvas, grounded in what the instructor chooses.",
           "metric": "Fall 2026",
-          "metricLabel": "Campus-wide launch"
+          "metricLabel": "Available campus-wide this term"
         },
         {
           "icon": "Users",
           "title": "TritonGPT and Class Planner",
           "audience": "All students",
           "color": "#FC8900",
+          "stage": 2,
           "text": "The campus assistant and both class planners, carrying every enrollment pass.",
-          "metric": "17,000",
-          "metricLabel": "Students and staff in August"
+          "metric": "20,000",
+          "metricLabel": "Students planned classes with AI this summer"
         },
         {
           "icon": "Server",
           "title": "Inference as a Service",
-          "audience": "Developers and systems",
+          "audience": "Campus developers and systems",
           "color": "#00629B",
-          "text": "One governed door to every model, most of it running on our own hardware.",
-          "metric": "93%",
-          "metricLabel": "Self-hosted and internal"
+          "stage": 2,
+          "text": "One governed door to every model, for any team building on campus.",
+          "metric": "144M",
+          "metricLabel": "API calls served since January"
         }
       ],
       "footnote": "Each program has its own slides following this one."
     },
-    "claimNote": "Source: Harness usage telemetry through Sep 18, 2026; TritonGPT analytics through Aug 2026; TritonAI gateway report Jan-Aug 2026 (92.6% self-hosted and internal) \u00b7 reviewed Sep 22, 2026",
+    "claimNote": "Source: Harness usage telemetry through Sep 18, 2026; Class Planner analytics workbook (19,995 distinct AI planner accounts, Jul 18-Sep 21, shown as 20,000); TritonAI gateway report Jan-Aug 2026 (143.9M requests) \u00b7 reviewed Sep 22, 2026",
     "audiences": [
       "all",
       "PK"

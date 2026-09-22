@@ -5619,59 +5619,102 @@ const Slide = ({ slide, staticPreview = false }) => {
         );
       })()}
 
-      {/* Program Summary Layout: agenda rows, one per program area */}
+      {/* Program Summary Layout: agenda rows with a skunkworks/pilots/scale track */}
       {isProgramSummary && slide.summary && (() => {
         const sum = slide.summary;
+        const stages = sum.stages || [];
         return (
-          <div className="w-full max-w-[1400px] mx-auto flex flex-col gap-3 sm:gap-4 flex-1 min-h-0">
-            <div className="flex flex-col divide-y divide-slate-200 bg-white rounded-2xl shadow-lg overflow-hidden">
-              {sum.items.map((item, index) => {
-                const IconComponent = item.icon ? iconMap[item.icon] : null;
-                const color = item.color || '#00629B';
-                return (
-                  <motion.div
-                    key={item.title}
-                    initial={{ opacity: 0, x: -16 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.15 + index * 0.12, duration: 0.4 }}
-                    className="flex flex-1 flex-col sm:flex-row sm:items-center gap-2 sm:gap-7 px-4 py-4 sm:px-9 sm:py-6"
-                  >
-                    {/* Name and description */}
-                    <div className="flex items-start sm:items-center gap-3 sm:gap-7 flex-1 min-w-0">
-                      {IconComponent && (
-                        <div
-                          className="w-11 h-11 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl shrink-0 flex items-center justify-center text-white shadow"
-                          style={{ backgroundColor: color }}
-                        >
-                          <IconComponent size={24} className="sm:w-9 sm:h-9" />
-                        </div>
-                      )}
-                      <div className="min-w-0 flex-1">
-                        <div className="text-lg sm:text-3xl font-black text-ucsd-navy leading-tight">{item.title}</div>
-                        <div className="text-[13px] sm:text-xl text-slate-600 leading-snug mt-0.5 sm:mt-1">{item.text}</div>
+          <div className="w-full max-w-[1500px] mx-auto flex flex-col gap-2 sm:gap-3 flex-1 min-h-0">
+            <div className="flex flex-col bg-white rounded-2xl shadow-lg overflow-hidden">
+              {/* Stage legend, aligned over the track column */}
+              {stages.length > 0 && (
+                <div className="hidden sm:flex items-center px-9 pt-5 pb-1">
+                  <div className="flex-1" />
+                  <div className="w-[16rem] flex">
+                    {stages.map((st) => (
+                      <div key={st} className="flex-1 text-center text-[11px] font-bold uppercase tracking-[0.12em] text-slate-400">
+                        {st}
                       </div>
-                    </div>
-                    {/* Audience and headline number */}
-                    <div className="shrink-0 flex items-baseline gap-2 pl-14 sm:pl-0 sm:block sm:text-right sm:w-[30%] sm:max-w-[16rem]">
-                      {item.metric && (
-                        <div className="text-2xl sm:text-4xl font-black leading-none text-ucsd-navy order-2 sm:order-none sm:mt-2">
-                          {item.metric}
-                        </div>
-                      )}
-                      <div className="min-w-0 order-1 sm:order-none">
-                        {item.audience && (
-                          <div className="text-[10px] sm:text-sm font-bold uppercase tracking-[0.1em] leading-tight" style={{ color }}>
-                            {item.audience}
+                    ))}
+                  </div>
+                  <div className="w-[13rem]" />
+                </div>
+              )}
+              <div className="flex flex-col divide-y divide-slate-200">
+                {sum.items.map((item, index) => {
+                  const IconComponent = item.icon ? iconMap[item.icon] : null;
+                  const color = item.color || '#00629B';
+                  const stageIdx = typeof item.stage === 'number' ? item.stage : stages.length - 1;
+                  return (
+                    <motion.div
+                      key={item.title}
+                      initial={{ opacity: 0, x: -16 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.15 + index * 0.12, duration: 0.4 }}
+                      className="flex flex-1 flex-col sm:flex-row sm:items-center gap-2 sm:gap-0 px-4 py-4 sm:px-9 sm:py-7"
+                    >
+                      {/* Name and description */}
+                      <div className="flex items-start sm:items-center gap-3 sm:gap-6 flex-1 min-w-0">
+                        {IconComponent && (
+                          <div
+                            className="w-11 h-11 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl shrink-0 flex items-center justify-center text-white shadow"
+                            style={{ backgroundColor: color }}
+                          >
+                            <IconComponent size={24} className="sm:w-9 sm:h-9" />
                           </div>
                         )}
-                        {item.metricLabel && (
-                          <div className="hidden sm:block text-sm text-slate-500 leading-tight mt-1">{item.metricLabel}</div>
-                        )}
+                        <div className="min-w-0 flex-1">
+                          <div className="text-lg sm:text-[28px] font-black text-ucsd-navy leading-tight">{item.title}</div>
+                          <div className="text-[13px] sm:text-[19px] text-slate-600 leading-snug mt-1">{item.text}</div>
+                        </div>
                       </div>
-                    </div>
-                  </motion.div>
-                );
-              })}
+                      {/* Stage track */}
+                      {stages.length > 0 && (
+                        <div className="hidden sm:flex w-[16rem] shrink-0 items-center relative px-1">
+                          <div className="absolute left-[16.6%] right-[16.6%] h-[2px] bg-slate-200" />
+                          {stages.map((st, si) => {
+                            const reached = si <= stageIdx;
+                            const active = si === stageIdx;
+                            return (
+                              <div key={st} className="flex-1 flex justify-center relative">
+                                <span
+                                  className="rounded-full block"
+                                  style={{
+                                    width: active ? 16 : 10,
+                                    height: active ? 16 : 10,
+                                    backgroundColor: reached ? color : '#ffffff',
+                                    border: reached ? 'none' : '2px solid #cbd5e1',
+                                    opacity: reached && !active ? 0.4 : 1,
+                                    boxShadow: active ? `0 0 0 4px ${color}22` : 'none'
+                                  }}
+                                />
+                              </div>
+                            );
+                          })}
+                        </div>
+                      )}
+                      {/* Audience and headline number */}
+                      <div className="shrink-0 flex items-baseline gap-2 pl-14 sm:pl-0 sm:block sm:text-right sm:w-[13rem]">
+                        {item.metric && (
+                          <div className="text-2xl sm:text-4xl font-black leading-none text-ucsd-navy order-2 sm:order-none">
+                            {item.metric}
+                          </div>
+                        )}
+                        <div className="min-w-0 order-1 sm:order-none">
+                          {item.audience && (
+                            <div className="text-[10px] sm:text-[12px] font-bold uppercase tracking-[0.1em] leading-tight sm:mt-1.5" style={{ color }}>
+                              {item.audience}
+                            </div>
+                          )}
+                          {item.metricLabel && (
+                            <div className="hidden sm:block text-[13px] text-slate-500 leading-tight mt-0.5">{item.metricLabel}</div>
+                          )}
+                        </div>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
             </div>
             {sum.footnote && (
               <div className="text-center text-slate-500 text-[11px] sm:text-sm leading-snug">{sum.footnote}</div>
