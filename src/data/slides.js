@@ -7054,15 +7054,15 @@ export const slides = [
     "type": "content",
     "content": [],
     "title": "TritonAI Collaborations",
-    "subtitle": "About $630K in partner agreements so far, and more of higher education asking to join",
+    "subtitle": "Total partner revenue: $613.5K · Annualized revenue: $254.1K*",
     "layout": "project-roster",
     "backgroundColor": "#F5F0E6",
     "managerLabel": "TritonAI collaborations: partners, campus growth, conversations",
-    "managerSummary": "Partner institutions on TritonAI with contract year and agreement value (UC Berkeley $160K, UC ANR $117K, Fairleigh Dickinson $108K, UC Merced $48K), two that did not renew (San Diego State $170K, CSU Chancellor's Office $29K), about $630K in total; the $650K hardware expansion at the Halicioglu School of Data Science and Computing (HSDSC), the October training video rollout with the VCR, API gateway interest from Berkeley and UCLA Engineering, and OpenAI/Anthropic negotiations. Closes on whether to take these to Cabinet and the Deans.",
+    "managerSummary": "Partner agreement dates and fee scope, verified against original PDFs and current renewal drafts on Sep 22, 2026. Total partner revenue $613,502: Berkeley $160,000 including original setup and signed renewal; ANR $58,502 original; FDU $107,600 original; Merced $68,000; former SDSU $170,000 and CSU $49,400. Annualized partner revenue of $254,102 is $60,000 Berkeley + $58,502 ANR + $87,600 FDU + $48,000 Merced, excluding setup and conditional on ANR/FDU renewals at listed rates. Historical total revenue spans the original contracts and signed Berkeley renewal, not YTD receipts. Annual service fees are shown separately. ANR and FDU renewal drafts are excluded from totals. FDU base term may extend for setup delays. Hardware, training, gateway interest, and vendor discussion items retained.",
     "roster": {
       "groups": [
         {
-          "label": "Active partners \u00b7 $433K",
+          "label": "Active partners · $394.1K total revenue",
           "color": "#00629B",
           "columns": 4,
           "items": [
@@ -7070,30 +7070,30 @@ export const slides = [
               "icon": "Landmark",
               "name": "UC Berkeley",
               "text": "Runs its campus assistant, BearGPT, on TritonAI.",
-              "detail": "Year two \u00b7 renewed \u00b7 $160K to date"
+              "detail": "Original: Aug 23, 2024–Aug 22, 2025\nRenewal: Mar 26, 2026–Mar 25, 2027\nTotal: $160K, including $20K setup\nAnnualized revenue: $60K"
             },
             {
               "icon": "Landmark",
               "name": "UC ANR",
-              "text": "Runs its AI assistant for Agriculture and Natural Resources on TritonAI.",
-              "detail": "Year two \u00b7 renewed \u00b7 $117K to date"
+              "text": "Hosts the Agriculture and Natural Resources AI assistant.",
+              "detail": "Original: Mar 25, 2025–Mar 24, 2026\nTotal: $58.5K, including setup\nAnnualized revenue: $58.5K*\nRenewal draft: Sep 23, 2026–Sep 22, 2027"
             },
             {
               "icon": "Landmark",
               "name": "Fairleigh Dickinson",
-              "text": "A private university outside the UC system, in production on TritonAI.",
-              "detail": "Year two \u00b7 renewing \u00b7 $108K to date"
+              "text": "Runs FredGPT on TritonAI.",
+              "detail": "Original: Jun 4, 2025–Jun 3, 2026\nTotal: $107.6K, including $20K setup\nAnnualized revenue: $87.6K*\nRenewal draft: Jul 1, 2026–Jun 30, 2027"
             },
             {
               "icon": "Landmark",
               "name": "UC Merced",
               "text": "Runs Scout, its campus AI assistant, on TritonAI.",
-              "detail": "Year one \u00b7 $48K to date"
+              "detail": "Term: Dec 1, 2025–Nov 30, 2026\nTotal: $68K, including $20K setup\nAnnualized revenue: $48K"
             }
           ]
         },
         {
-          "label": "Former partners, did not renew \u00b7 $199K",
+          "label": "Former partners · $219.4K total revenue · did not renew",
           "color": "#8A97A5",
           "columns": 2,
           "items": [
@@ -7101,13 +7101,13 @@ export const slides = [
               "icon": "Landmark",
               "name": "San Diego State",
               "text": "Ran SDSU-GPT on TritonAI.",
-              "detail": "$170K including setup"
+              "detail": "Term: Aug 28, 2024–Aug 27, 2025\nTotal: $170K · $60K annual operations + $110K setup and other work"
             },
             {
               "icon": "Landmark",
               "name": "CSU Chancellor's Office",
               "text": "Ran a TritonAI pilot for the Cal State system office.",
-              "detail": "$29K"
+              "detail": "Term: Feb 11, 2025–Feb 10, 2026\nTotal: $49.4K · $29.4K annual operations + $20K setup"
             }
           ]
         },
@@ -7119,7 +7119,7 @@ export const slides = [
             {
               "icon": "Server",
               "name": "$650K in New Hardware",
-              "text": "Expands TritonAI at the Hal\u0131c\u0131o\u011flu School of Data Science and Computing for teaching and learning with large language models.",
+              "text": "Expands TritonAI at the Halıcıoğlu School of Data Science and Computing for teaching and learning with large language models.",
               "detail": "Teaching and learning capacity"
             },
             {
@@ -7143,9 +7143,9 @@ export const slides = [
           ]
         }
       ],
-      "footnote": "For discussion: do we bring these updates to Cabinet and the Deans?"
+      "footnote": "Total: contracted revenue across 2024–27, including setup, before Onyx’s share. *Annualized excludes setup; assumes ANR/FDU renewals."
     },
-    "claimNote": "Source: TritonAI partner agreement records \u00b7 gross agreement values before the Onyx reseller share \u00b7 partner contract years confirmed by the program lead \u00b7 reviewed Sep 22, 2026",
+    "claimNote": "Source: partner agreements · Sep 22, 2026 · totals are contracted amounts; annualized includes pending renewals",
     "audiences": [
       "PK"
     ]

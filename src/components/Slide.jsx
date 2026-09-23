@@ -5694,7 +5694,7 @@ const Slide = ({ slide, staticPreview = false }) => {
                           <div className={clsx("font-black text-ucsd-navy leading-tight", dense ? "text-[13.5px] sm:text-[16px]" : roomy ? "text-[16px] sm:text-2xl" : "text-[15px] sm:text-lg")}>{item.name}</div>
                           <div className={clsx("text-slate-600 leading-snug mt-0.5", dense ? "text-[11px] sm:text-[13px]" : roomy ? "text-[13px] sm:text-[17px]" : "text-[12px] sm:text-[15px]")}>{item.text}</div>
                           {item.detail && (
-                            <div className={clsx("text-slate-500 leading-snug mt-1", dense ? "text-[10.5px] sm:text-[12px]" : roomy ? "text-[12px] sm:text-[15px]" : "text-[11px] sm:text-[13.5px]")}>{item.detail}</div>
+                            <div className={clsx("text-slate-500 leading-snug whitespace-pre-line mt-1", dense ? "text-[10.5px] sm:text-[12px]" : roomy ? "text-[12px] sm:text-[15px]" : "text-[11px] sm:text-[13.5px]")}>{item.detail}</div>
                           )}
                         </div>
                       </motion.div>
