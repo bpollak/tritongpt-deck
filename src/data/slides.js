@@ -7053,16 +7053,15 @@ export const slides = [
     "slug": "tritonai-collaborations",
     "type": "content",
     "content": [],
-    "title": "TritonGPT Software as a Service",
-    "subtitle": "Hosted and supported by UC San Diego · $613.5K total partner revenue",
+    "title": "TritonAI Partnerships and Initiatives",
     "layout": "project-roster",
     "backgroundColor": "#F5F0E6",
-    "managerLabel": "TritonGPT SaaS: annual revenue and partner details",
+    "managerLabel": "TritonAI partnerships and initiatives: SaaS partners and other work",
     "managerSummary": "TritonGPT software as a service: UC San Diego hosts and supports partner AI assistants for annual service fees. First partner began August 2024. Annual fee snapshots at December 31 using agreement start/end dates. 2024: Berkeley $80,000 + SDSU $60,000 = $140,000. 2025: ANR $58,502 + FDU $87,600 + Merced $48,000 + CSU $29,400 = $223,502. Berkeley and SDSU original terms ended before December 31, 2025. 2026 scenario: Berkeley signed renewal $60,000 + pending ANR $58,502 + pending FDU $87,600 = $206,102. Merced expires November 30, 2026; no renewal assumed. A same-rate Merced renewal would bring the 2026 scenario to $254,102. Gross annual fees before Onyx share; excludes separately priced setup and project work. ANR original fee bundles setup and service without a separate price. FDU base term may extend for setup delays; no unsupported extension is assumed. Dates and rates checked against original PDFs and current renewal drafts Sep 22, 2026. These snapshots are not calendar-year receipts or earned revenue. Partner agreement dates and fee scope, verified against original PDFs and current renewal drafts on Sep 22, 2026. Total partner revenue $613,502: Berkeley $160,000 including original setup and signed renewal; ANR $58,502 original; FDU $107,600 original; Merced $68,000; former SDSU $170,000 and CSU $49,400. Annualized partner revenue of $254,102 is $60,000 Berkeley + $58,502 ANR + $87,600 FDU + $48,000 Merced, excluding setup and conditional on ANR/FDU renewals at listed rates. Historical total revenue spans the original contracts and signed Berkeley renewal, not YTD receipts. Annual service fees are shown separately. ANR and FDU renewal drafts are excluded from totals. FDU base term may extend for setup delays. Hardware, training, gateway interest, and vendor discussion items retained.",
     "roster": {
       "groups": [
         {
-          "label": "Annualized SaaS revenue at December 31",
+          "label": "Annualized revenue at December 31",
           "color": "#00629B",
           "columns": 3,
           "items": [
@@ -7079,7 +7078,8 @@ export const slides = [
               "text": "",
               "color": "#C69214"
             }
-          ]
+          ],
+          "sectionTitle": "TritonGPT Software as a Service · $613.5K total partner revenue"
         },
         {
           "label": "Active SaaS partners · $394.1K total revenue",
@@ -7132,7 +7132,6 @@ export const slides = [
           ]
         },
         {
-          "label": "Growing and in conversation",
           "color": "#C69214",
           "columns": 4,
           "items": [
@@ -7160,10 +7159,11 @@ export const slides = [
               "text": "Negotiations under way with both companies.",
               "detail": "Commercial models alongside campus-hosted ones"
             }
-          ]
+          ],
+          "sectionTitle": "Other TritonAI Initiatives"
         }
       ],
-      "footnote": "Total revenue spans 2024–27 and includes setup. Annualized rates exclude separately priced setup and project work; 2026 is an estimate. All figures before Onyx’s share."
+      "footnote": "Partner revenue spans 2024–27 and includes setup. Annualized rates exclude separately priced setup and project work; 2026 is an estimate. Partner figures are before Onyx’s share."
     },
     "claimNote": "Source: partner service agreements · Sep 22, 2026 · ANR’s original annual fee bundles setup",
     "audiences": [

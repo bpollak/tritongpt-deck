@@ -5661,6 +5661,11 @@ const Slide = ({ slide, staticPreview = false }) => {
           <div className={clsx("w-full max-w-[1500px] mx-auto flex flex-col flex-1 min-h-0", dense ? "gap-2 sm:gap-2.5" : "gap-3 sm:gap-4")}>
             {groups.map((group, gi) => (
               <div key={group.label || gi} className={clsx("flex flex-col flex-1 min-h-0", dense ? "gap-1.5 sm:gap-2" : "gap-2 sm:gap-2.5")}>
+                {group.sectionTitle && (
+                  <div className={clsx("font-black text-base sm:text-xl leading-tight", gi > 0 && "border-t border-slate-300 pt-2 mt-1")} style={{ color: group.color }}>
+                    {group.sectionTitle}
+                  </div>
+                )}
                 {group.label && (
                   <div className="flex items-center gap-2.5">
                     <span className="h-3 w-3 rounded-full shrink-0" style={{ backgroundColor: group.color }} />
