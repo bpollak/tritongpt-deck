@@ -7053,57 +7053,42 @@ export const slides = [
     "slug": "partner-revenue-by-year",
     "type": "content",
     "content": [],
-    "title": "Annualized Partner Revenue",
-    "subtitle": "Year-end comparison since the first partnership in August 2024",
+    "title": "TritonGPT Software as a Service",
+    "subtitle": "AI assistants hosted and supported by UC San Diego for partner institutions",
     "layout": "project-roster",
     "backgroundColor": "#F5F0E6",
-    "managerLabel": "Partner revenue by year: annualized December 31 rate",
-    "managerSummary": "Annual fee snapshots at December 31 using agreement start/end dates. 2024: Berkeley $80,000 + SDSU $60,000 = $140,000. 2025: ANR $58,502 + FDU $87,600 + Merced $48,000 + CSU $29,400 = $223,502, up 59.6%. Berkeley and SDSU original terms ended before December 31, 2025. 2026 scenario: Berkeley signed renewal $60,000 + pending ANR $58,502 + pending FDU $87,600 = $206,102, down 7.8%. Merced expires November 30, 2026; no renewal assumed. A same-rate Merced renewal would bring the 2026 scenario to $254,102, up 13.7%. Gross annual fees before Onyx share; excludes separately priced setup and project work. ANR original fee bundles setup and service without a separate price. FDU base term may extend for setup delays; no unsupported extension is assumed. Dates and rates checked against original PDFs and current renewal drafts Sep 22, 2026. These snapshots are not calendar-year receipts or earned revenue.",
+    "managerLabel": "TritonGPT SaaS: annualized partner revenue by year",
+    "managerSummary": "TritonGPT software as a service: UC San Diego hosts and supports partner AI assistants for annual service fees. First partner began August 2024. Annual fee snapshots at December 31 using agreement start/end dates. 2024: Berkeley $80,000 + SDSU $60,000 = $140,000. 2025: ANR $58,502 + FDU $87,600 + Merced $48,000 + CSU $29,400 = $223,502. Berkeley and SDSU original terms ended before December 31, 2025. 2026 scenario: Berkeley signed renewal $60,000 + pending ANR $58,502 + pending FDU $87,600 = $206,102. Merced expires November 30, 2026; no renewal assumed. A same-rate Merced renewal would bring the 2026 scenario to $254,102. Gross annual fees before Onyx share; excludes separately priced setup and project work. ANR original fee bundles setup and service without a separate price. FDU base term may extend for setup delays; no unsupported extension is assumed. Dates and rates checked against original PDFs and current renewal drafts Sep 22, 2026. These snapshots are not calendar-year receipts or earned revenue.",
     "roster": {
       "columns": 3,
       "groups": [
         {
-          "label": "Annual revenue rate at December 31",
+          "label": "Annualized SaaS revenue at December 31",
           "color": "#00629B",
           "columns": 3,
           "items": [
             {
               "name": "2024 · $140.0K",
-              "text": "Baseline · 2 partners",
+              "text": "2 partners",
               "detail": "UC Berkeley: $80.0K\nSan Diego State: $60.0K"
             },
             {
               "name": "2025 · $223.5K",
-              "text": "+59.6% year over year · 4 partners",
+              "text": "4 partners",
               "detail": "Fairleigh Dickinson: $87.6K\nUC ANR: $58.5K\nUC Merced: $48.0K\nCSU Chancellor’s Office: $29.4K"
             },
             {
-              "name": "2026 scenario · $206.1K",
-              "text": "−7.8% year over year · 3 partners",
+              "name": "2026 estimate · $206.1K",
+              "text": "3 partners",
               "color": "#C69214",
-              "detail": "UC Berkeley: $60.0K signed\nFairleigh Dickinson: $87.6K pending\nUC ANR: $58.5K pending"
-            }
-          ]
-        },
-        {
-          "label": "2026 renewal assumptions",
-          "color": "#8A97A5",
-          "columns": 2,
-          "items": [
-            {
-              "name": "$146.1K depends on renewals",
-              "text": "The year-end scenario includes ANR and FDU renewal drafts. Signed terms currently contribute $60K at December 31."
-            },
-            {
-              "name": "Merced’s term ends November 30",
-              "text": "A renewal at the same $48K annual rate would bring the 2026 scenario to $254.1K, up 13.7% from 2025."
+              "detail": "UC Berkeley: $60.0K\nFairleigh Dickinson: $87.6K\nUC ANR: $58.5K"
             }
           ]
         }
       ],
-      "footnote": "Annual fees before Onyx’s share; excludes separately priced setup and project work. ANR’s original annual fee bundles setup. Rates reflect terms covering December 31, not revenue received during the year."
+      "footnote": "Annualized service fees before Onyx’s share; excludes separately priced setup and project work. ANR’s original annual fee bundles setup."
     },
-    "claimNote": "Source: partner agreements and renewal drafts · reviewed Sep 22, 2026 · 2026 is a scenario",
+    "claimNote": "Source: partner service agreements · 2026 estimate as of Sep 22, 2026",
     "audiences": [
       "PK"
     ]
@@ -7113,16 +7098,16 @@ export const slides = [
     "slug": "tritonai-collaborations",
     "type": "content",
     "content": [],
-    "title": "TritonAI Collaborations",
+    "title": "TritonGPT SaaS and Collaborations",
     "subtitle": "Total partner revenue: $613.5K · Annualized revenue: $254.1K*",
     "layout": "project-roster",
     "backgroundColor": "#F5F0E6",
-    "managerLabel": "TritonAI collaborations: partners, campus growth, conversations",
+    "managerLabel": "TritonGPT SaaS partnerships and TritonAI collaborations",
     "managerSummary": "Partner agreement dates and fee scope, verified against original PDFs and current renewal drafts on Sep 22, 2026. Total partner revenue $613,502: Berkeley $160,000 including original setup and signed renewal; ANR $58,502 original; FDU $107,600 original; Merced $68,000; former SDSU $170,000 and CSU $49,400. Annualized partner revenue of $254,102 is $60,000 Berkeley + $58,502 ANR + $87,600 FDU + $48,000 Merced, excluding setup and conditional on ANR/FDU renewals at listed rates. Historical total revenue spans the original contracts and signed Berkeley renewal, not YTD receipts. Annual service fees are shown separately. ANR and FDU renewal drafts are excluded from totals. FDU base term may extend for setup delays. Hardware, training, gateway interest, and vendor discussion items retained.",
     "roster": {
       "groups": [
         {
-          "label": "Active partners · $394.1K total revenue",
+          "label": "Active SaaS partners · $394.1K total revenue",
           "color": "#00629B",
           "columns": 4,
           "items": [
@@ -7153,7 +7138,7 @@ export const slides = [
           ]
         },
         {
-          "label": "Former partners · $219.4K total revenue · did not renew",
+          "label": "Former SaaS partners · $219.4K total revenue · did not renew",
           "color": "#8A97A5",
           "columns": 2,
           "items": [
