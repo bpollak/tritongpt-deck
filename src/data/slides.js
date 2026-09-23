@@ -363,7 +363,7 @@ export const slides = [
         "color": "#00C6D7"
       }
     ],
-    "bottomMessage": "This is the world our 45,000 students graduate into.",
+    "bottomMessage": "This is the world our 45,087 students graduate into.",
     "hidden": true,
     "audiences": [
       "all"
@@ -2183,7 +2183,7 @@ export const slides = [
         {
           "icon": "Users",
           "title": "TritonGPT and Class Planner",
-          "audience": "All students",
+          "audience": "All 45,087 students",
           "color": "#FC8900",
           "stage": 2,
           "text": "The campus assistant and both class planners, carrying every enrollment pass.",
@@ -2203,7 +2203,7 @@ export const slides = [
       ],
       "footnote": "Each program has its own slides following this one."
     },
-    "claimNote": "Source: Harness usage telemetry through Sep 18, 2026; Class Planner analytics workbook (19,995 distinct AI planner accounts, Jul 18-Sep 21, shown as 20,000); TritonAI gateway report Jan-Aug 2026 (143.9M requests) \u00b7 reviewed Sep 22, 2026",
+    "claimNote": "Source: Harness usage telemetry through Sep 18, 2026; Class Planner analytics workbook (19,995 distinct AI planner accounts, Jul 18-Sep 21, shown as 20,000); TritonAI gateway report Jan-Aug 2026 (143.9M requests); total campus enrollment 45,087 per ucsd.edu/about (as of fall 2026) \u00b7 reviewed Sep 22, 2026",
     "audiences": [
       "all",
       "PK"
