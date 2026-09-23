@@ -787,8 +787,8 @@ export const slides = [
         "tools": [
           "TritonGPT (UCSD)",
           "BearGPT (Berkeley)",
-          "BobcatGPT (Merced)",
-          "AggieGPT (ANR)",
+          "Scout (Merced)",
+          "UC ANR",
           "Fairleigh Dickinson University"
         ]
       },
@@ -2544,7 +2544,7 @@ export const slides = [
         "11 Sep",
         "18 Sep"
       ],
-      "headline": "Weekly sessions more than tripled from the first full week to a record 640 the week of September 18, with adoption stepping up rather than plateauing.",
+      "headline": "Weekly sessions more than tripled from the first full week to a record 640 in the week through September 18, with adoption stepping up rather than plateauing.",
       "insights": [
           {
             "icon": "Layers",
@@ -2630,7 +2630,7 @@ export const slides = [
         "11 Sep",
         "18 Sep"
       ],
-      "headline": "Prompts tripled alongside sessions while depth of use held at about 3 prompts per session, so new users are doing real work, not just trying the app once.",
+      "headline": "Prompts tripled alongside sessions while depth of use held just under 3 prompts per session, so new users are doing real work, not just trying the app once.",
       "insights": [
           {
             "icon": "Zap",
@@ -2647,7 +2647,7 @@ export const slides = [
           {
             "icon": "TrendingUp",
             "stat": "1,800 in a week",
-            "label": "Record week of September 18, 3.2x the first full week (570)",
+            "label": "Record week through September 18, 3.2x the first full week (570)",
             "color": "#FC8900"
           }
         ],
@@ -6891,7 +6891,7 @@ export const slides = [
               "icon": "Calendar",
               "name": "Class Planner",
               "text": "Students say what they need and the planner builds a schedule around real constraints: preferred times, personal commitments, and requirements. It compares viable options, then hands off to booking.",
-              "detail": "Students \u00b7 carried every registration pass this enrollment season"
+              "detail": "Students \u00b7 carried every enrollment pass this season"
             },
             {
               "icon": "FileCheck",
@@ -7075,7 +7075,7 @@ export const slides = [
             {
               "icon": "Landmark",
               "name": "UC ANR",
-              "text": "Runs AggieGPT for Agriculture and Natural Resources on TritonAI.",
+              "text": "Runs its AI assistant for Agriculture and Natural Resources on TritonAI.",
               "detail": "Year two \u00b7 renewed \u00b7 $117K to date"
             },
             {
@@ -7087,8 +7087,8 @@ export const slides = [
             {
               "icon": "Landmark",
               "name": "UC Merced",
-              "text": "Runs its campus assistant, BobcatGPT, on TritonAI.",
-              "detail": "Year one \u00b7 $48K"
+              "text": "Runs Scout, its campus AI assistant, on TritonAI.",
+              "detail": "Year one \u00b7 $48K to date"
             }
           ]
         },
