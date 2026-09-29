@@ -71,3 +71,6 @@ This repo is under `~/Documents` (iCloud Drive). Evicted "dataless" files hang a
 - `src/Presentation.jsx` marks supported mobile reading layouts with `data-mobile-reading`; viewer-scoped CSS below 768px restores natural content height and places claim notes after the content. The component framework stacks its four cards on phones. These rules do not affect exports or other authored layouts.
 - Unknown or missing URL audiences fail closed. Existing valid audience tags remain case-insensitive and stable slide hashes remain intact.
 - `npm test` runs data behavior checks. `npm run test:browser` starts a dedicated local server. `npm run thumbnails` regenerates committed previews; run it after slide content or renderer changes, then `npm run check:thumbnails`. Normal deployment builds do not install or launch a browser.
+
+- Slides may opt into the existing phone reading flow with `mobileReading: true`; the established-assistants roster uses this to keep all entries and its source note reachable on narrow screens.
+- Project rosters can set `roster.density: "comfortable"` to use larger card headings and regular spacing with a short-description inventory; other rosters retain automatic density.

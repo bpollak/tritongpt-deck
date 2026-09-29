@@ -416,7 +416,7 @@ const Presentation = () => {
               data-slide-slug={currentSlide.slug}
               data-slide-tone={currentSlide.dark ? 'dark' : 'light'}
               data-slide-variant={currentSlide.variant}
-              data-mobile-reading={(['solution-showcase', 'solution-showcase-video', 'data-dashboard'].includes(currentSlide.layout) || currentSlide.variant === 'harness-components-framework') || undefined}
+              data-mobile-reading={(currentSlide.mobileReading || ['solution-showcase', 'solution-showcase-video', 'data-dashboard'].includes(currentSlide.layout) || currentSlide.variant === 'harness-components-framework') || undefined}
             >
               <Slide slide={currentSlide} />
               {currentSlide.claimNote && (

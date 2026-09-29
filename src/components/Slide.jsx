@@ -5654,9 +5654,10 @@ const Slide = ({ slide, staticPreview = false }) => {
         // Denser slides (more rows plus group headers) tighten so everything fits one page
         const totalItems = groups.reduce((n, g) => n + (g.items?.length || 0), 0);
         const totalRows = groups.reduce((n, g) => n + Math.ceil((g.items?.length || 0) / columnsFor(g)), 0);
-        const dense = (customColumns ? totalRows * 2 : totalItems) + groups.filter((g) => g.label).length >= 10;
+        const comfortable = slide.roster.density === 'comfortable';
+        const dense = !comfortable && (customColumns ? totalRows * 2 : totalItems) + groups.filter((g) => g.label).length >= 10;
         // Lighter slides get larger type so they still fill the page
-        const roomy = !dense && totalItems <= 5;
+        const roomy = !comfortable && !dense && totalItems <= 5;
         return (
           <div className={clsx("w-full max-w-[1500px] mx-auto flex flex-col flex-1 min-h-0", dense ? "gap-2 sm:gap-2.5" : "gap-3 sm:gap-4")}>
             {groups.map((group, gi) => (
@@ -5696,7 +5697,7 @@ const Slide = ({ slide, staticPreview = false }) => {
                           </div>
                         )}
                         <div className="min-w-0 flex-1">
-                          <div className={clsx("font-black text-ucsd-navy leading-tight", dense ? "text-[13.5px] sm:text-[16px]" : roomy ? "text-[16px] sm:text-2xl" : "text-[15px] sm:text-lg")}>{item.name}</div>
+                          <div className={clsx("font-black text-ucsd-navy leading-tight", comfortable ? "text-[15px] sm:text-xl" : dense ? "text-[13.5px] sm:text-[16px]" : roomy ? "text-[16px] sm:text-2xl" : "text-[15px] sm:text-lg")}>{item.name}</div>
                           <div className={clsx("text-slate-600 leading-snug mt-0.5", dense ? "text-[11px] sm:text-[13px]" : roomy ? "text-[13px] sm:text-[17px]" : "text-[12px] sm:text-[15px]")}>{item.text}</div>
                           {item.detail && (
                             <div className={clsx("text-slate-500 leading-snug whitespace-pre-line mt-1", dense ? "text-[10.5px] sm:text-[12px]" : roomy ? "text-[12px] sm:text-[15px]" : "text-[11px] sm:text-[13.5px]")}>{item.detail}</div>

@@ -2182,7 +2182,7 @@ export const slides = [
         },
         {
           "icon": "Users",
-          "title": "TritonGPT and Class Planner",
+          "title": "TritonGPT and Standalone Class Planner",
           "audience": "Cumulative daily user counts",
           "color": "#FC8900",
           "stage": 2,
@@ -6868,6 +6868,150 @@ export const slides = [
     "qrCodeUrl": "https://brettcpollak.com/tritongpt",
     "audiences": [
       "LMU"
+    ]
+  },
+  {
+    "id": 240,
+    "slug": "tritongpt-established-assistants",
+    "type": "content",
+    "content": [],
+    "title": "TritonGPT Assistants and Agents",
+    "subtitle": "Selected public and shared tools across campus",
+    "layout": "project-roster",
+    "mobileReading": true,
+    "backgroundColor": "#F5F0E6",
+    "managerLabel": "TritonGPT public and shared assistants",
+    "managerSummary": "Current admin catalog reviewed Sep 29, 2026: 21 selected non-course assistants (11 Public, 10 Shared). Excludes private agents, individual courses, templates, tests, narrower departmental variants, and solutions covered on the following slides. Catalog access does not establish launch dates or usage.",
+    "roster": {
+      "columns": 3,
+      "groups": [
+        {
+          "color": "#00629B",
+          "items": [
+            {
+              "icon": "Building2",
+              "name": "UC San Diego Assistant",
+              "text": "Public · Campus guidance and content generation."
+            },
+            {
+              "icon": "FileText",
+              "name": "General AI Assistant",
+              "text": "Public · Summarize, paraphrase, and draft content."
+            },
+            {
+              "icon": "Globe",
+              "name": "Internet Search Assistant",
+              "text": "Public · Find current information on the web."
+            },
+            {
+              "icon": "FileEdit",
+              "name": "Expert Notetaker",
+              "text": "Public · Meeting summaries and action items."
+            },
+            {
+              "icon": "FileText",
+              "name": "Job Description Helper",
+              "text": "Public · Draft Career Tracks position overviews."
+            },
+            {
+              "icon": "ClipboardCheck",
+              "name": "Performance Review Evaluator",
+              "text": "Public · Check ratings against supervisor comments."
+            },
+            {
+              "icon": "DollarSign",
+              "name": "Fund Manager Coach",
+              "text": "Public · Budgeting, grants, payroll, and compliance."
+            },
+            {
+              "icon": "Database",
+              "name": "Activity Hub Assistant",
+              "text": "Public · Campus data definitions and user guides."
+            },
+            {
+              "icon": "Database",
+              "name": "Cloud ODS Assistant",
+              "text": "Public · Discover enterprise data and draft SQL."
+            },
+            {
+              "icon": "Shield",
+              "name": "Email Phishing Analyzer",
+              "text": "Public · Assess suspicious emails and warning signs."
+            },
+            {
+              "icon": "BookOpen",
+              "name": "Analytic Rubric Creator",
+              "text": "Public · Design evidence-based analytic rubrics."
+            },
+            {
+              "icon": "Search",
+              "name": "Accessibility Assistance",
+              "text": "Shared · Find guidance on campus accessibility.",
+              "color": "#007C83"
+            },
+            {
+              "icon": "Code",
+              "name": "Triton Developer Assistant",
+              "text": "Shared · Software development guidance.",
+              "color": "#007C83"
+            },
+            {
+              "icon": "FolderOpen",
+              "name": "Project Charter Assistant",
+              "text": "Shared · Draft professional project charters.",
+              "color": "#007C83"
+            },
+            {
+              "icon": "TrendingUp",
+              "name": "AI Workplace Opportunity Assistant v0.1",
+              "text": "Shared · Identify AI use cases and ready-to-use prompts.",
+              "color": "#007C83"
+            },
+            {
+              "icon": "Search",
+              "name": "Supplier Search Tool",
+              "text": "Shared · Find suppliers and purchasing guidance.",
+              "color": "#007C83"
+            },
+            {
+              "icon": "ClipboardCheck",
+              "name": "Procurement Document Filler",
+              "text": "Shared · Draft source selection and price justification.",
+              "color": "#007C83"
+            },
+            {
+              "icon": "BookOpen",
+              "name": "SET Assistant",
+              "text": "Shared · Support Student Evaluations of Teaching.",
+              "color": "#007C83"
+            },
+            {
+              "icon": "BookOpen",
+              "name": "AI Use in Research Assistant",
+              "text": "Shared · Support the AI in Research Workgroup.",
+              "color": "#007C83"
+            },
+            {
+              "icon": "Shield",
+              "name": "General Counsel Curated Knowledge Assistant",
+              "text": "Shared · Find guidance in curated institutional knowledge.",
+              "color": "#007C83"
+            },
+            {
+              "icon": "Building2",
+              "name": "ITS - Intelligent Operations",
+              "text": "Shared · Intelligent operations support for ITS.",
+              "color": "#007C83"
+            }
+          ]
+        }
+      ],
+      "footnote": "Shared tools require group access. This broader library complements the newer solutions that follow."
+    },
+    "claimNote": "Source: TritonGPT agent catalog. Reviewed Sep 29, 2026.",
+    "audiences": [
+      "all",
+      "PK"
     ]
   },
   {
