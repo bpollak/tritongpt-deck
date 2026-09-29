@@ -2183,12 +2183,12 @@ export const slides = [
         {
           "icon": "Users",
           "title": "TritonGPT and Class Planner",
-          "audience": "Distinct AI planner accounts",
+          "audience": "Cumulative daily user counts",
           "color": "#FC8900",
           "stage": 2,
           "text": "The campus assistant and both class planners, available to all 45,087 students.",
-          "metric": "~20,000",
-          "metricLabel": "Used AI Class Planner, Jul 18–Sep 21, 2026"
+          "metric": "~180K",
+          "metricLabel": "Both Class Planners, Jul 22–Sep 20, 2026"
         },
         {
           "icon": "Server",
