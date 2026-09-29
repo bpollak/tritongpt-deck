@@ -2183,12 +2183,12 @@ export const slides = [
         {
           "icon": "Users",
           "title": "TritonGPT and Class Planner",
-          "audience": "All 45,087 students",
+          "audience": "Distinct AI planner accounts",
           "color": "#FC8900",
           "stage": 2,
-          "text": "The campus assistant and both class planners, carrying every enrollment pass.",
-          "metric": "20,000",
-          "metricLabel": "Students planned classes with AI this summer"
+          "text": "The campus assistant and both class planners, available to all 45,087 students.",
+          "metric": "~20,000",
+          "metricLabel": "Used AI Class Planner, Jul 18–Sep 21, 2026"
         },
         {
           "icon": "Server",
@@ -2203,7 +2203,7 @@ export const slides = [
       ],
       "footnote": "Each program has its own slides following this one."
     },
-    "claimNote": "Source: Harness usage telemetry through Sep 18, 2026; Class Planner analytics workbook (19,995 distinct AI planner accounts, Jul 18-Sep 21, shown as 20,000); TritonAI gateway report Jan-Aug 2026 (143.9M requests); total campus enrollment 45,087 per ucsd.edu/about (as of fall 2026) \u00b7 reviewed Sep 22, 2026",
+    "claimNote": "Sources: Harness telemetry; Class Planner analytics; gateway report; ucsd.edu/about. Reviewed Sep 22, 2026.",
     "audiences": [
       "all",
       "PK"
