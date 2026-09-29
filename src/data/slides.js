@@ -6884,6 +6884,7 @@ export const slides = [
     "managerSummary": "Current admin catalog reviewed Sep 29, 2026: 21 selected non-course assistants (11 Public, 10 Shared). Excludes private agents, individual courses, templates, tests, narrower departmental variants, and solutions covered on the following slides. Catalog access does not establish launch dates or usage.",
     "roster": {
       "columns": 3,
+      "density": "expanded",
       "groups": [
         {
           "color": "#00629B",

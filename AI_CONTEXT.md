@@ -74,3 +74,4 @@ This repo is under `~/Documents` (iCloud Drive). Evicted "dataless" files hang a
 
 - Slides may opt into the existing phone reading flow with `mobileReading: true`; the established-assistants roster uses this to keep all entries and its source note reachable on narrow screens.
 - Project rosters can set `roster.density: "comfortable"` to use larger card headings and regular spacing with a short-description inventory; other rosters retain automatic density.
+- Project roster `density: "expanded"` uses taller cards, larger labels, and content-sized rows for the 21-item assistant library.

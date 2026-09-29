@@ -5655,6 +5655,7 @@ const Slide = ({ slide, staticPreview = false }) => {
         const totalItems = groups.reduce((n, g) => n + (g.items?.length || 0), 0);
         const totalRows = groups.reduce((n, g) => n + Math.ceil((g.items?.length || 0) / columnsFor(g)), 0);
         const comfortable = slide.roster.density === 'comfortable';
+        const expanded = slide.roster.density === 'expanded';
         const dense = !comfortable && (customColumns ? totalRows * 2 : totalItems) + groups.filter((g) => g.label).length >= 10;
         // Lighter slides get larger type so they still fill the page
         const roomy = !comfortable && !dense && totalItems <= 5;
@@ -5676,7 +5677,7 @@ const Slide = ({ slide, staticPreview = false }) => {
                     <span className="flex-1 h-px bg-slate-200" />
                   </div>
                 )}
-                <div className={clsx("grid grid-cols-1 flex-1 lg:auto-rows-fr", lgColumnClass[columnsFor(group)] || "lg:grid-cols-2", dense ? "gap-2" : roomy ? "gap-3 sm:gap-4" : "gap-2 sm:gap-3")}>
+                <div className={clsx("grid grid-cols-1 flex-1", expanded ? "lg:auto-rows-auto" : "lg:auto-rows-fr", lgColumnClass[columnsFor(group)] || "lg:grid-cols-2", expanded ? "gap-2 sm:gap-2.5" : dense ? "gap-2" : roomy ? "gap-3 sm:gap-4" : "gap-2 sm:gap-3")}>
                   {group.items.map((item, i) => {
                     const ItemIcon = item.icon ? iconMap[item.icon] : null;
                     return (
@@ -5685,20 +5686,20 @@ const Slide = ({ slide, staticPreview = false }) => {
                         initial={{ opacity: 0, y: 12 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 + (gi * 0.1) + i * 0.05, duration: 0.35 }}
-                        className={clsx("bg-white rounded-xl shadow-md border-l-4 flex items-start gap-3", dense ? "px-3 py-2 sm:px-3.5 sm:py-2.5" : roomy ? "px-4 py-3 sm:px-6 sm:py-5" : "px-3.5 py-2.5 sm:px-4 sm:py-3")}
+                        className={clsx("bg-white rounded-xl shadow-md border-l-4 flex items-start gap-3", expanded ? "px-3.5 py-2.5 sm:px-4 sm:min-h-[72px]" : dense ? "px-3 py-2 sm:px-3.5 sm:py-2.5" : roomy ? "px-4 py-3 sm:px-6 sm:py-5" : "px-3.5 py-2.5 sm:px-4 sm:py-3")}
                         style={{ borderLeftColor: item.color || group.color }}
                       >
                         {ItemIcon && (
                           <div
-                            className={clsx("rounded-lg shrink-0 flex items-center justify-center text-white mt-0.5", dense ? "w-7 h-7 sm:w-8 sm:h-8" : roomy ? "w-9 h-9 sm:w-12 sm:h-12" : "w-8 h-8 sm:w-10 sm:h-10")}
+                            className={clsx("rounded-lg shrink-0 flex items-center justify-center text-white mt-0.5", expanded ? "w-8 h-8 sm:w-9 sm:h-9" : dense ? "w-7 h-7 sm:w-8 sm:h-8" : roomy ? "w-9 h-9 sm:w-12 sm:h-12" : "w-8 h-8 sm:w-10 sm:h-10")}
                             style={{ backgroundColor: item.color || group.color }}
                           >
-                            <ItemIcon size={dense ? 15 : roomy ? 22 : 18} />
+                            <ItemIcon size={expanded ? 18 : dense ? 15 : roomy ? 22 : 18} />
                           </div>
                         )}
                         <div className="min-w-0 flex-1">
-                          <div className={clsx("font-black text-ucsd-navy leading-tight", comfortable ? "text-[15px] sm:text-xl" : dense ? "text-[13.5px] sm:text-[16px]" : roomy ? "text-[16px] sm:text-2xl" : "text-[15px] sm:text-lg")}>{item.name}</div>
-                          <div className={clsx("text-slate-600 leading-snug mt-0.5", dense ? "text-[11px] sm:text-[13px]" : roomy ? "text-[13px] sm:text-[17px]" : "text-[12px] sm:text-[15px]")}>{item.text}</div>
+                          <div className={clsx("font-black text-ucsd-navy leading-tight", expanded ? "text-[15px] sm:text-[18px]" : comfortable ? "text-[15px] sm:text-xl" : dense ? "text-[13.5px] sm:text-[16px]" : roomy ? "text-[16px] sm:text-2xl" : "text-[15px] sm:text-lg")}>{item.name}</div>
+                          <div className={clsx("text-slate-600 leading-snug mt-0.5", expanded ? "text-[12px] sm:text-[14px]" : dense ? "text-[11px] sm:text-[13px]" : roomy ? "text-[13px] sm:text-[17px]" : "text-[12px] sm:text-[15px]")}>{item.text}</div>
                           {item.detail && (
                             <div className={clsx("text-slate-500 leading-snug whitespace-pre-line mt-1", dense ? "text-[10.5px] sm:text-[12px]" : roomy ? "text-[12px] sm:text-[15px]" : "text-[11px] sm:text-[13.5px]")}>{item.detail}</div>
                           )}
