@@ -152,7 +152,12 @@ const Slide = ({ slide, staticPreview = false }) => {
           loop={slide.videoLoop === true}
           muted
           playsInline
-        />
+          crossOrigin={slide.captionsSrc ? 'anonymous' : undefined}
+        >
+          {slide.captionsSrc && (
+            <track kind="captions" src={slide.captionsSrc} srcLang="en" label="English" default />
+          )}
+        </video>
         {!slide.hideDemoBadge && (slide.demoLabel || slide.title || slide.managerLabel) && (
           <div className="absolute left-5 top-5 max-w-[78vw] rounded-lg border border-white/15 bg-black/55 px-4 py-2.5 text-white shadow-lg backdrop-blur-sm">
             <div className="text-[12px] font-black uppercase tracking-[0.2em] text-white/65">Demo</div>

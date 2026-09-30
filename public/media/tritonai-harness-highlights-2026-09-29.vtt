@@ -1,0 +1,89 @@
+WEBVTT
+
+1
+00:00:00.353 --> 00:00:03.674
+TritonAI Harness is UC San Diego's agent workspace.
+
+2
+00:00:03.694 --> 00:00:05.762
+It doesn't just answer questions.
+
+3
+00:00:05.782 --> 00:00:10.356
+It does the work, on your files, with you in control.
+
+4
+00:00:11.625 --> 00:00:13.587
+Your files stay on your computer.
+
+5
+00:00:13.607 --> 00:00:16.891
+Only what a task needs goes to an approved model,
+
+6
+00:00:16.911 --> 00:00:18.212
+through the TritonAI Gateway.
+
+7
+00:00:20.493 --> 00:00:22.664
+Ask it to summarize a workshop survey.
+
+8
+00:00:22.684 --> 00:00:23.603
+In Supervised mode,
+
+9
+00:00:23.623 --> 00:00:25.795
+it checks with you before it runs
+
+10
+00:00:25.815 --> 00:00:27.673
+a command or changes a file.
+
+11
+00:00:28.966 --> 00:00:31.863
+About two minutes later, the summary is done,
+
+12
+00:00:31.883 --> 00:00:33.686
+and every step is logged.
+
+13
+00:00:35.971 --> 00:00:37.789
+It can also work in desktop apps.
+
+14
+00:00:37.809 --> 00:00:39.365
+It made this chart in Excel,
+
+15
+00:00:39.385 --> 00:00:41.204
+using the menus the way you would.
+
+16
+00:00:43.478 --> 00:00:46.205
+It can turn meeting notes into a slide deck,
+
+17
+00:00:46.225 --> 00:00:48.342
+on the official UC San Diego template.
+
+18
+00:00:50.607 --> 00:00:53.989
+You can also build small web apps in the campus style,
+
+19
+00:00:54.009 --> 00:00:56.153
+and try them right in the Harness.
+
+20
+00:00:57.440 --> 00:00:59.586
+Then connect them to campus automation.
+
+21
+00:00:59.606 --> 00:01:03.919
+This test sign-up ran through every step and saved a new row.
+
+22
+00:01:06.203 --> 00:01:12.136
+That's TritonAI Harness: real work, on your files, with you in control.
