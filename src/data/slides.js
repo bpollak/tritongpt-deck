@@ -2359,7 +2359,7 @@ export const slides = [
     "content": [],
     "title": "TritonAI Harness Walkthrough",
     "managerLabel": "Video: TritonAI Harness highlights, narrated with captions (Sep 2026)",
-    "managerSummary": "72-second narrated highlight of TritonAI Harness from real runs: work stays on your computer, approvals before commands and file changes, a survey summarized in about two minutes, a chart made in Excel through computer use, meeting notes turned into a deck on the UC San Diego template, and a campus-styled app connected to n8n. Closed captions show by default, so it reads while muted.",
+    "managerSummary": "75-second narrated highlight of TritonAI Harness from real runs: work stays on your computer, approvals before commands and file changes, a survey summarized in about two minutes, a chart made in Excel through computer use, meeting notes turned into a deck on the UC San Diego template, and a campus-styled app connected to n8n. Closed captions show by default, so it reads while muted.",
     "videoSrc": "/media/tritonai-harness-highlights-2026-09-29.mp4",
     "poster": "/media/tritonai-harness-highlights-2026-09-29-poster.jpg",
     "captionsSrc": "/media/tritonai-harness-highlights-2026-09-29.vtt",
