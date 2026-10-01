@@ -1,0 +1,165 @@
+WEBVTT
+
+1
+00:00:00.355 --> 00:00:03.368
+TritonAI Harness is UC San Diego's agent workspace.
+
+2
+00:00:03.388 --> 00:00:05.121
+It doesn't just answer questions.
+
+3
+00:00:05.376 --> 00:00:10.527
+It does the work, on your files, with you in control.
+
+4
+00:00:11.636 --> 00:00:13.312
+Your files stay on your computer.
+
+5
+00:00:13.899 --> 00:00:16.573
+Only what a task needs goes to an approved model,
+
+6
+00:00:16.967 --> 00:00:18.393
+through the TritonAI Gateway.
+
+7
+00:00:20.505 --> 00:00:22.408
+Ask it to summarize a workshop survey.
+
+8
+00:00:23.047 --> 00:00:24.222
+In Supervised mode,
+
+9
+00:00:24.247 --> 00:00:26.587
+it checks with you before it runs
+
+10
+00:00:26.607 --> 00:00:27.855
+a command or changes a file.
+
+11
+00:00:28.976 --> 00:00:31.873
+About two minutes later, the summary is done,
+
+12
+00:00:31.893 --> 00:00:33.866
+and every step is logged.
+
+13
+00:00:35.983 --> 00:00:37.861
+It can also work in desktop apps.
+
+14
+00:00:38.084 --> 00:00:39.621
+It made this chart in Excel,
+
+15
+00:00:39.641 --> 00:00:41.386
+using the menus the way you would.
+
+16
+00:00:43.485 --> 00:00:46.668
+Plugins connect it to the campus systems you already use.
+
+17
+00:00:47.302 --> 00:00:49.512
+Each ability has its own switch,
+
+18
+00:00:49.532 --> 00:00:53.251
+and in Supervised mode it asks before it writes anything.
+
+19
+00:00:55.366 --> 00:00:59.110
+Microsoft 365 reads your Outlook mail and calendar.
+
+20
+00:00:59.758 --> 00:01:03.733
+Switch on drafts, calendar holds, and Teams chats when you want them.
+
+21
+00:01:04.310 --> 00:01:06.002
+It never sends mail for you.
+
+22
+00:01:07.124 --> 00:01:12.627
+Google Workspace reads your UC San Diego Drive: Docs, Sheets, and Slides.
+
+23
+00:01:13.305 --> 00:01:16.569
+It finds and summarizes files, but it doesn't change them.
+
+24
+00:01:18.663 --> 00:01:21.958
+GitHub reviews pull requests, triages issues, and explains failed builds.
+
+25
+00:01:22.061 --> 00:01:26.943
+It can branch and commit, but it never merges.
+
+26
+00:01:27.623 --> 00:01:29.188
+That call stays with a person.
+
+27
+00:01:30.297 --> 00:01:32.237
+Kuali Build shows which forms are in
+
+28
+00:01:32.257 --> 00:01:34.180
+progress and who they're waiting on.
+
+29
+00:01:34.505 --> 00:01:35.792
+With writes switched on,
+
+30
+00:01:35.837 --> 00:01:36.994
+it can start a draft for you
+
+31
+00:01:37.014 --> 00:01:38.844
+to check before anyone submits it.
+
+32
+00:01:39.964 --> 00:01:42.937
+And n8n, the campus automation platform, can explain a workflow,
+
+33
+00:01:43.163 --> 00:01:44.418
+find out why a run failed,
+
+34
+00:01:44.615 --> 00:01:48.031
+or draft a new one for you to test.
+
+35
+00:01:50.154 --> 00:01:52.881
+It can turn meeting notes into a slide deck,
+
+36
+00:01:52.901 --> 00:01:55.188
+on the official UC San Diego template.
+
+37
+00:01:57.284 --> 00:02:00.954
+You can also build small web apps in the campus style,
+
+38
+00:02:01.208 --> 00:02:03.000
+and try them right in the Harness.
+
+39
+00:02:04.116 --> 00:02:06.614
+Then connect them to campus automation.
+
+40
+00:02:07.088 --> 00:02:10.765
+This test sign-up ran through every step and saved a new row.
+
+41
+00:02:12.879 --> 00:02:18.812
+That's TritonAI Harness: real work, on your files, with you in control.
