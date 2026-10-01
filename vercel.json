@@ -2,32 +2,47 @@
   "redirects": [
     {
       "source": "/media/tritonai-harness-highlights-2026-09-29.mp4",
-      "destination": "/media/tritonai-harness-live-2026-09-30.mp4",
+      "destination": "/media/tritonai-harness-live-2026-10-01.mp4",
       "permanent": false
     },
     {
       "source": "/media/tritonai-harness-highlights-2026-09-29.vtt",
-      "destination": "/media/tritonai-harness-live-2026-09-30.vtt",
+      "destination": "/media/tritonai-harness-live-2026-10-01.vtt",
       "permanent": false
     },
     {
       "source": "/media/tritonai-harness-highlights-2026-09-29-poster.jpg",
-      "destination": "/media/tritonai-harness-live-2026-09-30-poster.jpg",
+      "destination": "/media/tritonai-harness-live-2026-10-01-poster.jpg",
       "permanent": false
     },
     {
       "source": "/media/tritonai-harness-highlights-2026-09-30.mp4",
-      "destination": "/media/tritonai-harness-live-2026-09-30.mp4",
+      "destination": "/media/tritonai-harness-live-2026-10-01.mp4",
       "permanent": false
     },
     {
       "source": "/media/tritonai-harness-highlights-2026-09-30.vtt",
-      "destination": "/media/tritonai-harness-live-2026-09-30.vtt",
+      "destination": "/media/tritonai-harness-live-2026-10-01.vtt",
       "permanent": false
     },
     {
       "source": "/media/tritonai-harness-highlights-2026-09-30-poster.jpg",
-      "destination": "/media/tritonai-harness-live-2026-09-30-poster.jpg",
+      "destination": "/media/tritonai-harness-live-2026-10-01-poster.jpg",
+      "permanent": false
+    },
+    {
+      "source": "/media/tritonai-harness-live-2026-09-30.mp4",
+      "destination": "/media/tritonai-harness-live-2026-10-01.mp4",
+      "permanent": false
+    },
+    {
+      "source": "/media/tritonai-harness-live-2026-09-30.vtt",
+      "destination": "/media/tritonai-harness-live-2026-10-01.vtt",
+      "permanent": false
+    },
+    {
+      "source": "/media/tritonai-harness-live-2026-09-30-poster.jpg",
+      "destination": "/media/tritonai-harness-live-2026-10-01-poster.jpg",
       "permanent": false
     }
   ],

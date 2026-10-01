@@ -152,7 +152,6 @@ const Slide = ({ slide, staticPreview = false }) => {
           loop={slide.videoLoop === true}
           muted
           playsInline
-          crossOrigin={slide.captionsSrc ? 'anonymous' : undefined}
         >
           {slide.captionsSrc && (
             <track kind="captions" src={slide.captionsSrc} srcLang="en" label="English" default />
