@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Video playback test</title>
+<style>body{font:15px/1.4 -apple-system,system-ui,sans-serif;margin:16px;background:#fff;color:#111}h1{font-size:18px}.c{border:1px solid #ccc;border-radius:8px;padding:10px;margin:12px 0}video{width:100%;background:#000}.s{font:13px ui-monospace,monospace;white-space:pre-wrap;margin-top:6px}</style></head><body>
+<h1>Harness video playback test</h1><div id="ua" class="s"></div><div id="list"></div>
+<script>
+const T=[
+ ['A current deck clip (High 4.1, with captions track)','/media/tritonai-harness-live-2026-10-01.mp4',true],
+ ['B current deck clip, no captions track','/media/tritonai-harness-live-2026-10-01.mp4',false],
+ ['C Main profile 1080p, 20 s','/media/vt/main1080.mp4',false],
+ ['D Baseline 720p, 20 s','/media/vt/baseline720.mp4',false],
+ ['E Main 1080p, no audio, 20 s','/media/vt/main1080-noaudio.mp4',false],
+ ['F original walkthrough (played before 9/29)','/media/tritonai-harness-walkthrough-2026-09-07.mp4',false]];
+document.getElementById('ua').textContent='UA: '+navigator.userAgent+'\ncanPlayType mp4/avc: '+document.createElement('video').canPlayType('video/mp4; codecs="avc1.640029, mp4a.40.2"');
+const L=document.getElementById('list');
+T.forEach(([name,src,track],i)=>{const d=document.createElement('div');d.className='c';d.innerHTML='<b>'+name+'</b><br>';const v=document.createElement('video');v.controls=true;v.muted=true;v.playsInline=true;v.setAttribute('muted','');v.setAttribute('playsinline','');v.preload='metadata';v.src=src;
+ if(track){const t=document.createElement('track');t.kind='captions';t.src='/media/tritonai-harness-live-2026-10-01.vtt';t.srclang='en';t.label='English';t.default=true;v.appendChild(t);}
+ const s=document.createElement('div');s.className='s';s.textContent='status: loading…';const up=m=>{s.textContent='status: '+m};
+ v.addEventListener('loadedmetadata',()=>up('OK metadata '+v.videoWidth+'x'+v.videoHeight+', '+v.duration.toFixed(1)+' s'));
+ v.addEventListener('canplay',()=>up('OK can play ('+v.videoWidth+'x'+v.videoHeight+')'));
+ v.addEventListener('playing',()=>up('PLAYING'));
+ v.addEventListener('error',()=>up('ERROR code '+(v.error&&v.error.code)+' '+((v.error&&v.error.message)||'')));
+ d.appendChild(v);d.appendChild(s);L.appendChild(d);});
+</script></body></html>
