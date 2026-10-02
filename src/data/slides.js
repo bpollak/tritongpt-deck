@@ -2360,7 +2360,7 @@ export const slides = [
     "title": "TritonAI Harness in Action",
     "managerLabel": "Video: TritonAI Harness in action, real outcomes with captions (Oct 2026)",
     "managerSummary": "Under-two-minute narrated video of the real TritonAI Harness at work, recorded from the app with fictional demo files: a survey summarized in seconds, a presentation-ready Excel dashboard, a nine-slide briefing deck on the UC San Diego template, the five campus plugins, an n8n workflow explained, a GitHub code change reviewed, and a branded sign-up web app wired to an n8n workflow, with self-service hosting coming soon. Closed captions show by default, so it reads while muted.",
-    "videoSrc": "/media/tritonai-harness-capabilities-2026-10-01-v2.mp4",
+    "videoSrc": "/media/tritonai-harness-capabilities-2026-10-01-v3.mp4",
     "poster": "/media/tritonai-harness-capabilities-2026-10-01-v2-poster.jpg",
     "captionsSrc": "/media/tritonai-harness-capabilities-2026-10-01-v2.vtt",
     "videoLoop": false,
