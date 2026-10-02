@@ -1,18 +1,28 @@
 {
   "redirects": [
     {
+      "source": "/media/tritonai-harness-capabilities-2026-10-01-v3.mp4",
+      "destination": "/media/tritonai-harness-capabilities-2026-10-02-v4.mp4",
+      "permanent": false
+    },
+    {
+      "source": "/media/tritonai-harness-capabilities-2026-10-01-v2.vtt",
+      "destination": "/media/tritonai-harness-capabilities-2026-10-02-v4.vtt",
+      "permanent": false
+    },
+    {
       "source": "/media/tritonai-harness-capabilities-2026-10-01-v2.mp4",
-      "destination": "/media/tritonai-harness-capabilities-2026-10-01-v3.mp4",
+      "destination": "/media/tritonai-harness-capabilities-2026-10-02-v4.mp4",
       "permanent": false
     },
     {
       "source": "/media/tritonai-harness-capabilities-2026-10-01.mp4",
-      "destination": "/media/tritonai-harness-capabilities-2026-10-01-v3.mp4",
+      "destination": "/media/tritonai-harness-capabilities-2026-10-02-v4.mp4",
       "permanent": false
     },
     {
       "source": "/media/tritonai-harness-capabilities-2026-10-01.vtt",
-      "destination": "/media/tritonai-harness-capabilities-2026-10-01-v2.vtt",
+      "destination": "/media/tritonai-harness-capabilities-2026-10-02-v4.vtt",
       "permanent": false
     },
     {
@@ -22,12 +32,12 @@
     },
     {
       "source": "/media/tritonai-harness-live-2026-10-01.mp4",
-      "destination": "/media/tritonai-harness-capabilities-2026-10-01-v3.mp4",
+      "destination": "/media/tritonai-harness-capabilities-2026-10-02-v4.mp4",
       "permanent": false
     },
     {
       "source": "/media/tritonai-harness-live-2026-10-01.vtt",
-      "destination": "/media/tritonai-harness-capabilities-2026-10-01-v2.vtt",
+      "destination": "/media/tritonai-harness-capabilities-2026-10-02-v4.vtt",
       "permanent": false
     },
     {
@@ -37,12 +47,12 @@
     },
     {
       "source": "/media/tritonai-harness-highlights-2026-09-29.mp4",
-      "destination": "/media/tritonai-harness-capabilities-2026-10-01-v3.mp4",
+      "destination": "/media/tritonai-harness-capabilities-2026-10-02-v4.mp4",
       "permanent": false
     },
     {
       "source": "/media/tritonai-harness-highlights-2026-09-29.vtt",
-      "destination": "/media/tritonai-harness-capabilities-2026-10-01-v2.vtt",
+      "destination": "/media/tritonai-harness-capabilities-2026-10-02-v4.vtt",
       "permanent": false
     },
     {
@@ -52,12 +62,12 @@
     },
     {
       "source": "/media/tritonai-harness-highlights-2026-09-30.mp4",
-      "destination": "/media/tritonai-harness-capabilities-2026-10-01-v3.mp4",
+      "destination": "/media/tritonai-harness-capabilities-2026-10-02-v4.mp4",
       "permanent": false
     },
     {
       "source": "/media/tritonai-harness-highlights-2026-09-30.vtt",
-      "destination": "/media/tritonai-harness-capabilities-2026-10-01-v2.vtt",
+      "destination": "/media/tritonai-harness-capabilities-2026-10-02-v4.vtt",
       "permanent": false
     },
     {
@@ -67,12 +77,12 @@
     },
     {
       "source": "/media/tritonai-harness-live-2026-09-30.mp4",
-      "destination": "/media/tritonai-harness-capabilities-2026-10-01-v3.mp4",
+      "destination": "/media/tritonai-harness-capabilities-2026-10-02-v4.mp4",
       "permanent": false
     },
     {
       "source": "/media/tritonai-harness-live-2026-09-30.vtt",
-      "destination": "/media/tritonai-harness-capabilities-2026-10-01-v2.vtt",
+      "destination": "/media/tritonai-harness-capabilities-2026-10-02-v4.vtt",
       "permanent": false
     },
     {
