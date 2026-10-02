@@ -21,6 +21,89 @@ const useIsNarrowViewport = (maxWidth = 640) => {
   return narrow;
 };
 
+// Phones and tablets start this player from a tap on the native Play control.
+// Autoplay and eager loading interfered with that control in iPhone browsers.
+const useIsTouchDevice = () => {
+  const query = '(hover: none) and (pointer: coarse)';
+  const [touch, setTouch] = React.useState(() => (typeof window !== 'undefined' ? window.matchMedia(query).matches : false));
+  React.useEffect(() => {
+    if (typeof window === 'undefined') return undefined;
+    const mq = window.matchMedia(query);
+    const onChange = (e) => setTouch(e.matches);
+    setTouch(mq.matches);
+    // iOS Safari before 14 only supports the older listener API.
+    if (mq.addEventListener) {
+      mq.addEventListener('change', onChange);
+      return () => mq.removeEventListener('change', onChange);
+    }
+    mq.addListener(onChange);
+    return () => mq.removeListener(onChange);
+  }, []);
+  return touch;
+};
+
+const DeckVideoSlide = ({ slide, staticPreview }) => {
+  const touchDevice = useIsTouchDevice();
+  const demoBadge = !slide.hideDemoBadge && (slide.demoLabel || slide.title || slide.managerLabel);
+  return (
+    <div className="relative w-full h-full overflow-hidden bg-black">
+      <video
+        src={slide.videoSrc}
+        poster={slide.poster}
+        className={`deck-video absolute inset-x-0 top-0 w-full object-contain ${
+          slide.videoClearNav ? 'bottom-16 h-[calc(100%-4rem)]' : 'bottom-0 h-full'
+        }`}
+        controls
+        autoPlay={!staticPreview && !touchDevice && slide.videoAutoPlay !== false}
+        preload={staticPreview ? 'metadata' : touchDevice ? 'none' : undefined}
+        loop={slide.videoLoop === true}
+        muted
+        playsInline
+      >
+        {slide.captionsSrc && (
+          <track kind="captions" src={slide.captionsSrc} srcLang="en" label="English" default />
+        )}
+      </video>
+      {touchDevice && !staticPreview && !demoBadge && (
+        <a
+          href={slide.videoSrc}
+          className="absolute right-3 top-3 inline-flex min-h-11 items-center rounded-full border border-white/25 bg-black/65 px-4 text-xs font-bold text-white backdrop-blur-sm focus:outline-none focus-visible:ring-4 focus-visible:ring-ucsd-gold/70"
+        >
+          Open the video directly
+        </a>
+      )}
+      {demoBadge && (
+        <div className="absolute left-5 top-5 max-w-[78vw] rounded-lg border border-white/15 bg-black/55 px-4 py-2.5 text-white shadow-lg backdrop-blur-sm">
+          <div className="text-[12px] font-black uppercase tracking-[0.2em] text-white/65">Demo</div>
+          <div className="mt-0.5 text-sm font-black tracking-wide sm:text-base">
+            {slide.demoLabel || slide.title || slide.managerLabel}
+          </div>
+        </div>
+      )}
+      {slide.stats?.length > 0 && (
+        <div className="absolute bottom-7 right-7 flex gap-3">
+          {slide.stats.map((stat, index) => (
+            <motion.div
+              key={`${stat.label}-${index}`}
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.25 + index * 0.12 }}
+              className="min-w-[180px] rounded-xl border border-white/20 bg-black/70 px-5 py-4 text-center text-white shadow-xl backdrop-blur-md"
+            >
+              <div className="text-sm font-black uppercase tracking-[0.14em] text-ucsd-sky">
+                {stat.label}
+              </div>
+              <div className="mt-1 text-4xl font-black leading-none sm:text-5xl">
+                {stat.value}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
 const iconMap = {
   'Handshake': Handshake,
   'Target': Target,
@@ -138,55 +221,7 @@ const Slide = ({ slide, staticPreview = false }) => {
   }
 
   if (slide.type === 'video') {
-    return (
-      <div className="relative w-full h-full overflow-hidden bg-black">
-        <video
-          src={slide.videoSrc}
-          poster={slide.poster}
-          className={`deck-video absolute inset-x-0 top-0 w-full object-contain ${
-            slide.videoClearNav ? 'bottom-16 h-[calc(100%-4rem)]' : 'bottom-0 h-full'
-          }`}
-          controls
-          autoPlay={!staticPreview && slide.videoAutoPlay !== false}
-          preload={staticPreview ? 'metadata' : undefined}
-          loop={slide.videoLoop === true}
-          muted
-          playsInline
-        >
-          {slide.captionsSrc && (
-            <track kind="captions" src={slide.captionsSrc} srcLang="en" label="English" default />
-          )}
-        </video>
-        {!slide.hideDemoBadge && (slide.demoLabel || slide.title || slide.managerLabel) && (
-          <div className="absolute left-5 top-5 max-w-[78vw] rounded-lg border border-white/15 bg-black/55 px-4 py-2.5 text-white shadow-lg backdrop-blur-sm">
-            <div className="text-[12px] font-black uppercase tracking-[0.2em] text-white/65">Demo</div>
-            <div className="mt-0.5 text-sm font-black tracking-wide sm:text-base">
-              {slide.demoLabel || slide.title || slide.managerLabel}
-            </div>
-          </div>
-        )}
-        {slide.stats?.length > 0 && (
-          <div className="absolute bottom-7 right-7 flex gap-3">
-            {slide.stats.map((stat, index) => (
-              <motion.div
-                key={`${stat.label}-${index}`}
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.25 + index * 0.12 }}
-                className="min-w-[180px] rounded-xl border border-white/20 bg-black/70 px-5 py-4 text-center text-white shadow-xl backdrop-blur-md"
-              >
-                <div className="text-sm font-black uppercase tracking-[0.14em] text-ucsd-sky">
-                  {stat.label}
-                </div>
-                <div className="mt-1 text-4xl font-black leading-none sm:text-5xl">
-                  {stat.value}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        )}
-      </div>
-    );
+    return <DeckVideoSlide slide={slide} staticPreview={staticPreview} />;
   }
 
   const isTitle = slide.type === 'title';
