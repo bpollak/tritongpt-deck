@@ -518,3 +518,10 @@
     zoom: 0.62;
   }
 }
+
+/* Slide video captions: smaller than the browser default so they cover less of the footage. */
+.deck-video::cue {
+  font-size: 55%;
+  line-height: 1.25;
+  background: rgba(0, 0, 0, 0.62);
+}

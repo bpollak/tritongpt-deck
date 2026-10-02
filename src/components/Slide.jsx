@@ -143,7 +143,7 @@ const Slide = ({ slide, staticPreview = false }) => {
         <video
           src={slide.videoSrc}
           poster={slide.poster}
-          className={`absolute inset-x-0 top-0 w-full object-contain ${
+          className={`deck-video absolute inset-x-0 top-0 w-full object-contain ${
             slide.videoClearNav ? 'bottom-16 h-[calc(100%-4rem)]' : 'bottom-0 h-full'
           }`}
           controls
