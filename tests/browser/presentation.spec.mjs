@@ -37,9 +37,14 @@ test('Cabinet opens with the PK intro and has its own fresh demonstration sequen
   await page.getByRole('button', { name: 'Next slide', exact: true }).click();
   await expect(page).toHaveURL(/#slide=cabinet-citizen-developer-story$/);
   await page.goto('/?audience=cabinet#slide=cabinet-training-website-demo', { waitUntil: 'domcontentloaded' });
-  await expect(page.getByText('New recording pending', { exact: true })).toBeVisible();
-  await expect(page.locator('video')).toHaveCount(0);
-  await expect(page.getByText('Fresh desktop + iPhone simulator capture', { exact: true })).toBeVisible();
+  const video = page.locator('video.deck-video[src="/media/cabinet/cabinet-mobile-website.mp4"]');
+  await expect(video).toHaveAttribute('src', '/media/cabinet/cabinet-mobile-website.mp4');
+  await expect(video.locator('track')).toHaveAttribute('src', '/media/cabinet/cabinet-mobile-website.vtt');
+  await expect.poll(() => video.evaluate(v => v.duration)).toBeCloseTo(80, 0);
+  await page.goto('/?audience=cabinet#slide=cabinet-personal-productivity-demo');
+  const productivityVideo = page.locator('video.deck-video[src="/media/cabinet/cabinet-personal-productivity.mp4"]');
+  await expect(productivityVideo).toBeVisible();
+  await expect.poll(() => productivityVideo.evaluate(v => v.duration)).toBeCloseTo(90, 0);
 });
 
 for (const width of [390, 767]) {

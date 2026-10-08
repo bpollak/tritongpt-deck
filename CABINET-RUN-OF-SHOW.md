@@ -1,6 +1,6 @@
 # Cabinet run of show
 
-20 minutes of presentation; 10 minutes of unscripted Q&A follows. The current view is a framework with fresh recording placeholders, not a finished presentation.
+20 minutes of presentation; 10 minutes of unscripted Q&A follows. The current view includes fresh Harness UI captures, an 80-second mobile website recording, and a 90-second productivity key-frame walkthrough. Other use-case and metric slots remain placeholders.
 
 Open `?audience=cabinet#slide=ai-operating-review-title`. The first slide is the exact existing PK intro, shared through audience assignment. Cabinet-only placeholders follow it. All existing PK and other audience sequences retain their order.
 
@@ -16,9 +16,9 @@ Open `?audience=cabinet#slide=ai-operating-review-title`. The first slide is the
 | The Harness is everything around the model | 0:45 | 10:15 | Original website comparison and its animations |
 | Bigger tasks split across sub-agents | 0:15 | 10:30 | Original website animated SVG |
 | TritonAI Harness | 1:00 | 11:30 | UI screenshot talk-through; plugins, skills, key functions |
-| Personal productivity | 1:30 | 13:00 | Data capture and analysis to Excel charts and a PowerPoint summary |
+| Personal productivity | 1:30 | 13:00 | Existing fictional files to Excel charts and a PowerPoint summary |
 | Review before expansion | 0:30 | 13:30 | Data, permissions, human review, validation |
-| Learn, then build | 3:00 | 16:30 | One continuous training-to-website sequence |
+| Learn, then build | 3:00 | 16:30 | Mobile request through checked local preview |
 | Sovereign AI | 1:15 | 17:45 | UCSD-managed inference and cross-campus use |
 | TritonAI at scale | 1:15 | 19:00 | Current metrics and attribution |
 | Three decisions for Cabinet | 1:00 | 20:00 | Prioritize, support, endorse |
@@ -41,7 +41,7 @@ The `recording.mediaStem` field names each intended capture. It is a planning id
 | `cabinet-training-website` | Website training, mobile request, preview/checks | Approved homepage training edit |
 | `cabinet-personal-productivity` | Capture and analyze data, Excel charts, PowerPoint summary | Compact fictional dataset and checked outputs |
 
-For the continuous enablement sequence, open Harness Essentials and play a short segment, then request the homepage update through the mobile app. Capture the rendered preview and checks. Publishing is a separate approval step. Narration should make clear that the phone directs the Harness running on the host computer. If processing time is shortened in the edited clip, mark that passage visibly.
+The finished mobile recording shows the prior training block, the mobile request, actual file edits and checks, the completed result, and updated local page in mobile Safari. Training playback has not been captured in this clip. Publishing is a separate approval step. Narration should make clear that the phone directs the Harness running on the host computer. If processing time is shortened in the edited clip, mark that passage visibly.
 
 Approved homepage target:
 
@@ -55,7 +55,7 @@ For the appropriate entry in `src/data/slides.js`, keep its stable slug and audi
 
 The UI captures are from Nightly `0.3.6-nightly.20261008.63`, October 8. Three Plugins stages cover all seven captured rows: GitHub/Google Workspace/Kuali Build, Microsoft 365/n8n, and Lucid/Tableau. Microsoft 365/n8n is shown first. Compact controls keep all seven names visible; the captured UI stays in readable excerpts. Skills stages show installed Accessibility and Branding instructions. Functions shows fresh Browser access/profile/viewport controls, then GLM and the permission menu. The captured fictional task uses Full access; no institutional default or Supervised-run claim is made. The inspected inventory did not confirm a Spreadsheets or Presentations skill title; Microsoft 365 cloud access is distinct from local Excel/PowerPoint artifact creation. Raw path-bearing captures and Runtime host/key details are not bundled. Device hub was not installed in the captured app and is not featured.
 
-Personal workflow storyboard, 90 seconds: fictional workshop CSV and notes (0–10), request and source reads (10–23), summary and missing-response calculation (23–40), checked Excel charts (40–60), short PowerPoint brief (60–80), result files and human review (80–90). The prepared fictional dataset has 42 responses, four blank Room ratings, and a Room average of 113/38 = 2.97. The actual Harness run and its outputs remain pending. An official campus PowerPoint template must be supplied before claiming template fidelity.
+Personal workflow storyboard, 90 seconds: fictional workshop CSV and notes (0–10), request and source reads (10–23), summary and missing-response calculation (23–40), checked Excel charts (40–60), short PowerPoint brief (60–80), result files and human review (80–90). The prepared fictional dataset has 42 responses, four blank Room ratings, and a Room average of 113/38 = 2.97. The actual official GLM run is complete. Inputs and the verified official UCSD BlueAndGold template remain unchanged. Native Excel and final PowerPoint review passed. The finished 90-second video is a labeled montage of actual UI key frames, not a continuous screen recording. It shows existing file ingestion, formulas, both Excel charts, a PowerPoint chart, decisions, actions and unresolved questions. Survey scale is 1–5; chart axes are 0–5 for a zero baseline.
 
 Keep raw captures and a local captioned fallback. The web deck is the presentation vehicle; PDF and PowerPoint exports provide static frames, not embedded playable demo media.
 
@@ -77,3 +77,9 @@ Keep raw captures and a local captioned fallback. The web deck is the presentati
 | Berkeley quote | Dan and AVC approval | Removed optional slide |
 
 Q&A preparation should use fresh vertical backups and recorded fallbacks. No BioBib material belongs in Cabinet or its backups.
+
+## Completed capture assets
+
+- `public/media/cabinet/cabinet-mobile-website.mp4`: 80 seconds; actual simulator recording, three completed fictional sample chats, official GLM 5.3, local preview only. Long processing waits are cut and labeled. Temporary simulator client revoked after capture; authorized clients returned from six to five.
+- `public/media/cabinet/cabinet-personal-productivity.mp4`: 90 seconds; actual fresh UI key-frame montage, clearly labeled. Checked workbook has 26 formulas and two native charts; four-slide campus PowerPoint has one native chart and source notes.
+- Both clips have verified local posters, native controls, English VTT captions, and no looping. Raw captures and edit manifests are retained in the capture folders outside the application.

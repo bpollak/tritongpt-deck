@@ -7687,10 +7687,10 @@ export const slides = [
   {
     "id": 1009,
     "slug": "cabinet-training-website-demo",
-    "type": "content",
+    "type": "video",
     "layout": "cabinet-demo",
     "title": "Learn, then build",
-    "subtitle": "Find the training. Make a reviewed website update.",
+    "subtitle": "Direct a website update by phone, inspect its checks, and review the local preview.",
     "content": [
       {
         "heading": "Learn",
@@ -7712,23 +7712,26 @@ export const slides = [
     "durationSeconds": 180,
     "recording": {
       "label": "Training → mobile request → website preview",
-      "format": "Fresh desktop + iPhone simulator capture",
-      "mediaStem": "cabinet-training-website"
+      "format": "Actual iPhone simulator recording • 80 seconds • processing time shortened",
+      "mediaStem": "cabinet-training-website",
+      "status": "captured and reviewed"
     },
-    "pendingNote": "Fresh recording pending; publication requires a separate approval.",
-    "speakerNotes": "Three minutes including narration. One consolidated recording, not repeated demo transitions. Approved edit target: homepage Harness training section. Heading: Start with TritonAI Harness Essentials. Describe approximately eight minutes, then fictional practice files, with captions, transcript, narrated chapters and knowledge checks. Button: Open Harness training; keep /training/harness/. Show the rendered preview and checks before publishing. Actual publication only with Brett approval. Record browser navigation by the Harness browser plugin. Keep raw captures and a captioned fallback; visibly mark shortened processing time.",
+    "speakerNotes": "Three minutes including narration. The 80-second film uses actual simulator recordings with waiting time shortened and visibly labeled. Three completed fictional chats populate the opening project. The phone directs the existing Harness on the Mac using official TritonAI Cloud GLM 5.3; the task edits only a separate local website checkout. Show the prior homepage training block, the request and boundaries, checks, completed task, then actual updated page in mobile Safari. The training link is preserved. Do not imply production publication or that the training video was played. Point to Essentials as the next learning step. Temporary simulator access was revoked after capture. No commit, push, or publish. Production publication remains a separate human decision.",
     "videoLoop": false,
     "videoClearNav": true,
     "videoAutoPlay": true,
-    "hideDemoBadge": true
+    "hideDemoBadge": true,
+    "videoSrc": "/media/cabinet/cabinet-mobile-website.mp4",
+    "poster": "/media/cabinet/cabinet-mobile-website-poster.jpg",
+    "captionsSrc": "/media/cabinet/cabinet-mobile-website.vtt"
   },
   {
     "id": 1010,
     "slug": "cabinet-personal-productivity-demo",
-    "type": "content",
+    "type": "video",
     "layout": "cabinet-demo",
     "title": "Personal productivity",
-    "subtitle": "Turn a small set of data into a checked workbook and a presentation summary.",
+    "subtitle": "Existing fictional files → checked Excel charts → a campus PowerPoint briefing.",
     "content": [
       {
         "heading": "Capture and analyze",
@@ -7746,15 +7749,18 @@ export const slides = [
     "durationSeconds": 90,
     "recording": {
       "label": "Data → Excel charts → PowerPoint",
-      "format": "Fresh capture • fictional data",
-      "mediaStem": "cabinet-personal-productivity"
+      "format": "Fresh actual UI key-frame montage • 90 seconds • processing time shortened",
+      "mediaStem": "cabinet-personal-productivity",
+      "status": "captured and reviewed"
     },
-    "pendingNote": "Fresh capture and reviewed workbook and presentation outputs pending.",
-    "speakerNotes": "Ninety seconds; fresh run pending. 0–10s: introduce the fictional 42-response workshop CSV and meeting notes. 10–23s: show the Harness request and file reads. 23–40s: inspect the summary and one calculation: four blank Room ratings are excluded, so 113/38 = 2.97. 40–60s: open the generated Excel workbook, showing editable native charts, formulas, counts, and a 0–5 rating scale. 60–80s: inspect a short generated PowerPoint brief, including the ratings chart, recorded decisions, actions, and speaker notes. 80–90s: show the result files and human review checkpoint. Use the official campus PowerPoint template only after it is supplied and verified. Do not claim live Excel manipulation unless recorded; generated files plus chart verification are sufficient. Capture the actual Harness creation, not staged outputs. If editing shortens processing time, visibly mark that passage. Existing public training is reference-only. Nothing is sent or published during this demonstration.",
+    "speakerNotes": "Ninety-second montage of actual freshly captured Harness execution and native Excel/PowerPoint review, explicitly labeled key frames; not continuous desktop video. Actual official GLM run used 42 fictional survey responses and meeting notes. Existing files are ingested; no new survey submissions collected. Show the request, source reads, generated workbook formulas, rating chart and comment chart, then generated PowerPoint chart, decisions, and repaired actions slide. Room sum113 /38 valid responses =2.97, excluding four blanks; Pace4.05 and Content4.43. Survey scale1–5, chart axes0–5 for a zero baseline. Workbook has26 live formulas and2 native editable charts. Four-slide PowerPoint uses the verified official UCSD BlueAndGold template, includes1 native editable chart and source notes. Inputs/template unchanged. Native review caught a layout problem on slide4; actual GLM repair and final native check completed before these captures. No connected accounts, sending, or publishing. Human review remains essential.",
     "videoLoop": false,
     "videoClearNav": true,
     "videoAutoPlay": true,
-    "hideDemoBadge": true
+    "hideDemoBadge": true,
+    "videoSrc": "/media/cabinet/cabinet-personal-productivity.mp4",
+    "poster": "/media/cabinet/cabinet-personal-productivity-poster.jpg",
+    "captionsSrc": "/media/cabinet/cabinet-personal-productivity.vtt"
   },
   {
     "id": 1011,
