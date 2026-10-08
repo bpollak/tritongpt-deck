@@ -7315,5 +7315,538 @@ export const slides = [
     "audiences": [
       "PK"
     ]
+  },
+  {
+    "id": 1001,
+    "slug": "cabinet-citizen-developer-story",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "Citizen developers, powered by sovereign AI",
+    "subtitle": "More people can build useful tools when the platform and review process are in place.",
+    "content": [
+      {
+        "heading": "Citizen development",
+        "text": "Staff and faculty bring the workflow knowledge. The Harness supports building and checking the result."
+      },
+      {
+        "heading": "Sovereign AI",
+        "text": "UC San Diego manages the infrastructure, model access, and controls."
+      }
+    ],
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Opening",
+    "durationSeconds": 60,
+    "speakerNotes": "Opening 1:30 total, including 0:30 on the shared PK intro. Frame business outcomes first. Give one sentence on data classification and UC policy alignment; governance depth comes after demonstrations. Do not imply every showcased application was built with our Harness."
+  },
+  {
+    "id": 1002,
+    "slug": "cabinet-class-planner-demo",
+    "type": "content",
+    "layout": "cabinet-demo",
+    "title": "Class Planner",
+    "subtitle": "A builder’s idea becomes a tool others can extend.",
+    "content": [
+      {
+        "heading": "The student task",
+        "text": "Show a schedule being assembled and checked."
+      },
+      {
+        "heading": "The builder story",
+        "text": "One junior engineer started it; student developers extended it."
+      }
+    ],
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Citizen Developer Showcase",
+    "durationSeconds": 120,
+    "recording": {
+      "label": "Build a student schedule",
+      "format": "Fresh desktop capture",
+      "mediaStem": "cabinet-class-planner"
+    },
+    "pendingNote": "Demo framing and current usage evidence pending confirmation.",
+    "speakerNotes": "Kevin to confirm current framing, origin story, and usage evidence. Fresh recording only. Verify maintenance status before describing it. The originating harness-style tool was likely different from TritonAI Harness. Two minutes includes clip plus narration.",
+    "videoLoop": false,
+    "videoClearNav": true,
+    "videoAutoPlay": true,
+    "hideDemoBadge": true
+  },
+  {
+    "id": 1003,
+    "slug": "cabinet-passport-demo",
+    "type": "content",
+    "layout": "cabinet-demo",
+    "title": "Passport",
+    "subtitle": "A second citizen developer example.",
+    "content": [
+      {
+        "heading": "The task",
+        "text": "Show one useful action from start to result."
+      },
+      {
+        "heading": "The builder",
+        "text": "Connect the workflow to the person or team who built it."
+      }
+    ],
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Citizen Developer Showcase",
+    "durationSeconds": 60,
+    "recording": {
+      "label": "Passport workflow",
+      "format": "Fresh capture • workflow to be selected",
+      "mediaStem": "cabinet-passport"
+    },
+    "pendingNote": "Highlights and demonstration scenario pending.",
+    "speakerNotes": "Nikki Giaquenta to provide highlights. Do not invent functionality, usage, release status, or origin. Editable placeholder; select one short workflow once details arrive.",
+    "videoLoop": false,
+    "videoClearNav": true,
+    "videoAutoPlay": true,
+    "hideDemoBadge": true
+  },
+  {
+    "id": 1004,
+    "slug": "cabinet-cash-receipts-demo",
+    "type": "content",
+    "layout": "cabinet-demo",
+    "title": "Cash receipts",
+    "subtitle": "A vertical AI solution for a recurring administrative workflow.",
+    "content": [
+      {
+        "heading": "The workflow",
+        "text": "Show a fictional receipt moving through the current process."
+      },
+      {
+        "heading": "The next decision",
+        "text": "Connect completed work, the current phase, and the proposed ROI path."
+      }
+    ],
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Administrative Verticals",
+    "durationSeconds": 120,
+    "recording": {
+      "label": "Receipt to reviewed result",
+      "format": "Fresh capture • fictional receipt",
+      "mediaStem": "cabinet-cash-receipts"
+    },
+    "pendingNote": "Current phase and ROI assumptions awaiting validation.",
+    "speakerNotes": "Administrative anchor: two minutes. Confirm completed phases and current phase with the owner. Show fictional records and a human review checkpoint. Use proposed ROI only after the assumptions and owner are confirmed; no invented time or savings claims.",
+    "videoLoop": false,
+    "videoClearNav": true,
+    "videoAutoPlay": true,
+    "hideDemoBadge": true
+  },
+  {
+    "id": 1005,
+    "slug": "cabinet-contract-review-demo",
+    "type": "content",
+    "layout": "cabinet-demo",
+    "title": "Contract review in Word",
+    "subtitle": "Review the agreement where the work already happens.",
+    "content": [
+      {
+        "heading": "The add-in",
+        "text": "Open a fictional agreement and show the review result."
+      },
+      {
+        "heading": "The review queue",
+        "text": "Identify the next groups to prioritize."
+      }
+    ],
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Administrative Verticals",
+    "durationSeconds": 90,
+    "recording": {
+      "label": "Word add-in review",
+      "format": "Fresh capture • fictional agreement",
+      "mediaStem": "cabinet-contract-review"
+    },
+    "pendingNote": "Before/after timing and department queue pending confirmation.",
+    "speakerNotes": "Sandra and Sean to confirm queue and current release status. Capture the NEW Word add-in, not the old contract reviewer video. Verify review time before adding a before/after claim. Plant the prioritization ask: the AI team built this today; citizens will build the next ones themselves.",
+    "videoLoop": false,
+    "videoClearNav": true,
+    "videoAutoPlay": true,
+    "hideDemoBadge": true
+  },
+  {
+    "id": 1006,
+    "slug": "cabinet-administrative-quick-hits",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "Administrative AI: quick updates",
+    "subtitle": "A fast look at the next workflows and their validation gates.",
+    "content": [
+      {
+        "heading": "Transcript matching",
+        "text": "Validation underway; further work is gated on TSS go-live."
+      },
+      {
+        "heading": "ServiceNow ticket routing",
+        "text": "Current deployment status to confirm."
+      },
+      {
+        "heading": "College selection assistant",
+        "text": "Admissions self-service; current deployment status to confirm."
+      },
+      {
+        "heading": "Directory",
+        "text": "Early phase. Internet-scraped data; arts and humanities coverage needs work."
+      }
+    ],
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Administrative Verticals",
+    "durationSeconds": 90,
+    "pendingNote": "Production or pilot labels will follow owner confirmation.",
+    "speakerNotes": "Ninety seconds total. Directory is the renamed application; never use the former name. Nicole to confirm current status and rollout. Mention the VCRI demonstration to Faith Hawkins and Corey only once confirmed for this update. Fresh montage or screenshots may replace these rows. Never imply transcript matching is live."
+  },
+  {
+    "id": 1015,
+    "slug": "cabinet-chat-and-harness",
+    "type": "content",
+    "layout": "cabinet-website-visual",
+    "title": "The Harness is everything around the model",
+    "subtitle": "The model can stay the same. The workspace changes what you can get done.",
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Platform",
+    "durationSeconds": 45,
+    "content": [
+      {
+        "heading": "TritonGPT chat workflow",
+        "text": "Conversation, retrieval, and document help: a prompt and an answer to review."
+      },
+      {
+        "heading": "TritonAI Harness workflow",
+        "text": "The same model works with context, memory, connected tools, and permissions. It reads, acts, and checks a result under human review."
+      }
+    ],
+    "speakerNotes": "Forty-five seconds. Show the original website comparison and its original CSS animations. The surrounding workspace, tools, context and bounded execution create the difference; model options can stay the same. This illustrates TritonGPT chat and TritonAI Harness workflows, not the limits of every chat product. Chat products may also offer tools. Source HTML/SVG/CSS copied without redesign from https://tritonai.ucsd.edu/developer-apis/harness.html#what-a-harness-adds, verified October 8, 2026. The complete composition is uniformly scaled to the slide; source fonts are bundled locally. No iframe, screenshot of the graphic, or external script is needed.",
+    "websiteVisual": "comparison"
+  },
+  {
+    "id": 1016,
+    "slug": "cabinet-subagents",
+    "type": "content",
+    "layout": "cabinet-website-visual",
+    "websiteVisual": "subagents",
+    "title": "Bigger tasks split across sub-agents",
+    "subtitle": "Focused planning, building, and checking produce one reviewed result.",
+    "content": [
+      {
+        "heading": "Focused work",
+        "text": "Each sub-agent gets a goal and a bounded toolset. The assembled result can be a deck, a document, an application, or a workflow."
+      }
+    ],
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Platform",
+    "durationSeconds": 15,
+    "speakerNotes": "Fifteen seconds. Use the original website animated SVG as a brief visual explanation; do not read every tool label. We are using focused delegation to prepare this presentation while the other task works on the simulator recording. The person running the Harness reviews consequential output. Original SVG, figure caption, and heading copied as is from https://tritonai.ucsd.edu/developer-apis/harness.html#sub-agents, verified October 8, 2026. Original moving dashed paths and their reduced-motion behavior are retained."
+  },
+  {
+    "id": 1007,
+    "slug": "cabinet-harness-mobile-demo",
+    "type": "content",
+    "layout": "cabinet-harness-overview",
+    "title": "TritonAI Harness",
+    "harnessOverview": {
+      "captureNote": "Fresh UI capture · Nightly 0.3.6-nightly.20261008.63 · October 8, 2026",
+      "views": [
+        {
+          "label": "Plugins",
+          "heading": "Connect the services you already use",
+          "src": "plugins-current-excerpt.png",
+          "alt": "Fresh Harness Plugins view showing GitHub and Google Workspace with bounded access descriptions",
+          "note": "Plugins make connected services available through bounded tools."
+        },
+        {
+          "label": "Skills",
+          "heading": "Bring reusable instructions and campus standards",
+          "src": "skills-accessibility-current-excerpt.png",
+          "alt": "Fresh Harness Skills view showing the UCSD Accessibility Compliance skill and its description",
+          "note": "Skills provide repeatable instructions for a task. The person reviews the result."
+        }
+      ]
+    },
+    "subtitle": "A visible workspace brings the task, tools, and review together.",
+    "content": [
+      {
+        "heading": "Workspace and tasks",
+        "text": "Talk through a fresh screenshot of the current Harness interface."
+      },
+      {
+        "heading": "Plugins and skills",
+        "text": "Show where capabilities and reusable instructions enter the workflow."
+      }
+    ],
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Platform",
+    "durationSeconds": 60,
+    "recording": {
+      "label": "Harness interface talk-through",
+      "pendingLabel": "New screenshots pending",
+      "format": "Fresh Harness UI screenshots",
+      "mediaStem": "cabinet-harness-overview"
+    },
+    "speakerNotes": "One minute. Use the Plugins and Skills buttons for staged talk-through. First twenty seconds: fresh Plugins view excerpt, GitHub and Google Workspace; connected services use bounded tools and the user's access. Next twenty seconds: fresh UCSD Accessibility Compliance skill excerpt; reusable instructions bring campus standards into the task, while the person still reviews the result. Final twenty seconds: explain workspace context and review, then advance into the compact personal workflow. Captured October 8 from Nightly 0.3.6-nightly.20261008.63; this is a nightly interface preview, not a claim about stable-release plugin counts. Crops exclude local path lines; no private project or real communication is shown. Workspace and approval-control screenshot captures remain optional pending additions. Retain the stable slug; do not duplicate the native mobile website task clip.",
+    "videoLoop": false,
+    "videoClearNav": true,
+    "videoAutoPlay": true,
+    "hideDemoBadge": true
+  },
+  {
+    "id": 1008,
+    "slug": "cabinet-governance",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "Review before expansion",
+    "subtitle": "The review process follows the data and the action.",
+    "content": [
+      {
+        "heading": "Data classification",
+        "text": "Match the workflow and model environment to the data."
+      },
+      {
+        "heading": "Access and approval",
+        "text": "Show the permissions and human review checkpoint."
+      },
+      {
+        "heading": "Validation",
+        "text": "Check the result before publication or wider use."
+      }
+    ],
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Platform",
+    "durationSeconds": 30,
+    "pendingNote": "Policy, PII handling, and model-access wording awaiting current review.",
+    "speakerNotes": "Thirty seconds. Describe actual UC policy alignment, PII handling, and UCSD-managed access controls only after review. Do not imply a blanket approval for every model or data type. Point to the publication approval in the upcoming website demonstration."
+  },
+  {
+    "id": 1009,
+    "slug": "cabinet-training-website-demo",
+    "type": "content",
+    "layout": "cabinet-demo",
+    "title": "Learn, then build",
+    "subtitle": "Find the training. Make a reviewed website update.",
+    "content": [
+      {
+        "heading": "Learn",
+        "text": "Open Essentials; play a short segment."
+      },
+      {
+        "heading": "Build",
+        "text": "Request the homepage update by phone."
+      },
+      {
+        "heading": "Review",
+        "text": "Check the preview before approving publication."
+      }
+    ],
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Enablement",
+    "durationSeconds": 180,
+    "recording": {
+      "label": "Training → mobile request → website preview",
+      "format": "Fresh desktop + iPhone simulator capture",
+      "mediaStem": "cabinet-training-website"
+    },
+    "pendingNote": "Fresh recording pending; publication requires a separate approval.",
+    "speakerNotes": "Three minutes including narration. One consolidated recording, not repeated demo transitions. Approved edit target: homepage Harness training section. Heading: Start with TritonAI Harness Essentials. Describe approximately eight minutes, then fictional practice files, with captions, transcript, narrated chapters and knowledge checks. Button: Open Harness training; keep /training/harness/. Show the rendered preview and checks before publishing. Actual publication only with Brett approval. Record browser navigation by the Harness browser plugin. Keep raw captures and a captioned fallback; visibly mark shortened processing time.",
+    "videoLoop": false,
+    "videoClearNav": true,
+    "videoAutoPlay": true,
+    "hideDemoBadge": true
+  },
+  {
+    "id": 1010,
+    "slug": "cabinet-personal-productivity-demo",
+    "type": "content",
+    "layout": "cabinet-demo",
+    "title": "Personal productivity",
+    "subtitle": "Turn a small set of data into a checked workbook and a presentation summary.",
+    "content": [
+      {
+        "heading": "Capture and analyze",
+        "text": "Start with a compact fictional dataset and a clear question."
+      },
+      {
+        "heading": "Excel to PowerPoint",
+        "text": "Review the workbook charts, then inspect the presentation summary."
+      }
+    ],
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Personal Productivity",
+    "durationSeconds": 90,
+    "recording": {
+      "label": "Data → Excel charts → PowerPoint",
+      "format": "Fresh capture • fictional data",
+      "mediaStem": "cabinet-personal-productivity"
+    },
+    "pendingNote": "Fresh capture and reviewed workbook and presentation outputs pending.",
+    "speakerNotes": "Ninety seconds; fresh run pending. 0–10s: introduce the fictional 42-response workshop CSV and meeting notes. 10–23s: show the Harness request and file reads. 23–40s: inspect the summary and one calculation: four blank Room ratings are excluded, so 113/38 = 2.97. 40–60s: open the generated Excel workbook, showing editable native charts, formulas, counts, and a 0–5 rating scale. 60–80s: inspect a short generated PowerPoint brief, including the ratings chart, recorded decisions, actions, and speaker notes. 80–90s: show the result files and human review checkpoint. Use the official campus PowerPoint template only after it is supplied and verified. Do not claim live Excel manipulation unless recorded; generated files plus chart verification are sufficient. Capture the actual Harness creation, not staged outputs. If editing shortens processing time, visibly mark that passage. Existing public training is reference-only. Nothing is sent or published during this demonstration.",
+    "videoLoop": false,
+    "videoClearNav": true,
+    "videoAutoPlay": true,
+    "hideDemoBadge": true
+  },
+  {
+    "id": 1011,
+    "slug": "cabinet-sovereign-ai",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "Sovereign AI",
+    "subtitle": "UCSD-managed inference supports campus builders and cross-campus use.",
+    "content": [
+      {
+        "heading": "Campus-managed models",
+        "text": "Show the current gateway and access path."
+      },
+      {
+        "heading": "Multiple model options",
+        "text": "Confirm the current commercial and campus-hosted options."
+      },
+      {
+        "heading": "Cross-campus use",
+        "text": "Berkeley research example and UC-wide availability discussion."
+      }
+    ],
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Sovereign AI and Scale",
+    "durationSeconds": 75,
+    "pendingNote": "Contract updates and cross-campus evidence pending verification.",
+    "speakerNotes": "One minute fifteen seconds. Verify current Anthropic/OpenAI contract state and Pradeep’s preferred Cabinet wording. Do not repeat stale negotiation claims or call agreements signed without evidence. Berkeley gateway usage must be source-backed. UC-wide availability is a possibility for discussion, not an approved launch."
+  },
+  {
+    "id": 1012,
+    "slug": "cabinet-scale",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "TritonAI at scale",
+    "subtitle": "Usage, attribution, and operating cost make the next decision visible.",
+    "content": [
+      {
+        "heading": "Inference usage",
+        "text": "Current token totals and campus-hosted share."
+      },
+      {
+        "heading": "Adoption",
+        "text": "Current sessions, prompts, and user growth."
+      },
+      {
+        "heading": "Cost attribution",
+        "text": "A verified view of usage and cost by service."
+      }
+    ],
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Sovereign AI and Scale",
+    "durationSeconds": 75,
+    "pendingNote": "Current metrics, measurement dates, and sources to insert.",
+    "speakerNotes": "One minute fifteen seconds. Reuse the existing analytics layouts after refreshing their data. Source slide candidates: llm-api-usage-attribution, tritongpt-usage-analytics, tritongpt-user-growth. Do not add old numbers to this placeholder. Show measurement dates and explain what each total measures; avoid mixing partner revenue, spend and inference cost."
+  },
+  {
+    "id": 1013,
+    "slug": "cabinet-asks-close",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "Three decisions for Cabinet",
+    "subtitle": "More builders. More useful workflows. UCSD-managed inference.",
+    "content": [
+      {
+        "heading": "Prioritize",
+        "text": "Set the order for the contract review queue."
+      },
+      {
+        "heading": "Support",
+        "text": "Advance the cash receipts ROI path."
+      },
+      {
+        "heading": "Endorse",
+        "text": "Use validation gates before expansion, including the TSS checkpoint."
+      }
+    ],
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Closing",
+    "durationSeconds": 60,
+    "speakerNotes": "One minute. Reinforce the citizen developer and sovereign AI thesis. Add one mobile timeline sentence only after its date is confirmed. The following ten minutes are unscripted Q&A; appendix and recorded fallbacks should be ready outside this timed sequence."
+  },
+  {
+    "id": 1014,
+    "slug": "cabinet-berkeley-quote",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "Berkeley perspective",
+    "subtitle": "Approved quotation pending",
+    "content": [
+      {
+        "heading": "Cross-campus validation",
+        "text": "Insert the approved quote and attribution only after permission is confirmed."
+      }
+    ],
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Optional Appendix",
+    "durationSeconds": 0,
+    "pendingNote": "Optional slide; excluded from the Cabinet sequence until approved.",
+    "speakerNotes": "Berkeley quote from Dan awaits AVC approval. Keep this slide removed until exact approved text and attribution arrive. Delete if it does not land. UC Tech News article is a draft and must not be described as published."
+  },
+  {
+    "id": 1017,
+    "slug": "cabinet-harness-components-backup",
+    "type": "content",
+    "layout": "cabinet-website-visual",
+    "websiteVisual": "components",
+    "title": "How the Harness works",
+    "subtitle": "The original website component graphics.",
+    "content": [
+      {
+        "heading": "Loop",
+        "text": "Act, observe, adjust within task limits."
+      },
+      {
+        "heading": "Context",
+        "text": "Instructions, files and memory, prior results."
+      },
+      {
+        "heading": "Action",
+        "text": "Enabled tools and granted permissions."
+      },
+      {
+        "heading": "Scale",
+        "text": "Focused sub-agents for planning, building and verification."
+      }
+    ],
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Optional Appendix",
+    "durationSeconds": 0,
+    "speakerNotes": "Original website component cards, HTML and inline SVGs copied as is. These cards are static on the current website; no invented animation has been added. Removed from the timed sequence as an optional Q&A backup. Source https://tritonai.ucsd.edu/developer-apis/harness.html#how-the-harness-works, verified October 8, 2026."
   }
 ];

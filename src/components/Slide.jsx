@@ -2,6 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion'; // eslint-disable-line no-unused-vars
 import clsx from 'clsx';
 import CabinetSlide from './CabinetSlide';
+import CabinetFrameworkSlide from './CabinetFrameworkSlide';
+import CabinetWebsiteVisual from './CabinetWebsiteVisual';
+import CabinetHarnessOverview from './CabinetHarnessOverview';
 import EmbeddedVideo from './EmbeddedVideo';
 import { Target, Database, Cpu, Blocks, GraduationCap, Building2, FileText, FileCheck, DollarSign, Shield, ShieldCheck, BookOpen, Code, Presentation, Globe, FileEdit, FolderOpen, TrendingUp, TrendingDown, ClipboardCheck, Search, Heart, Calendar, GitBranch, Network, Grid3x3, ArrowDown, ArrowRight, Brain, RefreshCw, ArrowRightLeft, CheckCircle, Monitor, User, Users, Award, Server, Layers, Wallet, Share2, Star, FlaskConical, Lightbulb, Landmark, Scale, Headphones, Hammer, Zap, Rocket, BarChart3, AlertTriangle, Handshake } from 'lucide-react';
 import { QRCodeSVG } from 'qrcode.react';
@@ -222,6 +225,18 @@ const Slide = ({ slide, staticPreview = false }) => {
 
   if (slide.type === 'video') {
     return <DeckVideoSlide slide={slide} staticPreview={staticPreview} />;
+  }
+
+  if (slide.layout === 'cabinet-harness-overview') {
+    return <CabinetHarnessOverview slide={slide} />;
+  }
+
+  if (slide.layout === 'cabinet-demo' || slide.layout === 'cabinet-outline') {
+    return <CabinetFrameworkSlide slide={slide} />;
+  }
+
+  if (slide.layout === 'cabinet-website-visual') {
+    return <CabinetWebsiteVisual slide={slide} staticPreview={staticPreview} />;
   }
 
   const isTitle = slide.type === 'title';

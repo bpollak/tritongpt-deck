@@ -30,10 +30,16 @@ test('invalid and missing audience links preserve the requested slide without sh
   await expect(page).toHaveURL(/#slide=lmu-title$/);
 });
 
-test('retired audience stays empty', async ({ page }) => {
+test('Cabinet opens with the PK intro and has its own fresh demonstration sequence', async ({ page }) => {
   await page.goto('/?audience=cabinet', { waitUntil: 'domcontentloaded' });
-  await expect(page.getByText('No slides are available for this audience filter.')).toBeVisible();
-  await expect(page.locator('[data-slide-slug]')).toHaveCount(0);
+  await expect(page).toHaveURL(/#slide=ai-operating-review-title$/);
+  await expect(page.getByRole('heading', { name: 'TritonAI Operating Review', exact: true })).toBeVisible();
+  await page.getByRole('button', { name: 'Next slide', exact: true }).click();
+  await expect(page).toHaveURL(/#slide=cabinet-citizen-developer-story$/);
+  await page.goto('/?audience=cabinet#slide=cabinet-training-website-demo', { waitUntil: 'domcontentloaded' });
+  await expect(page.getByText('New recording pending', { exact: true })).toBeVisible();
+  await expect(page.locator('video')).toHaveCount(0);
+  await expect(page.getByText('Fresh desktop + iPhone simulator capture', { exact: true })).toBeVisible();
 });
 
 for (const width of [390, 767]) {

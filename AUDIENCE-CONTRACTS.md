@@ -79,13 +79,32 @@ This file defines the editorial contract and canonical sequence for each support
 
 ## cabinet
 
-**Status:** Retired by editorial decision on July 26, 2026.
+**Status:** Fresh Cabinet demonstration framework, requested October 8, 2026. This replaces the retired May briefing; no old Cabinet footage is restored.
 
-**Communication job:** None. The May 2026 Chancellor's Cabinet briefing is no longer part of the active slide library.
+**Communication job:** Show staff and faculty becoming builders, supported by UCSD-managed AI. Business outcomes and fresh demonstrations lead; the platform follows.
 
-**Canonical count:** 0
+**Canonical count:** 16
 
-**Sequence:** None. Keep the `cabinet` audience key reserved so existing links fail closed with an empty-view message rather than exposing the full library.
+**Sequence:** 20 minutes plus 10 minutes Q&A. Timing and dependencies are in `CABINET-RUN-OF-SHOW.md`.
+
+1. `ai-operating-review-title` (exact shared PK intro)
+2. `cabinet-citizen-developer-story`
+3. `cabinet-class-planner-demo`
+4. `cabinet-passport-demo`
+5. `cabinet-cash-receipts-demo`
+6. `cabinet-contract-review-demo`
+7. `cabinet-administrative-quick-hits`
+8. `cabinet-chat-and-harness`
+9. `cabinet-subagents`
+10. `cabinet-harness-mobile-demo`
+11. `cabinet-personal-productivity-demo`
+12. `cabinet-governance`
+13. `cabinet-training-website-demo`
+14. `cabinet-sovereign-ai`
+15. `cabinet-scale`
+16. `cabinet-asks-close`
+
+The optional `cabinet-berkeley-quote` placeholder is removed until approved. Original website component graphics are available as the removed `cabinet-harness-components-backup`. Cabinet contains no BioBib content, old recordings, or unverified usage and savings statistics.
 
 ## citizen
 

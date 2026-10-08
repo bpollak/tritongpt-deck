@@ -2,7 +2,7 @@
 
 Open the deck with a complete link such as `https://tritongpt-deck.vercel.app/?audience=technical#slide=tritongpt-platform`.
 
-A missing or unknown audience tag shows a link-help message. Valid tags are case-insensitive: `all`, `technical`, `executive`, `cabinet`, `citizen`, `internal`, `public`, `conference`, `PK`, `regent`, and `LMU`. Cabinet is reserved and currently contains no slides.
+A missing or unknown audience tag shows a link-help message. Valid tags are case-insensitive: `all`, `technical`, `executive`, `cabinet`, `citizen`, `internal`, `public`, `conference`, `PK`, `regent`, and `LMU`. Cabinet has its own demonstration framework, starting with the shared PK intro. See `CABINET-RUN-OF-SHOW.md` for its 20-minute sequence and pending recording slots.
 
 `all` means **Default presentation**. It includes only slides explicitly assigned that tag. It does not automatically include every slide, and slides tagged `all` are not automatically included in other presentations.
 

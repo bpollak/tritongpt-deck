@@ -1,0 +1,263 @@
+/* Uniform slide fitting and local font aliases are the only presentation adaptation. */
+@font-face {font-family:CabinetSiteTeko;src:url('/cabinet-website/fonts/Teko-SemiBold.woff2') format('woff2');font-weight:600;font-display:swap;}
+@font-face {font-family:CabinetSiteRoboto;src:url('/cabinet-website/fonts/Roboto-Regular.ttf') format('truetype');font-weight:400;font-display:swap;}
+@font-face {font-family:CabinetSiteRoboto;src:url('/cabinet-website/fonts/Roboto-Bold.ttf') format('truetype');font-weight:700;font-display:swap;}
+@font-face {font-family:'Glyphicons Halflings';src:url('/cabinet-website/fonts/glyphicons-halflings-regular.woff2') format('woff2');font-display:block;}
+.cabinet-website-slide {width:100%;height:100%;padding:24px 28px 88px;background:#fff;box-sizing:border-box;overflow:hidden;}
+.cabinet-website-frame {width:100%;height:100%;position:relative;}
+.cabinet-website-source {position:absolute;top:0;left:0;width:1170px;transform-origin:top left;--triton-navy:#182b49;--triton-blue:#00629b;--triton-border:#d5d9de;color:#333;background:#fff;font:normal normal normal 16px/1.5 CabinetSiteRoboto,sans-serif;}
+.cabinet-website-source *, .cabinet-website-source *::before, .cabinet-website-source *::after {box-sizing:border-box;}
+.cabinet-website-source p {margin:0 0 10px;}
+.cabinet-website-source h2 {font-family:CabinetSiteTeko,sans-serif !important;font-weight:600;letter-spacing:.5px;}
+.cabinet-website-source h3 {font-family:CabinetSiteRoboto,sans-serif !important;letter-spacing:normal;}
+.cabinet-website-source a {color:#00629b;text-decoration:none;}
+.cabinet-website-source strong {font-weight:700;}
+.cabinet-website-source .row {margin-left:-15px;margin-right:-15px;}
+.cabinet-website-source .col-md-6 {position:relative;min-height:1px;padding-left:15px;padding-right:15px;}
+.cabinet-website-source .hub-section {margin:0;padding:70px 0;}
+.cabinet-website-source .hub-heading {margin-bottom:34px;max-width:820px;}
+.cabinet-website-source .hub-heading h2 {color:var(--triton-navy);font-size:clamp(34px,3.7vw,47px);line-height:1.08;margin:0 0 12px;text-wrap:balance;}
+.cabinet-website-source .hub-heading > p:last-child {color:#52616b;font-size:19px;line-height:1.58;}
+.cabinet-website-source .home-kicker {color:var(--triton-blue);font-size:13px;font-weight:700;letter-spacing:.12em;margin:0 0 10px;text-transform:uppercase;}
+.cabinet-website-source svg text {font-family:CabinetSiteRoboto,Arial,sans-serif !important;}
+.cabinet-website-source svg :is(path,line,polyline,polygon):not([stroke-linecap]) {stroke-linecap:butt;}
+.cabinet-website-source svg :is(path,line,polyline,polygon):not([stroke-linejoin]) {stroke-linejoin:miter;}
+.cabinet-website-slide[data-static-preview] .harness-anim-chat-dot,.cabinet-website-slide[data-static-preview] .harness-anim-arc,.cabinet-website-slide[data-static-preview] .harness-anim-orbit,.cabinet-website-slide[data-static-preview] .harness-anim-dash,.cabinet-website-slide[data-static-preview] .harness-anim-dash-rev {animation-play-state:paused;}
+
+/* Original website rules, scoped; keyframe and font names isolated. */
+/* --- TritonAI Harness page: "what a harness adds" comparison (from the deck) --- */
+.cabinet-website-source .harness-compare { border-top: 1px solid #d9e2e6; }
+.cabinet-website-source .harness-compare-grid { display: flex; flex-wrap: wrap; }
+.cabinet-website-source .harness-compare-grid::before, .cabinet-website-source .harness-compare-grid::after { display: none; }
+.cabinet-website-source .harness-compare-grid > [class*="col-"] { display: flex; margin-bottom: 24px; width: 100%; }
+.cabinet-website-source .harness-compare-grid > [class*="col-"] { width: 50%; }
+.cabinet-website-source .harness-compare-card {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  background: #f3f8fa;
+  border: 1px solid #cfdde2;
+  border-radius: 7px;
+  box-shadow: 0 1px 0 rgba(23, 24, 20, .03);
+  height: 100%;
+  padding: 28px;
+}
+.cabinet-website-source .harness-compare-card-harness { background: #fff8f2; border-color: #e7d9c4; }
+.cabinet-website-source .harness-compare-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.cabinet-website-source .harness-compare-title {
+  color: var(--triton-blue);
+  font-family: CabinetSiteTeko, sans-serif;
+  font-size: 40px;
+  letter-spacing: .04em;
+  line-height: 1;
+  margin: 0;
+  text-transform: uppercase;
+}
+.cabinet-website-source .harness-compare-sub { color: #52616b; font-size: 20px; font-style: italic; margin: 8px 0 0; }
+.cabinet-website-source .harness-compare-pills { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding-top: 6px; }
+.cabinet-website-source .harness-pill {
+  background: #fff;
+  border: 1px solid #b9d3dc;
+  border-radius: 999px;
+  color: var(--triton-blue);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  padding: 6px 12px;
+  text-transform: uppercase;
+}
+.cabinet-website-source .harness-pill-square { border-radius: 5px; background: #e7f3f8; }
+.cabinet-website-source .harness-pill-arrow { color: #6f8fa0; }
+.cabinet-website-source .harness-compare-flow {
+  align-items: center;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr 76px 1fr;
+  margin-top: 24px;
+}
+.cabinet-website-source .harness-node {
+  background: #fff;
+  border: 1px solid #b9d3dc;
+  border-radius: 7px;
+  color: var(--triton-blue);
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 12px 10px;
+  text-align: center;
+}
+.cabinet-website-source .harness-node-tint { background: #e7f3f8; }
+.cabinet-website-source .harness-model {
+  align-items: center;
+  background: #fff;
+  border: 1.5px solid var(--triton-blue);
+  border-radius: 50%;
+  color: var(--triton-blue);
+  display: flex;
+  font-family: CabinetSiteRoboto, Arial, sans-serif;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 500;
+  height: 76px;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+  width: 76px;
+}
+.cabinet-website-source .harness-compare-track { display: block; height: 18px; margin-top: 14px; width: 100%; }
+.cabinet-website-source .harness-compare-loop {
+  align-items: center;
+  background: #fff;
+  border: 1px solid #e7d9c4;
+  border-radius: 9px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr 120px 1fr;
+  margin-top: 24px;
+  padding: 16px 20px;
+}
+.cabinet-website-source .harness-stack { list-style: none; margin: 0; padding: 0; }
+.cabinet-website-source .harness-stack li {
+  border: 1px solid var(--triton-border);
+  border-radius: 5px;
+  color: #52616b;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 7px 10px;
+  text-align: center;
+}
+.cabinet-website-source .harness-stack li + li { margin-top: 10px; }
+.cabinet-website-source .harness-stack-out li { border-color: #b9d3dc; color: var(--triton-blue); }
+.cabinet-website-source .harness-model-ring {
+  align-items: center;
+  position: relative;
+  border-radius: 50%;
+  display: flex;
+  height: 120px;
+  justify-content: center;
+  margin: 0 auto;
+  width: 120px;
+}
+.cabinet-website-source .harness-model-ring svg { height: 100%; left: 0; position: absolute; top: 0; width: 100%; }
+.cabinet-website-source .harness-model-gold { border-color: #c69214; font-size: 48px; height: 88px; width: 88px; z-index: 1; }
+.cabinet-website-source .harness-model-gold small {
+  background: #c69214;
+  border-radius: 999px;
+  bottom: -6px;
+  color: #fff;
+  font-family: CabinetSiteRoboto, Arial, sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  line-height: 1;
+  padding: 4px 7px;
+  position: absolute;
+  right: -8px;
+}
+.cabinet-website-source .harness-compare-result {
+  margin-top: auto;
+  align-items: center;
+  border-top: 1px solid #d9e2e6;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+  padding-top: 16px;
+}
+.cabinet-website-source .harness-compare-label {
+  color: #52616b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+.cabinet-website-source .harness-chip {
+  background: #fff;
+  border: 1px solid #b9d3dc;
+  border-radius: 5px;
+  color: var(--triton-blue);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 5px 10px;
+}
+.cabinet-website-source .harness-chip .glyphicon { font-size: 12px; margin-right: 6px; top: 1px; }
+.cabinet-website-source .harness-chip-quote { border-radius: 14px; font-weight: 400; }
+.cabinet-website-source .harness-compare-end { color: #52616b; font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.cabinet-website-source .harness-compare-note { color: #52616b; font-size: 17px; line-height: 1.4; margin: auto 0 0; padding-top: 20px; }
+
+/* --- TritonAI Harness page: sub-agents figure (from the deck) --- */
+.cabinet-website-source .harness-subagents-figure { margin: 0; }
+.cabinet-website-source .harness-subagents-figure svg { display: block; height: auto; max-width: 1100px; margin: 0 auto; width: 100%; }
+.cabinet-website-source .harness-subagents-figure text { font-family: CabinetSiteRoboto, Arial, sans-serif; }
+.cabinet-website-source .harness-subagents-figure figcaption { color: #52616b; font-size: 15px; margin-top: 18px; text-align: center; }
+.cabinet-website-source .harness-subagents-legend { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 18px; grid-template-columns: repeat(3, 1fr); }
+.cabinet-website-source .harness-subagents-legend li { border-left: 4px solid; padding-left: 14px; }
+.cabinet-website-source .harness-subagents-legend li:nth-child(1) { border-color: #2f6f8f; }
+.cabinet-website-source .harness-subagents-legend li:nth-child(2) { border-color: #b4562a; }
+.cabinet-website-source .harness-subagents-legend li:nth-child(3) { border-color: #557a2e; }
+.cabinet-website-source .harness-subagents-legend strong { color: var(--triton-navy); display: block; font-size: 17px; }
+.cabinet-website-source .harness-subagents-legend span { color: #52616b; display: block; font-size: 15px; margin-top: 4px; }
+
+/* --- Harness page motion (mirrors the deck; disabled for reduced-motion users) --- */
+@keyframes cabinet-site-harness-chat-dot {
+  0% { transform: translateX(0); opacity: 1; }
+  78% { transform: translateX(382px); opacity: 1; }
+  82% { transform: translateX(382px); opacity: 0; }
+  97% { transform: translateX(382px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes cabinet-site-harness-arc { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -89; } }
+@keyframes cabinet-site-harness-orbit { from { offset-distance: 0%; } to { offset-distance: 100%; } }
+@keyframes cabinet-site-harness-dash { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -9; } }
+@keyframes cabinet-site-harness-dash-rev { from { stroke-dashoffset: 0; } to { stroke-dashoffset: 9; } }
+.cabinet-website-source .harness-anim-chat-dot { animation: cabinet-site-harness-chat-dot 16s linear infinite; }
+.cabinet-website-source .harness-anim-arc { animation: cabinet-site-harness-arc 16s linear infinite; }
+.cabinet-website-source .harness-anim-orbit {
+  animation: cabinet-site-harness-orbit 16s linear infinite;
+  offset-path: path("M 60 5 A 55 55 0 1 1 60 115 A 55 55 0 1 1 60 5");
+  offset-rotate: 0deg;
+}
+@supports not (offset-path: path("M 0 0 L 1 1")) { .cabinet-website-source .harness-anim-orbit { display: none; } }
+.cabinet-website-source .harness-anim-dash { animation: cabinet-site-harness-dash 2.8s linear infinite; }
+.cabinet-website-source .harness-anim-dash-rev { animation: cabinet-site-harness-dash-rev 2.8s linear infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .cabinet-website-source .harness-anim-chat-dot, .cabinet-website-source .harness-anim-arc, .cabinet-website-source .harness-anim-orbit, .cabinet-website-source .harness-anim-dash, .cabinet-website-source .harness-anim-dash-rev { animation: none; }
+  .cabinet-website-source .harness-anim-chat-dot, .cabinet-website-source .harness-anim-orbit { display: none; }
+}
+
+/* Harness components borrow the deck's numbered cards and layered diagrams. */
+.cabinet-website-source #how-the-harness-works { background: linear-gradient(155deg, transparent 70%, #f6eacb 70%), linear-gradient(25deg, #f4f0e7 80%, #e3efeb 80%); }
+.cabinet-website-source .harness-components-heading { display: flex; align-items: start; justify-content: space-between; gap: 20px; }
+.cabinet-website-source .harness-component-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.cabinet-website-source .harness-component { --component-accent: #00629b; --component-tint: #e3eef5; padding: 23px; border: 1px solid #cbd6db; border-top: 3px solid #4796b5; border-radius: 7px; background: #fffdf9; box-shadow: 0 6px 18px #182b4910; }
+.cabinet-website-source .harness-component-loop, .cabinet-website-source .harness-component-action { --component-accent: #a3472e; --component-tint: #fae9e0; }
+.cabinet-website-source .harness-component-scale { --component-accent: #426b3d; --component-tint: #eaf0e5; }
+.cabinet-website-source .harness-component-top { display: grid; grid-template-columns: 1fr 1.05fr; align-items: start; gap: 12px; margin-bottom: 22px; }
+.cabinet-website-source .harness-component-label { color: var(--component-accent); font-weight: 700; font-size: 19px; letter-spacing: .11em; text-transform: uppercase; margin: 0 0 8px; }
+.cabinet-website-source .harness-component-label span { font-size: 13px; margin-right: 5px; }
+.cabinet-website-source .harness-component h3 { color: #182b49; font-size: 22px; line-height: 1.2; font-weight: 700; margin: 0; }
+.cabinet-website-source .harness-component > p { color: #182b49; line-height: 1.5; margin-bottom: 0; }
+.cabinet-website-source .harness-component-visual { margin: 4px 0 0; min-width: 0; align-self: center; }
+.cabinet-website-source .harness-component svg { display: block; width: 100%; height: auto; overflow: visible; color: var(--component-accent); }
+.cabinet-website-source .harness-component svg rect, .cabinet-website-source .harness-component svg .hc-model { fill: var(--component-tint); stroke: currentColor; stroke-width: 1.2; }
+.cabinet-website-source .harness-component svg path { fill: none; stroke: currentColor; stroke-width: 1.2; }
+.cabinet-website-source .harness-component svg .hc-track { stroke-dasharray: 3 3; }
+.cabinet-website-source .harness-component svg text { fill: currentColor; text-anchor: middle; font-family: CabinetSiteRoboto, sans-serif; font-size: 14px; font-weight: 600; }
+.cabinet-website-source .harness-component svg .hc-model-letter { font-family: CabinetSiteRoboto, sans-serif; font-size: 24px; font-style: italic; font-weight: 500; }
+.cabinet-website-source .harness-component-visual figcaption { text-align: center; color: var(--component-accent); font-size: 10px; font-weight: 700; line-height: 1.4; letter-spacing: .1em; text-transform: uppercase; margin-top: 8px; }
+.cabinet-website-source .harness-component-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.cabinet-website-source .harness-component-links a { border: 1px solid currentColor; border-radius: 4px; padding: 5px 9px; color: var(--component-accent); font-size: 13px; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.cabinet-website-source .harness-component-links a:hover { background: var(--component-tint); }
+.cabinet-website-source .harness-worked-example { margin-top: 28px; padding: 24px; background: #fffcf4; border-left: 4px solid #c69214; }
+.cabinet-website-source .harness-worked-example h3 { margin-top: 8px; }
+.cabinet-website-source .harness-example-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin: 22px 0 0; padding-left: 22px; }
+.cabinet-website-source .harness-example-steps li { padding-left: 4px; }
+.cabinet-website-source .harness-example-steps span { display: block; margin-top: 5px; }
+
+
+.cabinet-website-source .glyphicon{position:relative;top:1px;display:inline-block;font-family:Glyphicons Halflings;font-style:normal;font-weight:400;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.cabinet-website-source .glyphicon-ok:before{content:"\e013"}
+.cabinet-website-source .glyphicon-file:before{content:"\e022"}
+.cabinet-website-source .glyphicon-list-alt:before{content:"\e032"}
+
+/* The source is a fixed desktop composition; only its wrapper scales. */
+.cabinet-website-source .hub-heading h2 {font-size:47px;}

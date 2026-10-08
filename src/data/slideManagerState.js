@@ -2,6 +2,21 @@ export const slideManagerState = {
   "order": [
     "lmu-title",
     "ai-operating-review-title",
+    "cabinet-citizen-developer-story",
+    "cabinet-class-planner-demo",
+    "cabinet-passport-demo",
+    "cabinet-cash-receipts-demo",
+    "cabinet-contract-review-demo",
+    "cabinet-administrative-quick-hits",
+    "cabinet-chat-and-harness",
+    "cabinet-subagents",
+    "cabinet-harness-mobile-demo",
+    "cabinet-personal-productivity-demo",
+    "cabinet-governance",
+    "cabinet-training-website-demo",
+    "cabinet-sovereign-ai",
+    "cabinet-scale",
+    "cabinet-asks-close",
     "the-ai-enabled-university",
     "ai-strategy-and-engagement",
     "uc-san-diego",
@@ -114,14 +129,17 @@ export const slideManagerState = {
     "thank-you-questions",
     "cabinet-harness-11c-developer-api-program",
     "video-harness-api-demo-2026-06-25-842",
-    "cabinet-harness-11d-campus-app-hosting-intake"
+    "cabinet-harness-11d-campus-app-hosting-intake",
+    "cabinet-berkeley-quote",
+    "cabinet-harness-components-backup"
   ],
   "audiences": {
     "lmu-title": [
       "LMU"
     ],
     "ai-operating-review-title": [
-      "PK"
+      "PK",
+      "cabinet"
     ],
     "the-ai-enabled-university": [
       "all",
@@ -633,6 +651,57 @@ export const slideManagerState = {
     ],
     "lmu-thank-you": [
       "LMU"
+    ],
+    "cabinet-citizen-developer-story": [
+      "cabinet"
+    ],
+    "cabinet-class-planner-demo": [
+      "cabinet"
+    ],
+    "cabinet-passport-demo": [
+      "cabinet"
+    ],
+    "cabinet-cash-receipts-demo": [
+      "cabinet"
+    ],
+    "cabinet-contract-review-demo": [
+      "cabinet"
+    ],
+    "cabinet-administrative-quick-hits": [
+      "cabinet"
+    ],
+    "cabinet-harness-mobile-demo": [
+      "cabinet"
+    ],
+    "cabinet-governance": [
+      "cabinet"
+    ],
+    "cabinet-training-website-demo": [
+      "cabinet"
+    ],
+    "cabinet-personal-productivity-demo": [
+      "cabinet"
+    ],
+    "cabinet-sovereign-ai": [
+      "cabinet"
+    ],
+    "cabinet-scale": [
+      "cabinet"
+    ],
+    "cabinet-asks-close": [
+      "cabinet"
+    ],
+    "cabinet-berkeley-quote": [
+      "cabinet"
+    ],
+    "cabinet-chat-and-harness": [
+      "cabinet"
+    ],
+    "cabinet-subagents": [
+      "cabinet"
+    ],
+    "cabinet-harness-components-backup": [
+      "cabinet"
     ]
   }
 };

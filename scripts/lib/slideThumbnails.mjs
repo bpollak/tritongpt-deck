@@ -4,6 +4,13 @@ import { readFile } from 'node:fs/promises';
 const rendererFiles = [
   'src/components/Slide.jsx',
   'src/components/CabinetSlide.jsx',
+  'src/components/CabinetFrameworkSlide.jsx',
+  'src/components/CabinetFrameworkSlide.css',
+  'src/components/CabinetWebsiteVisual.jsx',
+  'src/components/CabinetWebsiteVisual.css',
+  'src/components/CabinetHarnessOverview.jsx',
+  'src/components/CabinetHarnessOverview.css',
+  'src/data/cabinetWebsiteVisuals.js',
   'src/components/HarnessDefinitionVariants.jsx',
   'src/components/EmbeddedVideo.jsx',
   'src/pages/ThumbnailPage.jsx',
