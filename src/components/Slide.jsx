@@ -1420,7 +1420,7 @@ const Slide = ({ slide, staticPreview = false }) => {
       const barCeiling = 90; // percent of chart height used by the tallest column, leaving room for the value label
       return (
         <motion.div key={sIdx} initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 + sIdx * 0.1, duration: 0.5 }}
-          className="w-full max-w-6xl mx-auto flex-1 min-h-0 flex flex-col">
+          className="slide-stacked-columns w-full max-w-6xl mx-auto flex-1 min-h-0 flex flex-col">
           <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-0.5 sm:mb-1">
             {section.sectionTitle && <div className="text-ucsd-navy text-sm sm:text-base md:text-lg font-black">{section.sectionTitle}</div>}
             {series.length > 0 && (

@@ -1,3 +1,5 @@
+import { gatewayUsageDashboard } from './gatewayUsage.js';
+
 export const slides = [
   {
     "id": 0.5,
@@ -2212,138 +2214,7 @@ export const slides = [
   {
     "id": 23.5,
     "slug": "llm-api-usage-attribution",
-    "type": "content",
-    "layout": "data-dashboard",
-    "compact": true,
-    "title": "TritonAI LLM Gateway Usage",
-    "subtitle": "Aggregate API activity across UC San Diego, January 1 to August 31, 2026. No user-level records.",
-    "backgroundColor": "#F5F0E6",
-    "dashboardSections": [
-      {
-        "type": "metric-grid",
-        "variant": "strip",
-        "items": [
-          {
-            "value": "455.3B",
-            "label": "Tokens processed",
-            "icon": "Database",
-            "color": "#00629B"
-          },
-          {
-            "value": "143.9M",
-            "label": "API requests",
-            "icon": "BarChart3",
-            "color": "#00C6D7"
-          },
-          {
-            "value": "92.6%",
-            "label": "Tokens on self-hosted and internal routes",
-            "icon": "Server",
-            "color": "#6E963B"
-          },
-          {
-            "value": "78.9B",
-            "label": "Tokens in August, up 17.6% from July",
-            "icon": "TrendingUp",
-            "color": "#FC8900"
-          }
-        ]
-      },
-      {
-        "type": "stacked-columns",
-        "sectionTitle": "Monthly token volume, 2026",
-        "series": [
-          {
-            "key": "selfHosted",
-            "label": "Self-hosted and internal",
-            "color": "#00629B"
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud",
-            "color": "#FFCD00"
-          }
-        ],
-        "items": [
-          {
-            "label": "Jan 2026",
-            "selfHosted": 43.8,
-            "cloud": 0.5,
-            "displayValue": "44.3B",
-            "annotation": "43.8B / 0.5B cloud"
-          },
-          {
-            "label": "Feb 2026",
-            "selfHosted": 48.3,
-            "cloud": 0.7,
-            "displayValue": "49.0B",
-            "annotation": "48.3B / 0.7B cloud"
-          },
-          {
-            "label": "Mar 2026",
-            "selfHosted": 43.7,
-            "cloud": 1.0,
-            "displayValue": "44.8B",
-            "annotation": "43.7B / 1.0B cloud"
-          },
-          {
-            "label": "Apr 2026",
-            "selfHosted": 48.7,
-            "cloud": 1.4,
-            "displayValue": "50.1B",
-            "annotation": "48.7B / 1.4B cloud"
-          },
-          {
-            "label": "May 2026",
-            "selfHosted": 42.8,
-            "cloud": 5.3,
-            "displayValue": "48.1B",
-            "annotation": "42.8B / 5.3B cloud"
-          },
-          {
-            "label": "Jun 2026",
-            "selfHosted": 68.3,
-            "cloud": 4.9,
-            "displayValue": "73.2B",
-            "annotation": "68.3B / 4.9B cloud"
-          },
-          {
-            "label": "Jul 2026",
-            "selfHosted": 61.5,
-            "cloud": 5.6,
-            "displayValue": "67.1B",
-            "annotation": "61.5B / 5.6B cloud"
-          },
-          {
-            "label": "Aug 2026",
-            "selfHosted": 64.5,
-            "cloud": 14.3,
-            "displayValue": "78.9B",
-            "annotation": "64.5B / 14.3B cloud",
-            "highlight": true
-          }
-        ],
-        "caption": "Cloud tokens grew from 0.5B in January to 14.3B in August as more workloads moved to cloud routes."
-      },
-      {
-        "type": "stat-callouts",
-        "compact": true,
-        "items": [
-          {
-            "icon": "TrendingUp",
-            "stat": "What is driving growth",
-            "detail": "Production applications, embeddings, and automated background services. August cloud usage more than doubled July's.",
-            "color": "#00629B"
-          },
-          {
-            "icon": "CheckCircle",
-            "stat": "How to read these numbers",
-            "detail": "Gateway-recorded input plus output tokens, reconciled to 455,295,685,475 tokens and 143,909,714 request records.",
-            "color": "#6E963B"
-          }
-        ]
-      }
-    ],
+    ...gatewayUsageDashboard,
     "audiences": [
       "internal",
       "technical",
@@ -7854,31 +7725,15 @@ export const slides = [
   {
     "id": 1012,
     "slug": "cabinet-scale",
-    "type": "content",
-    "layout": "cabinet-outline",
-    "title": "TritonAI at scale",
-    "subtitle": "Usage, attribution, and operating cost make the next decision visible.",
-    "content": [
-      {
-        "heading": "Inference usage",
-        "text": "Current token totals and campus-hosted share."
-      },
-      {
-        "heading": "Adoption",
-        "text": "Current sessions, prompts, and user growth."
-      },
-      {
-        "heading": "Cost attribution",
-        "text": "A verified view of usage and cost by service."
-      }
-    ],
+    ...gatewayUsageDashboard,
     "audiences": [
       "cabinet"
     ],
     "managerSection": "Sovereign AI and Scale",
+    "managerLabel": "Gateway scale: January–September 2026",
+    "managerSummary": "Nine-month token chart, September route mix, and cumulative Gateway totals from the current TritonAI website.",
     "durationSeconds": 75,
-    "pendingNote": "Current metrics, measurement dates, and sources to insert.",
-    "speakerNotes": "One minute fifteen seconds. Reuse the existing analytics layouts after refreshing their data. Source slide candidates: llm-api-usage-attribution, tritongpt-usage-analytics, tritongpt-user-growth. Do not add old numbers to this placeholder. Show measurement dates and explain what each total measures; avoid mixing partner revenue, spend and inference cost."
+    "speakerNotes": `One minute fifteen seconds. ${gatewayUsageDashboard.speakerNotes}`
   },
   {
     "id": 1013,
