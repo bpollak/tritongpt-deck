@@ -8,6 +8,8 @@ const rendererFiles = [
   'src/components/CabinetFrameworkSlide.css',
   'src/components/CabinetWebsiteVisual.jsx',
   'src/components/CabinetWebsiteVisual.css',
+  'src/components/CabinetWorkflowComparison.jsx',
+  'src/components/CabinetWorkflowComparison.css',
   'src/components/CabinetHarnessOverview.jsx',
   'src/components/CabinetHarnessOverview.css',
   'src/data/cabinetWebsiteVisuals.js',

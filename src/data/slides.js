@@ -7524,15 +7524,75 @@ export const slides = [
     "content": [
       {
         "heading": "TritonGPT chat workflow",
-        "text": "Conversation, retrieval, and document help: a prompt and an answer to review."
+        "text": "Campus questions, document review, drafting, and purpose-built assistants."
       },
       {
         "heading": "TritonAI Harness workflow",
-        "text": "The same model works with context, memory, connected tools, and permissions. It reads, acts, and checks a result under human review."
+        "text": "Multi-step work through project files, connected tools, and checks to a saved result you review."
       }
     ],
-    "speakerNotes": "Forty-five seconds. Show the original website comparison and its original CSS animations. The surrounding workspace, tools, context and bounded execution create the difference; model options can stay the same. This illustrates TritonGPT chat and TritonAI Harness workflows, not the limits of every chat product. Chat products may also offer tools. Source HTML/SVG/CSS copied without redesign from https://tritonai.ucsd.edu/developer-apis/harness.html#what-a-harness-adds, verified October 8, 2026. The complete composition is uniformly scaled to the slide; source fonts are bundled locally. No iframe, screenshot of the graphic, or external script is needed.",
-    "websiteVisual": "comparison"
+    "speakerNotes": "Forty-five seconds total, no added lecture. Default: original website animation, preserved as copied. Optional Choose by task view: complementary entry points, not a replacement story or a smarter-model claim. TritonGPT helps you find, understand, and draft; the Harness can carry work through files, tools, and checks to a result you review. Use task cards for a 15-second transition to the 60-second UI overview and 90-second Excel/PowerPoint demo. Access & review is an untimed Q&A detail view on this same slide; do not read the full table during the 45-second slot. All six website matrix rows are mapped in CABINET-RUN-OF-SHOW.md; Best fit and Typical result are Cabinet synthesis supported by the overview and our completed demonstrations. Where you work adds the paired phone directing the host, verified by our actual October 8 simulator recording. TritonGPT includes retrieval, uploaded files, assistants and assistant-specific tools; the animation is illustrative, not a one-prompt capability limit. Campus chats: published policy says automatic deletion after 90 days. Harness task history and project files are local, but prompts/selected context go to the chosen model and tools exchange data with connected services. Review modes vary by provider; Full access permits actions without prompts. Our recorded fictional task used Full access, not Supervised. Plugin abilities and account permissions still apply. P1-P3 requires approved service/setup, model route and use case; P4 prohibited. A shared Gateway does not guarantee identical model inventories or that every route is self-hosted. Source matrix and architecture: https://tritonai.ucsd.edu/developer-apis/harness.html ; TritonGPT capabilities: https://tritonai.ucsd.edu/tritongpt/index.html ; retention and approved use: https://tritonai.ucsd.edu/tritongpt/privacy.html . Independently verified October 8, 2026. Original HTML/SVG/CSS from #what-a-harness-adds stays unchanged and uniformly scaled, with bundled fonts; adapted task and detail views are explicitly labeled Cabinet adaptation.",
+    "websiteVisual": "comparison",
+    "workflowComparison": {
+      "title": "Choose the workspace for the task.",
+      "lead": "TritonGPT helps you find, understand, and draft. The Harness can carry a task through files, tools, and checks to a result you review.",
+      "taskRows": [
+        {
+          "label": "Best fit",
+          "tritongpt": "Campus questions, document review, drafting, and purpose-built assistants.",
+          "harness": "Multi-step work that changes files, analyzes data, builds artifacts, or updates an application."
+        },
+        {
+          "label": "Where you work",
+          "tritongpt": "Campus-hosted web service; open in a browser.",
+          "harness": "Installed Mac/Windows workspace; a paired phone can direct the host."
+        },
+        {
+          "label": "Typical result",
+          "tritongpt": "A sourced answer, comparison, or draft to review.",
+          "harness": "A saved workbook, briefing deck, checked website change, or workflow to review."
+        }
+      ],
+      "detailRows": [
+        {
+          "label": "Files and actions",
+          "tritongpt": "Uploaded documents and permitted assistant context.",
+          "harness": "Opened project folders, file edits, commands, and version control within granted access."
+        },
+        {
+          "label": "Connected systems",
+          "tritongpt": "Campus sources, directory information, and assistant-specific tools.",
+          "harness": "Enabled plugins connect your account to services such as Microsoft 365, Google Workspace, GitHub, and n8n."
+        },
+        {
+          "label": "Where history lives",
+          "tritongpt": "Campus-stored chats; published policy: automatic deletion after 90 days.",
+          "harness": "Local project files and task history; selected context goes to the model, and tools communicate with connected services."
+        },
+        {
+          "label": "Review and approval",
+          "tritongpt": "Review the response before using it.",
+          "harness": "Choose approval mode; inspect changes, checks, and output. Full access can act without approval prompts."
+        }
+      ],
+      "dataRule": "P1–P3 only within approved services and setups; P4 prohibited. Check the service, model route, and use case.",
+      "accessRule": "Access follows your account permissions and the abilities enabled for each tool.",
+      "verifiedDate": "October 8, 2026",
+      "sources": [
+        {
+          "label": "Website matrix",
+          "href": "https://tritonai.ucsd.edu/developer-apis/harness.html"
+        },
+        {
+          "label": "TritonGPT overview",
+          "href": "https://tritonai.ucsd.edu/tritongpt/index.html"
+        },
+        {
+          "label": "Privacy policy",
+          "href": "https://tritonai.ucsd.edu/tritongpt/privacy.html"
+        }
+      ]
+    }
   },
   {
     "id": 1016,

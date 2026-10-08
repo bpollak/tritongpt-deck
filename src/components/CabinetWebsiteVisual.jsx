@@ -1,5 +1,6 @@
 import { useLayoutEffect, useRef, useState } from 'react';
 import { cabinetWebsiteVisuals } from '../data/cabinetWebsiteVisuals';
+import CabinetWorkflowComparison from './CabinetWorkflowComparison';
 import './CabinetWebsiteVisual.css';
 
 // These are local copies of the selected website graphics, not reconstructed
@@ -14,6 +15,7 @@ export default function CabinetWebsiteVisual({ slide, staticPreview }) {
       const frame = frameRef.current;
       const source = sourceRef.current;
       if (!frame || !source) return;
+      if (!frame.clientWidth || !frame.clientHeight) return;
       // Fit the visible composition. The site's outer section padding is blank
       // space, so it need not shrink the unchanged graphic on a projected slide.
       const sectionStyle = window.getComputedStyle(source.firstElementChild);
@@ -31,7 +33,7 @@ export default function CabinetWebsiteVisual({ slide, staticPreview }) {
     return () => observer.disconnect();
   }, [slide.websiteVisual]);
 
-  return (
+  const visual = (
     <div className="cabinet-website-slide" data-static-preview={staticPreview || undefined}>
       <div className="cabinet-website-frame" ref={frameRef}>
         <div
@@ -43,4 +45,8 @@ export default function CabinetWebsiteVisual({ slide, staticPreview }) {
       </div>
     </div>
   );
+
+  return slide.workflowComparison ? (
+    <CabinetWorkflowComparison comparison={slide.workflowComparison}>{visual}</CabinetWorkflowComparison>
+  ) : visual;
 }
