@@ -30,6 +30,20 @@
 }
 .cabinet-harness-switcher button[aria-pressed="true"] { background: #ffcd00; color: #182b49; border-color: #ffcd00; }
 .cabinet-harness-switcher button:focus-visible { outline: 3px solid #00c6d7; outline-offset: 4px; }
+.cabinet-harness-scene-heading { display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+.cabinet-harness-stages { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+.cabinet-harness-stages button {
+  border: 1px solid #8194ac;
+  border-radius: 6px;
+  padding: 8px 12px;
+  background: transparent;
+  color: #d5dce5;
+  font-size: clamp(12px, 1.05vw, 17px);
+  line-height: 1.3;
+  cursor: pointer;
+}
+.cabinet-harness-stages button[aria-pressed="true"] { background: #00629b; color: #fff; border-color: #67b9de; }
+.cabinet-harness-stages button:focus-visible { outline: 3px solid #00c6d7; outline-offset: 3px; }
 .cabinet-harness-capture {
   min-height: 0;
   flex: 1;

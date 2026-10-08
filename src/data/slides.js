@@ -7566,17 +7566,64 @@ export const slides = [
       "views": [
         {
           "label": "Plugins",
-          "heading": "Connect the services you already use",
-          "src": "plugins-current-excerpt.png",
-          "alt": "Fresh Harness Plugins view showing GitHub and Google Workspace with bounded access descriptions",
-          "note": "Plugins make connected services available through bounded tools."
+          "heading": "Connected services",
+          "initialScene": 1,
+          "scenes": [
+            {
+              "label": "GitHub · Google Workspace · Kuali Build",
+              "src": "plugins-campus-current-excerpt.png",
+              "alt": "Fresh Harness Plugins view showing GitHub, Google Workspace, and Kuali Build",
+              "note": "Connected services use bounded tools and the user's access."
+            },
+            {
+              "label": "Microsoft 365 · n8n",
+              "src": "plugins-microsoft-n8n-current-excerpt.png",
+              "alt": "Fresh Harness Plugins view showing Microsoft 365 and n8n with their access descriptions",
+              "note": "Microsoft 365 connects cloud services. The next demo creates local Excel and PowerPoint files."
+            },
+            {
+              "label": "Lucid · Tableau",
+              "src": "plugins-lucid-tableau-current-excerpt.png",
+              "alt": "Fresh Harness Plugins view excerpts showing Lucid and Tableau",
+              "note": "Diagramming and analytics services use the connected user's permissions."
+            }
+          ]
         },
         {
           "label": "Skills",
-          "heading": "Bring reusable instructions and campus standards",
-          "src": "skills-accessibility-current-excerpt.png",
-          "alt": "Fresh Harness Skills view showing the UCSD Accessibility Compliance skill and its description",
-          "note": "Skills provide repeatable instructions for a task. The person reviews the result."
+          "heading": "Reusable instructions",
+          "scenes": [
+            {
+              "label": "Accessibility",
+              "src": "skills-accessibility-current-excerpt.png",
+              "alt": "Fresh Harness Skills view showing UCSD Accessibility Compliance",
+              "note": "Skills bring repeatable task instructions. The person reviews the result."
+            },
+            {
+              "label": "Branding",
+              "src": "skills-branding-current-excerpt.png",
+              "alt": "Fresh Harness Skills view showing the UCSD Branding skill",
+              "note": "This installed skill covers UC San Diego website branding and its accessibility checks."
+            }
+          ]
+        },
+        {
+          "label": "Functions",
+          "heading": "Workspace controls",
+          "scenes": [
+            {
+              "label": "Browser access",
+              "src": "browser-access-current-excerpt.png",
+              "alt": "Fresh Harness Browser settings excerpts showing agent browser access, profiles, and the default viewport",
+              "note": "Browser access has project overrides, with profiles for separate logins."
+            },
+            {
+              "label": "Model & permissions",
+              "src": "model-permissions-current-excerpt.png",
+              "alt": "Fresh Harness task controls showing GLM selected and the Supervised, Auto-accept edits, Auto, and Full access permission choices",
+              "note": "Captured with GLM and Full access on fictional files."
+            }
+          ]
         }
       ]
     },
@@ -7598,11 +7645,11 @@ export const slides = [
     "durationSeconds": 60,
     "recording": {
       "label": "Harness interface talk-through",
-      "pendingLabel": "New screenshots pending",
+      "status": "captured",
       "format": "Fresh Harness UI screenshots",
       "mediaStem": "cabinet-harness-overview"
     },
-    "speakerNotes": "One minute. Use the Plugins and Skills buttons for staged talk-through. First twenty seconds: fresh Plugins view excerpt, GitHub and Google Workspace; connected services use bounded tools and the user's access. Next twenty seconds: fresh UCSD Accessibility Compliance skill excerpt; reusable instructions bring campus standards into the task, while the person still reviews the result. Final twenty seconds: explain workspace context and review, then advance into the compact personal workflow. Captured October 8 from Nightly 0.3.6-nightly.20261008.63; this is a nightly interface preview, not a claim about stable-release plugin counts. Crops exclude local path lines; no private project or real communication is shown. Workspace and approval-control screenshot captures remain optional pending additions. Retain the stable slug; do not duplicate the native mobile website task clip.",
+    "speakerNotes": "One minute. 0–24s: three Plugins stages cover all seven rows; start with Microsoft 365/n8n. Cloud-service tools differ from local Excel/PowerPoint creation in the next demo. 24–40s: show actual Accessibility and Branding instructions; no Office-specific skill title was confirmed. 40–60s: Browser access, then GLM and permission choices. The captured fictional task uses Full access; do not imply it ran in Supervised mode or that this is an institutional default. A person chooses the mode and reviews the outputs. Runtime host/key details and the uninstalled Device hub are excluded. All captures are October 8 Nightly 0.3.6-nightly.20261008.63, not a stable-release feature-list claim. Keep sixty seconds; native mobile website task is separate.",
     "videoLoop": false,
     "videoClearNav": true,
     "videoAutoPlay": true,
