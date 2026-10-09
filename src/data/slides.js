@@ -7826,24 +7826,71 @@ export const slides = [
     "managerSummary": "Actual Harness task followed by fresh recorded navigation through native Excel and PowerPoint outputs."
   },
   {
+    "id": 1022,
+    "slug": "cabinet-research-data-trust",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "Research breakthroughs raise data questions",
+    "subtitle": "Navier–Stokes: a major AI result and a dispute over unpublished research.",
+    "content": [
+      {
+        "heading": "A breakthrough claim · September 8",
+        "text": "OpenAI announced a proof for forced 3D Navier–Stokes, with a Lean formalization. [4]"
+      },
+      {
+        "heading": "Researcher concerns · Early accounts",
+        "text": "Tristan Buckmaster questioned whether private Codex drafts influenced the effort. CoinDesk and The Atlantic reported the controversy. [1–3]"
+      },
+      {
+        "heading": "OpenAI’s response · September 10 update",
+        "text": "OpenAI says the preceding two months of Buckmaster’s prompts could not have influenced the system, including through training. Misuse is not established. [4]"
+      }
+    ],
+    "pendingNote": "Campus implication: protect unpublished work with clear data-use terms and an approved inference environment.",
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Sovereign AI and Scale",
+    "durationSeconds": 60,
+    "sources": [
+      {
+        "label": "Buckmaster · NYU statement",
+        "href": "https://cims.nyu.edu/~tristanb/statement.pdf"
+      },
+      {
+        "label": "CoinDesk · Sep 9, 2026",
+        "href": "https://www.coindesk.com/tech/2026/09/09/openai-says-10-000-ai-agents-solved-a-usd1-million-math-problem-now-mathematicians-are-fighting"
+      },
+      {
+        "label": "The Atlantic · Sep 15, 2026",
+        "href": "https://www.theatlantic.com/technology/2026/09/math-crisis-openai-millennium-prize/688631/"
+      },
+      {
+        "label": "OpenAI · Sep 8; updated Sep 10, 2026",
+        "href": "https://openai.com/index/navier-stokes-solution/"
+      }
+    ],
+    "speakerNotes": "One minute. The result concerns finite-time blowup for forced 3D Navier–Stokes. Describe it as OpenAI’s announced proof; do not claim a Clay prize or general resolution of the unforced physical problem. Buckmaster and Alpöge worked on related forced Euler results. Buckmaster’s statement says he asked about training on their private Codex drafts; he explicitly says he does not know whether their data was used and is not accusing anyone. September 9 reporting described uncertainty about indirect use. OpenAI’s September 10 update states that the preceding two months of Buckmaster’s prompts could not have influenced the system, including training, and denies accessing their work before publication. Early reporting must be read alongside that later response. There is no established public evidence of misuse in the sources reviewed. Consumer research-tool usage is not evidence about UCSD enterprise/API data terms. The campus implication is our recommendation: choose approved services, clear terms and data handling, with campus-controlled inference available for appropriate unpublished work. This controversy does not prove that self-hosting automatically resolves all intellectual-property or security questions. Sources checked October 8, 2026."
+  },
+  {
     "id": 1011,
     "slug": "cabinet-sovereign-ai",
     "type": "content",
     "layout": "cabinet-outline",
-    "title": "Campus-managed AI supports the builders",
-    "subtitle": "Sovereign AI connects useful campus tools to infrastructure we manage.",
+    "title": "Sovereign inference as a service",
+    "subtitle": "Open models under campus control, alongside approved commercial frontier APIs.",
     "content": [
       {
-        "heading": "Shared model access",
-        "text": "UC San Diego infrastructure and approved cloud routes support campus tools and applications."
+        "heading": "Frontier access has external dependencies",
+        "text": "OpenAI documented safety-related training pauses. U.S. policy establishes voluntary pre-release review for covered frontier models. [1–2]"
       },
       {
-        "heading": "Permissions that fit the task",
-        "text": "Match the service and model route to the data, and choose how actions are approved."
+        "heading": "U.S. companies are advancing open models",
+        "text": "NVIDIA releases Nemotron weights, datasets and recipes, and leads a global coalition developing open frontier models. [3–4]"
       },
       {
-        "heading": "An owner and a review step",
-        "text": "Check the result before it is shared or expanded. Measure the workflow as it runs."
+        "heading": "Make campus-controlled inference a pillar",
+        "text": "Serve evaluated open models through our shared gateway. Control data handling, model versions and updates; keep approved frontier routes available."
       }
     ],
     "audiences": [
@@ -7851,7 +7898,25 @@ export const slides = [
     ],
     "managerSection": "Sovereign AI and Scale",
     "durationSeconds": 60,
-    "speakerNotes": "One minute. Return to the two pillars: people who understand their work, supported by sovereign campus-managed AI. UC San Diego manages shared inference and access infrastructure; approved commercial routes are also available. Sovereign does not mean every Gateway request runs on campus GPUs. Choose the service, model route, permissions, and data handling for the task. Stable is a release channel; desktop Harness is described as a supported pilot on the current public website. Keep a workflow owner, review consequential results, and measure outcomes. Do not repeat unverified vendor contracts, Berkeley quotes, rollout dates, or cross-campus availability. Transition: The tools and learning paths are available from one campus starting point. Sources: https://tritonai.ucsd.edu/developer-apis/index.html and https://tritonai.ucsd.edu/developer-apis/harness.html, checked October 8, 2026."
+    "sources": [
+      {
+        "label": "OpenAI pacing · Aug 18, 2026",
+        "href": "https://openai.com/index/pacing-model-development-cyber-capabilities/"
+      },
+      {
+        "label": "U.S. EO 14409 §3 · Jun 2, 2026",
+        "href": "https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/"
+      },
+      {
+        "label": "NVIDIA Nemotron 3 Ultra · Jun 4, 2026",
+        "href": "https://research.nvidia.com/labs/nemotron/Nemotron-3-Ultra/"
+      },
+      {
+        "label": "NVIDIA coalition · Mar 16, 2026",
+        "href": "https://nvidianews.nvidia.com/news/nvidia-launches-nemotron-coalition-of-leading-global-ai-labs-to-advance-open-frontier-models"
+      }
+    ],
+    "speakerNotes": "One minute. Sovereign inference as a service is a core ecosystem pillar alongside approved commercial frontier APIs. Model capability, release pacing and government review are outside university control; retaining a deployable open-weight option gives us more control over operations. The August 18 OpenAI source documents historical pauses, not an assertion that all commercial models are currently unavailable. EO 14409 section 3 establishes a voluntary framework with up to 30 days of early government access, expressly not mandatory licensing or preclearance. NVIDIA is a U.S. company; its coalition is global. NVIDIA reports strong open-model benchmarks, not universal parity with every proprietary frontier model. These models are candidates to evaluate, not a claim that Nemotron is already deployed at UCSD. Sovereign means control over the service and deployment; it does not mean risk-free, no oversight, or every gateway request on campus GPUs. Campus-managed inference still requires evaluation, isolation, access controls and monitoring. Routing, hardware capacity, support and model licensing determine the operational benefit. Our recommendation in row 3 is a strategic inference from the source facts. Sources checked October 8, 2026."
   },
   {
     "id": 1012,

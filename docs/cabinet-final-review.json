@@ -1,9 +1,9 @@
 {
   "reviewed_date": "2026-10-08",
   "scope": "Local Cabinet deck optimization; no deployment",
-  "slide_count": 16,
-  "core_seconds": 930,
-  "narration_transition_allowance_seconds": 270,
+  "slide_count": 17,
+  "core_seconds": 990,
+  "narration_transition_allowance_seconds": 210,
   "separate_qa_seconds": 600,
   "clips": [
     {
@@ -78,20 +78,21 @@
       "regent"
     ],
     "shared_pk_intro_unchanged": true,
-    "active_slide_order_unchanged": "Original sequence retained; PK utilization copy inserted after Class Planner demo.",
-    "projection_viewport": "1920 × 1080",
-    "compact_viewport": "620 × 350",
+    "active_slide_order_unchanged": "Original sequence retained; Cabinet-only utilization and research-data slides inserted.",
+    "projection_viewport": "1920 \u00d7 1080",
+    "compact_viewport": "620 \u00d7 350",
     "complete_canvas_fit": true,
-    "portrait_comparison": "390 × 844: reading view, no horizontal body overflow",
+    "portrait_comparison": "390 \u00d7 844: reading view, no horizontal body overflow",
     "video_playback": "All eight active clips loaded, advanced during desktop playback, used object-fit contain, and had no media errors.",
     "added_demo_framing": false,
     "source_animation": "Original website HTML/SVG/CSS retained. Comparison, use-case table, and original animation reachable.",
-    "charts": "Routing values independently match docs/cabinet-routing-savings.json; common zero baseline. January–September Gateway chart checked after animation completed.",
+    "charts": "Routing values independently match docs/cabinet-routing-savings.json; common zero baseline. January\u2013September Gateway chart checked after animation completed.",
     "media_review": "Four distributed frames per clip reviewed; replacement learning instructor excerpt checked at native full-player framing.",
     "build": "passed",
     "node_tests": "4 passed",
     "media_decode": "All eight clips decoded completely with ffmpeg; zero errors or diagnostics.",
-    "thumbnails": "All 109 active/library thumbnails validated; new Cabinet utilization chart generated."
+    "thumbnails": "All 110 active/library thumbnails refreshed and validated, including the new cited research-data slide and revised inference slide.",
+    "cited_slide_layouts": "Both cited slides visually reviewed at 1920\u00d71080 projection and 620\u00d7350 compact preview. Inference slide also checked at 390\u00d7844: reading mode, body width 390, four source links. Viewport override reset."
   },
   "slides": [
     {
@@ -186,11 +187,18 @@
       "screenshot": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-scale-final.png"
     },
     {
-      "slug": "cabinet-sovereign-ai",
-      "title": "Campus-managed AI supports the builders",
+      "slug": "cabinet-research-data-trust",
+      "title": "Research breakthroughs raise data questions",
       "allocation_seconds": 60,
       "video": null,
-      "screenshot": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-sovereign-ai-final.png"
+      "screenshot": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-research-data-trust-proof.png"
+    },
+    {
+      "slug": "cabinet-sovereign-ai",
+      "title": "Sovereign inference as a service",
+      "allocation_seconds": 60,
+      "video": null,
+      "screenshot": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-sovereign-inference-proof.png"
     },
     {
       "slug": "cabinet-training-discovery-demo",
@@ -215,15 +223,18 @@
     "cabinet-sovereign-ai",
     "cabinet-training-discovery-demo",
     "cabinet-asks-close",
-    "cabinet-class-planner-utilization"
+    "cabinet-class-planner-utilization",
+    "cabinet-research-data-trust"
   ],
   "source_qualifications": {
     "learning": "Real public lesson excerpt and revisited browser-local answer. No new quiz completion claimed.",
     "productivity": "Actual completed task, new full-window Excel charts, and retained native PowerPoint navigation. Prepared sample data; no task generation replayed.",
     "service_now": "Unsaved forms; no submitted case. Model scores are not observed accuracy.",
     "availability": "Desktop Harness stable release channel is distinct from supported-pilot rollout. Mobile is a preview; temporary pairing remains revoked.",
-    "class_planner_utilization": "Exact PK chart data, July 18–September 20, 2026; distinct authenticated daily TritonGPT accounts and Plausible estimated standalone daily visitors are different measures. Square-root axis retained and disclosed.",
-    "class_planner_chat_lookup": "October 8 Granola notes confirm a new AI/chat option in 1:1 Brett–Alex, but no URL was found in accessible notes or recent Matthew Holland Teams links. Public planner currently exposes Manual/Auto. Exact URL requested from presenter; new chat recording pending."
+    "class_planner_utilization": "Exact PK chart data, July 18\u2013September 20, 2026; distinct authenticated daily TritonGPT accounts and Plausible estimated standalone daily visitors are different measures. Square-root axis retained and disclosed.",
+    "class_planner_chat_lookup": "October 8 Granola notes confirm a new AI/chat option in 1:1 Brett\u2013Alex, but no URL was found in accessible notes or recent Matthew Holland Teams links. Public planner currently exposes Manual/Auto. Exact URL requested from presenter; new chat recording pending.",
+    "sovereign_inference": "OpenAI August 18 pacing disclosure; U.S. EO 14409 section 3 is voluntary and expressly excludes mandatory preclearance; NVIDIA model/coalition announcements are sources, not proof of UCSD deployment or universal frontier parity.",
+    "navier_stokes": "Primary Buckmaster statement raises a question and explicitly does not allege proven misuse. September 9 coverage precedes OpenAI September 10 denial concerning the preceding two months of prompts. No public misuse established; no Clay prize claim."
   },
   "remaining_owner_facts": [
     "Contract add-in release and rollout scope",
@@ -239,6 +250,9 @@
     "usage": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-scale-settled.png",
     "media_decode": "/Users/bpollak/dev/cabinet-final-sweep-20261008/media-decode-review.json",
     "learning_playback": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-learning-proof.png",
-    "class_planner_utilization": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-class-planner-utilization-proof.png"
+    "class_planner_utilization": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-class-planner-utilization-proof.png",
+    "sovereign_inference_sources": "docs/cabinet-sovereign-inference-sources.md",
+    "research_data_trust": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-research-data-trust-proof.png",
+    "sovereign_inference": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-sovereign-inference-proof.png"
   }
 }

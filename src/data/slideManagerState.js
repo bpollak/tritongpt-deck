@@ -14,6 +14,7 @@ export const slideManagerState = {
     "cabinet-personal-productivity-demo",
     "cabinet-training-website-demo",
     "cabinet-scale",
+    "cabinet-research-data-trust",
     "cabinet-sovereign-ai",
     "cabinet-training-discovery-demo",
     "cabinet-asks-close",
@@ -717,6 +718,9 @@ export const slideManagerState = {
       "cabinet"
     ],
     "cabinet-class-planner-utilization": [
+      "cabinet"
+    ],
+    "cabinet-research-data-trust": [
       "cabinet"
     ]
   }

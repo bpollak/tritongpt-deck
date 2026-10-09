@@ -188,3 +188,11 @@
 .cabinet-canvas[data-reading] .cabinet-framework-row h2 {font-size:24px;}
 .cabinet-canvas[data-reading] .cabinet-framework-row p {font-size:18px;}
 .cabinet-canvas[data-reading] .cabinet-framework-row {gap:15px;}
+
+.cabinet-framework-sources {margin:20px 0 0;font-size:14px;line-height:1.5;color:#b5c6d5;}
+.cabinet-framework-sources a {color:#b5dff4;text-decoration:underline;text-underline-offset:3px;}
+.cabinet-canvas-content .cabinet-framework-slide--cited .cabinet-framework-row p {font-size:22px;}
+.cabinet-canvas-content .cabinet-framework-slide--cited .cabinet-framework-rows {gap:18px;}
+.cabinet-canvas-content .cabinet-framework-slide--cited .cabinet-framework-pending {margin-top:20px;font-size:23px;line-height:1.35;}
+.cabinet-canvas[data-reading] .cabinet-framework-sources {font-size:14px;}
+.cabinet-canvas[data-reading] .cabinet-framework-slide--cited .cabinet-framework-row p {font-size:18px;}

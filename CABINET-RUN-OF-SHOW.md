@@ -1,6 +1,6 @@
 # Cabinet capability demonstration
 
-15½-minute core sequence, with 4½ minutes available for narration and transitions within the 20-minute presentation. Ten minutes of unscripted Q&A follows separately. Eight silent app-only clips total about 4 minutes 27 seconds. Narration explains the department benefit; the screen shows the tool and result.
+16½-minute core sequence, with 3½ minutes available for narration and transitions within the 20-minute presentation. Ten minutes of unscripted Q&A follows separately. Eight silent app-only clips total about 4 minutes 27 seconds. Narration explains the department benefit; the screen shows the tool and result.
 
 Open `?audience=cabinet#slide=ai-operating-review-title`. The existing PK introduction is unchanged. The PK utilization chart is copied into Cabinet after the Class Planner demonstration; its original PK placement and data are unchanged. Other audience views are unchanged.
 
@@ -19,10 +19,11 @@ Open `?audience=cabinet#slide=ai-operating-review-title`. The existing PK introd
 | Turn data into a briefing | 1:30 | 0:21 | A request becomes an editable workbook and briefing; staff review the result |
 | Request a change and review the result | 1:00 | 0:26 | Direct a website change from a phone; inspect the local result |
 | Gateway usage | 1:00 | — | Current January–September use, without turning tokens into a productivity claim |
-| Campus-managed AI supports the builders | 1:00 | — | Appropriate environment, controlled access, human review |
+| Research breakthroughs raise data questions | 1:00 | — | Navier–Stokes shows the need for clear data-use terms; reported concerns are not proof of misuse |
+| Sovereign inference as a service | 1:00 | — | NVIDIA’s open ecosystem gives campus inference a durable pillar alongside approved frontier APIs |
 | Help staff get started | 0:30 | 0:22 | Find a short learning video and use a knowledge check with your team |
 | Start with one workflow in your department | 1:00 | — | Choose a recurring task, pilot with staff, measure the improvement |
-| Narration and transition allowance | 4:30 | — | Keep the presentation within 20 minutes |
+| Narration and transition allowance | 3:30 | — | Keep the presentation within 20 minutes |
 | Q&A, following the presentation | 10:00 | — | Which workflow would help your department? |
 
 ## Presentation treatment
@@ -54,3 +55,7 @@ Fresh full-window retakes: `docs/cabinet-wide-retakes-manifest.json`. Earlier so
 Lead with the department benefit, let each clip play, then move on. The opening thesis is citizen development supported by sovereign, campus-managed AI. After the three service apps, transition to staff workflows in Word and ServiceNow. Use the routing estimate as a capacity illustration, then show how the Harness works through files and produces an editable briefing. Introduce the phone once as a preview. Close the infrastructure section by connecting model access, permissions, and an accountable owner to those useful workflows. The learning clip leads directly into the ask: one recurring workflow, one staff owner, one small pilot with a measure of improvement.
 
 The comparison opens in the row-by-row matrix. Use the original website animation as an optional 15-second explanation within the same allocation; avoid reading all rows or opening the additional use-case table during the main talk. The eight app clips have no added framing; presenter notes hold source qualifications. Ten minutes of Q&A is separate from the 20-minute presentation.
+
+## Sovereign inference source framing
+
+The two cited slides distinguish historical model-development pauses, voluntary U.S. pre-release review, NVIDIA’s open-model releases, and our recommendation for campus-controlled inference. The Navier–Stokes slide includes Buckmaster’s question, contemporary reporting, and OpenAI’s September 10 response. It does not assert that private research data was used. Keep the pair to two minutes; explain control and continuity rather than proof mechanics.
