@@ -7854,6 +7854,52 @@ export const slides = [
     "speakerNotes": "One minute. Capabilities in three bands: what it does (skills, projects, computer use), what it connects to (Microsoft 365, Google Workspace, Kuali Build, GitHub, n8n, campus and commercial models), and what keeps it safe (approval modes, protected keys, campus-managed). Source: the installed nightly build, Sept 22, 2026, and the plugin catalog on the Harness training page. Email stays a draft; a person presses send."
   },
   {
+    "id": 1036,
+    "slug": "cabinet-harness-in-action",
+    "type": "video",
+    "layout": "cabinet-demo",
+    "title": "The Harness at work",
+    "subtitle": "Plugins, skills, and a real task from request to result.",
+    "content": [],
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Platform",
+    "durationSeconds": 115,
+    "section": {
+      "part": 2,
+      "label": "Citizen development"
+    },
+    "intro": {
+      "kicker": "Demonstration · TritonAI Harness",
+      "title": "The Harness at work",
+      "label": "TritonAI Harness · plugins, skills, a real task",
+      "setup": "First the plugins that connect it to campus systems, and the skills that package know-how. Then a real task: summarize workshop feedback and build a UC San Diego results page.",
+      "watchFor": "The UCSD Branding skill in the request, the missing ratings it flags, and the finished page opening beside the conversation.",
+      "seconds": 7
+    },
+    "videoSrc": "/media/cabinet/cabinet-harness-in-action.mp4",
+    "poster": "/media/cabinet/cabinet-harness-in-action-poster.jpg",
+    "videoLoop": false,
+    "videoClearNav": false,
+    "videoAutoPlay": true,
+    "hideDemoBadge": true,
+    "demoOnly": true,
+    "recording": {
+      "label": "Settings › Plugins (Microsoft 365 abilities) → Skills → new thread with $ucsd-branding → work → results.html in the side panel",
+      "format": "Native screen recording of the Harness window, speed-ramped • silent for voice-over",
+      "mediaStem": "cabinet-harness-in-action",
+      "status": "captured and reviewed"
+    },
+    "releaseContext": {
+      "channel": "nightly",
+      "label": "TritonAI Harness Nightly",
+      "captureNote": "Recorded Oct 9 • fictional practice-kit data • about 3.5 minutes shown in 107 seconds"
+    },
+    "managerSummary": "Fresh native Harness recording: Plugins with Microsoft 365 abilities, the Skills list, then a real task using the UCSD Branding skill that summarizes practice survey data and builds a branded results page, opened in the Harness side panel.",
+    "speakerNotes": "About 2 minutes: seven-second intro card, then the 107-second recording. Voice-over: plugins connect it to Microsoft 365, Google Workspace, GitHub, Kuali Build, Lucid, n8n, and Tableau, each with abilities you switch on; Microsoft 365 reads by default and drafts are opt-in. Skills package campus know-how, like accessibility and UC San Diego branding. Then a real task: summarize a workshop survey and build a branded results page. It flags that 4 of 42 responses skipped the room rating and averages only the 38 that exist (2.97), then the finished page opens beside the conversation. Facts: recorded October 9, 2026, about 4:24–4:30 PM PT, native screen recording of the Harness (Nightly, Flash model, Full access). Data is the fictional practice-kit file workshop-feedback.csv from tritonai.ucsd.edu/training/harness. Task took 1m 35s; it did not open a browser. Edit: plugins and skills at 1.5x; about 12 seconds of navigation through the thread sidebar cut (it showed unrelated thread titles); working time at 8x; summary and result at 1.25–3x. Script: ~/dev/cabinet-recapture-20261009/native/edit_tour.sh"
+  },
+  {
     "id": 1026,
     "slug": "cabinet-harness-training-demo",
     "type": "video",

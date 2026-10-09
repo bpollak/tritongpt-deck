@@ -12,6 +12,7 @@ export const slideManagerState = {
     "cabinet-verticals-roadmap",
     "cabinet-chat-and-harness",
     "cabinet-harness-capabilities",
+    "cabinet-harness-in-action",
     "cabinet-harness-training-demo",
     "cabinet-harness-discovery-demo",
     "cabinet-harness-automation-use-cases",
@@ -150,6 +151,9 @@ export const slideManagerState = {
     "cabinet-subagents"
   ],
   "audiences": {
+    "cabinet-harness-in-action": [
+      "cabinet"
+    ],
     "cabinet-verticals-roadmap": [
       "cabinet"
     ],
@@ -175,7 +179,7 @@ export const slideManagerState = {
       "cabinet"
     ],
     "cabinet-harness-training-demo": [
-      "cabinet"
+      "cabinet-backup"
     ],
     "lmu-title": [
       "LMU"

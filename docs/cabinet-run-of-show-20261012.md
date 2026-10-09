@@ -1,6 +1,6 @@
 # Cabinet run of show · October 12, 2026
 
-25 slides · about 21:55 of content · 10 minutes of Q&A. Restructured again October 9 (evening) around Brett's framing: **the vertical solutions IT Services is building (with their impact) first, citizen development with the TritonAI Harness in the middle, then what people build with it**, and the foundation last. Every slide after the opening shows its part in the footer. Demos open with a short intro card; click it to start early.
+25 slides · about 23 minutes of content · 10 minutes of Q&A. Restructured again October 9 (evening) around Brett's framing: **the vertical solutions IT Services is building (with their impact) first, citizen development with the TritonAI Harness in the middle, then what people build with it**, and the foundation last. Every slide after the opening shows its part in the footer. Demos open with a short intro card; click it to start early.
 
 | Time | Slide | Presenter focus |
 | --- | --- | --- |
@@ -17,7 +17,7 @@
 | **Part 2** | **Citizen development: TritonAI Harness** | |
 | 8:50–9:50 | TritonGPT and TritonAI Harness | Bridge: IT can’t build every vertical; the Harness lets staff build their own. |
 | 9:50–10:50 | TritonAI Harness: Built by the People Who Do the Work | Skills, projects, computer use; connectors; safeguards. |
-| 10:50–11:50 | What the Harness does | Real outputs from the training opening. (Replace with the fresh capture when ready.) |
+| — | The Harness at work (intro + 107s recording) | Fresh capture: Plugins (Microsoft 365 abilities), Skills, then a real task with the branding skill that summarizes survey data and builds a results page. |
 | 11:50–13:00 | The Harness takes our new training | Meta-demo: the Harness finds the Discovery Series, plays the video, takes the quiz. |
 | 13:00–13:45 | What staff automate with it | Starter automations from the training, each with a review step. |
 | 13:45–14:30 | It stays in your control | Limits the person sets and the campus sets. |
@@ -41,8 +41,8 @@
 - **What's next** draws on the PK pilots and skunkworks slides (Payment Request Review, RFX Evaluation, Security Review, data agents, OCGA, hosting). No impact figures yet.
 - **ServiceNow routing** plays full width for voice-over. It is Codex's October 8 capture (built from captured frames).
 - **Class Planner** sits with what people build, but don't claim the Harness built it.
-- **Fresh Harness capture** (Plugins, Skills, a real task with the branding skill) is pending a macOS screen-recording permission prompt. Until then, "What the Harness does" uses the training opening.
-- If you need to get back to 21 minutes: drop "What the Harness does" once the fresh capture exists, or trim the gateway slide.
+- **The Harness at work** is a fresh native recording (Oct 9, 4:24 PM): Plugins, Skills, and a real task using the UCSD Branding skill on practice-kit data. The training-opening slide moved to the backup view.
+- Total is about 23 minutes. To get to 21: skip the automation use-cases slide (45s) and the Class Planner usage chart (30s), and keep the gateway slide to one line.
 
 ## Before Monday
 
