@@ -1,6 +1,6 @@
 # Cabinet run of show
 
-20 minutes of presentation; 10 minutes of unscripted Q&A follows. The current view includes fresh Harness UI captures, an 80-second mobile website recording, and a 90-second productivity key-frame walkthrough. Other use-case and metric slots remain placeholders.
+20 minutes of presentation; 10 minutes of unscripted Q&A follows. The current view includes fresh Directory and Passport computer-use recordings (50 seconds each), Harness UI captures, an 80-second mobile website recording, and a 90-second productivity key-frame walkthrough. Other use-case slots remain placeholders.
 
 Open `?audience=cabinet#slide=ai-operating-review-title`. The first slide is the exact existing PK intro, shared through audience assignment. Cabinet-only placeholders follow it. All existing PK and other audience sequences retain their order.
 
@@ -8,11 +8,12 @@ Open `?audience=cabinet#slide=ai-operating-review-title`. The first slide is the
 | --- | ---: | ---: | --- |
 | PK intro: TritonAI Operating Review | 0:30 | 0:30 | Open with the familiar visual |
 | Citizen developers, powered by sovereign AI | 1:00 | 1:30 | Establish the two pillars |
-| Class Planner | 2:00 | 3:30 | Lead with the builder origin story and a short workflow |
-| Passport | 1:00 | 4:30 | Second citizen developer example |
+| Class Planner | 1:00 | 2:30 | Builder origin story; framing and capture still pending |
+| Directory | 1:00 | 3:30 | Research expertise to suggested matches and profile review; in development |
+| Passport | 1:00 | 4:30 | Department-led production service; fictional local check-in and staff workflow |
 | Cash receipts | 2:00 | 6:30 | Administrative anchor; current phase and proposed ROI |
 | Contract review in Word | 1:30 | 8:00 | New add-in; plant the queue prioritization ask |
-| Administrative AI: quick updates | 1:30 | 9:30 | Transcript, ticket routing, college assistant, Directory |
+| Administrative AI: quick updates | 1:30 | 9:30 | Transcript, ticket routing, college assistant |
 | The Harness is everything around the model | 0:45 | 10:15 | Original animation; optional task-choice framing |
 | Bigger tasks split across sub-agents | 0:15 | 10:30 | Original website animated SVG |
 | TritonAI Harness | 1:00 | 11:30 | UI screenshot talk-through; plugins, skills, key functions |
@@ -53,7 +54,8 @@ The `recording.mediaStem` field names each intended capture. It is a planning id
 | Slot | Capture | On-screen material |
 | --- | --- | --- |
 | `cabinet-class-planner` | Desktop: assemble and check a schedule | Fictional student example |
-| `cabinet-passport` | Workflow selected after highlights arrive | Owner-confirmed scenario |
+| `cabinet-directory` | Captured: sample expertise request, generated explanation, topic search, profile | Actual public web app; development status and source-review caveats |
+| `cabinet-passport` | Captured: check-in, missing-photo flag, staff note/sign-out, reports | Actual public source running locally; one fictional visitor |
 | `cabinet-cash-receipts` | Receipt to human-reviewed result | Fictional receipt |
 | `cabinet-contract-review` | New Word add-in, agreement to review | Fictional agreement |
 | `cabinet-harness-overview` | Fresh UI screenshots, workspace/plugins/skills/review | Demonstration project |
@@ -88,10 +90,10 @@ Keep raw captures and a local captioned fallback. The web deck is the presentati
 | Item | Dependency | Treatment until confirmed |
 | --- | --- | --- |
 | Class Planner | Kevin: demo framing, origin and usage evidence | Flexible capture slot; no usage number |
-| Passport | Nikki Giaquenta: highlights | Editable scenario placeholder |
+| Passport | Nikki Giaquinta: any additional owner highlights | Actual local workflow captured; documented department-led origin, no invented usage/ROI |
 | Cash receipts | Owner: completed phases, current phase, ROI assumptions | No savings or phase claims |
 | Contract review | Sandra and Sean: queue, timings, deployment status | New add-in slot; no before/after number |
-| Directory | Nicole: status, roadmap and naming | Early phase; scraped data and arts/humanities gaps stated |
+| Directory | Nicole: rollout, roadmap and coverage | Fresh demonstration in citizen showcase; in development, source/match review required |
 | Quick hits | Owners: production versus pilot labels | Status pending, except transcript TSS gate |
 | Harness overview | Current interface and capabilities | Fresh UI screenshots; functions verified before narration |
 | Personal productivity | Training workflow and checked output artifacts | Fresh compact data-to-Excel-to-PowerPoint recording |
@@ -104,6 +106,10 @@ Q&A preparation should use fresh vertical backups and recorded fallbacks. No Bio
 
 ## Completed capture assets
 
+- `public/media/cabinet/cabinet-directory.mp4`: 50 seconds; actual computer-use browser screencast takes. Sample coastal-climate request, requirement extraction, generated alignment explanation, topic search and expanded profile. The actual interface still says Faculty Finder; the deck uses Directory. In development; model scores and public-source profile data require review. No faculty selection or outreach occurred.
+- `public/media/cabinet/cabinet-passport.mp4`: 50 seconds; actual computer-use browser screencast takes of public source commit `3c07442307aeff8b22ce79cf95358c86be0eb9b8`, running in an isolated localhost checkout/database. One fictional Alex Demo visitor checks in, flags a missing photo, receives confirmation, and appears in the staff log. A staff note and sign-out were verified in the local database. Reporting shows fictional data. No production queue was read or changed. UI/workflow source was unchanged; only local runtime configuration was added.
 - `public/media/cabinet/cabinet-mobile-website.mp4`: 80 seconds; actual simulator recording, three completed fictional sample chats, official GLM 5.3, local preview only. Long processing waits are cut and labeled. Temporary simulator client revoked after capture; authorized clients returned from six to five.
 - `public/media/cabinet/cabinet-personal-productivity.mp4`: 90 seconds; actual fresh UI key-frame montage, clearly labeled. Checked workbook has 26 formulas and two native charts; four-slide campus PowerPoint has one native chart and source notes.
-- Both clips have verified local posters, native controls, English VTT captions, and no looping. Raw captures and edit manifests are retained in the capture folders outside the application.
+- All four clips have local posters, native controls, English VTT captions, and no looping. Directory and Passport clips are edited actual browser recordings, cropped for legibility; idle/processing time is shortened and labeled. Raw captures and edit manifests are retained outside the application.
+
+Citizen developer framing: workflow knowledge → a bounded app → human review → supported ownership. Passport's official [use-case page](https://tritonai.ucsd.edu/use-cases/passport-app.html) documents department staff building the initial app with AI assistance and specialists preparing it for campus hosting; its production public entry point was checked October 8. Directory is a team-built development example. Do not imply every showcased app was built by a non-programmer, uses AI at runtime, or was built with TritonAI Harness. The three-minute showcase now has one minute each for Class Planner, Directory and Passport; the complete sequence remains 20 minutes across 17 active slides.

@@ -70,7 +70,7 @@ const DeckVideoSlide = ({ slide, staticPreview }) => {
         playsInline
       >
         {slide.captionsSrc && (
-          <track kind="captions" src={slide.captionsSrc} srcLang="en" label="English" default />
+          <track kind="captions" src={slide.captionsSrc} srcLang="en" label="English" default={slide.captionsDefault !== false} />
         )}
       </video>
       {touchDevice && !staticPreview && !demoBadge && (

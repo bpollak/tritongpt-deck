@@ -4,6 +4,7 @@ export const slideManagerState = {
     "ai-operating-review-title",
     "cabinet-citizen-developer-story",
     "cabinet-class-planner-demo",
+    "cabinet-directory-demo",
     "cabinet-passport-demo",
     "cabinet-cash-receipts-demo",
     "cabinet-contract-review-demo",
@@ -701,6 +702,9 @@ export const slideManagerState = {
       "cabinet"
     ],
     "cabinet-harness-components-backup": [
+      "cabinet"
+    ],
+    "cabinet-directory-demo": [
       "cabinet"
     ]
   }

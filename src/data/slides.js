@@ -7197,7 +7197,7 @@ export const slides = [
     "content": [
       {
         "heading": "Citizen development",
-        "text": "Staff and faculty bring the workflow knowledge. The Harness supports building and checking the result."
+        "text": "Staff and faculty bring workflow knowledge. Class Planner, Directory, and Passport show different paths from a campus need to a working tool."
       },
       {
         "heading": "Sovereign AI",
@@ -7209,7 +7209,7 @@ export const slides = [
     ],
     "managerSection": "Opening",
     "durationSeconds": 60,
-    "speakerNotes": "Opening 1:30 total, including 0:30 on the shared PK intro. Frame business outcomes first. Give one sentence on data classification and UC policy alignment; governance depth comes after demonstrations. Do not imply every showcased application was built with our Harness."
+    "speakerNotes": "Opening 1:30 total, including 0:30 on the shared PK intro. Frame business outcomes first. Give one sentence on data classification and UC policy alignment; governance depth comes after demonstrations. Do not imply every showcased application was built with our Harness. Citizen developer showcase: Class Planner one minute, Directory one minute, Passport one minute. Directory is a team-built development example; Passport is a department-led production service demonstrated in an isolated local copy. These are ecosystem examples, not a claim that every app was built with TritonAI Harness or that each builder was a non-programmer. The pattern is workflow expertise, a bounded app, human review, and an owner who can maintain it."
   },
   {
     "id": 1002,
@@ -7232,14 +7232,48 @@ export const slides = [
       "cabinet"
     ],
     "managerSection": "Citizen Developer Showcase",
-    "durationSeconds": 120,
+    "durationSeconds": 60,
     "recording": {
       "label": "Build a student schedule",
       "format": "Fresh desktop capture",
       "mediaStem": "cabinet-class-planner"
     },
     "pendingNote": "Demo framing and current usage evidence pending confirmation.",
-    "speakerNotes": "Kevin to confirm current framing, origin story, and usage evidence. Fresh recording only. Verify maintenance status before describing it. The originating harness-style tool was likely different from TritonAI Harness. Two minutes includes clip plus narration.",
+    "speakerNotes": "Kevin to confirm current framing, origin story, and usage evidence. Fresh recording only. Verify maintenance status before describing it. The originating harness-style tool was likely different from TritonAI Harness. One minute includes clip plus narration; the other two minutes in this showcase now cover Directory and Passport.",
+    "videoLoop": false,
+    "videoClearNav": true,
+    "videoAutoPlay": true,
+    "hideDemoBadge": true
+  },
+  {
+    "id": 1018,
+    "slug": "cabinet-directory-demo",
+    "type": "video",
+    "title": "Directory",
+    "subtitle": "Turn a research question into leads a person can review.",
+    "content": [],
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Citizen Developer Showcase",
+    "managerSummary": "Fresh 50-second computer-use recording: a sample coastal-climate expertise request, actual generated alignment explanations, topic search, and a faculty profile. In development; review source data and matches.",
+    "durationSeconds": 60,
+    "videoSrc": "/media/cabinet/cabinet-directory.mp4",
+    "poster": "/media/cabinet/cabinet-directory-poster.jpg",
+    "captionsSrc": "/media/cabinet/cabinet-directory.vtt",
+    "captionsDefault": false,
+    "releaseContext": {
+      "channel": "pilot",
+      "label": "Directory · In development",
+      "captureNote": "Live web app · Sample query · Profiles and matches need review"
+    },
+    "recording": {
+      "label": "Expertise request → suggested matches → profile review",
+      "format": "Actual browser recording • 50 seconds • edited takes and shortened processing",
+      "mediaStem": "cabinet-directory",
+      "status": "captured and reviewed"
+    },
+    "speakerNotes": "One minute, including a 50-second clip. Citizen developer framing: campus workflow expertise can become a focused tool. Show a sample coastal flooding, sea-level rise, and adaptation request, then extracted requirements and actual generated alignment explanations. Search the Expert Directory for coastal flooding and open a profile. The current app still displays Faculty Finder, while this deck uses Directory as specified in the handoff. This is an early-stage, team-built example, not evidence that a non-programmer built it or that it used TritonAI Harness. No rollout, usage, time-saving, or validated ranking claim. The public-source profiles and model-generated scores require human review; the score is not a prediction of success or an institutional evaluation of a faculty member. Source coverage, duplicate profiles/name disambiguation, and arts/humanities coverage remain review topics. No outreach, investigator selection, or funding decision was performed. The clip combines actual browser screencast takes, cropped for readability with processing/idle time shortened; no UI was synthesized. Live UI checked October 8, 2026 at https://directory.apps.ucsd.edu/ . Research Alignment website is broader adjacent context, not proof that this exact Directory app has the same implementation or owner. Keep the early-phase caveat visible.",
     "videoLoop": false,
     "videoClearNav": true,
     "videoAutoPlay": true,
@@ -7248,36 +7282,37 @@ export const slides = [
   {
     "id": 1003,
     "slug": "cabinet-passport-demo",
-    "type": "content",
+    "type": "video",
     "layout": "cabinet-demo",
     "title": "Passport",
-    "subtitle": "A second citizen developer example.",
-    "content": [
-      {
-        "heading": "The task",
-        "text": "Show one useful action from start to result."
-      },
-      {
-        "heading": "The builder",
-        "text": "Connect the workflow to the person or team who built it."
-      }
-    ],
+    "subtitle": "Department staff define the workflow; a supported app carries it through.",
+    "content": [],
     "audiences": [
       "cabinet"
     ],
     "managerSection": "Citizen Developer Showcase",
     "durationSeconds": 60,
     "recording": {
-      "label": "Passport workflow",
-      "format": "Fresh capture • workflow to be selected",
-      "mediaStem": "cabinet-passport"
+      "label": "Visitor check-in → staff review → completed visit",
+      "format": "Actual browser recording • 50 seconds • isolated local database",
+      "mediaStem": "cabinet-passport",
+      "status": "captured and reviewed"
     },
-    "pendingNote": "Highlights and demonstration scenario pending.",
-    "speakerNotes": "Nikki Giaquenta to provide highlights. Do not invent functionality, usage, release status, or origin. Editable placeholder; select one short workflow once details arrive.",
+    "speakerNotes": "One minute, including a 50-second edited computer-use recording. The citizen developer example is department staff translating their operational knowledge into a bounded application. The official use-case page says Passport Services and IPPS mapped the workflow and built the initial application with AI-assisted development tools; application and infrastructure specialists then prepared it for production. Do not claim TritonAI Harness was the original tool, name an individual builder without confirmation, or imply an AI model makes passport-service decisions. Production is documented for CSC and Bookstore, and the public entry point was verified October 8, 2026. The recording uses the actual public repository in a separate localhost checkout and fresh SQLite database, with a fictional Alex Demo visitor and reserved example contact details. It shows CSC walk-in check-in, Passport service, a missing-photo flag, confirmation, a saved staff note, staff sign-out, and reporting on that single fictional visit. Report counts and percentages are demonstration data, not campus performance metrics. Readiness prompts assist staff; they are not a legal eligibility determination or passport application. No live queue changes, real visitor records, sending, or publication occurred. Only local port/proxy/auth/database configuration differs from the checked-out app; UI and workflow source were not rewritten. Source: https://tritonai.ucsd.edu/use-cases/passport-app.html and https://github.com/IPPS-TechPM-BSA/passports-app . Build/ownership specifics beyond these sources remain owner-confirmation items.",
     "videoLoop": false,
     "videoClearNav": true,
     "videoAutoPlay": true,
-    "hideDemoBadge": true
+    "hideDemoBadge": true,
+    "managerSummary": "Fresh 50-second computer-use recording of the public Passport source running locally: fictional walk-in, missing-photo readiness flag, confirmation, staff note/status update, and reporting. Production service; isolated demo data.",
+    "videoSrc": "/media/cabinet/cabinet-passport.mp4",
+    "poster": "/media/cabinet/cabinet-passport-poster.jpg",
+    "captionsSrc": "/media/cabinet/cabinet-passport.vtt",
+    "captionsDefault": false,
+    "releaseContext": {
+      "channel": "stable",
+      "label": "Passport · Production service",
+      "captureNote": "Local source checkout · Fictional visitor · No live queue changes"
+    }
   },
   {
     "id": 1004,
@@ -7366,10 +7401,6 @@ export const slides = [
       {
         "heading": "College selection assistant",
         "text": "Admissions self-service; current deployment status to confirm."
-      },
-      {
-        "heading": "Directory",
-        "text": "Early phase. Internet-scraped data; arts and humanities coverage needs work."
       }
     ],
     "audiences": [
@@ -7378,7 +7409,7 @@ export const slides = [
     "managerSection": "Administrative Verticals",
     "durationSeconds": 90,
     "pendingNote": "Production or pilot labels will follow owner confirmation.",
-    "speakerNotes": "Ninety seconds total. Directory is the renamed application; never use the former name. Nicole to confirm current status and rollout. Mention the VCRI demonstration to Faith Hawkins and Corey only once confirmed for this update. Fresh montage or screenshots may replace these rows. Never imply transcript matching is live."
+    "speakerNotes": "Ninety seconds total. Directory now has its own demonstration in the Citizen Developer Showcase; avoid repeating it here. Nicole still needs to confirm rollout and roadmap. Mention the VCRI demonstration to Faith Hawkins and Corey only once confirmed for this update. Never imply transcript matching is live. Other deployment labels remain owner-confirmation items."
   },
   {
     "id": 1015,

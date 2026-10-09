@@ -51,6 +51,31 @@ test('Cabinet opens with the PK intro and has its own fresh demonstration sequen
   await expect.poll(() => productivityVideo.evaluate(v => v.duration)).toBeCloseTo(90, 0);
 });
 
+test('citizen developer showcase plays fresh Directory and Passport captures with distinct service status', async ({ page }) => {
+  await page.goto('/?audience=cabinet#slide=cabinet-class-planner-demo');
+  await page.getByRole('button', { name: 'Next slide', exact: true }).click();
+  await expect(page).toHaveURL(/#slide=cabinet-directory-demo$/);
+  for (const [slug, stem, status, provenance] of [
+    ['cabinet-directory-demo', 'cabinet-directory', 'Directory · In development', 'Live web app · Sample query'],
+    ['cabinet-passport-demo', 'cabinet-passport', 'Passport · Production service', 'Local source checkout · Fictional visitor']
+  ]) {
+    const stage = page.locator(`[data-slide-slug="${slug}"]`);
+    const banner = stage.getByRole('status', { name: 'Demo release status', exact: true });
+    await expect(banner).toContainText(status);
+    await expect(banner).toContainText(provenance);
+    const video = stage.locator('video.deck-video');
+    await expect(video).toHaveAttribute('src', `/media/cabinet/${stem}.mp4`);
+    await expect(video).toHaveAttribute('poster', `/media/cabinet/${stem}-poster.jpg`);
+    await expect(video).toHaveAttribute('controls', '');
+    await expect(video.locator('track')).toHaveAttribute('src', `/media/cabinet/${stem}.vtt`);
+    // Burned-in captions already explain the silent recording; native captions remain optional.
+    await expect(video.locator('track')).not.toHaveAttribute('default');
+    await expect.poll(() => video.evaluate(v => v.duration)).toBeCloseTo(50, 0);
+    await page.getByRole('button', { name: 'Next slide', exact: true }).click();
+  }
+  await expect(page).toHaveURL(/#slide=cabinet-cash-receipts-demo$/);
+});
+
 for (const width of [390, 767]) {
   test(`dense content is readable to its end at ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 844 });
