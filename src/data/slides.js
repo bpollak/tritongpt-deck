@@ -7721,17 +7721,46 @@ export const slides = [
     "speakerNotes": "Thirty seconds. Describe actual UC policy alignment, PII handling, and UCSD-managed access controls only after review. Do not imply a blanket approval for every model or data type. Point to the publication approval in the upcoming website demonstration."
   },
   {
+    "id": 1019,
+    "slug": "cabinet-training-discovery-demo",
+    "type": "video",
+    "title": "Learn at your own pace",
+    "subtitle": "Short videos, answer feedback, and discussion prompts for campus teams.",
+    "content": [],
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Enablement",
+    "durationSeconds": 40,
+    "releaseContext": {
+      "channel": "production",
+      "label": "Live TritonAI website",
+      "captureNote": "Discovery Series · Captured October 8, 2026"
+    },
+    "recording": {
+      "label": "Homepage → Learn → Discovery Series → video → quiz",
+      "format": "Actual website captures • 36 seconds • silent, captioned presentation cut",
+      "mediaStem": "cabinet-training-discovery",
+      "status": "captured and reviewed"
+    },
+    "speakerNotes": "Forty seconds including the 36-second cut. The live public website is the source. Navigate homepage > Learn > Discovery Series, open What is AI? with Trevor Bonjour, play a short excerpt, and answer the knowledge check. All three questions were answered through the UI; the short edit shows the first answer feedback and the final 3 of 3 result. Do not describe this as watching the full six-minute lesson. The video is silent for presenter talk-over and uses six seconds of actual changing playback frames, with navigation and quiz frames held for reading. Browser-only progress, not an institutional credential or LMS record. Use the closing discussion prompts to encourage teams to learn together. Keep the adjacent mobile demo to 140 seconds, preserving the existing three-minute enablement allocation and twenty-minute deck.",
+    "videoLoop": false,
+    "videoClearNav": true,
+    "videoAutoPlay": true,
+    "hideDemoBadge": true,
+    "videoSrc": "/media/cabinet/cabinet-training-discovery.mp4",
+    "poster": "/media/cabinet/cabinet-training-discovery-poster.jpg",
+    "captionsSrc": "/media/cabinet/cabinet-training-discovery.vtt",
+    "captionsDefault": false
+  },
+  {
     "id": 1009,
     "slug": "cabinet-training-website-demo",
     "type": "video",
     "layout": "cabinet-demo",
-    "title": "Learn, then build",
+    "title": "Build and review from your phone",
     "subtitle": "Direct a website update by phone, inspect its checks, and review the local preview.",
     "content": [
-      {
-        "heading": "Learn",
-        "text": "Open Essentials; play a short segment."
-      },
       {
         "heading": "Build",
         "text": "Request the homepage update by phone."
@@ -7745,19 +7774,19 @@ export const slides = [
       "cabinet"
     ],
     "managerSection": "Enablement",
-    "durationSeconds": 180,
+    "durationSeconds": 140,
     "releaseContext": {
       "channel": "nightly",
       "label": "Mobile preview · Nightly capture",
       "captureNote": "Nightly .63 host + development simulator · production mobile rollout unverified"
     },
     "recording": {
-      "label": "Training → mobile request → website preview",
+      "label": "Mobile request → checks → website preview",
       "format": "Actual iPhone simulator recording • 80 seconds • processing time shortened",
       "mediaStem": "cabinet-training-website",
       "status": "captured and reviewed"
     },
-    "speakerNotes": "Three minutes including narration. Label this mobile footage as preview captured with a development simulator and Nightly .63 host. Desktop stable release does not establish production mobile availability. The 80-second film uses actual simulator recordings with waiting time shortened and visibly labeled. Three completed fictional chats populate the opening project. The phone directs the existing Harness on the Mac using official TritonAI Cloud GLM 5.3; the task edits only a separate local website checkout. Show the prior homepage training block, the request and boundaries, checks, completed task, then actual updated page in mobile Safari. The training link is preserved. Do not imply production publication or that the training video was played. Point to Essentials as the next learning step. Temporary simulator access was revoked after capture. No commit, push, or publish. Production publication remains a separate human decision.",
+    "speakerNotes": "Two minutes twenty seconds including the 80-second film and narration. The preceding Discovery Series walkthrough has its own forty-second allocation. Label this mobile footage as preview captured with a development simulator and Nightly .63 host. Desktop stable release does not establish production mobile availability. The 80-second film uses actual simulator recordings with waiting time shortened and visibly labeled. Three completed fictional chats populate the opening project. The phone directs the existing Harness on the Mac using official TritonAI Cloud GLM 5.3; the task edits only a separate local website checkout. Show the prior homepage training block, the request and boundaries, checks, completed task, then actual updated page in mobile Safari. The training link is preserved. Do not imply production publication. The preceding slide demonstrates Discovery Series playback and its quiz; Harness Essentials is a separate learning path. Temporary simulator access was revoked after capture. No commit, push, or publish. Production publication remains a separate human decision.",
     "videoLoop": false,
     "videoClearNav": true,
     "videoAutoPlay": true,

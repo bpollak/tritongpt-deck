@@ -14,6 +14,7 @@ export const slideManagerState = {
     "cabinet-harness-mobile-demo",
     "cabinet-personal-productivity-demo",
     "cabinet-governance",
+    "cabinet-training-discovery-demo",
     "cabinet-training-website-demo",
     "cabinet-sovereign-ai",
     "cabinet-scale",
@@ -675,6 +676,9 @@ export const slideManagerState = {
       "cabinet"
     ],
     "cabinet-governance": [
+      "cabinet"
+    ],
+    "cabinet-training-discovery-demo": [
       "cabinet"
     ],
     "cabinet-training-website-demo": [
