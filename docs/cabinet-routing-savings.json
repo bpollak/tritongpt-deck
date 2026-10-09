@@ -1,0 +1,33 @@
+{
+  "type": "Illustrative scenario, not measured results",
+  "reference_population": "10,000 eligible cases; no calendar period or campus total implied",
+  "inputs": {
+    "eligible_cases": 10000,
+    "routing_accuracy_assumed_by_user": 0.9,
+    "manual_routing_seconds_assumed": 60,
+    "incorrect_assignment_handling_seconds_assumed": 90,
+    "extra_review_seconds_per_case_assisted_only_assumed": 10
+  },
+  "formulas": {
+    "manual_hours": "N * manual_seconds / 3600",
+    "automatic_hours": "N * (1 - accuracy) * correction_seconds / 3600",
+    "assisted_hours": "automatic_hours + N * review_seconds / 3600",
+    "saved_hours": "manual_hours - scenario_hours",
+    "monthly_eligible_cases": "total_monthly_cases * eligible_fraction"
+  },
+  "results": {
+    "manual_hours": 166.66666666666666,
+    "automatic_hours": 24.999999999999996,
+    "automatic_saved_hours": 141.66666666666666,
+    "automatic_labor_reduction_fraction": 0.85,
+    "assisted_hours": 52.77777777777777,
+    "assisted_saved_hours": 113.88888888888889,
+    "assisted_labor_reduction_fraction": 0.6833333333333333
+  },
+  "limitations": [
+    "All incorrect assignments are assumed detected and corrected within 90 seconds, including 30 seconds additional correction overhead.",
+    "No verified monthly case volume, measured timing, eligibility coverage, or observed 90% accuracy was supplied.",
+    "Current capture shows staff-reviewed suggestions, not automatic production assignment.",
+    "Excludes implementation, monitoring/audit costs, system costs, downstream delays, and quality effects. Staff capacity estimate, not cash or headcount savings."
+  ]
+}

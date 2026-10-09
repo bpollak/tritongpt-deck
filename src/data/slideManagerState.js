@@ -7,6 +7,7 @@ export const slideManagerState = {
     "cabinet-passport-demo",
     "cabinet-contract-review-demo",
     "cabinet-administrative-quick-hits",
+    "cabinet-routing-savings",
     "cabinet-chat-and-harness",
     "cabinet-personal-productivity-demo",
     "cabinet-training-website-demo",
@@ -709,6 +710,9 @@ export const slideManagerState = {
       "cabinet"
     ],
     "cabinet-directory-demo": [
+      "cabinet"
+    ],
+    "cabinet-routing-savings": [
       "cabinet"
     ]
   }

@@ -1,0 +1,240 @@
+{
+  "capture_date": "2026-10-08",
+  "purpose": "Whole-app capability demonstrations for Cabinet voice-over",
+  "crop": false,
+  "added_titles_or_captions": false,
+  "generated_ui": false,
+  "sampling": "Timestamped real UI screenshots; observed intervals preserved at 30 fps. Browser about 4 fps; native Word about 1-2 fps. No claim of 30 distinct captured frames each second.",
+  "source_qualifications": {
+    "directory": "Live development app; actual expertise query and generated matches. No outreach or selection.",
+    "passport": "Actual application source running locally with prepared sample visitor data. No production queue access or passport eligibility decision.",
+    "contract-review": "Installed Word add-in and public vendor agreement with existing unaccepted tracked changes. Rules deselected/restored; Extra knowledge toggled/restored; actual Talk to agent question and answer. No new review, acceptance, signature, or transmission of agreement.",
+    "servicenow": "Logged-in current interface; actual FieldSupport-Intake 79.9% and Hostmaster 96.9% suggestions from ordinary prepared case descriptions. Scores are not measured accuracy. Selected on unsaved forms, then discarded. No case submitted."
+  },
+  "clips": [
+    {
+      "name": "directory",
+      "video": "cabinet-directory-wide.mp4",
+      "poster": "cabinet-directory-wide-poster.jpg",
+      "video_sha256": "71d5fa255f3bc9a4a9743939220fabf8f25f4de8c2425ab80985ce3d04a82fb3",
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 2560,
+            "height": 1600,
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "33.066667"
+        }
+      },
+      "chapters": [
+        {
+          "source": "/Users/bpollak/dev/cabinet-wide-retakes-20261008/directory-opening/frames.json",
+          "source_log_sha256": "ed861edb479a942eb6f7914c9c4982376b6126763da727620cd4f23558dc6119",
+          "frame_count": 29,
+          "duration_seconds": 7.081,
+          "crop": false,
+          "speed_change": false
+        },
+        {
+          "source": "/Users/bpollak/dev/cabinet-wide-retakes-20261008/directory-request-v2/frames.json",
+          "source_log_sha256": "97d4a4394477110141e5ec17f4132e85b83fd2eea47e08beb99305c485fb38fc",
+          "frame_count": 34,
+          "duration_seconds": 10.043,
+          "crop": false,
+          "speed_change": false
+        },
+        {
+          "source": "/Users/bpollak/dev/cabinet-wide-retakes-20261008/directory-results/frames.json",
+          "source_log_sha256": "2efd3db6cf28587041237a54594e235aa780882b3bf42494e370a0471fd63841",
+          "frame_count": 64,
+          "duration_seconds": 16.138,
+          "crop": false,
+          "speed_change": false
+        }
+      ]
+    },
+    {
+      "name": "passport",
+      "video": "cabinet-passport-wide.mp4",
+      "poster": "cabinet-passport-wide-poster.jpg",
+      "video_sha256": "5852c74b41f4b7ff88ca0417983e27685fbf89ad7246e37a54d23e9b9aa22994",
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 2560,
+            "height": 1600,
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "33.500000"
+        }
+      },
+      "chapters": [
+        {
+          "source": "/Users/bpollak/dev/cabinet-wide-retakes-20261008/passport-opening-v2/frames.json",
+          "source_log_sha256": "69b3de8dd5ff5ccb978880349277a36456cd24eb15a1d194b69507f388164eec",
+          "frame_count": 30,
+          "duration_seconds": 7.134,
+          "crop": false,
+          "speed_change": false
+        },
+        {
+          "source": "/Users/bpollak/dev/cabinet-wide-retakes-20261008/passport-start/frames.json",
+          "source_log_sha256": "18832c9ed3d31e61da61c45e24a636700bcc94a8673411a6663b8fbd7712f81c",
+          "frame_count": 17,
+          "duration_seconds": 4.145,
+          "crop": false,
+          "speed_change": false
+        },
+        {
+          "source": "/Users/bpollak/dev/cabinet-wide-retakes-20261008/passport-visit/frames.json",
+          "source_log_sha256": "ed53217383e205e87a1016969f811888c8c35b33888c2b541fefff5c28efd843",
+          "frame_count": 19,
+          "duration_seconds": 5.065,
+          "crop": false,
+          "speed_change": false
+        },
+        {
+          "source": "/Users/bpollak/dev/cabinet-wide-retakes-20261008/passport-contact/frames.json",
+          "source_log_sha256": "74a72fce7f0846114604f802abcc30f24cb3c1cdb5d56dcc25c272383a9a7ff0",
+          "frame_count": 31,
+          "duration_seconds": 8.025,
+          "crop": false,
+          "speed_change": false
+        },
+        {
+          "source": "/Users/bpollak/dev/cabinet-wide-retakes-20261008/passport-readiness/frames.json",
+          "source_log_sha256": "5295b47d0b2767a255f238582eb4e4a935e4ae43ecfed79dc44ad2913b6058bc",
+          "frame_count": 33,
+          "duration_seconds": 9.106,
+          "crop": false,
+          "speed_change": false
+        }
+      ]
+    },
+    {
+      "name": "contract-review",
+      "video": "cabinet-contract-review-wide.mp4",
+      "poster": "cabinet-contract-review-wide-poster.jpg",
+      "video_sha256": "e44bfab162f41c354ca0d043dd9b2d2e786379f6134e997070755a69269bdb4c",
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 2560,
+            "height": 1978,
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "47.733333"
+        }
+      },
+      "chapters": [
+        {
+          "source": "/Users/bpollak/dev/cabinet-wide-retakes-20261008/word-rules-open/frames.json",
+          "source_log_sha256": "435a95180d284df91d70413ebc5f0c9e64137ebf877304f7ff4353ae1761fbae",
+          "frame_count": 4,
+          "duration_seconds": 9.297,
+          "crop": false,
+          "speed_change": false
+        },
+        {
+          "source": "/Users/bpollak/dev/cabinet-wide-retakes-20261008/word-rule-toggle/frames.json",
+          "source_log_sha256": "33bbfbaf933e1917c2f8ad26c9f9d42ee6b4026ba9b414885e0c6db6bcb99472",
+          "frame_count": 16,
+          "duration_seconds": 13.063,
+          "crop": false,
+          "speed_change": false
+        },
+        {
+          "source": "/Users/bpollak/dev/cabinet-wide-retakes-20261008/word-settings-agent-request/frames.json",
+          "source_log_sha256": "9567d78cb70618d4702090c17d607310509b32b5be161d771cc6e97efe19b7f2",
+          "frame_count": 15,
+          "duration_seconds": 15.514,
+          "crop": false,
+          "speed_change": false
+        },
+        {
+          "source": "/Users/bpollak/dev/cabinet-wide-retakes-20261008/word-agent-visible/frames.json",
+          "source_log_sha256": "38c6991f26dae6581390cd2228975a43e098667d489e3e0019b6545be5fd6b91",
+          "frame_count": 19,
+          "duration_seconds": 10.011,
+          "crop": false,
+          "speed_change": false
+        }
+      ]
+    },
+    {
+      "name": "servicenow",
+      "video": "cabinet-servicenow-wide.mp4",
+      "poster": "cabinet-servicenow-wide-poster.jpg",
+      "video_sha256": "8db4f9068053a64e4490fbdf65176bdb955f97b9b83c8c8792fec507a46e0a73",
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 2560,
+            "height": 1600,
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "38.266667"
+        }
+      },
+      "chapters": [
+        {
+          "source": "/Users/bpollak/dev/cabinet-wide-retakes-20261008/servicenow-hardware/frames.json",
+          "source_log_sha256": "3c453e39af2dcf146d8ee7e27cc710bc80055ce1af389d3e4541f4b78946d2a6",
+          "frame_count": 46,
+          "duration_seconds": 11.17,
+          "crop": false,
+          "speed_change": false
+        },
+        {
+          "source": "/Users/bpollak/dev/cabinet-wide-retakes-20261008/servicenow-hardware-select/frames.json",
+          "source_log_sha256": "56de3b45c5d0a748d703f72bbd6c669be1a6c49a14680546ce730e22a2fd3eaa",
+          "frame_count": 34,
+          "duration_seconds": 8.041,
+          "crop": false,
+          "speed_change": false
+        },
+        {
+          "source": "/Users/bpollak/dev/cabinet-wide-retakes-20261008/servicenow-dns/frames.json",
+          "source_log_sha256": "a0d2034b8263ba6da754bceb4fc0360098cfafa5f75719abf56225fb3556fb10",
+          "frame_count": 50,
+          "duration_seconds": 12.164,
+          "crop": false,
+          "speed_change": false
+        },
+        {
+          "source": "/Users/bpollak/dev/cabinet-wide-retakes-20261008/servicenow-dns-select/frames.json",
+          "source_log_sha256": "e47ab7984c9cce26e4939a5e8bd4ffc125ad54c39156585ed834f3f74a2076bc",
+          "frame_count": 28,
+          "duration_seconds": 7.011,
+          "crop": false,
+          "speed_change": false
+        }
+      ]
+    }
+  ]
+}

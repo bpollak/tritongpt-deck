@@ -7260,22 +7260,22 @@ export const slides = [
       "cabinet"
     ],
     "managerSection": "Citizen Developer Showcase",
-    "managerSummary": "Research need \u2192 suggested expertise \u2192 professional profile. Short capability highlight.",
+    "managerSummary": "Full Directory app: expertise request, summary, and naturally scrolled faculty matches.",
     "durationSeconds": 60,
-    "videoSrc": "/media/cabinet/cabinet-directory-executive.mp4",
-    "poster": "/media/cabinet/cabinet-directory-executive-poster.jpg",
+    "videoSrc": "/media/cabinet/cabinet-directory-wide.mp4",
+    "poster": "/media/cabinet/cabinet-directory-wide-poster.jpg",
     "releaseContext": {
       "channel": "pilot",
-      "label": "Directory \u00b7 In development",
-      "captureNote": "Live web app \u00b7 Sample query \u00b7 Profiles and matches need review"
+      "label": "Directory · In development",
+      "captureNote": "Live web app · Sample query · Profiles and matches need review"
     },
     "recording": {
-      "label": "Expertise request \u2192 suggested matches \u2192 profile review",
-      "format": "Short executive cut \u2022 silent for presenter voice-over \u2022 actual captured app pixels",
+      "label": "Expertise request → suggested faculty matches",
+      "format": "Whole app at high resolution • silent for presenter voice-over • no crop or digital zoom",
       "mediaStem": "cabinet-directory",
       "status": "captured and reviewed"
     },
-    "speakerNotes": "One minute, including a 22-second app-only cut. Voice-over: \u201cA department starts with a question and gets a set of potential experts to review, instead of starting the search from scratch.\u201d Point out the request, suggested matches, and profile; do not read model scores or explain search settings. This Directory example is in development and needs human review of public-source profiles and generated matches. No outreach or selection occurred. It is a team-built ecosystem example, not a verified Harness-built app. Actual browser footage captured October 8; idle time and intermediate steps cut. Detailed source qualifications are retained in docs/cabinet-executive-source-notes.json.",
+    "speakerNotes": "One minute, including a fresh 33-second whole-app recording. Voice-over: A department starts with a question and gets potential experts to review, instead of beginning the search from scratch. The app header, input, summary, and naturally scrolled faculty results stay in context; no crops or digital zoom. A real coastal flooding/climate adaptation expertise query produced the shown matches on October 8. Scores and public-source profiles require human review. No outreach or selection occurred. Directory remains in development and is a team-built ecosystem example, not a verified Harness-built app. Capture traceability: docs/cabinet-wide-retakes-manifest.json; detailed earlier source qualifications retained.",
     "videoLoop": false,
     "videoClearNav": false,
     "videoAutoPlay": true,
@@ -7296,23 +7296,23 @@ export const slides = [
     "managerSection": "Citizen Developer Showcase",
     "durationSeconds": 60,
     "recording": {
-      "label": "Visitor check-in \u2192 staff review \u2192 completed visit",
-      "format": "Short executive cut \u2022 silent for presenter voice-over \u2022 actual captured app pixels",
+      "label": "Service landing page → check-in → readiness → confirmation",
+      "format": "Whole app at high resolution • silent for presenter voice-over • no crop or digital zoom",
       "mediaStem": "cabinet-passport",
       "status": "captured and reviewed"
     },
-    "speakerNotes": "One minute, including a 24-second app-only cut. Voice-over: \u201cThe people who run a service understand its bottlenecks. Passport shows that knowledge becoming a check-in and staff workflow, with prompts that help the next step happen.\u201d Focus on check-in, readiness prompts, and service reporting, not form fields or report percentages. The visitor-entry and named staff-record views are omitted from this short cut. The official use-case page documents Passport Services/IPPS workflow design and AI-assisted development, followed by application/infrastructure specialists preparing production. This recording uses the actual source in an isolated local copy with sample visitor data, not the production queue. No real visitor records were changed; do not claim an AI makes passport eligibility decisions or that this app was built with our Harness. Provenance: docs/cabinet-executive-source-notes.json.",
+    "speakerNotes": "One minute, including a fresh 33-second whole-app recording. Voice-over: The people who run a service understand its bottlenecks. Passport turns that knowledge into check-in, readiness prompts, and a clear next step. Show the service landing page through an actual completed check-in, keeping full app context; do not narrate every form field. This is the real application source in an isolated local copy with prepared sample visitor data, not the production queue. No real visitor records were changed; no passport eligibility decision is made. The new clip covers the visitor workflow, not staff reporting. The official use-case source documents Passport Services/IPPS workflow design and AI-assisted development with specialists preparing production; do not claim our Harness built it. Capture traceability: docs/cabinet-wide-retakes-manifest.json.",
     "videoLoop": false,
     "videoClearNav": false,
     "videoAutoPlay": true,
     "hideDemoBadge": true,
-    "managerSummary": "Passport check-in, readiness prompts, and service reporting. Short capability highlight.",
-    "videoSrc": "/media/cabinet/cabinet-passport-executive.mp4",
-    "poster": "/media/cabinet/cabinet-passport-executive-poster.jpg",
+    "managerSummary": "Full Passport visitor workflow, from landing page through completed check-in.",
+    "videoSrc": "/media/cabinet/cabinet-passport-wide.mp4",
+    "poster": "/media/cabinet/cabinet-passport-wide-poster.jpg",
     "releaseContext": {
       "channel": "stable",
-      "label": "Passport \u00b7 Production service",
-      "captureNote": "Local source checkout \u00b7 Fictional visitor \u00b7 No live queue changes"
+      "label": "Passport · Production service",
+      "captureNote": "Local source checkout · Fictional visitor · No live queue changes"
     },
     "demoOnly": true
   },
@@ -7364,23 +7364,23 @@ export const slides = [
     "managerSection": "Administrative Verticals",
     "durationSeconds": 75,
     "recording": {
-      "label": "Public agreement \u2192 institutional rules \u2192 tracked changes and explanations",
-      "format": "Short executive cut \u2022 silent for presenter voice-over \u2022 actual captured app pixels",
+      "label": "Word document → configurable rules and options → Talk to agent",
+      "format": "Whole app at high resolution • silent for presenter voice-over • no crop or digital zoom",
       "mediaStem": "cabinet-contract-review",
       "status": "captured and reviewed"
     },
-    "speakerNotes": "Seventy-five seconds, including a 32-second cut preserving the entire real Word window and add-in together. Voice-over: \u201cStaff can bring a repeatable review process into the document they already use. The add-in applies the selected rules, proposes changes, and leaves the reviewer in control.\u201d Show it running and the resulting tracked changes/comments; skip rule-by-rule explanation. This is an actual review of the public SolarWinds software services agreement, dated September 10, 2026. It completed 19/19 rules. Changes remain unaccepted; no agreement was signed or sent. The film shortens waiting time and includes native scrolling. Add-in rollout still requires owner confirmation; do not claim measured savings. Full source notes and recording manifest remain in docs/.",
+    "speakerNotes": "Seventy-five seconds, including a fresh approximately 48-second recording of the entire real Word window, document, comments, and add-in. Voice-over: Staff can select institutional rules, configure the review, and ask the agent to explain proposed changes in the document they already use. The rule list is expanded; UC Health terms is deselected then restored; Extra knowledge is toggled then restored; an actual question is sent through Talk to agent and the answer is shown. All 19 rules remain selected and original options are restored. Existing tracked changes come from the completed 19/19-rule review of the public SolarWinds agreement dated September 10, 2026. No new review was started in this retake; no changes accepted, signature, or sending occurred. Keep human review explicit in narration. Add-in rollout still requires owner confirmation. Native copy labels remain part of Word, with no added slide banners. Capture traceability: docs/cabinet-wide-retakes-manifest.json.",
     "videoLoop": false,
     "videoClearNav": false,
     "videoAutoPlay": true,
     "hideDemoBadge": true,
-    "managerSummary": "Actual Word agreement and Contract Reviewer add-in: review runs, tracked changes appear, person reviews.",
-    "videoSrc": "/media/cabinet/cabinet-contract-review-executive.mp4",
-    "poster": "/media/cabinet/cabinet-contract-review-executive-poster.jpg",
+    "managerSummary": "Full Word document and add-in: rules, settings, tracked changes, and an actual agent answer.",
+    "videoSrc": "/media/cabinet/cabinet-contract-review-wide.mp4",
+    "poster": "/media/cabinet/cabinet-contract-review-wide-poster.jpg",
     "releaseContext": {
       "channel": "pilot",
-      "label": "Installed Word add-in \u00b7 Release status pending",
-      "captureNote": "Public vendor agreement \u00b7 Actual rule review \u00b7 Human approval required"
+      "label": "Installed Word add-in · Release status pending",
+      "captureNote": "Public vendor agreement · Actual rule review · Human approval required"
     },
     "demoOnly": true
   },
@@ -7396,22 +7396,22 @@ export const slides = [
     ],
     "managerSection": "Administrative Verticals",
     "durationSeconds": 60,
-    "speakerNotes": "One minute, including a 27-second app-only cut. Voice-over: \u201cA request comes in. ServiceNow suggests an assignment group, and the staff member chooses where it should go. The opportunity is less manual sorting and fewer handoffs to investigate.\u201d Show the two different requests and selected group; skip percentages and model architecture. Captured in the actual logged-in interface October 8. Suggestions are real outputs from unsaved sample descriptions; neither case was submitted. The percentages are displayed model scores, not measured accuracy. Both cases used the existing DeBERTa recommendation; no LLM fallback was shown. Do not describe this as a Harness feature. Rollout scope and outcome metrics await Service Desk owner confirmation. Detailed sources retained in docs/cabinet-executive-source-notes.json.",
-    "videoSrc": "/media/cabinet/cabinet-servicenow-executive.mp4",
+    "speakerNotes": "One minute, including a fresh approximately 38-second whole-interface recording. Voice-over: A request comes in and ServiceNow suggests the specialist team. Here a desktop hardware issue goes to Field Support; a DNS record request goes to Hostmaster. Staff selects each suggestion. Show the ordinary descriptions, actual ranked recommendations, and selection, without reading scores or discussing model architecture. The actual outputs were ITS-FieldSupport-Intake (79.9%) and ITS-Hostmaster (96.9%); those are model scores, not measured accuracy. Both displayed DeBERTa kept, not an LLM fallback. These were prepared descriptions in unsaved forms, discarded after recording; no case was submitted or saved. Do not describe this as a Harness feature or as automatic production assignment. The next slide explicitly models potential automatic routing at assumed 90% accuracy. Rollout scope and observed performance await owner confirmation. Capture traceability: docs/cabinet-wide-retakes-manifest.json.",
+    "videoSrc": "/media/cabinet/cabinet-servicenow-wide.mp4",
     "videoLoop": false,
     "videoClearNav": false,
     "videoAutoPlay": true,
     "hideDemoBadge": true,
-    "poster": "/media/cabinet/cabinet-servicenow-executive-poster.jpg",
-    "managerSummary": "Actual ServiceNow assignment suggestions and staff choice, with ordinary case wording.",
+    "poster": "/media/cabinet/cabinet-servicenow-wide-poster.jpg",
+    "managerSummary": "Full ServiceNow: desktop hardware to Field Support, DNS records to Hostmaster, actual suggestions and staff selection.",
     "releaseContext": {
       "channel": "pilot",
-      "label": "Current ServiceNow interface \u00b7 Rollout scope pending",
-      "captureNote": "Support requests \u00b7 Actual recommendations \u00b7 Staff selects"
+      "label": "Current ServiceNow interface · Rollout scope pending",
+      "captureNote": "Support requests · Actual recommendations · Staff selects"
     },
     "recording": {
-      "label": "Case description \u2192 ranked group suggestions \u2192 staff selection",
-      "format": "Short executive cut \u2022 silent for presenter voice-over \u2022 actual captured app pixels",
+      "label": "Case description → ranked group suggestions → staff selection",
+      "format": "Whole app at high resolution • silent for presenter voice-over • no crop or digital zoom",
       "mediaStem": "cabinet-servicenow-routing",
       "status": "captured and reviewed"
     },
@@ -7948,5 +7948,34 @@ export const slides = [
     "managerSection": "Optional Appendix",
     "durationSeconds": 0,
     "speakerNotes": "Original website component cards, HTML and inline SVGs copied as is. These cards are static on the current website; no invented animation has been added. Removed from the timed sequence as an optional Q&A backup. Source https://tritonai.ucsd.edu/developer-apis/harness.html#how-the-harness-works, verified October 8, 2026."
+  },
+  {
+    "id": 1020,
+    "slug": "cabinet-routing-savings",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "Less time sorting, more time helping",
+    "subtitle": "Illustrative estimate per 10,000 eligible cases, assuming 90% routing accuracy.",
+    "content": [
+      {
+        "heading": "~142 staff hours freed with automatic routing",
+        "text": "167 hours of manual routing → 25 hours correcting the 10% assigned incorrectly."
+      },
+      {
+        "heading": "~114 hours freed with staff review",
+        "text": "Allow 10 seconds to review every suggestion, plus the same correction time."
+      },
+      {
+        "heading": "Timing assumptions to validate",
+        "text": "60 seconds to route manually; 90 seconds per incorrect assignment. Volume and accuracy are assumptions, not measured results."
+      }
+    ],
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Administrative Verticals",
+    "durationSeconds": 60,
+    "managerSummary": "Potential routing labor savings at assumed 90% accuracy, normalized per 10,000 eligible cases; assisted and automatic scenarios.",
+    "speakerNotes": "One minute. This is a scenario requested for the presentation, not a performance claim. At N=10,000 eligible cases, manual routing takes 60 seconds each: 166.67 staff hours. At 90% correct automatic assignment, 1,000 incorrect assignments require 90 seconds each (60 seconds manual handling plus 30 seconds correction overhead): 25 hours. Potential savings: 141.67 hours, or 85% of baseline routing labor. Assisted routing adds 10 seconds to review/select on all 10,000 cases (27.78 hours) plus the same 25 hours correcting errors, leaving 52.78 hours and saving 113.89 hours (68.33%). The clip shows staff selection, not automatic assignment; automatic routing is a potential future operating scenario. The 90% assumption is from Brett, not the displayed model confidence scores. Timing and reference volume are illustrative pending owner validation. These are eligible cases, not all service desk cases: for monthly estimates multiply total case volume by the eligible share, then scale the per-case savings. No campus monthly volume was supplied. Every misroute is assumed detected and corrected in the stated time; downstream delays, quality effects, system costs, audit/monitoring, and implementation overhead are excluded. Do not call these cash or staffing reductions. Measure manual touch time, eligible coverage, actual destination accuracy, and correction effort in a pilot. Detailed arithmetic: docs/cabinet-routing-savings.json."
   }
 ];
