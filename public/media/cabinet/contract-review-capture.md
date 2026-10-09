@@ -1,6 +1,6 @@
 # Contract Reviewer recording — October 8, 2026
 
-Files: `cabinet-contract-review-clean.mp4`, `cabinet-contract-review-clean-poster.jpg`, `cabinet-contract-review.vtt`. The silent app-only clip is 70 seconds at 1920 × 1080 and fits the existing 90-second Cabinet slot.
+Files: `cabinet-contract-review-word-window.mp4`, `cabinet-contract-review-word-window-poster.jpg`, `cabinet-contract-review.vtt`. The silent app-only clip is 70 seconds at 2560 × 1978 and fits the existing 90-second Cabinet slot.
 
 ## Source agreement
 
@@ -16,7 +16,7 @@ The film shows the rule selection and context, shortened processing, completion,
 
 ## Recording and review boundaries
 
-The video uses actual native Word screen frames recorded through computer use, including held keyframes and cropped detail views for readability. Processing and idle time are shortened. The clean export uses the native 3440 × 2658 source frames and focused crops at 1920 × 1080, H.264 CRF 16. No added titles, footers, panels or captions are shown. No application UI, tracked change, comment, or model answer was synthesized or manually substituted. Context and detail are shown sequentially. Native Word labels and content already in the source document remain part of the capture.
+The video uses actual native Word screen frames recorded through computer use, including held keyframes and recorded document navigation. Processing and idle time are shortened. The current export keeps the entire native Word window together throughout, using the original 3440 × 2658 source frames downscaled once to 2560 × 1978, 30 fps, H.264 CRF 16. The ribbon, contract, tracked changes, comments and Contract Reviewer task pane stay in their actual positions. There are no callout crops, camera pans, zooms or composited panels. No added titles, footers, panels or captions are shown. No application UI, tracked change, comment, or model answer was synthesized or manually substituted. Rule selection, actual rule processing and changes appearing, completion, document navigation, rule-linked explanations and the follow-up response remain in the full Word framing. Native Word labels and content already in the source document remain part of the capture.
 
 The document was saved with its proposals still tracked. No change was accepted, agreement signed, vendor contacted, or production contract modified. A qualified reviewer must decide on every proposal and its applicability; completion of a rule pass does not establish contract approval or exhaustive issue detection.
 

@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "treatment": "Only actual captured app/document pixels. No added headers, footers, status banners, side panels or captions. Crop and scale for readability; held keyframes and shortened waits remain. Native app labels and document content are preserved. Desktop exports 1920x1080 CRF16; simulator1206x2622 native CRF16.",
+  "treatment": "Only actual captured app/document pixels. No added headers, footers, status banners, side panels or captions. Crop and scale for readability; held keyframes and shortened waits remain. Native app labels and document content are preserved. Desktop exports 1920x1080 CRF16; simulator1206x2622 native CRF16. Contract review revision: entire real Word window together, 2560x1978, with no callout crops or zooms.",
   "media": [
     {
       "video": "/media/cabinet/cabinet-directory-clean.mp4",
@@ -46,17 +46,17 @@
       }
     },
     {
-      "video": "/media/cabinet/cabinet-contract-review-clean.mp4",
-      "poster": "/media/cabinet/cabinet-contract-review-clean-poster.jpg",
-      "sha256": "18a6365f2a7668e7c4cc6e07f8f9954cfe3ca6a686cc25d6c9fdbfb9ad53d852",
+      "video": "/media/cabinet/cabinet-contract-review-word-window.mp4",
+      "poster": "/media/cabinet/cabinet-contract-review-word-window-poster.jpg",
+      "sha256": "5399d0259272a8b8ab3d50ca7eafbed4d552d793c763d72e6f66b0a6f0a2f5b0",
       "probe": {
         "programs": [],
         "stream_groups": [],
         "streams": [
           {
             "codec_name": "h264",
-            "width": 1920,
-            "height": 1080,
+            "width": 2560,
+            "height": 1978,
             "r_frame_rate": "30/1",
             "side_data_list": [
               {}
@@ -359,157 +359,229 @@
       "method": "Original captures only; crop/resize, no added text, panels, captions or synthesized UI."
     },
     "cabinet-contract-review": {
-      "duration": 70,
-      "size": [
-        1920,
-        1080
+      "date": "2026-10-08",
+      "video": "/media/cabinet/cabinet-contract-review-word-window.mp4",
+      "poster": "/media/cabinet/cabinet-contract-review-word-window-poster.jpg",
+      "source_directory": "/Users/bpollak/dev/cabinet-contract-capture-20261008",
+      "treatment": "Entire original Word window throughout: ribbon, document, tracked changes, comments and Contract Review task pane remain together in their real positions. No callout crops, camera pans, magnification, composited panels, added titles, captions or footers. Original aspect ratio preserved with a single downscale. Processing time shortened and native recorded frames held for narration; not continuous real time.",
+      "duration_seconds": 70,
+      "source_dimensions": [
+        3440,
+        2658
       ],
+      "export_dimensions": [
+        2560,
+        1978
+      ],
+      "fps": 30,
+      "crf": 16,
       "segments": [
         {
+          "label": "Agreement in Word",
+          "duration_seconds": 4,
           "sources": [
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/01-agreement.png"
+            "01-agreement.png"
           ],
-          "duration": 6,
-          "crop": [
-            400,
-            0,
-            2750,
-            1322
-          ]
-        },
-        {
-          "sources": [
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/02-rules.png"
-          ],
-          "duration": 7,
-          "crop": [
-            2054,
-            800,
-            3440,
-            1580
-          ]
-        },
-        {
-          "sources": [
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/03-ready.png"
-          ],
-          "duration": 6,
-          "crop": [
-            2000,
-            900,
-            3440,
-            1710
-          ]
-        },
-        {
-          "sources": [
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/05-progress.png",
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/09-progress.png",
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/14-progress.png",
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/17-latest.png"
-          ],
-          "duration": 5,
-          "crop": [
-            2100,
-            830,
-            3440,
-            1584
-          ]
-        },
-        {
-          "sources": [
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/20-complete.png"
-          ],
-          "duration": 4,
-          "crop": [
-            2100,
-            800,
-            3440,
-            1554
-          ]
-        },
-        {
-          "sources": [
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/20-complete.png"
-          ],
-          "duration": 10,
-          "crop": [
-            100,
-            320,
-            2730,
-            1799
-          ]
-        },
-        {
-          "sources": [
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000816.png",
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000817.png",
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000818.png",
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000819.png",
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000820.png",
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000821.png",
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000822.png",
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000823.png",
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000824.png",
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000825.png",
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000826.png",
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000827.png",
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000828.png",
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000829.png",
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000830.png",
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000831.png",
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000832.png",
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000833.png",
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000834.png",
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000835.png",
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000836.png"
-          ],
-          "duration": 12,
-          "crop": [
-            120,
-            330,
-            2730,
-            1798
-          ]
-        },
-        {
-          "sources": [
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/23-rule-explanation.png"
-          ],
-          "duration": 8,
-          "crop": [
-            120,
-            960,
-            2730,
-            2428
-          ]
-        },
-        {
-          "sources": [
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/26-summary-visible.png"
-          ],
-          "duration": 8,
-          "crop": [
-            2000,
-            1848,
+          "source_dimensions": [
             3440,
             2658
-          ]
+          ],
+          "crop": null
         },
         {
+          "label": "Rules selected in the add-in",
+          "duration_seconds": 6,
           "sources": [
-            "/Users/bpollak/dev/cabinet-contract-capture-20261008/23-rule-explanation.png"
+            "02-rules.png"
           ],
-          "duration": 4,
-          "crop": [
-            120,
-            330,
-            2730,
-            1798
-          ]
+          "source_dimensions": [
+            3440,
+            2658
+          ],
+          "crop": null
+        },
+        {
+          "label": "Business context and options",
+          "duration_seconds": 5,
+          "sources": [
+            "03-ready.png",
+            "04-review-started.png"
+          ],
+          "source_dimensions": [
+            3440,
+            2658
+          ],
+          "crop": null
+        },
+        {
+          "label": "Actual rule pass and changes appearing",
+          "duration_seconds": 10,
+          "sources": [
+            "05-progress.png",
+            "09-progress.png",
+            "14-progress.png",
+            "17-latest.png"
+          ],
+          "source_dimensions": [
+            3440,
+            2658
+          ],
+          "crop": null
+        },
+        {
+          "label": "Review complete with tracked changes and comments",
+          "duration_seconds": 6,
+          "sources": [
+            "20-complete.png"
+          ],
+          "source_dimensions": [
+            3440,
+            2658
+          ],
+          "crop": null
+        },
+        {
+          "label": "Reviewing the proposed preamble changes",
+          "duration_seconds": 12,
+          "sources": [
+            "frames/000771.png",
+            "frames/000772.png",
+            "frames/000773.png",
+            "frames/000774.png",
+            "frames/000775.png",
+            "frames/000776.png",
+            "frames/000777.png",
+            "frames/000778.png",
+            "frames/000779.png",
+            "frames/000780.png",
+            "frames/000781.png",
+            "frames/000782.png",
+            "frames/000783.png",
+            "frames/000784.png",
+            "frames/000785.png",
+            "frames/000786.png",
+            "frames/000787.png",
+            "frames/000788.png",
+            "frames/000789.png",
+            "frames/000790.png",
+            "frames/000791.png",
+            "frames/000792.png",
+            "frames/000793.png",
+            "frames/000794.png",
+            "frames/000795.png",
+            "frames/000796.png"
+          ],
+          "source_dimensions": [
+            3440,
+            2658
+          ],
+          "crop": null
+        },
+        {
+          "label": "Navigating indemnity and liability changes",
+          "duration_seconds": 10,
+          "sources": [
+            "frames/000816.png",
+            "frames/000817.png",
+            "frames/000818.png",
+            "frames/000819.png",
+            "frames/000820.png",
+            "frames/000821.png",
+            "frames/000822.png",
+            "frames/000823.png",
+            "frames/000824.png",
+            "frames/000825.png",
+            "frames/000826.png",
+            "frames/000827.png",
+            "frames/000828.png",
+            "frames/000829.png",
+            "frames/000830.png",
+            "frames/000831.png",
+            "frames/000832.png",
+            "frames/000833.png",
+            "frames/000834.png",
+            "frames/000835.png",
+            "frames/000836.png"
+          ],
+          "source_dimensions": [
+            3440,
+            2658
+          ],
+          "crop": null
+        },
+        {
+          "label": "Rule-linked explanation beside the document",
+          "duration_seconds": 7,
+          "sources": [
+            "23-rule-explanation.png"
+          ],
+          "source_dimensions": [
+            3440,
+            2658
+          ],
+          "crop": null
+        },
+        {
+          "label": "Follow-up question and actual response",
+          "duration_seconds": 5,
+          "sources": [
+            "frames/000837.png",
+            "frames/000838.png",
+            "frames/000839.png",
+            "frames/000840.png",
+            "frames/000841.png",
+            "frames/000842.png",
+            "frames/000843.png",
+            "frames/000844.png",
+            "frames/000845.png",
+            "frames/000846.png",
+            "frames/000847.png",
+            "frames/000848.png",
+            "frames/000849.png",
+            "frames/000850.png",
+            "frames/000851.png",
+            "frames/000852.png",
+            "frames/000853.png"
+          ],
+          "source_dimensions": [
+            3440,
+            2658
+          ],
+          "crop": null
+        },
+        {
+          "label": "Response alongside the reviewed agreement",
+          "duration_seconds": 5,
+          "sources": [
+            "26-summary-visible.png"
+          ],
+          "source_dimensions": [
+            3440,
+            2658
+          ],
+          "crop": null
         }
       ],
-      "method": "Original captures only; crop/resize, no added text, panels, captions or synthesized UI."
+      "video_sha256": "5399d0259272a8b8ab3d50ca7eafbed4d552d793c763d72e6f66b0a6f0a2f5b0",
+      "poster_sha256": "5ab72a9952acef5d7268239b55bffd5e01e7c011f4d8d8591fba4a2b9419b84f",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 2560,
+            "height": 1978,
+            "r_frame_rate": "30/1",
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "70.000000"
+        }
+      }
     },
     "cabinet-mobile-website": {
       "duration": 80,
@@ -559,7 +631,8 @@
   },
   "other_manifests": [
     "cabinet-productivity-media-manifest.json",
-    "cabinet-citizen-clean-media-manifest.json"
+    "cabinet-citizen-clean-media-manifest.json",
+    "cabinet-contract-word-manifest.json"
   ],
   "browser_retake_sources": {
     "directory": [

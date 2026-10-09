@@ -1,6 +1,6 @@
 from pathlib import Path
 from PIL import Image, ImageOps
-import json,subprocess,shutil,argparse
+import json,subprocess,shutil,argparse,sys
 from concurrent.futures import ThreadPoolExecutor
 parser=argparse.ArgumentParser(description="Rebuild app-only Cabinet recordings from original computer-use captures.")
 parser.add_argument('--capture-dir',type=Path,required=True,help='Directory with HD logs and source captures')
@@ -50,10 +50,10 @@ def service():
  encode('cabinet-servicenow-routing',seg,3)
 
 def contract():
- p=args.contract_source.resolve();log=json.loads((p/'frame-log.json').read_text());seg=[]
- specs=[(['01-agreement.png'],6,(400,0,2750,1322)),(['02-rules.png'],7,(2054,800,3440,1580)),(['03-ready.png'],6,(2000,900,3440,1710)),(['05-progress.png','09-progress.png','14-progress.png','17-latest.png'],5,(2100,830,3440,1584)),(['20-complete.png'],4,(2100,800,3440,1554)),(['20-complete.png'],10,(100,320,2730,1799)),([log[i]['file'] for i in range(816,837)],12,(120,330,2730,1798)),(['23-rule-explanation.png'],8,(120,960,2730,2428)),(['26-summary-visible.png'],8,(2000,1848,3440,2658)),(['23-rule-explanation.png'],4,(120,330,2730,1798))]
- for files,dur,crop in specs:seg.append({'frames':[p/f for f in files],'duration':dur,'crop':crop})
- encode('cabinet-contract-review',seg,6)
+ script=Path(__file__).resolve().parent/'rebuild-cabinet-contract-word.py'
+ report=R/'contract-word-window-manifest.json'
+ subprocess.run([sys.executable,str(script),'--source',str(args.contract_source.resolve()),'--work-dir',str(R/'contract-word-window'),'--output-dir',str(D),'--manifest',str(report)],check=True)
+ manifest['cabinet-contract-review']=json.loads(report.read_text())
 
 def mobile():
  p=args.mobile_source.resolve();out=R/'mobile-native';out.mkdir(exist_ok=True)
