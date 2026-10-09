@@ -41,7 +41,7 @@ try {
           new Promise((resolve) => setTimeout(resolve, 12000))
         ]);
       });
-      await page.addStyleTag({ content: '[data-thumbnail-slide] * { opacity: 1 !important; animation: none !important; transition: none !important; }' });
+      await page.addStyleTag({ content: '[data-thumbnail-slide] * { opacity: 1 !important; animation: none !important; transition: none !important; } .cabinet-harness-overview--demo-only header, .cabinet-harness-overview--demo-only .cabinet-harness-scene-heading { opacity: 0 !important; }' });
       // Let React motion finish its entrance and local videos reveal their poster/frame.
       await page.waitForTimeout(1800);
       await page.screenshot({ path: `public${src}`, type: 'jpeg', quality: 55, animations: 'disabled' });

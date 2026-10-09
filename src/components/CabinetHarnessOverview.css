@@ -59,3 +59,17 @@
 }
 .cabinet-harness-capture img { min-height: 0; width: 100%; flex: 1; object-fit: contain; }
 .cabinet-harness-capture figcaption { text-align: center; font-size: clamp(14px, 1.4vw, 22px); line-height: 1.4; }
+
+.cabinet-harness-overview--demo-only { padding: 0; gap: 0; background: #fff; }
+.cabinet-harness-overview--demo-only header,
+.cabinet-harness-overview--demo-only .cabinet-harness-scene-heading {
+  position: absolute; right: 24px; z-index: 10; padding: 12px;
+  background: #182b49; border-radius: 8px; opacity: 0; transition: opacity 150ms ease;
+}
+.cabinet-harness-overview--demo-only header { top: 16px; }
+.cabinet-harness-overview--demo-only .cabinet-harness-scene-heading { top: 96px; }
+.cabinet-harness-overview--demo-only header:hover,
+.cabinet-harness-overview--demo-only header:focus-within,
+.cabinet-harness-overview--demo-only .cabinet-harness-scene-heading:hover,
+.cabinet-harness-overview--demo-only .cabinet-harness-scene-heading:focus-within { opacity: 1; }
+.cabinet-harness-overview--demo-only .cabinet-harness-capture { padding: 0; gap: 0; border-radius: 0; background: #fff; }

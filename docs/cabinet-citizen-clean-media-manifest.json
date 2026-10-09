@@ -1,0 +1,3584 @@
+{
+  "description": "Fresh actual browser UI captures and native CDP screencast transitions, edited with real state holds to 50 seconds. Not a continuous real-time recording. No UI or output fabricated. No added headers, footers, captions, panels, padding, or synthetic animation. Source captures are native high-density PNG, not enlarged old frames.",
+  "capture": {
+    "capturedOn": "2026-10-09T01:57:58.365Z",
+    "directory": {
+      "source": "https://directory.apps.ucsd.edu/",
+      "query": "Find UC San Diego researchers with expertise in coastal flooding, sea-level rise, climate adaptation, and data-driven methods for protecting coastal communities.",
+      "cssViewport": [
+        1521,
+        1000
+      ],
+      "deviceScaleFactor": 2,
+      "recording": "Fresh actual UI PNG states and CDP screencast frames; no HTML/CSS/content changes.",
+      "outreach": false,
+      "selection": false
+    },
+    "passport": {
+      "source": "Isolated local source checkout, http://127.0.0.1:5316/",
+      "cssViewport": [
+        1600,
+        999
+      ],
+      "deviceScaleFactor": 2,
+      "fictionalVisitor": "Alex Demo",
+      "fictionalRetake": true,
+      "visitCount": 2,
+      "existingPriorDemoVisitRetained": true,
+      "missingPhoto": true,
+      "note": "Demo: review missing photo at counter.",
+      "staffSignOutVerified": true,
+      "dashboardLocked": true,
+      "productionQueueAccessed": false
+    },
+    "overridesCleared": true
+  },
+  "encoding": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "codec": "H.264",
+    "crf": 16,
+    "pixel_format": "yuv420p",
+    "audio": false,
+    "subtitle_stream": false
+  },
+  "clips": {
+    "directory": {
+      "duration_seconds": 50,
+      "frame_count": 1500,
+      "native_source_dimensions": [
+        [
+          3042,
+          2000
+        ]
+      ],
+      "all_crops_at_least_output_resolution": true,
+      "entries": [
+        {
+          "source": "clean-high-density/directory-expertise.png",
+          "duration": 8,
+          "kind": "actual state hold",
+          "stage": "directory-expertise",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            426,
+            400,
+            2616,
+            1632
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/directory-processing.png",
+          "duration": 3,
+          "kind": "actual state hold",
+          "stage": "directory-processing",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            426,
+            400,
+            2616,
+            1632
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/directory-summary.png",
+          "duration": 7,
+          "kind": "actual state hold",
+          "stage": "directory-summary",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            700,
+            2677,
+            2000
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00105.png",
+          "duration": 0.17551138559364554,
+          "kind": "native transition",
+          "stage": "directory-results-scroll",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            426,
+            460,
+            2616,
+            1692
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00106.png",
+          "duration": 0.097044271279003,
+          "kind": "native transition",
+          "stage": "directory-results-scroll",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            426,
+            460,
+            2616,
+            1692
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00107.png",
+          "duration": 1.0736343182349413,
+          "kind": "native transition",
+          "stage": "directory-results-scroll",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            426,
+            460,
+            2616,
+            1692
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00108.png",
+          "duration": 0.0920257987058521,
+          "kind": "native transition",
+          "stage": "directory-results-scroll",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            426,
+            460,
+            2616,
+            1692
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00109.png",
+          "duration": 0.11956270216489957,
+          "kind": "native transition",
+          "stage": "directory-results-scroll",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            426,
+            460,
+            2616,
+            1692
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00110.png",
+          "duration": 0.16972636486264708,
+          "kind": "native transition",
+          "stage": "directory-results-scroll",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            426,
+            460,
+            2616,
+            1692
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00111.png",
+          "duration": 0.09926832286471302,
+          "kind": "native transition",
+          "stage": "directory-results-scroll",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            426,
+            460,
+            2616,
+            1692
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00112.png",
+          "duration": 0.1027590818974634,
+          "kind": "native transition",
+          "stage": "directory-results-scroll",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            426,
+            460,
+            2616,
+            1692
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00113.png",
+          "duration": 0.10255942188993337,
+          "kind": "native transition",
+          "stage": "directory-results-scroll",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            426,
+            460,
+            2616,
+            1692
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00114.png",
+          "duration": 0.0998051376834934,
+          "kind": "native transition",
+          "stage": "directory-results-scroll",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            426,
+            460,
+            2616,
+            1692
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00115.png",
+          "duration": 0.3681031948234084,
+          "kind": "native transition",
+          "stage": "directory-results-scroll",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            426,
+            460,
+            2616,
+            1692
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/directory-matches.png",
+          "duration": 9.5,
+          "kind": "actual state hold",
+          "stage": "directory-matches",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            426,
+            460,
+            2616,
+            1692
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00116.png",
+          "duration": 0.05241593534194762,
+          "kind": "native transition",
+          "stage": "directory-directory-transition",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00117.png",
+          "duration": 0.05508928766909667,
+          "kind": "native transition",
+          "stage": "directory-directory-transition",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00118.png",
+          "duration": 0.0429556341176244,
+          "kind": "native transition",
+          "stage": "directory-directory-transition",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00119.png",
+          "duration": 0.501149064705618,
+          "kind": "native transition",
+          "stage": "directory-directory-transition",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00120.png",
+          "duration": 0.0429556341176244,
+          "kind": "native transition",
+          "stage": "directory-directory-transition",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00121.png",
+          "duration": 0.048054455411969815,
+          "kind": "native transition",
+          "stage": "directory-directory-transition",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00122.png",
+          "duration": 0.04567025254479973,
+          "kind": "native transition",
+          "stage": "directory-directory-transition",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00123.png",
+          "duration": 0.04930595708880909,
+          "kind": "native transition",
+          "stage": "directory-directory-transition",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00124.png",
+          "duration": 0.04741027001529886,
+          "kind": "native transition",
+          "stage": "directory-directory-transition",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00125.png",
+          "duration": 0.04762192605448062,
+          "kind": "native transition",
+          "stage": "directory-directory-transition",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00126.png",
+          "duration": 0.04668688429428892,
+          "kind": "native transition",
+          "stage": "directory-directory-transition",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00127.png",
+          "duration": 0.0488621621679441,
+          "kind": "native transition",
+          "stage": "directory-directory-transition",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00128.png",
+          "duration": 0.1718225364704976,
+          "kind": "native transition",
+          "stage": "directory-directory-transition",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00156.png",
+          "duration": 0.11725166963252452,
+          "kind": "native transition",
+          "stage": "directory-topic-search",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00157.png",
+          "duration": 0.09600319112169706,
+          "kind": "native transition",
+          "stage": "directory-topic-search",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00158.png",
+          "duration": 0.10509840311220305,
+          "kind": "native transition",
+          "stage": "directory-topic-search",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00159.png",
+          "duration": 0.09600319112169706,
+          "kind": "native transition",
+          "stage": "directory-topic-search",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00160.png",
+          "duration": 0.10734075670020134,
+          "kind": "native transition",
+          "stage": "directory-topic-search",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00161.png",
+          "duration": 0.1209993527983114,
+          "kind": "native transition",
+          "stage": "directory-topic-search",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00162.png",
+          "duration": 0.09752368843998561,
+          "kind": "native transition",
+          "stage": "directory-topic-search",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00163.png",
+          "duration": 0.11804515303896147,
+          "kind": "native transition",
+          "stage": "directory-topic-search",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00164.png",
+          "duration": 0.09600319112169706,
+          "kind": "native transition",
+          "stage": "directory-topic-search",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00165.png",
+          "duration": 0.10661136233813044,
+          "kind": "native transition",
+          "stage": "directory-topic-search",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00166.png",
+          "duration": 0.10598115340186416,
+          "kind": "native transition",
+          "stage": "directory-topic-search",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00167.png",
+          "duration": 0.10746969775374735,
+          "kind": "native transition",
+          "stage": "directory-topic-search",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00168.png",
+          "duration": 0.1257541495184221,
+          "kind": "native transition",
+          "stage": "directory-topic-search",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00169.png",
+          "duration": 0.09600319112169706,
+          "kind": "native transition",
+          "stage": "directory-topic-search",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00170.png",
+          "duration": 0.10577286400767447,
+          "kind": "native transition",
+          "stage": "directory-topic-search",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00171.png",
+          "duration": 0.10686466665633916,
+          "kind": "native transition",
+          "stage": "directory-topic-search",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00172.png",
+          "duration": 0.10906582014438784,
+          "kind": "native transition",
+          "stage": "directory-topic-search",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00173.png",
+          "duration": 0.20219254236197326,
+          "kind": "native transition",
+          "stage": "directory-topic-search",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00174.png",
+          "duration": 0.09600319112169706,
+          "kind": "native transition",
+          "stage": "directory-topic-search",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00175.png",
+          "duration": 0.3840127644867882,
+          "kind": "native transition",
+          "stage": "directory-topic-search",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/directory-topic-search.png",
+          "duration": 4.3,
+          "kind": "actual state hold",
+          "stage": "directory-topic-search",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            365,
+            400,
+            2677,
+            1700
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00196.png",
+          "duration": 0.1841258979355002,
+          "kind": "native transition",
+          "stage": "directory-profile-scroll",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            913,
+            0,
+            2860,
+            1095
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00197.png",
+          "duration": 0.15654882985925048,
+          "kind": "native transition",
+          "stage": "directory-profile-scroll",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            913,
+            0,
+            2860,
+            1095
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00198.png",
+          "duration": 1.0369435319067206,
+          "kind": "native transition",
+          "stage": "directory-profile-scroll",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            913,
+            0,
+            2860,
+            1095
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00199.png",
+          "duration": 0.0888808741634332,
+          "kind": "native transition",
+          "stage": "directory-profile-scroll",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            913,
+            0,
+            2860,
+            1095
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00200.png",
+          "duration": 0.0888808741634332,
+          "kind": "native transition",
+          "stage": "directory-profile-scroll",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            913,
+            0,
+            2860,
+            1095
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00201.png",
+          "duration": 0.1876096739594766,
+          "kind": "native transition",
+          "stage": "directory-profile-scroll",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            913,
+            0,
+            2860,
+            1095
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00202.png",
+          "duration": 0.0998315152109968,
+          "kind": "native transition",
+          "stage": "directory-profile-scroll",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            913,
+            0,
+            2860,
+            1095
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00203.png",
+          "duration": 0.09909901810295471,
+          "kind": "native transition",
+          "stage": "directory-profile-scroll",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            913,
+            0,
+            2860,
+            1095
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00204.png",
+          "duration": 0.09826056673627588,
+          "kind": "native transition",
+          "stage": "directory-profile-scroll",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            913,
+            0,
+            2860,
+            1095
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00205.png",
+          "duration": 0.10429572130822531,
+          "kind": "native transition",
+          "stage": "directory-profile-scroll",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            913,
+            0,
+            2860,
+            1095
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00206.png",
+          "duration": 0.3555234966537328,
+          "kind": "native transition",
+          "stage": "directory-profile-scroll",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            913,
+            0,
+            2860,
+            1095
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/directory-profile-focused.png",
+          "duration": 9.5,
+          "kind": "actual state hold",
+          "stage": "directory-profile-focused",
+          "source_pixels": [
+            3042,
+            2000
+          ],
+          "crop_pixels": [
+            913,
+            0,
+            2860,
+            1095
+          ],
+          "upsampled": false
+        }
+      ],
+      "sha256": "59763032839b196874c8dc7c284d280a4872ed1cb96b50f85fe974a05a700d45",
+      "bytes": 1432872
+    },
+    "passport": {
+      "duration_seconds": 50,
+      "frame_count": 1500,
+      "native_source_dimensions": [
+        [
+          3200,
+          1998
+        ],
+        [
+          3370,
+          2104
+        ]
+      ],
+      "all_crops_at_least_output_resolution": true,
+      "entries": [
+        {
+          "source": "clean-high-density/motion-00000.png",
+          "duration": 0.730803045334608,
+          "kind": "native transition",
+          "stage": "passport-location-start",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            320,
+            160,
+            2880,
+            1600
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00001.png",
+          "duration": 0.11383647059057683,
+          "kind": "native transition",
+          "stage": "passport-location-start",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            320,
+            160,
+            2880,
+            1600
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00002.png",
+          "duration": 0.2678799055285485,
+          "kind": "native transition",
+          "stage": "passport-location-start",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            320,
+            160,
+            2880,
+            1600
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00003.png",
+          "duration": 0.12813771712809827,
+          "kind": "native transition",
+          "stage": "passport-location-start",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            320,
+            160,
+            2880,
+            1600
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00004.png",
+          "duration": 0.30399697905586087,
+          "kind": "native transition",
+          "stage": "passport-location-start",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            320,
+            160,
+            2880,
+            1600
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00005.png",
+          "duration": 0.45534588236230733,
+          "kind": "native transition",
+          "stage": "passport-location-start",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            320,
+            160,
+            2880,
+            1600
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/passport-start.png",
+          "duration": 3,
+          "kind": "actual state hold",
+          "stage": "passport-start",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            320,
+            160,
+            2880,
+            1600
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00006.png",
+          "duration": 0.4401990594604453,
+          "kind": "native transition",
+          "stage": "passport-walk-in",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            448,
+            240,
+            2752,
+            1536
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00007.png",
+          "duration": 0.21196018810791095,
+          "kind": "native transition",
+          "stage": "passport-walk-in",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            448,
+            240,
+            2752,
+            1536
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00008.png",
+          "duration": 0.8478407524316438,
+          "kind": "native transition",
+          "stage": "passport-walk-in",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            448,
+            240,
+            2752,
+            1536
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/passport-visit-type.png",
+          "duration": 2.5,
+          "kind": "actual state hold",
+          "stage": "passport-visit-type",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            448,
+            240,
+            2752,
+            1536
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00009.png",
+          "duration": 0.04382757579120238,
+          "kind": "native transition",
+          "stage": "passport-contact-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00010.png",
+          "duration": 0.01765296188713284,
+          "kind": "native transition",
+          "stage": "passport-contact-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00011.png",
+          "duration": 0.01963542736151308,
+          "kind": "native transition",
+          "stage": "passport-contact-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00012.png",
+          "duration": 0.018587998805632423,
+          "kind": "native transition",
+          "stage": "passport-contact-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00013.png",
+          "duration": 0.019549427668939433,
+          "kind": "native transition",
+          "stage": "passport-contact-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00014.png",
+          "duration": 0.019595443817657467,
+          "kind": "native transition",
+          "stage": "passport-contact-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00015.png",
+          "duration": 0.03943247241608462,
+          "kind": "native transition",
+          "stage": "passport-contact-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00016.png",
+          "duration": 0.039556210962332514,
+          "kind": "native transition",
+          "stage": "passport-contact-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00017.png",
+          "duration": 0.021574839678214684,
+          "kind": "native transition",
+          "stage": "passport-contact-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00018.png",
+          "duration": 0.01765296188713284,
+          "kind": "native transition",
+          "stage": "passport-contact-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00019.png",
+          "duration": 0.019424145898191855,
+          "kind": "native transition",
+          "stage": "passport-contact-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00020.png",
+          "duration": 0.01964131967323917,
+          "kind": "native transition",
+          "stage": "passport-contact-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00021.png",
+          "duration": 0.019704732170862802,
+          "kind": "native transition",
+          "stage": "passport-contact-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00022.png",
+          "duration": 0.019616066908698784,
+          "kind": "native transition",
+          "stage": "passport-contact-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00023.png",
+          "duration": 0.018945746303287884,
+          "kind": "native transition",
+          "stage": "passport-contact-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00024.png",
+          "duration": 0.020305607673787644,
+          "kind": "native transition",
+          "stage": "passport-contact-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00025.png",
+          "duration": 0.01959011267847672,
+          "kind": "native transition",
+          "stage": "passport-contact-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00026.png",
+          "duration": 0.01974359336962773,
+          "kind": "native transition",
+          "stage": "passport-contact-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00027.png",
+          "duration": 0.07863332086407938,
+          "kind": "native transition",
+          "stage": "passport-contact-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00028.png",
+          "duration": 0.019673025922050984,
+          "kind": "native transition",
+          "stage": "passport-contact-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00029.png",
+          "duration": 0.01866095123652687,
+          "kind": "native transition",
+          "stage": "passport-contact-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00030.png",
+          "duration": 0.020029651074615764,
+          "kind": "native transition",
+          "stage": "passport-contact-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00031.png",
+          "duration": 0.019533574544533524,
+          "kind": "native transition",
+          "stage": "passport-contact-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00032.png",
+          "duration": 0.01956247493061863,
+          "kind": "native transition",
+          "stage": "passport-contact-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00033.png",
+          "duration": 0.01964188084578451,
+          "kind": "native transition",
+          "stage": "passport-contact-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00034.png",
+          "duration": 0.019616628081244127,
+          "kind": "native transition",
+          "stage": "passport-contact-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00035.png",
+          "duration": 0.07061184754853136,
+          "kind": "native transition",
+          "stage": "passport-contact-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00036.png",
+          "duration": 0.03718766419860225,
+          "kind": "native transition",
+          "stage": "passport-contact",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00037.png",
+          "duration": 0.047752628471196136,
+          "kind": "native transition",
+          "stage": "passport-contact",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00038.png",
+          "duration": 0.03718766419860225,
+          "kind": "native transition",
+          "stage": "passport-contact",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00039.png",
+          "duration": 0.03980080227287581,
+          "kind": "native transition",
+          "stage": "passport-contact",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00040.png",
+          "duration": 0.040324796469323514,
+          "kind": "native transition",
+          "stage": "passport-contact",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00041.png",
+          "duration": 0.04043798867306828,
+          "kind": "native transition",
+          "stage": "passport-contact",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00042.png",
+          "duration": 0.04144578348969923,
+          "kind": "native transition",
+          "stage": "passport-contact",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00043.png",
+          "duration": 0.04194997643901665,
+          "kind": "native transition",
+          "stage": "passport-contact",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00044.png",
+          "duration": 0.040132990359061496,
+          "kind": "native transition",
+          "stage": "passport-contact",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00045.png",
+          "duration": 0.04187077145049551,
+          "kind": "native transition",
+          "stage": "passport-contact",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00046.png",
+          "duration": 0.04012294196499538,
+          "kind": "native transition",
+          "stage": "passport-contact",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00047.png",
+          "duration": 0.04102936621795934,
+          "kind": "native transition",
+          "stage": "passport-contact",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00048.png",
+          "duration": 0.042253792589015654,
+          "kind": "native transition",
+          "stage": "passport-contact",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00049.png",
+          "duration": 0.041425686701567,
+          "kind": "native transition",
+          "stage": "passport-contact",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00050.png",
+          "duration": 0.04078879584237648,
+          "kind": "native transition",
+          "stage": "passport-contact",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00051.png",
+          "duration": 0.04086563650288206,
+          "kind": "native transition",
+          "stage": "passport-contact",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00052.png",
+          "duration": 0.041612764155797906,
+          "kind": "native transition",
+          "stage": "passport-contact",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00053.png",
+          "duration": 0.12963255860093836,
+          "kind": "native transition",
+          "stage": "passport-contact",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00054.png",
+          "duration": 0.03718766419860225,
+          "kind": "native transition",
+          "stage": "passport-contact",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00055.png",
+          "duration": 0.04053078854767887,
+          "kind": "native transition",
+          "stage": "passport-contact",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00056.png",
+          "duration": 0.04016402216426567,
+          "kind": "native transition",
+          "stage": "passport-contact",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00057.png",
+          "duration": 0.042184340453558684,
+          "kind": "native transition",
+          "stage": "passport-contact",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00058.png",
+          "duration": 0.04138519758430059,
+          "kind": "native transition",
+          "stage": "passport-contact",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00059.png",
+          "duration": 0.04175669262374491,
+          "kind": "native transition",
+          "stage": "passport-contact",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00060.png",
+          "duration": 0.039664262329977426,
+          "kind": "native transition",
+          "stage": "passport-contact",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00061.png",
+          "duration": 0.042553766705989385,
+          "kind": "native transition",
+          "stage": "passport-contact",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00062.png",
+          "duration": 0.148750656794409,
+          "kind": "native transition",
+          "stage": "passport-contact",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/passport-contact.png",
+          "duration": 2.0,
+          "kind": "actual state hold",
+          "stage": "passport-contact",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            20,
+            2688,
+            1244
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00063.png",
+          "duration": 0.09089171232872177,
+          "kind": "native transition",
+          "stage": "passport-readiness-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00064.png",
+          "duration": 0.051964552201923316,
+          "kind": "native transition",
+          "stage": "passport-readiness-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00065.png",
+          "duration": 0.047608206277437316,
+          "kind": "native transition",
+          "stage": "passport-readiness-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00066.png",
+          "duration": 0.101918142105417,
+          "kind": "native transition",
+          "stage": "passport-readiness-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00067.png",
+          "duration": 0.10430140673717773,
+          "kind": "native transition",
+          "stage": "passport-readiness-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00068.png",
+          "duration": 0.05298951868667325,
+          "kind": "native transition",
+          "stage": "passport-readiness-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00069.png",
+          "duration": 0.051929365091151175,
+          "kind": "native transition",
+          "stage": "passport-readiness-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00070.png",
+          "duration": 0.05471633560671707,
+          "kind": "native transition",
+          "stage": "passport-readiness-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00071.png",
+          "duration": 0.05324793585503213,
+          "kind": "native transition",
+          "stage": "passport-readiness-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00072.png",
+          "duration": 0.19043282510974927,
+          "kind": "native transition",
+          "stage": "passport-readiness-transition",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00073.png",
+          "duration": 0.24872453953084087,
+          "kind": "native transition",
+          "stage": "passport-application-yes",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00074.png",
+          "duration": 0.11025509209383184,
+          "kind": "native transition",
+          "stage": "passport-application-yes",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00075.png",
+          "duration": 0.4410203683753274,
+          "kind": "native transition",
+          "stage": "passport-application-yes",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00076.png",
+          "duration": 0.06646693928831521,
+          "kind": "native transition",
+          "stage": "passport-missing-photo",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00077.png",
+          "duration": 0.037063275987760595,
+          "kind": "native transition",
+          "stage": "passport-missing-photo",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00078.png",
+          "duration": 0.06513497309466582,
+          "kind": "native transition",
+          "stage": "passport-missing-photo",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00079.png",
+          "duration": 0.18589941706478919,
+          "kind": "native transition",
+          "stage": "passport-missing-photo",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00080.png",
+          "duration": 0.04506033974752131,
+          "kind": "native transition",
+          "stage": "passport-missing-photo",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00081.png",
+          "duration": 0.03938608128788795,
+          "kind": "native transition",
+          "stage": "passport-missing-photo",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00082.png",
+          "duration": 0.24795690612777677,
+          "kind": "native transition",
+          "stage": "passport-missing-photo",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00083.png",
+          "duration": 0.08351592983555556,
+          "kind": "native transition",
+          "stage": "passport-missing-photo",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00084.png",
+          "duration": 0.24538840873533474,
+          "kind": "native transition",
+          "stage": "passport-missing-photo",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00085.png",
+          "duration": 0.04278344928380838,
+          "kind": "native transition",
+          "stage": "passport-missing-photo",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00086.png",
+          "duration": 0.040424967790541964,
+          "kind": "native transition",
+          "stage": "passport-missing-photo",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00087.png",
+          "duration": 0.43240488652387354,
+          "kind": "native transition",
+          "stage": "passport-missing-photo",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00088.png",
+          "duration": 0.037063275987760595,
+          "kind": "native transition",
+          "stage": "passport-missing-photo",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00089.png",
+          "duration": 0.03731037014975277,
+          "kind": "native transition",
+          "stage": "passport-missing-photo",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00090.png",
+          "duration": 0.0816022225467143,
+          "kind": "native transition",
+          "stage": "passport-missing-photo",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00091.png",
+          "duration": 0.040745146307237426,
+          "kind": "native transition",
+          "stage": "passport-missing-photo",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00092.png",
+          "duration": 0.040715101957004736,
+          "kind": "native transition",
+          "stage": "passport-missing-photo",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00093.png",
+          "duration": 0.04193572732332121,
+          "kind": "native transition",
+          "stage": "passport-missing-photo",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00094.png",
+          "duration": 0.04088947700933566,
+          "kind": "native transition",
+          "stage": "passport-missing-photo",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00095.png",
+          "duration": 0.14825310395104238,
+          "kind": "native transition",
+          "stage": "passport-missing-photo",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/passport-readiness.png",
+          "duration": 4.4,
+          "kind": "actual state hold",
+          "stage": "passport-readiness",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            576,
+            0,
+            2624,
+            1152
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00096.png",
+          "duration": 0.12029022174263881,
+          "kind": "native transition",
+          "stage": "passport-confirmation",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            448,
+            240,
+            2752,
+            1536
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00097.png",
+          "duration": 0.05144646406629678,
+          "kind": "native transition",
+          "stage": "passport-confirmation",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            448,
+            240,
+            2752,
+            1536
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00098.png",
+          "duration": 0.05144646406629678,
+          "kind": "native transition",
+          "stage": "passport-confirmation",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            448,
+            240,
+            2752,
+            1536
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00099.png",
+          "duration": 0.05411463381047813,
+          "kind": "native transition",
+          "stage": "passport-confirmation",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            448,
+            240,
+            2752,
+            1536
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00100.png",
+          "duration": 0.05653467474224663,
+          "kind": "native transition",
+          "stage": "passport-confirmation",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            448,
+            240,
+            2752,
+            1536
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00101.png",
+          "duration": 0.059964190426597744,
+          "kind": "native transition",
+          "stage": "passport-confirmation",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            448,
+            240,
+            2752,
+            1536
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00102.png",
+          "duration": 0.6002087474401291,
+          "kind": "native transition",
+          "stage": "passport-confirmation",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            448,
+            240,
+            2752,
+            1536
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00103.png",
+          "duration": 0.6002087474401291,
+          "kind": "native transition",
+          "stage": "passport-confirmation",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            448,
+            240,
+            2752,
+            1536
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00104.png",
+          "duration": 0.2057858562651871,
+          "kind": "native transition",
+          "stage": "passport-confirmation",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            448,
+            240,
+            2752,
+            1536
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/passport-confirmation.png",
+          "duration": 3.2,
+          "kind": "actual state hold",
+          "stage": "passport-confirmation",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            448,
+            240,
+            2752,
+            1536
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00129.png",
+          "duration": 0.032777419776698055,
+          "kind": "native transition",
+          "stage": "passport-staff-review",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            480,
+            260,
+            2976,
+            1664
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00130.png",
+          "duration": 0.029122679610030455,
+          "kind": "native transition",
+          "stage": "passport-staff-review",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            480,
+            260,
+            2976,
+            1664
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00131.png",
+          "duration": 0.029122679610030455,
+          "kind": "native transition",
+          "stage": "passport-staff-review",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            480,
+            260,
+            2976,
+            1664
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00132.png",
+          "duration": 0.061292525172604764,
+          "kind": "native transition",
+          "stage": "passport-staff-review",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            480,
+            260,
+            2976,
+            1664
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00133.png",
+          "duration": 0.03237100013873815,
+          "kind": "native transition",
+          "stage": "passport-staff-review",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            480,
+            260,
+            2976,
+            1664
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00134.png",
+          "duration": 0.3397645954503553,
+          "kind": "native transition",
+          "stage": "passport-staff-review",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            480,
+            260,
+            2976,
+            1664
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00135.png",
+          "duration": 0.3397645954503553,
+          "kind": "native transition",
+          "stage": "passport-staff-review",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            480,
+            260,
+            2976,
+            1664
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00136.png",
+          "duration": 0.3397645954503553,
+          "kind": "native transition",
+          "stage": "passport-staff-review",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            480,
+            260,
+            2976,
+            1664
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00137.png",
+          "duration": 0.3397645954503553,
+          "kind": "native transition",
+          "stage": "passport-staff-review",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            480,
+            260,
+            2976,
+            1664
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00138.png",
+          "duration": 0.3397645954503553,
+          "kind": "native transition",
+          "stage": "passport-staff-review",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            480,
+            260,
+            2976,
+            1664
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00139.png",
+          "duration": 0.11649071844012182,
+          "kind": "native transition",
+          "stage": "passport-staff-review",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            480,
+            260,
+            2976,
+            1664
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/passport-staff-review.png",
+          "duration": 8,
+          "kind": "actual state hold",
+          "stage": "passport-staff-review",
+          "source_pixels": [
+            3370,
+            2104
+          ],
+          "crop_pixels": [
+            505,
+            274,
+            3134,
+            1753
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00140.png",
+          "duration": 0.07874174378079446,
+          "kind": "native transition",
+          "stage": "passport-complete",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            480,
+            260,
+            2976,
+            1664
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00141.png",
+          "duration": 0.15496808103288492,
+          "kind": "native transition",
+          "stage": "passport-complete",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            480,
+            260,
+            2976,
+            1664
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00142.png",
+          "duration": 0.06509901068471435,
+          "kind": "native transition",
+          "stage": "passport-complete",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            480,
+            260,
+            2976,
+            1664
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00143.png",
+          "duration": 0.06785906662503778,
+          "kind": "native transition",
+          "stage": "passport-complete",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            480,
+            260,
+            2976,
+            1664
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00144.png",
+          "duration": 0.07198449888745774,
+          "kind": "native transition",
+          "stage": "passport-complete",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            480,
+            260,
+            2976,
+            1664
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00145.png",
+          "duration": 0.07014166094931629,
+          "kind": "native transition",
+          "stage": "passport-complete",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            480,
+            260,
+            2976,
+            1664
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00146.png",
+          "duration": 0.07269380007027411,
+          "kind": "native transition",
+          "stage": "passport-complete",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            480,
+            260,
+            2976,
+            1664
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00147.png",
+          "duration": 0.5892849393536624,
+          "kind": "native transition",
+          "stage": "passport-complete",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            480,
+            260,
+            2976,
+            1664
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00148.png",
+          "duration": 0.07179566232164594,
+          "kind": "native transition",
+          "stage": "passport-complete",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            480,
+            260,
+            2976,
+            1664
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00149.png",
+          "duration": 0.06509901068471435,
+          "kind": "native transition",
+          "stage": "passport-complete",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            480,
+            260,
+            2976,
+            1664
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00150.png",
+          "duration": 0.14429855638429115,
+          "kind": "native transition",
+          "stage": "passport-complete",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            480,
+            260,
+            2976,
+            1664
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00151.png",
+          "duration": 0.07188878720341614,
+          "kind": "native transition",
+          "stage": "passport-complete",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            480,
+            260,
+            2976,
+            1664
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00152.png",
+          "duration": 0.07101237859386768,
+          "kind": "native transition",
+          "stage": "passport-complete",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            480,
+            260,
+            2976,
+            1664
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00153.png",
+          "duration": 0.07307354264371482,
+          "kind": "native transition",
+          "stage": "passport-complete",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            480,
+            260,
+            2976,
+            1664
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00154.png",
+          "duration": 0.07166321804535054,
+          "kind": "native transition",
+          "stage": "passport-complete",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            480,
+            260,
+            2976,
+            1664
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00155.png",
+          "duration": 0.2603960427388574,
+          "kind": "native transition",
+          "stage": "passport-complete",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            480,
+            260,
+            2976,
+            1664
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/passport-complete.png",
+          "duration": 4,
+          "kind": "actual state hold",
+          "stage": "passport-complete",
+          "source_pixels": [
+            3370,
+            2104
+          ],
+          "crop_pixels": [
+            505,
+            274,
+            3134,
+            1753
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00176.png",
+          "duration": 0.2137706749451488,
+          "kind": "native transition",
+          "stage": "passport-reports",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            260,
+            2944,
+            1628
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00177.png",
+          "duration": 0.09654666218061325,
+          "kind": "native transition",
+          "stage": "passport-reports",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            260,
+            2944,
+            1628
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00178.png",
+          "duration": 0.17711828871129676,
+          "kind": "native transition",
+          "stage": "passport-reports",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            260,
+            2944,
+            1628
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00179.png",
+          "duration": 1.1263777254404879,
+          "kind": "native transition",
+          "stage": "passport-reports",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            260,
+            2944,
+            1628
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/motion-00180.png",
+          "duration": 0.386186648722453,
+          "kind": "native transition",
+          "stage": "passport-reports",
+          "source_pixels": [
+            3200,
+            1998
+          ],
+          "crop_pixels": [
+            512,
+            260,
+            2944,
+            1628
+          ],
+          "upsampled": false
+        },
+        {
+          "source": "clean-high-density/passport-reports.png",
+          "duration": 6,
+          "kind": "actual state hold",
+          "stage": "passport-reports",
+          "source_pixels": [
+            3370,
+            2104
+          ],
+          "crop_pixels": [
+            539,
+            274,
+            3100,
+            1715
+          ],
+          "upsampled": false
+        }
+      ],
+      "sha256": "b5f9b99340382087c08f910b10487e14308f152d7f39f26877fd1c1f2de90871",
+      "bytes": 1309103
+    }
+  }
+}

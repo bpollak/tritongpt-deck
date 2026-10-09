@@ -1,6 +1,6 @@
 # Contract Reviewer recording — October 8, 2026
 
-Files: `cabinet-contract-review.mp4`, `cabinet-contract-review-poster.jpg`, `cabinet-contract-review.vtt`. The silent, captioned clip is 70 seconds at 1920 × 1080 and fits the existing 90-second Cabinet slot.
+Files: `cabinet-contract-review-clean.mp4`, `cabinet-contract-review-clean-poster.jpg`, `cabinet-contract-review.vtt`. The silent app-only clip is 70 seconds at 1920 × 1080 and fits the existing 90-second Cabinet slot.
 
 ## Source agreement
 
@@ -16,7 +16,7 @@ The film shows the rule selection and context, shortened processing, completion,
 
 ## Recording and review boundaries
 
-The video uses actual native Word screen frames recorded through computer use, including held keyframes and cropped detail views for readability. Processing and idle time are shortened; titles and explanatory captions are added outside the captured app. No application UI, tracked change, comment, or model answer was synthesized or manually substituted. The same captured frame can appear as document context and a magnified detail. A raw-capture storage limit was resolved by compressing this demo's frames; no result was lost or replaced.
+The video uses actual native Word screen frames recorded through computer use, including held keyframes and cropped detail views for readability. Processing and idle time are shortened. The clean export uses the native 3440 × 2658 source frames and focused crops at 1920 × 1080, H.264 CRF 16. No added titles, footers, panels or captions are shown. No application UI, tracked change, comment, or model answer was synthesized or manually substituted. Context and detail are shown sequentially. Native Word labels and content already in the source document remain part of the capture.
 
 The document was saved with its proposals still tracked. No change was accepted, agreement signed, vendor contacted, or production contract modified. A qualified reviewer must decide on every proposal and its applicability; completion of a rule pass does not establish contract approval or exhaustive issue detection.
 

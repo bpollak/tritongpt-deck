@@ -1,0 +1,181 @@
+{
+  "duration_seconds": 90,
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "codec": "H.264",
+  "pixel_format": "yuv420p",
+  "fps": 30,
+  "crf": 16,
+  "added_graphics": false,
+  "added_captions": false,
+  "audio": false,
+  "letterboxing": false,
+  "source_directory": "/Users/bpollak/dev/cabinet-productivity-capture-20261008",
+  "media_type": "Edited sequence of authentic screen captures; not continuous video.",
+  "limitations": [
+    "Static keyframes preserve the original 90-second edit timing.",
+    "Focused crops omit peripheral app chrome and some source rows.",
+    "Original app content, native labels, cursor, and PowerPoint template footer remain visible.",
+    "No content was redrawn, composited, or fabricated."
+  ],
+  "segments": [
+    {
+      "source": "harness-productivity-source-fresh.png",
+      "source_dimensions": [
+        3754,
+        2272
+      ],
+      "source_sha256": "873e47faa05ce4d4300c0813dc7c91406798114c318d9b9a16cdade0984023f8",
+      "start_seconds": 0,
+      "duration_seconds": 9,
+      "crop_xywh": [
+        1834,
+        0,
+        1920,
+        1080
+      ],
+      "crop_reason": "Actual CSV preview and source-file navigation; native pixels, no enlargement."
+    },
+    {
+      "source": "harness-productivity-request-fresh.png",
+      "source_dimensions": [
+        3754,
+        2272
+      ],
+      "source_sha256": "82a42d495a26e6d9d93a0bbc8d8522895e6a49df2702299ff2d7e75e5e74a046",
+      "start_seconds": 9,
+      "duration_seconds": 12,
+      "crop_xywh": [
+        920,
+        520,
+        1920,
+        1080
+      ],
+      "crop_reason": "Actual prompt composer, local output requirements, and visible GLM selection."
+    },
+    {
+      "source": "harness-productivity-working-fresh.png",
+      "source_dimensions": [
+        3754,
+        2272
+      ],
+      "source_sha256": "a32a5ccc3498ecec51bad62a022da39d07b690cfb47dc794cd5313eba7353817",
+      "start_seconds": 21,
+      "duration_seconds": 9,
+      "crop_xywh": [
+        920,
+        0,
+        1920,
+        1080
+      ],
+      "crop_reason": "Actual submitted prompt and Running python3 execution status."
+    },
+    {
+      "source": "productivity-excel-formula-fresh.png",
+      "source_dimensions": [
+        5120,
+        2672
+      ],
+      "source_sha256": "e548a7b090b025496418659f71e0c9547d359c1c6cb46c4f2ab1870649bf860d",
+      "start_seconds": 30,
+      "duration_seconds": 15,
+      "crop_xywh": [
+        0,
+        0,
+        2720,
+        1530
+      ],
+      "crop_reason": "Native Excel formula bar, selected Room average, counts, comments, and source line."
+    },
+    {
+      "source": "productivity-excel-dashboard-fresh.png",
+      "source_dimensions": [
+        5120,
+        2672
+      ],
+      "source_sha256": "8be868af5b8787b3c24560ade8e07b627ece61a302e4e97b3631c5bb0dd4e296",
+      "start_seconds": 45,
+      "duration_seconds": 8,
+      "crop_xywh": [
+        60,
+        620,
+        1920,
+        1080
+      ],
+      "crop_reason": "Actual ratings chart and workbook labels at native pixel size."
+    },
+    {
+      "source": "productivity-excel-dashboard-fresh.png",
+      "source_dimensions": [
+        5120,
+        2672
+      ],
+      "source_sha256": "8be868af5b8787b3c24560ade8e07b627ece61a302e4e97b3631c5bb0dd4e296",
+      "start_seconds": 53,
+      "duration_seconds": 7,
+      "crop_xywh": [
+        3200,
+        620,
+        1920,
+        1080
+      ],
+      "crop_reason": "Actual comment-count chart at native pixel size."
+    },
+    {
+      "source": "productivity-powerpoint-chart-final.png",
+      "source_dimensions": [
+        5120,
+        2672
+      ],
+      "source_sha256": "06bae937145de310f64bf0d48b0eef1ccf53a482957f84377c1e7ecb45144fb8",
+      "start_seconds": 60,
+      "duration_seconds": 10,
+      "crop_xywh": [
+        875,
+        318,
+        3760,
+        2115
+      ],
+      "crop_reason": "Actual final PowerPoint slide canvas with editable ratings chart."
+    },
+    {
+      "source": "productivity-powerpoint-decisions-final.png",
+      "source_dimensions": [
+        5120,
+        2672
+      ],
+      "source_sha256": "a3fa7dae044dcef3ae11afba109cf91eeeed5a036f106eb930edf0e1091e364e",
+      "start_seconds": 70,
+      "duration_seconds": 10,
+      "crop_xywh": [
+        875,
+        318,
+        3760,
+        2115
+      ],
+      "crop_reason": "Actual final PowerPoint slide canvas with recorded decisions."
+    },
+    {
+      "source": "productivity-powerpoint-actions-final.png",
+      "source_dimensions": [
+        5120,
+        2672
+      ],
+      "source_sha256": "1bc7aea64801b8aa2d31c6b099b4c37821367604ce7d0e06566af38b8e505c0c",
+      "start_seconds": 80,
+      "duration_seconds": 10,
+      "crop_xywh": [
+        875,
+        318,
+        3760,
+        2115
+      ],
+      "crop_reason": "Actual repaired PowerPoint slide canvas with owners and unresolved questions."
+    }
+  ],
+  "video_sha256": "e7ab1ba55b2fad7e6c19a40cb4ef54acdec79d5faeb5729c0efc0d8fe39e795b",
+  "poster_sha256": "60726bfccc35a87fe3cbba71c4bf76b550fde9f1ba56b28e7523aa638818c224",
+  "poster_time_seconds": 46
+}

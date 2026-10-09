@@ -7258,10 +7258,8 @@ export const slides = [
     "managerSection": "Citizen Developer Showcase",
     "managerSummary": "Fresh 50-second computer-use recording: a sample coastal-climate expertise request, actual generated alignment explanations, topic search, and a faculty profile. In development; review source data and matches.",
     "durationSeconds": 60,
-    "videoSrc": "/media/cabinet/cabinet-directory.mp4",
-    "poster": "/media/cabinet/cabinet-directory-poster.jpg",
-    "captionsSrc": "/media/cabinet/cabinet-directory.vtt",
-    "captionsDefault": false,
+    "videoSrc": "/media/cabinet/cabinet-directory-clean.mp4",
+    "poster": "/media/cabinet/cabinet-directory-clean-poster.jpg",
     "releaseContext": {
       "channel": "pilot",
       "label": "Directory · In development",
@@ -7269,15 +7267,16 @@ export const slides = [
     },
     "recording": {
       "label": "Expertise request → suggested matches → profile review",
-      "format": "Actual browser recording • 50 seconds • edited takes and shortened processing",
+      "format": "Actual browser recording • 50 seconds • edited takes and shortened processing • app footage only",
       "mediaStem": "cabinet-directory",
       "status": "captured and reviewed"
     },
-    "speakerNotes": "One minute, including a 50-second clip. Citizen developer framing: campus workflow expertise can become a focused tool. Show a sample coastal flooding, sea-level rise, and adaptation request, then extracted requirements and actual generated alignment explanations. Search the Expert Directory for coastal flooding and open a profile. The current app still displays Faculty Finder, while this deck uses Directory as specified in the handoff. This is an early-stage, team-built example, not evidence that a non-programmer built it or that it used TritonAI Harness. No rollout, usage, time-saving, or validated ranking claim. The public-source profiles and model-generated scores require human review; the score is not a prediction of success or an institutional evaluation of a faculty member. Source coverage, duplicate profiles/name disambiguation, and arts/humanities coverage remain review topics. No outreach, investigator selection, or funding decision was performed. The clip combines actual browser screencast takes, cropped for readability with processing/idle time shortened; no UI was synthesized. Live UI checked October 8, 2026 at https://directory.apps.ucsd.edu/ . Research Alignment website is broader adjacent context, not proof that this exact Directory app has the same implementation or owner. Mention the early-phase caveat in narration.",
+    "speakerNotes": "One minute, including a 50-second clip. Citizen developer framing: campus workflow expertise can become a focused tool. Show a sample coastal flooding, sea-level rise, and adaptation request, then extracted requirements and actual generated alignment explanations. Search the Expert Directory for coastal flooding and open a profile. The current app still displays Faculty Finder, while this deck uses Directory as specified in the handoff. This is an early-stage, team-built example, not evidence that a non-programmer built it or that it used TritonAI Harness. No rollout, usage, time-saving, or validated ranking claim. The public-source profiles and model-generated scores require human review; the score is not a prediction of success or an institutional evaluation of a faculty member. Source coverage, duplicate profiles/name disambiguation, and arts/humanities coverage remain review topics. No outreach, investigator selection, or funding decision was performed. The clip combines actual browser screencast takes, cropped for readability with processing/idle time shortened; no UI was synthesized. Live UI checked October 8, 2026 at https://directory.apps.ucsd.edu/ . Research Alignment website is broader adjacent context, not proof that this exact Directory app has the same implementation or owner. Mention the early-phase caveat in narration. Presentation treatment: show only the original captured app or document. No added titles, status banners, explanatory panels, burned captions, or provenance footers. Explain source, release status, fictional data, shortened waits, and review boundaries verbally. Native app labels and document content remain unchanged.",
     "videoLoop": false,
-    "videoClearNav": true,
+    "videoClearNav": false,
     "videoAutoPlay": true,
-    "hideDemoBadge": true
+    "hideDemoBadge": true,
+    "demoOnly": true
   },
   {
     "id": 1003,
@@ -7294,25 +7293,24 @@ export const slides = [
     "durationSeconds": 60,
     "recording": {
       "label": "Visitor check-in → staff review → completed visit",
-      "format": "Actual browser recording • 50 seconds • isolated local database",
+      "format": "Actual browser recording • 50 seconds • isolated local database • app footage only",
       "mediaStem": "cabinet-passport",
       "status": "captured and reviewed"
     },
-    "speakerNotes": "One minute, including a 50-second edited computer-use recording. The citizen developer example is department staff translating their operational knowledge into a bounded application. The official use-case page says Passport Services and IPPS mapped the workflow and built the initial application with AI-assisted development tools; application and infrastructure specialists then prepared it for production. Do not claim TritonAI Harness was the original tool, name an individual builder without confirmation, or imply an AI model makes passport-service decisions. Production is documented for CSC and Bookstore, and the public entry point was verified October 8, 2026. The recording uses the actual public repository in a separate localhost checkout and fresh SQLite database, with a fictional Alex Demo visitor and reserved example contact details. It shows CSC walk-in check-in, Passport service, a missing-photo flag, confirmation, a saved staff note, staff sign-out, and reporting on that single fictional visit. Report counts and percentages are demonstration data, not campus performance metrics. Readiness prompts assist staff; they are not a legal eligibility determination or passport application. No live queue changes, real visitor records, sending, or publication occurred. Only local port/proxy/auth/database configuration differs from the checked-out app; UI and workflow source were not rewritten. Source: https://tritonai.ucsd.edu/use-cases/passport-app.html and https://github.com/IPPS-TechPM-BSA/passports-app . Build/ownership specifics beyond these sources remain owner-confirmation items.",
+    "speakerNotes": "One minute, including a 50-second edited computer-use recording. The citizen developer example is department staff translating their operational knowledge into a bounded application. The official use-case page says Passport Services and IPPS mapped the workflow and built the initial application with AI-assisted development tools; application and infrastructure specialists then prepared it for production. Do not claim TritonAI Harness was the original tool, name an individual builder without confirmation, or imply an AI model makes passport-service decisions. Production is documented for CSC and Bookstore, and the public entry point was verified October 8, 2026. The recording uses the actual public repository in a separate localhost checkout and fresh SQLite database, with a fictional Alex Demo visitor and reserved example contact details. It shows CSC walk-in check-in, Passport service, a missing-photo flag, confirmation, a saved staff note, staff sign-out, and reporting on that single fictional visit. Report counts and percentages are demonstration data, not campus performance metrics. Readiness prompts assist staff; they are not a legal eligibility determination or passport application. No live queue changes, real visitor records, sending, or publication occurred. Only local port/proxy/auth/database configuration differs from the checked-out app; UI and workflow source were not rewritten. Source: https://tritonai.ucsd.edu/use-cases/passport-app.html and https://github.com/IPPS-TechPM-BSA/passports-app . Build/ownership specifics beyond these sources remain owner-confirmation items. Presentation treatment: show only the original captured app or document. No added titles, status banners, explanatory panels, burned captions, or provenance footers. Explain source, release status, fictional data, shortened waits, and review boundaries verbally. Native app labels and document content remain unchanged.",
     "videoLoop": false,
-    "videoClearNav": true,
+    "videoClearNav": false,
     "videoAutoPlay": true,
     "hideDemoBadge": true,
     "managerSummary": "Fresh 50-second computer-use recording of the public Passport source running locally: fictional walk-in, missing-photo readiness flag, confirmation, staff note/status update, and reporting. Production service; isolated demo data.",
-    "videoSrc": "/media/cabinet/cabinet-passport.mp4",
-    "poster": "/media/cabinet/cabinet-passport-poster.jpg",
-    "captionsSrc": "/media/cabinet/cabinet-passport.vtt",
-    "captionsDefault": false,
+    "videoSrc": "/media/cabinet/cabinet-passport-clean.mp4",
+    "poster": "/media/cabinet/cabinet-passport-clean-poster.jpg",
     "releaseContext": {
       "channel": "stable",
       "label": "Passport · Production service",
       "captureNote": "Local source checkout · Fictional visitor · No live queue changes"
-    }
+    },
+    "demoOnly": true
   },
   {
     "id": 1004,
@@ -7363,25 +7361,24 @@ export const slides = [
     "durationSeconds": 90,
     "recording": {
       "label": "Public agreement → institutional rules → tracked changes and explanations",
-      "format": "Actual Word capture • 70 seconds • processing time shortened",
+      "format": "Actual Word capture • 70 seconds • processing time shortened • app footage only",
       "mediaStem": "cabinet-contract-review",
       "status": "captured and reviewed"
     },
-    "speakerNotes": "Ninety seconds, including a 70-second edited computer-use capture. Start with the public SolarWinds Software as a Service Agreement dated September 10, 2026. The complete ten-page vendor PDF was converted to a local Word demonstration copy with vendor words preserved, whitespace reflowed, and source/demo headers added. Run the installed UC San Diego Contract Reviewer with all 19 rule groups selected, risk assessment enabled, and rule names in author labels. Additional context states that no purchase, customer data, order form, DPA, UC Health facts, or federal-funding facts are supplied. Show actual tracked changes and comments produced by the add-in, then inspect representative clauses and explanations. The marked-up document remains a proposal for qualified human review; no changes are accepted, agreement signed, or vendor contacted. Video uses actual native Word frames, cropped/scaled for readability with processing and idle time shortened. No redlines or application UI were synthesized. Existing contract workflow is described as production at https://tritonai.ucsd.edu/use-cases/contract-review.html ; that page describes inbox/portal delivery and does not establish this Word add-in version or campus rollout. Sandra and Sean still need to confirm the add-in release status and department queue. Do not reuse old review-time or savings numbers for this capture. Frame this as a specialized administrative workflow built by the AI team, with prioritization and owner review as the next decisions. Source: https://www.solarwinds.com/legal/software-services-agreement .",
+    "speakerNotes": "Ninety seconds, including a 70-second edited computer-use capture. Start with the public SolarWinds Software as a Service Agreement dated September 10, 2026. The complete ten-page vendor PDF was converted to a local Word demonstration copy with vendor words preserved, whitespace reflowed, and source/demo headers added. Run the installed UC San Diego Contract Reviewer with all 19 rule groups selected, risk assessment enabled, and rule names in author labels. Additional context states that no purchase, customer data, order form, DPA, UC Health facts, or federal-funding facts are supplied. Show actual tracked changes and comments produced by the add-in, then inspect representative clauses and explanations. The marked-up document remains a proposal for qualified human review; no changes are accepted, agreement signed, or vendor contacted. Video uses actual native Word frames, cropped/scaled for readability with processing and idle time shortened. No redlines or application UI were synthesized. Existing contract workflow is described as production at https://tritonai.ucsd.edu/use-cases/contract-review.html ; that page describes inbox/portal delivery and does not establish this Word add-in version or campus rollout. Sandra and Sean still need to confirm the add-in release status and department queue. Do not reuse old review-time or savings numbers for this capture. Frame this as a specialized administrative workflow built by the AI team, with prioritization and owner review as the next decisions. Source: https://www.solarwinds.com/legal/software-services-agreement . Presentation treatment: show only the original captured app or document. No added titles, status banners, explanatory panels, burned captions, or provenance footers. Explain source, release status, fictional data, shortened waits, and review boundaries verbally. Native app labels and document content remain unchanged.",
     "videoLoop": false,
-    "videoClearNav": true,
+    "videoClearNav": false,
     "videoAutoPlay": true,
     "hideDemoBadge": true,
     "managerSummary": "Fresh native Word computer-use capture: review a public SolarWinds SaaS agreement with the installed Contract Reviewer, inspect rule-linked redlines and comments, and leave decisions with a qualified reviewer.",
-    "videoSrc": "/media/cabinet/cabinet-contract-review.mp4",
-    "poster": "/media/cabinet/cabinet-contract-review-poster.jpg",
-    "captionsSrc": "/media/cabinet/cabinet-contract-review.vtt",
-    "captionsDefault": false,
+    "videoSrc": "/media/cabinet/cabinet-contract-review-clean.mp4",
+    "poster": "/media/cabinet/cabinet-contract-review-clean-poster.jpg",
     "releaseContext": {
       "channel": "pilot",
       "label": "Installed Word add-in · Release status pending",
       "captureNote": "Public vendor agreement · Actual rule review · Human approval required"
-    }
+    },
+    "demoOnly": true
   },
   {
     "id": 1006,
@@ -7395,15 +7392,13 @@ export const slides = [
     ],
     "managerSection": "Administrative Verticals",
     "durationSeconds": 90,
-    "speakerNotes": "Ninety seconds total: 50-second ServiceNow clip plus 40 seconds for framing and remaining quick updates. Captured in the logged-in support.ucsd.edu interface on October 8, 2026. Case > Create New Case exposes Suggest Assignment Group. No real requester, device identifier, location, credential, or existing case content is used. The first fictional Cisco Secure Client VPN issue produces ITS-ServiceDesk 92.1%, ITS-FieldSupport-Intake 2.7%, ITS-SecuritySOC 1.3%. The second fictional desktop that will not power on produces ITS-FieldSupport-Intake 83.5%, ITS-ServiceDesk 15.0%, ITS-RRSS 0.3%. These percentages are model scores displayed for these examples, not independently measured routing accuracy. Both dialogs display Hybrid recommendation and Decision: DeBERTa kept — confidence margin was high. No LLM fallback was demonstrated; do not claim these cases used TritonGPT, the Harness, or an LLM. Staff sees alternatives and chooses a group. Selecting the hardware recommendation fills the assignment field on an unsaved form; no Submit or Save action occurs. Leave without saving discards the fictional case. The 50-second video uses seven actual captured browser key frames held for reading, cropped/scaled and captioned; no UI or output is synthesized. This verifies the function is available to Brett in the current interface, not its campus rollout scope or performance. Justin/Service Desk owners still need to confirm rollout, model governance, and outcome metrics. Remaining quick updates: Transcript matching validation is underway, with further work gated on TSS go-live; do not imply it is live. College selection assistant: admissions self-service, current deployment status to confirm. Directory has its own citizen developer demonstration. Nicole still needs to confirm rollout and roadmap; mention the VCRI demonstration to Faith Hawkins and Corey only if confirmed.",
-    "videoSrc": "/media/cabinet/cabinet-servicenow-routing.mp4",
+    "speakerNotes": "Ninety seconds total: 50-second ServiceNow clip plus 40 seconds for framing and remaining quick updates. Captured in the logged-in support.ucsd.edu interface on October 8, 2026. Case > Create New Case exposes Suggest Assignment Group. No real requester, device identifier, location, credential, or existing case content is used. The first fictional Cisco Secure Client VPN issue produces ITS-ServiceDesk 92.1%, ITS-FieldSupport-Intake 2.7%, ITS-SecuritySOC 1.3%. The second fictional desktop that will not power on produces ITS-FieldSupport-Intake 83.5%, ITS-ServiceDesk 15.0%, ITS-RRSS 0.3%. These percentages are model scores displayed for these examples, not independently measured routing accuracy. Both dialogs display Hybrid recommendation and Decision: DeBERTa kept — confidence margin was high. No LLM fallback was demonstrated; do not claim these cases used TritonGPT, the Harness, or an LLM. Staff sees alternatives and chooses a group. Selecting the hardware recommendation fills the assignment field on an unsaved form; no Submit or Save action occurs. Leave without saving discards the fictional case. The 50-second video uses five fresh high-resolution captured browser key frames held for reading, cropped/scaled; no UI or output is synthesized. This verifies the function is available to Brett in the current interface, not its campus rollout scope or performance. Justin/Service Desk owners still need to confirm rollout, model governance, and outcome metrics. Remaining quick updates: Transcript matching validation is underway, with further work gated on TSS go-live; do not imply it is live. College selection assistant: admissions self-service, current deployment status to confirm. Directory has its own citizen developer demonstration. Nicole still needs to confirm rollout and roadmap; mention the VCRI demonstration to Faith Hawkins and Corey only if confirmed. Presentation treatment: show only the original captured app or document. No added titles, status banners, explanatory panels, burned captions, or provenance footers. Explain source, release status, fictional data, shortened waits, and review boundaries verbally. Native app labels and document content remain unchanged.",
+    "videoSrc": "/media/cabinet/cabinet-servicenow-routing-clean.mp4",
     "videoLoop": false,
-    "videoClearNav": true,
+    "videoClearNav": false,
     "videoAutoPlay": true,
     "hideDemoBadge": true,
-    "poster": "/media/cabinet/cabinet-servicenow-routing-poster.jpg",
-    "captionsSrc": "/media/cabinet/cabinet-servicenow-routing.vtt",
-    "captionsDefault": false,
+    "poster": "/media/cabinet/cabinet-servicenow-routing-clean-poster.jpg",
     "managerSummary": "Actual ServiceNow computer-use demo: two fictional unsaved cases, ranked assignment-group suggestions, and staff selection. Transcript matching and college assistant updates remain in speaker notes.",
     "releaseContext": {
       "channel": "pilot",
@@ -7412,10 +7407,11 @@ export const slides = [
     },
     "recording": {
       "label": "Fictional issue → ranked group suggestions → staff selection",
-      "format": "Actual browser capture • 50 seconds • held key frames",
+      "format": "Actual browser capture • 50 seconds • held key frames • app footage only",
       "mediaStem": "cabinet-servicenow-routing",
       "status": "captured and reviewed"
-    }
+    },
+    "demoOnly": true
   },
   {
     "id": 1015,
@@ -7689,11 +7685,12 @@ export const slides = [
       "format": "Fresh Harness UI screenshots",
       "mediaStem": "cabinet-harness-overview"
     },
-    "speakerNotes": "One minute. 0–24s: three Plugins stages cover all seven rows; start with Microsoft 365/n8n. Cloud-service tools differ from local Excel/PowerPoint creation in the next demo. 24–40s: show actual Accessibility and Branding instructions; no Office-specific skill title was confirmed. 40–60s: Browser access, then GLM and permission choices. The captured fictional task uses Full access; do not imply it ran in Supervised mode or that this is an institutional default. A person chooses the mode and reviews the outputs. Runtime host/key details and the uninstalled Device hub are excluded. All captures are October 8 Nightly 0.3.6-nightly.20261008.63. For narration: these capabilities are available in stable 0.3.6; the actual screenshots show Nightly .63. Stable 0.3.6 was published October 8 and includes all seven plugins, including Lucid and Tableau. Skill installation/use, browser settings, and approval controls are in the stable source. These screenshots are not separate stable-binary captures. Do not claim that the nightly saved-catalog refresh behavior or /feedback routing is in stable: the exact tag comparison shows those two extra commits only in Nightly .63. Keep sixty seconds; native mobile website task is separate.",
+    "speakerNotes": "One minute. 0–24s: three Plugins stages cover all seven rows; start with Microsoft 365/n8n. Cloud-service tools differ from local Excel/PowerPoint creation in the next demo. 24–40s: show actual Accessibility and Branding instructions; no Office-specific skill title was confirmed. 40–60s: Browser access, then GLM and permission choices. The captured fictional task uses Full access; do not imply it ran in Supervised mode or that this is an institutional default. A person chooses the mode and reviews the outputs. Runtime host/key details and the uninstalled Device hub are excluded. All captures are October 8 Nightly 0.3.6-nightly.20261008.63. For narration: these capabilities are available in stable 0.3.6; the actual screenshots show Nightly .63. Stable 0.3.6 was published October 8 and includes all seven plugins, including Lucid and Tableau. Skill installation/use, browser settings, and approval controls are in the stable source. These screenshots are not separate stable-binary captures. Do not claim that the nightly saved-catalog refresh behavior or /feedback routing is in stable: the exact tag comparison shows those two extra commits only in Nightly .63. Keep sixty seconds; native mobile website task is separate. Presentation treatment: show only the original captured app or document. No added titles, status banners, explanatory panels, burned captions, or provenance footers. Explain source, release status, fictional data, shortened waits, and review boundaries verbally. Native app labels and document content remain unchanged.",
     "videoLoop": false,
-    "videoClearNav": true,
+    "videoClearNav": false,
     "videoAutoPlay": true,
-    "hideDemoBadge": true
+    "hideDemoBadge": true,
+    "demoOnly": true
   },
   {
     "id": 1008,
@@ -7743,19 +7740,18 @@ export const slides = [
     },
     "recording": {
       "label": "Homepage → Learn → Discovery Series → video → quiz",
-      "format": "Actual website captures • 36 seconds • silent, captioned presentation cut",
+      "format": "Fresh 3370×2216 website captures • 36 seconds • silent, presentation cut • app footage only",
       "mediaStem": "cabinet-training-discovery",
       "status": "captured and reviewed"
     },
-    "speakerNotes": "Forty seconds including the 36-second cut. The live public website is the source. Navigate homepage > Learn > Discovery Series, open What is AI? with Trevor Bonjour, play a short excerpt, and answer the knowledge check. All three questions were answered through the UI; the short edit shows the first answer feedback and the final 3 of 3 result. Do not describe this as watching the full six-minute lesson. The video is silent for presenter talk-over and uses six seconds of actual changing playback frames, with navigation and quiz frames held for reading. Browser-only progress, not an institutional credential or LMS record. Use the closing discussion prompts to encourage teams to learn together. Keep the adjacent mobile demo to 140 seconds, preserving the existing three-minute enablement allocation and twenty-minute deck.",
+    "speakerNotes": "Forty seconds including the 36-second cut. The live public website is the source. Navigate homepage > Learn > Discovery Series, open What is AI? with Trevor Bonjour, play a short excerpt, and answer the knowledge check. All three questions were answered through the UI; the short edit shows the first answer feedback and the final 3 of 3 result. Do not describe this as watching the full six-minute lesson. The video is silent for presenter talk-over and uses six seconds of fresh full-density browser playback frames, with navigation and quiz frames held for reading. Browser-only progress, not an institutional credential or LMS record. Use the closing discussion prompts to encourage teams to learn together. Keep the adjacent mobile demo to 140 seconds, preserving the existing three-minute enablement allocation and twenty-minute deck. Presentation treatment: show only the original captured app or document. No added titles, status banners, explanatory panels, burned captions, or provenance footers. Explain source, release status, fictional data, shortened waits, and review boundaries verbally. Native app labels and document content remain unchanged.",
     "videoLoop": false,
-    "videoClearNav": true,
+    "videoClearNav": false,
     "videoAutoPlay": true,
     "hideDemoBadge": true,
-    "videoSrc": "/media/cabinet/cabinet-training-discovery.mp4",
-    "poster": "/media/cabinet/cabinet-training-discovery-poster.jpg",
-    "captionsSrc": "/media/cabinet/cabinet-training-discovery.vtt",
-    "captionsDefault": false
+    "videoSrc": "/media/cabinet/cabinet-training-discovery-clean.mp4",
+    "poster": "/media/cabinet/cabinet-training-discovery-clean-poster.jpg",
+    "demoOnly": true
   },
   {
     "id": 1009,
@@ -7786,18 +7782,18 @@ export const slides = [
     },
     "recording": {
       "label": "Mobile request → checks → website preview",
-      "format": "Actual iPhone simulator recording • 80 seconds • processing time shortened",
+      "format": "Actual iPhone simulator recording • 80 seconds • processing time shortened • app footage only",
       "mediaStem": "cabinet-training-website",
       "status": "captured and reviewed"
     },
-    "speakerNotes": "Two minutes twenty seconds including the 80-second film and narration. The preceding Discovery Series walkthrough has its own forty-second allocation. Label this mobile footage as preview captured with a development simulator and Nightly .63 host. Desktop stable release does not establish production mobile availability. The 80-second film uses actual simulator recordings with waiting time shortened and visibly labeled. Three completed fictional chats populate the opening project. The phone directs the existing Harness on the Mac using official TritonAI Cloud GLM 5.3; the task edits only a separate local website checkout. Show the prior homepage training block, the request and boundaries, checks, completed task, then actual updated page in mobile Safari. The training link is preserved. Do not imply production publication. The preceding slide demonstrates Discovery Series playback and its quiz; Harness Essentials is a separate learning path. Temporary simulator access was revoked after capture. No commit, push, or publish. Production publication remains a separate human decision.",
+    "speakerNotes": "Two minutes twenty seconds including the 80-second film and narration. The preceding Discovery Series walkthrough has its own forty-second allocation. Label this mobile footage as preview captured with a development simulator and Nightly .63 host. Desktop stable release does not establish production mobile availability. The 80-second film uses actual simulator recordings with waiting time shortened with the shortened timing explained verbally. Three completed fictional chats populate the opening project. The phone directs the existing Harness on the Mac using official TritonAI Cloud GLM 5.3; the task edits only a separate local website checkout. Show the prior homepage training block, the request and boundaries, checks, completed task, then actual updated page in mobile Safari. The training link is preserved. Do not imply production publication. The preceding slide demonstrates Discovery Series playback and its quiz; Harness Essentials is a separate learning path. Temporary simulator access was revoked after capture. No commit, push, or publish. Production publication remains a separate human decision. Presentation treatment: show only the original captured app or document. No added titles, status banners, explanatory panels, burned captions, or provenance footers. Explain source, release status, fictional data, shortened waits, and review boundaries verbally. Native app labels and document content remain unchanged.",
     "videoLoop": false,
-    "videoClearNav": true,
+    "videoClearNav": false,
     "videoAutoPlay": true,
     "hideDemoBadge": true,
-    "videoSrc": "/media/cabinet/cabinet-mobile-website.mp4",
-    "poster": "/media/cabinet/cabinet-mobile-website-poster.jpg",
-    "captionsSrc": "/media/cabinet/cabinet-mobile-website.vtt"
+    "videoSrc": "/media/cabinet/cabinet-mobile-website-clean.mp4",
+    "poster": "/media/cabinet/cabinet-mobile-website-clean-poster.jpg",
+    "demoOnly": true
   },
   {
     "id": 1010,
@@ -7828,18 +7824,18 @@ export const slides = [
     },
     "recording": {
       "label": "Data → Excel charts → PowerPoint",
-      "format": "Fresh actual UI key-frame montage • 90 seconds • processing time shortened",
+      "format": "Fresh actual UI key-frame montage • 90 seconds • processing time shortened • app footage only",
       "mediaStem": "cabinet-personal-productivity",
       "status": "captured and reviewed"
     },
-    "speakerNotes": "The workflow uses released desktop capabilities; the actual footage was recorded on Nightly .63, not the stable binary. No nightly-specific shortcut or catalog refresh behavior is shown. Ninety-second montage of actual freshly captured Harness execution and native Excel/PowerPoint review, explicitly labeled key frames; not continuous desktop video. Actual official GLM run used 42 fictional survey responses and meeting notes. Existing files are ingested; no new survey submissions collected. Show the request, source reads, generated workbook formulas, rating chart and comment chart, then generated PowerPoint chart, decisions, and repaired actions slide. Room sum113 /38 valid responses =2.97, excluding four blanks; Pace4.05 and Content4.43. Survey scale1–5, chart axes0–5 for a zero baseline. Workbook has26 live formulas and2 native editable charts. Four-slide PowerPoint uses the verified official UCSD BlueAndGold template, includes1 native editable chart and source notes. Inputs/template unchanged. Native review caught a layout problem on slide4; actual GLM repair and final native check completed before these captures. No connected accounts, sending, or publishing. Human review remains essential.",
+    "speakerNotes": "The workflow uses released desktop capabilities; the actual footage was recorded on Nightly .63, not the stable binary. No nightly-specific shortcut or catalog refresh behavior is shown. Ninety-second montage of actual freshly captured Harness execution and native Excel/PowerPoint review, explicitly labeled key frames; not continuous desktop video. Actual official GLM run used 42 fictional survey responses and meeting notes. Existing files are ingested; no new survey submissions collected. Show the request, source reads, generated workbook formulas, rating chart and comment chart, then generated PowerPoint chart, decisions, and repaired actions slide. Room sum113 /38 valid responses =2.97, excluding four blanks; Pace4.05 and Content4.43. Survey scale1–5, chart axes0–5 for a zero baseline. Workbook has26 live formulas and2 native editable charts. Four-slide PowerPoint uses the verified official UCSD BlueAndGold template, includes1 native editable chart and source notes. Inputs/template unchanged. Native review caught a layout problem on slide4; actual GLM repair and final native check completed before these captures. No connected accounts, sending, or publishing. Human review remains essential. Presentation treatment: show only the original captured app or document. No added titles, status banners, explanatory panels, burned captions, or provenance footers. Explain source, release status, fictional data, shortened waits, and review boundaries verbally. Native app labels and document content remain unchanged.",
     "videoLoop": false,
-    "videoClearNav": true,
+    "videoClearNav": false,
     "videoAutoPlay": true,
     "hideDemoBadge": true,
-    "videoSrc": "/media/cabinet/cabinet-personal-productivity.mp4",
-    "poster": "/media/cabinet/cabinet-personal-productivity-poster.jpg",
-    "captionsSrc": "/media/cabinet/cabinet-personal-productivity.vtt"
+    "videoSrc": "/media/cabinet/cabinet-personal-productivity-clean.mp4",
+    "poster": "/media/cabinet/cabinet-personal-productivity-clean-poster.jpg",
+    "demoOnly": true
   },
   {
     "id": 1011,

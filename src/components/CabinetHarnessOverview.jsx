@@ -8,9 +8,9 @@ export default function CabinetHarnessOverview({ slide }) {
   const view = views[selected];
   const scene = view.scenes[selectedScene];
   return (
-    <section className="cabinet-harness-overview" aria-label={slide.title}>
+    <section className={`cabinet-harness-overview${slide.demoOnly ? ' cabinet-harness-overview--demo-only' : ''}`} aria-label={slide.title}>
       <header>
-        <h1>{slide.title}</h1>
+        {!slide.demoOnly && <h1>{slide.title}</h1>}
         <div className="cabinet-harness-switcher" role="group" aria-label="Harness screenshots">
           {views.map((item, index) => (
             <button key={item.label} type="button" aria-pressed={selected === index} onClick={() => { setSelected(index); setSelectedScene(item.initialScene || 0); }}>{item.label}</button>
@@ -18,7 +18,7 @@ export default function CabinetHarnessOverview({ slide }) {
         </div>
       </header>
       <div className="cabinet-harness-scene-heading">
-        <h2>{view.heading}</h2>
+        {!slide.demoOnly && <h2>{view.heading}</h2>}
         <div className="cabinet-harness-stages" role="group" aria-label={`${view.label} screenshot stages`}>
           {view.scenes.map((item, index) => (
             <button key={item.label} type="button" aria-pressed={selectedScene === index} onClick={() => setSelectedScene(index)}>{item.label}</button>
@@ -27,7 +27,7 @@ export default function CabinetHarnessOverview({ slide }) {
       </div>
       <figure className="cabinet-harness-capture">
         <img src={`${import.meta.env.BASE_URL}cabinet-harness/${scene.src}`} alt={scene.alt} />
-        <figcaption>{scene.note}</figcaption>
+        {!slide.demoOnly && <figcaption>{scene.note}</figcaption>}
       </figure>
     </section>
   );

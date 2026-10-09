@@ -357,6 +357,7 @@ const Presentation = () => {
       className="presentation-viewer w-screen h-screen flex flex-col overflow-hidden relative font-sans"
       role="application"
       aria-label="Presentation viewer"
+      data-demo-only={currentSlide?.demoOnly || undefined}
       style={{ backgroundColor: currentSlide?.backgroundColor || (currentSlide?.dark ? '#1a1a1a' : '#F5F0E6') }}
     >
       <div aria-hidden="true" className="absolute w-0 h-0 overflow-hidden opacity-0 pointer-events-none">
@@ -419,7 +420,7 @@ const Presentation = () => {
               data-mobile-reading={(currentSlide.mobileReading || ['solution-showcase', 'solution-showcase-video', 'data-dashboard'].includes(currentSlide.layout) || currentSlide.variant === 'harness-components-framework') || undefined}
             >
               <Slide slide={currentSlide} />
-              {currentSlide.claimNote && (
+              {currentSlide.claimNote && !currentSlide.demoOnly && (
                 <div
                   className="presentation-claim-note pointer-events-none absolute bottom-2 left-2 z-40 max-w-[72vw] rounded-lg border border-white/60 bg-white/88 px-2.5 py-1 text-[10.5px] font-semibold leading-tight text-slate-600 shadow-sm backdrop-blur-sm sm:bottom-4 sm:left-24 sm:max-w-[30vw] sm:text-[11.5px]"
                   aria-label={`Claim context: ${currentSlide.claimNote}`}
@@ -461,7 +462,7 @@ const Presentation = () => {
         </button>
       </nav>
 
-      <TranscriptionOverlay />
+      <TranscriptionOverlay hideToggle={currentSlide?.demoOnly} />
     </div>
   );
 };

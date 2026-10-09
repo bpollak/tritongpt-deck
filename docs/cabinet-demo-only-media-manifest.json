@@ -1,0 +1,593 @@
+{
+  "date": "2026-10-08",
+  "treatment": "Only actual captured app/document pixels. No added headers, footers, status banners, side panels or captions. Crop and scale for readability; held keyframes and shortened waits remain. Native app labels and document content are preserved. Desktop exports 1920x1080 CRF16; simulator1206x2622 native CRF16.",
+  "media": [
+    {
+      "video": "/media/cabinet/cabinet-directory-clean.mp4",
+      "poster": "/media/cabinet/cabinet-directory-clean-poster.jpg",
+      "sha256": "59763032839b196874c8dc7c284d280a4872ed1cb96b50f85fe974a05a700d45",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "30/1",
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "50.000000"
+        }
+      }
+    },
+    {
+      "video": "/media/cabinet/cabinet-passport-clean.mp4",
+      "poster": "/media/cabinet/cabinet-passport-clean-poster.jpg",
+      "sha256": "b5f9b99340382087c08f910b10487e14308f152d7f39f26877fd1c1f2de90871",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "30/1"
+          }
+        ],
+        "format": {
+          "duration": "50.000000"
+        }
+      }
+    },
+    {
+      "video": "/media/cabinet/cabinet-contract-review-clean.mp4",
+      "poster": "/media/cabinet/cabinet-contract-review-clean-poster.jpg",
+      "sha256": "18a6365f2a7668e7c4cc6e07f8f9954cfe3ca6a686cc25d6c9fdbfb9ad53d852",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "30/1",
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "70.000000"
+        }
+      }
+    },
+    {
+      "video": "/media/cabinet/cabinet-servicenow-routing-clean.mp4",
+      "poster": "/media/cabinet/cabinet-servicenow-routing-clean-poster.jpg",
+      "sha256": "364a15f1ba4d63e72b3c2706b4bcb828bb5ec593d771e6f70815198d3bc8b8e9",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "30/1",
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "50.000000"
+        }
+      }
+    },
+    {
+      "video": "/media/cabinet/cabinet-training-discovery-clean.mp4",
+      "poster": "/media/cabinet/cabinet-training-discovery-clean-poster.jpg",
+      "sha256": "b2a5803dcea779e477fe730f6ca37725cc812300d6ee9c8774b98295e5d619fe",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "30/1",
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "36.000000"
+        }
+      }
+    },
+    {
+      "video": "/media/cabinet/cabinet-personal-productivity-clean.mp4",
+      "poster": "/media/cabinet/cabinet-personal-productivity-clean-poster.jpg",
+      "sha256": "e7ab1ba55b2fad7e6c19a40cb4ef54acdec79d5faeb5729c0efc0d8fe39e795b",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "30/1",
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "90.000000"
+        }
+      }
+    },
+    {
+      "video": "/media/cabinet/cabinet-mobile-website-clean.mp4",
+      "poster": "/media/cabinet/cabinet-mobile-website-clean-poster.jpg",
+      "sha256": "447b42a951e8fad3dc68384ed68372237a98ce7eafdaf756b4b903f7c2feec60",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1206,
+            "height": 2622,
+            "r_frame_rate": "30/1"
+          }
+        ],
+        "format": {
+          "duration": "80.000000"
+        }
+      }
+    }
+  ],
+  "root_capture_edits": {
+    "cabinet-servicenow-routing": {
+      "duration": 50,
+      "size": [
+        1920,
+        1080
+      ],
+      "segments": [
+        {
+          "sources": [
+            "/Users/bpollak/dev/cabinet-clean-demos-20261008/servicenow-hd/000.png"
+          ],
+          "duration": 9,
+          "crop": [
+            0,
+            0,
+            3370,
+            1896
+          ]
+        },
+        {
+          "sources": [
+            "/Users/bpollak/dev/cabinet-clean-demos-20261008/servicenow-hd/001.png"
+          ],
+          "duration": 9,
+          "crop": [
+            700,
+            80,
+            2670,
+            1188
+          ]
+        },
+        {
+          "sources": [
+            "/Users/bpollak/dev/cabinet-clean-demos-20261008/servicenow-hd/002.png"
+          ],
+          "duration": 9,
+          "crop": [
+            0,
+            0,
+            3370,
+            1896
+          ]
+        },
+        {
+          "sources": [
+            "/Users/bpollak/dev/cabinet-clean-demos-20261008/servicenow-hd/003.png"
+          ],
+          "duration": 11,
+          "crop": [
+            700,
+            80,
+            2670,
+            1188
+          ]
+        },
+        {
+          "sources": [
+            "/Users/bpollak/dev/cabinet-clean-demos-20261008/servicenow-hd/004.png"
+          ],
+          "duration": 12,
+          "crop": [
+            300,
+            50,
+            3000,
+            1569
+          ]
+        }
+      ],
+      "method": "Original captures only; crop/resize, no added text, panels, captions or synthesized UI."
+    },
+    "cabinet-training-discovery": {
+      "duration": 36,
+      "size": [
+        1920,
+        1080
+      ],
+      "segments": [
+        {
+          "sources": [
+            "/Users/bpollak/dev/cabinet-clean-demos-20261008/training-hd/0000.png"
+          ],
+          "duration": 3,
+          "crop": [
+            0,
+            0,
+            3370,
+            1896
+          ]
+        },
+        {
+          "sources": [
+            "/Users/bpollak/dev/cabinet-clean-demos-20261008/training-hd/0001.png"
+          ],
+          "duration": 3,
+          "crop": [
+            0,
+            0,
+            3370,
+            1896
+          ]
+        },
+        {
+          "sources": [
+            "/Users/bpollak/dev/cabinet-clean-demos-20261008/training-hd/0002.png"
+          ],
+          "duration": 3,
+          "crop": [
+            260,
+            120,
+            3110,
+            1723
+          ]
+        },
+        {
+          "sources": [
+            "/Users/bpollak/dev/cabinet-clean-demos-20261008/training-hd/0003.png"
+          ],
+          "duration": 4,
+          "crop": [
+            260,
+            300,
+            3110,
+            1903
+          ]
+        },
+        {
+          "sources": [
+            "/Users/bpollak/dev/cabinet-clean-demos-20261008/training-hd/0004.png"
+          ],
+          "duration": 2,
+          "crop": [
+            290,
+            290,
+            2330,
+            1438
+          ]
+        },
+        {
+          "sources": [
+            "/Users/bpollak/dev/cabinet-clean-demos-20261008/training-hd/0005.png",
+            "/Users/bpollak/dev/cabinet-clean-demos-20261008/training-hd/0006.png",
+            "/Users/bpollak/dev/cabinet-clean-demos-20261008/training-hd/0007.png",
+            "/Users/bpollak/dev/cabinet-clean-demos-20261008/training-hd/0008.png",
+            "/Users/bpollak/dev/cabinet-clean-demos-20261008/training-hd/0009.png",
+            "/Users/bpollak/dev/cabinet-clean-demos-20261008/training-hd/0010.png",
+            "/Users/bpollak/dev/cabinet-clean-demos-20261008/training-hd/0011.png",
+            "/Users/bpollak/dev/cabinet-clean-demos-20261008/training-hd/0012.png",
+            "/Users/bpollak/dev/cabinet-clean-demos-20261008/training-hd/0013.png",
+            "/Users/bpollak/dev/cabinet-clean-demos-20261008/training-hd/0014.png",
+            "/Users/bpollak/dev/cabinet-clean-demos-20261008/training-hd/0015.png",
+            "/Users/bpollak/dev/cabinet-clean-demos-20261008/training-hd/0016.png"
+          ],
+          "duration": 6,
+          "crop": [
+            290,
+            290,
+            2330,
+            1438
+          ]
+        },
+        {
+          "sources": [
+            "/Users/bpollak/dev/cabinet-clean-demos-20261008/training-hd/0017.png"
+          ],
+          "duration": 3,
+          "crop": [
+            280,
+            700,
+            2440,
+            1915
+          ]
+        },
+        {
+          "sources": [
+            "/Users/bpollak/dev/cabinet-clean-demos-20261008/training-hd/0018.png"
+          ],
+          "duration": 5,
+          "crop": [
+            900,
+            650,
+            2500,
+            1550
+          ]
+        },
+        {
+          "sources": [
+            "/Users/bpollak/dev/cabinet-clean-demos-20261008/training-hd/0019.png"
+          ],
+          "duration": 7,
+          "crop": [
+            280,
+            0,
+            2440,
+            1215
+          ]
+        }
+      ],
+      "method": "Original captures only; crop/resize, no added text, panels, captions or synthesized UI."
+    },
+    "cabinet-contract-review": {
+      "duration": 70,
+      "size": [
+        1920,
+        1080
+      ],
+      "segments": [
+        {
+          "sources": [
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/01-agreement.png"
+          ],
+          "duration": 6,
+          "crop": [
+            400,
+            0,
+            2750,
+            1322
+          ]
+        },
+        {
+          "sources": [
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/02-rules.png"
+          ],
+          "duration": 7,
+          "crop": [
+            2054,
+            800,
+            3440,
+            1580
+          ]
+        },
+        {
+          "sources": [
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/03-ready.png"
+          ],
+          "duration": 6,
+          "crop": [
+            2000,
+            900,
+            3440,
+            1710
+          ]
+        },
+        {
+          "sources": [
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/05-progress.png",
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/09-progress.png",
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/14-progress.png",
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/17-latest.png"
+          ],
+          "duration": 5,
+          "crop": [
+            2100,
+            830,
+            3440,
+            1584
+          ]
+        },
+        {
+          "sources": [
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/20-complete.png"
+          ],
+          "duration": 4,
+          "crop": [
+            2100,
+            800,
+            3440,
+            1554
+          ]
+        },
+        {
+          "sources": [
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/20-complete.png"
+          ],
+          "duration": 10,
+          "crop": [
+            100,
+            320,
+            2730,
+            1799
+          ]
+        },
+        {
+          "sources": [
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000816.png",
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000817.png",
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000818.png",
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000819.png",
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000820.png",
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000821.png",
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000822.png",
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000823.png",
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000824.png",
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000825.png",
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000826.png",
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000827.png",
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000828.png",
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000829.png",
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000830.png",
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000831.png",
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000832.png",
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000833.png",
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000834.png",
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000835.png",
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/frames/000836.png"
+          ],
+          "duration": 12,
+          "crop": [
+            120,
+            330,
+            2730,
+            1798
+          ]
+        },
+        {
+          "sources": [
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/23-rule-explanation.png"
+          ],
+          "duration": 8,
+          "crop": [
+            120,
+            960,
+            2730,
+            2428
+          ]
+        },
+        {
+          "sources": [
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/26-summary-visible.png"
+          ],
+          "duration": 8,
+          "crop": [
+            2000,
+            1848,
+            3440,
+            2658
+          ]
+        },
+        {
+          "sources": [
+            "/Users/bpollak/dev/cabinet-contract-capture-20261008/23-rule-explanation.png"
+          ],
+          "duration": 4,
+          "crop": [
+            120,
+            330,
+            2730,
+            1798
+          ]
+        }
+      ],
+      "method": "Original captures only; crop/resize, no added text, panels, captions or synthesized UI."
+    },
+    "cabinet-mobile-website": {
+      "duration": 80,
+      "size": [
+        1206,
+        2622
+      ],
+      "segments": [
+        [
+          "mobile-home-raw.mp4",
+          0,
+          6
+        ],
+        [
+          "mobile-website-before.mp4",
+          0,
+          6
+        ],
+        [
+          "mobile-website-task-raw.mp4",
+          14,
+          30
+        ],
+        [
+          "mobile-website-task-raw.mp4",
+          44,
+          8
+        ],
+        [
+          "mobile-website-task-raw.mp4",
+          324,
+          10
+        ],
+        [
+          "mobile-website-task-raw.mp4",
+          390,
+          10
+        ],
+        [
+          "mobile-website-after.mp4",
+          0,
+          10
+        ]
+      ],
+      "method": "Original native simulator recordings, no downscaling, framing, added titles or overlays. Waiting time edited as before."
+    }
+  },
+  "other_manifests": [
+    "cabinet-productivity-media-manifest.json",
+    "cabinet-citizen-clean-media-manifest.json"
+  ],
+  "browser_retake_sources": {
+    "directory": [
+      3042,
+      2000
+    ],
+    "passport": [
+      [
+        3200,
+        1998
+      ],
+      [
+        3370,
+        2104
+      ]
+    ],
+    "training": [
+      3370,
+      2216
+    ],
+    "servicenow": [
+      3370,
+      2216
+    ]
+  },
+  "validation": {
+    "all_seven_full_decode": "passed",
+    "audience_duration_seconds": 1200,
+    "notes": "The mobile clip was retimed to exactly80s by normalizing segment timestamps before concatenation."
+  }
+}
