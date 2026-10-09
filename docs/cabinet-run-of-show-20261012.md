@@ -12,7 +12,7 @@
 | 4:00–4:45 | Cash application roadmap | Four phases with dates from the Confluence roadmap; data access is the long pole. |
 | 4:45–6:05 | Bring document review into Word | Live Word run: three rules, tracked changes, agent answer. **Ask tag** (OCGA next). |
 | 6:05–7:05 | Routing tickets to the right team | Full-width routing recording; voice over. Agent decides. |
-| 7:05–8:05 | Transcript matching, college selection, and Directory | Transcript matching, college selection, Directory (Directory clip plays). |
+| 7:05–8:05 | Transcript matching, college selection, and the Faculty Expertise Directory | Transcript matching, college selection, Directory (Faculty Expertise Directory clip plays). |
 | 8:05–8:50 | What's next in vertical solutions | What is next: payment request review, RFX, security review, data agents, OCGA, hosting. |
 | **Part 2** | **Citizen development: TritonAI Harness** | |
 | 8:50–9:50 | TritonGPT and TritonAI Harness | Bridge: IT can’t build every vertical; the Harness lets staff build their own. |
@@ -46,7 +46,7 @@
 
 ## Before Monday
 
-- Nicole: confirm Directory public-facing name; final contract review queue and OCGA priority; broad Word add-in install gate
+- Nicole: confirm the public name (working name: Faculty Expertise Directory); final contract review queue and OCGA priority; broad Word add-in install gate
 - Matthew: exact Class Planner chat-interface URL
 - BFS and Alex: reconcile updated cash benefit assumptions and phase dates
 - Dan: Berkeley quote pending AVC approval; leave verbal until approved

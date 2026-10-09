@@ -7278,7 +7278,7 @@ export const slides = [
           "basis": "Scenario at an assumed 90% accuracy, not measured"
         },
         {
-          "name": "Directory",
+          "name": "Faculty Expertise Directory",
           "what": "Matches research needs to faculty expertise.",
           "status": "Pilot",
           "tone": "pilot",
@@ -7345,13 +7345,13 @@ export const slides = [
       "cabinet"
     ],
     "managerSection": "Administrative Verticals",
-    "managerSummary": "Full Directory app: expertise request, summary, and naturally scrolled faculty matches.",
+    "managerSummary": "Full Faculty Expertise Directory app: expertise request, summary, and naturally scrolled faculty matches.",
     "durationSeconds": 0,
     "videoSrc": "/media/cabinet/cabinet-directory-wide.mp4",
     "poster": "/media/cabinet/cabinet-directory-wide-poster.jpg",
     "releaseContext": {
       "channel": "pilot",
-      "label": "Directory · In development",
+      "label": "Faculty Expertise Directory · In development",
       "captureNote": "Live web app · Sample query · Profiles and matches need review"
     },
     "recording": {
@@ -7630,7 +7630,7 @@ export const slides = [
     "videoAutoPlay": true,
     "hideDemoBadge": true,
     "poster": "/media/cabinet/cabinet-administrative-montage-poster.jpg",
-    "managerSummary": "Brief actual ServiceNow routing and Directory results in full app context.",
+    "managerSummary": "Brief actual ServiceNow routing and Faculty Expertise Directory results in full app context.",
     "releaseContext": {
       "channel": "pilot",
       "label": "Current ServiceNow interface · Rollout scope pending",
@@ -8861,7 +8861,7 @@ export const slides = [
     "slug": "cabinet-verticals-at-a-glance",
     "type": "content",
     "layout": "cabinet-demo",
-    "title": "Transcript matching, college selection, and Directory",
+    "title": "Transcript matching, college selection, and the Faculty Expertise Directory",
     "subtitle": "Admissions and research teams, each with a clear next step.",
     "audiences": [
       "cabinet"
@@ -8878,11 +8878,11 @@ export const slides = [
         "text": "Helps prospective students explore college fit through self-service on campus websites."
       },
       {
-        "heading": "Directory",
+        "heading": "Faculty Expertise Directory",
         "text": "Matches research needs to faculty expertise. After the VCRI demo it moves to its next phase."
       }
     ],
-    "speakerNotes": "One minute. The Directory recording plays on the left. Transcript matching requires the TSS downstream validation/go-live checkpoint before expansion; no new launch date. College selection is an admissions self-service example, not an admission or assignment decision. Directory: early phase with incomplete public-source data. After the successful VCRI demonstration with Faith and Corey, Nicole's team continues development; arts and humanities coverage is the focus. Corey is in the room. Do not describe early ranking as an institutional faculty evaluation. Name pending Nicole's confirmation.",
+    "speakerNotes": "One minute. The Faculty Expertise Directory recording plays on the left. Transcript matching requires the TSS downstream validation/go-live checkpoint before expansion; no new launch date. College selection is an admissions self-service example, not an admission or assignment decision. Faculty Expertise Directory: early phase with incomplete public-source data. After the successful VCRI demonstration with Faith and Corey, Nicole's team continues development; arts and humanities coverage is the focus. Corey is in the room. Do not describe early ranking as an institutional faculty evaluation. Working name \"Faculty Expertise Directory\" (Brett, Oct 9); the app itself still shows an earlier name. Confirm the final name with Nicole.",
     "section": {
       "part": 1,
       "label": "Vertical solutions"
