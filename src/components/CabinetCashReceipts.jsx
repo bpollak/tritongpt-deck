@@ -3,7 +3,7 @@ import './CabinetCashReceipts.css';
 
 export default function CabinetCashReceipts({ slide }) {
   const data = slide.cashReceipts;
-  return <CabinetCanvas className="cabinet-cash-canvas">
+  return <CabinetCanvas className="cabinet-cash-canvas" section={slide.section} ask={slide.ask}>
     <section className="cabinet-cash" aria-label={slide.title}>
       <h1>{slide.title}</h1>
       <p className="cabinet-cash-lead">{slide.subtitle}</p>

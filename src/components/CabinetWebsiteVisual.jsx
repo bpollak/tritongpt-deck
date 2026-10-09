@@ -47,6 +47,6 @@ export default function CabinetWebsiteVisual({ slide, staticPreview }) {
   );
 
   return slide.workflowComparison ? (
-    <CabinetWorkflowComparison comparison={slide.workflowComparison}>{visual}</CabinetWorkflowComparison>
+    <CabinetWorkflowComparison comparison={{ ...slide.workflowComparison, section: slide.section }}>{visual}</CabinetWorkflowComparison>
   ) : visual;
 }

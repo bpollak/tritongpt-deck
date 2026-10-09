@@ -3,19 +3,32 @@ import CabinetCanvas from './CabinetCanvas';
 
 // Authoring placeholders use no old footage. Once a recording is approved, set
 // type to "video" and add videoSrc/poster/captionsSrc to use the existing player.
-export default function CabinetFrameworkSlide({ slide }) {
+export default function CabinetFrameworkSlide({ slide, staticPreview = false }) {
   const isDemo = slide.layout === 'cabinet-demo';
 
   return (
-    <CabinetCanvas className="cabinet-framework-canvas"><section className={`cabinet-framework-slide${slide.sources?.length || slide.sourceNote ? ' cabinet-framework-slide--cited' : ''}`} aria-label={slide.title}>
+    <CabinetCanvas className="cabinet-framework-canvas" section={slide.section} ask={slide.ask}><section className={`cabinet-framework-slide${slide.sources?.length || slide.sourceNote ? ' cabinet-framework-slide--cited' : ''}`} aria-label={slide.title}>
       <h1>{slide.title}</h1>
       {isDemo ? (
         <div className="cabinet-framework-demo">
-          <div className="cabinet-framework-recording" aria-label="Recording placeholder">
-            <p>{slide.recording?.pendingLabel || 'New recording pending'}</p>
-            <h2>{slide.recording?.label || slide.title}</h2>
-            <span>{slide.recording?.format || 'Screen capture'}</span>
-          </div>
+          {slide.videoSrc ? (
+            <video
+              className="cabinet-framework-video"
+              src={slide.videoSrc}
+              poster={slide.poster}
+              autoPlay={!staticPreview}
+              preload={staticPreview ? 'metadata' : undefined}
+              controls
+              muted
+              playsInline
+            />
+          ) : (
+            <div className="cabinet-framework-recording" aria-label="Recording placeholder">
+              <p>{slide.recording?.pendingLabel || 'New recording pending'}</p>
+              <h2>{slide.recording?.label || slide.title}</h2>
+              <span>{slide.recording?.format || 'Screen capture'}</span>
+            </div>
+          )}
           <div className="cabinet-framework-copy">
             <p className="cabinet-framework-takeaway">{slide.subtitle}</p>
             <ol>

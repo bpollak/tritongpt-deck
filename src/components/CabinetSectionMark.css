@@ -1,0 +1,65 @@
+.cabinet-section-mark {
+  position: absolute;
+  left: 96px;
+  right: 64px;
+  bottom: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  pointer-events: none;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+.cabinet-section-mark p { margin: 0; }
+
+.cabinet-section-mark__part {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #b5c6d5;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.cabinet-section-mark__steps { display: inline-flex; gap: 5px; }
+.cabinet-section-mark__steps i {
+  display: block;
+  width: 22px;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(181, 198, 213, .35);
+}
+.cabinet-section-mark__steps i[data-active] { background: #ffcd00; }
+
+.cabinet-section-mark__ask {
+  max-width: 560px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: #ffcd00;
+  color: #182b49;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+.cabinet-section-mark__ask strong {
+  margin-right: 6px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+
+.cabinet-canvas[data-reading] .cabinet-section-mark {
+  position: static;
+  flex-wrap: wrap;
+  margin: 0 22px 110px;
+}
+
+/* The comparison slide is light and keeps its view switcher bottom-left. */
+.cabinet-workflow-canvas .cabinet-section-mark { justify-content: flex-end; }
+.cabinet-workflow-canvas .cabinet-section-mark__part { color: #4b5d6f; }
+.cabinet-workflow-canvas .cabinet-section-mark__steps i { background: rgba(75, 93, 111, .25); }
+.cabinet-workflow-canvas .cabinet-section-mark__steps i[data-active] { background: #c69214; }

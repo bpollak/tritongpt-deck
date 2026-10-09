@@ -8,6 +8,7 @@ import CabinetHarnessOverview from './CabinetHarnessOverview';
 import CabinetRoutingSavings from './CabinetRoutingSavings';
 import CabinetCashReceipts from './CabinetCashReceipts';
 import EmbeddedVideo from './EmbeddedVideo';
+import CabinetDemoIntro from './CabinetDemoIntro';
 import { Target, Database, Cpu, Blocks, GraduationCap, Building2, FileText, FileCheck, DollarSign, Shield, ShieldCheck, BookOpen, Code, Presentation, Globe, FileEdit, FolderOpen, TrendingUp, TrendingDown, ClipboardCheck, Search, Heart, Calendar, GitBranch, Network, Grid3x3, ArrowDown, ArrowRight, Brain, RefreshCw, ArrowRightLeft, CheckCircle, Monitor, User, Users, Award, Server, Layers, Wallet, Share2, Star, FlaskConical, Lightbulb, Landmark, Scale, Headphones, Hammer, Zap, Rocket, BarChart3, AlertTriangle, Handshake } from 'lucide-react';
 import { QRCodeSVG } from 'qrcode.react';
 
@@ -50,16 +51,38 @@ const useIsTouchDevice = () => {
 const DeckVideoSlide = ({ slide, staticPreview }) => {
   const touchDevice = useIsTouchDevice();
   const demoBadge = !slide.hideDemoBadge && (slide.demoLabel || slide.title || slide.managerLabel);
+  const introSeconds = slide.intro?.seconds ?? 6;
+  const [showIntro, setShowIntro] = React.useState(Boolean(slide.intro));
+  const videoRef = React.useRef(null);
+  const autoPlay = !staticPreview && !touchDevice && slide.videoAutoPlay !== false;
+  React.useEffect(() => {
+    if (!showIntro || staticPreview) return undefined;
+    const timer = window.setTimeout(() => setShowIntro(false), introSeconds * 1000);
+    return () => window.clearTimeout(timer);
+  }, [showIntro, staticPreview, introSeconds]);
+  React.useEffect(() => {
+    if (slide.intro && !showIntro && autoPlay) videoRef.current?.play().catch(() => {});
+  }, [slide.intro, showIntro, autoPlay]);
   return (
     <div className="relative w-full h-full overflow-hidden bg-black">
+      {slide.intro && showIntro && (
+        <CabinetDemoIntro slide={slide} seconds={introSeconds} staticPreview={staticPreview} onDone={() => setShowIntro(false)} />
+      )}
+      {slide.intro && !showIntro && (
+        <div className="cabinet-demo-label">
+          <span>{slide.intro.kicker || 'Demonstration'}</span>
+          <strong>{slide.intro.label || slide.intro.title}</strong>
+        </div>
+      )}
       <video
+        ref={videoRef}
         src={slide.videoSrc}
         poster={slide.poster}
         className={`deck-video absolute inset-x-0 w-full object-contain ${
           slide.videoClearNav ? 'top-0 bottom-16 h-[calc(100%-4rem)]' : 'top-0 bottom-0 h-full'
         }`}
         controls
-        autoPlay={!staticPreview && !touchDevice && slide.videoAutoPlay !== false}
+        autoPlay={autoPlay && !slide.intro}
         preload={staticPreview ? 'metadata' : touchDevice ? 'none' : undefined}
         loop={slide.videoLoop === true}
         muted
@@ -242,7 +265,7 @@ const Slide = ({ slide, staticPreview = false }) => {
   }
 
   if (slide.layout === 'cabinet-demo' || slide.layout === 'cabinet-outline') {
-    return <CabinetFrameworkSlide slide={slide} />;
+    return <CabinetFrameworkSlide slide={slide} staticPreview={staticPreview} />;
   }
 
   if (slide.layout === 'cabinet-website-visual') {

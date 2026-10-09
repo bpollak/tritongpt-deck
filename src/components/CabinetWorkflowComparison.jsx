@@ -16,14 +16,14 @@ export default function CabinetWorkflowComparison({ comparison, children }) {
   ];
 
   return (
-    <CabinetCanvas className="cabinet-workflow-canvas"><div className="cabinet-workflow-comparison">
+    <CabinetCanvas className="cabinet-workflow-canvas" section={comparison.section}><div className="cabinet-workflow-comparison">
       <div id={`${panelId}-graphic`} className="cabinet-workflow-original" hidden={view !== 'graphic'}>
         {children}
       </div>
       {['matrix', 'tasks'].map(mode => (
         <section key={mode} id={`${panelId}-${mode}`} className="cabinet-workflow-adaptation" hidden={view !== mode}>
           <header>
-            <p className="cabinet-workflow-kicker">Choose by task</p>
+            <p className="cabinet-workflow-kicker">{comparison.kicker || 'Choose by task'}</p>
             <h2>{mode === 'matrix' ? comparison.matrixTitle : comparison.title}</h2>
             <p className="cabinet-workflow-lead">{mode === 'matrix' ? comparison.matrixLead : comparison.lead}</p>
           </header>

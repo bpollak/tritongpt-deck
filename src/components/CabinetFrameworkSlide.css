@@ -196,3 +196,17 @@
 .cabinet-canvas-content .cabinet-framework-slide--cited .cabinet-framework-pending {margin-top:20px;font-size:23px;line-height:1.35;}
 .cabinet-canvas[data-reading] .cabinet-framework-sources {font-size:14px;}
 .cabinet-canvas[data-reading] .cabinet-framework-slide--cited .cabinet-framework-row p {font-size:18px;}
+
+.cabinet-framework-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 6px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .35);
+}
+.cabinet-canvas-content .cabinet-framework-demo { gap: 40px; align-items: start; }
+.cabinet-canvas-content .cabinet-framework-copy .cabinet-framework-takeaway { font-size: 22px; margin-bottom: 18px; }
+.cabinet-canvas-content .cabinet-framework-copy ol { gap: 16px; }
+.cabinet-canvas-content .cabinet-framework-copy li h2 { font-size: 21px; margin-bottom: 3px; }
+.cabinet-canvas-content .cabinet-framework-copy li p { font-size: 17px; line-height: 1.35; }

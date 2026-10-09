@@ -1,0 +1,40 @@
+{
+  "capture_date": "2026-10-09",
+  "method": "Headless Chromium (Chrome for Testing 1228) driven by Playwright; frames from the DevTools Page.startScreencast stream (JPEG q92) with their real timestamps, rebuilt into constant 30 fps H.264 with ffmpeg. One continuous take per clip at real speed. No cuts, held frames, crops, digital zoom, titles, or generated UI. A cursor is drawn over the real mouse events.",
+  "scripts": "docs/recapture-20261009/",
+  "clips": [
+    {
+      "video": "cabinet-class-planner-flow.mp4",
+      "poster": "cabinet-class-planner-flow-poster.jpg",
+      "dimensions": "2560x1440",
+      "duration_seconds": 51.93,
+      "sha256": "b95526d0b81db412cb42558d39cdb1db740564b179bd67e84eeaea1983fe4868",
+      "source": "https://classplanner.apps.ucsd.edu/ (live public app, FA26)",
+      "viewport": "1440x810 at device scale 1.78",
+      "sequence": "Guide page → Open Class Planner → Auto planning → Later starts → MATH-010A, CSE-008A, COGS-001 → two alternative schedules (condensed week) → Details → Map",
+      "qualifications": "Fresh browser profile, light theme. No sign-in, student identity, TSS booking, enrollment, or shared schedule. Seat counts and walking estimates are live data at capture time."
+    },
+    {
+      "video": "cabinet-passport-flow.mp4",
+      "poster": "cabinet-passport-flow-poster.jpg",
+      "dimensions": "2560x1440",
+      "duration_seconds": 35.0,
+      "sha256": "9f25519c3cc9bf9224751b171a052473f3356a5d3936af95cac2a5af827a33e5",
+      "source": "Local copy of the Passports Visitor Management source (~/dev/cabinet-passport-demo-20261008, commit 3c07442) on 127.0.0.1, backed by a throwaway copy of the demo SQLite database",
+      "viewport": "1280x720 at device scale 2",
+      "sequence": "Location (CSC) → Start → Walk-In → contact details → Passport service → readiness checks (all yes) → Check-In Complete",
+      "qualifications": "Fictional visitor Jordan Rivera, 858-555-0142. No production queue or real visitor records. Visitor flow only; no staff reporting."
+    },
+    {
+      "video": "cabinet-harness-training-opening.mp4",
+      "poster": "cabinet-harness-training-opening-poster.jpg",
+      "dimensions": "2560x1440",
+      "duration_seconds": 45.87,
+      "sha256": "5cbb55824491cc83a03912de603301664cda0896420197860c9b4919f2d04c6b",
+      "source": "https://tritonai.ucsd.edu/ → 'Start TritonAI Harness training' → https://tritonai.ucsd.edu/training/harness/ → Play training",
+      "viewport": "1440x810 at device scale 1.78",
+      "sequence": "Home page scroll to 'Learn to use TritonAI Harness' → training page → Play → the opening chapter plays for 31 seconds with its captions",
+      "qualifications": "Navigation was scripted in a browser, not performed by the Harness. The opening's nine captures were recorded in September 2026 on the Harness Nightly build with fictional practice files (see docs/cabinet-harness-outputs-manifest.json). Narration audio not included. Re-encoded at CRF 22 for size."
+    }
+  ]
+}

@@ -6,20 +6,21 @@ export const slideManagerState = {
     "cabinet-class-planner-demo",
     "cabinet-class-planner-utilization",
     "cabinet-passport-demo",
-    "cabinet-department-builders",
     "cabinet-cash-receipts-demo",
-    "cabinet-contract-review-demo",
     "cabinet-verticals-at-a-glance",
-    "cabinet-administrative-quick-hits",
+    "cabinet-contract-review-demo",
     "cabinet-chat-and-harness",
-    "cabinet-harness-mobile-demo",
+    "cabinet-harness-training-demo",
     "cabinet-governance",
-    "cabinet-training-website-demo",
+    "cabinet-department-builders",
     "cabinet-inbox-priority-sorter",
     "cabinet-personal-productivity-demo",
     "cabinet-sovereign-ai",
     "cabinet-scale",
     "cabinet-asks-close",
+    "cabinet-administrative-quick-hits",
+    "cabinet-harness-mobile-demo",
+    "cabinet-training-website-demo",
     "the-ai-enabled-university",
     "ai-strategy-and-engagement",
     "uc-san-diego",
@@ -142,6 +143,9 @@ export const slideManagerState = {
     "cabinet-subagents"
   ],
   "audiences": {
+    "cabinet-harness-training-demo": [
+      "cabinet"
+    ],
     "lmu-title": [
       "LMU"
     ],
@@ -676,10 +680,10 @@ export const slideManagerState = {
       "cabinet"
     ],
     "cabinet-administrative-quick-hits": [
-      "cabinet"
+      "cabinet-backup"
     ],
     "cabinet-harness-mobile-demo": [
-      "cabinet"
+      "cabinet-backup"
     ],
     "cabinet-governance": [
       "cabinet"
@@ -688,7 +692,7 @@ export const slideManagerState = {
       "cabinet-backup"
     ],
     "cabinet-training-website-demo": [
-      "cabinet"
+      "cabinet-backup"
     ],
     "cabinet-personal-productivity-demo": [
       "cabinet"

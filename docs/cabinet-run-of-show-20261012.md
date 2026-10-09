@@ -1,51 +1,60 @@
 # Cabinet run of show · October 12, 2026
 
-19 slides · 21 minutes content · 10 minutes Q&A. Allocations include the recordings, narration, and transitions. Production release authorized October 9, 2026.
+17 slides · about 16½ minutes of content · 10 minutes of Q&A. Restructured October 9 around Shawn's framing: **citizen developers, powered by sovereign AI**, told in three parts. Every slide after the opening carries a footer showing which part it belongs to. Each demo starts with a short intro card (what it is, what to watch for), then the recording plays with a small label in the corner. Click the intro card to start a recording early.
 
 | Time | Slide | Presenter focus |
 | --- | --- | --- |
 | 0:00–0:30 | TritonAI Operating Review | Open with what people are building and putting to work. |
-| 0:30–1:30 | Citizen developers, powered by sovereign AI | Citizen developers are the story; sovereign inference is the foundation. |
-| 1:30–2:45 | Turn a course list into schedule options | Show the recurring student need and the usable output. |
-| 2:45–3:15 | TritonGPT Class Planner and Standalone Class Planner | Usage demonstrates demand; explain that the two series use different measures. |
-| 3:15–4:05 | Turn staff knowledge into a service app | Department knowledge becomes a practical service workflow. |
-| 4:05–4:30 | Departments are already building | Nikki’s pricing and facilities examples show the pattern spreading. Attribute results to the teams. |
-| 4:30–6:30 | Apply received cash faster | Four development phases, current design work, initial financial case, and the path needing support. |
-| 6:30–8:00 | Bring document review into Word | Review inside Word, configurable rules, and agent conversation. Prioritize the queue, with OCGA the next candidate. |
-| 8:00–8:45 | Apply the pattern across campus work | One sentence each: transcript matching, routing, college selection, and Directory. |
-| 8:45–9:30 | From requests to the right people | Show specialist routing and Directory results. Mention the VCRI success and next-phase data work. |
-| 9:30–10:45 | TritonGPT and TritonAI Harness | Reveal the engine: chat answers; a connected workspace can produce work and take scoped actions. |
-| 10:45–11:30 | TritonAI Harness | Briefly show Plugins and Skills. Native Nightly branding stays visible. The phone appears in the next film. |
-| 11:30–12:00 | Give builders a supported path | Approved data handling, scoped access, an accountable owner, and validation before expansion. |
-| 12:00–15:00 | Learn, then put the tools to work | One edited fallback: learn on the website, direct a local update from mobile, then show Excel and PowerPoint results. |
-| 15:00–16:00 | Inbox priority sorter | Actual Outlook pane: Today category, controls, and Why this tier; voice over the capability. |
-| 16:00–17:30 | Close the loop on the working day | Actual morning and evening emails: it closes the loop on the daily briefing. |
-| 17:30–19:00 | Sovereign inference as a service | UCSD-managed inference, model choice, Berkeley research use, and the UC-wide opportunity. |
-| 19:00–20:00 | TritonAI LLM Gateway Usage | September usage, overall trend, and the need for service and cost accountability. |
-| 20:00–21:00 | More builders. More useful workflows. | Prioritize the contract queue, support the cash receipts path, and endorse validation gates. |
+| 0:30–1:30 | Citizen developers, powered by sovereign AI | The map: what people are building, how they build it (Harness), what powers it (sovereign inference). One line on governance posture. |
+| **Part 1** | **What people are building** | |
+| 1:30–2:30 | Class Planner (intro card + 52s recording) | A recurring student need turned into a usable output. Kevin's framing; no builder names. |
+| 2:30–3:00 | Class Planner daily usage | Demand rises around enrollment passes; two series use different measures. |
+| 3:00–3:45 | Passport Services check-in (intro + 35s) | Staff who run the service designed the flow. |
+| 3:45–5:15 | Apply received cash faster · **Ask tag** | Phases, current state, initial financial case. Plant the ask. |
+| 5:15–6:15 | The same pattern across campus work | ServiceNow + Directory clip plays while you give one line each for routing, Directory, transcript matching, college selection. |
+| 6:15–7:35 | Contract review inside Word · **Ask tag** | Plant the OCGA ask. Bridge: "The AI team built this one. The next ones, departments build themselves. Here's how." |
+| **Part 2** | **How they build it** | |
+| 7:35–8:35 | TritonGPT and TritonAI Harness | Three rows only: what it does, what it connects to, who stays in charge. |
+| 8:35–9:50 | What the Harness does (intro + 46s recording) | TritonAI site → Harness training → its real-capture opening. Name the outputs as they pass. Training callout: 14 chapters, 8-minute Essentials. |
+| 9:50–10:35 | It stays in your control | Supervised mode, scoped plugins (Microsoft 365 never sends email), P1–P3 only, accountable owner. |
+| 10:35–11:05 | Departments are already building with it | Core Bio pricing (Harness + n8n), Facilities compliance. Team-reported results. |
+| 11:05–11:55 | Inbox priority sorter | "How I use it." Cached priorities; nothing applied. |
+| 11:55–13:10 | Close the loop on the working day | Morning briefing and evening debrief: "it closes the loop on the daily briefing." |
+| **Part 3** | **What powers it** | |
+| 13:10–14:40 | Sovereign inference as a service | UCSD-managed inference, model choice, Berkeley research use, UC-wide opportunity. |
+| 14:40–15:25 | TritonAI LLM Gateway Usage | September usage, trend, cost accountability. |
+| 15:25–16:25 | More builders. More useful workflows. | Recap the three asks; the first two were already tagged in Part 1. |
 
-## Recording notes
+## What changed on October 9
 
-Demo slides show the captured application without added banners. Training, mobile and Office outputs are separate actual sessions edited into one 61-second fallback. The website change was local; the simulator pairing remains revoked. Personal productivity is a 16-second capture of two actual Outlook emails, with unrelated protected details excluded. Directory and ServiceNow share a 28-second cut; their longer recordings are in the backup view. Native app branding is preserved, including the earlier Faculty Finder name; Directory is the current deck framing pending Nicole’s final name confirmation.
+- **Order.** Part 1 now ends on contract review so its "departments build the next ones" line leads straight into the Harness. Departments-already-building moved into Part 2 because those examples used the Harness and n8n.
+- **Merged.** The four quick hits and the ServiceNow/Directory clip are one slide (video left, one-liners right).
+- **Simplified.** The TritonGPT/Harness comparison is cut from six rows to three; data rules moved to the control slide.
+- **New.** "What the Harness does" replaces the untitled plugin-screenshot slide and uses the opening of the public Harness training.
+- **Moved to backup** (`?audience=cabinet-backup`): the plugin/skills screenshot slide, the 3-minute enablement film (AI Discovery, mobile website update, Excel/PowerPoint), and the standalone ServiceNow/Directory slide.
+- **Recaptured as continuous recordings:** Class Planner, Passport, and the Harness training opening. Each is one take at real speed, with no held frames or cuts. Details are in `docs/cabinet-recapture-20261009-manifest.json`, and the scripts are in `docs/recapture-20261009/`.
 
-The inbox priority sorter adds one minute before the briefing/debrief. Every previous allocation is retained. The recorded native Outlook pane shows an existing priority, available human controls, and the explanation behind the tier. It uses cached results; the automatic refresh still fails, so no successful fresh sort is claimed. No mailbox actions were applied. The displayed 49% estimates likelihood of acting, not measured accuracy. Repair refresh before a live new-sort demonstration.
+## Still stitched from stills (not recaptured)
+
+These need the desktop (Word, Outlook) or authenticated systems (ServiceNow, Directory), so they were not re-recorded without Brett's go-ahead:
+
+- Contract review in Word (48s, about 4 distinct frames)
+- ServiceNow + Directory excerpt (28s)
+- Inbox priority sorter (12s, one held frame)
+- Morning briefing and evening debrief (16s, two held frames). **Check the first frame.** It shows meeting attendee names and an internal cost note.
+
+The Harness training slide shows a scripted browser opening the training. It is **not** the Harness driving the browser, so don't call it that. A true meta-demo, with the Harness navigating by itself, needs a native recording of the Harness app.
 
 ## Before Monday
 
-- Nicole: confirm Directory public-facing name
+- Nicole: confirm Directory public-facing name; final contract review queue and OCGA priority; broad Word add-in install gate
 - Matthew: exact Class Planner chat-interface URL
 - BFS and Alex: reconcile updated cash benefit assumptions and phase dates
 - Dan: Berkeley quote pending AVC approval; leave verbal until approved
-- Nicole: final contract review queue and OCGA priority; broad Word add-in install gate
+- Confirm the mobile timeline before mentioning it in the close
 
-Nikki’s October 8 summary has been incorporated. The Berkeley quote stays verbal until approved. New Anthropic/OpenAI contract terms and availability are omitted from the slides pending a presenter decision and verified wording. No BioBib. GitHub Campus/Enterprise and staffing remain optional verbal answers, without launch or capacity commitments.
-
-## Backup view
-
-Open `/?audience=cabinet-backup` for the longer Directory demo, illustrative routing savings model, research-data trust source slide, and separate training capture. The 90% routing accuracy remains an assumption, not an observed result.
+The Berkeley quote stays verbal until approved. New Anthropic/OpenAI contract terms are omitted pending a presenter decision. No BioBib. GitHub Campus/Enterprise and staffing remain optional verbal answers.
 
 ## Sources and limitations
 
-Shawn’s full October 8 transcript was read. Raw transcript and email bodies are held outside the deck repository. Cash phases follow the October 5 Confluence design; all phase due dates remain TBD. The late-2026 initial-delivery target is Shawn’s planning expectation. The initial $1.3M–$3M annual financial benefit is the March business case republished September 30, with sponsor assumptions being reconciled; it is not measured or approved net ROI. The $79M monthly balance is a historical undistributed-cash baseline, not a loss or savings estimate. No executed statement of work was found.
-
-Nikki’s pricing annualization: roughly 50 updates/year × 3 reported hours saved/update = roughly 150 hours/year. Facilities timing refers to one five-building extraction/reporting run; it does not mean 81 physical issues were repaired in 13 seconds. No implementation costs, annual facilities projection, or workforce reduction is implied.
+Unchanged from the October 8 version: Shawn's October 8 transcript; cash phases follow the October 5 Confluence design with all phase dates TBD; the $1.3M–$3M figure is the March business case republished September 30, not measured or approved net ROI; the $79M monthly balance is a historical baseline. Nikki's pricing annualization is about 50 updates/year × 3 reported hours = about 150 hours/year; the facilities timing is one five-building extraction run. The 90% routing accuracy in the backup savings model is an assumption.

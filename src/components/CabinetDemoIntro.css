@@ -1,0 +1,129 @@
+.cabinet-demo-intro {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+  color: #f5f0e6;
+  background: linear-gradient(135deg, #182b49, #0b3d5f);
+  animation: cabinet-demo-intro-in .35s ease-out;
+}
+.cabinet-demo-intro:disabled { cursor: default; }
+
+.cabinet-demo-intro__poster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .08;
+  filter: blur(14px) saturate(.5);
+  transform: scale(1.06);
+}
+
+.cabinet-demo-intro__canvas { position: absolute; inset: 0; background: transparent; }
+
+.cabinet-demo-intro__body {
+  position: absolute;
+  left: 96px;
+  right: 120px;
+  top: 50%;
+  transform: translateY(-54%);
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+.cabinet-demo-intro__kicker {
+  margin: 0 0 14px;
+  color: #ffcd00;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.cabinet-demo-intro h1 {
+  margin: 0 0 22px;
+  font-family: 'Teko', 'Roboto', Arial, sans-serif;
+  font-size: 76px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: .01em;
+}
+
+.cabinet-demo-intro__setup {
+  max-width: 980px;
+  margin: 0 0 26px;
+  color: #e4ebf1;
+  font-size: 29px;
+  line-height: 1.38;
+}
+
+.cabinet-demo-intro__watch {
+  max-width: 980px;
+  margin: 0;
+  padding: 16px 0 0 20px;
+  border-left: 4px solid #ffcd00;
+  color: #c4d2df;
+  font-size: 23px;
+  line-height: 1.4;
+}
+.cabinet-demo-intro__watch strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #ffcd00;
+  font-size: 15px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.cabinet-demo-intro__timer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  transform-origin: 0 50%;
+  background: #ffcd00;
+  animation-name: cabinet-demo-intro-timer;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes cabinet-demo-intro-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes cabinet-demo-intro-timer { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+/* Slim label that stays on the recording */
+.cabinet-demo-label {
+  position: absolute;
+  left: 20px;
+  top: 18px;
+  z-index: 10;
+  max-width: 60vw;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: rgba(24, 43, 73, .82);
+  color: #fff;
+  font-family: 'Roboto', Arial, sans-serif;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .25);
+  pointer-events: none;
+  animation: cabinet-demo-intro-in .4s ease-out;
+}
+.cabinet-demo-label span {
+  display: block;
+  color: #ffcd00;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.cabinet-demo-label strong { display: block; margin-top: 2px; font-size: 15px; font-weight: 700; }
+
+.cabinet-canvas[data-reading] .cabinet-demo-intro__body { position: static; transform: none; padding: 32px 22px 120px; }
+.cabinet-canvas[data-reading] .cabinet-demo-intro h1 { font-size: 46px; }
+.cabinet-canvas[data-reading] .cabinet-demo-intro__setup { font-size: 20px; }
+.cabinet-canvas[data-reading] .cabinet-demo-intro__watch { font-size: 17px; }
