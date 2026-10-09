@@ -11,7 +11,7 @@
       "sha256": "b95526d0b81db412cb42558d39cdb1db740564b179bd67e84eeaea1983fe4868",
       "source": "https://classplanner.apps.ucsd.edu/ (live public app, FA26)",
       "viewport": "1440x810 at device scale 1.78",
-      "sequence": "Guide page → Open Class Planner → Auto planning → Later starts → MATH-010A, CSE-008A, COGS-001 → two alternative schedules (condensed week) → Details → Map",
+      "sequence": "Guide page \u2192 Open Class Planner \u2192 Auto planning \u2192 Later starts \u2192 MATH-010A, CSE-008A, COGS-001 \u2192 two alternative schedules (condensed week) \u2192 Details \u2192 Map",
       "qualifications": "Fresh browser profile, light theme. No sign-in, student identity, TSS booking, enrollment, or shared schedule. Seat counts and walking estimates are live data at capture time."
     },
     {
@@ -22,7 +22,7 @@
       "sha256": "9f25519c3cc9bf9224751b171a052473f3356a5d3936af95cac2a5af827a33e5",
       "source": "Local copy of the Passports Visitor Management source (~/dev/cabinet-passport-demo-20261008, commit 3c07442) on 127.0.0.1, backed by a throwaway copy of the demo SQLite database",
       "viewport": "1280x720 at device scale 2",
-      "sequence": "Location (CSC) → Start → Walk-In → contact details → Passport service → readiness checks (all yes) → Check-In Complete",
+      "sequence": "Location (CSC) \u2192 Start \u2192 Walk-In \u2192 contact details \u2192 Passport service \u2192 readiness checks (all yes) \u2192 Check-In Complete",
       "qualifications": "Fictional visitor Jordan Rivera, 858-555-0142. No production queue or real visitor records. Visitor flow only; no staff reporting."
     },
     {
@@ -31,10 +31,29 @@
       "dimensions": "2560x1440",
       "duration_seconds": 45.87,
       "sha256": "5cbb55824491cc83a03912de603301664cda0896420197860c9b4919f2d04c6b",
-      "source": "https://tritonai.ucsd.edu/ → 'Start TritonAI Harness training' → https://tritonai.ucsd.edu/training/harness/ → Play training",
+      "source": "https://tritonai.ucsd.edu/ \u2192 'Start TritonAI Harness training' \u2192 https://tritonai.ucsd.edu/training/harness/ \u2192 Play training",
       "viewport": "1440x810 at device scale 1.78",
-      "sequence": "Home page scroll to 'Learn to use TritonAI Harness' → training page → Play → the opening chapter plays for 31 seconds with its captions",
+      "sequence": "Home page scroll to 'Learn to use TritonAI Harness' \u2192 training page \u2192 Play \u2192 the opening chapter plays for 31 seconds with its captions",
       "qualifications": "Navigation was scripted in a browser, not performed by the Harness. The opening's nine captures were recorded in September 2026 on the Harness Nightly build with fictional practice files (see docs/cabinet-harness-outputs-manifest.json). Narration audio not included. Re-encoded at CRF 22 for size."
+    },
+    {
+      "video": "cabinet-harness-discovery-demo.mp4",
+      "poster": "cabinet-harness-discovery-demo-poster.jpg",
+      "dimensions": "2560x1440",
+      "duration_seconds": 63.73,
+      "sha256": "cd618a1eff3a76876f56c96612bfa28e21d583cf456cdf98916edced45bf379a",
+      "source": "Native macOS screen recording (screencapture -v) of the TritonAI Harness (Nightly, Flash model, Full access) beside a Chrome window; the Harness drove Chrome through its computer-use driver",
+      "sequence": "One prompt \u2192 tritonai.ucsd.edu home \u2192 TritonAI Discovery Series \u2192 'UC San Diego AI vision' plays \u2192 knowledge check answered, 3 of 3 correct",
+      "edit": "Speed-ramped: 1x request, 1.5x video start and finished quiz, 4\u20138x navigation and quiz steps; ~8 s of tab switching (including Chrome's New Tab page) cut; Chrome tab-group label blurred. Script: ~/dev/cabinet-recapture-20261009/native/edit_take2.sh",
+      "qualifications": "Real run, about 4 minutes, recorded October 9, 2026. The quiz was reset beforehand. No person typed or clicked during the run."
+    },
+    {
+      "video": "cabinet-harness-discovery-demo-take1.mp4",
+      "dimensions": "2560x1440",
+      "duration_seconds": 89.1,
+      "sha256": "bb6b0b7d95cf8cd3d889df18cb023a30bc0d0f2a7e73ac8aa1fd93fb5bafc489",
+      "source": "Earlier native take (backup, not in the Cabinet order)",
+      "qualifications": "Two prompts (navigation, then quiz). Shows a quiz misclick on question 2 that the Harness noticed and corrected (2 of 3 correct on first try). Top-right corner blurred to hide an unrelated floating window."
     }
   ]
 }

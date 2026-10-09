@@ -61,7 +61,13 @@ const DeckVideoSlide = ({ slide, staticPreview }) => {
     return () => window.clearTimeout(timer);
   }, [showIntro, staticPreview, introSeconds]);
   React.useEffect(() => {
-    if (slide.intro && !showIntro && autoPlay) videoRef.current?.play().catch(() => {});
+    const video = videoRef.current;
+    if (!slide.intro || showIntro || !autoPlay || !video) return undefined;
+    // play() can be interrupted while the file is still loading; retry once it can play.
+    const start = () => { video.muted = true; video.play().catch(() => {}); };
+    start();
+    video.addEventListener('canplay', start, { once: true });
+    return () => video.removeEventListener('canplay', start);
   }, [slide.intro, showIntro, autoPlay]);
   return (
     <div className="relative w-full h-full overflow-hidden bg-black">

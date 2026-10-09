@@ -11,6 +11,7 @@ export const slideManagerState = {
     "cabinet-contract-review-demo",
     "cabinet-chat-and-harness",
     "cabinet-harness-training-demo",
+    "cabinet-harness-discovery-demo",
     "cabinet-governance",
     "cabinet-department-builders",
     "cabinet-inbox-priority-sorter",
@@ -143,6 +144,9 @@ export const slideManagerState = {
     "cabinet-subagents"
   ],
   "audiences": {
+    "cabinet-harness-discovery-demo": [
+      "cabinet"
+    ],
     "cabinet-harness-training-demo": [
       "cabinet"
     ],

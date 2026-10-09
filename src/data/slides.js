@@ -7642,6 +7642,52 @@ export const slides = [
     "speakerNotes": "75 seconds: seven-second intro card, then the 46-second recording. Let the opening play and voice over it: \"You hand it real work: a spreadsheet, notes for a deck, a small app. It does that work with your files and campus tools while you stay in charge.\" Name what is on screen as it passes: the Harness window, an Excel dashboard from workshop feedback, a slide on the campus template, a sign-up app, an n8n workflow explained, a finished survey summary, a deck with a follow-up fix, Microsoft 365 connected, and the Skills Library. Then the training callout: 14 chapters, an eight-minute Essentials path, a practice kit of made-up files, and a use case library, at tritonai.ucsd.edu/training/harness. Facts: the opening's nine captures were recorded in September 2026 on the Harness Nightly build with fictional practice data (see docs/cabinet-harness-outputs-manifest.json). The navigation from the home page was scripted in a browser for this recording; it was not the Harness driving the browser. Do not call this the Harness navigating. Narration audio is not included; the training's own captions are visible. Recorded October 9, 2026 as one continuous take: a headless Chromium session scripted with Playwright, captured frame by frame through the DevTools screencast at 2560x1440 and played back at real speed. No cuts, held frames, crops, or digital zoom. The cursor is drawn over the real mouse events so the room can follow it. Recording scripts: ~/dev/cabinet-recapture-20261009."
   },
   {
+    "id": 1027,
+    "slug": "cabinet-harness-discovery-demo",
+    "type": "video",
+    "layout": "cabinet-demo",
+    "title": "The Harness takes our new training",
+    "subtitle": "A live Harness run: find the TritonAI Discovery Series, play the first video, take the knowledge check.",
+    "content": [],
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Platform",
+    "durationSeconds": 75,
+    "section": {
+      "part": 2,
+      "label": "How they build it"
+    },
+    "intro": {
+      "kicker": "Demonstration · live run, sped up",
+      "title": "The Harness takes our new training",
+      "label": "TritonAI Harness at work · sped up",
+      "setup": "I asked the Harness to open tritonai.ucsd.edu, find the new TritonAI Discovery Series, play the first video, and then answer the knowledge check.",
+      "watchFor": "It works the browser on its own: finds the series, starts the Chancellor's video, then answers the knowledge check.",
+      "seconds": 7
+    },
+    "videoSrc": "/media/cabinet/cabinet-harness-discovery-demo.mp4",
+    "poster": "/media/cabinet/cabinet-harness-discovery-demo-poster.jpg",
+    "videoLoop": false,
+    "videoClearNav": false,
+    "videoAutoPlay": true,
+    "hideDemoBadge": true,
+    "demoOnly": true,
+    "recording": {
+      "label": "Harness thread → Chrome: home page → Discovery Series → 'UC San Diego AI vision' plays → knowledge check",
+      "format": "Native screen recording of the Harness and Chrome side by side • silent • speed-ramped",
+      "mediaStem": "cabinet-harness-discovery-demo",
+      "status": "captured and reviewed"
+    },
+    "releaseContext": {
+      "channel": "nightly",
+      "label": "TritonAI Harness Nightly · computer use",
+      "captureNote": "Real run October 9 • about 4 minutes shown in 64 seconds • quiz answers stay in that browser"
+    },
+    "managerSummary": "Native recording: the Harness drives Chrome from the TritonAI home page to the Discovery Series, plays the Chancellor's 'UC San Diego AI vision' video, then answers the knowledge check (3 of 3 correct).",
+    "speakerNotes": "About 75 seconds: seven-second intro card, then the 64-second recording. Name the meta-demo: the Harness is doing the navigating. Voice-over: \"I asked the Harness to find our new Discovery Series, play the first lesson, and take the knowledge check. It opens the site, finds the series, starts the Chancellor's video, then answers the questions.\" Then the enablement point: the Discovery Series launched October 5 (videos 1–9), with 10–15 on October 15. Facts: recorded October 9, 2026, about 11:41–11:45 AM PT, as a native screen recording of the Harness (Nightly, Flash model, Full access) beside a Chrome window on the same desktop; the Harness drove Chrome through its computer-use driver. One prompt was sent; no person typed or clicked during the run. The quiz had been reset beforehand. Result on the page: 3 of 3 correct on the first try; answers are saved only in that browser. The Chrome window had been left on the lesson page from an earlier attempt, so the clip opens there before the Harness goes to the home page. Edit: real time for the request, the video starting, and the finished quiz; navigation and quiz steps are sped up 6–8x; about 8 seconds of tab switching, including a moment on Chrome's New Tab page, are cut; a small browser tab-group label is blurred. An earlier take (backup file cabinet-harness-discovery-demo-take1.mp4) shows the Harness misclicking a quiz answer, noticing, and fixing it; use that story verbally if helpful. Recorded in Full access for a smooth run; Supervised would ask before each click. Source files: ~/dev/cabinet-recapture-20261009/native (edit_take2.sh)."
+  },
+  {
     "id": 1016,
     "slug": "cabinet-subagents",
     "type": "content",
