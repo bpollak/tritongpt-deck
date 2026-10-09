@@ -54,6 +54,17 @@
       "sha256": "bb6b0b7d95cf8cd3d889df18cb023a30bc0d0f2a7e73ac8aa1fd93fb5bafc489",
       "source": "Earlier native take (backup, not in the Cabinet order)",
       "qualifications": "Two prompts (navigation, then quiz). Shows a quiz misclick on question 2 that the Harness noticed and corrected (2 of 3 correct on first try). Top-right corner blurred to hide an unrelated floating window."
+    },
+    {
+      "video": "cabinet-contract-review-live.mp4",
+      "poster": "cabinet-contract-review-live-poster.jpg",
+      "dimensions": "2560x1978",
+      "duration_seconds": 82.83,
+      "sha256": "9d47fd24f308ad5e9317d0d1197666c0b025a2047d34455d82c219ee4aa7c713",
+      "source": "Native macOS screen recording of the Microsoft Word window with the installed UC San Diego Contract Reviewer add-in; local copy of the public SolarWinds SaaS agreement (unreviewed demo copy)",
+      "sequence": "Select 3 rules \u2192 Start Review \u2192 tracked changes and comments appear \u2192 Review complete (3 of 3, 1m 31s) \u2192 Talk to agent question \u2192 answer \u2192 document scroll",
+      "edit": "1x setup and completion, 8x processing, 2\u20133x question and answer. Script: ~/dev/cabinet-recapture-20261009/word/edit_contract.sh",
+      "qualifications": "Live run October 9, 2026 on VPN. Nothing accepted, signed, sent, or saved over the source document."
     }
   ]
 }

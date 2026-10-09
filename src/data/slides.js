@@ -7419,25 +7419,25 @@ export const slides = [
       "cabinet"
     ],
     "managerSection": "Administrative Verticals",
-    "durationSeconds": 80,
+    "durationSeconds": 95,
     "recording": {
-      "label": "Word document → configurable rules and options → Talk to agent",
-      "format": "Whole app at high resolution • silent for presenter voice-over • no crop or digital zoom",
-      "mediaStem": "cabinet-contract-review",
+      "label": "Select three rules → Start Review → tracked changes and comments appear → Talk to agent → answer",
+      "format": "One native take of the Word window, speed-ramped • silent for voice-over",
+      "mediaStem": "cabinet-contract-review-live",
       "status": "captured and reviewed"
     },
-    "speakerNotes": "Close Part 1 here, then bridge: \"The AI team built this one. The next ones, we expect departments to build themselves. Here's how.\" Plant the ask while the recording plays: prioritize the next eligible contract groups and types, starting with OCGA (subject to Nicole's contract-type list). Advancement and real estate were reviewed and do not fit; do not list them. Seventy-five seconds, including a fresh approximately 48-second recording of the entire real Word window, document, comments, and add-in. Voice-over: Staff can select institutional rules, configure the review, and ask the agent to explain proposed changes in the document they already use. The rule list is expanded; UC Health terms is deselected then restored; Extra knowledge is toggled then restored; an actual question is sent through Talk to agent and the answer is shown. All 19 rules remain selected and original options are restored. Existing tracked changes come from the completed 19/19-rule review of the public SolarWinds agreement dated September 10, 2026. No new review was started in this retake; no changes accepted, signature, or sending occurred. Keep human review explicit in narration. The official Contract Review use-case page confirms the supervised Procurement inbox/portal workflow is in production. That page does not establish the broader Word add-in rollout. Describe this as the installed add-in demonstration; do not claim campus-wide availability. Source checked October 9: https://tritonai.ucsd.edu/use-cases/contract-review.html . Native copy labels remain part of Word, with no added slide banners. Capture traceability: docs/cabinet-wide-retakes-manifest.json. Revised allocation: 90 seconds. The AI team built this current example; the ambition is to give campus builders tools and involvement to develop the next focused workflows. Existing supervised Procurement workflow is production; broad add-in deployment still requires Microsoft trusted-app setup. In the October 8 transcript Shawn identifies OCGA as the next candidate, subject to the contract-type list from Nicole. Advancement and real estate were reviewed and do not fit this use case; do not list them as queued adopters. Plant the ask: prioritize OCGA’s relevant contract types and the next eligible groups. No before/after timing is measured.",
+    "speakerNotes": "Close Part 1 here, then bridge: \"The AI team built this one. The next ones, we expect departments to build themselves. Here's how.\" Plant the ask while the recording plays: prioritize the next eligible contract groups and types, starting with OCGA (subject to Nicole's contract-type list). Advancement and real estate were reviewed and do not fit; do not list them. About 90 seconds: six-second intro card, then the 83-second recording. Voice-over: staff choose institutional rules, the review runs inside Word, and every proposed change arrives as a tracked change with a comment naming its rule. Then you can ask the agent questions about the result. Capture: native screen recording of the real Word window and installed UC San Diego Contract Reviewer add-in, October 9, 2026, about 12:44 PM PT, on a local copy of the public SolarWinds SaaS agreement (unreviewed demonstration copy). Three rules were selected on camera (Terms of Purchase, Term and Termination, Indemnity and Liability); business context said it was a demonstration with no purchase, customer data, UC Health, federal funding, order form, or DPA; Risk assessment and rule names in author labels were on. The add-in reported Review complete, 3 of 3 rules, 1m 31s. Question asked: \"Which of these changes matters most for UC San Diego, and what should a reviewer confirm before accepting it?\" Answer (actual): UC terms prevail; data-security appendix and AI/analytics approval; UC convenience termination, supplier indemnity, no conflicting liability cap; remove automatic renewal. Speed: real time for rule selection, completion, and reading the answer; processing sped up 8x and the question/answer 2–3x. Nothing was accepted, signed, sent, or saved over the source. Single run time is not a benchmark. The existing supervised Procurement inbox/portal workflow is in production; broad Word add-in deployment still requires Microsoft trusted-app setup; do not claim campus-wide availability. OCGA is the next candidate subject to Nicole's contract-type list. Edit script: ~/dev/cabinet-recapture-20261009/word/edit_contract.sh",
     "videoLoop": false,
     "videoClearNav": false,
     "videoAutoPlay": true,
     "hideDemoBadge": true,
-    "managerSummary": "Full Word document and add-in: rules, settings, tracked changes, and an actual agent answer.",
-    "videoSrc": "/media/cabinet/cabinet-contract-review-wide.mp4",
-    "poster": "/media/cabinet/cabinet-contract-review-wide-poster.jpg",
+    "managerSummary": "Native Word recording: three rules selected, a live review adds tracked changes and rule-linked comments (3 of 3 rules, 1m 31s), then the agent answers which changes matter most and what to confirm.",
+    "videoSrc": "/media/cabinet/cabinet-contract-review-live.mp4",
+    "poster": "/media/cabinet/cabinet-contract-review-live-poster.jpg",
     "releaseContext": {
       "channel": "pilot",
       "label": "Production workflow · Word add-in availability unconfirmed",
-      "captureNote": "Public vendor agreement · Actual rule review · Human approval required"
+      "captureNote": "Live run Oct 9 • public vendor agreement • 3 rules in 1m 31s • nothing accepted"
     },
     "demoOnly": true,
     "section": {
@@ -7449,8 +7449,8 @@ export const slides = [
       "kicker": "Demonstration · Word add-in",
       "title": "Contract review inside Word",
       "label": "Contract review · Word add-in",
-      "setup": "Institutional rules run inside the document reviewers already use, and produce tracked changes with an explanation for each one.",
-      "watchFor": "Choosing the rules, then asking the agent why it proposed a change. A person approves every edit.",
+      "setup": "Institutional rules run inside the document reviewers already use. They produce tracked changes, each with a comment naming the rule behind it.",
+      "watchFor": "Three rules selected, the tracked changes appearing, then a question to the agent about what a reviewer should confirm. A person approves every edit.",
       "seconds": 6
     }
   },
