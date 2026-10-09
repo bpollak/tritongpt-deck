@@ -4,6 +4,7 @@ import json,subprocess,shutil,argparse,sys
 from concurrent.futures import ThreadPoolExecutor
 parser=argparse.ArgumentParser(description="Rebuild app-only Cabinet recordings from original computer-use captures.")
 parser.add_argument('--capture-dir',type=Path,required=True,help='Directory with HD logs and source captures')
+parser.add_argument('--service-source',type=Path,required=True)
 parser.add_argument('--contract-source',type=Path,required=True)
 parser.add_argument('--mobile-source',type=Path,required=True)
 parser.add_argument('--output-dir',type=Path,default=Path(__file__).resolve().parents[1]/'public/media/cabinet')
@@ -43,11 +44,10 @@ def training():
  encode('cabinet-training-discovery',seg,4)
 
 def service():
- log=json.loads((R/'servicenow-hd-log.json').read_text());select=lambda label:[Path(x['file']) for x in log if x['label']==label]
- seg=[]
- for label,dur,crop in [('vpn-input',9,(0,0,3370,1896)),('vpn-result',9,(700,80,2670,1188)),('hardware-input',9,(0,0,3370,1896)),('hardware-result',11,(700,80,2670,1188)),('selected-unsaved',12,(300,50,3000,1569))]:
-  seg.append({'frames':select(label),'duration':dur,'crop':crop})
- encode('cabinet-servicenow-routing',seg,3)
+ script=Path(__file__).resolve().parent/'rebuild-cabinet-servicenow.py'
+ report=R/'servicenow-natural-manifest.json'
+ subprocess.run([sys.executable,str(script),'--capture-dir',str(args.service_source.resolve()),'--output-dir',str(D),'--manifest',str(report)],check=True)
+ manifest['cabinet-servicenow-routing']=json.loads(report.read_text())
 
 def contract():
  script=Path(__file__).resolve().parent/'rebuild-cabinet-contract-word.py'

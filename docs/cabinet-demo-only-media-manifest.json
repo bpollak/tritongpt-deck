@@ -69,9 +69,9 @@
       }
     },
     {
-      "video": "/media/cabinet/cabinet-servicenow-routing-clean.mp4",
-      "poster": "/media/cabinet/cabinet-servicenow-routing-clean-poster.jpg",
-      "sha256": "364a15f1ba4d63e72b3c2706b4bcb828bb5ec593d771e6f70815198d3bc8b8e9",
+      "video": "/media/cabinet/cabinet-servicenow-routing-natural.mp4",
+      "poster": "/media/cabinet/cabinet-servicenow-routing-natural-poster.jpg",
+      "sha256": "c911324302dd308aee658ba8564863c5f367c3089c838188b51b789eef560f4c",
       "probe": {
         "programs": [],
         "stream_groups": [],
@@ -160,17 +160,54 @@
   ],
   "root_capture_edits": {
     "cabinet-servicenow-routing": {
-      "duration": 50,
-      "size": [
-        1920,
-        1080
-      ],
+      "date": "2026-10-08",
+      "video": "/media/cabinet/cabinet-servicenow-routing-natural.mp4",
+      "poster": "/media/cabinet/cabinet-servicenow-routing-natural-poster.jpg",
+      "treatment": "Actual ServiceNow UI recaptured with ordinary support-case wording, without visible demo or fictional qualifiers. No text was removed or altered in screenshot pixels. Held keyframes and focused crops at 1920x1080,30fps,CRF16; no added captions or framing. Sample inputs are not submitted production tickets.",
+      "submitted": false,
+      "saved": false,
+      "discarded": true,
+      "contact_and_requester_details": "Blank; no real requester/device/location data used",
+      "recommendations": {
+        "vpn": [
+          {
+            "group": "ITS-ServiceDesk",
+            "score": 91.8
+          },
+          {
+            "group": "ITS-SDMI",
+            "score": 2.3
+          },
+          {
+            "group": "ITS-Hostmaster",
+            "score": 2.3
+          }
+        ],
+        "onsite_hardware": [
+          {
+            "group": "ITS-FieldSupport-Intake",
+            "score": 79.9
+          },
+          {
+            "group": "ITS-ServiceDesk",
+            "score": 18.1
+          },
+          {
+            "group": "ITS-RRSS-BAPS",
+            "score": 0.7
+          }
+        ]
+      },
+      "selected_group": "ITS-FieldSupport-Intake",
       "segments": [
         {
-          "sources": [
-            "/Users/bpollak/dev/cabinet-clean-demos-20261008/servicenow-hd/000.png"
+          "label": "vpn-input",
+          "source": "/Users/bpollak/dev/cabinet-servicenow-natural-20261008/000.png",
+          "source_dimensions": [
+            3370,
+            2216
           ],
-          "duration": 9,
+          "duration_seconds": 9,
           "crop": [
             0,
             0,
@@ -179,10 +216,13 @@
           ]
         },
         {
-          "sources": [
-            "/Users/bpollak/dev/cabinet-clean-demos-20261008/servicenow-hd/001.png"
+          "label": "vpn-result",
+          "source": "/Users/bpollak/dev/cabinet-servicenow-natural-20261008/001.png",
+          "source_dimensions": [
+            3370,
+            2216
           ],
-          "duration": 9,
+          "duration_seconds": 9,
           "crop": [
             700,
             80,
@@ -191,10 +231,13 @@
           ]
         },
         {
-          "sources": [
-            "/Users/bpollak/dev/cabinet-clean-demos-20261008/servicenow-hd/002.png"
+          "label": "hardware-input",
+          "source": "/Users/bpollak/dev/cabinet-servicenow-natural-20261008/002.png",
+          "source_dimensions": [
+            3370,
+            2104
           ],
-          "duration": 9,
+          "duration_seconds": 9,
           "crop": [
             0,
             0,
@@ -203,10 +246,13 @@
           ]
         },
         {
-          "sources": [
-            "/Users/bpollak/dev/cabinet-clean-demos-20261008/servicenow-hd/003.png"
+          "label": "hardware-result",
+          "source": "/Users/bpollak/dev/cabinet-servicenow-natural-20261008/003.png",
+          "source_dimensions": [
+            3370,
+            2104
           ],
-          "duration": 11,
+          "duration_seconds": 11,
           "crop": [
             700,
             80,
@@ -215,19 +261,49 @@
           ]
         },
         {
-          "sources": [
-            "/Users/bpollak/dev/cabinet-clean-demos-20261008/servicenow-hd/004.png"
+          "label": "selected-unsaved",
+          "source": "/Users/bpollak/dev/cabinet-servicenow-natural-20261008/004.png",
+          "source_dimensions": [
+            3370,
+            2104
           ],
-          "duration": 12,
+          "duration_seconds": 12,
           "crop": [
             300,
             50,
-            3000,
-            1569
+            3004,
+            1571
           ]
         }
       ],
-      "method": "Original captures only; crop/resize, no added text, panels, captions or synthesized UI."
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "30/1",
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "50.000000"
+        }
+      },
+      "video_sha256": "c911324302dd308aee658ba8564863c5f367c3089c838188b51b789eef560f4c",
+      "poster_sha256": "888070f28cb63412f4e995ebcb867b2c161e99058a1d624048096d93e8e9e85d",
+      "validation": {
+        "full_video_decode": "passed",
+        "browser_playback": "1920x1080,50 seconds,zero text tracks,no player error,playback advances",
+        "visible_case_wording": "No demo or fictional qualifier; recaptured in actual UI",
+        "case_discard": "Returned to Cases list without Submit or Save",
+        "thumbnails": "111 current previews verified",
+        "build": "passed"
+      }
     },
     "cabinet-training-discovery": {
       "duration": 36,
@@ -632,7 +708,8 @@
   "other_manifests": [
     "cabinet-productivity-media-manifest.json",
     "cabinet-citizen-clean-media-manifest.json",
-    "cabinet-contract-word-manifest.json"
+    "cabinet-contract-word-manifest.json",
+    "cabinet-servicenow-natural-manifest.json"
   ],
   "browser_retake_sources": {
     "directory": [
@@ -654,8 +731,14 @@
       2216
     ],
     "servicenow": [
-      3370,
-      2216
+      [
+        3370,
+        2104
+      ],
+      [
+        3370,
+        2216
+      ]
     ]
   },
   "validation": {
