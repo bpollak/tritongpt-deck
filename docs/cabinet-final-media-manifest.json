@@ -5,10 +5,10 @@
   "digital_zoom": false,
   "speed_changes": false,
   "full_frame_aspect_ratio_preserved": true,
-  "timing": "Learning: observed screenshot timing retained in 30 fps encoding. Harness outputs: three original captured views held eight seconds each, with hard cuts and no added motion. Encoding is not 30 distinct capture frames per second.",
+  "timing": "Learning: observed screenshot timing retained. Harness: original Excel graphs held 8 seconds, native PowerPoint navigation 10 seconds at observed timing, original app output held 6 seconds. Encoding does not imply 30 distinct captured frames per second.",
   "source_qualifications": {
     "learning": "Current public website. Real video playback and brief revisited answer feedback. Existing browser-local quiz progress preserved; no new completion or credential claimed.",
-    "productivity": "Original real captures embedded in the training opening, recorded September 2026 on Nightly 0.3.5.20260926.39. Prepared sample survey and workshop outputs. These are held captures from recorded runs, not a new continuous task recording. The training contains rebuilt scenes elsewhere; none are included here."
+    "productivity": "Excel and app: September training captures, Nightly .39. PowerPoint: October 9 native review of the actual four-slide output generated October 8 on Nightly .63. Prepared workshop data; distinct recorded runs, not one continuous generation. No sending or publication of the underlying files."
   },
   "clips": [
     {
@@ -74,18 +74,16 @@
     },
     {
       "name": "productivity",
-      "video": "cabinet-harness-outputs.mp4",
-      "poster": "cabinet-harness-outputs-poster.jpg",
-      "video_sha256": "326f94868f83184db1930271531e78e5f1e0bdea9c31c37d4f5053b45b63861c",
+      "video": "cabinet-harness-results.mp4",
+      "poster": "cabinet-harness-results-poster.jpg",
+      "video_sha256": "03f14a33af47b02e75a2a61eef15d006822553edd04a22c860cce0df0f2ebfaf",
       "metadata": {
         "programs": [],
         "stream_groups": [],
         "streams": [
           {
-            "profile": "High",
             "width": 2560,
             "height": 1440,
-            "level": 50,
             "side_data_list": [
               {}
             ]
@@ -97,46 +95,30 @@
       },
       "segments": [
         {
-          "source_key": "SHOTS.v20ExcelDash",
-          "description": "Full native Excel window: survey dashboard and charts",
-          "source_image_sha256": "2e0ffeabc68353277c1d5100b603cd588838ffb72da26b3d9531a6ca2dc67b8c",
-          "source_dimensions": {
-            "width": 2400,
-            "height": 1253
-          },
+          "source": "cabinet-harness-outputs.mp4",
+          "source_sha256": "326f94868f83184db1930271531e78e5f1e0bdea9c31c37d4f5053b45b63861c",
           "start_seconds": 0,
           "duration_seconds": 8,
-          "treatment": "Held original capture; full frame, no synthetic motion"
+          "description": "Original training Excel graphs, full native window"
         },
         {
-          "source_key": "SHOTS.v20Ppt3",
-          "description": "Full native PowerPoint window: editable briefing chart",
-          "source_image_sha256": "a0be40e46fcd690e3f498aca11e263555f6899689ca972093b3211b02e7b0397",
-          "source_dimensions": {
-            "width": 2000,
-            "height": 1125
-          },
-          "start_seconds": 8,
-          "duration_seconds": 8,
-          "treatment": "Held original capture; full frame, no synthetic motion"
+          "source": "/Users/bpollak/dev/cabinet-final-sweep-20261008/powerpoint-release-clean-navigation-frames.json",
+          "source_sha256": "ccd05ba8dcc6fa8147451cb33652fb215b1c7bd61f2384bc4c86865062cb104f",
+          "start_seconds": 0,
+          "duration_seconds": 10,
+          "frames": 17,
+          "description": "October 9 native PowerPoint: chart, decisions, then actions; real UI navigation"
         },
         {
-          "source_key": "SHOTS.v20AppPage",
-          "description": "Complete captured app page: campus workshop registration",
-          "source_image_sha256": "567a0d22014c52e7135712b6223cc60c610b6862b8cccff19f7afb69b09cd0fe",
-          "source_dimensions": {
-            "width": 2000,
-            "height": 1256
-          },
+          "source": "cabinet-harness-outputs.mp4",
+          "source_sha256": "326f94868f83184db1930271531e78e5f1e0bdea9c31c37d4f5053b45b63861c",
           "start_seconds": 16,
-          "duration_seconds": 8,
-          "treatment": "Held original capture; full frame, no synthetic motion"
+          "duration_seconds": 6,
+          "description": "Original training app output"
         }
       ],
-      "source_url": "https://tritonai.ucsd.edu/training/harness/",
-      "source_html_sha256": "34cba8b02ee32ad53c602a792c8f41b90b9d6d3ad28bff11e9adb5e9668b88ef",
-      "source_qualification": "Original real captures embedded in the training opening, recorded September 2026 on Nightly 0.3.5.20260926.39. Prepared sample survey and workshop outputs. These are held captures from recorded runs, not a new continuous task recording. The training contains rebuilt scenes elsewhere; none are included here.",
-      "output_treatment": "Silent 24-second montage; original captured views contained in a 2560\u00d71440 canvas. No crop, digital zoom, labels, headers, footers, or generated UI. Native input resolution is 2000\u20132400 pixels wide; encoding does not add source detail."
+      "treatment": "Silent. Full captured views, aspect ratios preserved with containment. No crop, digital zoom, speed change, labels, task logs, Markdown files, or rebuilt UI. Original Excel/app views are held captures; PowerPoint preserves observed navigation timing.",
+      "source_qualification": "Excel and app: September training captures, Nightly .39. PowerPoint: October 9 native review of the actual four-slide output generated October 8 on Nightly .63. Prepared workshop data; distinct recorded runs, not one continuous generation. No sending or publication of the underlying files."
     }
   ],
   "retained_previous_productivity_clip": {
@@ -186,5 +168,71 @@
         "source_duration_seconds": 11.151
       }
     ]
+  },
+  "retained_training_output_montage": {
+    "name": "productivity",
+    "video": "cabinet-harness-outputs.mp4",
+    "poster": "cabinet-harness-outputs-poster.jpg",
+    "video_sha256": "326f94868f83184db1930271531e78e5f1e0bdea9c31c37d4f5053b45b63861c",
+    "metadata": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "profile": "High",
+          "width": 2560,
+          "height": 1440,
+          "level": 50,
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "24.000000"
+      }
+    },
+    "segments": [
+      {
+        "source_key": "SHOTS.v20ExcelDash",
+        "description": "Full native Excel window: survey dashboard and charts",
+        "source_image_sha256": "2e0ffeabc68353277c1d5100b603cd588838ffb72da26b3d9531a6ca2dc67b8c",
+        "source_dimensions": {
+          "width": 2400,
+          "height": 1253
+        },
+        "start_seconds": 0,
+        "duration_seconds": 8,
+        "treatment": "Held original capture; full frame, no synthetic motion"
+      },
+      {
+        "source_key": "SHOTS.v20Ppt3",
+        "description": "Full native PowerPoint window: editable briefing chart",
+        "source_image_sha256": "a0be40e46fcd690e3f498aca11e263555f6899689ca972093b3211b02e7b0397",
+        "source_dimensions": {
+          "width": 2000,
+          "height": 1125
+        },
+        "start_seconds": 8,
+        "duration_seconds": 8,
+        "treatment": "Held original capture; full frame, no synthetic motion"
+      },
+      {
+        "source_key": "SHOTS.v20AppPage",
+        "description": "Complete captured app page: campus workshop registration",
+        "source_image_sha256": "567a0d22014c52e7135712b6223cc60c610b6862b8cccff19f7afb69b09cd0fe",
+        "source_dimensions": {
+          "width": 2000,
+          "height": 1256
+        },
+        "start_seconds": 16,
+        "duration_seconds": 8,
+        "treatment": "Held original capture; full frame, no synthetic motion"
+      }
+    ],
+    "source_url": "https://tritonai.ucsd.edu/training/harness/",
+    "source_html_sha256": "34cba8b02ee32ad53c602a792c8f41b90b9d6d3ad28bff11e9adb5e9668b88ef",
+    "source_qualification": "Original real captures embedded in the training opening, recorded September 2026 on Nightly 0.3.5.20260926.39. Prepared sample survey and workshop outputs. These are held captures from recorded runs, not a new continuous task recording. The training contains rebuilt scenes elsewhere; none are included here.",
+    "output_treatment": "Silent 24-second montage; original captured views contained in a 2560\u00d71440 canvas. No crop, digital zoom, labels, headers, footers, or generated UI. Native input resolution is 2000\u20132400 pixels wide; encoding does not add source detail."
   }
 }

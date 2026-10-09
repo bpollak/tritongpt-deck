@@ -1,0 +1,48 @@
+{
+  "name": "productivity",
+  "video": "cabinet-harness-results.mp4",
+  "poster": "cabinet-harness-results-poster.jpg",
+  "video_sha256": "03f14a33af47b02e75a2a61eef15d006822553edd04a22c860cce0df0f2ebfaf",
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 2560,
+        "height": 1440,
+        "side_data_list": [
+          {}
+        ]
+      }
+    ],
+    "format": {
+      "duration": "24.000000"
+    }
+  },
+  "segments": [
+    {
+      "source": "cabinet-harness-outputs.mp4",
+      "source_sha256": "326f94868f83184db1930271531e78e5f1e0bdea9c31c37d4f5053b45b63861c",
+      "start_seconds": 0,
+      "duration_seconds": 8,
+      "description": "Original training Excel graphs, full native window"
+    },
+    {
+      "source": "/Users/bpollak/dev/cabinet-final-sweep-20261008/powerpoint-release-clean-navigation-frames.json",
+      "source_sha256": "ccd05ba8dcc6fa8147451cb33652fb215b1c7bd61f2384bc4c86865062cb104f",
+      "start_seconds": 0,
+      "duration_seconds": 10,
+      "frames": 17,
+      "description": "October 9 native PowerPoint: chart, decisions, then actions; real UI navigation"
+    },
+    {
+      "source": "cabinet-harness-outputs.mp4",
+      "source_sha256": "326f94868f83184db1930271531e78e5f1e0bdea9c31c37d4f5053b45b63861c",
+      "start_seconds": 16,
+      "duration_seconds": 6,
+      "description": "Original training app output"
+    }
+  ],
+  "treatment": "Silent. Full captured views, aspect ratios preserved with containment. No crop, digital zoom, speed change, labels, task logs, Markdown files, or rebuilt UI. Original Excel/app views are held captures; PowerPoint preserves observed navigation timing.",
+  "source_qualification": "Excel and app: September training captures, Nightly .39. PowerPoint: October 9 native review of the actual four-slide output generated October 8 on Nightly .63. Prepared workshop data; distinct recorded runs, not one continuous generation. No sending or publication of the underlying files."
+}

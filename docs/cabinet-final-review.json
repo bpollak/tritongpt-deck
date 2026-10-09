@@ -1,6 +1,6 @@
 {
-  "reviewed_date": "2026-10-08",
-  "scope": "Local Cabinet deck optimization; no deployment",
+  "reviewed_date": "2026-10-09",
+  "scope": "Cabinet release candidate authorized by presenter; source, build and local playback verified October 9. Production verification is recorded separately after deployment.",
   "slide_count": 17,
   "core_seconds": 990,
   "narration_transition_allowance_seconds": 210,
@@ -43,7 +43,7 @@
     },
     {
       "slide": "cabinet-personal-productivity-demo",
-      "video": "/media/cabinet/cabinet-harness-outputs.mp4",
+      "video": "/media/cabinet/cabinet-harness-results.mp4",
       "duration": 24,
       "width": 2560,
       "height": 1440
@@ -69,13 +69,13 @@
       "LMU",
       "PK",
       "all",
-      "technical",
-      "executive",
       "citizen",
+      "conference",
+      "executive",
       "internal",
       "public",
-      "conference",
-      "regent"
+      "regent",
+      "technical"
     ],
     "shared_pk_intro_unchanged": true,
     "active_slide_order_unchanged": "Original sequence retained; Cabinet-only utilization and research-data slides inserted.",
@@ -93,9 +93,11 @@
     "media_decode": "All eight clips decoded completely with ffmpeg; zero errors or diagnostics.",
     "thumbnails": "All 110 active/library thumbnails refreshed and validated, including the new cited research-data slide and revised inference slide.",
     "cited_slide_layouts": "Both cited slides visually reviewed at 1920\u00d71080 projection and 620\u00d7350 compact preview. Inference slide also checked at 390\u00d7844: reading mode, body width 390, four source links. Viewport override reset.",
-    "harness_output_montage": "Original Excel, PowerPoint, and app-page captures from the public training opening, fully contained without crop or digital zoom; 24 seconds with silent eight-second holds. See dedicated source manifest. Browser playback loaded at 2560\u00d71440, advanced muted, object-fit contain, no media error. Full PowerPoint context visually checked in the deck.",
+    "harness_output_montage": "Original training Excel graphs retained; fresh October 9 full-native PowerPoint navigation inserted. 24 seconds, full containment, silent, no technical logs. New source manifest retains distinct-run qualifications.",
     "executive_content_sweep": "All eight active clips sampled visually. Mobile re-cut to workspace and website before/after, removing technical prompt, Markdown filenames, commands, checks and task log. The other active clips show finished Office outputs, actual app workflows, Word add-in, ServiceNow suggestions, and training discovery.",
-    "mobile_results_playback": "Loaded and played through all 15 seconds, 1206\u00d72622, muted, object-fit contain, no media error. Every second of the edited clip was visually checked; no Markdown file, code view, or task log. Native website before/after framing is intact."
+    "mobile_results_playback": "Loaded and played through all 15 seconds, 1206\u00d72622, muted, object-fit contain, no media error. Every second of the edited clip was visually checked; no Markdown file, code view, or task log. Native website before/after framing is intact.",
+    "other_audiences_scope": "All ten existing audience sequences preserved against live production data fetched October 9. Shared Gateway usage chart intentionally gains September figures as requested; other existing slide content is unchanged after excluding Cabinet membership.",
+    "release_candidate": "October 9: build, all four tests, 110 thumbnail checks and diff checks pass. Settled browser sweep: 17 Cabinet slides, 8 autoplaying clips, full-frame containment, no horizontal overflow. Compact 1280x720 framing/savings/source slides reviewed."
   },
   "slides": [
     {
@@ -172,8 +174,8 @@
       "slug": "cabinet-personal-productivity-demo",
       "title": "Turn a request into useful outputs",
       "allocation_seconds": 90,
-      "video": "/media/cabinet/cabinet-harness-outputs.mp4",
-      "screenshot": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-harness-outputs-proof.png"
+      "video": "/media/cabinet/cabinet-harness-results.mp4",
+      "screenshot": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-output-local.png"
     },
     {
       "slug": "cabinet-training-website-demo",
@@ -231,20 +233,20 @@
   ],
   "source_qualifications": {
     "learning": "Real public lesson excerpt and revisited browser-local answer. No new quiz completion claimed.",
-    "productivity": "Original real captures embedded in the training opening, recorded September 2026 on Nightly 0.3.5.20260926.39. Prepared sample survey and workshop outputs. These are held captures from recorded runs, not a new continuous task recording. The training contains rebuilt scenes elsewhere; none are included here.",
+    "productivity": "Excel and app: September training captures, Nightly .39. PowerPoint: October 9 native review of the actual four-slide output generated October 8 on Nightly .63. Prepared workshop data; distinct recorded runs, not one continuous generation. No sending or publication of the underlying files.",
     "service_now": "Unsaved forms; no submitted case. Model scores are not observed accuracy.",
     "availability": "Desktop Harness stable release channel is distinct from supported-pilot rollout. Mobile is a preview; temporary pairing remains revoked.",
     "class_planner_utilization": "Exact PK chart data, July 18\u2013September 20, 2026; distinct authenticated daily TritonGPT accounts and Plausible estimated standalone daily visitors are different measures. Square-root axis retained and disclosed.",
-    "class_planner_chat_lookup": "October 8 Granola notes confirm a new AI/chat option in 1:1 Brett\u2013Alex, but no URL was found in accessible notes or recent Matthew Holland Teams links. Public planner currently exposes Manual/Auto. Exact URL requested from presenter; new chat recording pending.",
+    "class_planner_chat_lookup": "October 9 recheck: Granola has the October 8 discussion but no URL; focused Teams search surfaces the public planner and older analytics/video links. The live public workspace and its help dialog expose Auto/Manual planning, without a chat entry point. Exact new chat URL remains unavailable; existing planner demo retained.",
     "sovereign_inference": "OpenAI August 18 pacing disclosure; U.S. EO 14409 section 3 is voluntary and expressly excludes mandatory preclearance; NVIDIA model/coalition announcements are sources, not proof of UCSD deployment or universal frontier parity.",
     "navier_stokes": "Primary Buckmaster statement raises a question and explicitly does not allege proven misuse. September 9 coverage precedes OpenAI September 10 denial concerning the preceding two months of prompts. No public misuse established; no Clay prize claim.",
-    "mobile": "October 8 simulator and Nightly .63 host capture. The update was made in a separate local website checkout and not published. This short edit shows workspace context and actual before/after website views, not the request being entered or the task executing. Some source views are held original captures. Temporary pairing remains revoked."
+    "mobile": "October 8 simulator and Nightly .63 host capture. The update was made in a separate local website checkout and not published. This short edit shows workspace context and actual before/after website views, not the request being entered or the task executing. Some source views are held original captures. Temporary pairing remains revoked.",
+    "contract_review_availability": "Official campus use-case page checked October 9: supervised Procurement inbox/portal workflow is in production. Broader Word add-in rollout is not established; installed add-in is demonstrated without a campus-wide availability claim."
   },
   "remaining_owner_facts": [
-    "Contract add-in release and rollout scope",
-    "Class Planner builder attribution and adoption, if stated",
-    "ServiceNow eligible volume, measured routing accuracy and staff timing before a measured savings claim",
-    "Exact Matthew Holland Class Planner chat-interface URL, required before recording the new chat experience"
+    "Exact Matthew Holland Class Planner chat-interface URL for the additional chat recording",
+    "Broader Word add-in rollout, if a campus-wide availability statement is desired",
+    "ServiceNow measured accuracy, eligible volume and staff timing before replacing the illustrative savings estimate"
   ],
   "evidence": {
     "projection": "/Users/bpollak/dev/cabinet-final-sweep-20261008/projection-review.json",
@@ -258,6 +260,7 @@
     "sovereign_inference_sources": "docs/cabinet-sovereign-inference-sources.md",
     "research_data_trust": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-research-data-trust-proof.png",
     "sovereign_inference": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-sovereign-inference-proof.png",
-    "mobile_results_manifest": "docs/cabinet-mobile-results-manifest.json"
+    "mobile_results_manifest": "docs/cabinet-mobile-results-manifest.json",
+    "release_outputs_manifest": "docs/cabinet-release-outputs-manifest.json"
   }
 }
