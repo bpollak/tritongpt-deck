@@ -1,9 +1,9 @@
 {
   "reviewed_date": "2026-10-08",
   "scope": "Local Cabinet deck optimization; no deployment",
-  "slide_count": 15,
-  "core_seconds": 900,
-  "narration_transition_allowance_seconds": 300,
+  "slide_count": 16,
+  "core_seconds": 930,
+  "narration_transition_allowance_seconds": 270,
   "separate_qa_seconds": 600,
   "clips": [
     {
@@ -78,20 +78,20 @@
       "regent"
     ],
     "shared_pk_intro_unchanged": true,
-    "active_slide_order_unchanged": true,
-    "projection_viewport": "1920 \u00d7 1080",
-    "compact_viewport": "620 \u00d7 350",
+    "active_slide_order_unchanged": "Original sequence retained; PK utilization copy inserted after Class Planner demo.",
+    "projection_viewport": "1920 × 1080",
+    "compact_viewport": "620 × 350",
     "complete_canvas_fit": true,
-    "portrait_comparison": "390 \u00d7 844: reading view, no horizontal body overflow",
+    "portrait_comparison": "390 × 844: reading view, no horizontal body overflow",
     "video_playback": "All eight active clips loaded, advanced during desktop playback, used object-fit contain, and had no media errors.",
     "added_demo_framing": false,
     "source_animation": "Original website HTML/SVG/CSS retained. Comparison, use-case table, and original animation reachable.",
-    "charts": "Routing values independently match docs/cabinet-routing-savings.json; common zero baseline. January\u2013September Gateway chart checked after animation completed.",
+    "charts": "Routing values independently match docs/cabinet-routing-savings.json; common zero baseline. January–September Gateway chart checked after animation completed.",
     "media_review": "Four distributed frames per clip reviewed; replacement learning instructor excerpt checked at native full-player framing.",
     "build": "passed",
     "node_tests": "4 passed",
     "media_decode": "All eight clips decoded completely with ffmpeg; zero errors or diagnostics.",
-    "thumbnails": "All 108 active/library slide thumbnails regenerated and validated; outdated images removed."
+    "thumbnails": "All 109 active/library thumbnails validated; new Cabinet utilization chart generated."
   },
   "slides": [
     {
@@ -114,6 +114,13 @@
       "allocation_seconds": 60,
       "video": "/media/cabinet/cabinet-class-planner-wide.mp4",
       "screenshot": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-class-planner-demo-final.png"
+    },
+    {
+      "slug": "cabinet-class-planner-utilization",
+      "title": "TritonGPT Class Planner and Standalone Class Planner",
+      "allocation_seconds": 30,
+      "video": null,
+      "screenshot": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-class-planner-utilization-proof.png"
     },
     {
       "slug": "cabinet-directory-demo",
@@ -207,18 +214,22 @@
     "cabinet-personal-productivity-demo",
     "cabinet-sovereign-ai",
     "cabinet-training-discovery-demo",
-    "cabinet-asks-close"
+    "cabinet-asks-close",
+    "cabinet-class-planner-utilization"
   ],
   "source_qualifications": {
     "learning": "Real public lesson excerpt and revisited browser-local answer. No new quiz completion claimed.",
     "productivity": "Actual completed task, new full-window Excel charts, and retained native PowerPoint navigation. Prepared sample data; no task generation replayed.",
     "service_now": "Unsaved forms; no submitted case. Model scores are not observed accuracy.",
-    "availability": "Desktop Harness stable release channel is distinct from supported-pilot rollout. Mobile is a preview; temporary pairing remains revoked."
+    "availability": "Desktop Harness stable release channel is distinct from supported-pilot rollout. Mobile is a preview; temporary pairing remains revoked.",
+    "class_planner_utilization": "Exact PK chart data, July 18–September 20, 2026; distinct authenticated daily TritonGPT accounts and Plausible estimated standalone daily visitors are different measures. Square-root axis retained and disclosed.",
+    "class_planner_chat_lookup": "October 8 Granola notes confirm a new AI/chat option in 1:1 Brett–Alex, but no URL was found in accessible notes or recent Matthew Holland Teams links. Public planner currently exposes Manual/Auto. Exact URL requested from presenter; new chat recording pending."
   },
   "remaining_owner_facts": [
     "Contract add-in release and rollout scope",
     "Class Planner builder attribution and adoption, if stated",
-    "ServiceNow eligible volume, measured routing accuracy and staff timing before a measured savings claim"
+    "ServiceNow eligible volume, measured routing accuracy and staff timing before a measured savings claim",
+    "Exact Matthew Holland Class Planner chat-interface URL, required before recording the new chat experience"
   ],
   "evidence": {
     "projection": "/Users/bpollak/dev/cabinet-final-sweep-20261008/projection-review.json",
@@ -227,6 +238,7 @@
     "comparison": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-comparison-proof.png",
     "usage": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-scale-settled.png",
     "media_decode": "/Users/bpollak/dev/cabinet-final-sweep-20261008/media-decode-review.json",
-    "learning_playback": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-learning-proof.png"
+    "learning_playback": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-learning-proof.png",
+    "class_planner_utilization": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-class-planner-utilization-proof.png"
   }
 }

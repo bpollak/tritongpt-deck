@@ -1,14 +1,15 @@
 # Cabinet capability demonstration
 
-15-minute core sequence, with five minutes available for narration and transitions within the 20-minute presentation. Ten minutes of unscripted Q&A follows separately. Eight silent app-only clips total about 4 minutes 27 seconds. Narration explains the department benefit; the screen shows the tool and result.
+15½-minute core sequence, with 4½ minutes available for narration and transitions within the 20-minute presentation. Ten minutes of unscripted Q&A follows separately. Eight silent app-only clips total about 4 minutes 27 seconds. Narration explains the department benefit; the screen shows the tool and result.
 
-Open `?audience=cabinet#slide=ai-operating-review-title`. The existing PK introduction is unchanged. Other audience views are unchanged.
+Open `?audience=cabinet#slide=ai-operating-review-title`. The existing PK introduction is unchanged. The PK utilization chart is copied into Cabinet after the Class Planner demonstration; its original PK placement and data are unchanged. Other audience views are unchanged.
 
 | Slide | Allocation | Clip | Message to voice over |
 | --- | ---: | ---: | --- |
 | Existing PK introduction | 0:30 | — | Practical capabilities departments can use |
 | What could your department do with this? | 1:00 | — | Routine work, useful outputs, department services |
 | Turn a course list into schedule options | 1:00 | 0:46 | Class Planner combines courses and preferences, then shows alternatives, details, and walking routes |
+| Class Planner daily usage (copied from PK) | 0:30 | — | Demand rises around enrollment passes; two series use different daily-usage measures |
 | Find expertise for a department need | 1:00 | 0:33 | Start with a question; review potential experts |
 | Turn staff knowledge into a service app | 1:00 | 0:34 | Passport turns service knowledge into a focused workflow |
 | Bring document review into Word | 1:15 | 0:48 | Configure institutional rules and ask the agent about proposed changes in Word |
@@ -21,7 +22,7 @@ Open `?audience=cabinet#slide=ai-operating-review-title`. The existing PK introd
 | Campus-managed AI supports the builders | 1:00 | — | Appropriate environment, controlled access, human review |
 | Help staff get started | 0:30 | 0:22 | Find a short learning video and use a knowledge check with your team |
 | Start with one workflow in your department | 1:00 | — | Choose a recurring task, pilot with staff, measure the improvement |
-| Narration and transition allowance | 5:00 | — | Keep the presentation within 20 minutes |
+| Narration and transition allowance | 4:30 | — | Keep the presentation within 20 minutes |
 | Q&A, following the presentation | 10:00 | — | Which workflow would help your department? |
 
 ## Presentation treatment
