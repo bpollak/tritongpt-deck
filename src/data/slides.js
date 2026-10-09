@@ -7547,11 +7547,17 @@ export const slides = [
     "layout": "cabinet-harness-overview",
     "title": "TritonAI Harness",
     "harnessOverview": {
-      "captureNote": "Fresh UI capture · Nightly 0.3.6-nightly.20261008.63 · October 8, 2026",
+      "captureNote": "Nightly 0.3.6-nightly.20261008.63 · October 8, 2026. Feature availability checked against stable 0.3.6.",
       "views": [
         {
           "label": "Plugins",
           "heading": "Connected services",
+          "releaseAvailability": {
+            "channel": "stable",
+            "version": "0.3.6",
+            "label": "Available in stable 0.3.6",
+            "source": "https://github.com/dbalders/TritonAI-Harness/releases/tag/v0.3.6"
+          },
           "initialScene": 1,
           "scenes": [
             {
@@ -7577,6 +7583,12 @@ export const slides = [
         {
           "label": "Skills",
           "heading": "Reusable instructions",
+          "releaseAvailability": {
+            "channel": "stable",
+            "version": "0.3.6",
+            "label": "Available in stable 0.3.6",
+            "source": "https://github.com/dbalders/TritonAI-Harness/releases/tag/v0.3.6"
+          },
           "scenes": [
             {
               "label": "Accessibility",
@@ -7595,6 +7607,12 @@ export const slides = [
         {
           "label": "Functions",
           "heading": "Workspace controls",
+          "releaseAvailability": {
+            "channel": "stable",
+            "version": "0.3.6",
+            "label": "Available in stable 0.3.6",
+            "source": "https://github.com/dbalders/TritonAI-Harness/releases/tag/v0.3.6"
+          },
           "scenes": [
             {
               "label": "Browser access",
@@ -7634,7 +7652,7 @@ export const slides = [
       "format": "Fresh Harness UI screenshots",
       "mediaStem": "cabinet-harness-overview"
     },
-    "speakerNotes": "One minute. 0–24s: three Plugins stages cover all seven rows; start with Microsoft 365/n8n. Cloud-service tools differ from local Excel/PowerPoint creation in the next demo. 24–40s: show actual Accessibility and Branding instructions; no Office-specific skill title was confirmed. 40–60s: Browser access, then GLM and permission choices. The captured fictional task uses Full access; do not imply it ran in Supervised mode or that this is an institutional default. A person chooses the mode and reviews the outputs. Runtime host/key details and the uninstalled Device hub are excluded. All captures are October 8 Nightly 0.3.6-nightly.20261008.63, not a stable-release feature-list claim. Keep sixty seconds; native mobile website task is separate.",
+    "speakerNotes": "One minute. 0–24s: three Plugins stages cover all seven rows; start with Microsoft 365/n8n. Cloud-service tools differ from local Excel/PowerPoint creation in the next demo. 24–40s: show actual Accessibility and Branding instructions; no Office-specific skill title was confirmed. 40–60s: Browser access, then GLM and permission choices. The captured fictional task uses Full access; do not imply it ran in Supervised mode or that this is an institutional default. A person chooses the mode and reviews the outputs. Runtime host/key details and the uninstalled Device hub are excluded. All captures are October 8 Nightly 0.3.6-nightly.20261008.63. Green identifies capabilities available in stable 0.3.6; the amber capture-build line identifies the actual nightly UI. Stable 0.3.6 was published October 8 and includes all seven plugins, including Lucid and Tableau. Skill installation/use, browser settings, and approval controls are in the stable source. These screenshots are not separate stable-binary captures. Do not claim that the nightly saved-catalog refresh behavior or /feedback routing is in stable: the exact tag comparison shows those two extra commits only in Nightly .63. Keep sixty seconds; native mobile website task is separate.",
     "videoLoop": false,
     "videoClearNav": true,
     "videoAutoPlay": true,
@@ -7695,13 +7713,18 @@ export const slides = [
     ],
     "managerSection": "Enablement",
     "durationSeconds": 180,
+    "releaseContext": {
+      "channel": "nightly",
+      "label": "Mobile preview · Nightly capture",
+      "captureNote": "Nightly .63 host + development simulator · production mobile rollout unverified"
+    },
     "recording": {
       "label": "Training → mobile request → website preview",
       "format": "Actual iPhone simulator recording • 80 seconds • processing time shortened",
       "mediaStem": "cabinet-training-website",
       "status": "captured and reviewed"
     },
-    "speakerNotes": "Three minutes including narration. The 80-second film uses actual simulator recordings with waiting time shortened and visibly labeled. Three completed fictional chats populate the opening project. The phone directs the existing Harness on the Mac using official TritonAI Cloud GLM 5.3; the task edits only a separate local website checkout. Show the prior homepage training block, the request and boundaries, checks, completed task, then actual updated page in mobile Safari. The training link is preserved. Do not imply production publication or that the training video was played. Point to Essentials as the next learning step. Temporary simulator access was revoked after capture. No commit, push, or publish. Production publication remains a separate human decision.",
+    "speakerNotes": "Three minutes including narration. Label this mobile footage as preview captured with a development simulator and Nightly .63 host. Desktop stable release does not establish production mobile availability. The 80-second film uses actual simulator recordings with waiting time shortened and visibly labeled. Three completed fictional chats populate the opening project. The phone directs the existing Harness on the Mac using official TritonAI Cloud GLM 5.3; the task edits only a separate local website checkout. Show the prior homepage training block, the request and boundaries, checks, completed task, then actual updated page in mobile Safari. The training link is preserved. Do not imply production publication or that the training video was played. Point to Essentials as the next learning step. Temporary simulator access was revoked after capture. No commit, push, or publish. Production publication remains a separate human decision.",
     "videoLoop": false,
     "videoClearNav": true,
     "videoAutoPlay": true,
@@ -7732,13 +7755,18 @@ export const slides = [
     ],
     "managerSection": "Personal Productivity",
     "durationSeconds": 90,
+    "releaseContext": {
+      "channel": "stable",
+      "label": "Stable 0.3.6 capabilities · personal productivity",
+      "captureNote": "Actual recording: Nightly .63 · fictional files"
+    },
     "recording": {
       "label": "Data → Excel charts → PowerPoint",
       "format": "Fresh actual UI key-frame montage • 90 seconds • processing time shortened",
       "mediaStem": "cabinet-personal-productivity",
       "status": "captured and reviewed"
     },
-    "speakerNotes": "Ninety-second montage of actual freshly captured Harness execution and native Excel/PowerPoint review, explicitly labeled key frames; not continuous desktop video. Actual official GLM run used 42 fictional survey responses and meeting notes. Existing files are ingested; no new survey submissions collected. Show the request, source reads, generated workbook formulas, rating chart and comment chart, then generated PowerPoint chart, decisions, and repaired actions slide. Room sum113 /38 valid responses =2.97, excluding four blanks; Pace4.05 and Content4.43. Survey scale1–5, chart axes0–5 for a zero baseline. Workbook has26 live formulas and2 native editable charts. Four-slide PowerPoint uses the verified official UCSD BlueAndGold template, includes1 native editable chart and source notes. Inputs/template unchanged. Native review caught a layout problem on slide4; actual GLM repair and final native check completed before these captures. No connected accounts, sending, or publishing. Human review remains essential.",
+    "speakerNotes": "The workflow uses released desktop capabilities; the actual footage was recorded on Nightly .63, not the stable binary. No nightly-specific shortcut or catalog refresh behavior is shown. Ninety-second montage of actual freshly captured Harness execution and native Excel/PowerPoint review, explicitly labeled key frames; not continuous desktop video. Actual official GLM run used 42 fictional survey responses and meeting notes. Existing files are ingested; no new survey submissions collected. Show the request, source reads, generated workbook formulas, rating chart and comment chart, then generated PowerPoint chart, decisions, and repaired actions slide. Room sum113 /38 valid responses =2.97, excluding four blanks; Pace4.05 and Content4.43. Survey scale1–5, chart axes0–5 for a zero baseline. Workbook has26 live formulas and2 native editable charts. Four-slide PowerPoint uses the verified official UCSD BlueAndGold template, includes1 native editable chart and source notes. Inputs/template unchanged. Native review caught a layout problem on slide4; actual GLM repair and final native check completed before these captures. No connected accounts, sending, or publishing. Human review remains essential.",
     "videoLoop": false,
     "videoClearNav": true,
     "videoAutoPlay": true,

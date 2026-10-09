@@ -37,11 +37,15 @@ test('Cabinet opens with the PK intro and has its own fresh demonstration sequen
   await page.getByRole('button', { name: 'Next slide', exact: true }).click();
   await expect(page).toHaveURL(/#slide=cabinet-citizen-developer-story$/);
   await page.goto('/?audience=cabinet#slide=cabinet-training-website-demo', { waitUntil: 'domcontentloaded' });
+  await expect(page.locator('[data-slide-slug="cabinet-training-website-demo"]').getByRole('status', { name: 'Demo release status', exact: true })).toContainText('Mobile preview · Nightly capture');
+  await expect(page.locator('[data-slide-slug="cabinet-training-website-demo"]').getByRole('status', { name: 'Demo release status', exact: true })).toContainText('production mobile rollout unverified');
   const video = page.locator('video.deck-video[src="/media/cabinet/cabinet-mobile-website.mp4"]');
   await expect(video).toHaveAttribute('src', '/media/cabinet/cabinet-mobile-website.mp4');
   await expect(video.locator('track')).toHaveAttribute('src', '/media/cabinet/cabinet-mobile-website.vtt');
   await expect.poll(() => video.evaluate(v => v.duration)).toBeCloseTo(80, 0);
   await page.goto('/?audience=cabinet#slide=cabinet-personal-productivity-demo');
+  await expect(page.locator('[data-slide-slug="cabinet-personal-productivity-demo"]').getByRole('status', { name: 'Demo release status', exact: true })).toContainText('Stable 0.3.6 capabilities');
+  await expect(page.locator('[data-slide-slug="cabinet-personal-productivity-demo"]').getByRole('status', { name: 'Demo release status', exact: true })).toContainText('Actual recording: Nightly .63');
   const productivityVideo = page.locator('video.deck-video[src="/media/cabinet/cabinet-personal-productivity.mp4"]');
   await expect(productivityVideo).toBeVisible();
   await expect.poll(() => productivityVideo.evaluate(v => v.duration)).toBeCloseTo(90, 0);

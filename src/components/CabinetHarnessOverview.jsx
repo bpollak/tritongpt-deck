@@ -7,6 +7,7 @@ export default function CabinetHarnessOverview({ slide }) {
   const [selectedScene, setSelectedScene] = useState(() => views[0].initialScene || 0);
   const view = views[selected];
   const scene = view.scenes[selectedScene];
+  const release = view.releaseAvailability;
   return (
     <section className="cabinet-harness-overview" aria-label={slide.title}>
       <header>
@@ -25,11 +26,15 @@ export default function CabinetHarnessOverview({ slide }) {
           ))}
         </div>
       </div>
+      <div className={`cabinet-harness-release cabinet-harness-release-${release?.channel || 'unverified'}`} role="status" aria-label="Feature availability">
+        <strong>{release?.label || 'Release availability unverified'}</strong>
+        {release?.source && <a href={release.source} target="_blank" rel="noopener noreferrer">Release evidence</a>}
+      </div>
       <figure className="cabinet-harness-capture">
         <img src={`${import.meta.env.BASE_URL}cabinet-harness/${scene.src}`} alt={scene.alt} />
         <figcaption>{scene.note}</figcaption>
       </figure>
-      <p className="cabinet-harness-version">{captureNote}</p>
+      <p className="cabinet-harness-version"><strong>Capture build:</strong> {captureNote}</p>
     </section>
   );
 }

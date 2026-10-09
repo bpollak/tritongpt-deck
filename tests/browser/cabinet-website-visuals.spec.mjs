@@ -40,13 +40,16 @@ test('Cabinet opens with six aligned website-style comparison rows and retains t
   await expect(comparison.locator('.harness-anim-arc')).toHaveCSS('animation-duration', '16s');
 });
 
-test('Cabinet Harness screenshots cover all seven plugins in separate stages', async ({ page }) => {
+test('Cabinet Harness screenshots cover all seven plugins in separate stages', async ({ page }, testInfo) => {
   await page.goto('/?audience=cabinet#slide=cabinet-harness-mobile-demo');
   const overview = page.locator('.cabinet-harness-overview');
   await expect(overview.getByRole('button', { name: 'Plugins', exact: true })).toHaveAttribute('aria-pressed', 'true');
+  await expect(overview.getByRole('status', { name: 'Feature availability', exact: true })).toHaveText(/Available in stable 0\.3\.6/);
+  await expect(overview.locator('.cabinet-harness-version')).toContainText('Capture build: Nightly 0.3.6-nightly.20261008.63');
   const image = overview.locator('img');
   await expect(image).toHaveAttribute('src', /plugins-microsoft-n8n-current-excerpt\.png$/);
   await expect(image).toBeVisible();
+  await page.screenshot({ path: testInfo.outputPath('cabinet-harness-release-availability.png') });
   const stages = overview.getByRole('group', { name: 'Plugins screenshot stages', exact: true });
   for (const [label, filename] of [
     ['GitHub · Google Workspace · Kuali Build', 'plugins-campus-current-excerpt.png'],
