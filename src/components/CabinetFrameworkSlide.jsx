@@ -1,4 +1,5 @@
 import './CabinetFrameworkSlide.css';
+import CabinetCanvas from './CabinetCanvas';
 
 // Authoring placeholders use no old footage. Once a recording is approved, set
 // type to "video" and add videoSrc/poster/captionsSrc to use the existing player.
@@ -6,7 +7,7 @@ export default function CabinetFrameworkSlide({ slide }) {
   const isDemo = slide.layout === 'cabinet-demo';
 
   return (
-    <section className="cabinet-framework-slide" aria-label={slide.title}>
+    <CabinetCanvas className="cabinet-framework-canvas"><section className="cabinet-framework-slide" aria-label={slide.title}>
       <h1>{slide.title}</h1>
       {isDemo ? (
         <div className="cabinet-framework-demo">
@@ -44,6 +45,7 @@ export default function CabinetFrameworkSlide({ slide }) {
         </div>
       )}
       {slide.pendingNote && <p className="cabinet-framework-pending">{slide.pendingNote}</p>}
-    </section>
+      {slide.actionLink && <a className="cabinet-framework-action" href={slide.actionLink.href} target="_blank" rel="noopener noreferrer">{slide.actionLink.label} <span aria-hidden="true">↗</span></a>}
+    </section></CabinetCanvas>
   );
 }

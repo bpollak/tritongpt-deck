@@ -5,6 +5,7 @@ import CabinetSlide from './CabinetSlide';
 import CabinetFrameworkSlide from './CabinetFrameworkSlide';
 import CabinetWebsiteVisual from './CabinetWebsiteVisual';
 import CabinetHarnessOverview from './CabinetHarnessOverview';
+import CabinetRoutingSavings from './CabinetRoutingSavings';
 import EmbeddedVideo from './EmbeddedVideo';
 import { Target, Database, Cpu, Blocks, GraduationCap, Building2, FileText, FileCheck, DollarSign, Shield, ShieldCheck, BookOpen, Code, Presentation, Globe, FileEdit, FolderOpen, TrendingUp, TrendingDown, ClipboardCheck, Search, Heart, Calendar, GitBranch, Network, Grid3x3, ArrowDown, ArrowRight, Brain, RefreshCw, ArrowRightLeft, CheckCircle, Monitor, User, Users, Award, Server, Layers, Wallet, Share2, Star, FlaskConical, Lightbulb, Landmark, Scale, Headphones, Hammer, Zap, Rocket, BarChart3, AlertTriangle, Handshake } from 'lucide-react';
 import { QRCodeSVG } from 'qrcode.react';
@@ -229,6 +230,10 @@ const Slide = ({ slide, staticPreview = false }) => {
 
   if (slide.layout === 'cabinet-harness-overview') {
     return <CabinetHarnessOverview slide={slide} />;
+  }
+
+  if (slide.layout === 'cabinet-routing-savings') {
+    return <CabinetRoutingSavings slide={slide} />;
   }
 
   if (slide.layout === 'cabinet-demo' || slide.layout === 'cabinet-outline') {

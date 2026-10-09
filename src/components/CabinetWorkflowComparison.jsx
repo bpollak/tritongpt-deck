@@ -1,6 +1,7 @@
 import { useId, useState } from 'react';
 import { Server, FolderOpen, Archive, Plug, Eye, ShieldCheck } from 'lucide-react';
 import './CabinetWorkflowComparison.css';
+import CabinetCanvas from './CabinetCanvas';
 
 const rowIcons = { Server, FolderOpen, Archive, Plug, Eye, ShieldCheck };
 
@@ -15,7 +16,7 @@ export default function CabinetWorkflowComparison({ comparison, children }) {
   ];
 
   return (
-    <div className="cabinet-workflow-comparison">
+    <CabinetCanvas className="cabinet-workflow-canvas"><div className="cabinet-workflow-comparison">
       <div id={`${panelId}-graphic`} className="cabinet-workflow-original" hidden={view !== 'graphic'}>
         {children}
       </div>
@@ -68,6 +69,6 @@ export default function CabinetWorkflowComparison({ comparison, children }) {
           <button key={key} type="button" aria-pressed={view === key} aria-controls={`${panelId}-${key}`} onClick={() => setView(key)}>{label}</button>
         ))}
       </nav>
-    </div>
+    </div></CabinetCanvas>
   );
 }

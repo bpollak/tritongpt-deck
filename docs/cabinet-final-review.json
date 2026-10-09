@@ -1,0 +1,232 @@
+{
+  "reviewed_date": "2026-10-08",
+  "scope": "Local Cabinet deck optimization; no deployment",
+  "slide_count": 15,
+  "core_seconds": 900,
+  "narration_transition_allowance_seconds": 300,
+  "separate_qa_seconds": 600,
+  "clips": [
+    {
+      "slide": "cabinet-class-planner-demo",
+      "video": "/media/cabinet/cabinet-class-planner-wide.mp4",
+      "duration": 45.7,
+      "width": 2560,
+      "height": 1600
+    },
+    {
+      "slide": "cabinet-directory-demo",
+      "video": "/media/cabinet/cabinet-directory-wide.mp4",
+      "duration": 33.066667,
+      "width": 2560,
+      "height": 1600
+    },
+    {
+      "slide": "cabinet-passport-demo",
+      "video": "/media/cabinet/cabinet-passport-wide.mp4",
+      "duration": 33.5,
+      "width": 2560,
+      "height": 1600
+    },
+    {
+      "slide": "cabinet-contract-review-demo",
+      "video": "/media/cabinet/cabinet-contract-review-wide.mp4",
+      "duration": 47.733333,
+      "width": 2560,
+      "height": 1978
+    },
+    {
+      "slide": "cabinet-administrative-quick-hits",
+      "video": "/media/cabinet/cabinet-servicenow-wide.mp4",
+      "duration": 38.266667,
+      "width": 2560,
+      "height": 1600
+    },
+    {
+      "slide": "cabinet-personal-productivity-demo",
+      "video": "/media/cabinet/cabinet-productivity-wide.mp4",
+      "duration": 21.1,
+      "width": 2560,
+      "height": 1440
+    },
+    {
+      "slide": "cabinet-training-website-demo",
+      "video": "/media/cabinet/cabinet-mobile-executive.mp4",
+      "duration": 26,
+      "width": 1206,
+      "height": 2622
+    },
+    {
+      "slide": "cabinet-training-discovery-demo",
+      "video": "/media/cabinet/cabinet-learning-wide.mp4",
+      "duration": 21.733333,
+      "width": 2560,
+      "height": 1600
+    }
+  ],
+  "clip_total_seconds": 267.09999999999997,
+  "verification": {
+    "other_audiences_unchanged": [
+      "LMU",
+      "PK",
+      "all",
+      "technical",
+      "executive",
+      "citizen",
+      "internal",
+      "public",
+      "conference",
+      "regent"
+    ],
+    "shared_pk_intro_unchanged": true,
+    "active_slide_order_unchanged": true,
+    "projection_viewport": "1920 \u00d7 1080",
+    "compact_viewport": "620 \u00d7 350",
+    "complete_canvas_fit": true,
+    "portrait_comparison": "390 \u00d7 844: reading view, no horizontal body overflow",
+    "video_playback": "All eight active clips loaded, advanced during desktop playback, used object-fit contain, and had no media errors.",
+    "added_demo_framing": false,
+    "source_animation": "Original website HTML/SVG/CSS retained. Comparison, use-case table, and original animation reachable.",
+    "charts": "Routing values independently match docs/cabinet-routing-savings.json; common zero baseline. January\u2013September Gateway chart checked after animation completed.",
+    "media_review": "Four distributed frames per clip reviewed; replacement learning instructor excerpt checked at native full-player framing.",
+    "build": "passed",
+    "node_tests": "4 passed",
+    "media_decode": "All eight clips decoded completely with ffmpeg; zero errors or diagnostics.",
+    "thumbnails": "All 108 active/library slide thumbnails regenerated and validated; outdated images removed."
+  },
+  "slides": [
+    {
+      "slug": "ai-operating-review-title",
+      "title": "TritonAI Operating Review",
+      "allocation_seconds": 30,
+      "video": null,
+      "screenshot": "/Users/bpollak/dev/cabinet-final-sweep-20261008/ai-operating-review-title-final.png"
+    },
+    {
+      "slug": "cabinet-citizen-developer-story",
+      "title": "What could your department do with this?",
+      "allocation_seconds": 60,
+      "video": null,
+      "screenshot": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-citizen-developer-story-final.png"
+    },
+    {
+      "slug": "cabinet-class-planner-demo",
+      "title": "Turn a course list into schedule options",
+      "allocation_seconds": 60,
+      "video": "/media/cabinet/cabinet-class-planner-wide.mp4",
+      "screenshot": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-class-planner-demo-final.png"
+    },
+    {
+      "slug": "cabinet-directory-demo",
+      "title": "Find expertise for a department need",
+      "allocation_seconds": 60,
+      "video": "/media/cabinet/cabinet-directory-wide.mp4",
+      "screenshot": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-directory-demo-final.png"
+    },
+    {
+      "slug": "cabinet-passport-demo",
+      "title": "Turn staff knowledge into a service app",
+      "allocation_seconds": 60,
+      "video": "/media/cabinet/cabinet-passport-wide.mp4",
+      "screenshot": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-passport-demo-final.png"
+    },
+    {
+      "slug": "cabinet-contract-review-demo",
+      "title": "Bring document review into Word",
+      "allocation_seconds": 75,
+      "video": "/media/cabinet/cabinet-contract-review-wide.mp4",
+      "screenshot": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-contract-review-demo-final.png"
+    },
+    {
+      "slug": "cabinet-administrative-quick-hits",
+      "title": "Help requests reach the right team",
+      "allocation_seconds": 60,
+      "video": "/media/cabinet/cabinet-servicenow-wide.mp4",
+      "screenshot": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-administrative-quick-hits-final.png"
+    },
+    {
+      "slug": "cabinet-routing-savings",
+      "title": "Less time sorting, more time helping",
+      "allocation_seconds": 60,
+      "video": null,
+      "screenshot": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-routing-savings-final.png"
+    },
+    {
+      "slug": "cabinet-chat-and-harness",
+      "title": "TritonGPT and TritonAI Harness",
+      "allocation_seconds": 75,
+      "video": null,
+      "screenshot": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-chat-and-harness-final.png"
+    },
+    {
+      "slug": "cabinet-personal-productivity-demo",
+      "title": "Turn data into a briefing",
+      "allocation_seconds": 90,
+      "video": "/media/cabinet/cabinet-productivity-wide.mp4",
+      "screenshot": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-personal-productivity-demo-final.png"
+    },
+    {
+      "slug": "cabinet-training-website-demo",
+      "title": "Request a change and review the result",
+      "allocation_seconds": 60,
+      "video": "/media/cabinet/cabinet-mobile-executive.mp4",
+      "screenshot": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-training-website-demo-final.png"
+    },
+    {
+      "slug": "cabinet-scale",
+      "title": "TritonAI LLM Gateway Usage",
+      "allocation_seconds": 60,
+      "video": null,
+      "screenshot": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-scale-final.png"
+    },
+    {
+      "slug": "cabinet-sovereign-ai",
+      "title": "Campus-managed AI supports the builders",
+      "allocation_seconds": 60,
+      "video": null,
+      "screenshot": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-sovereign-ai-final.png"
+    },
+    {
+      "slug": "cabinet-training-discovery-demo",
+      "title": "Help staff get started",
+      "allocation_seconds": 30,
+      "video": "/media/cabinet/cabinet-learning-wide.mp4",
+      "screenshot": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-training-discovery-demo-final.png"
+    },
+    {
+      "slug": "cabinet-asks-close",
+      "title": "Start with one workflow in your department",
+      "allocation_seconds": 60,
+      "video": null,
+      "screenshot": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-asks-close-final.png"
+    }
+  ],
+  "changes": [
+    "cabinet-citizen-developer-story",
+    "cabinet-routing-savings",
+    "cabinet-chat-and-harness",
+    "cabinet-personal-productivity-demo",
+    "cabinet-sovereign-ai",
+    "cabinet-training-discovery-demo",
+    "cabinet-asks-close"
+  ],
+  "source_qualifications": {
+    "learning": "Real public lesson excerpt and revisited browser-local answer. No new quiz completion claimed.",
+    "productivity": "Actual completed task, new full-window Excel charts, and retained native PowerPoint navigation. Prepared sample data; no task generation replayed.",
+    "service_now": "Unsaved forms; no submitted case. Model scores are not observed accuracy.",
+    "availability": "Desktop Harness stable release channel is distinct from supported-pilot rollout. Mobile is a preview; temporary pairing remains revoked."
+  },
+  "remaining_owner_facts": [
+    "Contract add-in release and rollout scope",
+    "Class Planner builder attribution and adoption, if stated",
+    "ServiceNow eligible volume, measured routing accuracy and staff timing before a measured savings claim"
+  ],
+  "evidence": {
+    "projection": "/Users/bpollak/dev/cabinet-final-sweep-20261008/projection-review.json",
+    "compact": "/Users/bpollak/dev/cabinet-final-sweep-20261008/compact-review.json",
+    "source_media": "docs/cabinet-final-media-manifest.json",
+    "comparison": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-comparison-proof.png",
+    "usage": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-scale-settled.png",
+    "media_decode": "/Users/bpollak/dev/cabinet-final-sweep-20261008/media-decode-review.json",
+    "learning_playback": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-learning-proof.png"
+  }
+}

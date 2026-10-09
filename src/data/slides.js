@@ -7193,19 +7193,19 @@ export const slides = [
     "type": "content",
     "layout": "cabinet-outline",
     "title": "What could your department do with this?",
-    "subtitle": "Practical capabilities that help staff move work forward.",
+    "subtitle": "Citizen developers bring the workflow knowledge. Campus AI provides the tools.",
     "content": [
       {
-        "heading": "Handle routine work",
-        "text": "Help staff find information, review documents, and route requests."
+        "heading": "Start with work staff know",
+        "text": "Find a recurring task, a manual handoff, or a service people want to improve."
       },
       {
-        "heading": "Turn information into outputs",
-        "text": "Move from source files to charts, summaries, and presentations."
+        "heading": "Give people tools to build",
+        "text": "Use AI to work with information, produce useful outputs, and build a focused application."
       },
       {
-        "heading": "Improve a department service",
-        "text": "Put staff workflow knowledge into a focused, supported application."
+        "heading": "Support the result",
+        "text": "Campus-managed model access, the right permissions, and a person who owns the workflow."
       }
     ],
     "audiences": [
@@ -7213,7 +7213,7 @@ export const slides = [
     ],
     "managerSection": "Opening",
     "durationSeconds": 60,
-    "speakerNotes": "One minute. Open with the department question: where does your team spend time gathering information, moving it between systems, or preparing the next document? The demonstrations show capabilities to explore, not measured savings. Citizen development brings workflow expertise into application design. Directory is a team-built development example; Passport is a department-led service. Do not imply every example was built with TritonAI Harness. Then move directly into the apps."
+    "speakerNotes": "One minute. Open with the department question: where does your team spend time gathering information, moving it between systems, or preparing the next document? The organizing thesis is citizen development supported by sovereign, campus-managed AI. Staff bring workflow knowledge; the tools help them build. Start with examples, then reveal the workspace and shared infrastructure. Use approved data handling and keep a person accountable. The demonstrations show capabilities to explore, not measured savings. Class Planner is a focused student service; Directory is a team-built development example; Passport is department-led. Do not imply every example was built with our Harness. Transition: Here are three ways campus knowledge becomes a useful service."
   },
   {
     "id": 1002,
@@ -7438,11 +7438,11 @@ export const slides = [
         "text": "Multi-step work through project files, connected tools, and checks to a saved result you review."
       }
     ],
-    "speakerNotes": "Seventy-five seconds. Explain the distinction in two sentences: \u201cTritonGPT helps staff find, understand, and draft. The Harness can carry a task through files and tools to outputs they review.\u201d Use the aligned comparison and its original website animation if helpful; do not enumerate every row or introduce the plugin/settings tour. Then show data becoming an Excel workbook and PowerPoint briefing. The products are complementary, not a smarter-model claim. TritonGPT includes retrieval, uploaded files, assistants and assistant-specific tools; the animation is illustrative, not a one-prompt capability limit. Campus chats: published policy says automatic deletion after 90 days. Harness task history and project files are local, but prompts/selected context go to the chosen model and tools exchange data with connected services. Review modes vary by provider; Full access permits actions without prompts. Our recorded fictional task used Full access, not Supervised. Plugin abilities and account permissions still apply. P1-P3 requires approved service/setup, model route and use case; P4 prohibited. A shared Gateway does not guarantee identical model inventories or that every route is self-hosted. Source matrix and architecture: https://tritonai.ucsd.edu/developer-apis/harness.html ; TritonGPT capabilities: https://tritonai.ucsd.edu/tritongpt/index.html ; retention and approved use: https://tritonai.ucsd.edu/tritongpt/privacy.html . Independently verified October 8, 2026. Original HTML/SVG/CSS from #what-a-harness-adds stays unchanged and uniformly scaled, with bundled fonts; adapted matrix and use-case tables are explicitly labeled Cabinet adaptation.",
+    "speakerNotes": "Seventy-five seconds. Explain the distinction in two sentences: “TritonGPT helps staff find, understand, and draft. The Harness can carry a task through files and tools to outputs they review.” Use the aligned comparison and its original website animation if helpful; do not enumerate every row or introduce the plugin/settings tour. Then show data becoming an Excel workbook and PowerPoint briefing. The products are complementary, not a smarter-model claim. TritonGPT includes retrieval, uploaded files, assistants and assistant-specific tools; the animation is illustrative, not a one-prompt capability limit. Campus chats: published policy says automatic deletion after 90 days. Harness task history and project files are local, but prompts/selected context go to the chosen model and tools exchange data with connected services. Review modes vary by provider; Full access permits actions without prompts. The recorded task on prepared sample files used Full access, not Supervised. Plugin abilities and account permissions still apply. P1-P3 requires approved service/setup, model route and use case; P4 prohibited. The public site currently describes desktop Harness as a supported pilot; stable is the release channel, not a campus-wide rollout claim. Mobile remains preview. A shared Gateway does not guarantee identical model inventories or that every route is self-hosted. Source matrix and architecture: https://tritonai.ucsd.edu/developer-apis/harness.html ; TritonGPT capabilities: https://tritonai.ucsd.edu/tritongpt/index.html ; retention and approved use: https://tritonai.ucsd.edu/tritongpt/privacy.html . Independently verified October 8, 2026. Original HTML/SVG/CSS from #what-a-harness-adds stays unchanged and uniformly scaled, with bundled fonts; adapted matrix and use-case tables are explicitly labeled Cabinet adaptation.",
     "websiteVisual": "comparison",
     "workflowComparison": {
-      "matrixTitle": "Comparing TritonGPT and TritonAI Harness",
-      "matrixLead": "Shared campus AI infrastructure. Different workspaces, access, and ways to review the result.",
+      "matrixTitle": "TritonGPT and TritonAI Harness",
+      "matrixLead": "Find, understand, and draft in chat. Carry work through files and tools in the Harness.",
       "matrixRows": [
         {
           "label": "Where it runs",
@@ -7453,18 +7453,18 @@ export const slides = [
           },
           "harness": {
             "title": "Your workstation",
-            "detail": "Mac or Windows app; a paired phone can direct it."
+            "detail": "Mac or Windows desktop; mobile is a preview."
           }
         },
         {
           "label": "System access",
           "icon": "FolderOpen",
           "tritongpt": {
-            "title": "Uploaded files and assistant context",
+            "title": "Uploaded files and campus context",
             "detail": "Review documents within the chat."
           },
           "harness": {
-            "title": "Project folders, commands, and Git",
+            "title": "Project files and working tools",
             "detail": "Read, edit, run, and check within granted access."
           }
         },
@@ -7481,15 +7481,15 @@ export const slides = [
           }
         },
         {
-          "label": "Host plugins",
+          "label": "Connected tools",
           "icon": "Plug",
           "tritongpt": {
-            "title": "Campus sources and assistant tools",
-            "detail": "Websites, knowledge bases, and directory information."
+            "title": "Campus sources and assistants",
+            "detail": "Websites, knowledge bases, and assistant tools."
           },
           "harness": {
             "title": "Connected service plugins",
-            "detail": "Microsoft 365, Google Workspace, GitHub, and n8n; account permissions apply."
+            "detail": "Microsoft 365, Google Workspace, GitHub, n8n."
           }
         },
         {
@@ -7501,19 +7501,19 @@ export const slides = [
           },
           "harness": {
             "title": "Choose an approval mode",
-            "detail": "Supervised pauses for changes; Full access can act without prompts."
+            "detail": "Supervised pauses; Full access can act without prompts."
           }
         },
         {
           "label": "Data classification",
           "icon": "ShieldCheck",
           "tritongpt": {
-            "title": "P1\u2013P3 in approved services",
-            "detail": "P4 prohibited. Check the service, model route, and use case."
+            "title": "P1–P3 in approved services",
+            "detail": "P4 prohibited. Check the route and use case."
           },
           "harness": {
-            "title": "P1\u2013P3 in approved setups",
-            "detail": "P4 prohibited. Check the service, model route, and use case."
+            "title": "P1–P3 in approved setups",
+            "detail": "P4 prohibited. Check the route and use case."
           }
         }
       ],
@@ -7536,7 +7536,7 @@ export const slides = [
           "harness": "A saved workbook, briefing deck, checked website change, or workflow to review."
         }
       ],
-      "dataRule": "P1\u2013P3 only within approved services and setups; P4 prohibited. Check the service, model route, and use case.",
+      "dataRule": "P1–P3 only within approved services and setups; P4 prohibited. Check the service, model route, and use case.",
       "accessRule": "Access follows your account permissions and the abilities enabled for each tool.",
       "verifiedDate": "October 8, 2026",
       "sources": [
@@ -7739,23 +7739,23 @@ export const slides = [
     "releaseContext": {
       "channel": "production",
       "label": "Live TritonAI website",
-      "captureNote": "Discovery Series \u00b7 Captured October 8, 2026"
+      "captureNote": "Discovery Series · Captured October 8, 2026"
     },
     "recording": {
-      "label": "Homepage \u2192 Learn \u2192 Discovery Series \u2192 video \u2192 quiz",
-      "format": "Short executive cut \u2022 silent for presenter voice-over \u2022 actual captured app pixels",
+      "label": "Homepage → Learn → Discovery Series → instructor excerpt → brief knowledge-check feedback",
+      "format": "Fresh 3200 × 2000 full-app captures, delivered at 2560 × 1600 • silent • no added framing",
       "mediaStem": "cabinet-training-discovery",
       "status": "captured and reviewed"
     },
-    "speakerNotes": "Thirty seconds, including a 14-second silent website cut. Voice-over: \u201cYour staff can start at the TritonAI website, find examples relevant to their work, and use short learning resources together.\u201d Show where Learn leads and a few seconds of the Discovery Series playing. Do not teach the lesson or take the quiz in this Cabinet presentation. This is actual public-site footage captured October 8, with navigation shortened and six seconds of real video playback. The longer capture and quiz proof remain as source material outside the executive cut.",
+    "speakerNotes": "Thirty seconds including an approximately 22-second fresh full-app cut. Voice-over: Staff can start at the TritonAI website, find short videos relevant to their work, and use the knowledge checks and discussion prompts with their teams. The live sequence goes from homepage through Learn and Discovery Series into What is AI? with Trevor Bonjour, shows six seconds of actual instructor playback from midway through the lesson, then briefly shows correct-answer feedback. This is a capability overview, not a lesson walkthrough. Prior browser-local quiz progress was preserved; the recording revisits one answer and does not demonstrate completing a lesson or earning an institutional credential. Waits and navigation are shortened without changing speed; timestamped source captures run about 3 fps in a 30 fps encoding. Full app pixels, no overlays or digital zoom. Current public page lists videos 1–9 as available and 10–15 for October 15; do not imply all fifteen are live. Source checked October 8, 2026: https://tritonai.ucsd.edu/training-resources/videos/index.html . Transition: Ask your team to choose one workflow and one owner. Traceability: docs/cabinet-final-media-manifest.json.",
     "videoLoop": false,
     "videoClearNav": false,
     "videoAutoPlay": true,
     "hideDemoBadge": true,
-    "videoSrc": "/media/cabinet/cabinet-learning-executive.mp4",
-    "poster": "/media/cabinet/cabinet-learning-executive-poster.jpg",
+    "videoSrc": "/media/cabinet/cabinet-learning-wide.mp4",
+    "poster": "/media/cabinet/cabinet-learning-wide-poster.jpg",
     "demoOnly": true,
-    "managerSummary": "Brief website navigation and actual video playback; no quiz walkthrough."
+    "managerSummary": "Brief homepage-to-lesson navigation, actual instructor playback, and revisited knowledge-check feedback."
   },
   {
     "id": 1009,
@@ -7797,7 +7797,7 @@ export const slides = [
     "type": "video",
     "layout": "cabinet-demo",
     "title": "Turn data into a briefing",
-    "subtitle": "Source files \u2192 Excel charts \u2192 a PowerPoint summary for review.",
+    "subtitle": "Source files → Excel charts → a PowerPoint summary for review.",
     "content": [],
     "audiences": [
       "cabinet"
@@ -7806,22 +7806,22 @@ export const slides = [
     "durationSeconds": 90,
     "releaseContext": {
       "channel": "stable",
-      "label": "Stable 0.3.6 capabilities \u00b7 personal productivity",
-      "captureNote": "Actual recording: Nightly .63 \u00b7 fictional files"
+      "label": "Stable 0.3.6 capabilities · personal productivity",
+      "captureNote": "Actual recording: Nightly .63 · prepared sample files"
     },
     "recording": {
-      "label": "Data \u2192 Excel charts \u2192 PowerPoint",
-      "format": "Short executive cut \u2022 silent for presenter voice-over \u2022 actual captured app pixels",
+      "label": "Data → Excel charts → PowerPoint",
+      "format": "Fresh full-window Harness and Excel captures, followed by retained native PowerPoint navigation • high resolution • silent",
       "mediaStem": "cabinet-personal-productivity",
       "status": "captured and reviewed"
     },
-    "speakerNotes": "Ninety seconds, including an approximately 25-second cut. Voice-over: \u201cThink about the time your team spends turning a data file and meeting notes into the next briefing. Here the Harness creates an Excel workbook with charts and a PowerPoint summary that staff can open, edit, and review.\u201d Point to outputs; skip formulas, response counts, prompts, and slide-by-slide findings. The first three seconds are an authentic held capture of the completed GLM task; the rest is newly recorded native navigation from worksheet to charts and through the generated PowerPoint. The workbook and briefing are actual outputs created from prepared sample survey data and notes. These results are not campus performance metrics. Desktop capabilities are in stable 0.3.6; the original task was recorded on Nightly .63. Native review and a layout repair were completed. No account connection, sending, or publishing occurred. Source files, long cut, and detailed factual notes are retained.",
+    "speakerNotes": "Ninety seconds including an approximately 21-second cut. Voice-over: Think about the time your team spends turning a data file and meeting notes into the next briefing. Here the Harness creates an Excel workbook with editable charts and a PowerPoint summary staff can open, edit, and review. Show the original request and real completed task, the full native Excel window with both charts visible, and native PowerPoint navigation. The fresh Harness and Excel captures retain their observed timestamp cadence; the existing PowerPoint source is native high-resolution capture. No task generation is replayed in this retake. The workbook and briefing are actual outputs from prepared sample survey data and notes, not campus performance metrics. Original task ran on Nightly .63; these desktop capabilities exist in stable 0.3.6, which is the release channel while the public site calls Harness a supported pilot. A native Excel zoom adjustment fits both charts in view; no video crop, synthetic UI, or digital zoom is applied. The result was checked and a layout repaired. No sending or publication. Transition: The same workspace can also be directed from a phone; the next clip is a mobile preview. Traceability: docs/cabinet-final-media-manifest.json.",
     "videoLoop": false,
     "videoClearNav": false,
     "videoAutoPlay": true,
     "hideDemoBadge": true,
-    "videoSrc": "/media/cabinet/cabinet-productivity-executive.mp4",
-    "poster": "/media/cabinet/cabinet-productivity-executive-poster.jpg",
+    "videoSrc": "/media/cabinet/cabinet-productivity-wide.mp4",
+    "poster": "/media/cabinet/cabinet-productivity-wide-poster.jpg",
     "demoOnly": true,
     "managerSummary": "Actual Harness task followed by fresh recorded navigation through native Excel and PowerPoint outputs."
   },
@@ -7830,20 +7830,20 @@ export const slides = [
     "slug": "cabinet-sovereign-ai",
     "type": "content",
     "layout": "cabinet-outline",
-    "title": "Campus tools, with people in control",
-    "subtitle": "Match the tool and environment to the work your department needs to do.",
+    "title": "Campus-managed AI supports the builders",
+    "subtitle": "Sovereign AI connects useful campus tools to infrastructure we manage.",
     "content": [
       {
-        "heading": "Choose the right environment",
-        "text": "Match the service and model route to the data being used."
+        "heading": "Shared model access",
+        "text": "UC San Diego infrastructure and approved cloud routes support campus tools and applications."
       },
       {
-        "heading": "Control access",
-        "text": "Grant the access the task needs and choose how actions are approved."
+        "heading": "Permissions that fit the task",
+        "text": "Match the service and model route to the data, and choose how actions are approved."
       },
       {
-        "heading": "Review the result",
-        "text": "A person checks the output before it is sent, published, or put into wider use."
+        "heading": "An owner and a review step",
+        "text": "Check the result before it is shared or expanded. Measure the workflow as it runs."
       }
     ],
     "audiences": [
@@ -7851,7 +7851,7 @@ export const slides = [
     ],
     "managerSection": "Sovereign AI and Scale",
     "durationSeconds": 60,
-    "speakerNotes": "One minute. Connect sovereign AI to operational choices: campus-managed infrastructure and model access are part of the available approach, alongside commercial routes. Avoid claiming every Gateway route is self-hosted or every data classification is approved everywhere. Approval depends on service, model route, data, and use case. Human oversight and workflow ownership remain necessary. Do not repeat unverified vendor-contract or cross-campus rollout claims. The website change shown earlier remained a local preview."
+    "speakerNotes": "One minute. Return to the two pillars: people who understand their work, supported by sovereign campus-managed AI. UC San Diego manages shared inference and access infrastructure; approved commercial routes are also available. Sovereign does not mean every Gateway request runs on campus GPUs. Choose the service, model route, permissions, and data handling for the task. Stable is a release channel; desktop Harness is described as a supported pilot on the current public website. Keep a workflow owner, review consequential results, and measure outcomes. Do not repeat unverified vendor contracts, Berkeley quotes, rollout dates, or cross-campus availability. Transition: The tools and learning paths are available from one campus starting point. Sources: https://tritonai.ucsd.edu/developer-apis/index.html and https://tritonai.ucsd.edu/developer-apis/harness.html, checked October 8, 2026."
   },
   {
     "id": 1012,
@@ -7872,19 +7872,19 @@ export const slides = [
     "type": "content",
     "layout": "cabinet-outline",
     "title": "Start with one workflow in your department",
-    "subtitle": "Explore tools, examples, and learning resources at tritonai.ucsd.edu.",
+    "subtitle": "Choose one useful task. Put a staff owner alongside the tools.",
     "content": [
       {
-        "heading": "Choose a recurring task",
-        "text": "Find work that repeatedly consumes staff time or involves manual handoffs."
+        "heading": "Pick a recurring workflow",
+        "text": "Start where your team loses time gathering information or moving work between systems."
       },
       {
-        "heading": "Pilot with the people doing it",
-        "text": "Give the workflow an owner, use an approved setup, and review the results."
+        "heading": "Name an owner and run a small pilot",
+        "text": "Use the right campus setup and have the people doing the work review the results."
       },
       {
-        "heading": "Measure the improvement",
-        "text": "Compare time, quality, and staff effort before deciding whether to expand."
+        "heading": "Measure before expanding",
+        "text": "Compare time, quality, and staff effort. Keep what helps and improve what does not."
       }
     ],
     "audiences": [
@@ -7892,7 +7892,11 @@ export const slides = [
     ],
     "managerSection": "Closing",
     "durationSeconds": 60,
-    "speakerNotes": "One minute. Ask each department to identify one recurring workflow and the staff member who understands it. Start small with the appropriate campus support, service, data handling, and review. Measure actual outcomes before expanding; no savings claim is implied by these demonstrations. Point to tritonai.ucsd.edu. The core sequence allocates fifteen minutes, leaving five minutes for narration and transitions within the twenty-minute presentation; ten minutes of unscripted Q&A follows separately. Contract review queue and other project-specific decisions can be raised if the room wants to go deeper; they are not the default close."
+    "speakerNotes": "One minute. Ask each department to identify one recurring workflow and the staff member who understands it. Start small with the appropriate campus support, service, data handling, and review. Measure actual outcomes before expanding; no savings claim is implied by these demonstrations. Point to tritonai.ucsd.edu. The core sequence allocates fifteen minutes, leaving five minutes for narration and transitions within the twenty-minute presentation; ten minutes of unscripted Q&A follows separately. Contract review queue and other project-specific decisions can be raised if the room wants to go deeper; they are not the default close. Closing voice-over: Bring us one recurring task and the person who understands it. We can start small, measure what improves, and build from there. The visible website link is the starting point for tools, learning, and support.",
+    "actionLink": {
+      "label": "tritonai.ucsd.edu",
+      "href": "https://tritonai.ucsd.edu/"
+    }
   },
   {
     "id": 1014,
@@ -7952,7 +7956,7 @@ export const slides = [
     "id": 1020,
     "slug": "cabinet-routing-savings",
     "type": "content",
-    "layout": "cabinet-outline",
+    "layout": "cabinet-routing-savings",
     "title": "Less time sorting, more time helping",
     "subtitle": "Illustrative estimate per 10,000 eligible cases, assuming 90% routing accuracy.",
     "content": [
@@ -7975,6 +7979,28 @@ export const slides = [
     "managerSection": "Administrative Verticals",
     "durationSeconds": 60,
     "managerSummary": "Potential routing labor savings at assumed 90% accuracy, normalized per 10,000 eligible cases; assisted and automatic scenarios.",
-    "speakerNotes": "One minute. This is a scenario requested for the presentation, not a performance claim. At N=10,000 eligible cases, manual routing takes 60 seconds each: 166.67 staff hours. At 90% correct automatic assignment, 1,000 incorrect assignments require 90 seconds each (60 seconds manual handling plus 30 seconds correction overhead): 25 hours. Potential savings: 141.67 hours, or 85% of baseline routing labor. Assisted routing adds 10 seconds to review/select on all 10,000 cases (27.78 hours) plus the same 25 hours correcting errors, leaving 52.78 hours and saving 113.89 hours (68.33%). The clip shows staff selection, not automatic assignment; automatic routing is a potential future operating scenario. The 90% assumption is from Brett, not the displayed model confidence scores. Timing and reference volume are illustrative pending owner validation. These are eligible cases, not all service desk cases: for monthly estimates multiply total case volume by the eligible share, then scale the per-case savings. No campus monthly volume was supplied. Every misroute is assumed detected and corrected in the stated time; downstream delays, quality effects, system costs, audit/monitoring, and implementation overhead are excluded. Do not call these cash or staffing reductions. Measure manual touch time, eligible coverage, actual destination accuracy, and correction effort in a pilot. Detailed arithmetic: docs/cabinet-routing-savings.json."
+    "speakerNotes": "One minute. This is a scenario requested for the presentation, not a performance claim. At N=10,000 eligible cases, manual routing takes 60 seconds each: 166.67 staff hours. At 90% correct automatic assignment, 1,000 incorrect assignments require 90 seconds each (60 seconds manual handling plus 30 seconds correction overhead): 25 hours. Potential savings: 141.67 hours, or 85% of baseline routing labor. Assisted routing adds 10 seconds to review/select on all 10,000 cases (27.78 hours) plus the same 25 hours correcting errors, leaving 52.78 hours and saving 113.89 hours (68.33%). The clip shows staff selection, not automatic assignment; automatic routing is a potential future operating scenario. The 90% assumption is from Brett, not the displayed model confidence scores. Timing and reference volume are illustrative pending owner validation. These are eligible cases, not all service desk cases: for monthly estimates multiply total case volume by the eligible share, then scale the per-case savings. No campus monthly volume was supplied. Every misroute is assumed detected and corrected in the stated time; downstream delays, quality effects, system costs, audit/monitoring, and implementation overhead are excluded. Do not call these cash or staffing reductions. Measure manual touch time, eligible coverage, actual destination accuracy, and correction effort in a pilot. Detailed arithmetic: docs/cabinet-routing-savings.json. Transition: This is one example of the capacity we can test. Now let us look at the workspace staff can use for their own tasks.",
+    "routingSavings": {
+      "baselineHours": 166.66666666666666,
+      "assumptions": {
+        "eligibleCases": 10000,
+        "accuracy": 0.9,
+        "manualSeconds": 60,
+        "correctionSeconds": 90,
+        "reviewSeconds": 10
+      },
+      "scenarios": [
+        {
+          "label": "Automatic routing",
+          "hours": 25,
+          "description": "Correct the 10% assigned incorrectly."
+        },
+        {
+          "label": "With staff review",
+          "hours": 52.77777777777778,
+          "description": "Review every suggestion, then correct misroutes."
+        }
+      ]
+    }
   }
 ];

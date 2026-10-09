@@ -1,0 +1,124 @@
+{
+  "purpose": "Cabinet executive presentation; original app pixels, silent for voice-over",
+  "added_headers_footers_captions": false,
+  "cropping": false,
+  "digital_zoom": false,
+  "speed_changes": false,
+  "full_frame_aspect_ratio_preserved": true,
+  "timing": "Observed screenshot timing retained in 30 fps encoding; roughly 2-4 distinct captured frames per second. This is not 30 distinct capture frames per second.",
+  "source_qualifications": {
+    "learning": "Current public website. Real video playback and brief revisited answer feedback. Existing browser-local quiz progress preserved; no new completion or credential claimed.",
+    "productivity": "Fresh full-window Harness Nightly .63 and Excel captures, plus retained native PowerPoint navigation. Actual files from prepared sample data. Task generation is not replayed. Excel native zoom temporarily adjusted to fit charts and restored. No sending or publication."
+  },
+  "clips": [
+    {
+      "name": "learning",
+      "video": "cabinet-learning-wide.mp4",
+      "poster": "cabinet-learning-wide-poster.jpg",
+      "video_sha256": "5170c90aeede504e807ff36e0a547fc15f9da60e868d0fca08f88662e09722d1",
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 2560,
+            "height": 1600
+          }
+        ],
+        "format": {
+          "duration": "21.733333"
+        }
+      },
+      "segments": [
+        {
+          "source": "/Users/bpollak/dev/cabinet-final-sweep-20261008/learning-nav-frames.json",
+          "source_sha256": "3c870aa6f92732586fa04e0b7a138ca59a441ce9b7cad1a6b8b99120b4dadafe",
+          "start_seconds": 1,
+          "duration_seconds": 4.5,
+          "source_frames": 26,
+          "source_duration_seconds": 8.053241207999996
+        },
+        {
+          "source": "/Users/bpollak/dev/cabinet-final-sweep-20261008/learning-series-frames.json",
+          "source_sha256": "692783e51e2d7d74fd2f2f88afc0cc6417fa137f2d84d94288a358b462c06d72",
+          "start_seconds": 0.5,
+          "duration_seconds": 4.5,
+          "source_frames": 27,
+          "source_duration_seconds": 8.085792292000006
+        },
+        {
+          "source": "/Users/bpollak/dev/cabinet-final-sweep-20261008/learning-lesson-frames.json",
+          "source_sha256": "fc1be562cd38e00ebe3ca051dc28108d79ea417088892308c1ab7c4d040e23f3",
+          "start_seconds": 0.8,
+          "duration_seconds": 3.8,
+          "source_frames": 21,
+          "source_duration_seconds": 7.054270666999997
+        },
+        {
+          "source": "/Users/bpollak/dev/cabinet-final-sweep-20261008/learning-instructor-frames.json",
+          "source_sha256": "cfcaa74ff2833050f96a0764564448a894debdd3f4c2469ccbdfdd3c4bc97472",
+          "start_seconds": 1,
+          "duration_seconds": 6,
+          "source_frames": 26,
+          "source_duration_seconds": 8.012793666000013
+        },
+        {
+          "source": "/Users/bpollak/dev/cabinet-final-sweep-20261008/learning-check-frames.json",
+          "source_sha256": "ecdadf5dcd05848347c1de230e9592840b33d95fa1d7e811f66ee68c816b5a70",
+          "start_seconds": 1.4,
+          "duration_seconds": 3.8,
+          "source_frames": 17,
+          "source_duration_seconds": 6.012323166000002
+        }
+      ]
+    },
+    {
+      "name": "productivity",
+      "video": "cabinet-productivity-wide.mp4",
+      "poster": "cabinet-productivity-wide-poster.jpg",
+      "video_sha256": "161f0e7759d5cadeca4af4984b90b33c50eaa1cbf42617344b710c98de86badb",
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 2560,
+            "height": 1440,
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "21.100000"
+        }
+      },
+      "segments": [
+        {
+          "source": "/Users/bpollak/dev/cabinet-final-sweep-20261008/harness-task-full-frames.json",
+          "source_sha256": "2d337ec0756262c4b55bc8fe8a9e6f7a29c46fd5422bfb068624e774e80f7af1",
+          "start_seconds": 0,
+          "duration_seconds": 4,
+          "source_frames": 8,
+          "source_duration_seconds": 4.1832505830000155
+        },
+        {
+          "source": "/Users/bpollak/dev/cabinet-final-sweep-20261008/excel-charts-full-frames.json",
+          "source_sha256": "6d8a813a5c571baf2f90403c07b8617654afc2b592352f4bb482aa7ce66871d8",
+          "start_seconds": 0,
+          "duration_seconds": 6,
+          "source_frames": 11,
+          "source_duration_seconds": 6.320352416999987
+        },
+        {
+          "source": "/Users/bpollak/dev/cabinet-executive-capture-20261008/powerpoint-frames.json",
+          "source_sha256": "959684bae7b16716765f39ab786c704fa488b8e65b59555e478140f75cc9032d",
+          "start_seconds": 0,
+          "duration_seconds": 11.151,
+          "source_frames": 34,
+          "source_duration_seconds": 11.151
+        }
+      ]
+    }
+  ]
+}

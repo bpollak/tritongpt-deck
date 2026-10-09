@@ -1,0 +1,4 @@
+.cabinet-canvas {position:relative;width:100%;height:100%;overflow:hidden;}
+.cabinet-canvas-content {position:absolute;width:1280px;height:720px;transform-origin:0 0;}
+.cabinet-canvas[data-reading] {overflow-y:auto;}
+.cabinet-canvas[data-reading] > .cabinet-canvas-content {position:relative;width:100%;height:auto;min-height:100%;}
