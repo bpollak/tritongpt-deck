@@ -6,9 +6,9 @@ test('Cabinet opens with six aligned website-style comparison rows and retains t
   const controls = comparison.getByRole('navigation', { name: 'Comparison views' });
   await expect(controls.getByRole('button', { name: 'Comparison', exact: true })).toHaveAttribute('aria-pressed', 'true');
   const matrix = comparison.locator('.cabinet-workflow-adaptation:not([hidden])');
-  await expect(matrix.getByRole('heading', { name: 'Comparing TritonGPT and TritonAI Harness', exact: true })).toBeVisible();
+  await expect(matrix.getByRole('heading', { name: 'TritonGPT and TritonAI Harness', exact: true })).toBeVisible();
   await expect(matrix.getByRole('row')).toHaveCount(7);
-  for (const label of ['Where it runs', 'System access', 'Data storage', 'Host plugins', 'Human oversight', 'Data classification']) {
+  for (const label of ['Where it runs', 'System access', 'Data storage', 'Connected tools', 'Human oversight', 'Data classification']) {
     const row = matrix.getByRole('row').filter({ has: page.getByRole('rowheader', { name: label, exact: true }) });
     await expect(row.getByRole('cell')).toHaveCount(2);
     const cells = await row.getByRole('cell').all();
