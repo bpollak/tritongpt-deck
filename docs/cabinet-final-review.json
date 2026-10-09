@@ -50,8 +50,8 @@
     },
     {
       "slide": "cabinet-training-website-demo",
-      "video": "/media/cabinet/cabinet-mobile-executive.mp4",
-      "duration": 26,
+      "video": "/media/cabinet/cabinet-mobile-results.mp4",
+      "duration": 15,
       "width": 1206,
       "height": 2622
     },
@@ -63,7 +63,7 @@
       "height": 1600
     }
   ],
-  "clip_total_seconds": 270.0,
+  "clip_total_seconds": 259.0,
   "verification": {
     "other_audiences_unchanged": [
       "LMU",
@@ -93,7 +93,9 @@
     "media_decode": "All eight clips decoded completely with ffmpeg; zero errors or diagnostics.",
     "thumbnails": "All 110 active/library thumbnails refreshed and validated, including the new cited research-data slide and revised inference slide.",
     "cited_slide_layouts": "Both cited slides visually reviewed at 1920\u00d71080 projection and 620\u00d7350 compact preview. Inference slide also checked at 390\u00d7844: reading mode, body width 390, four source links. Viewport override reset.",
-    "harness_output_montage": "Original Excel, PowerPoint, and app-page captures from the public training opening, fully contained without crop or digital zoom; 24 seconds with silent eight-second holds. See dedicated source manifest. Browser playback loaded at 2560\u00d71440, advanced muted, object-fit contain, no media error. Full PowerPoint context visually checked in the deck."
+    "harness_output_montage": "Original Excel, PowerPoint, and app-page captures from the public training opening, fully contained without crop or digital zoom; 24 seconds with silent eight-second holds. See dedicated source manifest. Browser playback loaded at 2560\u00d71440, advanced muted, object-fit contain, no media error. Full PowerPoint context visually checked in the deck.",
+    "executive_content_sweep": "All eight active clips sampled visually. Mobile re-cut to workspace and website before/after, removing technical prompt, Markdown filenames, commands, checks and task log. The other active clips show finished Office outputs, actual app workflows, Word add-in, ServiceNow suggestions, and training discovery.",
+    "mobile_results_playback": "Loaded and played through all 15 seconds, 1206\u00d72622, muted, object-fit contain, no media error. Every second of the edited clip was visually checked; no Markdown file, code view, or task log. Native website before/after framing is intact."
   },
   "slides": [
     {
@@ -175,10 +177,10 @@
     },
     {
       "slug": "cabinet-training-website-demo",
-      "title": "Request a change and review the result",
+      "title": "Review a website update from your phone",
       "allocation_seconds": 60,
-      "video": "/media/cabinet/cabinet-mobile-executive.mp4",
-      "screenshot": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-training-website-demo-final.png"
+      "video": "/media/cabinet/cabinet-mobile-results.mp4",
+      "screenshot": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-mobile-results-proof.png"
     },
     {
       "slug": "cabinet-scale",
@@ -235,7 +237,8 @@
     "class_planner_utilization": "Exact PK chart data, July 18\u2013September 20, 2026; distinct authenticated daily TritonGPT accounts and Plausible estimated standalone daily visitors are different measures. Square-root axis retained and disclosed.",
     "class_planner_chat_lookup": "October 8 Granola notes confirm a new AI/chat option in 1:1 Brett\u2013Alex, but no URL was found in accessible notes or recent Matthew Holland Teams links. Public planner currently exposes Manual/Auto. Exact URL requested from presenter; new chat recording pending.",
     "sovereign_inference": "OpenAI August 18 pacing disclosure; U.S. EO 14409 section 3 is voluntary and expressly excludes mandatory preclearance; NVIDIA model/coalition announcements are sources, not proof of UCSD deployment or universal frontier parity.",
-    "navier_stokes": "Primary Buckmaster statement raises a question and explicitly does not allege proven misuse. September 9 coverage precedes OpenAI September 10 denial concerning the preceding two months of prompts. No public misuse established; no Clay prize claim."
+    "navier_stokes": "Primary Buckmaster statement raises a question and explicitly does not allege proven misuse. September 9 coverage precedes OpenAI September 10 denial concerning the preceding two months of prompts. No public misuse established; no Clay prize claim.",
+    "mobile": "October 8 simulator and Nightly .63 host capture. The update was made in a separate local website checkout and not published. This short edit shows workspace context and actual before/after website views, not the request being entered or the task executing. Some source views are held original captures. Temporary pairing remains revoked."
   },
   "remaining_owner_facts": [
     "Contract add-in release and rollout scope",
@@ -254,6 +257,7 @@
     "class_planner_utilization": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-class-planner-utilization-proof.png",
     "sovereign_inference_sources": "docs/cabinet-sovereign-inference-sources.md",
     "research_data_trust": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-research-data-trust-proof.png",
-    "sovereign_inference": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-sovereign-inference-proof.png"
+    "sovereign_inference": "/Users/bpollak/dev/cabinet-final-sweep-20261008/cabinet-sovereign-inference-proof.png",
+    "mobile_results_manifest": "docs/cabinet-mobile-results-manifest.json"
   }
 }

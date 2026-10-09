@@ -1,0 +1,40 @@
+{
+  "name": "mobile",
+  "video": "cabinet-mobile-results.mp4",
+  "poster": "cabinet-mobile-results-poster.jpg",
+  "video_sha256": "73b023616df95cc02eb4e3ae7636c8448e037354cb0695cafe9c14a7c3bf0c79",
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1206,
+        "height": 2622
+      }
+    ],
+    "format": {
+      "duration": "15.000000"
+    }
+  },
+  "source": "cabinet-mobile-website-clean.mp4",
+  "source_sha256": "447b42a951e8fad3dc68384ed68372237a98ce7eafdaf756b4b903f7c2feec60",
+  "segments": [
+    {
+      "start_seconds": 0,
+      "duration_seconds": 3,
+      "description": "Mobile Harness workspace"
+    },
+    {
+      "start_seconds": 6,
+      "duration_seconds": 4,
+      "description": "Website before the change"
+    },
+    {
+      "start_seconds": 70,
+      "duration_seconds": 8,
+      "description": "Website after the change"
+    }
+  ],
+  "treatment": "Original portrait pixels and timing. Mobile workspace then website before/after. No task prompt, Markdown file view, commands, checks, or processing log. No crop, zoom, captions, or generated UI. Original recording retained.",
+  "source_qualification": "October 8 simulator and Nightly .63 host capture. The update was made in a separate local website checkout and not published. This short edit shows workspace context and actual before/after website views, not the request being entered or the task executing. Some source views are held original captures. Temporary pairing remains revoked."
+}

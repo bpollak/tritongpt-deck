@@ -7762,7 +7762,7 @@ export const slides = [
     "slug": "cabinet-training-website-demo",
     "type": "video",
     "layout": "cabinet-demo",
-    "title": "Request a change and review the result",
+    "title": "Review a website update from your phone",
     "subtitle": "A phone can direct work on the paired Harness host.",
     "content": [],
     "audiences": [
@@ -7776,20 +7776,20 @@ export const slides = [
       "captureNote": "Nightly .63 host + development simulator \u00b7 production mobile rollout unverified"
     },
     "recording": {
-      "label": "Mobile request \u2192 checks \u2192 website preview",
+      "label": "Mobile workspace \u2192 website before and after",
       "format": "Short executive cut \u2022 silent for presenter voice-over \u2022 actual captured app pixels",
-      "mediaStem": "cabinet-training-website",
+      "mediaStem": "cabinet-mobile-results",
       "status": "captured and reviewed"
     },
-    "speakerNotes": "One minute, including a 26-second native portrait cut. Voice-over: \u201cA plain-language request starts the work. The Harness carries it through on the paired computer, and I can inspect the result before approving the next step.\u201d Focus on request and result, not checks or commands. Introduce this once as a mobile preview. Actual development simulator plus Nightly .63 host, captured October 8; desktop stable availability does not establish production mobile availability. The website change was made only in a separate local checkout and was not published. The task used the official GLM connection and Full access. Processing time is cut; some before/after views are held native captures. Temporary pairing was revoked after recording. Source notes retained in docs/cabinet-executive-source-notes.json.",
+    "speakerNotes": "One minute, including a 15-second native portrait cut. Voice-over: I asked the Harness to refresh the training information on our website. I can review the result from my phone before approving publication. Show the mobile workspace, the prior website view, then the updated view. The request-entry, Markdown filenames, code, commands, checks, and task logs are omitted from this executive cut; it does not show the task executing. Actual development simulator plus Nightly .63 host, captured October 8. Introduce this once as a mobile preview; desktop stable availability does not establish production mobile availability. The change was made only in a separate local checkout and was not published. Some original website views are held captures. Original portrait pixels and timing are preserved without crop, zoom, or added framing. The longer recording remains retained. Temporary pairing was revoked after recording. Traceability: docs/cabinet-mobile-results-manifest.json.",
     "videoLoop": false,
     "videoClearNav": false,
     "videoAutoPlay": true,
     "hideDemoBadge": true,
-    "videoSrc": "/media/cabinet/cabinet-mobile-executive.mp4",
-    "poster": "/media/cabinet/cabinet-mobile-executive-poster.jpg",
+    "videoSrc": "/media/cabinet/cabinet-mobile-results.mp4",
+    "poster": "/media/cabinet/cabinet-mobile-results-poster.jpg",
     "demoOnly": true,
-    "managerSummary": "Mobile request \u2192 working task \u2192 completed change \u2192 actual website preview."
+    "managerSummary": "Mobile workspace and actual website before/after views; technical task details omitted."
   },
   {
     "id": 1010,
