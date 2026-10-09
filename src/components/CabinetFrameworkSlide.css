@@ -155,3 +155,15 @@
   .cabinet-model-diagrams { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
   .cabinet-model-diagrams > svg { max-height: none; }
 }
+
+/* Keep the executive outline readable in the short browser-pane preview. */
+@media (max-height: 600px) and (min-width: 600px) {
+  .cabinet-framework-slide:has(.cabinet-framework-outline) { padding: 1rem 1.4rem 3.5rem; }
+  .cabinet-framework-slide:has(.cabinet-framework-outline) > h1 { margin-bottom: .65rem; font-size: 30px; }
+  .cabinet-framework-outline .cabinet-framework-takeaway { margin-bottom: .8rem; font-size: 16px; line-height: 1.3; }
+  .cabinet-framework-outline .cabinet-framework-rows { gap: .6rem; }
+  .cabinet-framework-outline .cabinet-framework-row { padding-top: .6rem; gap: 1rem; }
+  .cabinet-framework-outline .cabinet-framework-row h2 { font-size: 20px; margin-bottom: .2rem; }
+  .cabinet-framework-outline .cabinet-framework-row p { font-size: 14px; line-height: 1.3; }
+  .cabinet-framework-outline .cabinet-framework-row > span { font-size: 18px; }
+}

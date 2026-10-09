@@ -1,0 +1,307 @@
+{
+  "purpose": "Executive capability highlights; silent for presenter voice-over",
+  "added_titles_or_captions": false,
+  "generated_ui": false,
+  "speed_changes": false,
+  "original_long_cuts_retained": true,
+  "source_limitations": "Existing sources combine live screencast segments and authentic held screen captures. These edits do not turn still captures into continuous video. Passport is an isolated local copy; ServiceNow cases were not submitted; mobile edits were not published. Release status and source qualifications remain in presenter notes.",
+  "clips": [
+    {
+      "name": "directory",
+      "video": "cabinet-directory-executive.mp4",
+      "poster": "cabinet-directory-executive-poster.jpg",
+      "video_sha256": "a3f810365e46afe308674271fe85cd65695c6bad3b48673c67455bf089b3b493",
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1920,
+            "height": 1080,
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "22.000000"
+        }
+      },
+      "segments": [
+        {
+          "source": "cabinet-directory-clean.mp4",
+          "start_seconds": 0,
+          "duration_seconds": 3
+        },
+        {
+          "source": "cabinet-directory-clean.mp4",
+          "start_seconds": 20,
+          "duration_seconds": 9
+        },
+        {
+          "source": "cabinet-directory-clean.mp4",
+          "start_seconds": 40,
+          "duration_seconds": 10
+        }
+      ]
+    },
+    {
+      "name": "passport",
+      "video": "cabinet-passport-executive.mp4",
+      "poster": "cabinet-passport-executive-poster.jpg",
+      "video_sha256": "7a45eefac99bfe2f765a60fc12966946baae769666f16b85234c21159e70f19e",
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1920,
+            "height": 1080
+          }
+        ],
+        "format": {
+          "duration": "24.000000"
+        }
+      },
+      "segments": [
+        {
+          "source": "cabinet-passport-clean.mp4",
+          "start_seconds": 0,
+          "duration_seconds": 8
+        },
+        {
+          "source": "cabinet-passport-clean.mp4",
+          "start_seconds": 13,
+          "duration_seconds": 8
+        },
+        {
+          "source": "cabinet-passport-clean.mp4",
+          "start_seconds": 42,
+          "duration_seconds": 8
+        }
+      ]
+    },
+    {
+      "name": "contract-review",
+      "video": "cabinet-contract-review-executive.mp4",
+      "poster": "cabinet-contract-review-executive-poster.jpg",
+      "video_sha256": "638a9013303a4c134346a7b6b5a57ef1235aa7c05a7e6110042a5fa0182343db",
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 2560,
+            "height": 1978,
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "32.000000"
+        }
+      },
+      "segments": [
+        {
+          "source": "cabinet-contract-review-word-window.mp4",
+          "start_seconds": 10,
+          "duration_seconds": 7
+        },
+        {
+          "source": "cabinet-contract-review-word-window.mp4",
+          "start_seconds": 19,
+          "duration_seconds": 8
+        },
+        {
+          "source": "cabinet-contract-review-word-window.mp4",
+          "start_seconds": 31,
+          "duration_seconds": 12
+        },
+        {
+          "source": "cabinet-contract-review-word-window.mp4",
+          "start_seconds": 65,
+          "duration_seconds": 5
+        }
+      ]
+    },
+    {
+      "name": "servicenow",
+      "video": "cabinet-servicenow-executive.mp4",
+      "poster": "cabinet-servicenow-executive-poster.jpg",
+      "video_sha256": "a6f4987fea54eb4af7323225daadfef9584598f112649e7a5b5e7f229a60182c",
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1920,
+            "height": 1080,
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "27.000000"
+        }
+      },
+      "segments": [
+        {
+          "source": "cabinet-servicenow-routing-natural.mp4",
+          "start_seconds": 0,
+          "duration_seconds": 3
+        },
+        {
+          "source": "cabinet-servicenow-routing-natural.mp4",
+          "start_seconds": 9,
+          "duration_seconds": 8
+        },
+        {
+          "source": "cabinet-servicenow-routing-natural.mp4",
+          "start_seconds": 18,
+          "duration_seconds": 3
+        },
+        {
+          "source": "cabinet-servicenow-routing-natural.mp4",
+          "start_seconds": 27,
+          "duration_seconds": 8
+        },
+        {
+          "source": "cabinet-servicenow-routing-natural.mp4",
+          "start_seconds": 40,
+          "duration_seconds": 5
+        }
+      ]
+    },
+    {
+      "name": "learning",
+      "video": "cabinet-learning-executive.mp4",
+      "poster": "cabinet-learning-executive-poster.jpg",
+      "video_sha256": "cad9e059c923026aebd57d6ff464de5eb2d91540d46292dd0c75f6d8fec2791f",
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1920,
+            "height": 1080,
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "14.000000"
+        }
+      },
+      "segments": [
+        {
+          "source": "cabinet-training-discovery-clean.mp4",
+          "start_seconds": 0,
+          "duration_seconds": 2
+        },
+        {
+          "source": "cabinet-training-discovery-clean.mp4",
+          "start_seconds": 6,
+          "duration_seconds": 2
+        },
+        {
+          "source": "cabinet-training-discovery-clean.mp4",
+          "start_seconds": 9,
+          "duration_seconds": 4
+        },
+        {
+          "source": "cabinet-training-discovery-clean.mp4",
+          "start_seconds": 15,
+          "duration_seconds": 6
+        }
+      ]
+    },
+    {
+      "name": "mobile",
+      "video": "cabinet-mobile-executive.mp4",
+      "poster": "cabinet-mobile-executive-poster.jpg",
+      "video_sha256": "18338f8ba514079df33923788c662482e6ad77b11cfd713c7bb1c084c85c6a53",
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1206,
+            "height": 2622
+          }
+        ],
+        "format": {
+          "duration": "26.000000"
+        }
+      },
+      "segments": [
+        {
+          "source": "cabinet-mobile-website-clean.mp4",
+          "start_seconds": 12,
+          "duration_seconds": 6
+        },
+        {
+          "source": "cabinet-mobile-website-clean.mp4",
+          "start_seconds": 42,
+          "duration_seconds": 6
+        },
+        {
+          "source": "cabinet-mobile-website-clean.mp4",
+          "start_seconds": 60,
+          "duration_seconds": 6
+        },
+        {
+          "source": "cabinet-mobile-website-clean.mp4",
+          "start_seconds": 70,
+          "duration_seconds": 8
+        }
+      ]
+    },
+    {
+      "name": "productivity",
+      "video": "cabinet-productivity-executive.mp4",
+      "poster": "cabinet-productivity-executive-poster.jpg",
+      "video_sha256": "3a93c3d10244d3489ec8ca461f8e728359a14d81e8c0746c75635bf66c6b53ca",
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1920,
+            "height": 1080,
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "25.266667"
+        }
+      },
+      "segments": [
+        {
+          "source": "cabinet-personal-productivity-clean.mp4",
+          "start_seconds": 22,
+          "duration_seconds": 3,
+          "type": "Authentic held Harness execution capture"
+        },
+        {
+          "source": "/Users/bpollak/dev/cabinet-executive-capture-20261008/excel-frames.json",
+          "duration_seconds": 11.183,
+          "frame_count": 40,
+          "type": "New timestamped native app screen recording",
+          "sha256": "88b298971a63ba2633a9218edda23eaf2cf6714975d795556dc98688cc323285"
+        },
+        {
+          "source": "/Users/bpollak/dev/cabinet-executive-capture-20261008/powerpoint-frames.json",
+          "duration_seconds": 11.151,
+          "frame_count": 34,
+          "type": "New timestamped native app screen recording",
+          "sha256": "959684bae7b16716765f39ab786c704fa488b8e65b59555e478140f75cc9032d"
+        }
+      ]
+    }
+  ]
+}
