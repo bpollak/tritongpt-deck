@@ -210,3 +210,49 @@
 .cabinet-canvas-content .cabinet-framework-copy ol { gap: 16px; }
 .cabinet-canvas-content .cabinet-framework-copy li h2 { font-size: 21px; margin-bottom: 3px; }
 .cabinet-canvas-content .cabinet-framework-copy li p { font-size: 17px; line-height: 1.35; }
+
+/* Vertical solutions impact table */
+.cabinet-canvas-content .cabinet-impact .cabinet-framework-takeaway { font-size: 19px; margin-bottom: 8px; }
+.cabinet-canvas-content > .cabinet-framework-slide:has(.cabinet-impact) > h1 { font-size: 50px; margin-bottom: 8px; }
+.cabinet-framework-slide:has(.cabinet-impact) .cabinet-framework-sources { margin-top: 8px; font-size: 12px; }
+.cabinet-impact-table { width: 100%; border-collapse: collapse; }
+.cabinet-impact-table thead th {
+  padding: 0 14px 8px 0;
+  color: #b5c6d5;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-align: left;
+  text-transform: uppercase;
+  border-bottom: 1px solid #526879;
+}
+.cabinet-impact-table tbody tr { border-bottom: 1px solid rgba(82, 104, 121, .55); }
+.cabinet-impact-table tbody th,
+.cabinet-impact-table tbody td { padding: 6px 14px 6px 0; vertical-align: top; text-align: left; }
+.cabinet-impact-table tbody th { width: 36%; }
+.cabinet-impact-table tbody td:nth-child(2) { width: 13%; }
+.cabinet-impact-table tbody th strong { display: block; color: #ffcd00; font-size: 18px; font-weight: 600; }
+.cabinet-impact-table tbody th span,
+.cabinet-impact-table tbody td span:not(.cabinet-impact-status) { display: block; margin-top: 2px; color: #c4d2df; font-size: 13px; font-weight: 400; line-height: 1.25; }
+.cabinet-impact-figure { display: block; color: #f5f0e6; font-size: 19px; font-weight: 700; line-height: 1.15; }
+.cabinet-impact-status {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.cabinet-impact-status--live { background: #1f6f4a; color: #e8fff2; }
+.cabinet-impact-status--progress { background: #ffcd00; color: #182b49; }
+.cabinet-impact-status--pilot { background: #3b5a78; color: #e4ebf1; }
+.cabinet-canvas[data-reading] .cabinet-impact-table tbody th { width: auto; }
+
+/* Longer outlines (five rows, or four with a source line) */
+.cabinet-canvas-content .cabinet-framework-slide--compact > h1 { font-size: 52px; margin-bottom: 10px; }
+.cabinet-canvas-content .cabinet-framework-slide--compact .cabinet-framework-takeaway { font-size: 22px; margin-bottom: 14px; }
+.cabinet-canvas-content .cabinet-framework-slide--compact .cabinet-framework-rows { gap: 12px; }
+.cabinet-canvas-content .cabinet-framework-slide--compact .cabinet-framework-row { padding-top: 11px; }
+.cabinet-canvas-content .cabinet-framework-slide--compact .cabinet-framework-row h2 { font-size: 25px; margin-bottom: 2px; }
+.cabinet-canvas-content .cabinet-framework-slide--compact .cabinet-framework-row p { font-size: 19px; line-height: 1.3; }
+.cabinet-canvas-content .cabinet-framework-slide--compact .cabinet-framework-sources { margin-top: 12px; font-size: 12px; }

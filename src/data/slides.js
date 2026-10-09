@@ -25,7 +25,8 @@ export const slides = [
         "label": "Scale",
         "note": "Campus-wide and governed"
       }
-    ]
+    ],
+    "durationSeconds": 30
   },
   {
     "id": 1,
@@ -2263,13 +2264,13 @@ export const slides = [
               "icon": "Blocks",
               "name": "Skills",
               "text": "Packaged know-how, like the UC San Diego branding skill, that anyone can call on in plain language to build a tool, a report, or a page.",
-              "detail": "Describe what you need \u00b7 no programming required"
+              "detail": "Describe what you need · no programming required"
             },
             {
               "icon": "FolderOpen",
               "name": "Projects",
               "text": "Each piece of work keeps its own files, conversations, and context, so a request tracker or a daily briefing picks up where it left off.",
-              "detail": "Plan first, then build \u00b7 by typing or by voice"
+              "detail": "Plan first, then build · by typing or by voice"
             },
             {
               "icon": "Monitor",
@@ -2287,7 +2288,7 @@ export const slides = [
               "icon": "Calendar",
               "name": "Microsoft 365 and Google Workspace",
               "text": "Reads mail, calendars, Teams chats, and Drive files, manages meetings, and drafts email for review.",
-              "detail": "Email stays a draft \u00b7 a person always presses send"
+              "detail": "Email stays a draft · a person always presses send"
             },
             {
               "icon": "GitBranch",
@@ -2330,7 +2331,7 @@ export const slides = [
       ],
       "footnote": "Features from the current nightly build. A non-programmer administrator used it to build a complete desktop app, the OnBase API Explorer."
     },
-    "claimNote": "Source: TritonAI Harness nightly build installed on a TritonAI workstation (integrations, model catalog, and settings inspected Sep 22, 2026) \u00b7 team knowledge vault \u00b7 reviewed Sep 22, 2026",
+    "claimNote": "Source: TritonAI Harness nightly build installed on a TritonAI workstation (integrations, model catalog, and settings inspected Sep 22, 2026) · team knowledge vault · reviewed Sep 22, 2026",
     "audiences": [
       "all",
       "PK"
@@ -7192,20 +7193,24 @@ export const slides = [
     "slug": "cabinet-citizen-developer-story",
     "type": "content",
     "layout": "cabinet-outline",
-    "title": "Citizen developers, powered by sovereign AI",
-    "subtitle": "Staff who know the work become builders. Three parts today:",
+    "title": "Vertical solutions and citizen developers",
+    "subtitle": "IT Services builds the big campus time and cost savers, and gives staff the tools to build their own.",
     "content": [
       {
-        "heading": "What people are building",
-        "text": "Campus apps and administrative workflows shaped by the people who run them."
+        "heading": "Vertical solutions",
+        "text": "Systems IT Services is building for whole campus processes: cash application, contract review, routing, admissions."
       },
       {
-        "heading": "How they build it: TritonAI Harness",
-        "text": "An AI workspace on the desktop that carries real work through files and campus tools, with the person in charge."
+        "heading": "Citizen development: TritonAI Harness",
+        "text": "An AI workspace that lets staff turn what they know into working tools, with a supported path to hosting."
       },
       {
-        "heading": "What powers it: sovereign inference",
-        "text": "UCSD-managed models behind a shared gateway, with data handling matched to UC policy."
+        "heading": "What people build with it",
+        "text": "Personal productivity and department apps, from inbox triage to Passport check-in."
+      },
+      {
+        "heading": "The foundation",
+        "text": "UCSD-managed models behind one gateway, with data handling matched to UC policy."
       }
     ],
     "audiences": [
@@ -7213,7 +7218,80 @@ export const slides = [
     ],
     "managerSection": "Opening",
     "durationSeconds": 60,
-    "speakerNotes": "One minute (plus 30 seconds on the title). This slide is the map; the footer on every later slide shows which part we are in. Thesis: staff become builders, not only AI users. Part 1 shows what people are building, Part 2 explains the tool that lets more of them do it, Part 3 is the foundation underneath. One sentence on governance posture: data classification and UC policy alignment apply throughout, and every workflow has an accountable owner; the details come in Part 2. Class Planner and Passport show AI-assisted development paths; do not claim every example used our Harness or was built by a non-programmer. Transition: Let's start with what people are building."
+    "speakerNotes": "One minute. The map: four parts. First the vertical solutions IT Services is building, the large campus time and cost savers, with their impact. Second, citizen development: the Harness, what it can do, a live demonstration, and the path to hosting. Third, what people have built with it, for themselves and for their departments. Last, the foundation underneath and the asks. One line on governance posture: data classification and UC policy alignment apply throughout, and every workflow has an accountable owner."
+  },
+  {
+    "id": 1030,
+    "slug": "cabinet-verticals-impact",
+    "type": "content",
+    "content": [],
+    "title": "Vertical solutions: campus time and cost savers",
+    "subtitle": "Built by IT Services for whole campus processes, with the impact each has today or is projected to have.",
+    "layout": "cabinet-outline",
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Vertical Solutions",
+    "managerLabel": "Cabinet: vertical solutions and their impact",
+    "durationSeconds": 75,
+    "section": {
+      "part": 1,
+      "label": "Vertical solutions"
+    },
+    "speakerNotes": "90 seconds. These are the vertical solutions IT Services builds for whole campus processes. Group them: delivering now, and in progress. Say the impact type with each number. Contract review 120 to 11 minutes is a timed internal pilot benchmark, not a guarantee (CLAIM-LEDGER contract-reviewer-consolidated). Transcript matching: ~60K annual volume and ~225/hour at 98%+ are operating baseline and pilot figures; up to $500K is a planning estimate of capacity value if quality and throughput hold, not budget savings; no position-elimination framing. Ticket routing: the hours figure is a scenario at an assumed 90% accuracy per 10,000 eligible tickets (backup slide cabinet-routing-savings), not measured performance. Website assistants: the retired vendor contract is $300K a year in cost avoided (scaling-engagement-the-tritongpt-widget); 16 websites live; College Selection Assistant is one of them. Cash application: $1.3–3.0M a year is the proposed benefit from the March 2026 business case republished Sept 30, being reconciled by BFS, not measured or net ROI; $79M is a historical average monthly undistributed balance, not a loss. Directory and the financial/workforce agents are pilots with no measured impact yet; say so. Items drawn from the PK portfolio slides ai-portfolio-at-scale and ai-portfolio-pilots.",
+    "impactTable": {
+      "rows": [
+        {
+          "name": "Cash Application Modernization",
+          "what": "Matches received payments to invoices; staff review uncertain matches.",
+          "status": "In progress",
+          "tone": "progress",
+          "impact": "$1.3–3.0M a year proposed",
+          "basis": "Initial business case, being reconciled · $79M average monthly undistributed cash"
+        },
+        {
+          "name": "Contract Review",
+          "what": "Clause-by-clause review against UC rules, with redlines and reasons, in Word.",
+          "status": "In production",
+          "tone": "live",
+          "impact": "120 → 11 minutes per contract",
+          "basis": "91% less review time in a timed pilot"
+        },
+        {
+          "name": "Transcript Matching",
+          "what": "Matches incoming transcript coursework to the student record.",
+          "status": "In production",
+          "tone": "live",
+          "impact": "Up to $500K a year in capacity",
+          "basis": "Planning estimate · ~60K transcripts a year · ~225 an hour at 98%+ in pilot"
+        },
+        {
+          "name": "Website Assistants",
+          "what": "Campus web answers, including the College Selection Assistant.",
+          "status": "In production",
+          "tone": "live",
+          "impact": "$300K a year vendor cost avoided",
+          "basis": "Retired vendor contract · live on 16 campus websites"
+        },
+        {
+          "name": "Ticket Routing",
+          "what": "Suggests the ServiceNow team for each ticket; the agent decides.",
+          "status": "In production",
+          "tone": "live",
+          "impact": "~167 → ~25 staff hours per 10,000 tickets",
+          "basis": "Scenario at an assumed 90% accuracy, not measured"
+        },
+        {
+          "name": "Directory",
+          "what": "Matches research needs to faculty expertise.",
+          "status": "Pilot",
+          "tone": "pilot",
+          "impact": "Next phase after VCRI demo",
+          "basis": "Impact not yet measured"
+        }
+      ]
+    },
+    "sourceNote": "Sources: contract review timed pilot; transcript matching operating baseline, pilot, and planning estimate; widget vendor contract; routing scenario; cash March 2026 business case (being reconciled). Reviewed Oct 9, 2026."
   },
   {
     "id": 1002,
@@ -7248,8 +7326,8 @@ export const slides = [
     },
     "speakerNotes": "One minute: a six-second intro card, then a 52-second recording. Voice-over: Class Planner turns a list of courses into schedule options students can compare, then brings section details and the walk between classes into one place. Connect it to the builder story: a focused campus app made a recurring student task easier. Use Kevin's framing: built quickly, robust usage, now extended by student developers. That is presenter-provided framing, not a verified personnel history; do not name builders or say the original development used TritonAI Harness. Capture: the live public app (FA26) in a fresh browser profile, light theme. Sequence: guide page, Open Class Planner, Auto planning, Later starts, then MATH-010A, CSE-008A and COGS-001, two alternative schedules in the condensed week, Details, and Map. No student identity, sign-in, TSS booking, enrollment, or shared schedule. Seat counts and walking estimates are live data at capture time; a generated option is not a guarantee, and booking is completed in TSS. Recorded October 9, 2026 as one continuous take: a headless Chromium session scripted with Playwright, captured frame by frame through the DevTools screencast at 2560x1440 and played back at real speed. No cuts, held frames, crops, or digital zoom. The cursor is drawn over the real mouse events so the room can follow it. Recording scripts: ~/dev/cabinet-recapture-20261009. Source: https://classplanner.apps.ucsd.edu/",
     "section": {
-      "part": 1,
-      "label": "What people are building"
+      "part": 3,
+      "label": "What people build"
     },
     "intro": {
       "kicker": "Demonstration · live public app",
@@ -7327,8 +7405,8 @@ export const slides = [
     },
     "demoOnly": true,
     "section": {
-      "part": 1,
-      "label": "What people are building"
+      "part": 3,
+      "label": "What people build"
     },
     "intro": {
       "kicker": "Demonstration · department-designed service",
@@ -7351,8 +7429,8 @@ export const slides = [
       "cabinet"
     ],
     "managerSection": "Administrative Verticals",
-    "durationSeconds": 120,
-    "speakerNotes": "Two minutes. This is a project update, not a recording of a deployed cash matching tool. Cash already received can remain unapplied while staff research where it belongs; $79M is a historical average monthly undistributed balance, not annual loss, incremental income, or a savings claim. Four development phases follow the October 5 Confluence design. All due dates are TBD and Phase 1 detailed dates are blank. Shawn’s October 8 transcript says discovery is becoming design, integrations remain the main dependency, and the initial easy-matching delivery targets year-end 2026. His older two-phase boundaries are still being reconciled with Alex’s new four-phase documents. Do not equate old Phase 1 to new Receipt Population or promise November go-live. Proposed $1.3M–$3M annual financial benefit comes from the March business-case assumptions republished September 30. It is not measured savings or approved net ROI; costs are not netted and categories must be checked for overlap. Shawn says the sponsor revisited the initial estimate; June email contains updated assumptions. BFS needs to reconcile the estimate before committing to it. Labor hours are not currently measured; emphasize the financial consequences of unapplied balances, collections and accuracy, not a staffing reduction. Staff review unresolved or uncertain matches; automatic application is conditional on approved controls. Ask Cabinet to support integrations, ownership and the cash receipts path; the ask is tagged on screen here and repeated at the close.",
+    "durationSeconds": 75,
+    "speakerNotes": "90 seconds. This is a project update, not a recording of a deployed tool. Cash already received can sit unapplied while staff research where it belongs; $79M is a historical average monthly undistributed balance, not annual loss or savings. Four phases per the Implementation Roadmap (Shawn Munro, Confluence): Phase 1 receipt population Oct 12–Dec 11, 2026; Phase 2 high-confidence matching Nov 9–Dec 18, 2026; Phase 3 deep-research matching Jan–Mar 2027; Phase 4 outcome resolution and go-live Apr–Jun 2027. The $1.3M–$3M annual benefit is the proposed March 2026 business case republished Sept 30; BFS is reconciling the assumptions; not measured or net ROI. Staff review unresolved or uncertain matches; automatic application depends on approved controls. Ask: support the integrations (Bank of America data, ServiceNow ticket access) and ownership.",
     "videoLoop": false,
     "videoClearNav": true,
     "videoAutoPlay": true,
@@ -7388,10 +7466,14 @@ export const slides = [
           "text": "Apply, review, request information, or retry."
         }
       ],
-      "status": "Discovery → design · Initial delivery target: late 2026 · Phase dates and boundaries being finalized",
+      "status": "Phase 1 starts Oct 12 · High-confidence matching by Dec 18, 2026 · Full go-live targeted Q2 2027",
       "financialDrivers": "Potential value: staff capacity, improved collections and investment earnings, reduced matching-related risk."
     },
     "sources": [
+      {
+        "label": "Implementation roadmap",
+        "href": "https://ucsdcollab.atlassian.net/wiki/spaces/AI/pages/4121657506/Cash+Application+Modernization+-+Implementation+Roadmap"
+      },
       {
         "label": "October 5 design",
         "href": "https://ucsdcollab.atlassian.net/wiki/spaces/AI/pages/3864494148/Solution+Design+Overview"
@@ -7403,9 +7485,48 @@ export const slides = [
     ],
     "section": {
       "part": 1,
-      "label": "What people are building"
+      "label": "Vertical solutions"
     },
     "ask": "Support the integrations and ownership for cash receipts"
+  },
+  {
+    "id": 1031,
+    "slug": "cabinet-cash-roadmap",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "Cash application roadmap",
+    "subtitle": "Phases 1 and 2 finish in calendar 2026; Phases 3 and 4 run through mid-2027.",
+    "content": [
+      {
+        "heading": "Phase 1 · Receipt population · Oct 12 – Dec 11, 2026",
+        "text": "Collect and normalize payments from bank files and ServiceNow tickets, then build the receipt queue."
+      },
+      {
+        "heading": "Phase 2 · High-confidence matching · Nov 9 – Dec 18, 2026",
+        "text": "Match on invoice numbers and payment references, with confidence scores; auto-match only the clear cases."
+      },
+      {
+        "heading": "Phase 3 · Deep-research matching · Jan – Mar 2027",
+        "text": "Capture how accountants match the hard cases today and encode it, with accountants reviewing proposed matches."
+      },
+      {
+        "heading": "Phase 4 · Resolution and go-live · Apr – Jun 2027",
+        "text": "Ask payers to label payments clearly, request missing invoices from campus units, and go live."
+      }
+    ],
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Vertical Solutions",
+    "durationSeconds": 45,
+    "section": {
+      "part": 1,
+      "label": "Vertical solutions"
+    },
+    "ask": "Support the integrations and ownership for cash receipts",
+    "sourceNote": "Source: Cash Application Modernization Implementation Roadmap (Confluence, Shawn Munro), read Oct 9, 2026. Phase 1 status: planning.",
+    "speakerNotes": "45 seconds. Dates come from the Implementation Roadmap page in the AI Confluence space, read October 9, 2026. Phase 1 is in planning; Phases 2–4 not started. Longest-lead risk: Bank of America daily CSV provisioning and ServiceNow ticket API access, which should start the first week. December 21–31 is a hard stop. Phase 3 needs accounting staff time for knowledge-capture interviews in January. Phase 4 includes change management with external payers and campus units. Phase 3 scope may grow depending on how many receipts remain unmatched after Phase 2.",
+    "compact": true
   },
   {
     "id": 1005,
@@ -7419,7 +7540,7 @@ export const slides = [
       "cabinet"
     ],
     "managerSection": "Administrative Verticals",
-    "durationSeconds": 95,
+    "durationSeconds": 80,
     "recording": {
       "label": "Select three rules → Start Review → tracked changes and comments appear → Talk to agent → answer",
       "format": "One native take of the Word window, speed-ramped • silent for voice-over",
@@ -7442,7 +7563,7 @@ export const slides = [
     "demoOnly": true,
     "section": {
       "part": 1,
-      "label": "What people are building"
+      "label": "Vertical solutions"
     },
     "ask": "Prioritize the next contract groups, starting with OCGA",
     "intro": {
@@ -7453,6 +7574,46 @@ export const slides = [
       "watchFor": "Three rules selected, the tracked changes appearing, then a question to the agent about what a reviewer should confirm. A person approves every edit.",
       "seconds": 6
     }
+  },
+  {
+    "id": 1032,
+    "slug": "cabinet-servicenow-routing-demo",
+    "type": "video",
+    "layout": "cabinet-demo",
+    "title": "Routing tickets to the right team",
+    "subtitle": "ServiceNow suggests the specialist team; the agent chooses the assignment.",
+    "content": [],
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Vertical Solutions",
+    "durationSeconds": 60,
+    "section": {
+      "part": 1,
+      "label": "Vertical solutions"
+    },
+    "intro": {
+      "kicker": "Demonstration · ServiceNow",
+      "title": "Routing tickets to the right team",
+      "label": "ServiceNow · ticket routing",
+      "setup": "A support request comes in. The model, trained on our own case history, suggests which team should own it, with a confidence score.",
+      "watchFor": "The ranked suggestions. The agent picks the assignment; nothing is routed on its own.",
+      "seconds": 5
+    },
+    "videoSrc": "/media/cabinet/cabinet-servicenow-routing-natural.mp4",
+    "poster": "/media/cabinet/cabinet-servicenow-routing-natural-poster.jpg",
+    "videoLoop": false,
+    "videoClearNav": false,
+    "videoAutoPlay": true,
+    "hideDemoBadge": true,
+    "demoOnly": true,
+    "releaseContext": {
+      "channel": "pilot",
+      "label": "Current ServiceNow interface",
+      "captureNote": "Support requests · actual recommendations · staff selects · nothing saved"
+    },
+    "managerSummary": "Full-width ServiceNow routing recording (October 8 capture) for presenter voice-over.",
+    "speakerNotes": "One minute; voice over the full-width recording. ServiceNow suggests specialist assignment groups with confidence scores, trained on our case history; the agent selects. Recording: October 8, 2026 capture with natural case wording, unsaved demo forms, no case saved (docs/cabinet-servicenow-natural-manifest.json); it is built from captured frames rather than a continuous screen recording. Model scores are not measured accuracy. The savings figure on the overview is a scenario at an assumed 90% accuracy, not measured. Do not claim automatic routing."
   },
   {
     "id": 1006,
@@ -7509,7 +7670,7 @@ export const slides = [
         "text": "Multi-step work through project files, connected tools, and checks to a saved result you review."
       }
     ],
-    "speakerNotes": "One minute. Part 2 opens here: this is the tool that lets more departments build what Part 1 showed. Two sentences: \"TritonGPT helps staff find, understand, and draft. The Harness carries a task through files and campus tools to a result they review.\" Then go straight to the next slide, where the training shows it doing exactly that. The comparison is cut to three rows for Cabinet; data storage and classification move to the control slide. Complementary products, not a smarter-model claim. Plugin list matches the plugin catalog on https://tritonai.ucsd.edu/training/harness/ (checked October 9). Harness task history and project files are local, but prompts and selected context go to the chosen model, and tools exchange data with connected services. The public site describes desktop Harness as a supported pilot; mobile remains preview. Sources: https://tritonai.ucsd.edu/developer-apis/harness.html ; https://tritonai.ucsd.edu/tritongpt/index.html ; https://tritonai.ucsd.edu/tritongpt/privacy.html",
+    "speakerNotes": "One minute. Part 2 opens here: IT Services can't build every vertical, so the Harness lets staff build their own. Two sentences: \"TritonGPT helps staff find, understand, and draft. The Harness carries a task through files and campus tools to a result they review.\" Then go straight to the next slide, where the training shows it doing exactly that. The comparison is cut to three rows for Cabinet; data storage and classification move to the control slide. Complementary products, not a smarter-model claim. Plugin list matches the plugin catalog on https://tritonai.ucsd.edu/training/harness/ (checked October 9). Harness task history and project files are local, but prompts and selected context go to the chosen model, and tools exchange data with connected services. The public site describes desktop Harness as a supported pilot; mobile remains preview. Sources: https://tritonai.ucsd.edu/developer-apis/harness.html ; https://tritonai.ucsd.edu/tritongpt/index.html ; https://tritonai.ucsd.edu/tritongpt/privacy.html",
     "websiteVisual": "comparison",
     "workflowComparison": {
       "matrixTitle": "TritonGPT and TritonAI Harness",
@@ -7592,8 +7753,109 @@ export const slides = [
     },
     "section": {
       "part": 2,
-      "label": "How they build it"
+      "label": "Citizen development"
     }
+  },
+  {
+    "id": 1034,
+    "slug": "cabinet-harness-capabilities",
+    "type": "content",
+    "content": [],
+    "title": "TritonAI Harness: Built by the People Who Do the Work",
+    "subtitle": "A desktop AI workspace where staff turn know-how into working tools, without writing code",
+    "layout": "project-roster",
+    "backgroundColor": "#F5F0E6",
+    "managerLabel": "TritonAI Harness: capabilities, connections, safeguards",
+    "managerSummary": "Citizen-developer framing of the Harness from the nightly build installed on Brett's Mac (Sep 22, 2026): skills, projects, and computer use; Microsoft 365, Google Workspace, GitHub, Kuali Build, and n8n connectors plus campus and commercial models; approvals, protected keys, and central management.",
+    "roster": {
+      "columns": 3,
+      "groups": [
+        {
+          "label": "What it does",
+          "color": "#00629B",
+          "items": [
+            {
+              "icon": "Blocks",
+              "name": "Skills",
+              "text": "Packaged know-how, like the UC San Diego branding skill, that anyone can call on in plain language to build a tool, a report, or a page.",
+              "detail": "Describe what you need · no programming required"
+            },
+            {
+              "icon": "FolderOpen",
+              "name": "Projects",
+              "text": "Each piece of work keeps its own files, conversations, and context, so a request tracker or a daily briefing picks up where it left off.",
+              "detail": "Plan first, then build · by typing or by voice"
+            },
+            {
+              "icon": "Monitor",
+              "name": "Computer Use",
+              "text": "When a system has no connector, it can work a desktop app or its built-in browser the way a person would, and show what it did.",
+              "detail": "Turned on in the current build"
+            }
+          ]
+        },
+        {
+          "label": "What it connects to",
+          "color": "#C69214",
+          "items": [
+            {
+              "icon": "Calendar",
+              "name": "Microsoft 365 and Google Workspace",
+              "text": "Reads mail, calendars, Teams chats, and Drive files, manages meetings, and drafts email for review.",
+              "detail": "Email stays a draft · a person always presses send"
+            },
+            {
+              "icon": "GitBranch",
+              "name": "Campus Systems",
+              "text": "Kuali Build forms and approvals, GitHub for code, and n8n workflows that keep running after the conversation ends.",
+              "detail": "Five connectors installed in the current build"
+            },
+            {
+              "icon": "Server",
+              "name": "Campus and Commercial Models",
+              "text": "Campus-hosted open models keep sensitive work on UC San Diego infrastructure; leading commercial models are there when a task needs them.",
+              "detail": "TritonAI On-Prem and TritonAI Cloud in one app"
+            }
+          ]
+        },
+        {
+          "label": "What keeps it safe",
+          "color": "#182B49",
+          "items": [
+            {
+              "icon": "ShieldCheck",
+              "name": "Approvals",
+              "text": "Supervised, Auto, and Full access modes set how far it goes on its own; consequential steps wait for a yes.",
+              "detail": "The person stays accountable for every action"
+            },
+            {
+              "icon": "Shield",
+              "name": "Protected Keys",
+              "text": "Sign-ins and keys sit in the computer's secure store. The AI works through them without ever seeing them.",
+              "detail": "No passwords pasted into prompts"
+            },
+            {
+              "icon": "Building2",
+              "name": "Campus-Managed",
+              "text": "Code-signed, updated with one click, and governed by a TritonAI policy, with UC San Diego branding and accessibility built in.",
+              "detail": "One supported app instead of a dozen personal tools"
+            }
+          ]
+        }
+      ],
+      "footnote": "Features from the current nightly build. A non-programmer administrator used it to build a complete desktop app, the OnBase API Explorer."
+    },
+    "claimNote": "Source: TritonAI Harness nightly build installed on a TritonAI workstation (integrations, model catalog, and settings inspected Sep 22, 2026) · team knowledge vault · reviewed Sep 22, 2026",
+    "audiences": [
+      "cabinet"
+    ],
+    "section": {
+      "part": 2,
+      "label": "Citizen development"
+    },
+    "managerSection": "Platform",
+    "durationSeconds": 60,
+    "speakerNotes": "One minute. Capabilities in three bands: what it does (skills, projects, computer use), what it connects to (Microsoft 365, Google Workspace, Kuali Build, GitHub, n8n, campus and commercial models), and what keeps it safe (approval modes, protected keys, campus-managed). Source: the installed nightly build, Sept 22, 2026, and the plugin catalog on the Harness training page. Email stays a draft; a person presses send."
   },
   {
     "id": 1026,
@@ -7607,10 +7869,10 @@ export const slides = [
       "cabinet"
     ],
     "managerSection": "Platform",
-    "durationSeconds": 75,
+    "durationSeconds": 60,
     "section": {
       "part": 2,
-      "label": "How they build it"
+      "label": "Citizen development"
     },
     "intro": {
       "kicker": "Demonstration · TritonAI Harness training",
@@ -7653,10 +7915,10 @@ export const slides = [
       "cabinet"
     ],
     "managerSection": "Platform",
-    "durationSeconds": 75,
+    "durationSeconds": 70,
     "section": {
       "part": 2,
-      "label": "How they build it"
+      "label": "Citizen development"
     },
     "intro": {
       "kicker": "Demonstration · live run, sped up",
@@ -7686,6 +7948,48 @@ export const slides = [
     },
     "managerSummary": "Native recording: the Harness drives Chrome from the TritonAI home page to the Discovery Series, plays the Chancellor's 'UC San Diego AI vision' video, then answers the knowledge check (3 of 3 correct).",
     "speakerNotes": "About 75 seconds: seven-second intro card, then the 64-second recording. Name the meta-demo: the Harness is doing the navigating. Voice-over: \"I asked the Harness to find our new Discovery Series, play the first lesson, and take the knowledge check. It opens the site, finds the series, starts the Chancellor's video, then answers the questions.\" Then the enablement point: the Discovery Series launched October 5 (videos 1–9), with 10–15 on October 15. Facts: recorded October 9, 2026, about 11:41–11:45 AM PT, as a native screen recording of the Harness (Nightly, Flash model, Full access) beside a Chrome window on the same desktop; the Harness drove Chrome through its computer-use driver. One prompt was sent; no person typed or clicked during the run. The quiz had been reset beforehand. Result on the page: 3 of 3 correct on the first try; answers are saved only in that browser. The Chrome window had been left on the lesson page from an earlier attempt, so the clip opens there before the Harness goes to the home page. Edit: real time for the request, the video starting, and the finished quiz; navigation and quiz steps are sped up 6–8x; about 8 seconds of tab switching, including a moment on Chrome's New Tab page, are cut; a small browser tab-group label is blurred. An earlier take (backup file cabinet-harness-discovery-demo-take1.mp4) shows the Harness misclicking a quiz answer, noticing, and fixing it; use that story verbally if helpful. Recorded in Full access for a smooth run; Supervised would ask before each click. Source files: ~/dev/cabinet-recapture-20261009/native (edit_take2.sh)."
+  },
+  {
+    "id": 1033,
+    "slug": "cabinet-harness-automation-use-cases",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "What staff automate with it",
+    "subtitle": "Starter use cases from our Harness training, each with a review step built in",
+    "content": [
+      {
+        "heading": "Morning briefing",
+        "text": "Today's meetings with context, carried-over actions, and what to prepare, from calendar and mail."
+      },
+      {
+        "heading": "Meeting follow-up drafts",
+        "text": "Decisions, owners, and dates turned into an email draft that the person reviews and sends."
+      },
+      {
+        "heading": "Kuali Build queue check",
+        "text": "Which requests are stuck, who each is waiting on, and for how long, without changing anything."
+      },
+      {
+        "heading": "Request intake triage with n8n",
+        "text": "A workflow that sorts new requests and routes each to the right queue, saved inactive until reviewed."
+      },
+      {
+        "heading": "Website change review",
+        "text": "Checks a pull request for headings, link text, and plain language with the accessibility skill."
+      }
+    ],
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Platform",
+    "durationSeconds": 45,
+    "section": {
+      "part": 2,
+      "label": "Citizen development"
+    },
+    "sourceNote": "Source: TritonAI Harness training use case library, tritonai.ucsd.edu/training/harness, read Oct 9, 2026.",
+    "speakerNotes": "45 seconds. These come from the use case library in the Harness training, each tied to a plugin ability: Microsoft 365 read and opt-in drafts, Kuali Build read-only, the campus n8n plugin, and GitHub with the UCSD Accessibility Compliance skill. Drafts are never sent automatically; the n8n workflow stays inactive until reviewed; the Kuali Build check is read-only.",
+    "compact": true
   },
   {
     "id": 1016,
@@ -7856,7 +8160,7 @@ export const slides = [
     "speakerNotes": "45 seconds. Right after showing what it can do, show the limits. Supervised behavior and the Microsoft 365 abilities come from the training and its plugin catalog (https://tritonai.ucsd.edu/training/harness/, checked October 9, 2026): Read mail and calendars start on; drafts, mail organizing, calendar create/edit, Teams chat read and send are opt-in; the plugin never sends email, deletes mail or events, or responds to invitations. Account permissions still apply on top of plugin abilities, and the thread's access mode decides whether it asks first. P1–P3 only in approved services/setups, model routes and use cases; P4 prohibited under current product guidance. Selected context is sent to the selected model; campus-managed inference keeps processing on campus for those routes, but commercial routes are distinct. TSS downstream behavior is one concrete validation gate. Do not invent an institutional certification.",
     "section": {
       "part": 2,
-      "label": "How they build it"
+      "label": "Citizen development"
     }
   },
   {
@@ -7938,7 +8242,7 @@ export const slides = [
       "cabinet"
     ],
     "managerSection": "Personal Productivity",
-    "durationSeconds": 75,
+    "durationSeconds": 50,
     "speakerNotes": "90 seconds. Show the actual October 8 morning briefing and Chief of Staff debrief emails in Outlook. Brett confirmed the debrief arrives by email. Say: In the morning, I have the context for the meetings and previous commitments. At the end of the day, the debrief brings together the decisions and what I need to carry forward. It closes the loop on the daily briefing. This is Brett’s configured personal workflow, not a default feature enabled for every Harness user. Two presentation-safe message views were recorded October 9 and edited morning then evening; this is not a continuous live generation. The full messages include protected material, which is excluded from the capture. Original message text and Outlook framing are preserved; no fabricated output, subtitles or demo banners. Native capture is 1685x1052 pixels; the video pads one pixel rather than claiming an upscaled source is higher resolution. The recorded evening summary is a personal synthesis, not the authoritative source for project dates or availability. Use the separately verified source notes for those claims. Excel and PowerPoint outputs now appear in the enablement film.",
     "videoLoop": false,
     "videoClearNav": false,
@@ -7949,8 +8253,8 @@ export const slides = [
     "videoSrc": "/media/cabinet/cabinet-daily-briefing-debrief.mp4",
     "poster": "/media/cabinet/cabinet-daily-briefing-debrief-poster.jpg",
     "section": {
-      "part": 2,
-      "label": "How they build it"
+      "part": 3,
+      "label": "What people build"
     },
     "intro": {
       "kicker": "How I use it",
@@ -8033,7 +8337,7 @@ export const slides = [
       "cabinet"
     ],
     "managerSection": "Sovereign AI and Scale",
-    "durationSeconds": 90,
+    "durationSeconds": 60,
     "sources": [
       {
         "label": "OpenAI pacing · Aug 18, 2026",
@@ -8052,10 +8356,10 @@ export const slides = [
         "href": "https://nvidianews.nvidia.com/news/nvidia-launches-nemotron-coalition-of-leading-global-ai-labs-to-advance-open-frontier-models"
       }
     ],
-    "speakerNotes": "Part 3 opens here: what powers everything shown so far. One minute. Sovereign inference as a service is a core ecosystem pillar alongside approved commercial frontier APIs. Model capability, release pacing and government review are outside university control; retaining a deployable open-weight option gives us more control over operations. The August 18 OpenAI source documents historical pauses, not an assertion that all commercial models are currently unavailable. EO 14409 section 3 establishes a voluntary framework with up to 30 days of early government access, expressly not mandatory licensing or preclearance. NVIDIA is a U.S. company; its coalition is global. NVIDIA reports strong open-model benchmarks, not universal parity with every proprietary frontier model. These models are candidates to evaluate, not a claim that Nemotron is already deployed at UCSD. Sovereign means control over the service and deployment; it does not mean risk-free, no oversight, or every gateway request on campus GPUs. Campus-managed inference still requires evaluation, isolation, access controls and monitoring. Routing, hardware capacity, support and model licensing determine the operational benefit. Our recommendation in row 3 is a strategic inference from the source facts. Sources checked October 8, 2026. Revised allocation: 90 seconds. Lead with sovereign AI, the second pillar powering the citizen developer ecosystem and research. Berkeley gateway use is confirmed in Brett/Shawn’s October 8 discussion; expanded campus operationalization and UCOP funding/broker options remain discussion, not an approved UC-wide launch. A support liaison at each campus and token attribution would support expansion. UC Tech News article is still a draft; Dan’s quote awaits his AVC approval and is excluded. Anthropic/OpenAI contract updates are omitted until current terms/status and Pradeep’s preferred wording are confirmed. Keep commercial/open-weight comparison, NVIDIA sources and Navier–Stokes detail in backup for questions. Sovereign refers to service/deployment control, not a promise that every route is on campus GPUs or that data never leaves a workstation.",
+    "speakerNotes": "Part 4: what powers everything shown so far. One minute. Sovereign inference as a service is a core ecosystem pillar alongside approved commercial frontier APIs. Model capability, release pacing and government review are outside university control; retaining a deployable open-weight option gives us more control over operations. The August 18 OpenAI source documents historical pauses, not an assertion that all commercial models are currently unavailable. EO 14409 section 3 establishes a voluntary framework with up to 30 days of early government access, expressly not mandatory licensing or preclearance. NVIDIA is a U.S. company; its coalition is global. NVIDIA reports strong open-model benchmarks, not universal parity with every proprietary frontier model. These models are candidates to evaluate, not a claim that Nemotron is already deployed at UCSD. Sovereign means control over the service and deployment; it does not mean risk-free, no oversight, or every gateway request on campus GPUs. Campus-managed inference still requires evaluation, isolation, access controls and monitoring. Routing, hardware capacity, support and model licensing determine the operational benefit. Our recommendation in row 3 is a strategic inference from the source facts. Sources checked October 8, 2026. Revised allocation: 90 seconds. Lead with sovereign AI, the second pillar powering the citizen developer ecosystem and research. Berkeley gateway use is confirmed in Brett/Shawn’s October 8 discussion; expanded campus operationalization and UCOP funding/broker options remain discussion, not an approved UC-wide launch. A support liaison at each campus and token attribution would support expansion. UC Tech News article is still a draft; Dan’s quote awaits his AVC approval and is excluded. Anthropic/OpenAI contract updates are omitted until current terms/status and Pradeep’s preferred wording are confirmed. Keep commercial/open-weight comparison, NVIDIA sources and Navier–Stokes detail in backup for questions. Sovereign refers to service/deployment control, not a promise that every route is on campus GPUs or that data never leaves a workstation.",
     "section": {
-      "part": 3,
-      "label": "What powers it"
+      "part": 4,
+      "label": "Foundation"
     }
   },
   {
@@ -8068,7 +8372,7 @@ export const slides = [
     "managerSection": "Sovereign AI and Scale",
     "managerLabel": "Gateway scale: January–September 2026",
     "managerSummary": "Nine-month token chart, September route mix, and cumulative Gateway totals from the current TritonAI website.",
-    "durationSeconds": 60,
+    "durationSeconds": 30,
     "speakerNotes": `One minute. Show that campus use is already substantial; distinguish tokens from users or measured productivity. ${gatewayUsageDashboard.speakerNotes}`
   },
   {
@@ -8515,8 +8819,8 @@ export const slides = [
     "slug": "cabinet-verticals-at-a-glance",
     "type": "content",
     "layout": "cabinet-demo",
-    "title": "The same pattern across campus work",
-    "subtitle": "Focused tools, expert review, a clear next step.",
+    "title": "Transcript matching, college selection, and Directory",
+    "subtitle": "Admissions and research teams, each with a clear next step.",
     "audiences": [
       "cabinet"
     ],
@@ -8524,36 +8828,108 @@ export const slides = [
     "durationSeconds": 60,
     "content": [
       {
-        "heading": "ServiceNow routing",
-        "text": "Suggests the specialist team; staff choose the assignment."
-      },
-      {
-        "heading": "Directory",
-        "text": "Matches research needs to faculty expertise. The VCRI demo moved it to its next phase."
-      },
-      {
         "heading": "Transcript matching",
-        "text": "Matches coursework; TSS validation gates expansion."
+        "text": "Reads transcripts and matches coursework to the student record; TSS validation gates expansion."
       },
       {
         "heading": "College selection",
-        "text": "Helps students explore college fit through self-service."
+        "text": "Helps prospective students explore college fit through self-service on campus websites."
+      },
+      {
+        "heading": "Directory",
+        "text": "Matches research needs to faculty expertise. After the VCRI demo it moves to its next phase."
       }
     ],
-    "speakerNotes": "One minute. This slide merges the four quick hits with the 28-second ServiceNow and Directory recording, which plays on the left while you give one sentence each. ServiceNow: suggestions in an unsaved demo form; staff select; model scores are not measured accuracy; no case saved; do not claim automatic deployment. Directory: early phase with incomplete public-source data. Following the successful VCRI demonstration with Faith and Corey, Nicole's team is continuing development; backend data quality, including arts and humanities coverage, is the focus. Corey is in the room. Do not describe early ranking as an institutional faculty evaluation. Transcript matching requires the TSS downstream validation/go-live checkpoint before expansion; no new launch date or success metric. College selection is an admissions self-service example, not an admission or assignment decision. The recording is the existing edited excerpt (Codex, October 8); full recordings and the routing savings model remain in the backup view. Transition: one more, and it is the one with an ask attached.",
+    "speakerNotes": "One minute. The Directory recording plays on the left. Transcript matching requires the TSS downstream validation/go-live checkpoint before expansion; no new launch date. College selection is an admissions self-service example, not an admission or assignment decision. Directory: early phase with incomplete public-source data. After the successful VCRI demonstration with Faith and Corey, Nicole's team continues development; arts and humanities coverage is the focus. Corey is in the room. Do not describe early ranking as an institutional faculty evaluation. Name pending Nicole's confirmation.",
     "section": {
       "part": 1,
-      "label": "What people are building"
+      "label": "Vertical solutions"
     },
-    "videoSrc": "/media/cabinet/cabinet-administrative-montage.mp4",
-    "poster": "/media/cabinet/cabinet-administrative-montage-poster.jpg"
+    "videoSrc": "/media/cabinet/cabinet-directory-wide.mp4",
+    "poster": "/media/cabinet/cabinet-directory-wide-poster.jpg"
+  },
+  {
+    "id": 1035,
+    "slug": "cabinet-verticals-roadmap",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "What's next in vertical solutions",
+    "subtitle": "In pilot or being built now, each with human review until it earns confidence.",
+    "impactTable": {
+      "rows": [
+        {
+          "name": "Payment Request Review",
+          "what": "Checks a payment request and its attachments against policy, then drafts the decision for a reviewer.",
+          "status": "Building",
+          "tone": "progress",
+          "impact": "Finance staff",
+          "basis": "Humans review everything until confidence is earned"
+        },
+        {
+          "name": "RFX Evaluation Agent",
+          "what": "Screens supplier proposals against minimum requirements, then scores the qualifying ones.",
+          "status": "Building",
+          "tone": "progress",
+          "impact": "Procurement",
+          "basis": "Built for a bid expecting 70+ responses"
+        },
+        {
+          "name": "Security Review Agent",
+          "what": "Extends contract review into software security terms and data handling.",
+          "status": "Building",
+          "tone": "progress",
+          "impact": "Information assurance",
+          "basis": "The deeper review software contracts require"
+        },
+        {
+          "name": "Financial and Workforce Agents",
+          "what": "Plain-language answers from finance and payroll data, as tables or charts.",
+          "status": "Pilot",
+          "tone": "pilot",
+          "impact": "Finance and HR",
+          "basis": "First versions scoped to limited audiences"
+        },
+        {
+          "name": "Contract Review: next groups",
+          "what": "Extend the Procurement workflow to more contract types, starting with OCGA.",
+          "status": "Next",
+          "tone": "pilot",
+          "impact": "OCGA first",
+          "basis": "Subject to the contract-type list"
+        },
+        {
+          "name": "Citizen Developer Hosting",
+          "what": "A governed path from a staff-built tool to campus hosting: package, review, deploy.",
+          "status": "Pilot",
+          "tone": "pilot",
+          "impact": "Departments",
+          "basis": "Automating the review step is what lets it scale"
+        }
+      ],
+      "headers": [
+        "Solution",
+        "Status",
+        "For"
+      ]
+    },
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Vertical Solutions",
+    "durationSeconds": 45,
+    "section": {
+      "part": 1,
+      "label": "Vertical solutions"
+    },
+    "sourceNote": "Source: TritonAI program records (PK portfolio slides: pilots and skunkworks), reviewed Sep 22, 2026. A selection of current work, not a full inventory.",
+    "speakerNotes": "45 seconds. The next wave of vertical solutions, from the PK portfolio pilots and skunkworks slides (reviewed Sept 22). No impact figures yet; say who each is for. Payment Request Review and the RFX Evaluation Agent keep humans reviewing everything; the Security Review Agent is the contract reviewer extended into software security terms. Financial and workforce agents are limited-audience pilots. Contract review's next groups start with OCGA, subject to Nicole's list. Citizen Developer Hosting is covered again in Part 2. Cash application has its own roadmap slide; do not repeat it here."
   },
   {
     "id": 1024,
     "slug": "cabinet-department-builders",
     "type": "content",
     "layout": "cabinet-outline",
-    "title": "Departments are already building with it",
+    "title": "Departments are building with it",
     "subtitle": "IPPS and RRSS examples, built with the Harness and n8n",
     "audiences": [
       "cabinet"
@@ -8573,8 +8949,8 @@ export const slides = [
     "speakerNotes": "25 seconds after Passport. Source: Nikki Giaquinta’s RRSS/IPPS AI Projects email, received October 8 at 4:53 PM PT, read directly October 9. These are owner-reported examples, not independently timed or annual audited outcomes. Pricing annualization is 3 hours per update × roughly 50 updates/year = roughly 150 hours/year; no measured observation period was supplied. Same-day pricing suggestions are a stated workflow benefit. Facilities describes extraction/report preparation and work-item creation, not physically fixing 81 compliance issues in 13 seconds. The manual 45-minute baseline is approximate and the automated 13 seconds is one reported five-building run; don’t extrapolate annual savings or imply human remediation takes 13 seconds. No net ROI, implementation cost, dollar conversion, staff reduction or generalized accuracy is asserted. Both show departments supplying workflow knowledge and building focused tools. Green Spend, Concur reconciliation and custodial assignments are additional examples in Nikki’s email for Q&A; early-discussion ServiceNow deflection and Non-PO review are not presented as deployed products. No private records or email addresses shown on this slide.",
     "sourceNote": "Source: Nikki Giaquinta · October 8, 2026 · team-reported results",
     "section": {
-      "part": 2,
-      "label": "How they build it"
+      "part": 3,
+      "label": "What people build"
     }
   },
   {
@@ -8588,7 +8964,7 @@ export const slides = [
       "cabinet"
     ],
     "managerSection": "Personal Productivity",
-    "durationSeconds": 50,
+    "durationSeconds": 40,
     "managerSummary": "Actual Outlook Inbox Triage pane: Today priority, human controls and the explanation behind a priority.",
     "content": [],
     "speakerNotes": "60 seconds. Personal citizen developer workflow: Brett’s actual Inbox Triage add-in beside a real Outlook message. The 12-second silent capture shows the existing Today category, Today and This week controls, Done, Schedule, Draft reply and Delegate, then opens Why this tier. Explain the benefit as less time scanning and clearer attention to requests and follow-through. Those actions are visible controls; none were applied during capture. The final actual explanation frame is held six seconds for voiceover. Full native application framing at 2564x1444; no digital zoom, training instructions or invented interface. An unrelated personal address above the selected message card is masked. The demonstration uses existing cached priorities: automatic sorting currently fails through the Graph token helper, and no fresh classification success is claimed. Repair that before demonstrating a new live sort. The displayed 49 percent estimates likelihood of acting, not measured classification accuracy. No measured accuracy or time savings asserted. This is Brett’s configured workflow, not a default capability automatically enabled for all users. Transition to preparing with the daily briefing and closing the loop with the evening debrief.",
@@ -8600,8 +8976,8 @@ export const slides = [
     "videoClearNav": false,
     "hideDemoBadge": true,
     "section": {
-      "part": 2,
-      "label": "How they build it"
+      "part": 3,
+      "label": "What people build"
     },
     "intro": {
       "kicker": "How I use it",

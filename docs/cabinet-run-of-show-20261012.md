@@ -1,51 +1,48 @@
 # Cabinet run of show · October 12, 2026
 
-18 slides · about 18 minutes of content · 10 minutes of Q&A. Restructured October 9 around Shawn's framing: **citizen developers, powered by sovereign AI**, told in three parts. Every slide after the opening carries a footer showing which part it belongs to. Each demo starts with a short intro card (what it is, what to watch for), then the recording plays with a small label in the corner. Click the intro card to start a recording early.
+25 slides · about 21:55 of content · 10 minutes of Q&A. Restructured again October 9 (evening) around Brett's framing: **the vertical solutions IT Services is building (with their impact) first, citizen development with the TritonAI Harness in the middle, then what people build with it**, and the foundation last. Every slide after the opening shows its part in the footer. Demos open with a short intro card; click it to start early.
 
 | Time | Slide | Presenter focus |
 | --- | --- | --- |
-| 0:00–0:30 | TritonAI Operating Review | Open with what people are building and putting to work. |
-| 0:30–1:30 | Citizen developers, powered by sovereign AI | The map: what people are building, how they build it (Harness), what powers it (sovereign inference). One line on governance posture. |
-| **Part 1** | **What people are building** | |
-| 1:30–2:30 | Class Planner (intro card + 52s recording) | A recurring student need turned into a usable output. Kevin's framing; no builder names. |
-| 2:30–3:00 | Class Planner daily usage | Demand rises around enrollment passes; two series use different measures. |
-| 3:00–3:45 | Passport Services check-in (intro + 35s) | Staff who run the service designed the flow. |
-| 3:45–5:15 | Apply received cash faster · **Ask tag** | Phases, current state, initial financial case. Plant the ask. |
-| 5:15–6:15 | The same pattern across campus work | ServiceNow + Directory clip plays while you give one line each for routing, Directory, transcript matching, college selection. |
-| 6:15–7:50 | Contract review inside Word (intro + 83s live run) · **Ask tag** | Plant the OCGA ask. Bridge: "The AI team built this one. The next ones, departments build themselves. Here's how." |
-| **Part 2** | **How they build it** | |
-| 7:50–8:50 | TritonGPT and TritonAI Harness | Three rows only: what it does, what it connects to, who stays in charge. |
-| 8:50–10:05 | What the Harness does (intro + 46s recording) | TritonAI site → Harness training → its real-capture opening. Name the outputs as they pass. Training callout: 14 chapters, 8-minute Essentials. |
-| 10:05–11:20 | The Harness takes our new training (intro + 64s recording) | The meta-demo: the Harness itself opens tritonai.ucsd.edu, finds the new Discovery Series, plays the Chancellor's video, and answers the knowledge check (3 of 3). Say plainly that the Harness is doing the navigating. Sped up. |
-| 11:20–12:05 | It stays in your control | Supervised mode, scoped plugins (Microsoft 365 never sends email), P1–P3 only, accountable owner. |
-| 12:05–12:35 | Departments are already building with it | Core Bio pricing (Harness + n8n), Facilities compliance. Team-reported results. |
-| 12:35–13:25 | Inbox priority sorter | "How I use it." Cached priorities; nothing applied. |
-| 13:25–14:40 | Close the loop on the working day | Morning briefing and evening debrief: "it closes the loop on the daily briefing." |
-| **Part 3** | **What powers it** | |
-| 14:40–16:10 | Sovereign inference as a service | UCSD-managed inference, model choice, Berkeley research use, UC-wide opportunity. |
-| 16:10–16:55 | TritonAI LLM Gateway Usage | September usage, trend, cost accountability. |
-| 16:55–17:55 | More builders. More useful workflows. | Recap the three asks; the first two were already tagged in Part 1. |
+| 0:00–0:30 | TritonAI Operating Review | Open. |
+| 0:30–1:30 | Vertical solutions and citizen developers | The map: vertical solutions, citizen development, what people build, the foundation. |
+| **Part 1** | **Vertical solutions** | |
+| 1:30–2:45 | Vertical solutions: campus time and cost savers | Impact of each vertical. Say the type of each number (pilot, estimate, scenario, avoided cost). |
+| 2:45–4:00 | Apply received cash faster | Why cash application matters; proposed benefit being reconciled. **Ask tag**. |
+| 4:00–4:45 | Cash application roadmap | Four phases with dates from the Confluence roadmap; data access is the long pole. |
+| 4:45–6:05 | Bring document review into Word | Live Word run: three rules, tracked changes, agent answer. **Ask tag** (OCGA next). |
+| 6:05–7:05 | Routing tickets to the right team | Full-width routing recording; voice over. Agent decides. |
+| 7:05–8:05 | Transcript matching, college selection, and Directory | Transcript matching, college selection, Directory (Directory clip plays). |
+| 8:05–8:50 | What's next in vertical solutions | What is next: payment request review, RFX, security review, data agents, OCGA, hosting. |
+| **Part 2** | **Citizen development: TritonAI Harness** | |
+| 8:50–9:50 | TritonGPT and TritonAI Harness | Bridge: IT can’t build every vertical; the Harness lets staff build their own. |
+| 9:50–10:50 | TritonAI Harness: Built by the People Who Do the Work | Skills, projects, computer use; connectors; safeguards. |
+| 10:50–11:50 | What the Harness does | Real outputs from the training opening. (Replace with the fresh capture when ready.) |
+| 11:50–13:00 | The Harness takes our new training | Meta-demo: the Harness finds the Discovery Series, plays the video, takes the quiz. |
+| 13:00–13:45 | What staff automate with it | Starter automations from the training, each with a review step. |
+| 13:45–14:30 | It stays in your control | Limits the person sets and the campus sets. |
+| 14:30–15:15 | Campus app hosting: a lane for every build | Path to hosting: Tier 0 desktop to Tier 3 enterprise. |
+| **Part 3** | **What people build with it** | |
+| 15:15–15:55 | Inbox priority sorter | How I use it: inbox triage. |
+| 15:55–16:45 | Close the loop on the working day | Morning briefing and evening debrief. |
+| 16:45–17:10 | Departments are building with it | Core Bio pricing and Facilities compliance (team-reported). |
+| 17:10–17:55 | Turn staff knowledge into a service app | Department-designed service app. |
+| 17:55–18:55 | Turn a course list into schedule options | Class Planner: course list to schedule options. Don’t claim the Harness built it. |
+| 18:55–19:25 | TritonGPT Class Planner and Standalone Class Planner | Demand around enrollment passes. |
+| **Part 4** | **Foundation and close** | |
+| 19:25–20:25 | Sovereign inference as a service | UCSD-managed inference, model choice, Berkeley, UC-wide opportunity. |
+| 20:25–20:55 | TritonAI LLM Gateway Usage | Gateway usage in one line. |
+| 20:55–21:55 | More builders. More useful workflows. | Recap the asks. |
 
-## What changed on October 9
+## Notes on this version
 
-- **Order.** Part 1 now ends on contract review so its "departments build the next ones" line leads straight into the Harness. Departments-already-building moved into Part 2 because those examples used the Harness and n8n.
-- **Merged.** The four quick hits and the ServiceNow/Directory clip are one slide (video left, one-liners right).
-- **Simplified.** The TritonGPT/Harness comparison is cut from six rows to three; data rules moved to the control slide.
-- **New.** "What the Harness does" replaces the untitled plugin-screenshot slide and uses the opening of the public Harness training.
-- **Moved to backup** (`?audience=cabinet-backup`): the plugin/skills screenshot slide, the 3-minute enablement film (AI Discovery, mobile website update, Excel/PowerPoint), and the standalone ServiceNow/Directory slide.
-- **Recaptured as continuous recordings:** Class Planner, Passport, and the Harness training opening.
-- **Contract review re-recorded live:** three rules run in Word on camera, tracked changes appear, then a question to the agent (83s, speed-ramped).
-- **New native meta-demo:** a real Harness run driving Chrome to the Discovery Series and quiz, recorded on the desktop and sped up (details in the slide notes). Each is one take at real speed, with no held frames or cuts. Details are in `docs/cabinet-recapture-20261009-manifest.json`, and the scripts are in `docs/recapture-20261009/`.
-
-## Still stitched from stills (not recaptured)
-
-These need the desktop (Word, Outlook) or authenticated systems (ServiceNow, Directory), so they were not re-recorded without Brett's go-ahead:
-
-- ServiceNow + Directory excerpt (28s)
-- Inbox priority sorter (12s, one held frame)
-- Morning briefing and evening debrief (16s, two held frames). **Check the first frame.** It shows meeting attendee names and an internal cost note.
-
-The "What the Harness does" slide uses a scripted browser to open the training, so don't say the Harness navigated there. The next slide is the real meta-demo, where the Harness does the navigating.
+- **Impact overview** combines the most impactful items from the PK portfolio slides (at scale, pilots) with the verticals in progress. Each figure is labeled by type in the speaker notes: timed pilot, planning estimate, scenario, or vendor cost avoided. The routing hours are a scenario at an assumed 90% accuracy.
+- **Cash application roadmap** dates come from the Implementation Roadmap page in Confluence (read October 9): Phase 1 Oct 12–Dec 11, 2026; Phase 2 Nov 9–Dec 18, 2026; Phase 3 Jan–Mar 2027; Phase 4 Apr–Jun 2027.
+- **What's next** draws on the PK pilots and skunkworks slides (Payment Request Review, RFX Evaluation, Security Review, data agents, OCGA, hosting). No impact figures yet.
+- **ServiceNow routing** plays full width for voice-over. It is Codex's October 8 capture (built from captured frames).
+- **Class Planner** sits with what people build, but don't claim the Harness built it.
+- **Fresh Harness capture** (Plugins, Skills, a real task with the branding skill) is pending a macOS screen-recording permission prompt. Until then, "What the Harness does" uses the training opening.
+- If you need to get back to 21 minutes: drop "What the Harness does" once the fresh capture exists, or trim the gateway slide.
 
 ## Before Monday
 

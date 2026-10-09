@@ -3,19 +3,26 @@ export const slideManagerState = {
     "lmu-title",
     "ai-operating-review-title",
     "cabinet-citizen-developer-story",
-    "cabinet-class-planner-demo",
-    "cabinet-class-planner-utilization",
-    "cabinet-passport-demo",
+    "cabinet-verticals-impact",
     "cabinet-cash-receipts-demo",
-    "cabinet-verticals-at-a-glance",
+    "cabinet-cash-roadmap",
     "cabinet-contract-review-demo",
+    "cabinet-servicenow-routing-demo",
+    "cabinet-verticals-at-a-glance",
+    "cabinet-verticals-roadmap",
     "cabinet-chat-and-harness",
+    "cabinet-harness-capabilities",
     "cabinet-harness-training-demo",
     "cabinet-harness-discovery-demo",
+    "cabinet-harness-automation-use-cases",
     "cabinet-governance",
-    "cabinet-department-builders",
+    "cabinet-harness-11d-campus-app-hosting-intake",
     "cabinet-inbox-priority-sorter",
     "cabinet-personal-productivity-demo",
+    "cabinet-department-builders",
+    "cabinet-passport-demo",
+    "cabinet-class-planner-demo",
+    "cabinet-class-planner-utilization",
     "cabinet-sovereign-ai",
     "cabinet-scale",
     "cabinet-asks-close",
@@ -138,12 +145,32 @@ export const slideManagerState = {
     "thank-you-questions",
     "cabinet-harness-11c-developer-api-program",
     "video-harness-api-demo-2026-06-25-842",
-    "cabinet-harness-11d-campus-app-hosting-intake",
     "cabinet-berkeley-quote",
     "cabinet-harness-components-backup",
     "cabinet-subagents"
   ],
   "audiences": {
+    "cabinet-verticals-roadmap": [
+      "cabinet"
+    ],
+    "cabinet-harness-capabilities": [
+      "cabinet"
+    ],
+    "cabinet-harness-11d-campus-app-hosting-intake": [
+      "cabinet"
+    ],
+    "cabinet-harness-automation-use-cases": [
+      "cabinet"
+    ],
+    "cabinet-servicenow-routing-demo": [
+      "cabinet"
+    ],
+    "cabinet-cash-roadmap": [
+      "cabinet"
+    ],
+    "cabinet-verticals-impact": [
+      "cabinet"
+    ],
     "cabinet-harness-discovery-demo": [
       "cabinet"
     ],

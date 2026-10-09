@@ -7,7 +7,7 @@ export default function CabinetFrameworkSlide({ slide, staticPreview = false }) 
   const isDemo = slide.layout === 'cabinet-demo';
 
   return (
-    <CabinetCanvas className="cabinet-framework-canvas" section={slide.section} ask={slide.ask}><section className={`cabinet-framework-slide${slide.sources?.length || slide.sourceNote ? ' cabinet-framework-slide--cited' : ''}`} aria-label={slide.title}>
+    <CabinetCanvas className="cabinet-framework-canvas" section={slide.section} ask={slide.ask}><section className={`cabinet-framework-slide${slide.sources?.length || slide.sourceNote ? ' cabinet-framework-slide--cited' : ''}${slide.compact ? ' cabinet-framework-slide--compact' : ''}`} aria-label={slide.title}>
       <h1>{slide.title}</h1>
       {isDemo ? (
         <div className="cabinet-framework-demo">
@@ -40,6 +40,24 @@ export default function CabinetFrameworkSlide({ slide, staticPreview = false }) 
               ))}
             </ol>
           </div>
+        </div>
+      ) : slide.impactTable ? (
+        <div className="cabinet-impact">
+          <p className="cabinet-framework-takeaway">{slide.subtitle}</p>
+          <table className="cabinet-impact-table">
+            <thead>
+              <tr>{(slide.impactTable.headers || ['Solution', 'Status', 'Impact']).map(h => <th key={h} scope="col">{h}</th>)}</tr>
+            </thead>
+            <tbody>
+              {slide.impactTable.rows.map(row => (
+                <tr key={row.name}>
+                  <th scope="row"><strong>{row.name}</strong><span>{row.what}</span></th>
+                  <td><span className={`cabinet-impact-status cabinet-impact-status--${row.tone || 'live'}`}>{row.status}</span></td>
+                  <td><strong className="cabinet-impact-figure">{row.impact}</strong><span>{row.basis}</span></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       ) : (
         <div className="cabinet-framework-outline">
