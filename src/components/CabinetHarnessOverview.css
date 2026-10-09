@@ -59,9 +59,3 @@
 }
 .cabinet-harness-capture img { min-height: 0; width: 100%; flex: 1; object-fit: contain; }
 .cabinet-harness-capture figcaption { text-align: center; font-size: clamp(14px, 1.4vw, 22px); line-height: 1.4; }
-.cabinet-harness-release {display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 16px;border-radius:8px;font-size:clamp(16px,1.4vw,22px);flex:none;}
-.cabinet-harness-release-stable {background:#dff3e6;color:#17492c;border-left:6px solid #27804a;}
-.cabinet-harness-release-nightly {background:#fff0cf;color:#745000;border-left:6px solid #cf8a16;}
-.cabinet-harness-release-unverified {background:#e8edf3;color:#182b49;border-left:6px solid #8194ac;}
-.cabinet-harness-release a {font-size:14px;text-decoration:underline;white-space:nowrap;}
-.cabinet-harness-version {margin:0;color:#ffe0a0;border-left:4px solid #ffcd00;padding-left:12px;font-size:clamp(13px,1.05vw,17px);line-height:1.4;}

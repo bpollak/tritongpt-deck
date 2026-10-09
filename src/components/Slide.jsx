@@ -50,17 +50,11 @@ const DeckVideoSlide = ({ slide, staticPreview }) => {
   const demoBadge = !slide.hideDemoBadge && (slide.demoLabel || slide.title || slide.managerLabel);
   return (
     <div className="relative w-full h-full overflow-hidden bg-black">
-      {slide.releaseContext && (
-        <div role="status" aria-label="Demo release status" className={clsx('absolute inset-x-0 top-0 z-20 h-16 flex items-center justify-between gap-4 px-4 sm:px-6', slide.releaseContext.channel === 'stable' ? 'bg-[#dff3e6] text-[#17492c]' : 'bg-[#fff0cf] text-[#745000]')}>
-          <strong className="text-sm sm:text-lg leading-tight">{slide.releaseContext.label}</strong>
-          <span className="text-xs sm:text-sm text-right leading-tight max-w-[50%]">{slide.releaseContext.captureNote}</span>
-        </div>
-      )}
       <video
         src={slide.videoSrc}
         poster={slide.poster}
         className={`deck-video absolute inset-x-0 w-full object-contain ${
-          slide.releaseContext ? 'top-16 bottom-16 h-[calc(100%-8rem)]' : slide.videoClearNav ? 'top-0 bottom-16 h-[calc(100%-4rem)]' : 'top-0 bottom-0 h-full'
+          slide.videoClearNav ? 'top-0 bottom-16 h-[calc(100%-4rem)]' : 'top-0 bottom-0 h-full'
         }`}
         controls
         autoPlay={!staticPreview && !touchDevice && slide.videoAutoPlay !== false}
