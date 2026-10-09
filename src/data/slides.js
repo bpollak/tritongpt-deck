@@ -7193,24 +7193,20 @@ export const slides = [
     "slug": "cabinet-citizen-developer-story",
     "type": "content",
     "layout": "cabinet-outline",
-    "title": "Vertical solutions and citizen developers",
-    "subtitle": "IT Services builds the big campus time and cost savers, and gives staff the tools to build their own.",
+    "title": "By the end of this presentation, you'll know",
+    "subtitle": "Three questions, with real examples and real numbers.",
     "content": [
       {
-        "heading": "Vertical solutions",
-        "text": "Systems IT Services is building for whole campus processes: cash application, contract review, routing, admissions."
+        "heading": "Which practical AI solutions is ITS building, and what will they pay back?",
+        "text": "Cash application, contract review, transcript matching, ticket routing, and more, with the savings each is delivering or projected to deliver."
       },
       {
-        "heading": "Citizen development: TritonAI Harness",
-        "text": "An AI workspace that lets staff turn what they know into working tools, with a supported path to hosting."
+        "heading": "What is citizen development, and how can you and your staff use the Harness?",
+        "text": "An AI workspace that lets staff turn what they know into working tools, with campus controls and a supported path to hosting."
       },
       {
-        "heading": "What people build with it",
-        "text": "Personal productivity and department apps, from inbox triage to Passport check-in."
-      },
-      {
-        "heading": "The foundation",
-        "text": "UCSD-managed models behind one gateway, with data handling matched to UC policy."
+        "heading": "What have people already built with it?",
+        "text": "Examples for personal productivity and for departments, from inbox triage and daily briefings to a service check-in app."
       }
     ],
     "audiences": [
@@ -7218,7 +7214,7 @@ export const slides = [
     ],
     "managerSection": "Opening",
     "durationSeconds": 60,
-    "speakerNotes": "One minute. The map: four parts. First the vertical solutions IT Services is building, the large campus time and cost savers, with their impact. Second, citizen development: the Harness, what it can do, a live demonstration, and the path to hosting. Third, what people have built with it, for themselves and for their departments. Last, the foundation underneath and the asks. One line on governance posture: data classification and UC policy alignment apply throughout, and every workflow has an accountable owner."
+    "speakerNotes": "One minute. Set up the three questions the rest of the talk answers. Part 1 answers the first: the vertical solutions ITS is building and the impact of each. Part 2 answers the second: what citizen development is, what the Harness can do, a live demonstration, and the path to hosting. Part 3 answers the third: what people have built for themselves and their departments. The foundation and asks close the talk. Keep the payback claims measured: the impact slide labels each figure as a timed pilot, a planning estimate, a scenario, or cost avoided. One line on governance posture: data classification and UC policy alignment apply throughout, and every workflow has an accountable owner."
   },
   {
     "id": 1030,

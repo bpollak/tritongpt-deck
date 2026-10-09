@@ -5,7 +5,7 @@
 | Time | Slide | Presenter focus |
 | --- | --- | --- |
 | 0:00–0:30 | TritonAI Operating Review | Open. |
-| 0:30–1:30 | Vertical solutions and citizen developers | The map: vertical solutions, citizen development, what people build, the foundation. |
+| 0:30–1:30 | By the end of this presentation, you'll know | Three questions: what ITS is building and its payback; what citizen development and the Harness are; what people have built with it. |
 | **Part 1** | **Vertical solutions** | |
 | 1:30–2:45 | Vertical solutions: campus time and cost savers | Impact of each vertical. Say the type of each number (pilot, estimate, scenario, avoided cost). |
 | 2:45–4:00 | Apply received cash faster | Why cash application matters; proposed benefit being reconciled. **Ask tag**. |
