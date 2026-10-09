@@ -1,51 +1,57 @@
-.cabinet-workflow-comparison {width:100%;height:100%;position:relative;background:#fff;color:#182b49;}
+.cabinet-workflow-comparison {width:100%;height:100%;position:relative;background:#f5f0e6;color:#182b49;}
 .cabinet-workflow-original {width:100%;height:100%;}
 .cabinet-workflow-comparison [hidden] {display:none;}
 .cabinet-workflow-switcher {position:absolute;left:100px;bottom:28px;display:flex;gap:8px;z-index:2;}
 .cabinet-workflow-switcher button {padding:8px 14px;border:1px solid #9caabc;border-radius:6px;background:#fff;color:#182b49;font:inherit;font-size:16px;line-height:1.3;cursor:pointer;}
 .cabinet-workflow-switcher button[aria-pressed="true"] {background:#182b49;border-color:#182b49;color:#fff;}
 .cabinet-workflow-switcher button:focus-visible {outline:3px solid #00629b;outline-offset:3px;}
-.cabinet-workflow-adaptation {height:100%;box-sizing:border-box;padding:32px 64px 100px;display:flex;flex-direction:column;gap:20px;overflow:auto;font-family:CabinetSiteRoboto,Arial,sans-serif;}
+.cabinet-workflow-adaptation {height:100%;box-sizing:border-box;padding:26px 64px 100px;display:flex;flex-direction:column;gap:16px;overflow:auto;font-family:CabinetSiteRoboto,Arial,sans-serif;}
 .cabinet-workflow-adaptation header {flex:none;}
 .cabinet-workflow-kicker {margin:0 0 5px;color:#00629b;font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;}
 .cabinet-workflow-adaptation h2 {margin:0;font:600 clamp(36px,3.5vw,56px)/1.08 CabinetSiteTeko,sans-serif;}
-.cabinet-workflow-lead {margin:8px 0 0;max-width:1400px;font-size:clamp(18px,1.4vw,23px);line-height:1.45;}
-.cabinet-workflow-task-cards {display:grid;grid-template-columns:1fr 1fr;gap:28px;flex:1;min-height:0;}
-.cabinet-workflow-task-card {border:1px solid #cfdde2;border-top:5px solid #00629b;border-radius:8px;padding:24px 30px;background:#f3f8fa;}
-.cabinet-workflow-task-card.cabinet-workflow-harness {background:#fff8f2;border-color:#e7d9c4;border-top-color:#c69214;}
-.cabinet-workflow-task-card h3 {margin:0 0 18px;font:600 clamp(30px,2.65vw,43px)/1.05 CabinetSiteTeko,sans-serif;}
-.cabinet-workflow-task-card dl {margin:0;display:grid;gap:22px;}
-.cabinet-workflow-task-card dt {margin-bottom:6px;font-size:15px;font-weight:700;color:#00629b;text-transform:uppercase;letter-spacing:.05em;}
-.cabinet-workflow-task-card dd {margin:0;font-size:clamp(18px,1.5vw,24px);line-height:1.45;}
-.cabinet-workflow-detail-table {width:100%;border-collapse:separate;border-spacing:0;table-layout:fixed;border:1px solid #cfdde2;border-radius:8px;overflow:hidden;font-size:clamp(17px,1.32vw,22px);line-height:1.42;}
-.cabinet-workflow-detail-table th,.cabinet-workflow-detail-table td {padding:16px 20px;vertical-align:top;border-bottom:1px solid #d9e2e6;text-align:left;}
-.cabinet-workflow-detail-table thead th {background:#182b49;color:#fff;font-size:clamp(20px,1.5vw,24px);}
-.cabinet-workflow-detail-table thead th:first-child {width:15%;font-size:16px;}
-.cabinet-workflow-detail-table tbody th {font-size:clamp(17px,1.2vw,20px);color:#00629b;background:#f7f9fb;}
-.cabinet-workflow-detail-table td:nth-child(2) {background:#f3f8fa;}
-.cabinet-workflow-detail-table td:nth-child(3) {background:#fff8f2;}
+.cabinet-workflow-lead {margin:6px 0 0;max-width:1400px;font-size:clamp(18px,1.4vw,23px);line-height:1.4;}
+/* Match the site's teal / slate / blue headers and shared alternating rows. */
+.cabinet-workflow-detail-table {width:100%;border-collapse:separate;border-spacing:0;table-layout:fixed;border:1px solid #d0d7de;border-radius:8px;overflow:hidden;background:#fff;box-shadow:0 4px 20px rgba(24,43,73,.08);font-size:20px;line-height:1.35;flex:none;}
+.cabinet-workflow-detail-table th,.cabinet-workflow-detail-table td {padding:13px 20px;vertical-align:top;border-bottom:1px solid #e2e8f0;text-align:left;}
+.cabinet-workflow-detail-table thead th {background:#1e293b;color:#fff;vertical-align:middle;}
+.cabinet-workflow-detail-table thead th:first-child {width:23%;font-size:20px;background:#0f766e;}
+.cabinet-workflow-detail-table thead th:nth-child(3) {background:#006a96;}
+.cabinet-workflow-product {display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.cabinet-workflow-product strong {font-size:24px;}
+.cabinet-workflow-badge {background:rgba(255,255,255,.2);border-radius:4px;padding:3px 8px;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;}
+.cabinet-workflow-badge-gold {background:#ffd100;color:#182b49;}
+.cabinet-workflow-detail-table tbody th {font-size:19px;color:#182b49;font-weight:600;}
+.cabinet-workflow-row-label {display:flex;align-items:center;gap:10px;}
+.cabinet-workflow-row-label svg {color:#006a96;flex:none;}
+.cabinet-workflow-cell-title {display:block;font-size:20px;font-weight:700;line-height:1.25;margin-bottom:4px;}
+.cabinet-workflow-cell-detail {display:block;font-size:17px;line-height:1.35;color:#475569;}
+.cabinet-workflow-detail-table tbody tr:nth-child(even) {background:#f8fafc;}
 .cabinet-workflow-detail-table tbody tr:last-child > * {border-bottom:0;}
+.cabinet-workflow-mobile-label {display:none;}
 .cabinet-workflow-evidence {flex:none;}
 .cabinet-workflow-data-rule {margin:0;font-size:clamp(16px,1.2vw,20px);line-height:1.45;}
 .cabinet-workflow-access-rule {margin:4px 0 0;font-size:clamp(15px,1.06vw,17px);line-height:1.4;color:#52616b;}
-.cabinet-workflow-sources {margin:8px 0 0;font-size:14px;line-height:1.4;color:#52616b;}
+.cabinet-workflow-sources {margin:0;font-size:14px;line-height:1.4;color:#52616b;}
 .cabinet-workflow-sources a {color:#00629b;text-decoration:underline;text-underline-offset:2px;}
 @media (max-width:1100px) {
   .cabinet-workflow-switcher {left:90px;bottom:76px;gap:5px;}
   .cabinet-workflow-switcher button {font-size:13px;padding:7px 10px;}
   .cabinet-workflow-original .cabinet-website-slide {padding-bottom:132px;}
   .cabinet-workflow-adaptation {padding:24px 28px 138px;gap:16px;}
-  .cabinet-workflow-task-card {padding:18px;}
-  .cabinet-workflow-task-card dl {gap:16px;}
   .cabinet-workflow-detail-table th,.cabinet-workflow-detail-table td {padding:12px;}
+  .cabinet-workflow-product strong {font-size:21px;}
 }
 @media (max-width:700px) {
   .cabinet-workflow-switcher {left:20px;right:20px;justify-content:center;}
-  .cabinet-workflow-switcher button {font-size:11px;}
-  .cabinet-workflow-task-cards {grid-template-columns:1fr;flex:none;}
-  .cabinet-workflow-detail-table {font-size:13px;}
-  .cabinet-workflow-detail-table thead th {font-size:16px;}
-  .cabinet-workflow-detail-table thead th:first-child {width:21%;font-size:12px;}
-  .cabinet-workflow-detail-table tbody th {font-size:13px;}
-  .cabinet-workflow-detail-table th,.cabinet-workflow-detail-table td {padding:8px;}
+  .cabinet-workflow-switcher button {font-size:13px;}
+  .cabinet-workflow-adaptation {padding:22px 20px 150px;}
+  .cabinet-workflow-detail-table {font-size:17px;}
+  .cabinet-workflow-detail-table thead {position:absolute;width:1px;height:1px;margin:-1px;clip-path:inset(50%);overflow:hidden;}
+  .cabinet-workflow-detail-table tbody,.cabinet-workflow-detail-table tr,.cabinet-workflow-detail-table tbody th,.cabinet-workflow-detail-table td {display:block;width:100%;box-sizing:border-box;}
+  .cabinet-workflow-detail-table tbody th {background:#0f766e;color:#fff;font-size:18px;}
+  .cabinet-workflow-row-label svg {color:#fff;}
+  .cabinet-workflow-detail-table td {border-bottom:0;padding:14px 16px;}
+  .cabinet-workflow-mobile-label {display:block;font-size:14px;font-weight:700;color:#006a96;margin-bottom:6px;}
+  .cabinet-workflow-cell-title {font-size:18px;}
+  .cabinet-workflow-cell-detail {font-size:16px;}
 }

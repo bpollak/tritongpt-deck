@@ -1,36 +1,39 @@
 import { test, expect } from '@playwright/test';
 
-test('Cabinet comparison separates task choices from access and review without changing the animation', async ({ page }) => {
+test('Cabinet opens with six aligned website-style comparison rows and retains the animation', async ({ page }, testInfo) => {
   await page.goto('/?audience=cabinet#slide=cabinet-chat-and-harness');
   const comparison = page.locator('.cabinet-workflow-comparison');
   const controls = comparison.getByRole('navigation', { name: 'Comparison views' });
-  await expect(controls.getByRole('button', { name: 'Website animation', exact: true })).toHaveAttribute('aria-pressed', 'true');
-  await expect(comparison.locator('.cabinet-website-source .harness-anim-arc')).toBeVisible();
-
-  await controls.getByRole('button', { name: 'Choose by task', exact: true }).click();
-  const tasks = comparison.locator('.cabinet-workflow-adaptation:not([hidden])');
-  await expect(tasks.getByRole('heading', { name: 'Choose the workspace for the task.', exact: true })).toBeVisible();
-  await expect(tasks.getByRole('article')).toHaveCount(2);
-  await expect(tasks.getByText('Best fit', { exact: true })).toHaveCount(2);
-  await expect(tasks.getByText('Where you work', { exact: true })).toHaveCount(2);
-  await expect(tasks.getByText('Typical result', { exact: true })).toHaveCount(2);
-  await expect(tasks.getByText('Installed Mac/Windows workspace; a paired phone can direct the host.', { exact: true })).toBeVisible();
-  await expect(tasks.getByText('A saved workbook, briefing deck, checked website change, or workflow to review.', { exact: true })).toBeVisible();
-
-  await controls.getByRole('button', { name: 'Access & review', exact: true }).click();
-  const details = comparison.locator('.cabinet-workflow-adaptation:not([hidden])');
-  await expect(details.getByRole('row')).toHaveCount(5);
-  for (const row of ['Files and actions', 'Connected systems', 'Where history lives', 'Review and approval']) {
-    await expect(details.getByRole('rowheader', { name: row, exact: true })).toBeVisible();
+  await expect(controls.getByRole('button', { name: 'Comparison', exact: true })).toHaveAttribute('aria-pressed', 'true');
+  const matrix = comparison.locator('.cabinet-workflow-adaptation:not([hidden])');
+  await expect(matrix.getByRole('heading', { name: 'Comparing TritonGPT and TritonAI Harness', exact: true })).toBeVisible();
+  await expect(matrix.getByRole('row')).toHaveCount(7);
+  for (const label of ['Where it runs', 'System access', 'Data storage', 'Host plugins', 'Human oversight', 'Data classification']) {
+    const row = matrix.getByRole('row').filter({ has: page.getByRole('rowheader', { name: label, exact: true }) });
+    await expect(row.getByRole('cell')).toHaveCount(2);
+    const cells = await row.getByRole('cell').all();
+    const boxes = await Promise.all(cells.map(cell => cell.boundingBox()));
+    expect(boxes[0].y).toBeCloseTo(boxes[1].y, 0);
+    expect(boxes[0].height).toBeCloseTo(boxes[1].height, 0);
   }
-  await expect(details.getByText(/automatic deletion after 90 days/)).toBeVisible();
-  await expect(details.getByText(/selected context goes to the model, and tools communicate with connected services/)).toBeVisible();
-  await expect(details.getByText(/Full access can act without approval prompts/)).toBeVisible();
-  await expect(details.getByText(/P1–P3 only within approved services and setups; P4 prohibited/)).toBeVisible();
-  await expect(details.getByText(/Cabinet adaptation · Verified October 8, 2026/)).toBeVisible();
-  await expect(details.getByRole('link', { name: 'Privacy policy', exact: true })).toHaveAttribute('href', 'https://tritonai.ucsd.edu/tritongpt/privacy.html');
+  await expect(matrix.getByText('Automatic deletion after 90 days.', { exact: true })).toBeVisible();
+  await expect(matrix.getByText(/Selected context goes to the model; tools exchange data/)).toBeVisible();
+  await expect(matrix.getByText(/Full access can act without prompts/)).toBeVisible();
+  await expect(matrix.getByText(/P4 prohibited/)).toHaveCount(2);
   await page.evaluate(() => document.fonts.ready);
-  expect(await details.evaluate(el => el.scrollHeight <= el.clientHeight + 1)).toBe(true);
+  expect(await matrix.evaluate(el => el.scrollHeight <= el.clientHeight + 1)).toBe(true);
+  await page.screenshot({ path: testInfo.outputPath('cabinet-comparison-row-by-row.png') });
+
+  await controls.getByRole('button', { name: 'Use cases', exact: true }).click();
+  const tasks = comparison.locator('.cabinet-workflow-adaptation:not([hidden])');
+  await expect(tasks.getByRole('row')).toHaveCount(4);
+  await expect(tasks.getByRole('article')).toHaveCount(0);
+  for (const label of ['Best fit', 'Where you work', 'Typical result']) {
+    await expect(tasks.getByRole('rowheader', { name: label, exact: true })).toBeVisible();
+  }
+  await expect(tasks.getByText('A saved workbook, briefing deck, checked website change, or workflow to review.', { exact: true })).toBeVisible();
+  await expect(tasks.getByText(/P1–P3 only within approved services and setups; P4 prohibited/)).toBeVisible();
+  await expect(tasks.getByRole('link', { name: 'Privacy policy', exact: true })).toHaveAttribute('href', 'https://tritonai.ucsd.edu/tritongpt/privacy.html');
 
   await controls.getByRole('button', { name: 'Website animation', exact: true }).click();
   await expect(comparison.locator('.cabinet-website-source').getByText('contract.docx', { exact: true })).toBeVisible();
@@ -72,11 +75,11 @@ test('Cabinet comparison controls and source footer remain reachable on a narrow
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/?audience=cabinet#slide=cabinet-chat-and-harness');
   const controls = page.getByRole('navigation', { name: 'Comparison views' });
-  const tasksButton = controls.getByRole('button', { name: 'Choose by task', exact: true });
+  const tasksButton = controls.getByRole('button', { name: 'Use cases', exact: true });
   await tasksButton.focus();
   await page.keyboard.press('Enter');
   await expect(tasksButton).toHaveAttribute('aria-pressed', 'true');
-  await controls.getByRole('button', { name: 'Access & review', exact: true }).click();
+  await controls.getByRole('button', { name: 'Comparison', exact: true }).click();
   const details = page.locator('.cabinet-workflow-adaptation:not([hidden])');
   const policy = details.getByRole('link', { name: 'Privacy policy', exact: true });
   await policy.scrollIntoViewIfNeeded();
@@ -90,6 +93,7 @@ test('Cabinet comparison controls and source footer remain reachable on a narrow
 test('original website diagrams keep their animations and respect reduced motion', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'no-preference' });
   await page.goto('/?audience=cabinet#slide=cabinet-chat-and-harness');
+  await page.getByRole('button', { name: 'Website animation', exact: true }).click();
   const source = page.locator('.cabinet-website-source');
   await expect(source.getByRole('heading', { name: 'The harness is everything around the model', exact: true })).toBeVisible();
   await expect(source.getByText('contract.docx', { exact: true })).toBeVisible();
@@ -114,6 +118,7 @@ test('original website diagrams keep their animations and respect reduced motion
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await expect(flow).toHaveCSS('animation-name', 'none');
   await page.goto('/?audience=cabinet#slide=cabinet-chat-and-harness');
+  await page.getByRole('button', { name: 'Website animation', exact: true }).click();
   await expect(page.locator('.harness-anim-arc')).toHaveCSS('animation-name', 'none');
   await expect(page.locator('.harness-anim-chat-dot')).toHaveCSS('display', 'none');
   await expect(page.locator('.harness-model-ring')).toBeVisible();

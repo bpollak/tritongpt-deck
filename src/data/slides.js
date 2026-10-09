@@ -7385,7 +7385,7 @@ export const slides = [
     "slug": "cabinet-chat-and-harness",
     "type": "content",
     "layout": "cabinet-website-visual",
-    "title": "The Harness is everything around the model",
+    "title": "TritonGPT and TritonAI Harness",
     "subtitle": "The model can stay the same. The workspace changes what you can get done.",
     "audiences": [
       "cabinet"
@@ -7402,9 +7402,85 @@ export const slides = [
         "text": "Multi-step work through project files, connected tools, and checks to a saved result you review."
       }
     ],
-    "speakerNotes": "Forty-five seconds total, no added lecture. Default: original website animation, preserved as copied. Optional Choose by task view: complementary entry points, not a replacement story or a smarter-model claim. TritonGPT helps you find, understand, and draft; the Harness can carry work through files, tools, and checks to a result you review. Use task cards for a 15-second transition to the 60-second UI overview and 90-second Excel/PowerPoint demo. Access & review is an untimed Q&A detail view on this same slide; do not read the full table during the 45-second slot. All six website matrix rows are mapped in CABINET-RUN-OF-SHOW.md; Best fit and Typical result are Cabinet synthesis supported by the overview and our completed demonstrations. Where you work adds the paired phone directing the host, verified by our actual October 8 simulator recording. TritonGPT includes retrieval, uploaded files, assistants and assistant-specific tools; the animation is illustrative, not a one-prompt capability limit. Campus chats: published policy says automatic deletion after 90 days. Harness task history and project files are local, but prompts/selected context go to the chosen model and tools exchange data with connected services. Review modes vary by provider; Full access permits actions without prompts. Our recorded fictional task used Full access, not Supervised. Plugin abilities and account permissions still apply. P1-P3 requires approved service/setup, model route and use case; P4 prohibited. A shared Gateway does not guarantee identical model inventories or that every route is self-hosted. Source matrix and architecture: https://tritonai.ucsd.edu/developer-apis/harness.html ; TritonGPT capabilities: https://tritonai.ucsd.edu/tritongpt/index.html ; retention and approved use: https://tritonai.ucsd.edu/tritongpt/privacy.html . Independently verified October 8, 2026. Original HTML/SVG/CSS from #what-a-harness-adds stays unchanged and uniformly scaled, with bundled fonts; adapted task and detail views are explicitly labeled Cabinet adaptation.",
+    "speakerNotes": "Forty-five seconds total, no added lecture. Default: the six-row website-style comparison matrix. Keep this row-by-row view on screen while contrasting browser chat with a local agent workspace. The original website animation remains available through Website animation. Optional Use cases view: complementary entry points, not a replacement story or a smarter-model claim. TritonGPT helps you find, understand, and draft; the Harness can carry work through files, tools, and checks to a result you review. Use the row-aligned use-case table for a 15-second transition to the 60-second UI overview and 90-second Excel/PowerPoint demo. The main matrix covers all six website dimensions. Highlight the system-access and oversight rows in the 45-second slot; use the remaining rows for Q&A. All six website matrix rows appear in the default table and are mapped in CABINET-RUN-OF-SHOW.md; Best fit and Typical result are Cabinet synthesis supported by the overview and our completed demonstrations. Where you work adds the paired phone directing the host, verified by our actual October 8 simulator recording. TritonGPT includes retrieval, uploaded files, assistants and assistant-specific tools; the animation is illustrative, not a one-prompt capability limit. Campus chats: published policy says automatic deletion after 90 days. Harness task history and project files are local, but prompts/selected context go to the chosen model and tools exchange data with connected services. Review modes vary by provider; Full access permits actions without prompts. Our recorded fictional task used Full access, not Supervised. Plugin abilities and account permissions still apply. P1-P3 requires approved service/setup, model route and use case; P4 prohibited. A shared Gateway does not guarantee identical model inventories or that every route is self-hosted. Source matrix and architecture: https://tritonai.ucsd.edu/developer-apis/harness.html ; TritonGPT capabilities: https://tritonai.ucsd.edu/tritongpt/index.html ; retention and approved use: https://tritonai.ucsd.edu/tritongpt/privacy.html . Independently verified October 8, 2026. Original HTML/SVG/CSS from #what-a-harness-adds stays unchanged and uniformly scaled, with bundled fonts; adapted matrix and use-case tables are explicitly labeled Cabinet adaptation.",
     "websiteVisual": "comparison",
     "workflowComparison": {
+      "matrixTitle": "Comparing TritonGPT and TritonAI Harness",
+      "matrixLead": "Shared campus AI infrastructure. Different workspaces, access, and ways to review the result.",
+      "matrixRows": [
+        {
+          "label": "Where it runs",
+          "icon": "Server",
+          "tritongpt": {
+            "title": "Campus web service",
+            "detail": "Open in your browser; no installation."
+          },
+          "harness": {
+            "title": "Your workstation",
+            "detail": "Mac or Windows app; a paired phone can direct it."
+          }
+        },
+        {
+          "label": "System access",
+          "icon": "FolderOpen",
+          "tritongpt": {
+            "title": "Uploaded files and assistant context",
+            "detail": "Review documents within the chat."
+          },
+          "harness": {
+            "title": "Project folders, commands, and Git",
+            "detail": "Read, edit, run, and check within granted access."
+          }
+        },
+        {
+          "label": "Data storage",
+          "icon": "Archive",
+          "tritongpt": {
+            "title": "Campus-stored chats",
+            "detail": "Automatic deletion after 90 days."
+          },
+          "harness": {
+            "title": "Local files and task history",
+            "detail": "Selected context goes to the model; tools exchange data with their services."
+          }
+        },
+        {
+          "label": "Host plugins",
+          "icon": "Plug",
+          "tritongpt": {
+            "title": "Campus sources and assistant tools",
+            "detail": "Websites, knowledge bases, and directory information."
+          },
+          "harness": {
+            "title": "Connected service plugins",
+            "detail": "Microsoft 365, Google Workspace, GitHub, and n8n; account permissions apply."
+          }
+        },
+        {
+          "label": "Human oversight",
+          "icon": "Eye",
+          "tritongpt": {
+            "title": "Review the response",
+            "detail": "Evaluate and check before using it."
+          },
+          "harness": {
+            "title": "Choose an approval mode",
+            "detail": "Supervised pauses for changes; Full access can act without prompts."
+          }
+        },
+        {
+          "label": "Data classification",
+          "icon": "ShieldCheck",
+          "tritongpt": {
+            "title": "P1–P3 in approved services",
+            "detail": "P4 prohibited. Check the service, model route, and use case."
+          },
+          "harness": {
+            "title": "P1–P3 in approved setups",
+            "detail": "P4 prohibited. Check the service, model route, and use case."
+          }
+        }
+      ],
       "title": "Choose the workspace for the task.",
       "lead": "TritonGPT helps you find, understand, and draft. The Harness can carry a task through files, tools, and checks to a result you review.",
       "taskRows": [
@@ -7422,28 +7498,6 @@ export const slides = [
           "label": "Typical result",
           "tritongpt": "A sourced answer, comparison, or draft to review.",
           "harness": "A saved workbook, briefing deck, checked website change, or workflow to review."
-        }
-      ],
-      "detailRows": [
-        {
-          "label": "Files and actions",
-          "tritongpt": "Uploaded documents and permitted assistant context.",
-          "harness": "Opened project folders, file edits, commands, and version control within granted access."
-        },
-        {
-          "label": "Connected systems",
-          "tritongpt": "Campus sources, directory information, and assistant-specific tools.",
-          "harness": "Enabled plugins connect your account to services such as Microsoft 365, Google Workspace, GitHub, and n8n."
-        },
-        {
-          "label": "Where history lives",
-          "tritongpt": "Campus-stored chats; published policy: automatic deletion after 90 days.",
-          "harness": "Local project files and task history; selected context goes to the model, and tools communicate with connected services."
-        },
-        {
-          "label": "Review and approval",
-          "tritongpt": "Review the response before using it.",
-          "harness": "Choose approval mode; inspect changes, checks, and output. Full access can act without approval prompts."
         }
       ],
       "dataRule": "P1–P3 only within approved services and setups; P4 prohibited. Check the service, model route, and use case.",

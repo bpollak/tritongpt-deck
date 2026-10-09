@@ -31,22 +31,20 @@ The framing visuals reuse the [current Harness website comparison and animated s
 
 ### Cabinet comparison framing
 
-The same `cabinet-chat-and-harness` slide now offers three views: **Website animation** (the unchanged default), **Choose by task**, and **Access & review**. The latter two are explicitly labeled Cabinet adaptation. They do not alter the copied website graphics. The timed framing slot remains 45 seconds: show the animation, optionally use the task view to introduce the upcoming UI and productivity demos, then move on. The details view supports Q&A without adding an active slide. There are still 16 active Cabinet slides and 20 minutes of planned speaking time.
+The `cabinet-chat-and-harness` slide opens with **Comparison**, a six-row matrix adapted from the website. It uses the same teal / slate / blue column headers, product badges, alternating shared rows, icons, and bold summaries with supporting detail. Each capability occupies one row across both products. **Use cases** is also an aligned table, and **Website animation** retains the original graphic and animation unchanged. The framing slot remains 45 seconds within the 16-slide Cabinet sequence. Highlight system access and human oversight, then move to the UI and productivity demonstrations; the other rows support Q&A.
 
-Lead: “Choose the workspace for the task.” TritonGPT helps people find, understand, and draft. The Harness can carry a task through files, tools, and checks to a result they review. These are complementary entry points to campus AI. This is a distinction between workspaces and workflows; it does not claim a smarter model, identical model inventories, or a replacement for TritonGPT. TritonGPT supports files, retrieval, purpose-built assistants and bounded assistant tools. The original animation is illustrative, not a universal one-prompt capability limit.
+The workspaces serve complementary tasks. This does not claim a smarter model, identical model inventories, or a replacement for TritonGPT. TritonGPT supports files, retrieval, purpose-built assistants and bounded assistant tools. The original animation is illustrative, not a universal one-prompt capability limit.
 
-Every row of the website's six-row matrix is accounted for below. Copy and qualifications are stored in `workflowComparison` and `speakerNotes` in `src/data/slides.js`.
+| Website matrix row | Default comparison treatment |
+| --- | --- |
+| Where it runs | Campus browser service versus a Mac/Windows app. The paired phone directs the host, verified in the simulator recording. |
+| System access | Uploaded files and assistant context versus opened folders, edits, commands and Git within granted access. |
+| Data storage | Campus chats with automatic deletion after 90 days versus local files/history. Selected context goes to the chosen model and tools exchange data with their services. |
+| Host plugins | Campus sources and assistant tools versus enabled service plugins. Account permissions and enabled abilities constrain access. |
+| Human oversight | Review responses versus choosing an approval mode and inspecting changes/output. Full access can act without prompts; the fictional demonstrations used Full access. |
+| Data classification | P1–P3 only in approved services/setups; P4 prohibited. Check the service, model route and use case. |
 
-| Source matrix row | Cabinet treatment | View | Interpretation and qualification |
-| --- | --- | --- | --- |
-| Where it runs | Where you work | Choose by task | Campus-hosted browser service versus an installed Mac/Windows workspace. Paired phone control directs the host; this addition is supported by the completed simulator recording. |
-| System access | Files and actions | Access & review | Uploaded documents and permitted assistant context versus opened folders, edits, commands and version control within granted access. Neither implies unrestricted access. |
-| Data storage | Where history lives | Access & review | Campus-stored TritonGPT chats with the published 90-day automatic-deletion policy. Harness project files and history are local, but selected context goes to the chosen model and tools exchange data with connected services. Local storage does not mean all processing stays on-device. |
-| Host plugins | Connected systems | Access & review | Campus sources, directory context and assistant-specific tools versus enabled account-connected plugins. Services listed are examples; each plugin's capabilities and account permissions limit actions. Do not imply that every connector writes to every service. |
-| Human oversight | Review and approval | Access & review | Review TritonGPT responses. In the Harness, choose an approval mode and inspect changes, checks and output. Full access can act without approval prompts. The actual fictional demonstrations used Full access; do not describe them as Supervised. |
-| Data classification | Common Data use footer in both adapted views | Both | P1–P3 only within approved services/setups; P4 prohibited. Check service, model route and use case. This is not blanket approval for every provider or every P3 task. |
-| Added task framing | Best fit | Choose by task | Campus questions, document review, drafting and purpose-built assistants; multi-step file, analysis, artifact or application work. A use-case synthesis, not an absolute product boundary. |
-| Added outcome framing | Typical result | Choose by task | Reviewed answer/comparison/draft versus saved workbook, briefing deck, checked website change or workflow. Workbook, deck and local website examples connect to the new actual demonstrations. Local Office artifact creation is separate from Microsoft 365 cloud-plugin access. |
+The separate Use cases table preserves Best fit, Where you work, and Typical result. It connects the saved workbook, briefing deck, and checked website change to our actual new demonstrations. Local Office artifact creation is distinct from Microsoft 365 cloud-plugin access. Copy and presenter qualifications are stored in `workflowComparison` and `speakerNotes` in `src/data/slides.js`.
 
 Sources independently checked October 8, 2026: [Harness comparison matrix and execution architecture](https://tritonai.ucsd.edu/developer-apis/harness.html), [TritonGPT capabilities](https://tritonai.ucsd.edu/tritongpt/index.html), and [TritonGPT privacy policy](https://tritonai.ucsd.edu/tritongpt/privacy.html). The policy independently confirms automatic deletion after 90 days and approved-service qualifications. Compact links and the verification date appear in the adapted views; fuller source and interpretation notes remain available to the presenter. Shared Gateway access does not guarantee matching client model lists or self-hosting on every route.
 
