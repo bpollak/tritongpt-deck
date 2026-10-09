@@ -7351,36 +7351,37 @@ export const slides = [
   {
     "id": 1005,
     "slug": "cabinet-contract-review-demo",
-    "type": "content",
+    "type": "video",
     "layout": "cabinet-demo",
     "title": "Contract review in Word",
-    "subtitle": "Review the agreement where the work already happens.",
-    "content": [
-      {
-        "heading": "The add-in",
-        "text": "Open a fictional agreement and show the review result."
-      },
-      {
-        "heading": "The review queue",
-        "text": "Identify the next groups to prioritize."
-      }
-    ],
+    "subtitle": "Institutional rules produce tracked changes and explanations for a reviewer.",
+    "content": [],
     "audiences": [
       "cabinet"
     ],
     "managerSection": "Administrative Verticals",
     "durationSeconds": 90,
     "recording": {
-      "label": "Word add-in review",
-      "format": "Fresh capture • fictional agreement",
-      "mediaStem": "cabinet-contract-review"
+      "label": "Public agreement → institutional rules → tracked changes and explanations",
+      "format": "Actual Word capture • 70 seconds • processing time shortened",
+      "mediaStem": "cabinet-contract-review",
+      "status": "captured and reviewed"
     },
-    "pendingNote": "Before/after timing and department queue pending confirmation.",
-    "speakerNotes": "Sandra and Sean to confirm queue and current release status. Capture the NEW Word add-in, not the old contract reviewer video. Verify review time before adding a before/after claim. Plant the prioritization ask: the AI team built this today; citizens will build the next ones themselves.",
+    "speakerNotes": "Ninety seconds, including a 70-second edited computer-use capture. Start with the public SolarWinds Software as a Service Agreement dated September 10, 2026. The complete ten-page vendor PDF was converted to a local Word demonstration copy with vendor words preserved, whitespace reflowed, and source/demo headers added. Run the installed UC San Diego Contract Reviewer with all 19 rule groups selected, risk assessment enabled, and rule names in author labels. Additional context states that no purchase, customer data, order form, DPA, UC Health facts, or federal-funding facts are supplied. Show actual tracked changes and comments produced by the add-in, then inspect representative clauses and explanations. The marked-up document remains a proposal for qualified human review; no changes are accepted, agreement signed, or vendor contacted. Video uses actual native Word frames, cropped/scaled for readability with processing and idle time shortened. No redlines or application UI were synthesized. Existing contract workflow is described as production at https://tritonai.ucsd.edu/use-cases/contract-review.html ; that page describes inbox/portal delivery and does not establish this Word add-in version or campus rollout. Sandra and Sean still need to confirm the add-in release status and department queue. Do not reuse old review-time or savings numbers for this capture. Frame this as a specialized administrative workflow built by the AI team, with prioritization and owner review as the next decisions. Source: https://www.solarwinds.com/legal/software-services-agreement .",
     "videoLoop": false,
     "videoClearNav": true,
     "videoAutoPlay": true,
-    "hideDemoBadge": true
+    "hideDemoBadge": true,
+    "managerSummary": "Fresh native Word computer-use capture: review a public SolarWinds SaaS agreement with the installed Contract Reviewer, inspect rule-linked redlines and comments, and leave decisions with a qualified reviewer.",
+    "videoSrc": "/media/cabinet/cabinet-contract-review.mp4",
+    "poster": "/media/cabinet/cabinet-contract-review-poster.jpg",
+    "captionsSrc": "/media/cabinet/cabinet-contract-review.vtt",
+    "captionsDefault": false,
+    "releaseContext": {
+      "channel": "pilot",
+      "label": "Installed Word add-in · Release status pending",
+      "captureNote": "Public vendor agreement · Actual rule review · Human approval required"
+    }
   },
   {
     "id": 1006,
