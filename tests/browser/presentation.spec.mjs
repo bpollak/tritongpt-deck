@@ -30,50 +30,46 @@ test('invalid and missing audience links preserve the requested slide without sh
   await expect(page).toHaveURL(/#slide=lmu-title$/);
 });
 
-test('Cabinet opens with the PK intro and has its own fresh demonstration sequence', async ({ page }) => {
+test('Cabinet keeps the PK opening and plays the revised demos without banners', async ({ page }) => {
   await page.goto('/?audience=cabinet', { waitUntil: 'domcontentloaded' });
   await expect(page).toHaveURL(/#slide=ai-operating-review-title$/);
   await expect(page.getByRole('heading', { name: 'TritonAI Operating Review', exact: true })).toBeVisible();
   await page.getByRole('button', { name: 'Next slide', exact: true }).click();
   await expect(page).toHaveURL(/#slide=cabinet-citizen-developer-story$/);
-  await page.goto('/?audience=cabinet#slide=cabinet-training-website-demo', { waitUntil: 'domcontentloaded' });
-  await expect(page.locator('[data-slide-slug="cabinet-training-website-demo"]').getByRole('status', { name: 'Demo release status', exact: true })).toContainText('Mobile preview · Nightly capture');
-  await expect(page.locator('[data-slide-slug="cabinet-training-website-demo"]').getByRole('status', { name: 'Demo release status', exact: true })).toContainText('production mobile rollout unverified');
-  const video = page.locator('video.deck-video[src="/media/cabinet/cabinet-mobile-website.mp4"]');
-  await expect(video).toHaveAttribute('src', '/media/cabinet/cabinet-mobile-website.mp4');
-  await expect(video.locator('track')).toHaveAttribute('src', '/media/cabinet/cabinet-mobile-website.vtt');
-  await expect.poll(() => video.evaluate(v => v.duration)).toBeCloseTo(80, 0);
-  await page.goto('/?audience=cabinet#slide=cabinet-personal-productivity-demo');
-  await expect(page.locator('[data-slide-slug="cabinet-personal-productivity-demo"]').getByRole('status', { name: 'Demo release status', exact: true })).toContainText('Stable 0.3.6 capabilities');
-  await expect(page.locator('[data-slide-slug="cabinet-personal-productivity-demo"]').getByRole('status', { name: 'Demo release status', exact: true })).toContainText('Actual recording: Nightly .63');
-  const productivityVideo = page.locator('video.deck-video[src="/media/cabinet/cabinet-personal-productivity.mp4"]');
-  await expect(productivityVideo).toBeVisible();
-  await expect.poll(() => productivityVideo.evaluate(v => v.duration)).toBeCloseTo(90, 0);
+  for (const [slug, stem, seconds, width] of [
+    ['cabinet-training-website-demo', 'cabinet-enablement-combined', 60.733, 2560],
+    ['cabinet-personal-productivity-demo', 'cabinet-daily-briefing-debrief', 16.367, 1686],
+    ['cabinet-inbox-priority-sorter', 'cabinet-inbox-priority-sorter', 11.9, 2564]
+  ]) {
+    await page.goto(`/?audience=cabinet#slide=${slug}`);
+    const stage = page.locator(`[data-slide-slug="${slug}"]`);
+    await expect(stage.getByRole('status', { name: 'Demo release status', exact: true })).toHaveCount(0);
+    await expect(stage.getByRole('heading')).toHaveCount(0);
+    const video = stage.locator('video.deck-video');
+    await expect(video).toBeVisible();
+    await expect(video).toHaveAttribute('src', `/media/cabinet/${stem}.mp4`);
+    await expect.poll(() => video.evaluate(v => v.duration)).toBeCloseTo(seconds, 1);
+    expect(await video.evaluate(v => v.videoWidth)).toBe(width);
+    expect(await video.evaluate(v => v.videoHeight)).toBeGreaterThanOrEqual(1052);
+  }
 });
 
-test('citizen developer showcase plays fresh Directory and Passport captures with distinct service status', async ({ page }) => {
+test('citizen developer sequence keeps utilization and Passport before cash receipts', async ({ page }) => {
   await page.goto('/?audience=cabinet#slide=cabinet-class-planner-demo');
   await page.getByRole('button', { name: 'Next slide', exact: true }).click();
-  await expect(page).toHaveURL(/#slide=cabinet-directory-demo$/);
-  for (const [slug, stem, status, provenance] of [
-    ['cabinet-directory-demo', 'cabinet-directory', 'Directory · In development', 'Live web app · Sample query'],
-    ['cabinet-passport-demo', 'cabinet-passport', 'Passport · Production service', 'Local source checkout · Fictional visitor']
-  ]) {
-    const stage = page.locator(`[data-slide-slug="${slug}"]`);
-    const banner = stage.getByRole('status', { name: 'Demo release status', exact: true });
-    await expect(banner).toContainText(status);
-    await expect(banner).toContainText(provenance);
-    const video = stage.locator('video.deck-video');
-    await expect(video).toHaveAttribute('src', `/media/cabinet/${stem}.mp4`);
-    await expect(video).toHaveAttribute('poster', `/media/cabinet/${stem}-poster.jpg`);
-    await expect(video).toHaveAttribute('controls', '');
-    await expect(video.locator('track')).toHaveAttribute('src', `/media/cabinet/${stem}.vtt`);
-    // Burned-in captions already explain the silent recording; native captions remain optional.
-    await expect(video.locator('track')).not.toHaveAttribute('default');
-    await expect.poll(() => video.evaluate(v => v.duration)).toBeCloseTo(50, 0);
-    await page.getByRole('button', { name: 'Next slide', exact: true }).click();
-  }
+  await expect(page).toHaveURL(/#slide=cabinet-class-planner-utilization$/);
+  await page.getByRole('button', { name: 'Next slide', exact: true }).click();
+  await expect(page).toHaveURL(/#slide=cabinet-passport-demo$/);
+  const stage = page.locator('[data-slide-slug="cabinet-passport-demo"]');
+  await expect(stage.getByRole('status', { name: 'Demo release status', exact: true })).toHaveCount(0);
+  const video = stage.locator('video.deck-video');
+  await expect(video).toHaveAttribute('src', '/media/cabinet/cabinet-passport-wide.mp4');
+  await expect.poll(() => video.evaluate(v => v.videoWidth)).toBeGreaterThanOrEqual(2500);
+  await page.getByRole('button', { name: 'Next slide', exact: true }).click();
+  await expect(page).toHaveURL(/#slide=cabinet-department-builders$/);
+  await page.getByRole('button', { name: 'Next slide', exact: true }).click();
   await expect(page).toHaveURL(/#slide=cabinet-cash-receipts-demo$/);
+  await expect(page.getByRole('region', { name: 'Apply received cash faster' }).getByRole('heading', { level: 2 })).toHaveCount(6);
 });
 
 for (const width of [390, 767]) {
@@ -82,7 +78,7 @@ for (const width of [390, 767]) {
     for (const [slug, lastText] of [
       ['cabinet-harness-08b-component-framework', 'For bigger jobs, planning, building, and verification can run as separate focused sub-agents.'],
       ['class-planner-student-schedule', 'A saved plan opens matching course pages in TSS. Students still confirm sections and complete booking there.'],
-      ['llm-api-usage-attribution', 'Self-hosted models served 95.3% of recorded tokens across the measurement period.']
+      ['llm-api-usage-attribution', 'Gateway-recorded input plus output tokens. Request records include successful and failed calls.']
     ]) {
       await page.goto(`/?audience=all#slide=${slug}`, { waitUntil: 'domcontentloaded' });
       const stage = page.locator(`[data-slide-slug="${slug}"]`);

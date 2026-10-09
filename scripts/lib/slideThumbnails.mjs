@@ -10,6 +10,8 @@ const rendererFiles = [
   'src/components/CabinetCanvas.css',
   'src/components/CabinetRoutingSavings.jsx',
   'src/components/CabinetRoutingSavings.css',
+  'src/components/CabinetCashReceipts.jsx',
+  'src/components/CabinetCashReceipts.css',
   'src/components/CabinetWebsiteVisual.jsx',
   'src/components/CabinetWebsiteVisual.css',
   'src/components/CabinetWorkflowComparison.jsx',

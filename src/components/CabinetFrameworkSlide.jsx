@@ -7,7 +7,7 @@ export default function CabinetFrameworkSlide({ slide }) {
   const isDemo = slide.layout === 'cabinet-demo';
 
   return (
-    <CabinetCanvas className="cabinet-framework-canvas"><section className={`cabinet-framework-slide${slide.sources?.length ? ' cabinet-framework-slide--cited' : ''}`} aria-label={slide.title}>
+    <CabinetCanvas className="cabinet-framework-canvas"><section className={`cabinet-framework-slide${slide.sources?.length || slide.sourceNote ? ' cabinet-framework-slide--cited' : ''}`} aria-label={slide.title}>
       <h1>{slide.title}</h1>
       {isDemo ? (
         <div className="cabinet-framework-demo">
@@ -45,6 +45,7 @@ export default function CabinetFrameworkSlide({ slide }) {
         </div>
       )}
       {slide.pendingNote && <p className="cabinet-framework-pending">{slide.pendingNote}</p>}
+      {slide.sourceNote && <p className="cabinet-framework-sources">{slide.sourceNote}</p>}
       {slide.sources?.length > 0 && (
         <p className="cabinet-framework-sources">
           Sources: {slide.sources.map((source, index) => (

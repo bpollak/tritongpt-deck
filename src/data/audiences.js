@@ -1,12 +1,13 @@
 export const DEFAULT_AUDIENCE = 'all';
 
-export const AUDIENCE_TYPES = ['all', 'technical', 'executive', 'cabinet', 'citizen', 'internal', 'public', 'conference', 'PK', 'regent', 'LMU'];
+export const AUDIENCE_TYPES = ['all', 'technical', 'executive', 'cabinet', 'cabinet-backup', 'citizen', 'internal', 'public', 'conference', 'PK', 'regent', 'LMU'];
 
 export const AUDIENCE_COLORS = {
   all: 'bg-gray-500',
   technical: 'bg-blue-500',
   executive: 'bg-purple-500',
   cabinet: 'bg-rose-500',
+  'cabinet-backup': 'bg-rose-500',
   'citizen': 'bg-pink-600',
   internal: 'bg-green-500',
   public: 'bg-orange-500',
@@ -29,6 +30,7 @@ export const normalizeAudienceType = (audienceType) => findCanonicalAudience(aud
 
 export const getAudienceLabel = (audienceType) => {
   if (audienceType === DEFAULT_AUDIENCE) return 'Default presentation';
+  if (audienceType === 'cabinet-backup') return 'Cabinet backup';
   return audienceType.charAt(0).toUpperCase() + audienceType.slice(1);
 };
 

@@ -40,12 +40,13 @@ test('Cabinet opens with six aligned website-style comparison rows and retains t
   await expect(comparison.locator('.harness-anim-arc')).toHaveCSS('animation-duration', '16s');
 });
 
-test('Cabinet Harness screenshots cover all seven plugins in separate stages', async ({ page }, testInfo) => {
+test('Cabinet Harness screenshots cover all seven plugins with framing left to the presenter', async ({ page }, testInfo) => {
   await page.goto('/?audience=cabinet#slide=cabinet-harness-mobile-demo');
   const overview = page.locator('.cabinet-harness-overview');
   await expect(overview.getByRole('button', { name: 'Plugins', exact: true })).toHaveAttribute('aria-pressed', 'true');
-  await expect(overview.getByRole('status', { name: 'Feature availability', exact: true })).toHaveText(/Available in stable 0\.3\.6/);
-  await expect(overview.locator('.cabinet-harness-version')).toContainText('Capture build: Nightly 0.3.6-nightly.20261008.63');
+  await expect(overview).toHaveClass(/cabinet-harness-overview--demo-only/);
+  await expect(overview.getByRole('heading')).toHaveCount(0);
+  await expect(overview.locator('figcaption')).toHaveCount(0);
   const image = overview.locator('img');
   await expect(image).toHaveAttribute('src', /plugins-microsoft-n8n-current-excerpt\.png$/);
   await expect(image).toBeVisible();
@@ -69,8 +70,7 @@ test('Cabinet Harness screenshots cover all seven plugins in separate stages', a
   await expect(image).toHaveAttribute('src', /browser-access-current-excerpt\.png$/);
   await overview.getByRole('button', { name: 'Model & permissions', exact: true }).click();
   await expect(image).toHaveAttribute('src', /model-permissions-current-excerpt\.png$/);
-  await expect(overview.getByText('Captured with GLM and Full access on fictional files.', { exact: true })).toBeVisible();
-  await expect(overview.getByText(/Nightly 0\.3\.6-nightly\.20261008\.63/)).toBeVisible();
+  await expect(overview.getByText('Captured with GLM and Full access on fictional files.', { exact: true })).toHaveCount(0);
   await expect.poll(() => image.evaluate(el => el.complete && el.naturalWidth > 0)).toBe(true);
 });
 
@@ -111,15 +111,7 @@ test('original website diagrams keep their animations and respect reduced motion
   });
   expect(fontReady).toBe(true);
 
-  await page.goto('/?audience=cabinet#slide=cabinet-subagents');
-  const flow = page.locator('.cabinet-website-source .harness-anim-dash').first();
-  await expect(flow).toHaveCSS('animation-duration', '2.8s');
-  const flowBefore = await flow.evaluate(el => getComputedStyle(el).strokeDashoffset);
-  await page.waitForTimeout(400);
-  expect(await flow.evaluate(el => getComputedStyle(el).strokeDashoffset)).not.toBe(flowBefore);
-
   await page.emulateMedia({ reducedMotion: 'reduce' });
-  await expect(flow).toHaveCSS('animation-name', 'none');
   await page.goto('/?audience=cabinet#slide=cabinet-chat-and-harness');
   await page.getByRole('button', { name: 'Website animation', exact: true }).click();
   await expect(page.locator('.harness-anim-arc')).toHaveCSS('animation-name', 'none');

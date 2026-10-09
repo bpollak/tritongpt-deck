@@ -5,18 +5,20 @@ export const slideManagerState = {
     "cabinet-citizen-developer-story",
     "cabinet-class-planner-demo",
     "cabinet-class-planner-utilization",
-    "cabinet-directory-demo",
     "cabinet-passport-demo",
+    "cabinet-department-builders",
+    "cabinet-cash-receipts-demo",
     "cabinet-contract-review-demo",
+    "cabinet-verticals-at-a-glance",
     "cabinet-administrative-quick-hits",
-    "cabinet-routing-savings",
     "cabinet-chat-and-harness",
-    "cabinet-personal-productivity-demo",
+    "cabinet-harness-mobile-demo",
+    "cabinet-governance",
     "cabinet-training-website-demo",
-    "cabinet-scale",
-    "cabinet-research-data-trust",
+    "cabinet-inbox-priority-sorter",
+    "cabinet-personal-productivity-demo",
     "cabinet-sovereign-ai",
-    "cabinet-training-discovery-demo",
+    "cabinet-scale",
     "cabinet-asks-close",
     "the-ai-enabled-university",
     "ai-strategy-and-engagement",
@@ -109,7 +111,11 @@ export const slideManagerState = {
     "cabinet-harness-13-recap",
     "the-team-behind-tritonai",
     "thank-you",
-    "lmu-thank-you"
+    "lmu-thank-you",
+    "cabinet-directory-demo",
+    "cabinet-routing-savings",
+    "cabinet-research-data-trust",
+    "cabinet-training-discovery-demo"
   ],
   "removed": [
     "where-will-ai-place-us-in-2031",
@@ -133,10 +139,7 @@ export const slideManagerState = {
     "cabinet-harness-11d-campus-app-hosting-intake",
     "cabinet-berkeley-quote",
     "cabinet-harness-components-backup",
-    "cabinet-cash-receipts-demo",
-    "cabinet-subagents",
-    "cabinet-harness-mobile-demo",
-    "cabinet-governance"
+    "cabinet-subagents"
   ],
   "audiences": {
     "lmu-title": [
@@ -682,7 +685,7 @@ export const slideManagerState = {
       "cabinet"
     ],
     "cabinet-training-discovery-demo": [
-      "cabinet"
+      "cabinet-backup"
     ],
     "cabinet-training-website-demo": [
       "cabinet"
@@ -712,15 +715,24 @@ export const slideManagerState = {
       "cabinet"
     ],
     "cabinet-directory-demo": [
-      "cabinet"
+      "cabinet-backup"
     ],
     "cabinet-routing-savings": [
-      "cabinet"
+      "cabinet-backup"
     ],
     "cabinet-class-planner-utilization": [
       "cabinet"
     ],
     "cabinet-research-data-trust": [
+      "cabinet-backup"
+    ],
+    "cabinet-verticals-at-a-glance": [
+      "cabinet"
+    ],
+    "cabinet-department-builders": [
+      "cabinet"
+    ],
+    "cabinet-inbox-priority-sorter": [
       "cabinet"
     ]
   }

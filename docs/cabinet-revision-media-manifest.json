@@ -1,0 +1,128 @@
+{
+  "date": "2026-10-09",
+  "publication": "Production release authorized October 9, 2026",
+  "films": [
+    {
+      "video": "cabinet-enablement-combined.mp4",
+      "sha256": "b85b86bcea46b8f06cc641bd5ab98e17a2dd7df0cf4992b66e1a12794f6ec72a",
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 2560,
+            "height": 1600
+          }
+        ],
+        "format": {
+          "duration": "60.733333"
+        }
+      },
+      "sources": [
+        {
+          "file": "cabinet-learning-wide.mp4",
+          "sha256": "5170c90aeede504e807ff36e0a547fc15f9da60e868d0fca08f88662e09722d1",
+          "start": 0,
+          "duration": "full original clip"
+        },
+        {
+          "file": "cabinet-mobile-results.mp4",
+          "sha256": "73b023616df95cc02eb4e3ae7636c8448e037354cb0695cafe9c14a7c3bf0c79",
+          "start": 0,
+          "duration": "full original clip"
+        },
+        {
+          "file": "cabinet-harness-results.mp4",
+          "sha256": "03f14a33af47b02e75a2a61eef15d006822553edd04a22c860cce0df0f2ebfaf",
+          "start": 0,
+          "duration": "full original clip"
+        }
+      ],
+      "treatment": "Separate captured sessions edited into one silent fallback. Full source views contained; no crop, zoom, overlays or speed changes. Portrait mobile view is letterboxed."
+    },
+    {
+      "video": "cabinet-administrative-montage.mp4",
+      "sha256": "c95f3e692649b0cca4af16336f8a35ee44fd7972279bc7086b92fd0e59bfcdb1",
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 2560,
+            "height": 1600,
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "28.000000"
+        }
+      },
+      "sources": [
+        {
+          "file": "cabinet-servicenow-wide.mp4",
+          "sha256": "8db4f9068053a64e4490fbdf65176bdb955f97b9b83c8c8792fec507a46e0a73",
+          "start": 15,
+          "duration": 16
+        },
+        {
+          "file": "cabinet-directory-wide.mp4",
+          "sha256": "71d5fa255f3bc9a4a9743939220fabf8f25f4de8c2425ab80985ce3d04a82fb3",
+          "start": 0,
+          "duration": 4
+        },
+        {
+          "file": "cabinet-directory-wide.mp4",
+          "sha256": "71d5fa255f3bc9a4a9743939220fabf8f25f4de8c2425ab80985ce3d04a82fb3",
+          "start": 24,
+          "duration": 8
+        }
+      ],
+      "treatment": "Separate captured sessions edited into one silent fallback. Full source views contained; no crop, zoom, overlays or speed changes. Portrait mobile view is letterboxed."
+    },
+    {
+      "video": "cabinet-daily-briefing-debrief.mp4",
+      "sha256": "46879f4e4a95a62a2beb5e9e3b6ad3400b94f796a0550a2939eeb525d532cf45",
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1686,
+            "height": 1052
+          }
+        ],
+        "format": {
+          "duration": "16.366667"
+        }
+      },
+      "source": "Actual October 8 briefing and Chief of Staff debrief emails viewed in Outlook on October 9.",
+      "treatment": "Two real message views captured at approximately 2 fps, preserving observed timing, joined morning then evening. Native 1685x1052 source pixels, one pixel padded. No invented email, text overlays, cropping or digital zoom. Outlook message reading zoom was 175 percent and restored to 100 percent afterward.",
+      "scope": "Only the opening morning brief and presentation-related evening summary. Personnel details, family schedule, financial negotiation details and unrelated inbox are excluded. Not a continuous email-generation recording or a default product feature."
+    },
+    {
+      "video": "cabinet-inbox-priority-sorter.mp4",
+      "sha256": "a45c95b4423b843f5a724dfb1f32af235a400c0441f3a12850018188e74bbf4f",
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 2564,
+            "height": 1444,
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "11.900000"
+        }
+      },
+      "source": "Native Microsoft Outlook Inbox Triage add-in beside Nikki Giaquinta’s October 8 RRSS/IPPS AI Projects email, captured October 9.",
+      "treatment": "Actual native window at 2564x1444 pixels, sampled about once per second. Shows existing Today category, priority controls and opening Why this tier. Final actual explanation frame held six seconds for voiceover. No crop, zoom, invented interface, headings or footers. An unrelated personal address in the upper pane is covered with an opaque privacy mask.",
+      "scope": "Read-only pane demonstration using existing cached classification. No priority, Done, schedule, draft or delegation actions applied. Automatic sorting remains blocked by the Graph refresh failure. Displayed 49 percent is estimated action propensity, not measured classification accuracy."
+    }
+  ]
+}

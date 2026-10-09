@@ -10,6 +10,7 @@ const ThumbnailPage = () => {
 
   return (
     <MotionConfig reducedMotion="always">
+      <style>{'[data-thumbnail-slide] * { opacity: 1 !important; animation: none !important; transition: none !important; } .cabinet-harness-overview--demo-only header, .cabinet-harness-overview--demo-only .cabinet-harness-scene-heading { opacity: 0 !important; }'}</style>
       <div className="tritonai-slide-stage" data-thumbnail-slide={slide.slug} style={{ width: 1600, height: 900, position: 'relative', overflow: 'hidden' }}>
         <Slide slide={slide} staticPreview />
       </div>
