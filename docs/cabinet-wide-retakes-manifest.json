@@ -9,7 +9,8 @@
     "directory": "Live development app; actual expertise query and generated matches. No outreach or selection.",
     "passport": "Actual application source running locally with prepared sample visitor data. No production queue access or passport eligibility decision.",
     "contract-review": "Installed Word add-in and public vendor agreement with existing unaccepted tracked changes. Rules deselected/restored; Extra knowledge toggled/restored; actual Talk to agent question and answer. No new review, acceptance, signature, or transmission of agreement.",
-    "servicenow": "Logged-in current interface; actual FieldSupport-Intake 79.9% and Hostmaster 96.9% suggestions from ordinary prepared case descriptions. Scores are not measured accuracy. Selected on unsaved forms, then discarded. No case submitted."
+    "servicenow": "Logged-in current interface; actual FieldSupport-Intake 79.9% and Hostmaster 96.9% suggestions from ordinary prepared case descriptions. Scores are not measured accuracy. Selected on unsaved forms, then discarded. No case submitted.",
+    "class-planner": "Live public Class Planner, FA26, October 8. Separate browser-local Plan 2 with MATH-010A, CSE-008A, and COGS-001; existing Plan 1 preserved. Actual course search, automatic schedule generation, Later starts preference, schedule comparison, Details, and Map. Condensed calendar is the app native view, not a video crop or digital zoom. No student identity, transcript, TSS sign-in, booking, enrollment, seat reservation, or shared schedule publication. Usage and original builder claims are not asserted."
   },
   "clips": [
     {
@@ -231,6 +232,110 @@
           "source_log_sha256": "e47ab7984c9cce26e4939a5e8bd4ffc125ad54c39156585ed834f3f74a2076bc",
           "frame_count": 28,
           "duration_seconds": 7.011,
+          "crop": false,
+          "speed_change": false
+        }
+      ]
+    },
+    {
+      "name": "class-planner",
+      "video": "cabinet-class-planner-wide.mp4",
+      "poster": "cabinet-class-planner-wide-poster.jpg",
+      "video_sha256": "90928b123044e8f0ad92c243092f5dbf3616255bdc78bc71cdc25a03927bc099",
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 2560,
+            "height": 1600,
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "45.700000"
+        }
+      },
+      "chapters": [
+        {
+          "source": "/Users/bpollak/dev/cabinet-wide-retakes-20261008/class-planner-opening/frames.json",
+          "source_log_sha256": "7d932cf35af51ca67fb9bfc534234a5beec3783a78ca3383305e505b90287076",
+          "frame_count": 20,
+          "source_duration_seconds": 7.047,
+          "start_seconds": 0,
+          "duration_seconds": 5,
+          "crop": false,
+          "speed_change": false
+        },
+        {
+          "source": "/Users/bpollak/dev/cabinet-wide-retakes-20261008/class-planner-first-course/frames.json",
+          "source_log_sha256": "8308694a7ad5f9fb052487ce7fbf4ef608dd54ea8cf022a5fa8e7bba8dba719b",
+          "frame_count": 30,
+          "source_duration_seconds": 10.049,
+          "start_seconds": 0,
+          "duration_seconds": 6,
+          "crop": false,
+          "speed_change": false
+        },
+        {
+          "source": "/Users/bpollak/dev/cabinet-wide-retakes-20261008/class-planner-search-second/frames.json",
+          "source_log_sha256": "facb62af06c885cc50ecc3a252af33997bcb417b96c66febce59e5796cd47167",
+          "frame_count": 15,
+          "source_duration_seconds": 3.611,
+          "start_seconds": 1.5,
+          "duration_seconds": 2,
+          "crop": false,
+          "speed_change": false
+        },
+        {
+          "source": "/Users/bpollak/dev/cabinet-wide-retakes-20261008/class-planner-add-second/frames.json",
+          "source_log_sha256": "96019841c658e3bb4ddef97466518c67fcd795198692fcebcbfc3d7e32c816e0",
+          "frame_count": 14,
+          "source_duration_seconds": 4.56,
+          "start_seconds": 0,
+          "duration_seconds": 3,
+          "crop": false,
+          "speed_change": false
+        },
+        {
+          "source": "/Users/bpollak/dev/cabinet-wide-retakes-20261008/class-planner-search-third/frames.json",
+          "source_log_sha256": "3c4d6bd0136dd811fc8244a9dea6a35378e6808ef23fb50364b4fb21e639149e",
+          "frame_count": 11,
+          "source_duration_seconds": 4.034000000000001,
+          "start_seconds": 2,
+          "duration_seconds": 2,
+          "crop": false,
+          "speed_change": false
+        },
+        {
+          "source": "/Users/bpollak/dev/cabinet-wide-retakes-20261008/class-planner-three-courses/frames.json",
+          "source_log_sha256": "bba23ee98a7f3bddf938febc131d789cf976701d74d7760117f4a810ae34ec36",
+          "frame_count": 17,
+          "source_duration_seconds": 5.3950000000000005,
+          "start_seconds": 0,
+          "duration_seconds": 5,
+          "crop": false,
+          "speed_change": false
+        },
+        {
+          "source": "/Users/bpollak/dev/cabinet-wide-retakes-20261008/class-planner-preferences/frames.json",
+          "source_log_sha256": "7ab939f71105407b295e1923860c321e22828480064839a51ab913c65954b133",
+          "frame_count": 16,
+          "source_duration_seconds": 8.066,
+          "start_seconds": 0,
+          "duration_seconds": 6,
+          "crop": false,
+          "speed_change": false
+        },
+        {
+          "source": "/Users/bpollak/dev/cabinet-wide-retakes-20261008/class-planner-compare-views-v2/frames.json",
+          "source_log_sha256": "8e521d1662c2a6decccf70521151eacc14fae10b610e32d70974b3ff1cd0f17c",
+          "frame_count": 56,
+          "source_duration_seconds": 17.119,
+          "start_seconds": 0,
+          "duration_seconds": 17,
           "crop": false,
           "speed_change": false
         }

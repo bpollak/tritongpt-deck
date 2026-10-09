@@ -7218,36 +7218,35 @@ export const slides = [
   {
     "id": 1002,
     "slug": "cabinet-class-planner-demo",
-    "type": "content",
-    "layout": "cabinet-demo",
-    "title": "Class Planner",
-    "subtitle": "A builder’s idea becomes a tool others can extend.",
-    "content": [
-      {
-        "heading": "The student task",
-        "text": "Show a schedule being assembled and checked."
-      },
-      {
-        "heading": "The builder story",
-        "text": "One junior engineer started it; student developers extended it."
-      }
-    ],
+    "type": "video",
+    "title": "Turn a course list into schedule options",
+    "subtitle": "Class Planner helps students compare schedules and check the walk between classes.",
+    "content": [],
     "audiences": [
       "cabinet"
     ],
     "managerSection": "Citizen Developer Showcase",
     "durationSeconds": 60,
-    "recording": {
-      "label": "Build a student schedule",
-      "format": "Fresh desktop capture",
-      "mediaStem": "cabinet-class-planner"
-    },
-    "pendingNote": "Demo framing and current usage evidence pending confirmation.",
-    "speakerNotes": "Kevin to confirm current framing, origin story, and usage evidence. Fresh recording only. Verify maintenance status before describing it. The originating harness-style tool was likely different from TritonAI Harness. One minute includes clip plus narration; the other two minutes in this showcase now cover Directory and Passport.",
+    "videoSrc": "/media/cabinet/cabinet-class-planner-wide.mp4",
+    "poster": "/media/cabinet/cabinet-class-planner-wide-poster.jpg",
     "videoLoop": false,
-    "videoClearNav": true,
+    "videoClearNav": false,
     "videoAutoPlay": true,
-    "hideDemoBadge": true
+    "hideDemoBadge": true,
+    "demoOnly": true,
+    "managerSummary": "Fresh full-app Class Planner demonstration: course search, three-course schedule, Later starts preference, alternatives, details, and campus walking routes.",
+    "recording": {
+      "label": "Courses → preferences → schedule alternatives → details and walking routes",
+      "format": "Whole app at high resolution • silent for presenter voice-over • no crop or digital zoom",
+      "mediaStem": "cabinet-class-planner",
+      "status": "captured and reviewed"
+    },
+    "releaseContext": {
+      "channel": "stable",
+      "label": "Live Class Planner web app",
+      "captureNote": "Public course data • separate browser-local plan • no enrollment"
+    },
+    "speakerNotes": "One minute, including a fresh approximately 46-second whole-app demonstration. Voice-over: Class Planner turns a list of courses into schedule options students can compare, then brings meeting details and the walk between classes into the same workspace. Connect this to the builder story: a focused campus application can make a recurring student task easier. Live public app captured October 8, 2026, in FA26. The actual sequence opens the guide and workspace, searches/adds MATH-010A, CSE-008A, and COGS-001, selects Later starts, compares actual generated schedules, and opens Details and Map. The native condensed calendar keeps the full week in view; no video crop, digital zoom, titles, or footers are added. Processing and repeated idle steps are cut without changing playback speed. This is a separate browser-local Plan 2; existing Plan 1 is preserved. No student identity, transcript, TSS sign-in, booking, enrollment, reserved seat, or shared-schedule publication. Course data, seat counts, walking estimates, and review items need checking; a generated option is not a guarantee. The live guide says booking is completed in TSS and the planner does not enroll students. The handoff origin/maintenance story still needs Kevin confirmation before naming individual builders; no usage number or claim that our Harness built this app is added. Sources: https://classplanner.apps.ucsd.edu/ and its linked live workspace, independently checked October 8. Recording traceability: docs/cabinet-wide-retakes-manifest.json."
   },
   {
     "id": 1018,
@@ -7893,7 +7892,7 @@ export const slides = [
     ],
     "managerSection": "Closing",
     "durationSeconds": 60,
-    "speakerNotes": "One minute. Ask each department to identify one recurring workflow and the staff member who understands it. Start small with the appropriate campus support, service, data handling, and review. Measure actual outcomes before expanding; no savings claim is implied by these demonstrations. Point to tritonai.ucsd.edu and leave the remaining seven minutes of the twenty-minute slot for discussion. Contract review queue and other project-specific decisions can be raised if the room wants to go deeper; they are not the default close."
+    "speakerNotes": "One minute. Ask each department to identify one recurring workflow and the staff member who understands it. Start small with the appropriate campus support, service, data handling, and review. Measure actual outcomes before expanding; no savings claim is implied by these demonstrations. Point to tritonai.ucsd.edu. The core sequence allocates fifteen minutes, leaving five minutes for narration and transitions within the twenty-minute presentation; ten minutes of unscripted Q&A follows separately. Contract review queue and other project-specific decisions can be raised if the room wants to go deeper; they are not the default close."
   },
   {
     "id": 1014,

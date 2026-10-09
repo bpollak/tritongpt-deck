@@ -1,6 +1,6 @@
 # Cabinet capability demonstration
 
-14-minute core presentation, leaving about six minutes for discussion within a 20-minute slot. Seven silent app-only clips total about 3 minutes 38 seconds. Narration explains the department benefit; the screen shows the tool and result.
+15-minute core sequence, with five minutes available for narration and transitions within the 20-minute presentation. Ten minutes of unscripted Q&A follows separately. Eight silent app-only clips total about 4 minutes 24 seconds. Narration explains the department benefit; the screen shows the tool and result.
 
 Open `?audience=cabinet#slide=ai-operating-review-title`. The existing PK introduction is unchanged. Other audience views are unchanged.
 
@@ -8,6 +8,7 @@ Open `?audience=cabinet#slide=ai-operating-review-title`. The existing PK introd
 | --- | ---: | ---: | --- |
 | Existing PK introduction | 0:30 | — | Practical capabilities departments can use |
 | What could your department do with this? | 1:00 | — | Routine work, useful outputs, department services |
+| Turn a course list into schedule options | 1:00 | 0:46 | Class Planner combines courses and preferences, then shows alternatives, details, and walking routes |
 | Find expertise for a department need | 1:00 | 0:33 | Start with a question; review potential experts |
 | Turn staff knowledge into a service app | 1:00 | 0:34 | Passport turns service knowledge into a focused workflow |
 | Bring document review into Word | 1:15 | 0:48 | Configure institutional rules and ask the agent about proposed changes in Word |
@@ -20,18 +21,20 @@ Open `?audience=cabinet#slide=ai-operating-review-title`. The existing PK introd
 | Campus tools, with people in control | 1:00 | — | Appropriate environment, controlled access, human review |
 | Help staff get started | 0:30 | 0:14 | Find examples and short learning resources on TritonAI |
 | Start with one workflow in your department | 1:00 | — | Choose a recurring task, pilot with staff, measure the improvement |
-| Discussion | 6:00 | — | Which workflow would help your department? |
+| Narration and transition allowance | 5:00 | — | Keep the presentation within 20 minutes |
+| Q&A, following the presentation | 10:00 | — | Which workflow would help your department? |
 
 ## Presentation treatment
 
 Use one benefit sentence per example. Do not read prompts, formulas, model scores, setup steps, or every comparison row. The original website-style comparison and original website animation remain available on the comparison slide.
 
-The plugin/skill/settings screenshot tour, separate sub-agent diagram, Class Planner and cash-receipts placeholders, and detailed governance outline are removed from the active sequence and remain recoverable in the slide manager. The original full clips and capture evidence are retained. The Discovery Series highlight shows navigation and real video playback; the quiz is omitted.
+The plugin/skill/settings screenshot tour, separate sub-agent diagram, cash-receipts placeholder, and detailed governance outline are removed from the active sequence and remain recoverable in the slide manager. The original full clips and capture evidence are retained. The Discovery Series highlight shows navigation and real video playback; the quiz is omitted.
 
-All seven highlights contain only original app pixels with no added headers, footers, status banners, captions, or synthetic motion. Directory, Passport, and ServiceNow were re-recorded with the entire 1600 × 1000 app viewport at 2× capture density, delivered at 2560 × 1600 without cropping or digital zoom. Word was re-recorded with the entire native window, delivered at 2560 × 1978. The app’s own headers, navigation, document, and task areas remain visible; the slide adds no framing. Timestamped screenshots retain their observed timing (browser about 4 fps, Word about 1–2 fps) in a 30 fps encoding. Full native Word framing is preserved. The mobile recording retains its portrait aspect. The fresh Office recording shows worksheet-to-dashboard navigation and reviewing the generated PowerPoint; it does not replay the original generation. Existing capture sources combine moving screencast footage and held authentic screen captures. Editing does not make the latter continuous video.
+All eight highlights contain only original app pixels with no added headers, footers, status banners, captions, or synthetic motion. Class Planner, Directory, Passport, and ServiceNow were recorded with the entire 1600 × 1000 app viewport at 2× capture density, delivered at 2560 × 1600 without cropping or digital zoom. Word was re-recorded with the entire native window, delivered at 2560 × 1978. The app’s own headers, navigation, document, and task areas remain visible; the slide adds no framing. Timestamped screenshots retain their observed timing (browser about 4 fps, Word about 1–2 fps) in a 30 fps encoding. Full native Word framing is preserved. The mobile recording retains its portrait aspect. The fresh Office recording shows worksheet-to-dashboard navigation and reviewing the generated PowerPoint; it does not replay the original generation. Existing capture sources combine moving screencast footage and held authentic screen captures. Editing does not make the latter continuous video.
 
 ## Presenter facts, kept outside the on-screen story
 
+- Class Planner shows the current public app with a separate browser-local plan. It does not enroll students; booking remains in TSS. Builder attribution and current usage figures are omitted pending confirmation.
 - Directory is in development; people review source profiles and matches. Do not claim it was built with our Harness.
 - Passport is a department-led production service, captured in a separate local copy with sample data. The fresh clip follows a prepared visitor from landing page to confirmation; it does not show staff reporting or claim campus performance metrics.
 - Contract Reviewer ran against a public vendor agreement. The retake shows rules being deselected/restored, Extra knowledge toggled/restored, and an actual Talk to agent question and answer beside the document. Changes remain unaccepted. Release/rollout scope still needs owner confirmation.
