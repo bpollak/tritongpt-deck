@@ -1,0 +1,66 @@
+{
+  "name": "productivity",
+  "video": "cabinet-harness-outputs.mp4",
+  "poster": "cabinet-harness-outputs-poster.jpg",
+  "video_sha256": "326f94868f83184db1930271531e78e5f1e0bdea9c31c37d4f5053b45b63861c",
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "profile": "High",
+        "width": 2560,
+        "height": 1440,
+        "level": 50,
+        "side_data_list": [
+          {}
+        ]
+      }
+    ],
+    "format": {
+      "duration": "24.000000"
+    }
+  },
+  "segments": [
+    {
+      "source_key": "SHOTS.v20ExcelDash",
+      "description": "Full native Excel window: survey dashboard and charts",
+      "source_image_sha256": "2e0ffeabc68353277c1d5100b603cd588838ffb72da26b3d9531a6ca2dc67b8c",
+      "source_dimensions": {
+        "width": 2400,
+        "height": 1253
+      },
+      "start_seconds": 0,
+      "duration_seconds": 8,
+      "treatment": "Held original capture; full frame, no synthetic motion"
+    },
+    {
+      "source_key": "SHOTS.v20Ppt3",
+      "description": "Full native PowerPoint window: editable briefing chart",
+      "source_image_sha256": "a0be40e46fcd690e3f498aca11e263555f6899689ca972093b3211b02e7b0397",
+      "source_dimensions": {
+        "width": 2000,
+        "height": 1125
+      },
+      "start_seconds": 8,
+      "duration_seconds": 8,
+      "treatment": "Held original capture; full frame, no synthetic motion"
+    },
+    {
+      "source_key": "SHOTS.v20AppPage",
+      "description": "Complete captured app page: campus workshop registration",
+      "source_image_sha256": "567a0d22014c52e7135712b6223cc60c610b6862b8cccff19f7afb69b09cd0fe",
+      "source_dimensions": {
+        "width": 2000,
+        "height": 1256
+      },
+      "start_seconds": 16,
+      "duration_seconds": 8,
+      "treatment": "Held original capture; full frame, no synthetic motion"
+    }
+  ],
+  "source_url": "https://tritonai.ucsd.edu/training/harness/",
+  "source_html_sha256": "34cba8b02ee32ad53c602a792c8f41b90b9d6d3ad28bff11e9adb5e9668b88ef",
+  "source_qualification": "Original real captures embedded in the training opening, recorded September 2026 on Nightly 0.3.5.20260926.39. Prepared sample survey and workshop outputs. These are held captures from recorded runs, not a new continuous task recording. The training contains rebuilt scenes elsewhere; none are included here.",
+  "output_treatment": "Silent 24-second montage; original captured views contained in a 2560\u00d71440 canvas. No crop, digital zoom, labels, headers, footers, or generated UI. Native input resolution is 2000\u20132400 pixels wide; encoding does not add source detail."
+}

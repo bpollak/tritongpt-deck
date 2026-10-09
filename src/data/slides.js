@@ -7796,8 +7796,8 @@ export const slides = [
     "slug": "cabinet-personal-productivity-demo",
     "type": "video",
     "layout": "cabinet-demo",
-    "title": "Turn data into a briefing",
-    "subtitle": "Source files → Excel charts → a PowerPoint summary for review.",
+    "title": "Turn a request into useful outputs",
+    "subtitle": "Editable Excel dashboards, PowerPoint briefings, and a focused service app.",
     "content": [],
     "audiences": [
       "cabinet"
@@ -7807,23 +7807,23 @@ export const slides = [
     "releaseContext": {
       "channel": "stable",
       "label": "Stable 0.3.6 capabilities · personal productivity",
-      "captureNote": "Actual recording: Nightly .63 · prepared sample files"
+      "captureNote": "Original training captures: September Nightly .39 · prepared sample outputs"
     },
     "recording": {
-      "label": "Data → Excel charts → PowerPoint",
-      "format": "Fresh full-window Harness and Excel captures, followed by retained native PowerPoint navigation • high resolution • silent",
-      "mediaStem": "cabinet-personal-productivity",
+      "label": "Excel dashboard → PowerPoint briefing → service app",
+      "format": "Original high-resolution output captures from the training opening • held views • silent",
+      "mediaStem": "cabinet-harness-outputs",
       "status": "captured and reviewed"
     },
-    "speakerNotes": "Ninety seconds including an approximately 21-second cut. Voice-over: Think about the time your team spends turning a data file and meeting notes into the next briefing. Here the Harness creates an Excel workbook with editable charts and a PowerPoint summary staff can open, edit, and review. Show the original request and real completed task, the full native Excel window with both charts visible, and native PowerPoint navigation. The fresh Harness and Excel captures retain their observed timestamp cadence; the existing PowerPoint source is native high-resolution capture. No task generation is replayed in this retake. The workbook and briefing are actual outputs from prepared sample survey data and notes, not campus performance metrics. Original task ran on Nightly .63; these desktop capabilities exist in stable 0.3.6, which is the release channel while the public site calls Harness a supported pilot. A native Excel zoom adjustment fits both charts in view; no video crop, synthetic UI, or digital zoom is applied. The result was checked and a layout repaired. No sending or publication. Transition: The same workspace can also be directed from a phone; the next clip is a mobile preview. Traceability: docs/cabinet-final-media-manifest.json.",
+    "speakerNotes": "Ninety seconds including a 24-second silent montage. Voice-over: Start with the work your staff need to finish. The Harness can turn a spreadsheet into an editable dashboard, meeting information into a PowerPoint briefing, and service knowledge into a focused app. These are original output captures from the opening of the public Harness training: native Excel and PowerPoint windows, followed by the complete captured workshop registration app page. Each view is held for eight seconds so the audience can see the result. They come from recorded runs, not a fresh continuous replay of one task. The survey and workshop content are prepared practice examples, not campus performance metrics. The source training was recorded September 2026 on Nightly 0.3.5.20260926.39; distinguish that capture version from the stable 0.3.6 release channel and supported-pilot rollout. No rebuilt training scenes, player labels, cropping, digital zoom, or synthetic motion are included. Original source widths are 2000–2400 pixels; the 2560×1440 canvas preserves each complete view and does not add source detail. Staff still review outputs before use. Transition: The same workspace can also be directed from a phone; the next clip is a mobile preview. Traceability: docs/cabinet-harness-outputs-manifest.json.",
     "videoLoop": false,
     "videoClearNav": false,
     "videoAutoPlay": true,
     "hideDemoBadge": true,
-    "videoSrc": "/media/cabinet/cabinet-productivity-wide.mp4",
-    "poster": "/media/cabinet/cabinet-productivity-wide-poster.jpg",
+    "videoSrc": "/media/cabinet/cabinet-harness-outputs.mp4",
+    "poster": "/media/cabinet/cabinet-harness-outputs-poster.jpg",
     "demoOnly": true,
-    "managerSummary": "Actual Harness task followed by fresh recorded navigation through native Excel and PowerPoint outputs."
+    "managerSummary": "Original training-opening captures: finished Excel dashboard, native PowerPoint briefing, and workshop service app."
   },
   {
     "id": 1022,

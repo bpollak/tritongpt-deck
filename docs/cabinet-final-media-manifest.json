@@ -5,10 +5,10 @@
   "digital_zoom": false,
   "speed_changes": false,
   "full_frame_aspect_ratio_preserved": true,
-  "timing": "Observed screenshot timing retained in 30 fps encoding; roughly 2-4 distinct captured frames per second. This is not 30 distinct capture frames per second.",
+  "timing": "Learning: observed screenshot timing retained in 30 fps encoding. Harness outputs: three original captured views held eight seconds each, with hard cuts and no added motion. Encoding is not 30 distinct capture frames per second.",
   "source_qualifications": {
     "learning": "Current public website. Real video playback and brief revisited answer feedback. Existing browser-local quiz progress preserved; no new completion or credential claimed.",
-    "productivity": "Fresh full-window Harness Nightly .63 and Excel captures, plus retained native PowerPoint navigation. Actual files from prepared sample data. Task generation is not replayed. Excel native zoom temporarily adjusted to fit charts and restored. No sending or publication."
+    "productivity": "Original real captures embedded in the training opening, recorded September 2026 on Nightly 0.3.5.20260926.39. Prepared sample survey and workshop outputs. These are held captures from recorded runs, not a new continuous task recording. The training contains rebuilt scenes elsewhere; none are included here."
   },
   "clips": [
     {
@@ -74,51 +74,117 @@
     },
     {
       "name": "productivity",
-      "video": "cabinet-productivity-wide.mp4",
-      "poster": "cabinet-productivity-wide-poster.jpg",
-      "video_sha256": "161f0e7759d5cadeca4af4984b90b33c50eaa1cbf42617344b710c98de86badb",
+      "video": "cabinet-harness-outputs.mp4",
+      "poster": "cabinet-harness-outputs-poster.jpg",
+      "video_sha256": "326f94868f83184db1930271531e78e5f1e0bdea9c31c37d4f5053b45b63861c",
       "metadata": {
         "programs": [],
         "stream_groups": [],
         "streams": [
           {
+            "profile": "High",
             "width": 2560,
             "height": 1440,
+            "level": 50,
             "side_data_list": [
               {}
             ]
           }
         ],
         "format": {
-          "duration": "21.100000"
+          "duration": "24.000000"
         }
       },
       "segments": [
         {
-          "source": "/Users/bpollak/dev/cabinet-final-sweep-20261008/harness-task-full-frames.json",
-          "source_sha256": "2d337ec0756262c4b55bc8fe8a9e6f7a29c46fd5422bfb068624e774e80f7af1",
+          "source_key": "SHOTS.v20ExcelDash",
+          "description": "Full native Excel window: survey dashboard and charts",
+          "source_image_sha256": "2e0ffeabc68353277c1d5100b603cd588838ffb72da26b3d9531a6ca2dc67b8c",
+          "source_dimensions": {
+            "width": 2400,
+            "height": 1253
+          },
           "start_seconds": 0,
-          "duration_seconds": 4,
-          "source_frames": 8,
-          "source_duration_seconds": 4.1832505830000155
+          "duration_seconds": 8,
+          "treatment": "Held original capture; full frame, no synthetic motion"
         },
         {
-          "source": "/Users/bpollak/dev/cabinet-final-sweep-20261008/excel-charts-full-frames.json",
-          "source_sha256": "6d8a813a5c571baf2f90403c07b8617654afc2b592352f4bb482aa7ce66871d8",
-          "start_seconds": 0,
-          "duration_seconds": 6,
-          "source_frames": 11,
-          "source_duration_seconds": 6.320352416999987
+          "source_key": "SHOTS.v20Ppt3",
+          "description": "Full native PowerPoint window: editable briefing chart",
+          "source_image_sha256": "a0be40e46fcd690e3f498aca11e263555f6899689ca972093b3211b02e7b0397",
+          "source_dimensions": {
+            "width": 2000,
+            "height": 1125
+          },
+          "start_seconds": 8,
+          "duration_seconds": 8,
+          "treatment": "Held original capture; full frame, no synthetic motion"
         },
         {
-          "source": "/Users/bpollak/dev/cabinet-executive-capture-20261008/powerpoint-frames.json",
-          "source_sha256": "959684bae7b16716765f39ab786c704fa488b8e65b59555e478140f75cc9032d",
-          "start_seconds": 0,
-          "duration_seconds": 11.151,
-          "source_frames": 34,
-          "source_duration_seconds": 11.151
+          "source_key": "SHOTS.v20AppPage",
+          "description": "Complete captured app page: campus workshop registration",
+          "source_image_sha256": "567a0d22014c52e7135712b6223cc60c610b6862b8cccff19f7afb69b09cd0fe",
+          "source_dimensions": {
+            "width": 2000,
+            "height": 1256
+          },
+          "start_seconds": 16,
+          "duration_seconds": 8,
+          "treatment": "Held original capture; full frame, no synthetic motion"
         }
-      ]
+      ],
+      "source_url": "https://tritonai.ucsd.edu/training/harness/",
+      "source_html_sha256": "34cba8b02ee32ad53c602a792c8f41b90b9d6d3ad28bff11e9adb5e9668b88ef",
+      "source_qualification": "Original real captures embedded in the training opening, recorded September 2026 on Nightly 0.3.5.20260926.39. Prepared sample survey and workshop outputs. These are held captures from recorded runs, not a new continuous task recording. The training contains rebuilt scenes elsewhere; none are included here.",
+      "output_treatment": "Silent 24-second montage; original captured views contained in a 2560\u00d71440 canvas. No crop, digital zoom, labels, headers, footers, or generated UI. Native input resolution is 2000\u20132400 pixels wide; encoding does not add source detail."
     }
-  ]
+  ],
+  "retained_previous_productivity_clip": {
+    "name": "productivity",
+    "video": "cabinet-productivity-wide.mp4",
+    "poster": "cabinet-productivity-wide-poster.jpg",
+    "video_sha256": "161f0e7759d5cadeca4af4984b90b33c50eaa1cbf42617344b710c98de86badb",
+    "metadata": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 2560,
+          "height": 1440,
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "21.100000"
+      }
+    },
+    "segments": [
+      {
+        "source": "/Users/bpollak/dev/cabinet-final-sweep-20261008/harness-task-full-frames.json",
+        "source_sha256": "2d337ec0756262c4b55bc8fe8a9e6f7a29c46fd5422bfb068624e774e80f7af1",
+        "start_seconds": 0,
+        "duration_seconds": 4,
+        "source_frames": 8,
+        "source_duration_seconds": 4.1832505830000155
+      },
+      {
+        "source": "/Users/bpollak/dev/cabinet-final-sweep-20261008/excel-charts-full-frames.json",
+        "source_sha256": "6d8a813a5c571baf2f90403c07b8617654afc2b592352f4bb482aa7ce66871d8",
+        "start_seconds": 0,
+        "duration_seconds": 6,
+        "source_frames": 11,
+        "source_duration_seconds": 6.320352416999987
+      },
+      {
+        "source": "/Users/bpollak/dev/cabinet-executive-capture-20261008/powerpoint-frames.json",
+        "source_sha256": "959684bae7b16716765f39ab786c704fa488b8e65b59555e478140f75cc9032d",
+        "start_seconds": 0,
+        "duration_seconds": 11.151,
+        "source_frames": 34,
+        "source_duration_seconds": 11.151
+      }
+    ]
+  }
 }
