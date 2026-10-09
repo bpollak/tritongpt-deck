@@ -7386,31 +7386,32 @@ export const slides = [
   {
     "id": 1006,
     "slug": "cabinet-administrative-quick-hits",
-    "type": "content",
-    "layout": "cabinet-outline",
-    "title": "Administrative AI: quick updates",
-    "subtitle": "A fast look at the next workflows and their validation gates.",
-    "content": [
-      {
-        "heading": "Transcript matching",
-        "text": "Validation underway; further work is gated on TSS go-live."
-      },
-      {
-        "heading": "ServiceNow ticket routing",
-        "text": "Current deployment status to confirm."
-      },
-      {
-        "heading": "College selection assistant",
-        "text": "Admissions self-service; current deployment status to confirm."
-      }
-    ],
+    "type": "video",
+    "title": "ServiceNow: assignment-group suggestions",
+    "subtitle": "AI recommends a team; the staff member chooses the assignment.",
+    "content": [],
     "audiences": [
       "cabinet"
     ],
     "managerSection": "Administrative Verticals",
     "durationSeconds": 90,
-    "pendingNote": "Production or pilot labels will follow owner confirmation.",
-    "speakerNotes": "Ninety seconds total. Directory now has its own demonstration in the Citizen Developer Showcase; avoid repeating it here. Nicole still needs to confirm rollout and roadmap. Mention the VCRI demonstration to Faith Hawkins and Corey only once confirmed for this update. Never imply transcript matching is live. Other deployment labels remain owner-confirmation items."
+    "speakerNotes": "Ninety seconds total: 50-second ServiceNow clip plus 40 seconds for framing and remaining quick updates. Captured in the logged-in support.ucsd.edu interface on October 8, 2026. Case > Create New Case exposes Suggest Assignment Group. No real requester, device identifier, location, credential, or existing case content is used. The first fictional Cisco Secure Client VPN issue produces ITS-ServiceDesk 92.1%, ITS-FieldSupport-Intake 2.7%, ITS-SecuritySOC 1.3%. The second fictional desktop that will not power on produces ITS-FieldSupport-Intake 83.5%, ITS-ServiceDesk 15.0%, ITS-RRSS 0.3%. These percentages are model scores displayed for these examples, not independently measured routing accuracy. Both dialogs display Hybrid recommendation and Decision: DeBERTa kept — confidence margin was high. No LLM fallback was demonstrated; do not claim these cases used TritonGPT, the Harness, or an LLM. Staff sees alternatives and chooses a group. Selecting the hardware recommendation fills the assignment field on an unsaved form; no Submit or Save action occurs. Leave without saving discards the fictional case. The 50-second video uses seven actual captured browser key frames held for reading, cropped/scaled and captioned; no UI or output is synthesized. This verifies the function is available to Brett in the current interface, not its campus rollout scope or performance. Justin/Service Desk owners still need to confirm rollout, model governance, and outcome metrics. Remaining quick updates: Transcript matching validation is underway, with further work gated on TSS go-live; do not imply it is live. College selection assistant: admissions self-service, current deployment status to confirm. Directory has its own citizen developer demonstration. Nicole still needs to confirm rollout and roadmap; mention the VCRI demonstration to Faith Hawkins and Corey only if confirmed.",
+    "videoSrc": "/media/cabinet/cabinet-servicenow-routing.mp4",
+    "poster": "/media/cabinet/cabinet-servicenow-routing-poster.jpg",
+    "captionsSrc": "/media/cabinet/cabinet-servicenow-routing.vtt",
+    "captionsDefault": false,
+    "managerSummary": "Actual ServiceNow computer-use demo: two fictional unsaved cases, ranked assignment-group suggestions, and staff selection. Transcript matching and college assistant updates remain in speaker notes.",
+    "releaseContext": {
+      "channel": "pilot",
+      "label": "Current ServiceNow interface · Rollout scope pending",
+      "captureNote": "Fictional cases · Actual recommendations · Staff selects"
+    },
+    "recording": {
+      "label": "Fictional issue → ranked group suggestions → staff selection",
+      "format": "Actual browser capture • 50 seconds • held key frames",
+      "mediaStem": "cabinet-servicenow-routing",
+      "status": "captured and reviewed"
+    }
   },
   {
     "id": 1015,
