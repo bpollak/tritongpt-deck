@@ -8873,6 +8873,40 @@ export const slides = [
     "poster": "/media/cabinet/cabinet-directory-wide-poster.jpg"
   },
   {
+    "id": 1044,
+    "slug": "cabinet-college-assistant-demo",
+    "type": "video",
+    "layout": "cabinet-demo",
+    "title": "College Exploration Assistant",
+    "subtitle": "Prospective students describe what they want; TritonGPT suggests colleges worth a look, quoting each college's own pages.",
+    "content": [],
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Vertical Solutions",
+    "durationSeconds": 55,
+    "section": {
+      "part": 1,
+      "label": "Vertical solutions"
+    },
+    "intro": {
+      "kicker": "Admissions website",
+      "title": "Which of the eight colleges fits me?",
+      "setup": "A prospective first-year student asks the College Exploration Assistant on admissions.ucsd.edu, live and public today.",
+      "watchFor": "It interviews the student, then suggests colleges with citations to each college's own pages.",
+      "seconds": 6
+    },
+    "videoSrc": "/media/cabinet/cabinet-college-assistant.mp4",
+    "poster": "/media/cabinet/cabinet-college-assistant-poster.jpg",
+    "videoLoop": false,
+    "videoClearNav": false,
+    "videoAutoPlay": true,
+    "hideDemoBadge": true,
+    "demoOnly": true,
+    "managerSummary": "Live recording (Oct 10, 2026) of the College Exploration Assistant on admissions.ucsd.edu/why/colleges: persona card, real three-turn conversation, highlighter on each suggested college, match board built from the answer.",
+    "speakerNotes": "About 55 seconds (6s intro + 49s clip). This is the public College Exploration Assistant on the admissions Colleges page, powered by TritonGPT. A prospective student says what they care about (here: marine biology, the outdoors, a close-knit community). It asks a couple of clarifying questions, then suggests colleges and quotes each college's own pages with citations. It frames suggestions as a starting point, not an assignment, and reminds students any major works from any college. Part of the Website Assistants line: about $300K in vendor cost avoided. The persona card and the closing match board are presentation overlays; the conversation is real and unedited apart from speed-ups while it thinks."
+  },
+  {
     "id": 1035,
     "slug": "cabinet-verticals-roadmap",
     "type": "content",

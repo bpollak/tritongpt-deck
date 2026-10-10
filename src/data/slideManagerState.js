@@ -11,6 +11,7 @@ export const slideManagerState = {
     "cabinet-servicenow-routing-demo",
     "cabinet-ai-tutor-demo",
     "cabinet-verticals-at-a-glance",
+    "cabinet-college-assistant-demo",
     "cabinet-verticals-roadmap",
     "cabinet-divider-harness",
     "cabinet-chat-and-harness",
@@ -155,6 +156,9 @@ export const slideManagerState = {
     "cabinet-subagents"
   ],
   "audiences": {
+    "cabinet-college-assistant-demo": [
+      "cabinet"
+    ],
     "cabinet-ai-tutor-demo": [
       "cabinet"
     ],

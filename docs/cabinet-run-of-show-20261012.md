@@ -12,6 +12,7 @@
 | 4:08–5:33 | Contract review inside Word (intro + recording) | Live Word run: three rules, tracked changes, agent answer. OCGA is next. |
 | 5:33–6:23 | Routing tickets to the right team (intro + recording) | Two tickets routed past the Service Desk: desktop to Field Support (80%), DNS to Hostmaster (97%). Highlights and zooms guide the eye; voice over. |
 | 6:23–7:23 | More verticals in admissions and research | Transcript matching, college selection, Faculty Expertise Directory (Directory clip plays; the app still shows its earlier name). |
+| +0:55 | College Exploration Assistant (intro + 49s recording) | Live public assistant on admissions.ucsd.edu/why/colleges: a prospective first-year (marine biology, outdoors, close-knit community) gets four colleges with citations after three messages. Persona card and closing board are overlays; the conversation is real, sped up while it thinks. |
 | 7:23–8:08 | What's next in vertical solutions | Payment request review, RFX, security review, data agents, OCGA, hosting. |
 | **Part 2** | **Citizen development** (divider, 8s) | |
 | 8:16–9:16 | A chat answers. The Harness does the work. | Bridge: IT can’t build every vertical; the Harness lets staff build their own. |
@@ -49,6 +50,7 @@
 - **UX pass (Oct 9, late):** takeaway titles on the impact, cash, admissions/research, comparison, chart, and gateway slides; divider questions now repeat the opening slide word for word; impact rows follow the demo order; intro cards trimmed to two lines of setup and one or two of "watch for"; the Harness capabilities slide rebuilt as a dark three-column Cabinet slide (details moved to its speaker notes); hosting slide without the marker label and Tier 0 tool chips; gateway source line moved to the notes; gateway usage now opens Part 4 ahead of sovereign inference (evidence first, then the strategy that leads into the asks); the close names the three parts before the asks.
 - **Moved to the backup view:** "What staff automate with it" (repeated the morning briefing shown in Part 3, five dense rows, and was already the first cut for time).
 
+- **Added Oct 10 (later):** College Exploration Assistant demo after "More verticals" (+55s). With the AI Tutor and this demo, content runs about 23 minutes; to get back near 21.5, skip the Class Planner usage chart (30s) and let the Directory clip on "More verticals" run in the background while you talk through it quickly.
 - **Added Oct 10:** AI Tutor in Canvas (impact row plus a 43s cut of the PK setup video, after ServiceNow): launched fall with 5 instructors, scaling in winter. TA–Student Matching on What's next: resumes Q1 2027 after TSS go-live. Research Grant Compliance Agent left out (no activity found after the April proposal).
 
 ## Before Monday
