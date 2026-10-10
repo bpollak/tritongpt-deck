@@ -7233,7 +7233,7 @@ export const slides = [
     "type": "content",
     "layout": "cabinet-outline",
     "title": "Vertical solutions",
-    "subtitle": "Which practical AI solutions is ITS building, and what will they pay back?",
+    "subtitle": "Which practical AI solutions is ITS building for specific business needs, and what will they pay back?",
     "content": [],
     "divider": {
       "part": 1
@@ -7254,8 +7254,8 @@ export const slides = [
     "slug": "cabinet-verticals-impact",
     "type": "content",
     "content": [],
-    "title": "Campus time and cost savers",
-    "subtitle": "What each ITS-built solution delivers today, or is projected to deliver.",
+    "title": "Vertical solutions: AI for specific business needs",
+    "subtitle": "Each uses AI to solve one specific campus business need, with its impact today or projected.",
     "layout": "cabinet-outline",
     "audiences": [
       "cabinet"
