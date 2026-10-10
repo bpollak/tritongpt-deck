@@ -8538,7 +8538,7 @@ export const slides = [
     "managerLabel": "Gateway scale: January–September 2026",
     "managerSummary": "Nine-month token chart, September route mix, and cumulative Gateway totals from the current TritonAI website.",
     "durationSeconds": 30,
-    "speakerNotes": `Part 4 opens here: what powers everything shown so far. Thirty seconds. Show that campus use is already substantial; distinguish tokens from users or measured productivity. Source line moved off the slide: TritonAI Gateway usage, Jan–Sep 2026, reviewed Oct 5, 2026. ${gatewayUsageDashboard.speakerNotes}`
+    "speakerNotes": `Follows the why-sovereign slide (Oct 10 swap): the foundation is already carrying real load. Thirty seconds. Show that campus use is already substantial; distinguish tokens from users or measured productivity. Source line moved off the slide: TritonAI Gateway usage, Jan–Sep 2026, reviewed Oct 5, 2026. ${gatewayUsageDashboard.speakerNotes}`
   },
   {
     "id": 1013,
