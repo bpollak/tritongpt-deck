@@ -127,6 +127,7 @@ export const slideManagerState = {
     "cabinet-harness-13-recap",
     "the-team-behind-tritonai",
     "thank-you",
+    "thank-you-cabinet",
     "lmu-thank-you",
     "cabinet-routing-savings",
     "cabinet-research-data-trust",
@@ -147,7 +148,6 @@ export const slideManagerState = {
     "the-new-workforce-competency",
     "cost-of-inaction",
     "thank-you-duo",
-    "thank-you-cabinet",
     "thank-you-questions",
     "cabinet-harness-11c-developer-api-program",
     "video-harness-api-demo-2026-06-25-842",
@@ -708,7 +708,6 @@ export const slideManagerState = {
     ],
     "thank-you": [
       "all",
-      "cabinet",
       "technical",
       "executive",
       "citizen",

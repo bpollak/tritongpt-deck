@@ -5393,8 +5393,7 @@ export const slides = [
       "internal",
       "public",
       "executive",
-      "regent",
-      "cabinet"
+      "regent"
     ]
   },
   {
@@ -5446,16 +5445,15 @@ export const slides = [
         "imagePosition": "center 15%"
       },
       {
-        "name": "Allorah Pradenas",
-        "title": "Asst. Vice Chancellor & Chief of Staff",
-        "image": "/media/pradenas.jpg"
+        "name": "Kevin Chou",
+        "title": "Interim Chief Information Officer",
+        "image": "/media/chou.jpg"
       }
     ],
     "linkUrl": "https://tritonai.ucsd.edu",
     "linkLabel": "tritonai.ucsd.edu",
-    "hidden": true,
     "audiences": [
-      "all"
+      "cabinet"
     ]
   },
   {
