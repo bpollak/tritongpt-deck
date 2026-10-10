@@ -4,6 +4,8 @@ export const slides = [
   {
     "id": 0.5,
     "slug": "ai-operating-review-title",
+    "mobileSnapshot": "/media/cabinet/snap/ai-operating-review-title.jpg",
+    "mobileSnapshotMedia": "(max-height: 500px)",
     "type": "title",
     "content": [],
     "title": "TritonAI Operating Review",
@@ -5431,6 +5433,8 @@ export const slides = [
   {
     "id": 37.6,
     "slug": "thank-you-cabinet",
+    "mobileSnapshot": "/media/cabinet/snap/thank-you-cabinet.jpg",
+    "mobileSnapshotMedia": "(max-height: 500px)",
     "type": "title",
     "content": [],
     "title": "Thank You",
@@ -6505,6 +6509,7 @@ export const slides = [
   {
     "id": 124.6,
     "slug": "cabinet-harness-11d-campus-app-hosting-intake",
+    "mobileSnapshot": "/media/cabinet/snap/cabinet-harness-11d-campus-app-hosting-intake.jpg",
     "type": "content",
     "content": [],
     "layout": "harness-definition",
@@ -8521,6 +8526,8 @@ export const slides = [
   {
     "id": 1012,
     "slug": "cabinet-scale",
+    "mobileSnapshot": "/media/cabinet/snap/cabinet-scale.jpg",
+    "mobileSnapshotMedia": "(max-height: 500px)",
     ...gatewayUsageDashboard,
     "title": "The foundation already carries substantial campus use",
     "claimNote": null,
@@ -8673,6 +8680,8 @@ export const slides = [
   {
     "id": 1021,
     "slug": "cabinet-class-planner-utilization",
+    "mobileSnapshot": "/media/cabinet/snap/cabinet-class-planner-utilization.jpg",
+    "mobileSnapshotMedia": "(max-height: 500px)",
     "type": "content",
     "content": [],
     "title": "Class Planner demand peaks with enrollment passes",
@@ -9291,20 +9300,20 @@ export const slides = [
     "videoAutoPlay": true,
     "hideDemoBadge": true,
     "demoOnly": true,
-    "title": "Update the TritonAI website from my phone",
-    "subtitle": "The Harness mobile app directs the Harness on my desktop.",
-    "durationSeconds": 40,
+    "title": "The Harness from my phone",
+    "subtitle": "Two real tasks sent from my phone to the Harness on my desktop.",
+    "durationSeconds": 87,
     "intro": {
       "kicker": "TritonAI Harness · on my phone",
-      "title": "Update the website from my phone",
-      "setup": "From my phone I ask the Harness on my desktop to add an announcement to the TritonAI home page: Discovery Series lessons 10–15 arrive October 15.",
-      "watchFor": "It edits the right page, builds the site, runs 182 accessibility checks, and shows desktop and mobile previews. Nothing is published.",
+      "title": "The Harness from my phone",
+      "setup": "Two real tasks from my phone: update the TritonAI website, then ask for a project's milestones before Monday's meeting.",
+      "watchFor": "A finished, checked website change previewed on the phone, then a milestone table with a source for every row. Nothing is published or changed.",
       "seconds": 6
     },
-    "videoSrc": "/media/cabinet/cabinet-mobile-website-update.mp4",
-    "poster": "/media/cabinet/cabinet-mobile-website-update-poster.jpg",
-    "managerSummary": "Oct 10 recording: TritonAI Harness iOS app (simulator) paired to Brett's desktop Harness adds a Discovery Series announcement to a local copy of the TritonAI website, builds, validates, and returns previews. 10 minutes sped up.",
-    "speakerNotes": "About 40 seconds (6s intro + 34s clip). Recorded Oct 10 on the Harness mobile app (iPhone simulator, development build) paired to Brett's desktop Harness. One request from the phone: add a short announcement that Discovery Series lessons 10–15 arrive October 15 in the site's Decorator style, build it, show a screenshot, don't commit or publish. The Harness found the generated page source (home.md), added the announcement, built both deployment modes, passed the full test gate (182 viewport accessibility checks across 91 routes, zero failures), and showed desktop and mobile previews in the chat. About 10 minutes of real work shown at 45x. Ran against a local demo copy of the website with no publishing remote; nothing was committed or published."
+    "videoSrc": "/media/cabinet/cabinet-mobile-harness.mp4",
+    "poster": "/media/cabinet/cabinet-mobile-harness-poster.jpg",
+    "managerSummary": "Oct 10 recordings, combined: Harness mobile app (simulator) paired to Brett's desktop Harness. (1) Adds a Discovery Series announcement to a local copy of the TritonAI website, builds, validates, previews. (2) Read-only question on BFS Cash Receipts milestones answered from email, calendar, meeting notes, and memory with sources.",
+    "speakerNotes": "About 87 seconds (6s intro + 81s clip; you narrate). Part 1, 0:00–0:34, website update: from the phone I asked the Harness on my desktop to add an announcement that Discovery Series lessons 10–15 arrive October 15, in the site's Decorator style, build it, and show a screenshot without committing or publishing. It found the page source, built both deployment modes, passed 182 accessibility checks across 91 routes with zero failures, and showed desktop and mobile previews in the chat. About 10 minutes of work at 45x; local demo copy with no publishing remote. Part 2, 0:34–1:21, milestones: 'What are the milestones and target dates for BFS Cash Receipts Automation, and which are on track?' Read only; about 5 minutes of searching at 30x; the answer is a milestone table with target date, status, and source per row; Phase 1 described as on track for end of 2026. Charter dates are proposed, so say 'the plan'. The answer's raw source notes are not shown."
   },
   {
     "id": 1046,
@@ -9313,7 +9322,7 @@ export const slides = [
     "layout": "cabinet-demo",
     "content": [],
     "audiences": [
-      "cabinet"
+      "cabinet-backup"
     ],
     "managerSection": "Citizen Developer Showcase",
     "section": {

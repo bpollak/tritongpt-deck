@@ -21,8 +21,7 @@
 | 14:06–14:51 | Built artifacts need a hosting lane | Path to hosting: Tier 0 desktop to Tier 3 enterprise. |
 | **Part 3** | **What people build** (divider, 8s) | |
 | 14:59–15:39 | Inbox priority sorter | How I use it: inbox triage. |
-| +0:40 | Update the TritonAI website from my phone (intro + 34s recording) | Harness mobile app directs the desktop Harness: adds the Oct 15 Discovery Series announcement, builds, 182 accessibility checks, previews on the phone. Nothing published. |
-| +0:54 | Project milestones, from my phone (intro + 47s recording) | One read-only question about BFS Cash Receipts milestones; the Harness answers from email, calendar, meeting notes, and memory with a source per row. Dates are the charter's plan. |
+| +1:27 | The Harness from my phone (intro + 81s recording) | Two real tasks from the phone: website update (Oct 15 Discovery Series announcement, built and checked, nothing published), then a read-only milestones question on BFS Cash Receipts answered with sources. |
 | 16:29–17:29 | Departments are building with it | Nine IPPS and RRSS projects from Nikki (Oct 10) with status and impact: Core Bio pricing (~150 hrs/yr), Facilities compliance (81 issues in 13s), custodial staffing (~8 hrs/day projected), Passport, Concur reconciliation, green spend, spend chat; ServiceNow deflection and Non-PO review in early discussion. Tell two. |
 | +0:40 | Faculty Expertise Directory (intro + 33s recording) | Citizen developer project: research need to ranked faculty leads for review. Planning rollout after the VCRI demo; app still shows its earlier name. |
 | 16:54–17:39 | Passport Services check-in | Department-designed service app (clip now 20s, sped up). |

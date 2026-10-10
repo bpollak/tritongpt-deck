@@ -317,3 +317,17 @@
 .cabinet-canvas-content .cabinet-impact:has(tbody tr:nth-child(9)) .cabinet-impact-table tbody td { padding-top: 3px; padding-bottom: 3px; }
 .cabinet-canvas-content .cabinet-framework-slide:has(.cabinet-impact tbody tr:nth-child(9)) > h1 { font-size: 46px; margin-bottom: 2px; }
 .cabinet-canvas-content .cabinet-impact:has(tbody tr:nth-child(9)) .cabinet-framework-takeaway { font-size: 19px; margin-bottom: 2px; }
+
+
+/* Phone reading view: each impact-table row becomes a card. */
+.cabinet-canvas[data-reading] .cabinet-impact-table thead { display: none; }
+.cabinet-canvas[data-reading] .cabinet-impact-table,
+.cabinet-canvas[data-reading] .cabinet-impact-table tbody { display: block; width: 100%; }
+.cabinet-canvas[data-reading] .cabinet-impact-table tbody tr { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; padding: 12px 0; }
+.cabinet-canvas[data-reading] .cabinet-impact-table tbody th,
+.cabinet-canvas[data-reading] .cabinet-impact-table tbody td { display: block; width: auto !important; padding: 0 !important; }
+.cabinet-canvas[data-reading] .cabinet-impact-table tbody th { grid-column: 1; grid-row: 1; }
+.cabinet-canvas[data-reading] .cabinet-impact-table tbody td:nth-child(2) { grid-column: 2; grid-row: 1; align-self: start; }
+.cabinet-canvas[data-reading] .cabinet-impact-table tbody td:nth-child(3) { grid-column: 1 / -1; grid-row: 2; }
+.cabinet-canvas[data-reading] .cabinet-impact-table tbody th strong { font-size: 19px !important; }
+.cabinet-canvas[data-reading] .cabinet-impact-figure { font-size: 17px !important; }

@@ -229,8 +229,36 @@ const pulseAnimation = {
   }
 };
 
+// Some full-bleed layouts are sized in viewport units for projection. On a small
+// phone screen they can clip, so a slide may name a crisp desktop render to show
+// instead when `mobileSnapshotMedia` (default: phone portrait or short landscape) matches.
+const MOBILE_SNAPSHOT_MEDIA = '(max-width: 700px), (max-height: 500px)';
+const useMediaMatch = (query) => {
+  const [match, setMatch] = React.useState(() => (query && typeof window !== 'undefined' ? window.matchMedia(query).matches : false));
+  React.useEffect(() => {
+    if (!query || typeof window === 'undefined') { setMatch(false); return undefined; }
+    const mq = window.matchMedia(query);
+    const onChange = () => setMatch(mq.matches);
+    onChange();
+    if (mq.addEventListener) { mq.addEventListener('change', onChange); return () => mq.removeEventListener('change', onChange); }
+    mq.addListener(onChange);
+    return () => mq.removeListener(onChange);
+  }, [query]);
+  return match;
+};
+
 const Slide = ({ slide, staticPreview = false }) => {
+  const snapshotQuery = !staticPreview && slide?.mobileSnapshot ? (slide.mobileSnapshotMedia || MOBILE_SNAPSHOT_MEDIA) : null;
+  const showSnapshot = useMediaMatch(snapshotQuery);
   if (!slide) return <div className="text-red-500 p-10">Slide Error: No data provided</div>;
+
+  if (showSnapshot) {
+    return (
+      <div className="slide-mobile-snapshot">
+        <img src={slide.mobileSnapshot} alt={slide.title || slide.managerLabel || 'Slide'} />
+      </div>
+    );
+  }
 
   // Cabinet sub-presentation has its own self-contained design system.
   // It bypasses the rest of this file's layout dispatch.
