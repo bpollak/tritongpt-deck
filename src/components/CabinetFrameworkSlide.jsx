@@ -7,6 +7,15 @@ export default function CabinetFrameworkSlide({ slide, staticPreview = false }) 
   const isDemo = slide.layout === 'cabinet-demo';
 
   return (
+    slide.divider ? (
+      <CabinetCanvas className="cabinet-framework-canvas" section={slide.section}>
+        <section className="cabinet-divider" aria-label={slide.title}>
+          <p className="cabinet-divider__part">Part {slide.divider.part}</p>
+          <h1>{slide.title}</h1>
+          {slide.subtitle && <p className="cabinet-divider__question">{slide.subtitle}</p>}
+        </section>
+      </CabinetCanvas>
+    ) :
     <CabinetCanvas className="cabinet-framework-canvas" section={slide.section} ask={slide.ask}><section className={`cabinet-framework-slide${slide.sources?.length || slide.sourceNote ? ' cabinet-framework-slide--cited' : ''}${slide.compact ? ' cabinet-framework-slide--compact' : ''}`} aria-label={slide.title}>
       <h1>{slide.title}</h1>
       {isDemo ? (

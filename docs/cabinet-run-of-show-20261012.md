@@ -44,6 +44,9 @@
 - **The Harness at work** is a fresh native recording (Oct 9, 4:24 PM): Plugins, Skills, and a real task using the UCSD Branding skill on practice-kit data. The training-opening slide moved to the backup view.
 - Total is about 23 minutes. To get to 21: skip the automation use-cases slide (45s) and the Class Planner usage chart (30s), and keep the gateway slide to one line.
 
+- **Guided edits (Oct 9):** contract review, Class Planner, The Harness at work, and ServiceNow carry yellow highlights and smooth zooms on the key click or result, built with docs/recapture-20261009/guided.py from the spec files beside it. The underlying recordings are unchanged.
+- **Section dividers:** a short card opens each part with its question from the opening slide (8 seconds each).
+
 ## Before Monday
 
 - Nicole: confirm the public name (working name: Faculty Expertise Directory); final contract review queue and OCGA priority; broad Word add-in install gate

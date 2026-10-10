@@ -3,6 +3,7 @@ export const slideManagerState = {
     "lmu-title",
     "ai-operating-review-title",
     "cabinet-citizen-developer-story",
+    "cabinet-divider-verticals",
     "cabinet-verticals-impact",
     "cabinet-cash-receipts-demo",
     "cabinet-cash-roadmap",
@@ -10,6 +11,7 @@ export const slideManagerState = {
     "cabinet-servicenow-routing-demo",
     "cabinet-verticals-at-a-glance",
     "cabinet-verticals-roadmap",
+    "cabinet-divider-harness",
     "cabinet-chat-and-harness",
     "cabinet-harness-capabilities",
     "cabinet-harness-in-action",
@@ -18,6 +20,7 @@ export const slideManagerState = {
     "cabinet-harness-automation-use-cases",
     "cabinet-governance",
     "cabinet-harness-11d-campus-app-hosting-intake",
+    "cabinet-divider-outcomes",
     "cabinet-inbox-priority-sorter",
     "cabinet-personal-productivity-demo",
     "cabinet-department-builders",
@@ -151,6 +154,15 @@ export const slideManagerState = {
     "cabinet-subagents"
   ],
   "audiences": {
+    "cabinet-divider-outcomes": [
+      "cabinet"
+    ],
+    "cabinet-divider-harness": [
+      "cabinet"
+    ],
+    "cabinet-divider-verticals": [
+      "cabinet"
+    ],
     "cabinet-harness-in-action": [
       "cabinet"
     ],

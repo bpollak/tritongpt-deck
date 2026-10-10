@@ -6609,6 +6609,28 @@ export const slides = [
     ]
   },
   {
+    "id": 1042,
+    "slug": "cabinet-divider-outcomes",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "What people build",
+    "subtitle": "What have staff already built with it, for themselves and their departments?",
+    "content": [],
+    "divider": {
+      "part": 3
+    },
+    "section": {
+      "part": 3,
+      "label": "What people build"
+    },
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Divider",
+    "durationSeconds": 8,
+    "speakerNotes": "Eight seconds. Read the question and move on: \"What have staff already built with it, for themselves and their departments?\""
+  },
+  {
     "id": 126,
     "slug": "cabinet-harness-13-recap",
     "type": "content",
@@ -7217,6 +7239,28 @@ export const slides = [
     "speakerNotes": "One minute. Set up the three questions the rest of the talk answers. Part 1 answers the first: the vertical solutions ITS is building and the impact of each. Part 2 answers the second: what citizen development is, what the Harness can do, a live demonstration, and the path to hosting. Part 3 answers the third: what people have built for themselves and their departments. The foundation and asks close the talk. Keep the payback claims measured: the impact slide labels each figure as a timed pilot, a planning estimate, a scenario, or cost avoided. One line on governance posture: data classification and UC policy alignment apply throughout, and every workflow has an accountable owner."
   },
   {
+    "id": 1040,
+    "slug": "cabinet-divider-verticals",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "Vertical solutions",
+    "subtitle": "Which practical AI solutions is ITS building, and what will they pay back?",
+    "content": [],
+    "divider": {
+      "part": 1
+    },
+    "section": {
+      "part": 1,
+      "label": "Vertical solutions"
+    },
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Divider",
+    "durationSeconds": 8,
+    "speakerNotes": "Eight seconds. Read the question and move on: \"Which practical AI solutions is ITS building, and what will they pay back?\""
+  },
+  {
     "id": 1030,
     "slug": "cabinet-verticals-impact",
     "type": "content",
@@ -7295,8 +7339,8 @@ export const slides = [
     ],
     "managerSection": "Citizen Developer Showcase",
     "durationSeconds": 60,
-    "videoSrc": "/media/cabinet/cabinet-class-planner-flow.mp4",
-    "poster": "/media/cabinet/cabinet-class-planner-flow-poster.jpg",
+    "videoSrc": "/media/cabinet/cabinet-class-planner-guided.mp4",
+    "poster": "/media/cabinet/cabinet-class-planner-guided-poster.jpg",
     "videoLoop": false,
     "videoClearNav": false,
     "videoAutoPlay": true,
@@ -7314,7 +7358,7 @@ export const slides = [
       "label": "Live Class Planner web app",
       "captureNote": "Public course data • fresh browser session • no sign-in or enrollment"
     },
-    "speakerNotes": "One minute: a six-second intro card, then a 52-second recording. Voice-over: Class Planner turns a list of courses into schedule options students can compare, then brings section details and the walk between classes into one place. Connect it to the builder story: a focused campus app made a recurring student task easier. Use Kevin's framing: built quickly, robust usage, now extended by student developers. That is presenter-provided framing, not a verified personnel history; do not name builders or say the original development used TritonAI Harness. Capture: the live public app (FA26) in a fresh browser profile, light theme. Sequence: guide page, Open Class Planner, Auto planning, Later starts, then MATH-010A, CSE-008A and COGS-001, two alternative schedules in the condensed week, Details, and Map. No student identity, sign-in, TSS booking, enrollment, or shared schedule. Seat counts and walking estimates are live data at capture time; a generated option is not a guarantee, and booking is completed in TSS. Recorded October 9, 2026 as one continuous take: a headless Chromium session scripted with Playwright, captured frame by frame through the DevTools screencast at 2560x1440 and played back at real speed. No cuts, held frames, crops, or digital zoom. The cursor is drawn over the real mouse events so the room can follow it. Recording scripts: ~/dev/cabinet-recapture-20261009. Source: https://classplanner.apps.ucsd.edu/",
+    "speakerNotes": "One minute: a six-second intro card, then a 52-second recording. Voice-over: Class Planner turns a list of courses into schedule options students can compare, then brings section details and the walk between classes into one place. Connect it to the builder story: a focused campus app made a recurring student task easier. Use Kevin's framing: built quickly, robust usage, now extended by student developers. That is presenter-provided framing, not a verified personnel history; do not name builders or say the original development used TritonAI Harness. Capture: the live public app (FA26) in a fresh browser profile, light theme. Sequence: guide page, Open Class Planner, Auto planning, Later starts, then MATH-010A, CSE-008A and COGS-001, two alternative schedules in the condensed week, Details, and Map. No student identity, sign-in, TSS booking, enrollment, or shared schedule. Seat counts and walking estimates are live data at capture time; a generated option is not a guarantee, and booking is completed in TSS. Recorded October 9, 2026 as one continuous take: a headless Chromium session scripted with Playwright, captured frame by frame through the DevTools screencast at 2560x1440 and played back at real speed. No cuts, held frames, crops, or digital zoom. The cursor is drawn over the real mouse events so the room can follow it. Recording scripts: ~/dev/cabinet-recapture-20261009. Source: https://classplanner.apps.ucsd.edu/ Guided edit Oct 9: highlights and zooms on Auto planning, Later starts, the schedule switcher, and the walk between classes (spec_cp.json).",
     "section": {
       "part": 3,
       "label": "What people build"
@@ -7503,21 +7547,21 @@ export const slides = [
       "cabinet"
     ],
     "managerSection": "Administrative Verticals",
-    "durationSeconds": 80,
+    "durationSeconds": 85,
     "recording": {
       "label": "Select three rules → Start Review → tracked changes and comments appear → Talk to agent → answer",
       "format": "One native take of the Word window, speed-ramped • silent for voice-over",
       "mediaStem": "cabinet-contract-review-live",
       "status": "captured and reviewed"
     },
-    "speakerNotes": "Close Part 1 here, then bridge: \"The AI team built this one. The next ones, we expect departments to build themselves. Here's how.\" Plant the ask while the recording plays: prioritize the next eligible contract groups and types, starting with OCGA (subject to Nicole's contract-type list). Advancement and real estate were reviewed and do not fit; do not list them. About 90 seconds: six-second intro card, then the 83-second recording. Voice-over: staff choose institutional rules, the review runs inside Word, and every proposed change arrives as a tracked change with a comment naming its rule. Then you can ask the agent questions about the result. Capture: native screen recording of the real Word window and installed UC San Diego Contract Reviewer add-in, October 9, 2026, about 12:44 PM PT, on a local copy of the public SolarWinds SaaS agreement (unreviewed demonstration copy). Three rules were selected on camera (Terms of Purchase, Term and Termination, Indemnity and Liability); business context said it was a demonstration with no purchase, customer data, UC Health, federal funding, order form, or DPA; Risk assessment and rule names in author labels were on. The add-in reported Review complete, 3 of 3 rules, 1m 31s. Question asked: \"Which of these changes matters most for UC San Diego, and what should a reviewer confirm before accepting it?\" Answer (actual): UC terms prevail; data-security appendix and AI/analytics approval; UC convenience termination, supplier indemnity, no conflicting liability cap; remove automatic renewal. Speed: real time for rule selection, completion, and reading the answer; processing sped up 8x and the question/answer 2–3x. Nothing was accepted, signed, sent, or saved over the source. Single run time is not a benchmark. The existing supervised Procurement inbox/portal workflow is in production; broad Word add-in deployment still requires Microsoft trusted-app setup; do not claim campus-wide availability. OCGA is the next candidate subject to Nicole's contract-type list. Edit script: ~/dev/cabinet-recapture-20261009/word/edit_contract.sh",
+    "speakerNotes": "Close Part 1 here, then bridge: \"The AI team built this one. The next ones, we expect departments to build themselves. Here's how.\" Plant the ask while the recording plays: prioritize the next eligible contract groups and types, starting with OCGA (subject to Nicole's contract-type list). Advancement and real estate were reviewed and do not fit; do not list them. About 90 seconds: six-second intro card, then the 83-second recording. Voice-over: staff choose institutional rules, the review runs inside Word, and every proposed change arrives as a tracked change with a comment naming its rule. Then you can ask the agent questions about the result. Capture: native screen recording of the real Word window and installed UC San Diego Contract Reviewer add-in, October 9, 2026, about 12:44 PM PT, on a local copy of the public SolarWinds SaaS agreement (unreviewed demonstration copy). Three rules were selected on camera (Terms of Purchase, Term and Termination, Indemnity and Liability); business context said it was a demonstration with no purchase, customer data, UC Health, federal funding, order form, or DPA; Risk assessment and rule names in author labels were on. The add-in reported Review complete, 3 of 3 rules, 1m 31s. Question asked: \"Which of these changes matters most for UC San Diego, and what should a reviewer confirm before accepting it?\" Answer (actual): UC terms prevail; data-security appendix and AI/analytics approval; UC convenience termination, supplier indemnity, no conflicting liability cap; remove automatic renewal. Speed: real time for rule selection, completion, and reading the answer; processing sped up 8x and the question/answer 2–3x. Nothing was accepted, signed, sent, or saved over the source. Single run time is not a benchmark. The existing supervised Procurement inbox/portal workflow is in production; broad Word add-in deployment still requires Microsoft trusted-app setup; do not claim campus-wide availability. OCGA is the next candidate subject to Nicole's contract-type list. Edit script: ~/dev/cabinet-recapture-20261009/word/edit_contract.sh Guided edit Oct 9: yellow highlights and zooms on the three rules, Start Review, the tracked changes, Review complete, and the agent's answer (docs/recapture-20261009/spec_contract.json).",
     "videoLoop": false,
     "videoClearNav": false,
     "videoAutoPlay": true,
     "hideDemoBadge": true,
     "managerSummary": "Native Word recording: three rules selected, a live review adds tracked changes and rule-linked comments (3 of 3 rules, 1m 31s), then the agent answers which changes matter most and what to confirm.",
-    "videoSrc": "/media/cabinet/cabinet-contract-review-live.mp4",
-    "poster": "/media/cabinet/cabinet-contract-review-live-poster.jpg",
+    "videoSrc": "/media/cabinet/cabinet-contract-review-guided.mp4",
+    "poster": "/media/cabinet/cabinet-contract-review-guided-poster.jpg",
     "releaseContext": {
       "channel": "pilot",
       "label": "Production workflow · Word add-in availability unconfirmed",
@@ -7829,8 +7873,8 @@ export const slides = [
       "watchFor": "The UCSD Branding skill in the request, the missing ratings it flags, and the finished page opening beside the conversation.",
       "seconds": 7
     },
-    "videoSrc": "/media/cabinet/cabinet-harness-in-action.mp4",
-    "poster": "/media/cabinet/cabinet-harness-in-action-poster.jpg",
+    "videoSrc": "/media/cabinet/cabinet-harness-in-action-guided.mp4",
+    "poster": "/media/cabinet/cabinet-harness-in-action-guided-poster.jpg",
     "videoLoop": false,
     "videoClearNav": false,
     "videoAutoPlay": true,
@@ -7848,7 +7892,7 @@ export const slides = [
       "captureNote": "Recorded Oct 9 • fictional practice-kit data • about 3.5 minutes shown in 107 seconds"
     },
     "managerSummary": "Fresh native Harness recording: Plugins with Microsoft 365 abilities, the Skills list, then a real task using the UCSD Branding skill that summarizes practice survey data and builds a branded results page, opened in the Harness side panel.",
-    "speakerNotes": "About 2 minutes: seven-second intro card, then the 107-second recording. Voice-over: plugins connect it to Microsoft 365, Google Workspace, GitHub, Kuali Build, Lucid, n8n, and Tableau, each with abilities you switch on; Microsoft 365 reads by default and drafts are opt-in. Skills package campus know-how, like accessibility and UC San Diego branding. Then a real task: summarize a workshop survey and build a branded results page. It flags that 4 of 42 responses skipped the room rating and averages only the 38 that exist (2.97), then the finished page opens beside the conversation. Facts: recorded October 9, 2026, about 4:24–4:30 PM PT, native screen recording of the Harness (Nightly, Flash model, Full access). Data is the fictional practice-kit file workshop-feedback.csv from tritonai.ucsd.edu/training/harness. Task took 1m 35s; it did not open a browser. Edit: plugins and skills at 1.5x; about 12 seconds of navigation through the thread sidebar cut (it showed unrelated thread titles); working time at 8x; summary and result at 1.25–3x. Script: ~/dev/cabinet-recapture-20261009/native/edit_tour.sh"
+    "speakerNotes": "About 2 minutes: seven-second intro card, then the 107-second recording. Voice-over: plugins connect it to Microsoft 365, Google Workspace, GitHub, Kuali Build, Lucid, n8n, and Tableau, each with abilities you switch on; Microsoft 365 reads by default and drafts are opt-in. Skills package campus know-how, like accessibility and UC San Diego branding. Then a real task: summarize a workshop survey and build a branded results page. It flags that 4 of 42 responses skipped the room rating and averages only the 38 that exist (2.97), then the finished page opens beside the conversation. Facts: recorded October 9, 2026, about 4:24–4:30 PM PT, native screen recording of the Harness (Nightly, Flash model, Full access). Data is the fictional practice-kit file workshop-feedback.csv from tritonai.ucsd.edu/training/harness. Task took 1m 35s; it did not open a browser. Edit: plugins and skills at 1.5x; about 12 seconds of navigation through the thread sidebar cut (it showed unrelated thread titles); working time at 8x; summary and result at 1.25–3x. Script: ~/dev/cabinet-recapture-20261009/native/edit_tour.sh Guided edit Oct 9: highlights and zooms on the opt-in mail-draft ability, the UCSD Branding skill in the request, the missing-responses finding, and the finished page (spec_hw.json)."
   },
   {
     "id": 1026,
@@ -8889,6 +8933,28 @@ export const slides = [
       "label": "Vertical solutions"
     },
     "speakerNotes": "45 seconds. The next wave of vertical solutions, from the PK portfolio pilots and skunkworks slides (reviewed Sept 22). No impact figures yet; say who each is for. Payment Request Review and the RFX Evaluation Agent keep humans reviewing everything; the Security Review Agent is the contract reviewer extended into software security terms. Financial and workforce agents are limited-audience pilots. Contract review's next groups start with OCGA, subject to Nicole's list. Citizen Developer Hosting is covered again in Part 2. Cash application has its own roadmap slide; do not repeat it here."
+  },
+  {
+    "id": 1041,
+    "slug": "cabinet-divider-harness",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "Citizen development",
+    "subtitle": "What is the Harness, and how can you and your staff use it?",
+    "content": [],
+    "divider": {
+      "part": 2
+    },
+    "section": {
+      "part": 2,
+      "label": "Citizen development"
+    },
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Divider",
+    "durationSeconds": 8,
+    "speakerNotes": "Eight seconds. Read the question and move on: \"What is the Harness, and how can you and your staff use it?\""
   },
   {
     "id": 1024,
