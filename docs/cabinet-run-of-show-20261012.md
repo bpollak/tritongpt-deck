@@ -23,7 +23,7 @@
 | 14:59–15:44 | My daily brief and inbox priorities (intro + 36s recording) | Personal productivity: the 7 AM daily brief email, then the updated Inbox Triage add-in on a Priority 1 email (score 71/100 and its reasons), ending on what the sorter weighs: who per my context, who per my habits, how it reached me, what it asks; plus direct-ask and aging rules. |
 | +1:27 | The Harness from my phone (intro + 81s recording) | Two real tasks from the phone: website update (Oct 15 Discovery Series announcement, built and checked, nothing published), then a read-only milestones question on BFS Cash Receipts answered with sources. |
 | 16:29–17:29 | Departments are building with it | Nine IPPS and RRSS projects from Nikki (Oct 10) with status and impact: Core Bio pricing (~150 hrs/yr), Facilities compliance (81 issues in 13s), custodial staffing (~8 hrs/day projected), Passport, Concur reconciliation, green spend, spend chat; ServiceNow deflection and Non-PO review in early discussion. Tell two. |
-| +0:40 | Faculty Expertise Directory (intro + 33s recording) | Citizen developer project: research need to ranked faculty leads for review. Planning rollout after the VCRI demo; app still shows its earlier name. |
+| +0:38 | Faculty Expertise Directory (intro + 32s live recording) | Citizen developer project: research need to ranked faculty leads for review. Planning rollout after the VCRI demo; app still shows its earlier name. |
 | 16:54–17:39 | Passport Services check-in | Department-designed service app (clip now 20s, sped up). |
 | 17:39–18:19 | Class Planner (34s clip) | Course list to schedule options. Don’t claim the Harness built it. |
 | 18:39–19:09 | Class Planner demand peaks with enrollment passes | Daily usage around the enrollment passes. |

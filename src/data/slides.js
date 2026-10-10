@@ -7384,21 +7384,21 @@ export const slides = [
     ],
     "managerSection": "Citizen Developer Showcase",
     "managerSummary": "Citizen developer project (Part 3): Faculty Expertise Directory whole-app recording, expertise request to ranked faculty leads.",
-    "durationSeconds": 40,
-    "videoSrc": "/media/cabinet/cabinet-directory-wide.mp4",
-    "poster": "/media/cabinet/cabinet-directory-wide-poster.jpg",
+    "durationSeconds": 38,
+    "videoSrc": "/media/cabinet/cabinet-directory-live.mp4",
+    "poster": "/media/cabinet/cabinet-directory-live-poster.jpg",
     "releaseContext": {
       "channel": "pilot",
       "label": "Faculty Expertise Directory · In development",
       "captureNote": "Live web app · Sample query · Profiles and matches need review"
     },
     "recording": {
-      "label": "Expertise request → suggested faculty matches",
-      "format": "Whole app at high resolution • silent for presenter voice-over • no crop or digital zoom",
-      "mediaStem": "cabinet-directory",
+      "label": "Enter Expertise → plain-language request → analysis → opportunity summary → ranked faculty",
+      "format": "Continuous live recording (Oct 10), waits sped up, request zoomed, top match highlighted • silent",
+      "mediaStem": "cabinet-directory-live",
       "status": "captured and reviewed"
     },
-    "speakerNotes": "About 40 seconds (6s intro + 33s clip). Moved from vertical solutions to Part 3 as a citizen developer project (Brett, Oct 10). Voice-over: a department starts with a question and gets potential experts to review instead of searching from scratch. The app still shows its earlier name (Faculty Finder); working name Faculty Expertise Directory, confirm the final name with Nicole. After the successful VCRI demonstration with Faith and Corey, Nicole's team continues development and is planning the rollout phase; arts and humanities coverage is the focus (public-source data has gaps). Corey is in the room. Scores and profiles need human review; do not describe ranking as an institutional faculty evaluation. No outreach or selection occurred. A real coastal flooding/climate adaptation query produced the shown matches on October 8.",
+    "speakerNotes": "About 38 seconds (6s intro + 32s clip). Live recording of the Faculty Expertise Directory (directory.apps.ucsd.edu; the app still shows its earlier name, Faculty Finder), Oct 10. 0:00–0:08 a plain-language request typed into Enter Expertise (zoomed): researchers in coastal flooding, sea-level rise, climate adaptation, and data-driven methods for protecting coastal communities. 0:08–0:12 the analysis runs (sped up 3x). 0:12–0:17 an opportunity summary with themes. 0:17–0:32 ranked Aligned Faculty; the top match is highlighted with its score (92) and the breakdown: expertise, methods, track record, plus a one-paragraph rationale. Moved from vertical solutions to Part 3 as a citizen developer project (Brett, Oct 10). After the successful VCRI demonstration with Faith and Corey, Nicole's team continues development and is planning the rollout; arts and humanities coverage is the focus (public-source data has gaps). Corey is in the room. Scores need human review; don't describe ranking as an institutional faculty evaluation. Confirm the final name with Nicole.",
     "videoLoop": false,
     "videoClearNav": false,
     "videoAutoPlay": true,
