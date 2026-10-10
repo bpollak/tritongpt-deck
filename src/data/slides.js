@@ -7338,8 +7338,8 @@ export const slides = [
       "cabinet"
     ],
     "managerSection": "Citizen Developer Showcase",
-    "durationSeconds": 57,
-    "videoSrc": "/media/cabinet/cabinet-class-planner-guided.mp4",
+    "durationSeconds": 40,
+    "videoSrc": "/media/cabinet/cabinet-class-planner-guided-fast.mp4",
     "poster": "/media/cabinet/cabinet-class-planner-guided-poster.jpg",
     "videoLoop": false,
     "videoClearNav": false,
@@ -7349,7 +7349,7 @@ export const slides = [
     "managerSummary": "Continuous recording of the live Class Planner: later-starts preference, MATH-010A, CSE-008A and COGS-001, schedule alternatives, Details, and Map.",
     "recording": {
       "label": "Guide → auto planning with later starts → three courses → compare schedules → details and walking map",
-      "format": "One continuous take with guided highlights and zooms; two loading flashes cut (Oct 10) • silent for presenter voice-over",
+      "format": "One continuous take with guided highlights and zooms; zoom/highlight moments at real speed, course entry and transitions sped up 1.8–2.5x (Oct 10) • silent for presenter voice-over",
       "mediaStem": "cabinet-class-planner-flow",
       "status": "captured and reviewed"
     },

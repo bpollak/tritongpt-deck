@@ -25,7 +25,7 @@
 | 16:29–17:29 | Departments are building with it | Nine IPPS and RRSS projects from Nikki (Oct 10) with status and impact: Core Bio pricing (~150 hrs/yr), Facilities compliance (81 issues in 13s), custodial staffing (~8 hrs/day projected), Passport, Concur reconciliation, green spend, spend chat; ServiceNow deflection and Non-PO review in early discussion. Tell two. |
 | +0:40 | Faculty Expertise Directory (intro + 33s recording) | Citizen developer project: research need to ranked faculty leads for review. Planning rollout after the VCRI demo; app still shows its earlier name. |
 | 16:54–17:39 | Passport Services check-in | Department-designed service app (clip now 20s, sped up). |
-| 17:39–18:39 | Class Planner | Course list to schedule options. Don’t claim the Harness built it. |
+| 17:39–18:19 | Class Planner (34s clip) | Course list to schedule options. Don’t claim the Harness built it. |
 | 18:39–19:09 | Class Planner demand peaks with enrollment passes | Daily usage around the enrollment passes. |
 | **Part 4** | **Foundation and close** | |
 | 19:09–19:39 | The foundation already carries substantial campus use | Gateway usage in one line: what powers everything shown so far. |
