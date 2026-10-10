@@ -21,7 +21,7 @@ export default function CabinetWorkflowComparison({ comparison, children }) {
         {children}
       </div>
       {['matrix', 'tasks'].map(mode => (
-        <section key={mode} id={`${panelId}-${mode}`} className="cabinet-workflow-adaptation" hidden={view !== mode}>
+        <section key={mode} id={`${panelId}-${mode}`} className={`cabinet-workflow-adaptation cabinet-workflow-adaptation--${mode}`} hidden={view !== mode}>
           <header>
             <p className="cabinet-workflow-kicker">{comparison.kicker || 'Choose by task'}</p>
             <h2>{mode === 'matrix' ? comparison.matrixTitle : comparison.title}</h2>

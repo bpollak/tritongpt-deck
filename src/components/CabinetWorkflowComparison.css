@@ -91,3 +91,18 @@
 .cabinet-canvas[data-reading] .cabinet-workflow-lead {font-size:18px;}
 .cabinet-canvas[data-reading] .cabinet-workflow-switcher {position:fixed;left:12px;right:12px;bottom:76px;justify-content:center;gap:5px;}
 .cabinet-canvas[data-reading] .cabinet-workflow-switcher button {font-size:13px;padding:7px 10px;}
+
+/* Cabinet: the three-row comparison is the slide, so let it fill the canvas
+   with projector-sized type. The use-case view keeps the tighter sizes above. */
+.cabinet-canvas-content .cabinet-workflow-adaptation--matrix {padding-top:36px;gap:14px;}
+.cabinet-canvas-content .cabinet-workflow-adaptation--matrix h2 {font-size:58px;line-height:1.05;}
+.cabinet-canvas-content .cabinet-workflow-adaptation--matrix .cabinet-workflow-lead {font-size:24px;margin:6px 0 10px;}
+.cabinet-canvas-content .cabinet-workflow-adaptation--matrix .cabinet-workflow-detail-table th,
+.cabinet-canvas-content .cabinet-workflow-adaptation--matrix .cabinet-workflow-detail-table td {padding:20px 22px;}
+.cabinet-canvas-content .cabinet-workflow-adaptation--matrix .cabinet-workflow-product strong {font-size:26px;}
+.cabinet-canvas-content .cabinet-workflow-adaptation--matrix .cabinet-workflow-detail-table tbody th {font-size:21px;}
+.cabinet-canvas-content .cabinet-workflow-adaptation--matrix .cabinet-workflow-cell-title {font-size:24px;margin-bottom:6px;}
+.cabinet-canvas-content .cabinet-workflow-adaptation--matrix .cabinet-workflow-cell-detail {font-size:19px;line-height:1.3;}
+/* Keep the view switcher clear of the presenter's mic control at bottom left. */
+.cabinet-canvas-content .cabinet-workflow-switcher {left:96px;}
+.cabinet-canvas-content .cabinet-workflow-switcher button {font-size:14px;padding:6px 12px;}

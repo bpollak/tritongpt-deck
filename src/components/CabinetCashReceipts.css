@@ -35,3 +35,8 @@
 .cabinet-cash--simple .cabinet-cash-phases p {font-size:21px;}
 .cabinet-canvas[data-reading] .cabinet-cash--simple h1 {font-size:40px;}
 .cabinet-canvas[data-reading] .cabinet-cash--simple .cabinet-cash-lead {font-size:21px;margin-bottom:28px;}
+
+/* Line the title up with the other Cabinet content slides. */
+.cabinet-canvas-content .cabinet-cash--simple {padding-top:36px;}
+.cabinet-canvas-content .cabinet-cash--simple h1 {font-size:58px;margin-bottom:18px;}
+.cabinet-canvas-content .cabinet-cash--simple .cabinet-cash-lead {margin-bottom:80px;}

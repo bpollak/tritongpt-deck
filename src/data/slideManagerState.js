@@ -27,8 +27,8 @@ export const slideManagerState = {
     "cabinet-passport-demo",
     "cabinet-class-planner-demo",
     "cabinet-class-planner-utilization",
-    "cabinet-sovereign-ai",
     "cabinet-scale",
+    "cabinet-sovereign-ai",
     "cabinet-asks-close",
     "cabinet-administrative-quick-hits",
     "cabinet-harness-mobile-demo",
@@ -176,7 +176,7 @@ export const slideManagerState = {
       "cabinet"
     ],
     "cabinet-harness-automation-use-cases": [
-      "cabinet"
+      "cabinet-backup"
     ],
     "cabinet-servicenow-routing-demo": [
       "cabinet"

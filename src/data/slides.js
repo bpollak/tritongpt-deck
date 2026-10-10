@@ -6510,7 +6510,6 @@ export const slides = [
     "content": [],
     "layout": "harness-definition",
     "variant": "harness-campus-hosting",
-    "marker": "HOSTING",
     "aliases": [
       "campus-app-hosting-intake"
     ],
@@ -6538,22 +6537,10 @@ export const slides = [
         "process": "Citizen-Initiated Development",
         "userDeployments": [
           {
-            "label": "User Desktop / Laptop",
-            "tools": [
-              "Claude Code",
-              "CODEX",
-              "Onyx Craft + OpenCode",
-              "Campus Jupyter + OpenCode"
-            ]
+            "label": "User Desktop / Laptop"
           },
           {
-            "label": "User Sandbox",
-            "tools": [
-              "Claude Code",
-              "CODEX",
-              "TritonAI"
-            ],
-            "note": "May be required for some API/MCP tooling"
+            "label": "User Sandbox"
           }
         ]
       },
@@ -6606,7 +6593,9 @@ export const slides = [
       "regent",
       "cabinet",
       "executive"
-    ]
+    ],
+    "durationSeconds": 45,
+    "speakerNotes": "45 seconds. The path to hosting: Tier 0 individual desktops to Tier 3 enterprise; volume drops as governance increases. Tier 0 tool chips removed from the Cabinet slide (Oct 9) for less text: Claude Code, Codex, Onyx Craft + OpenCode, Campus Jupyter + OpenCode; a user sandbox may be required for some API/MCP tooling."
   },
   {
     "id": 1042,
@@ -6614,7 +6603,7 @@ export const slides = [
     "type": "content",
     "layout": "cabinet-outline",
     "title": "What people build",
-    "subtitle": "What have staff already built with it, for themselves and their departments?",
+    "subtitle": "What have people already built with it?",
     "content": [],
     "divider": {
       "part": 3
@@ -7265,8 +7254,8 @@ export const slides = [
     "slug": "cabinet-verticals-impact",
     "type": "content",
     "content": [],
-    "title": "Vertical solutions: campus time and cost savers",
-    "subtitle": "What each solution delivers today, or is projected to deliver.",
+    "title": "Campus time and cost savers",
+    "subtitle": "What each ITS-built solution delivers today, or is projected to deliver.",
     "layout": "cabinet-outline",
     "audiences": [
       "cabinet"
@@ -7296,6 +7285,13 @@ export const slides = [
           "basis": "Timed pilot"
         },
         {
+          "name": "Ticket Routing",
+          "status": "In production",
+          "tone": "live",
+          "impact": "~85% fewer routing hours",
+          "basis": "Scenario, not yet measured"
+        },
+        {
           "name": "Transcript Matching",
           "status": "In production",
           "tone": "live",
@@ -7308,13 +7304,6 @@ export const slides = [
           "tone": "live",
           "impact": "$300K a year saved",
           "basis": "Retired vendor contract"
-        },
-        {
-          "name": "Ticket Routing",
-          "status": "In production",
-          "tone": "live",
-          "impact": "~85% fewer routing hours",
-          "basis": "Scenario, not yet measured"
         },
         {
           "name": "Faculty Expertise Directory",
@@ -7364,11 +7353,11 @@ export const slides = [
       "label": "What people build"
     },
     "intro": {
-      "kicker": "live public app",
+      "kicker": "Live public app",
       "title": "Class Planner",
       "label": "Class Planner · courses to schedule options",
-      "setup": "Students list the courses they need. Class Planner builds schedule options they can compare, then shows section details and the walk between classes.",
-      "watchFor": "Three courses and one preference, later starts, become ranked schedules and a campus walking map.",
+      "setup": "Students list the courses they need. Class Planner builds schedule options to compare, with section details and the walk between classes.",
+      "watchFor": "Three courses and a later-start preference become ranked schedules and a walking map.",
       "seconds": 6
     }
   },
@@ -7447,7 +7436,7 @@ export const slides = [
       "title": "Passport Services check-in",
       "label": "Passport Services · visitor check-in",
       "setup": "Passport Services staff designed the visitor flow they needed: check in, answer readiness questions, and get a clear next step.",
-      "watchFor": "The readiness questions, which catch a missing photo, ID, or fee before the visitor reaches the counter.",
+      "watchFor": "The readiness questions that catch a missing photo, ID, or fee before the counter.",
       "seconds": 5
     }
   },
@@ -7456,8 +7445,8 @@ export const slides = [
     "slug": "cabinet-cash-receipts-demo",
     "type": "content",
     "layout": "cabinet-cash-receipts",
-    "title": "Cash application modernization",
-    "subtitle": "Automatically match incoming payments to the right invoices, so received cash is applied faster and staff focus on the hard cases.",
+    "title": "Apply received cash faster",
+    "subtitle": "Cash application modernization automatically matches incoming payments to the right invoices, so staff focus on the hard cases.",
     "content": [],
     "audiences": [
       "cabinet"
@@ -7576,8 +7565,8 @@ export const slides = [
       "kicker": "Word add-in",
       "title": "Contract review inside Word",
       "label": "Contract review · Word add-in",
-      "setup": "Institutional rules run inside the document reviewers already use. They produce tracked changes, each with a comment naming the rule behind it.",
-      "watchFor": "Three rules selected, the tracked changes appearing, then a question to the agent about what a reviewer should confirm. A person approves every edit.",
+      "setup": "Institutional rules run inside Word and produce tracked changes, each with a comment naming the rule behind it.",
+      "watchFor": "Three rules selected, tracked changes appearing, then the agent answering what a reviewer should confirm. A person approves every edit.",
       "seconds": 6
     }
   },
@@ -7602,8 +7591,8 @@ export const slides = [
       "kicker": "ServiceNow",
       "title": "Routing tickets to the right team",
       "label": "ServiceNow · ticket routing",
-      "setup": "Two tickets that would normally land on the Service Desk first. The model, trained on our own case history, sends each one straight to the specialist team.",
-      "watchFor": "A broken desktop goes to Field Support (80%). A DNS request goes to the Hostmaster team (97%).",
+      "setup": "Two tickets that would normally go to the Service Desk first. A model trained on our case history routes each to the specialist team.",
+      "watchFor": "A broken desktop goes to Field Support (80%); a DNS request goes to Hostmaster (97%).",
       "seconds": 5
     },
     "videoSrc": "/media/cabinet/cabinet-servicenow-routing-two-cases.mp4",
@@ -7659,7 +7648,7 @@ export const slides = [
     "slug": "cabinet-chat-and-harness",
     "type": "content",
     "layout": "cabinet-website-visual",
-    "title": "TritonGPT and TritonAI Harness",
+    "title": "A chat answers. The Harness does the work.",
     "subtitle": "The model can stay the same. The workspace changes what you can get done.",
     "audiences": [
       "cabinet"
@@ -7679,8 +7668,8 @@ export const slides = [
     "speakerNotes": "One minute. Part 2 opens here: IT Services can't build every vertical, so the Harness lets staff build their own. Two sentences: \"TritonGPT helps staff find, understand, and draft. The Harness carries a task through files and campus tools to a result they review.\" Then go straight to the next slide, where the training shows it doing exactly that. The comparison is cut to three rows for Cabinet; data storage and classification move to the control slide. Complementary products, not a smarter-model claim. Plugin list matches the plugin catalog on https://tritonai.ucsd.edu/training/harness/ (checked October 9). Harness task history and project files are local, but prompts and selected context go to the chosen model, and tools exchange data with connected services. The public site describes desktop Harness as a supported pilot; mobile remains preview. Sources: https://tritonai.ucsd.edu/developer-apis/harness.html ; https://tritonai.ucsd.edu/tritongpt/index.html ; https://tritonai.ucsd.edu/tritongpt/privacy.html",
     "websiteVisual": "comparison",
     "workflowComparison": {
-      "matrixTitle": "TritonGPT and TritonAI Harness",
-      "matrixLead": "A chat answers. The Harness does the work, with you in charge.",
+      "matrixTitle": "A chat answers. The Harness does the work.",
+      "matrixLead": "TritonGPT and TritonAI Harness, side by side. You stay in charge of both.",
       "matrixRows": [
         {
           "label": "What it does",
@@ -7753,90 +7742,11 @@ export const slides = [
     "slug": "cabinet-harness-capabilities",
     "type": "content",
     "content": [],
-    "title": "TritonAI Harness: Built by the People Who Do the Work",
-    "subtitle": "A desktop AI workspace where staff turn know-how into working tools, without writing code",
-    "layout": "project-roster",
-    "backgroundColor": "#F5F0E6",
+    "title": "TritonAI Harness: built by the people who do the work",
+    "subtitle": "A desktop AI workspace where staff turn know-how into working tools, without writing code.",
+    "layout": "cabinet-outline",
     "managerLabel": "TritonAI Harness: capabilities, connections, safeguards",
     "managerSummary": "Citizen-developer framing of the Harness from the nightly build installed on Brett's Mac (Sep 22, 2026): skills, projects, and computer use; Microsoft 365, Google Workspace, GitHub, Kuali Build, and n8n connectors plus campus and commercial models; approvals, protected keys, and central management.",
-    "roster": {
-      "columns": 3,
-      "groups": [
-        {
-          "label": "What it does",
-          "color": "#00629B",
-          "items": [
-            {
-              "icon": "Blocks",
-              "name": "Skills",
-              "text": "Packaged know-how, like the UC San Diego branding skill, that anyone can call on in plain language to build a tool, a report, or a page.",
-              "detail": "Describe what you need · no programming required"
-            },
-            {
-              "icon": "FolderOpen",
-              "name": "Projects",
-              "text": "Each piece of work keeps its own files, conversations, and context, so a request tracker or a daily briefing picks up where it left off.",
-              "detail": "Plan first, then build · by typing or by voice"
-            },
-            {
-              "icon": "Monitor",
-              "name": "Computer Use",
-              "text": "When a system has no connector, it can work a desktop app or its built-in browser the way a person would, and show what it did.",
-              "detail": "Turned on in the current build"
-            }
-          ]
-        },
-        {
-          "label": "What it connects to",
-          "color": "#C69214",
-          "items": [
-            {
-              "icon": "Calendar",
-              "name": "Microsoft 365 and Google Workspace",
-              "text": "Reads mail, calendars, Teams chats, and Drive files, manages meetings, and drafts email for review.",
-              "detail": "Email stays a draft · a person always presses send"
-            },
-            {
-              "icon": "GitBranch",
-              "name": "Campus Systems",
-              "text": "Kuali Build forms and approvals, GitHub for code, and n8n workflows that keep running after the conversation ends.",
-              "detail": "Five connectors installed in the current build"
-            },
-            {
-              "icon": "Server",
-              "name": "Campus and Commercial Models",
-              "text": "Campus-hosted open models keep sensitive work on UC San Diego infrastructure; leading commercial models are there when a task needs them.",
-              "detail": "TritonAI On-Prem and TritonAI Cloud in one app"
-            }
-          ]
-        },
-        {
-          "label": "What keeps it safe",
-          "color": "#182B49",
-          "items": [
-            {
-              "icon": "ShieldCheck",
-              "name": "Approvals",
-              "text": "Supervised, Auto, and Full access modes set how far it goes on its own; consequential steps wait for a yes.",
-              "detail": "The person stays accountable for every action"
-            },
-            {
-              "icon": "Shield",
-              "name": "Protected Keys",
-              "text": "Sign-ins and keys sit in the computer's secure store. The AI works through them without ever seeing them.",
-              "detail": "No passwords pasted into prompts"
-            },
-            {
-              "icon": "Building2",
-              "name": "Campus-Managed",
-              "text": "Code-signed, updated with one click, and governed by a TritonAI policy, with UC San Diego branding and accessibility built in.",
-              "detail": "One supported app instead of a dozen personal tools"
-            }
-          ]
-        }
-      ],
-      "footnote": "Features from the current nightly build. A non-programmer administrator used it to build a complete desktop app, the OnBase API Explorer."
-    },
     "audiences": [
       "cabinet"
     ],
@@ -7846,7 +7756,61 @@ export const slides = [
     },
     "managerSection": "Platform",
     "durationSeconds": 60,
-    "speakerNotes": "One minute. Capabilities in three bands: what it does (skills, projects, computer use), what it connects to (Microsoft 365, Google Workspace, Kuali Build, GitHub, n8n, campus and commercial models), and what keeps it safe (approval modes, protected keys, campus-managed). Source: the installed nightly build, Sept 22, 2026, and the plugin catalog on the Harness training page. Email stays a draft; a person presses send."
+    "speakerNotes": "One minute. Capabilities in three bands: what it does (skills, projects, computer use), what it connects to (Microsoft 365, Google Workspace, Kuali Build, GitHub, n8n, campus and commercial models), and what keeps it safe (approval modes, protected keys, campus-managed). Source: the installed nightly build, Sept 22, 2026, and the plugin catalog on the Harness training page. Email stays a draft; a person presses send. Other details from the full card version: skills like the UC San Diego branding skill build a tool, a report, or a page; projects let a request tracker or a daily briefing pick up where it left off; five connectors are installed in the current build; TritonAI On-Prem and TritonAI Cloud sit in one app; UC San Diego branding and accessibility are built in; one supported app instead of a dozen personal tools. A non-programmer administrator used it to build a complete desktop app, the OnBase API Explorer.",
+    "columns": [
+      {
+        "label": "What it does",
+        "items": [
+          {
+            "heading": "Skills",
+            "text": "Packaged know-how, like UC San Diego branding, that anyone can call on in plain language."
+          },
+          {
+            "heading": "Projects",
+            "text": "Each piece of work keeps its own files, conversations, and context."
+          },
+          {
+            "heading": "Computer use",
+            "text": "With no connector, it works a desktop app or browser the way a person would."
+          }
+        ]
+      },
+      {
+        "label": "What it connects to",
+        "items": [
+          {
+            "heading": "Microsoft 365 and Google",
+            "text": "Mail, calendars, chats, and files. Email stays a draft; a person presses send."
+          },
+          {
+            "heading": "Campus systems",
+            "text": "Kuali Build, GitHub, and n8n workflows that keep running after the conversation."
+          },
+          {
+            "heading": "Campus and commercial models",
+            "text": "Campus-hosted open models for sensitive work; commercial models when a task needs them."
+          }
+        ]
+      },
+      {
+        "label": "What keeps it safe",
+        "items": [
+          {
+            "heading": "Approvals",
+            "text": "Supervised, Auto, or Full access; consequential steps wait for a yes."
+          },
+          {
+            "heading": "Protected keys",
+            "text": "Sign-ins stay in the computer's secure store; the AI never sees them."
+          },
+          {
+            "heading": "Campus-managed",
+            "text": "Code-signed, one-click updates, and governed by a TritonAI policy."
+          }
+        ]
+      }
+    ],
+    "note": "Features from the current nightly build."
   },
   {
     "id": 1036,
@@ -7869,8 +7833,8 @@ export const slides = [
       "kicker": "TritonAI Harness",
       "title": "The Harness at work",
       "label": "TritonAI Harness · plugins, skills, a real task",
-      "setup": "First the plugins that connect it to campus systems, and the skills that package know-how. Then a real task: summarize workshop feedback and build a UC San Diego results page.",
-      "watchFor": "The UCSD Branding skill in the request, the missing ratings it flags, and the finished page opening beside the conversation.",
+      "setup": "Plugins connect it to campus systems; skills package know-how. Then a real task: summarize workshop feedback as a UC San Diego results page.",
+      "watchFor": "The UCSD Branding skill in the request, the missing ratings it flags, and the finished page beside the conversation.",
       "seconds": 7
     },
     "videoSrc": "/media/cabinet/cabinet-harness-in-action-guided.mp4",
@@ -7958,11 +7922,11 @@ export const slides = [
       "label": "Citizen development"
     },
     "intro": {
-      "kicker": "live run, sped up",
+      "kicker": "Computer use · live run, sped up",
       "title": "The Harness takes our new training",
       "label": "TritonAI Harness at work · sped up",
-      "setup": "I asked the Harness to open tritonai.ucsd.edu, find the new TritonAI Discovery Series, play the first video, and then answer the knowledge check.",
-      "watchFor": "It works the browser on its own: finds the series, starts the Chancellor's video, then answers the knowledge check.",
+      "setup": "I asked the Harness to open tritonai.ucsd.edu, find the new TritonAI Discovery Series, play the first video, and answer the knowledge check.",
+      "watchFor": "It works the browser on its own, the way a person would, from the home page to the quiz.",
       "seconds": 7
     },
     "videoSrc": "/media/cabinet/cabinet-harness-discovery-demo.mp4",
@@ -8016,7 +7980,7 @@ export const slides = [
       }
     ],
     "audiences": [
-      "cabinet"
+      "cabinet-backup"
     ],
     "managerSection": "Platform",
     "durationSeconds": 45,
@@ -8024,7 +7988,7 @@ export const slides = [
       "part": 2,
       "label": "Citizen development"
     },
-    "speakerNotes": "45 seconds. These come from the use case library in the Harness training, each tied to a plugin ability: Microsoft 365 read and opt-in drafts, Kuali Build read-only, the campus n8n plugin, and GitHub with the UCSD Accessibility Compliance skill. Drafts are never sent automatically; the n8n workflow stays inactive until reviewed; the Kuali Build check is read-only.",
+    "speakerNotes": "Cabinet backup (moved Oct 9 for time and to avoid repeating the morning briefing shown in Part 3). 45 seconds. These come from the use case library in the Harness training, each tied to a plugin ability: Microsoft 365 read and opt-in drafts, Kuali Build read-only, the campus n8n plugin, and GitHub with the UCSD Accessibility Compliance skill. Drafts are never sent automatically; the n8n workflow stays inactive until reviewed; the Kuali Build check is read-only.",
     "compact": true
   },
   {
@@ -8374,7 +8338,7 @@ export const slides = [
     ],
     "managerSection": "Sovereign AI and Scale",
     "durationSeconds": 60,
-    "speakerNotes": "Part 4: what powers everything shown so far. One minute. Sovereign inference as a service is a core ecosystem pillar alongside approved commercial frontier APIs. Model capability, release pacing and government review are outside university control; retaining a deployable open-weight option gives us more control over operations. The August 18 OpenAI source documents historical pauses, not an assertion that all commercial models are currently unavailable. EO 14409 section 3 establishes a voluntary framework with up to 30 days of early government access, expressly not mandatory licensing or preclearance. NVIDIA is a U.S. company; its coalition is global. NVIDIA reports strong open-model benchmarks, not universal parity with every proprietary frontier model. These models are candidates to evaluate, not a claim that Nemotron is already deployed at UCSD. Sovereign means control over the service and deployment; it does not mean risk-free, no oversight, or every gateway request on campus GPUs. Campus-managed inference still requires evaluation, isolation, access controls and monitoring. Routing, hardware capacity, support and model licensing determine the operational benefit. Our recommendation in row 3 is a strategic inference from the source facts. Sources checked October 8, 2026. Revised allocation: 90 seconds. Lead with sovereign AI, the second pillar powering the citizen developer ecosystem and research. Berkeley gateway use is confirmed in Brett/Shawn’s October 8 discussion; expanded campus operationalization and UCOP funding/broker options remain discussion, not an approved UC-wide launch. A support liaison at each campus and token attribution would support expansion. UC Tech News article is still a draft; Dan’s quote awaits his AVC approval and is excluded. Anthropic/OpenAI contract updates are omitted until current terms/status and Pradeep’s preferred wording are confirmed. Keep commercial/open-weight comparison, NVIDIA sources and Navier–Stokes detail in backup for questions. Sovereign refers to service/deployment control, not a promise that every route is on campus GPUs or that data never leaves a workstation.",
+    "speakerNotes": "One minute. Follows the gateway usage slide. Sovereign inference as a service is a core ecosystem pillar alongside approved commercial frontier APIs. Model capability, release pacing and government review are outside university control; retaining a deployable open-weight option gives us more control over operations. The August 18 OpenAI source documents historical pauses, not an assertion that all commercial models are currently unavailable. EO 14409 section 3 establishes a voluntary framework with up to 30 days of early government access, expressly not mandatory licensing or preclearance. NVIDIA is a U.S. company; its coalition is global. NVIDIA reports strong open-model benchmarks, not universal parity with every proprietary frontier model. These models are candidates to evaluate, not a claim that Nemotron is already deployed at UCSD. Sovereign means control over the service and deployment; it does not mean risk-free, no oversight, or every gateway request on campus GPUs. Campus-managed inference still requires evaluation, isolation, access controls and monitoring. Routing, hardware capacity, support and model licensing determine the operational benefit. Our recommendation in row 3 is a strategic inference from the source facts. Sources checked October 8, 2026. Revised allocation: 90 seconds. Lead with sovereign AI, the second pillar powering the citizen developer ecosystem and research. Berkeley gateway use is confirmed in Brett/Shawn’s October 8 discussion; expanded campus operationalization and UCOP funding/broker options remain discussion, not an approved UC-wide launch. A support liaison at each campus and token attribution would support expansion. UC Tech News article is still a draft; Dan’s quote awaits his AVC approval and is excluded. Anthropic/OpenAI contract updates are omitted until current terms/status and Pradeep’s preferred wording are confirmed. Keep commercial/open-weight comparison, NVIDIA sources and Navier–Stokes detail in backup for questions. Sovereign refers to service/deployment control, not a promise that every route is on campus GPUs or that data never leaves a workstation.",
     "section": {
       "part": 4,
       "label": "Foundation"
@@ -8384,6 +8348,8 @@ export const slides = [
     "id": 1012,
     "slug": "cabinet-scale",
     ...gatewayUsageDashboard,
+    "title": "The foundation already carries substantial campus use",
+    "claimNote": null,
     "audiences": [
       "cabinet"
     ],
@@ -8391,7 +8357,7 @@ export const slides = [
     "managerLabel": "Gateway scale: January–September 2026",
     "managerSummary": "Nine-month token chart, September route mix, and cumulative Gateway totals from the current TritonAI website.",
     "durationSeconds": 30,
-    "speakerNotes": `One minute. Show that campus use is already substantial; distinguish tokens from users or measured productivity. ${gatewayUsageDashboard.speakerNotes}`
+    "speakerNotes": `Part 4 opens here: what powers everything shown so far. Thirty seconds. Show that campus use is already substantial; distinguish tokens from users or measured productivity. Source line moved off the slide: TritonAI Gateway usage, Jan–Sep 2026, reviewed Oct 5, 2026. ${gatewayUsageDashboard.speakerNotes}`
   },
   {
     "id": 1013,
@@ -8399,7 +8365,7 @@ export const slides = [
     "type": "content",
     "layout": "cabinet-outline",
     "title": "More builders. More useful workflows.",
-    "subtitle": "Support the ecosystem and validate what works.",
+    "subtitle": "ITS-built verticals, staff-built tools, and a campus-controlled foundation. Three asks:",
     "content": [
       {
         "heading": "Prioritize contract review",
@@ -8535,7 +8501,7 @@ export const slides = [
     "slug": "cabinet-class-planner-utilization",
     "type": "content",
     "content": [],
-    "title": "TritonGPT Class Planner and Standalone Class Planner",
+    "title": "Class Planner demand peaks with enrollment passes",
     "subtitle": "Daily usage across the summer 2026 enrollment passes",
     "layout": "daily-usage-chart",
     "backgroundColor": "#F5F0E6",
@@ -8836,8 +8802,8 @@ export const slides = [
     "slug": "cabinet-verticals-at-a-glance",
     "type": "content",
     "layout": "cabinet-demo",
-    "title": "Transcript matching, college selection, and the Faculty Expertise Directory",
-    "subtitle": "Admissions and research teams, each with a clear next step.",
+    "title": "More verticals in admissions and research",
+    "subtitle": "Each with a clear next step.",
     "audiences": [
       "cabinet"
     ],
@@ -8940,7 +8906,7 @@ export const slides = [
     "type": "content",
     "layout": "cabinet-outline",
     "title": "Citizen development",
-    "subtitle": "What is the Harness, and how can you and your staff use it?",
+    "subtitle": "What is citizen development, and how can you and your staff use the Harness?",
     "content": [],
     "divider": {
       "part": 2
@@ -8962,7 +8928,7 @@ export const slides = [
     "type": "content",
     "layout": "cabinet-outline",
     "title": "Departments are building with it",
-    "subtitle": "IPPS and RRSS examples, built with the Harness and n8n",
+    "subtitle": "IPPS and RRSS examples, built with the Harness and n8n.",
     "audiences": [
       "cabinet"
     ],

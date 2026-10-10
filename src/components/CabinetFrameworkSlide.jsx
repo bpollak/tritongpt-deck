@@ -68,6 +68,26 @@ export default function CabinetFrameworkSlide({ slide, staticPreview = false }) 
             </tbody>
           </table>
         </div>
+      ) : slide.columns ? (
+        <div className="cabinet-columns">
+          <p className="cabinet-framework-takeaway">{slide.subtitle}</p>
+          <div className="cabinet-columns__grid">
+            {slide.columns.map((column) => (
+              <section className="cabinet-columns__col" key={column.label}>
+                <p className="cabinet-columns__label">{column.label}</p>
+                <ul>
+                  {column.items.map((item) => (
+                    <li key={item.heading}>
+                      <h3>{item.heading}</h3>
+                      <p>{item.text}</p>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ))}
+          </div>
+          {slide.note && <p className="cabinet-columns__note">{slide.note}</p>}
+        </div>
       ) : (
         <div className="cabinet-framework-outline">
           <p className="cabinet-framework-takeaway">{slide.subtitle}</p>
