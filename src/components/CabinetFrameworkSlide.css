@@ -294,3 +294,11 @@
    between the one-line takeaway and the column headers. */
 .cabinet-canvas-content > .cabinet-framework-slide:has(.cabinet-impact) > h1 { font-size: 58px; margin-bottom: 10px; }
 .cabinet-canvas-content .cabinet-impact .cabinet-framework-takeaway { font-size: 22px; margin-bottom: 20px; }
+
+/* Seven or more rows: tighter spacing so the table clears the footer */
+.cabinet-canvas-content .cabinet-impact:has(tbody tr:nth-child(7)) .cabinet-impact-table tbody th,
+.cabinet-canvas-content .cabinet-impact:has(tbody tr:nth-child(7)) .cabinet-impact-table tbody td { padding-top: 7px; padding-bottom: 7px; }
+.cabinet-canvas-content .cabinet-impact:has(tbody tr:nth-child(7)) .cabinet-impact-table tbody th strong,
+.cabinet-canvas-content .cabinet-impact:has(tbody tr:nth-child(7)) .cabinet-impact-figure { font-size: 22px; }
+.cabinet-canvas-content .cabinet-framework-slide:has(.cabinet-impact tbody tr:nth-child(7)) > h1 { margin-bottom: 4px; }
+.cabinet-canvas-content .cabinet-impact:has(tbody tr:nth-child(7)) .cabinet-framework-takeaway { margin-bottom: 4px; }

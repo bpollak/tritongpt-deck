@@ -49,6 +49,8 @@
 - **UX pass (Oct 9, late):** takeaway titles on the impact, cash, admissions/research, comparison, chart, and gateway slides; divider questions now repeat the opening slide word for word; impact rows follow the demo order; intro cards trimmed to two lines of setup and one or two of "watch for"; the Harness capabilities slide rebuilt as a dark three-column Cabinet slide (details moved to its speaker notes); hosting slide without the marker label and Tier 0 tool chips; gateway source line moved to the notes; gateway usage now opens Part 4 ahead of sovereign inference (evidence first, then the strategy that leads into the asks); the close names the three parts before the asks.
 - **Moved to the backup view:** "What staff automate with it" (repeated the morning briefing shown in Part 3, five dense rows, and was already the first cut for time).
 
+- **Added Oct 10:** AI Tutor in Canvas (impact row plus a 43s cut of the PK setup video, after ServiceNow): launched fall with 5 instructors, scaling in winter. TA–Student Matching on What's next: resumes Q1 2027 after TSS go-live. Research Grant Compliance Agent left out (no activity found after the April proposal).
+
 ## Before Monday
 
 - Nicole: confirm the public name (working name: Faculty Expertise Directory); final contract review queue and OCGA priority; broad Word add-in install gate

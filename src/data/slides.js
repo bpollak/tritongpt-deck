@@ -7292,6 +7292,13 @@ export const slides = [
           "basis": "Scenario, not yet measured"
         },
         {
+          "name": "AI Tutor in Canvas",
+          "status": "Launched fall",
+          "tone": "live",
+          "impact": "5 instructors this fall; scaling in winter",
+          "basis": "81% of pilot students said it helped them understand"
+        },
+        {
           "name": "Transcript Matching",
           "status": "In production",
           "tone": "live",
@@ -7609,6 +7616,40 @@ export const slides = [
     },
     "managerSummary": "ServiceNow routing, two cases: desktop hardware to ITS-FieldSupport-Intake (79.9%) and a DNS request to ITS-Hostmaster (96.9%), with the Suggest button, top recommendation, and filled assignment group highlighted and zoomed.",
     "speakerNotes": "50 seconds; voice over. Today most tickets land with the Service Desk first and get handed off. Here the agent clicks Suggest Assignment Group. First case: a department desktop won't power on; the model recommends ITS-FieldSupport-Intake at 79.9% and the group fills in. Second case: a request for DNS records on a university server; it recommends ITS-Hostmaster at 96.9%. The value is skipping the hand-off so the specialist team starts sooner. The agent stays in control and can pick another group. Scores are model confidence for these examples, not measured accuracy. Recording: October 8, 2026 capture on unsaved new-case forms in production ServiceNow; nothing saved or submitted. Built from captured frames; the yellow highlights and zooms were added in editing on Oct 9 (docs/recapture-20261009/sn_edit.py). The VPN example that routed to the Service Desk was dropped."
+  },
+  {
+    "id": 1043,
+    "slug": "cabinet-ai-tutor-demo",
+    "type": "video",
+    "layout": "cabinet-demo",
+    "title": "AI Tutor in Canvas",
+    "subtitle": "Instructors set up a course tutor in minutes; students get a Socratic guide grounded in course materials.",
+    "content": [],
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Vertical Solutions",
+    "durationSeconds": 50,
+    "section": {
+      "part": 1,
+      "label": "Vertical solutions"
+    },
+    "intro": {
+      "kicker": "Canvas",
+      "title": "AI Tutor in Canvas",
+      "setup": "Instructors pick the course materials and teaching style; students get a tutor that guides them to answers instead of handing them out.",
+      "watchFor": "Choosing the knowledge sources and Socratic style, then a student conversation.",
+      "seconds": 6
+    },
+    "videoSrc": "/media/cabinet/cabinet-ai-tutor-canvas.mp4",
+    "poster": "/media/cabinet/cabinet-ai-tutor-canvas-poster.jpg",
+    "videoLoop": false,
+    "videoClearNav": false,
+    "videoAutoPlay": true,
+    "hideDemoBadge": true,
+    "demoOnly": true,
+    "managerSummary": "Cabinet cut of the PK AI Tutor setup video (Sep 2026): Canvas course, tutor configuration, Socratic style, student chat.",
+    "speakerNotes": "About 50 seconds. Launched this fall with 5 instructors; scaling to more courses in winter (Brett, Oct 10). Instructors choose which Canvas pages, files, and sites the tutor may use, and the teaching style (Socratic or direct). Pilot feedback 2025–26: 81% said it helped them understand concepts, 86% found it easy to use, 67% want it in future courses (68 student responses; tritonai.ucsd.edu/tritongpt/instruction.html). Video: the September 2026 instructional pilot capture used in the PK view, trimmed to the Canvas portion and sped up 1.8x for Cabinet."
   },
   {
     "id": 1006,
@@ -8867,6 +8908,13 @@ export const slides = [
           "tone": "pilot",
           "impact": "Finance and HR",
           "basis": "First versions scoped to limited audiences"
+        },
+        {
+          "name": "TA–Student Matching",
+          "status": "Q1 2027",
+          "tone": "pilot",
+          "impact": "Chemistry & Biochemistry",
+          "basis": "Resumes after TSS go-live"
         },
         {
           "name": "Contract Review: next groups",
