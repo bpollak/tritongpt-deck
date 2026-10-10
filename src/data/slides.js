@@ -7267,7 +7267,7 @@ export const slides = [
       "part": 1,
       "label": "Vertical solutions"
     },
-    "speakerNotes": "90 seconds. These are the vertical solutions IT Services builds for whole campus processes. Group them: delivering now, and in progress. Say the impact type with each number. Contract review 120 to 11 minutes is a timed internal pilot benchmark, not a guarantee (CLAIM-LEDGER contract-reviewer-consolidated). Transcript matching (Brett, Oct 10): cost avoidance of temporary labor; it avoids hiring dozens of temporary staff for transcript entry. Further validation work begins in 2027 after TSS go-live. Supporting figures if asked: ~60K transcripts a year, ~225/hour at 98%+ in pilot; earlier planning estimate up to $500K a year in capacity. Frame as avoided temporary hiring, not reductions to existing staff. Ticket routing: the hours figure is a scenario at an assumed 90% accuracy per 10,000 eligible tickets (backup slide cabinet-routing-savings), not measured performance. Website assistants: the retired vendor contract is $300K a year in cost avoided (scaling-engagement-the-tritongpt-widget); 16 websites live; College Selection Assistant is one of them. Cash application: $1.3–3.0M a year is the proposed benefit from the March 2026 business case republished Sept 30, being reconciled by BFS, not measured or net ROI; $79M is a historical average monthly undistributed balance, not a loss. Faculty Expertise Directory: now planning its rollout phase after the VCRI demonstration; no measured impact yet. Items drawn from the PK portfolio slides ai-portfolio-at-scale and ai-portfolio-pilots.",
+    "speakerNotes": "90 seconds. These are the vertical solutions IT Services builds for whole campus processes. Group them: delivering now, and in progress. Say the impact type with each number. Contract review 120 to 11 minutes is a timed internal pilot benchmark, not a guarantee (CLAIM-LEDGER contract-reviewer-consolidated). Transcript matching (Brett, Oct 10): cost avoidance of temporary labor; it avoids hiring dozens of temporary staff for transcript entry. Further validation work begins in 2027 after TSS go-live. Supporting figures if asked: ~60K transcripts a year, ~225/hour at 98%+ in pilot; earlier planning estimate up to $500K a year in capacity. Frame as avoided temporary hiring, not reductions to existing staff. Ticket routing: the hours figure is a scenario at an assumed 90% accuracy per 10,000 eligible tickets (backup slide cabinet-routing-savings), not measured performance. Website assistants: the retired vendor contract is $300K a year in cost avoided (scaling-engagement-the-tritongpt-widget); 16 websites live; College Selection Assistant is one of them. Cash application: $1.3–3.0M a year is the proposed benefit from the March 2026 business case republished Sept 30, being reconciled by BFS, not measured or net ROI; $79M is a historical average monthly undistributed balance, not a loss. TritonAI Harness (added Oct 10): the platform row and the bridge to Part 2; generally available from the TritonAI website, 100+ active users as of the Sep 21 rollout review; automations still in beta for a subset of users. The Faculty Expertise Directory moved to Part 3 as a citizen developer project. Items drawn from the PK portfolio slides ai-portfolio-at-scale and ai-portfolio-pilots.",
     "impactTable": {
       "rows": [
         {
@@ -7313,11 +7313,11 @@ export const slides = [
           "basis": "Retired vendor contract"
         },
         {
-          "name": "Faculty Expertise Directory",
-          "status": "Planning",
-          "tone": "progress",
-          "impact": "Planning the rollout phase",
-          "basis": "Impact not yet measured"
+          "name": "TritonAI Harness",
+          "status": "Available",
+          "tone": "live",
+          "impact": "100+ active users building their own tools",
+          "basis": "Citizen development platform (Part 2)"
         }
       ]
     },
@@ -7334,7 +7334,7 @@ export const slides = [
       "cabinet"
     ],
     "managerSection": "Citizen Developer Showcase",
-    "durationSeconds": 60,
+    "durationSeconds": 57,
     "videoSrc": "/media/cabinet/cabinet-class-planner-guided.mp4",
     "poster": "/media/cabinet/cabinet-class-planner-guided-poster.jpg",
     "videoLoop": false,
@@ -7345,7 +7345,7 @@ export const slides = [
     "managerSummary": "Continuous recording of the live Class Planner: later-starts preference, MATH-010A, CSE-008A and COGS-001, schedule alternatives, Details, and Map.",
     "recording": {
       "label": "Guide → auto planning with later starts → three courses → compare schedules → details and walking map",
-      "format": "One continuous take at real speed • silent for presenter voice-over",
+      "format": "One continuous take with guided highlights and zooms; two loading flashes cut (Oct 10) • silent for presenter voice-over",
       "mediaStem": "cabinet-class-planner-flow",
       "status": "captured and reviewed"
     },
@@ -7372,15 +7372,15 @@ export const slides = [
     "id": 1018,
     "slug": "cabinet-directory-demo",
     "type": "video",
-    "title": "Find expertise for a department need",
-    "subtitle": "Turn a research question into leads a person can review.",
+    "title": "Faculty Expertise Directory",
+    "subtitle": "A research-support team built a tool that turns a research need into faculty leads to review.",
     "content": [],
     "audiences": [
       "cabinet"
     ],
-    "managerSection": "Administrative Verticals",
-    "managerSummary": "Full Faculty Expertise Directory app: expertise request, summary, and naturally scrolled faculty matches.",
-    "durationSeconds": 0,
+    "managerSection": "Citizen Developer Showcase",
+    "managerSummary": "Citizen developer project (Part 3): Faculty Expertise Directory whole-app recording, expertise request to ranked faculty leads.",
+    "durationSeconds": 40,
     "videoSrc": "/media/cabinet/cabinet-directory-wide.mp4",
     "poster": "/media/cabinet/cabinet-directory-wide-poster.jpg",
     "releaseContext": {
@@ -7394,12 +7394,24 @@ export const slides = [
       "mediaStem": "cabinet-directory",
       "status": "captured and reviewed"
     },
-    "speakerNotes": "One minute, including a fresh 33-second whole-app recording. Voice-over: A department starts with a question and gets potential experts to review, instead of beginning the search from scratch. The app header, input, summary, and naturally scrolled faculty results stay in context; no crops or digital zoom. A real coastal flooding/climate adaptation expertise query produced the shown matches on October 8. Scores and public-source profiles require human review. No outreach or selection occurred. Directory remains in development and is a team-built ecosystem example, not a verified Harness-built app. Capture traceability: docs/cabinet-wide-retakes-manifest.json; detailed earlier source qualifications retained. Revised location: optional full recording for Q&A. The active quick-hit film includes an excerpt. October 8 transcript: VCRI demo with Faith Hawkins and Corey went well; next phase continues with Nicole’s team. Source is scraped public data with gaps in arts and humanities; improved backend coverage is a main next-phase task. Shawn explicitly says the name is Directory. Final external naming confirmation with Nicole remains a coordination item, not permission to contact her.",
+    "speakerNotes": "About 40 seconds (6s intro + 33s clip). Moved from vertical solutions to Part 3 as a citizen developer project (Brett, Oct 10). Voice-over: a department starts with a question and gets potential experts to review instead of searching from scratch. The app still shows its earlier name (Faculty Finder); working name Faculty Expertise Directory, confirm the final name with Nicole. After the successful VCRI demonstration with Faith and Corey, Nicole's team continues development and is planning the rollout phase; arts and humanities coverage is the focus (public-source data has gaps). Corey is in the room. Scores and profiles need human review; do not describe ranking as an institutional faculty evaluation. No outreach or selection occurred. A real coastal flooding/climate adaptation query produced the shown matches on October 8.",
     "videoLoop": false,
     "videoClearNav": false,
     "videoAutoPlay": true,
     "hideDemoBadge": true,
-    "demoOnly": true
+    "demoOnly": true,
+    "layout": "cabinet-demo",
+    "section": {
+      "part": 3,
+      "label": "What people build"
+    },
+    "intro": {
+      "kicker": "Citizen developer project",
+      "title": "Faculty Expertise Directory",
+      "setup": "A research-support team built this to match a research or funding need to UC San Diego faculty with the right expertise. It is planning its rollout after a successful VCRI demo.",
+      "watchFor": "A plain-language expertise request becomes a summary and ranked faculty leads for a person to review.",
+      "seconds": 6
+    }
   },
   {
     "id": 1003,
@@ -7413,10 +7425,10 @@ export const slides = [
       "cabinet"
     ],
     "managerSection": "Citizen Developer Showcase",
-    "durationSeconds": 45,
+    "durationSeconds": 26,
     "recording": {
       "label": "Location → walk-in → contact details → readiness checks → check-in complete",
-      "format": "One continuous take at real speed • silent for presenter voice-over",
+      "format": "One continuous take, sped up (2x through the form, 1.4x through the readiness checks) • silent for presenter voice-over",
       "mediaStem": "cabinet-passport-flow",
       "status": "captured and reviewed"
     },
@@ -8846,7 +8858,7 @@ export const slides = [
     "title": "More verticals in admissions and research",
     "subtitle": "Each with a clear next step.",
     "audiences": [
-      "cabinet"
+      "cabinet-backup"
     ],
     "managerSection": "Administrative Verticals",
     "durationSeconds": 60,

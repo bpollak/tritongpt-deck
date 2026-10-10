@@ -26,6 +26,7 @@ export const slideManagerState = {
     "cabinet-inbox-priority-sorter",
     "cabinet-personal-productivity-demo",
     "cabinet-department-builders",
+    "cabinet-directory-demo",
     "cabinet-passport-demo",
     "cabinet-class-planner-demo",
     "cabinet-class-planner-utilization",
@@ -127,7 +128,6 @@ export const slideManagerState = {
     "the-team-behind-tritonai",
     "thank-you",
     "lmu-thank-you",
-    "cabinet-directory-demo",
     "cabinet-routing-savings",
     "cabinet-research-data-trust",
     "cabinet-training-discovery-demo"
@@ -774,7 +774,7 @@ export const slideManagerState = {
       "cabinet"
     ],
     "cabinet-directory-demo": [
-      "cabinet-backup"
+      "cabinet"
     ],
     "cabinet-routing-savings": [
       "cabinet-backup"
@@ -786,7 +786,7 @@ export const slideManagerState = {
       "cabinet-backup"
     ],
     "cabinet-verticals-at-a-glance": [
-      "cabinet"
+      "cabinet-backup"
     ],
     "cabinet-department-builders": [
       "cabinet"

@@ -7,11 +7,10 @@
 | 0:00–0:30 | TritonAI Operating Review | Open. |
 | 0:30–1:30 | By the end of this presentation, you'll know | Three questions: what ITS is building and its payback; what citizen development and the Harness are; what people have built with it. |
 | **Part 1** | **Vertical solutions** (divider, 8s) | |
-| 1:38–2:53 | Campus time and cost savers | Impact of each vertical, in the order you'll show them. Say the type of each number (pilot, estimate, scenario, avoided cost). |
+| 1:38–2:53 | Campus time and cost savers | Impact of each vertical, in the order you'll show them. Say the type of each number (pilot, estimate, scenario, avoided cost). Last row is the TritonAI Harness (100+ active users): use it as the bridge to Part 2. |
 | 2:53–4:08 | Apply received cash faster | Frame the project in one line, then walk the four phases (Oct 2026 – Jun 2027). |
 | 4:08–5:33 | Contract review inside Word (intro + recording) | Live Word run: three rules, tracked changes, agent answer. OCGA is next. |
 | 5:33–6:23 | Routing tickets to the right team (intro + recording) | Two tickets routed past the Service Desk: desktop to Field Support (80%), DNS to Hostmaster (97%). Highlights and zooms guide the eye; voice over. |
-| 6:23–7:23 | More verticals in admissions and research | Transcript matching, college selection, Faculty Expertise Directory (Directory clip plays; the app still shows its earlier name). |
 | +0:55 | College Exploration Assistant (intro + 49s recording) | Live public assistant on admissions.ucsd.edu/why/colleges: a prospective first-year (marine biology, outdoors, close-knit community) gets four colleges with citations after three messages. Persona card and closing board are overlays; the conversation is real, sped up while it thinks. |
 | 7:23–8:08 | What's next in vertical solutions | Payment request review, RFX, security review, data agents, OCGA, hosting. |
 | **Part 2** | **Citizen development** (divider, 8s) | |
@@ -25,7 +24,8 @@
 | 14:59–15:39 | Inbox priority sorter | How I use it: inbox triage. |
 | 15:39–16:29 | Close the loop on the working day | Morning briefing and evening debrief. |
 | 16:29–16:54 | Departments are building with it | Core Bio pricing and Facilities compliance (team-reported). |
-| 16:54–17:39 | Passport Services check-in | Department-designed service app. |
+| +0:40 | Faculty Expertise Directory (intro + 33s recording) | Citizen developer project: research need to ranked faculty leads for review. Planning rollout after the VCRI demo; app still shows its earlier name. |
+| 16:54–17:39 | Passport Services check-in | Department-designed service app (clip now 20s, sped up). |
 | 17:39–18:39 | Class Planner | Course list to schedule options. Don’t claim the Harness built it. |
 | 18:39–19:09 | Class Planner demand peaks with enrollment passes | Daily usage around the enrollment passes. |
 | **Part 4** | **Foundation and close** | |
@@ -50,7 +50,8 @@
 - **UX pass (Oct 9, late):** takeaway titles on the impact, cash, admissions/research, comparison, chart, and gateway slides; divider questions now repeat the opening slide word for word; impact rows follow the demo order; intro cards trimmed to two lines of setup and one or two of "watch for"; the Harness capabilities slide rebuilt as a dark three-column Cabinet slide (details moved to its speaker notes); hosting slide without the marker label and Tier 0 tool chips; gateway source line moved to the notes; gateway usage now opens Part 4 ahead of sovereign inference (evidence first, then the strategy that leads into the asks); the close names the three parts before the asks.
 - **Moved to the backup view:** "What staff automate with it" (repeated the morning briefing shown in Part 3, five dense rows, and was already the first cut for time).
 
-- **Added Oct 10 (later):** College Exploration Assistant demo after "More verticals" (+55s). With the AI Tutor and this demo, content runs about 23 minutes; to get back near 21.5, skip the Class Planner usage chart (30s) and let the Directory clip on "More verticals" run in the background while you talk through it quickly.
+- **Oct 10 (Brett):** TritonAI Harness added as the last impact-table row; Faculty Expertise Directory moved out of vertical solutions into Part 3 as a citizen developer project (its demo follows "Departments are building with it"); "More verticals in admissions and research" moved to the backup view. Class Planner clip fixed (stray highlights, Friday column cut off by the zoom, a blank-schedule flash and a map-loading flash removed). Passport clip sped up from 35s to 20s.
+- **Added Oct 10 (later):** College Exploration Assistant demo after the AI Tutor (+55s). After the later Oct 10 changes (More verticals removed, Directory demo added, Passport and Class Planner shortened) content runs about 22.3 minutes; to get under 22, skip the Class Planner usage chart (30s).
 - **Added Oct 10:** AI Tutor in Canvas (impact row plus a 42s cut of the PK setup video that opens on the Canvas course with no pilot title card, after ServiceNow): launched fall with 5 instructors, scaling in winter. TA–Student Matching on What's next: resumes Q1 2027 after TSS go-live. Research Grant Compliance Agent left out (no activity found after the April proposal).
 
 ## Before Monday
