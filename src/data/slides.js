@@ -7600,7 +7600,7 @@ export const slides = [
       "cabinet"
     ],
     "managerSection": "Vertical Solutions",
-    "durationSeconds": 50,
+    "durationSeconds": 31,
     "section": {
       "part": 1,
       "label": "Vertical solutions"
@@ -7626,7 +7626,7 @@ export const slides = [
       "captureNote": "Support requests · actual recommendations · staff selects · nothing saved"
     },
     "managerSummary": "ServiceNow routing, two cases: desktop hardware to ITS-FieldSupport-Intake (79.9%) and a DNS request to ITS-Hostmaster (96.9%), with the Suggest button, top recommendation, and filled assignment group highlighted and zoomed.",
-    "speakerNotes": "50 seconds; voice over. Today most tickets land with the Service Desk first and get handed off. Here the agent clicks Suggest Assignment Group. First case: a department desktop won't power on; the model recommends ITS-FieldSupport-Intake at 79.9% and the group fills in. Second case: a request for DNS records on a university server; it recommends ITS-Hostmaster at 96.9%. The value is skipping the hand-off so the specialist team starts sooner. The agent stays in control and can pick another group. Scores are model confidence for these examples, not measured accuracy. Recording: October 8, 2026 capture on unsaved new-case forms in production ServiceNow; nothing saved or submitted. Built from captured frames; the yellow highlights and zooms were added in editing on Oct 9 (docs/recapture-20261009/sn_edit.py). The VPN example that routed to the Service Desk was dropped."
+    "speakerNotes": "50 seconds; voice over. Today most tickets land with the Service Desk first and get handed off. Here the agent clicks Suggest Assignment Group. First case: a department desktop won't power on; the model recommends ITS-FieldSupport-Intake at 79.9% and the group fills in. Second case: a request for DNS records on a university server; it recommends ITS-Hostmaster at 96.9%. The value is skipping the hand-off so the specialist team starts sooner. The agent stays in control and can pick another group. Scores are model confidence for these examples, not measured accuracy. Recording: October 8, 2026 capture on unsaved new-case forms in production ServiceNow; nothing saved or submitted. Built from captured frames; the yellow highlights and zooms were added in editing on Oct 9 (docs/recapture-20261009/sn_edit.py). The VPN example that routed to the Service Desk was dropped. Clip sped up 1.6x on Oct 10 (about 25s)."
   },
   {
     "id": 1043,
@@ -7728,11 +7728,23 @@ export const slides = [
           "icon": "FolderOpen",
           "tritongpt": {
             "title": "Find, understand, draft",
-            "detail": "Answers and drafts from campus sources and uploaded files."
+            "detail": "Answers and drafts from campus sources and your files."
           },
           "harness": {
             "title": "Carries a task to a saved result",
-            "detail": "Works through project files and checks its work; you review the output."
+            "detail": "Works through project files and checks its work."
+          }
+        },
+        {
+          "label": "Best fit",
+          "icon": "Target",
+          "tritongpt": {
+            "title": "Questions, review, drafting",
+            "detail": "Campus questions, document review, assistants."
+          },
+          "harness": {
+            "title": "Multi-step work",
+            "detail": "Changes files, analyzes data, builds artifacts."
           }
         },
         {
@@ -7745,6 +7757,30 @@ export const slides = [
           "harness": {
             "title": "Campus tools, within your access",
             "detail": "Microsoft 365, Google Workspace, GitHub, Kuali Build, n8n."
+          }
+        },
+        {
+          "label": "Where you work",
+          "icon": "Monitor",
+          "tritongpt": {
+            "title": "In the browser",
+            "detail": "Campus-hosted web service."
+          },
+          "harness": {
+            "title": "Installed workspace",
+            "detail": "Mac or Windows; a paired phone can direct it."
+          }
+        },
+        {
+          "label": "Typical result",
+          "icon": "FileCheck",
+          "tritongpt": {
+            "title": "A sourced answer or draft",
+            "detail": "A comparison, summary, or draft text."
+          },
+          "harness": {
+            "title": "A saved deliverable",
+            "detail": "A workbook, deck, website change, or workflow."
           }
         },
         {
@@ -7782,7 +7818,8 @@ export const slides = [
       "dataRule": "P1–P3 only within approved services and setups; P4 prohibited. Check the service, model route, and use case.",
       "accessRule": "Access follows your account permissions and the abilities enabled for each tool.",
       "verifiedDate": "October 8, 2026",
-      "kicker": "The engine"
+      "kicker": "The engine",
+      "singleView": true
     },
     "section": {
       "part": 2,
@@ -8943,7 +8980,7 @@ export const slides = [
       "cabinet"
     ],
     "managerSection": "Vertical Solutions",
-    "durationSeconds": 55,
+    "durationSeconds": 45,
     "section": {
       "part": 1,
       "label": "Vertical solutions"
@@ -8951,8 +8988,8 @@ export const slides = [
     "intro": {
       "kicker": "Admissions website",
       "title": "Which of the eight colleges fits me?",
-      "setup": "A prospective first-year student asks the College Exploration Assistant on admissions.ucsd.edu, live and public today.",
-      "watchFor": "It interviews the student, then suggests colleges with citations to each college's own pages.",
+      "setup": "A prospective first-year describes what matters to them: marine biology, sustainability, the outdoors, a flexible gen ed, a close-knit community, and service.",
+      "watchFor": "It matches those interests to specific colleges, quoting each college's own pages with citations.",
       "seconds": 6
     },
     "videoSrc": "/media/cabinet/cabinet-college-assistant.mp4",
@@ -8962,8 +8999,8 @@ export const slides = [
     "videoAutoPlay": true,
     "hideDemoBadge": true,
     "demoOnly": true,
-    "managerSummary": "Live recording (Oct 10, 2026) of the College Exploration Assistant on admissions.ucsd.edu/why/colleges: persona card, real three-turn conversation, highlighter on each suggested college, match board built from the answer.",
-    "speakerNotes": "About 55 seconds (6s intro + 49s clip). This is the public College Exploration Assistant on the admissions Colleges page, powered by TritonGPT. A prospective student says what they care about (here: marine biology, the outdoors, a close-knit community). It asks a couple of clarifying questions, then suggests colleges and quotes each college's own pages with citations. It frames suggestions as a starting point, not an assignment, and reminds students any major works from any college. Part of the Website Assistants line: about $300K in vendor cost avoided. The persona card and the closing match board are presentation overlays; the conversation is real and unedited apart from speed-ups while it thinks."
+    "managerSummary": "Live recording (Oct 10, 2026, take 2) of the College Exploration Assistant on admissions.ucsd.edu/why/colleges: detailed persona prompt, one-message answer with four colleges, highlighter on each, match board built from the answer.",
+    "speakerNotes": "About 45 seconds (6s intro + 39s clip). The public College Exploration Assistant on the admissions Colleges page, powered by TritonGPT. Re-recorded Oct 10 with a richer prompt (Brett): a first-year planning to major in marine biology who cares about climate and sustainability, surfs and hikes, wants a flexible gen ed, prefers a smaller close-knit community, and volunteers. In one message it suggested Muir (individual choice and environmental awareness), Seventh (changing-planet focus, flexible exploration), Eighth (community engagement, interdisciplinary problem solving), and Marshall (scholar-citizen values, social responsibility), quoting each college's own pages with citations. It frames these as suggestions, not an assignment, and notes any major works from any college. Part of the Website Assistants line: about $300K in vendor cost avoided. The persona card and closing board are presentation overlays; the conversation is real, sped up while typing and while it thinks."
   },
   {
     "id": 1035,

@@ -106,3 +106,10 @@
 /* Keep the view switcher clear of the presenter's mic control at bottom left. */
 .cabinet-canvas-content .cabinet-workflow-switcher {left:96px;}
 .cabinet-canvas-content .cabinet-workflow-switcher button {font-size:14px;padding:6px 12px;}
+
+/* Single view: all six rows on one slide, no tabs. */
+.cabinet-canvas-content .cabinet-workflow-adaptation--single .cabinet-workflow-detail-table th,
+.cabinet-canvas-content .cabinet-workflow-adaptation--single .cabinet-workflow-detail-table td {padding:6px 17px;}
+.cabinet-canvas-content .cabinet-workflow-adaptation--single .cabinet-workflow-detail-table tbody th {font-size:18px;}
+.cabinet-canvas-content .cabinet-workflow-adaptation--single .cabinet-workflow-cell-title {font-size:19px;margin-bottom:1px;}
+.cabinet-canvas-content .cabinet-workflow-adaptation--single .cabinet-workflow-cell-detail {font-size:16px;}

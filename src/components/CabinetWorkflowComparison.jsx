@@ -1,14 +1,16 @@
 import { useId, useState } from 'react';
-import { Server, FolderOpen, Archive, Plug, Eye, ShieldCheck } from 'lucide-react';
+import { Server, FolderOpen, Archive, Plug, Eye, ShieldCheck, Target, Monitor, FileCheck } from 'lucide-react';
 import './CabinetWorkflowComparison.css';
 import CabinetCanvas from './CabinetCanvas';
 
-const rowIcons = { Server, FolderOpen, Archive, Plug, Eye, ShieldCheck };
+const rowIcons = { Server, FolderOpen, Archive, Plug, Eye, ShieldCheck, Target, Monitor, FileCheck };
 
 // The website-style matrix is the entry view; the original animation stays intact.
+// `singleView` shows only the matrix, with no tab switcher.
 export default function CabinetWorkflowComparison({ comparison, children }) {
   const [view, setView] = useState('matrix');
   const panelId = useId();
+  const single = comparison.singleView;
   const choices = [
     ['matrix', 'Comparison'],
     ['tasks', 'Use cases'],
@@ -20,8 +22,8 @@ export default function CabinetWorkflowComparison({ comparison, children }) {
       <div id={`${panelId}-graphic`} className="cabinet-workflow-original" hidden={view !== 'graphic'}>
         {children}
       </div>
-      {['matrix', 'tasks'].map(mode => (
-        <section key={mode} id={`${panelId}-${mode}`} className={`cabinet-workflow-adaptation cabinet-workflow-adaptation--${mode}`} hidden={view !== mode}>
+      {(single ? ['matrix'] : ['matrix', 'tasks']).map(mode => (
+        <section key={mode} id={`${panelId}-${mode}`} className={`cabinet-workflow-adaptation cabinet-workflow-adaptation--${mode}${single ? ' cabinet-workflow-adaptation--single' : ''}`} hidden={view !== mode}>
           <header>
             <p className="cabinet-workflow-kicker">{comparison.kicker || 'Choose by task'}</p>
             <h2>{mode === 'matrix' ? comparison.matrixTitle : comparison.title}</h2>
@@ -64,11 +66,11 @@ export default function CabinetWorkflowComparison({ comparison, children }) {
           </footer>
         </section>
       ))}
-      <nav className="cabinet-workflow-switcher" aria-label="Comparison views">
+      {!single && <nav className="cabinet-workflow-switcher" aria-label="Comparison views">
         {choices.map(([key, label]) => (
           <button key={key} type="button" aria-pressed={view === key} aria-controls={`${panelId}-${key}`} onClick={() => setView(key)}>{label}</button>
         ))}
-      </nav>
+      </nav>}
     </div></CabinetCanvas>
   );
 }

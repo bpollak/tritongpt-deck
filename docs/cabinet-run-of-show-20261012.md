@@ -10,11 +10,11 @@
 | 1:38–2:53 | Campus time and cost savers | Impact of each vertical, in the order you'll show them. Say the type of each number (pilot, estimate, scenario, avoided cost). Last row is the TritonAI Harness (100+ active users): use it as the bridge to Part 2. |
 | 2:53–4:08 | Apply received cash faster | Frame the project in one line, then walk the four phases (Oct 2026 – Jun 2027). |
 | 4:08–5:33 | Contract review inside Word (intro + recording) | Live Word run: three rules, tracked changes, agent answer. OCGA is next. |
-| 5:33–6:23 | Routing tickets to the right team (intro + recording) | Two tickets routed past the Service Desk: desktop to Field Support (80%), DNS to Hostmaster (97%). Highlights and zooms guide the eye; voice over. |
-| +0:55 | College Exploration Assistant (intro + 49s recording) | Live public assistant on admissions.ucsd.edu/why/colleges: a prospective first-year (marine biology, outdoors, close-knit community) gets four colleges with citations after three messages. Persona card and closing board are overlays; the conversation is real, sped up while it thinks. |
+| 5:33–6:23 | Routing tickets to the right team (intro + 25s recording, sped up 1.6x) | Two tickets routed past the Service Desk: desktop to Field Support (80%), DNS to Hostmaster (97%). Highlights and zooms guide the eye; voice over. |
+| +0:45 | College Exploration Assistant (intro + 39s recording) | Live public assistant on admissions.ucsd.edu/why/colleges. One detailed prompt (marine biology, sustainability, surfing and hiking, flexible gen ed, close-knit community, service) gets Muir, Seventh, Eighth, and Marshall, each tied to those interests with citations. Persona card and closing board are overlays; the conversation is real, sped up while typing and thinking. |
 | 7:23–8:08 | What's next in vertical solutions | Payment request review, RFX, security review, data agents, OCGA, hosting. |
 | **Part 2** | **Citizen development** (divider, 8s) | |
-| 8:16–9:16 | A chat answers. The Harness does the work. | Bridge: IT can’t build every vertical; the Harness lets staff build their own. |
+| 8:16–9:16 | A chat answers. The Harness does the work. | Bridge: IT can’t build every vertical; the Harness lets staff build their own. One six-row comparison matrix (what it does, best fit, connections, where you work, typical result, who stays in charge); no tabs to click. |
 | 9:16–10:16 | TritonAI Harness: built by the people who do the work | Three columns: what it does, what it connects to, what keeps it safe. |
 | 10:16–12:11 | The Harness at work (intro + 107s recording) | Plugins (Microsoft 365 abilities), Skills, then a real task with the branding skill that summarizes survey data and builds a results page. |
 | 12:11–13:21 | The Harness takes our new training (intro + recording) | Computer use: the Harness finds the Discovery Series, plays the video, takes the quiz. |
