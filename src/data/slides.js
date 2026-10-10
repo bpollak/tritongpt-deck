@@ -9251,19 +9251,19 @@ export const slides = [
     "slug": "cabinet-inbox-priority-sorter",
     "type": "video",
     "layout": "cabinet-demo",
-    "title": "Inbox priority sorter",
+    "title": "My daily brief and inbox priorities",
     "subtitle": "Spend less time scanning email and more time on the work that needs you.",
     "audiences": [
       "cabinet"
     ],
     "managerSection": "Personal Productivity",
-    "durationSeconds": 40,
-    "managerSummary": "Actual Outlook Inbox Triage pane: Today priority, human controls and the explanation behind a priority.",
+    "durationSeconds": 45,
+    "managerSummary": "Oct 10 native Outlook recording: Friday's daily brief email, then the updated Inbox Triage add-in on a Priority 1 message (score 71/100 and its reasons), ending on a card listing what the sorter weighs.",
     "content": [],
-    "speakerNotes": "60 seconds. Personal citizen developer workflow: Brett’s actual Inbox Triage add-in beside a real Outlook message. The 12-second silent capture shows the existing Today category, Today and This week controls, Done, Schedule, Draft reply and Delegate, then opens Why this tier. Explain the benefit as less time scanning and clearer attention to requests and follow-through. Those actions are visible controls; none were applied during capture. The final actual explanation frame is held six seconds for voiceover. Full native application framing at 2564x1444; no digital zoom, training instructions or invented interface. An unrelated personal address above the selected message card is masked. The demonstration uses existing cached priorities: automatic sorting currently fails through the Graph token helper, and no fresh classification success is claimed. Repair that before demonstrating a new live sort. The displayed 49 percent estimates likelihood of acting, not measured classification accuracy. No measured accuracy or time savings asserted. This is Brett’s configured workflow, not a default capability automatically enabled for all users. Transition to preparing with the daily briefing and closing the loop with the evening debrief. Redacted Oct 9: the Waiting-on list (colleague names and day counts) and the priority list items are blurred because the deck URL is public.",
+    "speakerNotes": "About 45 seconds (7s intro + 36s clip; you narrate). Personal productivity, two tools together (Brett, Oct 10). 0:00–0:11 Daily brief email for Friday Oct 9 (generated at 7 AM from the live calendar, prior meeting notes, and email): one card per meeting with context, my follow-through, a proposed agenda, and the desired outcome. 0:11–0:28 Inbox Triage add-in (updated Oct 10): a Priority 1 email from Kevin; 'What they want' in one line; 'Why this tier?' shows a priority score of 71/100 and the reasons: asks you directly, your manager, you reply to them 36% of the time, you often write to them. 0:28–0:36 What the sorter weighs to flag an email: (1) who it's from per my professional context (meets with me, manager or direct report, key person, tied to an open item); (2) who it's from per my habits (reply rate, reply speed, how often I write to them, last 90 days); (3) how it reached me (sole recipient, To vs CC, list/bulk mail, my own thread, a meeting soon, high importance, and spoof checks so a faked ucsd.edu sender can't borrow trust); (4) what it asks, read by a campus-hosted TritonAI model (decision, request, question, or scheduling; asked of me personally; a deadline within 2 days). Then explicit rules: a direct ask moves up about one tier; open direct asks older than a day climb each day (capped); replying or forwarding marks it Done. Labels are just two: Priority 1 · Today and Priority 2 · This week; everything else stays unlabeled. It learns weekly from what I actually reply to and from my manual corrections (which count triple), and keeps a new model only if accuracy doesn't drop. It only sets Outlook categories: no send, move, or delete; email content stays on campus. Oct 10 update: retries for failed writes and classifications, explicit feedback wins, the pane groups Today and This week and keeps explanations across refreshes. Shown unredacted at Brett's request (Oct 10).",
     "demoOnly": true,
-    "videoSrc": "/media/cabinet/cabinet-inbox-priority-sorter.mp4",
-    "poster": "/media/cabinet/cabinet-inbox-priority-sorter-poster.jpg",
+    "videoSrc": "/media/cabinet/cabinet-personal-productivity-oct10.mp4",
+    "poster": "/media/cabinet/cabinet-personal-productivity-oct10-poster.jpg",
     "videoAutoPlay": true,
     "videoLoop": false,
     "videoClearNav": false,
@@ -9273,12 +9273,12 @@ export const slides = [
       "label": "What people build"
     },
     "intro": {
-      "kicker": "How I use it",
-      "title": "Inbox priority sorter",
-      "label": "Inbox priority sorter · Outlook",
-      "setup": "A workflow I set up for myself: it sorts incoming mail by what needs me today, and explains why.",
-      "watchFor": "The “Why this tier” explanation. Nothing is moved or answered without me.",
-      "seconds": 5
+      "kicker": "How I use it · personal productivity",
+      "title": "Daily brief + inbox priorities",
+      "label": "Daily brief and Inbox Triage · Outlook",
+      "setup": "Two tools I set up for myself. Every morning a brief lands in my inbox with each meeting's context, follow-through, and agenda. An Outlook add-in flags the mail that needs me today or this week, and says why.",
+      "watchFor": "The meeting brief, then a Priority 1 email with its score and the reasons behind it.",
+      "seconds": 7
     }
   },
   {
