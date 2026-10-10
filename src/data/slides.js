@@ -7629,7 +7629,7 @@ export const slides = [
       "cabinet"
     ],
     "managerSection": "Vertical Solutions",
-    "durationSeconds": 50,
+    "durationSeconds": 48,
     "section": {
       "part": 1,
       "label": "Vertical solutions"
@@ -7648,8 +7648,8 @@ export const slides = [
     "videoAutoPlay": true,
     "hideDemoBadge": true,
     "demoOnly": true,
-    "managerSummary": "Cabinet cut of the PK AI Tutor setup video (Sep 2026): Canvas course, tutor configuration, Socratic style, student chat.",
-    "speakerNotes": "About 50 seconds. Launched this fall with 5 instructors; scaling to more courses in winter (Brett, Oct 10). Instructors choose which Canvas pages, files, and sites the tutor may use, and the teaching style (Socratic or direct). Pilot feedback 2025–26: 81% said it helped them understand concepts, 86% found it easy to use, 67% want it in future courses (68 student responses; tritonai.ucsd.edu/tritongpt/instruction.html). Video: the September 2026 instructional pilot capture used in the PK view, trimmed to the Canvas portion and sped up 1.8x for Cabinet."
+    "managerSummary": "Cabinet cut of the PK AI Tutor video: opens on the Canvas course, then tutor configuration, Socratic style, student chat. Pilot title card removed.",
+    "speakerNotes": "About 48 seconds. Launched this fall with 5 instructors; scaling to more courses in winter (Brett, Oct 10). Instructors choose which Canvas pages, files, and sites the tutor may use, and the teaching style (Socratic or direct). Pilot feedback 2025–26: 81% said it helped them understand concepts, 86% found it easy to use, 67% want it in future courses (68 student responses; tritonai.ucsd.edu/tritongpt/instruction.html). Video: the September 2026 instructional pilot capture used in the PK view, trimmed to the current Canvas-integrated tutor (the \"TritonGPT Initial Pilot\" title card is cut, Oct 10) and sped up 1.8x for Cabinet."
   },
   {
     "id": 1006,

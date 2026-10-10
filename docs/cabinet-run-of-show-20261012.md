@@ -51,7 +51,7 @@
 - **Moved to the backup view:** "What staff automate with it" (repeated the morning briefing shown in Part 3, five dense rows, and was already the first cut for time).
 
 - **Added Oct 10 (later):** College Exploration Assistant demo after "More verticals" (+55s). With the AI Tutor and this demo, content runs about 23 minutes; to get back near 21.5, skip the Class Planner usage chart (30s) and let the Directory clip on "More verticals" run in the background while you talk through it quickly.
-- **Added Oct 10:** AI Tutor in Canvas (impact row plus a 43s cut of the PK setup video, after ServiceNow): launched fall with 5 instructors, scaling in winter. TA–Student Matching on What's next: resumes Q1 2027 after TSS go-live. Research Grant Compliance Agent left out (no activity found after the April proposal).
+- **Added Oct 10:** AI Tutor in Canvas (impact row plus a 42s cut of the PK setup video that opens on the Canvas course with no pilot title card, after ServiceNow): launched fall with 5 instructors, scaling in winter. TA–Student Matching on What's next: resumes Q1 2027 after TSS go-live. Research Grant Compliance Agent left out (no activity found after the April proposal).
 
 ## Before Monday
 
