@@ -7267,7 +7267,7 @@ export const slides = [
       "part": 1,
       "label": "Vertical solutions"
     },
-    "speakerNotes": "90 seconds. These are the vertical solutions IT Services builds for whole campus processes. Group them: delivering now, and in progress. Say the impact type with each number. Contract review 120 to 11 minutes is a timed internal pilot benchmark, not a guarantee (CLAIM-LEDGER contract-reviewer-consolidated). Transcript matching: ~60K annual volume and ~225/hour at 98%+ are operating baseline and pilot figures; up to $500K is a planning estimate of capacity value if quality and throughput hold, not budget savings; no position-elimination framing. Ticket routing: the hours figure is a scenario at an assumed 90% accuracy per 10,000 eligible tickets (backup slide cabinet-routing-savings), not measured performance. Website assistants: the retired vendor contract is $300K a year in cost avoided (scaling-engagement-the-tritongpt-widget); 16 websites live; College Selection Assistant is one of them. Cash application: $1.3–3.0M a year is the proposed benefit from the March 2026 business case republished Sept 30, being reconciled by BFS, not measured or net ROI; $79M is a historical average monthly undistributed balance, not a loss. Directory and the financial/workforce agents are pilots with no measured impact yet; say so. Items drawn from the PK portfolio slides ai-portfolio-at-scale and ai-portfolio-pilots.",
+    "speakerNotes": "90 seconds. These are the vertical solutions IT Services builds for whole campus processes. Group them: delivering now, and in progress. Say the impact type with each number. Contract review 120 to 11 minutes is a timed internal pilot benchmark, not a guarantee (CLAIM-LEDGER contract-reviewer-consolidated). Transcript matching (Brett, Oct 10): cost avoidance of temporary labor; it avoids hiring dozens of temporary staff for transcript entry. Further validation work begins in 2027 after TSS go-live. Supporting figures if asked: ~60K transcripts a year, ~225/hour at 98%+ in pilot; earlier planning estimate up to $500K a year in capacity. Frame as avoided temporary hiring, not reductions to existing staff. Ticket routing: the hours figure is a scenario at an assumed 90% accuracy per 10,000 eligible tickets (backup slide cabinet-routing-savings), not measured performance. Website assistants: the retired vendor contract is $300K a year in cost avoided (scaling-engagement-the-tritongpt-widget); 16 websites live; College Selection Assistant is one of them. Cash application: $1.3–3.0M a year is the proposed benefit from the March 2026 business case republished Sept 30, being reconciled by BFS, not measured or net ROI; $79M is a historical average monthly undistributed balance, not a loss. Faculty Expertise Directory: now planning its rollout phase after the VCRI demonstration; no measured impact yet. Items drawn from the PK portfolio slides ai-portfolio-at-scale and ai-portfolio-pilots.",
     "impactTable": {
       "rows": [
         {
@@ -7295,8 +7295,8 @@ export const slides = [
           "name": "Transcript Matching",
           "status": "In production",
           "tone": "live",
-          "impact": "Up to $500K a year",
-          "basis": "Planning estimate"
+          "impact": "Avoids hiring dozens of temporary staff",
+          "basis": "Validation continues in 2027 after TSS go-live"
         },
         {
           "name": "Website Assistants",
@@ -7307,9 +7307,9 @@ export const slides = [
         },
         {
           "name": "Faculty Expertise Directory",
-          "status": "Pilot",
-          "tone": "pilot",
-          "impact": "Next phase after VCRI demo",
+          "status": "Planning",
+          "tone": "progress",
+          "impact": "Planning the rollout phase",
           "basis": "Impact not yet measured"
         }
       ]
@@ -8812,7 +8812,7 @@ export const slides = [
     "content": [
       {
         "heading": "Transcript matching",
-        "text": "Reads transcripts and matches coursework to the student record; TSS validation gates expansion."
+        "text": "Matches transcript coursework to the student record, avoiding dozens of temporary hires; validation continues in 2027 after TSS go-live."
       },
       {
         "heading": "College selection",
@@ -8820,7 +8820,7 @@ export const slides = [
       },
       {
         "heading": "Faculty Expertise Directory",
-        "text": "Matches research needs to faculty expertise. After the VCRI demo it moves to its next phase."
+        "text": "Matches research needs to faculty expertise. After the VCRI demo, it is planning its rollout phase."
       }
     ],
     "speakerNotes": "One minute. The Faculty Expertise Directory recording plays on the left. Transcript matching requires the TSS downstream validation/go-live checkpoint before expansion; no new launch date. College selection is an admissions self-service example, not an admission or assignment decision. Faculty Expertise Directory: early phase with incomplete public-source data. After the successful VCRI demonstration with Faith and Corey, Nicole's team continues development; arts and humanities coverage is the focus. Corey is in the room. Do not describe early ranking as an institutional faculty evaluation. Working name \"Faculty Expertise Directory\" (Brett, Oct 9); the app itself still shows an earlier name. Confirm the final name with Nicole.",
