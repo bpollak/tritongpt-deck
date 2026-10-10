@@ -23,6 +23,7 @@ export const slideManagerState = {
     "cabinet-harness-11d-campus-app-hosting-intake",
     "cabinet-divider-outcomes",
     "cabinet-inbox-priority-sorter",
+    "cabinet-mobile-briefing-demo",
     "cabinet-personal-productivity-demo",
     "cabinet-department-builders",
     "cabinet-directory-demo",

@@ -9234,5 +9234,43 @@ export const slides = [
       "watchFor": "The “Why this tier” explanation. Nothing is moved or answered without me.",
       "seconds": 5
     }
+  },
+  {
+    "id": 1045,
+    "slug": "cabinet-mobile-briefing-demo",
+    "type": "content",
+    "layout": "cabinet-demo",
+    "title": "Monday's briefing, from my phone",
+    "subtitle": "The Harness on my phone runs the same daily briefing skill against my live calendar.",
+    "content": [
+      {
+        "heading": "One request",
+        "text": "“Run daily briefing for Monday” from the TritonAI Harness mobile app."
+      },
+      {
+        "heading": "Live calendar",
+        "text": "Twelve meetings, from the 8:30 AI sync to Cabinet at noon and the Technical Architecture Council."
+      },
+      {
+        "heading": "Ready to walk in",
+        "text": "A card per meeting with context, follow-through, and a proposed agenda."
+      }
+    ],
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Citizen Developer Showcase",
+    "durationSeconds": 45,
+    "section": {
+      "part": 3,
+      "label": "What people build"
+    },
+    "recording": {
+      "pendingLabel": "Recording coming before Monday",
+      "label": "TritonAI Harness mobile → “run daily briefing for Monday” → meeting cards",
+      "format": "iPhone simulator paired to the desktop Harness • live calendar"
+    },
+    "managerSummary": "Placeholder (Oct 10) for a mobile recording: the Harness iOS app paired to the desktop Harness runs the ucsd-daily-meeting-brief skill for Monday Oct 12.",
+    "speakerNotes": "Placeholder until the mobile recording is captured. The simulator build is installed and the briefing collector was verified against the live calendar for Monday Oct 12 (15 entries, 12 meetings including Cabinet at noon). Pairing needs Brett to paste a fresh pairing code into the simulator (Settings → Connections → Create link → Share). If no recording lands, describe it verbally: the same daily-briefing skill runs from the phone, reading the live Microsoft 365 calendar and recent context, and returns one card per meeting."
   }
 ];
