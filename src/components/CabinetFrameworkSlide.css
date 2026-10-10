@@ -302,3 +302,18 @@
 .cabinet-canvas-content .cabinet-impact:has(tbody tr:nth-child(7)) .cabinet-impact-figure { font-size: 22px; }
 .cabinet-canvas-content .cabinet-framework-slide:has(.cabinet-impact tbody tr:nth-child(7)) > h1 { margin-bottom: 4px; }
 .cabinet-canvas-content .cabinet-impact:has(tbody tr:nth-child(7)) .cabinet-framework-takeaway { margin-bottom: 4px; }
+
+/* Nine-row impact tables (e.g. department builders) */
+.cabinet-canvas-content .cabinet-impact:has(tbody tr:nth-child(9)) .cabinet-impact-table tbody th,
+.cabinet-canvas-content .cabinet-impact:has(tbody tr:nth-child(9)) .cabinet-impact-table tbody td { padding-top: 4px; padding-bottom: 4px; }
+.cabinet-canvas-content .cabinet-impact:has(tbody tr:nth-child(9)) .cabinet-impact-table tbody th strong,
+.cabinet-canvas-content .cabinet-impact:has(tbody tr:nth-child(9)) .cabinet-impact-figure { font-size: 19px; }
+.cabinet-canvas-content .cabinet-impact:has(tbody tr:nth-child(9)) .cabinet-impact-table tbody td span:not(.cabinet-impact-status),
+.cabinet-canvas-content .cabinet-impact:has(tbody tr:nth-child(9)) .cabinet-impact-table tbody th span { font-size: 13px; margin-top: 1px; }
+.cabinet-canvas-content .cabinet-impact:has(tbody tr:nth-child(9)) .cabinet-impact-status { font-size: 13px; }
+.cabinet-canvas-content .cabinet-framework-slide:has(.cabinet-impact tbody tr:nth-child(9)) > h1 { font-size: 50px; }
+.cabinet-canvas-content .cabinet-impact:has(tbody tr:nth-child(9)) .cabinet-impact-table tbody th { width: 42%; }
+.cabinet-canvas-content .cabinet-impact:has(tbody tr:nth-child(9)) .cabinet-impact-table tbody th,
+.cabinet-canvas-content .cabinet-impact:has(tbody tr:nth-child(9)) .cabinet-impact-table tbody td { padding-top: 3px; padding-bottom: 3px; }
+.cabinet-canvas-content .cabinet-framework-slide:has(.cabinet-impact tbody tr:nth-child(9)) > h1 { font-size: 46px; margin-bottom: 2px; }
+.cabinet-canvas-content .cabinet-impact:has(tbody tr:nth-child(9)) .cabinet-framework-takeaway { font-size: 19px; margin-bottom: 2px; }

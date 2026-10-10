@@ -9106,26 +9106,98 @@ export const slides = [
     "type": "content",
     "layout": "cabinet-outline",
     "title": "Departments are building with it",
-    "subtitle": "IPPS and RRSS examples, built with the Harness and n8n.",
+    "subtitle": "IPPS and RRSS projects built with n8n, TritonAI APIs, and the Harness.",
     "audiences": [
       "cabinet"
     ],
     "managerSection": "Citizen Developer Showcase",
-    "durationSeconds": 25,
-    "content": [
-      {
-        "heading": "Core Bio Services pricing",
-        "text": "Harness + n8n compares supplier pricing. Team reports 3 hours saved per update, about 150 hours per year."
-      },
-      {
-        "heading": "Facilities compliance",
-        "text": "n8n extracts inspection findings into Excel and work items. One five-building run: 81 issues extracted in 13 seconds versus about 45 minutes manually."
-      }
-    ],
-    "speakerNotes": "25 seconds after Passport. Source: Nikki Giaquinta’s RRSS/IPPS AI Projects email, received October 8 at 4:53 PM PT, read directly October 9. These are owner-reported examples, not independently timed or annual audited outcomes. Pricing annualization is 3 hours per update × roughly 50 updates/year = roughly 150 hours/year; no measured observation period was supplied. Same-day pricing suggestions are a stated workflow benefit. Facilities describes extraction/report preparation and work-item creation, not physically fixing 81 compliance issues in 13 seconds. The manual 45-minute baseline is approximate and the automated 13 seconds is one reported five-building run; don’t extrapolate annual savings or imply human remediation takes 13 seconds. No net ROI, implementation cost, dollar conversion, staff reduction or generalized accuracy is asserted. Both show departments supplying workflow knowledge and building focused tools. Green Spend, Concur reconciliation and custodial assignments are additional examples in Nikki’s email for Q&A; early-discussion ServiceNow deflection and Non-PO review are not presented as deployed products. No private records or email addresses shown on this slide.",
+    "durationSeconds": 60,
+    "speakerNotes": "About a minute. Source: Nikki's summary to Brett (Oct 10) of IPPS and RRSS projects. Point: departments are building their own automations; pick two to tell. Core Bio Services pricing (Harness with the n8n plugin): pulls distributor prices, compares them to Core's negotiated pricing, suggests a markup that covers costs and stays under the competitor; runs about 50 times a year; saves about 3 hours per update (~150 hours a year) and delivers suggested pricing the same day. Facilities compliance (RRSS, n8n): State Fire Marshal results must be resolved within 10 days and were scattered across 25+ portal categories per building; now extracted after an email into Excel with work items; a five-building run handled 81 issues in about 13 seconds versus roughly 45 minutes by hand. Custodial staffing (n8n): a time-off form feeds a flow that assigns and reassigns flex custodial tasks; projected to recover about 8 hours of wait time a day across the flex team. Passport check-in app: built through the Citizen Developer program (demo follows). Concur credit memo AR reconciliation (n8n, TritonAI APIs): combines reports, applies matching rules on employee IDs, Concur references, names and amounts; the model comments on ambiguous cases for human review and fills an Oracle FBDI import for confident matches; no impact figure yet. Green spend reporting (n8n): identifies green items in supplier catalogs sent to Oracle and cross-references UC San Diego purchases, replacing year-end supplier outreach. Procurement spend chat (n8n, Google database, TritonAI APIs): natural-language questions on spend data instead of structured queries or ad hoc report requests. Early discussion: a TritonGPT deflection agent in ServiceNow for about 12,800 Tier 1 knowledge-gap tickets a year (about 29% of IPPS volume), and a Non-PO payment request review agent for 80–100 daily tickets, expected to grow to 125–145 with the dynamic ServiceNow form. Impact figures are team-reported; custodial is projected.",
     "section": {
       "part": 3,
       "label": "What people build"
+    },
+    "content": [],
+    "impactTable": {
+      "headers": [
+        "Project",
+        "Status",
+        "Impact"
+      ],
+      "rows": [
+        {
+          "name": "Core Bio Services pricing",
+          "what": "Compares distributor prices and suggests a competitive markup",
+          "status": "In use",
+          "tone": "live",
+          "impact": "~150 hours a year saved",
+          "basis": "3 hours per update; same-day repricing"
+        },
+        {
+          "name": "Facilities compliance (RRSS)",
+          "what": "Turns Fire Marshal inspection results into Excel and work items",
+          "status": "In use",
+          "tone": "live",
+          "impact": "81 issues in 13 seconds",
+          "basis": "vs. ~45 minutes by hand"
+        },
+        {
+          "name": "Custodial staffing assignments",
+          "what": "A time-off form auto-assigns and reassigns flex custodial tasks",
+          "status": "Built",
+          "tone": "live",
+          "impact": "~8 hours a day of wait time",
+          "basis": "Projected, across the flex team"
+        },
+        {
+          "name": "Passport check-in app",
+          "what": "Visitor check-in designed by the Passport office",
+          "status": "In use",
+          "tone": "live",
+          "impact": "Readiness checks before the counter",
+          "basis": "Demo follows"
+        },
+        {
+          "name": "Concur credit memo reconciliation",
+          "what": "Matches card repayments to AP credit memos for Oracle",
+          "status": "Built",
+          "tone": "live",
+          "impact": "People review only unclear matches",
+          "basis": "AI explains ambiguous cases"
+        },
+        {
+          "name": "Green spend reporting",
+          "what": "Flags green items in supplier catalogs we buy from",
+          "status": "Built",
+          "tone": "live",
+          "impact": "Replaces year-end supplier outreach",
+          "basis": "UC Sustainable Practices Policy"
+        },
+        {
+          "name": "Procurement spend chat",
+          "what": "Ask procurement spend questions in plain language",
+          "status": "Built",
+          "tone": "live",
+          "impact": "Replaces ad hoc report requests",
+          "basis": "n8n and TritonAI APIs"
+        },
+        {
+          "name": "TritonGPT in ServiceNow",
+          "what": "Answers Tier 1 “knowledge gap” tickets",
+          "status": "Early discussion",
+          "tone": "progress",
+          "impact": "~12,800 tickets a year",
+          "basis": "29% of IPPS ticket volume"
+        },
+        {
+          "name": "Non-PO payment request review",
+          "what": "Decision support for payment request reviewers",
+          "status": "Early discussion",
+          "tone": "progress",
+          "impact": "80–100 tickets a day",
+          "basis": "Growing to 125–145 with the new form"
+        }
+      ]
     }
   },
   {

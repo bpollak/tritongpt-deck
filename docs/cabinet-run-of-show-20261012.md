@@ -21,7 +21,7 @@
 | 14:06–14:51 | Built artifacts need a hosting lane | Path to hosting: Tier 0 desktop to Tier 3 enterprise. |
 | **Part 3** | **What people build** (divider, 8s) | |
 | 14:59–15:39 | Inbox priority sorter | How I use it: inbox triage. |
-| 16:29–16:54 | Departments are building with it | Core Bio pricing and Facilities compliance (team-reported). |
+| 16:29–17:29 | Departments are building with it | Nine IPPS and RRSS projects from Nikki (Oct 10) with status and impact: Core Bio pricing (~150 hrs/yr), Facilities compliance (81 issues in 13s), custodial staffing (~8 hrs/day projected), Passport, Concur reconciliation, green spend, spend chat; ServiceNow deflection and Non-PO review in early discussion. Tell two. |
 | +0:40 | Faculty Expertise Directory (intro + 33s recording) | Citizen developer project: research need to ranked faculty leads for review. Planning rollout after the VCRI demo; app still shows its earlier name. |
 | 16:54–17:39 | Passport Services check-in | Department-designed service app (clip now 20s, sped up). |
 | 17:39–18:39 | Class Planner | Course list to schedule options. Don’t claim the Harness built it. |
