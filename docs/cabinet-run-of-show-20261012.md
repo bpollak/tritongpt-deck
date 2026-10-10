@@ -28,8 +28,8 @@
 | 17:39–18:19 | Class Planner (34s clip) | Course list to schedule options. Don’t claim the Harness built it. |
 | 18:39–19:09 | Class Planner demand peaks with enrollment passes | Daily usage around the enrollment passes. |
 | **Part 4** | **Foundation and close** | |
-| 19:09–19:39 | The foundation already carries substantial campus use | Gateway usage in one line: what powers everything shown so far. |
 | +0:45 | Why the university needs its own AI supply | Sets up sovereign inference: access can change overnight, costs grow with every request, our data under our rules, tools keep working. Describe the news; don't name or criticize any lab. |
+| 19:09–19:39 | The foundation already carries substantial campus use | Gateway usage in one line: what powers everything shown so far. |
 | 19:39–20:39 | Sovereign inference as a service | Visual: open-weight models on campus GPUs plus approved commercial APIs feed the TritonAI Gateway (527B tokens Jan–Sep), which serves UC San Diego, UC Berkeley researchers (live), UC Merced (onboarding), and more UC campuses (next). |
 | +0:56 | Start here: the TritonAI Discovery Series (intro + 50s recording) | Call to action before questions. Direct tour of tritonai.ucsd.edu: the three tracks, the Chancellor's lesson 1, the knowledge check (3 of 3), and the Building track where people learn the Harness (lessons 10–15 arrive Oct 15). |
 | 20:39–21:39 | Thank You · Questions? (Brett and Kevin Chou) | One-line recap (verticals, staff-built tools, foundation), then questions with Kevin. The three asks slide moved to the backup view. |
