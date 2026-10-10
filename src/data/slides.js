@@ -7907,13 +7907,13 @@ export const slides = [
     "type": "video",
     "layout": "cabinet-demo",
     "title": "The Harness at work",
-    "subtitle": "One project, start to finish: survey, dashboard, briefing deck, workflow, and a sign-up app.",
+    "subtitle": "One project, start to finish: build the survey, analyze it, report it, and keep it running.",
     "content": [],
     "audiences": [
       "cabinet"
     ],
     "managerSection": "Platform",
-    "durationSeconds": 83,
+    "durationSeconds": 124,
     "section": {
       "part": 2,
       "label": "Citizen development"
@@ -7922,12 +7922,12 @@ export const slides = [
       "kicker": "TritonAI Harness · one project, start to finish",
       "title": "The Harness at work",
       "label": "TritonAI Harness · a fall workshop pilot",
-      "setup": "Follow one staff member's fall workshop pilot. Survey results become a summary, a dashboard for leaders, a briefing deck, and a branded sign-up app wired to a workflow.",
-      "watchFor": "Each result feeds the next, built from the same files on the desktop.",
+      "setup": "Follow one staff member's fall workshop pilot. The Harness builds the feedback survey as a campus page, then turns the results into a summary, a dashboard for leaders, a briefing deck, and a sign-up app for the next session.",
+      "watchFor": "The UC San Diego Branding skill in the request, the finished campus-branded survey, then each result feeding the next.",
       "seconds": 7
     },
-    "videoSrc": "/media/cabinet/cabinet-harness-story.mp4",
-    "poster": "/media/cabinet/cabinet-harness-story-poster.jpg",
+    "videoSrc": "/media/cabinet/cabinet-harness-story-v2.mp4",
+    "poster": "/media/cabinet/cabinet-harness-story-v2-poster.jpg",
     "videoLoop": false,
     "videoClearNav": false,
     "videoAutoPlay": true,
@@ -7944,8 +7944,8 @@ export const slides = [
       "label": "TritonAI Harness Nightly",
       "captureNote": "Recorded Oct 9 • fictional practice-kit data • about 3.5 minutes shown in 107 seconds"
     },
-    "managerSummary": "Silent Cabinet cut (76s) of the PK Harness walkthrough (Oct 2 capabilities video): Jordan's fall workshop pilot from survey summary to Excel dashboard, briefing deck, n8n workflow, and branded sign-up app, closing on 'use the standard tool, or build it your way'. Plugins and GitHub scenes cut; narration removed for live voice-over.",
-    "speakerNotes": "About 83 seconds (7s intro + 76s clip, silent; you narrate). Story: Jordan, a staff member, runs a fall workshop pilot (made-up project, fictional files). Beats and clip times: 0:00–0:17 Survey: Qualtrics already reports it, but Jordan wants the team's own questions answered, so the raw results go in; about 14 seconds later there are averages for every question, top comments, missing data flagged, and a takeaway, saved as a file. 0:17–0:32 Dashboard: leaders want one page, so it builds a presentation-ready Excel dashboard: headline numbers, three charts in campus colors, an insight under each. 0:32–0:47 Briefing deck: Jordan has ten minutes with leaders, so the notes and survey become a nine-slide deck on the official UC San Diego template, with live charts, an owners table, a timeline, and speaker notes. 0:47–0:53 Workflow: it reads the team's n8n workflow, explains each step in plain language, and confirms the last run succeeded. 0:53–1:12 App: a Microsoft Form would cover a basic sign-up, but the team wants the campus look and every sign-up in its own n8n workflow, so it builds that app on the campus design system; self-service hosting is coming so apps like this can go live. 1:12–1:16 Close: when a campus tool does the job, use it; when you need it your way, build it with the Harness. Source: the October 2 narrated capabilities video in the PK view (video-tritonai-harness-walkthrough), recorded from the real Harness with fictional demo files. Cabinet cut: narration and captions removed; plugins and GitHub scenes cut; 1.2–1.4x speed. The earlier native recording (plugins, skills, branded results page) is kept as cabinet-harness-in-action-guided.mp4."
+    "managerSummary": "Silent story cut (117s): a native Oct 10 recording of the Harness building a Decorator 5 feedback survey with the UCSD Branding skill, then the PK walkthrough's survey analysis, Excel dashboard, briefing deck, n8n workflow, and sign-up app.",
+    "speakerNotes": "About 2 minutes (7s intro + 117s clip, silent; you narrate). Story: Jordan, a staff member, runs a fall workshop pilot (made-up project, fictional files). Beats and clip times: 0:00–0:41 Build the survey: Jordan asks the Harness for a post-workshop feedback survey and picks the UCSD Branding skill so it looks like a campus page (Decorator 5); about a minute later there is an accessible survey.html with 1–5 ratings for pace, content, and room, a comments box, and Submit, opened beside the conversation. (Recorded live on Brett's Mac Oct 10, Harness Nightly, Flash model; the form isn't connected to a backend yet; thinking time shown at 10x.) 0:41–0:58 Analyze: responses come back; Qualtrics already reports, but Jordan wants the team's own questions answered, so the raw results go in; about 14 seconds later there are averages, top comments, missing data flagged, and a takeaway. 0:58–1:13 Dashboard: a presentation-ready Excel dashboard for leaders. 1:13–1:28 Briefing deck: nine slides on the official UC San Diego template with live charts, owners, timeline, and speaker notes. 1:28–1:34 Workflow: it reads the team's n8n workflow, explains each step, and confirms the last run succeeded. 1:34–1:53 Next session: a branded sign-up app wired to that workflow; self-service hosting is coming so apps like this can go live. 1:53–1:57 Close: when a campus tool does the job, use it; when you need it your way, build it with the Harness. Sources: the survey segment is a native screen recording (Oct 10, about 10:11 AM PT); the rest is the Oct 2 narrated capabilities video from the PK view (video-tritonai-harness-walkthrough), recorded from the real Harness with fictional demo files, narration removed, plugins and GitHub scenes cut, 1.2–1.4x."
   },
   {
     "id": 1026,

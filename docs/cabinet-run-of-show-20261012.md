@@ -16,7 +16,7 @@
 | **Part 2** | **Citizen development** (divider, 8s) | |
 | 8:16–9:16 | A chat answers. The Harness does the work. | Bridge: IT can’t build every vertical; the Harness lets staff build their own. One six-row comparison matrix (what it does, best fit, connections, where you work, typical result, who stays in charge); no tabs to click. |
 | 9:16–10:16 | TritonAI Harness: built by the people who do the work | Three columns: what it does, what it connects to, what keeps it safe. |
-| 10:16–11:39 | The Harness at work (intro + 76s silent recording, you narrate) | One story: Jordan's fall workshop pilot. Survey → summary, Excel dashboard for leaders, nine-slide briefing deck, n8n workflow explained, branded sign-up app wired to n8n, then "use the standard tool, or build it your way." Beat-by-beat voice-over is in the speaker notes. |
+| 10:16–12:20 | The Harness at work (intro + 117s silent recording, you narrate) | One story: Jordan's fall workshop pilot. The Harness builds the feedback survey as a campus page (UCSD Branding skill, recorded Oct 10) → survey results → summary, Excel dashboard for leaders, nine-slide briefing deck, n8n workflow explained, branded sign-up app wired to n8n, then "use the standard tool, or build it your way." Beat-by-beat voice-over is in the speaker notes. |
 | 13:21–14:06 | It stays in your control | Limits the person sets and the campus sets. |
 | 14:06–14:51 | Built artifacts need a hosting lane | Path to hosting: Tier 0 desktop to Tier 3 enterprise. |
 | **Part 3** | **What people build** (divider, 8s) | |
