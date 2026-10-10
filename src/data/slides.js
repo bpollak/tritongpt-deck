@@ -7277,6 +7277,13 @@ export const slides = [
           "basis": "Initial business case"
         },
         {
+          "name": "TritonAI Harness",
+          "status": "Available",
+          "tone": "live",
+          "impact": "100+ active users building their own tools",
+          "basis": "Citizen development platform (Part 2)"
+        },
+        {
           "name": "Contract Review",
           "status": "In production",
           "tone": "live",
@@ -7310,13 +7317,6 @@ export const slides = [
           "tone": "live",
           "impact": "$300K a year saved",
           "basis": "Retired vendor contract"
-        },
-        {
-          "name": "TritonAI Harness",
-          "status": "Available",
-          "tone": "live",
-          "impact": "100+ active users building their own tools",
-          "basis": "Citizen development platform (Part 2)"
         }
       ]
     },
