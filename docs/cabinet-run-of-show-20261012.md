@@ -8,10 +8,9 @@
 | 0:30–1:30 | By the end of this presentation, you'll know | Three questions: what ITS is building and its payback; what citizen development and the Harness are; what people have built with it. |
 | **Part 1** | **Vertical solutions** | |
 | 1:30–2:45 | Vertical solutions: campus time and cost savers | Impact of each vertical. Say the type of each number (pilot, estimate, scenario, avoided cost). |
-| 2:45–4:00 | Apply received cash faster | Why cash application matters; proposed benefit being reconciled. **Ask tag**. |
-| 4:00–4:45 | Cash application roadmap | Four phases with dates from the Confluence roadmap; data access is the long pole. |
-| 4:45–6:05 | Bring document review into Word | Live Word run: three rules, tracked changes, agent answer. **Ask tag** (OCGA next). |
-| 6:05–7:05 | Routing tickets to the right team | Full-width routing recording; voice over. Agent decides. |
+| 2:45–4:00 | Apply received cash faster | Frame the project in one line, then walk the four phases (Oct 2026 – Jun 2027). |
+| 4:45–6:05 | Bring document review into Word | Live Word run: three rules, tracked changes, agent answer. OCGA is next. |
+| 6:05–7:05 | Routing tickets to the right team | Hardware ticket routed straight to Field Support instead of the Service Desk; voice over. |
 | 7:05–8:05 | Transcript matching, college selection, and the Faculty Expertise Directory | Transcript matching, college selection, Directory (Faculty Expertise Directory clip plays). |
 | 8:05–8:50 | What's next in vertical solutions | What is next: payment request review, RFX, security review, data agents, OCGA, hosting. |
 | **Part 2** | **Citizen development: TritonAI Harness** | |
@@ -37,7 +36,8 @@
 ## Notes on this version
 
 - **Impact overview** combines the most impactful items from the PK portfolio slides (at scale, pilots) with the verticals in progress. Each figure is labeled by type in the speaker notes: timed pilot, planning estimate, scenario, or vendor cost avoided. The routing hours are a scenario at an assumed 90% accuracy.
-- **Cash application roadmap** dates come from the Implementation Roadmap page in Confluence (read October 9): Phase 1 Oct 12–Dec 11, 2026; Phase 2 Nov 9–Dec 18, 2026; Phase 3 Jan–Mar 2027; Phase 4 Apr–Jun 2027.
+- **Cash application** is one simple slide: a one-line framing and the four phases with dates from the Confluence roadmap. The separate roadmap slide is in the backup view.
+- **No source lines or Ask tags** on Cabinet slides (Brett, Oct 9). Sources and qualifiers live in the speaker notes. Demo recordings no longer show a label bubble.
 - **What's next** draws on the PK pilots and skunkworks slides (Payment Request Review, RFX Evaluation, Security Review, data agents, OCGA, hosting). No impact figures yet.
 - **ServiceNow routing** plays full width for voice-over. It is Codex's October 8 capture (built from captured frames).
 - **Class Planner** sits with what people build, but don't claim the Harness built it.

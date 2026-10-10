@@ -170,7 +170,7 @@ export const slideManagerState = {
       "cabinet"
     ],
     "cabinet-cash-roadmap": [
-      "cabinet"
+      "cabinet-backup"
     ],
     "cabinet-verticals-impact": [
       "cabinet"

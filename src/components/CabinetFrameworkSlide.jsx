@@ -51,7 +51,7 @@ export default function CabinetFrameworkSlide({ slide, staticPreview = false }) 
             <tbody>
               {slide.impactTable.rows.map(row => (
                 <tr key={row.name}>
-                  <th scope="row"><strong>{row.name}</strong><span>{row.what}</span></th>
+                  <th scope="row"><strong>{row.name}</strong>{row.what && <span>{row.what}</span>}</th>
                   <td><span className={`cabinet-impact-status cabinet-impact-status--${row.tone || 'live'}`}>{row.status}</span></td>
                   <td><strong className="cabinet-impact-figure">{row.impact}</strong><span>{row.basis}</span></td>
                 </tr>

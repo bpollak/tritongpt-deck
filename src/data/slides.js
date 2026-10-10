@@ -7222,7 +7222,7 @@ export const slides = [
     "type": "content",
     "content": [],
     "title": "Vertical solutions: campus time and cost savers",
-    "subtitle": "Built by IT Services for whole campus processes, with the impact each has today or is projected to have.",
+    "subtitle": "What each solution delivers today, or is projected to deliver.",
     "layout": "cabinet-outline",
     "audiences": [
       "cabinet"
@@ -7239,47 +7239,41 @@ export const slides = [
       "rows": [
         {
           "name": "Cash Application Modernization",
-          "what": "Matches received payments to invoices; staff review uncertain matches.",
           "status": "In progress",
           "tone": "progress",
-          "impact": "$1.3–3.0M a year proposed",
-          "basis": "Initial business case, being reconciled · $79M average monthly undistributed cash"
+          "impact": "$1.3–3.0M a year",
+          "basis": "Initial business case"
         },
         {
           "name": "Contract Review",
-          "what": "Clause-by-clause review against UC rules, with redlines and reasons, in Word.",
           "status": "In production",
           "tone": "live",
           "impact": "120 → 11 minutes per contract",
-          "basis": "91% less review time in a timed pilot"
+          "basis": "Timed pilot"
         },
         {
           "name": "Transcript Matching",
-          "what": "Matches incoming transcript coursework to the student record.",
           "status": "In production",
           "tone": "live",
-          "impact": "Up to $500K a year in capacity",
-          "basis": "Planning estimate · ~60K transcripts a year · ~225 an hour at 98%+ in pilot"
+          "impact": "Up to $500K a year",
+          "basis": "Planning estimate"
         },
         {
           "name": "Website Assistants",
-          "what": "Campus web answers, including the College Selection Assistant.",
           "status": "In production",
           "tone": "live",
-          "impact": "$300K a year vendor cost avoided",
-          "basis": "Retired vendor contract · live on 16 campus websites"
+          "impact": "$300K a year saved",
+          "basis": "Retired vendor contract"
         },
         {
           "name": "Ticket Routing",
-          "what": "Suggests the ServiceNow team for each ticket; the agent decides.",
           "status": "In production",
           "tone": "live",
-          "impact": "~167 → ~25 staff hours per 10,000 tickets",
-          "basis": "Scenario at an assumed 90% accuracy, not measured"
+          "impact": "~85% fewer routing hours",
+          "basis": "Scenario, not yet measured"
         },
         {
           "name": "Faculty Expertise Directory",
-          "what": "Matches research needs to faculty expertise.",
           "status": "Pilot",
           "tone": "pilot",
           "impact": "Next phase after VCRI demo",
@@ -7287,7 +7281,7 @@ export const slides = [
         }
       ]
     },
-    "sourceNote": "Sources: contract review timed pilot; transcript matching operating baseline, pilot, and planning estimate; widget vendor contract; routing scenario; cash March 2026 business case (being reconciled). Reviewed Oct 9, 2026."
+    "compact": false
   },
   {
     "id": 1002,
@@ -7326,7 +7320,7 @@ export const slides = [
       "label": "What people build"
     },
     "intro": {
-      "kicker": "Demonstration · live public app",
+      "kicker": "live public app",
       "title": "Class Planner",
       "label": "Class Planner · courses to schedule options",
       "setup": "Students list the courses they need. Class Planner builds schedule options they can compare, then shows section details and the walk between classes.",
@@ -7405,7 +7399,7 @@ export const slides = [
       "label": "What people build"
     },
     "intro": {
-      "kicker": "Demonstration · department-designed service",
+      "kicker": "department-designed service",
       "title": "Passport Services check-in",
       "label": "Passport Services · visitor check-in",
       "setup": "Passport Services staff designed the visitor flow they needed: check in, answer readiness questions, and get a clear next step.",
@@ -7418,72 +7412,47 @@ export const slides = [
     "slug": "cabinet-cash-receipts-demo",
     "type": "content",
     "layout": "cabinet-cash-receipts",
-    "title": "Apply received cash faster",
-    "subtitle": "Less payment research. Clearer balances. More capacity for staff.",
+    "title": "Cash application modernization",
+    "subtitle": "Automatically match incoming payments to the right invoices, so received cash is applied faster and staff focus on the hard cases.",
     "content": [],
     "audiences": [
       "cabinet"
     ],
     "managerSection": "Administrative Verticals",
     "durationSeconds": 75,
-    "speakerNotes": "90 seconds. This is a project update, not a recording of a deployed tool. Cash already received can sit unapplied while staff research where it belongs; $79M is a historical average monthly undistributed balance, not annual loss or savings. Four phases per the Implementation Roadmap (Shawn Munro, Confluence): Phase 1 receipt population Oct 12–Dec 11, 2026; Phase 2 high-confidence matching Nov 9–Dec 18, 2026; Phase 3 deep-research matching Jan–Mar 2027; Phase 4 outcome resolution and go-live Apr–Jun 2027. The $1.3M–$3M annual benefit is the proposed March 2026 business case republished Sept 30; BFS is reconciling the assumptions; not measured or net ROI. Staff review unresolved or uncertain matches; automatic application depends on approved controls. Ask: support the integrations (Bank of America data, ServiceNow ticket access) and ownership.",
+    "speakerNotes": "75 seconds. Frame it: cash already received can sit unapplied while staff research where it belongs. This project matches incoming payments to the right invoices automatically, with staff reviewing anything uncertain. Phase 1 collects and cleans payment data from bank files and ServiceNow tickets (Oct 12–Dec 11). Phase 2 auto-matches the clear cases on invoice numbers and payment references (Nov 9–Dec 18). Phase 3 captures how accountants match the hard cases today and turns it into tooling (Jan–Mar 2027). Phase 4 resolves what's left: asking payers to label payments, requesting missing invoices from campus units, and go-live (Apr–Jun 2027). If asked about value: the initial business case proposes $1.3–3.0M a year (being reconciled, not measured); the historical average undistributed balance is about $79M a month. Dates from the Implementation Roadmap in Confluence (read Oct 9). The biggest schedule risk is getting Bank of America and ServiceNow data access.",
     "videoLoop": false,
     "videoClearNav": true,
     "videoAutoPlay": true,
     "hideDemoBadge": true,
     "cashReceipts": {
-      "metrics": [
-        {
-          "value": "$79M",
-          "label": "Average monthly undistributed cash",
-          "note": "Historical business-case baseline"
-        },
-        {
-          "value": "$1.3–3.0M",
-          "label": "Proposed annual financial benefit",
-          "note": "Initial estimate; assumptions being reconciled"
-        }
-      ],
       "phases": [
         {
-          "title": "Populate receipts",
-          "text": "Collect and normalize payment information."
+          "title": "Collect payments",
+          "when": "Oct – Dec 2026",
+          "text": "Gather and clean payment data."
         },
         {
-          "title": "Match clear cases",
-          "text": "Use invoice identifiers and approved rules."
+          "title": "Match the clear cases",
+          "when": "Nov – Dec 2026",
+          "text": "Auto-match on invoice numbers."
         },
         {
-          "title": "Research complex cases",
-          "text": "Rank possible matches with supporting evidence."
+          "title": "Research the hard cases",
+          "when": "Jan – Mar 2027",
+          "text": "Capture how accountants match today."
         },
         {
-          "title": "Resolve the outcome",
-          "text": "Apply, review, request information, or retry."
+          "title": "Resolve and go live",
+          "when": "Apr – Jun 2027",
+          "text": "Close out unmatched payments."
         }
-      ],
-      "status": "Phase 1 starts Oct 12 · High-confidence matching by Dec 18, 2026 · Full go-live targeted Q2 2027",
-      "financialDrivers": "Potential value: staff capacity, improved collections and investment earnings, reduced matching-related risk."
+      ]
     },
-    "sources": [
-      {
-        "label": "Implementation roadmap",
-        "href": "https://ucsdcollab.atlassian.net/wiki/spaces/AI/pages/4121657506/Cash+Application+Modernization+-+Implementation+Roadmap"
-      },
-      {
-        "label": "October 5 design",
-        "href": "https://ucsdcollab.atlassian.net/wiki/spaces/AI/pages/3864494148/Solution+Design+Overview"
-      },
-      {
-        "label": "March 2026 business case",
-        "href": "https://ucsdcollab.atlassian.net/wiki/spaces/AI/pages/4080566338/Modernizing+Cash+Application+ROI"
-      }
-    ],
     "section": {
       "part": 1,
       "label": "Vertical solutions"
-    },
-    "ask": "Support the integrations and ownership for cash receipts"
+    }
   },
   {
     "id": 1031,
@@ -7519,8 +7488,6 @@ export const slides = [
       "part": 1,
       "label": "Vertical solutions"
     },
-    "ask": "Support the integrations and ownership for cash receipts",
-    "sourceNote": "Source: Cash Application Modernization Implementation Roadmap (Confluence, Shawn Munro), read Oct 9, 2026. Phase 1 status: planning.",
     "speakerNotes": "45 seconds. Dates come from the Implementation Roadmap page in the AI Confluence space, read October 9, 2026. Phase 1 is in planning; Phases 2–4 not started. Longest-lead risk: Bank of America daily CSV provisioning and ServiceNow ticket API access, which should start the first week. December 21–31 is a hard stop. Phase 3 needs accounting staff time for knowledge-capture interviews in January. Phase 4 includes change management with external payers and campus units. Phase 3 scope may grow depending on how many receipts remain unmatched after Phase 2.",
     "compact": true
   },
@@ -7561,9 +7528,8 @@ export const slides = [
       "part": 1,
       "label": "Vertical solutions"
     },
-    "ask": "Prioritize the next contract groups, starting with OCGA",
     "intro": {
-      "kicker": "Demonstration · Word add-in",
+      "kicker": "Word add-in",
       "title": "Contract review inside Word",
       "label": "Contract review · Word add-in",
       "setup": "Institutional rules run inside the document reviewers already use. They produce tracked changes, each with a comment naming the rule behind it.",
@@ -7583,21 +7549,21 @@ export const slides = [
       "cabinet"
     ],
     "managerSection": "Vertical Solutions",
-    "durationSeconds": 60,
+    "durationSeconds": 45,
     "section": {
       "part": 1,
       "label": "Vertical solutions"
     },
     "intro": {
-      "kicker": "Demonstration · ServiceNow",
+      "kicker": "ServiceNow",
       "title": "Routing tickets to the right team",
       "label": "ServiceNow · ticket routing",
-      "setup": "A support request comes in. The model, trained on our own case history, suggests which team should own it, with a confidence score.",
-      "watchFor": "The ranked suggestions. The agent picks the assignment; nothing is routed on its own.",
+      "setup": "A desktop won't power on. Instead of landing with the Service Desk first, the model trained on our case history recommends sending it straight to Field Support.",
+      "watchFor": "The recommended specialist team and its confidence. The agent confirms the assignment.",
       "seconds": 5
     },
-    "videoSrc": "/media/cabinet/cabinet-servicenow-routing-natural.mp4",
-    "poster": "/media/cabinet/cabinet-servicenow-routing-natural-poster.jpg",
+    "videoSrc": "/media/cabinet/cabinet-servicenow-routing-fieldsupport.mp4",
+    "poster": "/media/cabinet/cabinet-servicenow-routing-fieldsupport-poster.jpg",
     "videoLoop": false,
     "videoClearNav": false,
     "videoAutoPlay": true,
@@ -7608,8 +7574,8 @@ export const slides = [
       "label": "Current ServiceNow interface",
       "captureNote": "Support requests · actual recommendations · staff selects · nothing saved"
     },
-    "managerSummary": "Full-width ServiceNow routing recording (October 8 capture) for presenter voice-over.",
-    "speakerNotes": "One minute; voice over the full-width recording. ServiceNow suggests specialist assignment groups with confidence scores, trained on our case history; the agent selects. Recording: October 8, 2026 capture with natural case wording, unsaved demo forms, no case saved (docs/cabinet-servicenow-natural-manifest.json); it is built from captured frames rather than a continuous screen recording. Model scores are not measured accuracy. The savings figure on the overview is a scenario at an assumed 90% accuracy, not measured. Do not claim automatic routing."
+    "managerSummary": "ServiceNow routing: a hardware request recommended to ITS-FieldSupport-Intake (79.9%), then selected on the unsaved form.",
+    "speakerNotes": "45 seconds; voice over. A request comes in that the Service Desk would otherwise have to triage and hand off. The model recommends ITS-FieldSupport-Intake at 79.9%, with the Service Desk second at 18.1%; the agent selects Field Support and the group fills in. The value is skipping the hand-off: tickets go straight to the team that does the work. Scores are model confidence for this example, not measured accuracy. Recording: October 8, 2026 capture on an unsaved new-case form in production ServiceNow; nothing saved or submitted. Built from held screenshots, not a continuous recording. The VPN example that routed back to the Service Desk was cut on Oct 9."
   },
   {
     "id": 1006,
@@ -7731,20 +7697,6 @@ export const slides = [
       "dataRule": "P1–P3 only within approved services and setups; P4 prohibited. Check the service, model route, and use case.",
       "accessRule": "Access follows your account permissions and the abilities enabled for each tool.",
       "verifiedDate": "October 8, 2026",
-      "sources": [
-        {
-          "label": "Website matrix",
-          "href": "https://tritonai.ucsd.edu/developer-apis/harness.html"
-        },
-        {
-          "label": "TritonGPT overview",
-          "href": "https://tritonai.ucsd.edu/tritongpt/index.html"
-        },
-        {
-          "label": "Privacy policy",
-          "href": "https://tritonai.ucsd.edu/tritongpt/privacy.html"
-        }
-      ],
       "kicker": "The engine"
     },
     "section": {
@@ -7841,7 +7793,6 @@ export const slides = [
       ],
       "footnote": "Features from the current nightly build. A non-programmer administrator used it to build a complete desktop app, the OnBase API Explorer."
     },
-    "claimNote": "Source: TritonAI Harness nightly build installed on a TritonAI workstation (integrations, model catalog, and settings inspected Sep 22, 2026) · team knowledge vault · reviewed Sep 22, 2026",
     "audiences": [
       "cabinet"
     ],
@@ -7871,7 +7822,7 @@ export const slides = [
       "label": "Citizen development"
     },
     "intro": {
-      "kicker": "Demonstration · TritonAI Harness",
+      "kicker": "TritonAI Harness",
       "title": "The Harness at work",
       "label": "TritonAI Harness · plugins, skills, a real task",
       "setup": "First the plugins that connect it to campus systems, and the skills that package know-how. Then a real task: summarize workshop feedback and build a UC San Diego results page.",
@@ -7917,7 +7868,7 @@ export const slides = [
       "label": "Citizen development"
     },
     "intro": {
-      "kicker": "Demonstration · TritonAI Harness training",
+      "kicker": "TritonAI Harness training",
       "title": "What the Harness does",
       "label": "TritonAI Harness training · opening",
       "setup": "Our staff training opens with real Harness results: a spreadsheet becomes a dashboard, notes become a campus deck, a small sign-up app, an n8n workflow explained, Microsoft 365 connected, and skills to share.",
@@ -7963,7 +7914,7 @@ export const slides = [
       "label": "Citizen development"
     },
     "intro": {
-      "kicker": "Demonstration · live run, sped up",
+      "kicker": "live run, sped up",
       "title": "The Harness takes our new training",
       "label": "TritonAI Harness at work · sped up",
       "setup": "I asked the Harness to open tritonai.ucsd.edu, find the new TritonAI Discovery Series, play the first video, and then answer the knowledge check.",
@@ -8029,7 +7980,6 @@ export const slides = [
       "part": 2,
       "label": "Citizen development"
     },
-    "sourceNote": "Source: TritonAI Harness training use case library, tritonai.ucsd.edu/training/harness, read Oct 9, 2026.",
     "speakerNotes": "45 seconds. These come from the use case library in the Harness training, each tied to a plugin ability: Microsoft 365 read and opt-in drafts, Kuali Build read-only, the campus n8n plugin, and GitHub with the UCSD Accessibility Compliance skill. Drafts are never sent automatically; the n8n workflow stays inactive until reviewed; the Kuali Build check is read-only.",
     "compact": true
   },
@@ -8380,24 +8330,6 @@ export const slides = [
     ],
     "managerSection": "Sovereign AI and Scale",
     "durationSeconds": 60,
-    "sources": [
-      {
-        "label": "OpenAI pacing · Aug 18, 2026",
-        "href": "https://openai.com/index/pacing-model-development-cyber-capabilities/"
-      },
-      {
-        "label": "U.S. EO 14409 §3 · Jun 2, 2026",
-        "href": "https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/"
-      },
-      {
-        "label": "NVIDIA Nemotron 3 Ultra · Jun 4, 2026",
-        "href": "https://research.nvidia.com/labs/nemotron/Nemotron-3-Ultra/"
-      },
-      {
-        "label": "NVIDIA coalition · Mar 16, 2026",
-        "href": "https://nvidianews.nvidia.com/news/nvidia-launches-nemotron-coalition-of-leading-global-ai-labs-to-advance-open-frontier-models"
-      }
-    ],
     "speakerNotes": "Part 4: what powers everything shown so far. One minute. Sovereign inference as a service is a core ecosystem pillar alongside approved commercial frontier APIs. Model capability, release pacing and government review are outside university control; retaining a deployable open-weight option gives us more control over operations. The August 18 OpenAI source documents historical pauses, not an assertion that all commercial models are currently unavailable. EO 14409 section 3 establishes a voluntary framework with up to 30 days of early government access, expressly not mandatory licensing or preclearance. NVIDIA is a U.S. company; its coalition is global. NVIDIA reports strong open-model benchmarks, not universal parity with every proprietary frontier model. These models are candidates to evaluate, not a claim that Nemotron is already deployed at UCSD. Sovereign means control over the service and deployment; it does not mean risk-free, no oversight, or every gateway request on campus GPUs. Campus-managed inference still requires evaluation, isolation, access controls and monitoring. Routing, hardware capacity, support and model licensing determine the operational benefit. Our recommendation in row 3 is a strategic inference from the source facts. Sources checked October 8, 2026. Revised allocation: 90 seconds. Lead with sovereign AI, the second pillar powering the citizen developer ecosystem and research. Berkeley gateway use is confirmed in Brett/Shawn’s October 8 discussion; expanded campus operationalization and UCOP funding/broker options remain discussion, not an approved UC-wide launch. A support liaison at each campus and token attribution would support expansion. UC Tech News article is still a draft; Dan’s quote awaits his AVC approval and is excluded. Anthropic/OpenAI contract updates are omitted until current terms/status and Pradeep’s preferred wording are confirmed. Keep commercial/open-weight comparison, NVIDIA sources and Navier–Stokes detail in backup for questions. Sovereign refers to service/deployment control, not a promise that every route is on campus GPUs or that data never leaves a workstation.",
     "section": {
       "part": 4,
@@ -8847,7 +8779,6 @@ export const slides = [
         }
       ]
     },
-    "claimNote": "Source: Class Planner analytics workbook (daily usage, report through Sep 20, 2026, M. Holland) from TritonGPT and Plausible exports · UC San Diego enrollment dates · reviewed Sep 21, 2026",
     "audiences": [
       "cabinet"
     ],
@@ -8901,7 +8832,6 @@ export const slides = [
       "rows": [
         {
           "name": "Payment Request Review",
-          "what": "Checks a payment request and its attachments against policy, then drafts the decision for a reviewer.",
           "status": "Building",
           "tone": "progress",
           "impact": "Finance staff",
@@ -8909,7 +8839,6 @@ export const slides = [
         },
         {
           "name": "RFX Evaluation Agent",
-          "what": "Screens supplier proposals against minimum requirements, then scores the qualifying ones.",
           "status": "Building",
           "tone": "progress",
           "impact": "Procurement",
@@ -8917,7 +8846,6 @@ export const slides = [
         },
         {
           "name": "Security Review Agent",
-          "what": "Extends contract review into software security terms and data handling.",
           "status": "Building",
           "tone": "progress",
           "impact": "Information assurance",
@@ -8925,7 +8853,6 @@ export const slides = [
         },
         {
           "name": "Financial and Workforce Agents",
-          "what": "Plain-language answers from finance and payroll data, as tables or charts.",
           "status": "Pilot",
           "tone": "pilot",
           "impact": "Finance and HR",
@@ -8933,7 +8860,6 @@ export const slides = [
         },
         {
           "name": "Contract Review: next groups",
-          "what": "Extend the Procurement workflow to more contract types, starting with OCGA.",
           "status": "Next",
           "tone": "pilot",
           "impact": "OCGA first",
@@ -8941,7 +8867,6 @@ export const slides = [
         },
         {
           "name": "Citizen Developer Hosting",
-          "what": "A governed path from a staff-built tool to campus hosting: package, review, deploy.",
           "status": "Pilot",
           "tone": "pilot",
           "impact": "Departments",
@@ -8963,7 +8888,6 @@ export const slides = [
       "part": 1,
       "label": "Vertical solutions"
     },
-    "sourceNote": "Source: TritonAI program records (PK portfolio slides: pilots and skunkworks), reviewed Sep 22, 2026. A selection of current work, not a full inventory.",
     "speakerNotes": "45 seconds. The next wave of vertical solutions, from the PK portfolio pilots and skunkworks slides (reviewed Sept 22). No impact figures yet; say who each is for. Payment Request Review and the RFX Evaluation Agent keep humans reviewing everything; the Security Review Agent is the contract reviewer extended into software security terms. Financial and workforce agents are limited-audience pilots. Contract review's next groups start with OCGA, subject to Nicole's list. Citizen Developer Hosting is covered again in Part 2. Cash application has its own roadmap slide; do not repeat it here."
   },
   {
@@ -8989,7 +8913,6 @@ export const slides = [
       }
     ],
     "speakerNotes": "25 seconds after Passport. Source: Nikki Giaquinta’s RRSS/IPPS AI Projects email, received October 8 at 4:53 PM PT, read directly October 9. These are owner-reported examples, not independently timed or annual audited outcomes. Pricing annualization is 3 hours per update × roughly 50 updates/year = roughly 150 hours/year; no measured observation period was supplied. Same-day pricing suggestions are a stated workflow benefit. Facilities describes extraction/report preparation and work-item creation, not physically fixing 81 compliance issues in 13 seconds. The manual 45-minute baseline is approximate and the automated 13 seconds is one reported five-building run; don’t extrapolate annual savings or imply human remediation takes 13 seconds. No net ROI, implementation cost, dollar conversion, staff reduction or generalized accuracy is asserted. Both show departments supplying workflow knowledge and building focused tools. Green Spend, Concur reconciliation and custodial assignments are additional examples in Nikki’s email for Q&A; early-discussion ServiceNow deflection and Non-PO review are not presented as deployed products. No private records or email addresses shown on this slide.",
-    "sourceNote": "Source: Nikki Giaquinta · October 8, 2026 · team-reported results",
     "section": {
       "part": 3,
       "label": "What people build"

@@ -22,3 +22,16 @@
 .cabinet-canvas[data-reading] .cabinet-cash-metrics {grid-template-columns:1fr;}
 .cabinet-canvas[data-reading] .cabinet-cash-phases {grid-template-columns:1fr 1fr;gap:20px;}
 .cabinet-canvas[data-reading] .cabinet-cash-metrics strong {font-size:43px;}
+
+/* Simple version: one framing line, four phases with dates */
+.cabinet-cash--simple {padding-top:64px;}
+.cabinet-cash--simple h1 {font-size:66px;margin-bottom:22px;}
+.cabinet-cash--simple .cabinet-cash-lead {max-width:1000px;font-size:30px;line-height:1.35;margin-bottom:64px;}
+.cabinet-cash--simple .cabinet-cash-phases {gap:28px;}
+.cabinet-cash--simple .cabinet-cash-phases > div {padding-top:20px;border-top-width:4px;}
+.cabinet-cash--simple .cabinet-cash-phases span {display:block;font-size:20px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;}
+.cabinet-cash--simple .cabinet-cash-phases em {display:block;margin-top:6px;color:#b5c6d5;font-style:normal;font-weight:500;letter-spacing:0;text-transform:none;}
+.cabinet-cash--simple .cabinet-cash-phases h2 {font-size:30px;margin:14px 0 8px;}
+.cabinet-cash--simple .cabinet-cash-phases p {font-size:21px;}
+.cabinet-canvas[data-reading] .cabinet-cash--simple h1 {font-size:40px;}
+.cabinet-canvas[data-reading] .cabinet-cash--simple .cabinet-cash-lead {font-size:21px;margin-bottom:28px;}

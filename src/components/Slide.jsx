@@ -65,20 +65,19 @@ const DeckVideoSlide = ({ slide, staticPreview }) => {
     if (!slide.intro || showIntro || !autoPlay || !video) return undefined;
     // play() can be interrupted while the file is still loading; retry once it can play.
     const start = () => { video.muted = true; video.play().catch(() => {}); };
+    const resume = () => { if (document.visibilityState === 'visible' && video.paused && video.currentTime === 0) start(); };
     start();
     video.addEventListener('canplay', start, { once: true });
-    return () => video.removeEventListener('canplay', start);
+    document.addEventListener('visibilitychange', resume);
+    return () => {
+      video.removeEventListener('canplay', start);
+      document.removeEventListener('visibilitychange', resume);
+    };
   }, [slide.intro, showIntro, autoPlay]);
   return (
     <div className="relative w-full h-full overflow-hidden bg-black">
       {slide.intro && showIntro && (
         <CabinetDemoIntro slide={slide} seconds={introSeconds} staticPreview={staticPreview} onDone={() => setShowIntro(false)} />
-      )}
-      {slide.intro && !showIntro && (
-        <div className="cabinet-demo-label">
-          <span>{slide.intro.kicker || 'Demonstration'}</span>
-          <strong>{slide.intro.label || slide.intro.title}</strong>
-        </div>
       )}
       <video
         ref={videoRef}

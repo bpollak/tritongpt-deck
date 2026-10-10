@@ -58,9 +58,9 @@ export default function CabinetWorkflowComparison({ comparison, children }) {
               <p className="cabinet-workflow-data-rule"><strong>Data use, both workspaces:</strong> {comparison.dataRule}</p>
               <p className="cabinet-workflow-access-rule">{comparison.accessRule}</p>
             </>}
-            <p className="cabinet-workflow-sources">Cabinet adaptation · Verified {comparison.verifiedDate} · {comparison.sources.map((source, index) => (
+            {comparison.sources?.length > 0 && <p className="cabinet-workflow-sources">Cabinet adaptation · Verified {comparison.verifiedDate} · {comparison.sources.map((source, index) => (
               <span key={source.href}>{index > 0 && ' · '}<a href={source.href} target="_blank" rel="noopener noreferrer">{source.label}</a></span>
-            ))}</p>
+            ))}</p>}
           </footer>
         </section>
       ))}

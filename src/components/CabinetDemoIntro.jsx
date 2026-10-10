@@ -16,7 +16,7 @@ export default function CabinetDemoIntro({ slide, seconds, onDone, staticPreview
       {slide.poster && <img className="cabinet-demo-intro__poster" src={slide.poster} alt="" />}
       <CabinetCanvas className="cabinet-demo-intro__canvas" section={slide.section} ask={slide.ask}>
         <div className="cabinet-demo-intro__body">
-          <p className="cabinet-demo-intro__kicker">{intro.kicker || 'Demonstration'}</p>
+          {intro.kicker && <p className="cabinet-demo-intro__kicker">{intro.kicker}</p>}
           <h1>{intro.title}</h1>
           {intro.setup && <p className="cabinet-demo-intro__setup">{intro.setup}</p>}
           {intro.watchFor && (
