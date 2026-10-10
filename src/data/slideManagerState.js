@@ -31,6 +31,7 @@ export const slideManagerState = {
     "cabinet-class-planner-demo",
     "cabinet-class-planner-utilization",
     "cabinet-scale",
+    "cabinet-why-sovereign",
     "cabinet-sovereign-ai",
     "cabinet-harness-discovery-demo",
     "cabinet-asks-close",

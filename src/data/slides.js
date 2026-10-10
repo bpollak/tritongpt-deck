@@ -8402,6 +8402,43 @@ export const slides = [
     "speakerNotes": "One minute. The result concerns finite-time blowup for forced 3D Navier–Stokes. Describe it as OpenAI’s announced proof; do not claim a Clay prize or general resolution of the unforced physical problem. Buckmaster and Alpöge worked on related forced Euler results. Buckmaster’s statement says he asked about training on their private Codex drafts; he explicitly says he does not know whether their data was used and is not accusing anyone. September 9 reporting described uncertainty about indirect use. OpenAI’s September 10 update states that the preceding two months of Buckmaster’s prompts could not have influenced the system, including training, and denies accessing their work before publication. Early reporting must be read alongside that later response. There is no established public evidence of misuse in the sources reviewed. Consumer research-tool usage is not evidence about UCSD enterprise/API data terms. The campus implication is our recommendation: choose approved services, clear terms and data handling, with campus-controlled inference available for appropriate unpublished work. This controversy does not prove that self-hosting automatically resolves all intellectual-property or security questions. Sources checked October 8, 2026."
   },
   {
+    "id": 1047,
+    "slug": "cabinet-why-sovereign",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "Why the university needs its own AI supply",
+    "subtitle": "Everything you've seen today runs on AI models. We shouldn't rent all of it.",
+    "content": [
+      {
+        "heading": "Access can change overnight",
+        "text": "Frontier models arrive on someone else's timeline: previews, pauses, and government review."
+      },
+      {
+        "heading": "Costs grow with every request",
+        "text": "Commercial APIs meter every token. Models we host turn campus growth into a predictable, fixed cost."
+      },
+      {
+        "heading": "Our data stays under our rules",
+        "text": "Student, research, and business data can be processed on infrastructure UC San Diego runs and governs."
+      },
+      {
+        "heading": "Tools keep working",
+        "text": "Open-weight models we host can't be retired out from under an app like Class Planner."
+      }
+    ],
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Sovereign AI and Scale",
+    "durationSeconds": 45,
+    "section": {
+      "part": 4,
+      "label": "Foundation"
+    },
+    "speakerNotes": "About 45 seconds; sets up the sovereign inference slide (Brett, Oct 10). Keep to describing the news, not criticizing or naming any lab, and not as a replacement for the enterprise commercial agreements (they stay in the mix; see next slide). Row 1: release pacing, limited previews, and government review are outside university control; the June federal order sets a voluntary framework with up to 30 days of early government access, not mandatory licensing. Row 2: the gateway carried 527B tokens Jan–Sep 2026, 90.6% on self-hosted and internal routes (not all of that is campus GPU inference). Row 3: data handling still follows UC policy and the P1–P4 classification; sovereign means control over the service, not 'risk free'. Row 4: hosted open-weight models don't get deprecated by a vendor; Class Planner is the gateway's biggest daily load. Transition: 'So here is what we built, and who it already serves.'",
+    "compact": true
+  },
+  {
     "id": 1011,
     "slug": "cabinet-sovereign-ai",
     "type": "content",
