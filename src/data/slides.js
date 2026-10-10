@@ -5393,7 +5393,8 @@ export const slides = [
       "internal",
       "public",
       "executive",
-      "regent"
+      "regent",
+      "cabinet"
     ]
   },
   {
@@ -8369,9 +8370,9 @@ export const slides = [
     "id": 1011,
     "slug": "cabinet-sovereign-ai",
     "type": "content",
-    "layout": "cabinet-outline",
+    "layout": "cabinet-sovereign-gateway",
     "title": "Sovereign inference as a service",
-    "subtitle": "A shared foundation for campus builders, researchers, and UC collaboration.",
+    "subtitle": "One campus-run AI gateway: open-weight models on campus GPUs plus approved commercial APIs, now serving UC campuses beyond San Diego.",
     "content": [
       {
         "heading": "Campus control",
@@ -8391,10 +8392,58 @@ export const slides = [
     ],
     "managerSection": "Sovereign AI and Scale",
     "durationSeconds": 60,
-    "speakerNotes": "One minute. Follows the gateway usage slide. Sovereign inference as a service is a core ecosystem pillar alongside approved commercial frontier APIs. Model capability, release pacing and government review are outside university control; retaining a deployable open-weight option gives us more control over operations. The August 18 OpenAI source documents historical pauses, not an assertion that all commercial models are currently unavailable. EO 14409 section 3 establishes a voluntary framework with up to 30 days of early government access, expressly not mandatory licensing or preclearance. NVIDIA is a U.S. company; its coalition is global. NVIDIA reports strong open-model benchmarks, not universal parity with every proprietary frontier model. These models are candidates to evaluate, not a claim that Nemotron is already deployed at UCSD. Sovereign means control over the service and deployment; it does not mean risk-free, no oversight, or every gateway request on campus GPUs. Campus-managed inference still requires evaluation, isolation, access controls and monitoring. Routing, hardware capacity, support and model licensing determine the operational benefit. Our recommendation in row 3 is a strategic inference from the source facts. Sources checked October 8, 2026. Revised allocation: 90 seconds. Lead with sovereign AI, the second pillar powering the citizen developer ecosystem and research. Berkeley gateway use is confirmed in Brett/Shawn’s October 8 discussion; expanded campus operationalization and UCOP funding/broker options remain discussion, not an approved UC-wide launch. A support liaison at each campus and token attribution would support expansion. UC Tech News article is still a draft; Dan’s quote awaits his AVC approval and is excluded. Anthropic/OpenAI contract updates are omitted until current terms/status and Pradeep’s preferred wording are confirmed. Keep commercial/open-weight comparison, NVIDIA sources and Navier–Stokes detail in backup for questions. Sovereign refers to service/deployment control, not a promise that every route is on campus GPUs or that data never leaves a workstation.",
+    "speakerNotes": "One minute. Visual (Oct 10, Brett): models flow into the campus-run gateway, which already serves more than UC San Diego. Left: open-weight models on campus-managed GPUs at SDSC (sovereign: we control access, deployment, model choice) plus approved commercial APIs for frontier needs. Center: the same public Jan–Sep 2026 aggregates as the usage slide (527.0B tokens, 157.0M request records, 90.6% on self-hosted and internal routes; bars are monthly totals with the cloud share in gold). Right: UC Berkeley researchers already use the gateway with their own tools (not the Harness); UC Merced is onboarding to the gateway (Brett, Oct 10); more UC campuses is the opportunity, not an approved UC-wide launch. A support liaison at each campus and token attribution would support expansion. Sovereign inference as a service is a core ecosystem pillar alongside approved commercial frontier APIs. Model capability, release pacing and government review are outside university control; retaining a deployable open-weight option gives us more control over operations. The August 18 OpenAI source documents historical pauses, not an assertion that all commercial models are currently unavailable. EO 14409 section 3 establishes a voluntary framework with up to 30 days of early government access, expressly not mandatory licensing or preclearance. NVIDIA is a U.S. company; its coalition is global. NVIDIA reports strong open-model benchmarks, not universal parity with every proprietary frontier model. These models are candidates to evaluate, not a claim that Nemotron is already deployed at UCSD. Sovereign means control over the service and deployment; it does not mean risk-free, no oversight, or every gateway request on campus GPUs. Campus-managed inference still requires evaluation, isolation, access controls and monitoring. Routing, hardware capacity, support and model licensing determine the operational benefit. Our recommendation in row 3 is a strategic inference from the source facts. Sources checked October 8, 2026. Revised allocation: 90 seconds. Lead with sovereign AI, the second pillar powering the citizen developer ecosystem and research. Berkeley gateway use is confirmed in Brett/Shawn’s October 8 discussion; expanded campus operationalization and UCOP funding/broker options remain discussion, not an approved UC-wide launch. A support liaison at each campus and token attribution would support expansion. UC Tech News article is still a draft; Dan’s quote awaits his AVC approval and is excluded. Anthropic/OpenAI contract updates are omitted until current terms/status and Pradeep’s preferred wording are confirmed. Keep commercial/open-weight comparison, NVIDIA sources and Navier–Stokes detail in backup for questions. Sovereign refers to service/deployment control, not a promise that every route is on campus GPUs or that data never leaves a workstation.",
     "section": {
       "part": 4,
       "label": "Foundation"
+    },
+    "gatewayMap": {
+      "modelsLabel": "Models",
+      "models": [
+        {
+          "tag": "Sovereign",
+          "name": "Open-weight models",
+          "text": "Served on UC San Diego-managed GPUs at SDSC. We control access, deployment, and model choice."
+        },
+        {
+          "tag": "Choice",
+          "name": "Approved commercial APIs",
+          "text": "Frontier models when a task needs them, through the same front door and access controls."
+        }
+      ],
+      "hub": {
+        "name": "TritonAI Gateway",
+        "value": "527B",
+        "detail": "tokens · Jan–Sep 2026",
+        "foot": "157M requests · 90.6% on self-hosted and internal routes (blue), cloud in gold"
+      },
+      "campusesLabel": "Who it serves",
+      "campuses": [
+        {
+          "name": "UC San Diego",
+          "text": "TritonGPT, the Harness, vertical solutions, campus apps",
+          "status": "Live",
+          "tone": "live"
+        },
+        {
+          "name": "UC Berkeley",
+          "text": "Researchers using the gateway with their own tools",
+          "status": "Live",
+          "tone": "live"
+        },
+        {
+          "name": "UC Merced",
+          "text": "Onboarding to the gateway",
+          "status": "Onboarding",
+          "tone": "onboarding"
+        },
+        {
+          "name": "More UC campuses",
+          "text": "Inference as a shared UC service, with clear cost attribution",
+          "status": "Next",
+          "tone": "next"
+        }
+      ]
     }
   },
   {
@@ -8434,7 +8483,7 @@ export const slides = [
       }
     ],
     "audiences": [
-      "cabinet"
+      "cabinet-backup"
     ],
     "managerSection": "Closing",
     "durationSeconds": 60,

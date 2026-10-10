@@ -7,6 +7,7 @@ import CabinetWebsiteVisual from './CabinetWebsiteVisual';
 import CabinetHarnessOverview from './CabinetHarnessOverview';
 import CabinetRoutingSavings from './CabinetRoutingSavings';
 import CabinetCashReceipts from './CabinetCashReceipts';
+import CabinetSovereignGateway from './CabinetSovereignGateway';
 import EmbeddedVideo from './EmbeddedVideo';
 import CabinetDemoIntro from './CabinetDemoIntro';
 import { Target, Database, Cpu, Blocks, GraduationCap, Building2, FileText, FileCheck, DollarSign, Shield, ShieldCheck, BookOpen, Code, Presentation, Globe, FileEdit, FolderOpen, TrendingUp, TrendingDown, ClipboardCheck, Search, Heart, Calendar, GitBranch, Network, Grid3x3, ArrowDown, ArrowRight, Brain, RefreshCw, ArrowRightLeft, CheckCircle, Monitor, User, Users, Award, Server, Layers, Wallet, Share2, Star, FlaskConical, Lightbulb, Landmark, Scale, Headphones, Hammer, Zap, Rocket, BarChart3, AlertTriangle, Handshake } from 'lucide-react';
@@ -263,6 +264,10 @@ const Slide = ({ slide, staticPreview = false }) => {
 
   if (slide.layout === 'cabinet-routing-savings') {
     return <CabinetRoutingSavings slide={slide} />;
+  }
+
+  if (slide.layout === 'cabinet-sovereign-gateway') {
+    return <CabinetSovereignGateway slide={slide} />;
   }
 
   if (slide.layout === 'cabinet-cash-receipts') {

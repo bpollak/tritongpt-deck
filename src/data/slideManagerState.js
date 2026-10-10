@@ -708,6 +708,7 @@ export const slideManagerState = {
     ],
     "thank-you": [
       "all",
+      "cabinet",
       "technical",
       "executive",
       "citizen",
@@ -759,7 +760,7 @@ export const slideManagerState = {
       "cabinet"
     ],
     "cabinet-asks-close": [
-      "cabinet"
+      "cabinet-backup"
     ],
     "cabinet-berkeley-quote": [
       "cabinet"

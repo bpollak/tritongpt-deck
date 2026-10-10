@@ -1,0 +1,51 @@
+.cabinet-gw-canvas {background:#0f2340;}
+.cabinet-gw {position:relative;box-sizing:border-box;width:1280px;height:720px;color:#f5f0e6;font-family:Roboto,Arial,sans-serif;
+  background:radial-gradient(ellipse 520px 380px at 600px 420px,rgba(0,198,215,.16),transparent 70%),linear-gradient(135deg,#182b49,#0b3d5f);}
+.cabinet-gw h1 {position:absolute;left:64px;top:30px;margin:0;font-family:Teko,Roboto,sans-serif;font-size:58px;line-height:1.05;font-weight:600;}
+.cabinet-gw-lead {position:absolute;left:64px;top:100px;width:1100px;margin:0;font-size:24px;line-height:1.3;color:#c9d6e3;}
+
+.cabinet-gw-lines {position:absolute;inset:0;width:1280px;height:720px;pointer-events:none;}
+.cabinet-gw-flow {fill:none;stroke-width:3;stroke-linecap:round;stroke-dasharray:2 11;animation:cabinet-gw-flow 1.1s linear infinite;}
+.cabinet-gw-flow--in {stroke:#00c6d7;}
+.cabinet-gw-flow--live {stroke:#ffcd00;}
+.cabinet-gw-flow--onboarding {stroke:#ffcd00;opacity:.75;stroke-dasharray:2 16;}
+.cabinet-gw-flow--next {stroke:#8aa3ba;opacity:.6;animation:none;stroke-dasharray:4 9;}
+@keyframes cabinet-gw-flow {to {stroke-dashoffset:-13;}}
+
+.cabinet-gw-col-label {position:absolute;top:172px;font-size:14px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#8fb3cc;}
+.cabinet-gw-col-label--models {left:64px;}
+.cabinet-gw-col-label--campuses {left:850px;top:172px;}
+
+.cabinet-gw-model {position:absolute;left:64px;width:286px;box-sizing:border-box;padding:18px 20px;border-radius:14px;background:rgba(10,30,55,.72);border:1px solid #3d6585;border-left:5px solid #00c6d7;}
+.cabinet-gw-model span {font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#00c6d7;}
+.cabinet-gw-model h2 {margin:8px 0 8px;font-size:25px;line-height:1.15;}
+.cabinet-gw-model p {margin:0;font-size:17px;line-height:1.35;color:#c4d2df;}
+
+.cabinet-gw-hub {position:absolute;top:205px;height:410px;box-sizing:border-box;padding:22px 24px 18px;border-radius:22px;text-align:center;
+  background:linear-gradient(180deg,#0e4f78,#0b3657);border:2px solid #00c6d7;box-shadow:0 0 0 8px rgba(0,198,215,.12),0 24px 60px rgba(0,0,0,.35);}
+.cabinet-gw-hub-kicker {display:block;font-size:15px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#ffcd00;}
+.cabinet-gw-hub strong {display:block;margin-top:8px;font-family:Teko,Roboto,sans-serif;font-size:88px;line-height:.95;font-weight:600;color:#fff;white-space:nowrap;}
+.cabinet-gw-hub p {margin:4px 0 0;font-size:17px;color:#c9d6e3;}
+.cabinet-gw-bars {display:flex;align-items:flex-end;justify-content:space-between;gap:6px;height:140px;margin:18px 6px 0;}
+.cabinet-gw-bar {flex:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;}
+.cabinet-gw-bar i {position:relative;display:block;background:#00c6d7;border-radius:4px 4px 0 0;overflow:hidden;}
+.cabinet-gw-bar b {position:absolute;left:0;right:0;top:0;background:#ffcd00;}
+.cabinet-gw-bar small {margin-top:5px;font-size:12px;color:#8fb3cc;}
+.cabinet-gw-hub .cabinet-gw-hub-foot {margin-top:12px;font-size:15px;line-height:1.35;color:#b5c6d5;}
+
+.cabinet-gw-campus {position:absolute;left:850px;width:366px;box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px 12px 18px;border-radius:14px;background:rgba(10,30,55,.72);border:1px solid #3d6585;border-left:5px solid #ffcd00;}
+.cabinet-gw-campus h2 {margin:0 0 4px;font-size:23px;line-height:1.1;}
+.cabinet-gw-campus p {margin:0;font-size:15px;line-height:1.3;color:#c4d2df;}
+.cabinet-gw-campus span {flex:none;padding:5px 10px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#ffcd00;color:#182b49;}
+.cabinet-gw-campus--onboarding span {background:transparent;color:#ffcd00;border:1.5px solid #ffcd00;}
+.cabinet-gw-campus--next {background:transparent;border-style:dashed;border-left:5px dashed #8aa3ba;}
+.cabinet-gw-campus--next span {background:transparent;color:#b5c6d5;border:1.5px dashed #8aa3ba;}
+
+@media (prefers-reduced-motion: reduce) {.cabinet-gw-flow {animation:none;}}
+
+/* Phone reading view: stack the columns. */
+.cabinet-canvas[data-reading] .cabinet-gw {width:auto;height:auto;padding:24px 20px 100px;display:flex;flex-direction:column;gap:12px;}
+.cabinet-canvas[data-reading] .cabinet-gw > * {position:static;width:auto;height:auto !important;}
+.cabinet-canvas[data-reading] .cabinet-gw h1 {font-size:38px;}
+.cabinet-canvas[data-reading] .cabinet-gw-lead {font-size:18px;}
+.cabinet-canvas[data-reading] .cabinet-gw-lines {display:none;}

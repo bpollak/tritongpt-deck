@@ -118,3 +118,5 @@ export const gatewayUsageDashboard = {
   claimNote: 'Source: TritonAI Gateway usage · Jan–Sep 2026 · source reviewed Oct 5, 2026',
   speakerNotes: 'Gateway usage measures shared model access, not TritonGPT chat sessions or Harness adoption. January–September reconciles to 527,027,308,843 input and output tokens and 157,030,124 request records. September totals 71,731,623,368 tokens: 55,691,559,415 self-hosted/internal and 16,040,063,953 cloud. September has 13,120,410 request records across all 30 days. The 90.6% year-to-date share is the non-cloud remainder, including internal routes; do not describe all of it as on-premises GPU inference. Volume alone does not establish the cause of the monthly change. Cache-read and cache-creation fields are not added separately; earlier exports lack those fields, so an upstream definition change cannot be entirely ruled out. Labels are rounded; chart heights use exact public aggregates. Source: https://tritonai.ucsd.edu/developer-apis/index.html#gateway-usage, reviewed October 5 and verified October 8, 2026.'
 };
+
+export const gatewayMonthly = monthly;
