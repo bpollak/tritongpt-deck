@@ -9301,19 +9301,19 @@ export const slides = [
     "hideDemoBadge": true,
     "demoOnly": true,
     "title": "The Harness from my phone",
-    "subtitle": "Two real tasks sent from my phone to the Harness on my desktop.",
-    "durationSeconds": 87,
+    "subtitle": "Three real tasks sent from my phone to the Harness on my desktop.",
+    "durationSeconds": 132,
     "intro": {
       "kicker": "TritonAI Harness · on my phone",
       "title": "The Harness from my phone",
-      "setup": "Two real tasks from my phone: update the TritonAI website, then ask for a project's milestones before Monday's meeting.",
-      "watchFor": "A finished, checked website change previewed on the phone, then a milestone table with a source for every row. Nothing is published or changed.",
+      "setup": "Three real tasks from my phone: update the TritonAI website, ask for a project's milestones, and edit this very presentation.",
+      "watchFor": "A checked website change, a sourced milestone table, then the updated Thank You slide of this deck, all on the phone. Nothing is published.",
       "seconds": 6
     },
-    "videoSrc": "/media/cabinet/cabinet-mobile-harness.mp4",
-    "poster": "/media/cabinet/cabinet-mobile-harness-poster.jpg",
-    "managerSummary": "Oct 10 recordings, combined: Harness mobile app (simulator) paired to Brett's desktop Harness. (1) Adds a Discovery Series announcement to a local copy of the TritonAI website, builds, validates, previews. (2) Read-only question on BFS Cash Receipts milestones answered from email, calendar, meeting notes, and memory with sources.",
-    "speakerNotes": "About 87 seconds (6s intro + 81s clip; you narrate). Part 1, 0:00–0:34, website update: from the phone I asked the Harness on my desktop to add an announcement that Discovery Series lessons 10–15 arrive October 15, in the site's Decorator style, build it, and show a screenshot without committing or publishing. It found the page source, built both deployment modes, passed 182 accessibility checks across 91 routes with zero failures, and showed desktop and mobile previews in the chat. About 10 minutes of work at 45x; local demo copy with no publishing remote. Part 2, 0:34–1:21, milestones: 'What are the milestones and target dates for BFS Cash Receipts Automation, and which are on track?' Read only; about 5 minutes of searching at 30x; the answer is a milestone table with target date, status, and source per row; Phase 1 described as on track for end of 2026. Charter dates are proposed, so say 'the plan'. The answer's raw source notes are not shown."
+    "videoSrc": "/media/cabinet/cabinet-mobile-harness-3.mp4",
+    "poster": "/media/cabinet/cabinet-mobile-harness-3-poster.jpg",
+    "managerSummary": "Oct 10 recordings, combined: Harness mobile app (simulator) paired to Brett's desktop Harness. (1) Adds a Discovery Series announcement to a local copy of the TritonAI website, builds, validates, previews. (2) Read-only question on BFS Cash Receipts milestones answered from email, calendar, meeting notes, and memory with sources. (3) Edits this Cabinet deck's Thank You subtitle in a local copy, redirected mid-task from the phone, builds, and shows the updated slide (Oct 10).",
+    "speakerNotes": "About 2 minutes 12 seconds (6s intro + 126s clip; you narrate). Part 1, 0:00–0:34, website update: from the phone I asked the Harness on my desktop to add an announcement that Discovery Series lessons 10–15 arrive October 15, in the site's Decorator style, build it, and show a screenshot without committing or publishing. It found the page source, built both deployment modes, passed 182 accessibility checks across 91 routes with zero failures, and showed desktop and mobile previews in the chat. About 10 minutes of work at 45x; local demo copy with no publishing remote. Part 2, 0:34–1:21, milestones: 'What are the milestones and target dates for BFS Cash Receipts Automation, and which are on track?' Read only; about 5 minutes of searching at 30x; the answer is a milestone table with target date, status, and source per row; Phase 1 described as on track for end of 2026. Charter dates are proposed, so say 'the plan'. The answer's raw source notes are not shown. Part 3, 1:20–2:06, editing this presentation: from the phone I asked the Harness to change the Thank You slide's subtitle to 'Questions? Start learning at tritonai.ucsd.edu', run the slide checks and build, show a screenshot, and not commit. It found the Cabinet Thank You slide among three similar ones and edited one line. A side check (slide thumbnails) stalled, so I redirected it from the phone: skip that and just build. It built and showed the updated slide in the chat. About 13 minutes of work shown at 60x. Done in a local copy of the deck with no push remote; the live deck's Thank You slide is unchanged."
   },
   {
     "id": 1046,
