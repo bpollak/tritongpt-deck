@@ -9305,5 +9305,39 @@ export const slides = [
     "poster": "/media/cabinet/cabinet-mobile-website-update-poster.jpg",
     "managerSummary": "Oct 10 recording: TritonAI Harness iOS app (simulator) paired to Brett's desktop Harness adds a Discovery Series announcement to a local copy of the TritonAI website, builds, validates, and returns previews. 10 minutes sped up.",
     "speakerNotes": "About 40 seconds (6s intro + 34s clip). Recorded Oct 10 on the Harness mobile app (iPhone simulator, development build) paired to Brett's desktop Harness. One request from the phone: add a short announcement that Discovery Series lessons 10–15 arrive October 15 in the site's Decorator style, build it, show a screenshot, don't commit or publish. The Harness found the generated page source (home.md), added the announcement, built both deployment modes, passed the full test gate (182 viewport accessibility checks across 91 routes, zero failures), and showed desktop and mobile previews in the chat. About 10 minutes of real work shown at 45x. Ran against a local demo copy of the website with no publishing remote; nothing was committed or published."
+  },
+  {
+    "id": 1046,
+    "slug": "cabinet-mobile-milestones-demo",
+    "type": "video",
+    "layout": "cabinet-demo",
+    "content": [],
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Citizen Developer Showcase",
+    "section": {
+      "part": 3,
+      "label": "What people build"
+    },
+    "videoLoop": false,
+    "videoClearNav": false,
+    "videoAutoPlay": true,
+    "hideDemoBadge": true,
+    "demoOnly": true,
+    "title": "Project milestones, from my phone",
+    "subtitle": "One question, answered from email, calendar, meeting notes, and memory.",
+    "durationSeconds": 54,
+    "intro": {
+      "kicker": "TritonAI Harness · on my phone",
+      "title": "What are the milestones, and which are on track?",
+      "setup": "Before Monday's BFS Cash Receipts meeting I ask the Harness on my phone for the project's milestones and target dates.",
+      "watchFor": "A milestone table with target dates, current status, and a source for every row. Read only.",
+      "seconds": 6
+    },
+    "videoSrc": "/media/cabinet/cabinet-mobile-milestones.mp4",
+    "poster": "/media/cabinet/cabinet-mobile-milestones-poster.jpg",
+    "managerSummary": "Oct 10 recording: from the Harness mobile app, a read-only question about BFS Cash Receipts Automation milestones and target dates, answered from email, calendar, meeting notes, and memory with a source per row.",
+    "speakerNotes": "About 54 seconds (6s intro + 47s clip); you narrate. Real, read-only question from the Harness mobile app (Oct 10): 'What are the milestones and target dates for BFS Cash Receipts Automation, and which are on track? Check my email, calendar, meeting notes, and memory, and cite each source. Keep it to milestones and dates.' About 5 minutes of searching shown at 30x. The answer: a milestone table (project start July 2026, charter, current-state documentation, data access and match rules, Phase 1 build and pilot, then later phases) with target date, status, and source for each row; Phase 1 is described as on track for end of calendar year 2026. The answer's raw source notes are not shown. Dates in the charter are proposed; say 'the plan' rather than committing to dates."
   }
 ];

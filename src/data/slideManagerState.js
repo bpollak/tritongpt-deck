@@ -24,6 +24,7 @@ export const slideManagerState = {
     "cabinet-divider-outcomes",
     "cabinet-inbox-priority-sorter",
     "cabinet-mobile-briefing-demo",
+    "cabinet-mobile-milestones-demo",
     "cabinet-personal-productivity-demo",
     "cabinet-department-builders",
     "cabinet-directory-demo",
