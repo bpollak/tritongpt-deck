@@ -7549,7 +7549,7 @@ export const slides = [
       "cabinet"
     ],
     "managerSection": "Vertical Solutions",
-    "durationSeconds": 45,
+    "durationSeconds": 50,
     "section": {
       "part": 1,
       "label": "Vertical solutions"
@@ -7558,12 +7558,12 @@ export const slides = [
       "kicker": "ServiceNow",
       "title": "Routing tickets to the right team",
       "label": "ServiceNow · ticket routing",
-      "setup": "A desktop won't power on. Instead of landing with the Service Desk first, the model trained on our case history recommends sending it straight to Field Support.",
-      "watchFor": "The recommended specialist team and its confidence. The agent confirms the assignment.",
+      "setup": "Two tickets that would normally land on the Service Desk first. The model, trained on our own case history, sends each one straight to the specialist team.",
+      "watchFor": "A broken desktop goes to Field Support (80%). A DNS request goes to the Hostmaster team (97%).",
       "seconds": 5
     },
-    "videoSrc": "/media/cabinet/cabinet-servicenow-routing-fieldsupport.mp4",
-    "poster": "/media/cabinet/cabinet-servicenow-routing-fieldsupport-poster.jpg",
+    "videoSrc": "/media/cabinet/cabinet-servicenow-routing-two-cases.mp4",
+    "poster": "/media/cabinet/cabinet-servicenow-routing-two-cases-poster.jpg",
     "videoLoop": false,
     "videoClearNav": false,
     "videoAutoPlay": true,
@@ -7574,8 +7574,8 @@ export const slides = [
       "label": "Current ServiceNow interface",
       "captureNote": "Support requests · actual recommendations · staff selects · nothing saved"
     },
-    "managerSummary": "ServiceNow routing: a hardware request recommended to ITS-FieldSupport-Intake (79.9%), then selected on the unsaved form.",
-    "speakerNotes": "45 seconds; voice over. A request comes in that the Service Desk would otherwise have to triage and hand off. The model recommends ITS-FieldSupport-Intake at 79.9%, with the Service Desk second at 18.1%; the agent selects Field Support and the group fills in. The value is skipping the hand-off: tickets go straight to the team that does the work. Scores are model confidence for this example, not measured accuracy. Recording: October 8, 2026 capture on an unsaved new-case form in production ServiceNow; nothing saved or submitted. Built from held screenshots, not a continuous recording. The VPN example that routed back to the Service Desk was cut on Oct 9."
+    "managerSummary": "ServiceNow routing, two cases: desktop hardware to ITS-FieldSupport-Intake (79.9%) and a DNS request to ITS-Hostmaster (96.9%), with the Suggest button, top recommendation, and filled assignment group highlighted and zoomed.",
+    "speakerNotes": "50 seconds; voice over. Today most tickets land with the Service Desk first and get handed off. Here the agent clicks Suggest Assignment Group. First case: a department desktop won't power on; the model recommends ITS-FieldSupport-Intake at 79.9% and the group fills in. Second case: a request for DNS records on a university server; it recommends ITS-Hostmaster at 96.9%. The value is skipping the hand-off so the specialist team starts sooner. The agent stays in control and can pick another group. Scores are model confidence for these examples, not measured accuracy. Recording: October 8, 2026 capture on unsaved new-case forms in production ServiceNow; nothing saved or submitted. Built from captured frames; the yellow highlights and zooms were added in editing on Oct 9 (docs/recapture-20261009/sn_edit.py). The VPN example that routed to the Service Desk was dropped."
   },
   {
     "id": 1006,

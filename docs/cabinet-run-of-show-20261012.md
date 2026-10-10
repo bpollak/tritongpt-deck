@@ -10,7 +10,7 @@
 | 1:30–2:45 | Vertical solutions: campus time and cost savers | Impact of each vertical. Say the type of each number (pilot, estimate, scenario, avoided cost). |
 | 2:45–4:00 | Apply received cash faster | Frame the project in one line, then walk the four phases (Oct 2026 – Jun 2027). |
 | 4:45–6:05 | Bring document review into Word | Live Word run: three rules, tracked changes, agent answer. OCGA is next. |
-| 6:05–7:05 | Routing tickets to the right team | Hardware ticket routed straight to Field Support instead of the Service Desk; voice over. |
+| 6:05–7:05 | Routing tickets to the right team | Two tickets routed past the Service Desk: desktop to Field Support (80%), DNS to Hostmaster (97%). Highlights and zooms guide the eye; voice over. |
 | 7:05–8:05 | Transcript matching, college selection, and the Faculty Expertise Directory | Transcript matching, college selection, Directory (Faculty Expertise Directory clip plays). |
 | 8:05–8:50 | What's next in vertical solutions | What is next: payment request review, RFX, security review, data agents, OCGA, hosting. |
 | **Part 2** | **Citizen development: TritonAI Harness** | |
