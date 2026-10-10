@@ -16,12 +16,12 @@
 | **Part 2** | **Citizen development** (divider, 8s) | |
 | 8:16–9:16 | A chat answers. The Harness does the work. | Bridge: IT can’t build every vertical; the Harness lets staff build their own. One six-row comparison matrix (what it does, best fit, connections, where you work, typical result, who stays in charge); no tabs to click. |
 | 9:16–10:16 | TritonAI Harness: built by the people who do the work | Three columns: what it does, what it connects to, what keeps it safe. |
-| 10:16–12:20 | The Harness at work (intro + 117s silent recording, you narrate) | One story: Jordan's fall workshop pilot. The Harness builds the feedback survey as a campus page (UCSD Branding skill, recorded Oct 10) → survey results → summary, Excel dashboard for leaders, nine-slide briefing deck, n8n workflow explained, branded sign-up app wired to n8n, then "use the standard tool, or build it your way." Beat-by-beat voice-over is in the speaker notes. |
+| 10:16–11:53 | The Harness at work (intro + 90s silent recording, you narrate) | One story: Jordan's fall workshop pilot. The Harness builds the feedback survey as a campus page (UCSD Branding skill, recorded Oct 10) → survey results → summary, Excel dashboard for leaders, nine-slide briefing deck, n8n workflow explained, branded sign-up app wired to n8n, then "use the standard tool, or build it your way." Beat-by-beat voice-over is in the speaker notes. |
 | 13:21–14:06 | It stays in your control | Limits the person sets and the campus sets. |
 | 14:06–14:51 | Built artifacts need a hosting lane | Path to hosting: Tier 0 desktop to Tier 3 enterprise. |
 | **Part 3** | **What people build** (divider, 8s) | |
 | 14:59–15:39 | Inbox priority sorter | How I use it: inbox triage. |
-| +0:45 | Monday's briefing, from my phone (placeholder) | Recording pending: the Harness mobile app runs the daily briefing for Monday against the live calendar. If no recording lands, describe it verbally. |
+| +0:40 | Update the TritonAI website from my phone (intro + 34s recording) | Harness mobile app directs the desktop Harness: adds the Oct 15 Discovery Series announcement, builds, 182 accessibility checks, previews on the phone. Nothing published. |
 | 16:29–17:29 | Departments are building with it | Nine IPPS and RRSS projects from Nikki (Oct 10) with status and impact: Core Bio pricing (~150 hrs/yr), Facilities compliance (81 issues in 13s), custodial staffing (~8 hrs/day projected), Passport, Concur reconciliation, green spend, spend chat; ServiceNow deflection and Non-PO review in early discussion. Tell two. |
 | +0:40 | Faculty Expertise Directory (intro + 33s recording) | Citizen developer project: research need to ranked faculty leads for review. Planning rollout after the VCRI demo; app still shows its earlier name. |
 | 16:54–17:39 | Passport Services check-in | Department-designed service app (clip now 20s, sped up). |

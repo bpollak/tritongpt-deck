@@ -7913,7 +7913,7 @@ export const slides = [
       "cabinet"
     ],
     "managerSection": "Platform",
-    "durationSeconds": 124,
+    "durationSeconds": 97,
     "section": {
       "part": 2,
       "label": "Citizen development"
@@ -7926,7 +7926,7 @@ export const slides = [
       "watchFor": "The UC San Diego Branding skill in the request, the finished campus-branded survey, then each result feeding the next.",
       "seconds": 7
     },
-    "videoSrc": "/media/cabinet/cabinet-harness-story-v3.mp4",
+    "videoSrc": "/media/cabinet/cabinet-harness-story-v4.mp4",
     "poster": "/media/cabinet/cabinet-harness-story-v2-poster.jpg",
     "videoLoop": false,
     "videoClearNav": false,
@@ -7945,7 +7945,7 @@ export const slides = [
       "captureNote": "Recorded Oct 9 • fictional practice-kit data • about 3.5 minutes shown in 107 seconds"
     },
     "managerSummary": "Silent story cut (117s): a native Oct 10 recording of the Harness building a Decorator 5 feedback survey with the UCSD Branding skill, then the PK walkthrough's survey analysis, Excel dashboard, briefing deck, n8n workflow, and sign-up app.",
-    "speakerNotes": "About 2 minutes (7s intro + 117s clip, silent; you narrate). Story: Jordan, a staff member, runs a fall workshop pilot (made-up project, fictional files). Beats and clip times: 0:00–0:41 Build the survey: Jordan asks the Harness for a post-workshop feedback survey and picks the UCSD Branding skill so it looks like a campus page (Decorator 5); about a minute later there is an accessible survey.html with 1–5 ratings for pace, content, and room, a comments box, and Submit, opened beside the conversation. (Recorded live on Brett's Mac Oct 10, Harness Nightly, Flash model; the form isn't connected to a backend yet; thinking time shown at 10x.) 0:41–0:58 Analyze: responses come back; Qualtrics already reports, but Jordan wants the team's own questions answered, so the raw results go in; about 14 seconds later there are averages, top comments, missing data flagged, and a takeaway. 0:58–1:13 Dashboard: a presentation-ready Excel dashboard for leaders. 1:13–1:28 Briefing deck: nine slides on the official UC San Diego template with live charts, owners, timeline, and speaker notes. 1:28–1:34 Workflow: it reads the team's n8n workflow, explains each step, and confirms the last run succeeded. 1:34–1:53 Next session: a branded sign-up app wired to that workflow; self-service hosting is coming so apps like this can go live. 1:53–1:57 Close: when a campus tool does the job, use it; when you need it your way, build it with the Harness. Sources: the survey segment is a native screen recording (Oct 10, about 10:11 AM PT); the rest is the Oct 2 narrated capabilities video from the PK view (video-tritonai-harness-walkthrough), recorded from the real Harness with fictional demo files, narration removed, plugins and GitHub scenes cut, 1.2–1.4x. Guided edit (Oct 10): eased zooms and yellow highlights on the UCSD Branding skill chip (0:03), the 'Created survey.html' result (0:19), the survey page (0:30), the analysis findings (0:52), the dashboard KPI tiles (1:06), the deck's By the Numbers callouts (1:20), and the Sign Up button (1:46). Spec: ~/dev/cabinet-recapture-20261009/spec_hs.json."
+    "speakerNotes": "About 97 seconds (7s intro + 90s clip, silent; you narrate). Story: Jordan, a staff member, runs a fall workshop pilot (made-up project, fictional files). Beats (clip time): 0:00 the request with the UCSD Branding skill chip (highlighted); 0:15 'Created survey.html' (highlighted); 0:26 the campus-branded survey page (zoom); 0:37 survey results go in and the findings come back: averages, top comments, 4 of 42 room ratings missing (highlighted, slowed); 0:50 an Excel dashboard for leaders, KPI row highlighted; 1:00 a nine-slide briefing deck on the campus template, 'By the Numbers' held and highlighted; 1:10 it reads the team's n8n workflow and confirms the last run; 1:17 a branded sign-up app wired to that workflow, Sign Up highlighted; 1:25 close: use the standard tool, or build it your way. Edit (Oct 10): waiting and thinking stretches run at 3–4x; requests and results at real speed; key moments slowed or held. Sources: survey segment is a native recording from Oct 10 (Harness Nightly); the rest is the Oct 2 capabilities video from the PK view with narration removed. Spec: ~/dev/cabinet-recapture-20261009/spec_hs4.json, retime map hs/retime.py."
   },
   {
     "id": 1026,
@@ -9238,39 +9238,35 @@ export const slides = [
   {
     "id": 1045,
     "slug": "cabinet-mobile-briefing-demo",
-    "type": "content",
+    "type": "video",
     "layout": "cabinet-demo",
-    "title": "Monday's briefing, from my phone",
-    "subtitle": "The Harness on my phone runs the same daily briefing skill against my live calendar.",
-    "content": [
-      {
-        "heading": "One request",
-        "text": "“Run daily briefing for Monday” from the TritonAI Harness mobile app."
-      },
-      {
-        "heading": "Live calendar",
-        "text": "Twelve meetings, from the 8:30 AI sync to Cabinet at noon and the Technical Architecture Council."
-      },
-      {
-        "heading": "Ready to walk in",
-        "text": "A card per meeting with context, follow-through, and a proposed agenda."
-      }
-    ],
+    "content": [],
     "audiences": [
       "cabinet"
     ],
     "managerSection": "Citizen Developer Showcase",
-    "durationSeconds": 45,
     "section": {
       "part": 3,
       "label": "What people build"
     },
-    "recording": {
-      "pendingLabel": "Recording coming before Monday",
-      "label": "TritonAI Harness mobile → “run daily briefing for Monday” → meeting cards",
-      "format": "iPhone simulator paired to the desktop Harness • live calendar"
+    "videoLoop": false,
+    "videoClearNav": false,
+    "videoAutoPlay": true,
+    "hideDemoBadge": true,
+    "demoOnly": true,
+    "title": "Update the TritonAI website from my phone",
+    "subtitle": "The Harness mobile app directs the Harness on my desktop.",
+    "durationSeconds": 40,
+    "intro": {
+      "kicker": "TritonAI Harness · on my phone",
+      "title": "Update the website from my phone",
+      "setup": "From my phone I ask the Harness on my desktop to add an announcement to the TritonAI home page: Discovery Series lessons 10–15 arrive October 15.",
+      "watchFor": "It edits the right page, builds the site, runs 182 accessibility checks, and shows desktop and mobile previews. Nothing is published.",
+      "seconds": 6
     },
-    "managerSummary": "Placeholder (Oct 10) for a mobile recording: the Harness iOS app paired to the desktop Harness runs the ucsd-daily-meeting-brief skill for Monday Oct 12.",
-    "speakerNotes": "Placeholder until the mobile recording is captured. The simulator build is installed and the briefing collector was verified against the live calendar for Monday Oct 12 (15 entries, 12 meetings including Cabinet at noon). Pairing needs Brett to paste a fresh pairing code into the simulator (Settings → Connections → Create link → Share). If no recording lands, describe it verbally: the same daily-briefing skill runs from the phone, reading the live Microsoft 365 calendar and recent context, and returns one card per meeting."
+    "videoSrc": "/media/cabinet/cabinet-mobile-website-update.mp4",
+    "poster": "/media/cabinet/cabinet-mobile-website-update-poster.jpg",
+    "managerSummary": "Oct 10 recording: TritonAI Harness iOS app (simulator) paired to Brett's desktop Harness adds a Discovery Series announcement to a local copy of the TritonAI website, builds, validates, and returns previews. 10 minutes sped up.",
+    "speakerNotes": "About 40 seconds (6s intro + 34s clip). Recorded Oct 10 on the Harness mobile app (iPhone simulator, development build) paired to Brett's desktop Harness. One request from the phone: add a short announcement that Discovery Series lessons 10–15 arrive October 15 in the site's Decorator style, build it, show a screenshot, don't commit or publish. The Harness found the generated page source (home.md), added the announcement, built both deployment modes, passed the full test gate (182 viewport accessibility checks across 91 routes, zero failures), and showed desktop and mobile previews in the chat. About 10 minutes of real work shown at 45x. Ran against a local demo copy of the website with no publishing remote; nothing was committed or published."
   }
 ];
