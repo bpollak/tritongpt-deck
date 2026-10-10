@@ -18,7 +18,6 @@ export const slideManagerState = {
     "cabinet-harness-capabilities",
     "cabinet-harness-in-action",
     "cabinet-harness-training-demo",
-    "cabinet-harness-discovery-demo",
     "cabinet-harness-automation-use-cases",
     "cabinet-governance",
     "cabinet-harness-11d-campus-app-hosting-intake",
@@ -32,6 +31,7 @@ export const slideManagerState = {
     "cabinet-class-planner-utilization",
     "cabinet-scale",
     "cabinet-sovereign-ai",
+    "cabinet-harness-discovery-demo",
     "cabinet-asks-close",
     "cabinet-administrative-quick-hits",
     "cabinet-harness-mobile-demo",
@@ -750,7 +750,7 @@ export const slideManagerState = {
       "cabinet-backup"
     ],
     "cabinet-personal-productivity-demo": [
-      "cabinet"
+      "cabinet-backup"
     ],
     "cabinet-sovereign-ai": [
       "cabinet"

@@ -16,13 +16,11 @@
 | **Part 2** | **Citizen development** (divider, 8s) | |
 | 8:16–9:16 | A chat answers. The Harness does the work. | Bridge: IT can’t build every vertical; the Harness lets staff build their own. One six-row comparison matrix (what it does, best fit, connections, where you work, typical result, who stays in charge); no tabs to click. |
 | 9:16–10:16 | TritonAI Harness: built by the people who do the work | Three columns: what it does, what it connects to, what keeps it safe. |
-| 10:16–12:11 | The Harness at work (intro + 107s recording) | Plugins (Microsoft 365 abilities), Skills, then a real task with the branding skill that summarizes survey data and builds a results page. |
-| 12:11–13:21 | The Harness takes our new training (intro + recording) | Computer use: the Harness finds the Discovery Series, plays the video, takes the quiz. |
+| 10:16–11:39 | The Harness at work (intro + 76s silent recording, you narrate) | One story: Jordan's fall workshop pilot. Survey → summary, Excel dashboard for leaders, nine-slide briefing deck, n8n workflow explained, branded sign-up app wired to n8n, then "use the standard tool, or build it your way." Beat-by-beat voice-over is in the speaker notes. |
 | 13:21–14:06 | It stays in your control | Limits the person sets and the campus sets. |
 | 14:06–14:51 | Built artifacts need a hosting lane | Path to hosting: Tier 0 desktop to Tier 3 enterprise. |
 | **Part 3** | **What people build** (divider, 8s) | |
 | 14:59–15:39 | Inbox priority sorter | How I use it: inbox triage. |
-| 15:39–16:29 | Close the loop on the working day | Morning briefing and evening debrief. |
 | 16:29–16:54 | Departments are building with it | Core Bio pricing and Facilities compliance (team-reported). |
 | +0:40 | Faculty Expertise Directory (intro + 33s recording) | Citizen developer project: research need to ranked faculty leads for review. Planning rollout after the VCRI demo; app still shows its earlier name. |
 | 16:54–17:39 | Passport Services check-in | Department-designed service app (clip now 20s, sped up). |
@@ -31,6 +29,7 @@
 | **Part 4** | **Foundation and close** | |
 | 19:09–19:39 | The foundation already carries substantial campus use | Gateway usage in one line: what powers everything shown so far. |
 | 19:39–20:39 | Sovereign inference as a service | Visual: open-weight models on campus GPUs plus approved commercial APIs feed the TritonAI Gateway (527B tokens Jan–Sep), which serves UC San Diego, UC Berkeley researchers (live), UC Merced (onboarding), and more UC campuses (next). |
+| +0:56 | Start here: the TritonAI Discovery Series (intro + 50s recording) | Call to action before questions. Direct tour of tritonai.ucsd.edu: the three tracks, the Chancellor's lesson 1, the knowledge check (3 of 3), and the Building track where people learn the Harness (lessons 10–15 arrive Oct 15). |
 | 20:39–21:39 | Thank You · Questions? (Brett and Kevin Chou) | One-line recap (verticals, staff-built tools, foundation), then questions with Kevin. The three asks slide moved to the backup view. |
 
 ## Notes on this version
@@ -50,6 +49,7 @@
 - **UX pass (Oct 9, late):** takeaway titles on the impact, cash, admissions/research, comparison, chart, and gateway slides; divider questions now repeat the opening slide word for word; impact rows follow the demo order; intro cards trimmed to two lines of setup and one or two of "watch for"; the Harness capabilities slide rebuilt as a dark three-column Cabinet slide (details moved to its speaker notes); hosting slide without the marker label and Tier 0 tool chips; gateway source line moved to the notes; gateway usage now opens Part 4 ahead of sovereign inference (evidence first, then the strategy that leads into the asks); the close names the three parts before the asks.
 - **Moved to the backup view:** "What staff automate with it" (repeated the morning briefing shown in Part 3, five dense rows, and was already the first cut for time).
 
+- **Oct 10 (Brett, latest):** "The Harness at work" now uses a silent 76s story cut of the PK Harness walkthrough (you narrate). The Discovery Series demo was re-recorded by navigating the site directly (no Harness) and moved to just before the Thank You slide. "Close the loop on the working day" moved to the backup view.
 - **Oct 10 (Brett, later):** Sovereign inference slide rebuilt as a gateway hub visual (models → gateway → UC campuses), with UC Merced onboarding. The asks slide was replaced by the Thank You · Questions? slide with Brett and Kevin Chou (Interim CIO; official UC Tech News headshot); the asks slide is in the backup view.
 - **Oct 10 (Brett):** TritonAI Harness added as the last impact-table row; Faculty Expertise Directory moved out of vertical solutions into Part 3 as a citizen developer project (its demo follows "Departments are building with it"); "More verticals in admissions and research" moved to the backup view. Class Planner clip fixed (stray highlights, Friday column cut off by the zoom, a blank-schedule flash and a map-loading flash removed). Passport clip sped up from 35s to 20s.
 - **Added Oct 10 (later):** College Exploration Assistant demo after the AI Tutor (+55s). After the later Oct 10 changes (More verticals removed, Directory demo added, Passport and Class Planner shortened) content runs about 22.3 minutes; to get under 22, skip the Class Planner usage chart (30s).

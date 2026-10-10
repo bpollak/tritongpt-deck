@@ -7907,27 +7907,27 @@ export const slides = [
     "type": "video",
     "layout": "cabinet-demo",
     "title": "The Harness at work",
-    "subtitle": "Plugins, skills, and a real task from request to result.",
+    "subtitle": "One project, start to finish: survey, dashboard, briefing deck, workflow, and a sign-up app.",
     "content": [],
     "audiences": [
       "cabinet"
     ],
     "managerSection": "Platform",
-    "durationSeconds": 115,
+    "durationSeconds": 83,
     "section": {
       "part": 2,
       "label": "Citizen development"
     },
     "intro": {
-      "kicker": "TritonAI Harness",
+      "kicker": "TritonAI Harness · one project, start to finish",
       "title": "The Harness at work",
-      "label": "TritonAI Harness · plugins, skills, a real task",
-      "setup": "Plugins connect it to campus systems; skills package know-how. Then a real task: summarize workshop feedback as a UC San Diego results page.",
-      "watchFor": "The UCSD Branding skill in the request, the missing ratings it flags, and the finished page beside the conversation.",
+      "label": "TritonAI Harness · a fall workshop pilot",
+      "setup": "Follow one staff member's fall workshop pilot. Survey results become a summary, a dashboard for leaders, a briefing deck, and a branded sign-up app wired to a workflow.",
+      "watchFor": "Each result feeds the next, built from the same files on the desktop.",
       "seconds": 7
     },
-    "videoSrc": "/media/cabinet/cabinet-harness-in-action-guided.mp4",
-    "poster": "/media/cabinet/cabinet-harness-in-action-guided-poster.jpg",
+    "videoSrc": "/media/cabinet/cabinet-harness-story.mp4",
+    "poster": "/media/cabinet/cabinet-harness-story-poster.jpg",
     "videoLoop": false,
     "videoClearNav": false,
     "videoAutoPlay": true,
@@ -7944,8 +7944,8 @@ export const slides = [
       "label": "TritonAI Harness Nightly",
       "captureNote": "Recorded Oct 9 • fictional practice-kit data • about 3.5 minutes shown in 107 seconds"
     },
-    "managerSummary": "Fresh native Harness recording: Plugins with Microsoft 365 abilities, the Skills list, then a real task using the UCSD Branding skill that summarizes practice survey data and builds a branded results page, opened in the Harness side panel.",
-    "speakerNotes": "About 2 minutes: seven-second intro card, then the 107-second recording. Voice-over: plugins connect it to Microsoft 365, Google Workspace, GitHub, Kuali Build, Lucid, n8n, and Tableau, each with abilities you switch on; Microsoft 365 reads by default and drafts are opt-in. Skills package campus know-how, like accessibility and UC San Diego branding. Then a real task: summarize a workshop survey and build a branded results page. It flags that 4 of 42 responses skipped the room rating and averages only the 38 that exist (2.97), then the finished page opens beside the conversation. Facts: recorded October 9, 2026, about 4:24–4:30 PM PT, native screen recording of the Harness (Nightly, Flash model, Full access). Data is the fictional practice-kit file workshop-feedback.csv from tritonai.ucsd.edu/training/harness. Task took 1m 35s; it did not open a browser. Edit: plugins and skills at 1.5x; about 12 seconds of navigation through the thread sidebar cut (it showed unrelated thread titles); working time at 8x; summary and result at 1.25–3x. Script: ~/dev/cabinet-recapture-20261009/native/edit_tour.sh Guided edit Oct 9: highlights and zooms on the opt-in mail-draft ability, the UCSD Branding skill in the request, the missing-responses finding, and the finished page (spec_hw.json)."
+    "managerSummary": "Silent Cabinet cut (76s) of the PK Harness walkthrough (Oct 2 capabilities video): Jordan's fall workshop pilot from survey summary to Excel dashboard, briefing deck, n8n workflow, and branded sign-up app, closing on 'use the standard tool, or build it your way'. Plugins and GitHub scenes cut; narration removed for live voice-over.",
+    "speakerNotes": "About 83 seconds (7s intro + 76s clip, silent; you narrate). Story: Jordan, a staff member, runs a fall workshop pilot (made-up project, fictional files). Beats and clip times: 0:00–0:17 Survey: Qualtrics already reports it, but Jordan wants the team's own questions answered, so the raw results go in; about 14 seconds later there are averages for every question, top comments, missing data flagged, and a takeaway, saved as a file. 0:17–0:32 Dashboard: leaders want one page, so it builds a presentation-ready Excel dashboard: headline numbers, three charts in campus colors, an insight under each. 0:32–0:47 Briefing deck: Jordan has ten minutes with leaders, so the notes and survey become a nine-slide deck on the official UC San Diego template, with live charts, an owners table, a timeline, and speaker notes. 0:47–0:53 Workflow: it reads the team's n8n workflow, explains each step in plain language, and confirms the last run succeeded. 0:53–1:12 App: a Microsoft Form would cover a basic sign-up, but the team wants the campus look and every sign-up in its own n8n workflow, so it builds that app on the campus design system; self-service hosting is coming so apps like this can go live. 1:12–1:16 Close: when a campus tool does the job, use it; when you need it your way, build it with the Harness. Source: the October 2 narrated capabilities video in the PK view (video-tritonai-harness-walkthrough), recorded from the real Harness with fictional demo files. Cabinet cut: narration and captions removed; plugins and GitHub scenes cut; 1.2–1.4x speed. The earlier native recording (plugins, skills, branded results page) is kept as cabinet-harness-in-action-guided.mp4."
   },
   {
     "id": 1026,
@@ -7998,46 +7998,46 @@ export const slides = [
     "slug": "cabinet-harness-discovery-demo",
     "type": "video",
     "layout": "cabinet-demo",
-    "title": "The Harness takes our new training",
-    "subtitle": "A live Harness run: find the TritonAI Discovery Series, play the first video, take the knowledge check.",
+    "title": "Start here: the TritonAI Discovery Series",
+    "subtitle": "Fifteen short lessons on tritonai.ucsd.edu, from UC San Diego's AI vision to building with the Harness.",
     "content": [],
     "audiences": [
       "cabinet"
     ],
     "managerSection": "Platform",
-    "durationSeconds": 70,
+    "durationSeconds": 56,
     "section": {
-      "part": 2,
-      "label": "Citizen development"
+      "part": 4,
+      "label": "Foundation"
     },
     "intro": {
-      "kicker": "Computer use · live run, sped up",
-      "title": "The Harness takes our new training",
-      "label": "TritonAI Harness at work · sped up",
-      "setup": "I asked the Harness to open tritonai.ucsd.edu, find the new TritonAI Discovery Series, play the first video, and answer the knowledge check.",
-      "watchFor": "It works the browser on its own, the way a person would, from the home page to the quiz.",
-      "seconds": 7
+      "kicker": "Training · tritonai.ucsd.edu",
+      "title": "TritonAI Discovery Series",
+      "label": "TritonAI Discovery Series · tritonai.ucsd.edu",
+      "setup": "Fifteen short lessons for staff and faculty, from UC San Diego's AI vision to building with the Harness. Lessons 1–9 are live; 10–15 arrive October 15.",
+      "watchFor": "The Chancellor's opening lesson, a quick knowledge check, and the Building track where people learn the Harness.",
+      "seconds": 6
     },
-    "videoSrc": "/media/cabinet/cabinet-harness-discovery-demo.mp4",
-    "poster": "/media/cabinet/cabinet-harness-discovery-demo-poster.jpg",
+    "videoSrc": "/media/cabinet/cabinet-discovery-series.mp4",
+    "poster": "/media/cabinet/cabinet-discovery-series-poster.jpg",
     "videoLoop": false,
     "videoClearNav": false,
     "videoAutoPlay": true,
     "hideDemoBadge": true,
     "demoOnly": true,
     "recording": {
-      "label": "Harness thread → Chrome: home page → Discovery Series → 'UC San Diego AI vision' plays → knowledge check",
-      "format": "Native screen recording of the Harness and Chrome side by side • silent • speed-ramped",
-      "mediaStem": "cabinet-harness-discovery-demo",
+      "label": "tritonai.ucsd.edu home → Discovery Series tracks → lesson 1 video → knowledge check (3 of 3) → Building track",
+      "format": "Continuous browser recording, navigated directly (no Harness) • silent • speed-ramped",
+      "mediaStem": "cabinet-discovery-series",
       "status": "captured and reviewed"
     },
     "releaseContext": {
-      "channel": "nightly",
-      "label": "TritonAI Harness Nightly · computer use",
-      "captureNote": "Real run October 9 • about 4 minutes shown in 64 seconds • quiz answers stay in that browser"
+      "channel": "stable",
+      "label": "tritonai.ucsd.edu · public training site",
+      "captureNote": "Recorded October 10 in a fresh browser • quiz answers stay in that browser"
     },
-    "managerSummary": "Native recording: the Harness drives Chrome from the TritonAI home page to the Discovery Series, plays the Chancellor's 'UC San Diego AI vision' video, then answers the knowledge check (3 of 3 correct).",
-    "speakerNotes": "About 75 seconds: seven-second intro card, then the 64-second recording. Name the meta-demo: the Harness is doing the navigating. Voice-over: \"I asked the Harness to find our new Discovery Series, play the first lesson, and take the knowledge check. It opens the site, finds the series, starts the Chancellor's video, then answers the questions.\" Then the enablement point: the Discovery Series launched October 5 (videos 1–9), with 10–15 on October 15. Facts: recorded October 9, 2026, about 11:41–11:45 AM PT, as a native screen recording of the Harness (Nightly, Flash model, Full access) beside a Chrome window on the same desktop; the Harness drove Chrome through its computer-use driver. One prompt was sent; no person typed or clicked during the run. The quiz had been reset beforehand. Result on the page: 3 of 3 correct on the first try; answers are saved only in that browser. The Chrome window had been left on the lesson page from an earlier attempt, so the clip opens there before the Harness goes to the home page. Edit: real time for the request, the video starting, and the finished quiz; navigation and quiz steps are sped up 6–8x; about 8 seconds of tab switching, including a moment on Chrome's New Tab page, are cut; a small browser tab-group label is blurred. An earlier take (backup file cabinet-harness-discovery-demo-take1.mp4) shows the Harness misclicking a quiz answer, noticing, and fixing it; use that story verbally if helpful. Recorded in Full access for a smooth run; Supervised would ask before each click. Source files: ~/dev/cabinet-recapture-20261009/native (edit_take2.sh)."
+    "managerSummary": "Direct recording of the TritonAI Discovery Series site: home page, the three tracks, the Chancellor's 'UC San Diego AI vision' lesson playing, the knowledge check (3 of 3), and the Building track with the Harness lessons.",
+    "speakerNotes": "About 56 seconds (6s intro + 50s clip). Closing call to action before questions: this is where anyone on campus starts. Recorded October 10 by navigating tritonai.ucsd.edu directly (not the Harness), in a fresh browser: home page, 'Watch the training videos', the three tracks (Foundations, Using the Tools, Building), lesson 1 'UC San Diego AI vision' with Chancellor Khosla, the three-question knowledge check (3 of 3 correct on the first try; answers stay in that browser), then the Building track, where 'Citizen Developer: Strategy' and 'Citizen Developer: Harnesses and automation' arrive October 15. Discovery Series videos 1–9 launched October 5; 10–15 launch October 15. Edit: scrolling and quiz clicks sped up 1.2–1.6x; about 12 seconds of the video player loading are cut. The earlier Harness-driven version is kept as cabinet-harness-discovery-demo.mp4 for backup."
   },
   {
     "id": 1033,
@@ -8328,7 +8328,7 @@ export const slides = [
     "subtitle": "“It closes the loop on the daily briefing.”",
     "content": [],
     "audiences": [
-      "cabinet"
+      "cabinet-backup"
     ],
     "managerSection": "Personal Productivity",
     "durationSeconds": 50,
