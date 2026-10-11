@@ -1,6 +1,6 @@
 # Cabinet run of show · October 12, 2026
 
-26 slides · about 21.5 minutes of content · 10 minutes of Q&A. Restructured again October 9 (evening) around Brett's framing: **the vertical solutions IT Services is building (with their impact) first, citizen development with the TritonAI Harness in the middle, then what people build with it**, and the foundation last. Most slides show their part in the footer (the light chart, hosting, and dashboard slides do not). Demos open with a short intro card; click it to start early.
+29 slides · about 23 minutes of content · 10 minutes of Q&A. Restructured again October 9 (evening) around Brett's framing: **the vertical solutions IT Services is building (with their impact) first, citizen development with the TritonAI Harness in the middle, then what people build with it**, and the foundation last. Most slides show their part in the footer (the light chart, hosting, and dashboard slides do not). Demos open with a short intro card; click it to start early.
 
 | Time | Slide | Presenter focus |
 | --- | --- | --- |
@@ -53,10 +53,11 @@
 
 - **Oct 10 (Brett, latest):** "The Harness at work" now uses a silent 76s story cut of the PK Harness walkthrough (you narrate). The Discovery Series demo was re-recorded by navigating the site directly (no Harness) and moved to just before the Thank You slide. "Close the loop on the working day" moved to the backup view.
 - **Oct 10 (Brett, later):** Sovereign inference slide rebuilt as a gateway hub visual (models → gateway → UC campuses), with UC Merced onboarding. The asks slide was replaced by the Thank You · Questions? slide with Brett and Kevin Chou (Interim CIO; official UC Tech News headshot); the asks slide is in the backup view.
-- **Oct 10 (Brett):** TritonAI Harness added as the last impact-table row; Faculty Expertise Directory moved out of vertical solutions into Part 3 as a citizen developer project (its demo follows "Departments are building with it"); "More verticals in admissions and research" moved to the backup view. Class Planner clip fixed (stray highlights, Friday column cut off by the zoom, a blank-schedule flash and a map-loading flash removed). Passport clip sped up from 35s to 20s.
+- **Oct 10 (Brett):** TritonAI Harness added to the impact table (now the second row, under Cash Application); Faculty Expertise Directory moved out of vertical solutions into Part 3 as a citizen developer project (its demo follows "Departments are building with it"); "More verticals in admissions and research" moved to the backup view. Class Planner clip fixed (stray highlights, Friday column cut off by the zoom, a blank-schedule flash and a map-loading flash removed). Passport clip sped up from 35s to 20s.
 - **Added Oct 10 (later):** College Exploration Assistant demo after the AI Tutor (+55s). After the later Oct 10 changes (More verticals removed, Directory demo added, Passport and Class Planner shortened) content runs about 22.3 minutes; to get under 22, skip the Class Planner usage chart (30s).
 - **Added Oct 10:** AI Tutor in Canvas (impact row plus a 42s cut of the PK setup video that opens on the Canvas course with no pilot title card, after ServiceNow): launched fall with 5 instructors, scaling in winter. TA–Student Matching on What's next: resumes Q1 2027 after TSS go-live. Research Grant Compliance Agent left out (no activity found after the April proposal).
 
+- **Oct 11 (final pass):** phone intro cards keep the part footer clear of the nav buttons; the sovereign gateway model cards no longer clip their text; the Harness capabilities slide names Tableau and Lucid with the other connections; intro for "The Harness at work" shortened.
 - **Oct 10 (Brett, night):** "The Harness at work" now opens with a 40s settings tour (General, Plugins, Skills, Runtime, Usage cost) before the survey story (+40s; content now about 23 minutes). Access-key digits masked; a Tableau reconnect notice hidden.
 
 ## Before Monday

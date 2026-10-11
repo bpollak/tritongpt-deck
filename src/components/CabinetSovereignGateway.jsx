@@ -6,7 +6,7 @@ import './CabinetSovereignGateway.css';
 // and other UC campuses. Monthly bars use the same public aggregates as the usage slide.
 const HUB = { x: 450, w: 300, mid: 410 };
 const CAMPUS_TOP = 205, CAMPUS_H = 86, CAMPUS_GAP = 22;
-const MODEL_TOPS = [215, 425], MODEL_H = 180;
+const MODEL_TOPS = [205, 421], MODEL_H = 196;
 
 const curve = (x1, y1, x2, y2) => {
   const dx = (x2 - x1) / 2;

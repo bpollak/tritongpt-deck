@@ -123,7 +123,7 @@
 }
 .cabinet-demo-label strong { display: block; margin-top: 2px; font-size: 15px; font-weight: 700; }
 
-.cabinet-canvas[data-reading] .cabinet-demo-intro__body { position: static; transform: none; padding: 28px 22px 150px; }
+.cabinet-canvas[data-reading] .cabinet-demo-intro__body { position: static; transform: none; padding: 28px 22px 28px; }
 .cabinet-canvas[data-reading] .cabinet-demo-intro__kicker { font-size: 13px; margin-bottom: 10px; }
 .cabinet-canvas[data-reading] .cabinet-demo-intro h1 { font-size: 40px; line-height: 1.02; margin-bottom: 16px; }
 .cabinet-canvas[data-reading] .cabinet-demo-intro__setup { font-size: 18px; line-height: 1.4; margin-bottom: 18px; }

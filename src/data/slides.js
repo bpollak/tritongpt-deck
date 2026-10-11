@@ -7909,7 +7909,7 @@ export const slides = [
           },
           {
             "heading": "Campus systems",
-            "text": "Kuali Build, GitHub, and n8n workflows that keep running after the conversation."
+            "text": "Kuali Build, GitHub, Tableau, and Lucid, plus n8n workflows that keep running after the conversation."
           },
           {
             "heading": "Campus and commercial models",
@@ -7958,7 +7958,7 @@ export const slides = [
       "kicker": "TritonAI Harness · one project, start to finish",
       "title": "The Harness at work",
       "label": "TritonAI Harness · a fall workshop pilot",
-      "setup": "A quick look at the settings (plugins, skills, models, and spend), then one staff member's fall workshop pilot: the Harness builds the feedback survey, then turns the results into a summary, a dashboard, a deck, and a sign-up app.",
+      "setup": "A quick look at its settings, then one staff member's workshop pilot: the Harness builds a feedback survey, then turns the results into a summary, a dashboard, a deck, and a sign-up app.",
       "watchFor": "Seven connected plugins, the AI Team skills, and 30 days of usage cost; then the UCSD Branding skill in the request and each result feeding the next.",
       "seconds": 7
     },
@@ -9232,7 +9232,7 @@ export const slides = [
           "status": "In use",
           "tone": "live",
           "impact": "Readiness checks before the counter",
-          "basis": "Demo follows"
+          "basis": "Demo coming up"
         },
         {
           "name": "Concur credit memo reconciliation",
