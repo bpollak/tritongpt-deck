@@ -9310,9 +9310,9 @@ export const slides = [
       "watchFor": "A milestone table with a source for every row, then the updated Thank You slide of this deck. Nothing is published or pushed.",
       "seconds": 6
     },
-    "videoSrc": "/media/cabinet/cabinet-mobile-harness-5.mp4",
-    "poster": "/media/cabinet/cabinet-mobile-harness-5-poster.jpg",
-    "managerSummary": "Oct 10 recordings, combined: Harness mobile app (simulator) paired to Brett's desktop Harness. (1) Read-only question on BFS Cash Receipts milestones answered from email, calendar, meeting notes, and memory with sources. (2) Edits this Cabinet deck's Thank You subtitle in a local copy, redirected mid-task, builds, shows the updated slide. Website-update clip removed Oct 10.",
+    "videoSrc": "/media/cabinet/cabinet-mobile-harness-6.mp4",
+    "poster": "/media/cabinet/cabinet-mobile-harness-6-poster.jpg",
+    "managerSummary": "Oct 10 recordings, combined: Harness mobile app (simulator) paired to Brett's desktop Harness. (1) Read-only question on BFS Cash Receipts milestones answered from email, calendar, meeting notes, and memory with sources. (2) Edits this Cabinet deck's Thank You subtitle in a local copy, redirected mid-task, builds, shows the updated slide. Website-update clip removed Oct 10. Phone footage framed in an iPhone casing (Oct 10).",
     "speakerNotes": "About 58 seconds (6s intro + 52s clip; you narrate). Part 1, 0:00–0:26, BFS Cash Receipts milestones: from the phone, 'What are the milestones and target dates for BFS Cash Receipts Automation, and which are on track? Check my email, calendar, meeting notes, and memory, and cite each source. Keep it to milestones and dates. Read only.' About 5 minutes of searching shown at 60x; the answer is a milestone table with target date, status, and source per row; Phase 1 described as on track for end of 2026. Charter dates are proposed, so say 'the plan'. Part 2, 0:26–0:52, editing this presentation: 'Change the Thank You slide's subtitle to \"Questions? Start learning at tritonai.ucsd.edu\", run the slide checks and build, show me a screenshot, don't commit.' It found the Cabinet Thank You slide among three similar ones, edited one line, built, and showed the updated slide in the chat. About 13 minutes shown at 80x. Done in a local copy with no push remote; the live deck's Thank You slide is unchanged."
   },
   {
