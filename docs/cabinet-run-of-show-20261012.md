@@ -16,7 +16,7 @@
 | **Part 2** | **Citizen development** (divider, 8s) | |
 | 8:16–9:16 | A chat answers. The Harness does the work. | Bridge: IT can’t build every vertical; the Harness lets staff build their own. One six-row comparison matrix (what it does, best fit, connections, where you work, typical result, who stays in charge); no tabs to click. |
 | 9:16–10:16 | TritonAI Harness: built by the people who do the work | Three columns: what it does, what it connects to, what keeps it safe. |
-| 10:16–11:53 | The Harness at work (intro + 90s silent recording, you narrate) | One story: Jordan's fall workshop pilot. The Harness builds the feedback survey as a campus page (UCSD Branding skill, recorded Oct 10) → survey results → summary, Excel dashboard for leaders, nine-slide briefing deck, n8n workflow explained, branded sign-up app wired to n8n, then "use the standard tool, or build it your way." Beat-by-beat voice-over is in the speaker notes. |
+| 10:16–12:33 | The Harness at work (intro + 130s silent recording, you narrate) | Opens with a 40s settings tour: model and permissions, all seven plugins (GitHub, Google Workspace, Kuali Build, Lucid, Microsoft 365, n8n, Tableau), the AI Team skills, runtime providers, and your 30-day usage cost ($426 API estimate, 1,422 sessions, cost by model). Then one story: Jordan's fall workshop pilot. The Harness builds the feedback survey as a campus page (UCSD Branding skill, recorded Oct 10) → survey results → summary, Excel dashboard for leaders, nine-slide briefing deck, n8n workflow explained, branded sign-up app wired to n8n, then "use the standard tool, or build it your way." Beat-by-beat voice-over is in the speaker notes. |
 | 13:21–14:06 | It stays in your control | Limits the person sets and the campus sets. |
 | 14:06–14:51 | Built artifacts need a hosting lane | Path to hosting: Tier 0 desktop to Tier 3 enterprise. |
 | **Part 3** | **What people build** (divider, 8s) | |
@@ -56,6 +56,8 @@
 - **Oct 10 (Brett):** TritonAI Harness added as the last impact-table row; Faculty Expertise Directory moved out of vertical solutions into Part 3 as a citizen developer project (its demo follows "Departments are building with it"); "More verticals in admissions and research" moved to the backup view. Class Planner clip fixed (stray highlights, Friday column cut off by the zoom, a blank-schedule flash and a map-loading flash removed). Passport clip sped up from 35s to 20s.
 - **Added Oct 10 (later):** College Exploration Assistant demo after the AI Tutor (+55s). After the later Oct 10 changes (More verticals removed, Directory demo added, Passport and Class Planner shortened) content runs about 22.3 minutes; to get under 22, skip the Class Planner usage chart (30s).
 - **Added Oct 10:** AI Tutor in Canvas (impact row plus a 42s cut of the PK setup video that opens on the Canvas course with no pilot title card, after ServiceNow): launched fall with 5 instructors, scaling in winter. TA–Student Matching on What's next: resumes Q1 2027 after TSS go-live. Research Grant Compliance Agent left out (no activity found after the April proposal).
+
+- **Oct 10 (Brett, night):** "The Harness at work" now opens with a 40s settings tour (General, Plugins, Skills, Runtime, Usage cost) before the survey story (+40s; content now about 23 minutes). Access-key digits masked; a Tableau reconnect notice hidden.
 
 ## Before Monday
 
