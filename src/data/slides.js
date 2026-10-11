@@ -2,6 +2,37 @@ import { gatewayUsageDashboard } from './gatewayUsage.js';
 
 export const slides = [
   {
+    "id": 1049,
+    "slug": "cabinet-title",
+    "mobileSnapshot": "/media/cabinet/snap/cabinet-title.jpg",
+    "mobileSnapshotMedia": "(max-height: 500px)",
+    "type": "title",
+    "content": [],
+    "title": "TritonAI Operating Review",
+    "subtitle": "How campus AI gets built, proven, and put to work",
+    "layout": "title-hero",
+    "audiences": [
+      "cabinet"
+    ],
+    "arc": [
+      {
+        "label": "Skunkworks",
+        "note": "Build it, prove it works"
+      },
+      {
+        "label": "Pilots",
+        "note": "Real users, measured"
+      },
+      {
+        "label": "Scale",
+        "note": "Campus-wide and governed"
+      }
+    ],
+    "durationSeconds": 30,
+    "conference": "Chancellor's Cabinet · Monday, October 12, 2026",
+    "speakerNotes": " Cabinet copy (Oct 10): adds the Chancellor's Cabinet and Monday's date; the PK view keeps the original."
+  },
+  {
     "id": 0.5,
     "slug": "ai-operating-review-title",
     "mobileSnapshot": "/media/cabinet/snap/ai-operating-review-title.jpg",

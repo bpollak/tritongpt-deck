@@ -1,6 +1,7 @@
 export const slideManagerState = {
   "order": [
     "lmu-title",
+    "cabinet-title",
     "ai-operating-review-title",
     "cabinet-citizen-developer-story",
     "cabinet-divider-verticals",
@@ -208,8 +209,7 @@ export const slideManagerState = {
       "LMU"
     ],
     "ai-operating-review-title": [
-      "PK",
-      "cabinet"
+      "PK"
     ],
     "the-ai-enabled-university": [
       "all",
