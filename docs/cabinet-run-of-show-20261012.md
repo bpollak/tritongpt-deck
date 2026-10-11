@@ -7,7 +7,7 @@
 | 0:00–0:30 | TritonAI Operating Review | Open. |
 | 0:30–1:30 | By the end of this presentation, you'll know | Three questions: what ITS is building and its payback; what citizen development and the Harness are; what people have built with it. |
 | **Part 1** | **Vertical solutions** (divider, 8s) | |
-| 1:38–2:53 | Campus time and cost savers | Impact of each vertical, in the order you'll show them. Say the type of each number (pilot, estimate, scenario, avoided cost). The TritonAI Harness (100+ active users) is the second row, right under Cash Application. |
+| 1:38–2:53 | Campus time and cost savers | Impact of each vertical, in the order you'll show them. Say the type of each number (pilot, estimate, scenario, avoided cost). The TritonAI Harness (400+ users) is the second row, right under Cash Application. |
 | 2:53–4:08 | Apply received cash faster | Frame the project in one line, then walk the four phases (Oct 2026 – Jun 2027). |
 | 4:08–5:33 | Contract review inside Word (intro + recording) | Live Word run: three rules, tracked changes, agent answer. OCGA is next. |
 | 5:33–6:23 | Routing tickets to the right team (intro + 25s recording, sped up 1.6x) | Two tickets routed past the Service Desk: desktop to Field Support (80%), DNS to Hostmaster (97%). Highlights and zooms guide the eye; voice over. |
