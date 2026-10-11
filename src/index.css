@@ -198,8 +198,20 @@
 }
 
 @media (max-width: 639px) {
+  /* No reserved strip under the slide on phones: the nav floats over the slide,
+     so the slide runs to the bottom of the screen. */
   .presentation-stage {
-    margin-bottom: 56px;
+    margin-bottom: 0;
+  }
+  .presentation-nav {
+    bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+  }
+  .presentation-nav .presentation-nav__button,
+  .presentation-nav .presentation-nav__count {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.94);
+    color: #182b49;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
   }
 }
 
