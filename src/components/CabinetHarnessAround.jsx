@@ -51,7 +51,6 @@ export default function CabinetHarnessAround({ slide }) {
             <span className="cabinet-ha-out">“Here’s a summary…”</span>
             <span className="cabinet-ha-gets-label">End of turn</span>
           </div>
-          <Facts rows={d.chat.facts} />
         </article>
 
         <article className="cabinet-ha-panel cabinet-ha-panel--harness">
@@ -75,7 +74,6 @@ export default function CabinetHarnessAround({ slide }) {
               return <span key={o.label} className="cabinet-ha-out">{Icon && <Icon size={15} strokeWidth={2.5} aria-hidden="true" />}{o.label}</span>;
             })}
           </div>
-          <Facts rows={d.harness.facts} />
         </article>
       </div>
     </section>
