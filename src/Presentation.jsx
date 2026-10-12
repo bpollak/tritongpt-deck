@@ -277,7 +277,10 @@ const Presentation = () => {
       // keep all their native keyboard behavior.
       const navigationButton = e.target instanceof HTMLElement && e.target.closest('.presentation-nav__button');
       const activationKey = e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar';
-      if (isInteractiveTarget(e.target) && (!navigationButton || activationKey)) return;
+      // A clicked deck video keeps Space/Enter for play and pause, but the arrows,
+      // page keys, and presentation clickers still move the deck.
+      const deckVideo = e.target instanceof HTMLElement && e.target.closest('video.deck-video');
+      if (isInteractiveTarget(e.target) && !(deckVideo && !activationKey) && (!navigationButton || activationKey)) return;
 
       if (NEXT_SLIDE_KEYS.has(e.key)) {
         e.preventDefault();
