@@ -9256,8 +9256,8 @@ export const slides = [
     "slug": "cabinet-spa2-demo",
     "type": "video",
     "layout": "cabinet-demo",
-    "title": "Staff performance appraisals, rebuilt",
-    "subtitle": "ITS is rebuilding the Staff Performance Appraisal system with the TritonAI Harness.",
+    "title": "Agentic software development: an HR system in months",
+    "subtitle": "ITS rebuilt the Staff Performance Appraisal system with AI agents in months, instead of buying a third-party system.",
     "audiences": [
       "cabinet"
     ],
@@ -9269,19 +9269,10 @@ export const slides = [
     },
     "intro": {
       "sideVideo": true,
-      "kicker": "HR · built with the Harness",
-      "title": "Staff performance appraisals, rebuilt",
-      "setup": "ITS is rebuilding the campus appraisal system with the TritonAI Harness. Employees and supervisors see where each review stands, and HR sets up cycles, workflows, forms, and notices itself.",
-      "impact": [
-        {
-          "value": "6",
-          "label": "steps tracked from supervisor draft to signature"
-        },
-        {
-          "value": "1st",
-          "label": "enterprise HR app rebuilt with the Harness"
-        }
-      ],
+      "kicker": "Agentic software development",
+      "title": "An HR system in months, not years",
+      "setup": "Working with AI agents in the TritonAI Harness, ITS rebuilt the Staff Performance Appraisal system in months, instead of paying hundreds of thousands of dollars for a third-party system. HireOnline and JDOnline are next.",
+      "impact": [{"value": "Months", "label": "to build, not years"}, {"value": "6 figures", "label": "saved by not buying a third-party system"}],
       "watchFor": "An employee's appraisal progress and the supervisor review, then the admin side: cycle setup, workflow steps, form fields, and notification templates."
     },
     "videoSrc": "/media/cabinet/cabinet-spa2-walkthrough.mp4",
@@ -9292,7 +9283,7 @@ export const slides = [
     "hideDemoBadge": true,
     "demoOnly": true,
     "managerSummary": "Oct 12 walkthrough of the SPA2 rebuild (dev environment, test accounts and fictional employees), trimmed from 2:19 to 56s.",
-    "speakerNotes": "About a minute; side by side, the 56-second walkthrough loops on the right while you talk (Brett, Oct 12). SPA2: the Staff Performance Appraisal system, originally built in a department and later inherited by ITS, is being rebuilt with the TritonAI Harness; it is the first enterprise-tier HR app rebuilt this way and sets the pattern for HireOnline and JDOnline next (July 16 plan). HR leadership asked for something new and modern. What the clip shows: the employee home with the six steps from supervisor drafting through HR review, discussion, and signing; a supervisor's review; then the admin side where HR sets up the appraisal cycle, workflow steps, form fields, and notification templates. Recorded in a development environment with test accounts and fictional employees (the brief sign-in screen lists test roles). Don't give a go-live date; confirm current status with the build lead before quoting one. Trimmed from 2:19 (sign-ins cut, admin screens sped up 1.5-2x)."
+    "speakerNotes": "About a minute; side by side, the 56-second walkthrough loops on the right while you talk (Brett, Oct 12). Frame: agentic software development. ITS rebuilt the Staff Performance Appraisal system (SPA2) by directing AI agents in the TritonAI Harness: the team designs and reviews, the agents write and test the code. It took months rather than the much longer timeline of a traditional rebuild or procurement, and it avoids paying hundreds of thousands of dollars for a third-party system. The same approach converts HireOnline and JDOnline next. Background: the original SPA was built in a department and later inherited by ITS; HR leadership asked for something new and modern; work started in July 2026 with an 8-12 week MVP target ahead of the next appraisal cycle; HR custom apps are being rebuilt this way instead of buying commercial software. What the clip shows: the employee home with the six steps from supervisor drafting through HR review, discussion, and signing; a supervisor's review; then the admin side where HR sets up the appraisal cycle, workflow steps, form fields, and notification templates. Recorded in a development environment with test accounts and fictional employees. If asked for the dollar figure: 'hundreds of thousands' is your framing, not a quoted vendor price; don't name a vendor. Don't give a go-live date; confirm status with the build lead first."
   },
   {
     "id": 1024,
