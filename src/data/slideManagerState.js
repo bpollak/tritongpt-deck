@@ -32,6 +32,7 @@ export const slideManagerState = {
     "cabinet-passport-demo",
     "cabinet-class-planner-demo",
     "cabinet-class-planner-utilization",
+    "cabinet-spa2-demo",
     "cabinet-department-builders",
     "cabinet-why-sovereign",
     "cabinet-scale",
@@ -799,6 +800,9 @@ export const slideManagerState = {
       "cabinet-backup"
     ],
     "cabinet-personal-productivity-list": [
+      "cabinet"
+    ],
+    "cabinet-spa2-demo": [
       "cabinet"
     ]
   }

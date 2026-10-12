@@ -7685,6 +7685,7 @@ export const slides = [
       "label": "Vertical solutions"
     },
     "intro": {
+      "sideVideo": true,
       "impact": [{"value": "81%", "label": "of pilot students said it helped them understand"}, {"value": "5", "label": "instructors this fall; more courses in winter"}],
       "kicker": "Canvas",
       "title": "AI Tutor in Canvas",
@@ -7700,7 +7701,7 @@ export const slides = [
     "hideDemoBadge": true,
     "demoOnly": true,
     "managerSummary": "Cabinet cut of the PK AI Tutor video: opens on the Canvas course, then tutor configuration, Socratic style, student chat. Pilot title card removed.",
-    "speakerNotes": "About 48 seconds. Launched this fall with 5 instructors; scaling to more courses in winter (Brett, Oct 10). Instructors choose which Canvas pages, files, and sites the tutor may use, and the teaching style (Socratic or direct). Pilot feedback 2025–26: 81% said it helped them understand concepts, 86% found it easy to use, 67% want it in future courses (68 student responses; tritonai.ucsd.edu/tritongpt/instruction.html). Video: the September 2026 instructional pilot capture used in the PK view, trimmed to the current Canvas-integrated tutor (the \"TritonGPT Initial Pilot\" title card is cut, Oct 10) and sped up 1.8x for Cabinet."
+    "speakerNotes": "Side-by-side slide (Brett, Oct 12): the overview sits on the left while the recording loops silently on the right; no separate demo slide. About 48 seconds. Launched this fall with 5 instructors; scaling to more courses in winter (Brett, Oct 10). Instructors choose which Canvas pages, files, and sites the tutor may use, and the teaching style (Socratic or direct). Pilot feedback 2025–26: 81% said it helped them understand concepts, 86% found it easy to use, 67% want it in future courses (68 student responses; tritonai.ucsd.edu/tritongpt/instruction.html). Video: the September 2026 instructional pilot capture used in the PK view, trimmed to the current Canvas-integrated tutor (the \"TritonGPT Initial Pilot\" title card is cut, Oct 10) and sped up 1.8x for Cabinet."
   },
   {
     "id": 1006,
@@ -9249,6 +9250,49 @@ export const slides = [
     "managerSection": "Divider",
     "durationSeconds": 8,
     "speakerNotes": "Eight seconds. Read the question and move on: \"What is the Harness, and how can you and your staff use it?\""
+  },
+  {
+    "id": 1051,
+    "slug": "cabinet-spa2-demo",
+    "type": "video",
+    "layout": "cabinet-demo",
+    "title": "Staff performance appraisals, rebuilt",
+    "subtitle": "ITS is rebuilding the Staff Performance Appraisal system with the TritonAI Harness.",
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Citizen Developer Showcase",
+    "durationSeconds": 60,
+    "section": {
+      "part": 3,
+      "label": "What people build"
+    },
+    "intro": {
+      "sideVideo": true,
+      "kicker": "HR · built with the Harness",
+      "title": "Staff performance appraisals, rebuilt",
+      "setup": "ITS is rebuilding the campus appraisal system with the TritonAI Harness. Employees and supervisors see where each review stands, and HR sets up cycles, workflows, forms, and notices itself.",
+      "impact": [
+        {
+          "value": "6",
+          "label": "steps tracked from supervisor draft to signature"
+        },
+        {
+          "value": "1st",
+          "label": "enterprise HR app rebuilt with the Harness"
+        }
+      ],
+      "watchFor": "An employee's appraisal progress and the supervisor review, then the admin side: cycle setup, workflow steps, form fields, and notification templates."
+    },
+    "videoSrc": "/media/cabinet/cabinet-spa2-walkthrough.mp4",
+    "poster": "/media/cabinet/cabinet-spa2-walkthrough-poster.jpg",
+    "videoLoop": true,
+    "videoClearNav": false,
+    "videoAutoPlay": true,
+    "hideDemoBadge": true,
+    "demoOnly": true,
+    "managerSummary": "Oct 12 walkthrough of the SPA2 rebuild (dev environment, test accounts and fictional employees), trimmed from 2:19 to 56s.",
+    "speakerNotes": "About a minute; side by side, the 56-second walkthrough loops on the right while you talk (Brett, Oct 12). SPA2: the Staff Performance Appraisal system, originally built in a department and later inherited by ITS, is being rebuilt with the TritonAI Harness; it is the first enterprise-tier HR app rebuilt this way and sets the pattern for HireOnline and JDOnline next (July 16 plan). HR leadership asked for something new and modern. What the clip shows: the employee home with the six steps from supervisor drafting through HR review, discussion, and signing; a supervisor's review; then the admin side where HR sets up the appraisal cycle, workflow steps, form fields, and notification templates. Recorded in a development environment with test accounts and fictional employees (the brief sign-in screen lists test roles). Don't give a go-live date; confirm current status with the build lead before quoting one. Trimmed from 2:19 (sign-ins cut, admin screens sped up 1.5-2x)."
   },
   {
     "id": 1024,

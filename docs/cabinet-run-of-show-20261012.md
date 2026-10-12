@@ -25,6 +25,7 @@
 | 16:54–17:39 | Passport Services check-in | Department-designed service app (clip now 20s, sped up). |
 | 17:39–18:19 | Class Planner (34s clip) | Course list to schedule options. Don’t claim the Harness built it. |
 | 18:39–19:09 | Class Planner demand peaks with enrollment passes | Daily usage around the enrollment passes. |
+| +1:00 | Staff performance appraisals, rebuilt (side by side; 56s clip loops) | SPA2 rebuilt with the Harness: employee progress through six steps, supervisor review, then HR's admin setup (cycles, workflows, forms, notices). First enterprise HR app rebuilt this way; HireOnline and JDOnline follow. Dev environment, test data. |
 | 16:29–17:29 | Departments are building with it | Nine IPPS and RRSS projects from Nikki (Oct 10) with status and impact: Core Bio pricing (~150 hrs/yr), Facilities compliance (81 issues in 13s), custodial staffing (~8 hrs/day projected), Passport, Concur reconciliation, green spend, spend chat; the ticket analysis agent and Non-PO review in early discussion. Tell two. |
 | **Part 4** | **Foundation and close** | |
 | +0:45 | Why the university needs its own AI supply | Sets up sovereign inference: access can change overnight, costs grow with every request, our data under our rules, tools keep working. Describe the news; don't name or criticize any lab. |
@@ -56,6 +57,7 @@
 - **Added Oct 10 (later):** College Exploration Assistant demo after the AI Tutor (+55s). After the later Oct 10 changes (More verticals removed, Directory demo added, Passport and Class Planner shortened) content runs about 22.3 minutes; to get under 22, skip the Class Planner usage chart (30s).
 - **Added Oct 10:** AI Tutor in Canvas (impact row plus a 42s cut of the PK setup video that opens on the Canvas course with no pilot title card, after ServiceNow): launched fall with 5 instructors, scaling in winter. TA–Student Matching on What's next: resumes Q1 2027 after TSS go-live. Research Grant Compliance Agent left out (no activity found after the April proposal).
 
+- **Oct 12 (Brett, SPA2):** new side-by-side slide for the Staff Performance Appraisal rebuild after the Class Planner chart; AI Tutor switched to side by side (its standalone video slide removed).
 - **Oct 12 (Brett, navigation):** each demo intro is now its own slide (the counter shows 35 slides); the recording is the next slide and plays on arrival, so back/forward steps between them. Slide navigation stays visible on every slide. The College Exploration Assistant is side by side like routing (video loops beside the overview).
 - **Oct 12 (Brett, routing):** "Routing tickets to the right team" is now one side-by-side slide: overview and impact on the left, the recording looping on the right; no click to start, next moves on. Any other demo can switch to this with `intro.sideVideo`.
 - **Oct 12 (Brett, roadmap):** cash phases realigned to the Confluence Implementation Roadmap: Phase 1 Oct–Dec 2026; Phase 2 Jan–Mar 2027; Phases 3 and 4 in parallel Apr–Jun 2027, go-live June 2027.
