@@ -50,7 +50,15 @@ const useIsTouchDevice = () => {
   return touch;
 };
 
-const DeckVideoSlide = ({ slide, staticPreview }) => {
+// Side-by-side demos: the overview and the looping recording share one slide,
+// so "next" goes straight to the following slide.
+const DeckVideoSlide = ({ slide, staticPreview }) => (
+  slide.intro?.sideVideo
+    ? <div className="relative w-full h-full overflow-hidden"><CabinetDemoIntro slide={slide} staticPreview={staticPreview} sideVideo /></div>
+    : <DeckVideoPlayer slide={slide} staticPreview={staticPreview} />
+);
+
+const DeckVideoPlayer = ({ slide, staticPreview }) => {
   const touchDevice = useIsTouchDevice();
   const demoBadge = !slide.hideDemoBadge && (slide.demoLabel || slide.title || slide.managerLabel);
   const [showIntro, setShowIntro] = React.useState(Boolean(slide.intro));
