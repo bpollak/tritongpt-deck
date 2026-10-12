@@ -9345,6 +9345,89 @@ export const slides = [
     }
   },
   {
+    "id": 1050,
+    "slug": "cabinet-personal-productivity-list",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "How I use it every day",
+    "subtitle": "Tools I set up for my own work. They prepare, sort, and draft; I review and decide.",
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Personal Productivity",
+    "durationSeconds": 60,
+    "section": {
+      "part": 3,
+      "label": "What people build"
+    },
+    "impactTable": {
+      "headers": [
+        "Use case",
+        "When",
+        "What it does for me"
+      ],
+      "rows": [
+        {
+          "name": "Daily brief",
+          "what": "Every meeting on my calendar, with its context and open items",
+          "status": "Every morning",
+          "tone": "live",
+          "impact": "I walk into each meeting prepared",
+          "basis": "Objective, suggested agenda, questions to ask, what carried over"
+        },
+        {
+          "name": "Inbox priorities",
+          "what": "An Outlook add-in that flags what needs me today or this week",
+          "status": "All day",
+          "tone": "live",
+          "impact": "Priority 1 and 2, with the reasons why",
+          "basis": "Learns from what I actually answer; it never sends or deletes"
+        },
+        {
+          "name": "Draft replies",
+          "what": "Drafts for work email that still needs an answer",
+          "status": "Daily",
+          "tone": "live",
+          "impact": "Replies waiting in my drafts folder",
+          "basis": "Nothing goes out until I send it"
+        },
+        {
+          "name": "Meeting debriefs",
+          "what": "Decisions and action items pulled from my meeting notes",
+          "status": "After meetings",
+          "tone": "live",
+          "impact": "Follow-ups land on my task list",
+          "basis": "Each with an owner and the context behind it"
+        },
+        {
+          "name": "Scheduling assistant",
+          "what": "An email assistant that finds times and books meetings",
+          "status": "On request",
+          "tone": "live",
+          "impact": "Holds and reschedules, with me copied",
+          "basis": "Cancellations still need my approval"
+        },
+        {
+          "name": "Search across my work",
+          "what": "One question across email, calendar, notes, and documents",
+          "status": "On request",
+          "tone": "live",
+          "impact": "An answer with a source for every fact",
+          "basis": "From my desk or my phone"
+        },
+        {
+          "name": "Daily focus list",
+          "what": "What's open, what's blocked, and what to do first",
+          "status": "Every day",
+          "tone": "live",
+          "impact": "My priorities in one place",
+          "basis": "Built from email, meetings, and my task list"
+        }
+      ]
+    },
+    "speakerNotes": "About a minute; no demo, you voice over (Brett, Oct 11: replaces the daily brief and inbox demo, which moved to the backup view). Point: the same tools staff use, applied to my own workday. Each one prepares, sorts, or drafts; I review and decide, and nothing is sent or deleted without me. Pick two or three to tell. Daily brief: every morning at 7, each meeting's context, my objective, a suggested agenda, questions to ask, and what carried over from last time. Inbox priorities: an Outlook add-in that marks Priority 1 (today) and Priority 2 (this week) and shows why: who it's from, how it reached me, and what it asks; it learns from what I actually reply to and only sets categories. Draft replies: drafts for work email that still needs an answer, waiting for my review. Meeting debriefs: decisions and action items from my meeting notes, added to my task list. Scheduling assistant: email it to find a time; it places holds and reschedules with me copied, and cancellations need my approval. Search across my work: one question across email, calendar, notes, and documents, answered with sources, from my desk or phone (the phone demo comes next). Daily focus list: what's open, what's blocked, and what to do first. Avoid internal system names on stage."
+  },
+  {
     "id": 1025,
     "slug": "cabinet-inbox-priority-sorter",
     "type": "video",
@@ -9399,19 +9482,19 @@ export const slides = [
     "hideDemoBadge": true,
     "demoOnly": true,
     "title": "The Harness from my phone",
-    "subtitle": "A real task sent from my phone to the Harness on my desktop.",
+    "subtitle": "Most of this presentation was built from the TritonAI Harness mobile app.",
     "durationSeconds": 32,
     "intro": {
-      "kicker": "TritonAI Harness · on my phone",
+      "kicker": "TritonAI Harness · mobile app",
       "title": "The Harness from my phone",
-      "setup": "A real task sent from my phone to the Harness on my desktop: edit this very presentation.",
-      "watchFor": "It finds the right slide among three similar ones, builds the deck, and shows me the updated slide. Nothing is published or pushed.",
+      "setup": "I built most of this presentation from my phone with the TritonAI Harness mobile app. Here is one edit to this deck, start to finish.",
+      "watchFor": "It finds the right slide among three similar ones, updates it, rebuilds the deck, and shows me the result on my phone.",
       "seconds": 6
     },
-    "videoSrc": "/media/cabinet/cabinet-mobile-harness-7.mp4",
-    "poster": "/media/cabinet/cabinet-mobile-harness-7-poster.jpg",
+    "videoSrc": "/media/cabinet/cabinet-mobile-harness-8.mp4",
+    "poster": "/media/cabinet/cabinet-mobile-harness-8-poster.jpg",
     "managerSummary": "Oct 10 recording: Harness mobile app (simulator) paired to Brett's desktop Harness edits this Cabinet deck's Thank You subtitle in a local copy, builds, and shows the updated slide. Website-update clip removed Oct 10; cash-receipts milestones task removed Oct 11. Phone footage framed in an iPhone casing.",
-    "speakerNotes": "About 32 seconds (6s intro + 26s clip; you narrate). From the phone: 'Change the Thank You slide's subtitle to \"Questions? Start learning at tritonai.ucsd.edu\", run the slide checks and build, show me a screenshot, don't commit.' It found the Cabinet Thank You slide among three similar ones, edited one line, built, and showed the updated slide in the chat. About 13 minutes shown at 80x. Done in a local copy with no push remote; the live deck's Thank You slide is unchanged. The cash-receipts milestones task was cut Oct 11 (its answer showed draft schedule risk)."
+    "speakerNotes": "About 32 seconds (6s intro + 26s clip; you narrate). Framing (Brett, Oct 11): most of this presentation was built from the TritonAI Harness mobile app; this clip shows one edit to this deck from the phone. Don't call it sped up and don't frame it as a website update. From the phone: update the Thank You slide's subtitle, run the slide checks and build, show me a screenshot, don't commit. It found the Cabinet Thank You slide among three similar ones, changed one line, rebuilt the deck, and showed the updated slide in the chat on the phone. If asked: the phone directs the Harness running on my desktop; the clip is condensed from about 13 minutes of work; it was done in a local copy, so the Thank You slide at the end is unchanged. Captions no longer mention the speed-up (Oct 11)."
   },
   {
     "id": 1046,
