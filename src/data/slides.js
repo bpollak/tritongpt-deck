@@ -8030,7 +8030,7 @@ export const slides = [
       "cabinet"
     ],
     "managerSection": "Platform",
-    "durationSeconds": 167,
+    "durationSeconds": 161,
     "section": {
       "part": 2,
       "label": "Citizen development"
@@ -8043,7 +8043,7 @@ export const slides = [
       "watchFor": "The connected plugins, the AI Team skills, and 30 days of usage cost; then the UCSD Branding skill in the request and each result feeding the next.",
       "seconds": 7
     },
-    "videoSrc": "/media/cabinet/cabinet-harness-story-v6.mp4",
+    "videoSrc": "/media/cabinet/cabinet-harness-story-v7.mp4",
     "poster": "/media/cabinet/cabinet-harness-story-v6-poster.jpg",
     "videoLoop": false,
     "videoClearNav": false,
@@ -8059,10 +8059,10 @@ export const slides = [
     "releaseContext": {
       "channel": "nightly",
       "label": "TritonAI Harness Nightly",
-      "captureNote": "Settings tour recorded Oct 10 • story recorded Oct 9–10 on fictional practice-kit data • shown in 160 seconds"
+      "captureNote": "Settings tour recorded Oct 10 • story recorded Oct 9–10 on fictional practice-kit data • shown in 154 seconds"
     },
     "managerSummary": "Silent cut (130s): a 40s settings tour (model and permissions, all seven plugins, the AI Team skills, runtime providers, and the 30-day usage cost), then the story cut: a native Oct 10 recording of the Harness building a Decorator 5 feedback survey with the UCSD Branding skill, then the PK walkthrough's survey analysis, Excel dashboard, briefing deck, n8n workflow, and sign-up app.",
-    "speakerNotes": "About 167 seconds (7s intro + 160s clip, silent; you narrate). Edited Oct 11 (Brett): the sign-up app is cut, and the settings tour and every output run slower for voice-over. Settings tour (0:00–1:00): 0:00 General: default model and permissions for new threads (highlighted); 0:06 Plugins: GitHub, Google Workspace, Kuali Build, Lucid, Microsoft 365, and n8n, all enabled (Tableau also appears in the list; it is in testing) (toggles highlighted), each on the person's own sign-in and permissions; 0:21 Skills: the AI Team set (9 of 10 installed), shared by TritonAI Commons; 0:36 Runtime: TritonAI Cloud, TritonAI On-Prem, and cloud models (highlighted); 0:42 Cmd+K to Usage; 0:45 cost for Brett's own use: $426.44 API estimate over 30 days, 1,422 sessions, 1.93B tokens processed, $1,430 cache savings; the quota card shows the on-prem key at $342 of a $2,000 30-day budget (17.1%); 0:56 cost by model. Access-key digits are masked and a Tableau reconnect notice is hidden. The story (from 1:00): Jordan, a staff member, runs a fall workshop pilot (made-up project, fictional files). 1:00 the request with the UCSD Branding skill chip; 1:16 'Created survey.html' (highlighted); 1:30 the campus-branded survey page (zoom); 1:51 survey results go in and the findings come back: averages, top comments, 4 of 42 room ratings missing (highlighted); 1:59 an Excel dashboard for leaders; 2:05 a nine-slide briefing deck on the campus template, 'By the Numbers' highlighted; 2:30 it reads the team's n8n workflow and confirms the last run; 2:33 close: use the standard tool, or build it your way. Thinking and waiting run at 3–4x; requests at real speed; outputs slowed to about 0.6–0.75x. Sources: settings tour native recording Oct 10; survey segment native recording Oct 10; the rest is the Oct 2 capabilities video with narration removed. Build: ~/dev/cabinet-recapture-20261009/settings/build.py (tour), hs/retime.py then the v6 retime (story), joined with a 0.4s fade."
+    "speakerNotes": "About 161 seconds (7s intro + 154s clip, silent; you narrate). Edited Oct 11–12 (Brett): the sign-up app and the n8n workflow check are cut, Tableau is hidden from the plugin list, and the settings tour and every output run slower for voice-over. Settings tour (0:00–1:00): 0:00 General: default model and permissions for new threads (highlighted); 0:06 Plugins: GitHub, Google Workspace, Kuali Build, Lucid, Microsoft 365, and n8n, all enabled (toggles highlighted), each on the person's own sign-in and permissions; 0:21 Skills: the AI Team set (9 of 10 installed), shared by TritonAI Commons; 0:36 Runtime: TritonAI Cloud, TritonAI On-Prem, and cloud models (highlighted); 0:42 Cmd+K to Usage; 0:45 cost for Brett's own use: $426.44 API estimate over 30 days, 1,422 sessions, 1.93B tokens processed, $1,430 cache savings; the quota card shows the on-prem key at $342 of a $2,000 30-day budget (17.1%); 0:56 cost by model. Access-key digits are masked and a Tableau reconnect notice is hidden. The story (from 1:00): Jordan, a staff member, runs a fall workshop pilot (made-up project, fictional files). 1:00 the request with the UCSD Branding skill chip; 1:16 'Created survey.html' (highlighted); 1:30 the campus-branded survey page (zoom); 1:51 survey results go in and the findings come back: averages, top comments, 4 of 42 room ratings missing (highlighted); 1:59 an Excel dashboard for leaders; 2:05 a nine-slide briefing deck on the campus template, 'By the Numbers' highlighted; 2:28 close: use the standard tool, or build it your way. Thinking and waiting run at 3–4x; requests at real speed; outputs slowed to about 0.6–0.75x. Sources: settings tour native recording Oct 10; survey segment native recording Oct 10; the rest is the Oct 2 capabilities video with narration removed. Build: ~/dev/cabinet-recapture-20261009/settings/build.py (tour), hs/retime.py then the v6 retime (story), joined with a 0.4s fade."
   },
   {
     "id": 1026,
