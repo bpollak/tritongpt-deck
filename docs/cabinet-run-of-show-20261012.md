@@ -57,6 +57,7 @@
 - **Added Oct 10 (later):** College Exploration Assistant demo after the AI Tutor (+55s). After the later Oct 10 changes (More verticals removed, Directory demo added, Passport and Class Planner shortened) content runs about 22.3 minutes; to get under 22, skip the Class Planner usage chart (30s).
 - **Added Oct 10:** AI Tutor in Canvas (impact row plus a 42s cut of the PK setup video that opens on the Canvas course with no pilot title card, after ServiceNow): launched fall with 5 instructors, scaling in winter. TA–Student Matching on What's next: resumes Q1 2027 after TSS go-live. Research Grant Compliance Agent left out (no activity found after the April proposal).
 
+- **Oct 12 (Brett, opener):** opening slide now lists four questions; 04 "Why does UC San Diego need its own AI foundation?" sets up Part 4.
 - **Oct 12 (Brett, transcripts):** new side-by-side transcript matching slide before contract review; contract review is now side by side too (its standalone video slide is gone).
 - **Oct 12 (Brett, Class Planner):** Class Planner demo is side by side (wide video, loops beside the overview); its standalone video slide is gone.
 - **Oct 12 (Brett):** Tableau removed from the slide text (and hidden from the settings-tour video).

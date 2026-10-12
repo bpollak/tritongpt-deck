@@ -7240,7 +7240,8 @@ export const slides = [
     "type": "content",
     "layout": "cabinet-outline",
     "title": "We're hoping to help you better understand the following",
-    "subtitle": "Three questions, with real examples and real numbers.",
+    "subtitle": "Four questions, with real examples and real numbers.",
+    "compact": true,
     "content": [
       {
         "heading": "Which practical AI solutions is ITS building, and what will they pay back?",
@@ -7253,6 +7254,10 @@ export const slides = [
       {
         "heading": "What have people already built with it?",
         "text": "Examples for personal productivity and for departments, from inbox triage and daily briefings to a service check-in app."
+      },
+      {
+        "heading": "Why does UC San Diego need its own AI foundation?",
+        "text": "Models we run ourselves keep costs predictable, our data under our rules, and our tools working as vendors change, and other UC campuses are starting to use it too."
       }
     ],
     "audiences": [
@@ -7260,7 +7265,7 @@ export const slides = [
     ],
     "managerSection": "Opening",
     "durationSeconds": 60,
-    "speakerNotes": "One minute. Set up the three questions the rest of the talk answers. Part 1 answers the first: the vertical solutions ITS is building and the impact of each. Part 2 answers the second: what citizen development is, what the Harness can do, a live demonstration, and the path to hosting. Part 3 answers the third: what people have built for themselves and their departments. The foundation closes the talk, then a thank-you and questions with Kevin. Keep the payback claims measured: the impact slide labels each figure as a timed pilot, a planning estimate, a scenario, or cost avoided. One line on governance posture: data classification and UC policy alignment apply throughout, and every workflow has an accountable owner."
+    "speakerNotes": "One minute. Set up the four questions the rest of the talk answers. Part 1 answers the first: the vertical solutions ITS is building and the impact of each. Part 2 answers the second: what citizen development is, what the Harness can do, a live demonstration, and the path to hosting. Part 3 answers the third: what people have built for themselves and their departments. Part 4 answers the fourth: why the university needs its own AI supply, the gateway already carrying campus load, and sovereign inference as a service for UC. Then a thank-you and questions with Kevin. Keep the payback claims measured: the impact slide labels each figure as a timed pilot, a planning estimate, a scenario, or cost avoided. One line on governance posture: data classification and UC policy alignment apply throughout, and every workflow has an accountable owner."
   },
   {
     "id": 1040,
