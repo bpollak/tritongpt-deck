@@ -6550,17 +6550,17 @@ export const slides = [
     ],
     "parts": [
       {
-        "text": "Built artifacts need a "
+        "text": "ITS hosts applications built by "
       },
       {
-        "text": "hosting lane",
+        "text": "citizen developers",
         "accent": true
       },
       {
         "text": "."
       }
     ],
-    "subhead": "Tiered intake for agentic builds — from individual desktops to enterprise. Volume drops as governance increases.",
+    "subhead": "When a tool outgrows one desktop, ITS reviews it and hosts it on campus, from a single team's app to campus-wide services. Volume drops as governance increases.",
     "hostingTiers": [
       {
         "tierLabel": "Tier 0",
@@ -6630,7 +6630,7 @@ export const slides = [
       "executive"
     ],
     "durationSeconds": 45,
-    "speakerNotes": "45 seconds. The path to hosting: Tier 0 individual desktops to Tier 3 enterprise; volume drops as governance increases. Tier 0 tool chips removed from the Cabinet slide (Oct 9) for less text: Claude Code, Codex, Onyx Craft + OpenCode, Campus Jupyter + OpenCode; a user sandbox may be required for some API/MCP tooling."
+    "speakerNotes": "Title (Brett, Oct 11): ITS hosts applications built by citizen developers. 45 seconds. The path to hosting: Tier 0 individual desktops to Tier 3 enterprise; volume drops as governance increases. Tier 0 tool chips removed from the Cabinet slide (Oct 9) for less text: Claude Code, Codex, Onyx Craft + OpenCode, Campus Jupyter + OpenCode; a user sandbox may be required for some API/MCP tooling."
   },
   {
     "id": 1042,
