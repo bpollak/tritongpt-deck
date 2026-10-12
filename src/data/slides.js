@@ -7644,6 +7644,7 @@ export const slides = [
     },
     "intro": {
       "sideVideo": true,
+      "videoWide": true,
       "impact": [{"value": "~140 hours", "label": "of routing time saved per 10,000 tickets (scenario)"}, {"value": "~85%", "label": "fewer routing hours at 90% accuracy"}],
       "kicker": "ServiceNow",
       "title": "Routing tickets to the right team",
@@ -7686,6 +7687,7 @@ export const slides = [
     },
     "intro": {
       "sideVideo": true,
+      "videoWide": true,
       "impact": [{"value": "81%", "label": "of pilot students said it helped them understand"}, {"value": "5", "label": "instructors this fall; more courses in winter"}],
       "kicker": "Canvas",
       "title": "AI Tutor in Canvas",
@@ -9143,6 +9145,7 @@ export const slides = [
     },
     "intro": {
       "sideVideo": true,
+      "videoWide": true,
       "impact": [{"value": "$300K", "label": "a year saved by retiring a vendor contract"}, {"value": "16", "label": "campus websites with assistants"}],
       "kicker": "Admissions website",
       "title": "Which of the eight colleges fits me?",
