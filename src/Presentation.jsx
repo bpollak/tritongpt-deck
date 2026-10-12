@@ -237,6 +237,8 @@ const Presentation = () => {
 
   const nextSlide = useCallback(() => {
     if (filteredSlides.length === 0) return;
+    // A demo's intro card holds the deck: the first "next" starts the recording instead.
+    if (!window.dispatchEvent(new CustomEvent('deck-advance', { cancelable: true }))) return;
 
     setDirection(1);
     const nextIndex = currentIndex < filteredSlides.length - 1 ? currentIndex + 1 : 0;

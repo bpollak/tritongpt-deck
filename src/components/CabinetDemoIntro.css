@@ -81,21 +81,7 @@
   text-transform: uppercase;
 }
 
-.cabinet-demo-intro__timer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 4px;
-  width: 100%;
-  transform-origin: 0 50%;
-  background: #ffcd00;
-  animation-name: cabinet-demo-intro-timer;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-}
-
 @keyframes cabinet-demo-intro-in { from { opacity: 0; } to { opacity: 1; } }
-@keyframes cabinet-demo-intro-timer { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 
 /* Slim label that stays on the recording */
 .cabinet-demo-label {

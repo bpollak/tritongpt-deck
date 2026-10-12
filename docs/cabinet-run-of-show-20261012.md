@@ -1,6 +1,6 @@
 # Cabinet run of show · October 12, 2026
 
-28 slides · about 23 minutes of content · 10 minutes of Q&A. Restructured again October 9 (evening) around Brett's framing: **the vertical solutions IT Services is building (with their impact) first, citizen development with the TritonAI Harness in the middle, then what people build with it**, and the foundation last. Most slides show their part in the footer (the light chart, hosting, and dashboard slides do not). Demos open with a short intro card; click it to start early.
+28 slides · about 23 minutes of content · 10 minutes of Q&A. Restructured again October 9 (evening) around Brett's framing: **the vertical solutions IT Services is building (with their impact) first, citizen development with the TritonAI Harness in the middle, then what people build with it**, and the foundation last. Most slides show their part in the footer (the light chart, hosting, and dashboard slides do not). Demos open with an intro card that waits: click it or press next (clicker or arrow key) to start the recording.
 
 | Time | Slide | Presenter focus |
 | --- | --- | --- |

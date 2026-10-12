@@ -2,8 +2,8 @@ import CabinetCanvas from './CabinetCanvas';
 import './CabinetDemoIntro.css';
 
 // Title card shown before a recording plays, so the room knows what it is about
-// to see and what to look for. Click to start the recording early.
-export default function CabinetDemoIntro({ slide, seconds, onDone, staticPreview }) {
+// to see and what to look for. It waits until the presenter clicks or advances.
+export default function CabinetDemoIntro({ slide, onDone, staticPreview }) {
   const intro = slide.intro;
   return (
     <button
@@ -24,7 +24,6 @@ export default function CabinetDemoIntro({ slide, seconds, onDone, staticPreview
           )}
         </div>
       </CabinetCanvas>
-      {!staticPreview && <span className="cabinet-demo-intro__timer" style={{ animationDuration: `${seconds}s` }} />}
     </button>
   );
 }

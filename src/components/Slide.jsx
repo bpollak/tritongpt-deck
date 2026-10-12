@@ -52,15 +52,16 @@ const useIsTouchDevice = () => {
 const DeckVideoSlide = ({ slide, staticPreview }) => {
   const touchDevice = useIsTouchDevice();
   const demoBadge = !slide.hideDemoBadge && (slide.demoLabel || slide.title || slide.managerLabel);
-  const introSeconds = slide.intro?.seconds ?? 6;
   const [showIntro, setShowIntro] = React.useState(Boolean(slide.intro));
   const videoRef = React.useRef(null);
   const autoPlay = !staticPreview && !touchDevice && slide.videoAutoPlay !== false;
+  // The intro card waits for the presenter: a click or the next key/clicker starts the recording.
   React.useEffect(() => {
     if (!showIntro || staticPreview) return undefined;
-    const timer = window.setTimeout(() => setShowIntro(false), introSeconds * 1000);
-    return () => window.clearTimeout(timer);
-  }, [showIntro, staticPreview, introSeconds]);
+    const start = (e) => { e.preventDefault(); setShowIntro(false); };
+    window.addEventListener('deck-advance', start);
+    return () => window.removeEventListener('deck-advance', start);
+  }, [showIntro, staticPreview]);
   React.useEffect(() => {
     const video = videoRef.current;
     if (!slide.intro || showIntro || !autoPlay || !video) return undefined;
@@ -78,7 +79,7 @@ const DeckVideoSlide = ({ slide, staticPreview }) => {
   return (
     <div className="relative w-full h-full overflow-hidden bg-black">
       {slide.intro && showIntro && (
-        <CabinetDemoIntro slide={slide} seconds={introSeconds} staticPreview={staticPreview} onDone={() => setShowIntro(false)} />
+        <CabinetDemoIntro slide={slide} staticPreview={staticPreview} onDone={() => setShowIntro(false)} />
       )}
       <video
         ref={videoRef}
