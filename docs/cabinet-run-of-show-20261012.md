@@ -25,7 +25,7 @@
 | 16:54–17:39 | Passport Services check-in | Department-designed service app (clip now 20s, sped up). |
 | 17:39–18:19 | Class Planner (34s clip) | Course list to schedule options. Don’t claim the Harness built it. |
 | 18:39–19:09 | Class Planner demand peaks with enrollment passes | Daily usage around the enrollment passes. |
-| +1:00 | Agentic software development: an HR system in months (side by side; 56s clip loops) | SPA2 rebuilt by directing AI agents in the Harness: months, not years; avoids hundreds of thousands of dollars for a third-party system; HireOnline and JDOnline next. Clip: employee progress, supervisor review, HR admin setup. Dev environment, test data. |
+| +1:00 | Agentic software development: an HR system in months (side by side; 56s clip loops) | SPA2 rebuilt by directing AI agents in the Harness: months, not years; avoids hundreds of thousands of dollars for a third-party system; HireOnline and JDOnline next. Timeline: testing early–mid Nov, OMCP pilot Dec–Jan, full campus next cycle. Clip: employee progress, supervisor review, HR admin setup. Dev environment, test data. |
 | 16:29–17:29 | Departments are building with it | Nine IPPS and RRSS projects from Nikki (Oct 10) with status and impact: Core Bio pricing (~150 hrs/yr), Facilities compliance (81 issues in 13s), custodial staffing (~8 hrs/day projected), Passport, Concur reconciliation, green spend, spend chat; the ticket analysis agent and Non-PO review in early discussion. Tell two. |
 | **Part 4** | **Foundation and close** | |
 | +0:45 | Why the university needs its own AI supply | Sets up sovereign inference: access can change overnight, costs grow with every request, our data under our rules, tools keep working. Describe the news; don't name or criticize any lab. |

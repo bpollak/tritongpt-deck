@@ -219,3 +219,29 @@
 .cabinet-demo-intro--video-wide .cabinet-demo-intro__impact dt { font-size: 38px; }
 .cabinet-demo-intro--video-wide .cabinet-demo-intro__impact dd { font-size: 15px; }
 .cabinet-demo-intro--video-wide .cabinet-demo-intro__caption { font-size: 16px; }
+
+/* Launch timeline under the impact figures (intro.timeline) */
+.cabinet-demo-intro__timeline {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.cabinet-demo-intro__timeline li {
+  padding: 10px 12px 11px;
+  border-top: 3px solid #00c6d7;
+  background: rgba(255, 255, 255, .06);
+  border-radius: 0 0 8px 8px;
+}
+.cabinet-demo-intro__timeline span {
+  display: block;
+  color: #ffcd00;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.cabinet-demo-intro__timeline strong { display: block; margin-top: 4px; font-size: 16px; font-weight: 500; line-height: 1.3; color: #f5f0e6; }
+.cabinet-canvas[data-reading] .cabinet-demo-intro__timeline { grid-template-columns: 1fr; gap: 8px; margin: 0 0 18px; }

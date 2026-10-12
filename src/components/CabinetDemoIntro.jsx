@@ -26,6 +26,13 @@ export default function CabinetDemoIntro({ slide, onDone, staticPreview, sideVid
                 ))}
               </dl>
             )}
+            {intro.timeline?.length > 0 && (
+              <ol className="cabinet-demo-intro__timeline" aria-label="Launch timeline">
+                {intro.timeline.map(step => (
+                  <li key={step.what}><span>{step.when}</span><strong>{step.what}</strong></li>
+                ))}
+              </ol>
+            )}
           </div>
           {sideVideo ? (
             <aside className="cabinet-demo-intro__side cabinet-demo-intro__side--video">
