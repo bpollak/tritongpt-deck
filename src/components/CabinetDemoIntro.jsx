@@ -9,7 +9,7 @@ export default function CabinetDemoIntro({ slide, onDone, staticPreview, sideVid
   const intro = slide.intro;
   const Wrapper = sideVideo ? 'div' : 'button';
   const wrapperProps = sideVideo
-    ? { className: 'cabinet-demo-intro cabinet-demo-intro--side-video' }
+    ? { className: `cabinet-demo-intro cabinet-demo-intro--side-video${intro.videoWide ? ' cabinet-demo-intro--video-wide' : ''}` }
     : { type: 'button', className: 'cabinet-demo-intro', onClick: onDone, disabled: staticPreview, 'aria-label': `${intro.title}. Start the recording` };
   return (
     <Wrapper {...wrapperProps}>

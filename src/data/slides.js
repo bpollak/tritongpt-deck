@@ -9269,6 +9269,7 @@ export const slides = [
     },
     "intro": {
       "sideVideo": true,
+    "videoWide": true,
       "kicker": "Agentic software development",
       "title": "An HR system in months, not years",
       "setup": "Working with AI agents in the TritonAI Harness, ITS rebuilt the Staff Performance Appraisal system in months, instead of paying hundreds of thousands of dollars for a third-party system. HireOnline and JDOnline are next.",

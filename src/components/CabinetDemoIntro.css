@@ -204,3 +204,18 @@
 }
 .cabinet-canvas[data-reading] .cabinet-demo-intro__side--video { margin-top: 8px; }
 .cabinet-canvas[data-reading] .cabinet-demo-intro__caption { font-size: 14px; }
+
+/* Wider recording for detailed app screens (intro.videoWide) */
+.cabinet-demo-intro--video-wide .cabinet-demo-intro__body {
+  left: 56px;
+  right: 40px;
+  grid-template-columns: minmax(0, 0.62fr) minmax(0, 1.38fr);
+  gap: 36px;
+}
+.cabinet-demo-intro--video-wide h1 { font-size: 50px; }
+.cabinet-demo-intro--video-wide .cabinet-demo-intro__kicker { font-size: 14px; }
+.cabinet-demo-intro--video-wide .cabinet-demo-intro__setup { font-size: 19px; }
+.cabinet-demo-intro--video-wide .cabinet-demo-intro__impact { gap: 20px; margin-top: 22px; padding-top: 18px; }
+.cabinet-demo-intro--video-wide .cabinet-demo-intro__impact dt { font-size: 38px; }
+.cabinet-demo-intro--video-wide .cabinet-demo-intro__impact dd { font-size: 15px; }
+.cabinet-demo-intro--video-wide .cabinet-demo-intro__caption { font-size: 16px; }
