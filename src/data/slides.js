@@ -9256,7 +9256,7 @@ export const slides = [
     ],
     "managerSection": "Citizen Developer Showcase",
     "durationSeconds": 60,
-    "speakerNotes": "About a minute. Source: Nikki's summary to Brett (Oct 10) of IPPS and RRSS projects. Point: departments are building their own automations; pick two to tell. Core Bio Services pricing (Harness with the n8n plugin): pulls distributor prices, compares them to Core's negotiated pricing, suggests a markup that covers costs and stays under the competitor; runs about 50 times a year; saves about 3 hours per update (~150 hours a year) and delivers suggested pricing the same day. Facilities compliance (RRSS, n8n): State Fire Marshal results must be resolved within 10 days and were scattered across 25+ portal categories per building; now extracted after an email into Excel with work items; a five-building run handled 81 issues in about 13 seconds versus roughly 45 minutes by hand. Custodial staffing (n8n): a time-off form feeds a flow that assigns and reassigns flex custodial tasks; projected to recover about 8 hours of wait time a day across the flex team. Passport check-in app: built through the Citizen Developer program (demo coming up, after the directory). Concur credit memo AR reconciliation (n8n, TritonAI APIs): combines reports, applies matching rules on employee IDs, Concur references, names and amounts; the model comments on ambiguous cases for human review and fills an Oracle FBDI import for confident matches; no impact figure yet. Green spend reporting (n8n): identifies green items in supplier catalogs sent to Oracle and cross-references UC San Diego purchases, replacing year-end supplier outreach. Procurement spend chat (n8n, Google database, TritonAI APIs): natural-language questions on spend data instead of structured queries or ad hoc report requests. Early discussion: a TritonGPT deflection agent in ServiceNow for about 12,800 Tier 1 knowledge-gap tickets a year (about 29% of IPPS volume), and a Non-PO payment request review agent for 80–100 daily tickets, expected to grow to 125–145 with the dynamic ServiceNow form. Impact figures are team-reported; custodial is projected.",
+    "speakerNotes": "Now follows Class Planner (Brett, Oct 11); rows sorted in use, built, then early discussion. About a minute. Source: Nikki's summary to Brett (Oct 10) of IPPS and RRSS projects. Point: departments are building their own automations; pick two to tell. Core Bio Services pricing (Harness with the n8n plugin): pulls distributor prices, compares them to Core's negotiated pricing, suggests a markup that covers costs and stays under the competitor; runs about 50 times a year; saves about 3 hours per update (~150 hours a year) and delivers suggested pricing the same day. Facilities compliance (RRSS, n8n): State Fire Marshal results must be resolved within 10 days and were scattered across 25+ portal categories per building; now extracted after an email into Excel with work items; a five-building run handled 81 issues in about 13 seconds versus roughly 45 minutes by hand. Custodial staffing (n8n): a time-off form feeds a flow that assigns and reassigns flex custodial tasks; projected to recover about 8 hours of wait time a day across the flex team. Passport check-in app: built through the Citizen Developer program (demo shown earlier). Concur credit memo AR reconciliation (n8n, TritonAI APIs): combines reports, applies matching rules on employee IDs, Concur references, names and amounts; the model comments on ambiguous cases for human review and fills an Oracle FBDI import for confident matches; no impact figure yet. Green spend reporting (n8n): identifies green items in supplier catalogs sent to Oracle and cross-references UC San Diego purchases, replacing year-end supplier outreach. Procurement spend chat (n8n, Google database, TritonAI APIs): natural-language questions on spend data instead of structured queries or ad hoc report requests. Early discussion: a ticket analysis agent in ServiceNow (TritonGPT) for about 12,800 Tier 1 knowledge-gap tickets a year (about 29% of IPPS volume), and a Non-PO payment request review agent for 80–100 daily tickets, expected to grow to 125–145 with the dynamic ServiceNow form. Impact figures are team-reported; custodial is projected.",
     "section": {
       "part": 3,
       "label": "What people build"
@@ -9286,20 +9286,20 @@ export const slides = [
           "basis": "vs. ~45 minutes by hand"
         },
         {
+          "name": "Passport check-in app",
+          "what": "Visitor check-in designed by the Passport office",
+          "status": "In use",
+          "tone": "live",
+          "impact": "Readiness checks before the counter",
+          "basis": "Demo shown earlier"
+        },
+        {
           "name": "Custodial staffing assignments",
           "what": "A time-off form auto-assigns and reassigns flex custodial tasks",
           "status": "Built",
           "tone": "live",
           "impact": "~8 hours a day of wait time",
           "basis": "Projected, across the flex team"
-        },
-        {
-          "name": "Passport check-in app",
-          "what": "Visitor check-in designed by the Passport office",
-          "status": "In use",
-          "tone": "live",
-          "impact": "Readiness checks before the counter",
-          "basis": "Demo coming up"
         },
         {
           "name": "Concur credit memo reconciliation",
@@ -9326,7 +9326,7 @@ export const slides = [
           "basis": "n8n and TritonAI APIs"
         },
         {
-          "name": "TritonGPT in ServiceNow",
+          "name": "Ticket analysis agent",
           "what": "Answers Tier 1 “knowledge gap” tickets",
           "status": "Early discussion",
           "tone": "progress",
