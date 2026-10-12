@@ -7735,7 +7735,81 @@ export const slides = [
     "id": 1015,
     "slug": "cabinet-chat-and-harness",
     "type": "content",
-    "layout": "cabinet-website-visual",
+    "layout": "cabinet-harness-around",
+    "harnessAround": {
+      "kicker": "What a harness adds",
+      "lead": "The same approved models sit inside TritonGPT and the TritonAI Harness. A chat app answers a prompt. The Harness wraps the model with context, tools, permissions, and memory, and runs a loop so it can act on real work.",
+      "chat": {
+        "product": "TritonGPT",
+        "name": "Chat app",
+        "tagline": "A model answers.",
+        "facts": [
+          [
+            "Best for",
+            "Questions, document review, drafting"
+          ],
+          [
+            "Where",
+            "In the browser"
+          ],
+          [
+            "Connects to",
+            "Campus sources and purpose-built assistants"
+          ],
+          [
+            "You stay in charge",
+            "Review the answer before you use it"
+          ]
+        ]
+      },
+      "harness": {
+        "product": "TritonAI Harness",
+        "name": "Harness",
+        "tagline": "A model works.",
+        "inputs": [
+          "files",
+          "rules",
+          "memory"
+        ],
+        "actions": [
+          "read",
+          "edit",
+          "verify"
+        ],
+        "outputs": [
+          {
+            "icon": "FileText",
+            "label": "contract.docx"
+          },
+          {
+            "icon": "CheckCircle",
+            "label": "routed for sign-off"
+          },
+          {
+            "icon": "ClipboardList",
+            "label": "logged"
+          }
+        ],
+        "facts": [
+          [
+            "Best for",
+            "Multi-step work that ends in a saved result"
+          ],
+          [
+            "Where",
+            "Installed on Mac or Windows; a phone can direct it"
+          ],
+          [
+            "Connects to",
+            "Microsoft 365, Google, GitHub, Kuali Build, Tableau, Lucid, n8n, within your access"
+          ],
+          [
+            "You stay in charge",
+            "You set how much it does on its own"
+          ]
+        ]
+      }
+    },
     "title": "A chat answers. The Harness does the work.",
     "subtitle": "The model can stay the same. The workspace changes what you can get done.",
     "audiences": [
@@ -7753,7 +7827,7 @@ export const slides = [
         "text": "Multi-step work through project files, connected tools, and checks to a saved result you review."
       }
     ],
-    "speakerNotes": "One minute. Part 2 opens here: IT Services can't build every vertical, so the Harness lets staff build their own. Two sentences: \"TritonGPT helps staff find, understand, and draft. The Harness carries a task through files and campus tools to a result they review.\" Then go to the next slide: what it does, what it connects to, and what keeps it safe. The comparison shows six rows with no tabs (Oct 10); data storage and classification are on the control slide. Complementary products, not a smarter-model claim. Plugin list matches the plugin catalog on https://tritonai.ucsd.edu/training/harness/ (checked October 9). Harness task history and project files are local, but prompts and selected context go to the chosen model, and tools exchange data with connected services. The public site describes desktop Harness as a supported pilot; mobile remains preview. Sources: https://tritonai.ucsd.edu/developer-apis/harness.html ; https://tritonai.ucsd.edu/tritongpt/index.html ; https://tritonai.ucsd.edu/tritongpt/privacy.html",
+    "speakerNotes": "One minute. Part 2 opens here: IT Services can't build every vertical, so the Harness lets staff build their own. Two sentences: \"TritonGPT helps staff find, understand, and draft. The Harness carries a task through files and campus tools to a result they review.\" Then go to the next slide: what it does, what it connects to, and what keeps it safe. Visual (Oct 11, Brett): the chat app vs. Harness diagram from the TritonAI site (M is the model; the Harness wraps it with context, tools, and a loop), with four rows from the old comparison matrix under each side: best for, where, connects to, who stays in charge. The full matrix data is kept in workflowComparison for backup. Data storage and classification are on the control slide. Complementary products, not a smarter-model claim. Plugin list matches the plugin catalog on https://tritonai.ucsd.edu/training/harness/ (checked October 9). Harness task history and project files are local, but prompts and selected context go to the chosen model, and tools exchange data with connected services. The public site describes desktop Harness as a supported pilot; mobile remains preview. Sources: https://tritonai.ucsd.edu/developer-apis/harness.html ; https://tritonai.ucsd.edu/tritongpt/index.html ; https://tritonai.ucsd.edu/tritongpt/privacy.html",
     "websiteVisual": "comparison",
     "workflowComparison": {
       "matrixTitle": "A chat answers. The Harness does the work.",
