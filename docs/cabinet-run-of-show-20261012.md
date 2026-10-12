@@ -56,6 +56,7 @@
 - **Added Oct 10 (later):** College Exploration Assistant demo after the AI Tutor (+55s). After the later Oct 10 changes (More verticals removed, Directory demo added, Passport and Class Planner shortened) content runs about 22.3 minutes; to get under 22, skip the Class Planner usage chart (30s).
 - **Added Oct 10:** AI Tutor in Canvas (impact row plus a 42s cut of the PK setup video that opens on the Canvas course with no pilot title card, after ServiceNow): launched fall with 5 instructors, scaling in winter. TA–Student Matching on What's next: resumes Q1 2027 after TSS go-live. Research Grant Compliance Agent left out (no activity found after the April proposal).
 
+- **Oct 12 (Brett, Class Planner):** Class Planner demo is side by side (wide video, loops beside the overview); its standalone video slide is gone.
 - **Oct 12 (Brett):** Tableau removed from the slide text (and hidden from the settings-tour video).
 - **Oct 12 (Brett, Part 2):** "TritonAI Harness: built by the people who do the work" moved to the backup view; chat vs. Harness slide lost its lead paragraph and the four comparison rows are larger.
 - **Oct 12 (Brett, cash):** impact table cash row reads "$70M+ backlog of unallocated cash" with "60%+ of receipts need a person today" beneath (BFS business case: ~$79M average monthly undistributed balance).
