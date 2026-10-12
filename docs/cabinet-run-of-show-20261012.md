@@ -1,12 +1,12 @@
 # Cabinet run of show · October 12, 2026
 
-29 slides · about 23 minutes of content · 10 minutes of Q&A. Restructured again October 9 (evening) around Brett's framing: **the vertical solutions IT Services is building (with their impact) first, citizen development with the TritonAI Harness in the middle, then what people build with it**, and the foundation last. Most slides show their part in the footer (the light chart, hosting, and dashboard slides do not). Demos open with a short intro card; click it to start early.
+28 slides · about 23 minutes of content · 10 minutes of Q&A. Restructured again October 9 (evening) around Brett's framing: **the vertical solutions IT Services is building (with their impact) first, citizen development with the TritonAI Harness in the middle, then what people build with it**, and the foundation last. Most slides show their part in the footer (the light chart, hosting, and dashboard slides do not). Demos open with a short intro card; click it to start early.
 
 | Time | Slide | Presenter focus |
 | --- | --- | --- |
 | 0:00–0:30 | TritonAI Operating Review | Open. |
 | 0:30–1:30 | By the end of this presentation, you'll know | Three questions: what ITS is building and its payback; what citizen development and the Harness are; what people have built with it. |
-| **Part 1** | **Vertical solutions** (divider, 8s) | |
+| **Part 1** | **Vertical solutions** (no divider; the impact table opens the part) | |
 | 1:38–2:53 | Campus time and cost savers | Impact of each vertical, in the order you'll show them. Say the type of each number (pilot, estimate, scenario, avoided cost). The TritonAI Harness (400+ users) is the second row, right under Cash Application. |
 | 2:53–4:08 | Apply received cash faster | Frame the project in one line, then walk the four phases (Oct 2026 – Jun 2027). |
 | 4:08–5:33 | Contract review inside Word (intro + recording) | Live Word run: three rules, tracked changes, agent answer. OCGA is next. |
@@ -57,6 +57,7 @@
 - **Added Oct 10 (later):** College Exploration Assistant demo after the AI Tutor (+55s). After the later Oct 10 changes (More verticals removed, Directory demo added, Passport and Class Planner shortened) content runs about 22.3 minutes; to get under 22, skip the Class Planner usage chart (30s).
 - **Added Oct 10:** AI Tutor in Canvas (impact row plus a 42s cut of the PK setup video that opens on the Canvas course with no pilot title card, after ServiceNow): launched fall with 5 instructors, scaling in winter. TA–Student Matching on What's next: resumes Q1 2027 after TSS go-live. Research Grant Compliance Agent left out (no activity found after the April proposal).
 
+- **Oct 11 (Brett, evening):** Part 1 divider moved to the backup view; the cash slide subtitle and the impact table now say more than $70M in received cash sits unallocated in a typical month (business-case average about $79M).
 - **Oct 11 (content review, Brett's picks):** phone demo cut to the deck-edit task (the cash-receipts milestones answer showed draft schedule risk); Payment Request Review now appears only on the departments slide (early discussion), not on What's next; why-sovereign wording: "a cost we can plan for", "policy changes", "We decide when a model is retired, not a vendor"; UC Merced: "Scout runs on TritonAI; gateway onboarding now"; stale and sensitive speaker notes cleaned. No slides cut.
 - **Oct 11 (final pass):** phone intro cards keep the part footer clear of the nav buttons; the sovereign gateway model cards no longer clip their text; the Harness capabilities slide names Tableau and Lucid with the other connections; intro for "The Harness at work" shortened.
 - **Oct 10 (Brett, night):** "The Harness at work" now opens with a 40s settings tour (General, Plugins, Skills, Runtime, Usage cost) before the survey story (+40s; content now about 23 minutes). Access-key digits masked; a Tableau reconnect notice hidden.

@@ -7310,7 +7310,7 @@ export const slides = [
           "status": "In progress",
           "tone": "progress",
           "impact": "$1.3–3.0M a year",
-          "basis": "Initial business case"
+          "basis": "Initial business case on $70M+ in unallocated cash"
         },
         {
           "name": "TritonAI Harness",
@@ -7500,14 +7500,14 @@ export const slides = [
     "type": "content",
     "layout": "cabinet-cash-receipts",
     "title": "Apply received cash faster",
-    "subtitle": "Cash application modernization automatically matches incoming payments to the right invoices, so staff focus on the hard cases.",
+    "subtitle": "More than $70 million in received cash sits unallocated in a typical month. Cash application modernization matches payments to the right invoices automatically, so staff focus on the hard cases.",
     "content": [],
     "audiences": [
       "cabinet"
     ],
     "managerSection": "Administrative Verticals",
     "durationSeconds": 75,
-    "speakerNotes": "75 seconds. Frame it: cash already received can sit unapplied while staff research where it belongs. This project matches incoming payments to the right invoices automatically, with staff reviewing anything uncertain. Phase 1 collects and cleans payment data from bank files and ServiceNow tickets (Oct 12–Dec 11). Phase 2 auto-matches the clear cases on invoice numbers and payment references (Nov 9–Dec 18). Phase 3 captures how accountants match the hard cases today and turns it into tooling (Jan–Mar 2027). Phase 4 resolves what's left: asking payers to label payments, requesting missing invoices from campus units, and go-live (Apr–Jun 2027). If asked about value: the initial business case proposes $1.3–3.0M a year (being reconciled, not measured); the historical average undistributed balance is about $79M a month. Dates from the Implementation Roadmap in Confluence (read Oct 9). The biggest schedule risk is getting Bank of America and ServiceNow data access.",
+    "speakerNotes": "75 seconds. Frame it: cash already received can sit unapplied while staff research where it belongs. This project matches incoming payments to the right invoices automatically, with staff reviewing anything uncertain. Phase 1 collects and cleans payment data from bank files and ServiceNow tickets (Oct 12–Dec 11). Phase 2 auto-matches the clear cases on invoice numbers and payment references (Nov 9–Dec 18). Phase 3 captures how accountants match the hard cases today and turns it into tooling (Jan–Mar 2027). Phase 4 resolves what's left: asking payers to label payments, requesting missing invoices from campus units, and go-live (Apr–Jun 2027). The slide says more than $70 million sits unallocated in a typical month (Brett, Oct 11): the business case's historical average monthly undistributed balance is about $79M; it is cash waiting to be applied, not a loss. If asked about value: the initial business case proposes $1.3–3.0M a year (being reconciled, not measured). Dates from the Implementation Roadmap in Confluence (read Oct 9). The biggest schedule risk is getting Bank of America and ServiceNow data access.",
     "videoLoop": false,
     "videoClearNav": true,
     "videoAutoPlay": true,
