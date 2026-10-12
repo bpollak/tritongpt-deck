@@ -595,7 +595,7 @@
 
 /* Let recorded demos occupy the entire slide. Controls reveal on direct use. */
 .presentation-viewer[data-demo-only="true"] .presentation-progress { display: none; }
-.presentation-viewer[data-demo-only="true"] .presentation-nav,
+/* The slide navigation stays visible on demo slides (Brett, Oct 12); other demo-only controls fade until used. */
 .demo-only-control { opacity: 0; transition: opacity 150ms ease; }
 .presentation-viewer[data-demo-only="true"] .presentation-nav:hover,
 .presentation-viewer[data-demo-only="true"] .presentation-nav:focus-within,

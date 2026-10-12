@@ -154,9 +154,18 @@ const Presentation = () => {
     loadSlides();
   }, []);
 
-  // Filter slides based on audience type
+  // Filter slides based on audience type. A demo's intro card becomes its own slide
+  // (keeping the original slug) followed by the recording (slug + "-video"), so the
+  // presenter can step forward and back between them.
   const filteredSlides = useMemo(() => {
-    return filterSlidesByAudience(slidesData, audienceType);
+    return filterSlidesByAudience(slidesData, audienceType).flatMap((slide) => {
+      if (slide.type !== 'video' || !slide.intro || slide.intro.sideVideo) return [slide];
+      const { intro, aliases, ...rest } = slide;
+      return [
+        { ...slide, id: `${slide.id}-intro`, introSlide: true },
+        { ...rest, id: `${slide.id}-video`, slug: `${slide.slug}-video`, introTitle: intro.title }
+      ];
+    });
   }, [audienceType, slidesData]);
 
   const currentIndex = useMemo(() => {
@@ -272,6 +281,13 @@ const Presentation = () => {
       setCurrentSlideRef(getSlidePermalinkValue(filteredSlides[filteredSlides.length - 1]));
     }
   }, [currentIndex, filteredSlides]);
+
+  // Clicking an intro card starts its recording, i.e. moves to the next slide.
+  useEffect(() => {
+    const onRequestNext = () => nextSlide();
+    window.addEventListener('deck-request-next', onRequestNext);
+    return () => window.removeEventListener('deck-request-next', onRequestNext);
+  }, [nextSlide]);
 
   useEffect(() => {
     const handleKeyDown = (e) => {

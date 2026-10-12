@@ -52,11 +52,19 @@ const useIsTouchDevice = () => {
 
 // Side-by-side demos: the overview and the looping recording share one slide,
 // so "next" goes straight to the following slide.
-const DeckVideoSlide = ({ slide, staticPreview }) => (
-  slide.intro?.sideVideo
-    ? <div className="relative w-full h-full overflow-hidden"><CabinetDemoIntro slide={slide} staticPreview={staticPreview} sideVideo /></div>
-    : <DeckVideoPlayer slide={slide} staticPreview={staticPreview} />
-);
+const DeckVideoSlide = ({ slide, staticPreview }) => {
+  if (slide.intro?.sideVideo) {
+    return <div className="relative w-full h-full overflow-hidden"><CabinetDemoIntro slide={slide} staticPreview={staticPreview} sideVideo /></div>;
+  }
+  if (slide.introSlide) {
+    return (
+      <div className="relative w-full h-full overflow-hidden">
+        <CabinetDemoIntro slide={slide} staticPreview={staticPreview} onDone={() => window.dispatchEvent(new CustomEvent('deck-request-next'))} />
+      </div>
+    );
+  }
+  return <DeckVideoPlayer slide={slide} staticPreview={staticPreview} />;
+};
 
 const DeckVideoPlayer = ({ slide, staticPreview }) => {
   const touchDevice = useIsTouchDevice();
