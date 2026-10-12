@@ -7507,7 +7507,7 @@ export const slides = [
     ],
     "managerSection": "Administrative Verticals",
     "durationSeconds": 75,
-    "speakerNotes": "75 seconds. Frame it: cash already received can sit unapplied while staff research where it belongs. This project matches incoming payments to the right invoices automatically, with staff reviewing anything uncertain. Phase 1 collects and cleans payment data from bank files and ServiceNow tickets (Oct 12–Dec 11). Phase 2 auto-matches the clear cases on invoice numbers and payment references (Nov 9–Dec 18). Phase 3 captures how accountants match the hard cases today and turns it into tooling (Jan–Mar 2027). Phase 4 resolves what's left: asking payers to label payments, requesting missing invoices from campus units, and go-live (Apr–Jun 2027). The slide says a person has to handle more than 60 percent of receipts (Brett, Oct 11). Source: BFS business case 'Modernizing Cash Application ROI' (March 2026; sent by Cheryl Kaino May 19): of 123,108 receipts from January 2025 to January 2026 ($2.66B), 75,199 (61%) needed human touch, carrying $2.53B (81% of the dollars); 47,909 (39%) were applied automatically. Manual receipts take a few minutes (25%), 15–30 minutes (55%), or are very complex or unresolved (20%). Also in the business case, if asked: the average monthly undistributed cash balance over those 13 months was about $79M (cash waiting to be applied, not a loss or a monthly inflow); about 10 FTE across AR, Cashiers, Health, and SPF support the process today. If asked about value: the initial business case proposes $1.3–3.0M a year (being reconciled, not measured). Dates from the Implementation Roadmap in Confluence (read Oct 9). The biggest schedule risk is getting Bank of America and ServiceNow data access.",
+    "speakerNotes": "75 seconds. Frame it: cash already received can sit unapplied while staff research where it belongs. This project matches incoming payments to the right invoices automatically, with staff reviewing anything uncertain. Phase 1, receipt population (Oct 12–Dec 18, 2026, planning): collect and normalize payment data from Bank of America daily files, lockbox, ACH and wire remittances, and ServiceNow pending-payment and claim tickets. Phase 2, high-confidence matching (Jan 4–Mar 31, 2027): direct-match rules on invoice number, payment reference, and payer, with confidence scores; deploy auto-match in March. Phases 3 and 4 run in parallel (Apr 1–Jun 30, 2027): Phase 3 captures how accountants match the hard cases today and turns it into deep-research matching; Phase 4 resolves what's left (apply, human review, payer outreach, asking campus units for missing invoices) and ends with operational readiness review and go-live in June 2027. The slide says a person has to handle more than 60 percent of receipts (Brett, Oct 11). Source: BFS business case 'Modernizing Cash Application ROI' (March 2026; sent by Cheryl Kaino May 19): of 123,108 receipts from January 2025 to January 2026 ($2.66B), 75,199 (61%) needed human touch, carrying $2.53B (81% of the dollars); 47,909 (39%) were applied automatically. Manual receipts take a few minutes (25%), 15–30 minutes (55%), or are very complex or unresolved (20%). Also in the business case, if asked: the average monthly undistributed cash balance over those 13 months was about $79M (cash waiting to be applied, not a loss or a monthly inflow); about 10 FTE across AR, Cashiers, Health, and SPF support the process today. If asked about value: the initial business case proposes $1.3–3.0M a year (being reconciled, not measured). Dates from the Implementation Roadmap in Confluence (re-read Oct 12; Phases 2–4 moved since Oct 9; the page's Phase 2 row says 'Mar 31, 2026', a typo for 2027 per its Q1 2027 heading; milestones after Phase 1 are marked preliminary). The biggest schedule risk is getting Bank of America and ServiceNow data access.",
     "videoLoop": false,
     "videoClearNav": true,
     "videoAutoPlay": true,
@@ -7517,22 +7517,22 @@ export const slides = [
         {
           "title": "Collect payments",
           "when": "Oct – Dec 2026",
-          "text": "Gather and clean payment data."
+          "text": "Gather and clean payment data from bank files and tickets."
         },
         {
           "title": "Match the clear cases",
-          "when": "Nov – Dec 2026",
-          "text": "Auto-match on invoice numbers."
+          "when": "Jan – Mar 2027",
+          "text": "Auto-match high-confidence payments."
         },
         {
           "title": "Research the hard cases",
-          "when": "Jan – Mar 2027",
+          "when": "Apr – Jun 2027",
           "text": "Capture how accountants match today."
         },
         {
           "title": "Resolve and go live",
           "when": "Apr – Jun 2027",
-          "text": "Close out unmatched payments."
+          "text": "Close out unmatched payments; go live in June."
         }
       ]
     },
