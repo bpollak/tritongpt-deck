@@ -21,6 +21,13 @@ export default function CabinetDemoIntro({ slide, onDone, staticPreview }) {
             {intro.kicker && <p className="cabinet-demo-intro__kicker">{intro.kicker}</p>}
             <h1>{intro.title}</h1>
             {intro.setup && <p className="cabinet-demo-intro__setup">{intro.setup}</p>}
+            {intro.impact?.length > 0 && (
+              <dl className="cabinet-demo-intro__impact">
+                {intro.impact.map(item => (
+                  <div key={item.value}><dt>{item.value}</dt><dd>{item.label}</dd></div>
+                ))}
+              </dl>
+            )}
           </div>
           <aside className="cabinet-demo-intro__side">
             <span className="cabinet-demo-intro__play" aria-hidden="true"><Play size={46} strokeWidth={2.2} /></span>

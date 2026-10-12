@@ -7616,6 +7616,7 @@ export const slides = [
       "label": "Vertical solutions"
     },
     "intro": {
+      "impact": [{"value": "120 → 11 min", "label": "per contract in a timed pilot"}, {"value": "~90%", "label": "less reviewer time; a person approves every edit"}],
       "kicker": "Word add-in",
       "title": "Contract review inside Word",
       "label": "Contract review · Word add-in",
@@ -7642,6 +7643,7 @@ export const slides = [
       "label": "Vertical solutions"
     },
     "intro": {
+      "impact": [{"value": "~140 hours", "label": "of routing time saved per 10,000 tickets (scenario)"}, {"value": "~85%", "label": "fewer routing hours at 90% accuracy"}],
       "kicker": "ServiceNow",
       "title": "Routing tickets to the right team",
       "label": "ServiceNow · ticket routing",
@@ -7662,7 +7664,7 @@ export const slides = [
       "captureNote": "Support requests · actual recommendations · staff selects · nothing saved"
     },
     "managerSummary": "ServiceNow routing, two cases: desktop hardware to ITS-FieldSupport-Intake (79.9%) and a DNS request to ITS-Hostmaster (96.9%), with the Suggest button, top recommendation, and filled assignment group highlighted and zoomed.",
-    "speakerNotes": "About 31 seconds (6s intro + 25s clip); voice over. Today most tickets land with the Service Desk first and get handed off. Here the agent clicks Suggest Assignment Group. First case: a department desktop won't power on; the model recommends ITS-FieldSupport-Intake at 79.9% and the group fills in. Second case: a request for DNS records on a university server; it recommends ITS-Hostmaster at 96.9%. The value is skipping the hand-off so the specialist team starts sooner. The agent stays in control and can pick another group. Scores are model confidence for these examples, not measured accuracy. Recording: October 8, 2026 capture on unsaved new-case forms in production ServiceNow; nothing saved or submitted. Built from captured frames; the yellow highlights and zooms were added in editing on Oct 9 (docs/recapture-20261009/sn_edit.py). The VPN example that routed to the Service Desk was dropped. Clip sped up 1.6x on Oct 10 (about 25s)."
+    "speakerNotes": "Impact on the intro card (Oct 12): ~140 hours per 10,000 tickets is a scenario, not measured: manual routing at 60 seconds per ticket is 167 staff hours per 10,000; at 90% correct suggestions, 1,000 misroutes at 90 seconds each is 25 hours; savings about 142 hours (85%). Volume if asked: the classifier was trained on about 300,000 ServiceNow cases from six months (all queues, roughly 50,000 a month); a planning estimate puts the Service Desk alone at 50,000+ tickets a year. At 50,000 Service Desk tickets that is roughly 700 staff hours a year; the bigger gain is specialists starting sooner without a hand-off. Confirm actual Service Desk volume with Chuck's team before quoting an annual number. About 31 seconds (6s intro + 25s clip); voice over. Today most tickets land with the Service Desk first and get handed off. Here the agent clicks Suggest Assignment Group. First case: a department desktop won't power on; the model recommends ITS-FieldSupport-Intake at 79.9% and the group fills in. Second case: a request for DNS records on a university server; it recommends ITS-Hostmaster at 96.9%. The value is skipping the hand-off so the specialist team starts sooner. The agent stays in control and can pick another group. Scores are model confidence for these examples, not measured accuracy. Recording: October 8, 2026 capture on unsaved new-case forms in production ServiceNow; nothing saved or submitted. Built from captured frames; the yellow highlights and zooms were added in editing on Oct 9 (docs/recapture-20261009/sn_edit.py). The VPN example that routed to the Service Desk was dropped. Clip sped up 1.6x on Oct 10 (about 25s)."
   },
   {
     "id": 1043,
@@ -7682,6 +7684,7 @@ export const slides = [
       "label": "Vertical solutions"
     },
     "intro": {
+      "impact": [{"value": "81%", "label": "of pilot students said it helped them understand"}, {"value": "5", "label": "instructors this fall; more courses in winter"}],
       "kicker": "Canvas",
       "title": "AI Tutor in Canvas",
       "setup": "Instructors pick the course materials and teaching style; students get a tutor that guides them to answers instead of handing them out.",
@@ -9137,6 +9140,7 @@ export const slides = [
       "label": "Vertical solutions"
     },
     "intro": {
+      "impact": [{"value": "$300K", "label": "a year saved by retiring a vendor contract"}, {"value": "16", "label": "campus websites with assistants"}],
       "kicker": "Admissions website",
       "title": "Which of the eight colleges fits me?",
       "setup": "A prospective first-year describes what matters to them: marine biology, sustainability, the outdoors, a flexible gen ed, a close-knit community, and service.",

@@ -72,6 +72,24 @@
   line-height: 1.4;
 }
 
+/* Impact figures for vertical solutions, shown before the demo plays */
+.cabinet-demo-intro__impact {
+  display: flex;
+  gap: 40px;
+  margin: 28px 0 0;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, .16);
+}
+.cabinet-demo-intro__impact div { flex: 1; min-width: 0; }
+.cabinet-demo-intro__impact dt {
+  font-family: 'Teko', 'Roboto', Arial, sans-serif;
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 1;
+  color: #ffcd00;
+}
+.cabinet-demo-intro__impact dd { margin: 6px 0 0; font-size: 18px; line-height: 1.35; color: #c4d2df; }
+
 .cabinet-demo-intro__side {
   display: flex;
   flex-direction: column;
@@ -143,6 +161,9 @@
 .cabinet-canvas[data-reading] .cabinet-demo-intro__kicker { font-size: 13px; margin-bottom: 10px; }
 .cabinet-canvas[data-reading] .cabinet-demo-intro h1 { font-size: 40px; line-height: 1.02; margin-bottom: 16px; }
 .cabinet-canvas[data-reading] .cabinet-demo-intro__setup { font-size: 18px; line-height: 1.4; margin-bottom: 18px; }
+.cabinet-canvas[data-reading] .cabinet-demo-intro__impact { gap: 18px; margin: 4px 0 18px; padding-top: 14px; }
+.cabinet-canvas[data-reading] .cabinet-demo-intro__impact dt { font-size: 34px; }
+.cabinet-canvas[data-reading] .cabinet-demo-intro__impact dd { font-size: 14px; }
 .cabinet-canvas[data-reading] .cabinet-demo-intro__side { flex-direction: row; align-items: center; gap: 16px; }
 .cabinet-canvas[data-reading] .cabinet-demo-intro__play { flex: none; width: 56px; height: 56px; box-shadow: none; }
 .cabinet-canvas[data-reading] .cabinet-demo-intro__play svg { width: 24px; height: 24px; margin-left: 3px; }
