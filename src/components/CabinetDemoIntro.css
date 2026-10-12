@@ -10,73 +10,103 @@
   cursor: pointer;
   text-align: left;
   color: #f5f0e6;
-  background: linear-gradient(135deg, #182b49, #0b3d5f);
+  background: #13294b;
   animation: cabinet-demo-intro-in .35s ease-out;
 }
 .cabinet-demo-intro:disabled { cursor: default; }
 
-.cabinet-demo-intro__poster {
+/* A clean, standalone slide: solid navy, a soft glow, and a gold rule. No imagery behind it. */
+.cabinet-demo-intro__canvas {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: .08;
-  filter: blur(14px) saturate(.5);
-  transform: scale(1.06);
+  background:
+    radial-gradient(900px 520px at 88% 12%, rgba(0, 98, 155, .45), transparent 70%),
+    linear-gradient(160deg, #13294b 0%, #0f2d52 60%, #0b3558 100%);
 }
-
-.cabinet-demo-intro__canvas { position: absolute; inset: 0; background: transparent; }
+.cabinet-demo-intro__canvas::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, #ffcd00 0 28%, #00629b 28% 100%);
+}
 
 .cabinet-demo-intro__body {
   position: absolute;
   left: 96px;
-  right: 120px;
-  top: 50%;
-  transform: translateY(-54%);
+  right: 96px;
+  top: 64px;
+  bottom: 96px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 330px;
+  gap: 64px;
+  align-items: center;
   font-family: 'Roboto', Arial, sans-serif;
 }
 
 .cabinet-demo-intro__kicker {
   margin: 0 0 14px;
   color: #ffcd00;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 700;
   letter-spacing: .18em;
   text-transform: uppercase;
 }
 
 .cabinet-demo-intro h1 {
-  margin: 0 0 22px;
+  margin: 0 0 24px;
   font-family: 'Teko', 'Roboto', Arial, sans-serif;
-  font-size: 76px;
+  font-size: 74px;
   font-weight: 600;
-  line-height: 1;
+  line-height: .98;
   letter-spacing: .01em;
+  color: #f5f0e6;
 }
 
 .cabinet-demo-intro__setup {
-  max-width: 980px;
-  margin: 0 0 26px;
-  color: #e4ebf1;
-  font-size: 29px;
-  line-height: 1.38;
+  margin: 0;
+  color: #dfe7ef;
+  font-size: 27px;
+  line-height: 1.4;
 }
 
+.cabinet-demo-intro__side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 26px;
+}
+.cabinet-demo-intro__play {
+  display: grid;
+  place-items: center;
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  border: 3px solid #ffcd00;
+  color: #ffcd00;
+  background: rgba(255, 205, 0, .08);
+  box-shadow: 0 0 0 10px rgba(255, 205, 0, .06);
+}
+.cabinet-demo-intro__play svg { margin-left: 6px; fill: #ffcd00; }
+.cabinet-demo-intro:hover .cabinet-demo-intro__play { background: rgba(255, 205, 0, .16); }
+
 .cabinet-demo-intro__watch {
-  max-width: 980px;
   margin: 0;
-  padding: 16px 0 0 20px;
-  border-left: 4px solid #ffcd00;
-  color: #c4d2df;
-  font-size: 23px;
+  padding: 18px 20px 20px;
+  border-top: 4px solid #ffcd00;
+  border-radius: 0 0 10px 10px;
+  background: rgba(255, 255, 255, .06);
+  color: #dfe7ef;
+  font-size: 21px;
   line-height: 1.4;
 }
 .cabinet-demo-intro__watch strong {
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   color: #ffcd00;
-  font-size: 15px;
+  font-size: 14px;
   letter-spacing: .16em;
   text-transform: uppercase;
 }
@@ -109,9 +139,12 @@
 }
 .cabinet-demo-label strong { display: block; margin-top: 2px; font-size: 15px; font-weight: 700; }
 
-.cabinet-canvas[data-reading] .cabinet-demo-intro__body { position: static; transform: none; padding: 28px 22px 28px; }
+.cabinet-canvas[data-reading] .cabinet-demo-intro__body { position: static; display: block; padding: 28px 22px 28px; }
 .cabinet-canvas[data-reading] .cabinet-demo-intro__kicker { font-size: 13px; margin-bottom: 10px; }
 .cabinet-canvas[data-reading] .cabinet-demo-intro h1 { font-size: 40px; line-height: 1.02; margin-bottom: 16px; }
 .cabinet-canvas[data-reading] .cabinet-demo-intro__setup { font-size: 18px; line-height: 1.4; margin-bottom: 18px; }
-.cabinet-canvas[data-reading] .cabinet-demo-intro__watch { font-size: 16px; padding-top: 10px; }
+.cabinet-canvas[data-reading] .cabinet-demo-intro__side { flex-direction: row; align-items: center; gap: 16px; }
+.cabinet-canvas[data-reading] .cabinet-demo-intro__play { flex: none; width: 56px; height: 56px; box-shadow: none; }
+.cabinet-canvas[data-reading] .cabinet-demo-intro__play svg { width: 24px; height: 24px; margin-left: 3px; }
+.cabinet-canvas[data-reading] .cabinet-demo-intro__watch { font-size: 16px; padding: 12px 14px; }
 .cabinet-canvas[data-reading] .cabinet-demo-intro__watch strong { font-size: 12px; }
