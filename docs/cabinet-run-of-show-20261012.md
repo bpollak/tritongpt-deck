@@ -9,6 +9,7 @@
 | **Part 1** | **Vertical solutions** (no divider; the impact table opens the part) | |
 | 1:38–2:53 | Campus time and cost savers | Impact of each vertical, in the order you'll show them. Say the type of each number (pilot, estimate, scenario, avoided cost). The TritonAI Harness (400+ users) is the second row, right under Cash Application. |
 | 2:53–4:08 | Apply received cash faster | Frame the project in one line, then walk the four phases (Oct 2026 – Jun 2027). |
+| +0:45 | Transcript matching (side by side; OnBase review clip loops) | AI matches incoming transcripts to student records; staff confirm uncertain matches. 60,000 a year; 225/hr at 98%+ in the pilot; avoids temporary hiring. |
 | 4:08–5:33 | Contract review inside Word (intro + recording) | Live Word run: three rules, tracked changes, agent answer. OCGA is next. |
 | 5:33–6:23 | Routing tickets to the right team (intro + 25s recording, sped up 1.6x) | Two tickets routed past the Service Desk: desktop to Field Support (80%), DNS to Hostmaster (97%). Highlights and zooms guide the eye; voice over. |
 | +0:45 | College Exploration Assistant (intro + 39s recording) | Live public assistant on admissions.ucsd.edu/why/colleges. One detailed prompt (marine biology, sustainability, surfing and hiking, flexible gen ed, close-knit community, service) gets Muir, Seventh, Eighth, and Marshall, each tied to those interests with citations. Persona card and closing board are overlays; the conversation is real, sped up while typing and thinking. |
@@ -56,6 +57,7 @@
 - **Added Oct 10 (later):** College Exploration Assistant demo after the AI Tutor (+55s). After the later Oct 10 changes (More verticals removed, Directory demo added, Passport and Class Planner shortened) content runs about 22.3 minutes; to get under 22, skip the Class Planner usage chart (30s).
 - **Added Oct 10:** AI Tutor in Canvas (impact row plus a 42s cut of the PK setup video that opens on the Canvas course with no pilot title card, after ServiceNow): launched fall with 5 instructors, scaling in winter. TA–Student Matching on What's next: resumes Q1 2027 after TSS go-live. Research Grant Compliance Agent left out (no activity found after the April proposal).
 
+- **Oct 12 (Brett, transcripts):** new side-by-side transcript matching slide before contract review; contract review is now side by side too (its standalone video slide is gone).
 - **Oct 12 (Brett, Class Planner):** Class Planner demo is side by side (wide video, loops beside the overview); its standalone video slide is gone.
 - **Oct 12 (Brett):** Tableau removed from the slide text (and hidden from the settings-tour video).
 - **Oct 12 (Brett, Part 2):** "TritonAI Harness: built by the people who do the work" moved to the backup view; chat vs. Harness slide lost its lead paragraph and the four comparison rows are larger.

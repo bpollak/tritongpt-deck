@@ -8,6 +8,7 @@ export const slideManagerState = {
     "cabinet-verticals-impact",
     "cabinet-cash-receipts-demo",
     "cabinet-cash-roadmap",
+    "cabinet-transcript-matching-demo",
     "cabinet-contract-review-demo",
     "cabinet-servicenow-routing-demo",
     "cabinet-ai-tutor-demo",
@@ -803,6 +804,9 @@ export const slideManagerState = {
       "cabinet"
     ],
     "cabinet-spa2-demo": [
+      "cabinet"
+    ],
+    "cabinet-transcript-matching-demo": [
       "cabinet"
     ]
   }

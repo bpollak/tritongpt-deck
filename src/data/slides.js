@@ -7581,6 +7581,50 @@ export const slides = [
     "compact": true
   },
   {
+    "id": 1052,
+    "slug": "cabinet-transcript-matching-demo",
+    "type": "video",
+    "layout": "cabinet-demo",
+    "title": "Transcript matching",
+    "subtitle": "AI matches incoming transcripts to the right student record for Enrollment Management.",
+    "audiences": [
+      "cabinet"
+    ],
+    "managerSection": "Vertical Solutions",
+    "durationSeconds": 45,
+    "section": {
+      "part": 1,
+      "label": "Vertical solutions"
+    },
+    "intro": {
+      "sideVideo": true,
+      "videoWide": true,
+      "kicker": "Enrollment Management",
+      "title": "Transcript matching",
+      "setup": "Incoming transcripts arrive in every format. AI reads each one, matches it to the right student record, and sends only the uncertain cases to staff for review.",
+      "impact": [
+        {
+          "value": "60,000",
+          "label": "transcripts a year"
+        },
+        {
+          "value": "225/hr",
+          "label": "at 98%+ accuracy in the pilot"
+        }
+      ],
+      "watchFor": "Each transcript's candidate student matches, with a confidence score and the reasons behind it, for a person to confirm."
+    },
+    "videoSrc": "/media/tms-onbase-demo.mp4",
+    "poster": "/media/posters/transcript-matching.jpg",
+    "videoLoop": true,
+    "videoClearNav": false,
+    "videoAutoPlay": true,
+    "hideDemoBadge": true,
+    "demoOnly": true,
+    "managerSummary": "Cabinet side-by-side copy of transcript-matching-validation, using the same OnBase review recording.",
+    "speakerNotes": "About 45 seconds; side by side, the recording loops on the right (Brett, Oct 12). Transcript matching for Enrollment Management: AI extracts data from transcripts in any format (scanned, stained, distorted), matches each to the right student record, and routes uncertain matches to staff, who confirm in OnBase. Impact is cost avoidance: it avoids hiring dozens of temporary staff for peak-season transcript entry; don't frame it as reductions to existing staff. Figures: about 60,000 transcripts a year; about 225 an hour at 98%+ accuracy in the pilot (Enrollment Management operating baseline and pilot benchmark, reviewed Jul 2026). Earlier planning estimate up to about $500K a year in capacity, if asked. The clip is the same recording used on the main deck's transcript matching slide; names shown are in the review queue, so don't linger on a single record."
+  },
+  {
     "id": 1005,
     "slug": "cabinet-contract-review-demo",
     "type": "video",
@@ -7599,7 +7643,7 @@ export const slides = [
       "mediaStem": "cabinet-contract-review-live",
       "status": "captured and reviewed"
     },
-    "speakerNotes": "Plant the ask while the recording plays: prioritize the next eligible contract groups and types, starting with OCGA (subject to Nicole's contract-type list). Advancement and real estate were reviewed and do not fit; do not list them. About 55 seconds: six-second intro card, then the 40-second recording (sped up further Oct 10: setup 2.2x, processing and Q&A wait 3.5x, results 1.4x). Voice-over: staff choose institutional rules, the review runs inside Word, and every proposed change arrives as a tracked change with a comment naming its rule. Then you can ask the agent questions about the result. Capture: native screen recording of the real Word window and installed UC San Diego Contract Reviewer add-in, October 9, 2026, about 12:44 PM PT, on a local copy of the public SolarWinds SaaS agreement (unreviewed demonstration copy). Three rules were selected on camera (Terms of Purchase, Term and Termination, Indemnity and Liability); business context said it was a demonstration with no purchase, customer data, UC Health, federal funding, order form, or DPA; Risk assessment and rule names in author labels were on. The add-in reported Review complete, 3 of 3 rules, 1m 31s. Question asked: \"Which of these changes matters most for UC San Diego, and what should a reviewer confirm before accepting it?\" Answer (actual): UC terms prevail; data-security appendix and AI/analytics approval; UC convenience termination, supplier indemnity, no conflicting liability cap; remove automatic renewal. Speed: real time for rule selection, completion, and reading the answer; processing sped up 8x and the question/answer 2–3x. Nothing was accepted, signed, sent, or saved over the source. Single run time is not a benchmark. The existing supervised Procurement inbox/portal workflow is in production; broad Word add-in deployment still requires Microsoft trusted-app setup; do not claim campus-wide availability. OCGA is the next candidate subject to Nicole's contract-type list. Edit script: ~/dev/cabinet-recapture-20261009/word/edit_contract.sh Guided edit Oct 9: yellow highlights and zooms on the three rules, Start Review, the tracked changes, Review complete, and the agent's answer (docs/recapture-20261009/spec_contract.json).",
+    "speakerNotes": "Side-by-side slide (Brett, Oct 12): overview and impact on the left while the recording loops on the right; no separate demo slide. Plant the ask while the recording plays: prioritize the next eligible contract groups and types, starting with OCGA (subject to Nicole's contract-type list). Advancement and real estate were reviewed and do not fit; do not list them. About 55 seconds: six-second intro card, then the 40-second recording (sped up further Oct 10: setup 2.2x, processing and Q&A wait 3.5x, results 1.4x). Voice-over: staff choose institutional rules, the review runs inside Word, and every proposed change arrives as a tracked change with a comment naming its rule. Then you can ask the agent questions about the result. Capture: native screen recording of the real Word window and installed UC San Diego Contract Reviewer add-in, October 9, 2026, about 12:44 PM PT, on a local copy of the public SolarWinds SaaS agreement (unreviewed demonstration copy). Three rules were selected on camera (Terms of Purchase, Term and Termination, Indemnity and Liability); business context said it was a demonstration with no purchase, customer data, UC Health, federal funding, order form, or DPA; Risk assessment and rule names in author labels were on. The add-in reported Review complete, 3 of 3 rules, 1m 31s. Question asked: \"Which of these changes matters most for UC San Diego, and what should a reviewer confirm before accepting it?\" Answer (actual): UC terms prevail; data-security appendix and AI/analytics approval; UC convenience termination, supplier indemnity, no conflicting liability cap; remove automatic renewal. Speed: real time for rule selection, completion, and reading the answer; processing sped up 8x and the question/answer 2–3x. Nothing was accepted, signed, sent, or saved over the source. Single run time is not a benchmark. The existing supervised Procurement inbox/portal workflow is in production; broad Word add-in deployment still requires Microsoft trusted-app setup; do not claim campus-wide availability. OCGA is the next candidate subject to Nicole's contract-type list. Edit script: ~/dev/cabinet-recapture-20261009/word/edit_contract.sh Guided edit Oct 9: yellow highlights and zooms on the three rules, Start Review, the tracked changes, Review complete, and the agent's answer (docs/recapture-20261009/spec_contract.json).",
     "videoLoop": false,
     "videoClearNav": false,
     "videoAutoPlay": true,
@@ -7618,7 +7662,9 @@ export const slides = [
       "label": "Vertical solutions"
     },
     "intro": {
-      "impact": [{"value": "120 → 11 min", "label": "per contract in a timed pilot"}, {"value": "~90%", "label": "less reviewer time; a person approves every edit"}],
+      "sideVideo": true,
+      "videoWide": true,
+      "impact": [{"value": "11 min", "label": "per contract, down from 120, in a timed pilot"}, {"value": "~90%", "label": "less reviewer time; a person approves every edit"}],
       "kicker": "Word add-in",
       "title": "Contract review inside Word",
       "label": "Contract review · Word add-in",
