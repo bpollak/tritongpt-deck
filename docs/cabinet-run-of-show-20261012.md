@@ -19,7 +19,7 @@
 | 13:21–14:06 | It stays in your control | Limits the person sets and the campus sets. |
 | 14:06–14:51 | Built artifacts need a hosting lane | Path to hosting: Tier 0 desktop to Tier 3 enterprise. |
 | **Part 3** | **What people build** (divider, 8s) | |
-| +1:00 | How I use it every day (no demo; you voice over) | Seven personal productivity tools: daily brief, inbox priorities, draft replies, meeting debriefs, scheduling assistant, search across my work, daily focus list. Pick two or three to tell. The daily brief and inbox demo is in the backup view. |
+| +1:00 | Personal Productivity with TritonAI Harness (no demo; you voice over) | Seven personal productivity tools: daily brief, inbox priorities, draft replies, meeting debriefs, scheduling assistant, search across my work, daily focus list. Pick two or three to tell. The daily brief and inbox demo is in the backup view. |
 | +0:32 | The Harness from my phone (intro + 26s recording) | Most of this presentation was built from the TritonAI Harness mobile app; the clip shows one edit to this deck from the phone (finds the right slide among three, updates it, rebuilds, previews). |
 | +0:38 | Faculty Expertise Directory (intro + 32s live recording) | Citizen developer project: research need to ranked faculty leads for review. Planning rollout after the VCRI demo; app still shows its earlier name. |
 | 16:54–17:39 | Passport Services check-in | Department-designed service app (clip now 20s, sped up). |

@@ -9355,7 +9355,7 @@ export const slides = [
     "slug": "cabinet-personal-productivity-list",
     "type": "content",
     "layout": "cabinet-outline",
-    "title": "How I use it every day",
+    "title": "Personal Productivity with TritonAI Harness",
     "subtitle": "Tools I set up for my own work. They prepare, sort, and draft; I review and decide.",
     "audiences": [
       "cabinet"
