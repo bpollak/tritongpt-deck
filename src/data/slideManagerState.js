@@ -184,7 +184,7 @@ export const slideManagerState = {
       "cabinet-backup"
     ],
     "cabinet-harness-capabilities": [
-      "cabinet"
+      "cabinet-backup"
     ],
     "cabinet-harness-11d-campus-app-hosting-intake": [
       "cabinet"

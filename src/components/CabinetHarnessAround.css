@@ -6,7 +6,7 @@
 .cabinet-ha-key {position:absolute;right:0;bottom:2px;margin:0;font-size:14px;color:#5b6b80;}
 .cabinet-ha-key strong {font-style:italic;color:#00629b;}
 
-.cabinet-ha-panels {display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:14px;height:478px;}
+.cabinet-ha-panels {display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:18px;height:560px;}
 .cabinet-ha-panel {box-sizing:border-box;display:flex;flex-direction:column;padding:16px 22px 14px;border-radius:12px;border:1px solid #c9d8e4;background:#eef4f8;}
 .cabinet-ha-panel--harness {border-color:#ecd3b6;background:#fbf2e8;}
 .cabinet-ha-head {display:flex;justify-content:space-between;align-items:flex-start;gap:12px;}
@@ -44,10 +44,10 @@
 .cabinet-ha-out {display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border:1.5px solid #b9cbdb;border-radius:999px;background:#fff;font-size:15px;font-weight:600;color:#00629b;}
 .cabinet-ha-panel--harness .cabinet-ha-out {border-radius:6px;border-color:#c9d8e4;}
 
-.cabinet-ha-facts {margin:auto 0 0;padding-top:10px;display:grid;gap:5px;}
-.cabinet-ha-facts div {display:grid;grid-template-columns:150px 1fr;gap:10px;align-items:baseline;}
-.cabinet-ha-facts dt {font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#5b6b80;}
-.cabinet-ha-facts dd {margin:0;font-size:16px;line-height:1.3;color:#182b49;}
+.cabinet-ha-facts {margin:auto 0 0;padding-top:12px;display:grid;gap:9px;}
+.cabinet-ha-facts div {display:grid;grid-template-columns:132px 1fr;gap:12px;align-items:baseline;}
+.cabinet-ha-facts dt {font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#3e4c5e;line-height:1.3;}
+.cabinet-ha-facts dd {margin:0;font-size:20px;line-height:1.3;color:#182b49;}
 
 @media (prefers-reduced-motion: reduce) {
   .cabinet-ha-track b, .cabinet-ha-ring {animation:none;}

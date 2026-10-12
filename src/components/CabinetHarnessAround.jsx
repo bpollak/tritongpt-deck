@@ -27,7 +27,6 @@ export default function CabinetHarnessAround({ slide }) {
       <header className="cabinet-ha-header">
         <p className="cabinet-ha-kicker">{d.kicker}</p>
         <h1>{slide.title}</h1>
-        <p className="cabinet-ha-lead">{d.lead}</p>
         <p className="cabinet-ha-key"><strong>M</strong> = the AI model</p>
       </header>
 
