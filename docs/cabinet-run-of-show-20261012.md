@@ -5,7 +5,7 @@
 | Time | Slide | Presenter focus |
 | --- | --- | --- |
 | 0:00–0:30 | TritonAI Operating Review | Open. |
-| 0:30–1:30 | By the end of this presentation, you'll know | Three questions: what ITS is building and its payback; what citizen development and the Harness are; what people have built with it. |
+| 0:30–1:30 | We're hoping to help you better understand the following | Three questions: what ITS is building and its payback; what citizen development and the Harness are; what people have built with it. |
 | **Part 1** | **Vertical solutions** (no divider; the impact table opens the part) | |
 | 1:38–2:53 | Campus time and cost savers | Impact of each vertical, in the order you'll show them. Say the type of each number (pilot, estimate, scenario, avoided cost). The TritonAI Harness (400+ users) is the second row, right under Cash Application. |
 | 2:53–4:08 | Apply received cash faster | Frame the project in one line, then walk the four phases (Oct 2026 – Jun 2027). |

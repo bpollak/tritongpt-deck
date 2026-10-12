@@ -7239,7 +7239,7 @@ export const slides = [
     "slug": "cabinet-citizen-developer-story",
     "type": "content",
     "layout": "cabinet-outline",
-    "title": "By the end of this presentation, you'll know",
+    "title": "We're hoping to help you better understand the following",
     "subtitle": "Three questions, with real examples and real numbers.",
     "content": [
       {
