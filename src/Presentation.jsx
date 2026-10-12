@@ -68,18 +68,24 @@ const PREVIOUS_SLIDE_KEYS = new Set([
   'BrowserBack'
 ]);
 
-const isInteractiveTarget = (target) => {
+// Typing targets keep every key. Buttons, links, and media keep only Enter/Space,
+// so a presenter remote's page and arrow keys still move the deck after a click.
+const isTypingTarget = (target) => {
   if (!(target instanceof HTMLElement)) return false;
-  return (
-    target.isContentEditable ||
-    !!target.closest('button, a[href], input, textarea, select, summary, video, audio, [role="button"], [role="slider"], [role="textbox"]')
-  );
+  return target.isContentEditable || !!target.closest('input, textarea, select, [role="slider"], [role="textbox"]');
 };
+
+const isControlTarget = (target) => (
+  target instanceof HTMLElement && !!target.closest('button, a[href], summary, video, audio, [role="button"]')
+);
+
+const BLANK_KEYS = new Set(['b', 'B', '.']);
 
 const Presentation = () => {
   const [currentSlideRef, setCurrentSlideRef] = useState(() => getSlideRefFromHash());
   const isPopstateNav = useRef(false);
   const [direction, setDirection] = useState(0);
+  const [blank, setBlank] = useState(false);
   const [slidesData, setSlidesData] = useState(() => readLocalSlidePreview(defaultSlides) || defaultSlides);
 
   // Get audience type from URL parameter.
@@ -272,15 +278,28 @@ const Presentation = () => {
       if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey) {
         return;
       }
-      // Buttons own Enter/Space. Navigation arrows still work after a mouse
-      // click focuses one of our previous/next buttons; media and form controls
-      // keep all their native keyboard behavior.
-      const navigationButton = e.target instanceof HTMLElement && e.target.closest('.presentation-nav__button');
       const activationKey = e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar';
-      // A clicked deck video keeps Space/Enter for play and pause, but the arrows,
-      // page keys, and presentation clickers still move the deck.
-      const deckVideo = e.target instanceof HTMLElement && e.target.closest('video.deck-video');
-      if (isInteractiveTarget(e.target) && !(deckVideo && !activationKey) && (!navigationButton || activationKey)) return;
+      if (isTypingTarget(e.target) || (activationKey && isControlTarget(e.target))) return;
+
+      // Presenter remotes: the "start slideshow" button sends F5 (or Shift+F5), which
+      // would reload the page; use it to toggle full screen instead.
+      if (e.key === 'F5') {
+        e.preventDefault();
+        if (document.fullscreenElement) document.exitFullscreen?.().catch(() => {});
+        else document.documentElement.requestFullscreen?.().catch(() => {});
+        return;
+      }
+      // The blank-screen button sends "b" or "."; any key brings the slide back.
+      if (blank) {
+        e.preventDefault();
+        setBlank(false);
+        return;
+      }
+      if (BLANK_KEYS.has(e.key)) {
+        e.preventDefault();
+        setBlank(true);
+        return;
+      }
 
       if (NEXT_SLIDE_KEYS.has(e.key)) {
         e.preventDefault();
@@ -301,7 +320,7 @@ const Presentation = () => {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [nextSlide, prevSlide, goToFirstSlide, goToLastSlide]);
+  }, [nextSlide, prevSlide, goToFirstSlide, goToLastSlide, blank]);
 
   const slideVariants = {
     enter: (direction) => ({
@@ -390,6 +409,7 @@ const Presentation = () => {
       </div>
 
       {/* Slide Content Area */}
+      {blank && <div className="presentation-blank fixed inset-0 z-[200] bg-black" aria-hidden="true" onClick={() => setBlank(false)} />}
       <div className="presentation-stage flex-1 relative overflow-hidden">
         {currentSlide ? (
           <AnimatePresence initial={false} custom={direction} mode="popLayout">
