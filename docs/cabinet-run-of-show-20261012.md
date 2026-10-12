@@ -1,6 +1,6 @@
 # Cabinet run of show · October 12, 2026
 
-28 slides · about 23 minutes of content · 10 minutes of Q&A. Restructured again October 9 (evening) around Brett's framing: **the vertical solutions IT Services is building (with their impact) first, citizen development with the TritonAI Harness in the middle, then what people build with it**, and the foundation last. Most slides show their part in the footer (the light chart, hosting, and dashboard slides do not). Demos open with an intro card that waits: click it or press next (clicker or arrow key) to start the recording.
+27 slides · about 22 minutes of content · 10 minutes of Q&A. Restructured again October 9 (evening) around Brett's framing: **the vertical solutions IT Services is building (with their impact) first, citizen development with the TritonAI Harness in the middle, then what people build with it**, and the foundation last. Most slides show their part in the footer (the light chart, hosting, and dashboard slides do not). Demos open with an intro card that waits: click it or press next (clicker or arrow key) to start the recording.
 
 | Time | Slide | Presenter focus |
 | --- | --- | --- |
@@ -12,7 +12,6 @@
 | 4:08–5:33 | Contract review inside Word (intro + recording) | Live Word run: three rules, tracked changes, agent answer. OCGA is next. |
 | 5:33–6:23 | Routing tickets to the right team (intro + 25s recording, sped up 1.6x) | Two tickets routed past the Service Desk: desktop to Field Support (80%), DNS to Hostmaster (97%). Highlights and zooms guide the eye; voice over. |
 | +0:45 | College Exploration Assistant (intro + 39s recording) | Live public assistant on admissions.ucsd.edu/why/colleges. One detailed prompt (marine biology, sustainability, surfing and hiking, flexible gen ed, close-knit community, service) gets Muir, Seventh, Eighth, and Marshall, each tied to those interests with citations. Persona card and closing board are overlays; the conversation is real, sped up while typing and thinking. |
-| 7:23–8:08 | What's next in vertical solutions | Payment request review, RFX, security review, data agents, OCGA, hosting. |
 | **Part 2** | **Citizen development** (divider, 8s) | |
 | 8:16–9:16 | A chat answers. The Harness does the work. | Bridge: IT can’t build every vertical; the Harness lets staff build their own. One six-row comparison matrix (what it does, best fit, connections, where you work, typical result, who stays in charge); no tabs to click. |
 | 9:16–10:16 | TritonAI Harness: built by the people who do the work | Three columns: what it does, what it connects to, what keeps it safe. |
@@ -57,6 +56,7 @@
 - **Added Oct 10 (later):** College Exploration Assistant demo after the AI Tutor (+55s). After the later Oct 10 changes (More verticals removed, Directory demo added, Passport and Class Planner shortened) content runs about 22.3 minutes; to get under 22, skip the Class Planner usage chart (30s).
 - **Added Oct 10:** AI Tutor in Canvas (impact row plus a 42s cut of the PK setup video that opens on the Canvas course with no pilot title card, after ServiceNow): launched fall with 5 instructors, scaling in winter. TA–Student Matching on What's next: resumes Q1 2027 after TSS go-live. Research Grant Compliance Agent left out (no activity found after the April proposal).
 
+- **Oct 11 (Brett, night):** "What's next in vertical solutions" moved to the backup view; the College Exploration Assistant now closes Part 1 and carries the bridge to Part 2. Demo intro cards now wait for a click or the next key instead of a 6-second timer, and arrow/page/clicker keys advance the deck even after the video has been clicked.
 - **Oct 11 (Brett, evening):** Part 1 divider moved to the backup view; the cash slide subtitle and the impact table now say more than $70M in received cash sits unallocated in a typical month (business-case average about $79M).
 - **Oct 11 (content review, Brett's picks):** phone demo cut to the deck-edit task (the cash-receipts milestones answer showed draft schedule risk); Payment Request Review now appears only on the departments slide (early discussion), not on What's next; why-sovereign wording: "a cost we can plan for", "policy changes", "We decide when a model is retired, not a vendor"; UC Merced: "Scout runs on TritonAI; gateway onboarding now"; stale and sensitive speaker notes cleaned. No slides cut.
 - **Oct 11 (final pass):** phone intro cards keep the part footer clear of the nav buttons; the sovereign gateway model cards no longer clip their text; the Harness capabilities slide names Tableau and Lucid with the other connections; intro for "The Harness at work" shortened.

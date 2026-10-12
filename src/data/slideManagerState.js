@@ -179,7 +179,7 @@ export const slideManagerState = {
       "cabinet"
     ],
     "cabinet-verticals-roadmap": [
-      "cabinet"
+      "cabinet-backup"
     ],
     "cabinet-harness-capabilities": [
       "cabinet"
