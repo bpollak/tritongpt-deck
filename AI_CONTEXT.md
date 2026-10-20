@@ -85,3 +85,7 @@ This repo is under `~/Documents` (iCloud Drive). Evicted "dataless" files hang a
 - Source content remains in `src/data/slides.js`; order, removals, and audience assignments remain in `slideManagerState.js`. `durationSeconds`, `speakerNotes`, and `recording` describe timing, preparation, and the expected fresh capture. Presenter preparation details are also collected in `CABINET-RUN-OF-SHOW.md`.
 - When approved media arrives, change the demo's `type` to `video` and add `videoSrc`, `poster`, and `captionsSrc`. The existing video renderer takes precedence over its placeholder layout. Keep `videoLoop: false`, `videoClearNav: true`, and `videoAutoPlay: true` for silent desktop playback with native controls. Verify the recording before exposing it to Cabinet.
 - The Berkeley quotation placeholder is removed from the active deck until exact text and attribution are approved. No old metrics or BioBib content are assigned to Cabinet.
+
+## Per-audience overrides
+
+- A slide may carry `audienceOverrides: { <audience>: { ...fields } }`. `applyAudienceOverrides` in `src/data/audiences.js` merges those fields when that audience is selected (applied in `Presentation.jsx` before demo intros expand). The SMT retreat view uses it to renumber the section footer on reused Cabinet slides; other views are unchanged.

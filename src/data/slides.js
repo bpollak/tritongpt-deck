@@ -6540,6 +6540,7 @@ export const slides = [
   {
     "id": 124.6,
     "slug": "cabinet-harness-11d-campus-app-hosting-intake",
+    "audienceOverrides": {"smt":{"section":{"part":1,"total":5,"label":"Since May"}}},
     "mobileSnapshot": "/media/cabinet/snap/cabinet-harness-11d-campus-app-hosting-intake.jpg",
     "type": "content",
     "content": [],
@@ -7413,6 +7414,7 @@ export const slides = [
   {
     "id": 1018,
     "slug": "cabinet-directory-demo",
+    "audienceOverrides": {"smt":{"section":{"part":3,"total":5,"label":"What others build"}}},
     "type": "video",
     "title": "Faculty Expertise Directory",
     "subtitle": "A research-support team built a tool that turns a research need into faculty leads to review.",
@@ -7458,6 +7460,7 @@ export const slides = [
   {
     "id": 1003,
     "slug": "cabinet-passport-demo",
+    "audienceOverrides": {"smt":{"section":{"part":3,"total":5,"label":"What others build"}}},
     "type": "video",
     "layout": "cabinet-demo",
     "title": "Turn staff knowledge into a service app",
@@ -7794,6 +7797,7 @@ export const slides = [
   {
     "id": 1015,
     "slug": "cabinet-chat-and-harness",
+    "audienceOverrides": {"smt":{"section":{"part":1,"total":5,"label":"Since May"}}},
     "type": "content",
     "layout": "cabinet-harness-around",
     "harnessAround": {
@@ -8074,6 +8078,7 @@ export const slides = [
   {
     "id": 1036,
     "slug": "cabinet-harness-in-action",
+    "audienceOverrides": {"smt":{"section":{"part":1,"total":5,"label":"Since May"}}},
     "type": "video",
     "layout": "cabinet-demo",
     "title": "The Harness at work",
@@ -8166,6 +8171,7 @@ export const slides = [
   {
     "id": 1027,
     "slug": "cabinet-harness-discovery-demo",
+    "audienceOverrides": {"smt":{"section":{"part":4,"total":5,"label":"What it means for ITS"}}},
     "type": "video",
     "layout": "cabinet-demo",
     "title": "Start here: the TritonAI Discovery Series",
@@ -8393,6 +8399,7 @@ export const slides = [
   {
     "id": 1008,
     "slug": "cabinet-governance",
+    "audienceOverrides": {"smt":{"section":{"part":1,"total":5,"label":"Since May"}}},
     "type": "content",
     "layout": "cabinet-outline",
     "title": "It stays in your control",
@@ -9310,6 +9317,7 @@ export const slides = [
   {
     "id": 1051,
     "slug": "cabinet-spa2-demo",
+    "audienceOverrides": {"smt":{"section":{"part":3,"total":5,"label":"What others build"}}},
     "type": "video",
     "layout": "cabinet-demo",
     "title": "Agentic software development: an HR system in months",
@@ -9346,6 +9354,7 @@ export const slides = [
   {
     "id": 1024,
     "slug": "cabinet-department-builders",
+    "audienceOverrides": {"smt":{"section":{"part":3,"total":5,"label":"What others build"}}},
     "type": "content",
     "layout": "cabinet-outline",
     "title": "Departments are building with it",
@@ -9446,6 +9455,7 @@ export const slides = [
   {
     "id": 1050,
     "slug": "cabinet-personal-productivity-list",
+    "audienceOverrides": {"smt":{"section":{"part":2,"total":5,"label":"How I use it"}}},
     "type": "content",
     "layout": "cabinet-outline",
     "title": "Personal Productivity with TritonAI Harness",
@@ -9564,6 +9574,7 @@ export const slides = [
   {
     "id": 1045,
     "slug": "cabinet-mobile-briefing-demo",
+    "audienceOverrides": {"smt":{"section":{"part":2,"total":5,"label":"How I use it"}}},
     "type": "video",
     "layout": "cabinet-demo",
     "content": [],
@@ -9628,5 +9639,520 @@ export const slides = [
     "poster": "/media/cabinet/cabinet-mobile-milestones-poster.jpg",
     "managerSummary": "Oct 10 recording: from the Harness mobile app, a read-only question about BFS Cash Receipts Automation milestones and target dates, answered from email, calendar, meeting notes, and memory with a source per row.",
     "speakerNotes": "About 54 seconds (6s intro + 47s clip); you narrate. Real, read-only question from the Harness mobile app (Oct 10): 'What are the milestones and target dates for BFS Cash Receipts Automation, and which are on track? Check my email, calendar, meeting notes, and memory, and cite each source. Keep it to milestones and dates.' About 5 minutes of searching shown at 30x. The answer: a milestone table (project start July 2026, charter, current-state documentation, data access and match rules, Phase 1 build and pilot, then later phases) with target date, status, and source for each row; Phase 1 is described as on track for end of calendar year 2026. The answer's raw source notes are not shown. Dates in the charter are proposed; say 'the plan' rather than committing to dates."
+  },
+  {
+    "id": 2001,
+    "slug": "smt-title",
+    "type": "title",
+    "content": [],
+    "title": "TritonAI Harness",
+    "subtitle": "What I've built with it, and what you'll build with it today",
+    "layout": "title-hero",
+    "audiences": [
+      "smt"
+    ],
+    "arc": [
+      {
+        "label": "See it",
+        "note": "What it does and what's been built"
+      },
+      {
+        "label": "Try it",
+        "note": "An exercise from your own work"
+      },
+      {
+        "label": "Decide",
+        "note": "What SMT commits to"
+      }
+    ],
+    "durationSeconds": 30,
+    "conference": "ITS Senior Management Team Retreat · Tuesday, October 20, 2026",
+    "managerSection": "SMT Retreat",
+    "speakerNotes": "Thirty seconds. Three parts today: see what the Harness does and what's been built with it, try it on something from your own work, and decide what SMT commits to before we leave Wednesday. Most of the time is hands-on."
+  },
+  {
+    "id": 2002,
+    "slug": "smt-since-may",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "Since we approved the harness pattern in May",
+    "subtitle": "SMT made harnesses the governed path for AI work on May 6. Here is what happened next.",
+    "content": [],
+    "audiences": [
+      "smt"
+    ],
+    "managerSection": "SMT Retreat",
+    "durationSeconds": 90,
+    "section": {
+      "part": 1,
+      "total": 5,
+      "label": "Since May"
+    },
+    "impactTable": {
+      "headers": [
+        "Since May",
+        "Status",
+        "Where it stands"
+      ],
+      "rows": [
+        {
+          "name": "Harness governance pattern",
+          "what": "Intake, risk review, evaluation, and deployment gates",
+          "status": "Approved May 6",
+          "tone": "live",
+          "impact": "The rule we build under",
+          "basis": "Contract review and the data agent went first"
+        },
+        {
+          "name": "TritonAI Harness",
+          "what": "UC San Diego's desktop AI workspace",
+          "status": "Available",
+          "tone": "live",
+          "impact": "400+ users",
+          "basis": "Record 640 sessions in the week through September 18"
+        },
+        {
+          "name": "Training",
+          "what": "Harness course and the Discovery Series",
+          "status": "Live",
+          "tone": "live",
+          "impact": "Self-serve on tritonai.ucsd.edu",
+          "basis": "Narrated lessons with knowledge checks"
+        },
+        {
+          "name": "Cabinet briefing",
+          "what": "Citizen developers and campus-hosted AI",
+          "status": "October 12",
+          "tone": "live",
+          "impact": "Campus webinars requested",
+          "basis": "November and December, with staff builders presenting"
+        },
+        {
+          "name": "SMT as the test group",
+          "what": "Install, use it on our own work, report what breaks",
+          "status": "Starts today",
+          "tone": "progress",
+          "impact": "Then the Chancellor's Office",
+          "basis": "Today's exercise is step one"
+        }
+      ]
+    },
+    "speakerNotes": "About 90 seconds. Callback: on May 6 this group approved harnesses as the required pattern for AI workflows: intake, risk review, evaluation, deployment gates. Since then the Harness became generally available (400+ users per the Oct 10 count; the record week was 640 sessions, the week through Sep 18, about 3.2x the first full week). Training and the Discovery Series are live. At Cabinet on Oct 12 the questions ran long and campus webinars were requested for November and December. The rollout sequence Kevin proposed in September: SMT first as the test group, then the Chancellor's Office. That starts today."
+  },
+  {
+    "id": 2003,
+    "slug": "smt-divider-mine",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "How I use it",
+    "subtitle": "What does it do for one person's working day?",
+    "content": [],
+    "divider": {
+      "part": 2
+    },
+    "section": {
+      "part": 2,
+      "total": 5,
+      "label": "How I use it"
+    },
+    "audiences": [
+      "smt"
+    ],
+    "managerSection": "Divider",
+    "durationSeconds": 8,
+    "speakerNotes": "Eight seconds. Read the question and move on."
+  },
+  {
+    "id": 2004,
+    "slug": "smt-built-by-me",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "What I've built with it",
+    "subtitle": "Beyond my own inbox: tools other people use, built by describing the work to the Harness.",
+    "content": [],
+    "audiences": [
+      "smt"
+    ],
+    "managerSection": "SMT Retreat",
+    "durationSeconds": 120,
+    "section": {
+      "part": 2,
+      "total": 5,
+      "label": "How I use it"
+    },
+    "impactTable": {
+      "headers": [
+        "Build",
+        "Status",
+        "What it does"
+      ],
+      "rows": [
+        {
+          "name": "TritonAI Insights",
+          "what": "Leadership questions answered in plain language",
+          "status": "Pilot",
+          "tone": "progress",
+          "impact": "Answers, not reports",
+          "basis": "Research, finance, workforce, students, rankings; campus-hosted model"
+        },
+        {
+          "name": "Meeting scheduling assistant",
+          "what": "Email it; it finds a time and books the meeting",
+          "status": "In use since Oct 4",
+          "tone": "live",
+          "impact": "Built in an evening",
+          "basis": "Harness plus campus n8n; cancellations need my approval"
+        },
+        {
+          "name": "Website release automation",
+          "what": "Watches for a new Harness release every morning",
+          "status": "In use",
+          "tone": "live",
+          "impact": "Eight pages updated by 8 AM",
+          "basis": "Release notes and guidance, no manual edits"
+        },
+        {
+          "name": "Harness training course",
+          "what": "Narrated course with knowledge checks and a practice kit",
+          "status": "Live",
+          "tone": "live",
+          "impact": "Self-serve onboarding",
+          "basis": "Recorded and assembled with AI agents"
+        },
+        {
+          "name": "Service health checks",
+          "what": "Checks my automations and files Jira tickets with evidence",
+          "status": "Running",
+          "tone": "live",
+          "impact": "Problems ticketed before I notice",
+          "basis": "Nothing is changed without my approval"
+        }
+      ]
+    },
+    "speakerNotes": "About two minutes; pick two to tell. TritonAI Insights: leadership questions answered in plain language across research, finance, workforce, students, and rankings. It started as a research IDC explorer built overnight; the answering agent runs on campus-hosted models only, and existing Tableau workbooks gave it the context to be accurate. Pilot, sign-in required; don't demo person-level data. Scheduling assistant: live since Oct 4, built in one evening on the Harness and campus n8n; it books, reschedules, and places holds; cancellations need my approval. Release automation: an n8n workflow checks for a new Harness release at 8 AM and updates release notes and guidance across eight tritonai.ucsd.edu pages. Training course: the narrated Harness course on tritonai.ucsd.edu, produced with AI agents. Service health checks: sweeps my agents' services and files ITS Pro Jira tickets with logs attached. The point for this room: none of these needed a project team."
+  },
+  {
+    "id": 2005,
+    "slug": "smt-divider-others",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "What others build",
+    "subtitle": "What have staff outside ITS already built?",
+    "content": [],
+    "divider": {
+      "part": 3
+    },
+    "section": {
+      "part": 3,
+      "total": 5,
+      "label": "What others build"
+    },
+    "audiences": [
+      "smt"
+    ],
+    "managerSection": "Divider",
+    "durationSeconds": 8,
+    "speakerNotes": "Eight seconds. Read the question and move on."
+  },
+  {
+    "id": 2006,
+    "slug": "smt-divider-its",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "What it means for ITS",
+    "subtitle": "Is this table stakes, or where we differentiate?",
+    "content": [],
+    "divider": {
+      "part": 4
+    },
+    "section": {
+      "part": 4,
+      "total": 5,
+      "label": "What it means for ITS"
+    },
+    "audiences": [
+      "smt"
+    ],
+    "managerSection": "Divider",
+    "durationSeconds": 8,
+    "speakerNotes": "Eight seconds. Ties to this afternoon's table stakes vs. differentiating exercise."
+  },
+  {
+    "id": 2007,
+    "slug": "smt-its-implications",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "compact": true,
+    "title": "What changes for ITS",
+    "subtitle": "Five questions to carry into this afternoon's table stakes vs. differentiating session.",
+    "content": [
+      {
+        "heading": "Capacity, not headcount",
+        "text": "Budgets stay flat and retirements are coming. Vertical automation is where labor savings are real, and the FY28 asks have to show them."
+      },
+      {
+        "heading": "Table stakes vs. differentiating",
+        "text": "A governed AI workspace is becoming table stakes. Verticals we build for campus processes are where ITS differentiates."
+      },
+      {
+        "heading": "We become the host",
+        "text": "Staff-built tools need intake, review, hosting tiers, and someone who answers the phone. Who owns each tier?"
+      },
+      {
+        "heading": "Cost stays predictable",
+        "text": "Campus-hosted models are free for administrative work; cloud models have limits. Heavy users get steered to campus models."
+      },
+      {
+        "heading": "Start with our own queues",
+        "text": "Ticket routing, knowledge-gap tickets, alert filtering, release notes, status reports: ITS work is the first test."
+      }
+    ],
+    "audiences": [
+      "smt"
+    ],
+    "managerSection": "SMT Retreat",
+    "durationSeconds": 240,
+    "section": {
+      "part": 4,
+      "total": 5,
+      "label": "What it means for ITS"
+    },
+    "speakerNotes": "About four minutes; this is the discussion slide, so let it run if the room engages. 1) Capacity: flat budgets and upcoming retirements mean the same work with fewer hands; FY28 asks are one-time funds with hard labor savings attached, and vertical automation is where those savings are credible. 2) Table stakes vs. differentiating: a governed AI workspace is quickly becoming expected of any IT org; what differentiates ITS is the verticals (contract review, cash application, transcript matching, Class Planner). 3) Hosting: citizen-built tools move from desktop sandbox to ITS-reviewed tiers up to enterprise hosting; we need named owners for review and support at each tier. 4) Cost: on-prem campus models are free for ITS and administrative use under fair use; cloud usage is capped per user, with outreach to heavy users first. 5) Our own operations first: ServiceNow routing and the ticket analysis agent, monitoring alert filtering, release automation, portfolio status. Avoid framing this as replacing staff."
+  },
+  {
+    "id": 2008,
+    "slug": "smt-divider-try",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "Your turn",
+    "subtitle": "What would you hand it from your own week?",
+    "content": [],
+    "divider": {
+      "part": 5
+    },
+    "section": {
+      "part": 5,
+      "total": 5,
+      "label": "Your turn"
+    },
+    "audiences": [
+      "smt"
+    ],
+    "managerSection": "Divider",
+    "durationSeconds": 8,
+    "speakerNotes": "Eight seconds, then laptops open."
+  },
+  {
+    "id": 2009,
+    "slug": "smt-exercise-howto",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "compact": true,
+    "title": "How the exercise works",
+    "subtitle": "25 minutes on your own work, then one minute each to show what it made.",
+    "content": [
+      {
+        "heading": "Before you start",
+        "text": "Harness installed and your Gateway key approved, from tritonai.ucsd.edu › Developer APIs › Get Started. No install yet? Pair with someone."
+      },
+      {
+        "heading": "Stay in Supervised mode",
+        "text": "It asks before each step. Read what it plans to do, then Approve, Decline, or Stop."
+      },
+      {
+        "heading": "Use safe data and the campus model",
+        "text": "Your own files, P1 to P3 only: no individual pay, student records, or health data. Keep the campus-hosted GLM model selected."
+      },
+      {
+        "heading": "Check the result",
+        "text": "Open what it made. Ask it to explain how it got a number before you trust it."
+      },
+      {
+        "heading": "Show and tell",
+        "text": "One screen, one minute each: what it made, what it got wrong, and whether you'd use it again."
+      }
+    ],
+    "audiences": [
+      "smt"
+    ],
+    "managerSection": "SMT Retreat",
+    "durationSeconds": 90,
+    "section": {
+      "part": 5,
+      "total": 5,
+      "label": "Your turn"
+    },
+    "speakerNotes": "About 90 seconds. Each person has a printed card with their exercise and a prompt they can paste. Check before the session: retreat Wi-Fi, installers downloaded ahead of time, keys approved for everyone in the room and on Zoom. Supervised mode is recommended while learning, not required. Record or demo on GLM, not Flash (Flash has been dropping plugin tool calls). Remote attendees share their screen in Zoom for the show and tell."
+  },
+  {
+    "id": 2010,
+    "slug": "smt-exercise-assignments",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "Your exercise",
+    "subtitle": "Each one starts from something on your plate this quarter. Your card has the prompt.",
+    "content": [],
+    "audiences": [
+      "smt"
+    ],
+    "managerSection": "SMT Retreat",
+    "durationSeconds": 120,
+    "section": {
+      "part": 5,
+      "total": 5,
+      "label": "Your turn"
+    },
+    "impactTable": {
+      "headers": [
+        "Who",
+        "Uses",
+        "Exercise and what you leave with"
+      ],
+      "rows": [
+        {
+          "name": "Kevin Chou",
+          "what": "Interim CIO",
+          "status": "Excel · PowerPoint",
+          "tone": "live",
+          "impact": "FY28 asks, one page each",
+          "basis": "One-time cost with the labor savings attached, and a five-slide summary"
+        },
+        {
+          "name": "Anna Nordeen",
+          "what": "IT Business Office",
+          "status": "Excel",
+          "tone": "live",
+          "impact": "Five-year outlook as a what-if model",
+          "basis": "Change a driver and watch the gap move"
+        },
+        {
+          "name": "Dan Suchy",
+          "what": "Academic Technology Services",
+          "status": "Kuali Build · Excel",
+          "tone": "live",
+          "impact": "Instructor AI request intake",
+          "basis": "A request form and a weekly demand-vs-capacity view"
+        },
+        {
+          "name": "Erin Kilburn",
+          "what": "Project & Portfolio Management",
+          "status": "Excel · PowerPoint",
+          "tone": "live",
+          "impact": "Portfolio roll-up from a status export",
+          "basis": "Status, risks, and slipping dates in one table, plus review slides"
+        },
+        {
+          "name": "Say-Ho Tan",
+          "what": "Business Technology Services",
+          "status": "Excel",
+          "tone": "live",
+          "impact": "Conversion exceptions sorted by root cause",
+          "basis": "Clusters, suggested fixes, and a burn-down tracker"
+        },
+        {
+          "name": "Adrienne Esposito",
+          "what": "Enterprise Network & Data Center",
+          "status": "Excel · Word",
+          "tone": "live",
+          "impact": "Data center capacity and tenant cost model",
+          "basis": "Racks, power, and cost per tenant, plus a one-page offering sheet"
+        },
+        {
+          "name": "Arlene Yetnikoff",
+          "what": "Information Assurance, Trust & Identity",
+          "status": "PowerPoint · Word",
+          "tone": "live",
+          "impact": "Which AI tool for which data",
+          "basis": "A one-page P1–P4 guide and a town hall section with a quiz"
+        },
+        {
+          "name": "Matt Bellino",
+          "what": "Office of the CIO",
+          "status": "Kuali Build · Outlook drafts",
+          "tone": "live",
+          "impact": "Run of show for the campus AI webinars",
+          "basis": "Timeline, speaker outreach drafts, and a branded sign-up page"
+        },
+        {
+          "name": "Izabella Sekowska",
+          "what": "Retreat facilitator",
+          "status": "Excel · Word",
+          "tone": "live",
+          "impact": "Retreat decisions with owners and dates",
+          "basis": "Tomorrow's wrap-up tracker, built from today's notes"
+        },
+        {
+          "name": "Melissa FitzGerald",
+          "what": "Events",
+          "status": "Excel · PowerPoint",
+          "tone": "live",
+          "impact": "Event feedback summary",
+          "basis": "Survey results into a chart and a two-slide recap"
+        }
+      ]
+    },
+    "speakerNotes": "About two minutes. Walk the table quickly; the detail and a paste-ready prompt are on each person's card. Every exercise uses your own files and P1–P3 data, ends with a file you can keep, and has a stretch goal for anyone who finishes early. Anything that touches forms or workflows is saved inactive or as a draft: nothing gets sent or published during the exercise."
+  },
+  {
+    "id": 2011,
+    "slug": "smt-decisions",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "compact": true,
+    "title": "What we decide before Wednesday",
+    "subtitle": "Four commitments for the wrap-up session.",
+    "content": [
+      {
+        "heading": "SMT is the test group",
+        "text": "Each of us keeps using our exercise through November and reports what broke. Then the Chancellor's Office."
+      },
+      {
+        "heading": "Name two builders per division",
+        "text": "Staff who could present at the November and December campus webinars, or join the next cohort."
+      },
+      {
+        "heading": "One ITS process each for FY28",
+        "text": "A vertical automation with hard labor savings attached, ready for the FY28 request."
+      },
+      {
+        "heading": "Who supports what",
+        "text": "Named owners for review, hosting, and support at each tier for staff-built tools."
+      }
+    ],
+    "audiences": [
+      "smt"
+    ],
+    "managerSection": "SMT Retreat",
+    "durationSeconds": 300,
+    "section": {
+      "part": 5,
+      "total": 5,
+      "label": "Your turn"
+    },
+    "speakerNotes": "About five minutes; after the show and tell. The retreat goal is to leave Wednesday with decisions, owners, and dates; these four go on the Day 3 wrap-up board. 1) SMT test group through November, feedback through the TritonAI Feedback skill. 2) Two builder nominations per division for the campus webinars. 3) One ITS process per division as an FY28 vertical automation candidate with labor savings attached (timed to the FY28 budget review). 4) Owners for review, hosting, and support by hosting tier."
+  },
+  {
+    "id": 2012,
+    "slug": "smt-thank-you",
+    "type": "title",
+    "content": [],
+    "title": "Thank You",
+    "subtitle": "Questions?",
+    "layout": "title-hero",
+    "presenters": [
+      {
+        "name": "Brett Pollak",
+        "title": "Executive Director, IT Services",
+        "image": "/media/headshot.jpg",
+        "imageScale": 1.6,
+        "imagePosition": "center 15%"
+      }
+    ],
+    "linkUrl": "https://tritonai.ucsd.edu",
+    "linkLabel": "tritonai.ucsd.edu",
+    "audiences": [
+      "smt"
+    ],
+    "managerSection": "SMT Retreat"
   }
 ];

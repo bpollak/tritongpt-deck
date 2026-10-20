@@ -106,6 +106,42 @@ This file defines the editorial contract and canonical sequence for each support
 
 The optional `cabinet-berkeley-quote` placeholder is removed until approved. Original website component graphics are available as the removed `cabinet-harness-components-backup`. Cabinet contains no BioBib content, old recordings, or unverified usage and savings statistics.
 
+## smt
+
+**Status:** ITS Senior Management Team retreat, Tuesday, October 20, 2026. Built from the Cabinet framework; the hands-on exercise runs between the assignment and decision slides.
+
+**Communication job:** Show SMT what the Harness does and what has been built with it, then have each member use it on their own work and leave with commitments.
+
+**Canonical count:** 23
+
+**Sequence:** about 30 minutes of content, 25 minutes of exercise, 10 minutes of show and tell, 5 minutes of decisions. Reused Cabinet slides carry `audienceOverrides.smt.section` so their footer follows the SMT five-part structure without changing the Cabinet view.
+
+1. `smt-title`
+2. `smt-since-may`
+3. `cabinet-chat-and-harness`
+4. `cabinet-harness-in-action`
+5. `cabinet-governance`
+6. `cabinet-harness-11d-campus-app-hosting-intake`
+7. `smt-divider-mine`
+8. `cabinet-personal-productivity-list`
+9. `cabinet-mobile-briefing-demo`
+10. `smt-built-by-me`
+11. `smt-divider-others`
+12. `cabinet-directory-demo`
+13. `cabinet-passport-demo`
+14. `cabinet-spa2-demo`
+15. `cabinet-department-builders`
+16. `smt-divider-its`
+17. `smt-its-implications`
+18. `cabinet-harness-discovery-demo`
+19. `smt-divider-try`
+20. `smt-exercise-howto`
+21. `smt-exercise-assignments`
+22. `smt-decisions`
+23. `smt-thank-you`
+
+Per-person exercise prompts live outside this public repository.
+
 ## citizen
 
 **Communication job:** Understand the paved path from harness to hosting so a domain expert can build, govern, and share a useful agentic solution.

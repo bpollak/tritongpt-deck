@@ -1,6 +1,6 @@
 export const DEFAULT_AUDIENCE = 'all';
 
-export const AUDIENCE_TYPES = ['all', 'technical', 'executive', 'cabinet', 'cabinet-backup', 'citizen', 'internal', 'public', 'conference', 'PK', 'regent', 'LMU'];
+export const AUDIENCE_TYPES = ['all', 'technical', 'executive', 'cabinet', 'cabinet-backup', 'smt', 'citizen', 'internal', 'public', 'conference', 'PK', 'regent', 'LMU'];
 
 export const AUDIENCE_COLORS = {
   all: 'bg-gray-500',
@@ -8,6 +8,7 @@ export const AUDIENCE_COLORS = {
   executive: 'bg-purple-500',
   cabinet: 'bg-rose-500',
   'cabinet-backup': 'bg-rose-500',
+  smt: 'bg-cyan-600',
   'citizen': 'bg-pink-600',
   internal: 'bg-green-500',
   public: 'bg-orange-500',
@@ -31,6 +32,7 @@ export const normalizeAudienceType = (audienceType) => findCanonicalAudience(aud
 export const getAudienceLabel = (audienceType) => {
   if (audienceType === DEFAULT_AUDIENCE) return 'Default presentation';
   if (audienceType === 'cabinet-backup') return 'Cabinet backup';
+  if (audienceType === 'smt') return 'SMT retreat';
   return audienceType.charAt(0).toUpperCase() + audienceType.slice(1);
 };
 
@@ -46,4 +48,12 @@ export const isSlideVisibleForAudience = (slide, audienceType) => {
   const audiences = getEffectiveAudiences(slide);
 
   return audiences.some((audience) => findCanonicalAudience(audience) === targetAudience);
+};
+
+// A shared slide can carry per-audience field overrides (for example its section
+// footer), so one audience can reuse it without changing how another sees it.
+export const applyAudienceOverrides = (slide, audienceType) => {
+  const targetAudience = normalizeAudienceType(audienceType);
+  const override = targetAudience && slide?.audienceOverrides?.[targetAudience];
+  return override ? { ...slide, ...override } : slide;
 };

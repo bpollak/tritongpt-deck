@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Slide from './components/Slide';
 import TranscriptionOverlay from './components/TranscriptionOverlay';
 import { slides as defaultSlides } from './data/slideDeck';
-import { isSlideVisibleForAudience, normalizeAudienceType } from './data/audiences';
+import { applyAudienceOverrides, isSlideVisibleForAudience, normalizeAudienceType } from './data/audiences';
 import { findSlideIndexByPermalink, getSlidePermalinkValue } from './data/slidePermalinks';
 import { LOCAL_SLIDE_PREVIEW_EVENT, LOCAL_SLIDE_PREVIEW_KEY, isLocalPreviewHost, readLocalSlidePreview } from './utils/localSlidePreview';
 
@@ -158,7 +158,7 @@ const Presentation = () => {
   // (keeping the original slug) followed by the recording (slug + "-video"), so the
   // presenter can step forward and back between them.
   const filteredSlides = useMemo(() => {
-    return filterSlidesByAudience(slidesData, audienceType).flatMap((slide) => {
+    return filterSlidesByAudience(slidesData, audienceType).map((slide) => applyAudienceOverrides(slide, audienceType)).flatMap((slide) => {
       if (slide.type !== 'video' || !slide.intro || slide.intro.sideVideo) return [slide];
       const { intro, aliases, ...rest } = slide;
       return [

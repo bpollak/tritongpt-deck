@@ -16,6 +16,8 @@ export const slideManagerState = {
     "cabinet-college-assistant-demo",
     "cabinet-verticals-roadmap",
     "cabinet-divider-harness",
+    "smt-title",
+    "smt-since-may",
     "cabinet-chat-and-harness",
     "cabinet-harness-capabilities",
     "cabinet-harness-in-action",
@@ -24,21 +26,31 @@ export const slideManagerState = {
     "cabinet-governance",
     "cabinet-harness-11d-campus-app-hosting-intake",
     "cabinet-divider-outcomes",
+    "smt-divider-mine",
     "cabinet-personal-productivity-list",
     "cabinet-inbox-priority-sorter",
     "cabinet-mobile-briefing-demo",
     "cabinet-mobile-milestones-demo",
     "cabinet-personal-productivity-demo",
+    "smt-built-by-me",
+    "smt-divider-others",
     "cabinet-directory-demo",
     "cabinet-passport-demo",
     "cabinet-class-planner-demo",
     "cabinet-class-planner-utilization",
     "cabinet-spa2-demo",
     "cabinet-department-builders",
+    "smt-divider-its",
+    "smt-its-implications",
     "cabinet-why-sovereign",
     "cabinet-scale",
     "cabinet-sovereign-ai",
     "cabinet-harness-discovery-demo",
+    "smt-divider-try",
+    "smt-exercise-howto",
+    "smt-exercise-assignments",
+    "smt-decisions",
+    "smt-thank-you",
     "cabinet-asks-close",
     "cabinet-administrative-quick-hits",
     "cabinet-harness-mobile-demo",
@@ -179,7 +191,8 @@ export const slideManagerState = {
       "cabinet-backup"
     ],
     "cabinet-harness-in-action": [
-      "cabinet"
+      "cabinet",
+      "smt"
     ],
     "cabinet-verticals-roadmap": [
       "cabinet-backup"
@@ -188,7 +201,8 @@ export const slideManagerState = {
       "cabinet-backup"
     ],
     "cabinet-harness-11d-campus-app-hosting-intake": [
-      "cabinet"
+      "cabinet",
+      "smt"
     ],
     "cabinet-harness-automation-use-cases": [
       "cabinet-backup"
@@ -203,7 +217,8 @@ export const slideManagerState = {
       "cabinet"
     ],
     "cabinet-harness-discovery-demo": [
-      "cabinet"
+      "cabinet",
+      "smt"
     ],
     "cabinet-harness-training-demo": [
       "cabinet-backup"
@@ -732,7 +747,8 @@ export const slideManagerState = {
       "cabinet"
     ],
     "cabinet-passport-demo": [
-      "cabinet"
+      "cabinet",
+      "smt"
     ],
     "cabinet-cash-receipts-demo": [
       "cabinet"
@@ -747,7 +763,8 @@ export const slideManagerState = {
       "cabinet-backup"
     ],
     "cabinet-governance": [
-      "cabinet"
+      "cabinet",
+      "smt"
     ],
     "cabinet-training-discovery-demo": [
       "cabinet-backup"
@@ -771,7 +788,8 @@ export const slideManagerState = {
       "cabinet"
     ],
     "cabinet-chat-and-harness": [
-      "cabinet"
+      "cabinet",
+      "smt"
     ],
     "cabinet-subagents": [
       "cabinet"
@@ -780,7 +798,8 @@ export const slideManagerState = {
       "cabinet"
     ],
     "cabinet-directory-demo": [
-      "cabinet"
+      "cabinet",
+      "smt"
     ],
     "cabinet-routing-savings": [
       "cabinet-backup"
@@ -795,19 +814,62 @@ export const slideManagerState = {
       "cabinet-backup"
     ],
     "cabinet-department-builders": [
-      "cabinet"
+      "cabinet",
+      "smt"
     ],
     "cabinet-inbox-priority-sorter": [
       "cabinet-backup"
     ],
     "cabinet-personal-productivity-list": [
-      "cabinet"
+      "cabinet",
+      "smt"
     ],
     "cabinet-spa2-demo": [
-      "cabinet"
+      "cabinet",
+      "smt"
     ],
     "cabinet-transcript-matching-demo": [
       "cabinet"
+    ],
+    "cabinet-mobile-briefing-demo": [
+      "cabinet",
+      "smt"
+    ],
+    "smt-title": [
+      "smt"
+    ],
+    "smt-since-may": [
+      "smt"
+    ],
+    "smt-divider-mine": [
+      "smt"
+    ],
+    "smt-built-by-me": [
+      "smt"
+    ],
+    "smt-divider-others": [
+      "smt"
+    ],
+    "smt-divider-its": [
+      "smt"
+    ],
+    "smt-its-implications": [
+      "smt"
+    ],
+    "smt-divider-try": [
+      "smt"
+    ],
+    "smt-exercise-howto": [
+      "smt"
+    ],
+    "smt-exercise-assignments": [
+      "smt"
+    ],
+    "smt-decisions": [
+      "smt"
+    ],
+    "smt-thank-you": [
+      "smt"
     ]
   }
 };
