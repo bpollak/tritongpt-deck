@@ -150,7 +150,25 @@ export const slideManagerState = {
     "lmu-thank-you",
     "cabinet-routing-savings",
     "cabinet-research-data-trust",
-    "cabinet-training-discovery-demo"
+    "cabinet-training-discovery-demo",
+    "smt-work-opening",
+    "smt-work-day",
+    "smt-work-environments",
+    "smt-work-briefing",
+    "smt-work-inbox",
+    "smt-work-meetings",
+    "smt-work-continuity",
+    "smt-work-digest",
+    "smt-work-weekly",
+    "smt-work-watchers",
+    "smt-work-opportunity",
+    "smt-work-decision",
+    "smt-work-builds",
+    "smt-work-fleet",
+    "smt-work-operations",
+    "smt-work-job-spec",
+    "smt-work-try",
+    "smt-work-discussion"
   ],
   "removed": [
     "where-will-ai-place-us-in-2031",
@@ -870,8 +888,60 @@ export const slideManagerState = {
     ],
     "smt-thank-you": [
       "smt"
+    ],
+    "smt-work-opening": [
+      "smt-work"
+    ],
+    "smt-work-day": [
+      "smt-work"
+    ],
+    "smt-work-environments": [
+      "smt-work"
+    ],
+    "smt-work-briefing": [
+      "smt-work"
+    ],
+    "smt-work-inbox": [
+      "smt-work"
+    ],
+    "smt-work-meetings": [
+      "smt-work"
+    ],
+    "smt-work-continuity": [
+      "smt-work"
+    ],
+    "smt-work-digest": [
+      "smt-work"
+    ],
+    "smt-work-weekly": [
+      "smt-work"
+    ],
+    "smt-work-watchers": [
+      "smt-work"
+    ],
+    "smt-work-opportunity": [
+      "smt-work"
+    ],
+    "smt-work-decision": [
+      "smt-work"
+    ],
+    "smt-work-builds": [
+      "smt-work"
+    ],
+    "smt-work-fleet": [
+      "smt-work"
+    ],
+    "smt-work-operations": [
+      "smt-work"
+    ],
+    "smt-work-job-spec": [
+      "smt-work"
+    ],
+    "smt-work-try": [
+      "smt-work"
+    ],
+    "smt-work-discussion": [
+      "smt-work"
     ]
   }
 };
-
-export default slideManagerState;

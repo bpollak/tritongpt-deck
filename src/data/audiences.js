@@ -1,6 +1,6 @@
 export const DEFAULT_AUDIENCE = 'all';
 
-export const AUDIENCE_TYPES = ['all', 'technical', 'executive', 'cabinet', 'cabinet-backup', 'smt', 'citizen', 'internal', 'public', 'conference', 'PK', 'regent', 'LMU'];
+export const AUDIENCE_TYPES = ['all', 'technical', 'executive', 'cabinet', 'cabinet-backup', 'smt', 'smt-work', 'citizen', 'internal', 'public', 'conference', 'PK', 'regent', 'LMU'];
 
 export const AUDIENCE_COLORS = {
   all: 'bg-gray-500',
@@ -9,6 +9,7 @@ export const AUDIENCE_COLORS = {
   cabinet: 'bg-rose-500',
   'cabinet-backup': 'bg-rose-500',
   smt: 'bg-cyan-600',
+  'smt-work': 'bg-cyan-600',
   'citizen': 'bg-pink-600',
   internal: 'bg-green-500',
   public: 'bg-orange-500',
@@ -32,6 +33,7 @@ export const normalizeAudienceType = (audienceType) => findCanonicalAudience(aud
 export const getAudienceLabel = (audienceType) => {
   if (audienceType === DEFAULT_AUDIENCE) return 'Default presentation';
   if (audienceType === 'cabinet-backup') return 'Cabinet backup';
+  if (audienceType === 'smt-work') return 'SMT daily work';
   if (audienceType === 'smt') return 'SMT retreat';
   return audienceType.charAt(0).toUpperCase() + audienceType.slice(1);
 };

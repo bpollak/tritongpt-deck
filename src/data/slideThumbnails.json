@@ -1,469 +1,681 @@
 {
-  "rendererKey": "ee660c9cd1ea6a2039dfc4053980ecc542ff35ac4e991aa4cfc52f0d81e67b9f",
+  "rendererKey": "4a86eed42a7a1f80f45f88b83611a08adc601294aa45ad00a478e14caf788a74",
   "slides": {
     "lmu-title": {
       "contentKey": "9a077d6c21e79ac0",
-      "src": "/slide-thumbnails/lmu-title-9a077d6c21e79ac0-ee660c9c.jpg"
+      "src": "/slide-thumbnails/lmu-title-9a077d6c21e79ac0-4a86eed4.jpg"
+    },
+    "cabinet-title": {
+      "contentKey": "2bb7086146940345",
+      "src": "/slide-thumbnails/cabinet-title-2bb7086146940345-4a86eed4.jpg"
     },
     "ai-operating-review-title": {
-      "contentKey": "8b18c9bf6a98a736",
-      "src": "/slide-thumbnails/ai-operating-review-title-8b18c9bf6a98a736-ee660c9c.jpg"
+      "contentKey": "8960684ffcd1a467",
+      "src": "/slide-thumbnails/ai-operating-review-title-8960684ffcd1a467-4a86eed4.jpg"
     },
     "cabinet-citizen-developer-story": {
-      "contentKey": "1e1d07f2ee95d931",
-      "src": "/slide-thumbnails/cabinet-citizen-developer-story-1e1d07f2ee95d931-ee660c9c.jpg"
+      "contentKey": "f7249f97c817f63d",
+      "src": "/slide-thumbnails/cabinet-citizen-developer-story-f7249f97c817f63d-4a86eed4.jpg"
     },
-    "cabinet-class-planner-demo": {
-      "contentKey": "d1138eb4540ab311",
-      "src": "/slide-thumbnails/cabinet-class-planner-demo-d1138eb4540ab311-ee660c9c.jpg"
+    "cabinet-divider-verticals": {
+      "contentKey": "39eb1ae1dbf4709f",
+      "src": "/slide-thumbnails/cabinet-divider-verticals-39eb1ae1dbf4709f-4a86eed4.jpg"
     },
-    "cabinet-class-planner-utilization": {
-      "contentKey": "f8a84bc2c1429509",
-      "src": "/slide-thumbnails/cabinet-class-planner-utilization-f8a84bc2c1429509-ee660c9c.jpg"
-    },
-    "cabinet-passport-demo": {
-      "contentKey": "74e8394d46a9fbf7",
-      "src": "/slide-thumbnails/cabinet-passport-demo-74e8394d46a9fbf7-ee660c9c.jpg"
-    },
-    "cabinet-department-builders": {
-      "contentKey": "877f7e239544e88f",
-      "src": "/slide-thumbnails/cabinet-department-builders-877f7e239544e88f-ee660c9c.jpg"
+    "cabinet-verticals-impact": {
+      "contentKey": "35fdb48551e87c35",
+      "src": "/slide-thumbnails/cabinet-verticals-impact-35fdb48551e87c35-4a86eed4.jpg"
     },
     "cabinet-cash-receipts-demo": {
-      "contentKey": "d07eeb3cc90c601e",
-      "src": "/slide-thumbnails/cabinet-cash-receipts-demo-d07eeb3cc90c601e-ee660c9c.jpg"
+      "contentKey": "ff79fd0e12eafd63",
+      "src": "/slide-thumbnails/cabinet-cash-receipts-demo-ff79fd0e12eafd63-4a86eed4.jpg"
+    },
+    "cabinet-cash-roadmap": {
+      "contentKey": "1fccf654833225cf",
+      "src": "/slide-thumbnails/cabinet-cash-roadmap-1fccf654833225cf-4a86eed4.jpg"
+    },
+    "cabinet-transcript-matching-demo": {
+      "contentKey": "d78dbf54ba43a9ff",
+      "src": "/slide-thumbnails/cabinet-transcript-matching-demo-d78dbf54ba43a9ff-4a86eed4.jpg"
     },
     "cabinet-contract-review-demo": {
-      "contentKey": "420ce95f326ac21d",
-      "src": "/slide-thumbnails/cabinet-contract-review-demo-420ce95f326ac21d-ee660c9c.jpg"
+      "contentKey": "89e0500cc8dd75b2",
+      "src": "/slide-thumbnails/cabinet-contract-review-demo-89e0500cc8dd75b2-4a86eed4.jpg"
+    },
+    "cabinet-servicenow-routing-demo": {
+      "contentKey": "b485ff5b2de58939",
+      "src": "/slide-thumbnails/cabinet-servicenow-routing-demo-b485ff5b2de58939-4a86eed4.jpg"
+    },
+    "cabinet-ai-tutor-demo": {
+      "contentKey": "9098e26bd0c9ce82",
+      "src": "/slide-thumbnails/cabinet-ai-tutor-demo-9098e26bd0c9ce82-4a86eed4.jpg"
     },
     "cabinet-verticals-at-a-glance": {
-      "contentKey": "8209f53101aff59d",
-      "src": "/slide-thumbnails/cabinet-verticals-at-a-glance-8209f53101aff59d-ee660c9c.jpg"
+      "contentKey": "8d1433b4a645ca3c",
+      "src": "/slide-thumbnails/cabinet-verticals-at-a-glance-8d1433b4a645ca3c-4a86eed4.jpg"
     },
-    "cabinet-administrative-quick-hits": {
-      "contentKey": "c63ba094aa050bdb",
-      "src": "/slide-thumbnails/cabinet-administrative-quick-hits-c63ba094aa050bdb-ee660c9c.jpg"
+    "cabinet-college-assistant-demo": {
+      "contentKey": "29c80c4c1cedf47c",
+      "src": "/slide-thumbnails/cabinet-college-assistant-demo-29c80c4c1cedf47c-4a86eed4.jpg"
+    },
+    "cabinet-verticals-roadmap": {
+      "contentKey": "6a46b9b8ea6bdedc",
+      "src": "/slide-thumbnails/cabinet-verticals-roadmap-6a46b9b8ea6bdedc-4a86eed4.jpg"
+    },
+    "cabinet-divider-harness": {
+      "contentKey": "dfeb0b8df539fbbd",
+      "src": "/slide-thumbnails/cabinet-divider-harness-dfeb0b8df539fbbd-4a86eed4.jpg"
+    },
+    "smt-title": {
+      "contentKey": "e60dbaabb37c5309",
+      "src": "/slide-thumbnails/smt-title-e60dbaabb37c5309-4a86eed4.jpg"
+    },
+    "smt-since-may": {
+      "contentKey": "b3c69acbbebe8f5f",
+      "src": "/slide-thumbnails/smt-since-may-b3c69acbbebe8f5f-4a86eed4.jpg"
     },
     "cabinet-chat-and-harness": {
-      "contentKey": "6db2f388fffe410a",
-      "src": "/slide-thumbnails/cabinet-chat-and-harness-6db2f388fffe410a-ee660c9c.jpg"
+      "contentKey": "976b17047fd17d3d",
+      "src": "/slide-thumbnails/cabinet-chat-and-harness-976b17047fd17d3d-4a86eed4.jpg"
+    },
+    "cabinet-harness-capabilities": {
+      "contentKey": "81d7d75446aabd23",
+      "src": "/slide-thumbnails/cabinet-harness-capabilities-81d7d75446aabd23-4a86eed4.jpg"
+    },
+    "cabinet-harness-in-action": {
+      "contentKey": "549e1678ba41fde5",
+      "src": "/slide-thumbnails/cabinet-harness-in-action-549e1678ba41fde5-4a86eed4.jpg"
+    },
+    "cabinet-harness-training-demo": {
+      "contentKey": "c95394ab93e593fa",
+      "src": "/slide-thumbnails/cabinet-harness-training-demo-c95394ab93e593fa-4a86eed4.jpg"
+    },
+    "cabinet-harness-automation-use-cases": {
+      "contentKey": "d937492c78eba66c",
+      "src": "/slide-thumbnails/cabinet-harness-automation-use-cases-d937492c78eba66c-4a86eed4.jpg"
+    },
+    "cabinet-governance": {
+      "contentKey": "cb3e7b2e7fc165dd",
+      "src": "/slide-thumbnails/cabinet-governance-cb3e7b2e7fc165dd-4a86eed4.jpg"
+    },
+    "cabinet-harness-11d-campus-app-hosting-intake": {
+      "contentKey": "f5f0dffd4cfa3024",
+      "src": "/slide-thumbnails/cabinet-harness-11d-campus-app-hosting-intake-f5f0dffd4cfa3024-4a86eed4.jpg"
+    },
+    "cabinet-divider-outcomes": {
+      "contentKey": "c003e0965fc4336b",
+      "src": "/slide-thumbnails/cabinet-divider-outcomes-c003e0965fc4336b-4a86eed4.jpg"
+    },
+    "smt-divider-mine": {
+      "contentKey": "ed575640f28d52c5",
+      "src": "/slide-thumbnails/smt-divider-mine-ed575640f28d52c5-4a86eed4.jpg"
+    },
+    "cabinet-personal-productivity-list": {
+      "contentKey": "dc365690f6982062",
+      "src": "/slide-thumbnails/cabinet-personal-productivity-list-dc365690f6982062-4a86eed4.jpg"
+    },
+    "cabinet-inbox-priority-sorter": {
+      "contentKey": "d1ff1f725ed3913e",
+      "src": "/slide-thumbnails/cabinet-inbox-priority-sorter-d1ff1f725ed3913e-4a86eed4.jpg"
+    },
+    "cabinet-mobile-briefing-demo": {
+      "contentKey": "c2ea992374533f68",
+      "src": "/slide-thumbnails/cabinet-mobile-briefing-demo-c2ea992374533f68-4a86eed4.jpg"
+    },
+    "cabinet-mobile-milestones-demo": {
+      "contentKey": "3a23adbf1dc62014",
+      "src": "/slide-thumbnails/cabinet-mobile-milestones-demo-3a23adbf1dc62014-4a86eed4.jpg"
+    },
+    "cabinet-personal-productivity-demo": {
+      "contentKey": "db31c6f4ceb6199d",
+      "src": "/slide-thumbnails/cabinet-personal-productivity-demo-db31c6f4ceb6199d-4a86eed4.jpg"
+    },
+    "smt-built-by-me": {
+      "contentKey": "7186a951de6ce8ed",
+      "src": "/slide-thumbnails/smt-built-by-me-7186a951de6ce8ed-4a86eed4.jpg"
+    },
+    "smt-divider-others": {
+      "contentKey": "04d2eba4ae3fd5b8",
+      "src": "/slide-thumbnails/smt-divider-others-04d2eba4ae3fd5b8-4a86eed4.jpg"
+    },
+    "cabinet-directory-demo": {
+      "contentKey": "c60a226bd5ad4938",
+      "src": "/slide-thumbnails/cabinet-directory-demo-c60a226bd5ad4938-4a86eed4.jpg"
+    },
+    "cabinet-passport-demo": {
+      "contentKey": "a5bd3481cd8b39a7",
+      "src": "/slide-thumbnails/cabinet-passport-demo-a5bd3481cd8b39a7-4a86eed4.jpg"
+    },
+    "cabinet-class-planner-demo": {
+      "contentKey": "6101aaeda437d4df",
+      "src": "/slide-thumbnails/cabinet-class-planner-demo-6101aaeda437d4df-4a86eed4.jpg"
+    },
+    "cabinet-class-planner-utilization": {
+      "contentKey": "2c99c33f1511f511",
+      "src": "/slide-thumbnails/cabinet-class-planner-utilization-2c99c33f1511f511-4a86eed4.jpg"
+    },
+    "cabinet-spa2-demo": {
+      "contentKey": "17f0ef7ad20ceafa",
+      "src": "/slide-thumbnails/cabinet-spa2-demo-17f0ef7ad20ceafa-4a86eed4.jpg"
+    },
+    "cabinet-department-builders": {
+      "contentKey": "63b0c3cc153da1af",
+      "src": "/slide-thumbnails/cabinet-department-builders-63b0c3cc153da1af-4a86eed4.jpg"
+    },
+    "smt-divider-its": {
+      "contentKey": "0f5baf1149f75eff",
+      "src": "/slide-thumbnails/smt-divider-its-0f5baf1149f75eff-4a86eed4.jpg"
+    },
+    "smt-its-implications": {
+      "contentKey": "22e0755e0089ee41",
+      "src": "/slide-thumbnails/smt-its-implications-22e0755e0089ee41-4a86eed4.jpg"
+    },
+    "cabinet-why-sovereign": {
+      "contentKey": "f52629b22a4ce92c",
+      "src": "/slide-thumbnails/cabinet-why-sovereign-f52629b22a4ce92c-4a86eed4.jpg"
+    },
+    "cabinet-scale": {
+      "contentKey": "13afdb15fe848463",
+      "src": "/slide-thumbnails/cabinet-scale-13afdb15fe848463-4a86eed4.jpg"
+    },
+    "cabinet-sovereign-ai": {
+      "contentKey": "4e7585c5115a568d",
+      "src": "/slide-thumbnails/cabinet-sovereign-ai-4e7585c5115a568d-4a86eed4.jpg"
+    },
+    "cabinet-harness-discovery-demo": {
+      "contentKey": "17cc1c5d9e6e45a2",
+      "src": "/slide-thumbnails/cabinet-harness-discovery-demo-17cc1c5d9e6e45a2-4a86eed4.jpg"
+    },
+    "smt-divider-try": {
+      "contentKey": "c43dc5de08ee0ff1",
+      "src": "/slide-thumbnails/smt-divider-try-c43dc5de08ee0ff1-4a86eed4.jpg"
+    },
+    "smt-exercise-howto": {
+      "contentKey": "390a2d6b5b2380c4",
+      "src": "/slide-thumbnails/smt-exercise-howto-390a2d6b5b2380c4-4a86eed4.jpg"
+    },
+    "smt-exercise-assignments": {
+      "contentKey": "ce81e47c042ef7c4",
+      "src": "/slide-thumbnails/smt-exercise-assignments-ce81e47c042ef7c4-4a86eed4.jpg"
+    },
+    "smt-decisions": {
+      "contentKey": "6954749f8d1f9822",
+      "src": "/slide-thumbnails/smt-decisions-6954749f8d1f9822-4a86eed4.jpg"
+    },
+    "smt-thank-you": {
+      "contentKey": "245f395b57b7d47c",
+      "src": "/slide-thumbnails/smt-thank-you-245f395b57b7d47c-4a86eed4.jpg"
+    },
+    "cabinet-asks-close": {
+      "contentKey": "2c8d0c2b7c0bd73a",
+      "src": "/slide-thumbnails/cabinet-asks-close-2c8d0c2b7c0bd73a-4a86eed4.jpg"
+    },
+    "cabinet-administrative-quick-hits": {
+      "contentKey": "5789b90f4c7bc8fa",
+      "src": "/slide-thumbnails/cabinet-administrative-quick-hits-5789b90f4c7bc8fa-4a86eed4.jpg"
     },
     "cabinet-harness-mobile-demo": {
       "contentKey": "dad1c5e7e9fa5522",
-      "src": "/slide-thumbnails/cabinet-harness-mobile-demo-dad1c5e7e9fa5522-ee660c9c.jpg"
-    },
-    "cabinet-governance": {
-      "contentKey": "ecac4a67749ce283",
-      "src": "/slide-thumbnails/cabinet-governance-ecac4a67749ce283-ee660c9c.jpg"
+      "src": "/slide-thumbnails/cabinet-harness-mobile-demo-dad1c5e7e9fa5522-4a86eed4.jpg"
     },
     "cabinet-training-website-demo": {
       "contentKey": "68240c828873528b",
-      "src": "/slide-thumbnails/cabinet-training-website-demo-68240c828873528b-ee660c9c.jpg"
-    },
-    "cabinet-personal-productivity-demo": {
-      "contentKey": "b6c43b9500b7ac16",
-      "src": "/slide-thumbnails/cabinet-personal-productivity-demo-b6c43b9500b7ac16-ee660c9c.jpg"
-    },
-    "cabinet-sovereign-ai": {
-      "contentKey": "eef989115533999b",
-      "src": "/slide-thumbnails/cabinet-sovereign-ai-eef989115533999b-ee660c9c.jpg"
-    },
-    "cabinet-scale": {
-      "contentKey": "d536138eaa46d0f3",
-      "src": "/slide-thumbnails/cabinet-scale-d536138eaa46d0f3-ee660c9c.jpg"
-    },
-    "cabinet-asks-close": {
-      "contentKey": "de12cc415ae6b47a",
-      "src": "/slide-thumbnails/cabinet-asks-close-de12cc415ae6b47a-ee660c9c.jpg"
+      "src": "/slide-thumbnails/cabinet-training-website-demo-68240c828873528b-4a86eed4.jpg"
     },
     "the-ai-enabled-university": {
       "contentKey": "5f53cb711bd707f5",
-      "src": "/slide-thumbnails/the-ai-enabled-university-5f53cb711bd707f5-ee660c9c.jpg"
+      "src": "/slide-thumbnails/the-ai-enabled-university-5f53cb711bd707f5-4a86eed4.jpg"
     },
     "ai-strategy-and-engagement": {
       "contentKey": "228aa1fc2e3b4c06",
-      "src": "/slide-thumbnails/ai-strategy-and-engagement-228aa1fc2e3b4c06-ee660c9c.jpg"
+      "src": "/slide-thumbnails/ai-strategy-and-engagement-228aa1fc2e3b4c06-4a86eed4.jpg"
     },
     "uc-san-diego": {
       "contentKey": "25d2b64bbd084c9a",
-      "src": "/slide-thumbnails/uc-san-diego-25d2b64bbd084c9a-ee660c9c.jpg"
+      "src": "/slide-thumbnails/uc-san-diego-25d2b64bbd084c9a-4a86eed4.jpg"
     },
     "triton-ai-website": {
       "contentKey": "24f387b77954ee2c",
-      "src": "/slide-thumbnails/triton-ai-website-24f387b77954ee2c-ee660c9c.jpg"
+      "src": "/slide-thumbnails/triton-ai-website-24f387b77954ee2c-4a86eed4.jpg"
     },
     "tritongpt-origin": {
       "contentKey": "853297ea3eea3e9a",
-      "src": "/slide-thumbnails/tritongpt-origin-853297ea3eea3e9a-ee660c9c.jpg"
+      "src": "/slide-thumbnails/tritongpt-origin-853297ea3eea3e9a-4a86eed4.jpg"
     },
     "tritongpt-platform": {
       "contentKey": "fb6f720770ed5c29",
-      "src": "/slide-thumbnails/tritongpt-platform-fb6f720770ed5c29-ee660c9c.jpg"
+      "src": "/slide-thumbnails/tritongpt-platform-fb6f720770ed5c29-4a86eed4.jpg"
     },
     "tritongpt-secure-scalable-ai-platform": {
       "contentKey": "de82f61879de6218",
-      "src": "/slide-thumbnails/tritongpt-secure-scalable-ai-platform-de82f61879de6218-ee660c9c.jpg"
+      "src": "/slide-thumbnails/tritongpt-secure-scalable-ai-platform-de82f61879de6218-4a86eed4.jpg"
     },
     "tritongpt-initiative": {
       "contentKey": "822da254ba3f5554",
-      "src": "/slide-thumbnails/tritongpt-initiative-822da254ba3f5554-ee660c9c.jpg"
+      "src": "/slide-thumbnails/tritongpt-initiative-822da254ba3f5554-4a86eed4.jpg"
     },
     "video-media1": {
       "contentKey": "34601c93b106f6ef",
-      "src": "/slide-thumbnails/video-media1-34601c93b106f6ef-ee660c9c.jpg"
+      "src": "/slide-thumbnails/video-media1-34601c93b106f6ef-4a86eed4.jpg"
     },
     "video-screen-recording-1": {
       "contentKey": "e5ff282fe93951ed",
-      "src": "/slide-thumbnails/video-screen-recording-1-e5ff282fe93951ed-ee660c9c.jpg"
+      "src": "/slide-thumbnails/video-screen-recording-1-e5ff282fe93951ed-4a86eed4.jpg"
     },
     "video-screen-recording-2": {
       "contentKey": "9dda74d6c328850a",
-      "src": "/slide-thumbnails/video-screen-recording-2-9dda74d6c328850a-ee660c9c.jpg"
+      "src": "/slide-thumbnails/video-screen-recording-2-9dda74d6c328850a-4a86eed4.jpg"
     },
     "video-media2": {
       "contentKey": "e8dbba73bcb563b7",
-      "src": "/slide-thumbnails/video-media2-e8dbba73bcb563b7-ee660c9c.jpg"
+      "src": "/slide-thumbnails/video-media2-e8dbba73bcb563b7-4a86eed4.jpg"
     },
     "video-media4": {
       "contentKey": "d36a02fd0a3c0921",
-      "src": "/slide-thumbnails/video-media4-d36a02fd0a3c0921-ee660c9c.jpg"
+      "src": "/slide-thumbnails/video-media4-d36a02fd0a3c0921-4a86eed4.jpg"
     },
     "video-media3": {
       "contentKey": "62a09a662e22c090",
-      "src": "/slide-thumbnails/video-media3-62a09a662e22c090-ee660c9c.jpg"
+      "src": "/slide-thumbnails/video-media3-62a09a662e22c090-4a86eed4.jpg"
     },
     "video-screen-recording-2026-05-27": {
       "contentKey": "33d72d23efc2a4ab",
-      "src": "/slide-thumbnails/video-screen-recording-2026-05-27-33d72d23efc2a4ab-ee660c9c.jpg"
+      "src": "/slide-thumbnails/video-screen-recording-2026-05-27-33d72d23efc2a4ab-4a86eed4.jpg"
     },
     "video-tritongpt-class-scheduling-agent": {
       "contentKey": "07f8abba6952c0ba",
-      "src": "/slide-thumbnails/video-tritongpt-class-scheduling-agent-07f8abba6952c0ba-ee660c9c.jpg"
+      "src": "/slide-thumbnails/video-tritongpt-class-scheduling-agent-07f8abba6952c0ba-4a86eed4.jpg"
     },
     "class-planner-student-schedule": {
       "contentKey": "4f2d333aeef4c828",
-      "src": "/slide-thumbnails/class-planner-student-schedule-4f2d333aeef4c828-ee660c9c.jpg"
+      "src": "/slide-thumbnails/class-planner-student-schedule-4f2d333aeef4c828-4a86eed4.jpg"
     },
     "video-media5": {
       "contentKey": "6bbf42aa7373cba2",
-      "src": "/slide-thumbnails/video-media5-6bbf42aa7373cba2-ee660c9c.jpg"
+      "src": "/slide-thumbnails/video-media5-6bbf42aa7373cba2-4a86eed4.jpg"
     },
     "video-media6": {
       "contentKey": "91aeedd82e47e7e7",
-      "src": "/slide-thumbnails/video-media6-91aeedd82e47e7e7-ee660c9c.jpg"
+      "src": "/slide-thumbnails/video-media6-91aeedd82e47e7e7-4a86eed4.jpg"
     },
     "scaling-engagement-the-tritongpt-widget": {
       "contentKey": "4e801211b979edd2",
-      "src": "/slide-thumbnails/scaling-engagement-the-tritongpt-widget-4e801211b979edd2-ee660c9c.jpg"
+      "src": "/slide-thumbnails/scaling-engagement-the-tritongpt-widget-4e801211b979edd2-4a86eed4.jpg"
     },
     "video-tritongpt-mobile-app": {
       "contentKey": "8751cef4352dfa13",
-      "src": "/slide-thumbnails/video-tritongpt-mobile-app-8751cef4352dfa13-ee660c9c.jpg"
+      "src": "/slide-thumbnails/video-tritongpt-mobile-app-8751cef4352dfa13-4a86eed4.jpg"
     },
     "video-media9": {
       "contentKey": "a038e258f8704aa4",
-      "src": "/slide-thumbnails/video-media9-a038e258f8704aa4-ee660c9c.jpg"
+      "src": "/slide-thumbnails/video-media9-a038e258f8704aa4-4a86eed4.jpg"
     },
     "ai-driven-search-blink-integration": {
       "contentKey": "8ea6d099feecf443",
-      "src": "/slide-thumbnails/ai-driven-search-blink-integration-8ea6d099feecf443-ee660c9c.jpg"
+      "src": "/slide-thumbnails/ai-driven-search-blink-integration-8ea6d099feecf443-4a86eed4.jpg"
     },
     "instructional-ai-socratic-tutor-faculty-assistant": {
       "contentKey": "e745516d250d5e8d",
-      "src": "/slide-thumbnails/instructional-ai-socratic-tutor-faculty-assistant-e745516d250d5e8d-ee660c9c.jpg"
+      "src": "/slide-thumbnails/instructional-ai-socratic-tutor-faculty-assistant-e745516d250d5e8d-4a86eed4.jpg"
     },
     "video-media11": {
       "contentKey": "9772dde2ee7dc35b",
-      "src": "/slide-thumbnails/video-media11-9772dde2ee7dc35b-ee660c9c.jpg"
+      "src": "/slide-thumbnails/video-media11-9772dde2ee7dc35b-4a86eed4.jpg"
     },
     "tritongpt-to-tritonai-comparison": {
       "contentKey": "e79e4740b0bb4303",
-      "src": "/slide-thumbnails/tritongpt-to-tritonai-comparison-e79e4740b0bb4303-ee660c9c.jpg"
+      "src": "/slide-thumbnails/tritongpt-to-tritonai-comparison-e79e4740b0bb4303-4a86eed4.jpg"
     },
     "uc-san-diego-ai-strategy-2026": {
       "contentKey": "f5dae0d8dfe83c66",
-      "src": "/slide-thumbnails/uc-san-diego-ai-strategy-2026-f5dae0d8dfe83c66-ee660c9c.jpg"
+      "src": "/slide-thumbnails/uc-san-diego-ai-strategy-2026-f5dae0d8dfe83c66-4a86eed4.jpg"
     },
     "administrative-ai-the-efficiency-imperative": {
       "contentKey": "b05850ae258acc14",
-      "src": "/slide-thumbnails/administrative-ai-the-efficiency-imperative-b05850ae258acc14-ee660c9c.jpg"
+      "src": "/slide-thumbnails/administrative-ai-the-efficiency-imperative-b05850ae258acc14-4a86eed4.jpg"
     },
     "contract-reviewer-consolidated": {
       "contentKey": "940d3875ee1a17d1",
-      "src": "/slide-thumbnails/contract-reviewer-consolidated-940d3875ee1a17d1-ee660c9c.jpg"
+      "src": "/slide-thumbnails/contract-reviewer-consolidated-940d3875ee1a17d1-4a86eed4.jpg"
     },
     "transcript-matching-validation": {
       "contentKey": "348685ee7e98aafe",
-      "src": "/slide-thumbnails/transcript-matching-validation-348685ee7e98aafe-ee660c9c.jpg"
+      "src": "/slide-thumbnails/transcript-matching-validation-348685ee7e98aafe-4a86eed4.jpg"
     },
     "cabinet-harness-03-question": {
       "contentKey": "13695da50ee3baa3",
-      "src": "/slide-thumbnails/cabinet-harness-03-question-13695da50ee3baa3-ee660c9c.jpg"
+      "src": "/slide-thumbnails/cabinet-harness-03-question-13695da50ee3baa3-4a86eed4.jpg"
     },
     "dsmlp-datahub-shared-compute": {
       "contentKey": "f84fb2c356719ca8",
-      "src": "/slide-thumbnails/dsmlp-datahub-shared-compute-f84fb2c356719ca8-ee660c9c.jpg"
+      "src": "/slide-thumbnails/dsmlp-datahub-shared-compute-f84fb2c356719ca8-4a86eed4.jpg"
     },
     "dsmlp-tritonai-complementary-layers": {
       "contentKey": "86114b221d0a7ffe",
-      "src": "/slide-thumbnails/dsmlp-tritonai-complementary-layers-86114b221d0a7ffe-ee660c9c.jpg"
+      "src": "/slide-thumbnails/dsmlp-tritonai-complementary-layers-86114b221d0a7ffe-4a86eed4.jpg"
     },
     "tritonai-operating-review-summary": {
       "contentKey": "31d615eeffb64549",
-      "src": "/slide-thumbnails/tritonai-operating-review-summary-31d615eeffb64549-ee660c9c.jpg"
+      "src": "/slide-thumbnails/tritonai-operating-review-summary-31d615eeffb64549-4a86eed4.jpg"
     },
     "llm-api-usage-attribution": {
       "contentKey": "e61bc693affd0d9b",
-      "src": "/slide-thumbnails/llm-api-usage-attribution-e61bc693affd0d9b-ee660c9c.jpg"
+      "src": "/slide-thumbnails/llm-api-usage-attribution-e61bc693affd0d9b-4a86eed4.jpg"
     },
     "tritonai-developer-api-program": {
       "contentKey": "184232a099e0a117",
-      "src": "/slide-thumbnails/tritonai-developer-api-program-184232a099e0a117-ee660c9c.jpg"
+      "src": "/slide-thumbnails/tritonai-developer-api-program-184232a099e0a117-4a86eed4.jpg"
     },
     "video-tritonai-harness-walkthrough": {
       "contentKey": "03bf6deb8d44be7e",
-      "src": "/slide-thumbnails/video-tritonai-harness-walkthrough-03bf6deb8d44be7e-ee660c9c.jpg"
+      "src": "/slide-thumbnails/video-tritonai-harness-walkthrough-03bf6deb8d44be7e-4a86eed4.jpg"
     },
     "tritonai-harness-capabilities": {
       "contentKey": "d1675e918ca522c8",
-      "src": "/slide-thumbnails/tritonai-harness-capabilities-d1675e918ca522c8-ee660c9c.jpg"
+      "src": "/slide-thumbnails/tritonai-harness-capabilities-d1675e918ca522c8-4a86eed4.jpg"
     },
     "tritonai-harness-sessions": {
       "contentKey": "9f3f8f8cacf65ac8",
-      "src": "/slide-thumbnails/tritonai-harness-sessions-9f3f8f8cacf65ac8-ee660c9c.jpg"
+      "src": "/slide-thumbnails/tritonai-harness-sessions-9f3f8f8cacf65ac8-4a86eed4.jpg"
     },
     "tritonai-harness-prompts": {
       "contentKey": "94c62e9ef5e72a8a",
-      "src": "/slide-thumbnails/tritonai-harness-prompts-94c62e9ef5e72a8a-ee660c9c.jpg"
+      "src": "/slide-thumbnails/tritonai-harness-prompts-94c62e9ef5e72a8a-4a86eed4.jpg"
     },
     "instructional-ai-tutor": {
       "contentKey": "3fd1d7029b061db9",
-      "src": "/slide-thumbnails/instructional-ai-tutor-3fd1d7029b061db9-ee660c9c.jpg"
+      "src": "/slide-thumbnails/instructional-ai-tutor-3fd1d7029b061db9-4a86eed4.jpg"
     },
     "instructional-ai-tutor-demo": {
       "contentKey": "f11bd5473d51d37d",
-      "src": "/slide-thumbnails/instructional-ai-tutor-demo-f11bd5473d51d37d-ee660c9c.jpg"
+      "src": "/slide-thumbnails/instructional-ai-tutor-demo-f11bd5473d51d37d-4a86eed4.jpg"
     },
     "campus-app-hosting": {
       "contentKey": "b4be6d52fe93397a",
-      "src": "/slide-thumbnails/campus-app-hosting-b4be6d52fe93397a-ee660c9c.jpg"
+      "src": "/slide-thumbnails/campus-app-hosting-b4be6d52fe93397a-4a86eed4.jpg"
     },
     "campus-app-hosting-intake": {
       "contentKey": "7176e114e7ea1ea0",
-      "src": "/slide-thumbnails/campus-app-hosting-intake-7176e114e7ea1ea0-ee660c9c.jpg"
+      "src": "/slide-thumbnails/campus-app-hosting-intake-7176e114e7ea1ea0-4a86eed4.jpg"
     },
     "harness-memory-architecture": {
       "contentKey": "59366abaea4ee56d",
-      "src": "/slide-thumbnails/harness-memory-architecture-59366abaea4ee56d-ee660c9c.jpg"
+      "src": "/slide-thumbnails/harness-memory-architecture-59366abaea4ee56d-4a86eed4.jpg"
     },
     "harness-memory-scale-ucsd": {
       "contentKey": "dcc90c67262c81ba",
-      "src": "/slide-thumbnails/harness-memory-scale-ucsd-dcc90c67262c81ba-ee660c9c.jpg"
+      "src": "/slide-thumbnails/harness-memory-scale-ucsd-dcc90c67262c81ba-4a86eed4.jpg"
     },
     "a-meeting-becomes-memory-and-then-action": {
       "contentKey": "6593e88415b7e581",
-      "src": "/slide-thumbnails/a-meeting-becomes-memory-and-then-action-6593e88415b7e581-ee660c9c.jpg"
+      "src": "/slide-thumbnails/a-meeting-becomes-memory-and-then-action-6593e88415b7e581-4a86eed4.jpg"
     },
     "memory-quality-is-an-operational-service": {
       "contentKey": "def1955e8520c752",
-      "src": "/slide-thumbnails/memory-quality-is-an-operational-service-def1955e8520c752-ee660c9c.jpg"
+      "src": "/slide-thumbnails/memory-quality-is-an-operational-service-def1955e8520c752-4a86eed4.jpg"
     },
     "harness-perf-review-demo": {
       "contentKey": "15c55c70072b5b75",
-      "src": "/slide-thumbnails/harness-perf-review-demo-15c55c70072b5b75-ee660c9c.jpg"
+      "src": "/slide-thumbnails/harness-perf-review-demo-15c55c70072b5b75-4a86eed4.jpg"
     },
     "agent-engineering-strategy": {
       "contentKey": "f982f91d5115443b",
-      "src": "/slide-thumbnails/agent-engineering-strategy-f982f91d5115443b-ee660c9c.jpg"
+      "src": "/slide-thumbnails/agent-engineering-strategy-f982f91d5115443b-4a86eed4.jpg"
     },
     "preparing-the-ai-ready-graduate": {
       "contentKey": "f53a675b3775a81a",
-      "src": "/slide-thumbnails/preparing-the-ai-ready-graduate-f53a675b3775a81a-ee660c9c.jpg"
+      "src": "/slide-thumbnails/preparing-the-ai-ready-graduate-f53a675b3775a81a-4a86eed4.jpg"
     },
     "the-agentic-ai-stack": {
       "contentKey": "7dd6bde8b7689a16",
-      "src": "/slide-thumbnails/the-agentic-ai-stack-7dd6bde8b7689a16-ee660c9c.jpg"
+      "src": "/slide-thumbnails/the-agentic-ai-stack-7dd6bde8b7689a16-4a86eed4.jpg"
     },
     "multi-agent-incident-response-orchestration": {
       "contentKey": "771c47e2558b0a32",
-      "src": "/slide-thumbnails/multi-agent-incident-response-orchestration-771c47e2558b0a32-ee660c9c.jpg"
+      "src": "/slide-thumbnails/multi-agent-incident-response-orchestration-771c47e2558b0a32-4a86eed4.jpg"
     },
     "efficiency-ai-vs-opportunity-ai": {
       "contentKey": "fcacfe31d3ccc524",
-      "src": "/slide-thumbnails/efficiency-ai-vs-opportunity-ai-fcacfe31d3ccc524-ee660c9c.jpg"
+      "src": "/slide-thumbnails/efficiency-ai-vs-opportunity-ai-fcacfe31d3ccc524-4a86eed4.jpg"
     },
     "ucsd-ai-by-the-numbers": {
       "contentKey": "2c7e8c7a513a5c71",
-      "src": "/slide-thumbnails/ucsd-ai-by-the-numbers-2c7e8c7a513a5c71-ee660c9c.jpg"
+      "src": "/slide-thumbnails/ucsd-ai-by-the-numbers-2c7e8c7a513a5c71-4a86eed4.jpg"
     },
     "training-and-outreach": {
       "contentKey": "67be114baa6767c3",
-      "src": "/slide-thumbnails/training-and-outreach-67be114baa6767c3-ee660c9c.jpg"
+      "src": "/slide-thumbnails/training-and-outreach-67be114baa6767c3-4a86eed4.jpg"
     },
     "key-takeaways": {
       "contentKey": "30595a09f74684c4",
-      "src": "/slide-thumbnails/key-takeaways-30595a09f74684c4-ee660c9c.jpg"
+      "src": "/slide-thumbnails/key-takeaways-30595a09f74684c4-4a86eed4.jpg"
     },
     "ai-roadmap-2026": {
       "contentKey": "44aa1a7bc93eb67a",
-      "src": "/slide-thumbnails/ai-roadmap-2026-44aa1a7bc93eb67a-ee660c9c.jpg"
+      "src": "/slide-thumbnails/ai-roadmap-2026-44aa1a7bc93eb67a-4a86eed4.jpg"
     },
     "ai-roadmap-2026-q2": {
       "contentKey": "0bb3352142620a95",
-      "src": "/slide-thumbnails/ai-roadmap-2026-q2-0bb3352142620a95-ee660c9c.jpg"
+      "src": "/slide-thumbnails/ai-roadmap-2026-q2-0bb3352142620a95-4a86eed4.jpg"
     },
     "ai-roadmap-2026-q3": {
       "contentKey": "09d3a3e8ab49b977",
-      "src": "/slide-thumbnails/ai-roadmap-2026-q3-09d3a3e8ab49b977-ee660c9c.jpg"
+      "src": "/slide-thumbnails/ai-roadmap-2026-q3-09d3a3e8ab49b977-4a86eed4.jpg"
     },
     "tritongpt-adoption-synthesis": {
       "contentKey": "324ddf533ae095a5",
-      "src": "/slide-thumbnails/tritongpt-adoption-synthesis-324ddf533ae095a5-ee660c9c.jpg"
+      "src": "/slide-thumbnails/tritongpt-adoption-synthesis-324ddf533ae095a5-4a86eed4.jpg"
     },
     "class-planner-indexed-comparison": {
       "contentKey": "b2cc6e3a349ba432",
-      "src": "/slide-thumbnails/class-planner-indexed-comparison-b2cc6e3a349ba432-ee660c9c.jpg"
+      "src": "/slide-thumbnails/class-planner-indexed-comparison-b2cc6e3a349ba432-4a86eed4.jpg"
     },
     "tritongpt-usage-analytics": {
       "contentKey": "d637be4920214d55",
-      "src": "/slide-thumbnails/tritongpt-usage-analytics-d637be4920214d55-ee660c9c.jpg"
+      "src": "/slide-thumbnails/tritongpt-usage-analytics-d637be4920214d55-4a86eed4.jpg"
     },
     "tritongpt-widget-analytics": {
       "contentKey": "83d6e0ad363cc298",
-      "src": "/slide-thumbnails/tritongpt-widget-analytics-83d6e0ad363cc298-ee660c9c.jpg"
+      "src": "/slide-thumbnails/tritongpt-widget-analytics-83d6e0ad363cc298-4a86eed4.jpg"
     },
     "tritongpt-user-growth": {
       "contentKey": "417ddfb91db26b98",
-      "src": "/slide-thumbnails/tritongpt-user-growth-417ddfb91db26b98-ee660c9c.jpg"
+      "src": "/slide-thumbnails/tritongpt-user-growth-417ddfb91db26b98-4a86eed4.jpg"
     },
     "tritongpt-established-assistants": {
       "contentKey": "e92f8bcf2af5515f",
-      "src": "/slide-thumbnails/tritongpt-established-assistants-e92f8bcf2af5515f-ee660c9c.jpg"
+      "src": "/slide-thumbnails/tritongpt-established-assistants-e92f8bcf2af5515f-4a86eed4.jpg"
     },
     "ai-portfolio-at-scale": {
       "contentKey": "4e882a6c2472dad6",
-      "src": "/slide-thumbnails/ai-portfolio-at-scale-4e882a6c2472dad6-ee660c9c.jpg"
+      "src": "/slide-thumbnails/ai-portfolio-at-scale-4e882a6c2472dad6-4a86eed4.jpg"
     },
     "ai-portfolio-pilots": {
       "contentKey": "f740f6269efbd629",
-      "src": "/slide-thumbnails/ai-portfolio-pilots-f740f6269efbd629-ee660c9c.jpg"
+      "src": "/slide-thumbnails/ai-portfolio-pilots-f740f6269efbd629-4a86eed4.jpg"
     },
     "ai-portfolio-skunkworks": {
       "contentKey": "69f3e2fe6ff9d7ac",
-      "src": "/slide-thumbnails/ai-portfolio-skunkworks-69f3e2fe6ff9d7ac-ee660c9c.jpg"
+      "src": "/slide-thumbnails/ai-portfolio-skunkworks-69f3e2fe6ff9d7ac-4a86eed4.jpg"
     },
     "tritonai-collaborations": {
       "contentKey": "6e41588e55d5142a",
-      "src": "/slide-thumbnails/tritonai-collaborations-6e41588e55d5142a-ee660c9c.jpg"
+      "src": "/slide-thumbnails/tritonai-collaborations-6e41588e55d5142a-4a86eed4.jpg"
     },
     "research-alignment-poc": {
       "contentKey": "923229df73b43685",
-      "src": "/slide-thumbnails/research-alignment-poc-923229df73b43685-ee660c9c.jpg"
+      "src": "/slide-thumbnails/research-alignment-poc-923229df73b43685-4a86eed4.jpg"
     },
     "ai-engagement-at-scale": {
       "contentKey": "bf1b6a4865f2e2db",
-      "src": "/slide-thumbnails/ai-engagement-at-scale-bf1b6a4865f2e2db-ee660c9c.jpg"
+      "src": "/slide-thumbnails/ai-engagement-at-scale-bf1b6a4865f2e2db-4a86eed4.jpg"
     },
     "cabinet-harness-02-convergence": {
       "contentKey": "9eb9b4bb3d7cb1cc",
-      "src": "/slide-thumbnails/cabinet-harness-02-convergence-9eb9b4bb3d7cb1cc-ee660c9c.jpg"
+      "src": "/slide-thumbnails/cabinet-harness-02-convergence-9eb9b4bb3d7cb1cc-4a86eed4.jpg"
     },
     "cabinet-harness-08b-component-framework": {
       "contentKey": "4909f2e812aef3cc",
-      "src": "/slide-thumbnails/cabinet-harness-08b-component-framework-4909f2e812aef3cc-ee660c9c.jpg"
+      "src": "/slide-thumbnails/cabinet-harness-08b-component-framework-4909f2e812aef3cc-4a86eed4.jpg"
     },
     "cabinet-harness-04b-fixed-architecture": {
       "contentKey": "ac912950766420b6",
-      "src": "/slide-thumbnails/cabinet-harness-04b-fixed-architecture-ac912950766420b6-ee660c9c.jpg"
+      "src": "/slide-thumbnails/cabinet-harness-04b-fixed-architecture-ac912950766420b6-4a86eed4.jpg"
     },
     "cabinet-harness-06-already-in-toolbox": {
       "contentKey": "9256c75816bc7b04",
-      "src": "/slide-thumbnails/cabinet-harness-06-already-in-toolbox-9256c75816bc7b04-ee660c9c.jpg"
+      "src": "/slide-thumbnails/cabinet-harness-06-already-in-toolbox-9256c75816bc7b04-4a86eed4.jpg"
     },
     "cabinet-harness-08c-while-loop": {
       "contentKey": "3ee0596c14100f7c",
-      "src": "/slide-thumbnails/cabinet-harness-08c-while-loop-3ee0596c14100f7c-ee660c9c.jpg"
+      "src": "/slide-thumbnails/cabinet-harness-08c-while-loop-3ee0596c14100f7c-4a86eed4.jpg"
     },
     "cabinet-harness-09b-context-management": {
       "contentKey": "77a4886fa336cdbb",
-      "src": "/slide-thumbnails/cabinet-harness-09b-context-management-77a4886fa336cdbb-ee660c9c.jpg"
+      "src": "/slide-thumbnails/cabinet-harness-09b-context-management-77a4886fa336cdbb-4a86eed4.jpg"
     },
     "cabinet-harness-08e-tools-hooks-safety": {
       "contentKey": "4dd756350a505bba",
-      "src": "/slide-thumbnails/cabinet-harness-08e-tools-hooks-safety-4dd756350a505bba-ee660c9c.jpg"
+      "src": "/slide-thumbnails/cabinet-harness-08e-tools-hooks-safety-4dd756350a505bba-4a86eed4.jpg"
     },
     "cabinet-harness-10-subagents": {
       "contentKey": "17d0b68f5e5dbaad",
-      "src": "/slide-thumbnails/cabinet-harness-10-subagents-17d0b68f5e5dbaad-ee660c9c.jpg"
+      "src": "/slide-thumbnails/cabinet-harness-10-subagents-17d0b68f5e5dbaad-4a86eed4.jpg"
     },
     "video-harness-api-demo-2026-06-25-810": {
       "contentKey": "a96b7bc432d58aeb",
-      "src": "/slide-thumbnails/video-harness-api-demo-2026-06-25-810-a96b7bc432d58aeb-ee660c9c.jpg"
+      "src": "/slide-thumbnails/video-harness-api-demo-2026-06-25-810-a96b7bc432d58aeb-4a86eed4.jpg"
     },
     "from-tritongpt-to-tritonai": {
       "contentKey": "df83d9809dbae37c",
-      "src": "/slide-thumbnails/from-tritongpt-to-tritonai-df83d9809dbae37c-ee660c9c.jpg"
+      "src": "/slide-thumbnails/from-tritongpt-to-tritonai-df83d9809dbae37c-4a86eed4.jpg"
     },
     "cabinet-harness-11-ucsd-safe-path": {
       "contentKey": "bf040077bc0c5c45",
-      "src": "/slide-thumbnails/cabinet-harness-11-ucsd-safe-path-bf040077bc0c5c45-ee660c9c.jpg"
+      "src": "/slide-thumbnails/cabinet-harness-11-ucsd-safe-path-bf040077bc0c5c45-4a86eed4.jpg"
     },
     "cabinet-harness-11a-two-environments": {
       "contentKey": "bd145086e86b82d1",
-      "src": "/slide-thumbnails/cabinet-harness-11a-two-environments-bd145086e86b82d1-ee660c9c.jpg"
+      "src": "/slide-thumbnails/cabinet-harness-11a-two-environments-bd145086e86b82d1-4a86eed4.jpg"
     },
     "the-flywheel-in-action-pdf-remediator": {
       "contentKey": "84ddd256498f5956",
-      "src": "/slide-thumbnails/the-flywheel-in-action-pdf-remediator-84ddd256498f5956-ee660c9c.jpg"
+      "src": "/slide-thumbnails/the-flywheel-in-action-pdf-remediator-84ddd256498f5956-4a86eed4.jpg"
     },
     "the-flywheel-in-action-biobib-formatter": {
       "contentKey": "ec40e4f928e768e9",
-      "src": "/slide-thumbnails/the-flywheel-in-action-biobib-formatter-ec40e4f928e768e9-ee660c9c.jpg"
+      "src": "/slide-thumbnails/the-flywheel-in-action-biobib-formatter-ec40e4f928e768e9-4a86eed4.jpg"
     },
     "the-flywheel-in-action-ai-use-case-meeting": {
       "contentKey": "de98e0a60bd2b4ed",
-      "src": "/slide-thumbnails/the-flywheel-in-action-ai-use-case-meeting-de98e0a60bd2b4ed-ee660c9c.jpg"
+      "src": "/slide-thumbnails/the-flywheel-in-action-ai-use-case-meeting-de98e0a60bd2b4ed-4a86eed4.jpg"
     },
     "the-flywheel-in-action-dissertation-formatter": {
       "contentKey": "1c1e1d2cb6d587f0",
-      "src": "/slide-thumbnails/the-flywheel-in-action-dissertation-formatter-1c1e1d2cb6d587f0-ee660c9c.jpg"
+      "src": "/slide-thumbnails/the-flywheel-in-action-dissertation-formatter-1c1e1d2cb6d587f0-4a86eed4.jpg"
     },
     "cabinet-harness-13-recap": {
       "contentKey": "5fa692e97d8e89dc",
-      "src": "/slide-thumbnails/cabinet-harness-13-recap-5fa692e97d8e89dc-ee660c9c.jpg"
+      "src": "/slide-thumbnails/cabinet-harness-13-recap-5fa692e97d8e89dc-4a86eed4.jpg"
     },
     "the-team-behind-tritonai": {
       "contentKey": "ee4a9b731a1e3d73",
-      "src": "/slide-thumbnails/the-team-behind-tritonai-ee4a9b731a1e3d73-ee660c9c.jpg"
+      "src": "/slide-thumbnails/the-team-behind-tritonai-ee4a9b731a1e3d73-4a86eed4.jpg"
     },
     "thank-you": {
       "contentKey": "d0b027a59ca4db0a",
-      "src": "/slide-thumbnails/thank-you-d0b027a59ca4db0a-ee660c9c.jpg"
+      "src": "/slide-thumbnails/thank-you-d0b027a59ca4db0a-4a86eed4.jpg"
+    },
+    "thank-you-cabinet": {
+      "contentKey": "70040df6564904a7",
+      "src": "/slide-thumbnails/thank-you-cabinet-70040df6564904a7-4a86eed4.jpg"
     },
     "lmu-thank-you": {
       "contentKey": "5d5506df18411d1b",
-      "src": "/slide-thumbnails/lmu-thank-you-5d5506df18411d1b-ee660c9c.jpg"
-    },
-    "cabinet-directory-demo": {
-      "contentKey": "f701ac1ced10f504",
-      "src": "/slide-thumbnails/cabinet-directory-demo-f701ac1ced10f504-ee660c9c.jpg"
+      "src": "/slide-thumbnails/lmu-thank-you-5d5506df18411d1b-4a86eed4.jpg"
     },
     "cabinet-routing-savings": {
       "contentKey": "4cd22c1ec90b37c0",
-      "src": "/slide-thumbnails/cabinet-routing-savings-4cd22c1ec90b37c0-ee660c9c.jpg"
+      "src": "/slide-thumbnails/cabinet-routing-savings-4cd22c1ec90b37c0-4a86eed4.jpg"
     },
     "cabinet-research-data-trust": {
       "contentKey": "71a06c82f5bec0af",
-      "src": "/slide-thumbnails/cabinet-research-data-trust-71a06c82f5bec0af-ee660c9c.jpg"
+      "src": "/slide-thumbnails/cabinet-research-data-trust-71a06c82f5bec0af-4a86eed4.jpg"
     },
     "cabinet-training-discovery-demo": {
       "contentKey": "ad6a070ad15360c2",
-      "src": "/slide-thumbnails/cabinet-training-discovery-demo-ad6a070ad15360c2-ee660c9c.jpg"
+      "src": "/slide-thumbnails/cabinet-training-discovery-demo-ad6a070ad15360c2-4a86eed4.jpg"
     },
-    "cabinet-inbox-priority-sorter": {
-      "contentKey": "3e50db722950e6e3",
-      "src": "/slide-thumbnails/cabinet-inbox-priority-sorter-3e50db722950e6e3-ee660c9c.jpg"
+    "smt-work-opening": {
+      "contentKey": "126bf30d84c77d70",
+      "src": "/slide-thumbnails/smt-work-opening-126bf30d84c77d70-4a86eed4.jpg"
+    },
+    "smt-work-day": {
+      "contentKey": "0b4b98773ba59044",
+      "src": "/slide-thumbnails/smt-work-day-0b4b98773ba59044-4a86eed4.jpg"
+    },
+    "smt-work-environments": {
+      "contentKey": "7e4eff23b6d6bd3e",
+      "src": "/slide-thumbnails/smt-work-environments-7e4eff23b6d6bd3e-4a86eed4.jpg"
+    },
+    "smt-work-briefing": {
+      "contentKey": "16e6c569be7d6bd9",
+      "src": "/slide-thumbnails/smt-work-briefing-16e6c569be7d6bd9-4a86eed4.jpg"
+    },
+    "smt-work-inbox": {
+      "contentKey": "dc1b45ed850f70c1",
+      "src": "/slide-thumbnails/smt-work-inbox-dc1b45ed850f70c1-4a86eed4.jpg"
+    },
+    "smt-work-meetings": {
+      "contentKey": "e25b54145548f19d",
+      "src": "/slide-thumbnails/smt-work-meetings-e25b54145548f19d-4a86eed4.jpg"
+    },
+    "smt-work-continuity": {
+      "contentKey": "a6f67dc039f81834",
+      "src": "/slide-thumbnails/smt-work-continuity-a6f67dc039f81834-4a86eed4.jpg"
+    },
+    "smt-work-digest": {
+      "contentKey": "79199e5f15f2cb08",
+      "src": "/slide-thumbnails/smt-work-digest-79199e5f15f2cb08-4a86eed4.jpg"
+    },
+    "smt-work-weekly": {
+      "contentKey": "011e1a9a2f0981ad",
+      "src": "/slide-thumbnails/smt-work-weekly-011e1a9a2f0981ad-4a86eed4.jpg"
+    },
+    "smt-work-watchers": {
+      "contentKey": "c7f81c8ad56468b6",
+      "src": "/slide-thumbnails/smt-work-watchers-c7f81c8ad56468b6-4a86eed4.jpg"
+    },
+    "smt-work-opportunity": {
+      "contentKey": "c273171fc6b137c4",
+      "src": "/slide-thumbnails/smt-work-opportunity-c273171fc6b137c4-4a86eed4.jpg"
+    },
+    "smt-work-decision": {
+      "contentKey": "9715a21151e500ae",
+      "src": "/slide-thumbnails/smt-work-decision-9715a21151e500ae-4a86eed4.jpg"
+    },
+    "smt-work-builds": {
+      "contentKey": "7b561f571f5d125b",
+      "src": "/slide-thumbnails/smt-work-builds-7b561f571f5d125b-4a86eed4.jpg"
+    },
+    "smt-work-fleet": {
+      "contentKey": "c74cf94c400ac684",
+      "src": "/slide-thumbnails/smt-work-fleet-c74cf94c400ac684-4a86eed4.jpg"
+    },
+    "smt-work-operations": {
+      "contentKey": "42c73ad3b8fb92a5",
+      "src": "/slide-thumbnails/smt-work-operations-42c73ad3b8fb92a5-4a86eed4.jpg"
+    },
+    "smt-work-job-spec": {
+      "contentKey": "02802c6840b3233c",
+      "src": "/slide-thumbnails/smt-work-job-spec-02802c6840b3233c-4a86eed4.jpg"
+    },
+    "smt-work-try": {
+      "contentKey": "4e07afe21cfd6726",
+      "src": "/slide-thumbnails/smt-work-try-4e07afe21cfd6726-4a86eed4.jpg"
+    },
+    "smt-work-discussion": {
+      "contentKey": "90f0260942eee1e7",
+      "src": "/slide-thumbnails/smt-work-discussion-90f0260942eee1e7-4a86eed4.jpg"
     }
   }
 }

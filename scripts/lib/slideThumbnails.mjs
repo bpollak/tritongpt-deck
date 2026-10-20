@@ -3,6 +3,8 @@ import { readFile } from 'node:fs/promises';
 
 const rendererFiles = [
   'src/components/Slide.jsx',
+  'src/components/SmtWorkSlide.jsx',
+  'src/components/SmtWorkSlide.css',
   'src/components/CabinetSlide.jsx',
   'src/components/CabinetFrameworkSlide.jsx',
   'src/components/CabinetFrameworkSlide.css',

@@ -10154,5 +10154,620 @@ export const slides = [
       "smt"
     ],
     "managerSection": "SMT Retreat"
+  },
+  {
+    "id": 3000,
+    "slug": "smt-work-opening",
+    "title": "How AI fits into\nmy working day",
+    "subtitle": "Recurring work, useful outputs, and what I still review",
+    "rows": [],
+    "contextHref": null,
+    "speakerNotes": "30 seconds. Tour the work I use AI for regularly. Some tasks run on a schedule; others are tasks I give to the Harness. This is a personal implementation with work-related examples, not a campuswide offering. Pacing: about 22 minutes for the examples and exercise, then five minutes of discussion. For a 20-minute slot, shorten the public walkthrough and exercise, and skip the tools slide.",
+    "durationSeconds": 30,
+    "kind": "cover",
+    "type": "content",
+    "content": [],
+    "layout": "smt-work",
+    "audiences": [
+      "smt-work"
+    ],
+    "managerSection": "SMT daily work",
+    "dark": true,
+    "footer": "Brett Pollak · Executive Director, IT Services\nITS Senior Management Team Retreat · October 20, 2026"
+  },
+  {
+    "id": 3001,
+    "slug": "smt-work-day",
+    "title": "A working day with recurring jobs",
+    "subtitle": "The output arrives at a useful point in the day",
+    "rows": [
+      {
+        "label": "6:25 AM",
+        "text": "Scripted calendar and email snapshot on weekdays"
+      },
+      {
+        "label": "6:35 AM",
+        "text": "Daily AI Digest research and publication job"
+      },
+      {
+        "label": "7:00 AM",
+        "text": "Harness meeting brief and campus opportunity scan"
+      },
+      {
+        "label": "8:10 AM / 3:10 PM",
+        "text": "Work email reply drafts on weekdays"
+      },
+      {
+        "label": "6:15 PM",
+        "text": "Meeting debrief and action review on weekdays"
+      },
+      {
+        "label": "7:15 PM",
+        "text": "Agent session recaps feed future context"
+      }
+    ],
+    "contextHref": "/smt-job-guide.html#morning-snapshot",
+    "speakerNotes": "60 seconds. There are separate briefing paths: the always-on calendar/email brief at 6:25 and the Harness briefing at 7. These are start schedules, not completion promises. Source: live job registry verified October 20, 2026. Configured schedules use Pacific time. Scheduler OK does not independently prove downstream output.\n\nJOB CONTEXT\nMorning calendar and email snapshot (6:25 AM, weekdays)\nWhy: Give me a quick view of the day before I open several applications.\nReads: A fresh Microsoft 365 calendar and email snapshot, plus selected follow-up tracking.\nHow: A script ranks meetings and email highlights, assembles a dated briefing, and formats a short version for delivery. This particular job uses scripted rules rather than an open-ended agent run.\nProduces: A dated calendar/email briefing and a concise delivered summary.\nMy role: I assess what actually deserves attention. A meeting ranking or suggested talking point is a preparation aid.\nExample: I can see the day’s key meetings and recent correspondence together instead of reconstructing them separately.\n\nDaily AI Digest (6:35 AM, daily)\nWhy: Keep up with relevant AI developments and turn the research into a useful public edition.\nReads: A curated RSS feed, supplementary web research, relevant interests, and a list of recently published article URLs.\nHow: The job selects one to seven qualifying stories, checks source links and dates, excludes recent repeats, writes the edition, and follows the website publication process. It is instructed to publish fewer items rather than fill the edition with weak or invented material.\nProduces: A dated AI Digest edition on the personal website, with source links and commentary.\nMy role: I can inspect the published edition and its links. Recurring publication has a defined scope; that permission does not extend to unrelated public statements.\nExample: The public October 19 edition is the concrete output shown in the deck. It can be read without access to private systems.\n\nHarness daily meeting brief (7:00 AM, daily)\nWhy: Help me walk into a meeting with the relevant history already assembled.\nReads: Live calendar entries, prior meeting notes, relevant work context, and recorded follow-through. The collector can also research relevant background.\nHow: The collector prepares one card per meeting: context, my follow-through, proposed agenda, and desired outcome. The delivery process checks freshness and attempts the Harness chat and email separately.\nProduces: A dated chat in the daily-briefing project and the same briefing in work email. Receipts help prevent duplicate deliveries during retries.\nMy role: I check the cited evidence and decide what belongs on the actual agenda. The brief does not change calendar events or perform the actions it finds.\nExample: Before a recurring project meeting, I can review what we last discussed and which of my follow-ups remain open.\n\nCampus AI opportunity scan (7:00 AM, daily)\nWhy: Turn broad higher-education research into a specific idea worth evaluating.\nReads: Recent higher-education use cases, known work priorities, and an inventory of potential campus data sources.\nHow: The job performs up to three searches and scores candidates on recency, impact, relevance, data feasibility, and urgency. It selects the strongest candidate above its threshold, identifies required data and access considerations, and adds a nonduplicate idea to the opportunity pipeline.\nProduces: A dated opportunity note and a concise proposed use case, or “No strong signal today.”\nMy role: I decide whether the idea deserves investigation, a sponsor, and an owner. The score does not establish a business case or grant data access.\nExample: The useful output describes what a person would submit, what a proposed tool would do, and what the person would receive back.\n\nWork email reply drafts (8:10 AM and 3:10 PM, weekdays)\nWhy: Reduce the effort of starting a reply to important messages I have not answered.\nReads: Recent work inbox messages, their conversation history, Sent Items, existing drafts, and relevant professional context.\nHow: The scheduled scan looks back 14 days and scans up to 50 inbox messages. It skips noise, acknowledgments, threads already answered, and threads with an existing draft. It selects high-scoring candidates and creates at most three reply drafts per run, then checks wording quality.\nProduces: Reviewable reply drafts in Exchange, plus a report of created drafts and skipped candidates.\nMy role: I check the facts, proposed commitments, wording, and recipients before sending. This job never sends email.\nExample: A request that deserves a response arrives with a short draft grounded in the thread; an unknown answer stays something I need to confirm.\n\nMeeting debrief and action review (6:15 PM, weekdays)\nWhy: Keep useful meeting follow-through from disappearing into notes.\nReads: Available meeting notes/transcripts and the existing confirmed action list. The action review looks back over three days.\nHow: One step writes a dated debrief and structured extracts. A second separates confirmed actions from explicit requests addressed to me that still need review. It excludes casual statements that do not establish a confirmed task.\nProduces: A meeting debrief, structured extracts, and a concise action-review report.\nMy role: I confirm ownership and intended commitments. The job is instructed not to create task-board items from transcript heuristics.\nExample: “Could Brett review this?” can become a review candidate; it should not silently turn into an accepted assignment.\n\nWork session recap ingestion (7:15 PM, daily)\nWhy: Carry useful decisions and corrections from one agent-assisted work session into the next.\nReads: Pending recaps of coding and work sessions, including completed artifacts, explicit corrections, and open follow-ups.\nHow: The job selects durable professional facts, adds dated decisions, and updates relevant reference pages. When facts conflict, it prefers the newer dated evidence and records the discrepancy. It marks recaps as processed to avoid ingesting the same recap repeatedly.\nProduces: Updated professional reference material and a short ingestion summary.\nMy role: I correct inaccurate or outdated context. The instructions exclude credentials and sensitive personal information.\nExample: A naming correction or a decision about an artifact can remain available when I return to that work next week.",
+    "durationSeconds": 60,
+    "type": "content",
+    "content": [],
+    "layout": "smt-work",
+    "audiences": [
+      "smt-work"
+    ],
+    "managerSection": "SMT daily work",
+    "dark": true
+  },
+  {
+    "id": 3002,
+    "slug": "smt-work-environments",
+    "title": "Interactive work and scheduled work",
+    "subtitle": "Different ways to start the work",
+    "rows": [
+      {
+        "label": "TritonAI Harness",
+        "text": "I describe a task, work with connected tools, and review the result"
+      },
+      {
+        "label": "Always-on jobs",
+        "text": "A schedule or a new signal starts a bounded workflow"
+      },
+      {
+        "label": "Common requirement",
+        "text": "Define the approved sources, useful output, and review rule"
+      }
+    ],
+    "contextHref": "/smt-job-guide.html#harness-brief",
+    "speakerNotes": "60 seconds. Hermes runs the always-on jobs; the Harness is the interactive campus workspace. The 7 AM briefing also creates a Harness chat through its automation interface. Do not imply all jobs run inside the Harness. Access and authorization belong to each workflow separately. Sources: live job registry and existing retreat deck.\n\nJOB CONTEXT\nHarness daily meeting brief (7:00 AM, daily)\nWhy: Help me walk into a meeting with the relevant history already assembled.\nReads: Live calendar entries, prior meeting notes, relevant work context, and recorded follow-through. The collector can also research relevant background.\nHow: The collector prepares one card per meeting: context, my follow-through, proposed agenda, and desired outcome. The delivery process checks freshness and attempts the Harness chat and email separately.\nProduces: A dated chat in the daily-briefing project and the same briefing in work email. Receipts help prevent duplicate deliveries during retries.\nMy role: I check the cited evidence and decide what belongs on the actual agenda. The brief does not change calendar events or perform the actions it finds.\nExample: Before a recurring project meeting, I can review what we last discussed and which of my follow-ups remain open.\n\nMorning calendar and email snapshot (6:25 AM, weekdays)\nWhy: Give me a quick view of the day before I open several applications.\nReads: A fresh Microsoft 365 calendar and email snapshot, plus selected follow-up tracking.\nHow: A script ranks meetings and email highlights, assembles a dated briefing, and formats a short version for delivery. This particular job uses scripted rules rather than an open-ended agent run.\nProduces: A dated calendar/email briefing and a concise delivered summary.\nMy role: I assess what actually deserves attention. A meeting ranking or suggested talking point is a preparation aid.\nExample: I can see the day’s key meetings and recent correspondence together instead of reconstructing them separately.\n\nWork email reply drafts (8:10 AM and 3:10 PM, weekdays)\nWhy: Reduce the effort of starting a reply to important messages I have not answered.\nReads: Recent work inbox messages, their conversation history, Sent Items, existing drafts, and relevant professional context.\nHow: The scheduled scan looks back 14 days and scans up to 50 inbox messages. It skips noise, acknowledgments, threads already answered, and threads with an existing draft. It selects high-scoring candidates and creates at most three reply drafts per run, then checks wording quality.\nProduces: Reviewable reply drafts in Exchange, plus a report of created drafts and skipped candidates.\nMy role: I check the facts, proposed commitments, wording, and recipients before sending. This job never sends email.\nExample: A request that deserves a response arrives with a short draft grounded in the thread; an unknown answer stays something I need to confirm.",
+    "durationSeconds": 60,
+    "type": "content",
+    "content": [],
+    "layout": "smt-work",
+    "audiences": [
+      "smt-work"
+    ],
+    "managerSection": "SMT daily work",
+    "dark": true
+  },
+  {
+    "id": 3003,
+    "slug": "smt-work-briefing",
+    "title": "Meeting preparation, delivered at 7 AM",
+    "subtitle": "A brief I can use before the first meeting",
+    "rows": [
+      {
+        "label": "Inputs",
+        "text": "Today’s calendar, prior meeting notes, and open follow-through"
+      },
+      {
+        "label": "Output",
+        "text": "Meeting purpose, relevant history, and what needs my attention"
+      },
+      {
+        "label": "Delivery",
+        "text": "A daily Harness chat and a copy in work email"
+      },
+      {
+        "label": "My part",
+        "text": "Check the sources and decide what belongs on the agenda"
+      }
+    ],
+    "contextHref": "/smt-job-guide.html#harness-brief",
+    "speakerNotes": "75 seconds. Before: reconstruct the last conversation before the meeting. After: review an assembled brief. Distinguish recorded follow-through from a proposed agenda. Today’s receipts verify Harness delivery at 7:04 AM Pacific and email sent at 7:08 AM. Do not show private attendees or meeting content. Source: October 20 local delivery receipts.\n\nJOB CONTEXT\nHarness daily meeting brief (7:00 AM, daily)\nWhy: Help me walk into a meeting with the relevant history already assembled.\nReads: Live calendar entries, prior meeting notes, relevant work context, and recorded follow-through. The collector can also research relevant background.\nHow: The collector prepares one card per meeting: context, my follow-through, proposed agenda, and desired outcome. The delivery process checks freshness and attempts the Harness chat and email separately.\nProduces: A dated chat in the daily-briefing project and the same briefing in work email. Receipts help prevent duplicate deliveries during retries.\nMy role: I check the cited evidence and decide what belongs on the actual agenda. The brief does not change calendar events or perform the actions it finds.\nExample: Before a recurring project meeting, I can review what we last discussed and which of my follow-ups remain open.\n\nMorning calendar and email snapshot (6:25 AM, weekdays)\nWhy: Give me a quick view of the day before I open several applications.\nReads: A fresh Microsoft 365 calendar and email snapshot, plus selected follow-up tracking.\nHow: A script ranks meetings and email highlights, assembles a dated briefing, and formats a short version for delivery. This particular job uses scripted rules rather than an open-ended agent run.\nProduces: A dated calendar/email briefing and a concise delivered summary.\nMy role: I assess what actually deserves attention. A meeting ranking or suggested talking point is a preparation aid.\nExample: I can see the day’s key meetings and recent correspondence together instead of reconstructing them separately.",
+    "durationSeconds": 90,
+    "kind": null,
+    "takeaway": "Today’s app and email deliveries both verified",
+    "type": "content",
+    "content": [],
+    "layout": "smt-work",
+    "audiences": [
+      "smt-work"
+    ],
+    "managerSection": "SMT daily work",
+    "dark": true
+  },
+  {
+    "id": 3004,
+    "slug": "smt-work-inbox",
+    "title": "Inbox triage and reply preparation",
+    "subtitle": "Sorting, drafting, and sending have separate permissions",
+    "rows": [
+      {
+        "label": "Every four hours",
+        "text": "Inbox sorting: Priority 1 · Today; Priority 2 · This week"
+      },
+      {
+        "label": "On demand",
+        "text": "Manual sorting when I need it"
+      },
+      {
+        "label": "Twice each weekday",
+        "text": "A separate job prepares work reply drafts"
+      },
+      {
+        "label": "My part",
+        "text": "Review the priority judgment and decide on the reply"
+      }
+    ],
+    "contextHref": "/smt-job-guide.html#inbox-sorter",
+    "speakerNotes": "75 seconds. The sorter launchd interval is 14,400 seconds. It uses campus TritonAI processing. Work reply preparation is a separate script at 8:10 AM and 3:10 PM weekdays; latest run reported OK today. Priority is a judgment, not certainty. Sources: current launchd configuration, inbox-classifier source, and live registry.\n\nJOB CONTEXT\nInbox priority sorting (Every four hours; manual sorting remains available)\nWhy: Make the messages that need my attention easier to find.\nReads: Work email content and metadata, together with configured priority rules.\nHow: Campus TritonAI classification and local rules estimate whether the message asks something of me and how urgently I need to respond. The system applies Outlook priority categories.\nProduces: Messages labeled Priority 1 · Today or Priority 2 · This week, with decision reasons available in the tool.\nMy role: I can correct the ranking. A priority score is a judgment under uncertainty, not a guarantee that a message is urgent.\nExample: A direct request with a near deadline should be easier to spot than an informational announcement.\n\nWork email reply drafts (8:10 AM and 3:10 PM, weekdays)\nWhy: Reduce the effort of starting a reply to important messages I have not answered.\nReads: Recent work inbox messages, their conversation history, Sent Items, existing drafts, and relevant professional context.\nHow: The scheduled scan looks back 14 days and scans up to 50 inbox messages. It skips noise, acknowledgments, threads already answered, and threads with an existing draft. It selects high-scoring candidates and creates at most three reply drafts per run, then checks wording quality.\nProduces: Reviewable reply drafts in Exchange, plus a report of created drafts and skipped candidates.\nMy role: I check the facts, proposed commitments, wording, and recipients before sending. This job never sends email.\nExample: A request that deserves a response arrives with a short draft grounded in the thread; an unknown answer stays something I need to confirm.",
+    "durationSeconds": 75,
+    "type": "content",
+    "content": [],
+    "layout": "smt-work",
+    "audiences": [
+      "smt-work"
+    ],
+    "managerSection": "SMT daily work",
+    "dark": true
+  },
+  {
+    "id": 3005,
+    "slug": "smt-work-meetings",
+    "title": "Meeting notes become follow-through",
+    "subtitle": "The next meeting starts with the previous discussion available",
+    "rows": [
+      {
+        "label": "6:15 PM weekdays",
+        "text": "A scheduled job produces a debrief and action review"
+      },
+      {
+        "label": "Action review",
+        "text": "Confirmed actions stay distinct from candidates that need review"
+      },
+      {
+        "label": "My part",
+        "text": "Resolve ambiguity about ownership and commitments"
+      },
+      {
+        "label": "Later use",
+        "text": "Bring relevant history into the next briefing"
+      }
+    ],
+    "contextHref": "/smt-job-guide.html#meeting-debrief",
+    "speakerNotes": "75 seconds. Current instructions prohibit creating tasks from transcript heuristics. Direct asks become needs-review candidates; casual self-commitments are excluded unless already confirmed. Latest run on October 19 reported OK. Do not show private transcripts, sentiment, participation, or colleague-level judgments. Source: live job registry verified October 20, 2026. Configured schedules use Pacific time. Scheduler OK does not independently prove downstream output.\n\nJOB CONTEXT\nMeeting debrief and action review (6:15 PM, weekdays)\nWhy: Keep useful meeting follow-through from disappearing into notes.\nReads: Available meeting notes/transcripts and the existing confirmed action list. The action review looks back over three days.\nHow: One step writes a dated debrief and structured extracts. A second separates confirmed actions from explicit requests addressed to me that still need review. It excludes casual statements that do not establish a confirmed task.\nProduces: A meeting debrief, structured extracts, and a concise action-review report.\nMy role: I confirm ownership and intended commitments. The job is instructed not to create task-board items from transcript heuristics.\nExample: “Could Brett review this?” can become a review candidate; it should not silently turn into an accepted assignment.",
+    "durationSeconds": 75,
+    "kind": null,
+    "takeaway": "An inferred task is a candidate for review",
+    "type": "content",
+    "content": [],
+    "layout": "smt-work",
+    "audiences": [
+      "smt-work"
+    ],
+    "managerSection": "SMT daily work",
+    "dark": true
+  },
+  {
+    "id": 3006,
+    "slug": "smt-work-continuity",
+    "title": "Overnight work improves tomorrow’s context",
+    "subtitle": "A recap can outlast the conversation that produced it",
+    "rows": [
+      {
+        "label": "7:15 PM",
+        "text": "Session recaps capture work completed and decisions made"
+      },
+      {
+        "label": "Evening",
+        "text": "Relevant context is consolidated for later retrieval"
+      },
+      {
+        "label": "Team proposals",
+        "text": "A weekday job prepares candidate updates for a shared knowledge space"
+      },
+      {
+        "label": "My part",
+        "text": "Review what becomes a shared statement or a lasting decision"
+      }
+    ],
+    "contextHref": "/smt-job-guide.html#session-recaps",
+    "speakerNotes": "75 seconds. Explain a familiar problem: the reasoning behind a decision stays in one conversation and disappears from the next. Session ingestion reported OK October 19 at 7:21 PM; context promotion at 7:36 PM. Team proposal generation is configured for 8 PM weekdays, and proposal monitoring for 9 AM weekdays. These jobs prepare or surface candidate updates; do not claim they automatically approve shared decisions. Source: live registry reviewed October 20, plus the public architecture description at https://brettcpollak.com/ai-agent-architecture. No private context or individual notes on screen.\n\nJOB CONTEXT\nWork session recap ingestion (7:15 PM, daily)\nWhy: Carry useful decisions and corrections from one agent-assisted work session into the next.\nReads: Pending recaps of coding and work sessions, including completed artifacts, explicit corrections, and open follow-ups.\nHow: The job selects durable professional facts, adds dated decisions, and updates relevant reference pages. When facts conflict, it prefers the newer dated evidence and records the discrepancy. It marks recaps as processed to avoid ingesting the same recap repeatedly.\nProduces: Updated professional reference material and a short ingestion summary.\nMy role: I correct inaccurate or outdated context. The instructions exclude credentials and sensitive personal information.\nExample: A naming correction or a decision about an artifact can remain available when I return to that work next week.\n\nNightly context consolidation (7:35 PM, weekdays)\nWhy: Connect the day’s separate reports so useful context is available later.\nReads: Available briefings, meeting debriefs, evening summaries, opportunity research, and work artifacts from the day.\nHow: The job extracts decisions, commitments, and open follow-ups, then appends dated context and structured records. It is instructed to keep working when some inputs are missing and to preserve existing content.\nProduces: A consolidated daily record and updated professional reference material.\nMy role: I correct the record where necessary. A consolidated statement should remain traceable to the source artifacts; aggregation does not make an inference certain.\nExample: A project decision discussed in a meeting and clarified during a later work session can be retrieved together.\n\nTeam knowledge proposals (8:00 PM, weekdays)\nWhy: Offer useful updates to shared team knowledge without directly rewriting the team’s established pages.\nReads: Selected opportunities, decisions, and commitments extracted from daily work outputs.\nHow: A script prepares up to five proposals per night, including source references and action items, and can commit and push them to the team’s proposal area.\nProduces: Candidate updates in the shared proposal area, separate from established team pages.\nMy role: A person reviews a proposal before copying approved content into the relevant shared page. The proposal itself is visible to the team, so its content still needs an appropriate sharing boundary.\nExample: A proposed update to a project decision can wait for the page owner’s review instead of automatically becoming the team’s stated position.\n\nTeam proposal reminder (9:00 AM, weekdays)\nWhy: Bring pending knowledge proposals back to someone’s attention.\nReads: Proposal files currently waiting in the team’s proposal area.\nHow: A script lists up to 12 proposals and their age, then reminds the reviewer to copy approved material to the target page.\nProduces: A short reminder listing pending proposals. If none exist, the script has nothing to report.\nMy role: The reviewer accepts, corrects, or rejects each proposal. This job does not approve or merge a proposal.\nExample: A useful proposal prepared overnight appears in the morning review queue instead of being forgotten.",
+    "durationSeconds": 75,
+    "kind": null,
+    "takeaway": "Useful continuity requires a way to correct the record",
+    "type": "content",
+    "content": [],
+    "layout": "smt-work",
+    "audiences": [
+      "smt-work"
+    ],
+    "managerSection": "SMT daily work",
+    "dark": true
+  },
+  {
+    "id": 3007,
+    "slug": "smt-work-digest",
+    "title": "The AI Digest",
+    "subtitle": "A recurring publication people can read",
+    "rows": [
+      {
+        "label": "Daily · 6:35 AM",
+        "text": "Research recent AI news against my interests"
+      },
+      {
+        "label": "Editorial rules",
+        "text": "Require real source links, recent dates, and no repeat stories"
+      },
+      {
+        "label": "Output",
+        "text": "A dated edition on my personal website"
+      }
+    ],
+    "contextHref": "/smt-job-guide.html#ai-digest",
+    "speakerNotes": "75 seconds. Show the public output. The prompt rejects fabricated URLs and stories without verifiable recent dates, and checks a recent-publication list for duplicates. Screenshot: October 19 public edition. October 20 run reports OK, but that alone is not proof of an October 20 publication. Sources: https://brettcpollak.com/ai-digest/2026-10-19 and current briefing-ai-news job definition.\n\nJOB CONTEXT\nDaily AI Digest (6:35 AM, daily)\nWhy: Keep up with relevant AI developments and turn the research into a useful public edition.\nReads: A curated RSS feed, supplementary web research, relevant interests, and a list of recently published article URLs.\nHow: The job selects one to seven qualifying stories, checks source links and dates, excludes recent repeats, writes the edition, and follows the website publication process. It is instructed to publish fewer items rather than fill the edition with weak or invented material.\nProduces: A dated AI Digest edition on the personal website, with source links and commentary.\nMy role: I can inspect the published edition and its links. Recurring publication has a defined scope; that permission does not extend to unrelated public statements.\nExample: The public October 19 edition is the concrete output shown in the deck. It can be read without access to private systems. Walkthrough: spend up to one minute opening the public edition, following one source link, and showing the dated archive. Use the embedded screenshot if connectivity is poor. No private systems are needed.",
+    "durationSeconds": 120,
+    "kind": "evidence",
+    "type": "content",
+    "content": [],
+    "layout": "smt-work",
+    "audiences": [
+      "smt-work"
+    ],
+    "managerSection": "SMT daily work",
+    "dark": true,
+    "image": "/media/smt-work/digest.jpg",
+    "link": "https://brettcpollak.com/ai-digest/2026-10-19"
+  },
+  {
+    "id": 3008,
+    "slug": "smt-work-weekly",
+    "title": "UC San Diego AI Weekly",
+    "subtitle": "A Monday update on tools, training, and campus AI",
+    "rows": [
+      {
+        "label": "Monday · 5 AM",
+        "text": "A job prepares the weekly newsletter"
+      },
+      {
+        "label": "Publishing",
+        "text": "Update site data, check the build, and verify deployment"
+      },
+      {
+        "label": "Output",
+        "text": "A dated public edition and homepage update"
+      }
+    ],
+    "contextHref": "/smt-job-guide.html#ai-weekly",
+    "speakerNotes": "75 seconds. This differs from the daily digest. Sections cover supported AI tools, workshops and training, and TritonAI news. The job includes build/deployment verification; campus-site sync runs separately. Recurring publication has existing scoped authorization. This presentation does not authorize a new publication. Sources: https://brettcpollak.com/ucsd-ai-news/2026-10-19 and weekly-ucsd-ai-newsletter job definition, latest run OK October 19.\n\nJOB CONTEXT\nUC San Diego AI Weekly (5:00 AM, Mondays)\nWhy: Provide one recurring update on supported AI tools, campus training, and TritonAI news.\nReads: Current tool updates, upcoming training information, and campus AI news gathered for that week.\nHow: The job prepares the established newsletter sections, updates website data, runs the site checks, pushes the edition, and checks deployment and the homepage. The campus website synchronization runs separately.\nProduces: A dated newsletter edition and an updated homepage module.\nMy role: I can inspect the published copy and links. Information about availability or upcoming events still needs a current authoritative source.\nExample: A reader can see what changed in supported tools and which workshops are coming up in a single Monday update.",
+    "durationSeconds": 90,
+    "kind": "evidence",
+    "type": "content",
+    "content": [],
+    "layout": "smt-work",
+    "audiences": [
+      "smt-work"
+    ],
+    "managerSection": "SMT daily work",
+    "dark": true,
+    "image": "/media/smt-work/weekly.jpg",
+    "link": "https://brettcpollak.com/ucsd-ai-news/2026-10-19"
+  },
+  {
+    "id": 3009,
+    "slug": "smt-work-watchers",
+    "title": "Research and maintenance jobs",
+    "subtitle": "A watcher can surface a change for a person to assess",
+    "rows": [
+      {
+        "label": "Daily",
+        "text": "Campus AI opportunity scan scores relevance and feasibility"
+      },
+      {
+        "label": "Every four hours",
+        "text": "Vendor-terms watcher flags new documents for research"
+      },
+      {
+        "label": "Every 72 hours",
+        "text": "TritonAI roadmap review checks evidence within its authorized scope"
+      },
+      {
+        "label": "Sunday",
+        "text": "Decision brief separates my decisions from status updates"
+      }
+    ],
+    "contextHref": "/smt-job-guide.html#opportunity-scan",
+    "speakerNotes": "90 seconds. Opportunity scan can say no strong signal. Vendor watcher stages a document and alerts; it does not make procurement decisions. Roadmap has explicit standing permission for bounded evidence-backed updates. Decision brief includes only decisions Brett owns and can remain silent. Latest runs reported OK. Do not disclose vendors, contract terms, or internal decisions. Source: live job registry verified October 20, 2026. Configured schedules use Pacific time. Scheduler OK does not independently prove downstream output.\n\nJOB CONTEXT\nCampus AI opportunity scan (7:00 AM, daily)\nWhy: Turn broad higher-education research into a specific idea worth evaluating.\nReads: Recent higher-education use cases, known work priorities, and an inventory of potential campus data sources.\nHow: The job performs up to three searches and scores candidates on recency, impact, relevance, data feasibility, and urgency. It selects the strongest candidate above its threshold, identifies required data and access considerations, and adds a nonduplicate idea to the opportunity pipeline.\nProduces: A dated opportunity note and a concise proposed use case, or “No strong signal today.”\nMy role: I decide whether the idea deserves investigation, a sponsor, and an owner. The score does not establish a business case or grant data access.\nExample: The useful output describes what a person would submit, what a proposed tool would do, and what the person would receive back.\n\nVendor document watcher (Every four hours)\nWhy: Notice when an important new commercial document arrives without repeatedly checking the inbox myself.\nReads: A bounded scan of recent work email for defined agreement and commercial-document triggers.\nHow: The watcher checks for a new matching document and stages its subject, sender, date, and attachment names for follow-on research. If it finds no trigger, it stays quiet.\nProduces: A short alert identifying a document ready for research.\nMy role: A person decides whether to begin analysis. The watcher does not assess the terms itself, accept an agreement, or make a purchasing decision.\nExample: A newly received order form can prompt a research review without the watcher attempting to negotiate or approve it.\n\nTritonAI roadmap review (Every 72 hours)\nWhy: Keep the public roadmap consistent with evidence about what has actually shipped or changed.\nReads: Current roadmap data, recent decisions and project records, primary meeting evidence where needed, and public service pages.\nHow: The job compares the evidence with the roadmap, makes supported changes within its standing authorization, runs repository checks, and verifies the actual public result. Unsupported new commitments stay questions for review.\nProduces: Supported roadmap corrections and a private review record; no cosmetic freshness update when there is no substantive change.\nMy role: I resolve uncertain commitments and scope questions. Standing authorization covers this roadmap maintenance, not unrelated site or policy changes.\nExample: A supported delivery can move from a tentative description to an accurate current status; an announced date alone does not prove delivery.\n\nWeekly decision brief (6:00 AM, Sundays)\nWhy: Spend my attention on calls that require my judgment rather than another list of status updates.\nReads: The week’s briefings, meeting debriefs, and evening summaries.\nHow: The job keeps decisions I own, explains the stakes and consequences of delay, lists deadlines and missing facts, and ranks up to seven items. It is instructed not to invent deadlines or decisions.\nProduces: A concise decision brief. If fewer than three genuine decisions qualify, the job can remain silent.\nMy role: I make the decision, seek missing evidence, or explicitly defer it. The job cannot approve a course of action for me.\nExample: A question with an approaching deadline and unresolved evidence appears as a decision to prepare for, rather than a generic follow-up task.",
+    "durationSeconds": 60,
+    "type": "content",
+    "content": [],
+    "layout": "smt-work",
+    "audiences": [
+      "smt-work"
+    ],
+    "managerSection": "SMT daily work",
+    "dark": true
+  },
+  {
+    "id": 3010,
+    "slug": "smt-work-opportunity",
+    "title": "The campus opportunity scan",
+    "subtitle": "A specific candidate to assess, rather than another list of headlines",
+    "rows": [
+      {
+        "label": "Research",
+        "text": "Look for recent higher-education use cases and workflow problems"
+      },
+      {
+        "label": "Score",
+        "text": "Consider impact, relevance, available data, and urgency"
+      },
+      {
+        "label": "Select",
+        "text": "Choose the strongest candidate, or report no strong signal"
+      },
+      {
+        "label": "My part",
+        "text": "Decide whether the idea deserves an owner and further investigation"
+      }
+    ],
+    "contextHref": "/smt-job-guide.html#opportunity-scan",
+    "speakerNotes": "90 seconds. Describe the actual job instructions: at most three searches, a weighted rubric, and the single strongest idea. The instructions require a score above 60 out of 100; otherwise it says no strong signal. Required data sources and access tiers accompany an idea. A score is a prioritization aid, not proof of feasibility or value. Do not show the private pipeline or imply any idea is an approved project. Ask the room what recurring scan they now do manually. Source: current opportunity-scan job definition reviewed October 20.\n\nJOB CONTEXT\nCampus AI opportunity scan (7:00 AM, daily)\nWhy: Turn broad higher-education research into a specific idea worth evaluating.\nReads: Recent higher-education use cases, known work priorities, and an inventory of potential campus data sources.\nHow: The job performs up to three searches and scores candidates on recency, impact, relevance, data feasibility, and urgency. It selects the strongest candidate above its threshold, identifies required data and access considerations, and adds a nonduplicate idea to the opportunity pipeline.\nProduces: A dated opportunity note and a concise proposed use case, or “No strong signal today.”\nMy role: I decide whether the idea deserves investigation, a sponsor, and an owner. The score does not establish a business case or grant data access.\nExample: The useful output describes what a person would submit, what a proposed tool would do, and what the person would receive back.",
+    "durationSeconds": 90,
+    "type": "content",
+    "content": [],
+    "layout": "smt-work",
+    "audiences": [
+      "smt-work"
+    ],
+    "managerSection": "SMT daily work",
+    "dark": true
+  },
+  {
+    "id": 3011,
+    "slug": "smt-work-decision",
+    "title": "The weekly decision brief",
+    "subtitle": "A Sunday job focuses on calls that require my judgment",
+    "rows": [
+      {
+        "label": "Gather",
+        "text": "Read the week’s briefings, meeting debriefs, and evening summaries"
+      },
+      {
+        "label": "Filter",
+        "text": "Keep decisions I own; leave out routine status updates"
+      },
+      {
+        "label": "Frame",
+        "text": "State the stakes, deadline, known facts, and missing information"
+      },
+      {
+        "label": "My part",
+        "text": "Make the decision or identify what evidence is still needed"
+      }
+    ],
+    "contextHref": "/smt-job-guide.html#decision-brief",
+    "speakerNotes": "90 seconds. This job runs Sunday at 6 AM Pacific. Its instructions cap the brief at seven decisions and rank them by deadline and stakes. Missing deadlines stay explicitly unknown. If fewer than three genuine decision items qualify, it can remain silent. Tell the room why this differs from a task list: it should spend attention where judgment is required. Do not disclose current decisions or negotiations. Source: decision-brief-weekly job definition and latest OK run on October 18, verified October 20.\n\nJOB CONTEXT\nWeekly decision brief (6:00 AM, Sundays)\nWhy: Spend my attention on calls that require my judgment rather than another list of status updates.\nReads: The week’s briefings, meeting debriefs, and evening summaries.\nHow: The job keeps decisions I own, explains the stakes and consequences of delay, lists deadlines and missing facts, and ranks up to seven items. It is instructed not to invent deadlines or decisions.\nProduces: A concise decision brief. If fewer than three genuine decisions qualify, the job can remain silent.\nMy role: I make the decision, seek missing evidence, or explicitly defer it. The job cannot approve a course of action for me.\nExample: A question with an approaching deadline and unresolved evidence appears as a decision to prepare for, rather than a generic follow-up task.",
+    "durationSeconds": 90,
+    "kind": null,
+    "takeaway": "The job prepares the decision; I remain accountable for it",
+    "type": "content",
+    "content": [],
+    "layout": "smt-work",
+    "audiences": [
+      "smt-work"
+    ],
+    "managerSection": "SMT daily work",
+    "dark": true
+  },
+  {
+    "id": 3012,
+    "slug": "smt-work-builds",
+    "title": "The Harness also helps me build the tools",
+    "subtitle": "Tools I use and continue to develop",
+    "rows": [
+      {
+        "label": "Training course",
+        "text": "Narrated Harness lessons, knowledge checks, and a practice kit"
+      },
+      {
+        "label": "Website work",
+        "text": "Content updates, release preparation, and checks of the public result"
+      },
+      {
+        "label": "Leadership questions",
+        "text": "A campus-data assistant prototype for exploring questions"
+      },
+      {
+        "label": "Reusable instructions",
+        "text": "Skills capture the steps and checks for work I do again"
+      }
+    ],
+    "contextHref": "/smt-job-guide.html#roadmap-review",
+    "speakerNotes": "75 seconds. Reuses examples from smt-built-by-me in repository commit abece21. Training is described there as live; leadership assistant is a pilot/prototype, not a general campus service. Do not open person-level data. Existing inbox and mobile-briefing recordings can be optional demos; the talk stands without them. Source: existing SMT retreat deck. Do not claim measured impact from those examples.\n\nJOB CONTEXT\nTritonAI roadmap review (Every 72 hours)\nWhy: Keep the public roadmap consistent with evidence about what has actually shipped or changed.\nReads: Current roadmap data, recent decisions and project records, primary meeting evidence where needed, and public service pages.\nHow: The job compares the evidence with the roadmap, makes supported changes within its standing authorization, runs repository checks, and verifies the actual public result. Unsupported new commitments stay questions for review.\nProduces: Supported roadmap corrections and a private review record; no cosmetic freshness update when there is no substantive change.\nMy role: I resolve uncertain commitments and scope questions. Standing authorization covers this roadmap maintenance, not unrelated site or policy changes.\nExample: A supported delivery can move from a tentative description to an accurate current status; an announced date alone does not prove delivery.\n\nHarness daily meeting brief (7:00 AM, daily)\nWhy: Help me walk into a meeting with the relevant history already assembled.\nReads: Live calendar entries, prior meeting notes, relevant work context, and recorded follow-through. The collector can also research relevant background.\nHow: The collector prepares one card per meeting: context, my follow-through, proposed agenda, and desired outcome. The delivery process checks freshness and attempts the Harness chat and email separately.\nProduces: A dated chat in the daily-briefing project and the same briefing in work email. Receipts help prevent duplicate deliveries during retries.\nMy role: I check the cited evidence and decide what belongs on the actual agenda. The brief does not change calendar events or perform the actions it finds.\nExample: Before a recurring project meeting, I can review what we last discussed and which of my follow-ups remain open.",
+    "durationSeconds": 75,
+    "type": "content",
+    "content": [],
+    "layout": "smt-work",
+    "audiences": [
+      "smt-work"
+    ],
+    "managerSection": "SMT daily work",
+    "dark": true
+  },
+  {
+    "id": 3013,
+    "slug": "smt-work-fleet",
+    "title": "What is running behind these examples",
+    "subtitle": "Registry verified October 20, 2026",
+    "rows": [],
+    "contextHref": "/smt-job-guide.html#morning-snapshot",
+    "speakerNotes": "45 seconds. There are 99 registered jobs, 95 enabled and four paused. This is the full personal fleet and includes personal jobs excluded from the talk. Of 60 agent runs, 55 select GLM 5.3, three GLM 5.3 Flash, two Gemma 4 31B, through TritonAI. The 35 are configured no_agent scripts; that flag does not prove a script never calls a model internally. Enabled does not mean healthy. Do not reuse older local graph/page counts. Source: live job registry verified October 20, 2026. Configured schedules use Pacific time. Scheduler OK does not independently prove downstream output.\n\nJOB CONTEXT\nMorning calendar and email snapshot (6:25 AM, weekdays)\nWhy: Give me a quick view of the day before I open several applications.\nReads: A fresh Microsoft 365 calendar and email snapshot, plus selected follow-up tracking.\nHow: A script ranks meetings and email highlights, assembles a dated briefing, and formats a short version for delivery. This particular job uses scripted rules rather than an open-ended agent run.\nProduces: A dated calendar/email briefing and a concise delivered summary.\nMy role: I assess what actually deserves attention. A meeting ranking or suggested talking point is a preparation aid.\nExample: I can see the day’s key meetings and recent correspondence together instead of reconstructing them separately.\n\nWork email reply drafts (8:10 AM and 3:10 PM, weekdays)\nWhy: Reduce the effort of starting a reply to important messages I have not answered.\nReads: Recent work inbox messages, their conversation history, Sent Items, existing drafts, and relevant professional context.\nHow: The scheduled scan looks back 14 days and scans up to 50 inbox messages. It skips noise, acknowledgments, threads already answered, and threads with an existing draft. It selects high-scoring candidates and creates at most three reply drafts per run, then checks wording quality.\nProduces: Reviewable reply drafts in Exchange, plus a report of created drafts and skipped candidates.\nMy role: I check the facts, proposed commitments, wording, and recipients before sending. This job never sends email.\nExample: A request that deserves a response arrives with a short draft grounded in the thread; an unknown answer stays something I need to confirm.",
+    "durationSeconds": 45,
+    "kind": "numbers",
+    "takeaway": "Full personal fleet; this talk shows selected work uses",
+    "type": "content",
+    "content": [],
+    "layout": "smt-work",
+    "audiences": [
+      "smt-work"
+    ],
+    "managerSection": "SMT daily work",
+    "dark": true,
+    "metrics": [
+      [
+        "95",
+        "enabled scheduled jobs"
+      ],
+      [
+        "60",
+        "configured agent runs"
+      ],
+      [
+        "35",
+        "configured script jobs"
+      ]
+    ]
+  },
+  {
+    "id": 3014,
+    "slug": "smt-work-operations",
+    "title": "Recurring jobs still need operational care",
+    "subtitle": "The work includes maintenance and review",
+    "rows": [
+      {
+        "label": "Permissions",
+        "text": "Drafting, watching, and authorized publishing have different scopes"
+      },
+      {
+        "label": "Failure handling",
+        "text": "Some enabled jobs reported errors in today’s registry"
+      },
+      {
+        "label": "Verification",
+        "text": "Check the delivered artifact or live page beyond scheduler status"
+      },
+      {
+        "label": "Data access",
+        "text": "Use only the approved sources each workflow needs"
+      }
+    ],
+    "contextHref": "/smt-job-guide.html#roadmap-review",
+    "speakerNotes": "75 seconds. Be candid that this is useful but not maintenance-free. The registry includes errors today; no claim that 95 jobs are all healthy. This presentation work does not repair those jobs. Independently checkable outputs are stronger evidence. Expansion requires approved access, ownership, support, and review rules. Source: live job registry verified October 20, 2026. Configured schedules use Pacific time. Scheduler OK does not independently prove downstream output.\n\nJOB CONTEXT\nTritonAI roadmap review (Every 72 hours)\nWhy: Keep the public roadmap consistent with evidence about what has actually shipped or changed.\nReads: Current roadmap data, recent decisions and project records, primary meeting evidence where needed, and public service pages.\nHow: The job compares the evidence with the roadmap, makes supported changes within its standing authorization, runs repository checks, and verifies the actual public result. Unsupported new commitments stay questions for review.\nProduces: Supported roadmap corrections and a private review record; no cosmetic freshness update when there is no substantive change.\nMy role: I resolve uncertain commitments and scope questions. Standing authorization covers this roadmap maintenance, not unrelated site or policy changes.\nExample: A supported delivery can move from a tentative description to an accurate current status; an announced date alone does not prove delivery.\n\nHarness daily meeting brief (7:00 AM, daily)\nWhy: Help me walk into a meeting with the relevant history already assembled.\nReads: Live calendar entries, prior meeting notes, relevant work context, and recorded follow-through. The collector can also research relevant background.\nHow: The collector prepares one card per meeting: context, my follow-through, proposed agenda, and desired outcome. The delivery process checks freshness and attempts the Harness chat and email separately.\nProduces: A dated chat in the daily-briefing project and the same briefing in work email. Receipts help prevent duplicate deliveries during retries.\nMy role: I check the cited evidence and decide what belongs on the actual agenda. The brief does not change calendar events or perform the actions it finds.\nExample: Before a recurring project meeting, I can review what we last discussed and which of my follow-ups remain open.",
+    "durationSeconds": 75,
+    "type": "content",
+    "content": [],
+    "layout": "smt-work",
+    "audiences": [
+      "smt-work"
+    ],
+    "managerSection": "SMT daily work",
+    "dark": true
+  },
+  {
+    "id": 3015,
+    "slug": "smt-work-job-spec",
+    "title": "What I specify before a job repeats",
+    "subtitle": "Proposed example: a weekly service review",
+    "rows": [
+      {
+        "label": "Input",
+        "text": "A defined set of approved service updates"
+      },
+      {
+        "label": "Output",
+        "text": "A one-page brief with a source for each item and explicit gaps"
+      },
+      {
+        "label": "Timing",
+        "text": "Ready before the weekly review, with an alert if preparation fails"
+      },
+      {
+        "label": "Authority",
+        "text": "Draft only; the service owner reviews before sharing"
+      },
+      {
+        "label": "Review",
+        "text": "Compare preparation time and corrections with the current approach"
+      }
+    ],
+    "contextHref": null,
+    "speakerNotes": "90 seconds. Walk through a job definition, not a deployed service. Example request: Each Monday, prepare a draft weekly service review from this approved folder. Separate reported facts from proposed actions, cite each item, mark missing updates, and do not send it. Ask the room which sentence they would change for their own work. Sources, timing, and authority are part of the request. Before scheduling, run it once and compare the output with a human-prepared review. This is a proposed exercise, not an existing team automation.",
+    "durationSeconds": 90,
+    "type": "content",
+    "content": [],
+    "layout": "smt-work",
+    "audiences": [
+      "smt-work"
+    ],
+    "managerSection": "SMT daily work",
+    "dark": true
+  },
+  {
+    "id": 3016,
+    "slug": "smt-work-try",
+    "title": "A recurring job from your own work",
+    "subtitle": "A small exercise for this retreat",
+    "rows": [
+      {
+        "label": "Choose",
+        "text": "One task you reconstruct or repeat every week"
+      },
+      {
+        "label": "Describe",
+        "text": "The approved sources, useful output, and when you need it"
+      },
+      {
+        "label": "Try",
+        "text": "Ask the Harness for one draft using non-sensitive material"
+      },
+      {
+        "label": "Assess",
+        "text": "What needs correction, who reviews it, and is it worth repeating?"
+      }
+    ],
+    "contextHref": null,
+    "speakerNotes": "60 seconds, then hands-on time if available. Adapted from the retreat deck’s exercise section. Do not grant new data access. First run is draft-only. Proposed examples: weekly service review, project update, training recap, or source-backed change digest. These are candidate uses, not deployed team capabilities.",
+    "durationSeconds": 120,
+    "kind": null,
+    "takeaway": "Example: “Prepare my weekly service review from these approved updates; cite each item”",
+    "type": "content",
+    "content": [],
+    "layout": "smt-work",
+    "audiences": [
+      "smt-work"
+    ],
+    "managerSection": "SMT daily work",
+    "dark": true
+  },
+  {
+    "id": 3017,
+    "slug": "smt-work-discussion",
+    "title": "Which recurring task\nwould you hand over first?",
+    "subtitle": "What should the AI prepare, and where does your judgment begin?",
+    "rows": [],
+    "contextHref": null,
+    "speakerNotes": "Discussion. Name one task, its approved inputs, a reviewer, and a review date. Measures could include preparation time, correction rate, missed items, and whether anyone uses the output. This is a proposed next step, not an approved new program.",
+    "durationSeconds": 300,
+    "kind": "cover",
+    "type": "content",
+    "content": [],
+    "layout": "smt-work",
+    "audiences": [
+      "smt-work"
+    ],
+    "managerSection": "SMT daily work",
+    "dark": true,
+    "footer": "Proposed next step: one bounded workflow, one owner, and a review date"
   }
 ];

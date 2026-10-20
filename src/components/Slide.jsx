@@ -1,4 +1,5 @@
 import React from 'react';
+import SmtWorkSlide from './SmtWorkSlide';
 import { motion } from 'framer-motion'; // eslint-disable-line no-unused-vars
 import clsx from 'clsx';
 import CabinetSlide from './CabinetSlide';
@@ -268,6 +269,7 @@ const useMediaMatch = (query) => {
 const Slide = ({ slide, staticPreview = false }) => {
   const snapshotQuery = !staticPreview && slide?.mobileSnapshot ? (slide.mobileSnapshotMedia || MOBILE_SNAPSHOT_MEDIA) : null;
   const showSnapshot = useMediaMatch(snapshotQuery);
+  if (slide?.layout === 'smt-work') return <SmtWorkSlide slide={slide} />;
   if (!slide) return <div className="text-red-500 p-10">Slide Error: No data provided</div>;
 
   if (showSnapshot) {

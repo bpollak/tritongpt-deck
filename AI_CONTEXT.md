@@ -89,3 +89,12 @@ This repo is under `~/Documents` (iCloud Drive). Evicted "dataless" files hang a
 ## Per-audience overrides
 
 - A slide may carry `audienceOverrides: { <audience>: { ...fields } }`. `applyAudienceOverrides` in `src/data/audiences.js` merges those fields when that audience is selected (applied in `Presentation.jsx` before demo intros expand). The SMT retreat view uses it to renumber the section footer on reused Cabinet slides; other views are unchanged.
+
+## SMT recurring-work presentation
+
+- `?audience=smt-work` selects the 18-slide recurring-work talk. The original `smt` view remains available.
+- `src/data/slides.js` owns this view’s content, timing, and presenter notes; `slideManagerState.js` owns its order and audience assignment. `smtWorkSlides.js` selects the canonical view for offline exports.
+- `src/data/smtJobContexts.js` owns the 15 job-guide explanations and their slide mapping. The canonical slides carry their context links and expanded presenter notes. `SmtWorkSlide.jsx` and scoped CSS render the `smt-work` layout.
+- `npm run sync:smt-context` generates `public/smt-job-guide.html`; predev and prebuild run it before slide sync. The guide links back to the presentation and `/smt-ai-daily-work.pdf`.
+- `scripts/export-smt-work.mjs` builds a standalone offline HTML deck with embedded screenshots and notes. This optional export writes under `outputs/smt-work/` and is separate from deployment.
+- Job explanations are presentation-safe summaries, not raw job configurations or private outputs. Illustrative examples must remain labeled as illustrations.

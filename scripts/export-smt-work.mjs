@@ -1,0 +1,21 @@
+import fs from 'node:fs/promises';
+import React from 'react';
+import {renderToStaticMarkup} from 'react-dom/server';
+import {createServer} from 'vite';
+import {smtWorkSlides} from '../src/data/smtWorkSlides.js';
+const out='outputs/smt-work';await fs.mkdir(out,{recursive:true});
+const server=await createServer({server:{middlewareMode:true}});
+try{
+ const {default:Slide}=await server.ssrLoadModule('/src/components/SmtWorkSlide.jsx');
+ const css=await fs.readFile('src/components/SmtWorkSlide.css','utf8');
+ let pages='';
+ for(const [i,s] of smtWorkSlides.entries()){
+  const slide={...s,contextHref:s.contextHref ? 'SMT-Job-Context.html'+s.contextHref.slice(s.contextHref.indexOf('#')) : null};if(slide.image)slide.image='data:image/jpeg;base64,'+(await fs.readFile('public'+slide.image)).toString('base64');
+  pages+=`<section class="page${i===0?' active':''}" data-index="${i}">${renderToStaticMarkup(React.createElement(Slide,{slide}))}<div class="page-number">${i+1} / ${smtWorkSlides.length}</div></section>`;
+ }
+ const notes=JSON.stringify(smtWorkSlides.map(s=>({title:s.title,notes:s.speakerNotes}))).replaceAll('<','\\u003c');
+ const html=`<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI in my daily work | SMT Retreat</title><style>*{box-sizing:border-box}body{margin:0;background:#182b49;font-family:Arial,sans-serif}.page{display:none;width:100vw;height:100vh;position:relative}.page.active{display:block}.page-number{position:absolute;bottom:24px;right:36px;color:#c2d3e3;font-size:16px}.controls{position:fixed;bottom:14px;left:24px;display:flex;gap:10px;align-items:center}.controls button{border:1px solid #ffffff55;background:#182b49;color:#fff;padding:9px 14px;cursor:pointer;font:14px Arial}.controls span{color:#c2d3e3;font-size:12px}dialog{max-width:900px;max-height:85vh;overflow:auto;background:#fff;color:#182b49;border:0;padding:32px;font:20px/1.5 Arial}dialog h2{font-size:28px}dialog p{white-space:pre-line}dialog button{font:18px Arial;padding:8px 14px}${css}@media print{@page{size:16in 9in;margin:0}body{print-color-adjust:exact;-webkit-print-color-adjust:exact}.page,.page.active{display:block;width:16in;height:9in;break-after:page;overflow:hidden}.page:last-of-type{break-after:auto}.smt-work{height:9in}.controls,dialog{display:none!important}}</style></head><body>${pages}<nav class="controls" aria-label="Presentation controls"><button id="prev" aria-label="Previous slide">←</button><button id="next" aria-label="Next slide">→</button><button id="notes">Notes (N)</button><button id="full">Full screen (F)</button><span>Arrow keys to navigate</span></nav><dialog id="note"><h2></h2><p></p><button id="close">Close</button></dialog><script>const data=${notes};let index=0;const pages=[...document.querySelectorAll('.page')];function show(i){index=Math.max(0,Math.min(pages.length-1,i));pages.forEach((p,n)=>p.classList.toggle('active',n===index));location.hash=index+1;}function notes(){document.querySelector('#note h2').textContent=data[index].title;document.querySelector('#note p').textContent=data[index].notes;document.querySelector('#note').showModal()}document.querySelector('#prev').onclick=()=>show(index-1);document.querySelector('#next').onclick=()=>show(index+1);document.querySelector('#notes').onclick=notes;document.querySelector('#close').onclick=()=>document.querySelector('#note').close();function full(){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()}document.querySelector('#full').onclick=full;document.addEventListener('keydown',e=>{if(document.querySelector('#note').open)return;if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(index+1)}if(['ArrowLeft','PageUp'].includes(e.key))show(index-1);if(e.key==='Home')show(0);if(e.key==='End')show(pages.length-1);if(e.key.toLowerCase()==='n')notes();if(e.key.toLowerCase()==='f')full()});window.show=show;show((Number(location.hash.slice(1))||1)-1);</script></body></html>`;
+ await fs.writeFile(out+'/SMT-AI-Daily-Work.html',html);
+ await fs.writeFile(out+'/slides.json',JSON.stringify(smtWorkSlides,null,2));
+ console.log(`Offline HTML written: ${smtWorkSlides.length} slides with embedded images and presenter notes`);
+}finally{await server.close()}

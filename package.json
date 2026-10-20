@@ -6,9 +6,9 @@
   "scripts": {
     "sync:slides": "node scripts/sync-slide-artifacts.mjs",
     "check:deck": "npm run sync:slides",
-    "predev": "npm run sync:slides",
+    "predev": "npm run sync:smt-context && npm run sync:slides",
     "dev": "vite",
-    "prebuild": "npm run sync:slides",
+    "prebuild": "npm run sync:smt-context && npm run sync:slides",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
@@ -17,7 +17,8 @@
     "test": "node --test tests/*.test.mjs",
     "test:browser": "playwright test",
     "thumbnails": "node scripts/generate-slide-thumbnails.mjs",
-    "check:thumbnails": "node scripts/check-slide-thumbnails.mjs"
+    "check:thumbnails": "node scripts/check-slide-thumbnails.mjs",
+    "sync:smt-context": "node scripts/export-smt-context.mjs"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.18",
