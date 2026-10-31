@@ -142,33 +142,37 @@ The optional `cabinet-berkeley-quote` placeholder is removed until approved. Ori
 
 Per-person exercise prompts live outside this public repository.
 
-## sysadmin
+## tech-community
 
-**Status:** UC San Diego system administrator community (distributed IT), requested October 31, 2026. Built from the Cabinet framework and the Nov 3 Staff Town Hall tools content.
+**Status:** UC San Diego Tech Community (technical staff outside central IT: academic IT, libraries, research IT, and departmental IT), requested October 31, 2026. Demonstration- and diagram-led; replaces the short-lived `sysadmin` draft.
 
-**Communication job:** Show distributed IT staff what is supported, how the Harness differs from chat, how it stays safe on the machines they manage, where it helps a sysadmin, and how to deploy and support it.
+**Communication job:** Show distributed technical staff what agentic AI does, how the TritonAI Harness stays safe, what people across campus build with it, and the compute and model services underneath: the TritonAI Gateway and PARASOL (formerly DSMLP).
 
-**Canonical count:** 17
+**Canonical count:** 21
 
-**Sequence:** about 18 minutes plus Q&A, in four parts (Why now, The Harness, Put it to work, Get started). Reused Cabinet slides carry `audienceOverrides.sysadmin` for their section footer and, where the Cabinet framing differs, their speaker notes.
+**Sequence:** about 17 minutes plus Q&A, in four parts (The shift, The Harness, What people build, Compute and models). Every slide is owned by this view: demo and diagram slides are copies of Cabinet, citizen, and technical slides with their own slugs, so the order is independent of other views. New diagrams (`slide.figure`) are inline SVGs in `src/assets/figures/`. PARASOL figures match parasol.ucsd.edu; the PARASOL press release is embargoed until November 3, 2026.
 
-1. `sysadmin-title`
-2. `sysadmin-why-now`
-3. `sysadmin-supported-tools`
-4. `sysadmin-tritongpt-to-tritonai`
-5. `cabinet-chat-and-harness`
-6. `sysadmin-harness-capabilities`
-7. `cabinet-harness-in-action`
-8. `cabinet-governance`
-9. `sysadmin-admin-guardrails`
-10. `sysadmin-use-cases`
-11. `cabinet-harness-11d-campus-app-hosting-intake`
-12. `cabinet-spa2-demo`
-13. `cabinet-sovereign-ai`
-14. `sysadmin-deploy-support`
-15. `sysadmin-learn-connect`
-16. `sysadmin-asks`
-17. `sysadmin-thank-you`
+1. `techcom-title`
+2. `techcom-convergence`
+3. `techcom-tools`
+4. `techcom-chat-and-harness`
+5. `techcom-harness-at-work`
+6. `techcom-four-jobs`
+7. `techcom-guardrails`
+8. `techcom-safe-path`
+9. `techcom-mobile-demo`
+10. `techcom-research-alignment`
+11. `techcom-ai-tutor`
+12. `techcom-pdf-remediator`
+13. `techcom-spa2`
+14. `techcom-hosting`
+15. `techcom-gateway`
+16. `techcom-api-and-recharge`
+17. `techcom-parasol-transition`
+18. `techcom-parasol-reservations`
+19. `techcom-compute-and-models`
+20. `techcom-get-started`
+21. `techcom-thank-you`
 
 ## citizen
 

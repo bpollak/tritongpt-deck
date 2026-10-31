@@ -1,0 +1,70 @@
+<svg viewBox="0 0 1600 760" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" font-family="Roboto, Arial, sans-serif">
+  <defs>
+    <linearGradient id="pt-gold" x1="0" x2="1">
+      <stop offset="0" stop-color="#FFCD00"/>
+      <stop offset="1" stop-color="#FC8900"/>
+    </linearGradient>
+  </defs>
+
+  <!-- DSMLP -->
+  <rect x="40" y="40" width="390" height="400" rx="20" fill="#ffffff" fill-opacity=".04" stroke="#9fb3c8" stroke-opacity=".5" stroke-dasharray="8 6"/>
+  <text x="70" y="96" fill="#9fb3c8" font-size="18" letter-spacing="2">BEFORE</text>
+  <text x="70" y="156" fill="#c4d2df" font-family="Teko, sans-serif" font-size="66">DSMLP</text>
+  <text x="70" y="196" fill="#c4d2df" font-size="19">Data Science &amp; Machine</text>
+  <text x="70" y="222" fill="#c4d2df" font-size="19">Learning Platform</text>
+  <text x="70" y="290" fill="#9fb3c8" font-size="18">Courses, student projects,</text>
+  <text x="70" y="316" fill="#9fb3c8" font-size="18">and the Research Cluster</text>
+  <text x="70" y="384" fill="#9fb3c8" font-size="18">Demand outpacing capacity;</text>
+  <text x="70" y="410" fill="#9fb3c8" font-size="18">some students paid for cloud GPUs</text>
+
+  <!-- arrow 1 -->
+  <path d="M 446 240 L 500 240" stroke="#FFCD00" stroke-width="4"/>
+  <polygon points="518,240 496,228 496,252" fill="#FFCD00"/>
+
+  <!-- stays the same -->
+  <text x="540" y="78" fill="#00C6D7" font-family="Teko, sans-serif" font-size="40">STAYS THE SAME</text>
+  <g>
+    <rect x="540" y="100" width="500" height="98" rx="14" fill="#ffffff" fill-opacity=".07"/>
+    <circle cx="582" cy="149" r="18" fill="#1f6f4a"/><text x="582" y="157" fill="#e8fff2" font-size="20" font-weight="700" text-anchor="middle">✓</text>
+    <text x="616" y="141" fill="#ffffff" font-size="24" font-weight="700">Same sign-in</text>
+    <text x="616" y="172" fill="#c4d2df" font-size="19">UC San Diego account at datahub.ucsd.edu</text>
+
+    <rect x="540" y="214" width="500" height="98" rx="14" fill="#ffffff" fill-opacity=".07"/>
+    <circle cx="582" cy="263" r="18" fill="#1f6f4a"/><text x="582" y="271" fill="#e8fff2" font-size="20" font-weight="700" text-anchor="middle">✓</text>
+    <text x="616" y="255" fill="#ffffff" font-size="24" font-weight="700">Same files</text>
+    <text x="616" y="286" fill="#c4d2df" font-size="19">Home directories, course space, datasets</text>
+
+    <rect x="540" y="328" width="500" height="98" rx="14" fill="#ffffff" fill-opacity=".07"/>
+    <circle cx="582" cy="377" r="18" fill="#1f6f4a"/><text x="582" y="385" fill="#e8fff2" font-size="20" font-weight="700" text-anchor="middle">✓</text>
+    <text x="616" y="369" fill="#ffffff" font-size="24" font-weight="700">Same commands</text>
+    <text x="616" y="400" fill="#c4d2df" font-size="19">dsmlp-login.ucsd.edu and launch.sh</text>
+  </g>
+
+  <!-- arrow 2 -->
+  <path d="M 1056 240 L 1110 240" stroke="#FFCD00" stroke-width="4"/>
+  <polygon points="1128,240 1106,228 1106,252" fill="#FFCD00"/>
+
+  <!-- PARASOL -->
+  <rect x="1150" y="40" width="410" height="400" rx="20" fill="#FFCD00" fill-opacity=".1" stroke="#FFCD00" stroke-width="2.5"/>
+  <text x="1180" y="96" fill="#FFCD00" font-size="18" letter-spacing="2">NOW</text>
+  <text x="1180" y="156" fill="#FFCD00" font-family="Teko, sans-serif" font-size="66">PARASOL</text>
+  <text x="1180" y="194" fill="#f5f0e6" font-size="17">Platform for Applied Research, Analytics,</text>
+  <text x="1180" y="218" fill="#f5f0e6" font-size="17">Science and Open Learning</text>
+  <g font-size="19" fill="#ffffff">
+    <text x="1180" y="276">＋ Reservations matched to the</text>
+    <text x="1208" y="300" fill="#c4d2df">academic calendar</text>
+    <text x="1180" y="342">＋ Open Learning workspaces</text>
+    <text x="1208" y="366" fill="#c4d2df">from Winter 2027</text>
+    <text x="1180" y="408">＋ One site: parasol.ucsd.edu</text>
+  </g>
+
+  <!-- capacity -->
+  <text x="40" y="520" fill="#00C6D7" font-family="Teko, sans-serif" font-size="40">GPU CAPACITY</text>
+  <text x="40" y="582" fill="#c4d2df" font-size="20">Today</text>
+  <rect x="200" y="558" width="430" height="36" rx="8" fill="#00629B"/>
+  <text x="646" y="584" fill="#c4d2df" font-size="20">1×</text>
+  <text x="40" y="652" fill="#ffffff" font-size="20" font-weight="700">Winter 2027</text>
+  <rect x="200" y="628" width="1210" height="36" rx="8" fill="url(#pt-gold)"/>
+  <text x="1426" y="654" fill="#FFCD00" font-size="22" font-weight="700">nearly 3×</text>
+  <text x="200" y="712" fill="#f5f0e6" font-size="21">＋4 GPU servers · 32 NVIDIA RTX PRO 6000 Blackwell GPUs · funded by the Halıcıoğlu School of Data Science and Computing</text>
+</svg>

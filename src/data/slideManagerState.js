@@ -18,19 +18,12 @@ export const slideManagerState = {
     "cabinet-divider-harness",
     "smt-title",
     "smt-since-may",
-    "sysadmin-title",
-    "sysadmin-why-now",
-    "sysadmin-supported-tools",
-    "sysadmin-tritongpt-to-tritonai",
     "cabinet-chat-and-harness",
     "cabinet-harness-capabilities",
-    "sysadmin-harness-capabilities",
     "cabinet-harness-in-action",
     "cabinet-harness-training-demo",
     "cabinet-harness-automation-use-cases",
     "cabinet-governance",
-    "sysadmin-admin-guardrails",
-    "sysadmin-use-cases",
     "cabinet-harness-11d-campus-app-hosting-intake",
     "cabinet-divider-outcomes",
     "smt-divider-mine",
@@ -52,10 +45,6 @@ export const slideManagerState = {
     "cabinet-why-sovereign",
     "cabinet-scale",
     "cabinet-sovereign-ai",
-    "sysadmin-deploy-support",
-    "sysadmin-learn-connect",
-    "sysadmin-asks",
-    "sysadmin-thank-you",
     "cabinet-harness-discovery-demo",
     "smt-divider-try",
     "smt-exercise-howto",
@@ -179,7 +168,28 @@ export const slideManagerState = {
     "smt-work-operations",
     "smt-work-job-spec",
     "smt-work-try",
-    "smt-work-discussion"
+    "smt-work-discussion",
+    "techcom-title",
+    "techcom-convergence",
+    "techcom-tools",
+    "techcom-chat-and-harness",
+    "techcom-harness-at-work",
+    "techcom-four-jobs",
+    "techcom-guardrails",
+    "techcom-safe-path",
+    "techcom-mobile-demo",
+    "techcom-research-alignment",
+    "techcom-ai-tutor",
+    "techcom-pdf-remediator",
+    "techcom-spa2",
+    "techcom-hosting",
+    "techcom-gateway",
+    "techcom-api-and-recharge",
+    "techcom-parasol-transition",
+    "techcom-parasol-reservations",
+    "techcom-compute-and-models",
+    "techcom-get-started",
+    "techcom-thank-you"
   ],
   "removed": [
     "where-will-ai-place-us-in-2031",
@@ -221,8 +231,7 @@ export const slideManagerState = {
     ],
     "cabinet-harness-in-action": [
       "cabinet",
-      "smt",
-      "sysadmin"
+      "smt"
     ],
     "cabinet-verticals-roadmap": [
       "cabinet-backup"
@@ -232,8 +241,7 @@ export const slideManagerState = {
     ],
     "cabinet-harness-11d-campus-app-hosting-intake": [
       "cabinet",
-      "smt",
-      "sysadmin"
+      "smt"
     ],
     "cabinet-harness-automation-use-cases": [
       "cabinet-backup"
@@ -795,8 +803,7 @@ export const slideManagerState = {
     ],
     "cabinet-governance": [
       "cabinet",
-      "smt",
-      "sysadmin"
+      "smt"
     ],
     "cabinet-training-discovery-demo": [
       "cabinet-backup"
@@ -808,8 +815,7 @@ export const slideManagerState = {
       "cabinet-backup"
     ],
     "cabinet-sovereign-ai": [
-      "cabinet",
-      "sysadmin"
+      "cabinet"
     ],
     "cabinet-scale": [
       "cabinet"
@@ -822,8 +828,7 @@ export const slideManagerState = {
     ],
     "cabinet-chat-and-harness": [
       "cabinet",
-      "smt",
-      "sysadmin"
+      "smt"
     ],
     "cabinet-subagents": [
       "cabinet"
@@ -860,8 +865,7 @@ export const slideManagerState = {
     ],
     "cabinet-spa2-demo": [
       "cabinet",
-      "smt",
-      "sysadmin"
+      "smt"
     ],
     "cabinet-transcript-matching-demo": [
       "cabinet"
@@ -960,38 +964,68 @@ export const slideManagerState = {
     "smt-work-discussion": [
       "smt-work"
     ],
-    "sysadmin-title": [
-      "sysadmin"
+    "techcom-title": [
+      "tech-community"
     ],
-    "sysadmin-why-now": [
-      "sysadmin"
+    "techcom-convergence": [
+      "tech-community"
     ],
-    "sysadmin-supported-tools": [
-      "sysadmin"
+    "techcom-tools": [
+      "tech-community"
     ],
-    "sysadmin-tritongpt-to-tritonai": [
-      "sysadmin"
+    "techcom-chat-and-harness": [
+      "tech-community"
     ],
-    "sysadmin-harness-capabilities": [
-      "sysadmin"
+    "techcom-harness-at-work": [
+      "tech-community"
     ],
-    "sysadmin-admin-guardrails": [
-      "sysadmin"
+    "techcom-four-jobs": [
+      "tech-community"
     ],
-    "sysadmin-use-cases": [
-      "sysadmin"
+    "techcom-guardrails": [
+      "tech-community"
     ],
-    "sysadmin-deploy-support": [
-      "sysadmin"
+    "techcom-safe-path": [
+      "tech-community"
     ],
-    "sysadmin-learn-connect": [
-      "sysadmin"
+    "techcom-mobile-demo": [
+      "tech-community"
     ],
-    "sysadmin-asks": [
-      "sysadmin"
+    "techcom-research-alignment": [
+      "tech-community"
     ],
-    "sysadmin-thank-you": [
-      "sysadmin"
+    "techcom-ai-tutor": [
+      "tech-community"
+    ],
+    "techcom-pdf-remediator": [
+      "tech-community"
+    ],
+    "techcom-spa2": [
+      "tech-community"
+    ],
+    "techcom-hosting": [
+      "tech-community"
+    ],
+    "techcom-gateway": [
+      "tech-community"
+    ],
+    "techcom-parasol-transition": [
+      "tech-community"
+    ],
+    "techcom-parasol-reservations": [
+      "tech-community"
+    ],
+    "techcom-compute-and-models": [
+      "tech-community"
+    ],
+    "techcom-get-started": [
+      "tech-community"
+    ],
+    "techcom-thank-you": [
+      "tech-community"
+    ],
+    "techcom-api-and-recharge": [
+      "tech-community"
     ]
   }
 };

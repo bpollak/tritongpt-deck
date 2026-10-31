@@ -1,5 +1,6 @@
 import './CabinetFrameworkSlide.css';
 import CabinetCanvas from './CabinetCanvas';
+import CabinetFigure from './CabinetFigure';
 
 // Authoring placeholders use no old footage. Once a recording is approved, set
 // type to "video" and add videoSrc/poster/captionsSrc to use the existing player.
@@ -49,6 +50,11 @@ export default function CabinetFrameworkSlide({ slide, staticPreview = false }) 
               ))}
             </ol>
           </div>
+        </div>
+      ) : slide.figure ? (
+        <div className="cabinet-figure">
+          {slide.subtitle && <p className="cabinet-framework-takeaway">{slide.subtitle}</p>}
+          <CabinetFigure figure={slide.figure} title={slide.title} />
         </div>
       ) : slide.impactTable ? (
         <div className="cabinet-impact">

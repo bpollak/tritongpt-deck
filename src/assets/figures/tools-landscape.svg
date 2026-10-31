@@ -1,0 +1,95 @@
+<svg viewBox="0 0 1600 760" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" font-family="Roboto, Arial, sans-serif">
+  <defs>
+    <linearGradient id="tl-arrow" gradientUnits="userSpaceOnUse" x1="40" x2="1540" y1="34" y2="34">
+      <stop offset="0" stop-color="#00C6D7" stop-opacity=".25"/>
+      <stop offset="1" stop-color="#FFCD00"/>
+    </linearGradient>
+  </defs>
+
+  <!-- autonomy arrow -->
+  <line x1="40" y1="34" x2="1540" y2="34" stroke="url(#tl-arrow)" stroke-width="4"/>
+  <polygon points="1560,34 1536,22 1536,46" fill="#FFCD00"/>
+  <text x="40" y="70" fill="#9fb3c8" font-size="18" letter-spacing="2">ANSWERS</text>
+  <text x="1560" y="70" fill="#FFCD00" font-size="18" letter-spacing="2" text-anchor="end">ACTIONS · MORE AUTONOMY, MORE SUPERVISION</text>
+
+  <!-- lane headers -->
+  <g font-family="Teko, sans-serif">
+    <text x="40" y="132" fill="#00C6D7" font-size="46">CHAT</text>
+    <text x="570" y="132" fill="#00C6D7" font-size="46">IN YOUR APPS</text>
+    <text x="1100" y="132" fill="#FFCD00" font-size="46">AGENTS</text>
+  </g>
+  <text x="40" y="162" fill="#c4d2df" font-size="20">Ask, draft, summarize</text>
+  <text x="570" y="162" fill="#c4d2df" font-size="20">AI inside tools people already use</text>
+  <text x="1100" y="162" fill="#c4d2df" font-size="20">Hand it the work; it works through the steps</text>
+
+  <!-- lane 1 -->
+  <g>
+    <rect x="40" y="190" width="460" height="96" rx="14" fill="#ffffff" fill-opacity=".08" stroke="#00C6D7" stroke-opacity=".6"/>
+    <text x="64" y="232" fill="#ffffff" font-size="27" font-weight="700">TritonGPT</text>
+    <text x="64" y="264" fill="#c4d2df" font-size="18">Campus AI platform in the browser</text>
+    <rect x="384" y="210" width="96" height="32" rx="16" fill="#1f6f4a"/>
+    <text x="432" y="232" fill="#e8fff2" font-size="17" font-weight="700" text-anchor="middle">P1–P3</text>
+
+    <rect x="40" y="306" width="460" height="96" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#ffffff" stroke-opacity=".18"/>
+    <text x="64" y="348" fill="#ffffff" font-size="25" font-weight="700">Copilot with Data Protection</text>
+    <text x="64" y="380" fill="#c4d2df" font-size="18">Commercial data protection · campus login</text>
+
+    <rect x="40" y="422" width="460" height="96" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#ffffff" stroke-opacity=".18"/>
+    <text x="64" y="464" fill="#ffffff" font-size="25" font-weight="700">Gemini &amp; Gemini Notebook</text>
+    <text x="64" y="496" fill="#c4d2df" font-size="18">Research grounded in your sources</text>
+  </g>
+
+  <!-- lane 2 -->
+  <g>
+    <rect x="570" y="190" width="460" height="96" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#ffffff" stroke-opacity=".18"/>
+    <text x="594" y="232" fill="#ffffff" font-size="25" font-weight="700">Copilot for Microsoft 365</text>
+    <text x="594" y="264" fill="#c4d2df" font-size="18">Word, Excel, Outlook, Teams · license</text>
+
+    <rect x="570" y="306" width="460" height="96" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#ffffff" stroke-opacity=".18"/>
+    <text x="594" y="348" fill="#ffffff" font-size="25" font-weight="700">Gemini in Google Workspace</text>
+    <text x="594" y="380" fill="#c4d2df" font-size="18">Docs, Sheets, Drive · campus Google login</text>
+
+    <rect x="570" y="422" width="460" height="96" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#ffffff" stroke-opacity=".18"/>
+    <text x="594" y="464" fill="#ffffff" font-size="25" font-weight="700">Zoom AI Companion</text>
+    <text x="594" y="496" fill="#c4d2df" font-size="18">Summaries · everyone notified, consent first</text>
+  </g>
+
+  <!-- lane 3 -->
+  <g>
+    <rect x="1100" y="190" width="460" height="96" rx="14" fill="#FFCD00" fill-opacity=".14" stroke="#FFCD00" stroke-width="2"/>
+    <text x="1124" y="232" fill="#ffffff" font-size="27" font-weight="700">TritonAI Harness</text>
+    <text x="1124" y="264" fill="#c4d2df" font-size="18">Primary agent workspace · Mac, Windows</text>
+    <rect x="1444" y="210" width="96" height="32" rx="16" fill="#1f6f4a"/>
+    <text x="1492" y="232" fill="#e8fff2" font-size="17" font-weight="700" text-anchor="middle">P1–P3</text>
+
+    <rect x="1100" y="306" width="460" height="96" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#ffffff" stroke-opacity=".18"/>
+    <text x="1124" y="348" fill="#ffffff" font-size="25" font-weight="700">Claude Code</text>
+    <text x="1124" y="380" fill="#c4d2df" font-size="18">Coding agent in the terminal · supported</text>
+
+    <rect x="1100" y="422" width="460" height="96" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#ffffff" stroke-opacity=".18"/>
+    <text x="1124" y="464" fill="#ffffff" font-size="25" font-weight="700">Codex desktop app</text>
+    <text x="1124" y="496" fill="#c4d2df" font-size="18">Coding agent on the desktop · supported</text>
+  </g>
+
+  <!-- gateway connectors -->
+  <g stroke="#00C6D7" stroke-width="2" stroke-dasharray="6 6" fill="none" opacity=".8">
+    <path d="M 270 518 L 270 566"/>
+    <path d="M 1330 518 L 1330 566"/>
+  </g>
+
+  <!-- gateway bar -->
+  <rect x="40" y="566" width="1520" height="86" rx="16" fill="#00629B" fill-opacity=".55" stroke="#00C6D7"/>
+  <text x="72" y="621" fill="#FFCD00" font-family="Teko, sans-serif" font-size="40">TRITONAI GATEWAY</text>
+  <text x="372" y="606" fill="#ffffff" font-size="21" font-weight="700">One key. Campus-hosted open-weight models plus approved commercial APIs.</text>
+  <text x="372" y="634" fill="#c4d2df" font-size="18">Serves TritonGPT, the Harness, Claude Code, Codex, and other compatible clients</text>
+
+  <!-- rules -->
+  <g font-size="20" fill="#f5f0e6">
+    <circle cx="56" cy="712" r="12" fill="#1f6f4a"/><text x="56" y="719" fill="#e8fff2" font-size="16" font-weight="700" text-anchor="middle">✓</text>
+    <text x="80" y="719">Sign in with your UC San Diego account</text>
+    <circle cx="616" cy="712" r="12" fill="#a33b2b"/><text x="616" y="718" fill="#ffffff" font-size="15" font-weight="700" text-anchor="middle">✕</text>
+    <text x="640" y="719">No personal AI accounts · never P4 data</text>
+    <circle cx="1146" cy="712" r="12" fill="#00629B"/><text x="1146" y="718" fill="#ffffff" font-size="15" font-weight="700" text-anchor="middle">i</text>
+    <text x="1170" y="719">Data level per tool: tritonai.ucsd.edu/tools</text>
+  </g>
+</svg>

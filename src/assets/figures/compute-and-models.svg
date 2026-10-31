@@ -1,0 +1,67 @@
+<svg viewBox="0 0 1600 760" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" font-family="Roboto, Arial, sans-serif">
+  <!-- column headers -->
+  <text x="400" y="44" fill="#00C6D7" font-family="Teko, sans-serif" font-size="40" text-anchor="middle">RUN YOUR OWN WORK</text>
+  <text x="1200" y="44" fill="#FFCD00" font-family="Teko, sans-serif" font-size="40" text-anchor="middle">CALL A MODEL</text>
+
+  <!-- doors: compute -->
+  <g>
+    <rect x="60" y="76" width="320" height="96" rx="14" fill="#ffffff" fill-opacity=".07"/>
+    <text x="84" y="116" fill="#ffffff" font-size="24" font-weight="700">Datahub</text>
+    <text x="84" y="148" fill="#c4d2df" font-size="18">Jupyter and RStudio in a browser</text>
+    <rect x="420" y="76" width="320" height="96" rx="14" fill="#ffffff" fill-opacity=".07"/>
+    <text x="444" y="116" fill="#ffffff" font-size="24" font-weight="700">Command line</text>
+    <text x="444" y="148" fill="#c4d2df" font-size="18">SSH, launch.sh, batch, VS Code</text>
+  </g>
+  <!-- doors: models -->
+  <g>
+    <rect x="860" y="76" width="220" height="96" rx="14" fill="#ffffff" fill-opacity=".07"/>
+    <text x="882" y="116" fill="#ffffff" font-size="22" font-weight="700">TritonGPT</text>
+    <text x="882" y="148" fill="#c4d2df" font-size="17">Chat in a browser</text>
+    <rect x="1100" y="76" width="220" height="96" rx="14" fill="#FFCD00" fill-opacity=".14" stroke="#FFCD00"/>
+    <text x="1122" y="116" fill="#ffffff" font-size="22" font-weight="700">Agents</text>
+    <text x="1122" y="148" fill="#c4d2df" font-size="17">Harness and others</text>
+    <rect x="1340" y="76" width="220" height="96" rx="14" fill="#ffffff" fill-opacity=".07"/>
+    <text x="1362" y="116" fill="#ffffff" font-size="22" font-weight="700">Your apps</text>
+    <text x="1362" y="148" fill="#c4d2df" font-size="17">Department apps, APIs</text>
+  </g>
+
+  <!-- connectors -->
+  <g stroke-width="3" fill="none">
+    <path d="M 220 172 L 220 226" stroke="#00C6D7"/>
+    <path d="M 580 172 L 580 226" stroke="#00C6D7"/>
+    <path d="M 970 172 L 970 226" stroke="#FFCD00"/>
+    <path d="M 1210 172 L 1210 226" stroke="#FFCD00"/>
+    <path d="M 1450 172 L 1450 226" stroke="#FFCD00"/>
+  </g>
+
+  <!-- PARASOL -->
+  <rect x="40" y="226" width="720" height="300" rx="22" fill="#00629B" fill-opacity=".45" stroke="#00C6D7" stroke-width="2"/>
+  <text x="76" y="296" fill="#ffffff" font-family="Teko, sans-serif" font-size="60">PARASOL</text>
+  <text x="76" y="330" fill="#c4d2df" font-size="19">Shared compute, formerly DSMLP</text>
+  <g font-size="21" fill="#ffffff">
+    <text x="76" y="384">Containers on Kubernetes · CPU and GPU</text>
+    <text x="76" y="418">Storage and shared datasets</text>
+    <text x="76" y="452">Reservations and Service Units</text>
+  </g>
+  <text x="76" y="500" fill="#00C6D7" font-size="19">For courses, student projects, and approved research</text>
+
+  <!-- Gateway -->
+  <rect x="840" y="226" width="720" height="300" rx="22" fill="#FFCD00" fill-opacity=".1" stroke="#FFCD00" stroke-width="2"/>
+  <text x="876" y="296" fill="#FFCD00" font-family="Teko, sans-serif" font-size="60">TRITONAI GATEWAY</text>
+  <text x="876" y="330" fill="#c4d2df" font-size="19">Inference as a service, one key</text>
+  <g font-size="21" fill="#ffffff">
+    <text x="876" y="384">Open-weight models on campus GPUs at SDSC</text>
+    <text x="876" y="418">Approved commercial APIs for frontier needs</text>
+    <text x="876" y="452">Zero data retention on campus-hosted routes</text>
+  </g>
+  <text x="876" y="500" fill="#FFCD00" font-size="19">527.0B tokens served, January–September 2026</text>
+
+  <!-- bridge -->
+  <path d="M 760 376 L 840 376" stroke="#ffffff" stroke-opacity=".5" stroke-width="3" stroke-dasharray="6 6"/>
+
+  <!-- bottom notes -->
+  <rect x="40" y="566" width="1520" height="150" rx="20" fill="#ffffff" fill-opacity=".05"/>
+  <text x="76" y="612" fill="#FFCD00" font-family="Teko, sans-serif" font-size="34">RELATED, NOT THE SAME SERVICE</text>
+  <text x="76" y="652" fill="#f5f0e6" font-size="21">PARASOL runs the compute; selected TritonAI workloads can run there too. Model requests go through the gateway.</text>
+  <text x="76" y="688" fill="#c4d2df" font-size="19">Both run on UC San Diego infrastructure · parasol.ucsd.edu · tritonai.ucsd.edu</text>
+</svg>
