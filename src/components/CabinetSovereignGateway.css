@@ -40,6 +40,9 @@
 .cabinet-gw-campus--onboarding span {background:transparent;color:#ffcd00;border:1.5px solid #ffcd00;}
 .cabinet-gw-campus--next {background:transparent;border-style:dashed;border-left:5px dashed #8aa3ba;}
 .cabinet-gw-campus--next span {background:transparent;color:#b5c6d5;border:1.5px dashed #8aa3ba;}
+.cabinet-gw--dense .cabinet-gw-campus {padding:8px 14px 8px 16px;}
+.cabinet-gw--dense .cabinet-gw-campus h2 {font-size:20px;margin-bottom:2px;}
+.cabinet-gw--dense .cabinet-gw-campus p {font-size:14px;}
 
 @media (prefers-reduced-motion: reduce) {.cabinet-gw-flow {animation:none;}}
 

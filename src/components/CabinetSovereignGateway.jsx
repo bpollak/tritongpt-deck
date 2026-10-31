@@ -16,9 +16,12 @@ const curve = (x1, y1, x2, y2) => {
 export default function CabinetSovereignGateway({ slide }) {
   const g = slide.gatewayMap;
   const peak = Math.max(...gatewayMonthly.map(m => m.selfHostedTokens + m.cloudTokens));
-  const campusY = (i) => CAMPUS_TOP + i * (CAMPUS_H + CAMPUS_GAP) + CAMPUS_H / 2;
+  // More than four campuses switch to a compact stack so the list still ends above the footer.
+  const dense = g.campuses.length > 4;
+  const campusH = dense ? 72 : CAMPUS_H, campusGap = dense ? 14 : CAMPUS_GAP;
+  const campusY = (i) => CAMPUS_TOP + i * (campusH + campusGap) + campusH / 2;
   return <CabinetCanvas className="cabinet-gw-canvas" section={slide.section} ask={slide.ask}>
-    <section className="cabinet-gw" aria-label={slide.title}>
+    <section className={`cabinet-gw${dense ? ' cabinet-gw--dense' : ''}`} aria-label={slide.title}>
       <h1>{slide.title}</h1>
       <p className="cabinet-gw-lead">{slide.subtitle}</p>
 
@@ -54,7 +57,7 @@ export default function CabinetSovereignGateway({ slide }) {
 
       <div className="cabinet-gw-col-label cabinet-gw-col-label--campuses">{g.campusesLabel}</div>
       {g.campuses.map((c, i) => <div key={c.name} className={`cabinet-gw-campus cabinet-gw-campus--${c.tone}`}
-        style={{ top: CAMPUS_TOP + i * (CAMPUS_H + CAMPUS_GAP), height: CAMPUS_H }}>
+        style={{ top: CAMPUS_TOP + i * (campusH + campusGap), height: campusH }}>
         <div><h2>{c.name}</h2><p>{c.text}</p></div>
         <span>{c.status}</span>
       </div>)}

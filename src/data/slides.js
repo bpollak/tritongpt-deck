@@ -11321,7 +11321,7 @@ export const slides = [
     "type": "content",
     "layout": "cabinet-sovereign-gateway",
     "title": "Sovereign inference as a service",
-    "subtitle": "One campus-run AI gateway: open-weight models on campus GPUs plus approved commercial APIs, now serving UC campuses beyond San Diego.",
+    "subtitle": "One campus-run AI gateway: open-weight models on campus GPUs plus approved commercial APIs, now reaching campuses beyond San Diego.",
     "content": [
       {
         "heading": "Campus control",
@@ -11333,7 +11333,7 @@ export const slides = [
       },
       {
         "heading": "UC-wide opportunity",
-        "text": "Berkeley researchers already use the gateway. Explore expansion with campus support and clear cost attribution."
+        "text": "Berkeley researchers already use the gateway; Merced is testing, and UCLA and Virginia Tech have been offered access."
       }
     ],
     "audiences": [
@@ -11341,7 +11341,7 @@ export const slides = [
     ],
     "managerSection": "Tech Community",
     "durationSeconds": 45,
-    "speakerNotes": "45 seconds. Inference as a service. One campus-run gateway: open-weight models on campus-managed GPUs at SDSC plus approved commercial APIs, behind one key. January through September 2026 it handled 527.0 billion tokens and 157.0 million requests, 90.6 percent on self-hosted and internal routes. It already serves UC Berkeley researchers, and UC Merced's Scout runs on TritonAI. This is what the Harness runs on, and your departments can call the same gateway from their own apps. Now, what runs on top of it, starting with the solutions IT Services builds for whole campus processes.",
+    "speakerNotes": "45 seconds. Inference as a service. One campus-run gateway: open-weight models on campus-managed GPUs at SDSC plus approved commercial APIs, behind one key. January through September 2026 it handled 527.0 billion tokens and 157.0 million requests, 90.6 percent on self-hosted and internal routes. It already serves UC Berkeley researchers, and Berkeley wants to expand its use. UC Merced's Scout runs on TritonAI, and Merced now has gateway keys for testing. UCLA and Virginia Tech have been offered access, with keys ready; neither has onboarded yet, so say 'offered,' not 'using.' This is what the Harness runs on, and your departments can call the same gateway from their own apps. Now, what runs on top of it, starting with the solutions IT Services builds for whole campus processes.",
     "section": {
       "part": 1,
       "total": 5,
@@ -11371,26 +11371,32 @@ export const slides = [
       "campuses": [
         {
           "name": "UC San Diego",
-          "text": "TritonGPT, the Harness, vertical solutions, campus apps",
+          "text": "TritonGPT, the Harness, campus apps",
           "status": "Live",
           "tone": "live"
         },
         {
           "name": "UC Berkeley",
-          "text": "Researchers using the gateway with their own tools",
+          "text": "Researchers on the gateway; expansion in talks",
           "status": "Live",
           "tone": "live"
         },
         {
           "name": "UC Merced",
-          "text": "Scout runs on TritonAI; gateway onboarding now",
-          "status": "Onboarding",
+          "text": "Scout runs on TritonAI; gateway keys issued",
+          "status": "Testing",
           "tone": "onboarding"
         },
         {
-          "name": "More UC campuses",
-          "text": "Inference as a shared UC service, with clear cost attribution",
-          "status": "Next",
+          "name": "UCLA",
+          "text": "Gateway access offered; keys ready",
+          "status": "Invited",
+          "tone": "next"
+        },
+        {
+          "name": "Virginia Tech",
+          "text": "Offered a pilot of inference with the Harness",
+          "status": "Invited",
           "tone": "next"
         }
       ]
@@ -11481,7 +11487,7 @@ export const slides = [
     "content": [],
     "figure": {
       "id": "api-and-recharge",
-      "alt": "Campus builders connect through API clients (TritonAI Harness, Claude Code and Codex, Hermes and OpenCode) to the shared TritonAI LLM Gateway endpoint, which routes each approved key to enterprise cloud or UC-hosted models with capabilities that vary by model. Recharge: campus work on UC-hosted models has no recharge with monthly caps; cloud models bill a department chartstring from the first token; grant research charges the grant; other UC campuses use an intercampus recharge agreement."
+      "alt": "Campus builders connect through API clients (TritonAI Harness, Claude Code and Codex, Hermes and OpenCode) to the shared TritonAI LLM Gateway endpoint, which routes each approved key to UC-hosted models (GLM 5.3 and Flash, Muse Glimmer 30B, Qwen3 Embedding 4B, Cohere Transcribe, OpenAI Privacy Filter, and H2O Lightning 4B, a classifier in testing) or enterprise cloud models (Claude 5.5, GPT 6 series, Gemini 4 Argon, Gemma 4 31B, Kimi K2.6), with capabilities that vary by model. Recharge: campus work on UC-hosted models has no recharge with monthly caps; cloud models bill a department chartstring from the first token; grant research charges the grant; other UC campuses use an intercampus recharge agreement."
     },
     "audiences": [
       "tech-community"
@@ -11493,7 +11499,7 @@ export const slides = [
       "label": "The foundation"
     },
     "durationSeconds": 60,
-        "speakerNotes": "One minute. This is the API offering, the same diagram as the Build with TritonAI page. Whoever the builder is (department staff, a research lab, an analyst, a faculty team), they connect a client: the Harness, Claude Code or Codex, Hermes or OpenCode, an n8n workflow, or their own code. Every request goes through one endpoint, the TritonAI LLM Gateway, and the key's approval decides which routes it can use: enterprise cloud through AWS, Azure, or Google Cloud Vertex AI under UC contracts, or open models hosted on UC San Diego infrastructure. Then cost. Recharge is our word for internal billing to a chartstring. Campus administrative work on UC-hosted models has no recharge, with monthly caps. Cloud models bill a department chartstring from the first token at the Model Hub rate, with a budget owner and spend limit. Grant research charges the grant or project. Other UC campuses connect through an intercampus recharge agreement. The key controls model access; the app owner still owns data permissions, testing, accessibility, support, and human review. Start at tritonai.ucsd.edu/developer-apis. And the gateway is already carrying real load."
+        "speakerNotes": "One minute. This is the API offering, the same diagram as the Build with TritonAI page. Whoever the builder is (department staff, a research lab, an analyst, a faculty team), they connect a client: the Harness, Claude Code or Codex, Hermes or OpenCode, an n8n workflow, or their own code. Every request goes through one endpoint, the TritonAI LLM Gateway, and the key's approval decides which routes it can use: enterprise cloud through AWS, Azure, or Google Cloud Vertex AI under UC contracts, or open models hosted on UC San Diego infrastructure. The models: UC-hosted, GLM 5.3 and 5.3 Flash, Muse Glimmer 30B, Qwen3 Embedding 4B, Cohere Transcribe for speech, and the OpenAI Privacy Filter, plus H2O Lightning 4B, a small classification model the team brought online for testing on October 30 that may replace the safety classifier. In the cloud, Claude 5.5 (Haiku, Sonnet, Opus), the GPT 6 series, Gemini 4 Argon, Gemma 4 31B, and Kimi K2.6. These are the current families from the Build with TritonAI page (its saved list is from October 15); the Model Hub has the full list and rates. Then cost. Recharge is our word for internal billing to a chartstring. Campus administrative work on UC-hosted models has no recharge, with monthly caps. Cloud models bill a department chartstring from the first token at the Model Hub rate, with a budget owner and spend limit. Grant research charges the grant or project. Other UC campuses connect through an intercampus recharge agreement. The key controls model access; the app owner still owns data permissions, testing, accessibility, support, and human review. Start at tritonai.ucsd.edu/developer-apis. And the gateway is already carrying real load."
   },
   {
     "id": 5022,
