@@ -12,6 +12,14 @@
   <text x="1560" y="52" fill="#FFCD00" font-family="Teko, sans-serif" font-size="46" text-anchor="end">CONNECT</text>
   <text x="1384" y="50" fill="#c4d2df" font-size="19" text-anchor="end">With people doing the work</text>
 
+  <!-- status legend -->
+  <g font-size="16" font-weight="700">
+    <rect x="636" y="34" width="14" height="14" rx="3" fill="#2fbf71"/>
+    <text x="658" y="47" fill="#e8fff2">Available now</text>
+    <rect x="806" y="34" width="14" height="14" rx="3" fill="none" stroke="#FFCD00" stroke-width="2" stroke-dasharray="3 2"/>
+    <text x="828" y="47" fill="#FFCD00">Forming · join now</text>
+  </g>
+
   <!-- spokes -->
   <g stroke-width="2" stroke-dasharray="6 7" fill="none" opacity=".75">
     <path d="M 560 146 C 610 146, 640 250, 668 282" stroke="#00C6D7"/>
@@ -25,6 +33,10 @@
 
   <!-- LEARN cards -->
   <g>
+    <rect x="40" y="90" width="6" height="112" rx="3" fill="#2fbf71"/>
+    <rect x="40" y="220" width="6" height="112" rx="3" fill="#2fbf71"/>
+    <rect x="40" y="350" width="6" height="112" rx="3" fill="#2fbf71"/>
+    <rect x="40" y="480" width="6" height="112" rx="3" fill="#2fbf71"/>
     <rect x="40" y="90" width="520" height="112" rx="14" fill="#ffffff" fill-opacity=".08" stroke="#00C6D7" stroke-opacity=".6"/>
     <text x="64" y="134" fill="#ffffff" font-size="25" font-weight="700">TritonAI Discovery Series</text>
     <text x="64" y="170" fill="#c4d2df" font-size="18">15 short videos, from foundations to building</text>
@@ -66,41 +78,47 @@
 
   <!-- CONNECT grid -->
   <g>
-    <rect x="1040" y="90" width="252" height="156" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#ffffff" stroke-opacity=".18"/>
-    <text x="1060" y="130" fill="#ffffff" font-size="20" font-weight="700">TritonAI Champions</text>
-    <text x="1060" y="164" fill="#c4d2df" font-size="16">For the AI curious;</text>
-    <text x="1060" y="188" fill="#c4d2df" font-size="16">operational uses, short</text>
-    <text x="1060" y="212" fill="#c4d2df" font-size="16">trainings</text>
+    <rect x="1040" y="90" width="252" height="156" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#2fbf71" stroke-opacity=".7"/>
+    <text x="1060" y="126" fill="#ffffff" font-size="20" font-weight="700">TritonAI Champions</text>
+    <text x="1060" y="154" fill="#c4d2df" font-size="16">For the AI curious;</text>
+    <text x="1060" y="176" fill="#c4d2df" font-size="16">operational uses, trainings</text>
+    <rect x="1060" y="212" width="130" height="22" rx="11" fill="#1f6f4a"/>
+    <text x="1125" y="228" fill="#e8fff2" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="1">AVAILABLE NOW</text>
 
-    <rect x="1308" y="90" width="252" height="156" rx="14" fill="#FFCD00" fill-opacity=".14" stroke="#FFCD00" stroke-width="2"/>
-    <text x="1328" y="130" fill="#ffffff" font-size="20" font-weight="700">Tools Working Group</text>
-    <text x="1328" y="164" fill="#c4d2df" font-size="16">Power users, monthly;</text>
-    <text x="1328" y="188" fill="#c4d2df" font-size="16">shapes the roadmap</text>
-    <text x="1328" y="224" fill="#FFCD00" font-size="15" font-weight="700" letter-spacing="1">BEST FIT FOR THIS ROOM</text>
+    <rect x="1308" y="90" width="252" height="156" rx="14" fill="#FFCD00" fill-opacity=".06" stroke="#FFCD00" stroke-opacity=".85" stroke-width="2" stroke-dasharray="7 5"/>
+    <text x="1328" y="126" fill="#ffffff" font-size="20" font-weight="700">Tools Working Group</text>
+    <text x="1328" y="154" fill="#c4d2df" font-size="16">Power users, monthly;</text>
+    <text x="1328" y="176" fill="#FFCD00" font-size="16" font-weight="700">Best fit for this room</text>
+    <rect x="1328" y="212" width="96" height="22" rx="11" fill="none" stroke="#FFCD00" stroke-width="1.5"/>
+    <text x="1376" y="228" fill="#FFCD00" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="1">FORMING</text>
 
-    <rect x="1040" y="260" width="252" height="156" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#ffffff" stroke-opacity=".18"/>
-    <text x="1060" y="300" fill="#ffffff" font-size="20" font-weight="700">n8n Automation WG</text>
-    <text x="1060" y="334" fill="#c4d2df" font-size="16">Connecting systems,</text>
-    <text x="1060" y="358" fill="#c4d2df" font-size="16">monthly; sets integration</text>
-    <text x="1060" y="382" fill="#c4d2df" font-size="16">priorities and guardrails</text>
+    <rect x="1040" y="260" width="252" height="156" rx="14" fill="#FFCD00" fill-opacity=".06" stroke="#FFCD00" stroke-opacity=".85" stroke-width="2" stroke-dasharray="7 5"/>
+    <text x="1060" y="296" fill="#ffffff" font-size="20" font-weight="700">n8n Automation WG</text>
+    <text x="1060" y="324" fill="#c4d2df" font-size="16">Connecting systems; sets</text>
+    <text x="1060" y="346" fill="#c4d2df" font-size="16">integration guardrails</text>
+    <rect x="1060" y="382" width="96" height="22" rx="11" fill="none" stroke="#FFCD00" stroke-width="1.5"/>
+    <text x="1108" y="398" fill="#FFCD00" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="1">FORMING</text>
 
-    <rect x="1308" y="260" width="252" height="156" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#ffffff" stroke-opacity=".18"/>
-    <text x="1328" y="300" fill="#ffffff" font-size="20" font-weight="700">AI Use-Case Group</text>
-    <text x="1328" y="334" fill="#c4d2df" font-size="16">Every other Friday;</text>
-    <text x="1328" y="358" fill="#c4d2df" font-size="16">bring an idea, leave</text>
-    <text x="1328" y="382" fill="#c4d2df" font-size="16">with a scoped use case</text>
+    <rect x="1308" y="260" width="252" height="156" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#2fbf71" stroke-opacity=".7"/>
+    <text x="1328" y="296" fill="#ffffff" font-size="20" font-weight="700">AI Use-Case Group</text>
+    <text x="1328" y="324" fill="#c4d2df" font-size="16">Every other Friday; bring</text>
+    <text x="1328" y="346" fill="#c4d2df" font-size="16">an idea, leave with a plan</text>
+    <rect x="1328" y="382" width="130" height="22" rx="11" fill="#1f6f4a"/>
+    <text x="1393" y="398" fill="#e8fff2" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="1">AVAILABLE NOW</text>
 
-    <rect x="1040" y="430" width="252" height="156" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#ffffff" stroke-opacity=".18"/>
-    <text x="1060" y="470" fill="#ffffff" font-size="20" font-weight="700">AI Consulting Hours</text>
-    <text x="1060" y="504" fill="#c4d2df" font-size="16">Biweekly, time-boxed;</text>
-    <text x="1060" y="528" fill="#c4d2df" font-size="16">senior AI help for</text>
-    <text x="1060" y="552" fill="#c4d2df" font-size="16">active projects</text>
+    <rect x="1040" y="430" width="252" height="156" rx="14" fill="#FFCD00" fill-opacity=".06" stroke="#FFCD00" stroke-opacity=".85" stroke-width="2" stroke-dasharray="7 5"/>
+    <text x="1060" y="466" fill="#ffffff" font-size="20" font-weight="700">AI Consulting Hours</text>
+    <text x="1060" y="494" fill="#c4d2df" font-size="16">Biweekly expert help for</text>
+    <text x="1060" y="516" fill="#c4d2df" font-size="16">active projects</text>
+    <rect x="1060" y="552" width="96" height="22" rx="11" fill="none" stroke="#FFCD00" stroke-width="1.5"/>
+    <text x="1108" y="568" fill="#FFCD00" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="1">FORMING</text>
 
-    <rect x="1308" y="430" width="252" height="156" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#ffffff" stroke-opacity=".18"/>
-    <text x="1328" y="470" fill="#ffffff" font-size="20" font-weight="700">Department groups</text>
-    <text x="1328" y="504" fill="#c4d2df" font-size="16">Like the Jacobs School</text>
-    <text x="1328" y="528" fill="#c4d2df" font-size="16">AI Show and Tell;</text>
-    <text x="1328" y="552" fill="#c4d2df" font-size="16">run one? Get it listed</text>
+    <rect x="1308" y="430" width="252" height="156" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#2fbf71" stroke-opacity=".7"/>
+    <text x="1328" y="466" fill="#ffffff" font-size="20" font-weight="700">Department groups</text>
+    <text x="1328" y="494" fill="#c4d2df" font-size="16">Like the Jacobs School</text>
+    <text x="1328" y="516" fill="#c4d2df" font-size="16">AI Show and Tell</text>
+    <rect x="1328" y="552" width="130" height="22" rx="11" fill="#1f6f4a"/>
+    <text x="1393" y="568" fill="#e8fff2" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="1">AVAILABLE NOW</text>
   </g>
 
   <!-- stay in the loop -->
@@ -108,11 +126,14 @@
   <text x="72" y="690" fill="#FFCD00" font-family="Teko, sans-serif" font-size="40">STAY IN THE LOOP</text>
   <g font-size="20" font-weight="700" fill="#ffffff">
     <rect x="352" y="656" width="250" height="46" rx="23" fill="#ffffff" fill-opacity=".1"/>
-    <text x="477" y="686" text-anchor="middle">TritonAI Newsletter</text>
+    <circle cx="374" cy="679" r="6" fill="#2fbf71"/>
+    <text x="487" y="686" text-anchor="middle">TritonAI Newsletter</text>
     <rect x="618" y="656" width="230" height="46" rx="23" fill="#ffffff" fill-opacity=".1"/>
-    <text x="733" y="686" text-anchor="middle">TritonAI Updates</text>
+    <circle cx="640" cy="679" r="6" fill="#2fbf71"/>
+    <text x="743" y="686" text-anchor="middle">TritonAI Updates</text>
     <rect x="864" y="656" width="220" height="46" rx="23" fill="#ffffff" fill-opacity=".1"/>
-    <text x="974" y="686" text-anchor="middle">Weekly AI News</text>
+    <circle cx="886" cy="679" r="6" fill="#2fbf71"/>
+    <text x="984" y="686" text-anchor="middle">Weekly AI News</text>
   </g>
   <text x="1530" y="676" fill="#c4d2df" font-size="18" text-anchor="end">Join a group or ask a question</text>
   <text x="1530" y="704" fill="#ffffff" font-size="22" font-weight="700" text-anchor="end">tritonai@ucsd.edu</text>

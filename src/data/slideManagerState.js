@@ -170,25 +170,29 @@ export const slideManagerState = {
     "smt-work-try",
     "smt-work-discussion",
     "techcom-title",
-    "techcom-convergence",
     "techcom-tools",
+    "techcom-api-and-recharge",
+    "techcom-scale",
+    "techcom-gateway",
+    "techcom-verticals-impact",
+    "techcom-transcript-matching-demo",
+    "techcom-contract-review-demo",
+    "techcom-servicenow-routing-demo",
+    "techcom-ai-tutor",
+    "techcom-college-assistant-demo",
     "techcom-chat-and-harness",
     "techcom-harness-at-work",
-    "techcom-four-jobs",
-    "techcom-guardrails",
-    "techcom-safe-path",
+    "techcom-governance",
+    "techcom-personal-productivity-list",
     "techcom-mobile-demo",
-    "techcom-research-alignment",
-    "techcom-ai-tutor",
-    "techcom-pdf-remediator",
+    "techcom-directory-demo",
+    "techcom-passport-demo",
+    "techcom-class-planner-demo",
+    "techcom-class-planner-utilization",
     "techcom-spa2",
     "techcom-hosting",
-    "techcom-gateway",
-    "techcom-api-and-recharge",
     "techcom-parasol-transition",
-    "techcom-parasol-reservations",
     "techcom-compute-and-models",
-    "techcom-get-started",
     "techcom-learn-and-connect",
     "techcom-thank-you"
   ],
@@ -968,9 +972,6 @@ export const slideManagerState = {
     "techcom-title": [
       "tech-community"
     ],
-    "techcom-convergence": [
-      "tech-community"
-    ],
     "techcom-tools": [
       "tech-community"
     ],
@@ -980,25 +981,10 @@ export const slideManagerState = {
     "techcom-harness-at-work": [
       "tech-community"
     ],
-    "techcom-four-jobs": [
-      "tech-community"
-    ],
-    "techcom-guardrails": [
-      "tech-community"
-    ],
-    "techcom-safe-path": [
-      "tech-community"
-    ],
     "techcom-mobile-demo": [
       "tech-community"
     ],
-    "techcom-research-alignment": [
-      "tech-community"
-    ],
     "techcom-ai-tutor": [
-      "tech-community"
-    ],
-    "techcom-pdf-remediator": [
       "tech-community"
     ],
     "techcom-spa2": [
@@ -1013,13 +999,7 @@ export const slideManagerState = {
     "techcom-parasol-transition": [
       "tech-community"
     ],
-    "techcom-parasol-reservations": [
-      "tech-community"
-    ],
     "techcom-compute-and-models": [
-      "tech-community"
-    ],
-    "techcom-get-started": [
       "tech-community"
     ],
     "techcom-thank-you": [
@@ -1029,6 +1009,42 @@ export const slideManagerState = {
       "tech-community"
     ],
     "techcom-learn-and-connect": [
+      "tech-community"
+    ],
+    "techcom-scale": [
+      "tech-community"
+    ],
+    "techcom-verticals-impact": [
+      "tech-community"
+    ],
+    "techcom-transcript-matching-demo": [
+      "tech-community"
+    ],
+    "techcom-contract-review-demo": [
+      "tech-community"
+    ],
+    "techcom-servicenow-routing-demo": [
+      "tech-community"
+    ],
+    "techcom-college-assistant-demo": [
+      "tech-community"
+    ],
+    "techcom-governance": [
+      "tech-community"
+    ],
+    "techcom-personal-productivity-list": [
+      "tech-community"
+    ],
+    "techcom-directory-demo": [
+      "tech-community"
+    ],
+    "techcom-passport-demo": [
+      "tech-community"
+    ],
+    "techcom-class-planner-demo": [
+      "tech-community"
+    ],
+    "techcom-class-planner-utilization": [
       "tech-community"
     ]
   }

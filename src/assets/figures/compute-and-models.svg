@@ -1,7 +1,7 @@
 <svg viewBox="0 0 1600 760" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" font-family="Roboto, Arial, sans-serif">
   <!-- column headers -->
-  <text x="400" y="44" fill="#00C6D7" font-family="Teko, sans-serif" font-size="40" text-anchor="middle">RUN YOUR OWN WORK</text>
-  <text x="1200" y="44" fill="#FFCD00" font-family="Teko, sans-serif" font-size="40" text-anchor="middle">CALL A MODEL</text>
+  <text x="400" y="44" fill="#00C6D7" font-family="Teko, sans-serif" font-size="40" text-anchor="middle">INSTRUCTIONAL USE CASES</text>
+  <text x="1200" y="44" fill="#FFCD00" font-family="Teko, sans-serif" font-size="40" text-anchor="middle">ADMINISTRATIVE AND RESEARCH USE CASES</text>
 
   <!-- doors: compute -->
   <g>

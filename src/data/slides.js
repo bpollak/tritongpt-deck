@@ -10778,115 +10778,35 @@ export const slides = [
     ],
     "managerSection": "Tech Community",
     "durationSeconds": 30,
-    "speakerNotes": "30 seconds. Thanks for having me. This is a show-more, tell-less version: most of what follows is recordings of the tools working. Four parts: why agentic AI arrived this year, what the TritonAI Harness actually does, what people across campus are building with it, and the compute and model services underneath, including PARASOL, which is what DSMLP just became.",
+    "speakerNotes": "30 seconds. Thanks for having me. This is a show-more, tell-less version: most of what follows is recordings of the tools working. Five parts, bottom up: the TritonAI Gateway that every tool runs on, the vertical AI solutions IT Services builds on it, the Harness, what people across campus are building with it, and PARASOL, which is what DSMLP just became.",
     "type": "title",
     "content": [],
     "title": "AI That Does the Work",
-    "subtitle": "The TritonAI Harness, the TritonAI Gateway, and PARASOL",
+    "subtitle": "The TritonAI Gateway, vertical AI solutions, the Harness, and PARASOL",
     "layout": "title-hero",
     "arc": [
       {
-        "label": "The shift",
-        "note": "Why agents arrived now"
+        "label": "The foundation",
+        "note": "The Gateway, models, and APIs"
+      },
+      {
+        "label": "Vertical AI solutions",
+        "note": "Whole campus processes"
       },
       {
         "label": "The Harness",
-        "note": "See it work, and how it stays safe"
+        "note": "Chat vs. agents, then see it work"
       },
       {
         "label": "What people build",
-        "note": "Research, teaching, libraries, IT"
+        "note": "Research, teaching, departments"
       },
       {
-        "label": "Compute and models",
-        "note": "The gateway and PARASOL"
+        "label": "PARASOL",
+        "note": "DSMLP, with nearly 3x the GPUs"
       }
     ],
     "conference": "UC San Diego Tech Community"
-  },
-  {
-    "id": 5002,
-    "slug": "techcom-convergence",
-    "type": "content",
-    "content": [],
-    "layout": "harness-definition",
-    "variant": "harness-convergence",
-    "marker": "WHY NOW",
-    "kicker": "Two trends, one moment",
-    "parts": [
-      {
-        "text": "In "
-      },
-      {
-        "text": "2026",
-        "accent": true
-      },
-      {
-        "text": ", the model got "
-      },
-      {
-        "text": "smart enough",
-        "accent": "blue"
-      },
-      {
-        "text": ".\nThe "
-      },
-      {
-        "text": "harness",
-        "accent": true
-      },
-      {
-        "text": " arrived to put it to work."
-      }
-    ],
-    "streams": [
-      {
-        "kicker": "STREAM 1 · CAPABILITY",
-        "title": "Models that reason, plan, and use tools.",
-        "body": "Frontier models crossed a threshold: they sustain multi-step work, hold long context, and call tools natively — not just chat.",
-        "examples": [
-          {
-            "name": "Claude Opus",
-            "logoUrl": "https://cdn.simpleicons.org/anthropic/0d5f93"
-          },
-          {
-            "name": "GPT-5 series",
-            "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg"
-          }
-        ]
-      },
-      {
-        "kicker": "STREAM 2 · ARCHITECTURE",
-        "title": "Harnesses arrived off the shelf.",
-        "body": "Production scaffolding now ships from the major vendors — loop, tools, memory, permissions — ready to accomplish real work.",
-        "examples": [
-          {
-            "name": "Claude Code",
-            "logoUrl": "https://cdn.simpleicons.org/anthropic/be634d"
-          },
-          {
-            "name": "OpenAI CODEX",
-            "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg"
-          },
-          {
-            "name": "TritonAI",
-            "logoType": "ucsd"
-          }
-        ]
-      }
-    ],
-    "audiences": [
-      "tech-community"
-    ],
-    "managerSection": "Tech Community",
-    "section": {
-      "part": 1,
-      "total": 4,
-      "label": "The shift"
-    },
-    "durationSeconds": 45,
-    "speakerNotes": "45 seconds. Two things happened at once this year. Models crossed a threshold: they hold long context, plan, and call tools reliably enough to finish multi-step work. And the scaffolding around them, what we call a harness, started shipping off the shelf from the major vendors. TritonAI Harness is ours: the same pattern, wired to campus models, campus sign-in, and campus systems.",
-    "managerSummary": "Tech Community copy of cabinet-harness-02-convergence"
   },
   {
     "id": 5003,
@@ -10897,19 +10817,19 @@ export const slides = [
     "managerSection": "Tech Community",
     "section": {
       "part": 1,
-      "total": 4,
-      "label": "The shift"
+      "total": 5,
+      "label": "The foundation"
     },
     "durationSeconds": 60,
-    "speakerNotes": "One minute. The supported tools, arranged by how much they do on their own. Chat on the left: TritonGPT, Copilot with Data Protection, Gemini and Gemini Notebook. AI inside apps people already use in the middle. Agents on the right: the Harness, plus Claude Code and Codex, which this room will care about because they run on the same TritonAI Gateway key. Further right means more autonomy, so more supervision. The rules underneath hold across all of them: campus account, never a personal one, and never P4. Each tool's data level is on tritonai.ucsd.edu/tools. Before presenting: that page still badges TritonGPT and the Harness 'P3 / P4'; the Harness privacy statement says P1–P3, never P4.",
+    "speakerNotes": "One minute. Start with the stage: every supported tool, reviewed for university data, arranged by how much it does on its own. Always your UC San Diego account, never a personal one. Chat on the left: TritonGPT, approved for P1 to P3, plus Copilot with Data Protection and Gemini with Gemini Notebook. In the middle, AI inside apps people already use: Copilot for Microsoft 365, which needs a license, and Zoom AI Companion, where everyone is notified and consents. Agents on the right: the TritonAI Harness, also P1 to P3, plus Claude Code and Codex, which this room will care about because they run on the same TritonAI key. Further right means more autonomy, so more supervision. Coming soon: UCOP is close to securing new contracts with OpenAI and Anthropic, so faculty and staff can choose the tools they want with the data protections the university requires. And the bar along the bottom: these run through the TritonAI Gateway, so that is where we go next. Before presenting: tritonai.ucsd.edu/tools still badges TritonGPT and the Harness P3 / P4; the Harness privacy statement says P1 to P3, never P4.",
     "type": "content",
     "layout": "cabinet-outline",
     "title": "Supported AI tools, by how much they do",
-    "subtitle": "From answers to actions, all on campus accounts.",
+    "subtitle": "Reviewed for university data. Always your UC San Diego account, never a personal one.",
     "content": [],
     "figure": {
       "id": "tools-landscape",
-      "alt": "Supported AI tools in three lanes: chat (TritonGPT, Copilot with Data Protection, Gemini and Gemini Notebook), in your apps (Copilot for Microsoft 365, Gemini in Google Workspace, Zoom AI Companion), and agents (TritonAI Harness, Claude Code, Codex), all served by the TritonAI Gateway."
+      "alt": "Supported AI tools arranged from answers to actions. Chat: TritonGPT (P1–P3), Copilot with Data Protection (commercial protection), Gemini and Gemini Notebook (campus Google login). In your apps: Copilot for Microsoft 365 (license required), Zoom AI Companion (consent required). Agents: TritonAI Harness (P1–P3, agentic), Claude Code and Codex (same TritonAI key). Coming soon: UCOP is close to securing new contracts with OpenAI and Anthropic, so faculty and staff can choose the AI tools they want, with the data protections the university requires. All served by the TritonAI Gateway; never P4."
     }
   },
   {
@@ -11008,7 +10928,7 @@ export const slides = [
         "text": "Multi-step work through project files, connected tools, and checks to a saved result you review."
       }
     ],
-    "speakerNotes": "45 seconds. Same approved models in both. A chat answers a prompt and a person copies the result somewhere. The Harness wraps the model with context, tools, permissions, and memory, and runs a loop until the work is done or it needs you. That's the difference you'll see in the next recording.",
+    "speakerNotes": "45 seconds. That is chat. You all know what an agent is, so one slide on the difference. Same approved models in both, from the gateway. A chat answers a prompt and a person copies the result somewhere. The Harness wraps the model with context, tools, permissions, and memory, and runs a loop until the work is done or it needs you. Guardrails are built in: every tool call is checked against the person's identity, scope, and policy, and logged. That's the difference you'll see in the next recording.",
     "websiteVisual": "comparison",
     "workflowComparison": {
       "matrixTitle": "A chat answers. The Harness does the work.",
@@ -11113,9 +11033,9 @@ export const slides = [
       "singleView": true
     },
     "section": {
-      "part": 1,
-      "total": 4,
-      "label": "The shift"
+      "part": 3,
+      "total": 5,
+      "label": "The Harness"
     },
     "managerSummary": "Tech Community copy of cabinet-chat-and-harness"
   },
@@ -11131,19 +11051,11 @@ export const slides = [
       "tech-community"
     ],
     "managerSection": "Tech Community",
-    "durationSeconds": 161,
+    "durationSeconds": 154,
     "section": {
-      "part": 2,
-      "total": 4,
+      "part": 3,
+      "total": 5,
       "label": "The Harness"
-    },
-    "intro": {
-      "kicker": "TritonAI Harness · one project, start to finish",
-      "title": "The Harness at work",
-      "label": "TritonAI Harness · a fall workshop pilot",
-      "setup": "A quick look at its settings, then one staff member's workshop pilot: the Harness builds a feedback survey, then turns the results into a summary, a dashboard, and a briefing deck.",
-      "watchFor": "The connected plugins, the AI Team skills, and 30 days of usage cost; then the UCSD Branding skill in the request and each result feeding the next.",
-      "seconds": 7
     },
     "videoSrc": "/media/cabinet/cabinet-harness-story-v7.mp4",
     "poster": "/media/cabinet/cabinet-harness-story-v6-poster.jpg",
@@ -11167,294 +11079,6 @@ export const slides = [
     "managerSummary": "Tech Community copy of cabinet-harness-in-action"
   },
   {
-    "id": 5006,
-    "slug": "techcom-four-jobs",
-    "type": "content",
-    "content": [],
-    "layout": "harness-definition",
-    "variant": "harness-components-framework",
-    "marker": "ARCHITECTURE",
-    "parts": [
-      {
-        "text": "Inside the harness: "
-      },
-      {
-        "text": "four jobs",
-        "accent": true
-      },
-      {
-        "text": "."
-      }
-    ],
-    "subhead": "Each piece does work the model alone cannot. The next four slides go deeper on each.",
-    "components": [
-      {
-        "kicker": "Loop",
-        "title": "How does it keep going?",
-        "visual": "loop",
-        "color": "#d47a5f",
-        "body": "Act → observe → adjust → repeat. Until the work is done or a control stops it.",
-        "question": "Without it: the model gives one answer and stops — it cannot do real work.",
-        "examples": [
-          "while loop",
-          "observe",
-          "adjust"
-        ]
-      },
-      {
-        "kicker": "Context",
-        "title": "What does it know?",
-        "visual": "context",
-        "color": "#0d5f93",
-        "body": "The harness decides which files, instructions, memory, and prior results stay in view while the work happens.",
-        "question": "Without it: the model forgets what it's working on as soon as the page turns.",
-        "examples": [
-          "context window",
-          "system prompt",
-          "session persistence"
-        ]
-      },
-      {
-        "kicker": "Action",
-        "title": "What can it touch?",
-        "visual": "action",
-        "color": "#be634d",
-        "body": "Tools, skills, hooks, and permission boundaries — the only things the agent can actually reach into.",
-        "highlight": true,
-        "question": "Without it: the model can only talk about the work, not produce a deliverable.",
-        "examples": [
-          "skills & tools",
-          "lifecycle hooks",
-          "permissions"
-        ]
-      },
-      {
-        "kicker": "Scale",
-        "title": "When should work split?",
-        "visual": "scale",
-        "color": "#6f9363",
-        "body": "For bigger jobs, planning, building, and verification can run as separate focused sub-agents.",
-        "question": "Without it: big jobs collapse under their own weight in one long run.",
-        "examples": [
-          "sub-agents",
-          "planning",
-          "verification"
-        ]
-      }
-    ],
-    "audiences": [
-      "tech-community"
-    ],
-    "managerSection": "Tech Community",
-    "section": {
-      "part": 2,
-      "total": 4,
-      "label": "The Harness"
-    },
-    "durationSeconds": 45,
-    "speakerNotes": "45 seconds. For a technical audience, here's what's inside. Four jobs: the loop that keeps going (act, observe, adjust), context management (what's in view each turn), action (the tools, skills, and permission boundaries), and scale (splitting big work across sub-agents). The model alone can't do any of these; the harness does.",
-    "managerSummary": "Tech Community copy of cabinet-harness-08b-component-framework"
-  },
-  {
-    "id": 5007,
-    "slug": "techcom-guardrails",
-    "type": "content",
-    "content": [],
-    "layout": "harness-definition",
-    "variant": "harness-action",
-    "marker": "ACTION · touch real systems",
-    "spineActive": "action",
-    "parts": [
-      {
-        "text": "Every tool call passes through "
-      },
-      {
-        "text": "guardrails",
-        "accent": true
-      },
-      {
-        "text": "."
-      }
-    ],
-    "pipeline": [
-      {
-        "label": "Agent intent",
-        "sub": "what it wants to do",
-        "color": "#0d5f93"
-      },
-      {
-        "label": "Pre-hook",
-        "sub": "identity · scope · policy",
-        "color": "#d47a5f"
-      },
-      {
-        "label": "Tool call",
-        "sub": "the actual work",
-        "color": "#6f9363"
-      },
-      {
-        "label": "Post-hook",
-        "sub": "log · audit · verify",
-        "color": "#be634d"
-      }
-    ],
-    "traceGoal": "Submit a purchase requisition for $420 in office supplies.",
-    "traceSteps": [
-      {
-        "stage": "Agent intent",
-        "detail": "create_requisition(vendor=Staples, amount=420, fund=DEPT-OPS-24)"
-      },
-      {
-        "stage": "Pre-hook",
-        "detail": "vendor approved? · under cardholder limit? · fund has balance?"
-      },
-      {
-        "stage": "Tool call",
-        "detail": "Oracle Procurement · creates req · returns PO number"
-      },
-      {
-        "stage": "Post-hook",
-        "detail": "audit log entry · receipt attached · monthly recon queue"
-      }
-    ],
-    "approvalPrompt": {
-      "kicker": "the agent stops and asks before any write",
-      "question": "Should I run",
-      "code": "create_requisition(vendor=Staples, amount=420, fund=DEPT-OPS-24)",
-      "actions": [
-        "allow",
-        "deny",
-        "always allow"
-      ]
-    },
-    "audiences": [
-      "tech-community"
-    ],
-    "managerSection": "Tech Community",
-    "section": {
-      "part": 2,
-      "total": 4,
-      "label": "The Harness"
-    },
-    "durationSeconds": 45,
-    "speakerNotes": "45 seconds. Every tool call goes through the same path: the agent states intent, a pre-hook checks identity, scope, and policy, the tool runs, and a post-hook logs and verifies. Consequential actions stop for a human yes. This is where your instincts as IT people matter: the hooks are where policy lives.",
-    "managerSummary": "Tech Community copy of cabinet-harness-08e-tools-hooks-safety"
-  },
-  {
-    "id": 5008,
-    "slug": "techcom-safe-path",
-    "type": "content",
-    "content": [],
-    "layout": "harness-definition",
-    "variant": "harness-data-unlock",
-    "marker": "DATA GOVERNANCE · ACCESS",
-    "parts": [
-      {
-        "text": "How agents reach campus data — "
-      },
-      {
-        "text": "safely",
-        "accent": true
-      },
-      {
-        "text": "."
-      }
-    ],
-    "harnesses": [
-      {
-        "name": "Claude Code",
-        "logoUrl": "https://cdn.simpleicons.org/anthropic/171814"
-      },
-      {
-        "name": "CODEX",
-        "logoUrl": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg"
-      },
-      {
-        "name": "TritonAI",
-        "logoType": "ucsd"
-      }
-    ],
-    "priorityHeading": "Your personal context—private by default",
-    "prioritySystems": [
-      {
-        "name": "Microsoft Graph"
-      },
-      {
-        "name": "Google Workspace"
-      },
-      {
-        "name": "Confluence"
-      },
-      {
-        "name": "Campus Resources"
-      },
-      {
-        "name": "Zoom meeting transcripts / AI summaries"
-      }
-    ],
-    "alsoHeading": "Plus the campus enterprise data sources you have access to",
-    "alsoSystems": [
-      "ServiceNow",
-      "Activity Hubs",
-      "Kuali Research",
-      "Kuali Build",
-      "Oracle FIS",
-      "UCPath",
-      "Concur",
-      "DocuSign",
-      "OnBase",
-      "Canvas",
-      "Slate",
-      "Interfolio",
-      "Kaltura",
-      "Splunk",
-      "Blackbaud CRM",
-      "Tririga",
-      "EcoTime",
-      "Library Apps",
-      "+ 150 more across the campus catalog"
-    ],
-    "governance": [
-      {
-        "label": "SSO + MFA",
-        "note": "Campus IdP via SAML / OIDC + Duo"
-      },
-      {
-        "label": "Delegated OAuth 2.1",
-        "note": "Agent acts on the user's behalf — never as itself"
-      },
-      {
-        "label": "Scoped tokens",
-        "note": "Per-system, least-privilege, short-lived"
-      },
-      {
-        "label": "Audit log",
-        "note": "Every tool call: user · agent · scope · timestamp"
-      },
-      {
-        "label": "Approval gates",
-        "note": "Human review before writes, sharing, or memory promotion"
-      },
-      {
-        "label": "Proposal first",
-        "note": "Agents propose changes; people approve shared-memory promotion"
-      }
-    ],
-    "tiersFooter": "Personal by default. Team sharing is opt-in. Department and campus receive reviewed aggregates, each with its own governance boundary.",
-    "audiences": [
-      "tech-community"
-    ],
-    "managerSection": "Tech Community",
-    "section": {
-      "part": 2,
-      "total": 4,
-      "label": "The Harness"
-    },
-    "durationSeconds": 45,
-    "speakerNotes": "45 seconds. How agents reach campus data. The person's own context first: Microsoft Graph, Google Workspace, Confluence, Zoom summaries, all on their own delegated sign-in. Then the enterprise systems they already have access to. The governance rail on the right is the pattern we're building toward: campus SSO with MFA, delegated OAuth so the agent acts on the user's behalf and never as itself, scoped tokens, audit logs, and approval gates. Some of that rail is proposed, so present it as the direction, not all shipped.",
-    "managerSummary": "Tech Community copy of cabinet-harness-11-ucsd-safe-path"
-  },
-  {
     "id": 5009,
     "slug": "techcom-mobile-demo",
     "type": "video",
@@ -11465,8 +11089,8 @@ export const slides = [
     ],
     "managerSection": "Tech Community",
     "section": {
-      "part": 2,
-      "total": 4,
+      "part": 3,
+      "total": 5,
       "label": "The Harness"
     },
     "videoLoop": false,
@@ -11474,54 +11098,20 @@ export const slides = [
     "videoAutoPlay": true,
     "hideDemoBadge": true,
     "demoOnly": true,
-    "title": "The Harness from my phone",
-    "subtitle": "Most of this presentation was built from the TritonAI Harness mobile app.",
+    "title": "The Harness mobile app",
+    "subtitle": "I built most of my Cabinet presentation from my phone with it. In testing now; iOS App Store soon, then Android.",
     "durationSeconds": 32,
     "intro": {
-      "kicker": "TritonAI Harness · mobile app",
-      "title": "The Harness from my phone",
-      "setup": "I built most of this presentation from my phone with the TritonAI Harness mobile app. Here is one edit to this deck, start to finish.",
+      "kicker": "TritonAI Harness · mobile app · in testing",
+      "title": "The Harness mobile app",
+      "setup": "I built most of my presentation to Cabinet from my phone with this app. It is in testing now and should be on the App Store for iOS soon, with Android after. Here is one edit to that deck, start to finish.",
       "watchFor": "It finds the right slide among three similar ones, updates it, rebuilds the deck, and shows me the result on my phone.",
       "seconds": 6
     },
     "videoSrc": "/media/cabinet/cabinet-mobile-harness-8.mp4",
     "poster": "/media/cabinet/cabinet-mobile-harness-8-poster.jpg",
-    "speakerNotes": "About 30 seconds. The Harness on the desktop can be directed from a phone. In this clip I ask it, from my phone, to edit a slide in a deck; it finds the right one, updates it, rebuilds, and shows me the result. Mobile is still a preview.",
+    "speakerNotes": "About 30 seconds. I built most of the presentation I gave to Cabinet from my phone, using this app. A Harness mobile app is in testing now. It should be available on the App Store for iOS soon, and then for Android. It directs the Harness running on your computer, so the work and files stay there. In this clip I ask it to edit a slide in that Cabinet deck; it finds the right one among three similar ones, updates it, rebuilds, and shows the result on the phone. Don't promise a date; it's still in testing.",
     "managerSummary": "Tech Community copy of cabinet-mobile-briefing-demo"
-  },
-  {
-    "id": 5010,
-    "slug": "techcom-research-alignment",
-    "audiences": [
-      "tech-community"
-    ],
-    "managerSection": "Tech Community",
-    "section": {
-      "part": 3,
-      "total": 4,
-      "label": "What people build"
-    },
-    "durationSeconds": 68,
-    "speakerNotes": "About a minute; the clip runs 2.5 times real speed with no audio, so narrate. Research Alignment is a TritonAI solutions team prototype for research development offices: upload a funding opportunity, it extracts the investigator requirements, then ranks faculty whose publications, grants, and methods fit, and explains why each match surfaced. It also searches expertise directly. It is in development; sources and ownership are under review, and researchers and research administrators decide what to act on. Candidate sources include campus profile data and public sources like NIH RePORTER, NSF Awards, PubMed, ORCID, and Semantic Scholar.",
-    "type": "video",
-    "layout": "cabinet-demo",
-    "title": "Research Alignment",
-    "subtitle": "Match researchers to funding opportunities, and explain why each one surfaced.",
-    "content": [],
-    "intro": {
-      "kicker": "Research · in development",
-      "title": "Research Alignment",
-      "setup": "Upload a funding opportunity. It pulls out the investigator requirements, then ranks faculty whose publications, grants, and methods fit.",
-      "watchFor": "The extracted requirements, the ranked faculty with scores, and the reasons behind each match.",
-      "seconds": 6
-    },
-    "videoSrc": "/media/techcom/research-alignment-fast.mp4",
-    "poster": "/media/techcom/research-alignment-fast-poster.jpg",
-    "videoLoop": false,
-    "videoClearNav": false,
-    "videoAutoPlay": true,
-    "hideDemoBadge": true,
-    "demoOnly": true
   },
   {
     "id": 5011,
@@ -11537,9 +11127,9 @@ export const slides = [
     "managerSection": "Tech Community",
     "durationSeconds": 48,
     "section": {
-      "part": 3,
-      "total": 4,
-      "label": "What people build"
+      "part": 2,
+      "total": 5,
+      "label": "Vertical AI solutions"
     },
     "intro": {
       "sideVideo": true,
@@ -11567,85 +11157,8 @@ export const slides = [
     "videoAutoPlay": true,
     "hideDemoBadge": true,
     "demoOnly": true,
-    "speakerNotes": "About 45 seconds. For academic IT: an AI tutor inside Canvas. Instructors choose which course pages and files it draws on and set a Socratic style, so it guides students to answers instead of handing them out. It launched this fall with five instructors, with more courses in winter, and 81 percent of pilot students said it helped them understand.",
+    "speakerNotes": "About 45 seconds. For academic IT, a TritonGPT solution: an AI tutor inside Canvas. Instructors choose which course pages and files it draws on and set a Socratic style, so it guides students to answers instead of handing them out. It launched this fall with five instructors, with more courses in winter, and 81 percent of pilot students said it helped them understand.",
     "managerSummary": "Tech Community copy of cabinet-ai-tutor-demo"
-  },
-  {
-    "id": 5012,
-    "slug": "techcom-pdf-remediator",
-    "type": "content",
-    "layout": "flywheel-case-study",
-    "title": "The Flywheel in Action: PDF Remediator",
-    "subtitle": "How a staff member — not an engineer — solved a campus-wide compliance challenge with AI",
-    "backgroundColor": "#F5F0E6",
-    "flywheelStages": [
-      {
-        "name": "Identify Problem",
-        "shortLabel": "Identify",
-        "description": "Title II requires accessible PDFs, but the volume is massive and the people publishing them aren't accessibility experts.",
-        "icon": "Target",
-        "color": "#00629B"
-      },
-      {
-        "name": "Build with AI",
-        "shortLabel": "Build",
-        "description": "A staff member used Claude Code and CODEX through the Citizen Developer Program API path to build the solution — no engineering background required.",
-        "icon": "Code",
-        "color": "#00C6D7"
-      },
-      {
-        "name": "Host on Campus",
-        "shortLabel": "Host",
-        "description": "Browser-first, no database, SSO-ready — maps directly to the Campus App Hosting pipeline and shared responsibility model.",
-        "icon": "Globe",
-        "color": "#FC8900"
-      },
-      {
-        "name": "Solve & Promote",
-        "shortLabel": "Scale",
-        "description": "Hours of manual Acrobat work reduced to minutes; non-experts get clear guidance; compliance documentation is built in.",
-        "icon": "TrendingUp",
-        "color": "#6E963B"
-      }
-    ],
-    "impactMetrics": [
-      {
-        "value": "17+",
-        "label": "Automated Checks",
-        "sub": "9 categories"
-      },
-      {
-        "value": "Hours → Min",
-        "label": "Time Savings",
-        "sub": "Per document"
-      },
-      {
-        "value": "Built-in",
-        "label": "Compliance Evidence",
-        "sub": "Auditable packs"
-      }
-    ],
-    "videoSrc": "/media/mobile/pdf-remediator-1.6x.mp4",
-    "poster": "/media/posters/pdf-remediator.jpg",
-    "demoLabel": "PDF Remediator Demo",
-    "toolHighlights": [
-      "veraPDF Validation",
-      "PDF/UA Standard",
-      "Evidence Packs"
-    ],
-    "keyMessage": "Identified by someone close to the work, built with AI tools, ready for lightweight review and campus-only deployment",
-    "audiences": [
-      "tech-community"
-    ],
-    "managerSection": "Tech Community",
-    "section": {
-      "part": 3,
-      "total": 4,
-      "label": "What people build"
-    },
-    "durationSeconds": 45,
-    "speakerNotes": "45 seconds. For libraries and anyone publishing documents: Title II requires accessible PDFs, and the people publishing them aren't accessibility experts. A staff member, not an engineer, built the PDF Remediator with Claude Code and Codex through the citizen developer path. It runs more than 17 automated checks and turns hours of manual Acrobat work into minutes, with the compliance documentation built in.",
-    "managerSummary": "Tech Community copy of the-flywheel-in-action-pdf-remediator"
   },
   {
     "id": 5013,
@@ -11660,8 +11173,8 @@ export const slides = [
     "managerSection": "Tech Community",
     "durationSeconds": 60,
     "section": {
-      "part": 3,
-      "total": 4,
+      "part": 4,
+      "total": 5,
       "label": "What people build"
     },
     "intro": {
@@ -11796,8 +11309,8 @@ export const slides = [
     "speakerNotes": "30 seconds. When something a colleague builds outgrows their laptop, there's a path. Tier 0 is the desktop or a sandbox, Tier 1 is citizen-curated deployment on apps.ucsd.edu after a risk and scope review, Tier 2 is TritonAI and rapid ITS development, Tier 3 is enterprise. If you find one of these running under a desk, point it to intake.",
     "managerSection": "Tech Community",
     "section": {
-      "part": 3,
-      "total": 4,
+      "part": 4,
+      "total": 5,
       "label": "What people build"
     },
     "managerSummary": "Tech Community copy of cabinet-harness-11d-campus-app-hosting-intake"
@@ -11828,11 +11341,11 @@ export const slides = [
     ],
     "managerSection": "Tech Community",
     "durationSeconds": 45,
-    "speakerNotes": "45 seconds. Inference as a service. One campus-run gateway: open-weight models on campus-managed GPUs at SDSC plus approved commercial APIs, behind one key. January through September 2026 it handled 527.0 billion tokens and 157.0 million requests, 90.6 percent on self-hosted and internal routes. It already serves UC Berkeley researchers, and UC Merced's Scout runs on TritonAI. Your departments can call the same gateway from their own apps.",
+    "speakerNotes": "45 seconds. Inference as a service. One campus-run gateway: open-weight models on campus-managed GPUs at SDSC plus approved commercial APIs, behind one key. January through September 2026 it handled 527.0 billion tokens and 157.0 million requests, 90.6 percent on self-hosted and internal routes. It already serves UC Berkeley researchers, and UC Merced's Scout runs on TritonAI. This is what the Harness runs on, and your departments can call the same gateway from their own apps. Now, what runs on top of it, starting with the solutions IT Services builds for whole campus processes.",
     "section": {
-      "part": 4,
-      "total": 4,
-      "label": "Compute and models"
+      "part": 1,
+      "total": 5,
+      "label": "The foundation"
     },
     "gatewayMap": {
       "modelsLabel": "Models",
@@ -11892,9 +11405,9 @@ export const slides = [
     ],
     "managerSection": "Tech Community",
     "section": {
-      "part": 4,
-      "total": 4,
-      "label": "Compute and models"
+      "part": 5,
+      "total": 5,
+      "label": "PARASOL and next steps"
     },
     "durationSeconds": 45,
     "speakerNotes": "45 seconds. Behind every AI model is parallel computing power, and students have been short of it; some paid for cloud GPUs out of pocket to finish coursework. DSMLP is now PARASOL, the Platform for Applied Research, Analytics, Science and Open Learning. For your users nothing breaks: same sign-in at datahub.ucsd.edu, same files, and dsmlp-login and launch.sh still work. What's new: reservations, Open Learning workspaces from Winter 2027, and a single site at parasol.ucsd.edu. The Halıcıoğlu School of Data Science and Computing is funding four GPU servers with 32 NVIDIA RTX PRO 6000 Blackwell GPUs in Winter 2027, nearly tripling capacity. Figures match parasol.ucsd.edu; the press release is embargoed until Tuesday, November 3, so hold its demand projections and quotes until then.",
@@ -11909,76 +11422,28 @@ export const slides = [
     }
   },
   {
-    "id": 5017,
-    "slug": "techcom-parasol-reservations",
-    "audiences": [
-      "tech-community"
-    ],
-    "managerSection": "Tech Community",
-    "section": {
-      "part": 4,
-      "total": 4,
-      "label": "Compute and models"
-    },
-    "durationSeconds": 45,
-    "speakerNotes": "45 seconds. Why reservations: GPU demand isn't flat. It climbs through the quarter and peaks in weeks 6 to 10 and finals, then drops overnight and on weekends. A reservation holds a GPU for a window so a student with a deadline doesn't wait, and off-peak hours cost fewer Service Units, which moves long research runs to when classes use the fewest GPUs. The new servers add about 66,800 peak GPU-hours a year for coursework and more than 213,000 off-peak hours for research, capstones, and graduate work. Last year the platform already served more than 140 classes, 75 instructors, 18,000 enrollments, and 500 researchers. The bar heights are illustrative; the numbers are from parasol.ucsd.edu.",
-    "type": "content",
-    "layout": "cabinet-outline",
-    "title": "GPUs matched to the academic calendar",
-    "subtitle": "Reserve for deadlines; run long research jobs off-peak.",
-    "content": [],
-    "figure": {
-      "id": "parasol-reservations",
-      "alt": "GPU demand rises through a quarter and peaks in weeks 6 to 10 and finals. Reservations hold a GPU for a window; off-peak runs cost fewer Service Units. 66,800 peak GPU-hours and 213,000+ off-peak GPU-hours a year. AY 2025-26: 140+ classes, 75 instructors, 18,000 enrollments, 500+ researchers."
-    }
-  },
-  {
     "id": 5018,
     "slug": "techcom-compute-and-models",
     "type": "content",
     "layout": "cabinet-outline",
     "title": "Compute and models, side by side",
-    "subtitle": "PARASOL runs your work. The TritonAI Gateway serves the models.",
+    "subtitle": "PARASOL for instruction; the TritonAI Gateway for administration and research.",
     "content": [],
     "figure": {
       "id": "compute-and-models",
-      "alt": "Two services: PARASOL (Datahub and command line into shared CPU and GPU compute for courses and research) and the TritonAI Gateway (TritonGPT, agents, and department apps calling campus-hosted open-weight and approved commercial models with one key). Related, not the same service."
+      "alt": "Two services. Instructional use cases: PARASOL (Datahub and command line into shared CPU and GPU compute for courses and research) and, for administrative and research use cases, the TritonAI Gateway (TritonGPT, agents, and department apps calling campus-hosted open-weight and approved commercial models with one key). Related, not the same service."
     },
     "audiences": [
       "tech-community"
     ],
     "managerSection": "Tech Community",
     "section": {
-      "part": 4,
-      "total": 4,
-      "label": "Compute and models"
+      "part": 5,
+      "total": 5,
+      "label": "PARASOL and next steps"
     },
     "durationSeconds": 40,
-    "speakerNotes": "40 seconds. Two services, two doors. On the left, PARASOL runs your own work: Datahub in a browser or the command line, containers on shared CPUs and GPUs, storage and datasets, for courses, student projects, and approved research. On the right, the TritonAI Gateway is inference as a service: TritonGPT, the agents, and your department apps call campus-hosted open-weight models or approved commercial APIs with one key. They're related, not the same service: selected TritonAI workloads can run on PARASOL, but model requests go through the gateway."
-  },
-  {
-    "id": 5019,
-    "slug": "techcom-get-started",
-    "audiences": [
-      "tech-community"
-    ],
-    "managerSection": "Tech Community",
-    "section": {
-      "part": 4,
-      "total": 4,
-      "label": "Compute and models"
-    },
-    "durationSeconds": 45,
-    "speakerNotes": "45 seconds. Three steps: request a TritonAI Gateway key, install the Harness, and take the eight-minute Essentials training, then try it on one real task. For the first build, keep it narrow: one workflow, tested, with a person checking the results. Reuse what's in the Skills Library and the Developer FAQs, and plan who owns it and where it's hosted before it's real. The campus webinar on Thursday, November 12 goes through every tool in depth. Two sites to remember: tritonai.ucsd.edu and parasol.ucsd.edu.",
-    "type": "content",
-    "layout": "cabinet-outline",
-    "title": "Get started",
-    "subtitle": "Three steps, then bring a real task.",
-    "content": [],
-    "figure": {
-      "id": "get-started",
-      "alt": "Three steps: get a TritonAI Gateway key, install the Harness, take the 8-minute Essentials training. Build the first one narrow and tested, reusing the Skills Library; go deeper at the November 12 webinar; tritonai.ucsd.edu and parasol.ucsd.edu."
-    }
+    "speakerNotes": "40 seconds. To tie the two halves of this talk together: two services, two doors. On the left, instructional use cases: PARASOL runs the work itself, Datahub in a browser or the command line, containers on shared CPUs and GPUs, storage and datasets, for courses, student projects, and approved research. On the right, administrative and research use cases: the TritonAI Gateway is inference as a service: TritonGPT, the agents, and your department apps call campus-hosted open-weight models or approved commercial APIs with one key. They're related, not the same service: selected TritonAI workloads can run on PARASOL, but model requests go through the gateway."
   },
   {
     "id": 5020,
@@ -12023,12 +11488,12 @@ export const slides = [
     ],
     "managerSection": "Tech Community",
     "section": {
-      "part": 4,
-      "total": 4,
-      "label": "Compute and models"
+      "part": 1,
+      "total": 5,
+      "label": "The foundation"
     },
     "durationSeconds": 60,
-        "speakerNotes": "One minute. This is the API offering, the same diagram as the Build with TritonAI page. Whoever the builder is (department staff, a research lab, an analyst, a faculty team), they connect a client: the Harness, Claude Code or Codex, Hermes or OpenCode, an n8n workflow, or their own code. Every request goes through one endpoint, the TritonAI LLM Gateway, and the key's approval decides which routes it can use: enterprise cloud through AWS, Azure, or Google Cloud Vertex AI under UC contracts, or open models hosted on UC San Diego infrastructure. Then cost. Recharge is our word for internal billing to a chartstring. Campus administrative work on UC-hosted models has no recharge, with monthly caps. Cloud models bill a department chartstring from the first token at the Model Hub rate, with a budget owner and spend limit. Grant research charges the grant or project. Other UC campuses connect through an intercampus recharge agreement. The key controls model access; the app owner still owns data permissions, testing, accessibility, support, and human review. Start at tritonai.ucsd.edu/developer-apis."
+        "speakerNotes": "One minute. This is the API offering, the same diagram as the Build with TritonAI page. Whoever the builder is (department staff, a research lab, an analyst, a faculty team), they connect a client: the Harness, Claude Code or Codex, Hermes or OpenCode, an n8n workflow, or their own code. Every request goes through one endpoint, the TritonAI LLM Gateway, and the key's approval decides which routes it can use: enterprise cloud through AWS, Azure, or Google Cloud Vertex AI under UC contracts, or open models hosted on UC San Diego infrastructure. Then cost. Recharge is our word for internal billing to a chartstring. Campus administrative work on UC-hosted models has no recharge, with monthly caps. Cloud models bill a department chartstring from the first token at the Model Hub rate, with a budget owner and spend limit. Grant research charges the grant or project. Other UC campuses connect through an intercampus recharge agreement. The key controls model access; the app owner still owns data permissions, testing, accessibility, support, and human review. Start at tritonai.ucsd.edu/developer-apis. And the gateway is already carrying real load."
   },
   {
     "id": 5022,
@@ -12040,18 +11505,1040 @@ export const slides = [
     "content": [],
     "figure": {
       "id": "learn-and-connect",
-      "alt": "tritonai.ucsd.edu is the hub. Learn: the TritonAI Discovery Series (15 short videos, start here), five learning paths, the Certificate in AI for Higher Education (staff or leaders stream, 20 hours, no cost), and AI webinars including the November 12 tools webinar. Connect: TritonAI Champions, the TritonAI Tools Working Group (best fit for this room), the n8n Automation Working Group, the AI Use-Case Group every other Friday, AI Consulting Hours, and departmental groups such as the Jacobs School AI Show and Tell. Stay in the loop with the TritonAI Newsletter, TritonAI Updates, and Weekly AI News; email tritonai@ucsd.edu to join a group."
+      "alt": "tritonai.ucsd.edu is the hub. Learn: the TritonAI Discovery Series (15 short videos, start here), five learning paths, the Certificate in AI for Higher Education (staff or leaders stream, 20 hours, no cost), and AI webinars including the November 12 tools webinar. Connect, available now: TritonAI Champions, the AI Use-Case Group every other Friday, and departmental groups such as the Jacobs School AI Show and Tell. Forming now: the TritonAI Tools Working Group (best fit for this room), the n8n Automation Working Group, and AI Consulting Hours. Everything on the Learn side and the newsletter, updates, and weekly news are available now. Stay in the loop with the TritonAI Newsletter, TritonAI Updates, and Weekly AI News; email tritonai@ucsd.edu to join a group."
     },
     "audiences": [
       "tech-community"
     ],
     "managerSection": "Tech Community",
     "section": {
-      "part": 4,
-      "total": 4,
-      "label": "Compute and models"
+      "part": 5,
+      "total": 5,
+      "label": "PARASOL and next steps"
     },
     "durationSeconds": 60,
-    "speakerNotes": "60 seconds. Everything I showed today lives in one place: tritonai.ucsd.edu. On the left is how you learn. Start with the Discovery Series, 15 short videos that work well one per team meeting. Then pick a learning path; there's one for builders. If you want depth, the Certificate in AI for Higher Education is 20 hours, staff or leaders stream, at no cost. And the November 12 webinar walks through every supported tool. On the right is how you connect. For this room, the TritonAI Tools Working Group is the best fit: power users, monthly, and you help shape the roadmap. If you connect systems, join the n8n Automation Working Group. Bring an idea to the AI Use-Case Group every other Friday, or book AI Consulting Hours when a project is live. If your department already runs its own group, like the Jacobs School's AI Show and Tell, we'll list it. To stay in the loop: the newsletter, TritonAI Updates for platform changes, and Weekly AI News. Email tritonai@ucsd.edu to join any of these."
+    "speakerNotes": "60 seconds. Everything I showed today lives in one place: tritonai.ucsd.edu. On the left is how you learn. Start with the Discovery Series, 15 short videos that work well one per team meeting. Then pick a learning path; there's one for builders. If you want depth, the Certificate in AI for Higher Education is 20 hours, staff or leaders stream, at no cost. And the November 12 webinar walks through every supported tool. On the right is how you connect. Solid green means it is running today; dashed gold means it is forming now, so this is a good time to join and shape it. For this room, the TritonAI Tools Working Group is the best fit: power users, monthly, and it is forming now, so early members shape it and the roadmap. If you connect systems, join the n8n Automation Working Group. Bring an idea to the AI Use-Case Group every other Friday, and AI Consulting Hours for live projects is starting up. If your department already runs its own group, like the Jacobs School's AI Show and Tell, we'll list it. To stay in the loop: the newsletter, TritonAI Updates for platform changes, and Weekly AI News. Email tritonai@ucsd.edu to join any of these."
+  },
+  {
+    "id": 5025,
+    "slug": "techcom-scale",
+    "mobileSnapshot": "/media/cabinet/snap/cabinet-scale.jpg",
+    "mobileSnapshotMedia": "(max-height: 500px)",
+    "type": "content",
+    "layout": "data-dashboard",
+    "compact": true,
+    "title": "The foundation already carries substantial campus use",
+    "subtitle": "Aggregate API activity across UC San Diego, January 1–September 30, 2026. No user-level records.",
+    "backgroundColor": "#F5F0E6",
+    "dashboardSections": [
+      {
+        "type": "metric-grid",
+        "variant": "strip",
+        "items": [
+          {
+            "value": "527.0B",
+            "label": "Tokens processed",
+            "icon": "Database",
+            "color": "#00629B"
+          },
+          {
+            "value": "157.0M",
+            "label": "API request records",
+            "icon": "BarChart3",
+            "color": "#00C6D7"
+          },
+          {
+            "value": "90.6%",
+            "label": "Tokens on self-hosted and internal routes",
+            "icon": "Server",
+            "color": "#6E963B"
+          },
+          {
+            "value": "71.7B",
+            "label": "Tokens in September",
+            "icon": "TrendingUp",
+            "color": "#FC8900"
+          }
+        ]
+      },
+      {
+        "type": "stacked-columns",
+        "sectionTitle": "Monthly token volume · billions, 2026",
+        "series": [
+          {
+            "key": "selfHosted",
+            "label": "Self-hosted and internal",
+            "color": "#00629B"
+          },
+          {
+            "key": "cloud",
+            "label": "Cloud",
+            "color": "#FFCD00"
+          }
+        ],
+        "items": [
+          {
+            "label": "Jan 2026",
+            "selfHosted": 43.823578111,
+            "cloud": 0.461275717,
+            "displayValue": "44.3B",
+            "annotation": "43.8B / 0.5B cloud",
+            "highlight": false
+          },
+          {
+            "label": "Feb 2026",
+            "selfHosted": 48.256624512,
+            "cloud": 0.707140348,
+            "displayValue": "49.0B",
+            "annotation": "48.3B / 0.7B cloud",
+            "highlight": false
+          },
+          {
+            "label": "Mar 2026",
+            "selfHosted": 43.712369023,
+            "cloud": 1.047427888,
+            "displayValue": "44.8B",
+            "annotation": "43.7B / 1.0B cloud",
+            "highlight": false
+          },
+          {
+            "label": "Apr 2026",
+            "selfHosted": 48.662696509,
+            "cloud": 1.402041712,
+            "displayValue": "50.1B",
+            "annotation": "48.7B / 1.4B cloud",
+            "highlight": false
+          },
+          {
+            "label": "May 2026",
+            "selfHosted": 42.809512637,
+            "cloud": 5.283859803,
+            "displayValue": "48.1B",
+            "annotation": "42.8B / 5.3B cloud",
+            "highlight": false
+          },
+          {
+            "label": "Jun 2026",
+            "selfHosted": 68.314520505,
+            "cloud": 4.877858185,
+            "displayValue": "73.2B",
+            "annotation": "68.3B / 4.9B cloud",
+            "highlight": false
+          },
+          {
+            "label": "Jul 2026",
+            "selfHosted": 61.460517438,
+            "cloud": 5.61400289,
+            "displayValue": "67.1B",
+            "annotation": "61.5B / 5.6B cloud",
+            "highlight": false
+          },
+          {
+            "label": "Aug 2026",
+            "selfHosted": 64.536316586,
+            "cloud": 14.325943611,
+            "displayValue": "78.9B",
+            "annotation": "64.5B / 14.3B cloud",
+            "highlight": false
+          },
+          {
+            "label": "Sep 2026",
+            "selfHosted": 55.691559415,
+            "cloud": 16.040063953,
+            "displayValue": "71.7B",
+            "annotation": "55.7B / 16.0B cloud",
+            "highlight": true
+          }
+        ],
+        "caption": "September was down 9.0% from August. August remains the highest-volume month in this period."
+      },
+      {
+        "type": "stat-callouts",
+        "compact": true,
+        "items": [
+          {
+            "icon": "Server",
+            "stat": "September route mix",
+            "detail": "55.7B tokens on self-hosted and internal routes; 16.0B on cloud routes.",
+            "color": "#00629B"
+          },
+          {
+            "icon": "CheckCircle",
+            "stat": "How to read these numbers",
+            "detail": "Gateway-recorded input plus output tokens. Request records include successful and failed calls.",
+            "color": "#6E963B"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://tritonai.ucsd.edu/developer-apis/index.html#gateway-usage",
+    "claimNote": null,
+    "speakerNotes": "Tech Community: follows the API and recharge slide; the gateway is already carrying real load. (Cabinet note follows.) Thirty seconds. Show that campus use is already substantial; distinguish tokens from users or measured productivity. Source line moved off the slide: TritonAI Gateway usage, Jan–Sep 2026, reviewed Oct 5, 2026. Gateway usage measures shared model access, not TritonGPT chat sessions or Harness adoption. January–September reconciles to 527,027,308,843 input and output tokens and 157,030,124 request records. September totals 71,731,623,368 tokens: 55,691,559,415 self-hosted/internal and 16,040,063,953 cloud. September has 13,120,410 request records across all 30 days. The 90.6% year-to-date share is the non-cloud remainder, including internal routes; do not describe all of it as on-premises GPU inference. Volume alone does not establish the cause of the monthly change. Cache-read and cache-creation fields are not added separately; earlier exports lack those fields, so an upstream definition change cannot be entirely ruled out. Labels are rounded; chart heights use exact public aggregates. Source: https://tritonai.ucsd.edu/developer-apis/index.html#gateway-usage, reviewed October 5 and verified October 8, 2026.",
+    "audiences": [
+      "tech-community"
+    ],
+    "managerSection": "Tech Community",
+    "section": {
+      "part": 1,
+      "total": 5,
+      "label": "The foundation"
+    },
+    "managerLabel": "Gateway scale: January–September 2026",
+    "managerSummary": "Tech Community copy of cabinet-scale",
+    "durationSeconds": 30
+  },
+  {
+    "id": 5026,
+    "slug": "techcom-verticals-impact",
+    "type": "content",
+    "content": [],
+    "title": "Vertical solutions: AI for specific business needs",
+    "subtitle": "Each uses AI to solve one specific campus business need, with its impact today or projected.",
+    "layout": "cabinet-outline",
+    "audiences": [
+      "tech-community"
+    ],
+    "managerSection": "Tech Community",
+    "managerLabel": "Cabinet: vertical solutions and their impact",
+    "durationSeconds": 75,
+    "section": {
+      "part": 2,
+      "total": 5,
+      "label": "Vertical AI solutions"
+    },
+    "speakerNotes": "About 75 seconds. These are the vertical solutions IT Services builds for whole campus processes. Group them: delivering now, and in progress. Say the impact type with each number. Contract review 120 to 11 minutes is a timed internal pilot benchmark, not a guarantee (CLAIM-LEDGER contract-reviewer-consolidated). Transcript matching (Brett, Oct 10): cost avoidance of temporary labor; it avoids hiring dozens of temporary staff for transcript entry. Further validation work begins in 2027 after TSS go-live. Supporting figures if asked: ~60K transcripts a year, ~225/hour at 98%+ in pilot; earlier planning estimate up to $500K a year in capacity. Frame as avoided temporary hiring, not reductions to existing staff. Ticket routing: the hours figure is a scenario at an assumed 90% accuracy per 10,000 eligible tickets (backup slide cabinet-routing-savings), not measured performance. Website assistants: the retired vendor contract is $300K a year in cost avoided (scaling-engagement-the-tritongpt-widget); 16 websites live; College Selection Assistant is one of them. Cash application (Brett, Oct 11): the row shows the problem size: a person has to handle 61% of receipts (75,199 of 123,108, Jan 2025–Jan 2026, 81% of the $2.66B), per the BFS March 2026 business case. The headline now says '$70M+ backlog of unallocated cash' (Brett, Oct 12): the BFS business case puts the average monthly undistributed cash balance at about $79M over Jan 2025–Jan 2026, so 'more than $70M' is conservative; it is cash received but not yet applied, not a loss and not a monthly inflow. The $1.3–3.0M a year proposed benefit is off the slide; mention it only if asked, as an initial business-case estimate BFS is still reconciling, not measured or net ROI. TritonAI Harness (added Oct 10): the platform row and the bridge to Part 2; generally available from the TritonAI website, 400+ users (Brett, Oct 10; up from 100+ active at the Sep 21 rollout review); automations still in beta for a subset of users. The Faculty Expertise Directory moved to Part 3 as a citizen developer project. Items drawn from the PK portfolio slides ai-portfolio-at-scale and ai-portfolio-pilots.",
+    "impactTable": {
+      "rows": [
+        {
+          "name": "Cash Application Modernization",
+          "status": "In progress",
+          "tone": "progress",
+          "impact": "$70M+ backlog of unallocated cash",
+          "basis": "60%+ of receipts need a person today"
+        },
+        {
+          "name": "TritonAI Harness",
+          "status": "Available",
+          "tone": "live",
+          "impact": "400+ users building their own tools",
+          "basis": "Citizen development platform (Part 3)"
+        },
+        {
+          "name": "Contract Review",
+          "status": "In production",
+          "tone": "live",
+          "impact": "120 → 11 minutes per contract",
+          "basis": "Timed pilot"
+        },
+        {
+          "name": "Ticket Routing",
+          "status": "In production",
+          "tone": "live",
+          "impact": "~85% fewer routing hours",
+          "basis": "Scenario, not yet measured"
+        },
+        {
+          "name": "AI Tutor in Canvas",
+          "status": "Launched fall",
+          "tone": "live",
+          "impact": "5 instructors this fall; scaling in winter",
+          "basis": "81% of pilot students said it helped them understand"
+        },
+        {
+          "name": "Transcript Matching",
+          "status": "In production",
+          "tone": "live",
+          "impact": "Avoids hiring dozens of temporary staff",
+          "basis": "Validation continues in 2027 after TSS go-live"
+        },
+        {
+          "name": "Website Assistants",
+          "status": "In production",
+          "tone": "live",
+          "impact": "$300K a year saved",
+          "basis": "Retired vendor contract"
+        }
+      ]
+    },
+    "compact": false,
+    "managerSummary": "Tech Community copy of cabinet-verticals-impact"
+  },
+  {
+    "id": 5028,
+    "slug": "techcom-transcript-matching-demo",
+    "type": "video",
+    "layout": "cabinet-demo",
+    "title": "Transcript matching",
+    "subtitle": "AI matches incoming transcripts to the right student record for Enrollment Management.",
+    "audiences": [
+      "tech-community"
+    ],
+    "managerSection": "Tech Community",
+    "durationSeconds": 45,
+    "section": {
+      "part": 2,
+      "total": 5,
+      "label": "Vertical AI solutions"
+    },
+    "intro": {
+      "sideVideo": true,
+      "videoWide": true,
+      "kicker": "Enrollment Management",
+      "title": "Transcript matching",
+      "setup": "Incoming transcripts arrive in every format. AI reads each one, matches it to the right student record, and sends only the uncertain cases to staff for review.",
+      "impact": [
+        {
+          "value": "60,000",
+          "label": "transcripts a year"
+        },
+        {
+          "value": "225/hr",
+          "label": "at 98%+ accuracy in the pilot"
+        }
+      ],
+      "watchFor": "Each transcript's candidate student matches, with a confidence score and the reasons behind it, for a person to confirm."
+    },
+    "videoSrc": "/media/tms-onbase-demo.mp4",
+    "poster": "/media/posters/transcript-matching.jpg",
+    "videoLoop": true,
+    "videoClearNav": false,
+    "videoAutoPlay": true,
+    "hideDemoBadge": true,
+    "demoOnly": true,
+    "managerSummary": "Tech Community copy of cabinet-transcript-matching-demo",
+    "speakerNotes": "About 45 seconds; side by side, the recording loops on the right (Brett, Oct 12). Transcript matching for Enrollment Management: AI extracts data from transcripts in any format (scanned, stained, distorted), matches each to the right student record, and routes uncertain matches to staff, who confirm in OnBase. Impact is cost avoidance: it avoids hiring dozens of temporary staff for peak-season transcript entry; don't frame it as reductions to existing staff. Figures: about 60,000 transcripts a year; about 225 an hour at 98%+ accuracy in the pilot (Enrollment Management operating baseline and pilot benchmark, reviewed Jul 2026). Earlier planning estimate up to about $500K a year in capacity, if asked. The clip is the same recording used on the main deck's transcript matching slide; names shown are in the review queue, so don't linger on a single record."
+  },
+  {
+    "id": 5029,
+    "slug": "techcom-contract-review-demo",
+    "type": "video",
+    "layout": "cabinet-demo",
+    "title": "Bring document review into Word",
+    "subtitle": "Institutional rules produce tracked changes and explanations for a reviewer.",
+    "content": [],
+    "audiences": [
+      "tech-community"
+    ],
+    "managerSection": "Tech Community",
+    "durationSeconds": 55,
+    "recording": {
+      "label": "Select three rules → Start Review → tracked changes and comments appear → Talk to agent → answer",
+      "format": "One native take of the Word window, speed-ramped • silent for voice-over",
+      "mediaStem": "cabinet-contract-review-live",
+      "status": "captured and reviewed"
+    },
+    "speakerNotes": "Side-by-side slide (Brett, Oct 12): overview and impact on the left while the recording loops on the right; no separate demo slide. Plant the ask while the recording plays: prioritize the next eligible contract groups and types, starting with OCGA (subject to Nicole's contract-type list). Advancement and real estate were reviewed and do not fit; do not list them. About 55 seconds: six-second intro card, then the 40-second recording (sped up further Oct 10: setup 2.2x, processing and Q&A wait 3.5x, results 1.4x). Voice-over: staff choose institutional rules, the review runs inside Word, and every proposed change arrives as a tracked change with a comment naming its rule. Then you can ask the agent questions about the result. Capture: native screen recording of the real Word window and installed UC San Diego Contract Reviewer add-in, October 9, 2026, about 12:44 PM PT, on a local copy of the public SolarWinds SaaS agreement (unreviewed demonstration copy). Three rules were selected on camera (Terms of Purchase, Term and Termination, Indemnity and Liability); business context said it was a demonstration with no purchase, customer data, UC Health, federal funding, order form, or DPA; Risk assessment and rule names in author labels were on. The add-in reported Review complete, 3 of 3 rules, 1m 31s. Question asked: \"Which of these changes matters most for UC San Diego, and what should a reviewer confirm before accepting it?\" Answer (actual): UC terms prevail; data-security appendix and AI/analytics approval; UC convenience termination, supplier indemnity, no conflicting liability cap; remove automatic renewal. Speed: real time for rule selection, completion, and reading the answer; processing sped up 8x and the question/answer 2–3x. Nothing was accepted, signed, sent, or saved over the source. Single run time is not a benchmark. The existing supervised Procurement inbox/portal workflow is in production; broad Word add-in deployment still requires Microsoft trusted-app setup; do not claim campus-wide availability. OCGA is the next candidate subject to Nicole's contract-type list. Edit script: ~/dev/cabinet-recapture-20261009/word/edit_contract.sh Guided edit Oct 9: yellow highlights and zooms on the three rules, Start Review, the tracked changes, Review complete, and the agent's answer (docs/recapture-20261009/spec_contract.json).",
+    "videoLoop": false,
+    "videoClearNav": false,
+    "videoAutoPlay": true,
+    "hideDemoBadge": true,
+    "managerSummary": "Tech Community copy of cabinet-contract-review-demo",
+    "videoSrc": "/media/cabinet/cabinet-contract-review-fast.mp4",
+    "poster": "/media/cabinet/cabinet-contract-review-fast-poster.jpg",
+    "releaseContext": {
+      "channel": "pilot",
+      "label": "Production workflow · Word add-in availability unconfirmed",
+      "captureNote": "Live run Oct 9 • public vendor agreement • 3 rules in 1m 31s • nothing accepted"
+    },
+    "demoOnly": true,
+    "section": {
+      "part": 2,
+      "total": 5,
+      "label": "Vertical AI solutions"
+    },
+    "intro": {
+      "sideVideo": true,
+      "videoWide": true,
+      "impact": [
+        {
+          "value": "11 min",
+          "label": "per contract, down from 120, in a timed pilot"
+        },
+        {
+          "value": "~90%",
+          "label": "less reviewer time; a person approves every edit"
+        }
+      ],
+      "kicker": "Word add-in",
+      "title": "Contract review inside Word",
+      "label": "Contract review · Word add-in",
+      "setup": "Institutional rules run inside Word and produce tracked changes, each with a comment naming the rule behind it.",
+      "watchFor": "Three rules selected, tracked changes appearing, then the agent answering what a reviewer should confirm. A person approves every edit.",
+      "seconds": 6
+    }
+  },
+  {
+    "id": 5030,
+    "slug": "techcom-servicenow-routing-demo",
+    "type": "video",
+    "layout": "cabinet-demo",
+    "title": "Routing tickets to the right team",
+    "subtitle": "ServiceNow suggests the specialist team; the agent chooses the assignment.",
+    "content": [],
+    "audiences": [
+      "tech-community"
+    ],
+    "managerSection": "Tech Community",
+    "durationSeconds": 31,
+    "section": {
+      "part": 2,
+      "total": 5,
+      "label": "Vertical AI solutions"
+    },
+    "intro": {
+      "sideVideo": true,
+      "videoWide": true,
+      "impact": [
+        {
+          "value": "~140 hours",
+          "label": "of routing time saved per 10,000 tickets (scenario)"
+        },
+        {
+          "value": "~85%",
+          "label": "fewer routing hours at 90% accuracy"
+        }
+      ],
+      "kicker": "ServiceNow",
+      "title": "Routing tickets to the right team",
+      "label": "ServiceNow · ticket routing",
+      "setup": "Two tickets that would normally go to the Service Desk first. A model trained on our case history routes each to the specialist team.",
+      "watchFor": "A broken desktop goes to Field Support (80%); a DNS request goes to Hostmaster (97%).",
+      "seconds": 5
+    },
+    "videoSrc": "/media/cabinet/cabinet-servicenow-routing-two-cases.mp4",
+    "poster": "/media/cabinet/cabinet-servicenow-routing-two-cases-poster.jpg",
+    "videoLoop": false,
+    "videoClearNav": false,
+    "videoAutoPlay": true,
+    "hideDemoBadge": true,
+    "demoOnly": true,
+    "releaseContext": {
+      "channel": "pilot",
+      "label": "Current ServiceNow interface",
+      "captureNote": "Support requests · actual recommendations · staff selects · nothing saved"
+    },
+    "managerSummary": "Tech Community copy of cabinet-servicenow-routing-demo",
+    "speakerNotes": "Side-by-side slide (Brett, Oct 12): the overview and impact figures sit on the left while the 25-second recording loops silently on the right; no click to start, and next goes straight to the following slide. Talk through the overview while it plays. Impact on the intro card (Oct 12): ~140 hours per 10,000 tickets is a scenario, not measured: manual routing at 60 seconds per ticket is 167 staff hours per 10,000; at 90% correct suggestions, 1,000 misroutes at 90 seconds each is 25 hours; savings about 142 hours (85%). Volume if asked: the classifier was trained on about 300,000 ServiceNow cases from six months (all queues, roughly 50,000 a month); a planning estimate puts the Service Desk alone at 50,000+ tickets a year. At 50,000 Service Desk tickets that is roughly 700 staff hours a year; the bigger gain is specialists starting sooner without a hand-off. Confirm actual Service Desk volume with Chuck's team before quoting an annual number. About 31 seconds (6s intro + 25s clip); voice over. Today most tickets land with the Service Desk first and get handed off. Here the agent clicks Suggest Assignment Group. First case: a department desktop won't power on; the model recommends ITS-FieldSupport-Intake at 79.9% and the group fills in. Second case: a request for DNS records on a university server; it recommends ITS-Hostmaster at 96.9%. The value is skipping the hand-off so the specialist team starts sooner. The agent stays in control and can pick another group. Scores are model confidence for these examples, not measured accuracy. Recording: October 8, 2026 capture on unsaved new-case forms in production ServiceNow; nothing saved or submitted. Built from captured frames; the yellow highlights and zooms were added in editing on Oct 9 (docs/recapture-20261009/sn_edit.py). The VPN example that routed to the Service Desk was dropped. Clip sped up 1.6x on Oct 10 (about 25s)."
+  },
+  {
+    "id": 5031,
+    "slug": "techcom-college-assistant-demo",
+    "type": "video",
+    "layout": "cabinet-demo",
+    "title": "College Exploration Assistant",
+    "subtitle": "Prospective students describe what they want; TritonGPT suggests colleges worth a look, quoting each college's own pages.",
+    "content": [],
+    "audiences": [
+      "tech-community"
+    ],
+    "managerSection": "Tech Community",
+    "durationSeconds": 45,
+    "section": {
+      "part": 2,
+      "total": 5,
+      "label": "Vertical AI solutions"
+    },
+    "intro": {
+      "sideVideo": true,
+      "videoWide": true,
+      "impact": [
+        {
+          "value": "$300K",
+          "label": "a year saved by retiring a vendor contract"
+        },
+        {
+          "value": "16",
+          "label": "campus websites with assistants"
+        }
+      ],
+      "kicker": "Admissions website",
+      "title": "Which of the eight colleges fits me?",
+      "setup": "A prospective first-year describes what matters to them: marine biology, sustainability, the outdoors, a flexible gen ed, a close-knit community, and service.",
+      "watchFor": "It matches those interests to specific colleges, quoting each college's own pages with citations.",
+      "seconds": 6
+    },
+    "videoSrc": "/media/cabinet/cabinet-college-assistant.mp4",
+    "poster": "/media/cabinet/cabinet-college-assistant-poster.jpg",
+    "videoLoop": false,
+    "videoClearNav": false,
+    "videoAutoPlay": true,
+    "hideDemoBadge": true,
+    "demoOnly": true,
+    "managerSummary": "Tech Community copy of cabinet-college-assistant-demo",
+    "speakerNotes": "Side-by-side slide (Brett, Oct 12): the overview and impact sit on the left while the recording loops silently on the right; no click to start. Last slide of Part 1 (What's next moved to the backup view, Oct 11). After the clip, bridge: \"The AI team built these. The next ones, we expect departments to build themselves. Here's how.\" About 45 seconds (6s intro + 39s clip). The public College Exploration Assistant on the admissions Colleges page, powered by TritonGPT. Re-recorded Oct 10 with a richer prompt (Brett): a first-year planning to major in marine biology who cares about climate and sustainability, surfs and hikes, wants a flexible gen ed, prefers a smaller close-knit community, and volunteers. In one message it suggested Muir (individual choice and environmental awareness), Seventh (changing-planet focus, flexible exploration), Eighth (community engagement, interdisciplinary problem solving), and Marshall (scholar-citizen values, social responsibility), quoting each college's own pages with citations. It frames these as suggestions, not an assignment, and notes any major works from any college. Part of the Website Assistants line: about $300K in vendor cost avoided. The persona card and closing board are presentation overlays; the conversation is real, sped up while typing and while it thinks."
+  },
+  {
+    "id": 5032,
+    "slug": "techcom-governance",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "It stays in your control",
+    "subtitle": "Limits the person sets, and limits the campus sets.",
+    "content": [
+      {
+        "heading": "You choose how much it does alone",
+        "text": "Supervised mode asks before it runs a command or changes a file. Auto or Full access is for trusted work."
+      },
+      {
+        "heading": "Connected tools are scoped",
+        "text": "Plugins use your own account permissions. Microsoft 365 reads by default; drafts and calendar edits are opt-in, and it cannot send email or delete mail or events."
+      },
+      {
+        "heading": "Data rules still apply",
+        "text": "P1 to P3 data in approved setups, never P4. An accountable owner validates results before a workflow expands."
+      }
+    ],
+    "audiences": [
+      "tech-community"
+    ],
+    "managerSection": "Tech Community",
+    "section": {
+      "part": 3,
+      "total": 5,
+      "label": "The Harness"
+    },
+    "durationSeconds": 45,
+    "speakerNotes": "45 seconds. Right after showing what it can do, show the limits. Supervised behavior and the Microsoft 365 abilities come from the training and its plugin catalog (https://tritonai.ucsd.edu/training/harness/, checked October 9, 2026): Read mail and calendars start on; drafts, mail organizing, calendar create/edit, Teams chat read and send are opt-in; the plugin never sends email, deletes mail or events, or responds to invitations. Account permissions still apply on top of plugin abilities, and the thread's access mode decides whether it asks first. P1–P3 only in approved services/setups, model routes and use cases; P4 prohibited under current product guidance. Selected context is sent to the selected model; campus-managed inference keeps processing on campus for those routes, but commercial routes are distinct. TSS downstream behavior is one concrete validation gate. Do not invent an institutional certification.",
+    "managerSummary": "Tech Community copy of cabinet-governance"
+  },
+  {
+    "id": 5033,
+    "slug": "techcom-personal-productivity-list",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "Personal Productivity with TritonAI Harness",
+    "subtitle": "Tools I set up for my own work. They prepare, sort, and draft; I review and decide.",
+    "audiences": [
+      "tech-community"
+    ],
+    "managerSection": "Tech Community",
+    "section": {
+      "part": 3,
+      "total": 5,
+      "label": "The Harness"
+    },
+    "durationSeconds": 60,
+    "impactTable": {
+      "headers": [
+        "Use case",
+        "When",
+        "What it does for me"
+      ],
+      "rows": [
+        {
+          "name": "Daily brief",
+          "what": "Every meeting on my calendar, with its context and open items",
+          "status": "Every morning",
+          "tone": "live",
+          "impact": "I walk into each meeting prepared",
+          "basis": "Objective, suggested agenda, questions to ask, what carried over"
+        },
+        {
+          "name": "Inbox priorities",
+          "what": "An Outlook add-in that flags what needs me today or this week",
+          "status": "All day",
+          "tone": "live",
+          "impact": "Priority 1 and 2, with the reasons why",
+          "basis": "Learns from what I actually answer; it never sends or deletes"
+        },
+        {
+          "name": "Draft replies",
+          "what": "Drafts for work email that still needs an answer",
+          "status": "Daily",
+          "tone": "live",
+          "impact": "Replies waiting in my drafts folder",
+          "basis": "Nothing goes out until I send it"
+        },
+        {
+          "name": "Meeting debriefs",
+          "what": "Decisions and action items pulled from my meeting notes",
+          "status": "After meetings",
+          "tone": "live",
+          "impact": "Follow-ups land on my task list",
+          "basis": "Each with an owner and the context behind it"
+        },
+        {
+          "name": "Scheduling assistant",
+          "what": "An email assistant that finds times and books meetings",
+          "status": "On request",
+          "tone": "live",
+          "impact": "Holds and reschedules, with me copied",
+          "basis": "Cancellations still need my approval"
+        },
+        {
+          "name": "Search across my work",
+          "what": "One question across email, calendar, notes, and documents",
+          "status": "On request",
+          "tone": "live",
+          "impact": "An answer with a source for every fact",
+          "basis": "From my desk or my phone"
+        },
+        {
+          "name": "Daily focus list",
+          "what": "What's open, what's blocked, and what to do first",
+          "status": "Every day",
+          "tone": "live",
+          "impact": "My priorities in one place",
+          "basis": "Built from email, meetings, and my task list"
+        }
+      ]
+    },
+    "speakerNotes": "About a minute; no demo, you voice over (Brett, Oct 11: replaces the daily brief and inbox demo, which moved to the backup view). Point: the same tools staff use, applied to my own workday. Each one prepares, sorts, or drafts; I review and decide, and nothing is sent or deleted without me. Pick two or three to tell. Daily brief: every morning at 7, each meeting's context, my objective, a suggested agenda, questions to ask, and what carried over from last time. Inbox priorities: an Outlook add-in that marks Priority 1 (today) and Priority 2 (this week) and shows why: who it's from, how it reached me, and what it asks; it learns from what I actually reply to and only sets categories. Draft replies: drafts for work email that still needs an answer, waiting for my review. Meeting debriefs: decisions and action items from my meeting notes, added to my task list. Scheduling assistant: email it to find a time; it places holds and reschedules with me copied, and cancellations need my approval. Search across my work: one question across email, calendar, notes, and documents, answered with sources, from my desk or phone (the phone demo comes next). Daily focus list: what's open, what's blocked, and what to do first. Avoid internal system names on stage.",
+    "managerSummary": "Tech Community copy of cabinet-personal-productivity-list"
+  },
+  {
+    "id": 5034,
+    "slug": "techcom-directory-demo",
+    "type": "video",
+    "title": "Faculty Expertise Directory",
+    "subtitle": "A research-support team built a tool that turns a research need into faculty leads to review.",
+    "content": [],
+    "audiences": [
+      "tech-community"
+    ],
+    "managerSection": "Tech Community",
+    "section": {
+      "part": 4,
+      "total": 5,
+      "label": "What people build"
+    },
+    "managerSummary": "Tech Community copy of cabinet-directory-demo",
+    "durationSeconds": 38,
+    "videoSrc": "/media/cabinet/cabinet-directory-live.mp4",
+    "poster": "/media/cabinet/cabinet-directory-live-poster.jpg",
+    "releaseContext": {
+      "channel": "pilot",
+      "label": "Faculty Expertise Directory · In development",
+      "captureNote": "Live web app · Sample query · Profiles and matches need review"
+    },
+    "recording": {
+      "label": "Enter Expertise → plain-language request → analysis → opportunity summary → ranked faculty",
+      "format": "Continuous live recording (Oct 10), waits sped up, request zoomed, top match highlighted • silent",
+      "mediaStem": "cabinet-directory-live",
+      "status": "captured and reviewed"
+    },
+    "speakerNotes": "About 38 seconds (6s intro + 32s clip). Live recording of the Faculty Expertise Directory (directory.apps.ucsd.edu; the app still shows its earlier name, Faculty Finder), Oct 10. 0:00–0:08 a plain-language request typed into Enter Expertise (zoomed): researchers in coastal flooding, sea-level rise, climate adaptation, and data-driven methods for protecting coastal communities. 0:08–0:12 the analysis runs (sped up 3x). 0:12–0:17 an opportunity summary with themes. 0:17–0:32 ranked Aligned Faculty; the top match is highlighted with its score (92) and the breakdown: expertise, methods, track record, plus a one-paragraph rationale. Moved from vertical solutions to Part 3 as a citizen developer project (Brett, Oct 10). After the successful VCRI demonstration with Faith and Corey, Nicole's team continues development and is planning the rollout; arts and humanities coverage is the focus (public-source data has gaps). Scores need human review; don't describe ranking as an institutional faculty evaluation. Confirm the final name with Nicole.",
+    "videoLoop": false,
+    "videoClearNav": false,
+    "videoAutoPlay": true,
+    "hideDemoBadge": true,
+    "demoOnly": true,
+    "layout": "cabinet-demo",
+    "intro": {
+      "sideVideo": true,
+      "videoWide": true,
+      "kicker": "Citizen developer project",
+      "title": "Faculty Expertise Directory",
+      "label": "Faculty Expertise Directory · research need to faculty leads",
+      "setup": "A research-support team built this to match a research or funding need to UC San Diego faculty with the right expertise. It is planning its rollout after a successful VCRI demo.",
+      "watchFor": "A plain-language expertise request becomes a summary and ranked faculty leads for a person to review.",
+      "seconds": 6
+    }
+  },
+  {
+    "id": 5035,
+    "slug": "techcom-passport-demo",
+    "type": "video",
+    "layout": "cabinet-demo",
+    "title": "Turn staff knowledge into a service app",
+    "subtitle": "Department staff define the workflow; a supported app carries it through.",
+    "content": [],
+    "audiences": [
+      "tech-community"
+    ],
+    "managerSection": "Tech Community",
+    "section": {
+      "part": 4,
+      "total": 5,
+      "label": "What people build"
+    },
+    "durationSeconds": 26,
+    "recording": {
+      "label": "Location → walk-in → contact details → readiness checks → check-in complete",
+      "format": "One continuous take, sped up (2x through the form, 1.4x through the readiness checks) • silent for presenter voice-over",
+      "mediaStem": "cabinet-passport-flow",
+      "status": "captured and reviewed"
+    },
+    "speakerNotes": "About 25 seconds: five-second intro card, then a 20-second recording (sped up from 35 seconds, Oct 10). Voice-over: the people who run a service understand its bottlenecks. Passport turns that knowledge into check-in, readiness prompts, and a clear next step. Don't narrate every field. Capture: the real application source in a local copy (127.0.0.1) backed by a throwaway copy of the demo database, with a fictional walk-in visitor, Jordan Rivera, 858-555-0142. No production queue, real visitor records, or eligibility decision. The clip covers the visitor flow, not staff reporting. The official use-case source documents Passport Services/IPPS workflow design and AI-assisted development with specialists preparing production; do not claim our Harness built it. Nikki's October 8 email confirms the Citizen Developer program context. Recorded October 9, 2026 as one continuous take: a headless Chromium session scripted with Playwright, captured frame by frame through the DevTools screencast at 2560x1440 and sped up to 20 seconds on Oct 10; no cuts, held frames, crops, or digital zoom. The cursor is drawn over the real mouse events so the room can follow it. Recording scripts: ~/dev/cabinet-recapture-20261009.",
+    "videoLoop": false,
+    "videoClearNav": false,
+    "videoAutoPlay": true,
+    "hideDemoBadge": true,
+    "managerSummary": "Tech Community copy of cabinet-passport-demo",
+    "videoSrc": "/media/cabinet/cabinet-passport-flow.mp4",
+    "poster": "/media/cabinet/cabinet-passport-flow-poster.jpg",
+    "releaseContext": {
+      "channel": "stable",
+      "label": "Passport · Production service",
+      "captureNote": "Local copy of the app source • fictional visitor • no live queue"
+    },
+    "demoOnly": true,
+    "intro": {
+      "sideVideo": true,
+      "videoWide": true,
+      "kicker": "department-designed service",
+      "title": "Passport Services check-in",
+      "label": "Passport Services · visitor check-in",
+      "setup": "Passport Services staff designed the visitor flow they needed: check in, answer readiness questions, and get a clear next step.",
+      "watchFor": "The readiness questions that catch a missing photo, ID, or fee before the counter.",
+      "seconds": 5
+    }
+  },
+  {
+    "id": 5036,
+    "slug": "techcom-class-planner-demo",
+    "type": "video",
+    "title": "Turn a course list into schedule options",
+    "subtitle": "Class Planner helps students compare schedules and check the walk between classes.",
+    "content": [],
+    "audiences": [
+      "tech-community"
+    ],
+    "managerSection": "Tech Community",
+    "durationSeconds": 40,
+    "videoSrc": "/media/cabinet/cabinet-class-planner-guided-fast.mp4",
+    "poster": "/media/cabinet/cabinet-class-planner-guided-poster.jpg",
+    "videoLoop": false,
+    "videoClearNav": false,
+    "videoAutoPlay": true,
+    "hideDemoBadge": true,
+    "demoOnly": true,
+    "managerSummary": "Tech Community copy of cabinet-class-planner-demo",
+    "recording": {
+      "label": "Guide → auto planning with later starts → three courses → compare schedules → details and walking map",
+      "format": "One continuous take with guided highlights and zooms; zoom/highlight moments at real speed, course entry and transitions sped up 1.8–2.5x (Oct 10) • silent for presenter voice-over",
+      "mediaStem": "cabinet-class-planner-flow",
+      "status": "captured and reviewed"
+    },
+    "releaseContext": {
+      "channel": "stable",
+      "label": "Live Class Planner web app",
+      "captureNote": "Public course data • fresh browser session • no sign-in or enrollment"
+    },
+    "speakerNotes": "Side-by-side slide (Brett, Oct 12): the overview sits on the left while the recording loops on the right; no separate demo slide. About 40 seconds: a six-second intro card, then a 34-second recording (sped up Oct 10, slower during the zoomed highlights). Voice-over: Class Planner turns a list of courses into schedule options students can compare, then brings section details and the walk between classes into one place. Connect it to the builder story: a focused campus app made a recurring student task easier. Use Kevin's framing: built quickly, robust usage, now extended by student developers. That is presenter-provided framing, not a verified personnel history; do not name builders or say the original development used TritonAI Harness. Capture: the live public app (FA26) in a fresh browser profile, light theme. Sequence: guide page, Open Class Planner, Auto planning, Later starts, then MATH-010A, CSE-008A and COGS-001, two alternative schedules in the condensed week, Details, and Map. No student identity, sign-in, TSS booking, enrollment, or shared schedule. Seat counts and walking estimates are live data at capture time; a generated option is not a guarantee, and booking is completed in TSS. Recorded October 9, 2026 as one continuous take: a headless Chromium session scripted with Playwright, captured frame by frame through the DevTools screencast at 2560x1440 and then sped up between the zoomed highlights (Oct 10). No cuts or held frames. The cursor is drawn over the real mouse events so the room can follow it. Recording scripts: ~/dev/cabinet-recapture-20261009. Source: https://classplanner.apps.ucsd.edu/ Guided edit Oct 9: highlights and zooms on Auto planning, Later starts, the schedule switcher, and the walk between classes (spec_cp.json).",
+    "section": {
+      "part": 4,
+      "total": 5,
+      "label": "What people build"
+    },
+    "intro": {
+      "sideVideo": true,
+      "videoWide": true,
+      "kicker": "Live public app",
+      "title": "Class Planner",
+      "label": "Class Planner · courses to schedule options",
+      "setup": "Students list the courses they need. Class Planner builds schedule options to compare, with section details and the walk between classes.",
+      "watchFor": "Three courses and a later-start preference become ranked schedules and a walking map.",
+      "seconds": 6
+    }
+  },
+  {
+    "id": 5037,
+    "slug": "techcom-class-planner-utilization",
+    "mobileSnapshot": "/media/cabinet/snap/cabinet-class-planner-utilization.jpg",
+    "mobileSnapshotMedia": "(max-height: 500px)",
+    "type": "content",
+    "content": [],
+    "title": "Class Planner demand peaks with enrollment passes",
+    "subtitle": "Daily usage across the summer 2026 enrollment passes",
+    "layout": "daily-usage-chart",
+    "backgroundColor": "#F5F0E6",
+    "managerLabel": "Class Planner metrics: daily usage, both planners",
+    "managerSummary": "Tech Community copy of cabinet-class-planner-utilization",
+    "chartData": {
+      "title": "Class Planner daily usage",
+      "subtitle": "Daily counts, Jul 18-Sep 20, 2026 · square-root y-axis, labels show actual daily users",
+      "dates": [
+        "Jul 18",
+        "Jul 19",
+        "Jul 20",
+        "Jul 21",
+        "Jul 22",
+        "Jul 23",
+        "Jul 24",
+        "Jul 25",
+        "Jul 26",
+        "Jul 27",
+        "Jul 28",
+        "Jul 29",
+        "Jul 30",
+        "Jul 31",
+        "Aug 1",
+        "Aug 2",
+        "Aug 3",
+        "Aug 4",
+        "Aug 5",
+        "Aug 6",
+        "Aug 7",
+        "Aug 8",
+        "Aug 9",
+        "Aug 10",
+        "Aug 11",
+        "Aug 12",
+        "Aug 13",
+        "Aug 14",
+        "Aug 15",
+        "Aug 16",
+        "Aug 17",
+        "Aug 18",
+        "Aug 19",
+        "Aug 20",
+        "Aug 21",
+        "Aug 22",
+        "Aug 23",
+        "Aug 24",
+        "Aug 25",
+        "Aug 26",
+        "Aug 27",
+        "Aug 28",
+        "Aug 29",
+        "Aug 30",
+        "Aug 31",
+        "Sep 1",
+        "Sep 2",
+        "Sep 3",
+        "Sep 4",
+        "Sep 5",
+        "Sep 6",
+        "Sep 7",
+        "Sep 8",
+        "Sep 9",
+        "Sep 10",
+        "Sep 11",
+        "Sep 12",
+        "Sep 13",
+        "Sep 14",
+        "Sep 15",
+        "Sep 16",
+        "Sep 17",
+        "Sep 18",
+        "Sep 19",
+        "Sep 20"
+      ],
+      "series": [
+        {
+          "name": "TritonGPT Class Planner",
+          "color": "#1f4e79",
+          "data": [
+            1,
+            1,
+            2727,
+            3962,
+            2064,
+            1175,
+            752,
+            476,
+            671,
+            828,
+            579,
+            572,
+            655,
+            1070,
+            329,
+            406,
+            783,
+            968,
+            644,
+            412,
+            262,
+            281,
+            667,
+            1185,
+            628,
+            390,
+            357,
+            247,
+            189,
+            200,
+            519,
+            757,
+            891,
+            997,
+            805,
+            286,
+            300,
+            540,
+            604,
+            673,
+            691,
+            528,
+            442,
+            696,
+            1537,
+            1331,
+            309,
+            278,
+            352,
+            158,
+            118,
+            271,
+            734,
+            183,
+            139,
+            105,
+            175,
+            128,
+            196,
+            203,
+            169,
+            191,
+            161,
+            147,
+            173
+          ]
+        },
+        {
+          "name": "Standalone Class Planner",
+          "color": "#2a8a6b",
+          "data": [
+            null,
+            null,
+            null,
+            null,
+            591,
+            606,
+            3500,
+            1717,
+            1875,
+            2063,
+            1449,
+            1543,
+            2734,
+            3435,
+            1112,
+            1236,
+            2479,
+            3686,
+            2430,
+            1484,
+            1287,
+            1121,
+            2245,
+            4668,
+            2644,
+            1652,
+            1438,
+            1103,
+            825,
+            915,
+            1974,
+            2878,
+            3489,
+            4428,
+            3720,
+            1240,
+            1284,
+            2205,
+            2352,
+            2695,
+            2845,
+            2480,
+            2088,
+            3163,
+            7048,
+            8434,
+            2708,
+            2380,
+            2841,
+            1374,
+            1359,
+            2544,
+            6816,
+            2523,
+            1954,
+            1686,
+            1684,
+            1424,
+            2232,
+            2056,
+            2053,
+            2258,
+            2366,
+            2354,
+            2699
+          ]
+        }
+      ],
+      "yMax": 10000,
+      "yTicks": [
+        0,
+        100,
+        500,
+        1000,
+        2000,
+        4000,
+        6000,
+        10000
+      ],
+      "yAxisTitle": "Daily user count",
+      "xTicks": [
+        "Jul 20",
+        "Jul 27",
+        "Aug 3",
+        "Aug 10",
+        "Aug 17",
+        "Aug 24",
+        "Aug 31",
+        "Sep 7",
+        "Sep 14"
+      ],
+      "xAxisTitle": "Date (2026)",
+      "markers": [
+        {
+          "date": "Aug 3",
+          "label": "Aug 3-5",
+          "detail": "Juniors\nFirst pass"
+        },
+        {
+          "date": "Aug 10",
+          "label": "Aug 10-11",
+          "detail": "Sophomores +\ncontinuing first-years\nFirst pass"
+        },
+        {
+          "date": "Aug 17",
+          "label": "Aug 17-21",
+          "detail": "Continuing\nSecond pass"
+        },
+        {
+          "date": "Aug 31",
+          "label": "Aug 31-Sep 1",
+          "detail": "Incoming students\nFirst pass"
+        },
+        {
+          "date": "Sep 8",
+          "label": "Sep 8",
+          "detail": "Incoming first-years\nSecond pass"
+        }
+      ],
+      "peaks": [
+        {
+          "series": 0,
+          "date": "Jul 21",
+          "side": "right",
+          "dy": -30,
+          "text": "3.96k peak · Jul 21\nJul 22 priority first pass"
+        },
+        {
+          "series": 1,
+          "date": "Sep 1",
+          "side": "right",
+          "dy": 6,
+          "text": "8.43k peak\nSep 1"
+        }
+      ]
+    },
+    "audiences": [
+      "tech-community"
+    ],
+    "sourceSlide": "class-planner-indexed-comparison",
+    "managerSection": "Tech Community",
+    "section": {
+      "part": 4,
+      "total": 5,
+      "label": "What people build"
+    },
+    "durationSeconds": 30,
+    "speakerNotes": "Thirty seconds. The same utilization chart used in the PK view: daily usage July 18–September 20, 2026. Explain that it demonstrates demand for the student service during enrollment passes. The two series use different measures: distinct authenticated TritonGPT accounts per day and estimated standalone visitors from Plausible. Peaks are 3.96k and 8.43k respectively; do not add them or call either a campus-wide count of unique students. This is a historical period, not October usage. Keep the original square-root-axis disclosure and source note. Transition: agents can build much bigger systems too; next, an HR system rebuilt in months."
   }
+
 ];

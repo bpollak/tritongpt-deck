@@ -146,34 +146,38 @@ Per-person exercise prompts live outside this public repository.
 
 **Status:** UC San Diego Tech Community (technical staff outside central IT: academic IT, libraries, research IT, and departmental IT), requested October 31, 2026. Demonstration- and diagram-led; replaces the short-lived `sysadmin` draft.
 
-**Communication job:** Show distributed technical staff what agentic AI does, how the TritonAI Harness stays safe, what people across campus build with it, and the compute and model services underneath: the TritonAI Gateway and PARASOL (formerly DSMLP).
+**Communication job:** Build bottom up for distributed technical staff: the TritonAI Gateway and the models and API keys under every tool; the vertical AI solutions IT Services builds on it (most of the Cabinet deck, as demos); the TritonAI Harness (one chat-vs-agent slide, then demos rather than explanations of what a harness is); what people across campus build with it; and PARASOL (formerly DSMLP).
 
-**Canonical count:** 22
+**Canonical count:** 26
 
-**Sequence:** about 18 minutes plus Q&A, in four parts (The shift, The Harness, What people build, Compute and models). Every slide is owned by this view: demo and diagram slides are copies of Cabinet, citizen, and technical slides with their own slugs, so the order is independent of other views. New diagrams (`slide.figure`) are inline SVGs in `src/assets/figures/`. PARASOL figures match parasol.ucsd.edu; the PARASOL press release is embargoed until November 3, 2026.
+**Sequence:** about 21 minutes plus Q&A, in five parts (The foundation, Vertical AI solutions, The Harness, What people build, PARASOL and next steps). Every slide is owned by this view: demo and diagram slides are copies of Cabinet, citizen, and technical slides with their own slugs, so the order is independent of other views. New diagrams (`slide.figure`) are inline SVGs in `src/assets/figures/`. PARASOL figures match parasol.ucsd.edu; the PARASOL press release is embargoed until November 3, 2026.
 
 1. `techcom-title`
-2. `techcom-convergence`
-3. `techcom-tools`
-4. `techcom-chat-and-harness`
-5. `techcom-harness-at-work`
-6. `techcom-four-jobs`
-7. `techcom-guardrails`
-8. `techcom-safe-path`
-9. `techcom-mobile-demo`
-10. `techcom-research-alignment`
-11. `techcom-ai-tutor`
-12. `techcom-pdf-remediator`
-13. `techcom-spa2`
-14. `techcom-hosting`
-15. `techcom-gateway`
-16. `techcom-api-and-recharge`
-17. `techcom-parasol-transition`
-18. `techcom-parasol-reservations`
-19. `techcom-compute-and-models`
-20. `techcom-get-started`
-21. `techcom-learn-and-connect`
-22. `techcom-thank-you`
+2. `techcom-tools`
+3. `techcom-api-and-recharge`
+4. `techcom-scale`
+5. `techcom-gateway`
+6. `techcom-verticals-impact`
+7. `techcom-transcript-matching-demo`
+8. `techcom-contract-review-demo`
+9. `techcom-servicenow-routing-demo`
+10. `techcom-ai-tutor`
+11. `techcom-college-assistant-demo`
+12. `techcom-chat-and-harness`
+13. `techcom-harness-at-work`
+14. `techcom-governance`
+15. `techcom-personal-productivity-list`
+16. `techcom-mobile-demo`
+17. `techcom-directory-demo`
+18. `techcom-passport-demo`
+19. `techcom-class-planner-demo`
+20. `techcom-class-planner-utilization`
+21. `techcom-spa2`
+22. `techcom-hosting`
+23. `techcom-parasol-transition`
+24. `techcom-compute-and-models`
+25. `techcom-learn-and-connect`
+26. `techcom-thank-you`
 
 ## citizen
 

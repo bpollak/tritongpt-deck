@@ -678,88 +678,104 @@
       "src": "/slide-thumbnails/smt-work-discussion-90f0260942eee1e7-22b0419e.jpg"
     },
     "techcom-title": {
-      "contentKey": "82c5191b1ca3cdaa",
-      "src": "/slide-thumbnails/techcom-title-82c5191b1ca3cdaa-22b0419e.jpg"
-    },
-    "techcom-convergence": {
-      "contentKey": "57d6307c51059327",
-      "src": "/slide-thumbnails/techcom-convergence-57d6307c51059327-22b0419e.jpg"
+      "contentKey": "ec121f3846aa252f",
+      "src": "/slide-thumbnails/techcom-title-ec121f3846aa252f-22b0419e.jpg"
     },
     "techcom-tools": {
-      "contentKey": "f6cf94e92e5a8a4a",
-      "src": "/slide-thumbnails/techcom-tools-f6cf94e92e5a8a4a-22b0419e.jpg"
-    },
-    "techcom-chat-and-harness": {
-      "contentKey": "636c7c15849f97e8",
-      "src": "/slide-thumbnails/techcom-chat-and-harness-636c7c15849f97e8-22b0419e.jpg"
-    },
-    "techcom-harness-at-work": {
-      "contentKey": "38c03800f799f483",
-      "src": "/slide-thumbnails/techcom-harness-at-work-38c03800f799f483-22b0419e.jpg"
-    },
-    "techcom-four-jobs": {
-      "contentKey": "e0c456fa8490753d",
-      "src": "/slide-thumbnails/techcom-four-jobs-e0c456fa8490753d-22b0419e.jpg"
-    },
-    "techcom-guardrails": {
-      "contentKey": "df0be25723bfe2f4",
-      "src": "/slide-thumbnails/techcom-guardrails-df0be25723bfe2f4-22b0419e.jpg"
-    },
-    "techcom-safe-path": {
-      "contentKey": "74939346dca1388e",
-      "src": "/slide-thumbnails/techcom-safe-path-74939346dca1388e-22b0419e.jpg"
-    },
-    "techcom-mobile-demo": {
-      "contentKey": "390a98fad7b4b10b",
-      "src": "/slide-thumbnails/techcom-mobile-demo-390a98fad7b4b10b-22b0419e.jpg"
-    },
-    "techcom-research-alignment": {
-      "contentKey": "3622b2a90a496807",
-      "src": "/slide-thumbnails/techcom-research-alignment-3622b2a90a496807-22b0419e.jpg"
-    },
-    "techcom-ai-tutor": {
-      "contentKey": "c9af351a65c37c57",
-      "src": "/slide-thumbnails/techcom-ai-tutor-c9af351a65c37c57-22b0419e.jpg"
-    },
-    "techcom-pdf-remediator": {
-      "contentKey": "5533d062b461cb47",
-      "src": "/slide-thumbnails/techcom-pdf-remediator-5533d062b461cb47-22b0419e.jpg"
-    },
-    "techcom-spa2": {
-      "contentKey": "d2ea5de164a1663a",
-      "src": "/slide-thumbnails/techcom-spa2-d2ea5de164a1663a-22b0419e.jpg"
-    },
-    "techcom-hosting": {
-      "contentKey": "9fa4f8cb1a7ce02b",
-      "src": "/slide-thumbnails/techcom-hosting-9fa4f8cb1a7ce02b-22b0419e.jpg"
-    },
-    "techcom-gateway": {
-      "contentKey": "49c0607c0aed428b",
-      "src": "/slide-thumbnails/techcom-gateway-49c0607c0aed428b-22b0419e.jpg"
+      "contentKey": "5b018ac50107354b",
+      "src": "/slide-thumbnails/techcom-tools-5b018ac50107354b-22b0419e.jpg"
     },
     "techcom-api-and-recharge": {
-      "contentKey": "c655c5eedc03d4e2",
-      "src": "/slide-thumbnails/techcom-api-and-recharge-c655c5eedc03d4e2-22b0419e.jpg"
+      "contentKey": "c20d0b694181f339",
+      "src": "/slide-thumbnails/techcom-api-and-recharge-c20d0b694181f339-22b0419e.jpg"
+    },
+    "techcom-scale": {
+      "contentKey": "ae07fc9ba9240b36",
+      "src": "/slide-thumbnails/techcom-scale-ae07fc9ba9240b36-22b0419e.jpg"
+    },
+    "techcom-gateway": {
+      "contentKey": "b920de1385235b7d",
+      "src": "/slide-thumbnails/techcom-gateway-b920de1385235b7d-22b0419e.jpg"
+    },
+    "techcom-verticals-impact": {
+      "contentKey": "15bd9336d942617e",
+      "src": "/slide-thumbnails/techcom-verticals-impact-15bd9336d942617e-22b0419e.jpg"
+    },
+    "techcom-transcript-matching-demo": {
+      "contentKey": "154f74f64a7c1c6f",
+      "src": "/slide-thumbnails/techcom-transcript-matching-demo-154f74f64a7c1c6f-22b0419e.jpg"
+    },
+    "techcom-contract-review-demo": {
+      "contentKey": "515d4d95fb891fef",
+      "src": "/slide-thumbnails/techcom-contract-review-demo-515d4d95fb891fef-22b0419e.jpg"
+    },
+    "techcom-servicenow-routing-demo": {
+      "contentKey": "8cfa6f04983794a6",
+      "src": "/slide-thumbnails/techcom-servicenow-routing-demo-8cfa6f04983794a6-22b0419e.jpg"
+    },
+    "techcom-ai-tutor": {
+      "contentKey": "2c7bc6bee599b057",
+      "src": "/slide-thumbnails/techcom-ai-tutor-2c7bc6bee599b057-22b0419e.jpg"
+    },
+    "techcom-college-assistant-demo": {
+      "contentKey": "db7fcb6d6af042ab",
+      "src": "/slide-thumbnails/techcom-college-assistant-demo-db7fcb6d6af042ab-22b0419e.jpg"
+    },
+    "techcom-chat-and-harness": {
+      "contentKey": "0197c2b6e4d4943c",
+      "src": "/slide-thumbnails/techcom-chat-and-harness-0197c2b6e4d4943c-22b0419e.jpg"
+    },
+    "techcom-harness-at-work": {
+      "contentKey": "c15c593b4bcc1cba",
+      "src": "/slide-thumbnails/techcom-harness-at-work-c15c593b4bcc1cba-22b0419e.jpg"
+    },
+    "techcom-governance": {
+      "contentKey": "e19360000455be10",
+      "src": "/slide-thumbnails/techcom-governance-e19360000455be10-22b0419e.jpg"
+    },
+    "techcom-personal-productivity-list": {
+      "contentKey": "3d25997497386d44",
+      "src": "/slide-thumbnails/techcom-personal-productivity-list-3d25997497386d44-22b0419e.jpg"
+    },
+    "techcom-mobile-demo": {
+      "contentKey": "897f9ebd635a676a",
+      "src": "/slide-thumbnails/techcom-mobile-demo-897f9ebd635a676a-22b0419e.jpg"
+    },
+    "techcom-directory-demo": {
+      "contentKey": "08c9b313b19dca83",
+      "src": "/slide-thumbnails/techcom-directory-demo-08c9b313b19dca83-22b0419e.jpg"
+    },
+    "techcom-passport-demo": {
+      "contentKey": "24ded0312edb6fe4",
+      "src": "/slide-thumbnails/techcom-passport-demo-24ded0312edb6fe4-22b0419e.jpg"
+    },
+    "techcom-class-planner-demo": {
+      "contentKey": "b81ad8959fbdd746",
+      "src": "/slide-thumbnails/techcom-class-planner-demo-b81ad8959fbdd746-22b0419e.jpg"
+    },
+    "techcom-class-planner-utilization": {
+      "contentKey": "5e02de0c823936c6",
+      "src": "/slide-thumbnails/techcom-class-planner-utilization-5e02de0c823936c6-22b0419e.jpg"
+    },
+    "techcom-spa2": {
+      "contentKey": "bd804ff72b2409e4",
+      "src": "/slide-thumbnails/techcom-spa2-bd804ff72b2409e4-22b0419e.jpg"
+    },
+    "techcom-hosting": {
+      "contentKey": "c8bce601348f252d",
+      "src": "/slide-thumbnails/techcom-hosting-c8bce601348f252d-22b0419e.jpg"
     },
     "techcom-parasol-transition": {
-      "contentKey": "31fab46499506558",
-      "src": "/slide-thumbnails/techcom-parasol-transition-31fab46499506558-22b0419e.jpg"
-    },
-    "techcom-parasol-reservations": {
-      "contentKey": "2ebd4478484ae972",
-      "src": "/slide-thumbnails/techcom-parasol-reservations-2ebd4478484ae972-22b0419e.jpg"
+      "contentKey": "0ff3878cade82251",
+      "src": "/slide-thumbnails/techcom-parasol-transition-0ff3878cade82251-22b0419e.jpg"
     },
     "techcom-compute-and-models": {
-      "contentKey": "68d4242a337822da",
-      "src": "/slide-thumbnails/techcom-compute-and-models-68d4242a337822da-22b0419e.jpg"
-    },
-    "techcom-get-started": {
-      "contentKey": "f4e4fbe571ab50fa",
-      "src": "/slide-thumbnails/techcom-get-started-f4e4fbe571ab50fa-22b0419e.jpg"
+      "contentKey": "2244842ee4120af5",
+      "src": "/slide-thumbnails/techcom-compute-and-models-2244842ee4120af5-22b0419e.jpg"
     },
     "techcom-learn-and-connect": {
-      "contentKey": "9b55bf8036b23533",
-      "src": "/slide-thumbnails/techcom-learn-and-connect-9b55bf8036b23533-22b0419e.jpg"
+      "contentKey": "d6f5d771fbf967b8",
+      "src": "/slide-thumbnails/techcom-learn-and-connect-d6f5d771fbf967b8-22b0419e.jpg"
     },
     "techcom-thank-you": {
       "contentKey": "cf1ff7d61a130c0f",
