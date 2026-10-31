@@ -73,17 +73,37 @@
       "contentKey": "b3c69acbbebe8f5f",
       "src": "/slide-thumbnails/smt-since-may-b3c69acbbebe8f5f-4a86eed4.jpg"
     },
+    "sysadmin-title": {
+      "contentKey": "c9d6605cc460ef5c",
+      "src": "/slide-thumbnails/sysadmin-title-c9d6605cc460ef5c-4a86eed4.jpg"
+    },
+    "sysadmin-why-now": {
+      "contentKey": "3ee60eaec0499b3b",
+      "src": "/slide-thumbnails/sysadmin-why-now-3ee60eaec0499b3b-4a86eed4.jpg"
+    },
+    "sysadmin-supported-tools": {
+      "contentKey": "ec14a0dd6a6f8bdc",
+      "src": "/slide-thumbnails/sysadmin-supported-tools-ec14a0dd6a6f8bdc-4a86eed4.jpg"
+    },
+    "sysadmin-tritongpt-to-tritonai": {
+      "contentKey": "e7f60260d4b95217",
+      "src": "/slide-thumbnails/sysadmin-tritongpt-to-tritonai-e7f60260d4b95217-4a86eed4.jpg"
+    },
     "cabinet-chat-and-harness": {
-      "contentKey": "976b17047fd17d3d",
-      "src": "/slide-thumbnails/cabinet-chat-and-harness-976b17047fd17d3d-4a86eed4.jpg"
+      "contentKey": "5490dfdf91fa0408",
+      "src": "/slide-thumbnails/cabinet-chat-and-harness-5490dfdf91fa0408-4a86eed4.jpg"
     },
     "cabinet-harness-capabilities": {
       "contentKey": "81d7d75446aabd23",
       "src": "/slide-thumbnails/cabinet-harness-capabilities-81d7d75446aabd23-4a86eed4.jpg"
     },
+    "sysadmin-harness-capabilities": {
+      "contentKey": "8bdd55d9f54ebc2a",
+      "src": "/slide-thumbnails/sysadmin-harness-capabilities-8bdd55d9f54ebc2a-4a86eed4.jpg"
+    },
     "cabinet-harness-in-action": {
-      "contentKey": "549e1678ba41fde5",
-      "src": "/slide-thumbnails/cabinet-harness-in-action-549e1678ba41fde5-4a86eed4.jpg"
+      "contentKey": "fe906fe3ad8ae34e",
+      "src": "/slide-thumbnails/cabinet-harness-in-action-fe906fe3ad8ae34e-4a86eed4.jpg"
     },
     "cabinet-harness-training-demo": {
       "contentKey": "c95394ab93e593fa",
@@ -94,12 +114,20 @@
       "src": "/slide-thumbnails/cabinet-harness-automation-use-cases-d937492c78eba66c-4a86eed4.jpg"
     },
     "cabinet-governance": {
-      "contentKey": "cb3e7b2e7fc165dd",
-      "src": "/slide-thumbnails/cabinet-governance-cb3e7b2e7fc165dd-4a86eed4.jpg"
+      "contentKey": "2f6d524be179bd81",
+      "src": "/slide-thumbnails/cabinet-governance-2f6d524be179bd81-4a86eed4.jpg"
+    },
+    "sysadmin-admin-guardrails": {
+      "contentKey": "6f438f5806023c34",
+      "src": "/slide-thumbnails/sysadmin-admin-guardrails-6f438f5806023c34-4a86eed4.jpg"
+    },
+    "sysadmin-use-cases": {
+      "contentKey": "9536f56ba82a29d7",
+      "src": "/slide-thumbnails/sysadmin-use-cases-9536f56ba82a29d7-4a86eed4.jpg"
     },
     "cabinet-harness-11d-campus-app-hosting-intake": {
-      "contentKey": "f5f0dffd4cfa3024",
-      "src": "/slide-thumbnails/cabinet-harness-11d-campus-app-hosting-intake-f5f0dffd4cfa3024-4a86eed4.jpg"
+      "contentKey": "c3376c25c722cb9f",
+      "src": "/slide-thumbnails/cabinet-harness-11d-campus-app-hosting-intake-c3376c25c722cb9f-4a86eed4.jpg"
     },
     "cabinet-divider-outcomes": {
       "contentKey": "c003e0965fc4336b",
@@ -154,8 +182,8 @@
       "src": "/slide-thumbnails/cabinet-class-planner-utilization-2c99c33f1511f511-4a86eed4.jpg"
     },
     "cabinet-spa2-demo": {
-      "contentKey": "17f0ef7ad20ceafa",
-      "src": "/slide-thumbnails/cabinet-spa2-demo-17f0ef7ad20ceafa-4a86eed4.jpg"
+      "contentKey": "5e43aef2c2be068b",
+      "src": "/slide-thumbnails/cabinet-spa2-demo-5e43aef2c2be068b-4a86eed4.jpg"
     },
     "cabinet-department-builders": {
       "contentKey": "63b0c3cc153da1af",
@@ -178,8 +206,24 @@
       "src": "/slide-thumbnails/cabinet-scale-13afdb15fe848463-4a86eed4.jpg"
     },
     "cabinet-sovereign-ai": {
-      "contentKey": "4e7585c5115a568d",
-      "src": "/slide-thumbnails/cabinet-sovereign-ai-4e7585c5115a568d-4a86eed4.jpg"
+      "contentKey": "9d4b511653ff11b5",
+      "src": "/slide-thumbnails/cabinet-sovereign-ai-9d4b511653ff11b5-4a86eed4.jpg"
+    },
+    "sysadmin-deploy-support": {
+      "contentKey": "241dcaf9ddb852f8",
+      "src": "/slide-thumbnails/sysadmin-deploy-support-241dcaf9ddb852f8-4a86eed4.jpg"
+    },
+    "sysadmin-learn-connect": {
+      "contentKey": "92743849cd7c2ab8",
+      "src": "/slide-thumbnails/sysadmin-learn-connect-92743849cd7c2ab8-4a86eed4.jpg"
+    },
+    "sysadmin-asks": {
+      "contentKey": "13cb606050204b62",
+      "src": "/slide-thumbnails/sysadmin-asks-13cb606050204b62-4a86eed4.jpg"
+    },
+    "sysadmin-thank-you": {
+      "contentKey": "f5ffa41d2a71d0d0",
+      "src": "/slide-thumbnails/sysadmin-thank-you-f5ffa41d2a71d0d0-4a86eed4.jpg"
     },
     "cabinet-harness-discovery-demo": {
       "contentKey": "17cc1c5d9e6e45a2",

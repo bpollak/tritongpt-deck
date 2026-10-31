@@ -6540,7 +6540,7 @@ export const slides = [
   {
     "id": 124.6,
     "slug": "cabinet-harness-11d-campus-app-hosting-intake",
-    "audienceOverrides": {"smt":{"section":{"part":1,"total":5,"label":"Since May"}}},
+    "audienceOverrides": {"smt":{"section":{"part":1,"total":5,"label":"Since May"}},"sysadmin":{"section":{"part":3,"total":4,"label":"Put it to work"},"speakerNotes":"45 seconds. When something a colleague builds outgrows their laptop, there's a path. Tier 0 is the individual desktop or sandbox; Tier 1 is citizen-curated deployment on apps.ucsd.edu after a risk and scope review; Tier 2 is TritonAI and rapid ITS development; Tier 3 is enterprise development. Volume drops as governance increases. Ask for this room: when you see a tool like this living under someone's desk, point them to intake instead of standing up a server for it."}},
     "mobileSnapshot": "/media/cabinet/snap/cabinet-harness-11d-campus-app-hosting-intake.jpg",
     "type": "content",
     "content": [],
@@ -7797,7 +7797,7 @@ export const slides = [
   {
     "id": 1015,
     "slug": "cabinet-chat-and-harness",
-    "audienceOverrides": {"smt":{"section":{"part":1,"total":5,"label":"Since May"}}},
+    "audienceOverrides": {"smt":{"section":{"part":1,"total":5,"label":"Since May"}},"sysadmin":{"section":{"part":2,"total":4,"label":"The Harness"},"speakerNotes":"One minute. Same approved models in both. TritonGPT is a chat: it answers, and a person copies the result somewhere. The Harness wraps the model with context, tools, permissions, and memory, and runs a loop: it reads files, runs commands, calls plugins, checks the result, and keeps going until the task is done or it needs you. For this room the practical difference is that chat is a website you support, and the Harness is an agent acting on a machine with the user's access. That's why the next few slides are about how it stays controlled."}},
     "type": "content",
     "layout": "cabinet-harness-around",
     "harnessAround": {
@@ -8078,7 +8078,7 @@ export const slides = [
   {
     "id": 1036,
     "slug": "cabinet-harness-in-action",
-    "audienceOverrides": {"smt":{"section":{"part":1,"total":5,"label":"Since May"}}},
+    "audienceOverrides": {"smt":{"section":{"part":1,"total":5,"label":"Since May"}},"sysadmin":{"section":{"part":2,"total":4,"label":"The Harness"}}},
     "type": "video",
     "layout": "cabinet-demo",
     "title": "The Harness at work",
@@ -8399,7 +8399,7 @@ export const slides = [
   {
     "id": 1008,
     "slug": "cabinet-governance",
-    "audienceOverrides": {"smt":{"section":{"part":1,"total":5,"label":"Since May"}}},
+    "audienceOverrides": {"smt":{"section":{"part":1,"total":5,"label":"Since May"}},"sysadmin":{"section":{"part":2,"total":4,"label":"The Harness"},"speakerNotes":"45 seconds. The person sets how much it does alone: Supervised asks before it runs a command or changes a file; Auto and Full access are for trusted work. Plugins run on the user's own permissions, and Microsoft 365 starts read-only; drafts and calendar edits are opt-in, and it can't send email or delete mail or events. Data rules still apply: P1 to P3 in approved setups, never P4. For admins: recommend Supervised for anything that touches production or other people's data."}},
     "type": "content",
     "layout": "cabinet-outline",
     "title": "It stays in your control",
@@ -8618,6 +8618,7 @@ export const slides = [
   {
     "id": 1011,
     "slug": "cabinet-sovereign-ai",
+    "audienceOverrides": {"sysadmin":{"section":{"part":3,"total":4,"label":"Put it to work"},"speakerNotes":"One minute. The foundation under all of this is one campus-run gateway: open-weight models on campus-managed GPUs at SDSC plus approved commercial APIs, behind one key. January through September 2026 it handled 527.0 billion tokens and 157.0 million requests, 90.6 percent on self-hosted and internal routes. It already serves researchers beyond San Diego, and UC Merced's Scout runs on TritonAI. For this room: it's the same gateway the Harness, Claude Code, Codex, and other compatible clients use, so one key and one set of usage records covers them all."}},
     "type": "content",
     "layout": "cabinet-sovereign-gateway",
     "title": "Sovereign inference as a service",
@@ -9317,7 +9318,7 @@ export const slides = [
   {
     "id": 1051,
     "slug": "cabinet-spa2-demo",
-    "audienceOverrides": {"smt":{"section":{"part":3,"total":5,"label":"What others build"}}},
+    "audienceOverrides": {"smt":{"section":{"part":3,"total":5,"label":"What others build"}},"sysadmin":{"section":{"part":3,"total":4,"label":"Put it to work"},"speakerNotes":"About a minute. This is agentic software development at ITS scale. The team rebuilt the Staff Performance Appraisal system by directing AI agents in the Harness: people design and review, agents write and test the code. It took months rather than the timeline of a traditional rebuild or a purchase, and the same approach is next for HireOnline and JDOnline. It's also the pattern behind modernizing legacy apps instead of patching them in a crisis. Recorded in a development environment with test accounts and fictional employees. Timeline: testing early to mid November, a pilot in December and January, full campus for the next appraisal cycle."}},
     "type": "video",
     "layout": "cabinet-demo",
     "title": "Agentic software development: an HR system in months",
@@ -10769,5 +10770,691 @@ export const slides = [
     "managerSection": "SMT daily work",
     "dark": true,
     "footer": "Proposed next step: one bounded workflow, one owner, and a review date"
+  },
+  {
+    "id": 4001,
+    "slug": "sysadmin-title",
+    "type": "title",
+    "content": [],
+    "title": "TritonAI Harness",
+    "subtitle": "Agentic AI for the people who keep campus systems running",
+    "layout": "title-hero",
+    "arc": [
+      {
+        "label": "Why now",
+        "note": "Supported tools and what changed"
+      },
+      {
+        "label": "The Harness",
+        "note": "How it works and how it stays safe"
+      },
+      {
+        "label": "Put it to work",
+        "note": "Use cases, hosting, and the gateway"
+      },
+      {
+        "label": "Get started",
+        "note": "Deploy, support, learn, connect"
+      }
+    ],
+    "durationSeconds": 30,
+    "conference": "UC San Diego System Administrators Community",
+    "speakerNotes": "30 seconds. Thanks for having me. You're the people colleagues come to first when they have an AI question, so I want you to leave knowing what's supported, how the Harness works, how it stays safe on the machines you manage, and how to get people started. Four parts: why now, the Harness itself, putting it to work, and getting started. About 18 minutes, then questions.",
+    "audiences": [
+      "sysadmin"
+    ],
+    "managerSection": "Sysadmin Community"
+  },
+  {
+    "id": 4002,
+    "slug": "sysadmin-why-now",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "compact": true,
+    "title": "Why this matters for sysadmins now",
+    "subtitle": "The pace of our work changed this year, on both sides.",
+    "content": [
+      {
+        "heading": "Patch volume is climbing",
+        "text": "Microsoft vulnerabilities per month went from 80 in November 2025 to 1,413 in October 2026."
+      },
+      {
+        "heading": "Attackers use AI too",
+        "text": "AI is surfacing long-hidden flaws, like the recent PHP vulnerability, and exploit traffic arrives within hours of disclosure."
+      },
+      {
+        "heading": "Legacy code is exposure",
+        "text": "Unmaintained apps meant emergency patching and taking systems offline. We cannot stay in that spot."
+      },
+      {
+        "heading": "Agents help us keep up",
+        "text": "Find every exposure, update old code, and draft fixes in minutes instead of days, with a person approving each step."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Microsoft Security Update Guide",
+        "href": "https://msrc.microsoft.com/update-guide"
+      }
+    ],
+    "section": {
+      "part": 1,
+      "total": 4,
+      "label": "Why now"
+    },
+    "durationSeconds": 75,
+    "speakerNotes": "About 75 seconds. Start with what this room lived through. Microsoft's monthly CVE count went from 80 last November to 1,413 this October (Microsoft Security Update Guide; same chart Daniel showed at the Staff Town Hall). AI is now finding vulnerabilities that sat hidden for years, like the recent PHP flaw, and attack traffic ramps within hours of disclosure. Our own exposure came from software we hadn't kept current, which meant emergency patching and taking systems offline. The point isn't fear: the same agentic tools give us leverage. Daniel's team found every Blink reference to eForms, with form IDs, in about five minutes. That's the shift I want to show you.",
+    "audiences": [
+      "sysadmin"
+    ],
+    "managerSection": "Sysadmin Community"
+  },
+  {
+    "id": 4003,
+    "slug": "sysadmin-supported-tools",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "compact": true,
+    "title": "Supported AI tools at UC San Diego",
+    "subtitle": "Sign in with a UC San Diego account. University data never goes into a personal AI account.",
+    "impactTable": {
+      "headers": [
+        "Tool",
+        "Data and access",
+        "Best for"
+      ],
+      "rows": [
+        {
+          "name": "TritonGPT",
+          "what": "Campus AI platform in the browser",
+          "status": "P1–P3",
+          "tone": "live",
+          "impact": "Questions, documents, campus assistants",
+          "basis": "Campus SSO; never P4"
+        },
+        {
+          "name": "TritonAI Harness",
+          "what": "Agent workspace on Mac or Windows",
+          "status": "P1–P3",
+          "tone": "live",
+          "impact": "Multi-step work on files, code, and systems",
+          "basis": "TritonAI Gateway key; never P4"
+        },
+        {
+          "name": "Claude Code and Codex",
+          "what": "Coding agents in the terminal or desktop",
+          "status": "Supported",
+          "tone": "pilot",
+          "impact": "Scripts, repositories, automation",
+          "basis": "Same Gateway key as the Harness"
+        },
+        {
+          "name": "Copilot with Data Protection",
+          "what": "Protected Microsoft chat",
+          "status": "Commercial protection",
+          "tone": "pilot",
+          "impact": "Drafting, summarizing, images",
+          "basis": "Campus Microsoft login"
+        },
+        {
+          "name": "Copilot for Microsoft 365",
+          "what": "AI inside Word, Excel, Outlook, Teams",
+          "status": "License required",
+          "tone": "progress",
+          "impact": "In-app help where people already work",
+          "basis": "Per-user license"
+        },
+        {
+          "name": "Gemini and Gemini Notebook",
+          "what": "Google Workspace AI",
+          "status": "Campus Google login",
+          "tone": "pilot",
+          "impact": "Writing; research grounded in your sources",
+          "basis": "UC San Diego Google account"
+        },
+        {
+          "name": "Zoom AI Companion",
+          "what": "Meeting AI",
+          "status": "Consent required",
+          "tone": "progress",
+          "impact": "Transcripts, summaries, questions",
+          "basis": "Everyone in the meeting is notified"
+        }
+      ]
+    },
+    "sources": [
+      {
+        "label": "Approved AI tools, tritonai.ucsd.edu/tools",
+        "href": "https://tritonai.ucsd.edu/tools/index.html"
+      }
+    ],
+    "section": {
+      "part": 1,
+      "total": 4,
+      "label": "Why now"
+    },
+    "durationSeconds": 75,
+    "speakerNotes": "About 75 seconds. This is the list to point people to when they ask what they're allowed to use. One rule covers every row: sign in with your UC San Diego account, never a personal one, because personal accounts don't carry our contract protections. TritonGPT and the Harness are the two we build and run here, approved for P1 through P3, never P4. Claude Code and Codex are supported coding agents that use the same TritonAI Gateway key as the Harness, which matters to this room. Copilot and Gemini cover everyday drafting inside Microsoft 365 and Google Workspace; Copilot for Microsoft 365 needs a license. Zoom AI Companion needs notice and consent from everyone in the meeting. Note: the tools page on tritonai.ucsd.edu badges TritonGPT and the Harness 'P3 / P4'; the Harness privacy statement and these slides say P1–P3, never P4. Get the site corrected before this talk.",
+    "audiences": [
+      "sysadmin"
+    ],
+    "managerSection": "Sysadmin Community"
+  },
+  {
+    "id": 4004,
+    "slug": "sysadmin-tritongpt-to-tritonai",
+    "type": "content",
+    "layout": "comparison-table",
+    "title": "From TritonGPT to TritonAI",
+    "subtitle": "TritonGPT is still here. TritonAI is the program around it: one gateway, agents that act, and a path to hosting.",
+    "backgroundColor": "#F5F0E6",
+    "columnHeaders": {
+      "left": "TritonGPT: chat (2024–2025)",
+      "right": "TritonAI: agents (2026)"
+    },
+    "tableData": [
+      {
+        "icon": "Brain",
+        "iconColor": "#0d5f93",
+        "iconBg": "#EAF7FB",
+        "feature": "Interaction",
+        "genAI": "Ask a question and get an answer in the browser.",
+        "agenticAI": "Describe an outcome; the Harness works through the steps while you supervise."
+      },
+      {
+        "icon": "Layers",
+        "iconColor": "#6f9363",
+        "iconBg": "#EEF6EA",
+        "feature": "Reach",
+        "genAI": "Campus-wide for about 37,000 employees, then 45,000 students.",
+        "agenticAI": "Desktop app on Mac or Windows, plus any compatible client through the TritonAI Gateway."
+      },
+      {
+        "icon": "Zap",
+        "iconColor": "#be634d",
+        "iconBg": "#FFF0E8",
+        "feature": "Action",
+        "genAI": "Output stays in the chat for a person to copy and use.",
+        "agenticAI": "Reads and edits files, runs commands, and uses plugins within your permissions."
+      },
+      {
+        "icon": "TrendingUp",
+        "iconColor": "#C69214",
+        "iconBg": "#FFF7D6",
+        "feature": "Models",
+        "genAI": "A curated set of models behind one chat interface.",
+        "agenticAI": "One key: campus-hosted open-weight models plus approved commercial APIs."
+      },
+      {
+        "icon": "Users",
+        "iconColor": "#182B49",
+        "iconBg": "#EEF2F7",
+        "feature": "What you support",
+        "genAI": "A website with campus single sign-on.",
+        "agenticAI": "A desktop app, Gateway keys, plugins, and tools that outgrow a laptop."
+      }
+    ],
+    "section": {
+      "part": 1,
+      "total": 4,
+      "label": "Why now"
+    },
+    "durationSeconds": 60,
+    "speakerNotes": "One minute. TritonGPT launched campus-wide in 2024 for about 37,000 employees and reached 45,000 students in 2025. It's a chat: you ask, it answers, and you copy the result somewhere. TritonAI is the broader program that grew around it: one gateway and one key for campus-hosted and approved commercial models, an agent workspace in the Harness, and a path to host what people build. The last row is the one for this room: we've gone from supporting a website to supporting a desktop app, keys, plugins, and tools that outgrow someone's laptop.",
+    "audiences": [
+      "sysadmin"
+    ],
+    "managerSection": "Sysadmin Community"
+  },
+  {
+    "id": 4005,
+    "slug": "sysadmin-harness-capabilities",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "compact": true,
+    "title": "What the Harness can do",
+    "subtitle": "Everything a chat can do, plus hands: it acts on files, systems, and code while you supervise.",
+    "columns": [
+      {
+        "label": "Do the work",
+        "items": [
+          {
+            "heading": "Run commands and scripts",
+            "text": "Executes shell commands in a project folder. Supervised mode asks before each one."
+          },
+          {
+            "heading": "Read and edit code",
+            "text": "Multi-file edits, test runs, and pull-request review across a repository."
+          },
+          {
+            "heading": "Analyze and report",
+            "text": "Turns exports and logs into summaries, Excel dashboards, and briefing decks."
+          }
+        ]
+      },
+      {
+        "label": "Reach your systems",
+        "items": [
+          {
+            "heading": "Campus plugins",
+            "text": "Microsoft 365, Google Workspace, GitHub, Kuali Build, Lucid, and n8n, within your own access."
+          },
+          {
+            "heading": "Computer use, opt-in",
+            "text": "Clicks and types in desktop apps that have no plugin. Off until you turn it on."
+          },
+          {
+            "heading": "Build apps",
+            "text": "Web apps on the campus design system, with a path to campus hosting."
+          }
+        ]
+      },
+      {
+        "label": "Scale it up",
+        "items": [
+          {
+            "heading": "Runbooks become skills",
+            "text": "Use the Skills Library, or record a manual task once and reuse it."
+          },
+          {
+            "heading": "Sub-agents",
+            "text": "Splits planning, building, and checking across focused agents."
+          },
+          {
+            "heading": "Project memory",
+            "text": "Each project keeps its files, history, and suggested next steps."
+          }
+        ]
+      }
+    ],
+    "section": {
+      "part": 2,
+      "total": 4,
+      "label": "The Harness"
+    },
+    "durationSeconds": 75,
+    "speakerNotes": "About 75 seconds. Left column is what makes this different for admins: it runs shell commands and scripts in a project folder, edits code across a repo, and turns exports and logs into something a manager can read. Middle: it reaches systems through plugins on the person's own sign-in, and computer use lets it click and type in desktop apps that have no plugin. Computer use is off until you turn it on, and on macOS it needs Accessibility and Screen Recording permissions. Right: the things that make it scale. A runbook you repeat becomes a skill; big jobs get split across sub-agents; each project remembers where it left off. Capabilities match the Harness page and the 0.4.1 stable release notes on tritonai.ucsd.edu (checked October 31, 2026).",
+    "audiences": [
+      "sysadmin"
+    ],
+    "managerSection": "Sysadmin Community"
+  },
+  {
+    "id": 4006,
+    "slug": "sysadmin-admin-guardrails",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "compact": true,
+    "title": "What admins should know",
+    "subtitle": "How data moves, and what to enforce on the machines you manage.",
+    "columns": [
+      {
+        "label": "Stays on the device",
+        "items": [
+          {
+            "heading": "Local first",
+            "text": "Project files, transcripts, logs, and memory live in the user account, not on campus servers."
+          },
+          {
+            "heading": "Credentials stay out of the model",
+            "text": "Plugin tokens are encrypted with an OS-protected key. The app, not the AI, makes the API calls."
+          },
+          {
+            "heading": "Revoke instantly",
+            "text": "Turning a plugin off removes its tools before the next agent turn."
+          }
+        ]
+      },
+      {
+        "label": "Crosses the gateway",
+        "items": [
+          {
+            "heading": "Only the active request",
+            "text": "Selected context goes over HTTPS. Campus-hosted models keep no data and never train on it."
+          },
+          {
+            "heading": "No silent cloud fallback",
+            "text": "If a campus model is down, the error shows. Context is never rerouted to a cloud provider."
+          },
+          {
+            "heading": "Metadata-only telemetry",
+            "text": "Timestamps, model, token counts, and account ID. No file contents, command output, or transcripts."
+          }
+        ]
+      },
+      {
+        "label": "What you enforce",
+        "items": [
+          {
+            "heading": "Encrypt the disk",
+            "text": "FileVault or BitLocker is required, because transcripts live locally."
+          },
+          {
+            "heading": "Keep P4 out",
+            "text": "P1–P3 only. No ePHI, card numbers, or other P4 data."
+          },
+          {
+            "heading": "Supervise what matters",
+            "text": "Supervised mode for write tools and production systems. Treat pages and email it reads as untrusted input."
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "TritonAI Harness privacy statement",
+        "href": "https://tritonai.ucsd.edu/developer-apis/harness-privacy.html"
+      }
+    ],
+    "section": {
+      "part": 2,
+      "total": 4,
+      "label": "The Harness"
+    },
+    "durationSeconds": 75,
+    "speakerNotes": "About 75 seconds. Everything here is from the Harness privacy statement. Left: data stays on the device. Files, transcripts, logs, and memory sit in the user's account. Plugin credentials are encrypted with an OS-protected key and never enter the model's context; the application process makes the API call, the agent only proposes parameters. Turning off a plugin revokes it before the next turn. Middle: only the active request crosses the gateway. Campus-hosted models keep zero data and don't train on it; there's no silent fallback to the cloud; and gateway telemetry is metadata only. Right is your part: disk encryption is required because transcripts are local, P4 stays out, and anything touching production runs in Supervised mode. Add your own caution on prompt injection: content the agent reads from web pages or email is input, not instructions.",
+    "audiences": [
+      "sysadmin"
+    ],
+    "managerSection": "Sysadmin Community"
+  },
+  {
+    "id": 4007,
+    "slug": "sysadmin-use-cases",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "compact": true,
+    "title": "Where it helps a sysadmin",
+    "subtitle": "Some of this is already happening on campus. The rest is worth trying this week.",
+    "impactTable": {
+      "headers": [
+        "Use case",
+        "Status",
+        "What you get"
+      ],
+      "rows": [
+        {
+          "name": "Exposure scan",
+          "what": "Every Blink page referencing eForms, with form IDs",
+          "status": "Done on campus",
+          "tone": "live",
+          "impact": "About 5 minutes",
+          "basis": "Security team, during the PHP response"
+        },
+        {
+          "name": "Modernize legacy apps",
+          "what": "Agents updating older PHP applications",
+          "status": "Under way",
+          "tone": "live",
+          "impact": "Fewer emergency retrofits",
+          "basis": "ITS application teams"
+        },
+        {
+          "name": "Review a code change",
+          "what": "What changed, which files, whether the build passed",
+          "status": "In the demo",
+          "tone": "pilot",
+          "impact": "GitHub plugin",
+          "basis": "Review before you merge"
+        },
+        {
+          "name": "Explain an automation",
+          "what": "An n8n workflow, step by step, plus its last run",
+          "status": "In the demo",
+          "tone": "pilot",
+          "impact": "n8n plugin",
+          "basis": "Useful for inherited workflows"
+        },
+        {
+          "name": "Draft and check scripts",
+          "what": "PowerShell, bash, or config changes",
+          "status": "Try it",
+          "tone": "progress",
+          "impact": "You approve each command",
+          "basis": "Supervised mode, test systems first"
+        },
+        {
+          "name": "Triage patch notes",
+          "what": "This month's advisories against your inventory export",
+          "status": "Try it",
+          "tone": "progress",
+          "impact": "A prioritized list",
+          "basis": "CSV or Excel in, report out"
+        },
+        {
+          "name": "Runbook to skill",
+          "what": "Record a manual procedure once, then reuse it",
+          "status": "Try it",
+          "tone": "progress",
+          "impact": "Repeatable, shareable steps",
+          "basis": "Skills Library"
+        }
+      ]
+    },
+    "section": {
+      "part": 3,
+      "total": 4,
+      "label": "Put it to work"
+    },
+    "durationSeconds": 90,
+    "speakerNotes": "About 90 seconds. Top two are real. During the PHP response, Daniel's team asked for every Blink page that references eForms, with the form IDs, and had it in about five minutes; the next step is reducing exposure in minutes, not days. ITS application teams are pointing agents at older PHP applications to bring them current, so we spend less time on emergency retrofits. The middle two are in the demo you just saw: reviewing a GitHub change and explaining an n8n workflow. The bottom three are ideas to try this week, and they fit this room: draft and check scripts in Supervised mode against test systems first; give it this month's advisories and your inventory export and ask for a prioritized list; and turn a runbook you repeat into a skill. Be clear these three are suggestions, not measured results.",
+    "audiences": [
+      "sysadmin"
+    ],
+    "managerSection": "Sysadmin Community"
+  },
+  {
+    "id": 4008,
+    "slug": "sysadmin-deploy-support",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "compact": true,
+    "title": "Deploying and supporting it",
+    "subtitle": "What to know when a colleague asks you to set it up.",
+    "columns": [
+      {
+        "label": "Install",
+        "items": [
+          {
+            "heading": "Platforms",
+            "text": "Stable releases for macOS on Apple Silicon and Windows x64. Nightly is a separate update track."
+          },
+          {
+            "heading": "One key per person",
+            "text": "Each user requests their own TritonAI Gateway key, so usage is attributed to them."
+          },
+          {
+            "heading": "Updates",
+            "text": "First install uses the TritonAI Installer. Later updates come from Settings > About."
+          }
+        ]
+      },
+      {
+        "label": "Configure",
+        "items": [
+          {
+            "heading": "Computer use permissions",
+            "text": "On macOS, grant Accessibility and Screen Recording, then restart the Harness."
+          },
+          {
+            "heading": "Plugins on their own sign-in",
+            "text": "Each connection uses the user’s account and can be turned off in Settings."
+          },
+          {
+            "heading": "Other clients, same key",
+            "text": "Claude Code, Codex, OpenCode, and Hermes connect to the same gateway."
+          }
+        ]
+      },
+      {
+        "label": "Support",
+        "items": [
+          {
+            "heading": "Start with training",
+            "text": "The Essentials course takes about 8 minutes and includes practice files."
+          },
+          {
+            "heading": "Clean up properly",
+            "text": "Deleting a folder does not erase records in Microsoft 365 or Google. Disconnect the plugin too."
+          },
+          {
+            "heading": "Tell us what your fleet needs",
+            "text": "Packaging, permissions, and support gaps go to tritonai@ucsd.edu."
+          }
+        ]
+      }
+    ],
+    "section": {
+      "part": 4,
+      "total": 4,
+      "label": "Get started"
+    },
+    "durationSeconds": 60,
+    "speakerNotes": "One minute. Practical setup. Stable builds run on Apple Silicon Macs and Windows x64; Nightly is a separate track for people who want the newest features. Each person gets their own Gateway key, which is how usage is attributed. The installer handles first setup; updates come from Settings, About. If someone wants computer use on a Mac, they need to grant Accessibility and Screen Recording and restart. Plugins run on each person's own sign-in. And the same key works for Claude Code, Codex, OpenCode, and Hermes, so you don't need a separate path for developers. For support: send people to the 8-minute Essentials training first, remind them that deleting a folder doesn't erase what's in connected services, and send us what your fleet needs. Confirm before presenting: the current state of managed (MDM) packaging for Mac and Windows, if you want to mention it.",
+    "audiences": [
+      "sysadmin"
+    ],
+    "managerSection": "Sysadmin Community"
+  },
+  {
+    "id": 4009,
+    "slug": "sysadmin-learn-connect",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "compact": true,
+    "title": "Learn and connect",
+    "subtitle": "Everything in this talk lives at tritonai.ucsd.edu.",
+    "columns": [
+      {
+        "label": "Learn",
+        "items": [
+          {
+            "heading": "TritonAI Discovery Series",
+            "text": "15 short videos with knowledge checks: foundations, the tools, and building."
+          },
+          {
+            "heading": "Harness training",
+            "text": "Essentials in about 8 minutes; the full course in about 24, with practice files."
+          },
+          {
+            "heading": "Training for your team",
+            "text": "Request a session built around your unit’s work."
+          }
+        ]
+      },
+      {
+        "label": "Connect",
+        "items": [
+          {
+            "heading": "TritonAI Tools Working Group",
+            "text": "Monthly, for power users who spot issues early and shape the roadmap."
+          },
+          {
+            "heading": "n8n Automation Working Group",
+            "text": "Monthly; prioritizes integrations and designs guardrails before launch."
+          },
+          {
+            "heading": "AI Use-Case Group",
+            "text": "Every other Friday: bring an idea, leave with a scoped plan."
+          }
+        ]
+      },
+      {
+        "label": "Go deeper",
+        "items": [
+          {
+            "heading": "TritonAI webinar, November 12",
+            "text": "Every supported tool in depth, plus citizen developer use cases. Register through last week’s email."
+          },
+          {
+            "heading": "AI Consulting Hours",
+            "text": "Biweekly expert time for an active project."
+          },
+          {
+            "heading": "TritonAI Newsletter and Updates",
+            "text": "News, trainings, and platform changes as they ship."
+          }
+        ]
+      }
+    ],
+    "actionLink": {
+      "label": "tritonai.ucsd.edu",
+      "href": "https://tritonai.ucsd.edu"
+    },
+    "section": {
+      "part": 4,
+      "total": 4,
+      "label": "Get started"
+    },
+    "durationSeconds": 60,
+    "speakerNotes": "One minute. tritonai.ucsd.edu is the hub for everything I've covered. To learn: the Discovery Series is 15 short videos and works well one per staff meeting; Harness Essentials is about 8 minutes. To connect: I'd especially point this room to the TritonAI Tools Working Group, which meets monthly and is where power users help us catch issues early, and the n8n Automation Working Group if you connect systems. The AI Use-Case Group meets every other Friday. To go deeper: the campus webinar on Thursday, November 12 covers every supported tool in depth; the registration form went out by email last week. AI Consulting Hours is there for active projects.",
+    "audiences": [
+      "sysadmin"
+    ],
+    "managerSection": "Sysadmin Community"
+  },
+  {
+    "id": 4010,
+    "slug": "sysadmin-asks",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "compact": true,
+    "title": "What we are asking of this community",
+    "subtitle": "You are often the first person a colleague asks about AI.",
+    "content": [
+      {
+        "heading": "Try it on one real task this week",
+        "text": "Something you do every week: a report, a script, a ticket pattern."
+      },
+      {
+        "heading": "Be the local guide",
+        "text": "Point people to supported tools and tritonai.ucsd.edu, and away from personal accounts."
+      },
+      {
+        "heading": "Join the Tools Working Group",
+        "text": "Help us find issues early and shape what ships next."
+      },
+      {
+        "heading": "Tell us what your fleet needs",
+        "text": "Deployment, permissions, and support gaps make the platform better for everyone."
+      }
+    ],
+    "section": {
+      "part": 4,
+      "total": 4,
+      "label": "Get started"
+    },
+    "durationSeconds": 45,
+    "speakerNotes": "45 seconds. Four asks. Try it on one real task this week, something you repeat. Be the local guide: when a colleague asks what they can use, point them to the supported list and tritonai.ucsd.edu, and away from personal accounts. Join the Tools Working Group. And tell us what your fleet needs; you'll see the deployment and support gaps before we do.",
+    "audiences": [
+      "sysadmin"
+    ],
+    "managerSection": "Sysadmin Community"
+  },
+  {
+    "id": 4011,
+    "slug": "sysadmin-thank-you",
+    "type": "title",
+    "content": [],
+    "title": "Thank You",
+    "subtitle": "Questions?",
+    "layout": "title-hero",
+    "presenters": [
+      {
+        "name": "Brett Pollak",
+        "title": "Executive Director, IT Services",
+        "image": "/media/headshot.jpg",
+        "imageScale": 1.6,
+        "imagePosition": "center 15%"
+      }
+    ],
+    "linkUrl": "https://tritonai.ucsd.edu",
+    "linkLabel": "tritonai.ucsd.edu",
+    "durationSeconds": 15,
+    "speakerNotes": "Open for questions. Likely ones from this room: managed deployment and packaging, what the gateway logs, how to handle P4 requests, and whether Claude Code or Codex can use campus models (yes, with the same Gateway key).",
+    "audiences": [
+      "sysadmin"
+    ],
+    "managerSection": "Sysadmin Community"
   }
 ];

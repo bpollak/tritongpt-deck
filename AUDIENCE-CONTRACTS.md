@@ -142,6 +142,34 @@ The optional `cabinet-berkeley-quote` placeholder is removed until approved. Ori
 
 Per-person exercise prompts live outside this public repository.
 
+## sysadmin
+
+**Status:** UC San Diego system administrator community (distributed IT), requested October 31, 2026. Built from the Cabinet framework and the Nov 3 Staff Town Hall tools content.
+
+**Communication job:** Show distributed IT staff what is supported, how the Harness differs from chat, how it stays safe on the machines they manage, where it helps a sysadmin, and how to deploy and support it.
+
+**Canonical count:** 17
+
+**Sequence:** about 18 minutes plus Q&A, in four parts (Why now, The Harness, Put it to work, Get started). Reused Cabinet slides carry `audienceOverrides.sysadmin` for their section footer and, where the Cabinet framing differs, their speaker notes.
+
+1. `sysadmin-title`
+2. `sysadmin-why-now`
+3. `sysadmin-supported-tools`
+4. `sysadmin-tritongpt-to-tritonai`
+5. `cabinet-chat-and-harness`
+6. `sysadmin-harness-capabilities`
+7. `cabinet-harness-in-action`
+8. `cabinet-governance`
+9. `sysadmin-admin-guardrails`
+10. `sysadmin-use-cases`
+11. `cabinet-harness-11d-campus-app-hosting-intake`
+12. `cabinet-spa2-demo`
+13. `cabinet-sovereign-ai`
+14. `sysadmin-deploy-support`
+15. `sysadmin-learn-connect`
+16. `sysadmin-asks`
+17. `sysadmin-thank-you`
+
 ## citizen
 
 **Communication job:** Understand the paved path from harness to hosting so a domain expert can build, govern, and share a useful agentic solution.

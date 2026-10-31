@@ -18,12 +18,19 @@ export const slideManagerState = {
     "cabinet-divider-harness",
     "smt-title",
     "smt-since-may",
+    "sysadmin-title",
+    "sysadmin-why-now",
+    "sysadmin-supported-tools",
+    "sysadmin-tritongpt-to-tritonai",
     "cabinet-chat-and-harness",
     "cabinet-harness-capabilities",
+    "sysadmin-harness-capabilities",
     "cabinet-harness-in-action",
     "cabinet-harness-training-demo",
     "cabinet-harness-automation-use-cases",
     "cabinet-governance",
+    "sysadmin-admin-guardrails",
+    "sysadmin-use-cases",
     "cabinet-harness-11d-campus-app-hosting-intake",
     "cabinet-divider-outcomes",
     "smt-divider-mine",
@@ -45,6 +52,10 @@ export const slideManagerState = {
     "cabinet-why-sovereign",
     "cabinet-scale",
     "cabinet-sovereign-ai",
+    "sysadmin-deploy-support",
+    "sysadmin-learn-connect",
+    "sysadmin-asks",
+    "sysadmin-thank-you",
     "cabinet-harness-discovery-demo",
     "smt-divider-try",
     "smt-exercise-howto",
@@ -210,7 +221,8 @@ export const slideManagerState = {
     ],
     "cabinet-harness-in-action": [
       "cabinet",
-      "smt"
+      "smt",
+      "sysadmin"
     ],
     "cabinet-verticals-roadmap": [
       "cabinet-backup"
@@ -220,7 +232,8 @@ export const slideManagerState = {
     ],
     "cabinet-harness-11d-campus-app-hosting-intake": [
       "cabinet",
-      "smt"
+      "smt",
+      "sysadmin"
     ],
     "cabinet-harness-automation-use-cases": [
       "cabinet-backup"
@@ -782,7 +795,8 @@ export const slideManagerState = {
     ],
     "cabinet-governance": [
       "cabinet",
-      "smt"
+      "smt",
+      "sysadmin"
     ],
     "cabinet-training-discovery-demo": [
       "cabinet-backup"
@@ -794,7 +808,8 @@ export const slideManagerState = {
       "cabinet-backup"
     ],
     "cabinet-sovereign-ai": [
-      "cabinet"
+      "cabinet",
+      "sysadmin"
     ],
     "cabinet-scale": [
       "cabinet"
@@ -807,7 +822,8 @@ export const slideManagerState = {
     ],
     "cabinet-chat-and-harness": [
       "cabinet",
-      "smt"
+      "smt",
+      "sysadmin"
     ],
     "cabinet-subagents": [
       "cabinet"
@@ -844,7 +860,8 @@ export const slideManagerState = {
     ],
     "cabinet-spa2-demo": [
       "cabinet",
-      "smt"
+      "smt",
+      "sysadmin"
     ],
     "cabinet-transcript-matching-demo": [
       "cabinet"
@@ -942,6 +959,39 @@ export const slideManagerState = {
     ],
     "smt-work-discussion": [
       "smt-work"
+    ],
+    "sysadmin-title": [
+      "sysadmin"
+    ],
+    "sysadmin-why-now": [
+      "sysadmin"
+    ],
+    "sysadmin-supported-tools": [
+      "sysadmin"
+    ],
+    "sysadmin-tritongpt-to-tritonai": [
+      "sysadmin"
+    ],
+    "sysadmin-harness-capabilities": [
+      "sysadmin"
+    ],
+    "sysadmin-admin-guardrails": [
+      "sysadmin"
+    ],
+    "sysadmin-use-cases": [
+      "sysadmin"
+    ],
+    "sysadmin-deploy-support": [
+      "sysadmin"
+    ],
+    "sysadmin-learn-connect": [
+      "sysadmin"
+    ],
+    "sysadmin-asks": [
+      "sysadmin"
+    ],
+    "sysadmin-thank-you": [
+      "sysadmin"
     ]
   }
 };
