@@ -189,6 +189,7 @@ export const slideManagerState = {
     "techcom-parasol-reservations",
     "techcom-compute-and-models",
     "techcom-get-started",
+    "techcom-learn-and-connect",
     "techcom-thank-you"
   ],
   "removed": [
@@ -1025,6 +1026,9 @@ export const slideManagerState = {
       "tech-community"
     ],
     "techcom-api-and-recharge": [
+      "tech-community"
+    ],
+    "techcom-learn-and-connect": [
       "tech-community"
     ]
   }

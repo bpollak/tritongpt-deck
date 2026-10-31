@@ -1,0 +1,119 @@
+<svg viewBox="0 0 1600 760" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" font-family="Roboto, Arial, sans-serif">
+  <defs>
+    <radialGradient id="lc-hub" cx="50%" cy="42%" r="62%">
+      <stop offset="0" stop-color="#0b4f7d"/>
+      <stop offset="1" stop-color="#132a46"/>
+    </radialGradient>
+  </defs>
+
+  <!-- column headers -->
+  <text x="40" y="52" fill="#00C6D7" font-family="Teko, sans-serif" font-size="46">LEARN</text>
+  <text x="168" y="50" fill="#c4d2df" font-size="19">At your own pace</text>
+  <text x="1560" y="52" fill="#FFCD00" font-family="Teko, sans-serif" font-size="46" text-anchor="end">CONNECT</text>
+  <text x="1384" y="50" fill="#c4d2df" font-size="19" text-anchor="end">With people doing the work</text>
+
+  <!-- spokes -->
+  <g stroke-width="2" stroke-dasharray="6 7" fill="none" opacity=".75">
+    <path d="M 560 146 C 610 146, 640 250, 668 282" stroke="#00C6D7"/>
+    <path d="M 560 276 C 600 276, 620 304, 652 316" stroke="#00C6D7"/>
+    <path d="M 560 406 C 600 406, 620 372, 652 360" stroke="#00C6D7"/>
+    <path d="M 560 536 C 610 536, 640 420, 668 396" stroke="#00C6D7"/>
+    <path d="M 1040 168 C 990 168, 960 250, 932 282" stroke="#FFCD00"/>
+    <path d="M 1040 338 L 950 338" stroke="#FFCD00"/>
+    <path d="M 1040 506 C 990 506, 960 420, 932 396" stroke="#FFCD00"/>
+  </g>
+
+  <!-- LEARN cards -->
+  <g>
+    <rect x="40" y="90" width="520" height="112" rx="14" fill="#ffffff" fill-opacity=".08" stroke="#00C6D7" stroke-opacity=".6"/>
+    <text x="64" y="134" fill="#ffffff" font-size="25" font-weight="700">TritonAI Discovery Series</text>
+    <text x="64" y="170" fill="#c4d2df" font-size="18">15 short videos, from foundations to building</text>
+    <rect x="420" y="108" width="122" height="30" rx="15" fill="#00C6D7"/>
+    <text x="481" y="129" fill="#182B49" font-size="15" font-weight="700" text-anchor="middle" letter-spacing="1">START HERE</text>
+
+    <rect x="40" y="220" width="520" height="112" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#ffffff" stroke-opacity=".18"/>
+    <text x="64" y="264" fill="#ffffff" font-size="25" font-weight="700">Learning paths</text>
+    <text x="64" y="300" fill="#c4d2df" font-size="18">Five routes: students, faculty, staff, builders, leaders</text>
+
+    <rect x="40" y="350" width="520" height="112" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#ffffff" stroke-opacity=".18"/>
+    <text x="64" y="394" fill="#ffffff" font-size="25" font-weight="700">Certificate in AI for Higher Ed</text>
+    <text x="64" y="430" fill="#c4d2df" font-size="18">Staff or leaders stream · 20 hours · no cost</text>
+
+    <rect x="40" y="480" width="520" height="112" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#ffffff" stroke-opacity=".18"/>
+    <text x="64" y="524" fill="#ffffff" font-size="25" font-weight="700">AI webinars and prompting guides</text>
+    <text x="64" y="560" fill="#c4d2df" font-size="18">Recordings, plus the November 12 tools webinar</text>
+  </g>
+
+  <!-- hub -->
+  <circle cx="800" cy="338" r="196" fill="none" stroke="#9fb3c8" stroke-opacity=".2"/>
+  <circle cx="800" cy="338" r="152" fill="url(#lc-hub)" stroke="#FFCD00" stroke-width="5"/>
+  <text x="800" y="270" fill="#00C6D7" font-size="16" letter-spacing="2" text-anchor="middle">ONE HUB</text>
+  <text x="800" y="336" fill="#FFCD00" font-family="Teko, sans-serif" font-size="56" text-anchor="middle">tritonai</text>
+  <text x="800" y="380" fill="#FFCD00" font-family="Teko, sans-serif" font-size="40" text-anchor="middle">.ucsd.edu</text>
+  <text x="800" y="420" fill="#c4d2df" font-size="17" text-anchor="middle">Tools · Learn · Build · Connect</text>
+
+  <!-- four ways -->
+  <g font-size="17" font-weight="700" text-anchor="middle">
+    <rect x="612" y="560" width="88" height="34" rx="17" fill="#ffffff" fill-opacity=".08" stroke="#FFCD00" stroke-opacity=".6"/>
+    <text x="656" y="583" fill="#ffffff">Join</text>
+    <rect x="708" y="560" width="88" height="34" rx="17" fill="#ffffff" fill-opacity=".08" stroke="#FFCD00" stroke-opacity=".6"/>
+    <text x="752" y="583" fill="#ffffff">Ask</text>
+    <rect x="804" y="560" width="88" height="34" rx="17" fill="#ffffff" fill-opacity=".08" stroke="#FFCD00" stroke-opacity=".6"/>
+    <text x="848" y="583" fill="#ffffff">Share</text>
+    <rect x="900" y="560" width="88" height="34" rx="17" fill="#ffffff" fill-opacity=".08" stroke="#FFCD00" stroke-opacity=".6"/>
+    <text x="944" y="583" fill="#ffffff">Follow</text>
+  </g>
+
+  <!-- CONNECT grid -->
+  <g>
+    <rect x="1040" y="90" width="252" height="156" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#ffffff" stroke-opacity=".18"/>
+    <text x="1060" y="130" fill="#ffffff" font-size="20" font-weight="700">TritonAI Champions</text>
+    <text x="1060" y="164" fill="#c4d2df" font-size="16">For the AI curious;</text>
+    <text x="1060" y="188" fill="#c4d2df" font-size="16">operational uses, short</text>
+    <text x="1060" y="212" fill="#c4d2df" font-size="16">trainings</text>
+
+    <rect x="1308" y="90" width="252" height="156" rx="14" fill="#FFCD00" fill-opacity=".14" stroke="#FFCD00" stroke-width="2"/>
+    <text x="1328" y="130" fill="#ffffff" font-size="20" font-weight="700">Tools Working Group</text>
+    <text x="1328" y="164" fill="#c4d2df" font-size="16">Power users, monthly;</text>
+    <text x="1328" y="188" fill="#c4d2df" font-size="16">shapes the roadmap</text>
+    <text x="1328" y="224" fill="#FFCD00" font-size="15" font-weight="700" letter-spacing="1">BEST FIT FOR THIS ROOM</text>
+
+    <rect x="1040" y="260" width="252" height="156" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#ffffff" stroke-opacity=".18"/>
+    <text x="1060" y="300" fill="#ffffff" font-size="20" font-weight="700">n8n Automation WG</text>
+    <text x="1060" y="334" fill="#c4d2df" font-size="16">Connecting systems,</text>
+    <text x="1060" y="358" fill="#c4d2df" font-size="16">monthly; sets integration</text>
+    <text x="1060" y="382" fill="#c4d2df" font-size="16">priorities and guardrails</text>
+
+    <rect x="1308" y="260" width="252" height="156" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#ffffff" stroke-opacity=".18"/>
+    <text x="1328" y="300" fill="#ffffff" font-size="20" font-weight="700">AI Use-Case Group</text>
+    <text x="1328" y="334" fill="#c4d2df" font-size="16">Every other Friday;</text>
+    <text x="1328" y="358" fill="#c4d2df" font-size="16">bring an idea, leave</text>
+    <text x="1328" y="382" fill="#c4d2df" font-size="16">with a scoped use case</text>
+
+    <rect x="1040" y="430" width="252" height="156" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#ffffff" stroke-opacity=".18"/>
+    <text x="1060" y="470" fill="#ffffff" font-size="20" font-weight="700">AI Consulting Hours</text>
+    <text x="1060" y="504" fill="#c4d2df" font-size="16">Biweekly, time-boxed;</text>
+    <text x="1060" y="528" fill="#c4d2df" font-size="16">senior AI help for</text>
+    <text x="1060" y="552" fill="#c4d2df" font-size="16">active projects</text>
+
+    <rect x="1308" y="430" width="252" height="156" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#ffffff" stroke-opacity=".18"/>
+    <text x="1328" y="470" fill="#ffffff" font-size="20" font-weight="700">Department groups</text>
+    <text x="1328" y="504" fill="#c4d2df" font-size="16">Like the Jacobs School</text>
+    <text x="1328" y="528" fill="#c4d2df" font-size="16">AI Show and Tell;</text>
+    <text x="1328" y="552" fill="#c4d2df" font-size="16">run one? Get it listed</text>
+  </g>
+
+  <!-- stay in the loop -->
+  <rect x="40" y="628" width="1520" height="100" rx="18" fill="#00629B" fill-opacity=".45" stroke="#00C6D7"/>
+  <text x="72" y="690" fill="#FFCD00" font-family="Teko, sans-serif" font-size="40">STAY IN THE LOOP</text>
+  <g font-size="20" font-weight="700" fill="#ffffff">
+    <rect x="352" y="656" width="250" height="46" rx="23" fill="#ffffff" fill-opacity=".1"/>
+    <text x="477" y="686" text-anchor="middle">TritonAI Newsletter</text>
+    <rect x="618" y="656" width="230" height="46" rx="23" fill="#ffffff" fill-opacity=".1"/>
+    <text x="733" y="686" text-anchor="middle">TritonAI Updates</text>
+    <rect x="864" y="656" width="220" height="46" rx="23" fill="#ffffff" fill-opacity=".1"/>
+    <text x="974" y="686" text-anchor="middle">Weekly AI News</text>
+  </g>
+  <text x="1530" y="676" fill="#c4d2df" font-size="18" text-anchor="end">Join a group or ask a question</text>
+  <text x="1530" y="704" fill="#ffffff" font-size="22" font-weight="700" text-anchor="end">tritonai@ucsd.edu</text>
+</svg>

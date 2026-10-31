@@ -11969,7 +11969,7 @@ export const slides = [
       "label": "Compute and models"
     },
     "durationSeconds": 45,
-    "speakerNotes": "45 seconds. Three steps: request a TritonAI Gateway key, install the Harness, and take the eight-minute Essentials training, then try it on one real task. To connect with peers: the TritonAI Tools Working Group meets monthly and is the best fit for this room; the n8n Automation Working Group if you connect systems; the AI Use-Case Group every other Friday; AI Consulting Hours for active projects. The campus webinar on Thursday, November 12 goes through every tool in depth. Two sites to remember: tritonai.ucsd.edu and parasol.ucsd.edu.",
+    "speakerNotes": "45 seconds. Three steps: request a TritonAI Gateway key, install the Harness, and take the eight-minute Essentials training, then try it on one real task. For the first build, keep it narrow: one workflow, tested, with a person checking the results. Reuse what's in the Skills Library and the Developer FAQs, and plan who owns it and where it's hosted before it's real. The campus webinar on Thursday, November 12 goes through every tool in depth. Two sites to remember: tritonai.ucsd.edu and parasol.ucsd.edu.",
     "type": "content",
     "layout": "cabinet-outline",
     "title": "Get started",
@@ -11977,7 +11977,7 @@ export const slides = [
     "content": [],
     "figure": {
       "id": "get-started",
-      "alt": "Three steps: get a TritonAI Gateway key, install the Harness, take the 8-minute Essentials training. Connect with peers through working groups and consulting hours; go deeper at the November 12 webinar; tritonai.ucsd.edu and parasol.ucsd.edu."
+      "alt": "Three steps: get a TritonAI Gateway key, install the Harness, take the 8-minute Essentials training. Build the first one narrow and tested, reusing the Skills Library; go deeper at the November 12 webinar; tritonai.ucsd.edu and parasol.ucsd.edu."
     }
   },
   {
@@ -12029,5 +12029,29 @@ export const slides = [
     },
     "durationSeconds": 60,
         "speakerNotes": "One minute. This is the API offering, the same diagram as the Build with TritonAI page. Whoever the builder is (department staff, a research lab, an analyst, a faculty team), they connect a client: the Harness, Claude Code or Codex, Hermes or OpenCode, an n8n workflow, or their own code. Every request goes through one endpoint, the TritonAI LLM Gateway, and the key's approval decides which routes it can use: enterprise cloud through AWS, Azure, or Google Cloud Vertex AI under UC contracts, or open models hosted on UC San Diego infrastructure. Then cost. Recharge is our word for internal billing to a chartstring. Campus administrative work on UC-hosted models has no recharge, with monthly caps. Cloud models bill a department chartstring from the first token at the Model Hub rate, with a budget owner and spend limit. Grant research charges the grant or project. Other UC campuses connect through an intercampus recharge agreement. The key controls model access; the app owner still owns data permissions, testing, accessibility, support, and human review. Start at tritonai.ucsd.edu/developer-apis."
+  },
+  {
+    "id": 5022,
+    "slug": "techcom-learn-and-connect",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "Learn and connect",
+    "subtitle": "Everything I showed today lives at tritonai.ucsd.edu, along with the people doing this work.",
+    "content": [],
+    "figure": {
+      "id": "learn-and-connect",
+      "alt": "tritonai.ucsd.edu is the hub. Learn: the TritonAI Discovery Series (15 short videos, start here), five learning paths, the Certificate in AI for Higher Education (staff or leaders stream, 20 hours, no cost), and AI webinars including the November 12 tools webinar. Connect: TritonAI Champions, the TritonAI Tools Working Group (best fit for this room), the n8n Automation Working Group, the AI Use-Case Group every other Friday, AI Consulting Hours, and departmental groups such as the Jacobs School AI Show and Tell. Stay in the loop with the TritonAI Newsletter, TritonAI Updates, and Weekly AI News; email tritonai@ucsd.edu to join a group."
+    },
+    "audiences": [
+      "tech-community"
+    ],
+    "managerSection": "Tech Community",
+    "section": {
+      "part": 4,
+      "total": 4,
+      "label": "Compute and models"
+    },
+    "durationSeconds": 60,
+    "speakerNotes": "60 seconds. Everything I showed today lives in one place: tritonai.ucsd.edu. On the left is how you learn. Start with the Discovery Series, 15 short videos that work well one per team meeting. Then pick a learning path; there's one for builders. If you want depth, the Certificate in AI for Higher Education is 20 hours, staff or leaders stream, at no cost. And the November 12 webinar walks through every supported tool. On the right is how you connect. For this room, the TritonAI Tools Working Group is the best fit: power users, monthly, and you help shape the roadmap. If you connect systems, join the n8n Automation Working Group. Bring an idea to the AI Use-Case Group every other Friday, or book AI Consulting Hours when a project is live. If your department already runs its own group, like the Jacobs School's AI Show and Tell, we'll list it. To stay in the loop: the newsletter, TritonAI Updates for platform changes, and Weekly AI News. Email tritonai@ucsd.edu to join any of these."
   }
 ];

@@ -148,9 +148,9 @@ Per-person exercise prompts live outside this public repository.
 
 **Communication job:** Show distributed technical staff what agentic AI does, how the TritonAI Harness stays safe, what people across campus build with it, and the compute and model services underneath: the TritonAI Gateway and PARASOL (formerly DSMLP).
 
-**Canonical count:** 21
+**Canonical count:** 22
 
-**Sequence:** about 17 minutes plus Q&A, in four parts (The shift, The Harness, What people build, Compute and models). Every slide is owned by this view: demo and diagram slides are copies of Cabinet, citizen, and technical slides with their own slugs, so the order is independent of other views. New diagrams (`slide.figure`) are inline SVGs in `src/assets/figures/`. PARASOL figures match parasol.ucsd.edu; the PARASOL press release is embargoed until November 3, 2026.
+**Sequence:** about 18 minutes plus Q&A, in four parts (The shift, The Harness, What people build, Compute and models). Every slide is owned by this view: demo and diagram slides are copies of Cabinet, citizen, and technical slides with their own slugs, so the order is independent of other views. New diagrams (`slide.figure`) are inline SVGs in `src/assets/figures/`. PARASOL figures match parasol.ucsd.edu; the PARASOL press release is embargoed until November 3, 2026.
 
 1. `techcom-title`
 2. `techcom-convergence`
@@ -172,7 +172,8 @@ Per-person exercise prompts live outside this public repository.
 18. `techcom-parasol-reservations`
 19. `techcom-compute-and-models`
 20. `techcom-get-started`
-21. `techcom-thank-you`
+21. `techcom-learn-and-connect`
+22. `techcom-thank-you`
 
 ## citizen
 
