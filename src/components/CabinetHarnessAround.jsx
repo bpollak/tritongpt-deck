@@ -22,11 +22,14 @@ const Facts = ({ rows }) => (
 
 export default function CabinetHarnessAround({ slide }) {
   const d = slide.harnessAround;
-  return <CabinetCanvas className="cabinet-workflow-canvas cabinet-ha-canvas" section={slide.section}>
-    <section className="cabinet-ha" aria-label={slide.title}>
+  // tone "dark" matches the navy framework slides: title and subtitle, no kicker.
+  const dark = d.tone === 'dark';
+  return <CabinetCanvas className={`${dark ? 'cabinet-framework-canvas' : 'cabinet-workflow-canvas'} cabinet-ha-canvas`} section={slide.section}>
+    <section className={`cabinet-ha${dark ? ' cabinet-ha--dark' : ''}`} aria-label={slide.title}>
       <header className="cabinet-ha-header">
-        <p className="cabinet-ha-kicker">{d.kicker}</p>
+        {!dark && <p className="cabinet-ha-kicker">{d.kicker}</p>}
         <h1>{slide.title}</h1>
+        {dark && slide.subtitle && <p className="cabinet-ha-lead">{slide.subtitle}</p>}
         <p className="cabinet-ha-key"><strong>M</strong> = the AI model</p>
       </header>
 

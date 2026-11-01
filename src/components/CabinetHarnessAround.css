@@ -75,3 +75,38 @@
 .cabinet-ha-gets {flex-wrap:nowrap;gap:8px;}
 .cabinet-ha-out {font-size:17px;padding:6px 11px;white-space:nowrap;}
 .cabinet-ha-gets-label {white-space:nowrap;}
+
+/* Dark tone: same navy frame, Teko title, and subtitle as the framework slides. */
+.cabinet-ha--dark {padding:36px 64px 0;background:#182b49;color:#f5f0e6;}
+.cabinet-ha--dark h1 {font-size:58px;line-height:1;color:#fff;}
+.cabinet-ha--dark .cabinet-ha-lead {margin:14px 0 0;max-width:none;font-size:26px;line-height:1.35;color:#f5f0e6;}
+.cabinet-ha--dark .cabinet-ha-key {color:#c4d2df;}
+.cabinet-ha--dark .cabinet-ha-key strong {color:#ffcd00;}
+.cabinet-ha--dark .cabinet-ha-panels {margin-top:28px;}
+.cabinet-ha--dark .cabinet-ha-panel {border:2px solid rgba(0,198,215,.55);background:rgba(255,255,255,.05);}
+.cabinet-ha--dark .cabinet-ha-panel--harness {border-color:rgba(255,205,0,.7);background:rgba(255,205,0,.07);}
+.cabinet-ha--dark .cabinet-ha-product {color:#00c6d7;}
+.cabinet-ha--dark h2 {color:#fff;}
+.cabinet-ha--dark .cabinet-ha-panel--harness h2 {color:#ffcd00;}
+.cabinet-ha--dark .cabinet-ha-tag {color:#c4d2df;}
+.cabinet-ha--dark .cabinet-ha-chips span {border-color:rgba(255,255,255,.28);background:rgba(255,255,255,.06);color:#00c6d7;}
+.cabinet-ha--dark .cabinet-ha-panel--harness .cabinet-ha-chips span {border-color:rgba(255,205,0,.5);color:#ffcd00;}
+.cabinet-ha--dark .cabinet-ha-chips span.is-fill {background:rgba(0,198,215,.2);}
+.cabinet-ha--dark .cabinet-ha-chips em {color:#9fb3c8;}
+.cabinet-ha--dark .cabinet-ha-stage--harness {border-color:rgba(255,205,0,.35);background:rgba(255,255,255,.04);}
+.cabinet-ha--dark .cabinet-ha-box {border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.07);color:#fff;}
+.cabinet-ha--dark .cabinet-ha-box.is-fill {background:rgba(0,198,215,.2);}
+.cabinet-ha--dark .cabinet-ha-box.is-muted {color:#c4d2df;}
+.cabinet-ha--dark .cabinet-ha-track {border-top-color:rgba(255,255,255,.3);}
+.cabinet-ha--dark .cabinet-ha-track b {background:#00c6d7;}
+.cabinet-ha--dark .cabinet-ha-model {border-color:#00c6d7;background:#132a46;}
+.cabinet-ha--dark .cabinet-ha-m {color:#00c6d7;}
+.cabinet-ha--dark .cabinet-ha-model--loop {border-color:#ffcd00;}
+.cabinet-ha--dark .cabinet-ha-model--loop .cabinet-ha-m {color:#ffcd00;}
+.cabinet-ha--dark .cabinet-ha-ring {border-color:rgba(255,205,0,.55);}
+.cabinet-ha--dark .cabinet-ha-ring i {background:#ffcd00;}
+.cabinet-ha--dark .cabinet-ha-loop {background:#ffcd00;color:#182b49;}
+.cabinet-ha--dark .cabinet-ha-gets {border-top-color:rgba(255,255,255,.14);}
+.cabinet-ha--dark .cabinet-ha-gets-label {color:#9fb3c8;}
+.cabinet-ha--dark .cabinet-ha-out {border-color:rgba(255,255,255,.28);background:rgba(255,255,255,.07);color:#fff;}
+.cabinet-canvas[data-reading] .cabinet-ha--dark {padding:24px 18px 120px;}

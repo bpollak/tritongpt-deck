@@ -10909,7 +10909,8 @@ export const slides = [
             "You set how much it does on its own"
           ]
         ]
-      }
+      },
+      "tone": "dark"
     },
     "title": "A chat answers. The Harness does the work.",
     "subtitle": "The model can stay the same. The workspace changes what you can get done.",
@@ -11222,86 +11223,15 @@ export const slides = [
   {
     "id": 5014,
     "slug": "techcom-hosting",
-    "mobileSnapshot": "/media/cabinet/snap/cabinet-harness-11d-campus-app-hosting-intake.jpg",
     "type": "content",
+    "layout": "cabinet-outline",
+    "title": "ITS hosts applications built by citizen developers",
+    "subtitle": "When a tool outgrows one desktop, ITS reviews it and hosts it on campus.",
     "content": [],
-    "layout": "harness-definition",
-    "variant": "harness-campus-hosting",
-    "parts": [
-      {
-        "text": "ITS hosts applications built by "
-      },
-      {
-        "text": "citizen developers",
-        "accent": true
-      },
-      {
-        "text": "."
-      }
-    ],
-    "subhead": "When a tool outgrows one desktop, ITS reviews it and hosts it on campus, from a single team's app to campus-wide services. Volume drops as governance increases.",
-    "hostingTiers": [
-      {
-        "tierLabel": "Tier 0",
-        "users": "Individual Users",
-        "volume": "~1000+/y",
-        "color": "#4f7f38",
-        "softColor": "#c8dac1",
-        "fill": "#eef6ea",
-        "process": "Citizen-Initiated Development",
-        "userDeployments": [
-          {
-            "label": "User Desktop / Laptop"
-          },
-          {
-            "label": "User Sandbox"
-          }
-        ]
-      },
-      {
-        "tierLabel": "Tier 1",
-        "users": "Scattered Users",
-        "volume": "~200/y",
-        "color": "#0076a8",
-        "softColor": "#b9d4e6",
-        "fill": "#e7f0f7",
-        "review": "Citizen App Risk / Scope Review",
-        "deployment": "Citizen-Curated Deployment",
-        "domain": "*.apps.ucsd.edu",
-        "recurring": "Recurring Risk / Scope Review"
-      },
-      {
-        "tierLabel": "Tier 2",
-        "users": "Many Users",
-        "volume": "~20/y",
-        "color": "#009cad",
-        "softColor": "#b9e0e5",
-        "fill": "#e6f6f8",
-        "review": "TritonAI Tools & Rapid Dev",
-        "deployments": [
-          {
-            "name": "TritonAI Dev",
-            "domain": "*.tritonai.ucsd.edu"
-          },
-          {
-            "name": "Rapid ITS Dev",
-            "domain": "*.ucsd.edu"
-          }
-        ],
-        "recurring": "Recurring Risk / Scope Review"
-      },
-      {
-        "tierLabel": "Tier 3",
-        "users": "Campus-Wide Usage",
-        "volume": "~1-5/y",
-        "color": "#00629b",
-        "softColor": "#9eb9d6",
-        "fill": "#dfeaf3",
-        "review": "Enterprise Architecture / Dev",
-        "deployment": "Traditional Enterprise Dev / Deployment",
-        "domain": "iPaaS Patterns"
-      }
-    ],
+    "figure": {
+      "id": "campus-app-hosting",
+      "alt": "Four hosting tiers. Tier 0: individual users, about 1,000 apps a year, self-serve on a desktop or sandbox. Tier 1: scattered users, about 200 a year, citizen app risk and scope review, citizen-curated deployment on apps.ucsd.edu, recurring review. Tier 2: many users, about 20 a year, TritonAI tools and rapid development on tritonai.ucsd.edu or ucsd.edu, recurring review. Tier 3: campus-wide, 1 to 5 a year, enterprise architecture and traditional enterprise deployment with iPaaS patterns. Apps escalate or migrate between tiers."
+    },
     "audiences": [
       "tech-community"
     ],
@@ -11528,157 +11458,16 @@ export const slides = [
   {
     "id": 5025,
     "slug": "techcom-scale",
-    "mobileSnapshot": "/media/cabinet/snap/cabinet-scale.jpg",
-    "mobileSnapshotMedia": "(max-height: 500px)",
     "type": "content",
-    "layout": "data-dashboard",
-    "compact": true,
-    "title": "The foundation already carries substantial campus use",
-    "subtitle": "Aggregate API activity across UC San Diego, January 1–September 30, 2026. No user-level records.",
-    "backgroundColor": "#F5F0E6",
-    "dashboardSections": [
-      {
-        "type": "metric-grid",
-        "variant": "strip",
-        "items": [
-          {
-            "value": "527.0B",
-            "label": "Tokens processed",
-            "icon": "Database",
-            "color": "#00629B"
-          },
-          {
-            "value": "157.0M",
-            "label": "API request records",
-            "icon": "BarChart3",
-            "color": "#00C6D7"
-          },
-          {
-            "value": "90.6%",
-            "label": "Tokens on self-hosted and internal routes",
-            "icon": "Server",
-            "color": "#6E963B"
-          },
-          {
-            "value": "71.7B",
-            "label": "Tokens in September",
-            "icon": "TrendingUp",
-            "color": "#FC8900"
-          }
-        ]
-      },
-      {
-        "type": "stacked-columns",
-        "sectionTitle": "Monthly token volume · billions, 2026",
-        "series": [
-          {
-            "key": "selfHosted",
-            "label": "Self-hosted and internal",
-            "color": "#00629B"
-          },
-          {
-            "key": "cloud",
-            "label": "Cloud",
-            "color": "#FFCD00"
-          }
-        ],
-        "items": [
-          {
-            "label": "Jan 2026",
-            "selfHosted": 43.823578111,
-            "cloud": 0.461275717,
-            "displayValue": "44.3B",
-            "annotation": "43.8B / 0.5B cloud",
-            "highlight": false
-          },
-          {
-            "label": "Feb 2026",
-            "selfHosted": 48.256624512,
-            "cloud": 0.707140348,
-            "displayValue": "49.0B",
-            "annotation": "48.3B / 0.7B cloud",
-            "highlight": false
-          },
-          {
-            "label": "Mar 2026",
-            "selfHosted": 43.712369023,
-            "cloud": 1.047427888,
-            "displayValue": "44.8B",
-            "annotation": "43.7B / 1.0B cloud",
-            "highlight": false
-          },
-          {
-            "label": "Apr 2026",
-            "selfHosted": 48.662696509,
-            "cloud": 1.402041712,
-            "displayValue": "50.1B",
-            "annotation": "48.7B / 1.4B cloud",
-            "highlight": false
-          },
-          {
-            "label": "May 2026",
-            "selfHosted": 42.809512637,
-            "cloud": 5.283859803,
-            "displayValue": "48.1B",
-            "annotation": "42.8B / 5.3B cloud",
-            "highlight": false
-          },
-          {
-            "label": "Jun 2026",
-            "selfHosted": 68.314520505,
-            "cloud": 4.877858185,
-            "displayValue": "73.2B",
-            "annotation": "68.3B / 4.9B cloud",
-            "highlight": false
-          },
-          {
-            "label": "Jul 2026",
-            "selfHosted": 61.460517438,
-            "cloud": 5.61400289,
-            "displayValue": "67.1B",
-            "annotation": "61.5B / 5.6B cloud",
-            "highlight": false
-          },
-          {
-            "label": "Aug 2026",
-            "selfHosted": 64.536316586,
-            "cloud": 14.325943611,
-            "displayValue": "78.9B",
-            "annotation": "64.5B / 14.3B cloud",
-            "highlight": false
-          },
-          {
-            "label": "Sep 2026",
-            "selfHosted": 55.691559415,
-            "cloud": 16.040063953,
-            "displayValue": "71.7B",
-            "annotation": "55.7B / 16.0B cloud",
-            "highlight": true
-          }
-        ],
-        "caption": "September was down 9.0% from August. August remains the highest-volume month in this period."
-      },
-      {
-        "type": "stat-callouts",
-        "compact": true,
-        "items": [
-          {
-            "icon": "Server",
-            "stat": "September route mix",
-            "detail": "55.7B tokens on self-hosted and internal routes; 16.0B on cloud routes.",
-            "color": "#00629B"
-          },
-          {
-            "icon": "CheckCircle",
-            "stat": "How to read these numbers",
-            "detail": "Gateway-recorded input plus output tokens. Request records include successful and failed calls.",
-            "color": "#6E963B"
-          }
-        ]
-      }
-    ],
+    "layout": "cabinet-outline",
+    "title": "The foundation already carries real campus use",
+    "subtitle": "Gateway activity across UC San Diego, January–September 2026.",
+    "content": [],
+    "figure": {
+      "id": "gateway-scale",
+      "alt": "527.0 billion tokens, 157.0 million API request records, 90.6% of tokens on self-hosted and internal routes, 71.7 billion tokens in September. Monthly stacked columns, self-hosted and cloud: Jan 44.3B, Feb 49.0B, Mar 44.8B, Apr 50.1B, May 48.1B, Jun 73.2B, Jul 67.1B, Aug 78.9B, Sep 71.7B."
+    },
     "sourceUrl": "https://tritonai.ucsd.edu/developer-apis/index.html#gateway-usage",
-    "claimNote": null,
     "speakerNotes": "Tech Community: follows the API and recharge slide; the gateway is already carrying real load. (Cabinet note follows.) Thirty seconds. Show that campus use is already substantial; distinguish tokens from users or measured productivity. Source line moved off the slide: TritonAI Gateway usage, Jan–Sep 2026, reviewed Oct 5, 2026. Gateway usage measures shared model access, not TritonGPT chat sessions or Harness adoption. January–September reconciles to 527,027,308,843 input and output tokens and 157,030,124 request records. September totals 71,731,623,368 tokens: 55,691,559,415 self-hosted/internal and 16,040,063,953 cloud. September has 13,120,410 request records across all 30 days. The 90.6% year-to-date share is the non-cloud remainder, including internal routes; do not describe all of it as on-premises GPU inference. Volume alone does not establish the cause of the monthly change. Cache-read and cache-creation fields are not added separately; earlier exports lack those fields, so an upstream definition change cannot be entirely ruled out. Labels are rounded; chart heights use exact public aggregates. Source: https://tritonai.ucsd.edu/developer-apis/index.html#gateway-usage, reviewed October 5 and verified October 8, 2026.",
     "audiences": [
       "tech-community"
@@ -12241,302 +12030,20 @@ export const slides = [
   {
     "id": 5037,
     "slug": "techcom-class-planner-utilization",
-    "mobileSnapshot": "/media/cabinet/snap/cabinet-class-planner-utilization.jpg",
-    "mobileSnapshotMedia": "(max-height: 500px)",
     "type": "content",
-    "content": [],
+    "layout": "cabinet-outline",
     "title": "Class Planner demand peaks with enrollment passes",
-    "subtitle": "Daily usage across the summer 2026 enrollment passes",
-    "layout": "daily-usage-chart",
-    "backgroundColor": "#F5F0E6",
+    "subtitle": "Daily users across the summer 2026 enrollment passes.",
+    "content": [],
+    "figure": {
+      "id": "class-planner-usage",
+      "alt": "Line chart of daily users, July 18 to September 20, 2026, on a square-root axis. TritonGPT Class Planner peaks at 3.96k on July 21; the standalone Class Planner peaks at 8.43k on September 1. Spikes line up with enrollment passes on Aug 3, Aug 10, Aug 17, Aug 31 and Sep 8."
+    },
     "managerLabel": "Class Planner metrics: daily usage, both planners",
     "managerSummary": "Tech Community copy of cabinet-class-planner-utilization",
-    "chartData": {
-      "title": "Class Planner daily usage",
-      "subtitle": "Daily counts, Jul 18-Sep 20, 2026 · square-root y-axis, labels show actual daily users",
-      "dates": [
-        "Jul 18",
-        "Jul 19",
-        "Jul 20",
-        "Jul 21",
-        "Jul 22",
-        "Jul 23",
-        "Jul 24",
-        "Jul 25",
-        "Jul 26",
-        "Jul 27",
-        "Jul 28",
-        "Jul 29",
-        "Jul 30",
-        "Jul 31",
-        "Aug 1",
-        "Aug 2",
-        "Aug 3",
-        "Aug 4",
-        "Aug 5",
-        "Aug 6",
-        "Aug 7",
-        "Aug 8",
-        "Aug 9",
-        "Aug 10",
-        "Aug 11",
-        "Aug 12",
-        "Aug 13",
-        "Aug 14",
-        "Aug 15",
-        "Aug 16",
-        "Aug 17",
-        "Aug 18",
-        "Aug 19",
-        "Aug 20",
-        "Aug 21",
-        "Aug 22",
-        "Aug 23",
-        "Aug 24",
-        "Aug 25",
-        "Aug 26",
-        "Aug 27",
-        "Aug 28",
-        "Aug 29",
-        "Aug 30",
-        "Aug 31",
-        "Sep 1",
-        "Sep 2",
-        "Sep 3",
-        "Sep 4",
-        "Sep 5",
-        "Sep 6",
-        "Sep 7",
-        "Sep 8",
-        "Sep 9",
-        "Sep 10",
-        "Sep 11",
-        "Sep 12",
-        "Sep 13",
-        "Sep 14",
-        "Sep 15",
-        "Sep 16",
-        "Sep 17",
-        "Sep 18",
-        "Sep 19",
-        "Sep 20"
-      ],
-      "series": [
-        {
-          "name": "TritonGPT Class Planner",
-          "color": "#1f4e79",
-          "data": [
-            1,
-            1,
-            2727,
-            3962,
-            2064,
-            1175,
-            752,
-            476,
-            671,
-            828,
-            579,
-            572,
-            655,
-            1070,
-            329,
-            406,
-            783,
-            968,
-            644,
-            412,
-            262,
-            281,
-            667,
-            1185,
-            628,
-            390,
-            357,
-            247,
-            189,
-            200,
-            519,
-            757,
-            891,
-            997,
-            805,
-            286,
-            300,
-            540,
-            604,
-            673,
-            691,
-            528,
-            442,
-            696,
-            1537,
-            1331,
-            309,
-            278,
-            352,
-            158,
-            118,
-            271,
-            734,
-            183,
-            139,
-            105,
-            175,
-            128,
-            196,
-            203,
-            169,
-            191,
-            161,
-            147,
-            173
-          ]
-        },
-        {
-          "name": "Standalone Class Planner",
-          "color": "#2a8a6b",
-          "data": [
-            null,
-            null,
-            null,
-            null,
-            591,
-            606,
-            3500,
-            1717,
-            1875,
-            2063,
-            1449,
-            1543,
-            2734,
-            3435,
-            1112,
-            1236,
-            2479,
-            3686,
-            2430,
-            1484,
-            1287,
-            1121,
-            2245,
-            4668,
-            2644,
-            1652,
-            1438,
-            1103,
-            825,
-            915,
-            1974,
-            2878,
-            3489,
-            4428,
-            3720,
-            1240,
-            1284,
-            2205,
-            2352,
-            2695,
-            2845,
-            2480,
-            2088,
-            3163,
-            7048,
-            8434,
-            2708,
-            2380,
-            2841,
-            1374,
-            1359,
-            2544,
-            6816,
-            2523,
-            1954,
-            1686,
-            1684,
-            1424,
-            2232,
-            2056,
-            2053,
-            2258,
-            2366,
-            2354,
-            2699
-          ]
-        }
-      ],
-      "yMax": 10000,
-      "yTicks": [
-        0,
-        100,
-        500,
-        1000,
-        2000,
-        4000,
-        6000,
-        10000
-      ],
-      "yAxisTitle": "Daily user count",
-      "xTicks": [
-        "Jul 20",
-        "Jul 27",
-        "Aug 3",
-        "Aug 10",
-        "Aug 17",
-        "Aug 24",
-        "Aug 31",
-        "Sep 7",
-        "Sep 14"
-      ],
-      "xAxisTitle": "Date (2026)",
-      "markers": [
-        {
-          "date": "Aug 3",
-          "label": "Aug 3-5",
-          "detail": "Juniors\nFirst pass"
-        },
-        {
-          "date": "Aug 10",
-          "label": "Aug 10-11",
-          "detail": "Sophomores +\ncontinuing first-years\nFirst pass"
-        },
-        {
-          "date": "Aug 17",
-          "label": "Aug 17-21",
-          "detail": "Continuing\nSecond pass"
-        },
-        {
-          "date": "Aug 31",
-          "label": "Aug 31-Sep 1",
-          "detail": "Incoming students\nFirst pass"
-        },
-        {
-          "date": "Sep 8",
-          "label": "Sep 8",
-          "detail": "Incoming first-years\nSecond pass"
-        }
-      ],
-      "peaks": [
-        {
-          "series": 0,
-          "date": "Jul 21",
-          "side": "right",
-          "dy": -30,
-          "text": "3.96k peak · Jul 21\nJul 22 priority first pass"
-        },
-        {
-          "series": 1,
-          "date": "Sep 1",
-          "side": "right",
-          "dy": 6,
-          "text": "8.43k peak\nSep 1"
-        }
-      ]
-    },
     "audiences": [
       "tech-community"
     ],
-    "sourceSlide": "class-planner-indexed-comparison",
     "managerSection": "Tech Community",
     "section": {
       "part": 4,

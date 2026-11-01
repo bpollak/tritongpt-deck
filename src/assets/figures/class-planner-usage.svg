@@ -1,0 +1,52 @@
+<svg viewBox="0 0 1600 760" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" font-family="Roboto, Arial, sans-serif">
+
+<path d="M 120 640 L 1560 640" stroke="#ffffff" stroke-opacity="0.35" stroke-width="2"/><text x="106" y="646" fill="#9fb3c8" font-size="16" text-anchor="end">0</text>
+<path d="M 120 593 L 1560 593" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1"/><text x="106" y="599" fill="#9fb3c8" font-size="16" text-anchor="end">100</text>
+<path d="M 120 535 L 1560 535" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1"/><text x="106" y="541" fill="#9fb3c8" font-size="16" text-anchor="end">500</text>
+<path d="M 120 491 L 1560 491" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1"/><text x="106" y="497" fill="#9fb3c8" font-size="16" text-anchor="end">1k</text>
+<path d="M 120 430 L 1560 430" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1"/><text x="106" y="436" fill="#9fb3c8" font-size="16" text-anchor="end">2k</text>
+<path d="M 120 343 L 1560 343" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1"/><text x="106" y="349" fill="#9fb3c8" font-size="16" text-anchor="end">4k</text>
+<path d="M 120 276 L 1560 276" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1"/><text x="106" y="282" fill="#9fb3c8" font-size="16" text-anchor="end">6k</text>
+<path d="M 120 170 L 1560 170" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1"/><text x="106" y="176" fill="#9fb3c8" font-size="16" text-anchor="end">10k</text>
+<text x="34" y="405" fill="#9fb3c8" font-size="15" text-anchor="middle" letter-spacing="1" transform="rotate(-90 34 405)">DAILY USERS</text>
+<text x="165" y="670" fill="#c4d2df" font-size="16" text-anchor="middle">Jul 20</text>
+<text x="322" y="670" fill="#c4d2df" font-size="16" text-anchor="middle">Jul 27</text>
+<text x="480" y="670" fill="#c4d2df" font-size="16" text-anchor="middle">Aug 3</text>
+<text x="638" y="670" fill="#c4d2df" font-size="16" text-anchor="middle">Aug 10</text>
+<text x="795" y="670" fill="#c4d2df" font-size="16" text-anchor="middle">Aug 17</text>
+<text x="952" y="670" fill="#c4d2df" font-size="16" text-anchor="middle">Aug 24</text>
+<text x="1110" y="670" fill="#c4d2df" font-size="16" text-anchor="middle">Aug 31</text>
+<text x="1268" y="670" fill="#c4d2df" font-size="16" text-anchor="middle">Sep 7</text>
+<text x="1425" y="670" fill="#c4d2df" font-size="16" text-anchor="middle">Sep 14</text>
+<path d="M 480 98 L 480 640" stroke="#ffffff" stroke-opacity=".35" stroke-dasharray="5 6"/>
+<text x="488" y="114" fill="#ffffff" font-size="16" font-weight="700">Aug 3-5</text>
+<text x="488" y="136" fill="#c4d2df" font-size="15">Juniors</text>
+<text x="488" y="156" fill="#c4d2df" font-size="15">First pass</text>
+<path d="M 638 98 L 638 640" stroke="#ffffff" stroke-opacity=".35" stroke-dasharray="5 6"/>
+<text x="646" y="114" fill="#ffffff" font-size="16" font-weight="700">Aug 10-11</text>
+<text x="646" y="136" fill="#c4d2df" font-size="15">Sophomores +</text>
+<text x="646" y="156" fill="#c4d2df" font-size="15">cont. first-years</text>
+<path d="M 795 98 L 795 640" stroke="#ffffff" stroke-opacity=".35" stroke-dasharray="5 6"/>
+<text x="803" y="114" fill="#ffffff" font-size="16" font-weight="700">Aug 17-21</text>
+<text x="803" y="136" fill="#c4d2df" font-size="15">Continuing</text>
+<text x="803" y="156" fill="#c4d2df" font-size="15">Second pass</text>
+<path d="M 1110 98 L 1110 640" stroke="#ffffff" stroke-opacity=".35" stroke-dasharray="5 6"/>
+<text x="1118" y="114" fill="#ffffff" font-size="16" font-weight="700">Aug 31-Sep 1</text>
+<text x="1118" y="136" fill="#c4d2df" font-size="15">Incoming students</text>
+<text x="1118" y="156" fill="#c4d2df" font-size="15">First pass</text>
+<path d="M 1290 98 L 1290 640" stroke="#ffffff" stroke-opacity=".35" stroke-dasharray="5 6"/>
+<text x="1298" y="114" fill="#ffffff" font-size="16" font-weight="700">Sep 8</text>
+<text x="1298" y="136" fill="#c4d2df" font-size="15">Incoming first-years</text>
+<text x="1298" y="156" fill="#c4d2df" font-size="15">Second pass</text>
+<path d="M 120.0 635.3 L 142.5 635.3 L 165.0 394.6 L 187.5 344.2 L 210.0 426.5 L 232.5 478.9 L 255.0 511.1 L 277.5 537.5 L 300.0 518.3 L 322.5 504.8 L 345.0 526.9 L 367.5 527.6 L 390.0 519.7 L 412.5 486.3 L 435.0 554.7 L 457.5 545.3 L 480.0 508.5 L 502.5 493.8 L 525.0 520.7 L 547.5 544.6 L 570.0 563.9 L 592.5 561.2 L 615.0 518.6 L 637.5 478.2 L 660.0 522.2 L 682.5 547.2 L 705.0 551.2 L 727.5 566.1 L 750.0 575.4 L 772.5 573.5 L 795.0 532.9 L 817.5 510.7 L 840.0 499.7 L 862.5 491.6 L 885.0 506.6 L 907.5 560.5 L 930.0 558.6 L 952.5 530.8 L 975.0 524.5 L 997.5 518.1 L 1020.0 516.5 L 1042.5 532.0 L 1065.0 541.2 L 1087.5 516.0 L 1110.0 455.7 L 1132.5 468.5 L 1155.0 557.4 L 1177.5 561.6 L 1200.0 551.8 L 1222.5 580.9 L 1245.0 588.9 L 1267.5 562.6 L 1290.0 512.7 L 1312.5 576.4 L 1335.0 584.6 L 1357.5 591.8 L 1380.0 577.8 L 1402.5 586.8 L 1425.0 574.2 L 1447.5 573.0 L 1470.0 578.9 L 1492.5 575.0 L 1515.0 580.4 L 1537.5 583.0 L 1560.0 578.2" fill="none" stroke="#FFCD00" stroke-width="3" stroke-linejoin="round"/>
+<path d="M 210.0 525.7 L 232.5 524.3 L 255.0 361.9 L 277.5 445.2 L 300.0 436.5 L 322.5 426.5 L 345.0 461.1 L 367.5 455.4 L 390.0 394.2 L 412.5 364.5 L 435.0 483.3 L 457.5 474.8 L 480.0 406.0 L 502.5 354.7 L 525.0 408.3 L 547.5 458.9 L 570.0 471.4 L 592.5 482.6 L 615.0 417.3 L 637.5 318.9 L 660.0 398.3 L 682.5 449.0 L 705.0 461.8 L 727.5 483.9 L 750.0 505.0 L 772.5 497.8 L 795.0 431.2 L 817.5 387.9 L 840.0 362.4 L 862.5 327.2 L 885.0 353.3 L 907.5 474.5 L 930.0 471.6 L 952.5 419.3 L 975.0 412.1 L 997.5 396.0 L 1020.0 389.3 L 1042.5 405.9 L 1065.0 425.2 L 1087.5 375.7 L 1110.0 245.4 L 1132.5 208.4 L 1155.0 395.4 L 1177.5 410.7 L 1200.0 389.5 L 1222.5 465.8 L 1245.0 466.7 L 1267.5 402.9 L 1290.0 252.0 L 1312.5 403.9 L 1335.0 432.2 L 1357.5 447.0 L 1380.0 447.1 L 1402.5 462.6 L 1425.0 418.0 L 1447.5 426.9 L 1470.0 427.0 L 1492.5 416.7 L 1515.0 411.4 L 1537.5 412.0 L 1560.0 395.8 L 1560.0 640 L 210.0 640 Z" fill="#00C6D7" fill-opacity=".1"/>
+<path d="M 210.0 525.7 L 232.5 524.3 L 255.0 361.9 L 277.5 445.2 L 300.0 436.5 L 322.5 426.5 L 345.0 461.1 L 367.5 455.4 L 390.0 394.2 L 412.5 364.5 L 435.0 483.3 L 457.5 474.8 L 480.0 406.0 L 502.5 354.7 L 525.0 408.3 L 547.5 458.9 L 570.0 471.4 L 592.5 482.6 L 615.0 417.3 L 637.5 318.9 L 660.0 398.3 L 682.5 449.0 L 705.0 461.8 L 727.5 483.9 L 750.0 505.0 L 772.5 497.8 L 795.0 431.2 L 817.5 387.9 L 840.0 362.4 L 862.5 327.2 L 885.0 353.3 L 907.5 474.5 L 930.0 471.6 L 952.5 419.3 L 975.0 412.1 L 997.5 396.0 L 1020.0 389.3 L 1042.5 405.9 L 1065.0 425.2 L 1087.5 375.7 L 1110.0 245.4 L 1132.5 208.4 L 1155.0 395.4 L 1177.5 410.7 L 1200.0 389.5 L 1222.5 465.8 L 1245.0 466.7 L 1267.5 402.9 L 1290.0 252.0 L 1312.5 403.9 L 1335.0 432.2 L 1357.5 447.0 L 1380.0 447.1 L 1402.5 462.6 L 1425.0 418.0 L 1447.5 426.9 L 1470.0 427.0 L 1492.5 416.7 L 1515.0 411.4 L 1537.5 412.0 L 1560.0 395.8" fill="none" stroke="#00C6D7" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="187.5" cy="344.2" r="7" fill="#FFCD00" stroke="#182B49" stroke-width="2"/>
+<text x="202" y="350" fill="#FFCD00" font-size="18" font-weight="700">3.96k peak · Jul 21</text>
+<circle cx="1132.5" cy="208.4" r="7" fill="#00C6D7" stroke="#182B49" stroke-width="2"/>
+<text x="1146" y="214" fill="#00C6D7" font-size="18" font-weight="700">8.43k peak · Sep 1</text>
+<path d="M 40 26 L 76 26" stroke="#FFCD00" stroke-width="4"/><text x="88" y="32" fill="#ffffff" font-size="17">TritonGPT Class Planner · distinct signed-in accounts</text>
+<path d="M 40 58 L 76 58" stroke="#00C6D7" stroke-width="4"/><text x="88" y="64" fill="#ffffff" font-size="17">Standalone Class Planner · estimated visitors</text>
+<text x="40" y="712" fill="#f5f0e6" font-size="18">Square-root y-axis; labels show actual daily users. The two measures differ, so do not add them.</text>
+<text x="40" y="742" fill="#9fb3c8" font-size="17">Historical period: July 18–September 20, 2026. Dashed lines mark enrollment passes.</text>
+</svg>
