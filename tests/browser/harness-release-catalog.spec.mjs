@@ -19,7 +19,8 @@ for (const width of [1440, 390]) {
     await expect(features.locator('.hrc-component-icon')).toHaveCount(6);
     expect(await page.locator('.hrc-card svg').count()).toBeGreaterThanOrEqual(24);
     await expect(plugins.getByRole('article', { name: 'Tableau', exact: true }).getByText('Nightly', { exact: true })).toBeVisible();
-    await expect(plugins.getByRole('article', { name: 'UCSD Assistant', exact: true }).getByText('Stable only', { exact: true })).toBeVisible();
+    await expect(plugins.getByRole('article', { name: 'UCSD Assistant', exact: true }).getByRole('img', { name: 'Available in Stable and Nightly', exact: true })).toBeVisible();
+    await expect(page.getByText('Stable only', { exact: true })).toHaveCount(0);
     await expect(skills.getByRole('heading', { name: 'Hosting readiness', exact: true })).toBeVisible();
     await expect(skills.getByText('Campus skill', { exact: true })).toBeVisible();
     await expect(skills.getByRole('heading', { name: 'Record your own skill', exact: true })).toBeVisible();

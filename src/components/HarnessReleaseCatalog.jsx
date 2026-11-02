@@ -35,7 +35,6 @@ export default function HarnessReleaseCatalog({ slide }) {
       <div className="hrc-legend" aria-label="Release availability">
         <span><Availability availability="both" /> Stable + Nightly</span>
         <span><Availability availability="nightly" /> Testing in Nightly</span>
-        <span><Availability availability="stable" /> Stable bundle only</span>
         <span><Availability availability="campus" /> Install separately</span>
       </div>
       <div className="hrc-overview">

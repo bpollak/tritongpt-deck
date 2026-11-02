@@ -1,9 +1,9 @@
-// Verified against published release tags and the signed Nightly bundle.
+// Release snapshots plus the product-owner availability correction noted below.
 export const harnessReleaseCatalog = {
   "stableVersion": "0.4.1",
   "nightlyVersion": "0.4.2-nightly.20261030.115",
   "nightlyDate": "Oct 30",
-  "checkedDate": "Nov 1, 2026",
+  "checkedDate": "Nov 2, 2026",
   "sources": {
     "stable": "https://github.com/dbalders/TritonAI-Harness/releases/tag/v0.4.1",
     "nightly": "https://github.com/dbalders/TritonAI-Harness/releases/tag/v0.4.2-nightly.20261030.115",
@@ -78,7 +78,8 @@ export const harnessReleaseCatalog = {
       "id": "ucsd-assistant",
       "name": "UCSD Assistant",
       "description": "Public campus search and service information.",
-      "availability": "stable",
+      "availability": "both",
+      "availabilityNote": "Available in Stable and Nightly. Product-owner correction, Nov 2, 2026: the prior Nightly omission was a release mistake and is being corrected.",
       "skillCount": 2,
       "source": "https://github.com/dbalders/TritonAI-Harness/blob/v0.4.1/config/managed-plugin-catalog.json"
     }
@@ -237,7 +238,7 @@ export const harnessReleaseCatalog = {
           "name": "Campus search",
           "description": "Search public UC San Diego campus information.",
           "plugin": "ucsd-assistant",
-          "availability": "stable",
+          "availability": "both",
           "source": "https://github.com/dbalders/TritonAI-Plugins/blob/218f61639ca6de8ecac6ecddd35884a25afaa8ed/plugins/ucsd-assistant/skills/ucsd-campus-search/SKILL.md"
         },
         {
@@ -245,7 +246,7 @@ export const harnessReleaseCatalog = {
           "name": "Campus services",
           "description": "Find public campus service information.",
           "plugin": "ucsd-assistant",
-          "availability": "stable",
+          "availability": "both",
           "source": "https://github.com/dbalders/TritonAI-Plugins/blob/218f61639ca6de8ecac6ecddd35884a25afaa8ed/plugins/ucsd-assistant/skills/ucsd-campus-services/SKILL.md"
         }
       ]
