@@ -669,11 +669,11 @@ export const harnessReleaseCatalog = {
 // Curated presentation selection; release availability still comes from the verified catalog.
 export const harnessReleaseHighlights = {
   features: [
-    { id: 'memory', name: 'Memory', detail: 'Context across tasks and computers', icon: 'Brain' },
-    { id: 'agents', name: 'Helper agents', detail: 'Work on parts of a task in parallel', icon: 'Users' },
-    { id: 'schedule', name: 'Scheduled tasks', detail: 'Repeat work on a schedule', icon: 'Calendar' },
-    { id: 'computer', name: 'Computer use', detail: 'Work in desktop apps and browsers', icon: 'MousePointer2' },
-    { id: 'clients', name: 'Phone access', detail: 'Direct work from a paired phone', icon: 'Smartphone' },
+    { id: 'memory', name: 'Memory', detail: 'Recall past work and decisions', icon: 'Brain' },
+    { id: 'agents', name: 'Helper agents', detail: 'Keep several tasks moving at once', icon: 'Users' },
+    { id: 'schedule', name: 'Automations', detail: 'Run on a schedule or a trigger', icon: 'Calendar' },
+    { id: 'computer', name: 'Computer use', detail: 'Use your files, apps, and browser', icon: 'MousePointer2' },
+    { id: 'clients', name: 'Phone access', detail: 'Start work on a connected computer', icon: 'Smartphone' },
     { id: 'ideas', name: 'Ideas', detail: 'Suggestions for using the Harness', icon: 'Lightbulb' }
   ],
   plugins: ['microsoft-365', 'google-workspace', 'github', 'jira-data-center', 'kuali-build', 'n8n', 'lucid', 'tableau', 'ucsd-assistant'],

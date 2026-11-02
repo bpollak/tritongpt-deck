@@ -11765,7 +11765,7 @@ export const slides = [
     "type": "content",
     "layout": "harness-release-catalog",
     "title": "Key Harness features",
-    "subtitle": "Connected tools, reusable skills, and help with everyday work.",
+    "subtitle": "Work in your apps, automate tasks, and reuse what works.",
     "content": [],
     "releaseCatalog": harnessReleaseCatalog,
     "releaseHighlights": harnessReleaseHighlights,
@@ -11779,7 +11779,7 @@ export const slides = [
       "label": "The Harness"
     },
     "durationSeconds": 60,
-    "speakerNotes": "About one minute. This is one page of the key features, plugins, and skills. The features include memory across tasks, helper agents that work in parallel, scheduled tasks, computer use, phone access, and Ideas. Ideas suggests ways to use the Harness based on your work. The middle shows the connected plugins. The right gives examples of reusable skills, plus recording your own task as a skill. A green check means it is in Stable and Nightly. Gold means it is in Nightly for testing; blue means Stable only. Tableau and its reporting skill are Nightly only in this comparison. UCSD Assistant is Stable only in the current bundles. The bottom highlights the guided tour, guest links, and separate Prod/Dev plugin connections being tested in Nightly. This compares Stable 0.4.1 with the October 30 Nightly release, checked November 1. Commons skills are optional and update separately. Nightly testing does not commit a Stable release date. Account permissions, approved data handling, and human review still apply.",
+    "speakerNotes": "About one minute. This is one page of the key features, plugins, and skills. Memory helps recall past work and the reasons for decisions. Helper agents let several tasks move forward at once. Automations run work on a schedule or when another service sends a trigger. Examples from the October 30 AI Use Case Office Hours: a morning email and calendar brief, a summary of overnight work that needs a decision, or an hourly project check-in. These are tasks you set up; the computer running them must stay awake with the Harness running. Computer use works with files, desktop apps, and browsers you allow it to access. A paired phone can start work on a connected computer. Ideas suggests ways to use the Harness. Skills save repeatable steps; you can record a task, review the steps, and reuse them. The middle shows connected plugins; the right gives skill examples. A green check means Stable and Nightly. Gold means Nightly testing; blue means Stable only. Tableau and its reporting skill are Nightly only in this comparison. UCSD Assistant is Stable only in the current bundles. The bottom highlights the guided tour, guest links, and separate Prod/Dev plugin connections being tested in Nightly. This compares Stable 0.4.1 with the October 30 Nightly release, checked November 1. Commons skills are optional and update separately. Nightly testing does not commit a Stable release date. Account permissions, approved data handling, and human review still apply. Examples source: AI Use Case Office Hours, October 30, 2026, https://mediaspace.ucsd.edu/media/AI+Use+Case+Office+Hours/1_41rf5xlo — computer use and local automations at 6:14; scheduled work at 11:00; overnight brief at 11:27. Release availability remains based on the tagged guides, not the recording.",
     "managerSummary": "One-page visual overview of key Harness features, plugins, and skill examples"
   },
   {
