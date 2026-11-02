@@ -10781,7 +10781,7 @@ export const slides = [
     "speakerNotes": "30 seconds. Thanks for having me. This is a show-more, tell-less version: most of what follows is recordings of the tools working. Four parts, bottom up: the TritonAI Gateway that every tool runs on, the vertical AI solutions IT Services builds on it, the Harness, and what people across campus are building with it.",
     "type": "title",
     "content": [],
-    "title": "AI That Does the Work",
+    "title": "TritonAI at UC San Diego",
     "subtitle": "The TritonAI Gateway, vertical AI solutions, the Harness, and what people build",
     "layout": "title-hero",
     "arc": [
@@ -10820,7 +10820,7 @@ export const slides = [
     "speakerNotes": "One minute. Start with the stage: every supported tool, reviewed for university data, arranged by how much it does on its own. Always your UC San Diego account, never a personal one. Chat on the left: TritonGPT, approved for P1 to P3, plus Copilot with Data Protection and Gemini with Gemini Notebook. In the middle, AI inside apps people already use: Copilot for Microsoft 365, which needs a license, and Zoom AI Companion, where everyone is notified and consents. Agents on the right: the TritonAI Harness, also P1 to P3, plus Claude Code and Codex, which this room will care about because they run on the same TritonAI key. Further right means more autonomy, so more supervision. Coming soon: UCOP is close to securing new contracts with OpenAI and Anthropic, so faculty and staff can choose the tools they want with the data protections the university requires. And the bar along the bottom: these run through the TritonAI Gateway, so that is where we go next. Before presenting: tritonai.ucsd.edu/tools still badges TritonGPT and the Harness P3 / P4; the Harness privacy statement says P1 to P3, never P4.",
     "type": "content",
     "layout": "cabinet-outline",
-    "title": "Supported AI tools, by how much they do",
+    "title": "Supported AI tools",
     "subtitle": "Reviewed for university data. Always your UC San Diego account, never a personal one.",
     "content": [],
     "figure": {
@@ -10908,7 +10908,7 @@ export const slides = [
       },
       "tone": "dark"
     },
-    "title": "A chat answers. The Harness does the work.",
+    "title": "TritonGPT and the TritonAI Harness",
     "subtitle": "The model can stay the same. The workspace changes what you can get done.",
     "audiences": [
       "tech-community"
@@ -11041,7 +11041,7 @@ export const slides = [
     "slug": "techcom-harness-at-work",
     "type": "video",
     "layout": "cabinet-demo",
-    "title": "The Harness at work",
+    "title": "The TritonAI Harness at work",
     "subtitle": "What it connects to and what it costs, then one project start to finish: build the survey, analyze it, report it, and keep it running.",
     "content": [],
     "audiences": [
@@ -11095,12 +11095,12 @@ export const slides = [
     "videoAutoPlay": true,
     "hideDemoBadge": true,
     "demoOnly": true,
-    "title": "The Harness mobile app",
+    "title": "The TritonAI Harness on your phone",
     "subtitle": "I built most of my Cabinet presentation from my phone with it. In testing now; iOS App Store soon, then Android.",
     "durationSeconds": 32,
     "intro": {
       "kicker": "TritonAI Harness · mobile app · in testing",
-      "title": "The Harness mobile app",
+      "title": "The TritonAI Harness on your phone",
       "setup": "I built most of my presentation to Cabinet from my phone with this app. It is in testing now and should be on the App Store for iOS soon, with Android after. Here is one edit to that deck, start to finish.",
       "watchFor": "It finds the right slide among three similar ones, updates it, rebuilds the deck, and shows me the result on my phone.",
       "seconds": 6
@@ -11162,7 +11162,7 @@ export const slides = [
     "slug": "techcom-spa2",
     "type": "video",
     "layout": "cabinet-demo",
-    "title": "Agentic software development: an HR system in months",
+    "title": "Rebuilding staff appraisals with AI",
     "subtitle": "ITS rebuilt the Staff Performance Appraisal system with AI agents in months, instead of buying a third-party system.",
     "audiences": [
       "tech-community"
@@ -11178,7 +11178,7 @@ export const slides = [
       "sideVideo": true,
       "videoWide": true,
       "kicker": "Agentic software development",
-      "title": "An HR system in months, not years",
+      "title": "Rebuilding staff appraisals with AI",
       "setup": "Working with AI agents in the TritonAI Harness, ITS rebuilt the Staff Performance Appraisal system in months, instead of paying hundreds of thousands of dollars for a third-party system. HireOnline and JDOnline are next.",
       "impact": [
         {
@@ -11221,7 +11221,7 @@ export const slides = [
     "slug": "techcom-hosting",
     "type": "content",
     "layout": "cabinet-outline",
-    "title": "ITS hosts applications built by citizen developers",
+    "title": "Host department apps with ITS",
     "subtitle": "When a tool outgrows one desktop, ITS reviews it and hosts it on campus.",
     "content": [],
     "figure": {
@@ -11246,7 +11246,7 @@ export const slides = [
     "slug": "techcom-gateway",
     "type": "content",
     "layout": "cabinet-sovereign-gateway",
-    "title": "Sovereign inference as a service",
+    "title": "The TritonAI Gateway",
     "subtitle": "One campus-run AI gateway: open-weight models on campus GPUs plus approved commercial APIs, now reaching campuses beyond San Diego.",
     "content": [
       {
@@ -11388,7 +11388,7 @@ export const slides = [
     "speakerNotes": "Open for questions. Likely ones from this room: calling the gateway from department apps, what the gateway logs (metadata, not content), and whether Claude Code or Codex can use campus models (yes, same key).",
     "type": "title",
     "content": [],
-    "title": "Thank You",
+    "title": "Thank you",
     "subtitle": "Questions?",
     "layout": "title-hero",
     "presenters": [
@@ -11408,7 +11408,7 @@ export const slides = [
     "slug": "techcom-api-and-recharge",
     "type": "content",
     "layout": "cabinet-outline",
-    "title": "One API key, with recharge built in",
+    "title": "API access and recharge",
     "subtitle": "Build on the models campus already approved, from any client or your own code.",
     "content": [],
     "figure": {
@@ -11456,7 +11456,7 @@ export const slides = [
     "slug": "techcom-scale",
     "type": "content",
     "layout": "cabinet-outline",
-    "title": "The foundation already carries real campus use",
+    "title": "TritonAI Gateway usage",
     "subtitle": "Gateway activity across UC San Diego, January–September 2026.",
     "content": [],
     "figure": {
@@ -11474,7 +11474,7 @@ export const slides = [
       "total": 4,
       "label": "The foundation"
     },
-    "managerLabel": "Gateway scale: January–September 2026",
+    "managerLabel": "TritonAI Gateway usage",
     "managerSummary": "Tech Community copy of cabinet-scale",
     "durationSeconds": 30
   },
@@ -11483,14 +11483,14 @@ export const slides = [
     "slug": "techcom-verticals-impact",
     "type": "content",
     "content": [],
-    "title": "Vertical solutions: AI for specific business needs",
+    "title": "AI for campus business needs",
     "subtitle": "Each uses AI to solve one specific campus business need, with its impact today or projected.",
     "layout": "cabinet-outline",
     "audiences": [
       "tech-community"
     ],
     "managerSection": "Tech Community",
-    "managerLabel": "Cabinet: vertical solutions and their impact",
+    "managerLabel": "AI for campus business needs",
     "durationSeconds": 75,
     "section": {
       "part": 2,
@@ -11559,7 +11559,7 @@ export const slides = [
     "slug": "techcom-transcript-matching-demo",
     "type": "video",
     "layout": "cabinet-demo",
-    "title": "Transcript matching",
+    "title": "Match transcripts to student records",
     "subtitle": "AI matches incoming transcripts to the right student record for Enrollment Management.",
     "audiences": [
       "tech-community"
@@ -11575,7 +11575,7 @@ export const slides = [
       "sideVideo": true,
       "videoWide": true,
       "kicker": "Enrollment Management",
-      "title": "Transcript matching",
+      "title": "Match transcripts to student records",
       "setup": "Incoming transcripts arrive in every format. AI reads each one, matches it to the right student record, and sends only the uncertain cases to staff for review.",
       "impact": [
         {
@@ -11604,7 +11604,7 @@ export const slides = [
     "slug": "techcom-contract-review-demo",
     "type": "video",
     "layout": "cabinet-demo",
-    "title": "Bring document review into Word",
+    "title": "Review contracts in Word",
     "subtitle": "Institutional rules produce tracked changes and explanations for a reviewer.",
     "content": [],
     "audiences": [
@@ -11651,7 +11651,7 @@ export const slides = [
         }
       ],
       "kicker": "Word add-in",
-      "title": "Contract review inside Word",
+      "title": "Review contracts in Word",
       "label": "Contract review · Word add-in",
       "setup": "Institutional rules run inside Word and produce tracked changes, each with a comment naming the rule behind it.",
       "watchFor": "Three rules selected, tracked changes appearing, then the agent answering what a reviewer should confirm. A person approves every edit.",
@@ -11663,7 +11663,7 @@ export const slides = [
     "slug": "techcom-servicenow-routing-demo",
     "type": "video",
     "layout": "cabinet-demo",
-    "title": "Routing tickets to the right team",
+    "title": "Route tickets to the right team",
     "subtitle": "ServiceNow suggests the specialist team; the agent chooses the assignment.",
     "content": [],
     "audiences": [
@@ -11690,7 +11690,7 @@ export const slides = [
         }
       ],
       "kicker": "ServiceNow",
-      "title": "Routing tickets to the right team",
+      "title": "Route tickets to the right team",
       "label": "ServiceNow · ticket routing",
       "setup": "Two tickets that would normally go to the Service Desk first. A model trained on our case history routes each to the specialist team.",
       "watchFor": "A broken desktop goes to Field Support (80%); a DNS request goes to Hostmaster (97%).",
@@ -11743,7 +11743,7 @@ export const slides = [
         }
       ],
       "kicker": "Admissions website",
-      "title": "Which of the eight colleges fits me?",
+      "title": "College Exploration Assistant",
       "setup": "A prospective first-year describes what matters to them: marine biology, sustainability, the outdoors, a flexible gen ed, a close-knit community, and service.",
       "watchFor": "It matches those interests to specific colleges, quoting each college's own pages with citations.",
       "seconds": 6
@@ -11763,7 +11763,7 @@ export const slides = [
     "slug": "techcom-governance",
     "type": "content",
     "layout": "cabinet-outline",
-    "title": "It stays in your control",
+    "title": "Control what the Harness can do",
     "subtitle": "Limits the person sets, and limits the campus sets.",
     "content": [
       {
@@ -11797,7 +11797,7 @@ export const slides = [
     "slug": "techcom-personal-productivity-list",
     "type": "content",
     "layout": "cabinet-outline",
-    "title": "Personal Productivity with TritonAI Harness",
+    "title": "How I use the TritonAI Harness",
     "subtitle": "Tools I set up for my own work. They prepare, sort, and draft; I review and decide.",
     "audiences": [
       "tech-community"
@@ -11931,7 +11931,7 @@ export const slides = [
     "slug": "techcom-passport-demo",
     "type": "video",
     "layout": "cabinet-demo",
-    "title": "Turn staff knowledge into a service app",
+    "title": "Passport Services check-in",
     "subtitle": "Department staff define the workflow; a supported app carries it through.",
     "content": [],
     "audiences": [
@@ -11979,7 +11979,7 @@ export const slides = [
     "id": 5036,
     "slug": "techcom-class-planner-demo",
     "type": "video",
-    "title": "Turn a course list into schedule options",
+    "title": "Class Planner: compare course schedules",
     "subtitle": "Class Planner helps students compare schedules and check the walk between classes.",
     "content": [],
     "audiences": [
@@ -12016,7 +12016,7 @@ export const slides = [
       "sideVideo": true,
       "videoWide": true,
       "kicker": "Live public app",
-      "title": "Class Planner",
+      "title": "Class Planner: compare course schedules",
       "label": "Class Planner · courses to schedule options",
       "setup": "Students list the courses they need. Class Planner builds schedule options to compare, with section details and the walk between classes.",
       "watchFor": "Three courses and a later-start preference become ranked schedules and a walking map.",
@@ -12028,14 +12028,14 @@ export const slides = [
     "slug": "techcom-class-planner-utilization",
     "type": "content",
     "layout": "cabinet-outline",
-    "title": "Class Planner demand peaks with enrollment passes",
+    "title": "Class Planner daily use",
     "subtitle": "Daily users across the summer 2026 enrollment passes.",
     "content": [],
     "figure": {
       "id": "class-planner-usage",
       "alt": "Line chart of daily users, July 18 to September 20, 2026, on a square-root axis. TritonGPT Class Planner peaks at 3.96k on July 21; the standalone Class Planner peaks at 8.43k on September 1. Spikes line up with enrollment passes on Aug 3, Aug 10, Aug 17, Aug 31 and Sep 8."
     },
-    "managerLabel": "Class Planner metrics: daily usage, both planners",
+    "managerLabel": "Class Planner daily use",
     "managerSummary": "Tech Community copy of cabinet-class-planner-utilization",
     "audiences": [
       "tech-community"
