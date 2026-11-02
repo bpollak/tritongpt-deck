@@ -197,11 +197,6 @@ export const slideManagerState = {
     "chancellor-what-we-built",
     "chancellor-harness-report",
     "chancellor-tableau-mechanics",
-    "chancellor-insights-how",
-    "chancellor-insights-live",
-    "chancellor-checked",
-    "chancellor-analyst-work",
-    "chancellor-decision",
     "chancellor-thank-you"
   ],
   "removed": [
@@ -1067,25 +1062,10 @@ export const slideManagerState = {
     "chancellor-what-we-built": [
       "chancellor"
     ],
-    "chancellor-insights-how": [
-      "chancellor"
-    ],
-    "chancellor-insights-live": [
-      "chancellor"
-    ],
     "chancellor-harness-report": [
       "chancellor"
     ],
     "chancellor-tableau-mechanics": [
-      "chancellor"
-    ],
-    "chancellor-checked": [
-      "chancellor"
-    ],
-    "chancellor-analyst-work": [
-      "chancellor"
-    ],
-    "chancellor-decision": [
       "chancellor"
     ],
     "chancellor-thank-you": [
