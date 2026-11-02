@@ -11663,8 +11663,8 @@ export const slides = [
     "slug": "techcom-servicenow-routing-demo",
     "type": "video",
     "layout": "cabinet-demo",
-    "title": "Route tickets to the right team",
-    "subtitle": "ServiceNow suggests the specialist team; the agent chooses the assignment.",
+    "title": "Suggest the assignment group for a case",
+    "subtitle": "ServiceNow suggests the assignment group that should fulfill the case. Staff choose the final assignment.",
     "content": [],
     "audiences": [
       "tech-community"
@@ -11690,10 +11690,10 @@ export const slides = [
         }
       ],
       "kicker": "ServiceNow",
-      "title": "Route tickets to the right team",
+      "title": "Suggest the assignment group for a case",
       "label": "ServiceNow · ticket routing",
-      "setup": "Two tickets that would normally go to the Service Desk first. A model trained on our case history routes each to the specialist team.",
-      "watchFor": "A broken desktop goes to Field Support (80%); a DNS request goes to Hostmaster (97%).",
+      "setup": "For each case, the model suggests the assignment group that should fulfill it. Staff review the suggestion and choose the assignment.",
+      "watchFor": "Suggested groups: Field Support for a broken desktop (80%); Hostmaster for a DNS request (97%).",
       "seconds": 5
     },
     "videoSrc": "/media/cabinet/cabinet-servicenow-routing-two-cases.mp4",
@@ -11709,7 +11709,7 @@ export const slides = [
       "captureNote": "Support requests · actual recommendations · staff selects · nothing saved"
     },
     "managerSummary": "Tech Community copy of cabinet-servicenow-routing-demo",
-    "speakerNotes": "Side-by-side slide (Brett, Oct 12): the overview and impact figures sit on the left while the 25-second recording loops silently on the right; no click to start, and next goes straight to the following slide. Talk through the overview while it plays. Impact on the intro card (Oct 12): ~140 hours per 10,000 tickets is a scenario, not measured: manual routing at 60 seconds per ticket is 167 staff hours per 10,000; at 90% correct suggestions, 1,000 misroutes at 90 seconds each is 25 hours; savings about 142 hours (85%). Volume if asked: the classifier was trained on about 300,000 ServiceNow cases from six months (all queues, roughly 50,000 a month); a planning estimate puts the Service Desk alone at 50,000+ tickets a year. At 50,000 Service Desk tickets that is roughly 700 staff hours a year; the bigger gain is specialists starting sooner without a hand-off. Confirm actual Service Desk volume with Chuck's team before quoting an annual number. About 31 seconds (6s intro + 25s clip); voice over. Today most tickets land with the Service Desk first and get handed off. Here the agent clicks Suggest Assignment Group. First case: a department desktop won't power on; the model recommends ITS-FieldSupport-Intake at 79.9% and the group fills in. Second case: a request for DNS records on a university server; it recommends ITS-Hostmaster at 96.9%. The value is skipping the hand-off so the specialist team starts sooner. The agent stays in control and can pick another group. Scores are model confidence for these examples, not measured accuracy. Recording: October 8, 2026 capture on unsaved new-case forms in production ServiceNow; nothing saved or submitted. Built from captured frames; the yellow highlights and zooms were added in editing on Oct 9 (docs/recapture-20261009/sn_edit.py). The VPN example that routed to the Service Desk was dropped. Clip sped up 1.6x on Oct 10 (about 25s)."
+    "speakerNotes": "Side-by-side slide (Brett, Oct 12): the overview and impact figures sit on the left while the 25-second recording loops silently on the right; no click to start, and next goes straight to the following slide. Talk through the overview while it plays. Impact on the intro card (Oct 12): ~140 hours per 10,000 tickets is a scenario, not measured: manual routing at 60 seconds per ticket is 167 staff hours per 10,000; at 90% correct suggestions, 1,000 misroutes at 90 seconds each is 25 hours; savings about 142 hours (85%). Volume if asked: the classifier was trained on about 300,000 ServiceNow cases from six months (all queues, roughly 50,000 a month); a planning estimate puts the Service Desk alone at 50,000+ tickets a year. At 50,000 Service Desk tickets that is roughly 700 staff hours a year; the bigger gain is specialists starting sooner without a hand-off. Confirm actual Service Desk volume with Chuck's team before quoting an annual number. About 31 seconds (6s intro + 25s clip); voice over. Today most tickets land with the Service Desk first and get handed off. A staff member clicks Suggest Assignment Group. First case: a department desktop won't power on; the model recommends ITS-FieldSupport-Intake at 79.9% and the group fills in. Second case: a request for DNS records on a university server; it recommends ITS-Hostmaster at 96.9%. The value is skipping the hand-off so the specialist team starts sooner. Staff review the suggestion and choose the assignment group that should fulfill the case. Scores are model confidence for these examples, not measured accuracy. Recording: October 8, 2026 capture on unsaved new-case forms in production ServiceNow; nothing saved or submitted. Built from captured frames; the yellow highlights and zooms were added in editing on Oct 9 (docs/recapture-20261009/sn_edit.py). The VPN example that routed to the Service Desk was dropped. Clip sped up 1.6x on Oct 10 (about 25s)."
   },
   {
     "id": 5031,
