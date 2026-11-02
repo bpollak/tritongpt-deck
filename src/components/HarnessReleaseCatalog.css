@@ -8,6 +8,7 @@
 .hrc-badge{display:inline-flex;flex-shrink:0;align-items:center;justify-content:center;padding:2px 6px;border:1px solid;border-radius:5px;font-size:10px;font-weight:700;line-height:1.2;white-space:nowrap;}
 .hrc-badge--nightly{color:#ffe276;background:#4c4021;border-color:#d6ac32;}
 .hrc-badge--stable{color:#c5e8ff;background:#183b59;border-color:#6caad4;}
+.hrc-badge--campus{color:#c3f1f4;background:#124153;border-color:#72c4cc;}
 .hrc-overview{display:grid;grid-template-columns:1.08fr 1fr 1.08fr;gap:15px;flex:1;min-height:0;}
 .hrc-card{min-width:0;min-height:0;padding:14px;display:flex;flex-direction:column;gap:10px;border:1px solid #58788f;border-radius:13px;background:#ffffff07;}
 .hrc-card>h2{display:flex;align-items:center;gap:10px;margin:0;color:#80e0ec;font-family:Teko,Roboto,Arial,sans-serif;font-size:29px;font-weight:600;line-height:1;}

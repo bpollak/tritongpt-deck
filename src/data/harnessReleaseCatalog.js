@@ -251,6 +251,19 @@ export const harnessReleaseCatalog = {
       ]
     },
     {
+      "name": "Campus-provided skills",
+      "note": "Provided through campus skill management; availability depends on your setup.",
+      "items": [
+        {
+          "id": "hosting-readiness",
+          "name": "Hosting readiness",
+          "description": "Check deployment packaging and prepare the handoff for platform-team review and hosting.",
+          "availability": "campus",
+          "source": "TritonAI Harness Skills → AI Team: enabled, managed hosting preparation skill; checked Nov 1, 2026."
+        }
+      ]
+    },
+    {
       "name": "TritonAI Commons skills",
       "note": "Optional public library; updates separately from the app.",
       "items": [
@@ -680,7 +693,7 @@ export const harnessReleaseHighlights = {
   skills: [
     { name: 'Email and calendars', icon: 'Mail', ids: ['gmail', 'google-calendar', 'outlook-mail', 'outlook-calendar'] },
     { name: 'Documents and spreadsheets', icon: 'FileSpreadsheet', ids: ['google-drive', 'onedrive-files'] },
-    { name: 'Diagrams', icon: 'Network', ids: ['lucid-diagrams'] },
+    { name: 'Hosting readiness', icon: 'ClipboardList', ids: ['hosting-readiness'] },
     { name: 'Websites and accessibility', icon: 'Globe', ids: ['ucsd-cms', 'ucsd-accessibility-compliance', 'ucsd-decorator'] },
     { name: 'Data classification', icon: 'ShieldCheck', ids: ['ucsd-data-classification'] },
     { name: 'Tableau reports', icon: 'BarChart3', ids: ['tableau-reports'] }

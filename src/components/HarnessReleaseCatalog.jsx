@@ -2,7 +2,7 @@ import { Lightbulb, Brain, Users, Calendar, MousePointer2, Smartphone, Mail, Fil
 import CabinetCanvas from './CabinetCanvas';
 import './HarnessReleaseCatalog.css';
 
-const icons = { Lightbulb, Brain, Users, Calendar, MousePointer2, Smartphone, Mail, FileSpreadsheet, Network, Globe, ShieldCheck, BarChart3, Compass, Link2, Layers };
+const icons = { Lightbulb, Brain, Users, Calendar, MousePointer2, Smartphone, Mail, FileSpreadsheet, Network, Globe, ShieldCheck, BarChart3, Compass, Link2, Layers, ClipboardList };
 const pluginIcons = {
   'microsoft-365': [Layers, '#2563b8'],
   'google-workspace': [FileSpreadsheet, '#18844b'],
@@ -16,6 +16,7 @@ const pluginIcons = {
 };
 
 function Availability({ availability }) {
+  if (availability === 'campus') return <span className="hrc-badge hrc-badge--campus">Campus skill</span>;
   if (availability === 'both') return <span className="hrc-stable-check" role="img" aria-label="Available in Stable and Nightly" title="Available in Stable and Nightly"><CheckCircle2 size={18} aria-hidden="true" /></span>;
   return <span className={`hrc-badge hrc-badge--${availability}`}>{availability === 'nightly' ? 'Nightly' : 'Stable only'}</span>;
 }
@@ -35,6 +36,7 @@ export default function HarnessReleaseCatalog({ slide }) {
         <span><Availability availability="both" /> Stable + Nightly</span>
         <span><Availability availability="nightly" /> Testing in Nightly</span>
         <span><Availability availability="stable" /> Stable bundle only</span>
+        <span><Availability availability="campus" /> Install separately</span>
       </div>
       <div className="hrc-overview">
         <section className="hrc-card hrc-features-card" aria-label="Key features">
@@ -68,7 +70,7 @@ export default function HarnessReleaseCatalog({ slide }) {
           <ul className="hrc-skill-list">
             {highlights.skills.map(item => {
               const Icon = icons[item.icon];
-              const availability = item.ids.some(id => skills[id].availability === 'nightly') ? 'nightly' : 'both';
+              const availability = item.ids.some(id => skills[id].availability === 'campus') ? 'campus' : item.ids.some(id => skills[id].availability === 'nightly') ? 'nightly' : 'both';
               return <li key={item.name}><Icon size={25} className="hrc-skill-icon" aria-hidden="true" /><h3>{item.name}</h3><Availability availability={availability} /></li>;
             })}
           </ul>
@@ -86,7 +88,7 @@ export default function HarnessReleaseCatalog({ slide }) {
         })}
       </div>
       <footer className="hrc-footer">
-        <span>Skill examples come from plugins and the optional Commons library.</span>
+        <span>Skill examples include plugins, optional Commons skills, and campus-provided skills.</span>
         <span>Stable {catalog.stableVersion} · Nightly {catalog.nightlyDate} · Checked {catalog.checkedDate} · <a href={catalog.sources.stable} target="_blank" rel="noreferrer">Release notes</a></span>
       </footer>
     </section>

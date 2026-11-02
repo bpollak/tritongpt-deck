@@ -20,6 +20,8 @@ for (const width of [1440, 390]) {
     expect(await page.locator('.hrc-card svg').count()).toBeGreaterThanOrEqual(24);
     await expect(plugins.getByRole('article', { name: 'Tableau', exact: true }).getByText('Nightly', { exact: true })).toBeVisible();
     await expect(plugins.getByRole('article', { name: 'UCSD Assistant', exact: true }).getByText('Stable only', { exact: true })).toBeVisible();
+    await expect(skills.getByRole('heading', { name: 'Hosting readiness', exact: true })).toBeVisible();
+    await expect(skills.getByText('Campus skill', { exact: true })).toBeVisible();
     await expect(skills.getByRole('heading', { name: 'Record your own skill', exact: true })).toBeVisible();
     if (width === 1440) {
       await page.evaluate(() => document.fonts.ready);
