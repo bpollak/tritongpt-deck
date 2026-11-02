@@ -1,0 +1,80 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.000
+The completed dashboard: entering classes, college composition and graduation rates.
+
+00:00:04.000 --> 00:00:07.000
+Drag the distinct-student measure onto Rows.
+
+00:00:07.000 --> 00:00:09.000
+Four entering-class bars appear.
+
+00:00:09.000 --> 00:00:13.000
+Drag College onto Color.
+
+00:00:13.000 --> 00:00:16.000
+The bars now show each college within the entering classes.
+
+00:00:16.000 --> 00:00:19.000
+Select the treemap in Tableau Show Me.
+
+00:00:19.000 --> 00:00:24.000
+The treemap shows Fall 2021 class size and four-year graduation rate by college.
+
+00:00:24.000 --> 00:00:27.500
+Change Measure Values to Color to create the heatmap.
+
+00:00:27.500 --> 00:00:32.000
+Compare the four- and six-year graduation rates across colleges.
+
+00:00:32.000 --> 00:00:35.000
+Synchronize the two axes in the two-year comparison.
+
+00:00:35.000 --> 00:00:38.000
+The lines connect Fall 2020 and Fall 2021 four-year graduation rates.
+
+00:00:38.000 --> 00:00:42.000
+Drag the entering-class worksheet onto the dashboard.
+
+00:00:42.000 --> 00:00:43.500
+Align the entering-class chart.
+
+00:00:43.500 --> 00:00:47.500
+Drag the treemap onto the dashboard.
+
+00:00:47.500 --> 00:00:49.000
+Size the treemap beside the entering-class chart.
+
+00:00:49.000 --> 00:00:53.000
+Drag the graduation-rate heatmap into the lower row.
+
+00:00:53.000 --> 00:00:54.500
+Size the lower-left panel.
+
+00:00:54.500 --> 00:00:58.500
+Drag the two-year comparison into the lower-right panel.
+
+00:00:58.500 --> 00:01:00.000
+Align the final chart panel.
+
+00:01:00.000 --> 00:01:04.000
+Add the governed source and refresh date to the dashboard.
+
+00:01:04.000 --> 00:01:10.000
+Configure highlighting on selection using the College field.
+
+00:01:10.000 --> 00:01:14.000
+Publish the workbook in Personal Space; Tableau confirms success.
+
+00:01:14.000 --> 00:01:19.000
+The saved dashboard shows all colleges and campus headline totals.
+
+00:01:19.000 --> 00:01:22.000
+Select Sixth College in the treemap.
+
+00:01:22.000 --> 00:01:29.000
+Sixth College highlights across all four charts; headline totals stay unchanged.
+
+00:01:29.000 --> 00:01:35.000
+Return to the complete dashboard. Activity Hub graduation rates are provisional.
+

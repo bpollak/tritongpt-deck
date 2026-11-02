@@ -12246,28 +12246,28 @@ export const slides = [
     "slug": "chancellor-tableau-mechanics",
     "type": "video",
     "layout": "cabinet-demo",
-    "videoSrc": "/media/chancellor/chancellor-tableau-mechanics-v3.mp4",
-    "poster": "/media/chancellor/chancellor-tableau-mechanics-v3-poster.jpg",
-    "captionsSrc": "/media/chancellor/chancellor-tableau-mechanics-v3.vtt",
+    "videoSrc": "/media/chancellor/chancellor-tableau-mechanics-v6-director.mp4",
+    "poster": "/media/chancellor/chancellor-tableau-mechanics-v6-director-poster.jpg",
+    "captionsSrc": "/media/chancellor/chancellor-tableau-mechanics-v6-director.vtt",
     "captionsDefault": false,
     "videoLoop": false,
     "videoClearNav": false,
     "videoAutoPlay": true,
     "hideDemoBadge": true,
     "demoOnly": true,
-    "title": "Building the Tableau dashboard",
-    "subtitle": "The mechanics: build four chart types, assemble the dashboard and link the views.",
+    "title": "Undergraduate success at UC San Diego",
+    "subtitle": "Entering-class trends, college composition and graduation outcomes.",
     "recording": {
       "label": "Prepared measures → charts → dashboard layout → college highlighting → saved report",
-      "format": "Real screen recording with native cursor · edited to 3 minutes 2 seconds · silent for presenter narration",
-      "mediaStem": "chancellor-tableau-mechanics-v3",
+      "format": "Real screen recording with native cursor · edited to 1 minute 35 seconds · silent for presenter narration",
+      "mediaStem": "chancellor-tableau-mechanics-v6-director",
       "status": "captured; revised edit ready for review"
     },
     "intro": {
-      "kicker": "Computer use · Tableau web authoring",
-      "title": "Building the Tableau dashboard",
-      "setup": "A second recording focused on visible mouse-driven Tableau authoring, using prepared measures to build an interactive dashboard.",
-      "watchFor": "Watch the fields move onto shelves, the chart types change, the dashboard take shape, and one college highlight across all four charts.",
+      "kicker": "Student success · Tableau dashboard",
+      "title": "Undergraduate success at UC San Diego",
+      "setup": "Track the size and college composition of entering first-year classes, and compare four- and six-year graduation rates.",
+      "watchFor": "Fall 2019–2022 entering classes, graduation patterns by college, and one college selected across all four charts.",
       "seconds": 5
     },
     "section": {
@@ -12275,8 +12275,8 @@ export const slides = [
       "total": 3,
       "label": "What we built"
     },
-    "durationSeconds": 187,
-    "speakerNotes": "Second video; preserve the preceding Harness recording. This dashboard was built by Codex operating Tableau through native computer use. It is not TritonAI Harness or a campus-hosted model. Re-recorded November 2, 2026 as a continuous 55-minute screen capture at 30 fps with the real cursor enabled. The 3:02 edit omits setup, waits and retries, crops the workspace, and uses playback at real time, 1.5x or 2x. Per Brett's review, the upper-right recording attribution and speed overlay were removed; the edit details remain here. No cursor path or Tableau interaction is reconstructed. The governed source and calculated measures were prepared beforehand; the charts, layout, source notes and highlight action were built through the Tableau UI. The edited runtime is not elapsed build time and does not establish a measured speed advantage over a human analyst. The video focuses on mechanics, not findings. It uses live SAH-RetentionCensus-View and distinct-student cohort counts. Comparison: Fall 2020 and Fall 2021 four-year graduation; six-year graduation: Fall 2019. Campus counts include unassigned college; named-college rate comparisons exclude it. Cohort counts: 6,022 / 6,445 / 7,543 / 6,545 for Fall 2019–2022. Graduation rates are provisional and may differ from Institutional Research. The new private workbook, Undergraduate success dashboard — cursor demonstration, is saved in Personal Space (7302); dashboard view 47321. The saved viewer and cross-chart Sixth College highlight were verified. No broader Tableau sharing was added.",
+    "durationSeconds": 100,
+    "speakerNotes": "Second video; preserve the preceding Harness recording. The heading now names the dashboard and describes its purpose: entering-class trends, college composition and graduation outcomes. This dashboard was built by Codex operating Tableau through native computer use. It is not TritonAI Harness or a campus-hosted model. Re-recorded November 2, 2026 as a continuous 55-minute screen capture at 30 fps with the real cursor enabled. The 1:35 director cut incorporates two agent reviews for visual direction and audience readability. It opens on the completed dashboard, then shows genuine measure, College and worksheet drags before returning to the saved result. Selective crops enlarge the active controls; three larger phase captions replace fifteen technical micro-headings. The incomplete KPI band is outside the frame during assembly. A clean Sixth College highlight from the same saved viewer is inserted after the genuine recorded selection so the tooltip does not cover the result. The cut ends on the unobstructed full dashboard. Playback varies from about 0.8x to 4x; no cursor path or UI action is invented. The earlier 1:45 and 3:02 cuts are retained for comparison. Per Brett's review, the upper-right recording attribution and speed overlay were removed; the edit details remain here. No cursor path or Tableau interaction is reconstructed. The governed source and calculated measures were prepared beforehand; the charts, layout, source notes and highlight action were built through the Tableau UI. The edited runtime is not elapsed build time and does not establish a measured speed advantage over a human analyst. The video focuses on mechanics, not findings. It uses live SAH-RetentionCensus-View and distinct-student cohort counts. Comparison: Fall 2020 and Fall 2021 four-year graduation; six-year graduation: Fall 2019. Campus counts include unassigned college; named-college rate comparisons exclude it. Cohort counts: 6,022 / 6,445 / 7,543 / 6,545 for Fall 2019–2022. Graduation rates are provisional and may differ from Institutional Research. The new private workbook, Undergraduate success dashboard — cursor demonstration, is saved in Personal Space (7302); dashboard view 47321. The saved viewer and cross-chart Sixth College highlight were verified. No broader Tableau sharing was added.",
     "audiences": [
       "chancellor"
     ],
