@@ -1,0 +1,47 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:09.000
+Build the entering-class bars. Prepared measures: move Students to Rows, then fit the view.
+
+00:00:09.000 --> 00:00:21.000
+Stack the bars by college. Drag College onto Color to reveal the composition of each class.
+
+00:00:21.000 --> 00:00:33.000
+Create the Fall 2021 treemap. Choose the treemap in Show Me; size represents cohort students.
+
+00:00:33.000 --> 00:00:42.000
+Set a consistent graduation-rate scale. Use the same 70%–90% color range across the rate views.
+
+00:00:42.000 --> 00:00:54.000
+Build the graduation-rate heatmap. Change the Measure Values encoding from detail to color.
+
+00:00:54.000 --> 00:01:10.000
+Align the two-year comparison. Synchronize the line and circle axes; hide the redundant axis.
+
+00:01:10.000 --> 00:01:20.000
+Assemble the dashboard. Drag the prepared entering-class worksheet onto the canvas.
+
+00:01:20.000 --> 00:01:34.000
+Arrange the chart panels. Place the treemap beside the stacked bars and align its frame.
+
+00:01:34.000 --> 00:01:46.000
+Complete the lower row. Drag the rate heatmap onto the dashboard.
+
+00:01:46.000 --> 00:02:00.000
+Add the two-year comparison. Place and size the final chart alongside the heatmap.
+
+00:02:00.000 --> 00:02:10.000
+Clean up the legends. Position the shared color scale and the two-year comparison key.
+
+00:02:10.000 --> 00:02:19.000
+Add the source and definitions. Document the cohort scope, refresh date, and provisional rates.
+
+00:02:19.000 --> 00:02:32.000
+Link the charts by College. Run highlighting on Select; leave headline totals outside the action.
+
+00:02:32.000 --> 00:02:40.000
+Save to Personal Space. Publish the finished workbook in campus Tableau.
+
+00:02:40.000 --> 00:03:02.000
+Verify the saved interactive dashboard. Select Sixth College: all four charts highlight; headline totals stay intact.
+

@@ -12246,9 +12246,9 @@ export const slides = [
     "slug": "chancellor-tableau-mechanics",
     "type": "video",
     "layout": "cabinet-demo",
-    "videoSrc": "/media/chancellor/chancellor-tableau-mechanics.mp4",
-    "poster": "/media/chancellor/chancellor-tableau-mechanics-poster.jpg",
-    "captionsSrc": "/media/chancellor/chancellor-tableau-mechanics.vtt",
+    "videoSrc": "/media/chancellor/chancellor-tableau-mechanics-v3.mp4",
+    "poster": "/media/chancellor/chancellor-tableau-mechanics-v3-poster.jpg",
+    "captionsSrc": "/media/chancellor/chancellor-tableau-mechanics-v3.vtt",
     "captionsDefault": false,
     "videoLoop": false,
     "videoClearNav": false,
@@ -12256,17 +12256,17 @@ export const slides = [
     "hideDemoBadge": true,
     "demoOnly": true,
     "title": "Building the Tableau dashboard",
-    "subtitle": "The mechanics: define measures, build four chart types, assemble the dashboard and link the views.",
+    "subtitle": "The mechanics: build four chart types, assemble the dashboard and link the views.",
     "recording": {
-      "label": "Cohort checks → charts → dashboard layout → college highlighting → saved report",
-      "format": "Real computer use by Codex · edited time-lapse · 2 minutes 24 seconds · silent for presenter narration",
-      "mediaStem": "chancellor-tableau-mechanics",
-      "status": "captured and reviewed"
+      "label": "Prepared measures → charts → dashboard layout → college highlighting → saved report",
+      "format": "Real screen recording with native cursor · edited to 3 minutes 2 seconds · silent for presenter narration",
+      "mediaStem": "chancellor-tableau-mechanics-v3",
+      "status": "captured; revised edit ready for review"
     },
     "intro": {
       "kicker": "Computer use · Tableau web authoring",
       "title": "Building the Tableau dashboard",
-      "setup": "A second recording focused on the mechanics of building the report, from cohort measures to an interactive dashboard.",
+      "setup": "A second recording focused on visible mouse-driven Tableau authoring, using prepared measures to build an interactive dashboard.",
       "watchFor": "Watch the fields move onto shelves, the chart types change, the dashboard take shape, and one college highlight across all four charts.",
       "seconds": 5
     },
@@ -12275,8 +12275,8 @@ export const slides = [
       "total": 3,
       "label": "What we built"
     },
-    "durationSeconds": 149,
-    "speakerNotes": "Second video; preserve the preceding Harness recording. This dashboard was built by Codex operating Tableau through computer use. It is not a recording of TritonAI Harness or a campus-hosted model. Footage is edited and time-lapsed; setup, waits and retries are omitted. The video focuses on mechanics, not findings. The report uses the governed live SAH-RetentionCensus-View source and distinct-student cohort counts. It compares Fall 2020 and Fall 2021 four-year graduation; six-year graduation uses Fall 2019. Campus counts include unassigned college; the seven-college rate comparison excludes it. Source cohort counts were 6,022 / 6,445 / 7,543 / 6,545 for Fall 2019–2022, within two students of the spec's IR references. Live graduation rates differ from published IR figures and are labeled provisional on the dashboard. The private workbook is saved as Undergraduate success dashboard (AI build) in Brett's Personal Space; do not imply broader sharing. Final dashboard and College highlight action were checked in the saved viewer.",
+    "durationSeconds": 187,
+    "speakerNotes": "Second video; preserve the preceding Harness recording. This dashboard was built by Codex operating Tableau through native computer use. It is not TritonAI Harness or a campus-hosted model. Re-recorded November 2, 2026 as a continuous 55-minute screen capture at 30 fps with the real cursor enabled. The 3:02 edit omits setup, waits and retries, crops the workspace, and uses playback at real time, 1.5x or 2x. Per Brett's review, the upper-right recording attribution and speed overlay were removed; the edit details remain here. No cursor path or Tableau interaction is reconstructed. The governed source and calculated measures were prepared beforehand; the charts, layout, source notes and highlight action were built through the Tableau UI. The edited runtime is not elapsed build time and does not establish a measured speed advantage over a human analyst. The video focuses on mechanics, not findings. It uses live SAH-RetentionCensus-View and distinct-student cohort counts. Comparison: Fall 2020 and Fall 2021 four-year graduation; six-year graduation: Fall 2019. Campus counts include unassigned college; named-college rate comparisons exclude it. Cohort counts: 6,022 / 6,445 / 7,543 / 6,545 for Fall 2019–2022. Graduation rates are provisional and may differ from Institutional Research. The new private workbook, Undergraduate success dashboard — cursor demonstration, is saved in Personal Space (7302); dashboard view 47321. The saved viewer and cross-chart Sixth College highlight were verified. No broader Tableau sharing was added.",
     "audiences": [
       "chancellor"
     ],
