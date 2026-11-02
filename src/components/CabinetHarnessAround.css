@@ -110,3 +110,17 @@
 .cabinet-ha--dark .cabinet-ha-gets-label {color:#9fb3c8;}
 .cabinet-ha--dark .cabinet-ha-out {border-color:rgba(255,255,255,.28);background:rgba(255,255,255,.07);color:#fff;}
 .cabinet-canvas[data-reading] .cabinet-ha--dark {padding:24px 18px 120px;}
+
+/* Keep diagram labels inside each panel in the phone reading view. */
+.cabinet-canvas[data-reading] .cabinet-ha-panels {grid-template-columns:minmax(0,1fr);}
+.cabinet-canvas[data-reading] .cabinet-ha-panel {min-width:0;padding:20px 16px;}
+.cabinet-canvas[data-reading] .cabinet-ha-chips {flex-wrap:wrap;}
+.cabinet-canvas[data-reading] .cabinet-ha-chips span {padding:5px 8px;font-size:11px;}
+.cabinet-canvas[data-reading] .cabinet-ha-stage {grid-template-columns:minmax(0,1fr) 64px minmax(0,1fr);gap:16px;height:180px;min-width:0;}
+.cabinet-canvas[data-reading] .cabinet-ha-stage--harness {padding:12px 8px;}
+.cabinet-canvas[data-reading] .cabinet-ha-col {min-width:0;}
+.cabinet-canvas[data-reading] .cabinet-ha-box {min-width:0;padding:6px 2px;font-size:15px;}
+.cabinet-canvas[data-reading] .cabinet-ha-model {width:58px;height:58px;}
+.cabinet-canvas[data-reading] .cabinet-ha-m {font-size:36px;}
+.cabinet-canvas[data-reading] .cabinet-ha-gets {flex-wrap:wrap;}
+.cabinet-canvas[data-reading] .cabinet-ha-gets-label {flex-basis:100%;}

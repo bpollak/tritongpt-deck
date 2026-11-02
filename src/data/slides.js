@@ -10836,7 +10836,7 @@ export const slides = [
     "layout": "cabinet-harness-around",
     "harnessAround": {
       "kicker": "What a harness adds",
-      "lead": "The same approved models sit inside TritonGPT and the TritonAI Harness. A chat app answers a prompt. The Harness wraps the model with context, tools, permissions, and memory, and runs a loop so it can act on real work.",
+      "lead": "The Harness adds files, connected tools, memory, and checks around the model so it can carry a task through to a result.",
       "chat": {
         "product": "TritonGPT",
         "name": "Chat app",
@@ -10877,15 +10877,15 @@ export const slides = [
         "outputs": [
           {
             "icon": "FileText",
-            "label": "contract.docx"
+            "label": "briefing.docx"
           },
           {
             "icon": "CheckCircle",
-            "label": "routed for sign-off"
+            "label": "checked"
           },
           {
             "icon": "ClipboardList",
-            "label": "logged"
+            "label": "ready to review"
           }
         ],
         "facts": [
@@ -10910,7 +10910,7 @@ export const slides = [
       "tone": "dark"
     },
     "title": "TritonGPT and the TritonAI Harness",
-    "subtitle": "The model can stay the same. The workspace changes what you can get done.",
+    "subtitle": "Give it a task. It works through the steps and brings back a result.",
     "audiences": [
       "tech-community"
     ],
@@ -10923,10 +10923,10 @@ export const slides = [
       },
       {
         "heading": "TritonAI Harness workflow",
-        "text": "Multi-step work through project files, connected tools, and checks to a saved result you review."
+        "text": "Give it a goal and the files it needs. It uses connected tools, checks the work, and returns a result to review."
       }
     ],
-    "speakerNotes": "45 seconds. That is chat. You all know what an agent is, so one slide on the difference. Same approved models in both, from the gateway. A chat answers a prompt and a person copies the result somewhere. The Harness wraps the model with context, tools, permissions, and memory, and runs a loop until the work is done or it needs you. Guardrails are built in: every tool call is checked against the person's identity, scope, and policy, and logged. That's the difference you'll see in the next recording.",
+    "speakerNotes": "45 seconds. TritonGPT helps with questions, document review, and drafts. The Harness adds the workspace and tools to carry out a task. Give it the result you need and the relevant files, then let it work through the steps. It can use connected apps, check the output, and ask when it needs a decision. Your connected accounts and approval settings determine what it can do. The sample outputs show a saved briefing and its review status. Next, watch a complete project using fictional workshop data.",
     "websiteVisual": "comparison",
     "workflowComparison": {
       "matrixTitle": "A chat answers. The Harness does the work.",
@@ -11035,7 +11035,7 @@ export const slides = [
       "total": 4,
       "label": "The Harness"
     },
-    "managerSummary": "Tech Community copy of cabinet-chat-and-harness"
+    "managerSummary": "How the Harness carries a task through files, tools, and checks to a result"
   },
   {
     "id": 5005,
@@ -11043,7 +11043,7 @@ export const slides = [
     "type": "video",
     "layout": "cabinet-demo",
     "title": "The TritonAI Harness at work",
-    "subtitle": "What it connects to and what it costs, then one project start to finish: build the survey, analyze it, report it, and keep it running.",
+    "subtitle": "Give it a goal and the project files. It builds a survey, checks the results, and prepares a report.",
     "content": [],
     "audiences": [
       "tech-community"
@@ -11073,7 +11073,7 @@ export const slides = [
       "label": "TritonAI Harness Nightly",
       "captureNote": "Settings tour recorded Oct 10 • story recorded Oct 9–10 on fictional practice-kit data • shown in 154 seconds"
     },
-    "speakerNotes": "About two and a half minutes; the clip is silent, so narrate. First a quick settings tour: the plugins on the person's own sign-in (GitHub, Google Workspace, Kuali Build, Lucid, Microsoft 365, n8n), shared skills, and the model routes, campus on-prem and cloud. Then one made-up project start to finish: a staff member's fall workshop pilot. It builds a campus-branded survey, analyzes the results and flags missing ratings, builds an Excel dashboard for leaders, and produces a nine-slide briefing deck on the campus template. Everything comes from the project's files. Point out that each output is a saved file the person reviews.",
+    "speakerNotes": "About two and a half minutes; the clip is silent, so narrate. First a quick settings tour: the plugins on the person's own sign-in (GitHub, Google Workspace, Kuali Build, Lucid, Microsoft 365, n8n), shared skills, and the model routes, campus on-prem and cloud. Then one made-up project start to finish: a staff member's fall workshop pilot. It builds a campus-branded survey, analyzes the results and flags missing ratings, builds an Excel dashboard for leaders, and produces a nine-slide briefing deck on the campus template. Everything comes from the project's files. Point out that each output is a saved file the person reviews. Frame this as a task with a clear finish: a survey and checked reporting files. The person describes the result, then reviews what comes back. The recording shows file-based project work; scheduled jobs are explained on the following feature and personal automation slides.",
     "managerSummary": "Tech Community copy of cabinet-harness-in-action"
   },
   {
@@ -11097,18 +11097,18 @@ export const slides = [
     "hideDemoBadge": true,
     "demoOnly": true,
     "title": "The TritonAI Harness on your phone",
-    "subtitle": "I built most of my Cabinet presentation from my phone with it. In testing now; iOS App Store soon, then Android.",
+    "subtitle": "Direct work on your computer from your phone. The mobile app is in testing.",
     "durationSeconds": 32,
     "intro": {
       "kicker": "TritonAI Harness · mobile app · in testing",
       "title": "The TritonAI Harness on your phone",
-      "setup": "I built most of my presentation to Cabinet from my phone with this app. It is in testing now and should be on the App Store for iOS soon, with Android after. Here is one edit to that deck, start to finish.",
-      "watchFor": "It finds the right slide among three similar ones, updates it, rebuilds the deck, and shows me the result on my phone.",
+      "setup": "I built most of my Cabinet presentation from my phone. The work runs on a connected computer. The mobile app is in testing; this clip shows one deck edit.",
+      "watchFor": "A request from my phone becomes a checked deck edit on the computer, then a preview I can review.",
       "seconds": 6
     },
     "videoSrc": "/media/cabinet/cabinet-mobile-harness-8.mp4",
     "poster": "/media/cabinet/cabinet-mobile-harness-8-poster.jpg",
-    "speakerNotes": "About 30 seconds. I built most of the presentation I gave to Cabinet from my phone, using this app. A Harness mobile app is in testing now. It should be available on the App Store for iOS soon, and then for Android. It directs the Harness running on your computer, so the work and files stay there. In this clip I ask it to edit a slide in that Cabinet deck; it finds the right one among three similar ones, updates it, rebuilds, and shows the result on the phone. Don't promise a date; it's still in testing.",
+    "speakerNotes": "About 30 seconds. I built most of my Cabinet presentation from my phone using this app. The phone directs the Harness on a connected computer, where the task runs and the project files are stored. That computer must stay awake with the Harness running. In this clip, I ask for one deck edit. It finds the right slide among three similar ones, updates it, rebuilds, and brings back a preview. The mobile app is in testing. Do not promise an App Store date. The same setup can direct a longer task while you are away from your desk.",
     "managerSummary": "Tech Community copy of cabinet-mobile-briefing-demo"
   },
   {
@@ -11223,7 +11223,7 @@ export const slides = [
     "type": "content",
     "layout": "cabinet-outline",
     "title": "Host department apps with ITS",
-    "subtitle": "When a tool outgrows one desktop, ITS reviews it and hosts it on campus.",
+    "subtitle": "A skill may be enough for a routine task. Bring shared apps to ITS for review.",
     "content": [],
     "figure": {
       "id": "campus-app-hosting",
@@ -11233,7 +11233,7 @@ export const slides = [
       "tech-community"
     ],
     "durationSeconds": 30,
-    "speakerNotes": "30 seconds. When something a colleague builds outgrows their laptop, there's a path. Tier 0 is the desktop or a sandbox, Tier 1 is citizen-curated deployment on apps.ucsd.edu after a risk and scope review, Tier 2 is TritonAI and rapid ITS development, Tier 3 is enterprise. If you find one of these running under a desk, point it to intake.",
+    "speakerNotes": "30 seconds. First ask whether the job needs a shared app. A personal report or recurring task may be a skill or automation inside the Harness. When colleagues need a shared service, there is a hosting path. Tier 0 is a desktop or sandbox, Tier 1 is citizen-curated deployment on apps.ucsd.edu after risk and scope review, Tier 2 is TritonAI and rapid ITS development, and Tier 3 is enterprise. Bring shared apps to intake so ownership, support, access, and hosting can be reviewed.",
     "managerSection": "Tech Community",
     "section": {
       "part": 4,
@@ -11434,7 +11434,7 @@ export const slides = [
     "type": "content",
     "layout": "cabinet-outline",
     "title": "Learn and connect",
-    "subtitle": "Everything I showed today lives at tritonai.ucsd.edu, along with the people doing this work.",
+    "subtitle": "Start with one task you repeat. Try it, check the result, and save the steps as a skill.",
     "content": [],
     "figure": {
       "id": "learn-and-connect",
@@ -11450,7 +11450,7 @@ export const slides = [
       "label": "Next steps"
     },
     "durationSeconds": 60,
-    "speakerNotes": "60 seconds. Everything I showed today lives in one place: tritonai.ucsd.edu. On the left is how you learn. Start with the Discovery Series, 15 short videos that work well one per team meeting. Then pick a learning path; there's one for builders. If you want depth, the Certificate in AI for Higher Education is 20 hours, staff or leaders stream, at no cost. And the November 12 webinar walks through every supported tool. On the right is how you connect. Solid green means it is running today; dashed gold means it is forming now, so this is a good time to join and shape it. For this room, the TritonAI Tools Working Group is the best fit: power users, monthly, and it is forming now, so early members shape it and the roadmap. If you connect systems, join the n8n Automation Working Group. Bring an idea to the AI Use-Case Group every other Friday, and AI Consulting Hours for live projects is starting up. If your department already runs its own group, like the Jacobs School's AI Show and Tell, we'll list it. To stay in the loop: the newsletter, TritonAI Updates for platform changes, and Weekly AI News. Email tritonai@ucsd.edu to join any of these."
+    "speakerNotes": "60 seconds. Start with one useful task you repeat. Describe the result you need, try it, inspect what comes back, and refine the steps into a skill. Use the learning and community resources at tritonai.ucsd.edu to get help. On the left is how you learn. Start with the Discovery Series, 15 short videos that work well one per team meeting. Then pick a learning path; there's one for builders. If you want depth, the Certificate in AI for Higher Education is 20 hours, staff or leaders stream, at no cost. And the November 12 webinar walks through every supported tool. On the right is how you connect. Solid green means it is running today; dashed gold means it is forming now, so this is a good time to join and shape it. For this room, the TritonAI Tools Working Group is the best fit: power users, monthly, and it is forming now, so early members shape it and the roadmap. If you connect systems, join the n8n Automation Working Group. Bring an idea to the AI Use-Case Group every other Friday, and AI Consulting Hours for live projects is starting up. If your department already runs its own group, like the Jacobs School's AI Show and Tell, we'll list it. To stay in the loop: the newsletter, TritonAI Updates for platform changes, and Weekly AI News. Email tritonai@ucsd.edu to join any of these. The October 30 AI Use Case Office Hours recording is a practical example: https://mediaspace.ucsd.edu/media/AI+Use+Case+Office+Hours/1_41rf5xlo. Bring your task and the result you need to the group."
   },
   {
     "id": 5025,
@@ -11498,7 +11498,7 @@ export const slides = [
       "total": 4,
       "label": "Vertical AI solutions"
     },
-    "speakerNotes": "About 75 seconds. These are the vertical solutions IT Services builds for whole campus processes. Group them: delivering now, and in progress. Say the impact type with each number. Contract review 120 to 11 minutes is a timed internal pilot benchmark, not a guarantee (CLAIM-LEDGER contract-reviewer-consolidated). Transcript matching (Brett, Oct 10): cost avoidance of temporary labor; it avoids hiring dozens of temporary staff for transcript entry. Further validation work begins in 2027 after TSS go-live. Supporting figures if asked: ~60K transcripts a year, ~225/hour at 98%+ in pilot; earlier planning estimate up to $500K a year in capacity. Frame as avoided temporary hiring, not reductions to existing staff. Ticket routing: the hours figure is a scenario at an assumed 90% accuracy per 10,000 eligible tickets (backup slide cabinet-routing-savings), not measured performance. Website assistants: the retired vendor contract is $300K a year in cost avoided (scaling-engagement-the-tritongpt-widget); 16 websites live; College Selection Assistant is one of them. Cash application (Brett, Oct 11): the row shows the problem size: a person has to handle 61% of receipts (75,199 of 123,108, Jan 2025–Jan 2026, 81% of the $2.66B), per the BFS March 2026 business case. The headline now says '$70M+ backlog of unallocated cash' (Brett, Oct 12): the BFS business case puts the average monthly undistributed cash balance at about $79M over Jan 2025–Jan 2026, so 'more than $70M' is conservative; it is cash received but not yet applied, not a loss and not a monthly inflow. The $1.3–3.0M a year proposed benefit is off the slide; mention it only if asked, as an initial business-case estimate BFS is still reconciling, not measured or net ROI. TritonAI Harness (added Oct 10): the platform row and the bridge to Part 2; generally available from the TritonAI website, 400+ users (Brett, Oct 10; up from 100+ active at the Sep 21 rollout review); automations still in beta for a subset of users. The Faculty Expertise Directory moved to Part 3 as a citizen developer project. Items drawn from the PK portfolio slides ai-portfolio-at-scale and ai-portfolio-pilots.",
+    "speakerNotes": "About 75 seconds. These are the vertical solutions IT Services builds for whole campus processes. Group them: delivering now, and in progress. Say the impact type with each number. Contract review 120 to 11 minutes is a timed internal pilot benchmark, not a guarantee (CLAIM-LEDGER contract-reviewer-consolidated). Transcript matching (Brett, Oct 10): cost avoidance of temporary labor; it avoids hiring dozens of temporary staff for transcript entry. Further validation work begins in 2027 after TSS go-live. Supporting figures if asked: ~60K transcripts a year, ~225/hour at 98%+ in pilot; earlier planning estimate up to $500K a year in capacity. Frame as avoided temporary hiring, not reductions to existing staff. Ticket routing: the hours figure is a scenario at an assumed 90% accuracy per 10,000 eligible tickets (backup slide cabinet-routing-savings), not measured performance. Website assistants: the retired vendor contract is $300K a year in cost avoided (scaling-engagement-the-tritongpt-widget); 16 websites live; College Selection Assistant is one of them. Cash application (Brett, Oct 11): the row shows the problem size: a person has to handle 61% of receipts (75,199 of 123,108, Jan 2025–Jan 2026, 81% of the $2.66B), per the BFS March 2026 business case. The headline now says '$70M+ backlog of unallocated cash' (Brett, Oct 12): the BFS business case puts the average monthly undistributed cash balance at about $79M over Jan 2025–Jan 2026, so 'more than $70M' is conservative; it is cash received but not yet applied, not a loss and not a monthly inflow. The $1.3–3.0M a year proposed benefit is off the slide; mention it only if asked, as an initial business-case estimate BFS is still reconciling, not measured or net ROI. TritonAI Harness (added Oct 10): the platform row and the bridge to Part 3; generally available from the TritonAI website, 400+ users (Brett, Oct 10; up from 100+ active at the Sep 21 rollout review); scheduled tasks and webhook automations are documented in Stable 0.4.1; each workflow needs its own setup and permissions. The Faculty Expertise Directory appears in Part 4 as a citizen developer project. Items drawn from the PK portfolio slides ai-portfolio-at-scale and ai-portfolio-pilots.",
     "impactTable": {
       "rows": [
         {
@@ -11779,7 +11779,7 @@ export const slides = [
       "label": "The Harness"
     },
     "durationSeconds": 60,
-    "speakerNotes": "About one minute. This is one page of the key features, plugins, and skills. Memory helps recall past work and the reasons for decisions. Helper agents let several tasks move forward at once. Automations run work on a schedule or when another service sends a trigger. Examples from the October 30 AI Use Case Office Hours: a morning email and calendar brief, a summary of overnight work that needs a decision, or an hourly project check-in. These are tasks you set up; the computer running them must stay awake with the Harness running. Computer use works with files, desktop apps, and browsers you allow it to access. A paired phone can start work on a connected computer. Ideas suggests ways to use the Harness. Skills save repeatable steps; you can record a task, review the steps, and reuse them. The middle shows connected plugins; the right gives skill examples. A green check means Stable and Nightly. Gold means Nightly testing; blue means Stable only. Tableau and its reporting skill are Nightly only in this comparison. UCSD Assistant is Stable only in the current bundles. The bottom highlights the guided tour, guest links, and separate Prod/Dev plugin connections being tested in Nightly. This compares Stable 0.4.1 with the October 30 Nightly release, checked November 1. Commons skills are optional and update separately. Nightly testing does not commit a Stable release date. Account permissions, approved data handling, and human review still apply. Examples source: AI Use Case Office Hours, October 30, 2026, https://mediaspace.ucsd.edu/media/AI+Use+Case+Office+Hours/1_41rf5xlo — computer use and local automations at 6:14; scheduled work at 11:00; overnight brief at 11:27. Release availability remains based on the tagged guides, not the recording.",
+    "speakerNotes": "About one minute. This is the capability map: features on the left, connected plugins in the middle, and reusable skill examples on the right. Memory recalls past work and decisions. Helper agents support parallel work. Automations start work on a schedule or when another service sends a trigger. Computer use works with files, apps, and browsers you allow it to access. A paired phone can start work on a connected computer. Ideas suggests ways to use the Harness. Record a task, review the steps, and save them as a skill. The next slide shows what these capabilities do in my workday. A green check means Stable and Nightly. Gold means Nightly testing; blue means Stable only. Tableau and its reporting skill are Nightly only in this comparison. UCSD Assistant is Stable only in the current bundles. The bottom highlights the guided tour, guest links, and separate Prod/Dev plugin connections being tested in Nightly. This compares Stable 0.4.1 with the October 30 Nightly release, checked November 1. Commons skills are optional and update separately. Nightly testing does not commit a Stable release date. Account permissions, approved data handling, and human review still apply. Supporting examples: October 30 AI Use Case Office Hours, https://mediaspace.ucsd.edu/media/AI+Use+Case+Office+Hours/1_41rf5xlo; local automations at 6:14 and scheduled work at 11:00. Release availability comes from the tagged guides.",
     "managerSummary": "One-page visual overview of key Harness features, plugins, and skill examples"
   },
   {
@@ -11787,8 +11787,8 @@ export const slides = [
     "slug": "techcom-personal-productivity-list",
     "type": "content",
     "layout": "cabinet-outline",
-    "title": "How I use the TritonAI Harness",
-    "subtitle": "Tools I set up for my own work. They prepare, sort, and draft; I review and decide.",
+    "title": "Automations in my workday",
+    "subtitle": "Some tasks run on a schedule. Others start when I ask. I review what needs a decision.",
     "audiences": [
       "tech-community"
     ],
@@ -11801,71 +11801,71 @@ export const slides = [
     "durationSeconds": 60,
     "impactTable": {
       "headers": [
-        "Use case",
-        "When",
-        "What it does for me"
+        "Task",
+        "Starts",
+        "What comes back"
       ],
       "rows": [
         {
           "name": "Daily brief",
-          "what": "Every meeting on my calendar, with its context and open items",
+          "what": "Meeting context and open items from my calendar",
           "status": "Every morning",
           "tone": "live",
-          "impact": "I walk into each meeting prepared",
-          "basis": "Objective, suggested agenda, questions to ask, what carried over"
+          "impact": "A brief for each meeting",
+          "basis": "Objectives, questions, and unfinished business"
         },
         {
           "name": "Inbox priorities",
-          "what": "An Outlook add-in that flags what needs me today or this week",
-          "status": "All day",
+          "what": "An Outlook add-in sorts what needs my attention",
+          "status": "Throughout the day",
           "tone": "live",
-          "impact": "Priority 1 and 2, with the reasons why",
-          "basis": "Learns from what I actually answer; it never sends or deletes"
+          "impact": "Today and this week, with reasons",
+          "basis": "Sets categories; does not send or delete"
         },
         {
           "name": "Draft replies",
-          "what": "Drafts for work email that still needs an answer",
+          "what": "Work email that still needs an answer",
           "status": "Daily",
           "tone": "live",
-          "impact": "Replies waiting in my drafts folder",
-          "basis": "Nothing goes out until I send it"
+          "impact": "Draft replies ready for review",
+          "basis": "I decide what gets sent"
         },
         {
           "name": "Meeting debriefs",
-          "what": "Decisions and action items pulled from my meeting notes",
+          "what": "Decisions and action items from my meeting notes",
           "status": "After meetings",
           "tone": "live",
-          "impact": "Follow-ups land on my task list",
-          "basis": "Each with an owner and the context behind it"
+          "impact": "Follow-ups on my task list",
+          "basis": "Owners and context included"
         },
         {
           "name": "Scheduling assistant",
-          "what": "An email assistant that finds times and books meetings",
+          "what": "An email request to find a time",
           "status": "On request",
           "tone": "live",
-          "impact": "Holds and reschedules, with me copied",
-          "basis": "Cancellations still need my approval"
+          "impact": "Meeting holds and reschedules",
+          "basis": "I am copied; cancellations need my approval"
         },
         {
           "name": "Search across my work",
-          "what": "One question across email, calendar, notes, and documents",
+          "what": "A question across email, calendar, notes, and files",
           "status": "On request",
           "tone": "live",
-          "impact": "An answer with a source for every fact",
-          "basis": "From my desk or my phone"
+          "impact": "An answer linked to its sources",
+          "basis": "Past work and decisions, from my desk or phone"
         },
         {
           "name": "Daily focus list",
-          "what": "What's open, what's blocked, and what to do first",
+          "what": "Open tasks, blockers, and the next step",
           "status": "Every day",
           "tone": "live",
-          "impact": "My priorities in one place",
-          "basis": "Built from email, meetings, and my task list"
+          "impact": "A short list of priorities",
+          "basis": "Built from email, meetings, and tasks"
         }
       ]
     },
-    "speakerNotes": "About a minute; no demo, you voice over (Brett, Oct 11: replaces the daily brief and inbox demo, which moved to the backup view). Point: the same tools staff use, applied to my own workday. Each one prepares, sorts, or drafts; I review and decide, and nothing is sent or deleted without me. Pick two or three to tell. Daily brief: every morning at 7, each meeting's context, my objective, a suggested agenda, questions to ask, and what carried over from last time. Inbox priorities: an Outlook add-in that marks Priority 1 (today) and Priority 2 (this week) and shows why: who it's from, how it reached me, and what it asks; it learns from what I actually reply to and only sets categories. Draft replies: drafts for work email that still needs an answer, waiting for my review. Meeting debriefs: decisions and action items from my meeting notes, added to my task list. Scheduling assistant: email it to find a time; it places holds and reschedules with me copied, and cancellations need my approval. Search across my work: one question across email, calendar, notes, and documents, answered with sources, from my desk or phone (the phone demo comes next). Daily focus list: what's open, what's blocked, and what to do first. Avoid internal system names on stage.",
-    "managerSummary": "Tech Community copy of cabinet-personal-productivity-list"
+    "speakerNotes": "About one minute. These are workflows I have configured for my own work, not a set of automations every install comes with. The middle column is the key: some start on a schedule, others follow a meeting or a request. A job can prepare useful work without a new prompt every time. Pick two or three rows: the morning meeting brief, draft replies waiting for review, and follow-ups pulled from meeting notes. I review decisions and outgoing messages; the scheduling assistant has the specific permissions described in its row. Connections and approval settings determine what each workflow can do. For local Harness jobs, the computer doing the work needs to stay awake with the Harness running. You can direct a connected computer from a phone; that is the next demo. At the October 30 Office Hours, David also showed a 6 a.m. summary of overnight work and described hourly project check-ins. Those are additional examples to configure, not claims about my current setup. Source: https://mediaspace.ucsd.edu/media/AI+Use+Case+Office+Hours/1_41rf5xlo, scheduled work at 11:00 and overnight briefing at 11:27.",
+    "managerSummary": "Personal workflows organized by what starts the task and what comes back"
   },
   {
     "id": 5034,
