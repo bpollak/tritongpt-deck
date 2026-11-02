@@ -21,6 +21,6 @@ for (const width of [320, 390]) {
     await page.getByText('ready to review', { exact: true }).scrollIntoViewIfNeeded();
     await expect(page.getByText('ready to review', { exact: true })).toBeInViewport();
     await page.getByRole('button', { name: 'Next slide', exact: true }).click();
-    await expect(page).toHaveURL(/#slide=techcom-harness-at-work$/);
+    await expect(page).toHaveURL(/#slide=techcom-governance$/);
   });
 }

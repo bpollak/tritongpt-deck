@@ -34,7 +34,7 @@ for (const width of [1440, 390]) {
     }
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
     await page.getByRole('button', { name: 'Next slide', exact: true }).click();
-    await expect(page).toHaveURL(/#slide=techcom-personal-productivity-list$/);
+    await expect(page).toHaveURL(/#slide=techcom-harness-at-work$/);
   });
 }
 
@@ -42,7 +42,7 @@ test('static Harness overview preserves keyboard slide navigation', async ({ pag
   await page.goto(path);
   await page.getByRole('button', { name: 'Next slide', exact: true }).focus();
   await page.keyboard.press('Enter');
-  await expect(page).toHaveURL(/#slide=techcom-personal-productivity-list$/);
+  await expect(page).toHaveURL(/#slide=techcom-harness-at-work$/);
   await page.getByRole('button', { name: 'Previous slide', exact: true }).focus();
   await page.keyboard.press('Enter');
   await expect(page).toHaveURL(/#slide=techcom-governance$/);
