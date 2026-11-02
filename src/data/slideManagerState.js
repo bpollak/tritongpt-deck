@@ -184,7 +184,6 @@ export const slideManagerState = {
     "techcom-harness-at-work",
     "techcom-governance",
     "techcom-personal-productivity-list",
-    "techcom-mobile-demo",
     "techcom-directory-demo",
     "techcom-passport-demo",
     "techcom-class-planner-demo",
@@ -195,6 +194,7 @@ export const slideManagerState = {
     "techcom-thank-you"
   ],
   "removed": [
+    "techcom-mobile-demo",
     "techcom-parasol-transition",
     "techcom-compute-and-models",
     "where-will-ai-place-us-in-2031",
