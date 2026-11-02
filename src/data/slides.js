@@ -1,5 +1,5 @@
 import { gatewayUsageDashboard } from './gatewayUsage.js';
-import { harnessReleaseCatalog } from './harnessReleaseCatalog.js';
+import { harnessReleaseCatalog, harnessReleaseHighlights } from './harnessReleaseCatalog.js';
 
 export const slides = [
   {
@@ -11764,10 +11764,11 @@ export const slides = [
     "slug": "techcom-governance",
     "type": "content",
     "layout": "harness-release-catalog",
-    "title": "What’s in the TritonAI Harness",
-    "subtitle": "See what’s in Stable and what’s being tested in Nightly.",
+    "title": "Key Harness features",
+    "subtitle": "Connected tools, reusable skills, and help with everyday work.",
     "content": [],
     "releaseCatalog": harnessReleaseCatalog,
+    "releaseHighlights": harnessReleaseHighlights,
     "audiences": [
       "tech-community"
     ],
@@ -11778,8 +11779,8 @@ export const slides = [
       "label": "The Harness"
     },
     "durationSeconds": 60,
-    "speakerNotes": "About one minute. Start with the release labels: Stable means it is available in both releases; Nightly means it is being tested; Stable only means it is not in this Nightly bundle. Use the three tabs to show features, plugins, and skills. The comparison is Stable 0.4.1 and the October 30 Nightly build, verified November 1. Stable already includes project overviews, Ideas, recorded skills, Help, memory sync, helper agents, scheduled tasks, and webhooks. Nightly adds the guided tour, guest thread links, separate plugin Prod/Dev connections, new-feature suggestions in Ideas, an updated project overview, and the optional fx engine. Tableau is Nightly only. UCSD Assistant is in Stable but absent from the current Nightly plugin bundle. Skills include the plugin-provided skills and the optional public Commons library; personal skills vary by user. Nightly availability is a testing status, not a commitment to a Stable release date. Account permissions, data handling rules, and human review still apply.",
-    "managerSummary": "Release inventory: plugins, skills, and features with Stable/Nightly availability"
+    "speakerNotes": "About one minute. This is one page of the key features, plugins, and skills. The features include memory across tasks, helper agents that work in parallel, scheduled tasks, computer use, phone access, and Ideas. Ideas suggests ways to use the Harness based on your work. The middle shows the connected plugins. The right gives examples of reusable skills, plus recording your own task as a skill. A green check means it is in Stable and Nightly. Gold means it is in Nightly for testing; blue means Stable only. Tableau and its reporting skill are Nightly only in this comparison. UCSD Assistant is Stable only in the current bundles. The bottom highlights the guided tour, guest links, and separate Prod/Dev plugin connections being tested in Nightly. This compares Stable 0.4.1 with the October 30 Nightly release, checked November 1. Commons skills are optional and update separately. Nightly testing does not commit a Stable release date. Account permissions, approved data handling, and human review still apply.",
+    "managerSummary": "One-page visual overview of key Harness features, plugins, and skill examples"
   },
   {
     "id": 5033,

@@ -3,45 +3,47 @@ import { test, expect } from '@playwright/test';
 const path = '/?audience=tech-community#slide=techcom-governance';
 
 for (const width of [1440, 390]) {
-  test(`Harness inventory labels release availability and exposes every tab at ${width}px`, async ({ page }) => {
+  test(`Harness highlights show features, plugins, and skills together at ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: width === 390 ? 844 : 900 });
     await page.goto(path);
-    await expect(page.getByRole('heading', { level: 1, name: 'What’s in the TritonAI Harness', exact: true })).toBeVisible();
-    const panel = page.getByRole('tabpanel');
-    await expect(panel.locator('li')).toHaveCount(41);
-    await expect(panel.locator('li').filter({ hasText: 'Guided getting-started tour' }).getByText('Nightly', { exact: true })).toBeVisible();
-    await expect(panel.locator('li').filter({ hasText: 'Recurring scheduled tasks' }).getByText('Stable', { exact: true })).toBeVisible();
+    await expect(page.getByRole('heading', { level: 1, name: 'Key Harness features', exact: true })).toBeVisible();
+    await expect(page.getByRole('tab')).toHaveCount(0);
+    const features = page.getByRole('region', { name: 'Key features', exact: true });
+    const plugins = page.getByRole('region', { name: 'Connected plugins', exact: true });
+    const skills = page.getByRole('region', { name: 'Reusable skills', exact: true });
+    await expect(features.getByRole('listitem')).toHaveCount(6);
+    await expect(plugins.getByRole('article')).toHaveCount(9);
+    await expect(skills.getByRole('listitem')).toHaveCount(6);
+    await expect(features.getByRole('heading', { name: 'Ideas', exact: true })).toBeVisible();
+    await expect(features.getByText('Suggestions for using the Harness', { exact: true })).toBeVisible();
+    await expect(features.locator('.hrc-component-icon')).toHaveCount(6);
+    expect(await page.locator('.hrc-card svg').count()).toBeGreaterThanOrEqual(24);
+    await expect(plugins.getByRole('article', { name: 'Tableau', exact: true }).getByText('Nightly', { exact: true })).toBeVisible();
+    await expect(plugins.getByRole('article', { name: 'UCSD Assistant', exact: true }).getByText('Stable only', { exact: true })).toBeVisible();
+    await expect(skills.getByRole('heading', { name: 'Record your own skill', exact: true })).toBeVisible();
     if (width === 1440) {
-      expect(await panel.evaluate(el => el.scrollHeight <= el.clientHeight + 1)).toBe(true);
+      await page.evaluate(() => document.fonts.ready);
+      for (const locator of [features, plugins, skills]) {
+        expect(await locator.evaluate(el => el.scrollHeight <= el.clientHeight + 1 && el.scrollWidth <= el.clientWidth + 1)).toBe(true);
+        await expect(locator).toBeInViewport({ ratio: 1 });
+      }
+      await expect(page.locator('.hrc-footer')).toBeInViewport({ ratio: 1 });
+    } else {
+      await page.getByText('Prod/Dev connections', { exact: true }).scrollIntoViewIfNeeded();
+      await expect(page.getByText('Prod/Dev connections', { exact: true })).toBeInViewport();
     }
-
-    await page.getByRole('tab', { name: 'Plugins 9', exact: true }).click();
-    await expect(panel.locator('article')).toHaveCount(9);
-    await expect(panel.getByRole('article').filter({ has: page.getByRole('heading', { name: 'Tableau', exact: true }) }).getByText('Nightly', { exact: true })).toBeVisible();
-    await expect(panel.getByRole('article').filter({ has: page.getByRole('heading', { name: 'UCSD Assistant', exact: true }) }).getByText('Stable only', { exact: true })).toBeVisible();
-
-    await page.getByRole('tab', { name: 'Skills 31', exact: true }).click();
-    await expect(panel.locator('li')).toHaveCount(31);
-    await expect(panel.getByText('Optional public library; updates separately from the app.', { exact: true })).toBeVisible();
-    const lastSkill = panel.getByText('Use and manage memory', { exact: true });
-    await lastSkill.scrollIntoViewIfNeeded();
-    await expect(lastSkill).toBeInViewport();
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
     await page.getByRole('button', { name: 'Next slide', exact: true }).click();
     await expect(page).toHaveURL(/#slide=techcom-personal-productivity-list$/);
   });
 }
 
-test('Harness catalog tabs support arrow keys without navigating to a different slide', async ({ page }) => {
+test('static Harness overview preserves keyboard slide navigation', async ({ page }) => {
   await page.goto(path);
-  await page.getByRole('tab', { name: 'Features 41', exact: true }).focus();
-  await page.keyboard.press('ArrowRight');
-  await expect(page.getByRole('tab', { name: 'Plugins 9', exact: true })).toHaveAttribute('aria-selected', 'true');
+  await page.getByRole('button', { name: 'Next slide', exact: true }).focus();
+  await page.keyboard.press('Enter');
+  await expect(page).toHaveURL(/#slide=techcom-personal-productivity-list$/);
+  await page.getByRole('button', { name: 'Previous slide', exact: true }).focus();
+  await page.keyboard.press('Enter');
   await expect(page).toHaveURL(/#slide=techcom-governance$/);
-  await page.keyboard.press('End');
-  await expect(page.getByRole('tab', { name: 'Skills 31', exact: true })).toBeFocused();
-  await expect(page.getByRole('tabpanel').locator('li')).toHaveCount(31);
-  await page.keyboard.press('Home');
-  await expect(page.getByRole('tab', { name: 'Features 41', exact: true })).toBeFocused();
-  await expect(page.getByRole('tabpanel').locator('li')).toHaveCount(41);
 });
