@@ -10821,7 +10821,7 @@ export const slides = [
     "type": "content",
     "layout": "cabinet-outline",
     "title": "Supported AI tools",
-    "subtitle": "Reviewed for university data. Always your UC San Diego account, never a personal one.",
+    "subtitle": "Approved for P3 data under supported vendor contracts. Use your UC San Diego account.",
     "content": [],
     "figure": {
       "id": "tools-landscape",
