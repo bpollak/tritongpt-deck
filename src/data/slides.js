@@ -12043,12 +12043,12 @@ export const slides = [
     "conference": "Office of the Chancellor · Tuesday, November 3, 2026",
     "arc": [
       {
-        "label": "Answer the question",
-        "note": "TritonAI Insights"
-      },
-      {
         "label": "Build the report",
         "note": "TritonAI Harness"
+      },
+      {
+        "label": "Answer the question",
+        "note": "TritonAI Insights"
       },
       {
         "label": "Check the work",
@@ -12071,12 +12071,12 @@ export const slides = [
     "subtitle": "Answers when you need an answer; a report when you need a report.",
     "content": [
       {
-        "heading": "Answering the question",
-        "text": "A leader asks about the campus. Today an analyst finds the data, runs it and writes it up. TritonAI Insights answers directly, from governed campus data, with the work shown."
-      },
-      {
         "heading": "Building the report",
         "text": "When a standing report is the right tool, the TritonAI Harness builds it in Tableau the way an analyst would, starting from the campus data definitions."
+      },
+      {
+        "heading": "Answering the question",
+        "text": "A leader asks about the campus. Today an analyst finds the data, runs it and writes it up. TritonAI Insights answers directly, from governed campus data, with the work shown."
       },
       {
         "heading": "Checking the work",
@@ -12089,7 +12089,7 @@ export const slides = [
       "label": "The question"
     },
     "durationSeconds": 60,
-    "speakerNotes": "One minute. Frame the follow-up from October 12: there are two kinds of analyst work. Most requests are a question that needs an answer, often the same question asked again; some need a report that people come back to. Insights handles the first, the Harness the second, and both are judged by the same test: does the number match the official source?",
+    "speakerNotes": "One minute. Frame the follow-up from October 12: there are two kinds of analyst work. Most requests are a question that needs an answer, often the same question asked again; some need a report that people come back to. The Harness builds the report, Insights answers the question, and both are judged by the same test: does the number match the official source?",
     "audiences": [
       "chancellor"
     ],
@@ -12138,23 +12138,6 @@ export const slides = [
     "content": [],
     "columns": [
       {
-        "label": "TritonAI Insights · answers",
-        "items": [
-          {
-            "heading": "Plain-English questions",
-            "text": "Research, Finance, Workforce, Students, Rankings, and questions across them."
-          },
-          {
-            "heading": "From governed campus data",
-            "text": "Built from the reports the campus already runs in Tableau and Cognos."
-          },
-          {
-            "heading": "Checked answers",
-            "text": "150+ answers checked against their source reports and marked Ready."
-          }
-        ]
-      },
-      {
         "label": "TritonAI Harness · reports",
         "items": [
           {
@@ -12170,6 +12153,23 @@ export const slides = [
             "text": "Drives Tableau on screen to build the workbook an analyst would build by hand."
           }
         ]
+      },
+      {
+        "label": "TritonAI Insights · answers",
+        "items": [
+          {
+            "heading": "Plain-English questions",
+            "text": "Research, Finance, Workforce, Students, Rankings, and questions across them."
+          },
+          {
+            "heading": "From governed campus data",
+            "text": "Built from the reports the campus already runs in Tableau and Cognos."
+          },
+          {
+            "heading": "Checked answers",
+            "text": "150+ answers checked against their source reports and marked Ready."
+          }
+        ]
       }
     ],
     "section": {
@@ -12178,7 +12178,64 @@ export const slides = [
       "label": "What we built"
     },
     "durationSeconds": 60,
-    "speakerNotes": "One minute. Insights started October 15 as a research indirect-cost explorer and grew domain by domain from existing Tableau and Cognos reports; the Ready count was 152 at the October 21 full regression. The Harness figure is the 400+ users quoted on October 10. Next: how an Insights answer is checked, then the live demonstration.",
+    "speakerNotes": "One minute. Insights started October 15 as a research indirect-cost explorer and grew domain by domain from existing Tableau and Cognos reports; the Ready count was 152 at the October 21 full regression. The Harness figure is the 400+ users quoted on October 10. Next: the Harness builds a report on screen, then how an Insights answer is checked and the live demonstration.",
+    "audiences": [
+      "chancellor"
+    ],
+    "managerSection": "Chancellor"
+  },
+  {
+    "id": 5107,
+    "slug": "chancellor-harness-report",
+    "type": "video",
+    "layout": "cabinet-demo",
+    "videoSrc": "/media/chancellor/chancellor-harness-report.mp4",
+    "poster": "/media/chancellor/chancellor-harness-report-poster.jpg",
+    "videoLoop": false,
+    "videoClearNav": false,
+    "videoAutoPlay": true,
+    "hideDemoBadge": true,
+    "demoOnly": true,
+    "title": "The Harness builds the report",
+    "subtitle": "One request: four-year graduation by college for the Fall 2021 entering class, built in Tableau from the campus's governed student data.",
+    "content": [
+      {
+        "heading": "Uses the governed source",
+        "text": "Opens SAH-RetentionCensus-View and builds the workbook as an analyst would."
+      },
+      {
+        "heading": "Writes the formulas",
+        "text": "Counts distinct students, four-year graduates and the rate, on screen in Tableau."
+      },
+      {
+        "heading": "Checks against IR",
+        "text": "The Fall 2021 cohort comes to 7,543 students, IR's published count."
+      },
+      {
+        "heading": "Aggregates only",
+        "text": "No student-level data on any chart; nothing downloaded."
+      }
+    ],
+    "recording": {
+      "label": "Governed source → formulas → Fall 2021 cohort check → college charts → dashboard → published",
+      "format": "One continuous screen recording, time-lapsed, with captions · 2 minutes 15 seconds · silent for presenter voice-over",
+      "mediaStem": "chancellor-harness-report",
+      "status": "captured and reviewed"
+    },
+    "intro": {
+      "kicker": "TritonAI Harness · an AI agent doing an analyst's job",
+      "title": "The Harness builds the report",
+      "setup": "One request: four-year graduation by college for the Fall 2021 entering class, built in Tableau from the governed student data source and published to campus Tableau.",
+      "watchFor": "The agent on the left driving Tableau on the right: the formulas it writes, the cohort check against IR (7,543), and the finished dashboard it publishes.",
+      "seconds": 7
+    },
+    "section": {
+      "part": 2,
+      "total": 3,
+      "label": "What we built"
+    },
+    "durationSeconds": 142,
+    "speakerNotes": "About two and a half minutes: a 7-second intro card, then the 2:15 video (silent; you narrate). Left pane: the TritonAI Harness agent's steps. Right pane: Tableau in Chrome, operated by the agent. Approximate timeline: 0:00 title; 0:05 opens the governed source (SAH-RetentionCensus-View) and starts a workbook; 0:17 writes the formulas (Cohort size = count of distinct students, four-year graduates, the rate); 0:47 filters to the Fall 2021 first-time first-year class: 7,543 students, IR's published count; 0:56 builds the college chart, labels and sorts it; 1:12 builds the entering-class chart; 1:27 assembles the dashboard with title and caption; 1:46 publishes to campus Tableau; then the finished dashboard. All footage is one real screen recording of the agent, time-lapsed up to 8x; nothing on screen was staged. People wrote the request and a few follow-up instructions; the AI did the work on screen, using TritonAI's AI model hosted on campus. Narration: this is the request an analyst gets; the agent knows the governed data and Tableau, writes the formulas, checks its cohort against IR, and publishes. If asked: (1) the college rates run about 1 to 2 points above IR's published figures (largest gap Muir, 74.9% vs 72.7%), most likely a definition difference in this source; the agent flags it and it goes to the data stewards. (2) The entering-class chart adds to 7,526; 17 students have no college recorded. (3) Real elapsed time was longer than the video, including retries; the video is sped up. Transition: a report is one kind of analyst work; most requests are a question that needs an answer, which is where Insights comes in.",
     "audiences": [
       "chancellor"
     ],
@@ -12295,63 +12352,6 @@ export const slides = [
     },
     "durationSeconds": 240,
     "speakerNotes": "About four minutes. Click Open TritonAI Insights (signed in beforehand) and ask in this order, clicking the vetted question where there is one; a shorter wording runs live and can misread \"last year\". 1) Home: \"How much indirect cost recovery (IDC) did the campus bring in during FY 2025-26, and how does that compare with the previous four years?\" Open \"How this was answered\". 2) How we answer: \"How much IDC did each school generate in FY 2025-26?\" (Scripps $40.25M, 11.7%; Jacobs $37.29M, 10.9% follow). 3) Research: \"If federal indirect cost rates on HHS-funded work were capped at 15% of the IDC-eligible direct base, how much IDC would FY 2025-26 HHS spending have carried, by vice chancellor area?\" ($64.06M left of $191.24M; Health Sciences carries $100.50M of the reduction; HHS is broader than NIH). 4) Students: \"What is UC San Diego's four-year graduation rate for first-year and transfer students, and how has it changed?\" (transfers 86.9%). 5) Rankings: \"Where did UC San Diego rank in U.S. News Best National Universities in the 2027 edition?\", then \"What would move UC San Diego up...?\" (six-year graduation rate is the heaviest input, 21%). Optional: type \"How much did Scripps bring in?\" to show it asks which measure. Ask the room not to fire many live questions at once. If the network fails, this table is the fallback: every figure on it is the first line of a Ready answer. Do not show pay by named person on the shared screen.",
-    "audiences": [
-      "chancellor"
-    ],
-    "managerSection": "Chancellor"
-  },
-  {
-    "id": 5107,
-    "slug": "chancellor-harness-report",
-    "type": "video",
-    "layout": "cabinet-demo",
-    "videoSrc": "/media/chancellor/chancellor-harness-report.mp4",
-    "poster": "/media/chancellor/chancellor-harness-report-poster.jpg",
-    "videoLoop": false,
-    "videoClearNav": false,
-    "videoAutoPlay": true,
-    "hideDemoBadge": true,
-    "demoOnly": true,
-    "title": "The Harness builds the report",
-    "subtitle": "One request: four-year graduation by college for the Fall 2021 entering class, built in Tableau from the campus's governed student data.",
-    "content": [
-      {
-        "heading": "Uses the governed source",
-        "text": "Opens SAH-RetentionCensus-View and builds the workbook as an analyst would."
-      },
-      {
-        "heading": "Writes the formulas",
-        "text": "Counts distinct students, four-year graduates and the rate, on screen in Tableau."
-      },
-      {
-        "heading": "Checks against IR",
-        "text": "The Fall 2021 cohort comes to 7,543 students, IR's published count."
-      },
-      {
-        "heading": "Aggregates only",
-        "text": "No student-level data on any chart; nothing downloaded."
-      }
-    ],
-    "recording": {
-      "label": "Governed source → formulas → Fall 2021 cohort check → college charts → dashboard → published",
-      "format": "One continuous screen recording, time-lapsed, with captions · 2 minutes 15 seconds · silent for presenter voice-over",
-      "mediaStem": "chancellor-harness-report",
-      "status": "captured and reviewed"
-    },
-    "intro": {
-      "kicker": "TritonAI Harness · an AI agent doing an analyst's job",
-      "title": "The Harness builds the report",
-      "setup": "One request: four-year graduation by college for the Fall 2021 entering class, built in Tableau from the governed student data source and published to campus Tableau.",
-      "watchFor": "The agent on the left driving Tableau on the right: the formulas it writes, the cohort check against IR (7,543), and the finished dashboard it publishes.",
-      "seconds": 7
-    },
-    "section": {
-      "part": 2,
-      "total": 3,
-      "label": "What we built"
-    },
-    "durationSeconds": 142,
-    "speakerNotes": "About two and a half minutes: a 7-second intro card, then the 2:15 video (silent; you narrate). Left pane: the TritonAI Harness agent's steps. Right pane: Tableau in Chrome, operated by the agent. Approximate timeline: 0:00 title; 0:05 opens the governed source (SAH-RetentionCensus-View) and starts a workbook; 0:17 writes the formulas (Cohort size = count of distinct students, four-year graduates, the rate); 0:47 filters to the Fall 2021 first-time first-year class: 7,543 students, IR's published count; 0:56 builds the college chart, labels and sorts it; 1:12 builds the entering-class chart; 1:27 assembles the dashboard with title and caption; 1:46 publishes to campus Tableau; then the finished dashboard. All footage is one real screen recording of the agent, time-lapsed up to 8x; nothing on screen was staged. People wrote the request and a few follow-up instructions; the AI did the work on screen, using TritonAI's AI model hosted on campus. Narration: this is the request an analyst gets; the agent knows the governed data and Tableau, writes the formulas, checks its cohort against IR, and publishes. If asked: (1) the college rates run about 1 to 2 points above IR's published figures (largest gap Muir, 74.9% vs 72.7%), most likely a definition difference in this source; the agent flags it and it goes to the data stewards. (2) The entering-class chart adds to 7,526; 17 students have no college recorded. (3) Real elapsed time was longer than the video, including retries; the video is sped up.",
     "audiences": [
       "chancellor"
     ],
