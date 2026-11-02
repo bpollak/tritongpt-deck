@@ -12242,6 +12242,47 @@ export const slides = [
     "managerSection": "Chancellor"
   },
   {
+    "id": 5112,
+    "slug": "chancellor-tableau-mechanics",
+    "type": "video",
+    "layout": "cabinet-demo",
+    "videoSrc": "/media/chancellor/chancellor-tableau-mechanics.mp4",
+    "poster": "/media/chancellor/chancellor-tableau-mechanics-poster.jpg",
+    "captionsSrc": "/media/chancellor/chancellor-tableau-mechanics.vtt",
+    "captionsDefault": false,
+    "videoLoop": false,
+    "videoClearNav": false,
+    "videoAutoPlay": true,
+    "hideDemoBadge": true,
+    "demoOnly": true,
+    "title": "Building the Tableau dashboard",
+    "subtitle": "The mechanics: define measures, build four chart types, assemble the dashboard and link the views.",
+    "recording": {
+      "label": "Cohort checks → charts → dashboard layout → college highlighting → saved report",
+      "format": "Real computer use by Codex · edited time-lapse · 2 minutes 24 seconds · silent for presenter narration",
+      "mediaStem": "chancellor-tableau-mechanics",
+      "status": "captured and reviewed"
+    },
+    "intro": {
+      "kicker": "Computer use · Tableau web authoring",
+      "title": "Building the Tableau dashboard",
+      "setup": "A second recording focused on the mechanics of building the report, from cohort measures to an interactive dashboard.",
+      "watchFor": "Watch the fields move onto shelves, the chart types change, the dashboard take shape, and one college highlight across all four charts.",
+      "seconds": 5
+    },
+    "section": {
+      "part": 2,
+      "total": 3,
+      "label": "What we built"
+    },
+    "durationSeconds": 149,
+    "speakerNotes": "Second video; preserve the preceding Harness recording. This dashboard was built by Codex operating Tableau through computer use. It is not a recording of TritonAI Harness or a campus-hosted model. Footage is edited and time-lapsed; setup, waits and retries are omitted. The video focuses on mechanics, not findings. The report uses the governed live SAH-RetentionCensus-View source and distinct-student cohort counts. It compares Fall 2020 and Fall 2021 four-year graduation; six-year graduation uses Fall 2019. Campus counts include unassigned college; the seven-college rate comparison excludes it. Source cohort counts were 6,022 / 6,445 / 7,543 / 6,545 for Fall 2019–2022, within two students of the spec's IR references. Live graduation rates differ from published IR figures and are labeled provisional on the dashboard. The private workbook is saved as Undergraduate success dashboard (AI build) in Brett's Personal Space; do not imply broader sharing. Final dashboard and College highlight action were checked in the saved viewer.",
+    "audiences": [
+      "chancellor"
+    ],
+    "managerSection": "Chancellor"
+  },
+  {
     "id": 5105,
     "slug": "chancellor-insights-how",
     "type": "content",

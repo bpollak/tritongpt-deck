@@ -1,0 +1,35 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:10.000
+Check distinct-student cohort counts. Start with a text table before choosing charts.
+
+00:00:10.000 --> 00:00:28.000
+Build the stacked bars. Put entering class on Columns, students on Rows, and college on Color.
+
+00:00:28.000 --> 00:00:38.000
+Switch to a treemap. Use Show Me to change the visual form.
+
+00:00:38.000 --> 00:00:50.000
+Set size and color encodings. Size represents students; color represents the graduation rate.
+
+00:00:50.000 --> 00:01:08.000
+Build the college rate heatmap. Combine College, Measure Names and Measure Values.
+
+00:01:08.000 --> 00:01:25.000
+Build the two-year comparison. Compare Fall 2020 and Fall 2021 on the same college rows.
+
+00:01:25.000 --> 00:01:35.000
+Connect the years on synchronized axes. Layer circles over a line and use entering class as the path.
+
+00:01:35.000 --> 00:01:49.000
+Assemble the dashboard. Position charts on a fixed-size canvas and add source notes.
+
+00:01:49.000 --> 00:01:58.000
+Add the College highlight action. Run the action on Select and match the College field.
+
+00:01:58.000 --> 00:02:06.000
+Publish the workbook to Personal Space. Save the completed report in campus Tableau.
+
+00:02:06.000 --> 00:02:24.000
+Verify the saved interactive report. One college highlights across four charts; campus totals remain intact.
+
