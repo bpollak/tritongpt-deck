@@ -194,7 +194,6 @@ export const slideManagerState = {
     "techcom-thank-you",
     "chancellor-title",
     "chancellor-the-question",
-    "chancellor-why-now",
     "chancellor-what-we-built",
     "chancellor-harness-report",
     "chancellor-tableau-mechanics",
@@ -1063,9 +1062,6 @@ export const slideManagerState = {
       "chancellor"
     ],
     "chancellor-the-question": [
-      "chancellor"
-    ],
-    "chancellor-why-now": [
       "chancellor"
     ],
     "chancellor-what-we-built": [

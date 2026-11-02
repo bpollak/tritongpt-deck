@@ -12096,39 +12096,6 @@ export const slides = [
     "managerSection": "Chancellor"
   },
   {
-    "id": 5103,
-    "slug": "chancellor-why-now",
-    "type": "content",
-    "layout": "cabinet-outline",
-    "title": "Why it matters now",
-    "subtitle": "FY28: the capacity has to come from how the work is done.",
-    "content": [
-      {
-        "heading": "A structural gap of about 2.7% a year",
-        "text": "Salaries and benefits rise about 6% a year against 2 to 3% core revenue growth. Over three years the gap compounds to 7 to 8%."
-      },
-      {
-        "heading": "Allocations arrive net, up front",
-        "text": "Units receive the net 2.4% allocation and solve the gap themselves."
-      },
-      {
-        "heading": "Core-funded attrition is not backfilled",
-        "text": "When an analyst position opens, the requests keep coming. The question is which parts of the work AI can carry."
-      }
-    ],
-    "section": {
-      "part": 1,
-      "total": 3,
-      "label": "The question"
-    },
-    "durationSeconds": 45,
-    "speakerNotes": "Forty-five seconds. These are the FY28 planning assumptions from the VCFA budget outlook: core revenue up 2 to 3%, expenses up about 5.1%, so about 2.7% a year, 7 to 8% over three years; net 2.4% allocations up front. The point is not headcount cuts; it is that the same requests have to be met with fewer hands, so vertical automation of analyst work matters more than personal productivity.",
-    "audiences": [
-      "chancellor"
-    ],
-    "managerSection": "Chancellor"
-  },
-  {
     "id": 5104,
     "slug": "chancellor-what-we-built",
     "type": "content",
