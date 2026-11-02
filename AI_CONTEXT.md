@@ -98,3 +98,7 @@ This repo is under `~/Documents` (iCloud Drive). Evicted "dataless" files hang a
 - `npm run sync:smt-context` generates `public/smt-job-guide.html`; predev and prebuild run it before slide sync. The guide links back to the presentation and `/smt-ai-daily-work.pdf`.
 - `scripts/export-smt-work.mjs` builds a standalone offline HTML deck with embedded screenshots and notes. This optional export writes under `outputs/smt-work/` and is separate from deployment.
 - Job explanations are presentation-safe summaries, not raw job configurations or private outputs. Illustrative examples must remain labeled as illustrations.
+
+## Harness release inventory
+
+- The Tech Community `techcom-governance` permalink now renders `harness-release-catalog`. `src/data/harnessReleaseCatalog.js` owns the versioned plugin, skill, and grouped feature inventory, with per-item sources and channel availability. `HarnessReleaseCatalog.jsx` and its scoped CSS provide keyboard-accessible Features, Plugins, and Skills tabs, with text and color release labels. Commons skills are optional and update independently of the app. Preserve the release tags and comparison date when refreshing the inventory.

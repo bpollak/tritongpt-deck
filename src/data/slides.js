@@ -1,4 +1,5 @@
 import { gatewayUsageDashboard } from './gatewayUsage.js';
+import { harnessReleaseCatalog } from './harnessReleaseCatalog.js';
 
 export const slides = [
   {
@@ -11762,23 +11763,11 @@ export const slides = [
     "id": 5032,
     "slug": "techcom-governance",
     "type": "content",
-    "layout": "cabinet-outline",
-    "title": "Control what the Harness can do",
-    "subtitle": "Limits the person sets, and limits the campus sets.",
-    "content": [
-      {
-        "heading": "You choose how much it does alone",
-        "text": "Supervised mode asks before it runs a command or changes a file. Auto or Full access is for trusted work."
-      },
-      {
-        "heading": "Connected tools are scoped",
-        "text": "Plugins use your own account permissions. Microsoft 365 reads by default; drafts and calendar edits are opt-in, and it cannot send email or delete mail or events."
-      },
-      {
-        "heading": "Data rules still apply",
-        "text": "P1 to P3 data in approved setups, never P4. An accountable owner validates results before a workflow expands."
-      }
-    ],
+    "layout": "harness-release-catalog",
+    "title": "What’s in the TritonAI Harness",
+    "subtitle": "See what’s in Stable and what’s being tested in Nightly.",
+    "content": [],
+    "releaseCatalog": harnessReleaseCatalog,
     "audiences": [
       "tech-community"
     ],
@@ -11788,9 +11777,9 @@ export const slides = [
       "total": 4,
       "label": "The Harness"
     },
-    "durationSeconds": 45,
-    "speakerNotes": "45 seconds. Right after showing what it can do, show the limits. Supervised behavior and the Microsoft 365 abilities come from the training and its plugin catalog (https://tritonai.ucsd.edu/training/harness/, checked October 9, 2026): Read mail and calendars start on; drafts, mail organizing, calendar create/edit, Teams chat read and send are opt-in; the plugin never sends email, deletes mail or events, or responds to invitations. Account permissions still apply on top of plugin abilities, and the thread's access mode decides whether it asks first. P1–P3 only in approved services/setups, model routes and use cases; P4 prohibited under current product guidance. Selected context is sent to the selected model; campus-managed inference keeps processing on campus for those routes, but commercial routes are distinct. TSS downstream behavior is one concrete validation gate. Do not invent an institutional certification.",
-    "managerSummary": "Tech Community copy of cabinet-governance"
+    "durationSeconds": 60,
+    "speakerNotes": "About one minute. Start with the release labels: Stable means it is available in both releases; Nightly means it is being tested; Stable only means it is not in this Nightly bundle. Use the three tabs to show features, plugins, and skills. The comparison is Stable 0.4.1 and the October 30 Nightly build, verified November 1. Stable already includes project overviews, Ideas, recorded skills, Help, memory sync, helper agents, scheduled tasks, and webhooks. Nightly adds the guided tour, guest thread links, separate plugin Prod/Dev connections, new-feature suggestions in Ideas, an updated project overview, and the optional fx engine. Tableau is Nightly only. UCSD Assistant is in Stable but absent from the current Nightly plugin bundle. Skills include the plugin-provided skills and the optional public Commons library; personal skills vary by user. Nightly availability is a testing status, not a commitment to a Stable release date. Account permissions, data handling rules, and human review still apply.",
+    "managerSummary": "Release inventory: plugins, skills, and features with Stable/Nightly availability"
   },
   {
     "id": 5033,

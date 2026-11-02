@@ -12,6 +12,7 @@ import CabinetSovereignGateway from './CabinetSovereignGateway';
 import EmbeddedVideo from './EmbeddedVideo';
 import CabinetDemoIntro from './CabinetDemoIntro';
 import CabinetHarnessAround from './CabinetHarnessAround';
+import HarnessReleaseCatalog from './HarnessReleaseCatalog';
 import { Target, Database, Cpu, Blocks, GraduationCap, Building2, FileText, FileCheck, DollarSign, Shield, ShieldCheck, BookOpen, Code, Presentation, Globe, FileEdit, FolderOpen, TrendingUp, TrendingDown, ClipboardCheck, Search, Heart, Calendar, GitBranch, Network, Grid3x3, ArrowDown, ArrowRight, Brain, RefreshCw, ArrowRightLeft, CheckCircle, Monitor, User, Users, Award, Server, Layers, Wallet, Share2, Star, FlaskConical, Lightbulb, Landmark, Scale, Headphones, Hammer, Zap, Rocket, BarChart3, AlertTriangle, Handshake } from 'lucide-react';
 import { QRCodeSVG } from 'qrcode.react';
 
@@ -328,6 +329,10 @@ const Slide = ({ slide, staticPreview = false }) => {
 
   if (slide.layout === 'cabinet-harness-around') {
     return <CabinetHarnessAround slide={slide} />;
+  }
+
+  if (slide.layout === 'harness-release-catalog') {
+    return <HarnessReleaseCatalog slide={slide} />;
   }
 
   if (slide.layout === 'cabinet-website-visual') {

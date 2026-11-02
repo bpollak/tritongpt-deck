@@ -20,6 +20,8 @@ const rendererFiles = [
   'src/components/CabinetWorkflowComparison.css',
   'src/components/CabinetHarnessOverview.jsx',
   'src/components/CabinetHarnessOverview.css',
+  'src/components/HarnessReleaseCatalog.jsx',
+  'src/components/HarnessReleaseCatalog.css',
   'src/data/cabinetWebsiteVisuals.js',
   'src/components/HarnessDefinitionVariants.jsx',
   'src/components/EmbeddedVideo.jsx',

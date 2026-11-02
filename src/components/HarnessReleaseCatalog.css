@@ -1,0 +1,51 @@
+.hrc-canvas{background:linear-gradient(135deg,#182b49,#0b3d5f);}
+.hrc-slide{box-sizing:border-box;width:100%;height:100%;display:flex;flex-direction:column;gap:9px;padding:26px 46px 77px;background:linear-gradient(135deg,#182b49,#0b3d5f);color:#f5f0e6;font-family:Roboto,Arial,sans-serif;}
+.hrc-header h1{margin:0;font-family:Teko,Roboto,Arial,sans-serif;font-size:48px;font-weight:600;line-height:1.05;}
+.hrc-header p{margin:5px 0 0;font-size:20px;line-height:1.35;}
+.hrc-legend{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;color:#d8e3ed;}
+.hrc-legend>span{display:inline-flex;align-items:center;gap:7px;}
+.hrc-badge{display:inline-flex;flex-shrink:0;align-items:center;justify-content:center;min-width:47px;padding:2px 6px;border:1px solid;border-radius:5px;font-size:10px;font-weight:700;line-height:1.2;white-space:nowrap;}
+.hrc-badge--both{color:#b8f5d4;background:#173f37;border-color:#5bba8d;}
+.hrc-badge--nightly{color:#ffe276;background:#4c4021;border-color:#d6ac32;}
+.hrc-badge--stable{color:#c5e8ff;background:#183b59;border-color:#6caad4;}
+.hrc-tabs{display:flex;align-items:center;gap:8px;border-bottom:1px solid #61798e;padding-bottom:8px;}
+.hrc-tabs button{display:inline-flex;align-items:center;gap:9px;min-height:36px;padding:5px 14px;border:1px solid #6b8195;border-radius:7px;background:#1b3451;color:#e7eef5;font-size:17px;font-weight:700;cursor:pointer;}
+.hrc-tabs button[aria-selected=true]{background:#ffcd00;border-color:#ffcd00;color:#182b49;}
+.hrc-tabs button span{color:inherit;font-size:13px;font-weight:500;}
+.hrc-version{margin-left:auto;color:#c6d6e4;font-size:13px;}
+.hrc-panel{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-color:#8da6ba #17314d;padding:2px 7px 3px 0;}
+.hrc-panel:focus-visible,.hrc-tabs button:focus-visible,.hrc-footer a:focus-visible{outline:3px solid #fff;outline-offset:3px;}
+.hrc-feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;align-items:start;}
+.hrc-feature-group,.hrc-skill-group{border:1px solid #536f86;border-radius:9px;padding:8px 11px;background:#ffffff06;}
+.hrc-feature-group h2,.hrc-skill-group h2{margin:0 0 5px;color:#80e0ec;font-size:17px;font-weight:700;line-height:1.2;}
+.hrc-slide ul{list-style:none;margin:0;padding:0;}
+.hrc-slide li{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:21px;font-size:15px;line-height:1.25;}
+.hrc-slide li>span:first-child{min-width:0;}
+.hrc-feature-group li+li{border-top:1px solid #ffffff0a;}
+.hrc-skill-groups{display:flex;flex-direction:column;gap:10px;}
+.hrc-skill-group h2 small{margin-left:9px;color:#c6d6e4;font-family:Roboto,Arial,sans-serif;font-size:12px;font-weight:400;}
+.hrc-skill-group ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px 24px;}
+.hrc-skill-group li{min-height:26px;}
+.hrc-plugin-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;}
+.hrc-plugin{padding:12px;border:1px solid #59788e;border-radius:10px;background:#ffffff08;}
+.hrc-plugin>div{display:flex;align-items:center;justify-content:space-between;gap:8px;}
+.hrc-plugin h2{margin:0;color:#fff;font-size:21px;line-height:1.15;}
+.hrc-plugin p{margin:8px 0;color:#d2e0eb;font-size:15px;line-height:1.25;}
+.hrc-plugin small{color:#9fc0d7;font-size:13px;}
+.hrc-footer{display:flex;justify-content:space-between;gap:12px;color:#b6cadc;font-size:11px;line-height:1.4;}
+.hrc-footer a{color:#b9e8ff;text-decoration:underline;text-underline-offset:2px;}
+.hrc-canvas[data-reading] .hrc-slide{height:auto;min-height:100%;padding:26px 20px 28px;gap:16px;}
+.hrc-canvas[data-reading] .hrc-header h1{font-size:36px;}
+.hrc-canvas[data-reading] .hrc-header p{font-size:18px;line-height:1.4;}
+.hrc-canvas[data-reading] .hrc-legend{flex-direction:column;gap:9px;font-size:13px;}
+.hrc-canvas[data-reading] .hrc-tabs{flex-wrap:wrap;gap:8px;}
+.hrc-canvas[data-reading] .hrc-tabs button{min-height:44px;padding:7px 12px;font-size:16px;}
+.hrc-canvas[data-reading] .hrc-version{flex-basis:100%;margin:2px 0 0;font-size:12px;}
+.hrc-canvas[data-reading] .hrc-panel{flex:none;overflow:visible;padding:0;}
+.hrc-canvas[data-reading] .hrc-feature-grid,.hrc-canvas[data-reading] .hrc-plugin-grid,.hrc-canvas[data-reading] .hrc-skill-group ul{grid-template-columns:minmax(0,1fr);}
+.hrc-canvas[data-reading] .hrc-feature-group,.hrc-canvas[data-reading] .hrc-skill-group{padding:14px 12px;}
+.hrc-canvas[data-reading] .hrc-feature-group h2,.hrc-canvas[data-reading] .hrc-skill-group h2{font-size:20px;margin-bottom:8px;}
+.hrc-canvas[data-reading] .hrc-skill-group h2 small{display:block;margin:5px 0 0;font-size:13px;}
+.hrc-canvas[data-reading] .hrc-slide li{min-height:38px;font-size:16px;gap:12px;}
+.hrc-canvas[data-reading] .hrc-badge{font-size:11px;}
+.hrc-canvas[data-reading] .hrc-footer{flex-direction:column;font-size:12px;}
