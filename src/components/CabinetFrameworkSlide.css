@@ -278,6 +278,7 @@
 
 /* Three-column overview (Harness capabilities): one short line per item */
 .cabinet-columns__grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:44px; }
+.cabinet-columns__grid--2 { grid-template-columns:repeat(2,minmax(0,1fr)); gap:64px; }
 .cabinet-columns__col { padding-top:16px; border-top:4px solid #00c6d7; }
 .cabinet-columns__col:nth-child(2) { border-top-color:#ffcd00; }
 .cabinet-columns__col:nth-child(3) { border-top-color:#8fa9c0; }

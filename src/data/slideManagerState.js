@@ -191,7 +191,18 @@ export const slideManagerState = {
     "techcom-spa2",
     "techcom-hosting",
     "techcom-learn-and-connect",
-    "techcom-thank-you"
+    "techcom-thank-you",
+    "chancellor-title",
+    "chancellor-the-question",
+    "chancellor-why-now",
+    "chancellor-what-we-built",
+    "chancellor-insights-how",
+    "chancellor-insights-live",
+    "chancellor-harness-report",
+    "chancellor-checked",
+    "chancellor-analyst-work",
+    "chancellor-decision",
+    "chancellor-thank-you"
   ],
   "removed": [
     "techcom-mobile-demo",
@@ -1046,6 +1057,39 @@ export const slideManagerState = {
     ],
     "techcom-class-planner-utilization": [
       "tech-community"
+    ],
+    "chancellor-title": [
+      "chancellor"
+    ],
+    "chancellor-the-question": [
+      "chancellor"
+    ],
+    "chancellor-why-now": [
+      "chancellor"
+    ],
+    "chancellor-what-we-built": [
+      "chancellor"
+    ],
+    "chancellor-insights-how": [
+      "chancellor"
+    ],
+    "chancellor-insights-live": [
+      "chancellor"
+    ],
+    "chancellor-harness-report": [
+      "chancellor"
+    ],
+    "chancellor-checked": [
+      "chancellor"
+    ],
+    "chancellor-analyst-work": [
+      "chancellor"
+    ],
+    "chancellor-decision": [
+      "chancellor"
+    ],
+    "chancellor-thank-you": [
+      "chancellor"
     ]
   }
 };

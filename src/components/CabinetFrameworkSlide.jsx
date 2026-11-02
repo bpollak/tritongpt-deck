@@ -77,7 +77,7 @@ export default function CabinetFrameworkSlide({ slide, staticPreview = false }) 
       ) : slide.columns ? (
         <div className="cabinet-columns">
           <p className="cabinet-framework-takeaway">{slide.subtitle}</p>
-          <div className="cabinet-columns__grid">
+          <div className={`cabinet-columns__grid${slide.columns.length === 2 ? ' cabinet-columns__grid--2' : ''}`}>
             {slide.columns.map((column) => (
               <section className="cabinet-columns__col" key={column.label}>
                 <p className="cabinet-columns__label">{column.label}</p>

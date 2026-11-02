@@ -12030,6 +12030,507 @@ export const slides = [
     },
     "durationSeconds": 30,
     "speakerNotes": "Thirty seconds. The same utilization chart used in the PK view: daily usage July 18–September 20, 2026. Explain that it demonstrates demand for the student service during enrollment passes. The two series use different measures: distinct authenticated TritonGPT accounts per day and estimated standalone visitors from Plausible. Peaks are 3.96k and 8.43k respectively; do not add them or call either a campus-wide count of unique students. This is a historical period, not October usage. Keep the original square-root-axis disclosure and source note. Transition: agents can build much bigger systems too; next, an HR system rebuilt in months."
+  },
+  // chancellor view (generated)
+  {
+    "id": 5101,
+    "slug": "chancellor-title",
+    "type": "title",
+    "layout": "title-hero",
+    "content": [],
+    "title": "AI for Analyst Work",
+    "subtitle": "Following up on October 12: answers, reports, and how we check them",
+    "conference": "Office of the Chancellor · Tuesday, November 3, 2026",
+    "arc": [
+      {
+        "label": "Answer the question",
+        "note": "TritonAI Insights"
+      },
+      {
+        "label": "Build the report",
+        "note": "TritonAI Harness"
+      },
+      {
+        "label": "Check the work",
+        "note": "Before anything is shown"
+      }
+    ],
+    "durationSeconds": 15,
+    "speakerNotes": "Fifteen seconds. On October 12 the cabinet saw the TritonAI roadmap. Today is the follow-up: can AI take on the work analysts do? Two showcases, then what is checked, what it means for analyst work, and the decision in front of us.",
+    "audiences": [
+      "chancellor"
+    ],
+    "managerSection": "Chancellor"
+  },
+  {
+    "id": 5102,
+    "slug": "chancellor-the-question",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "Can AI take on analyst work?",
+    "subtitle": "Answers when you need an answer; a report when you need a report.",
+    "content": [
+      {
+        "heading": "Answering the question",
+        "text": "A leader asks about the campus. Today an analyst finds the data, runs it and writes it up. TritonAI Insights answers directly, from governed campus data, with the work shown."
+      },
+      {
+        "heading": "Building the report",
+        "text": "When a standing report is the right tool, the TritonAI Harness builds it in Tableau the way an analyst would, starting from the campus data definitions."
+      },
+      {
+        "heading": "Checking the work",
+        "text": "Both check their figures against the official source before anything is shown."
+      }
+    ],
+    "section": {
+      "part": 1,
+      "total": 3,
+      "label": "The question"
+    },
+    "durationSeconds": 60,
+    "speakerNotes": "One minute. Frame the follow-up from October 12: there are two kinds of analyst work. Most requests are a question that needs an answer, often the same question asked again; some need a report that people come back to. Insights handles the first, the Harness the second, and both are judged by the same test: does the number match the official source?",
+    "audiences": [
+      "chancellor"
+    ],
+    "managerSection": "Chancellor"
+  },
+  {
+    "id": 5103,
+    "slug": "chancellor-why-now",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "Why it matters now",
+    "subtitle": "FY28: the capacity has to come from how the work is done.",
+    "content": [
+      {
+        "heading": "A structural gap of about 2.7% a year",
+        "text": "Salaries and benefits rise about 6% a year against 2 to 3% core revenue growth. Over three years the gap compounds to 7 to 8%."
+      },
+      {
+        "heading": "Allocations arrive net, up front",
+        "text": "Units receive the net 2.4% allocation and solve the gap themselves."
+      },
+      {
+        "heading": "Core-funded attrition is not backfilled",
+        "text": "When an analyst position opens, the requests keep coming. The question is which parts of the work AI can carry."
+      }
+    ],
+    "section": {
+      "part": 1,
+      "total": 3,
+      "label": "The question"
+    },
+    "durationSeconds": 45,
+    "speakerNotes": "Forty-five seconds. These are the FY28 planning assumptions from the VCFA budget outlook: core revenue up 2 to 3%, expenses up about 5.1%, so about 2.7% a year, 7 to 8% over three years; net 2.4% allocations up front. The point is not headcount cuts; it is that the same requests have to be met with fewer hands, so vertical automation of analyst work matters more than personal productivity.",
+    "audiences": [
+      "chancellor"
+    ],
+    "managerSection": "Chancellor"
+  },
+  {
+    "id": 5104,
+    "slug": "chancellor-what-we-built",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "What we built in three weeks",
+    "subtitle": "Two tools for the two kinds of analyst work, on the campus's own data and AI.",
+    "content": [],
+    "columns": [
+      {
+        "label": "TritonAI Insights · answers",
+        "items": [
+          {
+            "heading": "Plain-English questions",
+            "text": "Research, Finance, Workforce, Students, Rankings, and questions across them."
+          },
+          {
+            "heading": "From governed campus data",
+            "text": "Built from the reports the campus already runs in Tableau and Cognos."
+          },
+          {
+            "heading": "Checked answers",
+            "text": "150+ answers checked against their source reports and marked Ready."
+          }
+        ]
+      },
+      {
+        "label": "TritonAI Harness · reports",
+        "items": [
+          {
+            "heading": "An AI workspace on every desk",
+            "text": "The campus AI workspace already in use by 400+ people."
+          },
+          {
+            "heading": "Knows the campus data",
+            "text": "Works from the governed data sources and their definitions."
+          },
+          {
+            "heading": "Builds the report in Tableau",
+            "text": "Drives Tableau on screen to build the workbook an analyst would build by hand."
+          }
+        ]
+      }
+    ],
+    "section": {
+      "part": 2,
+      "total": 3,
+      "label": "What we built"
+    },
+    "durationSeconds": 60,
+    "speakerNotes": "One minute. Insights started October 15 as a research indirect-cost explorer and grew domain by domain from existing Tableau and Cognos reports; the Ready count was 152 at the October 21 full regression. The Harness figure is the 400+ users quoted on October 10. Next: how an Insights answer is checked, then the live demonstration.",
+    "audiences": [
+      "chancellor"
+    ],
+    "managerSection": "Chancellor"
+  },
+  {
+    "id": 5105,
+    "slug": "chancellor-insights-how",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "TritonAI Insights: how an answer earns \"Ready\"",
+    "subtitle": "The answer comes with its homework.",
+    "content": [
+      {
+        "heading": "Checked against the source report",
+        "text": "A Ready answer has been checked against the report it comes from before anyone sees it. The full set is re-run before each release."
+      },
+      {
+        "heading": "Every figure must come from its own query",
+        "text": "A number that does not appear in the answer's query results cannot be shown as Ready."
+      },
+      {
+        "heading": "Data, definitions and date on every answer",
+        "text": "Each answer names what it counted and shows the query it ran."
+      },
+      {
+        "heading": "Honest about limits",
+        "text": "Questions outside the checked set run live and are labelled Exploratory. An ambiguous question gets a clarifying question, not a guess."
+      },
+      {
+        "heading": "Runs on campus",
+        "text": "The AI model runs on TritonAI on campus; no campus data goes to an outside AI company."
+      }
+    ],
+    "compact": true,
+    "section": {
+      "part": 2,
+      "total": 3,
+      "label": "What we built"
+    },
+    "durationSeconds": 60,
+    "speakerNotes": "One minute. The key line: it got an answer wrong once, a check caught it, and it could not be shown as Ready (October 18 review: a wrong campus total in the prose was blocked by the rule that every figure must appear in its own query results). If asked \"is this the official number?\": it is the figure from the named source report, checked against that report; where two systems count differently, the answer says which it used.",
+    "audiences": [
+      "chancellor"
+    ],
+    "managerSection": "Chancellor"
+  },
+  {
+    "id": 5106,
+    "slug": "chancellor-insights-live",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "Live: TritonAI Insights",
+    "subtitle": "Five questions leaders ask, each answered instantly and checked.",
+    "content": [],
+    "impactTable": {
+      "headers": [
+        "Question",
+        "Status",
+        "Checked answer"
+      ],
+      "rows": [
+        {
+          "name": "Indirect cost recovery, FY 2025-26",
+          "what": "Research",
+          "status": "Ready",
+          "tone": "live",
+          "impact": "$343.00M, down 11.8%",
+          "basis": "from $388.69M in FY 2024-25"
+        },
+        {
+          "name": "Recovery by school",
+          "what": "Research",
+          "status": "Ready",
+          "tone": "live",
+          "impact": "School of Medicine $192.94M",
+          "basis": "56.3% of the campus total"
+        },
+        {
+          "name": "A 15% cap on HHS indirect rates",
+          "what": "Research · scenario",
+          "status": "Ready",
+          "tone": "live",
+          "impact": "$127.18M less recovered",
+          "basis": "on FY 2025-26 HHS spending; a scenario"
+        },
+        {
+          "name": "Four-year graduation rate",
+          "what": "Students",
+          "status": "Ready",
+          "tone": "live",
+          "impact": "78.0%",
+          "basis": "Fall 2021 entering class, up 16.6 points from Fall 2012"
+        },
+        {
+          "name": "U.S. News rank, 2027 edition",
+          "what": "Rankings",
+          "status": "Ready",
+          "tone": "live",
+          "impact": "29th (tie)",
+          "basis": "6th among public universities"
+        }
+      ]
+    },
+    "actionLink": {
+      "label": "Open TritonAI Insights",
+      "href": "https://idc-explorer.vercel.app"
+    },
+    "compact": true,
+    "section": {
+      "part": 2,
+      "total": 3,
+      "label": "What we built"
+    },
+    "durationSeconds": 240,
+    "speakerNotes": "About four minutes. Click Open TritonAI Insights (signed in beforehand) and ask in this order, clicking the vetted question where there is one; a shorter wording runs live and can misread \"last year\". 1) Home: \"How much indirect cost recovery (IDC) did the campus bring in during FY 2025-26, and how does that compare with the previous four years?\" Open \"How this was answered\". 2) How we answer: \"How much IDC did each school generate in FY 2025-26?\" (Scripps $40.25M, 11.7%; Jacobs $37.29M, 10.9% follow). 3) Research: \"If federal indirect cost rates on HHS-funded work were capped at 15% of the IDC-eligible direct base, how much IDC would FY 2025-26 HHS spending have carried, by vice chancellor area?\" ($64.06M left of $191.24M; Health Sciences carries $100.50M of the reduction; HHS is broader than NIH). 4) Students: \"What is UC San Diego's four-year graduation rate for first-year and transfer students, and how has it changed?\" (transfers 86.9%). 5) Rankings: \"Where did UC San Diego rank in U.S. News Best National Universities in the 2027 edition?\", then \"What would move UC San Diego up...?\" (six-year graduation rate is the heaviest input, 21%). Optional: type \"How much did Scripps bring in?\" to show it asks which measure. Ask the room not to fire many live questions at once. If the network fails, this table is the fallback: every figure on it is the first line of a Ready answer. Do not show pay by named person on the shared screen.",
+    "audiences": [
+      "chancellor"
+    ],
+    "managerSection": "Chancellor"
+  },
+  {
+    "id": 5107,
+    "slug": "chancellor-harness-report",
+    "type": "video",
+    "layout": "cabinet-demo",
+    "videoSrc": "/media/chancellor/chancellor-harness-report.mp4",
+    "poster": "/media/chancellor/chancellor-harness-report-poster.jpg",
+    "videoLoop": false,
+    "videoClearNav": false,
+    "videoAutoPlay": true,
+    "hideDemoBadge": true,
+    "demoOnly": true,
+    "title": "The Harness builds the report",
+    "subtitle": "One request: four-year graduation by college for the Fall 2021 entering class, built in Tableau from the campus's governed student data.",
+    "content": [
+      {
+        "heading": "Uses the governed source",
+        "text": "Opens SAH-RetentionCensus-View and builds the workbook as an analyst would."
+      },
+      {
+        "heading": "Writes the formulas",
+        "text": "Counts distinct students, four-year graduates and the rate, on screen in Tableau."
+      },
+      {
+        "heading": "Checks against IR",
+        "text": "The Fall 2021 cohort comes to 7,543 students, IR's published count."
+      },
+      {
+        "heading": "Aggregates only",
+        "text": "No student-level data on any chart; nothing downloaded."
+      }
+    ],
+    "recording": {
+      "label": "Governed source → formulas → Fall 2021 cohort check → college charts → dashboard → published",
+      "format": "One continuous screen recording, time-lapsed, with captions · 2 minutes 15 seconds · silent for presenter voice-over",
+      "mediaStem": "chancellor-harness-report",
+      "status": "captured and reviewed"
+    },
+    "intro": {
+      "kicker": "TritonAI Harness · an AI agent doing an analyst's job",
+      "title": "The Harness builds the report",
+      "setup": "One request: four-year graduation by college for the Fall 2021 entering class, built in Tableau from the governed student data source and published to campus Tableau.",
+      "watchFor": "The agent on the left driving Tableau on the right: the formulas it writes, the cohort check against IR (7,543), and the finished dashboard it publishes.",
+      "seconds": 7
+    },
+    "section": {
+      "part": 2,
+      "total": 3,
+      "label": "What we built"
+    },
+    "durationSeconds": 142,
+    "speakerNotes": "About two and a half minutes: a 7-second intro card, then the 2:15 video (silent; you narrate). Left pane: the TritonAI Harness agent's steps. Right pane: Tableau in Chrome, operated by the agent. Approximate timeline: 0:00 title; 0:05 opens the governed source (SAH-RetentionCensus-View) and starts a workbook; 0:17 writes the formulas (Cohort size = count of distinct students, four-year graduates, the rate); 0:47 filters to the Fall 2021 first-time first-year class: 7,543 students, IR's published count; 0:56 builds the college chart, labels and sorts it; 1:12 builds the entering-class chart; 1:27 assembles the dashboard with title and caption; 1:46 publishes to campus Tableau; then the finished dashboard. All footage is one real screen recording of the agent, time-lapsed up to 8x; nothing on screen was staged. People wrote the request and a few follow-up instructions; the AI did the work on screen, using TritonAI's AI model hosted on campus. Narration: this is the request an analyst gets; the agent knows the governed data and Tableau, writes the formulas, checks its cohort against IR, and publishes. If asked: (1) the college rates run about 1 to 2 points above IR's published figures (largest gap Muir, 74.9% vs 72.7%), most likely a definition difference in this source; the agent flags it and it goes to the data stewards. (2) The entering-class chart adds to 7,526; 17 students have no college recorded. (3) Real elapsed time was longer than the video, including retries; the video is sped up.",
+    "audiences": [
+      "chancellor"
+    ],
+    "managerSection": "Chancellor"
+  },
+  {
+    "id": 5108,
+    "slug": "chancellor-checked",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "What is checked, and what is not",
+    "subtitle": "We show only what has been checked, and we say what has not.",
+    "content": [],
+    "columns": [
+      {
+        "label": "Checked",
+        "items": [
+          {
+            "heading": "Every Ready answer",
+            "text": "Checked against its source report before it is marked Ready; re-run before each release."
+          },
+          {
+            "heading": "Today's questions",
+            "text": "In a November 1 test of 65 questions, all 19 scripted questions came back correct, in under a second."
+          },
+          {
+            "heading": "The Harness report",
+            "text": "The Fall 2021 cohort the agent built, 7,543 students, matches IR's published count."
+          }
+        ]
+      },
+      {
+        "label": "Not yet",
+        "items": [
+          {
+            "heading": "Live campus data",
+            "text": "Live SAP HANA answers on the campus sign-on version, such as FY 2026-27 position budgets, are not yet reconciled."
+          },
+          {
+            "heading": "Free-form follow-ups",
+            "text": "Questions outside the checked set run live and can misread a phrase like \"last year\"."
+          },
+          {
+            "heading": "Definitions that disagree",
+            "text": "The student source's four-year rates differ slightly from IR's published rates; a question for the data stewards."
+          },
+          {
+            "heading": "Governance for a wider audience",
+            "text": "Data steward sign-off; CISO data classification and retention."
+          }
+        ]
+      }
+    ],
+    "section": {
+      "part": 3,
+      "total": 3,
+      "label": "What it means"
+    },
+    "durationSeconds": 90,
+    "speakerNotes": "A minute and a half. The November 1 test asked both versions 65 questions. The current site answered all 19 scripted questions correctly in 0.2 seconds. The campus sign-on version, with live HANA data, answered 8 of 8 questions only HANA holds, but one headline workforce figure came back wrong (32,997.6 FTE against the checked 31,997.6), so it is not what we demonstrate yet. Plain-English follow-ups were right 11 of 12 times; the miss read \"last year\" as FY 2024-25. A fix for simultaneous questions went live on November 1. Not loaded yet: Advancement, Facilities space, and award obligations by month.",
+    "audiences": [
+      "chancellor"
+    ],
+    "managerSection": "Chancellor"
+  },
+  {
+    "id": 5109,
+    "slug": "chancellor-analyst-work",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "What it means for analyst work",
+    "subtitle": "Analysts move from pulling and building to defining and checking. The pilot will measure the time saved; we are not claiming it yet.",
+    "content": [],
+    "impactTable": {
+      "headers": [
+        "Part of the work",
+        "Who does it",
+        "What changes"
+      ],
+      "rows": [
+        {
+          "name": "Answer the recurring question",
+          "status": "AI answers",
+          "tone": "live",
+          "impact": "Instant, checked answers",
+          "basis": "Insights: the questions leaders ask again and again"
+        },
+        {
+          "name": "Find the right data",
+          "status": "AI drafts",
+          "tone": "live",
+          "impact": "Starts from the governed sources",
+          "basis": "and their campus definitions"
+        },
+        {
+          "name": "Build the report",
+          "status": "AI drafts",
+          "tone": "live",
+          "impact": "A Tableau workbook from one request",
+          "basis": "Harness, on screen, in the analyst's account"
+        },
+        {
+          "name": "Define, check and sign off",
+          "status": "Analyst owns",
+          "tone": "progress",
+          "impact": "Where analyst time goes",
+          "basis": "definitions, review, and the new questions"
+        }
+      ]
+    },
+    "section": {
+      "part": 3,
+      "total": 3,
+      "label": "What it means"
+    },
+    "durationSeconds": 90,
+    "speakerNotes": "A minute and a half. The point for FY28: with core-funded attrition not backfilled, the recurring requests should not wait in a queue. AI takes the first draft of the pull, the build and the recurring answer; analysts keep ownership of definitions and sign-off, which is also what makes the AI's answers trustworthy. No savings figure on purpose: the pilot measures turnaround from question to answer and analyst hours per request. Cognos is the next tool to test the same way.",
+    "audiences": [
+      "chancellor"
+    ],
+    "managerSection": "Chancellor"
+  },
+  {
+    "id": 5110,
+    "slug": "chancellor-decision",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "The decision in front of us",
+    "subtitle": "Three steps that move this from demonstration to daily use.",
+    "content": [
+      {
+        "heading": "A 30-day pilot with one analyst office",
+        "text": "Its recurring requests go through Insights and the Harness first; its analysts check and sign off. We measure turnaround and analyst hours per request."
+      },
+      {
+        "heading": "Live campus data once it passes the same checks",
+        "text": "Move Insights to campus sign-on with live SAP HANA data when those answers match their source reports, as today's Ready answers do."
+      },
+      {
+        "heading": "Governance before a wider audience",
+        "text": "Data steward sign-off, and CISO data classification and retention, before anyone beyond the cabinet uses it."
+      }
+    ],
+    "section": {
+      "part": 3,
+      "total": 3,
+      "label": "What it means"
+    },
+    "durationSeconds": 90,
+    "speakerNotes": "A minute and a half. Ask for a decision on the pilot office and the start date. Be ready to name who owns the checks: the analyst office for definitions, ITS for the tools and the regression runs.",
+    "audiences": [
+      "chancellor"
+    ],
+    "managerSection": "Chancellor"
+  },
+  {
+    "id": 5111,
+    "slug": "chancellor-thank-you",
+    "type": "title",
+    "layout": "title-hero",
+    "content": [],
+    "title": "Thank You",
+    "subtitle": "Questions?",
+    "presenters": [
+      {
+        "name": "Brett Pollak",
+        "title": "Executive Director, IT Services",
+        "image": "/media/headshot.jpg",
+        "imageScale": 1.6,
+        "imagePosition": "center 15%"
+      }
+    ],
+    "linkUrl": "https://tritonai.ucsd.edu",
+    "linkLabel": "tritonai.ucsd.edu",
+    "durationSeconds": 10,
+    "speakerNotes": "Questions. Likely ones: Is this the official number? Where does the AI run? Can it be wrong? Who can see pay by name (signed-in cabinet users only; not on the shared screen)? How fresh is it (each answer shows its data date)?",
+    "audiences": [
+      "chancellor"
+    ],
+    "managerSection": "Chancellor"
   }
-
 ];
