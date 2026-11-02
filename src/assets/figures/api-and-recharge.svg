@@ -17,20 +17,23 @@
     <rect x="62" y="330" width="216" height="62" rx="10" fill="#ffffff" fill-opacity=".07"/><text x="80" y="368">Faculty teams</text>
   </g>
 
-  <!-- column B: clients -->
+  <!-- apps using the gateway -->
   <rect x="330" y="20" width="300" height="400" rx="16" fill="#ffffff" fill-opacity=".05" stroke="#FFCD00" stroke-width="2"/>
-  <text x="352" y="54" fill="#00C6D7" font-size="15" letter-spacing="1.5">CONNECT A CLIENT OR APP</text>
-  <text x="352" y="92" fill="#FFCD00" font-family="Teko, sans-serif" font-size="38">API CLIENTS</text>
-  <rect x="352" y="114" width="256" height="76" rx="10" fill="#FFCD00" fill-opacity=".16" stroke="#FFCD00"/>
-  <text x="372" y="146" fill="#ffffff" font-size="21" font-weight="700">TritonAI Harness</text>
-  <text x="372" y="174" fill="#c4d2df" font-size="17">Primary supported client</text>
-  <rect x="352" y="200" width="256" height="76" rx="10" fill="#ffffff" fill-opacity=".07"/>
-  <text x="372" y="232" fill="#ffffff" font-size="21" font-weight="700">Claude Code, Codex</text>
-  <text x="372" y="260" fill="#c4d2df" font-size="17">Supported alternatives</text>
-  <rect x="352" y="286" width="256" height="76" rx="10" fill="#ffffff" fill-opacity=".07"/>
-  <text x="372" y="318" fill="#ffffff" font-size="21" font-weight="700">Hermes, OpenCode</text>
-  <text x="372" y="346" fill="#c4d2df" font-size="17">and other compatible clients</text>
-  <text x="352" y="398" fill="#c4d2df" font-size="15">Plus n8n workflows and your own code</text>
+  <text x="352" y="54" fill="#00C6D7" font-size="15" letter-spacing="1.5">USE THE GATEWAY THROUGH</text>
+  <text x="352" y="92" fill="#FFCD00" font-family="Teko, sans-serif" font-size="38">APPS AND TOOLS</text>
+  <rect x="352" y="114" width="256" height="62" rx="10" fill="#ffffff" fill-opacity=".07"/>
+  <text x="372" y="141" fill="#ffffff" font-size="21" font-weight="700">TritonGPT</text>
+  <text x="372" y="164" fill="#c4d2df" font-size="17">and partner instances</text>
+  <rect x="352" y="182" width="256" height="62" rx="10" fill="#FFCD00" fill-opacity=".16" stroke="#FFCD00"/>
+  <text x="372" y="209" fill="#ffffff" font-size="21" font-weight="700">TritonAI Harness</text>
+  <text x="372" y="232" fill="#c4d2df" font-size="17">Primary supported client</text>
+  <rect x="352" y="250" width="256" height="62" rx="10" fill="#ffffff" fill-opacity=".07"/>
+  <text x="372" y="277" fill="#ffffff" font-size="21" font-weight="700">Claude Code, Codex</text>
+  <text x="372" y="300" fill="#c4d2df" font-size="17">Supported alternatives</text>
+  <rect x="352" y="318" width="256" height="62" rx="10" fill="#ffffff" fill-opacity=".07"/>
+  <text x="372" y="345" fill="#ffffff" font-size="21" font-weight="700">Hermes, OpenCode</text>
+  <text x="372" y="368" fill="#c4d2df" font-size="17">and other compatible tools</text>
+  <text x="352" y="402" fill="#c4d2df" font-size="15">Plus n8n workflows and your own code</text>
 
   <!-- arrow to gateway -->
   <path d="M 640 220 L 676 220" stroke="#00C6D7" stroke-width="4"/>
@@ -39,10 +42,10 @@
   <!-- gateway core -->
   <circle cx="820" cy="220" r="176" fill="none" stroke="#9fb3c8" stroke-opacity=".25"/>
   <circle cx="820" cy="220" r="150" fill="url(#ar-core)" stroke="#FFCD00" stroke-width="5"/>
-  <text x="820" y="160" fill="#00C6D7" font-size="15" letter-spacing="1.5" text-anchor="middle">SHARED API ENDPOINT</text>
+  <text x="820" y="160" fill="#00C6D7" font-size="15" letter-spacing="1.5" text-anchor="middle">ONE CAMPUS CONNECTION</text>
   <text x="820" y="216" fill="#ffffff" font-family="Teko, sans-serif" font-size="54" text-anchor="middle">TritonAI LLM</text>
   <text x="820" y="264" fill="#ffffff" font-family="Teko, sans-serif" font-size="54" text-anchor="middle">Gateway</text>
-  <text x="820" y="300" fill="#FFCD00" font-size="18" text-anchor="middle">One key per approval</text>
+  <text x="820" y="300" fill="#FFCD00" font-size="17" text-anchor="middle">Your key controls model access</text>
 
   <!-- access arrow -->
   <path d="M 980 220 L 1026 220" stroke="#00C6D7" stroke-width="4"/>
@@ -52,7 +55,7 @@
 
   <!-- column D: models by route -->
   <rect x="1060" y="20" width="500" height="400" rx="16" fill="#ffffff" fill-opacity=".05" stroke="#6f9363" stroke-width="2"/>
-  <text x="1082" y="50" fill="#00C6D7" font-size="15" letter-spacing="1.5">MODELS BY APPROVED ROUTE</text>
+  <text x="1082" y="50" fill="#00C6D7" font-size="15" letter-spacing="1.5">MODELS YOU CAN ACCESS</text>
 
   <rect x="1078" y="62" width="464" height="154" rx="10" fill="#ffffff" fill-opacity=".07"/>
   <text x="1096" y="88" fill="#ffffff" font-size="18" font-weight="700">UC-hosted <tspan fill="#c4d2df" font-weight="400" font-size="15">· open models on UC San Diego GPUs</tspan></text>
@@ -78,36 +81,38 @@
   <text x="1082" y="382" fill="#00C6D7" font-size="13" letter-spacing="1.5">CAPABILITIES VARY BY MODEL</text>
   <text x="1082" y="406" fill="#c4d2df" font-size="15">Chat · Reasoning · Vision · Coding · OCR · Speech · Images</text>
 
-  <!-- recharge -->
-  <text x="40" y="490" fill="#FFCD00" font-family="Teko, sans-serif" font-size="42">WHAT A KEY COSTS</text>
-  <text x="360" y="488" fill="#c4d2df" font-size="19">Recharge is the campus term for internal billing to a department chartstring.</text>
+  <!-- who pays for usage -->
+  <text x="40" y="490" fill="#FFCD00" font-family="Teko, sans-serif" font-size="42">HOW USAGE IS BILLED</text>
+  <text x="400" y="488" fill="#c4d2df" font-size="19">Recharge means billing a department, grant, or partner campus for usage.</text>
   <g>
     <rect x="40" y="512" width="365" height="226" rx="16" fill="#1f6f4a" fill-opacity=".35" stroke="#1f6f4a"/>
-    <text x="64" y="556" fill="#ffffff" font-size="22" font-weight="700">Campus work</text>
-    <text x="64" y="598" fill="#e8fff2" font-family="Teko, sans-serif" font-size="40">NO RECHARGE</text>
-    <text x="64" y="636" fill="#c4d2df" font-size="18">UC-hosted models for campus</text>
-    <text x="64" y="662" fill="#c4d2df" font-size="18">administrative work.</text>
-    <text x="64" y="700" fill="#c4d2df" font-size="18">Monthly caps apply.</text>
+    <text x="64" y="556" fill="#ffffff" font-size="20" font-weight="700">Campus administrative work</text>
+    <text x="64" y="598" fill="#e8fff2" font-family="Teko, sans-serif" font-size="34">NO DEPARTMENT CHARGE</text>
+    <text x="64" y="636" fill="#c4d2df" font-size="18">When you use models hosted</text>
+    <text x="64" y="662" fill="#c4d2df" font-size="18">on UC San Diego infrastructure.</text>
+    <text x="64" y="700" fill="#c4d2df" font-size="18">Monthly usage limits apply.</text>
 
     <rect x="425" y="512" width="365" height="226" rx="16" fill="#ffffff" fill-opacity=".06" stroke="#FFCD00" stroke-opacity=".7"/>
     <text x="449" y="556" fill="#ffffff" font-size="22" font-weight="700">Cloud models</text>
-    <text x="449" y="598" fill="#FFCD00" font-family="Teko, sans-serif" font-size="40">FROM THE FIRST TOKEN</text>
-    <text x="449" y="636" fill="#c4d2df" font-size="18">Billed to a department chartstring</text>
-    <text x="449" y="662" fill="#c4d2df" font-size="18">at the Model Hub rate, with a</text>
-    <text x="449" y="688" fill="#c4d2df" font-size="18">budget owner and spend limit.</text>
+    <text x="449" y="598" fill="#FFCD00" font-family="Teko, sans-serif" font-size="34">YOUR DEPARTMENT PAYS</text>
+    <text x="449" y="636" fill="#c4d2df" font-size="18">Cloud usage is billed to your</text>
+    <text x="449" y="660" fill="#c4d2df" font-size="18">department at Model Hub rates.</text>
+    <text x="449" y="684" fill="#c4d2df" font-size="18">Provide a billing account,</text>
+    <text x="449" y="708" fill="#c4d2df" font-size="18">budget owner, and spending limit.</text>
 
     <rect x="810" y="512" width="365" height="226" rx="16" fill="#ffffff" fill-opacity=".06" stroke="#00C6D7" stroke-opacity=".7"/>
-    <text x="834" y="556" fill="#ffffff" font-size="22" font-weight="700">Grant research</text>
-    <text x="834" y="598" fill="#00C6D7" font-family="Teko, sans-serif" font-size="40">TO THE GRANT</text>
-    <text x="834" y="636" fill="#c4d2df" font-size="18">UC-hosted and cloud use charged</text>
-    <text x="834" y="662" fill="#c4d2df" font-size="18">to the grant or approved project</text>
-    <text x="834" y="688" fill="#c4d2df" font-size="18">chartstring.</text>
+    <text x="834" y="556" fill="#ffffff" font-size="22" font-weight="700">Grant-funded research</text>
+    <text x="834" y="598" fill="#00C6D7" font-family="Teko, sans-serif" font-size="34">THE GRANT PAYS</text>
+    <text x="834" y="636" fill="#c4d2df" font-size="18">UC-hosted and cloud usage is</text>
+    <text x="834" y="662" fill="#c4d2df" font-size="18">billed to the grant or approved</text>
+    <text x="834" y="688" fill="#c4d2df" font-size="18">project billing account.</text>
 
     <rect x="1195" y="512" width="365" height="226" rx="16" fill="#ffffff" fill-opacity=".06" stroke="#9fb3c8" stroke-opacity=".6"/>
     <text x="1219" y="556" fill="#ffffff" font-size="22" font-weight="700">Other UC campuses</text>
-    <text x="1219" y="598" fill="#c4d2df" font-family="Teko, sans-serif" font-size="34">INTERCAMPUS RECHARGE</text>
-    <text x="1219" y="636" fill="#c4d2df" font-size="18">Connect through an agreement</text>
-    <text x="1219" y="662" fill="#c4d2df" font-size="18">arranged with the TritonAI team.</text>
+    <text x="1219" y="598" fill="#c4d2df" font-family="Teko, sans-serif" font-size="34">YOUR CAMPUS PAYS</text>
+    <text x="1219" y="636" fill="#c4d2df" font-size="18">Your campus needs a billing</text>
+    <text x="1219" y="662" fill="#c4d2df" font-size="18">agreement with the TritonAI team.</text>
   </g>
-  <text x="40" y="788" fill="#9fb3c8" font-size="18">Your approval sets routes, limits, and billing; full model list and rates are in the Model Hub. Your app still owns data permissions, testing, and human review. tritonai.ucsd.edu/developer-apis</text>
+  <text x="40" y="776" fill="#9fb3c8" font-size="18">Your API key sets which models you can use and how usage is billed. The Model Hub lists available models and rates.</text>
+  <text x="40" y="804" fill="#9fb3c8" font-size="18">App owners manage data permissions, testing, and human review. Get started: tritonai.ucsd.edu/developer-apis</text>
 </svg>
