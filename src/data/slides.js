@@ -10778,11 +10778,11 @@ export const slides = [
     ],
     "managerSection": "Tech Community",
     "durationSeconds": 30,
-    "speakerNotes": "30 seconds. Thanks for having me. This is a show-more, tell-less version: most of what follows is recordings of the tools working. Five parts, bottom up: the TritonAI Gateway that every tool runs on, the vertical AI solutions IT Services builds on it, the Harness, what people across campus are building with it, and PARASOL, which is what DSMLP just became.",
+    "speakerNotes": "30 seconds. Thanks for having me. This is a show-more, tell-less version: most of what follows is recordings of the tools working. Four parts, bottom up: the TritonAI Gateway that every tool runs on, the vertical AI solutions IT Services builds on it, the Harness, and what people across campus are building with it.",
     "type": "title",
     "content": [],
     "title": "AI That Does the Work",
-    "subtitle": "The TritonAI Gateway, vertical AI solutions, the Harness, and PARASOL",
+    "subtitle": "The TritonAI Gateway, vertical AI solutions, the Harness, and what people build",
     "layout": "title-hero",
     "arc": [
       {
@@ -10800,10 +10800,6 @@ export const slides = [
       {
         "label": "What people build",
         "note": "Research, teaching, departments"
-      },
-      {
-        "label": "PARASOL",
-        "note": "DSMLP, with nearly 3x the GPUs"
       }
     ],
     "conference": "UC San Diego Tech Community"
@@ -10817,7 +10813,7 @@ export const slides = [
     "managerSection": "Tech Community",
     "section": {
       "part": 1,
-      "total": 5,
+      "total": 4,
       "label": "The foundation"
     },
     "durationSeconds": 60,
@@ -11035,7 +11031,7 @@ export const slides = [
     },
     "section": {
       "part": 3,
-      "total": 5,
+      "total": 4,
       "label": "The Harness"
     },
     "managerSummary": "Tech Community copy of cabinet-chat-and-harness"
@@ -11055,7 +11051,7 @@ export const slides = [
     "durationSeconds": 154,
     "section": {
       "part": 3,
-      "total": 5,
+      "total": 4,
       "label": "The Harness"
     },
     "videoSrc": "/media/cabinet/cabinet-harness-story-v7.mp4",
@@ -11091,7 +11087,7 @@ export const slides = [
     "managerSection": "Tech Community",
     "section": {
       "part": 3,
-      "total": 5,
+      "total": 4,
       "label": "The Harness"
     },
     "videoLoop": false,
@@ -11129,7 +11125,7 @@ export const slides = [
     "durationSeconds": 48,
     "section": {
       "part": 2,
-      "total": 5,
+      "total": 4,
       "label": "Vertical AI solutions"
     },
     "intro": {
@@ -11175,7 +11171,7 @@ export const slides = [
     "durationSeconds": 60,
     "section": {
       "part": 4,
-      "total": 5,
+      "total": 4,
       "label": "What people build"
     },
     "intro": {
@@ -11240,7 +11236,7 @@ export const slides = [
     "managerSection": "Tech Community",
     "section": {
       "part": 4,
-      "total": 5,
+      "total": 4,
       "label": "What people build"
     },
     "managerSummary": "Tech Community copy of cabinet-harness-11d-campus-app-hosting-intake"
@@ -11274,7 +11270,7 @@ export const slides = [
     "speakerNotes": "45 seconds. Inference as a service. One campus-run gateway: open-weight models on campus-managed GPUs at SDSC plus approved commercial APIs, behind one key. January through September 2026 it handled 527.0 billion tokens and 157.0 million requests, 90.6 percent on self-hosted and internal routes. It already serves UC Berkeley researchers, and Berkeley wants to expand its use. UC Merced's Scout runs on TritonAI, and Merced now has gateway keys for testing. UCLA and Virginia Tech have been offered access, with keys ready; neither has onboarded yet, so say 'offered,' not 'using.' This is what the Harness runs on, and your departments can call the same gateway from their own apps. Now, what runs on top of it, starting with the solutions IT Services builds for whole campus processes.",
     "section": {
       "part": 1,
-      "total": 5,
+      "total": 4,
       "label": "The foundation"
     },
     "gatewayMap": {
@@ -11389,7 +11385,7 @@ export const slides = [
     ],
     "managerSection": "Tech Community",
     "durationSeconds": 15,
-    "speakerNotes": "Open for questions. Likely ones from this room: calling the gateway from department apps, what the gateway logs (metadata, not content), PARASOL access for a course or lab (instructors request through the ITS Services & Support Portal; email parasol@ucsd.edu), and whether Claude Code or Codex can use campus models (yes, same key).",
+    "speakerNotes": "Open for questions. Likely ones from this room: calling the gateway from department apps, what the gateway logs (metadata, not content), and whether Claude Code or Codex can use campus models (yes, same key).",
     "type": "title",
     "content": [],
     "title": "Thank You",
@@ -11425,7 +11421,7 @@ export const slides = [
     "managerSection": "Tech Community",
     "section": {
       "part": 1,
-      "total": 5,
+      "total": 4,
       "label": "The foundation"
     },
     "durationSeconds": 60,
@@ -11448,9 +11444,9 @@ export const slides = [
     ],
     "managerSection": "Tech Community",
     "section": {
-      "part": 5,
-      "total": 5,
-      "label": "PARASOL and next steps"
+      "part": 4,
+      "total": 4,
+      "label": "Next steps"
     },
     "durationSeconds": 60,
     "speakerNotes": "60 seconds. Everything I showed today lives in one place: tritonai.ucsd.edu. On the left is how you learn. Start with the Discovery Series, 15 short videos that work well one per team meeting. Then pick a learning path; there's one for builders. If you want depth, the Certificate in AI for Higher Education is 20 hours, staff or leaders stream, at no cost. And the November 12 webinar walks through every supported tool. On the right is how you connect. Solid green means it is running today; dashed gold means it is forming now, so this is a good time to join and shape it. For this room, the TritonAI Tools Working Group is the best fit: power users, monthly, and it is forming now, so early members shape it and the roadmap. If you connect systems, join the n8n Automation Working Group. Bring an idea to the AI Use-Case Group every other Friday, and AI Consulting Hours for live projects is starting up. If your department already runs its own group, like the Jacobs School's AI Show and Tell, we'll list it. To stay in the loop: the newsletter, TritonAI Updates for platform changes, and Weekly AI News. Email tritonai@ucsd.edu to join any of these."
@@ -11475,7 +11471,7 @@ export const slides = [
     "managerSection": "Tech Community",
     "section": {
       "part": 1,
-      "total": 5,
+      "total": 4,
       "label": "The foundation"
     },
     "managerLabel": "Gateway scale: January–September 2026",
@@ -11498,7 +11494,7 @@ export const slides = [
     "durationSeconds": 75,
     "section": {
       "part": 2,
-      "total": 5,
+      "total": 4,
       "label": "Vertical AI solutions"
     },
     "speakerNotes": "About 75 seconds. These are the vertical solutions IT Services builds for whole campus processes. Group them: delivering now, and in progress. Say the impact type with each number. Contract review 120 to 11 minutes is a timed internal pilot benchmark, not a guarantee (CLAIM-LEDGER contract-reviewer-consolidated). Transcript matching (Brett, Oct 10): cost avoidance of temporary labor; it avoids hiring dozens of temporary staff for transcript entry. Further validation work begins in 2027 after TSS go-live. Supporting figures if asked: ~60K transcripts a year, ~225/hour at 98%+ in pilot; earlier planning estimate up to $500K a year in capacity. Frame as avoided temporary hiring, not reductions to existing staff. Ticket routing: the hours figure is a scenario at an assumed 90% accuracy per 10,000 eligible tickets (backup slide cabinet-routing-savings), not measured performance. Website assistants: the retired vendor contract is $300K a year in cost avoided (scaling-engagement-the-tritongpt-widget); 16 websites live; College Selection Assistant is one of them. Cash application (Brett, Oct 11): the row shows the problem size: a person has to handle 61% of receipts (75,199 of 123,108, Jan 2025–Jan 2026, 81% of the $2.66B), per the BFS March 2026 business case. The headline now says '$70M+ backlog of unallocated cash' (Brett, Oct 12): the BFS business case puts the average monthly undistributed cash balance at about $79M over Jan 2025–Jan 2026, so 'more than $70M' is conservative; it is cash received but not yet applied, not a loss and not a monthly inflow. The $1.3–3.0M a year proposed benefit is off the slide; mention it only if asked, as an initial business-case estimate BFS is still reconciling, not measured or net ROI. TritonAI Harness (added Oct 10): the platform row and the bridge to Part 2; generally available from the TritonAI website, 400+ users (Brett, Oct 10; up from 100+ active at the Sep 21 rollout review); automations still in beta for a subset of users. The Faculty Expertise Directory moved to Part 3 as a citizen developer project. Items drawn from the PK portfolio slides ai-portfolio-at-scale and ai-portfolio-pilots.",
@@ -11572,7 +11568,7 @@ export const slides = [
     "durationSeconds": 45,
     "section": {
       "part": 2,
-      "total": 5,
+      "total": 4,
       "label": "Vertical AI solutions"
     },
     "intro": {
@@ -11638,7 +11634,7 @@ export const slides = [
     "demoOnly": true,
     "section": {
       "part": 2,
-      "total": 5,
+      "total": 4,
       "label": "Vertical AI solutions"
     },
     "intro": {
@@ -11677,7 +11673,7 @@ export const slides = [
     "durationSeconds": 31,
     "section": {
       "part": 2,
-      "total": 5,
+      "total": 4,
       "label": "Vertical AI solutions"
     },
     "intro": {
@@ -11730,7 +11726,7 @@ export const slides = [
     "durationSeconds": 45,
     "section": {
       "part": 2,
-      "total": 5,
+      "total": 4,
       "label": "Vertical AI solutions"
     },
     "intro": {
@@ -11789,7 +11785,7 @@ export const slides = [
     "managerSection": "Tech Community",
     "section": {
       "part": 3,
-      "total": 5,
+      "total": 4,
       "label": "The Harness"
     },
     "durationSeconds": 45,
@@ -11809,7 +11805,7 @@ export const slides = [
     "managerSection": "Tech Community",
     "section": {
       "part": 3,
-      "total": 5,
+      "total": 4,
       "label": "The Harness"
     },
     "durationSeconds": 60,
@@ -11894,7 +11890,7 @@ export const slides = [
     "managerSection": "Tech Community",
     "section": {
       "part": 4,
-      "total": 5,
+      "total": 4,
       "label": "What people build"
     },
     "managerSummary": "Tech Community copy of cabinet-directory-demo",
@@ -11944,7 +11940,7 @@ export const slides = [
     "managerSection": "Tech Community",
     "section": {
       "part": 4,
-      "total": 5,
+      "total": 4,
       "label": "What people build"
     },
     "durationSeconds": 26,
@@ -12013,7 +12009,7 @@ export const slides = [
     "speakerNotes": "Side-by-side slide (Brett, Oct 12): the overview sits on the left while the recording loops on the right; no separate demo slide. About 40 seconds: a six-second intro card, then a 34-second recording (sped up Oct 10, slower during the zoomed highlights). Voice-over: Class Planner turns a list of courses into schedule options students can compare, then brings section details and the walk between classes into one place. Connect it to the builder story: a focused campus app made a recurring student task easier. Use Kevin's framing: built quickly, robust usage, now extended by student developers. That is presenter-provided framing, not a verified personnel history; do not name builders or say the original development used TritonAI Harness. Capture: the live public app (FA26) in a fresh browser profile, light theme. Sequence: guide page, Open Class Planner, Auto planning, Later starts, then MATH-010A, CSE-008A and COGS-001, two alternative schedules in the condensed week, Details, and Map. No student identity, sign-in, TSS booking, enrollment, or shared schedule. Seat counts and walking estimates are live data at capture time; a generated option is not a guarantee, and booking is completed in TSS. Recorded October 9, 2026 as one continuous take: a headless Chromium session scripted with Playwright, captured frame by frame through the DevTools screencast at 2560x1440 and then sped up between the zoomed highlights (Oct 10). No cuts or held frames. The cursor is drawn over the real mouse events so the room can follow it. Recording scripts: ~/dev/cabinet-recapture-20261009. Source: https://classplanner.apps.ucsd.edu/ Guided edit Oct 9: highlights and zooms on Auto planning, Later starts, the schedule switcher, and the walk between classes (spec_cp.json).",
     "section": {
       "part": 4,
-      "total": 5,
+      "total": 4,
       "label": "What people build"
     },
     "intro": {
@@ -12047,7 +12043,7 @@ export const slides = [
     "managerSection": "Tech Community",
     "section": {
       "part": 4,
-      "total": 5,
+      "total": 4,
       "label": "What people build"
     },
     "durationSeconds": 30,

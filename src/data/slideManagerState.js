@@ -191,12 +191,12 @@ export const slideManagerState = {
     "techcom-class-planner-utilization",
     "techcom-spa2",
     "techcom-hosting",
-    "techcom-parasol-transition",
-    "techcom-compute-and-models",
     "techcom-learn-and-connect",
     "techcom-thank-you"
   ],
   "removed": [
+    "techcom-parasol-transition",
+    "techcom-compute-and-models",
     "where-will-ai-place-us-in-2031",
     "the-ai-enabled-university-duo",
     "the-ai-enabled-university-cabinet",
