@@ -11073,7 +11073,7 @@ export const slides = [
       "label": "TritonAI Harness Nightly",
       "captureNote": "Settings tour recorded Oct 10 • story recorded Oct 9–10 on fictional practice-kit data • shown in 154 seconds"
     },
-    "speakerNotes": "About two and a half minutes; the clip is silent, so narrate. First a quick settings tour: the plugins on the person's own sign-in (GitHub, Google Workspace, Kuali Build, Lucid, Microsoft 365, n8n), shared skills, and the model routes, campus on-prem and cloud. Then one made-up project start to finish: a staff member's fall workshop pilot. It builds a campus-branded survey, analyzes the results and flags missing ratings, builds an Excel dashboard for leaders, and produces a nine-slide briefing deck on the campus template. Everything comes from the project's files. Point out that each output is a saved file the person reviews. Frame this as a task with a clear finish: a survey and checked reporting files. The person describes the result, then reviews what comes back. The recording shows file-based project work; scheduled jobs are explained on the following feature and personal automation slides.",
+    "speakerNotes": "About two and a half minutes; the clip is silent, so narrate. First a quick settings tour: the plugins on the person's own sign-in (GitHub, Google Workspace, Kuali Build, Lucid, Microsoft 365, n8n), shared skills, and the model routes, campus on-prem and cloud. Then one made-up project start to finish: a staff member's fall workshop pilot. It builds a campus-branded survey, analyzes the results and flags missing ratings, builds an Excel dashboard for leaders, and produces a nine-slide briefing deck on the campus template. Everything comes from the project's files. Point out that each output is a saved file the person reviews. Frame this as a task with a clear finish: a survey and checked reporting files. The person describes the result, then reviews what comes back. The recording shows file-based project work; scheduled jobs are explained on the following feature and automation slides.",
     "managerSummary": "Tech Community copy of cabinet-harness-in-action"
   },
   {
@@ -11779,7 +11779,7 @@ export const slides = [
       "label": "The Harness"
     },
     "durationSeconds": 60,
-    "speakerNotes": "About one minute. This is the capability map: features on the left, connected plugins in the middle, and reusable skill examples on the right. Memory recalls past work and decisions. Helper agents support parallel work. Automations start work on a schedule or when another service sends a trigger. Computer use works with files, apps, and browsers you allow it to access. A paired phone can start work on a connected computer. Ideas suggests ways to use the Harness. Record a task, review the steps, and save them as a skill. The next slide shows what these capabilities do in my workday. A green check means Stable and Nightly. Gold means Nightly testing; blue means Stable only. Tableau and its reporting skill are Nightly only in this comparison. UCSD Assistant is Stable only in the current bundles. The bottom highlights the guided tour, guest links, and separate Prod/Dev plugin connections being tested in Nightly. This compares Stable 0.4.1 with the October 30 Nightly release, checked November 1. Commons skills are optional and update separately. Nightly testing does not commit a Stable release date. Account permissions, approved data handling, and human review still apply. Supporting examples: October 30 AI Use Case Office Hours, https://mediaspace.ucsd.edu/media/AI+Use+Case+Office+Hours/1_41rf5xlo; local automations at 6:14 and scheduled work at 11:00. Release availability comes from the tagged guides.",
+    "speakerNotes": "About one minute. This is the capability map: features on the left, connected plugins in the middle, and reusable skill examples on the right. Memory recalls past work and decisions. Helper agents support parallel work. Automations start work on a schedule or when another service sends a trigger. Computer use works with files, apps, and browsers you allow it to access. A paired phone can start work on a connected computer. Ideas suggests ways to use the Harness. Record a task, review the steps, and save them as a skill. The next slide shows how anyone can set up automations with these capabilities. A green check means Stable and Nightly. Gold means Nightly testing; blue means Stable only. Tableau and its reporting skill are Nightly only in this comparison. UCSD Assistant is Stable only in the current bundles. The bottom highlights the guided tour, guest links, and separate Prod/Dev plugin connections being tested in Nightly. This compares Stable 0.4.1 with the October 30 Nightly release, checked November 1. Commons skills are optional and update separately. Nightly testing does not commit a Stable release date. Account permissions, approved data handling, and human review still apply. Supporting examples: October 30 AI Use Case Office Hours, https://mediaspace.ucsd.edu/media/AI+Use+Case+Office+Hours/1_41rf5xlo; local automations at 6:14 and scheduled work at 11:00. Release availability comes from the tagged guides.",
     "managerSummary": "One-page visual overview of key Harness features, plugins, and skill examples"
   },
   {
@@ -11787,8 +11787,8 @@ export const slides = [
     "slug": "techcom-personal-productivity-list",
     "type": "content",
     "layout": "cabinet-outline",
-    "title": "Automations in my workday",
-    "subtitle": "Some tasks run on a schedule. Others start when I ask. I review what needs a decision.",
+    "title": "Automations in the Harness",
+    "subtitle": "Set a task once. Run it on a schedule or when another system sends an event.",
     "audiences": [
       "tech-community"
     ],
@@ -11801,71 +11801,63 @@ export const slides = [
     "durationSeconds": 60,
     "impactTable": {
       "headers": [
-        "Task",
-        "Starts",
-        "What comes back"
+        "Built-in capability",
+        "How you use it",
+        "What you can do"
       ],
       "rows": [
         {
-          "name": "Daily brief",
-          "what": "Meeting context and open items from my calendar",
-          "status": "Every morning",
+          "name": "Scheduled work",
+          "what": "Choose a time or repeat interval",
+          "status": "Set a schedule",
           "tone": "live",
-          "impact": "A brief for each meeting",
-          "basis": "Objectives, questions, and unfinished business"
+          "impact": "Daily briefs and recurring reports",
+          "basis": "Summarize email, calendars, or project files"
         },
         {
-          "name": "Inbox priorities",
-          "what": "An Outlook add-in sorts what needs my attention",
-          "status": "Throughout the day",
+          "name": "Project check-ins",
+          "what": "Repeat saved instructions at an interval",
+          "status": "Repeat a task",
           "tone": "live",
-          "impact": "Today and this week, with reasons",
-          "basis": "Sets categories; does not send or delete"
+          "impact": "Progress updates and blockers",
+          "basis": "Check ongoing work or summarize overnight results"
         },
         {
-          "name": "Draft replies",
-          "what": "Work email that still needs an answer",
-          "status": "Daily",
+          "name": "Event triggers",
+          "what": "Another service calls the task’s webhook",
+          "status": "Connect a trigger",
           "tone": "live",
-          "impact": "Draft replies ready for review",
-          "basis": "I decide what gets sent"
+          "impact": "Respond to a new event",
+          "basis": "Review a pull request or investigate a failed build"
         },
         {
-          "name": "Meeting debriefs",
-          "what": "Decisions and action items from my meeting notes",
-          "status": "After meetings",
+          "name": "Tools and skills",
+          "what": "Use enabled plugins and reusable steps",
+          "status": "Choose tools",
           "tone": "live",
-          "impact": "Follow-ups on my task list",
-          "basis": "Owners and context included"
+          "impact": "Work across files and connected apps",
+          "basis": "With the access and approvals you configure"
         },
         {
-          "name": "Scheduling assistant",
-          "what": "An email request to find a time",
-          "status": "On request",
+          "name": "Results in a thread",
+          "what": "Use an existing thread or start a new one",
+          "status": "Choose a thread",
           "tone": "live",
-          "impact": "Meeting holds and reschedules",
-          "basis": "I am copied; cancellations need my approval"
+          "impact": "Summaries and files ready to review",
+          "basis": "Choose the project, model, and computer"
         },
         {
-          "name": "Search across my work",
-          "what": "A question across email, calendar, notes, and files",
-          "status": "On request",
+          "name": "Task controls",
+          "what": "Edit, pause, resume, or run scheduled tasks now",
+          "status": "Manage tasks",
           "tone": "live",
-          "impact": "An answer linked to its sources",
-          "basis": "Past work and decisions, from my desk or phone"
-        },
-        {
-          "name": "Daily focus list",
-          "what": "Open tasks, blockers, and the next step",
-          "status": "Every day",
-          "tone": "live",
-          "impact": "A short list of priorities",
-          "basis": "Built from email, meetings, and tasks"
+          "impact": "Adjust automations as work changes",
+          "basis": "Open Settings → Scheduled tasks"
         }
       ]
     },
-    "speakerNotes": "About one minute. These are workflows I have configured for my own work, not a set of automations every install comes with. The middle column is the key: some start on a schedule, others follow a meeting or a request. A job can prepare useful work without a new prompt every time. Pick two or three rows: the morning meeting brief, draft replies waiting for review, and follow-ups pulled from meeting notes. I review decisions and outgoing messages; the scheduling assistant has the specific permissions described in its row. Connections and approval settings determine what each workflow can do. For local Harness jobs, the computer doing the work needs to stay awake with the Harness running. You can direct a connected computer from a phone; that is the next demo. At the October 30 Office Hours, David also showed a 6 a.m. summary of overnight work and described hourly project check-ins. Those are additional examples to configure, not claims about my current setup. Source: https://mediaspace.ucsd.edu/media/AI+Use+Case+Office+Hours/1_41rf5xlo, scheduled work at 11:00 and overnight briefing at 11:27.",
-    "managerSummary": "Personal workflows organized by what starts the task and what comes back"
+    "speakerNotes": "About one minute. These are the automation capabilities built into the Harness, with examples any user can configure. Open Settings → Scheduled tasks, write the task instructions, and choose the project, model, computer, and schedule. Fixed-time tasks use that computer’s time zone. Examples include morning email and calendar briefs, recurring reports, progress checks, or a summary of overnight work. For event-driven work, another system calls a webhook to start the saved task. A GitHub pull request or failed build are examples; the external system and webhook need to be connected. Public webhook URLs require a managed T3 Connect tunnel. Tasks use the tools, accounts, and skills you enable, with the permissions and approval settings you choose. They can post to an existing thread or start a new one each run. You can edit, pause, resume, delete, or run scheduled tasks immediately; webhook tasks start from their incoming event. The computer running a local task needs to stay awake with the Harness running. The scheduling and webhook capabilities are documented in both Stable 0.4.1 and the October 30 Nightly build. The examples illustrate tasks users can set up; they are not preconfigured workflows or guaranteed outcomes. Source: https://github.com/dbalders/TritonAI-Harness/blob/v0.4.2-nightly.20261030.115/docs/user/project-settings.md#scheduled-tasks-on-mobile. Examples also discussed in the October 30 AI Use Case Office Hours: https://mediaspace.ucsd.edu/media/AI+Use+Case+Office+Hours/1_41rf5xlo, from 11:00.",
+    "managerSummary": "Built-in scheduling, event triggers, tools, results, and task controls anyone can configure"
   },
   {
     "id": 5034,
