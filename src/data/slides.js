@@ -12052,7 +12052,7 @@ export const slides = [
       },
       {
         "label": "Check the work",
-        "note": "Before anything is shown"
+        "note": "Compare with source reports"
       }
     ],
     "durationSeconds": 15,
@@ -12067,20 +12067,20 @@ export const slides = [
     "slug": "chancellor-the-question",
     "type": "content",
     "layout": "cabinet-outline",
-    "title": "Can AI take on analyst work?",
-    "subtitle": "Answers when you need an answer; a report when you need a report.",
+    "title": "How UC San Diego supports analytics",
+    "subtitle": "Campus analysts build reports on shared, governed data from the Activity Hubs.",
     "content": [
       {
-        "heading": "Building the report",
-        "text": "When a standing report is the right tool, the TritonAI Harness builds it in Tableau the way an analyst would, starting from the campus data definitions."
+        "heading": "Shared data and support",
+        "text": "The Activity Hubs curate student, employee, financial, research and facilities data. IT Services supports the hubs, Tableau and Cognos. Data stewards approve developer access by domain."
       },
       {
-        "heading": "Answering the question",
-        "text": "A leader asks about the campus. Today an analyst finds the data, runs it and writes it up. TritonAI Insights answers directly, from governed campus data, with the work shown."
+        "heading": "Analysts across campus build reports",
+        "text": "Report developers use Tableau and Cognos to turn campus data into reports and dashboards for their teams and the university."
       },
       {
-        "heading": "Checking the work",
-        "text": "Both check their figures against the official source before anything is shown."
+        "heading": "People find and use reports",
+        "text": "The Business Analytics Hub helps people find published reports and request access. When a new question comes up, an analyst can adapt a report or run a new analysis."
       }
     ],
     "section": {
@@ -12089,7 +12089,7 @@ export const slides = [
       "label": "The question"
     },
     "durationSeconds": 60,
-    "speakerNotes": "One minute. Frame the follow-up from October 12: there are two kinds of analyst work. Most requests are a question that needs an answer, often the same question asked again; some need a report that people come back to. The Harness builds the report, Insights answers the question, and both are judged by the same test: does the number match the official source?",
+    "speakerNotes": "IT Services provides the shared data and tools. Data stewards set access rules for their domains. Analysts across campus bring local knowledge and build the reports people rely on. The Activity Hubs are where developers get governed data. The Business Analytics Hub is where people go to find reports and request access. That is the model behind both demos: can AI help analysts build reports and help people find answers in the reports we already have? References: https://blink.ucsd.edu/technology/bi/activity-hubs/ and https://blink.ucsd.edu/technology/bi/services/index.html.",
     "audiences": [
       "chancellor"
     ],
@@ -12100,16 +12100,16 @@ export const slides = [
     "slug": "chancellor-what-we-built",
     "type": "content",
     "layout": "cabinet-outline",
-    "title": "What we built in three weeks",
-    "subtitle": "Two tools for the two kinds of analyst work, on the campus's own data and AI.",
+    "title": "What we built in two weeks",
+    "subtitle": "Two ways to work with campus data: build a report or ask a question.",
     "content": [],
     "columns": [
       {
         "label": "TritonAI Harness · reports",
         "items": [
           {
-            "heading": "An AI workspace on every desk",
-            "text": "The campus AI workspace already in use by 400+ people."
+            "heading": "A campus AI workspace",
+            "text": "The Harness brings AI and the tools it operates into one workspace."
           },
           {
             "heading": "Knows the campus data",
@@ -12134,7 +12134,7 @@ export const slides = [
           },
           {
             "heading": "Checked answers",
-            "text": "150+ answers checked against their source reports and marked Ready."
+            "text": "Prepared answers are checked against their source reports and marked Ready."
           }
         ]
       }
@@ -12156,15 +12156,15 @@ export const slides = [
     "slug": "chancellor-harness-report",
     "type": "video",
     "layout": "cabinet-demo",
-    "videoSrc": "/media/chancellor/chancellor-harness-report.mp4",
-    "poster": "/media/chancellor/chancellor-harness-report-poster.jpg",
+    "videoSrc": "/media/chancellor/chancellor-harness-report-streamlined.mp4",
+    "poster": "/media/chancellor/chancellor-harness-report-streamlined-poster.jpg",
     "videoLoop": false,
     "videoClearNav": false,
     "videoAutoPlay": true,
     "hideDemoBadge": true,
     "demoOnly": true,
     "title": "The Harness builds the report",
-    "subtitle": "One request: four-year graduation by college for the Fall 2021 entering class, built in Tableau from the campus's governed student data.",
+    "subtitle": "The Harness starts with a prompt describing the desired dashboard and builds it in Tableau.",
     "content": [
       {
         "heading": "Uses the governed source",
@@ -12184,25 +12184,25 @@ export const slides = [
       }
     ],
     "recording": {
-      "label": "Governed source → formulas → Fall 2021 cohort check → college charts → dashboard → published",
-      "format": "One continuous screen recording, time-lapsed, with captions · 1 minute 22 seconds · silent for presenter voice-over",
-      "mediaStem": "chancellor-harness-report",
+      "label": "Prompt → governed source → formulas → Fall 2021 cohort check → college charts → dashboard → published",
+      "format": "Edited screen recording with captions · 55 seconds · silent for presenter narration",
+      "mediaStem": "chancellor-harness-report-streamlined",
       "status": "captured and reviewed"
     },
     "intro": {
-      "kicker": "TritonAI Harness · an AI agent doing an analyst's job",
+      "kicker": "TritonAI Harness · Tableau report demo",
       "title": "The Harness builds the report",
-      "setup": "One request: four-year graduation by college for the Fall 2021 entering class, built in Tableau from the governed student data source and published to campus Tableau.",
+      "setup": "The prompt asks for a Tableau dashboard showing four-year graduation rates by college for the Fall 2021 entering class.",
       "watchFor": "The agent on the left driving Tableau on the right: the formulas it writes, the cohort check against IR (7,543), and the finished dashboard it publishes.",
-      "seconds": 7
+      "seconds": 4
     },
     "section": {
       "part": 2,
       "total": 3,
       "label": "What we built"
     },
-    "durationSeconds": 89,
-    "speakerNotes": "About a minute and a half: a 7-second intro card, then the 1:22 video (silent; you narrate). Left pane: the TritonAI Harness agent's steps. Right pane: Tableau in Chrome, operated by the agent. Approximate timeline: 0:00 title; 0:04 opens the governed source (SAH-RetentionCensus-View) and starts a workbook; 0:11 writes the formulas (Cohort size = count of distinct students, four-year graduates, the rate); 0:28 filters to the Fall 2021 first-time first-year class: 7,543 students, IR's published count; 0:33 builds the college chart, labels and sorts it; 0:44 builds the entering-class chart; 0:52 assembles the dashboard with title and caption; 1:03 publishes to campus Tableau; then the finished dashboard. All footage is one real screen recording of the agent, time-lapsed up to 10x; nothing on screen was staged. People wrote the request and a few follow-up instructions; the AI did the work on screen, using TritonAI's AI model hosted on campus. Narration: this is the request an analyst gets; the agent knows the governed data and Tableau, writes the formulas, checks its cohort against IR, and publishes. If asked: (1) the college rates run about 1 to 2 points above IR's published figures (largest gap Muir, 74.9% vs 72.7%), most likely a definition difference in this source; the agent flags it and it goes to the data stewards. (2) The entering-class chart adds to 7,526; 17 students have no college recorded. (3) Real elapsed time was longer than the video, including retries; the video is sped up. Transition: a report is one kind of analyst work; most requests are a question that needs an answer, which is where Insights comes in.",
+    "durationSeconds": 59,
+    "speakerNotes": "The silent 55-second edit starts with a summary of the requested dashboard. The Harness opens the governed source, writes the measures, checks the cohort count against Institutional Research (7,543), builds the charts and publishes the dashboard. The footage is sped up and waiting time is cut. People wrote the initial request and a few follow-up instructions. If asked, some college rates differ from Institutional Research by about 1–2 percentage points. The cohort check is a count check.",
     "audiences": [
       "chancellor"
     ],
