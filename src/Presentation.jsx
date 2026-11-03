@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'; // eslint-disable-line no-unused-vars
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Slide from './components/Slide';
+import './ChancellorPresentation.css';
 import TranscriptionOverlay from './components/TranscriptionOverlay';
 import { slides as defaultSlides } from './data/slideDeck';
 import { applyAudienceOverrides, isSlideVisibleForAudience, normalizeAudienceType } from './data/audiences';
@@ -397,6 +398,7 @@ const Presentation = () => {
       className="presentation-viewer w-screen h-screen flex flex-col overflow-hidden relative font-sans"
       role="application"
       aria-label="Presentation viewer"
+      data-audience={validAudience}
       data-demo-only={currentSlide?.demoOnly || undefined}
       style={{ backgroundColor: currentSlide?.backgroundColor || (currentSlide?.dark ? '#1a1a1a' : '#F5F0E6') }}
     >

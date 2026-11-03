@@ -12039,7 +12039,7 @@ export const slides = [
     "layout": "title-hero",
     "content": [],
     "title": "AI for Analyst Work",
-    "subtitle": "Following up on October 12: answers, reports, and how we check them",
+    "subtitle": "Skunkworks phase · Testing AI for campus reports and questions",
     "conference": "Office of the Chancellor · Tuesday, November 3, 2026",
     "arc": [
       {
@@ -12067,6 +12067,7 @@ export const slides = [
     "slug": "chancellor-the-question",
     "type": "content",
     "layout": "cabinet-outline",
+    "compact": true,
     "title": "How UC San Diego supports analytics",
     "subtitle": "Campus analysts build reports on shared, governed data from the Activity Hubs.",
     "content": [
@@ -12080,7 +12081,7 @@ export const slides = [
       },
       {
         "heading": "Institutional Research has a separate reporting setup",
-        "text": "Institutional Research uses a separate SQL Server environment for student reporting and also has access to selected views in the Activity Hubs."
+        "text": "Institutional Research uses its own SQL Server environment for student reporting and can pull data from all Activity Hub views into it."
       },
       {
         "heading": "People find and use reports",
@@ -12090,10 +12091,10 @@ export const slides = [
     "section": {
       "part": 1,
       "total": 3,
-      "label": "The question"
+      "label": "Campus context"
     },
     "durationSeconds": 60,
-    "speakerNotes": "IT Services provides the shared data and tools. Data stewards set access rules for their domains. Analysts across campus bring local knowledge and build the reports people rely on. The Activity Hubs are where developers get governed data. Institutional Research has a separate SQL Server reporting environment and can also draw on selected SAP HANA views. The Tableau demo uses the Student Activity Hub. Institutional Research’s published cohort count gives us a benchmark. The Business Analytics Hub is where people go to find reports and request access. That is the model behind both demos: can AI help analysts build reports and help people find answers in the reports we already have? References: https://blink.ucsd.edu/technology/bi/activity-hubs/ and https://blink.ucsd.edu/technology/bi/services/index.html.",
+    "speakerNotes": "IT Services provides the shared data and tools. Data stewards set access rules for their domains. Analysts across campus bring local knowledge and build the reports people rely on. The Activity Hubs are where developers get governed data. Institutional Research can use all Activity Hub views and pull their data into its own SQL Server reporting environment. The Tableau demo uses the Student Activity Hub. Institutional Research’s published cohort count gives us a benchmark. The Business Analytics Hub is where people go to find reports and request access. That is the model behind both demos: can AI help analysts build reports and help people find answers in the reports we already have? References: https://blink.ucsd.edu/technology/bi/activity-hubs/ and https://blink.ucsd.edu/technology/bi/services/index.html.",
     "audiences": [
       "chancellor"
     ],
@@ -12105,7 +12106,7 @@ export const slides = [
     "type": "content",
     "layout": "cabinet-outline",
     "title": "What we built in two weeks",
-    "subtitle": "Two ways to work with campus data: build a report or ask a question.",
+    "subtitle": "Two skunkworks experiments with campus data: build a report and answer a question.",
     "content": [],
     "columns": [
       {
@@ -12146,7 +12147,7 @@ export const slides = [
     "section": {
       "part": 2,
       "total": 3,
-      "label": "What we built"
+      "label": "Skunkworks phase"
     },
     "durationSeconds": 60,
     "speakerNotes": "One minute. Insights started October 15 as a research indirect-cost explorer and grew domain by domain from existing Tableau and Cognos reports; the Ready count was 152 at the October 21 full regression. In the demo, computer use means the agent reads the Tableau screen, clicks menus, types formulas and uses the results on screen to decide what to do next. Next: the Harness builds a report on screen, then how an Insights answer is checked and the live demonstration.",
@@ -12194,7 +12195,7 @@ export const slides = [
       "status": "captured and reviewed"
     },
     "intro": {
-      "kicker": "TritonAI Harness · Tableau report demo",
+      "kicker": "Skunkworks demo · TritonAI Harness",
       "title": "The Harness builds the report",
       "setup": "The prompt asks for a Tableau dashboard showing four-year graduation rates by college for the Fall 2021 entering class.",
       "watchFor": "The agent on the left driving Tableau on the right: the formulas it writes, the cohort check against IR (7,543), and the finished dashboard it publishes.",
@@ -12203,10 +12204,10 @@ export const slides = [
     "section": {
       "part": 2,
       "total": 3,
-      "label": "What we built"
+      "label": "Skunkworks phase"
     },
     "durationSeconds": 59,
-    "speakerNotes": "The silent 55-second edit starts with a summary of the requested dashboard. The Harness opens the governed source, writes the measures, checks the cohort count against Institutional Research (7,543), builds the charts and publishes the dashboard. The footage is sped up and waiting time is cut. People wrote the initial request and a few follow-up instructions. If asked, some college rates differ from Institutional Research by about 1–2 percentage points. The cohort check is a count check.",
+    "speakerNotes": "This experiment uses the existing TritonAI Harness app to test report building. The silent 55-second edit starts with a summary of the requested dashboard. The Harness opens the governed source, writes the measures, checks the cohort count against Institutional Research (7,543), builds the charts and publishes the dashboard. The footage is sped up and waiting time is cut. People wrote the initial request and a few follow-up instructions. If asked, some college rates differ from Institutional Research by about 1–2 percentage points. The cohort check is a count check.",
     "audiences": [
       "chancellor"
     ],
@@ -12235,7 +12236,7 @@ export const slides = [
       "status": "captured; revised edit ready for review"
     },
     "intro": {
-      "kicker": "Student success · Tableau dashboard",
+      "kicker": "Skunkworks demo · Student success dashboard",
       "title": "Undergraduate success at UC San Diego",
       "setup": "See how many first-year students started each fall and how they were spread across UC San Diego’s colleges. Compare the share who graduated within four or six years.",
       "watchFor": "Select a college to see it highlighted across all four charts.",
@@ -12244,7 +12245,7 @@ export const slides = [
     "section": {
       "part": 2,
       "total": 3,
-      "label": "What we built"
+      "label": "Skunkworks phase"
     },
     "durationSeconds": 100,
     "speakerNotes": "Second video; preserve the preceding Harness recording. The heading now names the dashboard and describes its purpose: entering-class trends, college composition and graduation outcomes. This dashboard was built by Codex operating Tableau through native computer use. It is not TritonAI Harness or a campus-hosted model. Re-recorded November 2, 2026 as a continuous 55-minute screen capture at 30 fps with the real cursor enabled. The 1:35 director cut incorporates two agent reviews for visual direction and audience readability. It opens on the completed dashboard, then shows genuine measure, College and worksheet drags before returning to the saved result. Selective crops enlarge the active controls; three larger phase captions replace fifteen technical micro-headings. The incomplete KPI band is outside the frame during assembly. A clean Sixth College highlight from the same saved viewer is inserted after the genuine recorded selection so the tooltip does not cover the result. The cut ends on the unobstructed full dashboard. Playback varies from about 0.8x to 4x; no cursor path or UI action is invented. The earlier 1:45 and 3:02 cuts are retained for comparison. Per Brett's review, the upper-right recording attribution and speed overlay were removed; the edit details remain here. No cursor path or Tableau interaction is reconstructed. The governed source and calculated measures were prepared beforehand; the charts, layout, source notes and highlight action were built through the Tableau UI. The edited runtime is not elapsed build time and does not establish a measured speed advantage over a human analyst. The video focuses on mechanics, not findings. It uses live SAH-RetentionCensus-View and distinct-student cohort counts. Comparison: Fall 2020 and Fall 2021 four-year graduation; six-year graduation: Fall 2019. Campus counts include unassigned college; named-college rate comparisons exclude it. Cohort counts: 6,022 / 6,445 / 7,543 / 6,545 for Fall 2019–2022. Graduation rates are provisional and may differ from Institutional Research. The new private workbook, Undergraduate success dashboard — cursor demonstration, is saved in Personal Space (7302); dashboard view 47321. The saved viewer and cross-chart Sixth College highlight were verified. No broader Tableau sharing was added.",
@@ -12262,7 +12263,7 @@ export const slides = [
     "section": {
       "part": 2,
       "total": 3,
-      "label": "What we built"
+      "label": "Skunkworks phase"
     },
     "durationSeconds": 55,
     "audiences": [
@@ -12290,7 +12291,7 @@ export const slides = [
         ]
       },
       {
-        "label": "What we built",
+        "label": "Skunkworks phase",
         "items": [
           {
             "heading": "A Cabinet-level proof of concept",
@@ -12314,7 +12315,7 @@ export const slides = [
     "section": {
       "part": 2,
       "total": 3,
-      "label": "What we built"
+      "label": "Skunkworks phase"
     },
     "durationSeconds": 55,
     "audiences": [
@@ -12322,7 +12323,8 @@ export const slides = [
     ],
     "managerSection": "Chancellor",
     "title": "How Insights answers a question",
-    "subtitle": "The prototype connects questions to existing campus data and shows the sources behind each answer.",
+    "subtitle": "The skunkworks prototype connects questions to campus data and shows its sources.",
+    "note": "Reports can define the same KPI differently. Freeform answers can sound convincing and are unverified. For official use, confirm the definition and figure with the data steward.",
     "columns": [
       {
         "label": "1 · Ask a question",
@@ -12364,7 +12366,7 @@ export const slides = [
         ]
       }
     ],
-    "speakerNotes": "This Cabinet-level skunkworks project is a proof of concept to evaluate for a pilot. Access is granted to the prototype as a whole, without granular permissions within it. The agent uses a field catalog and query limits to plan which sources to query. Live HANA reads are preferred where covered. Prepared report snapshots are the backstop when a metric is calculated inside the report itself or live data is unavailable. For a hypothetical question such as ‘Show salary and fringe charges by fiscal year,’ the answer, table and chart would use the same query results. Retrieval time and upstream refresh time are distinct."
+    "speakerNotes": "This Cabinet-level skunkworks project is a proof of concept to evaluate for a pilot. Access is granted to the prototype as a whole, without granular permissions within it. The agent uses a field catalog and query limits to plan which sources to query. Live HANA reads are preferred where covered. Prepared report snapshots are the backstop when a metric is calculated inside the report itself or live data is unavailable. For a hypothetical question such as ‘Show salary and fringe charges by fiscal year,’ the answer, table and chart would use the same query results. Retrieval time and upstream refresh time are distinct Two reports can use the same KPI name and count different populations, apply different filters or use different reporting dates. For example, retention can vary with which students are included and when enrollment is measured. Some calculations live inside Tableau or Cognos reports, so a direct query may produce a different figure. Prepared answers are checked against their source reports. Freeform answers are exploratory and can sound convincing even when the figure is wrong. For official reporting or decisions, review the source, definition and data date. Ask the responsible data steward to confirm which figure to use when reports disagree.",
   },
   {
     "id": 5111,
@@ -12373,7 +12375,7 @@ export const slides = [
     "layout": "title-hero",
     "content": [],
     "title": "Thank You",
-    "subtitle": "Questions?",
+    "subtitle": "Questions about the skunkworks findings?",
     "presenters": [
       {
         "name": "Brett Pollak",

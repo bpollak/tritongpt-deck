@@ -1,0 +1,50 @@
+/* Keep projected slides on the shared 16:9 canvas. Dense outlines use
+   tighter spacing, and longer content remains reachable by scrolling. */
+[data-audience="chancellor"] .cabinet-canvas:not([data-reading]) .cabinet-framework-slide {
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+[data-audience="chancellor"] .cabinet-canvas:not([data-reading]) .cabinet-framework-slide:has(.cabinet-framework-row:nth-child(4)) > h1 {
+  margin-bottom: 10px;
+}
+
+[data-audience="chancellor"] .cabinet-canvas:not([data-reading]) .cabinet-framework-outline:has(.cabinet-framework-row:nth-child(4)) .cabinet-framework-takeaway {
+  margin-bottom: 14px;
+}
+
+[data-audience="chancellor"] .cabinet-canvas:not([data-reading]) .cabinet-framework-rows:has(.cabinet-framework-row:nth-child(4)) {
+  gap: 12px;
+}
+
+[data-audience="chancellor"] .cabinet-canvas:not([data-reading]) .cabinet-framework-rows:has(.cabinet-framework-row:nth-child(4)) .cabinet-framework-row {
+  padding-top: 11px;
+}
+
+[data-audience="chancellor"] .tritonai-title-slide {
+  justify-content: flex-start;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+}
+
+[data-audience="chancellor"] .tritonai-title-slide > .z-10 {
+  flex-shrink: 0;
+  margin-block: auto;
+  padding-block: 24px;
+}
+
+[data-audience="chancellor"] :is(.cabinet-canvas[data-reading], .tritonai-title-slide) {
+  touch-action: pan-y;
+}
+
+@media (max-width: 599px), (max-height: 520px) {
+  [data-audience="chancellor"] .tritonai-title-slide .flex-row.items-start {
+    gap: clamp(16px, 5vw, 40px);
+  }
+
+  [data-audience="chancellor"] .tritonai-title-slide .rounded-full:has(> img) {
+    width: clamp(84px, 24vw, 128px);
+    height: auto;
+    aspect-ratio: 1;
+  }
+}
