@@ -12079,6 +12079,10 @@ export const slides = [
         "text": "Report developers use Tableau and Cognos to turn campus data into reports and dashboards for their teams and the university."
       },
       {
+        "heading": "Institutional Research has a separate reporting setup",
+        "text": "Institutional Research uses a separate SQL Server environment for student reporting and also has access to selected views in the Activity Hubs."
+      },
+      {
         "heading": "People find and use reports",
         "text": "The Business Analytics Hub helps people find published reports and request access. When a new question comes up, an analyst can adapt a report or run a new analysis."
       }
@@ -12089,7 +12093,7 @@ export const slides = [
       "label": "The question"
     },
     "durationSeconds": 60,
-    "speakerNotes": "IT Services provides the shared data and tools. Data stewards set access rules for their domains. Analysts across campus bring local knowledge and build the reports people rely on. The Activity Hubs are where developers get governed data. The Business Analytics Hub is where people go to find reports and request access. That is the model behind both demos: can AI help analysts build reports and help people find answers in the reports we already have? References: https://blink.ucsd.edu/technology/bi/activity-hubs/ and https://blink.ucsd.edu/technology/bi/services/index.html.",
+    "speakerNotes": "IT Services provides the shared data and tools. Data stewards set access rules for their domains. Analysts across campus bring local knowledge and build the reports people rely on. The Activity Hubs are where developers get governed data. Institutional Research has a separate SQL Server reporting environment and can also draw on selected SAP HANA views. The Tableau demo uses the Student Activity Hub. Institutional Research’s published cohort count gives us a benchmark. The Business Analytics Hub is where people go to find reports and request access. That is the model behind both demos: can AI help analysts build reports and help people find answers in the reports we already have? References: https://blink.ucsd.edu/technology/bi/activity-hubs/ and https://blink.ucsd.edu/technology/bi/services/index.html.",
     "audiences": [
       "chancellor"
     ],
