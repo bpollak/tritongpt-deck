@@ -1,17 +1,17 @@
 <svg viewBox="0 0 1600 760" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" font-family="Roboto, Arial, sans-serif">
 
 <rect x="40" y="0" width="371" height="108" rx="14" fill="#ffffff" fill-opacity=".06" stroke="#00C6D7" stroke-opacity=".5"/>
-<text x="64" y="60" fill="#00C6D7" font-size="56" font-family="Teko, sans-serif">527.0B</text>
+<text x="64" y="60" fill="#00C6D7" font-size="56" font-family="Teko, sans-serif">598.3B</text>
 <text x="64" y="90" fill="#c4d2df" font-size="17">Tokens processed</text>
 <rect x="423" y="0" width="371" height="108" rx="14" fill="#ffffff" fill-opacity=".06" stroke="#ffffff" stroke-opacity=".5"/>
-<text x="447" y="60" fill="#ffffff" font-size="56" font-family="Teko, sans-serif">157.0M</text>
+<text x="447" y="60" fill="#ffffff" font-size="56" font-family="Teko, sans-serif">166.8M</text>
 <text x="447" y="90" fill="#c4d2df" font-size="17">API request records</text>
 <rect x="806" y="0" width="371" height="108" rx="14" fill="#ffffff" fill-opacity=".06" stroke="#8fbf5a" stroke-opacity=".5"/>
-<text x="830" y="60" fill="#8fbf5a" font-size="56" font-family="Teko, sans-serif">90.6%</text>
+<text x="830" y="60" fill="#8fbf5a" font-size="56" font-family="Teko, sans-serif">89.6%</text>
 <text x="830" y="90" fill="#c4d2df" font-size="17">Tokens on self-hosted and internal routes</text>
 <rect x="1189" y="0" width="371" height="108" rx="14" fill="#ffffff" fill-opacity=".06" stroke="#FFCD00" stroke-opacity=".5"/>
-<text x="1213" y="60" fill="#FFCD00" font-size="56" font-family="Teko, sans-serif">71.7B</text>
-<text x="1213" y="90" fill="#c4d2df" font-size="17">Tokens in September</text>
+<text x="1213" y="60" fill="#FFCD00" font-size="56" font-family="Teko, sans-serif">71.3B</text>
+<text x="1213" y="90" fill="#c4d2df" font-size="17">Tokens in October</text>
 <text x="40" y="168" fill="#00C6D7" font-size="15" letter-spacing="1.5">MONTHLY TOKEN VOLUME · BILLIONS, 2026</text>
 <rect x="1176" y="155" width="16" height="16" rx="3" fill="#00C6D7"/><text x="1200" y="169" fill="#c4d2df" font-size="17">Self-hosted and internal</text>
 <rect x="1424" y="155" width="16" height="16" rx="3" fill="#FFCD00"/><text x="1448" y="169" fill="#c4d2df" font-size="17">Cloud</text>
@@ -20,43 +20,47 @@
 <path d="M 110 318 L 1560 318" stroke="#ffffff" stroke-opacity=".1"/><text x="96" y="324" fill="#9fb3c8" font-size="16" text-anchor="end">60B</text>
 <path d="M 110 210 L 1560 210" stroke="#ffffff" stroke-opacity=".1"/><text x="96" y="216" fill="#9fb3c8" font-size="16" text-anchor="end">80B</text>
 <path d="M 110 640 L 1560 640" stroke="#ffffff" stroke-opacity=".35" stroke-width="2"/>
-<rect x="141" y="404.4" width="100" height="235.6" fill="#00C6D7" fill-opacity="0.8"/>
-<rect x="141" y="402.0" width="100" height="2.5" fill="#FFCD00"/>
-<text x="191" y="388" fill="#ffffff" font-size="32" font-family="Teko, sans-serif" text-anchor="middle">44.3B</text>
-<text x="191" y="670" fill="#c4d2df" font-size="18" text-anchor="middle">Jan</text>
-<rect x="302" y="380.6" width="100" height="259.4" fill="#00C6D7" fill-opacity="0.8"/>
-<rect x="302" y="376.8" width="100" height="3.8" fill="#FFCD00"/>
-<text x="352" y="363" fill="#ffffff" font-size="32" font-family="Teko, sans-serif" text-anchor="middle">49.0B</text>
-<text x="352" y="670" fill="#c4d2df" font-size="18" text-anchor="middle">Feb</text>
-<rect x="463" y="405.0" width="100" height="235.0" fill="#00C6D7" fill-opacity="0.8"/>
-<rect x="463" y="399.4" width="100" height="5.6" fill="#FFCD00"/>
-<text x="513" y="385" fill="#ffffff" font-size="32" font-family="Teko, sans-serif" text-anchor="middle">44.8B</text>
-<text x="513" y="670" fill="#c4d2df" font-size="18" text-anchor="middle">Mar</text>
-<rect x="624" y="378.4" width="100" height="261.6" fill="#00C6D7" fill-opacity="0.8"/>
-<rect x="624" y="370.9" width="100" height="7.5" fill="#FFCD00"/>
-<text x="674" y="357" fill="#ffffff" font-size="32" font-family="Teko, sans-serif" text-anchor="middle">50.1B</text>
-<text x="674" y="670" fill="#c4d2df" font-size="18" text-anchor="middle">Apr</text>
-<rect x="785" y="409.9" width="100" height="230.1" fill="#00C6D7" fill-opacity="0.8"/>
-<rect x="785" y="381.5" width="100" height="28.4" fill="#FFCD00"/>
-<text x="835" y="367" fill="#ffffff" font-size="32" font-family="Teko, sans-serif" text-anchor="middle">48.1B</text>
-<text x="835" y="670" fill="#c4d2df" font-size="18" text-anchor="middle">May</text>
-<rect x="946" y="272.8" width="100" height="367.2" fill="#00C6D7" fill-opacity="0.8"/>
-<rect x="946" y="246.6" width="100" height="26.2" fill="#FFCD00"/>
-<text x="996" y="233" fill="#ffffff" font-size="32" font-family="Teko, sans-serif" text-anchor="middle">73.2B</text>
-<text x="996" y="670" fill="#c4d2df" font-size="18" text-anchor="middle">Jun</text>
-<rect x="1107" y="309.6" width="100" height="330.4" fill="#00C6D7" fill-opacity="0.8"/>
-<rect x="1107" y="279.5" width="100" height="30.2" fill="#FFCD00"/>
-<text x="1157" y="265" fill="#ffffff" font-size="32" font-family="Teko, sans-serif" text-anchor="middle">67.1B</text>
-<text x="1157" y="670" fill="#c4d2df" font-size="18" text-anchor="middle">Jul</text>
-<rect x="1268" y="293.1" width="100" height="346.9" fill="#00C6D7" fill-opacity="0.8"/>
-<rect x="1268" y="216.1" width="100" height="77.0" fill="#FFCD00"/>
-<text x="1318" y="202" fill="#ffffff" font-size="32" font-family="Teko, sans-serif" text-anchor="middle">78.9B</text>
-<text x="1318" y="670" fill="#c4d2df" font-size="18" text-anchor="middle">Aug</text>
-<rect x="1429" y="340.7" width="100" height="299.3" fill="#00C6D7" fill-opacity="1"/>
-<rect x="1429" y="254.4" width="100" height="86.2" fill="#FFCD00"/>
-<rect x="1425" y="250.4" width="108" height="389.6" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2"/>
-<text x="1479" y="240" fill="#FFCD00" font-size="32" font-family="Teko, sans-serif" text-anchor="middle">71.7B</text>
-<text x="1479" y="670" fill="#ffffff" font-size="18" font-weight="700" text-anchor="middle">Sep</text>
-<text x="40" y="714" fill="#f5f0e6" font-size="19">September: 55.7B tokens on self-hosted and internal routes, 16.0B on cloud. Down 9.0% from August, the highest month so far.</text>
+<rect x="136.5" y="404.4" width="92" height="235.6" fill="#00C6D7" fill-opacity="0.8"/>
+<rect x="136.5" y="402.0" width="92" height="2.5" fill="#FFCD00"/>
+<text x="182.5" y="388" fill="#ffffff" font-size="32" font-family="Teko, sans-serif" text-anchor="middle">44.3B</text>
+<text x="182.5" y="670" fill="#c4d2df" font-size="18" text-anchor="middle">Jan</text>
+<rect x="281.5" y="380.6" width="92" height="259.4" fill="#00C6D7" fill-opacity="0.8"/>
+<rect x="281.5" y="376.8" width="92" height="3.8" fill="#FFCD00"/>
+<text x="327.5" y="363" fill="#ffffff" font-size="32" font-family="Teko, sans-serif" text-anchor="middle">49.0B</text>
+<text x="327.5" y="670" fill="#c4d2df" font-size="18" text-anchor="middle">Feb</text>
+<rect x="426.5" y="405.0" width="92" height="235.0" fill="#00C6D7" fill-opacity="0.8"/>
+<rect x="426.5" y="399.4" width="92" height="5.6" fill="#FFCD00"/>
+<text x="472.5" y="385" fill="#ffffff" font-size="32" font-family="Teko, sans-serif" text-anchor="middle">44.8B</text>
+<text x="472.5" y="670" fill="#c4d2df" font-size="18" text-anchor="middle">Mar</text>
+<rect x="571.5" y="378.4" width="92" height="261.6" fill="#00C6D7" fill-opacity="0.8"/>
+<rect x="571.5" y="370.9" width="92" height="7.5" fill="#FFCD00"/>
+<text x="617.5" y="357" fill="#ffffff" font-size="32" font-family="Teko, sans-serif" text-anchor="middle">50.1B</text>
+<text x="617.5" y="670" fill="#c4d2df" font-size="18" text-anchor="middle">Apr</text>
+<rect x="716.5" y="409.9" width="92" height="230.1" fill="#00C6D7" fill-opacity="0.8"/>
+<rect x="716.5" y="381.5" width="92" height="28.4" fill="#FFCD00"/>
+<text x="762.5" y="367" fill="#ffffff" font-size="32" font-family="Teko, sans-serif" text-anchor="middle">48.1B</text>
+<text x="762.5" y="670" fill="#c4d2df" font-size="18" text-anchor="middle">May</text>
+<rect x="861.5" y="272.8" width="92" height="367.2" fill="#00C6D7" fill-opacity="0.8"/>
+<rect x="861.5" y="246.6" width="92" height="26.2" fill="#FFCD00"/>
+<text x="907.5" y="233" fill="#ffffff" font-size="32" font-family="Teko, sans-serif" text-anchor="middle">73.2B</text>
+<text x="907.5" y="670" fill="#c4d2df" font-size="18" text-anchor="middle">Jun</text>
+<rect x="1006.5" y="309.6" width="92" height="330.4" fill="#00C6D7" fill-opacity="0.8"/>
+<rect x="1006.5" y="279.5" width="92" height="30.2" fill="#FFCD00"/>
+<text x="1052.5" y="265" fill="#ffffff" font-size="32" font-family="Teko, sans-serif" text-anchor="middle">67.1B</text>
+<text x="1052.5" y="670" fill="#c4d2df" font-size="18" text-anchor="middle">Jul</text>
+<rect x="1151.5" y="293.1" width="92" height="346.9" fill="#00C6D7" fill-opacity="0.8"/>
+<rect x="1151.5" y="216.1" width="92" height="77.0" fill="#FFCD00"/>
+<text x="1197.5" y="202" fill="#ffffff" font-size="32" font-family="Teko, sans-serif" text-anchor="middle">78.9B</text>
+<text x="1197.5" y="670" fill="#c4d2df" font-size="18" text-anchor="middle">Aug</text>
+<rect x="1296.5" y="340.7" width="92" height="299.3" fill="#00C6D7" fill-opacity="0.8"/>
+<rect x="1296.5" y="254.4" width="92" height="86.2" fill="#FFCD00"/>
+<text x="1342.5" y="240" fill="#ffffff" font-size="32" font-family="Teko, sans-serif" text-anchor="middle">71.7B</text>
+<text x="1342.5" y="670" fill="#c4d2df" font-size="18" text-anchor="middle">Sep</text>
+<rect x="1441.5" y="323.0" width="92" height="317.0" fill="#00C6D7" fill-opacity="1"/>
+<rect x="1441.5" y="256.8" width="92" height="66.3" fill="#FFCD00"/>
+<rect x="1437.5" y="252.8" width="100" height="387.2" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="2"/>
+<text x="1487.5" y="243" fill="#FFCD00" font-size="32" font-family="Teko, sans-serif" text-anchor="middle">71.3B</text>
+<text x="1487.5" y="670" fill="#ffffff" font-size="18" font-weight="700" text-anchor="middle">Oct</text>
+<text x="40" y="714" fill="#f5f0e6" font-size="19">October: 59.0B tokens on self-hosted and internal routes, 12.3B on cloud. About level with September; August remains the highest month.</text>
 <text x="40" y="746" fill="#9fb3c8" font-size="17">Gateway-recorded input plus output tokens. Request records include successful and failed calls. No user-level records.</text>
 </svg>

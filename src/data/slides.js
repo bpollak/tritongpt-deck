@@ -8613,7 +8613,7 @@ export const slides = [
       "part": 4,
       "label": "Foundation"
     },
-    "speakerNotes": "About 45 seconds; sets up the sovereign inference slide (Brett, Oct 10). Keep to describing the news, not criticizing or naming any lab, and not as a replacement for the enterprise commercial agreements (they stay in the mix; see next slide). Row 1: release pacing, limited previews, and government review are outside university control; the June federal order sets a voluntary framework with up to 30 days of early government access, not mandatory licensing. Row 2: the gateway carried 527B tokens Jan–Sep 2026, 90.6% on self-hosted and internal routes (not all of that is campus GPU inference). Row 3: data handling still follows UC policy and the P1–P4 classification; sovereign means control over the service, not 'risk free'. Row 4: hosted open-weight models don't get deprecated by a vendor; Class Planner is the gateway's biggest daily load. Now opens Part 4 (Oct 10 swap). Transition: 'And the foundation is already carrying real load.' → gateway usage, then sovereign inference.",
+    "speakerNotes": "About 45 seconds; sets up the sovereign inference slide (Brett, Oct 10). Keep to describing the news, not criticizing or naming any lab, and not as a replacement for the enterprise commercial agreements (they stay in the mix; see next slide). Row 1: release pacing, limited previews, and government review are outside university control; the June federal order sets a voluntary framework with up to 30 days of early government access, not mandatory licensing. Row 2: the gateway carried 598B tokens Jan–Oct 2026, 89.6% on self-hosted and internal routes (not all of that is campus GPU inference). Row 3: data handling still follows UC policy and the P1–P4 classification; sovereign means control over the service, not 'risk free'. Row 4: hosted open-weight models don't get deprecated by a vendor; Class Planner is the gateway's biggest daily load. Now opens Part 4 (Oct 10 swap). Transition: 'And the foundation is already carrying real load.' → gateway usage, then sovereign inference.",
     "compact": true
   },
   {
@@ -8642,7 +8642,7 @@ export const slides = [
     ],
     "managerSection": "Sovereign AI and Scale",
     "durationSeconds": 60,
-    "speakerNotes": "One minute. Visual (Oct 10, Brett): models flow into the campus-run gateway, which already serves more than UC San Diego. Left: open-weight models on campus-managed GPUs at SDSC (sovereign: we control access, deployment, model choice) plus approved commercial APIs for frontier needs. Center: the same public Jan–Sep 2026 aggregates as the usage slide (527.0B tokens, 157.0M request records, 90.6% on self-hosted and internal routes; bars are monthly totals with the cloud share in gold). Right: UC Berkeley researchers already use the gateway with their own tools (not the Harness); UC Merced's Scout already runs on TritonAI and gateway onboarding is under way (Brett, Oct 10); more UC campuses is the opportunity, not an approved UC-wide launch. A support liaison at each campus and token attribution would support expansion. Sovereign inference as a service is a core ecosystem pillar alongside approved commercial frontier APIs. Model capability, release pacing and government review are outside university control; retaining a deployable open-weight option gives us more control over operations. The August 18 OpenAI source documents historical pauses, not an assertion that all commercial models are currently unavailable. EO 14409 section 3 establishes a voluntary framework with up to 30 days of early government access, expressly not mandatory licensing or preclearance. NVIDIA is a U.S. company; its coalition is global. NVIDIA reports strong open-model benchmarks, not universal parity with every proprietary frontier model. These models are candidates to evaluate, not a claim that Nemotron is already deployed at UCSD. Sovereign means control over the service and deployment; it does not mean risk-free, no oversight, or every gateway request on campus GPUs. Campus-managed inference still requires evaluation, isolation, access controls and monitoring. Routing, hardware capacity, support and model licensing determine the operational benefit. Our recommendation in row 3 is a strategic inference from the source facts. Sources checked October 8, 2026. Lead with sovereign AI, the second pillar powering the citizen developer ecosystem and research. Berkeley gateway use is confirmed in Brett/Shawn’s October 8 discussion; expanded campus operationalization and UCOP funding/broker options remain discussion, not an approved UC-wide launch. A support liaison at each campus and token attribution would support expansion. Keep commercial/open-weight comparison, NVIDIA sources and Navier–Stokes detail in backup for questions. Sovereign refers to service/deployment control, not a promise that every route is on campus GPUs or that data never leaves a workstation.",
+    "speakerNotes": "One minute. Visual (Oct 10, Brett): models flow into the campus-run gateway, which already serves more than UC San Diego. Left: open-weight models on campus-managed GPUs at SDSC (sovereign: we control access, deployment, model choice) plus approved commercial APIs for frontier needs. Center: the same public Jan–Oct 2026 aggregates as the usage slide (598.3B tokens, 166.8M request records, 89.6% on self-hosted and internal routes; bars are monthly totals with the cloud share in gold). Right: UC Berkeley researchers already use the gateway with their own tools (not the Harness); UC Merced's Scout already runs on TritonAI and gateway onboarding is under way (Brett, Oct 10); more UC campuses is the opportunity, not an approved UC-wide launch. A support liaison at each campus and token attribution would support expansion. Sovereign inference as a service is a core ecosystem pillar alongside approved commercial frontier APIs. Model capability, release pacing and government review are outside university control; retaining a deployable open-weight option gives us more control over operations. The August 18 OpenAI source documents historical pauses, not an assertion that all commercial models are currently unavailable. EO 14409 section 3 establishes a voluntary framework with up to 30 days of early government access, expressly not mandatory licensing or preclearance. NVIDIA is a U.S. company; its coalition is global. NVIDIA reports strong open-model benchmarks, not universal parity with every proprietary frontier model. These models are candidates to evaluate, not a claim that Nemotron is already deployed at UCSD. Sovereign means control over the service and deployment; it does not mean risk-free, no oversight, or every gateway request on campus GPUs. Campus-managed inference still requires evaluation, isolation, access controls and monitoring. Routing, hardware capacity, support and model licensing determine the operational benefit. Our recommendation in row 3 is a strategic inference from the source facts. Sources checked October 8, 2026. Lead with sovereign AI, the second pillar powering the citizen developer ecosystem and research. Berkeley gateway use is confirmed in Brett/Shawn’s October 8 discussion; expanded campus operationalization and UCOP funding/broker options remain discussion, not an approved UC-wide launch. A support liaison at each campus and token attribution would support expansion. Keep commercial/open-weight comparison, NVIDIA sources and Navier–Stokes detail in backup for questions. Sovereign refers to service/deployment control, not a promise that every route is on campus GPUs or that data never leaves a workstation.",
     "section": {
       "part": 4,
       "label": "Foundation"
@@ -8663,9 +8663,9 @@ export const slides = [
       ],
       "hub": {
         "name": "TritonAI Gateway",
-        "value": "527B",
-        "detail": "tokens · Jan–Sep 2026",
-        "foot": "157M requests · 90.6% on self-hosted and internal routes (blue), cloud in gold"
+        "value": "598B",
+        "detail": "tokens · Jan–Oct 2026",
+        "foot": "167M requests · 89.6% on self-hosted and internal routes (blue), cloud in gold"
       },
       "campusesLabel": "Who it serves",
       "campuses": [
@@ -8708,10 +8708,10 @@ export const slides = [
       "cabinet"
     ],
     "managerSection": "Sovereign AI and Scale",
-    "managerLabel": "Gateway scale: January–September 2026",
-    "managerSummary": "Nine-month token chart, September route mix, and cumulative Gateway totals from the current TritonAI website.",
+    "managerLabel": "Gateway scale: January–October 2026",
+    "managerSummary": "Ten-month token chart, October route mix, and cumulative Gateway totals from the current TritonAI website.",
     "durationSeconds": 30,
-    "speakerNotes": `Follows the why-sovereign slide (Oct 10 swap): the foundation is already carrying real load. Thirty seconds. Show that campus use is already substantial; distinguish tokens from users or measured productivity. Source line moved off the slide: TritonAI Gateway usage, Jan–Sep 2026, reviewed Oct 5, 2026. ${gatewayUsageDashboard.speakerNotes}`
+    "speakerNotes": `Follows the why-sovereign slide (Oct 10 swap): the foundation is already carrying real load. Thirty seconds. Show that campus use is already substantial; distinguish tokens from users or measured productivity. Source line moved off the slide: TritonAI Gateway usage, Jan–Oct 2026, reviewed Nov 3, 2026. ${gatewayUsageDashboard.speakerNotes}`
   },
   {
     "id": 1013,
@@ -11268,7 +11268,7 @@ export const slides = [
     ],
     "managerSection": "Tech Community",
     "durationSeconds": 45,
-    "speakerNotes": "45 seconds. Inference as a service. One campus-run gateway: open-weight models on campus-managed GPUs at SDSC plus approved commercial APIs, behind one key. January through September 2026 it handled 527.0 billion tokens and 157.0 million requests, 90.6 percent on self-hosted and internal routes. It already serves UC Berkeley researchers, and Berkeley wants to expand its use. UC Merced's Scout runs on TritonAI, and Merced now has gateway keys for testing. UCLA and Virginia Tech have been offered access, with keys ready; neither has onboarded yet, so say 'offered,' not 'using.' This is what the Harness runs on, and your departments can call the same gateway from their own apps. Now, what runs on top of it, starting with the solutions IT Services builds for whole campus processes.",
+    "speakerNotes": "45 seconds. Inference as a service. One campus-run gateway: open-weight models on campus-managed GPUs at SDSC plus approved commercial APIs, behind one key. January through October 2026 it handled 598.3 billion tokens and 166.8 million requests, 89.6 percent on self-hosted and internal routes. It already serves UC Berkeley researchers, and Berkeley wants to expand its use. UC Merced's Scout runs on TritonAI, and Merced now has gateway keys for testing. UCLA and Virginia Tech have been offered access, with keys ready; neither has onboarded yet, so say 'offered,' not 'using.' This is what the Harness runs on, and your departments can call the same gateway from their own apps. Now, what runs on top of it, starting with the solutions IT Services builds for whole campus processes.",
     "section": {
       "part": 1,
       "total": 4,
@@ -11290,9 +11290,9 @@ export const slides = [
       ],
       "hub": {
         "name": "TritonAI Gateway",
-        "value": "527B",
-        "detail": "tokens · Jan–Sep 2026",
-        "foot": "157M requests · 90.6% on self-hosted and internal routes (blue), cloud in gold"
+        "value": "598B",
+        "detail": "tokens · Jan–Oct 2026",
+        "foot": "167M requests · 89.6% on self-hosted and internal routes (blue), cloud in gold"
       },
       "campusesLabel": "Who it serves",
       "campuses": [
@@ -11458,14 +11458,14 @@ export const slides = [
     "type": "content",
     "layout": "cabinet-outline",
     "title": "TritonAI Gateway usage",
-    "subtitle": "Gateway activity across UC San Diego, January–September 2026.",
+    "subtitle": "Gateway activity across UC San Diego, January–October 2026.",
     "content": [],
     "figure": {
       "id": "gateway-scale",
-      "alt": "527.0 billion tokens, 157.0 million API request records, 90.6% of tokens on self-hosted and internal routes, 71.7 billion tokens in September. Monthly stacked columns, self-hosted and cloud: Jan 44.3B, Feb 49.0B, Mar 44.8B, Apr 50.1B, May 48.1B, Jun 73.2B, Jul 67.1B, Aug 78.9B, Sep 71.7B."
+      "alt": "598.3 billion tokens, 166.8 million API request records, 89.6% of tokens on self-hosted and internal routes, 71.3 billion tokens in October. Monthly stacked columns, self-hosted and cloud: Jan 44.3B, Feb 49.0B, Mar 44.8B, Apr 50.1B, May 48.1B, Jun 73.2B, Jul 67.1B, Aug 78.9B, Sep 71.7B, Oct 71.3B."
     },
     "sourceUrl": "https://tritonai.ucsd.edu/developer-apis/index.html#gateway-usage",
-    "speakerNotes": "Tech Community: follows the API and recharge slide; the gateway is already carrying real load. (Cabinet note follows.) Thirty seconds. Show that campus use is already substantial; distinguish tokens from users or measured productivity. Source line moved off the slide: TritonAI Gateway usage, Jan–Sep 2026, reviewed Oct 5, 2026. Gateway usage measures shared model access, not TritonGPT chat sessions or Harness adoption. January–September reconciles to 527,027,308,843 input and output tokens and 157,030,124 request records. September totals 71,731,623,368 tokens: 55,691,559,415 self-hosted/internal and 16,040,063,953 cloud. September has 13,120,410 request records across all 30 days. The 90.6% year-to-date share is the non-cloud remainder, including internal routes; do not describe all of it as on-premises GPU inference. Volume alone does not establish the cause of the monthly change. Cache-read and cache-creation fields are not added separately; earlier exports lack those fields, so an upstream definition change cannot be entirely ruled out. Labels are rounded; chart heights use exact public aggregates. Source: https://tritonai.ucsd.edu/developer-apis/index.html#gateway-usage, reviewed October 5 and verified October 8, 2026.",
+    "speakerNotes": "Tech Community: follows the API and recharge slide; the gateway is already carrying real load. (Cabinet note follows.) Thirty seconds. Show that campus use is already substantial; distinguish tokens from users or measured productivity. Source line moved off the slide: TritonAI Gateway usage, Jan–Oct 2026, reviewed Nov 3, 2026. Gateway usage measures shared model access, not TritonGPT chat sessions or Harness adoption. January–October reconciles to 598,326,063,857 input and output tokens and 166,831,485 request records. October totals 71,298,755,014 tokens: 58,970,967,701 self-hosted/internal and 12,327,787,313 cloud. October has 9,801,361 request records across all 31 days. The 89.6% year-to-date share is the non-cloud remainder, including internal routes; do not describe all of it as on-premises GPU inference. Volume alone does not establish the cause of the monthly change. Cache-read and cache-creation fields are not added separately; earlier exports lack those fields, so an upstream definition change cannot be entirely ruled out. Labels are rounded; chart heights use exact public aggregates. Source: https://tritonai.ucsd.edu/developer-apis/index.html#gateway-usage, reviewed November 3, 2026.",
     "audiences": [
       "tech-community"
     ],
