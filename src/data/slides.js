@@ -12108,16 +12108,16 @@ export const slides = [
         "label": "TritonAI Harness · reports",
         "items": [
           {
-            "heading": "A campus AI workspace",
-            "text": "The Harness brings AI and the tools it operates into one workspace."
+            "heading": "TritonAI Harness",
+            "text": "Staff download the Harness to their computers. The app brings AI agents and the tools they use into one workspace."
           },
           {
-            "heading": "Knows the campus data",
-            "text": "Works from the governed data sources and their definitions."
+            "heading": "Computer use",
+            "text": "This Harness capability lets an agent read the screen and operate an application with the mouse and keyboard."
           },
           {
             "heading": "Builds the report in Tableau",
-            "text": "Drives Tableau on screen to build the workbook an analyst would build by hand."
+            "text": "From a prompt, the agent uses governed campus data to write calculations, build charts and assemble a Tableau dashboard."
           }
         ]
       },
@@ -12145,7 +12145,7 @@ export const slides = [
       "label": "What we built"
     },
     "durationSeconds": 60,
-    "speakerNotes": "One minute. Insights started October 15 as a research indirect-cost explorer and grew domain by domain from existing Tableau and Cognos reports; the Ready count was 152 at the October 21 full regression. The Harness figure is the 400+ users quoted on October 10. Next: the Harness builds a report on screen, then how an Insights answer is checked and the live demonstration.",
+    "speakerNotes": "One minute. Insights started October 15 as a research indirect-cost explorer and grew domain by domain from existing Tableau and Cognos reports; the Ready count was 152 at the October 21 full regression. In the demo, computer use means the agent reads the Tableau screen, clicks menus, types formulas and uses the results on screen to decide what to do next. Next: the Harness builds a report on screen, then how an Insights answer is checked and the live demonstration.",
     "audiences": [
       "chancellor"
     ],
@@ -12223,7 +12223,7 @@ export const slides = [
     "hideDemoBadge": true,
     "demoOnly": true,
     "title": "Undergraduate success at UC San Diego",
-    "subtitle": "Entering-class trends, college composition and graduation outcomes.",
+    "subtitle": "How many first-year students started at UC San Diego, and how many graduated within four or six years?",
     "recording": {
       "label": "Prepared measures → charts → dashboard layout → college highlighting → saved report",
       "format": "Real screen recording with native cursor · edited to 1 minute 35 seconds · silent for presenter narration",
@@ -12233,8 +12233,8 @@ export const slides = [
     "intro": {
       "kicker": "Student success · Tableau dashboard",
       "title": "Undergraduate success at UC San Diego",
-      "setup": "Track the size and college composition of entering first-year classes, and compare four- and six-year graduation rates.",
-      "watchFor": "Fall 2019–2022 entering classes, graduation patterns by college, and one college selected across all four charts.",
+      "setup": "See how many first-year students started each fall and how they were spread across UC San Diego’s colleges. Compare the share who graduated within four or six years.",
+      "watchFor": "Select a college to see it highlighted across all four charts.",
       "seconds": 5
     },
     "section": {
@@ -12338,7 +12338,7 @@ export const slides = [
         "items": [
           {
             "heading": "Read live data where covered",
-            "text": "Insights queries SAP HANA where live coverage is available. Prepared report snapshots fill coverage gaps or provide a fallback."
+            "text": "Insights queries SAP HANA where live coverage is available. Report snapshots serve as a backstop for metrics calculated in the reports themselves and for gaps in live coverage."
           },
           {
             "heading": "Combine sources where supported",
@@ -12360,7 +12360,7 @@ export const slides = [
         ]
       }
     ],
-    "speakerNotes": "This Cabinet-level skunkworks project is a proof of concept to evaluate for a pilot. Access is granted to the prototype as a whole, without granular permissions within it. The agent uses a field catalog and query limits to plan which sources to query. Live HANA reads are preferred where covered. Prepared report snapshots support fallback and uncovered data. For a hypothetical question such as ‘Show salary and fringe charges by fiscal year,’ the answer, table and chart would use the same query results. Retrieval time and upstream refresh time are distinct."
+    "speakerNotes": "This Cabinet-level skunkworks project is a proof of concept to evaluate for a pilot. Access is granted to the prototype as a whole, without granular permissions within it. The agent uses a field catalog and query limits to plan which sources to query. Live HANA reads are preferred where covered. Prepared report snapshots are the backstop when a metric is calculated inside the report itself or live data is unavailable. For a hypothetical question such as ‘Show salary and fringe charges by fiscal year,’ the answer, table and chart would use the same query results. Retrieval time and upstream refresh time are distinct."
   },
   {
     "id": 5111,
