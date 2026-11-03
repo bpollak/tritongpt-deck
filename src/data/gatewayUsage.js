@@ -1,5 +1,5 @@
 // Public Gateway aggregates from https://tritonai.ucsd.edu/developer-apis/index.html#gateway-usage.
-// January–September 2026; source reviewed October 5, 2026, verified October 8, 2026.
+// January–October 2026; source reviewed November 3, 2026 (October from Dominic Feliton's November 2 export).
 // Keep exact counts for geometry; round only presentation labels.
 const monthly = [
   {
@@ -55,6 +55,12 @@ const monthly = [
     "label": "September",
     "selfHostedTokens": 55691559415,
     "cloudTokens": 16040063953
+  },
+  {
+    "month": "2026-10",
+    "label": "October",
+    "selfHostedTokens": 58970967701,
+    "cloudTokens": 12327787313
   }
 ];
 
@@ -65,17 +71,17 @@ export const gatewayUsageDashboard = {
   layout: 'data-dashboard',
   compact: true,
   title: 'TritonAI LLM Gateway Usage',
-  subtitle: 'Aggregate API activity across UC San Diego, January 1–September 30, 2026. No user-level records.',
+  subtitle: 'Aggregate API activity across UC San Diego, January 1–October 31, 2026. No user-level records.',
   backgroundColor: '#F5F0E6',
   dashboardSections: [
     {
       type: 'metric-grid',
       variant: 'strip',
       items: [
-        { value: '527.0B', label: 'Tokens processed', icon: 'Database', color: '#00629B' },
-        { value: '157.0M', label: 'API request records', icon: 'BarChart3', color: '#00C6D7' },
-        { value: '90.6%', label: 'Tokens on self-hosted and internal routes', icon: 'Server', color: '#6E963B' },
-        { value: '71.7B', label: 'Tokens in September', icon: 'TrendingUp', color: '#FC8900' }
+        { value: '598.3B', label: 'Tokens processed', icon: 'Database', color: '#00629B' },
+        { value: '166.8M', label: 'API request records', icon: 'BarChart3', color: '#00C6D7' },
+        { value: '89.6%', label: 'Tokens on self-hosted and internal routes', icon: 'Server', color: '#6E963B' },
+        { value: '71.3B', label: 'Tokens in October', icon: 'TrendingUp', color: '#FC8900' }
       ]
     },
     {
@@ -91,9 +97,9 @@ export const gatewayUsageDashboard = {
         cloud: row.cloudTokens / 1e9,
         displayValue: `${billions(row.selfHostedTokens + row.cloudTokens)}B`,
         annotation: `${billions(row.selfHostedTokens)}B / ${billions(row.cloudTokens)}B cloud`,
-        highlight: row.month === '2026-09'
+        highlight: row.month === '2026-10'
       })),
-      caption: 'September was down 9.0% from August. August remains the highest-volume month in this period.'
+      caption: 'October was about level with September (down 0.6%), with more on self-hosted routes. August remains the highest-volume month.'
     },
     {
       type: 'stat-callouts',
@@ -101,8 +107,8 @@ export const gatewayUsageDashboard = {
       items: [
         {
           icon: 'Server',
-          stat: 'September route mix',
-          detail: '55.7B tokens on self-hosted and internal routes; 16.0B on cloud routes.',
+          stat: 'October route mix',
+          detail: '59.0B tokens on self-hosted and internal routes (up 5.9%); 12.3B on cloud routes (down 23.1%).',
           color: '#00629B'
         },
         {
@@ -115,8 +121,8 @@ export const gatewayUsageDashboard = {
     }
   ],
   sourceUrl: 'https://tritonai.ucsd.edu/developer-apis/index.html#gateway-usage',
-  claimNote: 'Source: TritonAI Gateway usage · Jan–Sep 2026 · source reviewed Oct 5, 2026',
-  speakerNotes: 'Gateway usage measures shared model access, not TritonGPT chat sessions or Harness adoption. January–September reconciles to 527,027,308,843 input and output tokens and 157,030,124 request records. September totals 71,731,623,368 tokens: 55,691,559,415 self-hosted/internal and 16,040,063,953 cloud. September has 13,120,410 request records across all 30 days. The 90.6% year-to-date share is the non-cloud remainder, including internal routes; do not describe all of it as on-premises GPU inference. Volume alone does not establish the cause of the monthly change. Cache-read and cache-creation fields are not added separately; earlier exports lack those fields, so an upstream definition change cannot be entirely ruled out. Labels are rounded; chart heights use exact public aggregates. Source: https://tritonai.ucsd.edu/developer-apis/index.html#gateway-usage, reviewed October 5 and verified October 8, 2026.'
+  claimNote: 'Source: TritonAI Gateway usage · Jan–Oct 2026 · source reviewed Nov 3, 2026',
+  speakerNotes: 'Gateway usage measures shared model access, not TritonGPT chat sessions or Harness adoption. January–October reconciles to 598,326,063,857 input and output tokens and 166,831,485 request records. October totals 71,298,755,014 tokens: 58,970,967,701 self-hosted/internal and 12,327,787,313 cloud. October has 9,801,361 request records across all 31 days. The 89.6% year-to-date share is the non-cloud remainder, including internal routes; do not describe all of it as on-premises GPU inference. Volume alone does not establish the cause of the monthly change. Cache-read and cache-creation fields are not added separately; earlier exports lack those fields, so an upstream definition change cannot be entirely ruled out. Labels are rounded; chart heights use exact public aggregates. Source: https://tritonai.ucsd.edu/developer-apis/index.html#gateway-usage, reviewed November 3, 2026.'
 };
 
 export const gatewayMonthly = monthly;
