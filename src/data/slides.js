@@ -12250,6 +12250,119 @@ export const slides = [
     "managerSection": "Chancellor"
   },
   {
+    "id": 5113,
+    "slug": "chancellor-insights-origin",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "content": [],
+    "section": {
+      "part": 2,
+      "total": 3,
+      "label": "What we built"
+    },
+    "durationSeconds": 55,
+    "audiences": [
+      "chancellor"
+    ],
+    "managerSection": "Chancellor",
+    "title": "Finding answers in the reports we already have",
+    "actionLink": {
+      "href": "https://idc-explorer.vercel.app/",
+      "label": "Open TritonAI Insights"
+    },
+    "subtitle": "Reports answer questions and help us forecast. Finding the right report can be the hardest part.",
+    "columns": [
+      {
+        "label": "What we learned",
+        "items": [
+          {
+            "heading": "Which report answers my question?",
+            "text": "The answer may already exist. People still have to know which report to open, which filters to use and how the measures are defined."
+          },
+          {
+            "heading": "A follow-up can mean another search",
+            "text": "A dashboard is built around a set of questions. A different time period, comparison or domain may send the reader looking for another report."
+          }
+        ]
+      },
+      {
+        "label": "What we built",
+        "items": [
+          {
+            "heading": "A Cabinet-level proof of concept",
+            "text": "TritonAI Insights is a skunkworks project that lets Cabinet members ask in plain language and follow up using reports and data the campus already has."
+          },
+          {
+            "heading": "Two ways to ask",
+            "text": "Prequalified questions have answers verified against source reports. Freeform questions are exploratory and their answers are unverified."
+          }
+        ]
+      }
+    ],
+    "speakerNotes": "Studying analysts’ work surfaced a problem for the people who use reports. Reports answer questions and support forecasts, but readers first have to find the report that fits. Insights tests whether an AI layer can ease that search and give people more flexibility to ask follow-ups using existing sources. The Cabinet proof of concept helps us evaluate whether the approach could support a pilot."
+  },
+  {
+    "id": 5114,
+    "slug": "chancellor-insights-architecture",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "content": [],
+    "section": {
+      "part": 2,
+      "total": 3,
+      "label": "What we built"
+    },
+    "durationSeconds": 55,
+    "audiences": [
+      "chancellor"
+    ],
+    "managerSection": "Chancellor",
+    "title": "How Insights answers a question",
+    "subtitle": "The prototype connects questions to existing campus data and shows the sources behind each answer.",
+    "columns": [
+      {
+        "label": "1 · Ask a question",
+        "items": [
+          {
+            "heading": "Start with a question",
+            "text": "Ask in plain language about one domain or across domains where the sources support it."
+          },
+          {
+            "heading": "Cabinet-level access",
+            "text": "Access is granted to the prototype as a whole. Approved participants have the same access within it."
+          }
+        ]
+      },
+      {
+        "label": "2 · Query the data",
+        "items": [
+          {
+            "heading": "Read live data where covered",
+            "text": "Insights queries SAP HANA where live coverage is available. Prepared report snapshots fill coverage gaps or provide a fallback."
+          },
+          {
+            "heading": "Combine sources where supported",
+            "text": "Restricted, read-only queries can bring together results from multiple domains."
+          }
+        ]
+      },
+      {
+        "label": "3 · Show the evidence",
+        "items": [
+          {
+            "heading": "Build the answer from query results",
+            "text": "The answer identifies its sources and available dates. The same results drive the table and any suitable chart."
+          },
+          {
+            "heading": "Make verification visible",
+            "text": "Prequalified answers are verified. Freeform answers are exploratory and unverified."
+          }
+        ]
+      }
+    ],
+    "speakerNotes": "This Cabinet-level skunkworks project is a proof of concept to evaluate for a pilot. Access is granted to the prototype as a whole, without granular permissions within it. The agent uses a field catalog and query limits to plan which sources to query. Live HANA reads are preferred where covered. Prepared report snapshots support fallback and uncovered data. For a hypothetical question such as ‘Show salary and fringe charges by fiscal year,’ the answer, table and chart would use the same query results. Retrieval time and upstream refresh time are distinct."
+  },
+  {
     "id": 5111,
     "slug": "chancellor-thank-you",
     "type": "title",

@@ -197,6 +197,8 @@ export const slideManagerState = {
     "chancellor-what-we-built",
     "chancellor-harness-report",
     "chancellor-tableau-mechanics",
+    "chancellor-insights-origin",
+    "chancellor-insights-architecture",
     "chancellor-thank-you"
   ],
   "removed": [
@@ -1066,6 +1068,12 @@ export const slideManagerState = {
       "chancellor"
     ],
     "chancellor-tableau-mechanics": [
+      "chancellor"
+    ],
+    "chancellor-insights-origin": [
+      "chancellor"
+    ],
+    "chancellor-insights-architecture": [
       "chancellor"
     ],
     "chancellor-thank-you": [
