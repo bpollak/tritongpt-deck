@@ -12369,6 +12369,48 @@ export const slides = [
     "speakerNotes": "This Cabinet-level skunkworks project is a proof of concept to evaluate for a pilot. Access is granted to the prototype as a whole, without granular permissions within it. The agent uses a field catalog and query limits to plan which sources to query. Live HANA reads are preferred where covered. Prepared report snapshots are the backstop when a metric is calculated inside the report itself or live data is unavailable. For a hypothetical question such as ‘Show salary and fringe charges by fiscal year,’ the answer, table and chart would use the same query results. Retrieval time and upstream refresh time are distinct Two reports can use the same KPI name and count different populations, apply different filters or use different reporting dates. For example, retention can vary with which students are included and when enrollment is measured. Some calculations live inside Tableau or Cognos reports, so a direct query may produce a different figure. Prepared answers are checked against their source reports. Freeform answers are exploratory and can sound convincing even when the figure is wrong. For official reporting or decisions, review the source, definition and data date. Ask the responsible data steward to confirm which figure to use when reports disagree.",
   },
   {
+    "id": 5115,
+    "slug": "chancellor-insights-walkthrough",
+    "type": "video",
+    "layout": "cabinet-demo",
+    "videoSrc": "/media/chancellor/chancellor-insights-walkthrough.mp4",
+    "poster": "/media/chancellor/chancellor-insights-walkthrough-poster.jpg",
+    "captionsSrc": "/media/chancellor/chancellor-insights-walkthrough.vtt",
+    "captionsDefault": false,
+    "videoMuted": false,
+    "videoLoop": false,
+    "videoClearNav": false,
+    "videoAutoPlay": true,
+    "hideDemoBadge": true,
+    "demoOnly": true,
+    "title": "Using TritonAI Insights",
+    "subtitle": "A narrated five-minute guide for the Chancellor and Cabinet.",
+    "recording": {
+      "label": "What's behind it → ask a question → read the answer → ask in your own words → follow up → across areas and rankings → using it well",
+      "format": "Narrated walkthrough built from captures of the live site · 5 minutes 21 seconds · AI voice · captions available",
+      "mediaStem": "chancellor-insights-walkthrough",
+      "status": "final"
+    },
+    "intro": {
+      "kicker": "Walkthrough · TritonAI Insights",
+      "title": "Using TritonAI Insights",
+      "setup": "A narrated five-minute guide for Cabinet members: what Insights is built on, how to ask a question and read the answer, and how to use it well.",
+      "watchFor": "Ready answers, checked in advance, versus Exploratory answers generated live, and the source and data date shown with every answer.",
+      "seconds": 5
+    },
+    "section": {
+      "part": 2,
+      "total": 3,
+      "label": "Skunkworks phase"
+    },
+    "durationSeconds": 330,
+    "speakerNotes": "Five minutes 21 seconds, narrated with an AI voice; captions are available from the player's CC button. The walkthrough uses captures of the live site at insights.tritonai.ucsd.edu with the signed-in email hidden. It covers what Insights is built on (reports the campus already relies on in Tableau and Cognos, with live campus data warehouse queries for research, finance and workforce where the connections cover the question), a Ready answer (indirect cost recovery), an Exploratory question typed in plain English and answered live, follow-ups, a question across areas and the rankings, and five rules for using it well. Figures shown were checked against the live site before recording. Use it here, or send it to Cabinet members to watch on their own.",
+    "audiences": [
+      "chancellor"
+    ],
+    "managerSection": "Chancellor"
+  },
+  {
     "id": 5111,
     "slug": "chancellor-thank-you",
     "type": "title",

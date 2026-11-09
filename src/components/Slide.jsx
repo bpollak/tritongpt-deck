@@ -74,6 +74,8 @@ const DeckVideoPlayer = ({ slide, staticPreview }) => {
   const [showIntro, setShowIntro] = React.useState(Boolean(slide.intro));
   const videoRef = React.useRef(null);
   const autoPlay = !staticPreview && !touchDevice && slide.videoAutoPlay !== false;
+  // Narrated recordings set videoMuted: false; silent demos stay muted for presenter narration.
+  const muted = slide.videoMuted !== false;
   // The intro card waits for the presenter: a click or the next key/clicker starts the recording.
   React.useEffect(() => {
     if (!showIntro || staticPreview) return undefined;
@@ -85,7 +87,7 @@ const DeckVideoPlayer = ({ slide, staticPreview }) => {
     const video = videoRef.current;
     if (!slide.intro || showIntro || !autoPlay || !video) return undefined;
     // play() can be interrupted while the file is still loading; retry once it can play.
-    const start = () => { video.muted = true; video.play().catch(() => {}); };
+    const start = () => { video.muted = muted; video.play().catch(() => {}); };
     const resume = () => { if (document.visibilityState === 'visible' && video.paused && video.currentTime === 0) start(); };
     start();
     video.addEventListener('canplay', start, { once: true });
@@ -94,7 +96,7 @@ const DeckVideoPlayer = ({ slide, staticPreview }) => {
       video.removeEventListener('canplay', start);
       document.removeEventListener('visibilitychange', resume);
     };
-  }, [slide.intro, showIntro, autoPlay]);
+  }, [slide.intro, showIntro, autoPlay, muted]);
   return (
     <div className="relative w-full h-full overflow-hidden bg-black">
       {slide.intro && showIntro && (
@@ -111,7 +113,7 @@ const DeckVideoPlayer = ({ slide, staticPreview }) => {
         autoPlay={autoPlay && !slide.intro}
         preload={staticPreview ? 'metadata' : touchDevice ? 'none' : undefined}
         loop={slide.videoLoop === true}
-        muted
+        muted={muted}
         playsInline
       >
         {slide.captionsSrc && (
