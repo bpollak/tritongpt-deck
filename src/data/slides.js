@@ -12161,53 +12161,53 @@ export const slides = [
     "slug": "chancellor-harness-report",
     "type": "video",
     "layout": "cabinet-demo",
-    "videoSrc": "/media/chancellor/chancellor-harness-report-streamlined.mp4",
-    "poster": "/media/chancellor/chancellor-harness-report-streamlined-poster.jpg",
+    "videoSrc": "/media/chancellor/chancellor-harness-undergrad-degrees.mp4",
+    "poster": "/media/chancellor/chancellor-harness-undergrad-degrees-poster.jpg",
     "videoLoop": false,
     "videoClearNav": false,
     "videoAutoPlay": true,
     "hideDemoBadge": true,
     "demoOnly": true,
     "title": "The Harness builds the report",
-    "subtitle": "The Harness starts with a prompt describing the desired dashboard and builds it in Tableau.",
+    "subtitle": "The Harness starts with one request and rebuilds IR's Undergraduate Degree Recipients report as a dashboard in Tableau.",
     "content": [
       {
         "heading": "Uses the governed source",
-        "text": "Opens SAH-RetentionCensus-View and builds the workbook as an analyst would."
+        "text": "Opens SAH-Degree-View and builds the workbook as an analyst would."
       },
       {
         "heading": "Writes the formulas",
-        "text": "Counts distinct students, four-year graduates and the rate, on screen in Tableau."
+        "text": "Counts each student once a year, in the school of their first degree, on screen in Tableau."
       },
       {
         "heading": "Checks against IR",
-        "text": "The Fall 2021 cohort comes to 7,543 students, IR's published count."
+        "text": "All five years within 2% of IR's published totals; 2024-25 is 9,775 against IR's 9,596."
       },
       {
         "heading": "Aggregates only",
-        "text": "No student-level data on any chart; nothing downloaded."
+        "text": "No student-level data on any chart; schools under 10 recipients not shown; nothing downloaded."
       }
     ],
     "recording": {
-      "label": "Prompt → governed source → formulas → Fall 2021 cohort check → college charts → dashboard → published",
-      "format": "Edited screen recording with captions · 55 seconds · silent for presenter narration",
-      "mediaStem": "chancellor-harness-report-streamlined",
-      "status": "captured and reviewed"
+      "label": "Request → governed source and counting rules → campus and school charts → dashboard → finished draft",
+      "format": "Highlights from one continuous screen recording, with a real elapsed-time clock and zooms on Tableau and the agent's pointer · 2 minutes 32 seconds · silent for presenter voice-over",
+      "mediaStem": "chancellor-harness-undergrad-degrees",
+      "status": "captured November 8, 2026 (fourth take, full-width panel); highlights cut reviewed"
     },
     "intro": {
       "kicker": "Skunkworks demo · TritonAI Harness",
       "title": "The Harness builds the report",
-      "setup": "The prompt asks for a Tableau dashboard showing four-year graduation rates by college for the Fall 2021 entering class.",
-      "watchFor": "The agent on the left driving Tableau on the right: the formulas it writes, the cohort check against IR (7,543), and the finished dashboard it publishes.",
-      "seconds": 4
+      "setup": "One request: rebuild IR's Undergraduate Degree Recipients report as a visual dashboard in Tableau, from the governed student data source, saved as a draft.",
+      "watchFor": "The agent in the middle driving Tableau on the right: the counting rules it writes, the charts and dashboard taking shape, and the finished draft. The clock in the corner shows real elapsed time.",
+      "seconds": 7
     },
     "section": {
       "part": 2,
       "total": 3,
       "label": "Skunkworks phase"
     },
-    "durationSeconds": 59,
-    "speakerNotes": "This experiment uses the existing TritonAI Harness app to test report building. The silent 55-second edit starts with a summary of the requested dashboard. The Harness opens the governed source, writes the measures, checks the cohort count against Institutional Research (7,543), builds the charts and publishes the dashboard. The footage is sped up and waiting time is cut. People wrote the initial request and a few follow-up instructions. If asked, some college rates differ from Institutional Research by about 1–2 percentage points. The cohort check is a count check.",
+    "durationSeconds": 159,
+    "speakerNotes": "About two and three-quarter minutes: a 7-second intro card, then the 2:32 video (silent; you narrate). Middle: the TritonAI Harness agent's steps. Right: Tableau on the development server, operated by the agent. The clock at bottom right is real elapsed time from the moment the request was sent; it matches the Harness's own \"Working for\" timer. Timeline: 0:00 title; 0:05 the one-sentence request; 0:12 minute 0, it opens IR's published report to see what it shows; 0:20 minute 2, it connects to the governed degree source (SAH-Degree-View) and writes the counting rules; 0:32 minute 6, slowed down: the agent's small pointer finds each field and drops it on the chart (year, recipients, the 2024-25 highlight); 0:59 the five campus totals; 1:09 minute 12, the 2024-25 school chart, schools under 10 left off; 1:36 minute 14, it double-clicks each sheet onto the dashboard and sets the size; 2:05 minute 18, the draft is saved to a personal space and opened as readers see it; 2:20 the finished dashboard, done in 19 minutes 57 seconds; 2:27 end card. These are highlights of one real, uninterrupted run, played at one to four times speed between jumps; the minutes in between are cut, not staged. One request, no follow-up instructions. Two hand actions, neither in the build: the Tableau panel was widened before the request was sent, and in the first minute the panel was switched to the browser tab the agent had opened. Thread titles in the Harness sidebar are blurred. The AI model was GPT-6.1 Sol through the TritonAI Harness. Narration: this is the request an analyst gets; the agent reads IR's report, knows the governed data and Tableau, writes the counting rules and builds the charts. If asked: (1) every year is within 2% of IR; 2024-25 runs 179 degrees high (1.87%), plausibly degrees posted after IR's January 23, 2026 data date, not confirmed. (2) School counts were checked the same morning: all 45 school-year cells within tolerance; largest gap Social Sciences 2024-25, 3,898 vs 3,809. (3) Schools with fewer than 10 recipients are left off the chart. Transition: a report is one kind of analyst work; most requests are a question that needs an answer, which is where Insights comes in.",
     "audiences": [
       "chancellor"
     ],
