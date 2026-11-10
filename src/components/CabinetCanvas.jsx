@@ -9,7 +9,11 @@ export default function CabinetCanvas({ children, className = '', section, ask }
   const [placement, setPlacement] = useState({ scale: 1, left: 0, top: 0, reading: false });
   useLayoutEffect(() => {
     const fit = () => {
-      const { width, height } = frame.current.getBoundingClientRect();
+      // Layout size, not getBoundingClientRect: the stage applies CSS zoom on
+      // laptop-height windows, and the bounding rect reports the zoomed size,
+      // which left the canvas at 75% of the available width.
+      const width = frame.current.offsetWidth;
+      const height = frame.current.offsetHeight;
       if (!width || !height) return;
       const reading = width < 600 && height > width;
       const scale = Math.min(width / 1280, height / 720);
