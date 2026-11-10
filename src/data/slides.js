@@ -12440,5 +12440,669 @@ export const slides = [
       "chancellor"
     ],
     "managerSection": "Chancellor"
+  },
+  /* chancellors-office view (generated) */
+  {
+    "id": 5301,
+    "slug": "co-title",
+    "type": "title",
+    "layout": "title-hero",
+    "content": [],
+    "title": "Getting started with the TritonAI Harness",
+    "subtitle": "What it is, how to get set up, and what you can do with it",
+    "conference": "Office of the Chancellor · Tuesday, November 10, 2026",
+    "arc": [
+      {
+        "label": "What it is",
+        "note": "A model that does the work"
+      },
+      {
+        "label": "Get set up",
+        "note": "Install, key, first task"
+      },
+      {
+        "label": "Put it to work",
+        "note": "Everyday office tasks"
+      }
+    ],
+    "durationSeconds": 15,
+    "speakerNotes": "Fifteen seconds. Three parts: what the Harness is, how to get set up, and what you can do with it in an office like this one. Then a live demo.",
+    "audiences": [
+      "chancellors-office"
+    ],
+    "managerSection": "Chancellor's Office"
+  },
+  {
+    "id": 5302,
+    "slug": "co-chat-and-harness",
+    "type": "content",
+    "layout": "cabinet-harness-around",
+    "harnessAround": {
+      "kicker": "What a harness adds",
+      "lead": "The Harness adds files, connected tools, memory, and checks around the model so it can carry a task through to a result.",
+      "chat": {
+        "product": "TritonGPT",
+        "name": "Chat app",
+        "tagline": "A model answers.",
+        "facts": [
+          [
+            "Best for",
+            "Questions, document review, drafting"
+          ],
+          [
+            "Where",
+            "In the browser"
+          ],
+          [
+            "Connects to",
+            "Campus sources and purpose-built assistants"
+          ],
+          [
+            "You stay in charge",
+            "Review the answer before you use it"
+          ]
+        ]
+      },
+      "harness": {
+        "product": "TritonAI Harness",
+        "name": "Harness",
+        "tagline": "A model works.",
+        "inputs": [
+          "files",
+          "rules",
+          "memory"
+        ],
+        "actions": [
+          "read",
+          "edit",
+          "verify"
+        ],
+        "outputs": [
+          {
+            "icon": "FileText",
+            "label": "briefing.docx"
+          },
+          {
+            "icon": "CheckCircle",
+            "label": "checked"
+          },
+          {
+            "icon": "ClipboardList",
+            "label": "ready to review"
+          }
+        ],
+        "facts": [
+          [
+            "Best for",
+            "Multi-step work that ends in a saved result"
+          ],
+          [
+            "Where",
+            "Installed on Mac or Windows; a phone can direct it"
+          ],
+          [
+            "Connects to",
+            "Microsoft 365, Google, GitHub, Kuali Build, Lucid, n8n, within your access"
+          ],
+          [
+            "You stay in charge",
+            "You set how much it does on its own"
+          ]
+        ]
+      },
+      "tone": "dark"
+    },
+    "title": "TritonGPT and the TritonAI Harness",
+    "subtitle": "Give it a task. It works through the steps and brings back a result.",
+    "audiences": [
+      "chancellors-office"
+    ],
+    "managerSection": "Chancellor's Office",
+    "durationSeconds": 45,
+    "content": [
+      {
+        "heading": "TritonGPT chat workflow",
+        "text": "Campus questions, document review, drafting, and purpose-built assistants."
+      },
+      {
+        "heading": "TritonAI Harness workflow",
+        "text": "Give it a goal and the files it needs. It uses connected tools, checks the work, and returns a result to review."
+      }
+    ],
+    "speakerNotes": "45 seconds. Most of you know TritonGPT. The difference is who does the middle of the task. In chat you carry things back and forth. In the Harness you describe the result you need, it reads the files, uses the connected tools, produces the document or draft, and checks its work. You still review the result before it goes anywhere.",
+    "websiteVisual": "comparison",
+    "workflowComparison": {
+      "matrixTitle": "A chat answers. The Harness does the work.",
+      "matrixLead": "TritonGPT and TritonAI Harness, side by side. You stay in charge of both.",
+      "matrixRows": [
+        {
+          "label": "What it does",
+          "icon": "FolderOpen",
+          "tritongpt": {
+            "title": "Find, understand, draft",
+            "detail": "Answers and drafts from campus sources and your files."
+          },
+          "harness": {
+            "title": "Carries a task to a saved result",
+            "detail": "Works through project files and checks its work."
+          }
+        },
+        {
+          "label": "Best fit",
+          "icon": "Target",
+          "tritongpt": {
+            "title": "Questions, review, drafting",
+            "detail": "Campus questions, document review, assistants."
+          },
+          "harness": {
+            "title": "Multi-step work",
+            "detail": "Changes files, analyzes data, builds artifacts."
+          }
+        },
+        {
+          "label": "What it connects to",
+          "icon": "Plug",
+          "tritongpt": {
+            "title": "Campus sources and assistants",
+            "detail": "Websites, knowledge bases, and assistant tools."
+          },
+          "harness": {
+            "title": "Campus tools, within your access",
+            "detail": "Microsoft 365, Google Workspace, GitHub, Kuali Build, n8n."
+          }
+        },
+        {
+          "label": "Where you work",
+          "icon": "Monitor",
+          "tritongpt": {
+            "title": "In the browser",
+            "detail": "Campus-hosted web service."
+          },
+          "harness": {
+            "title": "Installed workspace",
+            "detail": "Mac or Windows; a paired phone can direct it."
+          }
+        },
+        {
+          "label": "Typical result",
+          "icon": "FileCheck",
+          "tritongpt": {
+            "title": "A sourced answer or draft",
+            "detail": "A comparison, summary, or draft text."
+          },
+          "harness": {
+            "title": "A saved deliverable",
+            "detail": "A workbook, deck, website change, or workflow."
+          }
+        },
+        {
+          "label": "Who stays in charge",
+          "icon": "Eye",
+          "tritongpt": {
+            "title": "You review the response",
+            "detail": "Check it before you use it."
+          },
+          "harness": {
+            "title": "You set how much it does alone",
+            "detail": "Supervised mode asks before commands and file changes."
+          }
+        }
+      ],
+      "title": "Choose the workspace for the task.",
+      "lead": "TritonGPT helps you find, understand, and draft. The Harness can carry a task through files, tools, and checks to a result you review.",
+      "taskRows": [
+        {
+          "label": "Best fit",
+          "tritongpt": "Campus questions, document review, drafting, and purpose-built assistants.",
+          "harness": "Multi-step work that changes files, analyzes data, builds artifacts, or updates an application."
+        },
+        {
+          "label": "Where you work",
+          "tritongpt": "Campus-hosted web service; open in a browser.",
+          "harness": "Installed Mac/Windows workspace; a paired phone can direct the host."
+        },
+        {
+          "label": "Typical result",
+          "tritongpt": "A sourced answer, comparison, or draft to review.",
+          "harness": "A saved workbook, briefing deck, checked website change, or workflow to review."
+        }
+      ],
+      "dataRule": "P1–P3 only within approved services and setups; P4 prohibited. Check the service, model route, and use case.",
+      "accessRule": "Access follows your account permissions and the abilities enabled for each tool.",
+      "verifiedDate": "October 8, 2026",
+      "kicker": "The engine",
+      "singleView": true
+    },
+    "section": {
+      "part": 1,
+      "total": 3,
+      "label": "What it is"
+    }
+  },
+  {
+    "id": 5308,
+    "slug": "co-key-features",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "Key Harness features",
+    "subtitle": "What the Harness adds around the model.",
+    "content": [],
+    "columns": [
+      {
+        "label": "How it works for you",
+        "items": [
+          {
+            "heading": "Memory",
+            "text": "Recalls past work and decisions."
+          },
+          {
+            "heading": "Helper agents",
+            "text": "Keep several tasks moving at once."
+          },
+          {
+            "heading": "Automations",
+            "text": "Run on a schedule or a trigger."
+          },
+          {
+            "heading": "Computer use",
+            "text": "Uses your files, apps, and browser. Off until you turn it on."
+          }
+        ]
+      },
+      {
+        "label": "Staying on top of work",
+        "items": [
+          {
+            "heading": "Phone access",
+            "text": "Start work on a connected computer from your phone."
+          },
+          {
+            "heading": "Ideas",
+            "text": "Ready-to-use suggestions drawn from your recent work."
+          },
+          {
+            "heading": "Project overviews",
+            "text": "Work in progress, recent updates, and suggested next steps in one place."
+          },
+          {
+            "heading": "Skill recording",
+            "text": "Demonstrate a task once, then reuse it."
+          }
+        ]
+      }
+    ],
+    "section": {
+      "part": 1,
+      "total": 3,
+      "label": "What it is"
+    },
+    "durationSeconds": 60,
+    "speakerNotes": "60 seconds. This is the feature list from the Harness page on tritonai.ucsd.edu, stable release 0.4.1. Two to land for this room: memory, so you do not start over each time, and skill recording, so a task you worked out once becomes repeatable for you or a colleague. Computer use is off by default; you turn it on in Settings › General. Bigger tasks can be split across helper agents that plan, build, and check.",
+    "audiences": [
+      "chancellors-office"
+    ],
+    "managerSection": "Chancellor's Office"
+  },
+  {
+    "id": 5309,
+    "slug": "co-plugins",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "Included plugins",
+    "subtitle": "Turn them on in Settings › Plugins. Each one works within your own account permissions.",
+    "content": [],
+    "columns": [
+      {
+        "label": "Everyday work",
+        "items": [
+          {
+            "heading": "Microsoft 365",
+            "text": "Reads Outlook mail and calendars. Drafts, calendar changes, and Teams chat are opt-in."
+          },
+          {
+            "heading": "Google Workspace",
+            "text": "Reads UC San Diego Drive files: Docs, Sheets, and Slides."
+          },
+          {
+            "heading": "UCSD Assistant",
+            "text": "Finds campus information from public UC San Diego sources, with citations."
+          },
+          {
+            "heading": "Lucid",
+            "text": "Searches and reads Lucidchart and Lucidspark documents."
+          }
+        ]
+      },
+      {
+        "label": "Forms, workflows, and projects",
+        "items": [
+          {
+            "heading": "Kuali Build",
+            "text": "Inspects apps, forms, documents, and workflows."
+          },
+          {
+            "heading": "n8n",
+            "text": "Inspects and designs workflows in UC San Diego’s n8n service."
+          },
+          {
+            "heading": "Jira",
+            "text": "Searches and reads issues, comments, and worklogs."
+          },
+          {
+            "heading": "GitHub",
+            "text": "Reads repositories and drafts pull requests."
+          }
+        ]
+      }
+    ],
+    "section": {
+      "part": 1,
+      "total": 3,
+      "label": "What it is"
+    },
+    "durationSeconds": 45,
+    "speakerNotes": "45 seconds. Eight plugins ship with the stable release. For this office the first three matter most: Microsoft 365 for mail and calendar, Google Workspace for Drive files, and UCSD Assistant for policy and campus questions. Microsoft 365 has no send tool. Turning a plugin off removes its access immediately.",
+    "audiences": [
+      "chancellors-office"
+    ],
+    "managerSection": "Chancellor's Office"
+  },
+  {
+    "id": 5310,
+    "slug": "co-skills",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "Skills",
+    "subtitle": "Saved instructions for work you repeat. Browse them in Settings › Skills or the UCSD Skills Library.",
+    "content": [],
+    "columns": [
+      {
+        "label": "Built in",
+        "items": [
+          {
+            "heading": "Email and calendars",
+            "text": "Meeting briefs, inbox review, and reply drafts."
+          },
+          {
+            "heading": "Documents and spreadsheets",
+            "text": "Word, Excel, and PowerPoint files from your material."
+          },
+          {
+            "heading": "Data classification",
+            "text": "Checks data against UC Protection Levels P1 through P4."
+          },
+          {
+            "heading": "Record your own",
+            "text": "Demonstrate a task, then reuse it or share it with UC San Diego."
+          }
+        ]
+      },
+      {
+        "label": "From the Skills Library",
+        "items": [
+          {
+            "heading": "Websites and accessibility",
+            "text": "Audits pages and documents against WCAG 2.1 AA."
+          },
+          {
+            "heading": "Campus branding",
+            "text": "Builds web pages that match UC San Diego standards."
+          },
+          {
+            "heading": "Hosting readiness",
+            "text": "Prepares an app for campus hosting review."
+          },
+          {
+            "heading": "Automated code review",
+            "text": "Reviews code for defects before it is merged."
+          }
+        ]
+      }
+    ],
+    "section": {
+      "part": 1,
+      "total": 3,
+      "label": "What it is"
+    },
+    "durationSeconds": 45,
+    "speakerNotes": "45 seconds. The left column is what this room will use. The right column is for people building websites and apps; mention it and move on. Anyone can submit a skill to the library with Share with UCSD.",
+    "audiences": [
+      "chancellors-office"
+    ],
+    "managerSection": "Chancellor's Office"
+  },
+  {
+    "id": 5303,
+    "slug": "co-get-set-up",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "Get set up in four steps",
+    "subtitle": "Start at tritonai.ucsd.edu › Developer APIs › Get Started. Mac (Apple Silicon) or Windows.",
+    "content": [
+      {
+        "heading": "Download the installer",
+        "text": "Open TritonAI Installer. You can download it before you have a key."
+      },
+      {
+        "heading": "Request your access key",
+        "text": "Submit the access form and say what you plan to use it for. Some requests need approval. The email has a one-time link to your key."
+      },
+      {
+        "heading": "Install and open",
+        "text": "Paste the key into the installer and choose Check access & install. Then open TritonAI Harness."
+      },
+      {
+        "heading": "Connect your tools",
+        "text": "In Settings › Plugins, turn on Microsoft 365 and sign in with your campus account."
+      }
+    ],
+    "section": {
+      "part": 2,
+      "total": 3,
+      "label": "Get set up"
+    },
+    "durationSeconds": 60,
+    "speakerNotes": "60 seconds. The key is the step that can take time, so request it today. Campus-hosted models carry no recharge for administrative work; cloud models need a chartstring. Save the key when the one-time link opens, and never email it. Microsoft 365 reads Outlook mail and calendars by default; drafts and calendar changes are opt-in. Help: tritonai@ucsd.edu.",
+    "audiences": [
+      "chancellors-office"
+    ],
+    "managerSection": "Chancellor's Office"
+  },
+  {
+    "id": 5304,
+    "slug": "co-first-task",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "Your first task",
+    "subtitle": "The same four moves every time.",
+    "content": [
+      {
+        "heading": "Choose Supervised",
+        "text": "It reads freely, then pauses for your approval before it changes a file or uses a write tool."
+      },
+      {
+        "heading": "Describe the result",
+        "text": "Say what you want back and which sources to use. Start with nothing sensitive: “Help me outline a meeting agenda.”"
+      },
+      {
+        "heading": "Check what it made",
+        "text": "Open the result. Review the sources and confirm owners and dates before you share it."
+      },
+      {
+        "heading": "Save what works",
+        "text": "Record the task as a skill so you, or a colleague, can run it again."
+      }
+    ],
+    "section": {
+      "part": 2,
+      "total": 3,
+      "label": "Get set up"
+    },
+    "durationSeconds": 60,
+    "speakerNotes": "60 seconds. Supervised is recommended while you learn; you choose the mode for each chat. The managed default model is hosted on campus. After the first prompt, the Essentials course is about eight minutes and comes with a fictional practice kit. Then switch to the live demo: one request from start to finish in Supervised mode.",
+    "audiences": [
+      "chancellors-office"
+    ],
+    "managerSection": "Chancellor's Office"
+  },
+  {
+    "id": 5305,
+    "slug": "co-what-you-can-do",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "What you can do with it",
+    "subtitle": "It prepares the work. You review it and decide.",
+    "content": [],
+    "impactTable": {
+      "headers": [
+        "Task",
+        "Uses",
+        "What you get back"
+      ],
+      "rows": [
+        {
+          "name": "Meeting brief",
+          "what": "A meeting and the related email from the past two weeks",
+          "status": "Outlook",
+          "tone": "live",
+          "impact": "Agenda, open questions, follow-ups",
+          "basis": "You confirm owners and dates before sharing"
+        },
+        {
+          "name": "Calendar review",
+          "what": "Next week’s conflicts, overlaps, and missing travel time",
+          "status": "Outlook",
+          "tone": "live",
+          "impact": "A list of what needs a decision",
+          "basis": "Calendar changes are opt-in and need your approval"
+        },
+        {
+          "name": "Reply drafts",
+          "what": "Email that still needs an answer",
+          "status": "Outlook",
+          "tone": "live",
+          "impact": "Drafts waiting in your Drafts folder",
+          "basis": "There is no send tool; you send it"
+        },
+        {
+          "name": "Find information",
+          "what": "Search by topic, person, or rough date",
+          "status": "Outlook · Drive",
+          "tone": "live",
+          "impact": "An answer with its sources",
+          "basis": "It compares versions and flags conflicts"
+        },
+        {
+          "name": "Documents",
+          "what": "A summary, briefing, or one-page report from your files",
+          "status": "Word · Excel · PowerPoint",
+          "tone": "live",
+          "impact": "A saved file to review",
+          "basis": "Ask how it got a number before you trust it"
+        },
+        {
+          "name": "Campus questions",
+          "what": "Policies, procedures, and campus services",
+          "status": "UCSD Assistant",
+          "tone": "live",
+          "impact": "An answer with citations",
+          "basis": "Public campus sources, no sign-in"
+        }
+      ]
+    },
+    "section": {
+      "part": 3,
+      "total": 3,
+      "label": "Put it to work"
+    },
+    "durationSeconds": 90,
+    "speakerNotes": "90 seconds. Don’t read the table. Pick the two rows closest to the room: the meeting brief and the calendar review for anyone who supports a leader’s day, and find information for guidance that is buried in email. I run a version of the first three every day on my own setup: a brief for every meeting each morning, inbox priorities, and reply drafts I review and send myself. Ask which row would save each person the most time.",
+    "audiences": [
+      "chancellors-office"
+    ],
+    "managerSection": "Chancellor's Office"
+  },
+  {
+    "id": 5311,
+    "slug": "co-hosting",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "When a task becomes a shared app",
+    "subtitle": "A skill is often enough for your own work. When colleagues need it too, bring it to ITS for review and hosting.",
+    "content": [],
+    "figure": {
+      "id": "campus-app-hosting",
+      "alt": "Four hosting tiers. Tier 0: individual users, about 1,000 apps a year, self-serve on a desktop or sandbox. Tier 1: scattered users, about 200 a year, citizen app risk and scope review, citizen-curated deployment on apps.ucsd.edu, recurring review. Tier 2: many users, about 20 a year, TritonAI tools and rapid development on tritonai.ucsd.edu or ucsd.edu, recurring review. Tier 3: campus-wide, 1 to 5 a year, enterprise architecture and traditional enterprise deployment with iPaaS patterns. Apps escalate or migrate between tiers."
+    },
+    "audiences": [
+      "chancellors-office"
+    ],
+    "durationSeconds": 30,
+    "speakerNotes": "30 seconds. Most of what this office does first will stay at Tier 0: a skill or an automation on your own computer. If something you build becomes a tool colleagues rely on, there is a path: risk and scope review, then hosting on apps.ucsd.edu, with ITS taking on the larger ones. Bring shared apps to intake so ownership, support, access, and hosting are reviewed.",
+    "managerSection": "Chancellor's Office",
+    "section": {
+      "part": 3,
+      "total": 3,
+      "label": "Put it to work"
+    }
+  },
+  {
+    "id": 5306,
+    "slug": "co-in-your-control",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "It stays in your control",
+    "subtitle": "Limits you set, and limits the campus sets.",
+    "content": [
+      {
+        "heading": "You choose how much it does alone",
+        "text": "Supervised pauses for approval before file changes and write actions. Full access is for work you trust."
+      },
+      {
+        "heading": "Connected tools use your own access",
+        "text": "Microsoft 365 reads by default. Drafts and calendar changes are opt-in. It cannot send email."
+      },
+      {
+        "heading": "Data rules still apply",
+        "text": "Approved for P1 to P3 data, never P4. Files and task history stay on your computer."
+      }
+    ],
+    "section": {
+      "part": 3,
+      "total": 3,
+      "label": "Put it to work"
+    },
+    "durationSeconds": 45,
+    "speakerNotes": "45 seconds. Three separate controls: what your account can reach, what each plugin is allowed to do, and how much the Harness does without asking in a given chat. For first trials in this office, keep individual pay, student records, health data, and privileged legal material out of it.",
+    "audiences": [
+      "chancellors-office"
+    ],
+    "managerSection": "Chancellor's Office"
+  },
+  {
+    "id": 5307,
+    "slug": "co-thank-you",
+    "type": "title",
+    "layout": "title-hero",
+    "content": [],
+    "title": "What would you hand over first?",
+    "subtitle": "Start with the 8-minute Essentials course. Help: tritonai@ucsd.edu",
+    "presenters": [
+      {
+        "name": "Brett Pollak",
+        "title": "Executive Director, IT Services",
+        "image": "/media/headshot.jpg",
+        "imageScale": 1.6,
+        "imagePosition": "center 15%"
+      }
+    ],
+    "linkUrl": "https://tritonai.ucsd.edu/training/harness/",
+    "linkLabel": "tritonai.ucsd.edu/training/harness",
+    "durationSeconds": 300,
+    "speakerNotes": "Discussion. Go around the room: one recurring task, the sources it may use, and who reviews the result. Request a key today; the Essentials course and practice kit take under half an hour.",
+    "audiences": [
+      "chancellors-office"
+    ],
+    "managerSection": "Chancellor's Office"
   }
 ];

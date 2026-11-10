@@ -1,6 +1,6 @@
 export const DEFAULT_AUDIENCE = 'all';
 
-export const AUDIENCE_TYPES = ['all', 'technical', 'executive', 'cabinet', 'cabinet-backup', 'smt', 'smt-work', 'tech-community', 'citizen', 'internal', 'public', 'conference', 'PK', 'regent', 'LMU', 'chancellor'];
+export const AUDIENCE_TYPES = ['all', 'technical', 'executive', 'cabinet', 'cabinet-backup', 'smt', 'smt-work', 'tech-community', 'citizen', 'internal', 'public', 'conference', 'PK', 'regent', 'LMU', 'chancellor', 'chancellors-office'];
 
 export const AUDIENCE_COLORS = {
   all: 'bg-gray-500',
@@ -18,7 +18,8 @@ export const AUDIENCE_COLORS = {
   'PK': 'bg-teal-500',
   'regent': 'bg-indigo-500',
   'LMU': 'bg-red-700',
-  'chancellor': 'bg-sky-700'
+  'chancellor': 'bg-sky-700',
+  'chancellors-office': 'bg-sky-700'
 };
 
 const findCanonicalAudience = (audienceType) => {
@@ -39,6 +40,7 @@ export const getAudienceLabel = (audienceType) => {
   if (audienceType === 'smt') return 'SMT retreat';
   if (audienceType === 'tech-community') return 'Tech Community';
   if (audienceType === 'chancellor') return 'Chancellor, Nov 3';
+  if (audienceType === 'chancellors-office') return 'Chancellor’s Office, Nov 10';
   return audienceType.charAt(0).toUpperCase() + audienceType.slice(1);
 };
 

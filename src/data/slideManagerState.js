@@ -200,7 +200,18 @@ export const slideManagerState = {
     "chancellor-insights-origin",
     "chancellor-insights-architecture",
     "chancellor-insights-walkthrough",
-    "chancellor-thank-you"
+    "chancellor-thank-you",
+    "co-title",
+    "co-chat-and-harness",
+    "co-key-features",
+    "co-plugins",
+    "co-skills",
+    "co-get-set-up",
+    "co-first-task",
+    "co-what-you-can-do",
+    "co-hosting",
+    "co-in-your-control",
+    "co-thank-you"
   ],
   "removed": [
     "techcom-mobile-demo",
@@ -1082,6 +1093,39 @@ export const slideManagerState = {
     ],
     "chancellor-thank-you": [
       "chancellor"
+    ],
+    "co-title": [
+      "chancellors-office"
+    ],
+    "co-chat-and-harness": [
+      "chancellors-office"
+    ],
+    "co-get-set-up": [
+      "chancellors-office"
+    ],
+    "co-first-task": [
+      "chancellors-office"
+    ],
+    "co-what-you-can-do": [
+      "chancellors-office"
+    ],
+    "co-in-your-control": [
+      "chancellors-office"
+    ],
+    "co-thank-you": [
+      "chancellors-office"
+    ],
+    "co-key-features": [
+      "chancellors-office"
+    ],
+    "co-plugins": [
+      "chancellors-office"
+    ],
+    "co-skills": [
+      "chancellors-office"
+    ],
+    "co-hosting": [
+      "chancellors-office"
     ]
   }
 };
