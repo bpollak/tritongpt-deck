@@ -13364,7 +13364,7 @@ export const slides = [
       }
     ],
     "durationSeconds": 15,
-    "speakerNotes": "Fifteen seconds. This view has two uses. On Monday, November 16, walk the Chancellor through slide 2, the plan for the session, and confirm he is comfortable with it. In the session with the Executive Vice Chancellor, slides 2 through 5 are the five-minute overview, slide 6 plays once the live build is running, and slide 7 is the hands-on setup. The first tasks and the finished report are done live in the Harness, without slides.",
+    "speakerNotes": "Fifteen seconds. This view has two uses. On Monday, November 16, walk the Chancellor through slide 2, the plan for the session, and confirm he is comfortable with it. In the session with the Executive Vice Chancellor, slides 2 through 6 are the overview, slide 7 plays once the live build is running, and slide 8 is the hands-on setup. The first tasks and the finished report are done live in the Harness, without slides.",
     "audiences": [
       "ir-demo"
     ],
@@ -13387,7 +13387,7 @@ export const slides = [
       "rows": [
         {
           "name": "Overview",
-          "what": "Four slides",
+          "what": "Five slides",
           "status": "5 min",
           "tone": "pilot",
           "impact": "What the Harness is",
@@ -13433,7 +13433,7 @@ export const slides = [
       "label": "Overview"
     },
     "durationSeconds": 60,
-    "speakerNotes": "One minute. This is the slide to walk the Chancellor through on Monday. The point of the design: a report takes about 20 minutes to build, and nobody should sit and watch it. So the build starts early and runs in the background on the shared screen while the Executive Vice Chancellor gets a working Harness of their own, then the session ends on the finished report. Before the session: the IR report skill installed in your Harness; the Tableau plugin turned on in Settings › Plugins; signed in to the Tableau development server inside the Harness browser pane; the Sol 6.1 model selected (the skill was tuned on it); and one full practice build over the weekend from a plain one-sentence request. Confirm your Tableau account can open the student data sources; if a practice build shows no rows, that is an access question for the Tableau administrators, not a skill problem. Have the Executive Vice Chancellor’s access key approved ahead of time. If the live build stalls, the recorded build on slide 6 and a finished practice dashboard in your Tableau personal space are the fallback.",
+    "speakerNotes": "One minute. This is the slide to walk the Chancellor through on Monday. The point of the design: a report takes about 20 minutes to build, and nobody should sit and watch it. So the build starts early and runs in the background on the shared screen while the Executive Vice Chancellor gets a working Harness of their own, then the session ends on the finished report. Before the session: the IR report skill installed in your Harness; the Tableau plugin turned on in Settings › Plugins; signed in to the Tableau development server inside the Harness browser pane; the Sol 6.1 model selected (the skill was tuned on it); and one full practice build over the weekend from a plain one-sentence request. Confirm your Tableau account can open the student data sources; if a practice build shows no rows, that is an access question for the Tableau administrators, not a skill problem. Have the Executive Vice Chancellor’s access key approved ahead of time. If the live build stalls, the recorded build on slide 7 and a finished practice dashboard in your Tableau personal space are the fallback.",
     "audiences": [
       "ir-demo"
     ],
@@ -13511,6 +13511,83 @@ export const slides = [
     },
     "durationSeconds": 60,
     "speakerNotes": "One minute. A skill is a set of written instructions the Harness reads when a request matches it. This one was built over about a week of practice builds: for each core IR report it holds the governed data source, the counting rules, known traps, and IR’s published numbers to check against. Other IR reports are variations on those core ones. Computer use means the agent reads the Tableau screen and uses the mouse and keyboard as an analyst would; nothing is generated outside Tableau. The result is an ordinary Tableau workbook, so it does not depend on AI after it is built. It is saved as a draft on the development server and is not an official IR report.",
+    "audiences": [
+      "ir-demo"
+    ],
+    "managerSection": "IR report demonstration"
+  },
+  {
+    "id": 5507,
+    "slug": "irdemo-how-it-learned",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "How the Harness learned IR’s reports",
+    "subtitle": "AI practice-built IR’s core workbooks, and each build taught the next.",
+    "content": [],
+    "columns": [
+      {
+        "label": "Practice on the core",
+        "items": [
+          {
+            "icon": "Database",
+            "heading": "Start with the foundation",
+            "text": "Enrollment, degrees, graduation and retention. IR’s other reports build on these."
+          },
+          {
+            "icon": "BarChart3",
+            "heading": "Rebuild each in Tableau",
+            "text": "AI built each workbook from governed campus data, start to finish."
+          }
+        ]
+      },
+      {
+        "label": "Learn from each build",
+        "items": [
+          {
+            "icon": "Scale",
+            "heading": "Check against IR",
+            "text": "Every build was compared with IR’s published numbers."
+          },
+          {
+            "icon": "ClipboardList",
+            "heading": "Write down the lessons",
+            "text": "Counting rules, traps, and what to do differently next time."
+          },
+          {
+            "icon": "Clock",
+            "heading": "Faster each time",
+            "text": "First builds ran an hour or more. Rehearsed builds take about 20 minutes."
+          }
+        ]
+      },
+      {
+        "label": "Build on it",
+        "items": [
+          {
+            "icon": "Brain",
+            "heading": "A reusable skill",
+            "text": "The lessons are saved as a skill the Harness reads on every request."
+          },
+          {
+            "icon": "Network",
+            "heading": "Derivative reports",
+            "text": "A new report starts from what the core ones taught."
+          },
+          {
+            "icon": "Lightbulb",
+            "heading": "Refined over time",
+            "text": "Each build adds to it, and IR’s own rules can sharpen it."
+          }
+        ]
+      }
+    ],
+    "section": {
+      "part": 1,
+      "total": 3,
+      "label": "Overview"
+    },
+    "durationSeconds": 60,
+    "speakerNotes": "One minute. This is how the skill came to exist. Nobody wrote a program for each report. Over about a week in early November, AI practice-built the workbooks that are foundational to IR’s reporting: enrollment, degrees awarded, graduation and retention, and teaching modality. Most of IR’s other reports are variations on those. Each practice build followed the same loop: build the workbook in Tableau from the governed Activity Hub data, compare the numbers with what IR publishes, work out why any number was off, and write the lesson down. The lessons are plain written instructions: which source to use, how to count each student once, known traps, and IR’s figures to check against. The effect showed quickly. First builds of a report ran an hour or more; by the third practice run of the same report the build took minutes, and a rehearsed build now takes about 20 minutes. Two points for this audience. First, the knowledge is cumulative: a report that derives from a core one starts from what is already learned. Second, it is a starting point. Differences from IR’s numbers are recorded with their likely cause, and working through IR’s own rules with Institutional Research would sharpen it further.",
     "audiences": [
       "ir-demo"
     ],

@@ -201,6 +201,7 @@ export const slideManagerState = {
     "chancellor-the-question",
     "chancellor-what-we-built",
     "irdemo-how-it-works",
+    "irdemo-how-it-learned",
     "irdemo-pick-a-report",
     "chancellor-harness-report",
     "chancellor-tableau-mechanics",
@@ -1159,6 +1160,9 @@ export const slideManagerState = {
       "ir-demo"
     ],
     "irdemo-how-it-works": [
+      "ir-demo"
+    ],
+    "irdemo-how-it-learned": [
       "ir-demo"
     ],
     "irdemo-pick-a-report": [
