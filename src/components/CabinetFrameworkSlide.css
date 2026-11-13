@@ -287,6 +287,25 @@
 .cabinet-columns h3 { margin:0 0 4px; color:#ffcd00; font-family:'Teko','Roboto',Arial,sans-serif; font-size:30px; font-weight:600; line-height:1.05; }
 .cabinet-columns li p { margin:0; color:#c4d2df; font-size:20px; line-height:1.35; }
 .cabinet-columns__note { margin:26px 0 0; color:#8fa9c0; font-size:15px; }
+/* Compact columns: short feature rows and chip lists, for slides that list many items. */
+.cabinet-columns ul.cabinet-columns__compact { gap:11px; }
+.cabinet-columns__compact h3 { margin:0; font-size:27px; }
+.cabinet-columns__compact li p { font-size:17px; line-height:1.25; }
+.cabinet-columns__chips { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.cabinet-columns__chips--1 { grid-template-columns:minmax(0,1fr); }
+.cabinet-columns__chips--dense { gap:8px; }
+.cabinet-columns__chips.cabinet-columns__chips--dense span { padding:6px 12px; }
+.cabinet-columns__chips span { padding:9px 12px; border-radius:10px; border:1px solid #3d6585; background:rgba(10,30,55,.72); color:#f5f0e6; font-size:18px; font-weight:600; line-height:1.2; white-space:nowrap; }
+.cabinet-columns__chips .cabinet-columns__chip-extra { border-style:dashed; border-color:#ffcd00; background:transparent; color:#ffcd00; }
+.cabinet-columns__footnote { margin:16px 0 0; color:#c4d2df; font-size:17px; line-height:1.35; }
+.cabinet-columns__footnote--icon { display:flex; align-items:flex-start; gap:10px; padding:12px 14px; border-radius:10px; background:rgba(255,205,0,.10); border:1px solid rgba(255,205,0,.45); color:#f5f0e6; }
+.cabinet-columns__footnote--icon svg { flex:none; margin-top:1px; color:#ffcd00; }
+.cabinet-columns__with-icon { display:flex; align-items:center; gap:14px; }
+.cabinet-columns__icon { flex:none; display:flex; align-items:center; justify-content:center; width:46px; height:46px; border-radius:12px; background:rgba(0,198,215,.16); border:1px solid rgba(0,198,215,.55); color:#7fe6f0; }
+.cabinet-columns__chips span { display:flex; align-items:center; gap:9px; }
+.cabinet-columns__chips span svg { flex:none; color:#ffcd00; }
+.cabinet-columns__col:nth-child(3) .cabinet-columns__chips span svg { color:#9fc3dc; }
+.cabinet-columns__chips .cabinet-columns__chip-extra svg { color:#ffcd00 !important; }
 .cabinet-canvas[data-reading] .cabinet-columns__grid { grid-template-columns:minmax(0,1fr); gap:28px; }
 .cabinet-canvas[data-reading] .cabinet-columns h3 { font-size:26px; }
 .cabinet-canvas[data-reading] .cabinet-columns li p { font-size:18px; }

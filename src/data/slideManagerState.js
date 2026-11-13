@@ -11,6 +11,7 @@ export const slideManagerState = {
     "cabinet-transcript-matching-demo",
     "cabinet-contract-review-demo",
     "cabinet-servicenow-routing-demo",
+    "senate-title",
     "cabinet-ai-tutor-demo",
     "cabinet-verticals-at-a-glance",
     "cabinet-college-assistant-demo",
@@ -21,6 +22,7 @@ export const slideManagerState = {
     "cabinet-chat-and-harness",
     "cabinet-harness-capabilities",
     "cabinet-harness-in-action",
+    "senate-harness-features",
     "cabinet-harness-training-demo",
     "cabinet-harness-automation-use-cases",
     "cabinet-governance",
@@ -45,6 +47,7 @@ export const slideManagerState = {
     "cabinet-why-sovereign",
     "cabinet-scale",
     "cabinet-sovereign-ai",
+    "senate-product-or-gateway",
     "cabinet-harness-discovery-demo",
     "smt-divider-try",
     "smt-exercise-howto",
@@ -243,7 +246,8 @@ export const slideManagerState = {
       "cabinet"
     ],
     "cabinet-ai-tutor-demo": [
-      "cabinet"
+      "cabinet",
+      "senate"
     ],
     "cabinet-divider-outcomes": [
       "cabinet"
@@ -256,7 +260,8 @@ export const slideManagerState = {
     ],
     "cabinet-harness-in-action": [
       "cabinet",
-      "smt"
+      "smt",
+      "senate"
     ],
     "cabinet-verticals-roadmap": [
       "cabinet-backup"
@@ -282,7 +287,8 @@ export const slideManagerState = {
     ],
     "cabinet-harness-discovery-demo": [
       "cabinet",
-      "smt"
+      "smt",
+      "senate"
     ],
     "cabinet-harness-training-demo": [
       "cabinet-backup"
@@ -840,7 +846,8 @@ export const slideManagerState = {
       "cabinet-backup"
     ],
     "cabinet-sovereign-ai": [
-      "cabinet"
+      "cabinet",
+      "senate"
     ],
     "cabinet-scale": [
       "cabinet"
@@ -853,7 +860,8 @@ export const slideManagerState = {
     ],
     "cabinet-chat-and-harness": [
       "cabinet",
-      "smt"
+      "smt",
+      "senate"
     ],
     "cabinet-subagents": [
       "cabinet"
@@ -863,7 +871,8 @@ export const slideManagerState = {
     ],
     "cabinet-directory-demo": [
       "cabinet",
-      "smt"
+      "smt",
+      "senate"
     ],
     "cabinet-routing-savings": [
       "cabinet-backup"
@@ -1126,6 +1135,15 @@ export const slideManagerState = {
     ],
     "co-hosting": [
       "chancellors-office"
+    ],
+    "senate-title": [
+      "senate"
+    ],
+    "senate-product-or-gateway": [
+      "senate"
+    ],
+    "senate-harness-features": [
+      "senate"
     ]
   }
 };

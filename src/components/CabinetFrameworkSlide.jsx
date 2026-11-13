@@ -1,4 +1,13 @@
+import { Brain, Bot, CalendarClock, MousePointerClick, Smartphone, Lightbulb, Mail, FolderOpen, GraduationCap, ClipboardList, ListChecks, Github, Network, Shapes, FileSpreadsheet, Globe, Tags, Server, CircleDot, ShieldCheck } from 'lucide-react';
 import './CabinetFrameworkSlide.css';
+
+// Icons for column slides that list many items (optional `icon` on an item or chip).
+const columnIcons = { Brain, Bot, CalendarClock, MousePointerClick, Smartphone, Lightbulb, Mail, FolderOpen, GraduationCap, ClipboardList, ListChecks, Github, Network, Shapes, FileSpreadsheet, Globe, Tags, Server, CircleDot, ShieldCheck };
+const ColumnIcon = ({ name, size = 22 }) => {
+  const Icon = columnIcons[name];
+  return Icon ? <Icon size={size} strokeWidth={2} aria-hidden="true" /> : null;
+};
+const chipOf = (chip) => (typeof chip === 'string' ? { label: chip } : chip);
 import CabinetCanvas from './CabinetCanvas';
 import CabinetFigure from './CabinetFigure';
 
@@ -81,14 +90,25 @@ export default function CabinetFrameworkSlide({ slide, staticPreview = false }) 
             {slide.columns.map((column) => (
               <section className="cabinet-columns__col" key={column.label}>
                 <p className="cabinet-columns__label">{column.label}</p>
-                <ul>
-                  {column.items.map((item) => (
-                    <li key={item.heading}>
-                      <h3>{item.heading}</h3>
-                      <p>{item.text}</p>
-                    </li>
-                  ))}
-                </ul>
+                {column.chips ? (
+                  <div className={`cabinet-columns__chips${column.chipColumns === 1 ? ' cabinet-columns__chips--1' : ''}${column.dense ? ' cabinet-columns__chips--dense' : ''}`}>
+                    {column.chips.map(chipOf).map((chip) => <span key={chip.label}><ColumnIcon name={chip.icon} size={20} />{chip.label}</span>)}
+                    {column.chipExtra && <span className="cabinet-columns__chip-extra"><ColumnIcon name={chipOf(column.chipExtra).icon} size={20} />{chipOf(column.chipExtra).label}</span>}
+                  </div>
+                ) : (
+                  <ul className={column.compact ? 'cabinet-columns__compact' : undefined}>
+                    {column.items.map((item) => (
+                      <li key={item.heading} className={item.icon ? 'cabinet-columns__with-icon' : undefined}>
+                        {item.icon && <i className="cabinet-columns__icon"><ColumnIcon name={item.icon} size={24} /></i>}
+                        <div>
+                          <h3>{item.heading}</h3>
+                          <p>{item.text}</p>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {column.footnote && <p className={`cabinet-columns__footnote${column.footnoteIcon ? ' cabinet-columns__footnote--icon' : ''}`}><ColumnIcon name={column.footnoteIcon} size={22} />{column.footnote}</p>}
               </section>
             ))}
           </div>

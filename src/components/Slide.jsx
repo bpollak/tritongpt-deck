@@ -9,6 +9,7 @@ import CabinetHarnessOverview from './CabinetHarnessOverview';
 import CabinetRoutingSavings from './CabinetRoutingSavings';
 import CabinetCashReceipts from './CabinetCashReceipts';
 import CabinetSovereignGateway from './CabinetSovereignGateway';
+import CabinetProductGateway from './CabinetProductGateway';
 import EmbeddedVideo from './EmbeddedVideo';
 import CabinetDemoIntro from './CabinetDemoIntro';
 import CabinetHarnessAround from './CabinetHarnessAround';
@@ -319,6 +320,10 @@ const Slide = ({ slide, staticPreview = false }) => {
 
   if (slide.layout === 'cabinet-sovereign-gateway') {
     return <CabinetSovereignGateway slide={slide} />;
+  }
+
+  if (slide.layout === 'cabinet-product-gateway') {
+    return <CabinetProductGateway slide={slide} />;
   }
 
   if (slide.layout === 'cabinet-cash-receipts') {

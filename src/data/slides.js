@@ -7798,7 +7798,7 @@ export const slides = [
   {
     "id": 1015,
     "slug": "cabinet-chat-and-harness",
-    "audienceOverrides": {"smt":{"section":{"part":1,"total":5,"label":"Since May"}}},
+    "audienceOverrides": {"senate":{"tone":"dark"},"smt":{"section":{"part":1,"total":5,"label":"Since May"}}},
     "type": "content",
     "layout": "cabinet-harness-around",
     "harnessAround": {
@@ -13104,5 +13104,237 @@ export const slides = [
       "chancellors-office"
     ],
     "managerSection": "Chancellor's Office"
+  },
+  /* senate view (generated) */
+  {
+    "id": 5401,
+    "slug": "senate-title",
+    "type": "title",
+    "layout": "title-hero",
+    "content": [],
+    "title": "TritonAI Operating Review",
+    "subtitle": "How campus AI gets built, proven, and put to work",
+    "conference": "Senate-Administration Council · Monday, November 16, 2026",
+    "arc": [
+      {
+        "label": "Teaching and research",
+        "note": "AI Tutor and the Faculty Expertise Directory"
+      },
+      {
+        "label": "The Harness",
+        "note": "A workspace faculty and staff can use"
+      },
+      {
+        "label": "Foundation",
+        "note": "A campus-run gateway, not one vendor"
+      }
+    ],
+    "durationSeconds": 20,
+    "speakerNotes": "Twenty seconds. This is a shorter version of what the Chancellor’s Cabinet saw on October 12, with one addition at the Senate chair’s request: the difference between buying a frontier lab’s product and running a campus AI gateway. About 9 minutes of slides, then questions.",
+    "audiences": [
+      "senate"
+    ],
+    "managerSection": "Senate-Administration Council"
+  },
+  {
+    "id": 5404,
+    "slug": "senate-harness-features",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "Key Harness features",
+    "subtitle": "Work in your apps, automate tasks, and reuse what works.",
+    "content": [],
+    "columns": [
+      {
+        "label": "Features",
+        "compact": true,
+        "items": [
+          {
+            "icon": "Brain",
+            "heading": "Memory",
+            "text": "Recalls past work and decisions"
+          },
+          {
+            "icon": "Bot",
+            "heading": "Helper agents",
+            "text": "Keep several tasks moving at once"
+          },
+          {
+            "icon": "CalendarClock",
+            "heading": "Automations",
+            "text": "Run on a schedule or a trigger"
+          },
+          {
+            "icon": "MousePointerClick",
+            "heading": "Computer use",
+            "text": "Works in your files, apps, and browser"
+          },
+          {
+            "icon": "Smartphone",
+            "heading": "Phone access",
+            "text": "Start work on a connected computer"
+          },
+          {
+            "icon": "Lightbulb",
+            "heading": "Ideas",
+            "text": "Suggestions from your recent work"
+          }
+        ]
+      },
+      {
+        "label": "Plugins",
+        "chips": [
+          {
+            "icon": "Mail",
+            "label": "Microsoft 365"
+          },
+          {
+            "icon": "FolderOpen",
+            "label": "Google Workspace"
+          },
+          {
+            "icon": "GraduationCap",
+            "label": "UCSD Assistant"
+          },
+          {
+            "icon": "ClipboardList",
+            "label": "Kuali Build"
+          },
+          {
+            "icon": "ListChecks",
+            "label": "Jira"
+          },
+          {
+            "icon": "Github",
+            "label": "GitHub"
+          },
+          {
+            "icon": "Network",
+            "label": "n8n"
+          },
+          {
+            "icon": "Shapes",
+            "label": "Lucid"
+          }
+        ],
+        "chipColumns": 1,
+        "dense": true
+      },
+      {
+        "label": "Skills",
+        "chips": [
+          {
+            "icon": "Mail",
+            "label": "Email and calendars"
+          },
+          {
+            "icon": "FileSpreadsheet",
+            "label": "Documents and spreadsheets"
+          },
+          {
+            "icon": "Globe",
+            "label": "Websites and accessibility"
+          },
+          {
+            "icon": "Tags",
+            "label": "Data classification"
+          },
+          {
+            "icon": "Server",
+            "label": "Hosting readiness"
+          }
+        ],
+        "chipColumns": 1,
+        "chipExtra": {
+          "icon": "CircleDot",
+          "label": "Record your own"
+        },
+        "footnoteIcon": "ShieldCheck",
+        "footnote": "Supervised mode pauses for your approval. Files stay on your computer."
+      }
+    ],
+    "section": {
+      "part": 2,
+      "label": "Citizen development"
+    },
+    "durationSeconds": 60,
+    "speakerNotes": "About 60 seconds. This is the Key Harness features list from tritonai.ucsd.edu. Do not read it. For faculty, land three: memory, so a project picks up where it left off; skills, including recording your own so a task you worked out once is repeatable by you or a student; and the plugins, which reach Microsoft 365, Google Workspace, and campus information with your own account access. Then the bottom line, which replaces the earlier controls slide: in Supervised mode it pauses before changing a file or using a write tool; files and task history stay on your computer; and the UC-hosted models do not retain what you send them. Computer use is off until you turn it on. Approved for P1 through P3 data, never P4.",
+    "audiences": [
+      "senate"
+    ],
+    "managerSection": "Senate-Administration Council"
+  },
+  {
+    "id": 5402,
+    "slug": "senate-product-or-gateway",
+    "type": "content",
+    "layout": "cabinet-product-gateway",
+    "title": "A frontier lab’s product or a campus AI gateway",
+    "subtitle": "The difference: what has to move when something changes, and where your data goes.",
+    "content": [],
+    "productGateway": {
+      "product": {
+        "name": "A frontier lab’s product",
+        "boxLabel": "OpenAI · Anthropic · Google",
+        "layers": [
+          {
+            "icon": "Users",
+            "label": "Their app"
+          },
+          {
+            "icon": "MessagesSquare",
+            "label": "Your work and data"
+          },
+          {
+            "icon": "Cpu",
+            "label": "Their models"
+          }
+        ],
+        "verdict": "Change labs and all three move."
+      },
+      "gateway": {
+        "name": "The TritonAI Gateway",
+        "toolsLabel": "Campus tools · your work stays here",
+        "tools": [
+          "TritonGPT",
+          "Harness",
+          "Department apps"
+        ],
+        "hub": "TritonAI Gateway",
+        "modelsLabel": "Models · swappable",
+        "moreLabel": "+ more",
+        "modelGroups": [
+          {
+            "label": "Hosted at SDSC",
+            "models": [
+              "GLM",
+              "Glimmer"
+            ],
+            "note": "Data stays at UC San Diego",
+            "sovereign": true
+          },
+          {
+            "label": "Frontier labs",
+            "models": [
+              "Claude",
+              "GPT",
+              "Gemini"
+            ],
+            "note": "UC contracts"
+          }
+        ],
+        "verdict": "Change a model and only this layer moves."
+      }
+    },
+    "section": {
+      "part": 4,
+      "label": "Foundation"
+    },
+    "durationSeconds": 75,
+    "speakerNotes": "About 75 seconds. Added at the Senate chair’s request. Left: a product bought from a frontier lab, such as OpenAI, Anthropic, or Google, is one sealed stack. The app, the work people do in it, and the models all sit with that lab, so chat history, custom assistants, course materials, and habits build up inside it. If the price, the tier, or the model changes, the whole stack has to move. Right: the campus approach separates the layers, and the default models are open models hosted at the San Diego Supercomputer Center on GPUs UC San Diego manages. A prompt, a draft, or a dataset sent to those models is not sent to a third party. That is the sovereign part, and it matters for unpublished research, grant drafts, and anything a faculty member would not hand to an outside company. People work in campus tools; those tools reach models through the TritonAI Gateway with one key; and the models underneath can be swapped. The default campus model changed this fall and people kept using the same tools. This is not an argument against the frontier labs: their models, Claude, GPT, and Gemini, are available through the same front door under UC contracts, as one choice among several. Bottom row, all from the public TritonAI site: 89.6 percent of gateway tokens ran on campus-hosted models from January through October; UC-hosted models carry no recharge for campus administrative work, with monthly caps; and the service is approved for P1 through P3 data, never P4. Faculty stakes: what happens to a course built around one product when its terms change, and whether a model a study relied on can be retired by a vendor. Speak to any specific systemwide agreement in the room, not on the slide.",
+    "audiences": [
+      "senate"
+    ],
+    "managerSection": "Senate-Administration Council"
   }
 ];

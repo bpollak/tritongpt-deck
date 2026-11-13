@@ -1,0 +1,63 @@
+.cabinet-pg-canvas {background:#0f2340;}
+.cabinet-pg {position:relative;box-sizing:border-box;width:1280px;height:720px;color:#f5f0e6;font-family:Roboto,Arial,sans-serif;
+  background:radial-gradient(ellipse 520px 380px at 950px 400px,rgba(0,198,215,.14),transparent 70%),linear-gradient(135deg,#182b49,#0b3d5f);}
+.cabinet-pg h1 {position:absolute;left:64px;top:26px;margin:0;font-family:Teko,Roboto,sans-serif;font-size:58px;line-height:1.05;font-weight:600;}
+.cabinet-pg-lead {position:absolute;left:64px;top:94px;width:1150px;margin:0;font-size:24px;line-height:1.3;color:#c9d6e3;}
+
+.cabinet-pg-panel {position:absolute;top:156px;height:470px;box-sizing:border-box;padding:20px 28px 20px;border-radius:18px;background:rgba(10,30,55,.72);display:flex;flex-direction:column;}
+.cabinet-pg-panel--product {left:64px;width:416px;border:1px solid #6b5a3a;border-top:5px solid #fc8900;}
+.cabinet-pg-panel--gateway {left:560px;width:656px;border:1px solid #3d6585;border-top:5px solid #00c6d7;}
+.cabinet-pg-panel header span {display:block;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;}
+.cabinet-pg-panel--product header span {color:#fc8900;}
+.cabinet-pg-panel--gateway header span {color:#00c6d7;}
+.cabinet-pg-panel header h2 {margin:0 0 14px;font-family:Teko,Roboto,sans-serif;font-size:42px;line-height:1.05;font-weight:600;}
+
+/* Left: one sealed box. The three layers share a single border, so nothing separates. */
+.cabinet-pg-sealed {position:relative;flex:1;display:flex;flex-direction:column;border:3px solid #fc8900;border-radius:14px;background:rgba(252,137,0,.10);overflow:visible;}
+.cabinet-pg-sealed-label {margin:0;padding:10px 20px;font-size:15px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#ffd9a8;border-bottom:1px solid rgba(252,137,0,.45);}
+.cabinet-pg-lock {position:absolute;right:-16px;top:-16px;width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#fc8900;color:#182b49;box-shadow:0 6px 16px rgba(0,0,0,.35);}
+.cabinet-pg-sealed-layer {flex:1;display:flex;align-items:center;gap:20px;padding:0 24px;color:#ffd9a8;}
+.cabinet-pg-sealed-layer + .cabinet-pg-sealed-layer {border-top:1px dashed rgba(252,137,0,.45);}
+.cabinet-pg-sealed-layer strong {display:block;font-size:30px;font-weight:500;line-height:1.2;color:#fff;}
+.cabinet-pg-sealed-layer small {display:block;margin-top:2px;font-size:16px;line-height:1.3;color:#d6dfe8;}
+
+/* Right: three separate layers joined by flowing links. */
+.cabinet-pg-layer {box-sizing:border-box;padding:14px 18px 16px;border-radius:12px;border:1px solid #3d6585;background:rgba(15,45,75,.8);}
+.cabinet-pg-layer p {display:flex;align-items:center;gap:8px;margin:0 0 10px;font-size:15px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8fb3cc;}
+.cabinet-pg-layer--models {border-style:dashed;border-color:#00c6d7;}
+.cabinet-pg-layer--models p {color:#00c6d7;}
+.cabinet-pg-chips {display:flex;flex-wrap:wrap;gap:8px;}
+.cabinet-pg-chips span {padding:7px 14px;border-radius:999px;font-size:19px;white-space:nowrap;font-weight:600;line-height:1.2;background:#f5f0e6;color:#182b49;}
+.cabinet-pg-model-row {display:flex;align-items:center;gap:10px;}
+.cabinet-pg-model-row + .cabinet-pg-model-row {margin-top:8px;}
+.cabinet-pg-model-row small {flex:none;width:118px;white-space:nowrap;font-size:16px;font-weight:600;color:#e3ecf4;}
+.cabinet-pg-model-row em {display:flex;align-items:center;gap:6px;margin-left:auto;font-style:normal;font-size:15px;color:#a9bfd2;white-space:nowrap;}
+.cabinet-pg-model-row--sovereign em {font-weight:700;color:#ffcd00;}
+.cabinet-pg-chips--models {flex-wrap:nowrap;gap:6px;}
+.cabinet-pg-chips--models span {padding:5px 10px;font-size:16px;background:rgba(0,198,215,.18);color:#e9fbfd;border:1px solid #00c6d7;}
+.cabinet-pg-chips--models .cabinet-pg-chip-next {background:transparent;border:1px dashed #8fb3cc;color:#8fb3cc;font-weight:500;}
+.cabinet-pg-link {display:block;flex:1;min-height:10px;width:0;margin:0 auto;border-left:3px dotted #00c6d7;}
+.cabinet-pg-hub {box-sizing:border-box;padding:14px 16px 10px;border-radius:12px;text-align:center;background:linear-gradient(180deg,#0e4f78,#0b3657);border:2px solid #00c6d7;box-shadow:0 0 0 6px rgba(0,198,215,.12);}
+.cabinet-pg-hub strong {display:block;font-family:Teko,Roboto,sans-serif;font-size:40px;line-height:1;font-weight:600;color:#ffcd00;letter-spacing:.02em;}
+.cabinet-pg-hub small {display:block;margin-top:3px;font-size:15px;color:#c9d6e3;}
+
+.cabinet-pg-verdict {margin:16px 0 0;font-size:24px;line-height:1.25;font-weight:600;}
+.cabinet-pg-panel--product .cabinet-pg-verdict {color:#ffc07a;}
+.cabinet-pg-panel--gateway .cabinet-pg-verdict {color:#7fe6f0;}
+
+.cabinet-pg-or {position:absolute;left:492px;top:363px;width:56px;height:56px;box-sizing:border-box;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Teko,Roboto,sans-serif;font-size:28px;line-height:1;padding-top:3px;color:#182b49;background:#ffcd00;box-shadow:0 8px 20px rgba(0,0,0,.35);}
+
+.cabinet-pg-facts {position:absolute;left:64px;top:584px;width:1152px;margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.cabinet-pg-facts li {display:flex;align-items:center;gap:12px;padding:0 0 0 14px;border-left:3px solid #ffcd00;}
+.cabinet-pg-facts strong {flex:none;font-family:Teko,Roboto,sans-serif;font-size:34px;line-height:1;font-weight:600;color:#ffcd00;white-space:nowrap;}
+.cabinet-pg-facts span {font-size:15px;line-height:1.3;color:#c9d6e3;}
+
+/* Phone reading view: stack everything in document order. */
+.cabinet-canvas[data-reading] .cabinet-pg {width:auto;height:auto;padding:24px 20px 100px;display:flex;flex-direction:column;gap:14px;}
+.cabinet-canvas[data-reading] .cabinet-pg > * {position:static;width:auto;height:auto;}
+.cabinet-canvas[data-reading] .cabinet-pg h1 {font-size:38px;}
+.cabinet-canvas[data-reading] .cabinet-pg-lead {font-size:18px;}
+.cabinet-canvas[data-reading] .cabinet-pg-or {align-self:center;width:48px;height:48px;}
+.cabinet-canvas[data-reading] .cabinet-pg-sealed-layer {padding:12px 18px;}
+.cabinet-canvas[data-reading] .cabinet-pg-link {min-height:16px;}
+.cabinet-canvas[data-reading] .cabinet-pg-model-row {flex-wrap:wrap;}

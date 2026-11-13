@@ -23,7 +23,8 @@ const Facts = ({ rows }) => (
 export default function CabinetHarnessAround({ slide }) {
   const d = slide.harnessAround;
   // tone "dark" matches the navy framework slides: title and subtitle, no kicker.
-  const dark = d.tone === 'dark';
+  // A per-audience override can also set slide.tone, so one view can go dark without changing the others.
+  const dark = (slide.tone || d.tone) === 'dark';
   return <CabinetCanvas className={`${dark ? 'cabinet-framework-canvas' : 'cabinet-workflow-canvas'} cabinet-ha-canvas`} section={slide.section}>
     <section className={`cabinet-ha${dark ? ' cabinet-ha--dark' : ''}`} aria-label={slide.title}>
       <header className="cabinet-ha-header">
