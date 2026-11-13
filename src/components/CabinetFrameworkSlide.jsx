@@ -1,8 +1,8 @@
-import { Brain, Bot, CalendarClock, MousePointerClick, Smartphone, Lightbulb, Mail, FolderOpen, GraduationCap, ClipboardList, ListChecks, Github, Network, Shapes, FileSpreadsheet, Globe, Tags, Server, CircleDot, ShieldCheck } from 'lucide-react';
+import { Brain, Bot, CalendarClock, MousePointerClick, Smartphone, Lightbulb, Mail, FolderOpen, GraduationCap, ClipboardList, ListChecks, Github, Network, Shapes, FileSpreadsheet, Globe, Tags, Server, CircleDot, ShieldCheck, MessageSquare, BookOpen, Database, Clock, BarChart3, Scale, Users, Ban } from 'lucide-react';
 import './CabinetFrameworkSlide.css';
 
 // Icons for column slides that list many items (optional `icon` on an item or chip).
-const columnIcons = { Brain, Bot, CalendarClock, MousePointerClick, Smartphone, Lightbulb, Mail, FolderOpen, GraduationCap, ClipboardList, ListChecks, Github, Network, Shapes, FileSpreadsheet, Globe, Tags, Server, CircleDot, ShieldCheck };
+const columnIcons = { Brain, Bot, CalendarClock, MousePointerClick, Smartphone, Lightbulb, Mail, FolderOpen, GraduationCap, ClipboardList, ListChecks, Github, Network, Shapes, FileSpreadsheet, Globe, Tags, Server, CircleDot, ShieldCheck, MessageSquare, BookOpen, Database, Clock, BarChart3, Scale, Users, Ban };
 const ColumnIcon = ({ name, size = 22 }) => {
   const Icon = columnIcons[name];
   return Icon ? <Icon size={size} strokeWidth={2} aria-hidden="true" /> : null;

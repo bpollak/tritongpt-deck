@@ -19,6 +19,8 @@ export const slideManagerState = {
     "cabinet-divider-harness",
     "smt-title",
     "smt-since-may",
+    "irdemo-title",
+    "irdemo-run-of-show",
     "cabinet-chat-and-harness",
     "cabinet-harness-capabilities",
     "cabinet-harness-in-action",
@@ -198,6 +200,8 @@ export const slideManagerState = {
     "chancellor-title",
     "chancellor-the-question",
     "chancellor-what-we-built",
+    "irdemo-how-it-works",
+    "irdemo-pick-a-report",
     "chancellor-harness-report",
     "chancellor-tableau-mechanics",
     "chancellor-insights-origin",
@@ -861,7 +865,8 @@ export const slideManagerState = {
     "cabinet-chat-and-harness": [
       "cabinet",
       "smt",
-      "senate"
+      "senate",
+      "ir-demo"
     ],
     "cabinet-subagents": [
       "cabinet"
@@ -1086,7 +1091,8 @@ export const slideManagerState = {
       "chancellor"
     ],
     "chancellor-harness-report": [
-      "chancellor"
+      "chancellor",
+      "ir-demo"
     ],
     "chancellor-tableau-mechanics": [
       "chancellor"
@@ -1110,7 +1116,8 @@ export const slideManagerState = {
       "chancellors-office"
     ],
     "co-get-set-up": [
-      "chancellors-office"
+      "chancellors-office",
+      "ir-demo"
     ],
     "co-first-task": [
       "chancellors-office"
@@ -1144,6 +1151,18 @@ export const slideManagerState = {
     ],
     "senate-harness-features": [
       "senate"
+    ],
+    "irdemo-title": [
+      "ir-demo"
+    ],
+    "irdemo-run-of-show": [
+      "ir-demo"
+    ],
+    "irdemo-how-it-works": [
+      "ir-demo"
+    ],
+    "irdemo-pick-a-report": [
+      "ir-demo"
     ]
   }
 };

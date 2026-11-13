@@ -7798,7 +7798,7 @@ export const slides = [
   {
     "id": 1015,
     "slug": "cabinet-chat-and-harness",
-    "audienceOverrides": {"senate":{"tone":"dark"},"smt":{"section":{"part":1,"total":5,"label":"Since May"}}},
+    "audienceOverrides": {"ir-demo":{"tone":"dark","section":{"part":1,"total":3,"label":"Overview"}},"senate":{"tone":"dark"},"smt":{"section":{"part":1,"total":5,"label":"Since May"}}},
     "type": "content",
     "layout": "cabinet-harness-around",
     "harnessAround": {
@@ -12159,6 +12159,7 @@ export const slides = [
   {
     "id": 5107,
     "slug": "chancellor-harness-report",
+    "audienceOverrides": {"ir-demo":{"section":{"part":2,"total":3,"label":"While it builds"},"title":"What the Harness is doing right now","subtitle":"A recorded build of IR’s Undergraduate Degree Recipients report. About 20 minutes of work, shown in two and a half.","intro":{"kicker":"While the live build runs · a recorded build","title":"What the Harness is doing right now","setup":"The live build is running on the other screen. This recording shows the same kind of build from start to finish: one request, then IR’s Undergraduate Degree Recipients report rebuilt as a Tableau dashboard.","watchFor":"The agent in the middle driving Tableau on the right: the counting rules it writes, the charts taking shape, and the saved draft. The clock in the corner is real elapsed time.","seconds":7},"speakerNotes":"About two and three-quarter minutes: a 7-second intro card, then the 2:32 recording (silent; you narrate). Play this right after the live build starts, so the room sees the whole arc without waiting 20 minutes. Middle of the frame: the Harness agent’s steps. Right: Tableau on the development server, operated by the agent through computer use. The clock at the bottom right is real elapsed time from the moment the request was sent. Say what it is doing in plain words: it opens the governed student degree data, writes the counting rules (each student once a year, in the school of the first degree), builds the campus and school charts, assembles the dashboard, and saves a draft. Recorded November 8. All five years landed within 2 percent of IR’s published totals. Then glance at the live build and move to setup."}},
     "type": "video",
     "layout": "cabinet-demo",
     "videoSrc": "/media/chancellor/chancellor-harness-undergrad-degrees.mp4",
@@ -12874,6 +12875,7 @@ export const slides = [
   {
     "id": 5303,
     "slug": "co-get-set-up",
+    "audienceOverrides": {"ir-demo":{"section":{"part":2,"total":3,"label":"While it builds"},"content":[{"heading":"Download the installer","text":"Open TritonAI Installer from the Get Started page."},{"heading":"Have your access key ready","text":"The approval email has a one-time link to your key."},{"heading":"Install and open","text":"Paste the key into the installer and choose Check access & install. Then open TritonAI Harness."},{"heading":"Connect your tools","text":"In Settings › Plugins, turn on Microsoft 365 and sign in with your campus account."}],"speakerNotes":"About 10 minutes, hands on, while the report builds. Have the access key approved and ready before the session so the wait for the key email does not eat the time. On the Executive Vice Chancellor’s computer: download the installer, paste the key, choose Check access and install, open the Harness, then turn on Microsoft 365 in Settings › Plugins and sign in with the campus account. Windows and Mac both work; if a typed prompt does not submit on Windows, restart the Harness once before trying anything else. Glance at the live build every few minutes and say one line about where it is. This is the last slide. After setup, run two first tasks live on the Executive Vice Chancellor’s own mail and calendar in Supervised mode (a meeting brief for a real meeting this week, then a calendar review for next week), then switch back to the finished report: read two or three numbers next to IR’s from the comparison table, and say plainly that IR’s figures remain the official ones and this is a labeled draft."}},
     "type": "content",
     "layout": "cabinet-outline",
     "title": "Get set up in four steps",
@@ -13336,5 +13338,256 @@ export const slides = [
       "senate"
     ],
     "managerSection": "Senate-Administration Council"
+  },
+  /* ir-demo view (generated) */
+  {
+    "id": 5501,
+    "slug": "irdemo-title",
+    "type": "title",
+    "layout": "title-hero",
+    "content": [],
+    "title": "AI for Institutional Research Reports",
+    "subtitle": "A live TritonAI Harness demonstration",
+    "conference": "Executive Vice Chancellor briefing · November 2026",
+    "arc": [
+      {
+        "label": "Pick a report",
+        "note": "From ir.ucsd.edu"
+      },
+      {
+        "label": "The Harness builds it",
+        "note": "In Tableau, about 20 minutes"
+      },
+      {
+        "label": "Your own Harness",
+        "note": "Set up while it builds"
+      }
+    ],
+    "durationSeconds": 15,
+    "speakerNotes": "Fifteen seconds. This view has two uses. On Monday, November 16, walk the Chancellor through slide 2, the plan for the session, and confirm he is comfortable with it. In the session with the Executive Vice Chancellor, slides 2 through 5 are the five-minute overview, slide 6 plays once the live build is running, and slide 7 is the hands-on setup. The first tasks and the finished report are done live in the Harness, without slides.",
+    "audiences": [
+      "ir-demo"
+    ],
+    "managerSection": "IR report demonstration"
+  },
+  {
+    "id": 5502,
+    "slug": "irdemo-run-of-show",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "The plan for the session",
+    "subtitle": "About 30 minutes. The report builds on one screen while you set up your own Harness.",
+    "content": [],
+    "impactTable": {
+      "headers": [
+        "Step",
+        "Time",
+        "What happens"
+      ],
+      "rows": [
+        {
+          "name": "Overview",
+          "what": "Four slides",
+          "status": "5 min",
+          "tone": "pilot",
+          "impact": "What the Harness is",
+          "basis": "And how it turns one request into a report"
+        },
+        {
+          "name": "Pick a report",
+          "what": "Your choice, from ir.ucsd.edu",
+          "status": "2 min",
+          "tone": "progress",
+          "impact": "One sentence starts the build",
+          "basis": "On the shared screen, in Tableau"
+        },
+        {
+          "name": "Set up your Harness",
+          "what": "On your own computer",
+          "status": "10 min · build running",
+          "tone": "live",
+          "impact": "Install, key, Microsoft 365",
+          "basis": "Ready to use when the session ends"
+        },
+        {
+          "name": "Your first tasks",
+          "what": "On your own mail and calendar",
+          "status": "8 min · build running",
+          "tone": "live",
+          "impact": "A meeting brief and a calendar review",
+          "basis": "It prepares the work; you review it"
+        },
+        {
+          "name": "Back to the report",
+          "what": "About 20 minutes after it started",
+          "status": "5 min",
+          "tone": "progress",
+          "impact": "The finished Tableau dashboard",
+          "basis": "Its numbers next to IR’s published figures"
+        }
+      ]
+    },
+    "section": {
+      "part": 1,
+      "total": 3,
+      "label": "Overview"
+    },
+    "durationSeconds": 60,
+    "speakerNotes": "One minute. This is the slide to walk the Chancellor through on Monday. The point of the design: a report takes about 20 minutes to build, and nobody should sit and watch it. So the build starts early and runs in the background on the shared screen while the Executive Vice Chancellor gets a working Harness of their own, then the session ends on the finished report. Before the session: the IR report skill installed in your Harness; the Tableau plugin turned on in Settings › Plugins; signed in to the Tableau development server inside the Harness browser pane; the Sol 6.1 model selected (the skill was tuned on it); and one full practice build over the weekend from a plain one-sentence request. Confirm your Tableau account can open the student data sources; if a practice build shows no rows, that is an access question for the Tableau administrators, not a skill problem. Have the Executive Vice Chancellor’s access key approved ahead of time. If the live build stalls, the recorded build on slide 6 and a finished practice dashboard in your Tableau personal space are the fallback.",
+    "audiences": [
+      "ir-demo"
+    ],
+    "managerSection": "IR report demonstration"
+  },
+  {
+    "id": 5503,
+    "slug": "irdemo-how-it-works",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "From one sentence to a Tableau report",
+    "subtitle": "A skill taught the Harness how Institutional Research builds its core reports.",
+    "content": [],
+    "columns": [
+      {
+        "label": "The request",
+        "items": [
+          {
+            "icon": "MessageSquare",
+            "heading": "One plain sentence",
+            "text": "“Rebuild IR’s Graduate Enrollment Trends report in Tableau.”"
+          },
+          {
+            "icon": "BookOpen",
+            "heading": "A skill for IR reports",
+            "text": "The counting rules and check figures for IR’s core reports, learned over practice builds."
+          }
+        ]
+      },
+      {
+        "label": "The build",
+        "items": [
+          {
+            "icon": "Database",
+            "heading": "Governed campus data",
+            "text": "The Activity Hubs, the same source campus analysts build on."
+          },
+          {
+            "icon": "MousePointerClick",
+            "heading": "Computer use",
+            "text": "The agent works Tableau on screen: formulas, charts, dashboard."
+          },
+          {
+            "icon": "Clock",
+            "heading": "About 20 minutes",
+            "text": "One request, no steering along the way."
+          }
+        ]
+      },
+      {
+        "label": "The result",
+        "items": [
+          {
+            "icon": "BarChart3",
+            "heading": "A saved Tableau dashboard",
+            "text": "People with access can reopen it and refresh it. No AI needed."
+          },
+          {
+            "icon": "Scale",
+            "heading": "Checked against IR",
+            "text": "A table shows its numbers next to IR’s published figures."
+          },
+          {
+            "icon": "ShieldCheck",
+            "heading": "A labeled draft",
+            "text": "Totals only, small counts hidden, kept in a personal space."
+          }
+        ]
+      }
+    ],
+    "section": {
+      "part": 1,
+      "total": 3,
+      "label": "Overview"
+    },
+    "durationSeconds": 60,
+    "speakerNotes": "One minute. A skill is a set of written instructions the Harness reads when a request matches it. This one was built over about a week of practice builds: for each core IR report it holds the governed data source, the counting rules, known traps, and IR’s published numbers to check against. Other IR reports are variations on those core ones. Computer use means the agent reads the Tableau screen and uses the mouse and keyboard as an analyst would; nothing is generated outside Tableau. The result is an ordinary Tableau workbook, so it does not depend on AI after it is built. It is saved as a draft on the development server and is not an official IR report.",
+    "audiences": [
+      "ir-demo"
+    ],
+    "managerSection": "IR report demonstration"
+  },
+  {
+    "id": 5504,
+    "slug": "irdemo-pick-a-report",
+    "type": "content",
+    "layout": "cabinet-outline",
+    "title": "Pick a report",
+    "subtitle": "Any report on ir.ucsd.edu. Here is what to expect from each kind.",
+    "content": [],
+    "columns": [
+      {
+        "label": "Ready in about 20 minutes",
+        "chips": [
+          {
+            "icon": "GraduationCap",
+            "label": "Graduate Enrollment Trends"
+          },
+          {
+            "icon": "GraduationCap",
+            "label": "Graduate Degrees and Time to Degree"
+          },
+          {
+            "icon": "GraduationCap",
+            "label": "Undergraduate Degree Recipients"
+          },
+          {
+            "icon": "CalendarClock",
+            "label": "Teaching Modality"
+          },
+          {
+            "icon": "Users",
+            "label": "Staff and faculty by VC area (new)"
+          }
+        ],
+        "chipColumns": 1,
+        "dense": true
+      },
+      {
+        "label": "A shorter version today",
+        "items": [
+          {
+            "icon": "Clock",
+            "heading": "Graduation and Retention · Third Week Enrollment",
+            "text": "A faithful rebuild takes about an hour. Today: a one-table version."
+          },
+          {
+            "icon": "Scale",
+            "heading": "Graduate Admissions",
+            "text": "New students only. Applications are not in the governed data."
+          }
+        ]
+      },
+      {
+        "label": "Not from governed data",
+        "items": [
+          {
+            "icon": "Ban",
+            "heading": "Completion rates, surveys, initial placement",
+            "text": "Built from IR’s own files. The Harness says so in about a minute and offers the closest report."
+          }
+        ]
+      }
+    ],
+    "section": {
+      "part": 1,
+      "total": 3,
+      "label": "Overview"
+    },
+    "durationSeconds": 45,
+    "speakerNotes": "Forty-five seconds, then start the live build. Let the Executive Vice Chancellor choose; this slide sets expectations for each kind of pick. Left column: rehearsed in 17 to 21 minutes each. Graduate Enrollment Trends is the strongest (Fall 2025 matched IR exactly in rehearsal). Staff and faculty by vice chancellor area is a report IR does not publish, which shows the same data answering a new question. Middle column: these can be picked, and the Harness will say the honest time and build a one-table version. Right column: these reports come from IR’s own warehouse, survey files, or systemwide data, so the Harness declines and offers the closest report it can build; that is the intended behavior, not a failure. To start the build, type one sentence in the Harness: Rebuild IR’s (report name) report in Tableau and show me how it compares to IR’s numbers. If the browser pane shows a sign-in page, sign in there once and it carries on. Then go to the next slide while it works.",
+    "audiences": [
+      "ir-demo"
+    ],
+    "managerSection": "IR report demonstration"
   }
 ];
