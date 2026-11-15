@@ -1148,7 +1148,8 @@ export const slideManagerState = {
       "senate"
     ],
     "senate-product-or-gateway": [
-      "senate"
+      "senate",
+      "cabinet"
     ],
     "senate-harness-features": [
       "senate"
