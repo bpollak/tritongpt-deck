@@ -5462,27 +5462,12 @@ export const slides = [
   {
     "id": 37.6,
     "slug": "thank-you-cabinet",
-    "mobileSnapshot": "/media/cabinet/snap/thank-you-cabinet.jpg",
-    "mobileSnapshotMedia": "(max-height: 500px)",
     "type": "title",
     "content": [],
     "title": "Thank You",
     "subtitle": "Questions?",
     "layout": "title-hero",
-    "presenters": [
-      {
-        "name": "Brett Pollak",
-        "title": "Executive Director, IT Services",
-        "image": "/media/headshot.jpg",
-        "imageScale": 1.6,
-        "imagePosition": "center 15%"
-      },
-      {
-        "name": "Kevin Chou",
-        "title": "Interim Chief Information Officer",
-        "image": "/media/chou.jpg"
-      }
-    ],
+    "presenters": [],
     "linkUrl": "https://tritonai.ucsd.edu",
     "linkLabel": "tritonai.ucsd.edu",
     "audiences": [
