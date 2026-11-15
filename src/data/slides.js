@@ -5,8 +5,6 @@ export const slides = [
   {
     "id": 1049,
     "slug": "cabinet-title",
-    "mobileSnapshot": "/media/cabinet/snap/cabinet-title.jpg",
-    "mobileSnapshotMedia": "(max-height: 500px)",
     "type": "title",
     "content": [],
     "title": "TritonAI Operating Review",
@@ -30,8 +28,7 @@ export const slides = [
       }
     ],
     "durationSeconds": 30,
-    "conference": "Chancellor's Cabinet · Monday, October 12, 2026",
-    "speakerNotes": " Cabinet copy (Oct 10): adds the Chancellor's Cabinet and Monday's date; the PK view keeps the original."
+    "speakerNotes": "Thirty seconds. Welcome the room and name the arc: campus AI gets built in skunkworks, proven in pilots, and then put to work at scale. The deck follows that order."
   },
   {
     "id": 0.5,
